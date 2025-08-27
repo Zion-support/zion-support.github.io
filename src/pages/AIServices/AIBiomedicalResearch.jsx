@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIBiomedicalResearch() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Biomedical Research - Zion Tech Group" description="AI-powered biomedical research solution that transforms your operations with intelligent automation and real-time insights." keywords="AI biomedical research, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aibiomedicalresearch/"/>
+      <SEOHead title="Biomedical Research - Zion Tech Group" description="AI-powered biomedical research solution that transforms your operations with intelligent automation and real-time insights." keywords="AI biomedical research, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aibiomedicalresearch/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

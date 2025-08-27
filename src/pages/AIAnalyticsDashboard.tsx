@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { 
   BarChart3, 
   TrendingUp, 
@@ -18,7 +18,6 @@ import {
   Shield
 } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AIAnalyticsDashboard() {
   const features = [
     {
@@ -113,7 +112,7 @@ export default function AIAnalyticsDashboard() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
-      <SEO 
+      <SEOHead 
         title="AI Analytics Dashboard - Zion Tech Group" 
         description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!"
         keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group"
@@ -138,7 +137,7 @@ export default function AIAnalyticsDashboard() {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
@@ -163,8 +162,7 @@ export default function AIAnalyticsDashboard() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
+            {features.map((feature, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">
                     {feature.icon}
@@ -176,8 +174,7 @@ export default function AIAnalyticsDashboard() {
                     {feature.description}
                   </CardDescription>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -195,13 +192,10 @@ export default function AIAnalyticsDashboard() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
-                {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
+            {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>
+                {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                     Most Popular
-                  </Badge>
-                )}
+                  </Badge>)}
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-white mb-2">{plan.name}</CardTitle>
                   <div className="mb-4">
@@ -214,12 +208,10 @@ export default function AIAnalyticsDashboard() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-zion-slate-light">
-                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
+                    {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
+                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
                         {feature}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
                   <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     <Link to="/contact">
@@ -227,8 +219,7 @@ export default function AIAnalyticsDashboard() {
                     </Link>
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -246,13 +237,10 @@ export default function AIAnalyticsDashboard() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
+            {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"/>))}
                   </div>
                   <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
                   <div>
@@ -260,8 +248,7 @@ export default function AIAnalyticsDashboard() {
                     <p className="text-sm text-zion-slate-light">{testimonial.role}</p>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -279,7 +266,7 @@ export default function AIAnalyticsDashboard() {
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">
               <Link to="/contact">
                 Start Your Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"/>
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">
@@ -290,6 +277,5 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 }

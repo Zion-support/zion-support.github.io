@@ -1,20 +1,18 @@
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
 import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
-
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string };
   const [activeTab, setActiveTab] = useState<string>("kanban");
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Hiring Tracker | Zion AI Marketplace" 
         description="Manage your candidate pipeline in the Zion AI Marketplace." 
       />
@@ -23,7 +21,7 @@ function HiringTrackerContent() {
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-bold flex items-center">
-              <Briefcase className="mr-2 h-6 w-6 text-primary" />
+              <Briefcase className="mr-2 h-6 w-6 text-primary"/>
               Hiring Pipeline
             </h1>
             <p className="text-muted-foreground mt-1">
@@ -39,23 +37,19 @@ function HiringTrackerContent() {
           </TabsList>
           
           <TabsContent value="kanban" className="mt-6">
-            <KanbanBoard jobId={jobId} />
+            <KanbanBoard jobId={jobId}/>
           </TabsContent>
           
           <TabsContent value="analytics" className="mt-6">
-            <HiringAnalytics jobId={jobId} />
+            <HiringAnalytics jobId={jobId}/>
           </TabsContent>
         </Tabs>
       </main>
       
-    </>
-  );
+    </>);
 }
-
 export default function HiringTracker() {
-  return (
-    <ProtectedRoute>
+    return (<ProtectedRoute>
       <HiringTrackerContent />
-    </ProtectedRoute>
-  );
+    </ProtectedRoute>);
 }

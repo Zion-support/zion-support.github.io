@@ -45,7 +45,7 @@ const ITInfrastructure: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="IT Infrastructure - Zion Tech Group"
         description="Build a robust and scalable IT infrastructure with our expert solutions and management services."
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
@@ -56,20 +56,17 @@ const ITInfrastructure: React.FC = () => {
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
       icon: "🌐"
     },
-    {
-      title: "Server Management",
+    {title}: "Server Management",
       description: "Comprehensive server infrastructure and management services",
       features: ["Server Setup", "Virtualization", "Performance Optimization", "Backup Solutions"],
       icon: "🖥️"
     },
-    {
-      title: "Storage Solutions",
+    {title}: "Storage Solutions",
       description: "Scalable storage infrastructure for growing businesses",
       features: ["Storage Design", "Data Backup", "Disaster Recovery", "Cloud Storage"],
       icon: "💾"
     },
-    {
-      title: "Security Infrastructure",
+    {title}: "Security Infrastructure",
       description: "Multi-layered security infrastructure protection",
       features: ["Firewall Management", "Intrusion Detection", "Access Control", "Security Monitoring"],
       icon: "🔒"
@@ -77,21 +74,21 @@ const ITInfrastructure: React.FC = () => {
   ];
 
   const infrastructureAreas = [
-    { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
-    { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
-    { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
-    { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
+    {area}: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
+    {area}: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
+    {area}: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
+    {area}: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
 
   return (
     <>
       <Helmet>
         <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
-        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services." />
-        <meta property="og:title" content="IT Infrastructure — Zion Tech Group" />
-        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure." />
-        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure" />
+        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."/>
+        <meta property="og:title" content="IT Infrastructure — Zion Tech Group"/>
+        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."/>
+        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>
+        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
@@ -109,16 +106,10 @@ const ITInfrastructure: React.FC = () => {
               Our comprehensive services ensure reliability, scalability, and security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
+              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                 Get Infrastructure Consultation
               </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
+              <Link to="/services" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                 View All Services
               </Link>
             </div>
@@ -138,11 +129,7 @@ const ITInfrastructure: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
-                >
+              {infrastructureServices.map((service, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -150,16 +137,13 @@ const ITInfrastructure: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="text-sm text-gray-300 flex items-center">
+                      {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                           {feature}
-                        </li>
-                      ))}
+                        </li>))}
                     </ul>
                   </div>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
         </section>
@@ -177,22 +161,15 @@ const ITInfrastructure: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {infrastructureAreas.map((area, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20"
-                >
+              {infrastructureAreas.map((area, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
                   <ul className="space-y-2">
-                    {area.solutions.map((solution, idx) => (
-                      <li key={idx} className="text-gray-300 flex items-center">
+                    {area.solutions.map((solution, idx) => (<li key={idx} className="text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
-                </div>
-              ))}
+                </div>))}
             </div>
           </div>
         </section>
@@ -213,7 +190,7 @@ const ITInfrastructure: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
@@ -223,7 +200,7 @@ const ITInfrastructure: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11l5-5m0 0l5 5m-5-5v12" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11l5-5m0 0l5 5m-5-5v12"/>
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Scalability</h3>
@@ -233,7 +210,7 @@ const ITInfrastructure: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Security</h3>
@@ -252,10 +229,7 @@ const ITInfrastructure: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our infrastructure services can support your business growth
             </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
+            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               Get Infrastructure Consultation
             </Link>
           </div>
@@ -265,4 +239,5 @@ const ITInfrastructure: React.FC = () => {
   );
 };
 
-export default ITInfrastructure;
+export default ITInfrastructure;</>);
+};

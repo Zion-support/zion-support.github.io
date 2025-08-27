@@ -2,545 +2,246 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  User, 
-  Settings, 
   Bell, 
-  Search, 
-  Plus, 
+  LogOut, 
+  UserCheck, 
+  MessageSquare, 
   TrendingUp, 
-  TrendingDown, 
-  Eye, 
-  Edit, 
-  Trash2, 
-  Star, 
-  MessageCircle, 
-  Calendar, 
-  Clock, 
-  MapPin, 
-  DollarSign,
-  Users,
-  Code,
-  Shield,
-  Cloud,
-  Brain,
-  Rocket,
-  Zap,
-  Heart,
-  Building,
-  Cpu,
-  Lock,
-  Globe,
-  Award,
-  CheckCircle,
-  X,
-  ArrowRight,
-  BarChart3,
-  PieChart,
+  Users, 
   Activity,
-  Target,
-  Zap as Lightning,
-  BookOpen,
-  FileText,
-  ShoppingCart,
-  Briefcase,
-  CreditCard,
-  Download,
-  Upload,
-  Filter,
-  MoreHorizontal
+  Settings,
+  User,
+  Shield,
+  Zap,
+  Globe
 } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-
-interface DashboardStats {
-  totalServices: number;
-  activeProjects: number;
-  totalRevenue: number;
-  customerSatisfaction: number;
-  pendingRequests: number;
-  completedProjects: number;
-}
-
-interface RecentActivity {
-  id: string;
-  type: 'service' | 'project' | 'message' | 'payment';
-  title: string;
-  description: string;
-  timestamp: Date;
-  status: 'pending' | 'active' | 'completed' | 'cancelled';
-  icon: any;
-  color: string;
-}
-
-interface QuickAction {
-  name: string;
-  description: string;
-  icon: any;
-  path: string;
-  color: string;
-  count?: number;
-}
-
-const mockStats: DashboardStats = {
-  totalServices: 24,
-  activeProjects: 8,
-  totalRevenue: 125000,
-  customerSatisfaction: 4.8,
-  pendingRequests: 3,
-  completedProjects: 156
-};
-
-const mockRecentActivity: RecentActivity[] = [
-  {
-    id: '1',
-    type: 'service',
-    title: 'AI Analytics Platform',
-    description: 'New service request received from TechCorp Solutions',
-    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago
-    status: 'pending',
-    icon: Brain,
-    color: 'text-purple-500'
-  },
-  {
-    id: '2',
-    type: 'project',
-    title: 'Cloud Migration',
-    description: 'Project "Digital Transformation" completed successfully',
-    timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000), // 1 day ago
-    status: 'completed',
-    icon: Cloud,
-    color: 'text-blue-500'
-  },
-  {
-    id: '3',
-    type: 'message',
-    title: 'Customer Inquiry',
-    description: 'New message from Sarah Johnson regarding cybersecurity services',
-    timestamp: new Date(Date.now() - 3 * 60 * 60 * 1000), // 3 hours ago
-    status: 'active',
-    icon: MessageCircle,
-    color: 'text-green-500'
-  },
-  {
-    id: '4',
-    type: 'payment',
-    title: 'Payment Received',
-    description: 'Payment of $5,000 received for AI Business Intelligence service',
-    timestamp: new Date(Date.now() - 12 * 60 * 60 * 1000), // 12 hours ago
-    status: 'completed',
-    icon: DollarSign,
-    color: 'text-green-500'
-  }
-];
-
-const quickActions: QuickAction[] = [
-  {
-    name: 'Add New Service',
-    description: 'Create and publish a new service offering',
-    icon: Plus,
-    path: '/services/new',
-    color: 'from-blue-500 to-cyan-500',
-    count: 0
-  },
-  {
-    name: 'View Projects',
-    description: 'Monitor active and completed projects',
-    icon: Briefcase,
-    path: '/projects',
-    color: 'from-purple-500 to-pink-500',
-    count: mockStats.activeProjects
-  },
-  {
-    name: 'Customer Messages',
-    description: 'Respond to customer inquiries and requests',
-    icon: MessageCircle,
-    path: '/messages',
-    color: 'from-green-500 to-teal-500',
-    count: 5
-  },
-  {
-    name: 'Analytics',
-    description: 'View detailed performance metrics and insights',
-    icon: BarChart3,
-    path: '/analytics',
-    color: 'from-orange-500 to-red-500',
-    count: 0
-  },
-  {
-    name: 'Billing',
-    description: 'Manage invoices and payment methods',
-    icon: CreditCard,
-    path: '/billing',
-    color: 'from-indigo-500 to-purple-500',
-    count: 0
-  },
-  {
-    name: 'Settings',
-    description: 'Configure account and service preferences',
-    icon: Settings,
-    path: '/settings',
-    color: 'from-gray-500 to-slate-500',
-    count: 0
-  }
-];
-
-const chartData = {
-  revenue: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
-  services: [8, 12, 15, 18, 22, 24, 24],
-  customers: [45, 52, 58, 65, 72, 78, 82]
-};
 
 export default function Dashboard() {
-  const { user } = useAuth();
-  const [selectedPeriod, setSelectedPeriod] = useState('7d');
-  const [isLoading, setIsLoading] = useState(false);
+  const [user] = useState({
+    displayName: 'John Doe',
+    email: 'john.doe@example.com',
+    avatar: '/images/avatar.jpg'
+  });
 
-  useEffect(() => {
-    // Simulate loading
-    setIsLoading(true);
-    setTimeout(() => setIsLoading(false), 1000);
-  }, []);
-
-  const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0
-    }).format(amount);
+  const logout = () => {
+    // Handle logout logic
+    console.log('Logout clicked');
   };
 
-  const formatTimestamp = (timestamp: Date) => {
-    const now = new Date();
-    const diff = now.getTime() - timestamp.getTime();
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const days = Math.floor(hours / 24);
-
-    if (days > 0) {
-      return `${days} day${days > 1 ? 's' : ''} ago`;
-    } else if (hours > 0) {
-      return `${hours} hour${hours > 1 ? 's' : ''} ago`;
-    } else {
-      return 'Just now';
+  const stats = [
+    {
+      title: "Total Users",
+      value: "12,847",
+      change: "+12%",
+      icon: Users,
+      color: "text-blue-400"
+    },
+    {
+      title: "Active Projects",
+      value: "156",
+      change: "+8%",
+      icon: Activity,
+      color: "text-green-400"
+    },
+    {
+      title: "Revenue",
+      value: "$2.4M",
+      change: "+23%",
+      icon: TrendingUp,
+      color: "text-purple-400"
+    },
+    {
+      title: "Security Score",
+      value: "98.5%",
+      change: "+2%",
+      icon: Shield,
+      color: "text-yellow-400"
     }
-  };
+  ];
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'pending': return 'bg-yellow-500/20 text-yellow-500';
-      case 'active': return 'bg-blue-500/20 text-blue-500';
-      case 'completed': return 'bg-green-500/20 text-green-500';
-      case 'cancelled': return 'bg-red-500/20 text-red-500';
-      default: return 'bg-gray-500/20 text-gray-500';
+  const recentActivities = [
+    {
+      type: "login",
+      message: "User logged in from New York",
+      time: "2 minutes ago",
+      icon: User
+    },
+    {
+      type: "security",
+      message: "Two-factor authentication enabled",
+      time: "1 hour ago",
+      icon: Shield
+    },
+    {
+      type: "update",
+      message: "Profile information updated",
+      time: "3 hours ago",
+      icon: Settings
+    },
+    {
+      type: "activity",
+      message: "New project created",
+      time: "5 hours ago",
+      icon: Zap
     }
-  };
-
-  if (!user) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
-        <div className="container-responsive text-center">
-          <h1 className="text-3xl font-bold text-white mb-4">Access Denied</h1>
-          <p className="text-zion-slate-light mb-8">Please log in to access your dashboard.</p>
-          <Link
-            to="/login"
-            className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-          >
-            Go to Login
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
-      <div className="container-responsive">
-        {/* Dashboard Header */}
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
+      <div className="container mx-auto px-4 py-16">
+        {/* Header */}
         <motion.div 
           className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-white mb-2">Welcome back, {user.name}!</h1>
-              <p className="text-zion-slate-light">Here's what's happening with your business today.</p>
+              <h1 className="text-3xl font-bold text-white">Dashboard</h1>
+              <p className="text-zion-slate-light">Welcome back, {user.displayName}</p>
             </div>
-            
             <div className="flex items-center gap-4">
-              <div className="relative">
-                <button className="relative p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-xl transition-all duration-300">
-                  <Bell className="h-5 w-5" />
-                  <span className="absolute top-1 right-1 w-3 h-3 bg-red-500 rounded-full"></span>
-                </button>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                  <span className="text-white font-semibold">{user.name.charAt(0)}</span>
-                </div>
-                <div className="hidden sm:block">
-                  <div className="text-white font-medium">{user.name}</div>
-                  <div className="text-zion-slate-light text-sm">{user.role}</div>
-                </div>
-              </div>
+              <button className="p-2 text-zion-slate-light hover:text-white transition-colors">
+                <Bell className="w-6 h-6" />
+              </button>
+              <button 
+                onClick={logout}
+                className="px-4 py-2 bg-zinc-800/50 text-white rounded-lg hover:bg-zinc-700/50 transition-colors flex items-center gap-2"
+              >
+                <LogOut className="w-4 h-4" />
+                Logout
+              </button>
             </div>
           </div>
         </motion.div>
 
-        {/* Stats Overview */}
+        {/* Stats Grid */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                <Code className="h-6 w-6 text-white" />
-              </div>
-              <TrendingUp className="h-5 w-5 text-green-400" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{mockStats.totalServices}</div>
-            <div className="text-zion-slate-light text-sm">Total Services</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                <Briefcase className="h-6 w-6 text-white" />
-              </div>
-              <TrendingUp className="h-5 w-5 text-green-400" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{mockStats.activeProjects}</div>
-            <div className="text-zion-slate-light text-sm">Active Projects</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
-                <DollarSign className="h-6 w-6 text-white" />
-              </div>
-              <TrendingUp className="h-5 w-5 text-green-400" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{formatCurrency(mockStats.totalRevenue)}</div>
-            <div className="text-zion-slate-light text-sm">Total Revenue</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center">
-                <Star className="h-6 w-6 text-white" />
-              </div>
-              <TrendingUp className="h-5 w-5 text-green-400" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{mockStats.customerSatisfaction}</div>
-            <div className="text-zion-slate-light text-sm">Customer Rating</div>
-          </div>
-        </motion.div>
-
-        {/* Quick Actions */}
-        <motion.div 
-          className="mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h2 className="text-2xl font-bold text-white mb-6">Quick Actions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {quickActions.map((action, index) => (
-              <motion.div
-                key={action.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-              >
-                <Link
-                  to={action.path}
-                  className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${action.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <action.icon className="h-6 w-6 text-white" />
-                    </div>
-                    {action.count !== undefined && action.count > 0 && (
-                      <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                        {action.count}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-white font-semibold text-lg mb-2 group-hover:text-zion-cyan transition-colors">
-                    {action.name}
-                  </h3>
-                  <p className="text-zion-slate-light text-sm mb-4">
-                    {action.description}
-                  </p>
-                  <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                    <span className="text-sm font-medium">Get Started</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              className="bg-zinc-800/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300"
+              whileHover={{ y: -2, scale: 1.02 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+            >
+              <div className="flex items-center justify-between mb-4">
+                <div className={`p-2 bg-zinc-700/50 rounded-lg`}>
+                  <stat.icon className={`w-6 h-6 ${stat.color}`} />
+                </div>
+                <span className="text-sm text-green-400 font-medium">{stat.change}</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-1">{stat.value}</h3>
+              <p className="text-zion-slate-light text-sm">{stat.title}</p>
+            </motion.div>
+          ))}
         </motion.div>
 
-        {/* Recent Activity and Charts */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Recent Activity */}
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left Column */}
           <motion.div 
-            className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6"
+            className="lg:col-span-2"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-white">Recent Activity</h3>
-              <Link to="/activity" className="text-zion-cyan hover:text-zion-cyan-light text-sm transition-colors">
-                View All
-              </Link>
+            {/* Welcome Section */}
+            <div className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6 mb-6">
+              <h2 className="text-xl font-bold text-white mb-4">Welcome to Zion Tech Group</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-4 rounded-lg bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/20">
+                  <h3 className="text-lg font-medium text-white">Getting Started</h3>
+                  <p className="text-zion-slate-light mt-1">Complete your profile to unlock all features</p>
+                </div>
+                <div className="p-4 rounded-lg bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/20">
+                  <h3 className="text-lg font-medium text-white">Explore Services</h3>
+                  <p className="text-zion-slate-light mt-1">Discover our AI-powered solutions</p>
+                </div>
+              </div>
             </div>
-            
-            <div className="space-y-4">
-              {mockRecentActivity.map((activity, index) => (
-                <motion.div
-                  key={activity.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
-                  className="flex items-start gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-200"
-                >
-                  <div className={`w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0`}>
-                    <activity.icon className={`h-5 w-5 ${activity.color}`} />
-                  </div>
-                  
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                      <h4 className="text-white font-medium">{activity.title}</h4>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(activity.status)}`}>
-                        {activity.status}
-                      </span>
+
+            {/* Recent Activities */}
+            <div className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6">
+              <h2 className="text-xl font-bold text-white mb-4">Recent Activities</h2>
+              <div className="space-y-4">
+                {recentActivities.map((activity, index) => (
+                  <div key={index} className="flex items-center gap-4 p-3 bg-zinc-800/50 rounded-lg">
+                    <div className="p-2 bg-zinc-700/50 rounded-lg">
+                      <activity.icon className="w-5 h-5 text-zion-cyan" />
                     </div>
-                    <p className="text-zion-slate-light text-sm mb-2">{activity.description}</p>
-                    <div className="flex items-center gap-4 text-xs text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {formatTimestamp(activity.timestamp)}
-                      </div>
+                    <div className="flex-1">
+                      <p className="text-white text-sm">{activity.message}</p>
+                      <p className="text-zion-slate-light text-xs">{activity.time}</p>
                     </div>
                   </div>
-                </motion.div>
-              ))}
+                ))}
+              </div>
             </div>
           </motion.div>
 
-          {/* Performance Chart */}
+          {/* Right Column */}
           <motion.div 
-            className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6"
+            className="space-y-6"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-white">Performance Overview</h3>
-              <select
-                value={selectedPeriod}
-                onChange={(e) => setSelectedPeriod(e.target.value)}
-                className="bg-white/10 border border-zion-cyan/20 rounded-lg px-3 py-1 text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              >
-                <option value="7d">Last 7 days</option>
-                <option value="30d">Last 30 days</option>
-                <option value="90d">Last 90 days</option>
-              </select>
+            {/* Quick Actions */}
+            <div className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-white mb-4">Quick Actions</h3>
+              <div className="space-y-3">
+                <Link 
+                  to="/profile" 
+                  className="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-700/50 transition-colors"
+                >
+                  <User className="w-5 h-5 text-zion-cyan" />
+                  <span className="text-white">Edit Profile</span>
+                </Link>
+                <Link 
+                  to="/settings" 
+                  className="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-700/50 transition-colors"
+                >
+                  <Settings className="w-5 h-5 text-zion-cyan" />
+                  <span className="text-white">Settings</span>
+                </Link>
+                <Link 
+                  to="/services" 
+                  className="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-lg hover:bg-zinc-700/50 transition-colors"
+                >
+                  <Globe className="w-5 h-5 text-zion-cyan" />
+                  <span className="text-white">Browse Services</span>
+                </Link>
+              </div>
             </div>
-            
-            <div className="space-y-6">
-              {/* Revenue Chart */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-zion-slate-light text-sm">Revenue</span>
-                  <span className="text-white font-semibold">{formatCurrency(chartData.revenue[chartData.revenue.length - 1])}</span>
-                </div>
-                <div className="flex items-end gap-1 h-20">
-                  {chartData.revenue.map((value, index) => (
-                    <div
-                      key={index}
-                      className="flex-1 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-sm"
-                      style={{ height: `${(value / Math.max(...chartData.revenue)) * 100}%` }}
-                    />
-                  ))}
-                </div>
-              </div>
 
-              {/* Services Chart */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-zion-slate-light text-sm">Active Services</span>
-                  <span className="text-white font-semibold">{chartData.services[chartData.services.length - 1]}</span>
+            {/* System Status */}
+            <div className="bg-zinc-800/30 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6">
+              <h3 className="text-lg font-bold text-white mb-4">System Status</h3>
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-zion-slate-light">Website</span>
+                  <span className="text-green-400 text-sm">Operational</span>
                 </div>
-                <div className="flex items-end gap-1 h-20">
-                  {chartData.services.map((value, index) => (
-                    <div
-                      key={index}
-                      className="flex-1 bg-gradient-to-t from-zion-purple to-zion-blue rounded-t-sm"
-                      style={{ height: `${(value / Math.max(...chartData.services)) * 100}%` }}
-                    />
-                  ))}
+                <div className="flex items-center justify-between">
+                  <span className="text-zion-slate-light">API Services</span>
+                  <span className="text-green-400 text-sm">Operational</span>
                 </div>
-              </div>
-
-              {/* Customers Chart */}
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-zion-slate-light text-sm">Total Customers</span>
-                  <span className="text-white font-semibold">{chartData.customers[chartData.customers.length - 1]}</span>
-                </div>
-                <div className="flex items-end gap-1 h-20">
-                  {chartData.customers.map((value, index) => (
-                    <div
-                      key={index}
-                      className="flex-1 bg-gradient-to-t from-zion-blue to-zion-cyan rounded-t-sm"
-                      style={{ height: `${(value / Math.max(...chartData.customers)) * 100}%` }}
-                    />
-                  ))}
+                <div className="flex items-center justify-between">
+                  <span className="text-zion-slate-light">Database</span>
+                  <span className="text-green-400 text-sm">Operational</span>
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Bottom Stats */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Clock className="h-8 w-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-2">{mockStats.pendingRequests}</div>
-            <div className="text-zion-slate-light">Pending Requests</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <CheckCircle className="h-8 w-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-2">{mockStats.completedProjects}</div>
-            <div className="text-zion-slate-light">Completed Projects</div>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Target className="h-8 w-8 text-white" />
-            </div>
-            <div className="text-2xl font-bold text-white mb-2">98%</div>
-            <div className="text-zion-slate-light">Success Rate</div>
-          </div>
-        </motion.div>
       </div>
     </div>
   );

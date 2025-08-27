@@ -35,7 +35,7 @@ const ITInfrastructure = () => {
         { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="IT Infrastructure - Zion Tech Group" description="Build a robust and scalable IT infrastructure with our expert solutions and management services." keywords="IT infrastructure, server management, network design, data centers, infrastructure security" canonical="https://ziontechgroup.com/services/infrastructure"/>
+      <SEOHead title="IT Infrastructure - Zion Tech Group" description="Build a robust and scalable IT infrastructure with our expert solutions and management services." keywords="IT infrastructure, server management, network design, data centers, infrastructure security" canonical="https://ziontechgroup.com/services/infrastructure"/>
       title: "Network Infrastructure",
       description: "Design, implement, and maintain robust network solutions",
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],

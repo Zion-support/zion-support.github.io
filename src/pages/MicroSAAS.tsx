@@ -1,332 +1,302 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Code, 
-  Zap, 
-  Users, 
-  Shield, 
-  Cloud, 
   Brain, 
-  Rocket, 
-  Heart,
-  CheckCircle,
+  Cloud, 
+  Shield, 
+  BarChart3, 
+  Code, 
+  DollarSign, 
+  Heart, 
+  ShoppingCart, 
+  GraduationCap, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  CheckCircle, 
+  Star, 
+  TrendingUp, 
+  Zap, 
+  Users,
   ArrowRight,
-  Star,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Database,
-  Lock,
-  BarChart3,
+  Rocket,
   Target,
-  Lightbulb
+  Clock
 } from 'lucide-react';
 
-const microSaasServices = [
-  {
-    icon: Brain,
-    title: 'AI Business Intelligence',
-    description: 'Intelligent analytics and reporting platform powered by machine learning.',
-    features: ['Predictive analytics', 'Real-time dashboards', 'Custom reporting', 'AI insights'],
-    price: 'From $99/month',
-    category: 'AI & Analytics'
-  },
-  {
-    icon: Users,
-    title: 'Customer Experience Platform',
-    description: 'Comprehensive customer engagement and satisfaction management system.',
-    features: ['Customer feedback', 'Sentiment analysis', 'Journey mapping', 'Automation'],
-    price: 'From $149/month',
-    category: 'Customer Experience'
-  },
-  {
-    icon: Rocket,
-    title: 'Quantum Computing Solutions',
-    description: 'Access to quantum computing power for complex problem solving.',
-    features: ['Quantum algorithms', 'Cloud access', 'API integration', 'Expert support'],
-    price: 'From $299/month',
-    category: 'Quantum Computing'
-  },
-  {
-    icon: Shield,
-    title: 'Supply Chain Security',
-    description: 'End-to-end supply chain visibility and security management.',
-    features: ['Real-time tracking', 'Risk assessment', 'Compliance monitoring', 'Audit trails'],
-    price: 'From $199/month',
-    category: 'Supply Chain'
-  },
-  {
-    icon: Lock,
-    title: 'Cybersecurity Suite',
-    description: 'Comprehensive security tools for small to medium businesses.',
-    features: ['Threat detection', 'Vulnerability scanning', 'Security monitoring', 'Incident response'],
-    price: 'From $179/month',
-    category: 'Cybersecurity'
-  },
-  {
-    icon: Cpu,
-    title: 'IoT Edge Computing',
-    description: 'Edge computing platform for IoT device management and data processing.',
-    features: ['Device management', 'Data processing', 'Real-time analytics', 'Scalable infrastructure'],
-    price: 'From $129/month',
-    category: 'IoT & Edge'
-  },
-  {
-    icon: Code,
-    title: 'Content Creation Tools',
-    description: 'AI-powered content generation and management platform.',
-    features: ['AI writing', 'Content optimization', 'SEO tools', 'Analytics'],
-    price: 'From $79/month',
-    category: 'Content Creation'
-  },
-  {
-    icon: BarChart3,
-    title: 'HR Platform',
-    description: 'Human resources management system with AI-powered insights.',
-    features: ['Employee management', 'Performance tracking', 'Recruitment tools', 'Analytics'],
-    price: 'From $89/month',
-    category: 'HR Management'
-  }
-];
+const MicroSAAS = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-const benefits = [
-  {
-    icon: Zap,
-    title: 'Rapid Deployment',
-    description: 'Get up and running in minutes, not months. Our micro SAAS solutions are designed for quick implementation.'
-  },
-  {
-    icon: Cloud,
-    title: 'Scalable Infrastructure',
-    description: 'Start small and grow seamlessly. Our cloud-based solutions scale with your business needs.'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-level security standards with SOC2 compliance and advanced threat protection.'
-  },
-  {
-    icon: Brain,
-    title: 'AI-Powered Insights',
-    description: 'Leverage artificial intelligence to gain deeper insights and automate complex processes.'
-  }
-];
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Globe },
+    { id: 'ai', name: 'AI Solutions', icon: Brain },
+    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
+    { id: 'security', name: 'Cybersecurity', icon: Shield },
+    { id: 'analytics', name: 'Data Analytics', icon: BarChart3 },
+    { id: 'development', name: 'Development', icon: Code },
+    { id: 'fintech', name: 'FinTech', icon: DollarSign },
+    { id: 'healthtech', name: 'HealthTech', icon: Heart }
+  ];
 
-const useCases = [
-  {
-    industry: 'Startups',
-    title: 'Quick Market Entry',
-    description: 'Launch your business with proven tools and get to market faster.',
-    icon: Rocket,
-    benefits: ['Reduced time to market', 'Lower upfront costs', 'Proven solutions', 'Scalable growth']
-  },
-  {
-    industry: 'SMBs',
-    title: 'Enterprise-Grade Tools',
-    description: 'Access enterprise-level technology without enterprise-level complexity.',
-    icon: Building,
-    benefits: ['Professional features', 'Easy implementation', 'Cost-effective', 'Expert support']
-  },
-  {
-    industry: 'Enterprises',
-    title: 'Innovation Acceleration',
-    description: 'Speed up innovation projects with ready-to-use micro SAAS solutions.',
-    icon: TrendingUp,
-    benefits: ['Faster innovation', 'Reduced risk', 'Flexible deployment', 'Integration ready']
-  }
-];
+  const services = [
+    {
+      id: 'ai-chatbot',
+      title: 'AI Chatbot Builder Pro',
+      description: 'No-code AI chatbot creation platform with advanced NLP and multi-language support.',
+      category: 'ai',
+      price: '$99/month',
+      features: ['Drag & drop builder', 'Advanced NLP', 'Multi-language', 'CRM integrations'],
+      rating: 4.8,
+      reviews: 156
+    },
+    {
+      id: 'ai-content',
+      title: 'AI Content Generator Suite',
+      description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing.',
+      category: 'ai',
+      price: '$79/month',
+      features: ['AI content generation', 'SEO optimization', 'Brand voice', 'Plagiarism checker'],
+      rating: 4.7,
+      reviews: 89
+    },
+    {
+      id: 'cloud-infra',
+      title: 'Cloud Infrastructure Manager',
+      description: 'Comprehensive cloud infrastructure management with multi-cloud support.',
+      category: 'cloud',
+      price: '$149/month',
+      features: ['Multi-cloud support', 'Auto-scaling', 'Cost optimization', 'Security compliance'],
+      rating: 4.9,
+      reviews: 234
+    },
+    {
+      id: 'cyber-shield',
+      title: 'CyberShield Pro',
+      description: 'Enterprise-grade cybersecurity solution with real-time threat detection.',
+      category: 'security',
+      price: '$199/month',
+      features: ['Real-time monitoring', 'Threat detection', 'Compliance reporting', '24/7 support'],
+      rating: 4.8,
+      reviews: 178
+    },
+    {
+      id: 'data-insights',
+      title: 'Data Insights Platform',
+      description: 'Powerful data analytics and business intelligence platform.',
+      category: 'analytics',
+      price: '$129/month',
+      features: ['Real-time analytics', 'Custom dashboards', 'Data visualization', 'Predictive insights'],
+      rating: 4.6,
+      reviews: 112
+    },
+    {
+      id: 'dev-tools',
+      title: 'Developer Toolkit Pro',
+      description: 'Comprehensive development tools and automation platform.',
+      category: 'development',
+      price: '$89/month',
+      features: ['Code generation', 'Testing automation', 'CI/CD pipeline', 'Code review'],
+      rating: 4.7,
+      reviews: 95
+    }
+  ];
 
-export default function MicroSAAS() {
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+
+  const benefits = [
+    {
+      icon: <Zap className="h-6 w-6" />,
+      title: "Immediate Deployment",
+      description: "All services are ready for immediate deployment with no setup delays"
+    },
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
+    },
+    {
+      icon: <Users className="h-6 w-6" />,
+      title: "Dedicated Support",
+      description: "24/7 technical support with dedicated account managers"
+    },
+    {
+      icon: <TrendingUp className="h-6 w-6" />,
+      title: "Proven ROI",
+      description: "Average 300% ROI within 6 months of implementation"
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>
-          <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
-        </div>
-        
-        <div className="container-responsive relative z-10">
-          <motion.div
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"
+      >
+        <div className="container mx-auto px-4 text-center">
+          <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold mb-6"
           >
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-                <Code className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gradient">
-                Micro SAAS Solutions
-              </h1>
-            </div>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Powerful, focused software solutions that deliver big results without big complexity. 
-              Get enterprise-grade technology in bite-sized packages designed for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="btn-futuristic px-8 py-3 text-lg"
-              >
-                Get Started
-              </a>
-              <a
-                href="#services"
-                className="btn-neon px-8 py-3 text-lg"
-              >
-                View Solutions
-              </a>
-            </div>
+            Micro SAAS Solutions
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
+          >
+            Transform your business with our comprehensive suite of AI-powered micro SAAS services. 
+            From automation to analytics, we provide enterprise-grade solutions at startup prices.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-wrap justify-center gap-4"
+          >
+            <button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold flex items-center">
+              <Globe className="h-5 w-5 mr-2" />
+              View All Services
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg font-semibold flex items-center transition-colors">
+              <Phone className="h-5 w-5 mr-2" />
+              Contact Sales
+            </button>
           </motion.div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container-responsive">
-          <motion.div
+      <section className="py-20 bg-blue-600">
+        <div className="container mx-auto px-4">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Micro SAAS?</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our micro SAAS approach combines the power of enterprise solutions with the simplicity 
-              and affordability that growing businesses need.
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-blue-100 text-lg max-w-3xl mx-auto">
+              We deliver enterprise-grade solutions with startup agility and proven results
             </p>
           </motion.div>
-
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
-                key={benefit.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 rounded-xl bg-zion-slate-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                viewport={{ once: true }}
+                className="bg-blue-700 rounded-lg p-6 text-white text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="mx-auto w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mb-4">
+                  {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-zion-slate-light">{benefit.description}</p>
+                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-blue-100">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20">
-        <div className="container-responsive">
-          <motion.div
+      {/* Category Filter */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            viewport={{ once: true }}
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Micro SAAS Solutions</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover our range of focused, powerful micro SAAS solutions designed to solve 
-              specific business challenges with maximum efficiency.
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Explore Our Services
+            </h2>
+            <p className="text-gray-600 text-lg">
+              Choose from our comprehensive range of micro SAAS solutions
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {microSaasServices.map((service, index) => (
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <motion.button
+                  key={category.id}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-colors ${
+                    selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  <Icon className="h-5 w-5" />
+                  {category.name}
+                </motion.button>
+              );
+            })}
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
               <motion.div
-                key={service.title}
+                key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 overflow-hidden group"
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200"
               >
                 <div className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                    <div className="flex items-center gap-1">
+                      <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                      <span className="text-sm text-gray-600">{service.rating}</span>
+                      <span className="text-sm text-gray-400">({service.reviews})</span>
+                    </div>
                   </div>
                   
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  
                   <div className="mb-4">
-                    <span className="text-xs font-medium text-zion-cyan uppercase tracking-wide">
-                      {service.category}
-                    </span>
-                    <h3 className="text-xl font-semibold text-white mt-1 mb-3">{service.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{service.description}</p>
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
                   
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center space-x-3 text-zion-slate-light text-sm">
-                          <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                          <span>{feature}</span>
+                    <h4 className="font-medium text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                          {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-lg font-bold text-zion-cyan">{service.price}</div>
-                    <button className="btn-neon px-4 py-2 text-sm">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Perfect For Every Business</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Whether you're a startup looking to scale quickly or an enterprise seeking innovation, 
-              our micro SAAS solutions adapt to your needs.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-8 rounded-xl bg-zion-slate-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                    <useCase.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <span className="text-sm font-medium text-zion-cyan uppercase tracking-wide">{useCase.industry}</span>
-                    <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
-                  </div>
-                </div>
-                
-                <p className="text-zion-slate-light mb-6">{useCase.description}</p>
-                
-                <div className="space-y-3">
-                  {useCase.benefits.map((benefit) => (
-                    <div key={benefit} className="flex items-center space-x-3 text-zion-slate-light">
-                      <Star className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                      <span className="text-sm">{benefit}</span>
-                    </div>
-                  ))}
+                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+                    Get Started
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </button>
                 </div>
               </motion.div>
             ))}
@@ -335,43 +305,35 @@ export default function MicroSAAS() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Start with one solution or build a complete ecosystem. Our micro SAAS approach 
-              gives you the flexibility to grow at your own pace.
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses that have already revolutionized their operations with our micro SAAS solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="btn-futuristic px-8 py-3 text-lg"
-              >
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center">
+                <Rocket className="h-5 w-5 mr-2" />
                 Start Free Trial
-              </a>
-              <a
-                href="/request-quote"
-                className="btn-neon px-8 py-3 text-lg"
-              >
-                Get Custom Quote
-              </a>
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors flex items-center">
+                <Phone className="h-5 w-5 mr-2" />
+                Schedule Demo
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
 
-// Missing icon components
-const Building = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-  </svg>
-);
+export default MicroSAAS;
