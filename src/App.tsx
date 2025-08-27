@@ -27,6 +27,12 @@ const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 
+// 2028 Innovative Services
+const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
+const MicroSAASServices2028 = React.lazy(() => import('./pages/MicroSAASServices2028'));
+const ITServices2028 = React.lazy(() => import('./pages/ITServices2028'));
+const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
+
 // Enhanced Services 2025
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025.tsx'));
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025.tsx'));
@@ -100,6 +106,12 @@ function App() {
               {/* IT Services Routes */}
               <Route path="/it-services" element={<ITServicesPage />} />
               <Route path="/it-services/:service" element={<ITServicesPage />} />
+              
+              {/* 2028 Innovative Services Routes */}
+              <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
+              <Route path="/micro-saas-2028" element={<MicroSAASServices2028 />} />
+              <Route path="/it-services-2028" element={<ITServices2028 />} />
+              <Route path="/comprehensive-pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
               
               {/* Enhanced Services 2025 Routes */}
               <Route path="/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
