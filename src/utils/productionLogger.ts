@@ -1,45 +1,12 @@
-<<<<<<< HEAD
-// Production-safe logging utility
-export const productionLogger = {
-  log: (...args: any[]) => {
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(...args);
-    }
-  },
-  
-  error: (...args: any[]) => {
-    if (process.env.NODE_ENV !== 'production') {
-      console.error(...args);
-    }
-    // In production, you might want to send errors to a monitoring service
-  },
-  
-  warn: (...args: any[]) => {
-    if (process.env.NODE_ENV !== 'production') {
-      console.warn(...args);
-    }
-  },
-  
-  info: (...args: any[]) => {
-    if (process.env.NODE_ENV !== 'production') {
-      console.info(...args);
-    }
-  }
-};
-
-export default productionLogger;
-=======
 /**
  * Production logging utility for safe error handling and logging
  */
-
 interface LogLevel {
   level: 'info' | 'warn' | 'error';
   message: string;
   data?: any;
   timestamp: string;
 }
-
 // Production-safe logging functions
 export const logInfo = (message: string, data?: any): void => {
   if (process.env.NODE_ENV === 'development') {
@@ -48,7 +15,6 @@ export const logInfo = (message: string, data?: any): void => {
   // In production, you might want to send to a logging service
   // logToService('info', message, data);
 };
-
 export const logWarn = (message: string, data?: any): void => {
   if (process.env.NODE_ENV === 'development') {
     console.warn(`[WARN] ${message}`, data);
@@ -56,7 +22,6 @@ export const logWarn = (message: string, data?: any): void => {
   // In production, you might want to send to a logging service
   // logToService('warn', message, data);
 };
-
 export const logError = (message: string, error?: any): void => {
   if (process.env.NODE_ENV === 'development') {
     console.error(`[ERROR] ${message}`, error);
@@ -64,7 +29,6 @@ export const logError = (message: string, error?: any): void => {
   // In production, you might want to send to a logging service
   // logToService('error', message, error);
 };
-
 export const logErrorToProduction = (message: string, error?: any): void => {
   // Always log errors in production for monitoring
   if (process.env.NODE_ENV === 'production') {
@@ -78,7 +42,6 @@ export const logErrorToProduction = (message: string, error?: any): void => {
     logError(message, error);
   }
 };
-
 // Helper function to safely stringify objects for logging
 export const safeStringify = (obj: any): string => {
   try {
@@ -96,7 +59,6 @@ export const safeStringify = (obj: any): string => {
     return '[Unable to stringify object]';
   }
 };
-
 // Production-safe error boundary logging
 export const logErrorBoundary = (error: Error, errorInfo: any): void => {
   logErrorToProduction('React Error Boundary caught an error', {
@@ -105,7 +67,6 @@ export const logErrorBoundary = (error: Error, errorInfo: any): void => {
     componentStack: errorInfo?.componentStack
   });
 };
-
 // Performance logging
 export const logPerformance = (operation: string, duration: number): void => {
   if (process.env.NODE_ENV === 'development') {
@@ -114,4 +75,3 @@ export const logPerformance = (operation: string, duration: number): void => {
   // In production, you might want to send to a monitoring service
   // logToMonitoringService('performance', operation, duration);
 };
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

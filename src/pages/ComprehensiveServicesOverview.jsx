@@ -129,7 +129,6 @@ export default function ComprehensiveServicesOverview() {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-zion-blue/20 to-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
-
         <div className="relative z-10 container mx-auto px-4 py-16 lg:py-20">
           {/* Hero Section */}
           <div className="text-center mb-20">
@@ -161,7 +160,6 @@ export default function ComprehensiveServicesOverview() {
               </div>
             </div>
           </div>
-
           {/* Search and Filters */}
           <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 mb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -170,7 +168,6 @@ export default function ComprehensiveServicesOverview() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light"/>
                 <Input placeholder="Search services..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-zion-slate-light"/>
               </div>
-
               {/* Category Filter */}
               <Select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
@@ -181,7 +178,6 @@ export default function ComprehensiveServicesOverview() {
                   {categories.map((category) => (<SelectItem key={category} value={category}>{category}</SelectItem>))}
                 </SelectContent>
               </Select>
-
               {/* Price Range Filter */}
               <Select value={priceRange} onChange={(e) => setPriceRange(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
@@ -193,7 +189,6 @@ export default function ComprehensiveServicesOverview() {
                   <SelectItem value="high">Over $3k/month</SelectItem>
                 </SelectContent>
               </Select>
-
               {/* Support Level Filter */}
               <Select value={selectedSupportLevel} onChange={(e) => setSelectedSupportLevel(e.target.value)}>
                 <SelectTrigger className="bg-white/10 border-white/20 text-white">
@@ -208,7 +203,6 @@ export default function ComprehensiveServicesOverview() {
               </Select>
             </div>
           </div>
-
           {/* Services Count */}
           <div className="text-center mb-12">
             <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6">
@@ -229,7 +223,6 @@ export default function ComprehensiveServicesOverview() {
               </div>
             </div>
           </div>
-
           {/* All Services */}
           <div className="mb-16">
             <div className="flex items-center justify-between mb-8">
@@ -337,7 +330,6 @@ export default function ComprehensiveServicesOverview() {
                   </motion.div>))}
               </div>)}
           </div>
-
           {/* Contact Section */}
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>

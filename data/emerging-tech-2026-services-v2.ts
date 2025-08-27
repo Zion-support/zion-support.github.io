@@ -14,7 +14,6 @@ export interface EmergingTech2026ServiceV2 {
     address: string;
   };
 }
-
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   {
     id: "2026-emerging-tech-v2",

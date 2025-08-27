@@ -215,13 +215,13 @@ export const useSecurityCompliance = (_initialConfig) => {
         };
         // Generate recommendations
         if (securityMetrics.complianceScore < 80) {
-            report.recommendations.push('Immediate compliance review required');
+            report.recommendations('Immediate compliance review required');
         }
         if (securityMetrics.criticalEvents > 0) {
-            report.recommendations.push('Critical security events need immediate attention');
+            report.recommendations('Critical security events need immediate attention');
         }
         if (securityMetrics.threatLevel === 'high' || securityMetrics.threatLevel === 'critical') {
-            report.recommendations.push('Elevated threat level - implement additional security measures');
+            report.recommendations('Elevated threat level - implement additional security measures');
         }
         trackEvent('security', 'report', 'generated');
         return JSON.stringify(report, null, 2);

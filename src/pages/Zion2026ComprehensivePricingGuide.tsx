@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { zion2026InnovativeMicroSAASServices } from '../../data/zion-2026-innovative-micro-saas-services';
-
 const Zion2026ComprehensivePricingGuide: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState<string>('monthly');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   const categories = [
     'all',
     'AI & Automation',
@@ -18,16 +16,13 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
     'AI & Customer Service',
     'Space Technology'
   ];
-
   const filteredServices = zion2026InnovativeMicroSAASServices.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );
-
   const getAnnualPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '').replace(',', ''));
     return (price * 12 * 0.8).toFixed(0); // 20% discount for annual
   };
-
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
       'AI & Automation': 'from-purple-600 to-indigo-700',
@@ -43,14 +38,11 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
     };
     return colors[category] || 'from-gray-600 to-slate-700';
   };
-
   const totalMonthlyRevenue = filteredServices.reduce((sum, service) => {
     const price = parseFloat(service.price.replace('$', '').replace(',', ''));
     return sum + (price * service.customers);
   }, 0);
-
   const totalAnnualRevenue = totalMonthlyRevenue * 12;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -95,7 +87,6 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Revenue Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
@@ -120,7 +111,6 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-zion-cyan to-zion-purple py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,7 +136,6 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
@@ -170,7 +159,6 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Pricing Table */}
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8 overflow-x-auto">
           <table className="w-full">
@@ -253,7 +241,6 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
             </tbody>
           </table>
         </div>
-
         {/* ROI Analysis */}
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
           <h3 className="text-2xl font-bold text-zion-cyan mb-6 text-center">ROI Analysis & Market Insights</h3>
@@ -279,7 +266,6 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Pricing Comparison */}
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
           <h3 className="text-2xl font-bold text-zion-cyan mb-6 text-center">Pricing Comparison by Category</h3>
@@ -292,9 +278,7 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
                 const price = parseFloat(service.price.replace('$', '').replace(',', ''));
                 return sum + price;
               }, 0) / categoryServices.length;
-
               const avgRating = categoryServices.reduce((sum, service) => sum + service.rating, 0) / categoryServices.length;
-
               return (
                 <div key={category} className="bg-white/5 rounded-xl p-4">
                   <h4 className="font-bold text-white mb-3">{category}</h4>
@@ -318,7 +302,6 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-zion-cyan to-zion-purple py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -351,5 +334,4 @@ const Zion2026ComprehensivePricingGuide: React.FC = () => {
     </div>
   );
 };
-
 export default Zion2026ComprehensivePricingGuide;

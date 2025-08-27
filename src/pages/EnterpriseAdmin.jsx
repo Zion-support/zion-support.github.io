@@ -2,7 +2,7 @@ import React from "react";
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
     const { user } = useAuth();

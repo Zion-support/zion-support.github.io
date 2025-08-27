@@ -14,7 +14,6 @@ import {
   Target,
   CheckCircle
 } from 'lucide-react';
-
 const PartnersPage: React.FC = () => {
   const partners = [
     {
@@ -45,7 +44,6 @@ const PartnersPage: React.FC = () => {
       tier: 'Gold'
     }
   ];
-
   const partnershipTiers = [
     {
       name: 'Platinum',
@@ -84,7 +82,6 @@ const PartnersPage: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -109,7 +106,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Partnership Benefits */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,7 +120,6 @@ const PartnersPage: React.FC = () => {
               Why <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Partner</span> With Us?
             </h2>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: Users, title: 'Global Network', description: 'Access to our worldwide network of clients and partners' },
@@ -150,7 +145,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Current Partners */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -168,7 +162,6 @@ const PartnersPage: React.FC = () => {
               Working with industry leaders to deliver exceptional value to our clients
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
               <motion.div
@@ -205,7 +198,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Partnership Tiers */}
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -223,7 +215,6 @@ const PartnersPage: React.FC = () => {
               Choose the partnership level that best fits your business goals
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {partnershipTiers.map((tier, index) => (
               <motion.div
@@ -254,7 +245,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -303,5 +293,4 @@ const PartnersPage: React.FC = () => {
     </div>
   );
 };
-
 export default PartnersPage;

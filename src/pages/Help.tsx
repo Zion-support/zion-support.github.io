@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, BookOpen, Video, MessageCircle, Phone, Mail, FileText, Users2, Settings, Shield, Cloud, Brain, Zap, HelpCircle, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface HelpArticle {
   id: string;
   title: string;
@@ -11,7 +10,6 @@ interface HelpArticle {
   tags: string[];
   content: string;
 }
-
 interface HelpCategory {
   id: string;
   name: string;
@@ -20,11 +18,9 @@ interface HelpCategory {
   color: string;
   articleCount: number;
 }
-
 const Help: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   const helpCategories: HelpCategory[] = [
     {
       id: 'getting-started',
@@ -75,7 +71,6 @@ const Help: React.FC = () => {
       articleCount: 20
     }
   ];
-
   const helpArticles: HelpArticle[] = [
     // Getting Started Articles
     {
@@ -102,7 +97,6 @@ const Help: React.FC = () => {
       tags: ['project', 'first-time', 'setup'],
       content: 'Ready to start your first project? Here\'s how to get going...'
     },
-
     // Services Articles
     {
       id: 'ai-services-overview',
@@ -120,7 +114,6 @@ const Help: React.FC = () => {
       tags: ['cybersecurity', 'security', 'services'],
       content: 'Our cybersecurity services are designed to protect your organization...'
     },
-
     // AI Solutions Articles
     {
       id: 'ml-implementation',
@@ -138,7 +131,6 @@ const Help: React.FC = () => {
       tags: ['NLP', 'language', 'AI'],
       content: 'Natural Language Processing enables computers to understand human language...'
     },
-
     // Cybersecurity Articles
     {
       id: 'security-audit',
@@ -156,7 +148,6 @@ const Help: React.FC = () => {
       tags: ['incident response', 'security', 'emergency'],
       content: 'In the event of a security incident, follow these steps...'
     },
-
     // Cloud & DevOps Articles
     {
       id: 'cloud-migration',
@@ -174,7 +165,6 @@ const Help: React.FC = () => {
       tags: ['DevOps', 'CI/CD', 'automation'],
       content: 'DevOps practices help organizations deliver software faster...'
     },
-
     // Technical Support Articles
     {
       id: 'troubleshooting',
@@ -193,7 +183,6 @@ const Help: React.FC = () => {
       content: 'Our technical support team is available to help you...'
     }
   ];
-
   const filteredArticles = helpArticles.filter(article => {
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -201,12 +190,10 @@ const Help: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-
   const getCategoryColor = (categoryId: string) => {
     const category = helpCategories.find(cat => cat.id === categoryId);
     return category?.color || 'bg-gray-500';
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header Section */}
@@ -227,7 +214,6 @@ const Help: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search Section */}
         <motion.div
@@ -247,7 +233,6 @@ const Help: React.FC = () => {
             />
           </div>
         </motion.div>
-
         {/* Quick Actions */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -264,7 +249,6 @@ const Help: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Contact Support</h3>
               <p className="text-sm text-gray-600">Get help from our team</p>
             </Link>
-
             <a
               href="tel:+13024640950"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -273,7 +257,6 @@ const Help: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
               <p className="text-sm text-gray-600">+1 (302) 464-0950</p>
             </a>
-
             <a
               href="mailto:info@ziontechgroup.com"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -282,7 +265,6 @@ const Help: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Email Support</h3>
               <p className="text-sm text-gray-600">info@ziontechgroup.com</p>
             </a>
-
             <Link
               to="/faq"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -293,7 +275,6 @@ const Help: React.FC = () => {
             </Link>
           </div>
         </motion.div>
-
         {/* Help Categories */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -328,7 +309,6 @@ const Help: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Help Articles */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -341,7 +321,6 @@ const Help: React.FC = () => {
             </h2>
             <span className="text-gray-500">{filteredArticles.length} articles found</span>
           </div>
-
           {filteredArticles.length > 0 ? (
             <div className="space-y-4">
               {filteredArticles.map((article) => (
@@ -394,7 +373,6 @@ const Help: React.FC = () => {
             </div>
           )}
         </motion.div>
-
         {/* Additional Resources */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -420,7 +398,6 @@ const Help: React.FC = () => {
                   Start Chat
                 </button>
               </div>
-
               <div className="text-center">
                 <Phone className="w-12 h-12 mx-auto mb-4 text-zion-cyan-light" />
                 <h3 className="text-lg font-semibold mb-2">Phone Support</h3>
@@ -434,7 +411,6 @@ const Help: React.FC = () => {
                   Call Now
                 </a>
               </div>
-
               <div className="text-center">
                 <Mail className="w-12 h-12 mx-auto mb-4 text-zion-cyan-light" />
                 <h3 className="text-lg font-semibold mb-2">Email Support</h3>
@@ -451,7 +427,6 @@ const Help: React.FC = () => {
             </div>
           </div>
         </motion.div>
-
         {/* External Resources */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -469,7 +444,6 @@ const Help: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Documentation</h3>
               <p className="text-sm text-gray-600">Technical guides and API docs</p>
             </Link>
-
             <Link
               to="/webinars"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -478,7 +452,6 @@ const Help: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Video Tutorials</h3>
               <p className="text-sm text-gray-600">Learn through video content</p>
             </Link>
-
             <Link
               to="/community"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -487,7 +460,6 @@ const Help: React.FC = () => {
               <h3 className="font-semibold text-gray-900 mb-2">Community</h3>
               <p className="text-sm text-gray-600">Join user discussions</p>
             </Link>
-
             <Link
               to="/training"
               className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow text-center"
@@ -502,5 +474,4 @@ const Help: React.FC = () => {
     </div>
   );
 };
-
 export default Help;

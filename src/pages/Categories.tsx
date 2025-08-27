@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Brain, Shield, Cloud, Database, Code, Zap, Users, TrendingUp, Globe, Rocket } from 'lucide-react';
-
 export default function Categories() {
     const serviceCategories = [
         {
@@ -83,9 +82,8 @@ export default function Categories() {
             count: 8
         }
     ];
-
     return (
-        <>
+<>
             <SEO 
                 title="Service Categories - Zion Tech Group" 
                 description="Browse tech services by category and find what you need." 
@@ -109,7 +107,6 @@ export default function Categories() {
                                 Explore our comprehensive range of tech services organized by category. Find exactly what you need to transform your business.
                             </p>
                         </div>
-
                         {/* Category Stats */}
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
                             <div className="text-center">
@@ -131,7 +128,6 @@ export default function Categories() {
                         </div>
                     </div>
                 </section>
-
                 {/* Categories Grid */}
                 <section className="py-16 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
@@ -174,7 +170,6 @@ export default function Categories() {
                         </div>
                     </div>
                 </section>
-
                 {/* CTA Section */}
                 <section className="py-16 bg-zion-blue-dark">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -194,6 +189,6 @@ export default function Categories() {
                 </section>
             </main>
             <Footer />
-        </>
+</>
     );
 }

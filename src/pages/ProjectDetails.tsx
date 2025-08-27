@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
@@ -18,7 +18,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";
 function ProjectDetailsContent() {
-    const router = useRouter();
+    const router = useNavigate();
     // Get projectId from Next.js router query params
     const { projectId } = router.query;
     const { user } = useAuth();
@@ -47,7 +47,7 @@ function ProjectDetailsContent() {
                     description: "The requested project could not be found.",
                     variant: "destructive",
                 });
-                router.push("/dashboard");
+                router("/dashboard");
             }
             setIsLoading(false);
         }
@@ -161,43 +161,18 @@ function ProjectDetailsContent() {
             <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
-            <Button onClick={() => router.push("/dashboard")}>
+            <Button onClick={() => router("/dashboard")}>
               Return to Dashboard
             </Button>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-      </div>
-    );
-  }
-  
-  // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
-  
-  if (!isClient && !isTalent) {
-    router.push("/unauthorized");
-    return null;
-  }
-  
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
-  
-  return (
-    <>
-      <SEOHead 
-        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
-        description="View and manage your project details and collaboration."
-      />
-=======
       </div>);
     }
     // Check if user is either the client or the talent
     const isClient = user?.id === project.client_id;
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
-        router.push("/unauthorized");
+        router("/unauthorized");
         return null;
     }
     const isOfferPending = project.status === "offer_sent";
@@ -205,7 +180,6 @@ function ProjectDetailsContent() {
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
@@ -279,14 +253,13 @@ function ProjectDetailsContent() {
                     <Layers className="mr-2 h-4 w-4"/> Milestones
                   </Link>
                 </Button>)}
-
               {isActiveProject && (<Button variant="outline" asChild>
                   <Link href={`/project/${project.id}/room`}>
                     <Video className="mr-2 h-4 w-4"/> Project Room
                   </Link>
                 </Button>)}
               
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
+              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
                   <MessageSquare className="mr-2 h-4 w-4"/> Message
                 </Button>)}
             </div>
@@ -473,7 +446,7 @@ function ProjectDetailsContent() {
                       <p className="text-sm text-muted-foreground">
                         {project.talent_profile?.professional_title || "Professional"}
                       </p>
-                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}>
+                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?talentId=${project.talent_id}`)}>
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -488,7 +461,7 @@ function ProjectDetailsContent() {
                         {project.talent_profile?.full_name || "Client"}
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
-                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
+                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?clientId=${project.client_id}`)}>
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -530,7 +503,7 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
                   </p>
-                  <Button variant="outline" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)} className="w-full">
+                  <Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}`)} className="w-full">
                     <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
                   </Button>
                 </CardFooter>)}

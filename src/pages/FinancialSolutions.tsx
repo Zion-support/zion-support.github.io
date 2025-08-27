@@ -107,7 +107,6 @@ export default function FinancialSolutions() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -137,7 +136,6 @@ export default function FinancialSolutions() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -159,7 +157,6 @@ export default function FinancialSolutions() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -188,7 +185,6 @@ export default function FinancialSolutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center">

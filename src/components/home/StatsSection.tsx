@@ -1,16 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 interface Stat {
   number: string;
   label: string;
   icon: React.ComponentType<{ className?: string }>;
 }
-
 interface StatsSectionProps {
   stats: Stat[];
 }
-
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   return (
     <section className="py-20" role="region" aria-labelledby="stats-heading">
@@ -43,5 +40,4 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
     </section>
   );
 };
-
 export default StatsSection;

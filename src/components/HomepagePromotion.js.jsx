@@ -106,7 +106,6 @@ export function HomepagePromotion() {
             </div>
           </div>
         </motion.div>
-
         {/* Featured Services Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {featuredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:bg-white/20 transition-all duration-300 group">
@@ -122,7 +121,6 @@ export function HomepagePromotion() {
                   {service.price}
                 </div>
               </div>
-
               {/* Features */}
               <div className="mb-4">
                 <h4 className="text-zion-cyan font-semibold text-sm mb-2">Key Features</h4>
@@ -133,7 +131,6 @@ export function HomepagePromotion() {
                     </li>))}
                 </ul>
               </div>
-
               {/* Benefits */}
               <div className="mb-4">
                 <h4 className="text-zion-cyan font-semibold text-sm mb-2">Benefits</h4>
@@ -144,13 +141,11 @@ export function HomepagePromotion() {
                     </li>))}
                 </ul>
               </div>
-
               <Link to={service.link} className="block w-full bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-semibold py-2 px-4 rounded-lg text-center transition-colors">
                 Learn More
               </Link>
             </motion.div>))}
         </motion.div>
-
         {/* Call to Action Section */}
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-8 backdrop-blur-sm">

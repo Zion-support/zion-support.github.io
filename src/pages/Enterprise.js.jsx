@@ -79,7 +79,6 @@ export default function Enterprise() {
     ];
     return (<div className="min-h-screen bg-background">
       <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com/enterprise"/>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -100,7 +99,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -128,7 +126,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* Plans Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -170,7 +167,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">

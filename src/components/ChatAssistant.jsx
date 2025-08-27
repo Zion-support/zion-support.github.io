@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, X, Bot, User, Minimize2, Maximize2, Settings, HelpCircle } from 'lucide-react';
-
 export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSendMessage } = {}) {
     const [internalIsOpen, setInternalIsOpen] = useState(false);
     const [message, setMessage] = useState('');
@@ -12,23 +11,19 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
     const [showWelcome, setShowWelcome] = useState(true);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
-
     // Use external state if provided, otherwise use internal state
     const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
     const setIsOpen = externalIsOpen !== undefined ? (onClose || (() => { })) : setInternalIsOpen;
-
     // Auto-scroll to bottom when new messages arrive
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [chatHistory]);
-
     // Focus input when chat opens
     useEffect(() => {
         if (isOpen && inputRef.current && !isMinimized) {
             inputRef.current.focus();
         }
     }, [isOpen, isMinimized]);
-
     // Welcome message
     useEffect(() => {
         if (isOpen && chatHistory.length === 0 && showWelcome) {
@@ -42,21 +37,17 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
             setShowWelcome(false);
         }
     }, [isOpen, chatHistory.length, showWelcome]);
-
     const handleSendMessage = async () => {
         if (!message.trim()) return;
-
         const userMessage = {
             type: 'user',
             content: message,
             timestamp: new Date(),
             id: `user-${Date.now()}`
         };
-
         setChatHistory(prev => [...prev, userMessage]);
         const currentMessage = message;
         setMessage('');
-
         if (onSendMessage) {
             try {
                 await onSendMessage(currentMessage);
@@ -78,7 +69,6 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
             }, 1500 + Math.random() * 1000); // Random delay for more natural feel
         }
     };
-
     const generateResponse = (userMessage) => {
         const message = userMessage.toLowerCase();
         
@@ -96,18 +86,15 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
             return 'Thank you for your message! I\'d be happy to help you with that. Our team specializes in AI, cybersecurity, cloud solutions, and digital transformation. Could you provide more details about your specific needs so I can better assist you?';
         }
     };
-
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             handleSendMessage();
         }
     };
-
     const formatTime = (date) => {
         return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     };
-
     const quickActions = [
         'AI Solutions',
         'Cybersecurity',
@@ -115,7 +102,6 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
         'Get Quote',
         'Schedule Call'
     ];
-
     if (!isOpen) {
         return (
             <motion.button 
@@ -138,7 +124,6 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
             </motion.button>
         );
     }
-
     return (
         <AnimatePresence>
             <motion.div 
@@ -187,9 +172,8 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
                         </div>
                     </div>
                 </div>
-
                 {!isMinimized && (
-                    <>
+<>
                         {/* Messages */}
                         <div className="flex-1 p-4 overflow-y-auto h-80 bg-gray-50">
                             {chatHistory.map((msg) => (
@@ -243,7 +227,6 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
                             
                             <div ref={messagesEndRef} />
                         </div>
-
                         {/* Quick Actions */}
                         {chatHistory.length === 1 && (
                             <div className="px-4 pb-3">
@@ -261,7 +244,6 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
                                 </div>
                             </div>
                         )}
-
                         {/* Input */}
                         <div className="p-4 border-t border-gray-200 bg-white">
                             <div className="flex gap-2">
@@ -287,7 +269,7 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose, recipient, onSe
                                 Press Enter to send • Shift+Enter for new line
                             </p>
                         </div>
-                    </>
+</>
                 )}
             </motion.div>
         </AnimatePresence>

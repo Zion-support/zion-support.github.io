@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 const Card = ({ children, className = '' }) => {
     return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
@@ -31,3 +32,7 @@ const CardFooter = ({ children, className = '' }) => {
 };
 
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './Card.jsx';
+export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle };
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

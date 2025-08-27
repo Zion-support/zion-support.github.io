@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-
+import { Link } from 'react-router-dom';
 interface SimpleButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -8,7 +7,6 @@ interface SimpleButtonProps {
   className?: string;
   onClick?: () => void;
 }
-
 const SimpleButton: React.FC<SimpleButtonProps> = ({ 
   children, 
   href,
@@ -22,7 +20,6 @@ const SimpleButton: React.FC<SimpleButtonProps> = ({
     default: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500'
   };
-
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
   
   if (href) {
@@ -32,7 +29,6 @@ const SimpleButton: React.FC<SimpleButtonProps> = ({
       </Link>
     );
   }
-
   return (
     <button
       type="button"
@@ -43,5 +39,4 @@ const SimpleButton: React.FC<SimpleButtonProps> = ({
     </button>
   );
 };
-
 export default SimpleButton;

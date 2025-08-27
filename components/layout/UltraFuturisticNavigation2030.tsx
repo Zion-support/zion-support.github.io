@@ -13,14 +13,12 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye,
   BrainCircuit, Rocket, Microscope, Lightbulb
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: '🚀 2030 AI & Consciousness',
@@ -95,7 +93,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -106,7 +103,6 @@ const mainNavigation = [
   { name: 'Careers', href: '/careers', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const quickLinks = [
   { name: 'AI Services', href: '/services/ai', icon: Brain },
   { name: 'Quantum Tech', href: '/services/quantum', icon: Atom },
@@ -115,24 +111,19 @@ const quickLinks = [
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target },
   { name: 'Research Tools', href: '/services/research', icon: Microscope }
 ];
-
 const UltraFuturisticNavigation2030: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -163,7 +154,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
               </div>
             </Link>
           </motion.div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {mainNavigation.map((item, index) => (
@@ -183,7 +173,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Desktop Service Categories Dropdown */}
           <div className="hidden lg:block relative">
             <motion.button
@@ -198,7 +187,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
               <span className="font-medium">All Services</span>
               <ChevronDown className="w-4 h-4 group-hover:text-purple-400 transition-colors duration-200" />
             </motion.button>
-
             <AnimatePresence>
               {activeCategory !== null && (
                 <motion.div
@@ -244,7 +232,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
               )}
             </AnimatePresence>
           </div>
-
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -267,7 +254,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
               <span className="text-sm font-medium">{contactInfo.email}</span>
             </Link>
           </motion.div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <motion.button
@@ -282,7 +268,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -308,7 +293,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
                   </Link>
                 ))}
               </div>
-
               {/* Quick Links */}
               <div className="border-t border-slate-700 pt-6">
                 <h3 className="text-sm font-semibold text-slate-400 mb-3">Quick Access</h3>
@@ -326,7 +310,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
                   ))}
                 </div>
               </div>
-
               {/* Contact Info */}
               <div className="border-t border-slate-700 pt-6 space-y-3">
                 <h3 className="text-sm font-semibold text-slate-400">Contact Information</h3>
@@ -358,5 +341,4 @@ const UltraFuturisticNavigation2030: React.FC = () => {
     </nav>
   );
 };
-
 export default UltraFuturisticNavigation2030;

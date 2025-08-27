@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Zap, Shield, Brain, Cloud, Users, MessageCircle, FileText } from "lucide-react";
-
 export default function Pricing() {
     const pricingTiers = [
         {
@@ -95,7 +94,6 @@ export default function Pricing() {
             link: "/contact"
         }
     ];
-
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
             <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -113,7 +111,6 @@ export default function Pricing() {
                     </p>
                 </div>
             </section>
-
             <section className="pb-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

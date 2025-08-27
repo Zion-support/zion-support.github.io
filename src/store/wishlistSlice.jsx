@@ -20,7 +20,7 @@ const wishlistSlice = createSlice({
         addToWishlist(state, action) {
             const exists = state.items.some((item) => item.id === action.payload.id && item.type === action.payload.type);
             if (!exists)
-                state.items.push(action.payload);
+                state.items(action.payload);
         },
         removeFromWishlist(state, action) {
             state.items = state.items.filter((item) => item.id !== action.payload.id);

@@ -190,7 +190,6 @@ export function AdvancedCollaborationPlatform() {
           </button>
         </div>
       </div>
-
       {/* Meeting Controls */}
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
         <div className="flex items-center justify-between">
@@ -227,7 +226,6 @@ export function AdvancedCollaborationPlatform() {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="flex h-[calc(100%-140px)]">
         {/* Main Meeting Area */}
@@ -262,7 +260,6 @@ export function AdvancedCollaborationPlatform() {
                   </div>))}
               </div>
             </div>
-
             {/* Right Sidebar */}
             <div className="space-y-4">
               {/* Tabs */}
@@ -282,7 +279,6 @@ export function AdvancedCollaborationPlatform() {
                     </button>);
         })}
               </div>
-
               {/* Tab Content */}
               <div className="h-80 overflow-y-auto">
                 {activeTab === 'meeting' && (<div className="space-y-4">
@@ -322,7 +318,6 @@ export function AdvancedCollaborationPlatform() {
                       </div>
                     </div>
                   </div>)}
-
                 {activeTab === 'chat' && (<div className="space-y-4">
                     <div className="space-y-3">
                       {chatMessages.map(message => (<div key={message.id} className="bg-zion-slate-light/30 p-3 rounded-lg">
@@ -348,7 +343,6 @@ export function AdvancedCollaborationPlatform() {
                       </button>
                     </div>
                   </div>)}
-
                 {activeTab === 'documents' && (<div className="space-y-4">
                     <div className="flex items-center gap-2">
                       <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search documents..." className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate text-sm"/>
@@ -376,7 +370,6 @@ export function AdvancedCollaborationPlatform() {
                         </div>))}
                     </div>
                   </div>)}
-
                 {activeTab === 'participants' && (<div className="space-y-4">
                     <div className="flex items-center gap-2">
                       <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search participants..." className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate text-sm"/>

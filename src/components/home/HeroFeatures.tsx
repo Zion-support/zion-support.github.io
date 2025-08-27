@@ -1,16 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 interface HeroFeature {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
 }
-
 interface HeroFeaturesProps {
   features: HeroFeature[];
 }
-
 const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
   return (
     <motion.div 
@@ -36,5 +33,4 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
     </motion.div>
   );
 };
-
 export default HeroFeatures;

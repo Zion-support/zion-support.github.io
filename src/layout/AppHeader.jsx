@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { 
   Menu, 
   X, 
@@ -17,12 +18,14 @@ import {
   Rocket 
 } from 'lucide-react';
 
+=======
+import { Menu, X, ChevronDown, Globe, Sun, Moon } from 'lucide-react';
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -31,13 +34,19 @@ export function AppHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
+<<<<<<< HEAD
 
+=======
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    // In a real app, this would toggle the theme
+  };
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
     { 
@@ -58,9 +67,18 @@ export function AppHeader() {
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
+<<<<<<< HEAD
 
   const isActive = (path) => location.pathname === path;
 
+=======
+  const isActiveRoute = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -96,7 +114,6 @@ export function AppHeader() {
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -157,8 +174,12 @@ export function AppHeader() {
               </div>
             ))}
           </nav>
+<<<<<<< HEAD
 
           {/* CTA Buttons */}
+=======
+          {/* Actions */}
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
@@ -167,7 +188,6 @@ export function AppHeader() {
               Get Started
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -176,6 +196,99 @@ export function AppHeader() {
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+<<<<<<< HEAD
+=======
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden overflow-hidden"
+            >
+              <div className="py-6 border-t border-zion-cyan/20">
+                <nav className="space-y-4">
+                  {navigationItems.map((item) => (
+                    <div key={item.path}>
+                      {item.hasDropdown ? (
+                        <div>
+                          <button
+                            onClick={() => setDropdownOpen(dropdownOpen === item.path ? null : item.path)}
+                            className="flex items-center justify-between w-full text-white hover:text-zion-cyan transition-colors duration-300 py-2"
+                          >
+                            {item.label}
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                              dropdownOpen === item.path ? 'rotate-180' : ''
+                            }`} />
+                          </button>
+                          
+                          <AnimatePresence>
+                            {dropdownOpen === item.path && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="ml-4 mt-2 space-y-2"
+                              >
+                                {item.dropdownItems.map((dropdownItem) => (
+                                  <Link
+                                    key={dropdownItem.path}
+                                    to={dropdownItem.path}
+                                    className="block text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 py-1"
+                                  >
+                                    {dropdownItem.label}
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          className={`block text-white hover:text-zion-cyan transition-colors duration-300 py-2 ${
+                            isActiveRoute(item.path) ? 'text-zion-cyan' : ''
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                  
+                  <div className="pt-4 border-t border-zion-cyan/20 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-slate-light">Theme:</span>
+                      <button
+                        onClick={toggleDarkMode}
+                        className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
+                      >
+                        {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                      </button>
+                    </div>
+                    
+                    <Link 
+                      to="/login" 
+                      className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium py-2"
+                    >
+                      Login
+                    </Link>
+                    <Link 
+                      to="/contact" 
+                      className="block px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </nav>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       </div>
 
       {/* Mobile Menu */}

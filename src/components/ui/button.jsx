@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 export function Button({ children, variant = 'default', size = 'md', asChild = false, className = '', onClick, type = 'button', disabled = false }) {
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
@@ -21,3 +22,7 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       {children}
     </button>);
 }
+=======
+import { Button, buttonVariants } from './Button.jsx';
+export { Button, buttonVariants };
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

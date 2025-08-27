@@ -22,11 +22,52 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+<<<<<<< HEAD
     },
     {
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
+=======
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our technology services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "AI Solutions",
+      "short_name": "AI",
+      "description": "Explore AI-powered solutions",
+      "url": "/services/ai-business-intelligence",
+      "icons": [
+        {
+          "src": "/icon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     }
   ],
   "screenshots": [
@@ -43,6 +84,7 @@
       "form_factor": "narrow"
     }
   ],
+<<<<<<< HEAD
   "shortcuts": [
     {
       "name": "AI Services",
@@ -69,6 +111,8 @@
       ]
     }
   ],
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {

@@ -132,7 +132,7 @@ export class SEOOptimizer {
         const issues = [];
         // Check for missing or short title
         if (!content.includes('<title>') || content.includes('<title></title>')) {
-            issues.push({
+            issues({
                 page,
                 issue: 'missing-title',
                 severity: 'high',
@@ -141,7 +141,7 @@ export class SEOOptimizer {
         }
         // Check for missing meta description
         if (!content.includes('name="description"')) {
-            issues.push({
+            issues({
                 page,
                 issue: 'missing-description',
                 severity: 'high',
@@ -151,7 +151,7 @@ export class SEOOptimizer {
         // Check for short meta description
         const descMatch = content.match(/name="description" content="([^"]+)"/);
         if (descMatch && descMatch[1].length < 120) {
-            issues.push({
+            issues({
                 page,
                 issue: 'short-description',
                 severity: 'medium',
@@ -160,7 +160,7 @@ export class SEOOptimizer {
         }
         // Check for missing headings
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
-            issues.push({
+            issues({
                 page,
                 issue: 'no-headings',
                 severity: 'medium',
@@ -170,7 +170,7 @@ export class SEOOptimizer {
         // Check for minimal content
         const textContent = content.replace(/<[^>]*>/g, '').trim();
         if (textContent.length < 300) {
-            issues.push({
+            issues({
                 page,
                 issue: 'minimal-content',
                 severity: 'medium',

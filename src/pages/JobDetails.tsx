@@ -9,7 +9,7 @@ import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
 import useJobDetails from '@/hooks/useJobDetails';
 import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead.jsx";
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export default function JobDetails() {
     // Cast to specify the expected route param type since useParams may be untyped
@@ -35,35 +35,6 @@ export default function JobDetails() {
         
       </>);
     }
-<<<<<<< HEAD
-    
-    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-      toast.error("Only job seekers can apply for jobs");
-      return;
-    }
-    
-    setIsApplyModalOpen(true);
-  };
-
-  const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success("Application submitted successfully!");
-    setIsApplyModalOpen(false);
-  };
-
-  const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified";
-    return `$${budget.min} - $${budget.max}`;
-  };
-
-  const isOwnJob = user?.id === job.client_id;
-
-  return (
-    <>
-      <SEOHead 
-        title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={job.description.substring(0, 160)}
-      />
-=======
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
@@ -88,7 +59,6 @@ export default function JobDetails() {
     const isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">

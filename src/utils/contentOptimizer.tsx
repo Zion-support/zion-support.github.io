@@ -101,7 +101,7 @@ export class ContentOptimizer {
         const issues = [];
         // Check for missing headings
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
-            issues.push({
+            issues({
                 type: 'missing-headings',
                 severity: 'high',
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,
@@ -110,7 +110,7 @@ export class ContentOptimizer {
         }
         // Check for minimal content
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
-            issues.push({
+            issues({
                 type: 'minimal-content',
                 severity: 'medium',
                 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,
@@ -119,7 +119,7 @@ export class ContentOptimizer {
         }
         // Check for no images
         if (metrics.imageCount === 0) {
-            issues.push({
+            issues({
                 type: 'no-images',
                 severity: 'medium',
                 description: 'No images found. Images improve user engagement and SEO',
@@ -128,7 +128,7 @@ export class ContentOptimizer {
         }
         // Check for poor structure
         if (metrics.headingCount === 0 && metrics.wordCount > 100) {
-            issues.push({
+            issues({
                 type: 'poor-structure',
                 severity: 'high',
                 description: 'Content lacks proper heading structure for organization',
@@ -140,7 +140,7 @@ export class ContentOptimizer {
         const contentKeywords = this.extractContentKeywords(content);
         const missingKeywords = pageKeywords.filter(kw => !contentKeywords.includes(kw));
         if (missingKeywords.length > 0) {
-            issues.push({
+            issues({
                 type: 'missing-keywords',
                 severity: 'medium',
                 description: `Missing important keywords: ${missingKeywords.join(', ')}`,
@@ -154,7 +154,7 @@ export class ContentOptimizer {
         issues.forEach(issue => {
             switch (issue.type) {
                 case 'missing-headings':
-                    suggestions.push({
+                    suggestions({
                         type: 'add-headings',
                         priority: 'high',
                         description: 'Add proper heading structure (H1, H2, H3) to organize content',
@@ -162,7 +162,7 @@ export class ContentOptimizer {
                     });
                     break;
                 case 'minimal-content':
-                    suggestions.push({
+                    suggestions({
                         type: 'expand-content',
                         priority: 'medium',
                         description: 'Expand content to provide more value and improve SEO',
@@ -170,7 +170,7 @@ export class ContentOptimizer {
                     });
                     break;
                 case 'no-images':
-                    suggestions.push({
+                    suggestions({
                         type: 'add-images',
                         priority: 'medium',
                         description: 'Add relevant images, diagrams, or infographics to improve engagement',
@@ -178,7 +178,7 @@ export class ContentOptimizer {
                     });
                     break;
                 case 'poor-structure':
-                    suggestions.push({
+                    suggestions({
                         type: 'improve-structure',
                         priority: 'high',
                         description: 'Reorganize content with proper headings and logical flow',
@@ -186,7 +186,7 @@ export class ContentOptimizer {
                     });
                     break;
                 case 'missing-keywords':
-                    suggestions.push({
+                    suggestions({
                         type: 'add-keywords',
                         priority: 'medium',
                         description: 'Naturally incorporate missing keywords into the content',
@@ -203,7 +203,7 @@ export class ContentOptimizer {
         const keywords = [];
         segments.forEach(segment => {
             const words = segment.split('-').filter(w => w.length > 2);
-            keywords.push(...words);
+            keywords(...words);
         });
         return keywords;
     }

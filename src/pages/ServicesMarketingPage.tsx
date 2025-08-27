@@ -52,7 +52,6 @@ const ServicesMarketingPage = () => {
               <div className="text-gray-300">Autonomous Operations</div>
             </div>
           </div>
-
           {/* Call to Action */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/revolutionary-services-2025" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
@@ -64,7 +63,6 @@ const ServicesMarketingPage = () => {
           </div>
         </div>
       </section>
-
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,7 +75,6 @@ const ServicesMarketingPage = () => {
               combine cutting-edge AI, quantum computing, and autonomous systems.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
@@ -94,7 +91,6 @@ const ServicesMarketingPage = () => {
                 <li>• Revolutionary blockchain solutions</li>
               </ul>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-3xl">⚡</span>
@@ -109,7 +105,6 @@ const ServicesMarketingPage = () => {
                 <li>• 24/7 autonomous operation</li>
               </ul>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
                 <span className="text-3xl">🛡️</span>
@@ -127,7 +122,6 @@ const ServicesMarketingPage = () => {
           </div>
         </div>
       </section>
-
       {/* Service Categories Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,7 +134,6 @@ const ServicesMarketingPage = () => {
               modern technology needs.
             </p>
           </div>
-
           {Object.entries(serviceCategories).map(([category, services]) => (<div key={category} className="mb-16">
               <h3 className="text-3xl font-bold text-white mb-8 text-center">{category}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -163,7 +156,6 @@ const ServicesMarketingPage = () => {
             </div>))}
         </div>
       </section>
-
       {/* Competitive Advantages */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -175,7 +167,6 @@ const ServicesMarketingPage = () => {
               What sets us apart from traditional technology providers and competitors.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-6">Technology Leadership</h3>
@@ -203,7 +194,6 @@ const ServicesMarketingPage = () => {
                 </div>
               </div>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-6">Business Impact</h3>
               <div className="space-y-4">
@@ -233,7 +223,6 @@ const ServicesMarketingPage = () => {
           </div>
         </div>
       </section>
-
       {/* ROI Calculator */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -262,7 +251,6 @@ const ServicesMarketingPage = () => {
                 <div className="text-gray-400 text-sm">Speed and accuracy</div>
               </div>
             </div>
-
             <div className="text-center">
               <a href="mailto:kleber@ziontechgroup.com?subject=ROI%20Calculation%20Request" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Request Custom ROI Analysis
@@ -271,7 +259,6 @@ const ServicesMarketingPage = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

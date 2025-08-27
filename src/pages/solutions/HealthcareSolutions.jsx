@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export default function HealthcareSolutions() {
     const solutions = [
@@ -93,7 +93,6 @@ export default function HealthcareSolutions() {
           <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
         </div>
       </section>
-
       {/* Solutions Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -105,7 +104,6 @@ export default function HealthcareSolutions() {
               From patient care to operational efficiency, we provide end-to-end healthcare technology solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
             const Icon = solution.icon;
@@ -126,7 +124,6 @@ export default function HealthcareSolutions() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
@@ -138,7 +135,6 @@ export default function HealthcareSolutions() {
               Measurable improvements in patient care and operational efficiency
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -149,7 +145,6 @@ export default function HealthcareSolutions() {
           </div>
         </div>
       </section>
-
       {/* Case Studies */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -161,7 +156,6 @@ export default function HealthcareSolutions() {
               Real results from healthcare organizations using our solutions
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-4">
@@ -191,7 +185,6 @@ export default function HealthcareSolutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">

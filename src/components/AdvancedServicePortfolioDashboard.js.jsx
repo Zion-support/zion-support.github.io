@@ -199,7 +199,6 @@ const AdvancedServicePortfolioDashboard = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Portfolio Metrics */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <Card className="hover:shadow-lg transition-shadow">
@@ -225,7 +224,6 @@ const AdvancedServicePortfolioDashboard = () => {
             </p>
           </CardContent>
         </Card>
-
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
@@ -249,7 +247,6 @@ const AdvancedServicePortfolioDashboard = () => {
             </p>
           </CardContent>
         </Card>
-
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
@@ -273,7 +270,6 @@ const AdvancedServicePortfolioDashboard = () => {
             </p>
           </CardContent>
         </Card>
-
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
@@ -298,7 +294,6 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Filters and Controls */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -321,7 +316,6 @@ const AdvancedServicePortfolioDashboard = () => {
               <option value="Discontinued">Discontinued</option>
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>
             <select value={selectedComplexity} onChange={(e) => setSelectedComplexity(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -332,12 +326,10 @@ const AdvancedServicePortfolioDashboard = () => {
               <option value="Enterprise">Enterprise</option>
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>
             <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full"/>
           </div>
-
           <div className="flex items-end">
             <Button variant="outline" className="w-full" onClick={() => {
             setSelectedCategory('all');
@@ -351,7 +343,6 @@ const AdvancedServicePortfolioDashboard = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Portfolio Table */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mb-8">
         <Card>
@@ -432,7 +423,6 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Portfolio Insights */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
@@ -468,7 +458,6 @@ const AdvancedServicePortfolioDashboard = () => {
             </div>
           </CardContent>
         </Card>
-
         {/* Portfolio Insights */}
         <Card>
           <CardHeader>
@@ -512,7 +501,6 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
       </motion.div>
-
       {/* CTA Section */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">

@@ -202,7 +202,6 @@ export function InnovationResearchSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -213,7 +212,6 @@ export function InnovationResearchSection() {
             At Zion Tech Group, we push the boundaries of technology through cutting-edge research, 
             innovative solutions, and collaborative partnerships with leading institutions worldwide.
           </p>
-
           {/* Innovation stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {innovationStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -225,7 +223,6 @@ export function InnovationResearchSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Research Areas */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -250,7 +247,6 @@ export function InnovationResearchSection() {
                       {area.description}
                     </p>
                   </div>
-
                   {/* Quick stats */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -262,7 +258,6 @@ export function InnovationResearchSection() {
                       <div className="text-zion-slate-light text-xs">Researchers</div>
                     </div>
                   </div>
-
                   {/* Highlights preview */}
                   <div className="mb-4">
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Key Focus Areas:</div>
@@ -276,7 +271,6 @@ export function InnovationResearchSection() {
                         </div>)}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -284,7 +278,6 @@ export function InnovationResearchSection() {
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedResearch === area.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -298,7 +291,6 @@ export function InnovationResearchSection() {
                             <div className="text-zion-slate-light text-xs">Patents</div>
                           </div>
                         </div>
-
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Technologies:</h5>
                           <div className="flex flex-wrap gap-1">
@@ -307,14 +299,12 @@ export function InnovationResearchSection() {
                               </span>))}
                           </div>
                         </div>
-
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Partners:</h5>
                           <div className="text-zion-slate-light/80 text-xs">
                             {area.partners.join(", ")}
                           </div>
                         </div>
-
                         <div className="text-center p-2 rounded-lg bg-zion-cyan/20 border border-zion-cyan/30">
                           <div className="text-zion-cyan font-bold text-sm">{area.funding}</div>
                           <div className="text-zion-slate-light text-xs">Research Funding</div>
@@ -325,7 +315,6 @@ export function InnovationResearchSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Research Labs */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -352,14 +341,12 @@ export function InnovationResearchSection() {
                     <div className="text-zion-slate-light text-xs">Researchers</div>
                   </div>
                 </div>
-
                 <div className="text-zion-slate-light/80 text-xs">
                   <strong>Equipment:</strong> {lab.equipment}
                 </div>
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

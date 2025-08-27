@@ -20,7 +20,6 @@ const AIAutonomousLegalCounsel = () => {
               Your personal AI legal advisor available 24/7 for legal consultation, document review, and legal guidance
             </p>
           </div>
-
           {/* Legal Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIAutonomousLegalCounsel = () => {
               <p className="text-gray-300">Legal risk analysis and mitigation</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIAutonomousLegalCounsel = () => {
               <p className="text-gray-300">Always current with latest laws</p>
             </div>
           </div>
-
           {/* Legal Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Legal Consultation Process</h2>
@@ -113,7 +110,6 @@ const AIAutonomousLegalCounsel = () => {
               </div>
             </div>
           </div>
-
           {/* Legal Areas */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Legal Practice Areas</h2>
@@ -123,7 +119,6 @@ const AIAutonomousLegalCounsel = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Legal Applications</h2>
@@ -144,7 +139,6 @@ const AIAutonomousLegalCounsel = () => {
               </div>
             </div>
           </div>
-
           {/* Disclaimer */}
           <div className="mb-16 text-center">
             <div className="bg-yellow-600/20 border border-yellow-600/40 rounded-xl p-6 max-w-4xl mx-auto">
@@ -154,7 +148,6 @@ const AIAutonomousLegalCounsel = () => {
               </p>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI Legal Support?</h2>

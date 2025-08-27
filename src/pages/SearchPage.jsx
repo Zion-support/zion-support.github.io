@@ -24,7 +24,6 @@ export default function SearchPage() {
         <form onSubmit={handleSubmit} className="mb-6">
           <EnhancedSearchInput value={query} onChange={setQuery} searchSuggestions={suggestions} placeholder="Search talent, jobs, and projects..."/>
         </form>
-
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results.length === 0 && (<p className="text-zion-slate-light">No results found.</p>)}
         {!loading && results.length > 0 && (<div className="space-y-4">

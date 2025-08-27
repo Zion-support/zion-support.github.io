@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
@@ -72,7 +72,7 @@ export default function TranslationManager() {
             Object.entries(langTranslations).forEach(([key, value]) => {
                 if (key.toLowerCase().includes(query) ||
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
-                    filtered.push(key);
+                    filtered(key);
                 }
             });
         });

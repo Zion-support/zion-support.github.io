@@ -70,7 +70,6 @@ const ComprehensiveServicesShowcase2025 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-800 to-purple-800 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +89,6 @@ const ComprehensiveServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-
       {/* Search and Filters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-12">
@@ -114,7 +112,6 @@ const ComprehensiveServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
-
         {/* Services Grid */}
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -137,7 +134,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     {service.industry}
                   </div>)}
               </div>
-
               {/* Features */}
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -152,7 +148,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                   {service.features.length > 4 && (<span className="text-blue-300 text-sm">+{service.features.length - 4} more features</span>)}
                 </div>
               </div>
-
               {/* Benefits */}
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -166,7 +161,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     </div>))}
                 </div>
               </div>
-
               {/* Pricing & ROI */}
               <div className="mb-6 p-4 bg-white/5 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
@@ -185,7 +179,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <span className="text-yellow-400 text-sm font-semibold">{service.roi}</span>
                 </div>
               </div>
-
               {/* Technology & Compliance */}
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-3">
@@ -205,7 +198,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </div>
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className="flex gap-3">
                 <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
@@ -217,7 +209,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                   Learn More
                 </motion.button>
               </div>
-
               {/* Contact Info */}
               <div className="mt-4 pt-4 border-t border-white/20">
                 <div className="flex items-center justify-between text-sm">
@@ -237,7 +228,6 @@ const ComprehensiveServicesShowcase2025 = () => {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Call to Action */}
         {filteredServices.length === 0 && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
             <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -251,7 +241,6 @@ const ComprehensiveServicesShowcase2025 = () => {
             </button>
           </motion.div>)}
       </div>
-
                 {/* Service Details */}
                 <div className="space-y-4 mb-6">
                   {/* Category & Price */}
@@ -268,7 +257,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                       </div>
                     </div>
                   </div>
-
                   {/* Rating & AI Score */}
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center gap-1">
@@ -281,7 +269,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                       <span className="text-white">AI: {service.aiScore}</span>
                     </div>
                   </div>
-
                   {/* Market Price */}
                   <div className="text-center py-2 bg-gray-800/50 rounded-lg">
                     <span className="text-xs text-gray-400">Market Price:</span>
@@ -290,7 +277,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Features Preview */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -303,7 +289,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <Link
@@ -319,7 +304,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                     Contact
                   </Link>
                 </div>
-
                 {/* Contact Info */}
                 <div className="mt-4 pt-4 border-t border-gray-700">
                   <div className="flex items-center justify-between text-xs text-gray-400">
@@ -343,7 +327,6 @@ const ComprehensiveServicesShowcase2025 = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
@@ -365,7 +348,6 @@ const ComprehensiveServicesShowcase2025 = () => {
           )}
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 via-blue-900/50 to-purple-900/50">
         <div className="max-w-4xl mx-auto text-center">

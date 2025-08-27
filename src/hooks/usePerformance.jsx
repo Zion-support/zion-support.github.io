@@ -103,7 +103,7 @@ export function usePerformance() {
         const result = [];
         Object.entries(metrics).forEach(([key, value]) => {
             if (value !== null) {
-                result.push({
+                result({
                     name: key.toUpperCase(),
                     value,
                     rating: getRating(key, value)

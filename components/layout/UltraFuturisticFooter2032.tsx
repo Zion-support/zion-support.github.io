@@ -11,14 +11,12 @@ import {
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon,
   MessageCircle as MessageCircleIcon, Star as StarIcon
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const mainNavigationRoutes = [
   { name: 'Home', href: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
   { name: 'Services', href: '/services', icon: Briefcase, description: 'Our comprehensive service portfolio' },
@@ -29,7 +27,6 @@ const mainNavigationRoutes = [
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
 ];
-
 const serviceCategories = [
   {
     title: '🚀 2032 Revolutionary AI Services',
@@ -86,7 +83,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const quickLinks = [
   { name: '2032 Services', href: '/2032-futuristic-services-showcase', icon: Star, description: 'Revolutionary 2032 services' },
   { name: 'Enhanced Pricing', href: '/enhanced-market-pricing-2032', icon: DollarSign, description: 'Comprehensive pricing analysis' },
@@ -97,7 +93,6 @@ const quickLinks = [
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
 ];
-
 const companyInfo = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -106,7 +101,6 @@ const companyInfo = [
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
 ];
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -115,7 +109,6 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
 ];
-
 const footerVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -127,12 +120,10 @@ const footerVariants = {
     }
   }
 };
-
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 };
-
 export default function UltraFuturisticFooter2032() {
   return (
     <footer className="relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden">
@@ -142,7 +133,6 @@ export default function UltraFuturisticFooter2032() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
         <motion.div
           variants={footerVariants}
@@ -171,7 +161,6 @@ export default function UltraFuturisticFooter2032() {
                 Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. 
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.
               </p>
-
               {/* Contact Information */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
@@ -198,7 +187,6 @@ export default function UltraFuturisticFooter2032() {
                 </div>
               </div>
             </motion.div>
-
             {/* Service Categories */}
             <motion.div variants={itemVariants} className="lg:col-span-2">
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -224,7 +212,6 @@ export default function UltraFuturisticFooter2032() {
                 ))}
               </div>
             </motion.div>
-
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className="lg:col-span-1">
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -248,7 +235,6 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
-
               {/* Company Info */}
               <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
@@ -265,7 +251,6 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
-
               {/* Social Links */}
               <div>
                 <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
@@ -285,7 +270,6 @@ export default function UltraFuturisticFooter2032() {
               </div>
             </motion.div>
           </div>
-
           {/* Newsletter Signup */}
           <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
             <div className="text-center">
@@ -308,7 +292,6 @@ export default function UltraFuturisticFooter2032() {
               </div>
             </div>
           </motion.div>
-
           {/* Bottom Bar */}
           <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -333,7 +316,6 @@ export default function UltraFuturisticFooter2032() {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Floating Action Button */}
       <div className="fixed bottom-8 right-8 z-50">
         <motion.button

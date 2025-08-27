@@ -1,22 +1,16 @@
 import React, { useEffect, useRef } from 'react';
-
 const UltraFuturisticBackground2034: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     let animationFrameId: number;
     let particles: Particle[] = [];
     let connections: Connection[] = [];
-
     class Particle {
       x: number;
       y: number;
@@ -25,7 +19,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       size: number;
       color: string;
       alpha: number;
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -35,17 +28,13 @@ const UltraFuturisticBackground2034: React.FC = () => {
         this.color = ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][Math.floor(Math.random() * 5)];
         this.alpha = Math.random() * 0.5 + 0.3;
       }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
-
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
         this.alpha = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.3 + 0.5;
       }
-
       draw() {
         ctx.save();
         ctx.globalAlpha = this.alpha;
@@ -58,12 +47,10 @@ const UltraFuturisticBackground2034: React.FC = () => {
         ctx.restore();
       }
     }
-
     class Connection {
       particle1: Particle;
       particle2: Particle;
       distance: number;
-
       constructor(p1: Particle, p2: Particle) {
         this.particle1 = p1;
         this.particle2 = p2;
@@ -71,7 +58,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
           Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2)
         );
       }
-
       draw() {
         if (this.distance < 150) {
           const alpha = (150 - this.distance) / 150 * 0.3;
@@ -86,22 +72,18 @@ const UltraFuturisticBackground2034: React.FC = () => {
         }
       }
     }
-
     // Initialize particles
     for (let i = 0; i < 100; i++) {
       particles.push(new Particle());
     }
-
     // Create connections
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         connections.push(new Connection(particles[i], particles[j]));
       }
     }
-
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Draw gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2,
@@ -116,24 +98,19 @@ const UltraFuturisticBackground2034: React.FC = () => {
       gradient.addColorStop(1, 'rgba(0, 255, 255, 0.05)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
         particle.draw();
       });
-
       // Draw connections
       connections.forEach(connection => {
         connection.draw();
       });
-
       // Draw floating geometric shapes
       drawFloatingShapes();
-
       animationFrameId = requestAnimationFrame(animate);
     };
-
     const drawFloatingShapes = () => {
       const time = Date.now() * 0.001;
       
@@ -147,7 +124,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       ctx.shadowBlur = 20;
       drawHexagon(ctx, 40);
       ctx.restore();
-
       // Triangle
       ctx.save();
       ctx.translate(canvas.width * 0.8, canvas.height * 0.7);
@@ -158,7 +134,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       ctx.shadowBlur = 20;
       drawTriangle(ctx, 50);
       ctx.restore();
-
       // Circle
       ctx.save();
       ctx.translate(canvas.width * 0.5, canvas.height * 0.8);
@@ -171,7 +146,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       ctx.stroke();
       ctx.restore();
     };
-
     const drawHexagon = (ctx: CanvasRenderingContext2D, size: number) => {
       ctx.beginPath();
       for (let i = 0; i < 6; i++) {
@@ -187,7 +161,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       ctx.closePath();
       ctx.stroke();
     };
-
     const drawTriangle = (ctx: CanvasRenderingContext2D, size: number) => {
       ctx.beginPath();
       for (let i = 0; i < 3; i++) {
@@ -203,22 +176,17 @@ const UltraFuturisticBackground2034: React.FC = () => {
       ctx.closePath();
       ctx.stroke();
     };
-
     animate();
-
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
-
   return (
     <>
       {/* Canvas Background */}
@@ -227,7 +195,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
         className="fixed inset-0 pointer-events-none z-0"
         style={{ zIndex: 0 }}
       />
-
       {/* Additional CSS-based animated elements */}
       <div className="fixed inset-0 pointer-events-none z-0">
         {/* Floating orbs */}
@@ -246,5 +213,4 @@ const UltraFuturisticBackground2034: React.FC = () => {
     </>
   );
 };
-
 export default UltraFuturisticBackground2034;

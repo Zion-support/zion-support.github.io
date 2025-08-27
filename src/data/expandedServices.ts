@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings";
-
 // Real, market-competitive micro SAAS services and IT solutions
 export const EXPANDED_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -71,7 +70,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 92
   },
-
   // Cloud & DevOps Services
   {
     id: "cloud-migration-enterprise",
@@ -140,7 +138,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     availability: "3-5 Weeks",
     aiScore: 89
   },
-
   // Cybersecurity Services
   {
     id: "cybersecurity-audit-complete",
@@ -209,7 +206,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     availability: "4-6 Weeks",
     aiScore: 90
   },
-
   // Data & Analytics Services
   {
     id: "data-warehouse-enterprise",
@@ -278,7 +274,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 91
   },
-
   // Web & Mobile Development
   {
     id: "progressive-web-app",
@@ -347,7 +342,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 93
   },
-
   // Blockchain & Web3 Services
   {
     id: "smart-contract-development",
@@ -394,7 +388,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     availability: "10-14 Weeks",
     aiScore: 94
   },
-
   // IoT & Hardware Integration
   {
     id: "iot-platform-development",
@@ -440,7 +433,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     availability: "6-8 Weeks",
     aiScore: 90
   },
-
   // Business Intelligence & Automation
   {
     id: "business-process-automation",
@@ -488,7 +480,6 @@ export const EXPANDED_SERVICES: ProductListing[] = [
     aiScore: 94
   }
 ];
-
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
   { label: 'AI Development', value: 'ai-development' },
@@ -504,7 +495,6 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   { label: 'Business Automation', value: 'business-automation' },
   { label: 'Business Solutions', value: 'business-solutions' }
 ];
-
 // Service subcategories for detailed filtering
 export const EXPANDED_SERVICE_SUBCATEGORIES = {
   'ai-development': ['Chatbots', 'Analytics', 'Document Processing', 'Computer Vision', 'NLP'],

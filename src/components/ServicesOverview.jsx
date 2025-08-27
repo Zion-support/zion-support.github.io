@@ -286,7 +286,6 @@ export function ServicesOverview() {
             Discover our complete range of professional services designed to accelerate your business growth and digital transformation
           </p>
         </div>
-
         {/* Service Categories Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {serviceCategories.map((category, index) => (<div key={index} className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light hover:border-zion-cyan/50 transition-all duration-300">
@@ -345,7 +344,6 @@ export function ServicesOverview() {
               </Link>
             </div>))}
         </div>
-
         {/* Why Choose Us */}
         <div className="bg-zion-blue rounded-lg p-8 mb-16">
           <div className="text-center mb-12">
@@ -367,7 +365,6 @@ export function ServicesOverview() {
               </div>))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">

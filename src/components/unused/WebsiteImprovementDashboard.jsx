@@ -132,7 +132,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 left-4 z-50 p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Website improvement dashboard" aria-expanded={isOpen}>
         <ChartBarIcon className="w-6 h-6"/>
       </motion.button>
-
       {/* Dashboard Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0, x: -400 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -400 }} className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden">
@@ -148,7 +147,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 <XMarkIcon className="w-5 h-5"/>
               </button>
             </div>
-
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
               {[
@@ -164,7 +162,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                   {tab.label}
                 </button>))}
             </div>
-
             {/* Content */}
             <div className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]">
               {activeTab === 'overview' && (<div className="space-y-4">
@@ -195,7 +192,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       <div className="text-xs text-orange-600">WCAG Level</div>
                     </div>
                   </div>
-
                   {/* Action Button */}
                   <button onClick={runFullAnalysis} disabled={isAnalyzing} className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
                     {isAnalyzing ? (<>
@@ -206,7 +202,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                         Run Full Analysis
                       </>)}
                   </button>
-
                   {/* Recent Activity */}
                   <div>
                     <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
@@ -228,7 +223,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                     </div>
                   </div>
                 </div>)}
-
               {activeTab === 'performance' && (<div className="space-y-4">
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Performance Metrics
@@ -285,7 +279,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 })}
                   </div>
                 </div>)}
-
               {activeTab === 'seo' && (<div className="space-y-4">
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     SEO Analysis
@@ -340,7 +333,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       </div>
                     </div>)}
                 </div>)}
-
               {activeTab === 'accessibility' && (<div className="space-y-4">
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Accessibility Report
@@ -387,7 +379,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                       </div>
                     </div>)}
                 </div>)}
-
               {activeTab === 'recommendations' && (<div className="space-y-4">
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
                     Actionable Recommendations

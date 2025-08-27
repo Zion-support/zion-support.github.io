@@ -114,7 +114,6 @@ export function ServicesBenefitsShowcase() {
             for businesses worldwide. From cutting-edge AI to enterprise IT solutions, we deliver results.
           </p>
         </div>
-
         {/* Industry Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {industryStats.map((stat, index) => (<div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
@@ -122,7 +121,6 @@ export function ServicesBenefitsShowcase() {
               <div className="text-slate-300 text-sm">{stat.label}</div>
             </div>))}
         </div>
-
         {/* Service Benefits Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {serviceBenefits.map((service, index) => (<Card key={service.category} className="bg-slate-800/50 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105">
@@ -150,7 +148,6 @@ export function ServicesBenefitsShowcase() {
                       </li>))}
                   </ul>
                 </div>
-
                 {/* Use Cases */}
                 <div>
                   <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -164,7 +161,6 @@ export function ServicesBenefitsShowcase() {
                       </li>))}
                   </ul>
                 </div>
-
                 {/* Market Position */}
                 <div className="bg-slate-700/50 rounded-lg p-4">
                   <h4 className="text-white font-semibold mb-2">Market Position</h4>
@@ -184,7 +180,6 @@ export function ServicesBenefitsShowcase() {
                     <div className="text-cyan-400 font-semibold">{service.support}</div>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                   Explore {service.category}
@@ -193,7 +188,6 @@ export function ServicesBenefitsShowcase() {
               </CardContent>
             </Card>))}
         </div>
-
         {/* Competitive Advantages */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -230,7 +224,6 @@ export function ServicesBenefitsShowcase() {
             </div>
           </div>
         </div>
-
         {/* ROI and Success Metrics */}
         <div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 border border-cyan-500/30 rounded-2xl p-8 mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-8">
@@ -254,7 +247,6 @@ export function ServicesBenefitsShowcase() {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600 rounded-2xl p-12">
           <h3 className="text-3xl font-bold text-white mb-4">

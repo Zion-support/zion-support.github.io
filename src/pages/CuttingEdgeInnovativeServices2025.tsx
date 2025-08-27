@@ -42,18 +42,15 @@ import {
   getMarketInsights,
   getCompetitiveLandscape 
 } from '../../data/2025-comprehensive-pricing-analysis';
-
 export default function CuttingEdgeInnovativeServices2025() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
   const [viewMode, setViewMode] = useState('grid');
-
   const allServices = [...cuttingEdgeInnovativeServices2025, ...specializedIndustrySolutions2025];
   const marketInsights = getMarketInsights();
   const competitiveLandscape = getCompetitiveLandscape();
-
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesIndustry = selectedIndustry === 'All' || (service as any).industry === selectedIndustry;
@@ -62,7 +59,6 @@ export default function CuttingEdgeInnovativeServices2025() {
     
     return matchesCategory && matchesIndustry && matchesSearch;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
@@ -77,7 +73,6 @@ export default function CuttingEdgeInnovativeServices2025() {
         return 0;
     }
   });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -87,7 +82,6 @@ export default function CuttingEdgeInnovativeServices2025() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -98,7 +92,6 @@ export default function CuttingEdgeInnovativeServices2025() {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-cyan">
       <SEO 
@@ -107,7 +100,6 @@ export default function CuttingEdgeInnovativeServices2025() {
         keywords="AI services, quantum computing, blockchain, cybersecurity, manufacturing, healthcare, financial services, innovative technology"
         canonical="https://ziontechgroup.com/cutting-edge-innovative-services-2025"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -152,7 +144,6 @@ export default function CuttingEdgeInnovativeServices2025() {
               <div className="text-zion-slate-light text-sm">Fastest Payback</div>
             </div>
           </motion.div>
-
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -175,7 +166,6 @@ export default function CuttingEdgeInnovativeServices2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -197,7 +187,6 @@ export default function CuttingEdgeInnovativeServices2025() {
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                 />
               </div>
-
               {/* Category Filter */}
               <div className="relative">
                 <select
@@ -211,7 +200,6 @@ export default function CuttingEdgeInnovativeServices2025() {
                   ))}
                 </select>
               </div>
-
               {/* Industry Filter */}
               <div className="relative">
                 <select
@@ -225,7 +213,6 @@ export default function CuttingEdgeInnovativeServices2025() {
                   ))}
                 </select>
               </div>
-
               {/* Sort */}
               <div className="relative">
                 <select
@@ -243,7 +230,6 @@ export default function CuttingEdgeInnovativeServices2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
@@ -269,7 +255,6 @@ export default function CuttingEdgeInnovativeServices2025() {
                     </div>
                   )}
                 </div>
-
                 {/* Service Info */}
                 <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-3">{service.tagline}</p>
@@ -279,7 +264,6 @@ export default function CuttingEdgeInnovativeServices2025() {
                   <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
                   <span className="text-zion-slate-light ml-1">{service.period}</span>
                 </div>
-
                 {/* Features */}
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
@@ -292,7 +276,6 @@ export default function CuttingEdgeInnovativeServices2025() {
                     ))}
                   </ul>
                 </div>
-
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                   <div className="text-center">
@@ -304,7 +287,6 @@ export default function CuttingEdgeInnovativeServices2025() {
                     <div className="text-zion-slate-light">Customers</div>
                   </div>
                 </div>
-
                 {/* CTA */}
                 <Link
                   to={service.link}
@@ -318,7 +300,6 @@ export default function CuttingEdgeInnovativeServices2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Competitive Landscape */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
@@ -351,7 +332,6 @@ export default function CuttingEdgeInnovativeServices2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
@@ -386,7 +366,6 @@ export default function CuttingEdgeInnovativeServices2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">

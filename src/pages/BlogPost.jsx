@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, ChevronLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+<<<<<<< HEAD
 import { Separator } from "@/components/ui/separator";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
@@ -63,6 +64,100 @@ export default function BlogPost() {
               </Link>
             </Button>
           </div>
+=======
+// Mock blog post data for now
+const MOCK_BLOG_POST = {
+  id: 1,
+  title: "The Future of AI in Business",
+  excerpt: "Discover how artificial intelligence is transforming business operations and creating new opportunities for growth and innovation.",
+  content: `
+    <p>Artificial Intelligence (AI) is revolutionizing the way businesses operate, from customer service to decision-making processes. Companies that embrace AI technology are seeing significant improvements in efficiency, productivity, and customer satisfaction.</p>
+    
+    <h2>The Impact of AI on Business Operations</h2>
+    <p>AI-powered solutions are automating routine tasks, analyzing vast amounts of data, and providing insights that were previously impossible to obtain. This transformation is happening across all industries, from healthcare to finance to retail.</p>
+    
+    <h2>Key Benefits of AI Implementation</h2>
+    <ul>
+      <li>Increased operational efficiency</li>
+      <li>Better customer experiences</li>
+      <li>Data-driven decision making</li>
+      <li>Cost reduction through automation</li>
+      <li>Improved accuracy and consistency</li>
+    </ul>
+    
+    <h2>Looking Ahead</h2>
+    <p>As AI technology continues to evolve, businesses that stay ahead of the curve will have a significant competitive advantage. The future belongs to those who can effectively integrate AI into their operations while maintaining the human touch that customers value.</p>
+  `,
+  category: "AI & Technology",
+  publishedDate: "2024-01-15",
+  readTime: "5 min read",
+  author: { name: "Zion Tech Team", title: "AI Specialist", avatarUrl: "/images/avatar-placeholder.jpg" },
+  featuredImage: "/images/blog-ai-future.jpg",
+  slug: "future-of-ai-business",
+  tags: ["AI", "Business", "Technology", "Innovation", "Digital Transformation"]
+};
+export default function BlogPost() {
+  const { slug } = useParams();
+  const navigate = useNavigate();
+  const [post, setPost] = useState(MOCK_BLOG_POST);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  useEffect(() => {
+    // In a real app, you would fetch the post by slug from an API
+    // For now, we'll use the mock data
+    if (!post) {
+      navigate("/blog", { replace: true });
+    }
+    // Scroll to top when post changes
+    window.scrollTo(0, 0);
+  }, [slug, navigate, post]);
+  if (!post) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white p-8 flex justify-center items-center">
+        <div className="animate-pulse">Loading article...</div>
+      </div>
+    );
+  }
+  // Helper function to get share URL
+  const getShareUrl = (platform) => {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(post.title);
+    switch (platform) {
+      case 'facebook':
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      case 'twitter':
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+      case 'linkedin':
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+      default:
+        return '#';
+    }
+  };
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-32 pb-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Back to blog button */}
+        <div className="mb-8">
+          <Link 
+            to="/blog"
+            className="inline-flex items-center px-4 py-2 border border-zion-cyan/20 text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4"/>
+            Back to all articles
+          </Link>
+        </div>
+        
+        {/* Article header */}
+        <div className="mb-8 max-w-4xl mx-auto">
+          <span className="text-sm text-zion-cyan bg-zion-slate-dark/50 px-3 py-1 rounded-full inline-block mb-4">
+            {post.category}
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {post.title}
+          </h1>
+          <p className="text-xl text-zion-slate-light mb-8">
+            {post.excerpt}
+          </p>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
           
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">

@@ -1,147 +1,11 @@
 import React from 'react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CloudCostOptimizer() {
-<<<<<<< HEAD
-  const features = [
-    "AI-driven cost optimization algorithms",
-    "Multi-cloud support (AWS, Azure, GCP)",
-    "Real-time cost monitoring and alerts",
-    "Automated resource scaling",
-    "Reserved instance recommendations",
-    "Spot instance optimization",
-    "Storage lifecycle management",
-    "Cost allocation and tagging",
-    "Budget forecasting and planning",
-    "Performance vs. cost analysis",
-    "Automated cost optimization actions",
-    "Custom optimization policies"
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for small cloud deployments",
-      features: [
-        "Up to $5,000 monthly cloud spend",
-        "Basic cost optimization",
-        "Monthly cost reports",
-        "Email support",
-        "Basic cost alerts",
-        "AWS cost optimization"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to $50,000 monthly cloud spend",
-        "Advanced AI optimization",
-        "Real-time cost monitoring",
-        "Multi-cloud support",
-        "Priority support",
-        "Advanced analytics",
-        "Automated optimization",
-        "Custom cost policies"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large cloud deployments",
-      features: [
-        "Unlimited cloud spend",
-        "Premium AI optimization",
-        "24/7 cost monitoring",
-        "Full multi-cloud support",
-        "Phone & priority support",
-        "Custom optimization policies",
-        "API access & integrations",
-        "Dedicated cost analyst",
-        "Advanced forecasting",
-        "Custom reporting"
-      ],
-      popular: false
-    }
-  ];
-
-  const optimizationServices = [
-    {
-      title: "Cost Analysis & Monitoring",
-      description: "Real-time visibility into your cloud spending with detailed breakdowns and trend analysis.",
-      icon: <BarChart3 className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "AI-Powered Optimization",
-      description: "Machine learning algorithms that continuously optimize your cloud resources for maximum cost efficiency.",
-      icon: <BarChart3 className="h-8 w-8 text-zion-purple" />
-    },
-    {
-      title: "Multi-Cloud Management",
-      description: "Unified cost optimization across AWS, Azure, and Google Cloud Platform.",
-      icon: <Globe className="h-8 w-8 text-zion-cyan" />
-    },
-    {
-      title: "Automated Actions",
-      description: "Automatically implement cost-saving measures with your approval and oversight.",
-      icon: <Settings className="h-8 w-8 text-zion-purple" />
-    }
-  ];
-
-  const supportedClouds = [
-    "Amazon Web Services (AWS)",
-    "Microsoft Azure",
-    "Google Cloud Platform (GCP)",
-    "Oracle Cloud",
-    "IBM Cloud",
-    "DigitalOcean",
-    "Linode",
-    "Vultr"
-  ];
-
-  const costSavings = [
-    {
-      metric: "Average Cost Reduction",
-      value: "40%",
-      description: "Typical savings achieved by our customers"
-    },
-    {
-      metric: "ROI Timeline",
-      value: "2-3 months",
-      description: "Time to see positive return on investment"
-    },
-    {
-      metric: "Resource Utilization",
-      value: "85%",
-      description: "Average improvement in resource efficiency"
-    },
-    {
-      metric: "Cost Visibility",
-      value: "100%",
-      description: "Complete transparency into cloud spending"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
-      <SEOHead 
-        title="Cloud Cost Optimizer - Zion Tech Group" 
-        description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%."
-        keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings"
-        canonical="https://ziontechgroup.com/cloud-optimizer"
-      />
-=======
     const features = [
         "AI-driven cost optimization algorithms",
         "Multi-cloud support (AWS, Azure, GCP)",
@@ -265,8 +129,6 @@ export default function CloudCostOptimizer() {
     ];
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
       <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
@@ -293,7 +155,6 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
-
       {/* Cost Savings Metrics */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -317,7 +178,6 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
-
       {/* Optimization Services */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -343,7 +203,6 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
-
       {/* Supported Cloud Providers */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto">
@@ -366,7 +225,6 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
-
       {/* Features Grid */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -391,7 +249,6 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
@@ -434,7 +291,6 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { Check, Star, Brain, Zap, Shield, Globe, Heart, DollarSign, BookOpen, TrendingUp, Briefcase, Users, ArrowRight } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { ENHANCED_SERVICES_2025, EnhancedService2025 } from "../data/enhanced-services-2025";
-
 const categoryIcons: Record<string, React.ReactNode> = {
   "AI & Autonomous Systems": <Brain className="h-5 w-5" />,
   "Quantum Computing": <Zap className="h-5 w-5" />,
@@ -17,19 +16,14 @@ const categoryIcons: Record<string, React.ReactNode> = {
   "Supply Chain AI": <Briefcase className="h-5 w-5" />,
   "Education AI": <Users className="h-5 w-5" />
 };
-
 export default function ComprehensivePricingGuide2025() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [viewMode, setViewMode] = useState<"grid" | "table">("grid");
-
   const categories = ["All", ...Array.from(new Set(ENHANCED_SERVICES_2025.map(service => service.category)))];
-
   const filteredServices = ENHANCED_SERVICES_2025.filter(service => 
     selectedCategory === "All" || service.category === selectedCategory
   );
-
   const sortedServices = [...filteredServices].sort((a, b) => a.price - b.price);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       <SEO 
@@ -62,7 +56,6 @@ export default function ComprehensivePricingGuide2025() {
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark py-4 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto text-center text-white">
@@ -72,7 +65,6 @@ export default function ComprehensivePricingGuide2025() {
           </p>
         </div>
       </div>
-
       {/* Filters and View Toggle */}
       <div className="bg-zinc-800 py-6 px-4 border-b border-zinc-700">
         <div className="container mx-auto">
@@ -93,7 +85,6 @@ export default function ComprehensivePricingGuide2025() {
                 </button>
               ))}
             </div>
-
             {/* View Toggle */}
             <div className="flex gap-2">
               <button
@@ -120,7 +111,6 @@ export default function ComprehensivePricingGuide2025() {
           </div>
         </div>
       </div>
-
       {/* Pricing Content */}
       <div className="container mx-auto px-4 py-12">
         {viewMode === "grid" ? (
@@ -129,7 +119,6 @@ export default function ComprehensivePricingGuide2025() {
           <PricingTable services={sortedServices} />
         )}
       </div>
-
       {/* Pricing FAQ */}
       <div className="bg-zinc-800 py-16 px-4">
         <div className="container mx-auto">
@@ -154,7 +143,6 @@ export default function ComprehensivePricingGuide2025() {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
@@ -181,7 +169,6 @@ export default function ComprehensivePricingGuide2025() {
     </div>
   );
 }
-
 function PricingGrid({ services }: { services: EnhancedService2025[] }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -191,7 +178,6 @@ function PricingGrid({ services }: { services: EnhancedService2025[] }) {
     </div>
   );
 }
-
 function PricingCard({ service }: { service: EnhancedService2025 }) {
   return (
     <div className="bg-white rounded-xl shadow-2xl overflow-hidden border border-zinc-200 hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2">
@@ -208,7 +194,6 @@ function PricingCard({ service }: { service: EnhancedService2025 }) {
         <div className="text-3xl font-bold mb-2">${service.price.toLocaleString()}</div>
         <div className="text-sm opacity-90">per month</div>
       </div>
-
       {/* Content */}
       <div className="p-6">
         {/* Stats */}
@@ -224,7 +209,6 @@ function PricingCard({ service }: { service: EnhancedService2025 }) {
             <span className="text-zinc-500 text-sm">AI Score</span>
           </div>
         </div>
-
         {/* Features */}
         <div className="mb-6">
           <h4 className="font-semibold text-zinc-800 mb-3">What's Included:</h4>
@@ -237,7 +221,6 @@ function PricingCard({ service }: { service: EnhancedService2025 }) {
             ))}
           </ul>
         </div>
-
         {/* Trial & Setup */}
         <div className="bg-zinc-50 p-4 rounded-lg mb-6">
           <div className="grid grid-cols-2 gap-4 text-sm">
@@ -251,7 +234,6 @@ function PricingCard({ service }: { service: EnhancedService2025 }) {
             </div>
           </div>
         </div>
-
         {/* Action */}
         <Link to="/contact" className="block">
           <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -263,7 +245,6 @@ function PricingCard({ service }: { service: EnhancedService2025 }) {
     </div>
   );
 }
-
 function PricingTable({ services }: { services: EnhancedService2025[] }) {
   return (
     <div className="overflow-x-auto">

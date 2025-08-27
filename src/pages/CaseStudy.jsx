@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { CASE_STUDIES } from "@/data/case-studies";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 export default function CaseStudy() {
-    const router = useRouter();
+    const router = useNavigate();
     const { slug } = router.query;
     const study = CASE_STUDIES.find((s) => s.slug === slug);
     if (!study) {

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, TrendingUp, Users, Zap, ArrowRight, CheckCircle, Clock, DollarSign } from 'lucide-react';
 import Link from 'next/link';
-
 interface Service {
   id: string;
   name: string;
@@ -43,14 +42,12 @@ interface Service {
   rating: number;
   reviews: number;
 }
-
 interface Enhanced2026ServicesShowcaseV4Props {
   services: Service[];
   title?: string;
   subtitle?: string;
   showFilters?: boolean;
 }
-
 const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Props> = ({
   services,
   title = "Revolutionary 2026 Services",
@@ -61,7 +58,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
   const [searchTerm, setSearchTerm] = useState('');
-
   const categories = ['all', 'AI', 'Quantum', 'Enterprise', 'Micro SaaS', 'Emerging Tech', 'Cybersecurity', 'Blockchain'];
   const priceRanges = [
     { id: 'all', label: 'All Prices' },
@@ -70,7 +66,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
     { id: 'high', label: '$500 - $1000', min: 500, max: 1000 },
     { id: 'enterprise', label: '$1000+', min: 1000, max: Infinity }
   ];
-
   const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase());
@@ -78,7 +73,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
-
     let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -87,10 +81,8 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
         matchesPrice = price >= range.min && price <= range.max;
       }
     }
-
     return matchesCategory && matchesSearch && matchesPrice;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
@@ -104,7 +96,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
         return a.name.localeCompare(b.name);
     }
   });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -114,7 +105,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -125,7 +115,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
       }
     }
   };
-
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Effects */}
@@ -147,7 +136,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
             {subtitle}
           </p>
         </motion.div>
-
         {/* Filters */}
         {showFilters && (
           <motion.div
@@ -171,7 +159,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                 </div>
               </div>
             </div>
-
             {/* Filter Controls */}
             <div className="flex flex-wrap justify-center gap-4">
               {/* Category Filter */}
@@ -190,7 +177,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                   </button>
                 ))}
               </div>
-
               {/* Price Range Filter */}
               <select
                 value={selectedPriceRange}
@@ -203,7 +189,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                   </option>
                 ))}
               </select>
-
               {/* Sort By */}
               <select
                 value={sortBy}
@@ -218,7 +203,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
             </div>
           </motion.div>
         )}
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -241,7 +225,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                       ⭐ Popular
                     </div>
                   )}
-
                   {/* Service Icon */}
                   <div className="flex items-center justify-between mb-4">
                     <div className={`text-4xl ${service.textColor}`}>
@@ -253,7 +236,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-
                   {/* Service Info */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {service.name}
@@ -264,7 +246,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                   <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Price */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-white">
@@ -275,7 +256,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                       {service.trialDays} days free
                     </div>
                   </div>
-
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
@@ -288,7 +268,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                       ))}
                     </div>
                   </div>
-
                   {/* Market Info */}
                   <div className="space-y-2 mb-6 text-xs">
                     <div className="flex justify-between">
@@ -304,7 +283,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                       <span className="text-white">{service.customers.toLocaleString()}</span>
                     </div>
                   </div>
-
                   {/* CTA Button */}
                   <Link
                     href={service.link}
@@ -313,7 +291,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
-
                   {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 </div>
@@ -321,7 +298,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
             ))}
           </AnimatePresence>
         </motion.div>
-
         {/* Results Count */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -335,5 +311,4 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
     </section>
   );
 };
-
 export default Enhanced2026ServicesShowcaseV4;

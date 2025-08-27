@@ -21,16 +21,13 @@ import {
 } from 'lucide-react';
 import { revolutionary2029AdvancedMicroSaasServices } from '../../data/revolutionary-2029-advanced-micro-saas-services';
 import { revolutionary2030CuttingEdgeInnovations } from '../../data/revolutionary-2030-cutting-edge-innovations';
-
 export default function RevolutionaryServicesShowcase2030() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const allServices = [
     ...revolutionary2029AdvancedMicroSaasServices,
     ...revolutionary2030CuttingEdgeInnovations
   ];
-
   const categories = [
     'all',
     'AI & Autonomous',
@@ -49,7 +46,6 @@ export default function RevolutionaryServicesShowcase2030() {
     'Multiversal',
     'Consciousness'
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
@@ -61,7 +57,6 @@ export default function RevolutionaryServicesShowcase2030() {
     
     return matchesCategory && matchesSearch;
   });
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -71,7 +66,6 @@ export default function RevolutionaryServicesShowcase2030() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -82,7 +76,6 @@ export default function RevolutionaryServicesShowcase2030() {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -120,7 +113,6 @@ export default function RevolutionaryServicesShowcase2030() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -152,7 +144,6 @@ export default function RevolutionaryServicesShowcase2030() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8" id="services">
         <div className="max-w-7xl mx-auto">
@@ -185,7 +176,6 @@ export default function RevolutionaryServicesShowcase2030() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -221,11 +211,9 @@ export default function RevolutionaryServicesShowcase2030() {
                   </div>
                   <p className="text-sm text-gray-500">{service.setupTime} setup</p>
                 </div>
-
                 <div className="mb-4">
                   <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                 </div>
-
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -237,7 +225,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     ))}
                   </ul>
                 </div>
-
                 <div className="mb-4">
                   <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
                     <TrendingUp className="w-4 h-4" />
@@ -247,7 +234,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     <span className="text-cyan-400 font-semibold">ROI:</span> {service.roi}
                   </div>
                 </div>
-
                 <div className="flex flex-col gap-2">
                   <a
                     href={service.link}
@@ -270,7 +256,6 @@ export default function RevolutionaryServicesShowcase2030() {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50" id="contact">
         <div className="max-w-7xl mx-auto">
@@ -289,7 +274,6 @@ export default function RevolutionaryServicesShowcase2030() {
               can drive innovation and growth in your organization.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <motion.div
@@ -306,7 +290,6 @@ export default function RevolutionaryServicesShowcase2030() {
                   cutting-edge solutions that will revolutionize your business operations.
                 </p>
               </div>
-
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="bg-cyan-500/20 p-3 rounded-lg">
@@ -319,7 +302,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     </a>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-4">
                   <div className="bg-cyan-500/20 p-3 rounded-lg">
                     <Mail className="w-6 h-6 text-cyan-400" />
@@ -331,7 +313,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     </a>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-4">
                   <div className="bg-cyan-500/20 p-3 rounded-lg">
                     <MapPin className="w-6 h-6 text-cyan-400" />
@@ -345,7 +326,6 @@ export default function RevolutionaryServicesShowcase2030() {
                   </div>
                 </div>
               </div>
-
               <div className="pt-6">
                 <h4 className="text-white font-semibold mb-4">Why Choose Zion Tech Group?</h4>
                 <ul className="space-y-2 text-gray-300">
@@ -368,7 +348,6 @@ export default function RevolutionaryServicesShowcase2030() {
                 </ul>
               </div>
             </motion.div>
-
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -397,7 +376,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     />
                   </div>
                 </div>
-
                 <div>
                   <label className="block text-white font-medium mb-2">Email</label>
                   <input
@@ -406,7 +384,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     placeholder="Enter your email address"
                   />
                 </div>
-
                 <div>
                   <label className="block text-white font-medium mb-2">Company</label>
                   <input
@@ -415,7 +392,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     placeholder="Enter your company name"
                   />
                 </div>
-
                 <div>
                   <label className="block text-white font-medium mb-2">Service Interest</label>
                   <select className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
@@ -432,7 +408,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     <option value="other">Other</option>
                   </select>
                 </div>
-
                 <div>
                   <label className="block text-white font-medium mb-2">Message</label>
                   <textarea
@@ -441,7 +416,6 @@ export default function RevolutionaryServicesShowcase2030() {
                     placeholder="Tell us about your project or requirements..."
                   ></textarea>
                 </div>
-
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
@@ -454,7 +428,6 @@ export default function RevolutionaryServicesShowcase2030() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

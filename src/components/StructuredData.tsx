@@ -1,10 +1,8 @@
 import React from 'react'
-
 interface StructuredDataProps {
   type: 'organization' | 'website' | 'service'
   data: any
 }
-
 export default function StructuredData({ type, data }: StructuredDataProps) {
   const getStructuredData = () => {
     switch (type) {
@@ -62,7 +60,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
         return data
     }
   }
-
   return (
     <script
       type="application/ld+json"

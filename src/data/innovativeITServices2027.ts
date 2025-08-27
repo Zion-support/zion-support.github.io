@@ -36,7 +36,6 @@ export interface InnovativeITService2027 {
   quantumFeatures?: string[];
   blockchainFeatures?: string[];
 }
-
 export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
   // Quantum Computing Infrastructure Services
   {
@@ -113,7 +112,6 @@ export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
     competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum", "D-Wave", "Rigetti"],
     quantumFeatures: ["Quantum supremacy", "Quantum entanglement", "Quantum superposition", "Quantum tunneling"]
   },
-
   // Advanced AI-Powered DevOps Automation
   {
     id: "ai-powered-devops-automation",
@@ -189,7 +187,6 @@ export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
     competitors: ["GitLab", "GitHub Actions", "Jenkins", "CircleCI", "Travis CI"],
     aiCapabilities: ["Predictive analytics", "Automated decision making", "Performance optimization", "Anomaly detection"]
   },
-
   // Zero-Trust Security Architecture
   {
     id: "zero-trust-security-architecture",
@@ -264,7 +261,6 @@ export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
     marketSize: "$75 billion by 2027",
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Juniper Networks"]
   },
-
   // Edge Computing Infrastructure
   {
     id: "edge-computing-infrastructure",
@@ -339,7 +335,6 @@ export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
     marketSize: "$40 billion by 2027",
     competitors: ["AWS", "Microsoft Azure", "Google Cloud", "IBM", "Cisco"]
   },
-
   // Blockchain Infrastructure Services
   {
     id: "blockchain-infrastructure-services",
@@ -415,7 +410,6 @@ export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
     competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys", "R3"],
     blockchainFeatures: ["Smart contracts", "Decentralized identity", "Tokenization", "Cross-chain interoperability"]
   },
-
   // AI-Powered Data Engineering
   {
     id: "ai-powered-data-engineering",
@@ -491,7 +485,6 @@ export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
     competitors: ["Databricks", "Snowflake", "AWS", "Microsoft Azure", "Google Cloud"],
     aiCapabilities: ["Predictive analytics", "Automated data quality", "Intelligent data governance", "Real-time processing"]
   },
-
   // 5G Network Optimization
   {
     id: "5g-network-optimization",
@@ -566,7 +559,6 @@ export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
     marketSize: "$50 billion by 2027",
     competitors: ["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"]
   },
-
   // Sustainable IT Infrastructure
   {
     id: "sustainable-it-infrastructure",
@@ -642,5 +634,4 @@ export const INNOVATIVE_IT_SERVICES_2027: InnovativeITService2027[] = [
     competitors: ["Schneider Electric", "Siemens", "ABB", "Honeywell", "Johnson Controls"]
   }
 ];
-
 export default INNOVATIVE_IT_SERVICES_2027;

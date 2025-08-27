@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-
 interface UltraQuantumMatrixBackgroundProps {
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum' | 'neon' | 'cosmic' | 'cyber';
@@ -7,7 +6,6 @@ interface UltraQuantumMatrixBackgroundProps {
   animationSpeed?: number;
   children: React.ReactNode;
 }
-
 export default function UltraQuantumMatrixBackground({
   intensity = 'medium',
   colorScheme = 'quantum',
@@ -17,7 +15,6 @@ export default function UltraQuantumMatrixBackground({
 }: UltraQuantumMatrixBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-
   // Color schemes
   const getColorScheme = () => {
     switch (colorScheme) {
@@ -51,25 +48,19 @@ export default function UltraQuantumMatrixBackground({
         };
     }
   };
-
   const colors = getColorScheme();
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     // Set canvas size
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle system
     class Particle {
       x: number;
@@ -80,7 +71,6 @@ export default function UltraQuantumMatrixBackground({
       opacity: number;
       color: string;
       type: 'matrix' | 'quantum' | 'energy';
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -91,26 +81,21 @@ export default function UltraQuantumMatrixBackground({
         this.color = [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)];
         this.type = ['matrix', 'quantum', 'energy'][Math.floor(Math.random() * 3)] as any;
       }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
-
         // Wrap around edges
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
-
         // Fade in/out
         this.opacity += (Math.random() - 0.5) * 0.02;
         this.opacity = Math.max(0.1, Math.min(1, this.opacity));
       }
-
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
-
         switch (this.type) {
           case 'matrix': {
             // Matrix-style characters
@@ -121,7 +106,6 @@ export default function UltraQuantumMatrixBackground({
             ctx.fillText(char, this.x, this.y);
             break;
           }
-
           case 'quantum': {
             // Quantum wave function
             ctx.strokeStyle = this.color;
@@ -141,7 +125,6 @@ export default function UltraQuantumMatrixBackground({
             ctx.stroke();
             break;
           }
-
           case 'energy':
             // Energy particles
             ctx.fillStyle = this.color;
@@ -155,36 +138,29 @@ export default function UltraQuantumMatrixBackground({
             ctx.fill();
             ctx.shadowBlur = 0;
             break;
-
           default: {
             break;
           }
         }
-
         ctx.restore();
       }
     }
-
     // Create particles
     const particles: Particle[] = [];
     const actualParticleCount = Math.floor(particleCount * (intensity === 'low' ? 0.5 : intensity === 'high' ? 1.5 : 1));
-
     for (let i = 0; i < actualParticleCount; i++) {
       particles.push(new Particle());
     }
-
     // Connection lines
     const drawConnections = () => {
       ctx.strokeStyle = colors.primary;
       ctx.lineWidth = 0.5;
       ctx.globalAlpha = 0.3;
-
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-
           if (distance < 100) {
             const opacity = 1 - (distance / 100);
             ctx.globalAlpha = opacity * 0.3;
@@ -196,23 +172,19 @@ export default function UltraQuantumMatrixBackground({
         }
       }
     }
-
     // Grid effect
     const drawGrid = () => {
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.5;
       ctx.globalAlpha = 0.1;
-
       const gridSize = 50;
       const offset = (Date.now() * 0.01) % gridSize;
-
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
       }
-
       for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
@@ -220,16 +192,13 @@ export default function UltraQuantumMatrixBackground({
         ctx.stroke();
       }
     }
-
     // Quantum field effect
     const drawQuantumField = () => {
       ctx.strokeStyle = colors.accent;
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.1;
-
       const time = Date.now() * 0.001;
       const fieldStrength = Math.sin(time * 0.5) * 0.5 + 0.5;
-
       for (let i = 0; i < 10; i++) {
         const x = (canvas.width / 10) * i;
         const y = canvas.height / 2 + Math.sin(time + i) * 50 * fieldStrength;
@@ -240,28 +209,22 @@ export default function UltraQuantumMatrixBackground({
         ctx.stroke();
       }
     }
-
     // Animation loop
     const animate = () => {
       ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Draw effects
       drawGrid();
       drawQuantumField();
       drawConnections();
-
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
         particle.draw();
       });
-
       animationRef.current = requestAnimationFrame(animate);
     };
-
     animate();
-
     // Cleanup
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -270,7 +233,6 @@ export default function UltraQuantumMatrixBackground({
       }
     };
   }, [intensity, colorScheme, particleCount, animationSpeed, colors]);
-
   return (
     <div className="relative min-h-screen">
       <canvas

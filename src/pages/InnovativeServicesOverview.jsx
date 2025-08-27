@@ -77,7 +77,6 @@ const InnovativeServicesOverview = () => {
               Call Now: +1 302 464 0950
             </a>
           </div>
-
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">Contact Information</h2>
@@ -101,7 +100,6 @@ const InnovativeServicesOverview = () => {
           </div>
         </motion.div>
       </section>
-
       {/* Category Filter */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -115,7 +113,6 @@ const InnovativeServicesOverview = () => {
           </div>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -142,7 +139,6 @@ const InnovativeServicesOverview = () => {
                     {service.trialDays} days free trial • {service.setupTime} setup
                   </div>
                 </div>
-
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center text-sm">
                     <span className="text-cyan-400 mr-2">📊</span>
@@ -161,7 +157,6 @@ const InnovativeServicesOverview = () => {
                     <span className="text-gray-300">{service.customers} customers</span>
                   </div>
                 </div>
-
                 <div className="text-center">
                   <a href={service.link} className="inline-block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                     Learn More
@@ -171,7 +166,6 @@ const InnovativeServicesOverview = () => {
           </div>
         </div>
       </section>
-
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -187,7 +181,6 @@ const InnovativeServicesOverview = () => {
                 ×
               </button>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-bold mb-4">Service Details</h3>
@@ -217,17 +210,13 @@ const InnovativeServicesOverview = () => {
                     <span>{selectedService.customers}</span>
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold mb-4">Market Position</h3>
                 <p className="text-gray-300 mb-4">{selectedService.marketPosition}</p>
-
                 <h3 className="text-xl font-bold mb-4">ROI</h3>
                 <p className="text-gray-300 mb-4">{selectedService.roi}</p>
-
                 <h3 className="text-xl font-bold mb-4">Market Size</h3>
                 <p className="text-gray-300 mb-4">{selectedService.marketSize} • {selectedService.growthRate}</p>
               </div>
-
               <div>
                 <h3 className="text-xl font-bold mb-4">Features</h3>
                 <ul className="space-y-2 mb-6">
@@ -236,21 +225,18 @@ const InnovativeServicesOverview = () => {
                       {feature}
                     </li>))}
                 </ul>
-
                 <h3 className="text-xl font-bold mb-4">Technology Stack</h3>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedService.technology.map((tech, index) => (<span key={index} className="bg-blue-600/20 text-blue-300 px-2 py-1 rounded text-sm">
                       {tech}
                     </span>))}
                 </div>
-
                 <h3 className="text-xl font-bold mb-4">Use Cases</h3>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedService.useCases.map((useCase, index) => (<span key={index} className="bg-green-600/20 text-green-300 px-2 py-1 rounded text-sm">
                       {useCase}
                     </span>))}
                 </div>
-
                 <h3 className="text-xl font-bold mb-4">Competitors</h3>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedService.competitors.map((competitor, index) => (<span key={index} className="bg-red-600/20 text-red-300 px-2 py-1 rounded text-sm">
@@ -259,7 +245,6 @@ const InnovativeServicesOverview = () => {
                 </div>
               </div>
             </div>
-
             <div className="mt-8 text-center">
               <a href={selectedService.link} className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 mr-4">
                 Get Started
@@ -270,7 +255,6 @@ const InnovativeServicesOverview = () => {
             </div>
           </motion.div>
         </div>)}
-
       {/* Footer CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

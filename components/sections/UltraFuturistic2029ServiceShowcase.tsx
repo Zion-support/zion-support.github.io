@@ -3,16 +3,13 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-
 type Service = CuttingEdgeInnovation2029 | any;
-
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[];
   title?: string;
   subtitle?: string;
   maxServices?: number;
 }
-
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-600 to-pink-600',
   'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',
@@ -24,7 +21,6 @@ const categoryColors: { [key: string]: string } = {
   'Quantum & Time': 'from-green-600 to-emerald-600',
   'AI & Augmented Reality': 'from-orange-600 to-red-600'
 };
-
 const categoryIcons: { [key: string]: any } = {
   'AI & Consciousness': Brain,
   'Quantum & Neuroscience': Cpu,
@@ -36,7 +32,6 @@ const categoryIcons: { [key: string]: any } = {
   'Quantum & Time': Timer,
   'AI & Augmented Reality': Eye
 };
-
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
   services,
   title = "2029 Ultra-Futuristic Innovations",
@@ -45,10 +40,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
-
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))];
-
   // Filter and sort services
   const filteredServices = services
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
@@ -73,7 +66,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       }
     })
     .slice(0, maxServices);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -83,7 +75,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -95,7 +86,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       }
     }
   };
-
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -104,7 +94,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -130,7 +119,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             {subtitle}
           </motion.p>
         </motion.div>
-
         {/* Filters and Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -157,7 +145,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               ))}
             </div>
           </div>
-
           {/* Sort Options */}
           <div className="flex items-center space-x-2">
             <span className="text-gray-300 text-sm font-medium">Sort by:</span>
@@ -172,7 +159,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </select>
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -194,7 +180,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -225,7 +210,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </div>
           </div>
         </motion.div>
-
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -260,5 +244,4 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
     </section>
   );
 };
-
 export default UltraFuturistic2029ServiceShowcase;

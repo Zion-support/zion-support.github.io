@@ -3,14 +3,12 @@ import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, DollarSign, Shield, Rocket, Brain, Globe, Cpu, Atom } from 'lucide-react';
 import { innovative2026Services } from '../../data/innovative-2026-services';
 import { emergingTech2026Services } from '../../data/emerging-tech-2026-services';
-
 interface EnhancedServiceShowcase2026Props {
   title?: string;
   subtitle?: string;
   showPricing?: boolean;
   maxServices?: number;
 }
-
 const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = ({
   title = "Revolutionary 2026 Services",
   subtitle = "Experience the future with our cutting-edge AI, quantum, and emerging technology solutions",
@@ -19,7 +17,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-
   // Combine all services
   const allServices = [...innovative2026Services, ...emergingTech2026Services];
   
@@ -27,10 +24,8 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
   const filteredServices = selectedCategory === 'all' 
     ? allServices.slice(0, maxServices)
     : allServices.filter(service => service.category.includes(selectedCategory)).slice(0, maxServices);
-
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category.split('&')[0].trim())))];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -40,7 +35,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
       }
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -52,7 +46,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
       }
     }
   };
-
   const hoverVariants = {
     hover: {
       y: -10,
@@ -63,7 +56,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
       }
     }
   };
-
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return <Brain className="w-5 h-5" />;
     if (category.includes('Quantum')) return <Atom className="w-5 h-5" />;
@@ -73,7 +65,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
     if (category.includes('Robotics')) return <Cpu className="w-5 h-5" />;
     return <Zap className="w-5 h-5" />;
   };
-
   const getCategoryColor = (category: string) => {
     if (category.includes('AI')) return 'from-blue-600 to-indigo-700';
     if (category.includes('Quantum')) return 'from-purple-600 to-pink-700';
@@ -83,7 +74,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
     if (category.includes('Robotics')) return 'from-blue-600 to-indigo-700';
     return 'from-green-600 to-emerald-700';
   };
-
   return (
     <section className="py-20 px-4 relative overflow-hidden">
       {/* Background Effects */}
@@ -115,7 +105,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
             {subtitle}
           </motion.p>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -140,7 +129,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
             </motion.button>
           ))}
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -176,7 +164,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
                     Popular
                   </motion.div>
                 )}
-
                 {/* Service Icon */}
                 <motion.div
                   className="text-6xl mb-6 flex justify-center"
@@ -185,7 +172,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
                 >
                   {service.icon}
                 </motion.div>
-
                 {/* Service Content */}
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
@@ -199,7 +185,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {service.description}
                   </p>
-
                   {/* Features */}
                   <div className="space-y-2">
                     <h4 className="text-white font-semibold text-sm uppercase tracking-wider">
@@ -214,7 +199,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
                       ))}
                     </ul>
                   </div>
-
                   {/* Pricing & CTA */}
                   {showPricing && (
                     <div className="pt-4 border-t border-gray-700/50">
@@ -239,7 +223,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
                       </motion.button>
                     </div>
                   )}
-
                   {/* Service Stats */}
                   <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-700/50">
                     <div className="text-center">
@@ -252,7 +235,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
                     </div>
                   </div>
                 </div>
-
                 {/* Hover Effects */}
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -262,7 +244,6 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -288,5 +269,4 @@ const EnhancedServiceShowcase2026: React.FC<EnhancedServiceShowcase2026Props> = 
     </section>
   );
 };
-
 export default EnhancedServiceShowcase2026;

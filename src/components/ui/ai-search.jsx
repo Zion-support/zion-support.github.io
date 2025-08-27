@@ -229,7 +229,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             {isSearching ? (<div className="w-4 h-4 border-2 border-zion-blue-dark border-t-transparent rounded-full animate-spin"/>) : (<Search className="w-4 h-4"/>)}
           </Button>
         </div>
-
         {/* Clear Button */}
         {query && (<motion.button initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} onClick={() => {
                 setQuery('');
@@ -240,7 +239,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
             <X className="w-4 h-4"/>
           </motion.button>)}
       </div>
-
       {/* Search Results Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl z-50 max-h-96 overflow-hidden" initial={{ opacity: 0, y: -10, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -10, scale: 0.95 }} transition={{ duration: 0.2, ease: "easeOut" }}>
@@ -265,7 +263,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 </Button>
               </div>
             </div>
-
             {/* Filters Panel */}
             <AnimatePresence>
               {showFilters && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
@@ -310,7 +307,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                   </div>
                 </motion.div>)}
             </AnimatePresence>
-
             {/* Content */}
             <div className="max-h-64 overflow-y-auto">
               {/* Search History */}
@@ -328,7 +324,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       </button>))}
                   </div>
                 </div>)}
-
               {/* AI Suggestions */}
               {suggestions.length > 0 && (<div className="p-4 border-b border-zion-blue-light/30">
                   <h4 className="text-zinc-300 text-sm font-medium mb-3 flex items-center gap-2">
@@ -345,7 +340,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       </button>))}
                   </div>
                 </div>)}
-
               {/* Search Results */}
               {results.length > 0 && (<div className="p-4">
                   <h4 className="text-zinc-300 text-sm font-medium mb-3 flex items-center gap-2">
@@ -389,7 +383,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                       </motion.div>))}
                   </div>
                 </div>)}
-
               {/* No Results */}
               {query && results.length === 0 && !isSearching && (<div className="p-8 text-center">
                   <Search className="w-12 h-12 text-zinc-500 mx-auto mb-3"/>
@@ -399,7 +392,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                   </p>
                 </div>)}
             </div>
-
             {/* Footer Actions */}
             <div className="p-4 border-t border-zion-blue-light/30 bg-zion-blue/10">
               <div className="flex items-center justify-between">

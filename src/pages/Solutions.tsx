@@ -18,7 +18,6 @@ const Solutions = () => {
             </p>
           </div>
         </section>
-
         {/* Solutions Grid */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -38,7 +37,6 @@ const Solutions = () => {
                   Learn More →
                 </Link>
               </div>
-
               {/* Cloud Platforms */}
               <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
@@ -54,7 +52,6 @@ const Solutions = () => {
                   Learn More →
                 </Link>
               </div>
-
               {/* Cybersecurity */}
               <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
@@ -70,7 +67,6 @@ const Solutions = () => {
                   Learn More →
                 </Link>
               </div>
-
               {/* Digital Transformation */}
               <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
@@ -86,7 +82,6 @@ const Solutions = () => {
                   Learn More →
                 </Link>
               </div>
-
               {/* Infrastructure */}
               <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
@@ -102,7 +97,6 @@ const Solutions = () => {
                   Learn More →
                 </Link>
               </div>
-
               {/* Consulting */}
               <div className="bg-black/30 p-8 rounded-lg border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg mb-6 flex items-center justify-center">

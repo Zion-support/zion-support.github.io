@@ -1,5 +1,5 @@
 import React from "react";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { MobileAppHero } from "@/components/mobile-app/MobileAppHero";
 import { AppFeatures } from "@/components/mobile-app/AppFeatures";
 import { AppScreenshots } from "@/components/mobile-app/AppScreenshots";

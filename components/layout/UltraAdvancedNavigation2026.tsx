@@ -7,14 +7,12 @@ import {
   Microscope, DollarSign, Home, Users, Briefcase, 
   BookOpen, MessageCircle 
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: 'AI & Machine Learning 2026',
@@ -90,7 +88,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'About Us', href: '/about', icon: Users },
@@ -103,12 +100,10 @@ const companyLinks = [
   { name: 'Careers', href: '/careers', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -116,7 +111,6 @@ const UltraAdvancedNavigation2026 = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navigationItems = [
     {
       name: 'AI Services',
@@ -173,13 +167,11 @@ const UltraAdvancedNavigation2026 = () => {
       ]
     }
   ];
-
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-
   return (
     <>
       {/* Enhanced Navigation Bar */}
@@ -205,7 +197,6 @@ const UltraAdvancedNavigation2026 = () => {
                 <div className="text-xs text-gray-400">Revolutionary Technology Solutions</div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
@@ -220,7 +211,6 @@ const UltraAdvancedNavigation2026 = () => {
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -273,7 +263,6 @@ const UltraAdvancedNavigation2026 = () => {
                   </AnimatePresence>
                 </div>
               ))}
-
               {/* Quick Links */}
               <div className="flex items-center space-x-6">
                 <Link href="/services" className="text-gray-300 hover:text-white transition-colors duration-200 font-medium">
@@ -287,7 +276,6 @@ const UltraAdvancedNavigation2026 = () => {
                 </Link>
               </div>
             </div>
-
             {/* Contact Info - Desktop */}
             <div className="hidden lg:flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200">
@@ -301,7 +289,6 @@ const UltraAdvancedNavigation2026 = () => {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -312,7 +299,6 @@ const UltraAdvancedNavigation2026 = () => {
           </div>
         </div>
       </nav>
-
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -347,7 +333,6 @@ const UltraAdvancedNavigation2026 = () => {
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Mobile Navigation Items */}
               <div className="space-y-4">
                 {navigationItems.map((item) => (
@@ -378,7 +363,6 @@ const UltraAdvancedNavigation2026 = () => {
                     </div>
                   </div>
                 ))}
-
                 {/* Quick Links */}
                 <div className="space-y-3 pt-4">
                   <Link
@@ -403,7 +387,6 @@ const UltraAdvancedNavigation2026 = () => {
                     Contact
                   </Link>
                 </div>
-
                 {/* Contact Info - Mobile */}
                 <div className="pt-6 border-t border-gray-700/50 space-y-3">
                   <div className="flex items-center space-x-3 text-gray-300">
@@ -419,7 +402,6 @@ const UltraAdvancedNavigation2026 = () => {
                     <span className="text-sm">{contactInfo.address}</span>
                   </div>
                 </div>
-
                 {/* Get Started Button - Mobile */}
                 <div className="pt-4">
                   <Link
@@ -435,11 +417,9 @@ const UltraAdvancedNavigation2026 = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
   );
 }
-
 export default UltraAdvancedNavigation2026;

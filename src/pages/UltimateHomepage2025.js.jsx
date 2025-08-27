@@ -139,7 +139,6 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -174,7 +173,6 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
-
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -187,7 +185,6 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -209,7 +206,6 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
-
       {/* Featured Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -262,7 +258,6 @@ export default function UltimateHomepage2025() {
           </Link>
         </div>
       </div>
-
       {/* Industries Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -285,7 +280,6 @@ export default function UltimateHomepage2025() {
             </div>))}
         </div>
       </div>
-
       {/* All Services Preview */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
@@ -327,7 +321,6 @@ export default function UltimateHomepage2025() {
           </Link>
         </div>
       </div>
-
       {/* Call to Action Section */}
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

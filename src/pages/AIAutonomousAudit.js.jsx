@@ -20,7 +20,6 @@ const AIAutonomousAudit = () => {
               Your AI audit partner that continuously conducts audits, examines systems, and ensures compliance with intelligent autonomous operation
             </p>
           </div>
-
           {/* Audit Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIAutonomousAudit = () => {
               <p className="text-gray-300">Generate reports</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIAutonomousAudit = () => {
               <p className="text-gray-300">Learns new standards</p>
             </div>
           </div>
-
           {/* Audit Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Audit Process</h2>
@@ -119,7 +116,6 @@ const AIAutonomousAudit = () => {
               </div>
             </div>
           </div>
-
           {/* Audit Types */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Audit Solutions</h2>
@@ -129,7 +125,6 @@ const AIAutonomousAudit = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Audit Applications</h2>
@@ -150,7 +145,6 @@ const AIAutonomousAudit = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-purple-600 to-violet-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for AI-Powered Auditing?</h2>

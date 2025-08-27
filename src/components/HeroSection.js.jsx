@@ -70,7 +70,6 @@ export function HeroSection() {
         <motion.div className="absolute top-3/4 left-1/6 w-2 h-2 rounded-full bg-zion-purple-light opacity-80" variants={floatingVariants} animate="animate" style={{ animationDelay: '1.5s' }}/>
         <motion.div className="absolute top-1/6 right-1/6 w-4 h-4 rounded-full bg-zion-cyan opacity-40" variants={floatingVariants} animate="animate" style={{ animationDelay: '2.5s' }}/>
       </div>
-
       {/* Enhanced decorative geometric shapes with animations */}
       <motion.div className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
       <motion.div className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30" animate={{ rotate: -360 }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }}/>
@@ -86,12 +85,10 @@ export function HeroSection() {
             {t('home.hero_title') || "The Future of Tech & AI"}
           </GradientHeading>
         </motion.div>
-
         {/* Enhanced subtitle with better spacing and animations */}
         <motion.p variants={itemVariants} className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light">
           {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
         </motion.p>
-
         {/* Enhanced feature highlights with icons and animations */}
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-16 text-zion-slate-light">
           <motion.div className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400 }}>
@@ -115,7 +112,6 @@ export function HeroSection() {
             <span className="font-medium">24/7 Support</span>
           </motion.div>
         </motion.div>
-
         {/* Enhanced CTA buttons with better animations and effects */}
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
@@ -132,7 +128,6 @@ export function HeroSection() {
             </Link>
           </motion.div>
         </motion.div>
-
         {/* Enhanced trust indicators with better visuals */}
         <motion.div variants={itemVariants} className="mt-20 text-zion-slate-light/80">
           <p className="text-lg mb-6 font-medium">Trusted by leading companies worldwide</p>
@@ -143,7 +138,6 @@ export function HeroSection() {
             <motion.div className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" whileHover={{ scale: 1.1, opacity: 1 }} transition={{ type: "spring", stiffness: 400 }}/>
           </div>
         </motion.div>
-
         {/* New stats section */}
         <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <motion.div className="text-center group" whileHover={{ y: -5 }} transition={{ type: "spring", stiffness: 400 }}>
@@ -229,7 +223,6 @@ export const HeroSection = () => {
         <motion.div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-60" variants={floatingVariants} animate="animate" style={{ animationDelay: "2s" }}/>
         <motion.div className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30" variants={floatingVariants} animate="animate" style={{ animationDelay: "3s" }}/>
       </motion.div>
-
       {/* Main Content */}
       <div className="container relative z-10 px-4 mx-auto text-center">
         <motion.div variants={containerVariants} initial="hidden" animate="visible">
@@ -243,7 +236,6 @@ export const HeroSection = () => {
               <Sparkles className="h-8 w-8 text-zion-cyan animate-pulse"/>
             </div>
           </motion.div>
-
           {/* Main Heading */}
           <motion.div variants={itemVariants} className="mb-6">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-4">
@@ -256,13 +248,11 @@ export const HeroSection = () => {
               Leading the future of technology innovation
             </p>
           </motion.div>
-
           {/* Description */}
           <motion.p variants={itemVariants} className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
             Discover cutting-edge AI solutions, expert talent, and innovative services that drive digital transformation. 
             From startups to enterprises, we deliver results that matter.
           </motion.p>
-
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group" size="lg" asChild>
@@ -278,7 +268,6 @@ export const HeroSection = () => {
               Explore Services
             </Link>
           </motion.div>
-
           {/* Trust Metrics */}
           <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
             {trustMetrics.map((metric, index) => (<motion.div key={index} className="text-center group hover:scale-105 transition-transform duration-300" variants={itemVariants}>
@@ -289,7 +278,6 @@ export const HeroSection = () => {
                 <div className="text-zion-slate-light text-sm">{metric.value}</div>
               </motion.div>))}
           </motion.div>
-
           {/* Feature Badges */}
           <motion.div variants={itemVariants} className="flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm">
             {featureBadges.map((badge, index) => (<div key={index} className="flex items-center gap-2 group">

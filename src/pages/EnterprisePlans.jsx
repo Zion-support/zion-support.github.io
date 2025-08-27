@@ -5,7 +5,7 @@ import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";
 import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA";
 import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 export default function EnterprisePlans() {
     return (<>
       <SEOHead title="Enterprise Plans - Zion AI Marketplace" description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."/>

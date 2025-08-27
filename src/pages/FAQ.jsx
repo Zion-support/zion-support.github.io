@@ -2,8 +2,11 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+<<<<<<< HEAD
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export default function FAQ() {
     const faqData = [
         {

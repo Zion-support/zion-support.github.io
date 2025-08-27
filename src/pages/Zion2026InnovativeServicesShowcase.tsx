@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { zion2026InnovativeMicroSAASServices } from '../../data/zion-2026-innovative-micro-saas-services';
 import { Zion2026InnovativeMicroSAASService } from '../../data/zion-2026-innovative-micro-saas-services';
-
 const Zion2026InnovativeServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('popular');
-
   const categories = [
     'all',
     'AI & Automation',
@@ -20,7 +18,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
     'AI & Customer Service',
     'Space Technology'
   ];
-
   const filteredServices = zion2026InnovativeMicroSAASServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -28,7 +25,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popular':
@@ -45,7 +41,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
         return 0;
     }
   });
-
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
       'AI & Automation': 'from-purple-600 to-indigo-700',
@@ -61,7 +56,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
     };
     return colors[category] || 'from-gray-600 to-slate-700';
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -95,7 +89,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-zion-cyan to-zion-purple py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,7 +114,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Filters and Search */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
@@ -137,7 +129,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
                 className="w-full px-4 py-2 bg-white/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-
             {/* Category Filter */}
             <div>
               <label className="block text-sm font-medium text-zion-cyan mb-2">Category</label>
@@ -153,7 +144,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
                 ))}
               </select>
             </div>
-
             {/* Sort By */}
             <div>
               <label className="block text-sm font-medium text-zion-cyan mb-2">Sort By</label>
@@ -171,21 +161,18 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Results Count */}
         <div className="text-center mb-8">
           <p className="text-zion-cyan-light text-lg">
             Showing {filteredServices.length} of {zion2026InnovativeMicroSAASServices.length} services
           </p>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <div className="text-center py-16">
@@ -195,7 +182,6 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
           </div>
         )}
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-zion-cyan to-zion-purple py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -224,14 +210,11 @@ const Zion2026InnovativeServicesShowcase: React.FC = () => {
     </div>
   );
 };
-
 interface ServiceCardProps {
   service: Zion2026InnovativeMicroSAASService;
 }
-
 const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20 hover:border-zion-cyan/40">
       {/* Header */}
@@ -246,19 +229,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             ⭐ POPULAR
           </div>
         )}
-
         {/* Price */}
         <div className="text-3xl font-bold text-zion-cyan mb-2">
           {service.price}
           <span className="text-lg text-zion-cyan-light">{service.period}</span>
         </div>
       </div>
-
       {/* Description */}
       <p className="text-zion-cyan-light text-sm mb-6 leading-relaxed">
         {service.description}
       </p>
-
       {/* Key Features */}
       <div className="mb-6">
         <h4 className="text-zion-cyan font-semibold mb-3">Key Features:</h4>
@@ -279,7 +259,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           </button>
         )}
       </div>
-
       {/* Stats */}
       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
         <div>
@@ -295,7 +274,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           <div className="text-xs text-zion-cyan-light">Trial Days</div>
         </div>
       </div>
-
       {/* Market Info */}
       <div className="mb-6">
         <div className="text-xs text-zion-cyan-light mb-2">
@@ -308,13 +286,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           <strong>Setup Time:</strong> {service.setupTime}
         </div>
       </div>
-
       {/* ROI */}
       <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-lg p-4 mb-6">
         <div className="text-sm text-zion-cyan font-semibold mb-1">Expected ROI</div>
         <div className="text-xs text-zion-cyan-light">{service.roi}</div>
       </div>
-
       {/* Actions */}
       <div className="space-y-3">
         <a
@@ -332,7 +308,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           Get Quote
         </a>
       </div>
-
       {/* Category Badge */}
       <div className="mt-4 text-center">
         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -342,7 +317,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
     </div>
   );
 };
-
 const getCategoryColor = (category: string) => {
   const colors: { [key: string]: string } = {
     'AI & Automation': 'from-purple-600 to-indigo-700',
@@ -358,5 +332,4 @@ const getCategoryColor = (category: string) => {
   };
   return colors[category] || 'from-gray-600 to-slate-700';
 };
-
 export default Zion2026InnovativeServicesShowcase;

@@ -15,7 +15,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
 export default function About() {
   const values = [
     {
@@ -43,7 +42,6 @@ export default function About() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const milestones = [
     {
       year: "2024",
@@ -66,7 +64,6 @@ export default function About() {
       description: "Zion Tech Group was founded with a vision to democratize advanced technology for businesses."
     }
   ];
-
   const team = [
     {
       name: "Kleber Santos",
@@ -97,14 +94,12 @@ export default function About() {
       expertise: ["NLP", "Computer Vision", "AI Integration"]
     }
   ];
-
   const stats = [
     { number: "500+", label: "AI Models Deployed", icon: Brain },
     { number: "50+", label: "Services Offered", icon: Zap },
     { number: "1000+", label: "Happy Clients", icon: Users },
     { number: "99.9%", label: "Uptime Guarantee", icon: Shield }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       <SEO 
@@ -113,7 +108,6 @@ export default function About() {
         keywords="about Zion Tech Group, company mission, team, AI innovation, quantum computing, technology leadership" 
         url="https://ziontechgroup.com/about"
       />
-
       {/* Hero Section */}
       <section className="relative py-32 lg:py-40 overflow-hidden">
         {/* Animated Background Elements */}
@@ -122,7 +116,6 @@ export default function About() {
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple/20 rounded-full animate-pulse-slow"></div>
           <div className="absolute top-1/2 left-1/2 w-32 h-32 border border-zion-cyan/10 rounded-full animate-float"></div>
         </div>
-
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -138,7 +131,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -169,7 +161,6 @@ export default function About() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -210,7 +201,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Company Values */}
       <section className="py-20 bg-zion-blue-dark/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -228,7 +218,6 @@ export default function About() {
               The core principles that guide our every decision and action in serving our clients and advancing technology.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
@@ -252,7 +241,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Company Stats */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -279,7 +267,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Company Timeline */}
       <section className="py-20 bg-zion-blue-dark/30 backdrop-blur-sm">
         <div className="container mx-auto px-4">
@@ -297,7 +284,6 @@ export default function About() {
               From startup to industry leader, discover the key milestones that have shaped Zion Tech Group's growth and success.
             </p>
           </motion.div>
-
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-zion-cyan to-zion-purple"></div>
@@ -331,7 +317,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -349,7 +334,6 @@ export default function About() {
               Our diverse team of experts brings together decades of experience in AI, quantum computing, cybersecurity, and business transformation.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <motion.div
@@ -384,7 +368,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-purple via-zion-blue to-zion-cyan relative overflow-hidden">
         <div className="absolute inset-0">

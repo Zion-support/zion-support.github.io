@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function SolutionsPage() {
   const industrySolutions = [
     {
@@ -82,7 +81,6 @@ export default function SolutionsPage() {
       color: 'from-yellow-500 to-orange-600'
     }
   ];
-
   const technologySolutions = [
     {
       category: 'AI & Machine Learning',
@@ -148,7 +146,6 @@ export default function SolutionsPage() {
       ]
     }
   ];
-
   const useCases = [
     {
       title: 'Customer Service Automation',
@@ -175,7 +172,6 @@ export default function SolutionsPage() {
       industries: ['Manufacturing', 'Finance', 'Healthcare', 'Retail']
     }
   ];
-
   return (
     <>
       <Head>
@@ -184,7 +180,6 @@ export default function SolutionsPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -197,7 +192,6 @@ export default function SolutionsPage() {
             </p>
           </div>
         </section>
-
         {/* Industry Solutions */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -234,7 +228,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* Technology Solutions */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
           <div className="max-w-7xl mx-auto">
@@ -275,7 +268,6 @@ export default function SolutionsPage() {
             ))}
           </div>
         </section>
-
         {/* Use Cases */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -321,7 +313,6 @@ export default function SolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">

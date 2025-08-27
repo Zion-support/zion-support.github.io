@@ -63,7 +63,6 @@ export const CUTTING_EDGE_INNOVATIONS_2025 = [
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
     marketSize: "$19.6 billion by 2025"
   },
-
   // Quantum Computing Solutions
   {
     id: "quantum-computing-as-a-service",
@@ -128,7 +127,6 @@ export const CUTTING_EDGE_INNOVATIONS_2025 = [
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
     marketSize: "$65 billion by 2030"
   },
-
   // Blockchain & DeFi Solutions
   {
     id: "enterprise-blockchain-platform",
@@ -193,7 +191,6 @@ export const CUTTING_EDGE_INNOVATIONS_2025 = [
     competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
     marketSize: "$19.9 billion by 2025"
   },
-
   // IoT & Edge Computing Platform
   {
     id: "iot-edge-computing-platform",
@@ -258,7 +255,6 @@ export const CUTTING_EDGE_INNOVATIONS_2025 = [
     competitors: ["AWS IoT", "Microsoft Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
     marketSize: "$1.1 trillion by 2025"
   },
-
   // Cybersecurity & Zero Trust Platform
   {
     id: "zero-trust-cybersecurity-platform",
@@ -323,7 +319,6 @@ export const CUTTING_EDGE_INNOVATIONS_2025 = [
     competitors: ["CrowdStrike", "Palo Alto Networks", "Cisco", "Microsoft Defender"],
     marketSize: "$376 billion by 2029"
   },
-
   // Digital Twin & Simulation Platform
   {
     id: "digital-twin-simulation-platform",
@@ -388,7 +383,6 @@ export const CUTTING_EDGE_INNOVATIONS_2025 = [
     competitors: ["Siemens", "GE Digital", "PTC", "Microsoft", "IBM"],
     marketSize: "$86 billion by 2028"
   },
-
   // Metaverse & Virtual Reality Platform
   {
     id: "metaverse-vr-platform",
@@ -453,7 +447,6 @@ export const CUTTING_EDGE_INNOVATIONS_2025 = [
     competitors: ["Meta", "Microsoft", "Roblox", "Decentraland", "The Sandbox"],
     marketSize: "$800 billion by 2024"
   },
-
   // Green Tech & Sustainability Platform
   {
     id: "green-tech-sustainability-platform",
@@ -519,5 +512,4 @@ export const CUTTING_EDGE_INNOVATIONS_2025 = [
     marketSize: "$417 billion by 2027"
   }
 ];
-
 export default CUTTING_EDGE_INNOVATIONS_2025;

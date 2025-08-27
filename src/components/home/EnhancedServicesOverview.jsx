@@ -102,7 +102,6 @@ const EnhancedServicesOverview = () => {
             </Button>
           </div>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark/50 border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:-translate-y-2">
@@ -125,7 +124,6 @@ const EnhancedServicesOverview = () => {
                   {service.description}
                 </CardDescription>
               </CardHeader>
-
               <CardContent className="space-y-4">
                 {/* Price and Rating */}
                 <div className="flex items-center justify-between">
@@ -140,7 +138,6 @@ const EnhancedServicesOverview = () => {
                     <span className="text-white font-medium">{service.rating}</span>
                   </div>
                 </div>
-
                 {/* Key Benefits */}
                 <div className="space-y-2">
                   {service.benefits.slice(0, 2).map((benefit, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
@@ -148,14 +145,12 @@ const EnhancedServicesOverview = () => {
                       {benefit}
                     </div>))}
                 </div>
-
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
                   {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-cyan">
                       {tag}
                     </Badge>))}
                 </div>
-
                 {/* Availability and Location */}
                 <div className="flex items-center justify-between text-sm">
                   <div className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}>
@@ -171,7 +166,6 @@ const EnhancedServicesOverview = () => {
                     {service.location}
                   </div>
                 </div>
-
                 {/* Action Button */}
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Started
@@ -179,7 +173,6 @@ const EnhancedServicesOverview = () => {
               </CardContent>
             </Card>))}
         </div>
-
         {/* Service Categories Overview */}
         <div className="bg-zion-blue/20 rounded-2xl p-8 border border-zion-blue-light">
           <div className="text-center mb-8">
@@ -192,7 +185,7 @@ const EnhancedServicesOverview = () => {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {ENHANCED_SERVICES.reduce((acc, service) => {
             if (!acc.find(cat => cat.category === service.category)) {
-                acc.push({
+                acc({
                     category: service.category,
                     count: ENHANCED_SERVICES.filter(s => s.category === service.category).length,
                     icon: getCategoryIcon(service.category)
@@ -208,7 +201,6 @@ const EnhancedServicesOverview = () => {
               </div>))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-2xl p-8 border border-zion-purple/30">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { SEO } from "../components/SEOHead"';
+import SEOHead from "../components/SEOHead";
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 export default function TalentProfilePage() {
@@ -8,7 +8,6 @@ export default function TalentProfilePage() {
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) {
@@ -16,7 +15,6 @@ export default function TalentProfilePage() {
         setLoading(false);
         return;
       }
-
       try {
         const res = await fetch(`/api/talent/${id}`);
         if (!res.ok) throw new Error('Failed to load profile');
@@ -28,15 +26,12 @@ export default function TalentProfilePage() {
         setLoading(false);
       }
     };
-
     fetchProfile();
   }, [id]);
-
   if (loading) return <ProfileLoadingState />;
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
-
   return (
-    <>
+<>
       <SEOHead title={profile.full_name} description={profile.bio || ''} />
       <main className="min-h-screen bg-zion-blue py-8 text-white">
         <div className="container mx-auto px-4 space-y-4">

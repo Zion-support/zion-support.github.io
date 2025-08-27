@@ -156,7 +156,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -178,7 +177,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -203,7 +201,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -226,7 +223,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Industries Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -248,7 +244,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
@@ -292,7 +287,6 @@ const AIAutonomousLegalResearchAssistant = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">

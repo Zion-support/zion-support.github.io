@@ -10,13 +10,11 @@ export type ServiceItem = {
 	href: string; // internal path or external URL
 	external?: boolean;
 };
-
 export type ServiceCategory = {
 	name: string;
 	slug: string;
 	items: ServiceItem[];
 };
-
 export const servicesCatalog: ServiceCategory[] = [
 	{
 		name: 'Micro SaaS',

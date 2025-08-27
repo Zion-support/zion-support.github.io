@@ -9,7 +9,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WaitlistSection } from "@/components/WaitlistSection";
 import { BlogSection } from "@/components/BlogSection";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { Link } from "react-router-dom";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";

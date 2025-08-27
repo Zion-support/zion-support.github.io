@@ -1,9 +1,7 @@
-
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe } from "lucide-react";
 import { motion } from "framer-motion";
-
 const categories = [
   {
     title: "Services",
@@ -58,7 +56,6 @@ const categories = [
     featured: true
   }
 ];
-
 const specialServices = [
   {
     title: "IT Onsite Services",
@@ -85,11 +82,9 @@ const specialServices = [
     description: "Cybersecurity & compliance"
   }
 ];
-
 interface CategoriesSectionProps {
   showTitle?: boolean;
 }
-
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -100,7 +95,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -109,7 +103,6 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       transition: { duration: 0.6, ease: "easeOut" }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background pattern */}

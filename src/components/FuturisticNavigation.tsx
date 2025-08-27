@@ -104,39 +104,32 @@ import {
   Handshake,
   Calendar
 } from 'lucide-react';
-
 export const FuturisticNavigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location]);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
-
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
-
   const navigationItems = [
     {
       name: 'Cutting-Edge Innovations',
@@ -226,9 +219,8 @@ export const FuturisticNavigation: React.FC = () => {
       ]
     }
   ];
-
   return (
-    <>
+<>
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 quantum-particles ${
         scrolled 
           ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
@@ -259,7 +251,6 @@ export const FuturisticNavigation: React.FC = () => {
                 </div>
               </Link>
             </motion.div>
-
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
               {navigationItems.map((item, index) => (
@@ -281,7 +272,6 @@ export const FuturisticNavigation: React.FC = () => {
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
                   </motion.button>
-
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -331,7 +321,6 @@ export const FuturisticNavigation: React.FC = () => {
                 </div>
               ))}
             </nav>
-
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
               {/* Search */}
@@ -347,7 +336,6 @@ export const FuturisticNavigation: React.FC = () => {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
                 </div>
               </form>
-
               {/* User actions */}
               <div className="flex items-center space-x-2">
                 <motion.button
@@ -372,7 +360,6 @@ export const FuturisticNavigation: React.FC = () => {
                   <ShoppingCart className="w-5 h-5" />
                 </motion.button>
               </div>
-
               {/* Mobile menu button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -385,7 +372,6 @@ export const FuturisticNavigation: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         <AnimatePresence>
           {mobileMenuOpen && (
@@ -410,7 +396,6 @@ export const FuturisticNavigation: React.FC = () => {
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
                   </div>
                 </form>
-
                 {/* Mobile Navigation Items */}
                 <div className="space-y-2">
                   {navigationItems.map((item) => (
@@ -441,6 +426,6 @@ export const FuturisticNavigation: React.FC = () => {
           )}
         </AnimatePresence>
       </header>
-    </>
+</>
   );
 };

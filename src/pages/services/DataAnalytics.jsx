@@ -1,6 +1,6 @@
 import React from 'react';
-import { SEO } from "../components/SEOHead";
-import Link from 'next/link';
+import SEOHead from "../../components/SEOHead.jsx";
+import { Link } from 'react-router-dom';
 import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target } from 'lucide-react';
 export default function DataAnalyticsServices() {
     const analyticsServices = [
@@ -161,7 +161,6 @@ export default function DataAnalyticsServices() {
     ];
     return (<div className="min-h-screen bg-background">
       <SEOHead title="Data Analytics & Business Intelligence Services - Zion Tech Group" description="Comprehensive data analytics, business intelligence, and predictive analytics solutions to transform your business with data-driven insights." keywords="data analytics, business intelligence, predictive analytics, data engineering, ETL, data visualization, reporting" canonical="https://ziontechgroup.com/services/data-analytics"/>
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -175,7 +174,6 @@ export default function DataAnalyticsServices() {
           </p>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -186,7 +184,6 @@ export default function DataAnalyticsServices() {
               to drive growth, efficiency, and competitive advantage.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsServices.map((service, index) => (<div key={service.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -213,7 +210,6 @@ export default function DataAnalyticsServices() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -234,7 +230,6 @@ export default function DataAnalyticsServices() {
                   </div>))}
               </div>
             </div>
-
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Free Analytics Assessment</h3>
               <p className="text-gray-600 mb-6">
@@ -258,7 +253,6 @@ export default function DataAnalyticsServices() {
           </div>
         </div>
       </section>
-
       {/* Industries Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -269,7 +263,6 @@ export default function DataAnalyticsServices() {
               across diverse industry sectors.
             </p>
           </div>
-
           <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {industries.map((industry, index) => (<div key={industry} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-blue-50 transition-colors border border-gray-200">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -280,7 +273,6 @@ export default function DataAnalyticsServices() {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -291,7 +283,6 @@ export default function DataAnalyticsServices() {
               and innovative solutions for our clients.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {technologies.map((tech, index) => (<div key={tech} className="bg-white rounded-lg p-4 text-center hover:bg-blue-50 transition-colors border border-gray-200">
                 <span className="text-gray-700 font-medium text-sm">{tech}</span>
@@ -299,7 +290,6 @@ export default function DataAnalyticsServices() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -309,7 +299,6 @@ export default function DataAnalyticsServices() {
               A proven methodology for delivering successful analytics solutions that drive business value.
             </p>
           </div>
-
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-6 gap-8">
               <div className="text-center">
@@ -321,7 +310,6 @@ export default function DataAnalyticsServices() {
                   Understand business needs and data opportunities
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">2</span>
@@ -331,7 +319,6 @@ export default function DataAnalyticsServices() {
                   Evaluate current data infrastructure and maturity
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">3</span>
@@ -341,7 +328,6 @@ export default function DataAnalyticsServices() {
                   Develop analytics roadmap and architecture
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">4</span>
@@ -351,7 +337,6 @@ export default function DataAnalyticsServices() {
                   Build and deploy analytics solutions
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">5</span>
@@ -361,7 +346,6 @@ export default function DataAnalyticsServices() {
                   Enable teams to use analytics effectively
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">6</span>
@@ -375,7 +359,6 @@ export default function DataAnalyticsServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">

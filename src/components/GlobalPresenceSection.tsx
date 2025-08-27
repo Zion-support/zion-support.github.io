@@ -197,7 +197,6 @@ export function GlobalPresenceSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -208,7 +207,6 @@ export function GlobalPresenceSection() {
             From Silicon Valley to Singapore, Zion Tech Group operates across six continents, 
             serving clients worldwide with localized expertise and global innovation.
           </p>
-
           {/* Global stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {globalStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -220,7 +218,6 @@ export function GlobalPresenceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Global Offices */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -246,7 +243,6 @@ export function GlobalPresenceSection() {
                       <div className="text-zion-slate-light text-xs">Est. {office.established}</div>
                     </div>
                   </div>
-
                   {/* Quick info */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -258,7 +254,6 @@ export function GlobalPresenceSection() {
                       <div className="text-zion-slate-light text-xs">Projects</div>
                     </div>
                   </div>
-
                   {/* Specialties */}
                   <div className="mb-4">
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Specialties:</div>
@@ -268,7 +263,6 @@ export function GlobalPresenceSection() {
                         </span>))}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -276,7 +270,6 @@ export function GlobalPresenceSection() {
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedOffice === office.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -304,7 +297,6 @@ export function GlobalPresenceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Strategic Partnerships */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -325,11 +317,9 @@ export function GlobalPresenceSection() {
                     <div className="text-zion-cyan text-sm mb-1">{partnership.type}</div>
                     <div className="text-zion-slate-light text-xs">Since {partnership.established}</div>
                   </div>
-
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                     {partnership.description}
                   </p>
-
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -341,7 +331,6 @@ export function GlobalPresenceSection() {
                       <div className="text-zion-slate-light text-xs">Status</div>
                     </div>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedPartnership === index && (<motion.div className="mt-4 p-3 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -355,7 +344,6 @@ export function GlobalPresenceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Industry Presence */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -383,7 +371,6 @@ export function GlobalPresenceSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

@@ -85,7 +85,6 @@ export default function AICodeReview() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -110,7 +109,6 @@ export default function AICodeReview() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -131,7 +129,6 @@ export default function AICodeReview() {
           </div>
         </div>
       </section>
-
       {/* Supported Languages */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -152,7 +149,6 @@ export default function AICodeReview() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

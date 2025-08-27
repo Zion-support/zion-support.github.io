@@ -4,23 +4,19 @@ interface SitemapUrl {
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-
 interface SitemapConfig {
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
 }
-
 export class SitemapGenerator {
   private config: SitemapConfig;
-
   constructor(config: SitemapConfig) {
     this.config = {
       outputPath: './public/sitemap.xml',
       ...config
     };
   }
-
   /**
    * Generate XML sitemap content
    */
@@ -30,7 +26,6 @@ export class SitemapGenerator {
     const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
     const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
     const urlsetClose = '</urlset>';
-
     const urlElements = urls.map(url => {
       const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
@@ -41,10 +36,8 @@ export class SitemapGenerator {
       
       return urlElement.replace(/\s+/g, ' ').trim();
     }).join('');
-
     return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
   }
-
   /**
    * Generate sitemap index for large sites
    */
@@ -52,17 +45,14 @@ export class SitemapGenerator {
     const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
     const sitemapindexOpen = '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
     const sitemapindexClose = '</sitemapindex>';
-
     const sitemapElements = sitemaps.map(sitemap => {
       return `<sitemap>
         <loc>${sitemap}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
       </sitemap>`;
     }).join('');
-
     return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
   }
-
   /**
    * Generate robots.txt content
    */
@@ -71,16 +61,13 @@ export class SitemapGenerator {
     
     return `User-agent: *
 Allow: /
-
 # Sitemaps
 Sitemap: ${baseUrl}/sitemap.xml
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-
 # Allow important pages
 Allow: /
 Allow: /services/
@@ -89,11 +76,9 @@ Allow: /about/
 Allow: /contact/
 Allow: /blog/
 Allow: /careers/
-
 # Crawl delay (optional)
 Crawl-delay: 1`;
   }
-
   /**
    * Generate JSON sitemap for JavaScript applications
    */
@@ -108,10 +93,8 @@ Crawl-delay: 1`;
         lastmod: url.lastmod || new Date().toISOString()
       }))
     };
-
     return JSON.stringify(jsonSitemap, null, 2);
   }
-
   /**
    * Generate HTML sitemap for users
    */
@@ -203,11 +186,9 @@ Crawl-delay: 1`;
     </div>
 </body>
 </html>`;
-
     return html;
   }
 }
-
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig: SitemapConfig = {
   baseUrl: 'https://ziontechgroup.com',
@@ -258,7 +239,6 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/terms', changefreq: 'yearly', priority: 0.3 }
   ]
 };
-
 // Utility function to generate all sitemap files
 export const generateAllSitemaps = async (config: SitemapConfig = defaultSitemapConfig) => {
   const generator = new SitemapGenerator(config);
@@ -287,5 +267,4 @@ export const generateAllSitemaps = async (config: SitemapConfig = defaultSitemap
     throw error;
   }
 };
-
 export default SitemapGenerator;

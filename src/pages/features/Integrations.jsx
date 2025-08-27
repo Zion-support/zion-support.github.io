@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
     const schema = {

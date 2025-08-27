@@ -38,7 +38,6 @@ export interface AIFuturisticService {
   rating: number;
   reviews: number;
 }
-
 export const aiFuturisticServices: AIFuturisticService[] = [
   // AI-Powered Quantum Blockchain Analytics
   {
@@ -92,7 +91,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.8,
     reviews: 95
   },
-
   // AI-Powered Quantum Code Review Copilot
   {
     id: 'ai-powered-quantum-code-review-copilot',
@@ -145,7 +143,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.7,
     reviews: 198
   },
-
   // AI-Powered Quantum Data Analytics
   {
     id: 'ai-powered-quantum-data-analytics',
@@ -198,7 +195,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.8,
     reviews: 145
   },
-
   // AI-Powered Quantum Evaluations
   {
     id: 'ai-powered-quantum-evaluations',
@@ -251,7 +247,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.8,
     reviews: 102
   },
-
   // AI-Powered Quantum Guardrails
   {
     id: 'ai-powered-quantum-guardrails',
@@ -304,7 +299,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.9,
     reviews: 48
   },
-
   // AI-Powered Quantum HR Recruitment
   {
     id: 'ai-powered-quantum-hr-recruitment',
@@ -357,7 +351,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.7,
     reviews: 167
   },
-
   // AI-Powered Quantum IoT Platform
   {
     id: 'ai-powered-quantum-iot-platform',
@@ -410,7 +403,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.8,
     reviews: 234
   },
-
   // AI-Powered Quantum Legal Contract Analyzer
   {
     id: 'ai-powered-quantum-legal-contract-analyzer',
@@ -463,7 +455,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.8,
     reviews: 89
   },
-
   // AI-Powered Quantum Market Research
   {
     id: 'ai-powered-quantum-market-research',
@@ -516,7 +507,6 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     rating: 4.7,
     reviews: 145
   },
-
   // AI-Powered Quantum Phone Agent
   {
     id: 'ai-powered-quantum-phone-agent',

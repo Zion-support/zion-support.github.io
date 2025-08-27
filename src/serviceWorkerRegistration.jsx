@@ -4,17 +4,14 @@ const isLocalhost = Boolean(
     window.location.hostname === '[::1]' ||
     window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
 );
-
 export function register(config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
     if (publicUrl.origin !== window.location.origin) {
       return;
     }
-
     window.addEventListener('load', () => {
       const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
-
       if (isLocalhost) {
         checkValidServiceWorker(swUrl, config);
         navigator.serviceWorker.ready.then(() => {
@@ -26,7 +23,6 @@ export function register(config) {
     });
   }
 }
-
 function registerValidSW(swUrl, config) {
   navigator.serviceWorker
     .register(swUrl)
@@ -57,7 +53,6 @@ function registerValidSW(swUrl, config) {
       console.error('Error during service worker registration:', error);
     });
 }
-
 function checkValidServiceWorker(swUrl, config) {
   fetch(swUrl, {
     headers: { 'Service-Worker': 'script' },
@@ -81,7 +76,6 @@ function checkValidServiceWorker(swUrl, config) {
       console.log('No internet connection found. App is running in offline mode.');
     });
 }
-
 export function unregister() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
@@ -93,7 +87,6 @@ export function unregister() {
       });
   }
 }
-
 // Add offline/online detection
 export function setupOfflineDetection() {
   window.addEventListener('online', () => {
@@ -103,7 +96,6 @@ export function setupOfflineDetection() {
       window.showOfflineNotification('Connection restored', 'success');
     }
   });
-
   window.addEventListener('offline', () => {
     console.log('Connection lost');
     // You could show a toast notification here
@@ -112,6 +104,5 @@ export function setupOfflineDetection() {
     }
   });
 }
-
 // Initialize offline detection
 setupOfflineDetection();

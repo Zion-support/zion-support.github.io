@@ -17,7 +17,6 @@ import {
   Clock,
   DollarSign
 } from 'lucide-react';
-
 // Sample featured services data
 const featuredServices = [
   {
@@ -111,7 +110,6 @@ const featuredServices = [
     color: "from-zion-purple to-zion-cyan"
   }
 ];
-
 const serviceCategories = [
   { name: 'AI & Machine Learning', icon: Brain, count: 25, color: 'from-zion-cyan to-zion-blue' },
   { name: 'Cybersecurity', icon: Shield, count: 18, color: 'from-zion-purple to-zion-cyan' },
@@ -120,7 +118,6 @@ const serviceCategories = [
   { name: 'IoT & Edge Computing', icon: Network, count: 15, color: 'from-zion-purple to-zion-blue' },
   { name: 'Quantum Computing', icon: Rocket, count: 8, color: 'from-zion-blue to-zion-cyan' }
 ];
-
 export function EnhancedServicesShowcase() {
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark relative overflow-hidden">
@@ -148,7 +145,6 @@ export function EnhancedServicesShowcase() {
             Discover our most popular and innovative services designed to transform your business operations
           </p>
         </motion.div>
-
         {/* Featured Services Grid */}
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
@@ -200,7 +196,6 @@ export function EnhancedServicesShowcase() {
                   </div>
                 </div>
               </div>
-
               {/* Service Content */}
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -213,7 +208,6 @@ export function EnhancedServicesShowcase() {
                     </span>
                   ))}
                 </div>
-
                 <Link 
                   to={`/services/${service.id}`}
                   className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium rounded-lg hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300"
@@ -225,7 +219,6 @@ export function EnhancedServicesShowcase() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Service Categories Overview */}
         <motion.div 
           className="text-center mb-16"
@@ -259,7 +252,6 @@ export function EnhancedServicesShowcase() {
             ))}
           </div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div 
           className="text-center"

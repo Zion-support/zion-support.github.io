@@ -177,7 +177,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             particles = [];
             const particleCount = variant === 'particles' ? 100 : 50;
             for (let i = 0; i < particleCount; i++) {
-                particles.push({
+                particles({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
                     vx: (Math.random() - 0.5) * 0.5,

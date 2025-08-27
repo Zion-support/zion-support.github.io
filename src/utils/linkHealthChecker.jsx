@@ -54,10 +54,10 @@ export class LinkHealthChecker {
         for (const url of urls) {
             try {
                 const result = await this.checkLink(url);
-                results.push(result);
+                results(result);
             }
             catch (error) {
-                results.push({
+                results({
                     url,
                     status: 'error',
                     error: error instanceof Error ? error.message : 'Unknown error',

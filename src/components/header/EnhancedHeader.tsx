@@ -20,7 +20,6 @@ import {
   Star
 } from 'lucide-react';
 import { Button } from '../ui/button';
-
 // Enhanced navigation structure with new services
 const navigation = [
   {
@@ -237,14 +236,12 @@ const navigation = [
     ]
   },
 ];
-
 export function EnhancedHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -253,31 +250,26 @@ export function EnhancedHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location]);
-
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     // Implement search functionality
     console.log('Searching for:', searchQuery);
   };
-
   return (
-    <>
+<>
       {/* Futuristic animated background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />
       </div>
-
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
@@ -309,7 +301,6 @@ export function EnhancedHeader() {
                 </div>
               </Link>
             </motion.div>
-
             {/* Desktop Navigation */}
             <div className="hidden lg:flex lg:items-center lg:space-x-8">
               {navigation.map((item) => (
@@ -324,7 +315,6 @@ export function EnhancedHeader() {
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
-
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -371,7 +361,6 @@ export function EnhancedHeader() {
                 </div>
               ))}
             </div>
-
             {/* Search Bar */}
             <div className="hidden md:flex flex-1 max-w-md mx-8">
               <form onSubmit={handleSearch} className="relative w-full">
@@ -390,7 +379,6 @@ export function EnhancedHeader() {
                 </button>
               </form>
             </div>
-
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
               {/* Notifications */}
@@ -398,12 +386,10 @@ export function EnhancedHeader() {
                 <Bell className="w-5 h-5" />
                 <span className="absolute top-0 right-0 w-2 h-2 bg-zion-cyan rounded-full"></span>
               </button>
-
               {/* User Menu */}
               <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200">
                 <User className="w-5 h-5" />
               </button>
-
               {/* CTA Button */}
               <Button
                 asChild
@@ -411,7 +397,6 @@ export function EnhancedHeader() {
               >
                 <Link to="/request-quote">Get Started</Link>
               </Button>
-
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -422,7 +407,6 @@ export function EnhancedHeader() {
             </div>
           </div>
         </nav>
-
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
@@ -450,7 +434,6 @@ export function EnhancedHeader() {
                     <Search className="w-5 h-5" />
                   </button>
                 </form>
-
                 {/* Mobile Navigation Items */}
                 {navigation.map((item) => (
                   <div key={item.name} className="space-y-2">
@@ -492,8 +475,7 @@ export function EnhancedHeader() {
           )}
         </AnimatePresence>
       </header>
-    </>
+</>
   );
 }
-
 export default EnhancedHeader;

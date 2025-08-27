@@ -15,7 +15,6 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
           {heroImage && (<img loading="lazy" src={heroImage} alt={title} className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl"/>)}
         </div>
       </section>
-
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
@@ -23,7 +22,6 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
           </p>
         </div>
       </section>
-
       <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
@@ -40,7 +38,6 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
           </div>
         </div>
       </section>
-
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
@@ -64,7 +61,6 @@ export const ServiceLandingTemplate = ({ title, subtitle, heroImage, description
           </div>
         </div>
       </section>
-
       <section className="py-12 bg-zion-blue-dark text-center">
         <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white" asChild>
           <a href={ctaLink}>{ctaText}</a>

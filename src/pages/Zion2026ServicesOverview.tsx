@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { zion2026InnovativeMicroSAASServices } from '../../data/zion-2026-innovative-micro-saas-services';
-
 const Zion2026ServicesOverview: React.FC = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
   const categories = [
     'all',
     'AI & Automation',
@@ -18,11 +16,9 @@ const Zion2026ServicesOverview: React.FC = () => {
     'AI & Customer Service',
     'Space Technology'
   ];
-
   const filteredServices = zion2026InnovativeMicroSAASServices.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );
-
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
       'AI & Automation': 'from-purple-600 to-indigo-700',
@@ -38,11 +34,9 @@ const Zion2026ServicesOverview: React.FC = () => {
     };
     return colors[category] || 'from-gray-600 to-slate-700';
   };
-
   const selectedServiceData = selectedService 
     ? zion2026InnovativeMicroSAASServices.find(service => service.id === selectedService)
     : null;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -90,7 +84,6 @@ const Zion2026ServicesOverview: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Contact Information Banner */}
       <div className="bg-gradient-to-r from-zion-cyan to-zion-purple py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -116,7 +109,6 @@ const Zion2026ServicesOverview: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -139,7 +131,6 @@ const Zion2026ServicesOverview: React.FC = () => {
                   ))}
                 </select>
               </div>
-
               {/* Services List */}
               <div className="space-y-3 max-h-96 overflow-y-auto">
                 {filteredServices.map(service => (
@@ -164,7 +155,6 @@ const Zion2026ServicesOverview: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Right Content - Service Details */}
           <div className="lg:col-span-2">
             {selectedServiceData ? (
@@ -181,7 +171,6 @@ const Zion2026ServicesOverview: React.FC = () => {
                       ⭐ POPULAR SERVICE
                     </div>
                   )}
-
                   {/* Price and Stats */}
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
                     <div className="bg-white/10 rounded-xl p-4">
@@ -202,13 +191,11 @@ const Zion2026ServicesOverview: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Description */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-4">Description</h2>
                   <p className="text-zion-cyan-light leading-relaxed">{selectedServiceData.description}</p>
                 </div>
-
                 {/* Features */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-4">Key Features</h2>
@@ -221,7 +208,6 @@ const Zion2026ServicesOverview: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Technology Stack */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-4">Technology Stack</h2>
@@ -233,7 +219,6 @@ const Zion2026ServicesOverview: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Integrations */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-4">Integrations</h2>
@@ -245,7 +230,6 @@ const Zion2026ServicesOverview: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Use Cases */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-4">Use Cases</h2>
@@ -257,7 +241,6 @@ const Zion2026ServicesOverview: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Market Information */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-4">Market Information</h2>
@@ -280,7 +263,6 @@ const Zion2026ServicesOverview: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* ROI and Implementation */}
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-4">ROI & Implementation</h2>
@@ -295,7 +277,6 @@ const Zion2026ServicesOverview: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Actions */}
                 <div className="text-center">
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -332,7 +313,6 @@ const Zion2026ServicesOverview: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Call to Action */}
       <div className="bg-gradient-to-r from-zion-cyan to-zion-purple py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -361,5 +341,4 @@ const Zion2026ServicesOverview: React.FC = () => {
     </div>
   );
 };
-
 export default Zion2026ServicesOverview;

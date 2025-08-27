@@ -175,7 +175,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-6 right-6 z-50 p-4 bg-zion-blue-dark border-2 border-zion-cyan/50 rounded-full shadow-2xl hover:bg-zion-blue hover:border-zion-cyan transition-all duration-200 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
         <Settings className="w-6 h-6 text-white"/>
       </motion.button>
-
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (<motion.div initial={{ opacity: 0, x: 300 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 300 }} transition={{ type: 'spring', damping: 25, stiffness: 200 }} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">
@@ -194,7 +193,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 Customize your experience with keyboard shortcuts (Ctrl/Cmd + H, L, R, A)
               </p>
             </div>
-
             {/* Settings Content */}
             <div className="p-6 space-y-6">
               {/* Visual Settings */}
@@ -212,7 +210,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>
                 </div>
-
                 {/* Large Text */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
@@ -221,7 +218,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>
                 </div>
-
                 {/* Font Size Control */}
                 <div className="space-y-2">
                   <label className="text-white text-sm">Font Size: {settings.fontSize}px</label>
@@ -237,7 +233,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     </button>
                   </div>
                 </div>
-
                 {/* Color Blind Mode */}
                 <div className="space-y-2">
                   <label className="text-white text-sm">Color Blind Mode</label>
@@ -249,7 +244,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   </select>
                 </div>
               </div>
-
               {/* Motion & Audio Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
@@ -265,7 +259,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>
                 </div>
-
                 {/* Screen Reader */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
@@ -274,7 +267,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   </label>
                 </div>
               </div>
-
               {/* Navigation Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
@@ -289,7 +281,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     Focus Indicator
                   </label>
                 </div>
-
                 {/* Keyboard Navigation */}
                 <div className="flex items-center justify-between">
                   <label className="text-white cursor-pointer flex items-center gap-2">
@@ -298,7 +289,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   </label>
                 </div>
               </div>
-
               {/* Reset Button */}
               <div className="pt-4 border-t border-zion-cyan/30">
                 <button onClick={resetToDefaults} className="w-full p-3 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-cyan/30 rounded-lg text-white transition-colors">
@@ -308,7 +298,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             </div>
           </motion.div>)}
       </AnimatePresence>
-
       {/* Notifications */}
       <div className="fixed top-6 right-6 z-50 space-y-2">
         <AnimatePresence>
@@ -324,7 +313,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             </motion.div>))}
         </AnimatePresence>
       </div>
-
       {/* CSS Variables for Accessibility */}
       <style dangerouslySetInnerHTML={{
             __html: `
@@ -332,7 +320,6 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             --font-size: ${settings.fontSize}px;
             --color-blind-mode: ${settings.colorBlindMode};
           }
-
           .high-contrast {
             --bg-primary: #000000;
             --bg-secondary: #1a1a1a;
@@ -340,30 +327,25 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             --text-secondary: #e0e0e0;
             --border-color: #ffffff;
           }
-
           .large-text {
             --font-size-base: 18px;
             --font-size-lg: 22px;
             --font-size-xl: 26px;
             --font-size-2xl: 32px;
           }
-
           .reduced-motion * {
             animation-duration: 0.01ms !important;
             animation-iteration-count: 1 !important;
             transition-duration: 0.01ms !important;
           }
-
           .focus-indicator *:focus {
             outline: 3px solid #00d4ff !important;
             outline-offset: 2px !important;
           }
-
           .keyboard-navigation *:focus-visible {
             outline: 3px solid #00d4ff !important;
             outline-offset: 2px !important;
           }
-
           .sr-only {
             position: absolute;
             width: 1px;
@@ -375,16 +357,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             white-space: nowrap;
             border: 0;
           }
-
           /* Color blind mode filters */
           [style*="--color-blind-mode: protanopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/></filter></svg>#protanopia');
           }
-
           [style*="--color-blind-mode: deuteranopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/></filter></svg>#deuteranopia');
           }
-
           [style*="--color-blind-mode: tritanopia"] {
             filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/></filter></svg>#tritanopia');
           }

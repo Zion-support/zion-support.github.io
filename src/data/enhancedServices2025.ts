@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings";
-
 // Enhanced 2025 Services - Real, Market-Competitive Micro SAAS, IT & AI Services
 export const ENHANCED_SERVICES_2025: ProductListing[] = [
   // AI & Machine Learning Services
@@ -99,7 +98,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "24/7 Security Monitoring"
     ]
   },
-
   // Cloud & DevOps Services
   {
     id: "quantum-cloud-infrastructure",
@@ -164,7 +162,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Cost Management"
     ]
   },
-
   // IoT & Edge Computing
   {
     id: "iot-edge-intelligence-platform",
@@ -197,7 +194,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Scalable Architecture"
     ]
   },
-
   // Blockchain & Web3 Services
   {
     id: "blockchain-governance-platform",
@@ -230,7 +226,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Smart Contract Integration"
     ]
   },
-
   // Healthcare & Biotech AI
   {
     id: "ai-biomedical-research-platform",
@@ -264,7 +259,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Research Collaboration Tools"
     ]
   },
-
   // Financial Services AI
   {
     id: "ai-financial-trading-platform",
@@ -297,7 +291,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Real-time Analytics"
     ]
   },
-
   // Space Technology Services
   {
     id: "space-tech-ai-platform",
@@ -331,7 +324,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Real-time Monitoring"
     ]
   },
-
   // Green Technology Services
   {
     id: "ai-climate-prediction-engine",
@@ -364,7 +356,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Real-time Monitoring"
     ]
   },
-
   // Legal Technology AI
   {
     id: "ai-legal-research-assistant",
@@ -397,7 +388,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Research Automation"
     ]
   },
-
   // Education Technology AI
   {
     id: "ai-education-professor",
@@ -430,7 +420,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Multi-subject Support"
     ]
   },
-
   // Manufacturing AI
   {
     id: "ai-manufacturing-optimization",
@@ -463,7 +452,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Performance Analytics"
     ]
   },
-
   // Retail & E-commerce AI
   {
     id: "ai-retail-intelligence-platform",
@@ -496,7 +484,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Performance Analytics"
     ]
   },
-
   // Transportation & Logistics AI
   {
     id: "ai-logistics-optimization",
@@ -529,7 +516,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Cost Optimization"
     ]
   },
-
   // Energy & Utilities AI
   {
     id: "ai-energy-management-system",
@@ -562,7 +548,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Sustainability Metrics"
     ]
   },
-
   // Real Estate AI
   {
     id: "ai-real-estate-analytics",
@@ -595,7 +580,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Portfolio Management"
     ]
   },
-
   // Media & Entertainment AI
   {
     id: "ai-media-production-suite",
@@ -628,7 +612,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
       "Automated Workflows"
     ]
   },
-
   // Agriculture Technology AI
   {
     id: "ai-agriculture-optimization",
@@ -662,7 +645,6 @@ export const ENHANCED_SERVICES_2025: ProductListing[] = [
     ]
   }
 ];
-
 // Service Categories for Enhanced Navigation
 export const ENHANCED_SERVICE_CATEGORIES = [
   {
@@ -714,7 +696,6 @@ export const ENHANCED_SERVICE_CATEGORIES = [
     featured: false
   }
 ];
-
 // Pricing Tiers for Enterprise Solutions
 export const ENTERPRISE_PRICING_TIERS = [
   {
@@ -760,7 +741,6 @@ export const ENTERPRISE_PRICING_TIERS = [
     popular: false
   }
 ];
-
 // Contact Information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",

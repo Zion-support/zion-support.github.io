@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'mild' | 'moderate' | 'intense' | 'extreme';
   colorScheme?: 'quantum-fusion' | 'neural-network' | 'holographic-matrix' | 'cyberpunk-fusion';
@@ -12,7 +11,6 @@ interface UltraAdvancedFuturisticBackground2026Props {
   enableConsciousnessSimulation?: boolean;
   children: React.ReactNode;
 }
-
 const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
   intensity = 'moderate',
   colorScheme = 'quantum-fusion',
@@ -27,7 +25,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [consciousnessState, setConsciousnessState] = useState(0);
-
   // Intensity multipliers
   const intensityMultipliers = {
     mild: 0.5,
@@ -35,9 +32,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     intense: 1.5,
     extreme: 2.0
   };
-
   const multiplier = intensityMultipliers[intensity];
-
   // Color schemes
   const colorSchemes = {
     'quantum-fusion': {
@@ -73,19 +68,14 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       matrix: '0 0 50px rgba(245, 158, 11, 0.4)'
     }
   };
-
   const colors = colorSchemes[colorScheme];
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     // Enhanced particle system
     class QuantumParticle {
       x: number;
@@ -98,7 +88,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       type: 'quantum' | 'neural' | 'holographic' | 'consciousness';
       color: string;
       phase: number;
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -111,7 +100,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         this.color = this.getColor();
         this.phase = Math.random() * Math.PI * 2;
       }
-
       getColor() {
         switch (this.type) {
           case 'quantum':
@@ -126,41 +114,34 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
             return colors.primary;
         }
       }
-
       update() {
         this.x += this.vx * animationSpeed;
         this.y += this.vy * animationSpeed;
         this.life--;
         this.phase += 0.02 * animationSpeed;
-
         // Bounce off edges
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
         // Quantum entanglement effect
         if (enableQuantumEffects && this.type === 'quantum') {
           this.x += Math.sin(this.phase) * 0.5;
           this.y += Math.cos(this.phase) * 0.5;
         }
-
         // Neural pulse effect
         if (enableNeuralPulse && this.type === 'neural') {
           this.size = Math.sin(this.phase) * 2 + 2;
         }
-
         // Holographic matrix effect
         if (enableHolographic && this.type === 'holographic') {
           this.x += Math.sin(this.phase * 2) * 1;
           this.y += Math.cos(this.phase * 2) * 1;
         }
-
         // Consciousness simulation effect
         if (enableConsciousnessSimulation && this.type === 'consciousness') {
           this.x += Math.sin(consciousnessState + this.phase) * 0.8;
           this.y += Math.cos(consciousnessState + this.phase) * 0.8;
         }
       }
-
       draw() {
         if (ctx) {
           const alpha = this.life / this.maxLife;
@@ -190,7 +171,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           ctx.restore();
         }
       }
-
       drawQuantumParticle(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = this.color;
         ctx.beginPath();
@@ -207,7 +187,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           ctx.stroke();
         }
       }
-
       drawNeuralParticle(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = this.color;
         ctx.beginPath();
@@ -224,7 +203,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
           ctx.stroke();
         }
       }
-
       drawHolographicParticle(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = this.color;
         ctx.beginPath();
@@ -238,7 +216,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         ctx.rect(this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
         ctx.stroke();
       }
-
       drawConsciousnessParticle(ctx: CanvasRenderingContext2D) {
         ctx.fillStyle = this.color;
         ctx.beginPath();
@@ -253,14 +230,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         ctx.stroke();
       }
     }
-
     let particles: QuantumParticle[] = [];
     
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
       particles.push(new QuantumParticle());
     }
-
     // Animation loop
     let animationId: number;
     const animate = () => {
@@ -302,9 +277,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       
       animationId = requestAnimationFrame(animate);
     };
-
     animate();
-
     // Mouse move handler
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -322,15 +295,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
         }
       });
     };
-
     window.addEventListener('mousemove', handleMouseMove);
-
     return () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [particleCount, animationSpeed, enableHolographic, enableQuantumEffects, enableNeuralPulse, enableConsciousnessSimulation, colors, multiplier]);
-
   // Helper functions for advanced effects
   const drawQuantumFieldLines = (ctx: CanvasRenderingContext2D) => {
     ctx.strokeStyle = colors.primary;
@@ -345,7 +315,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     }
     ctx.globalAlpha = 1;
   };
-
   const drawNeuralNetwork = (ctx: CanvasRenderingContext2D) => {
     ctx.strokeStyle = colors.secondary;
     ctx.lineWidth = 0.3;
@@ -359,7 +328,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     }
     ctx.globalAlpha = 1;
   };
-
   const drawHolographicMatrix = (ctx: CanvasRenderingContext2D) => {
     ctx.strokeStyle = colors.tertiary;
     ctx.lineWidth = 0.2;
@@ -373,7 +341,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     }
     ctx.globalAlpha = 1;
   };
-
   const drawConsciousnessSimulation = (ctx: CanvasRenderingContext2D) => {
     ctx.strokeStyle = colors.accent;
     ctx.lineWidth = 0.4;
@@ -392,7 +359,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     }
     ctx.globalAlpha = 1;
   };
-
   return (
     <div className="relative w-full h-full overflow-hidden">
       {/* Enhanced Canvas Background */}
@@ -473,5 +439,4 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     </div>
   );
 };
-
 export default UltraAdvancedFuturisticBackground2026;

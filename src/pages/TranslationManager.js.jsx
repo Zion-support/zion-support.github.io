@@ -72,7 +72,7 @@ export default function TranslationManager() {
             Object.entries(langTranslations).forEach(([key, value]) => {
                 if (key.toLowerCase().includes(query) ||
                     (typeof value === 'string' && value.toLowerCase().includes(query))) {
-                    filtered.push(key);
+                    filtered(key);
                 }
             });
         });

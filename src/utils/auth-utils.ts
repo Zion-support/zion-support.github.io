@@ -1,7 +1,6 @@
 /**
  * Authentication utility functions
  */
-
 /**
  * Cleans up authentication state by removing stored tokens and user data
  */
@@ -31,7 +30,6 @@ export const cleanupAuthState = (): void => {
     console.error('Error cleaning up authentication state:', error);
   }
 };
-
 /**
  * Checks if user is authenticated
  */
@@ -48,7 +46,6 @@ export const isAuthenticated = (): boolean => {
     return false;
   }
 };
-
 /**
  * Gets stored authentication tokens
  */
@@ -63,7 +60,6 @@ export const getStoredTokens = (): { accessToken?: string; refreshToken?: string
     return null;
   }
 };
-
 /**
  * Stores authentication tokens
  */

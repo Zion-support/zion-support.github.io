@@ -17,19 +17,22 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
   const [openCategories, setOpenCategories] = useState([]);
 
   const toggleCategory = (category) => {
+=======
+  const [openCategories, setOpenCategories] = useState<string[]>([]);
+  const toggleCategory = (category: string) => {
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     setOpenCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)
         : [...prev, category]
     );
   };
-
   const helpCategories = [
     {
       id: 'getting-started',
@@ -164,7 +167,6 @@ export default function Help() {
       ]
     }
   ];
-
   const popularArticles = [
     {
       title: 'How to get started with AI services',
@@ -185,7 +187,6 @@ export default function Help() {
       readTime: '6 min read'
     }
   ];
-
   const filteredCategories = helpCategories.map(category => ({
     ...category,
     articles: category.articles.filter(article =>
@@ -193,7 +194,6 @@ export default function Help() {
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(category => category.articles.length > 0);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       {/* Hero Section */}
@@ -219,7 +219,6 @@ export default function Help() {
           </div>
         </div>
       </section>
-
       {/* Popular Articles */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -245,7 +244,6 @@ export default function Help() {
           </div>
         </div>
       </section>
-
       {/* Help Categories */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -304,7 +302,6 @@ export default function Help() {
           </div>
         </div>
       </section>
-
       {/* Video Tutorials */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -353,7 +350,6 @@ export default function Help() {
           </div>
         </div>
       </section>
-
       {/* Contact Support */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">

@@ -2,20 +2,17 @@ export function register() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       const swUrl = `${process.env.PUBLIC_URL}/sw.js`;
-
       navigator.serviceWorker
         .register(swUrl)
         .then((registration) => {
           // Registration successful
           console.log('ServiceWorker registration successful with scope: ', registration.scope);
-
           // Check for updates
           registration.addEventListener('updatefound', () => {
             const installingWorker = registration.installing;
             if (installingWorker == null) {
               return;
             }
-
             installingWorker.onstatechange = () => {
               if (installingWorker.state === 'installed') {
                 if (navigator.serviceWorker.controller) {
@@ -38,7 +35,6 @@ export function register() {
     });
   }
 }
-
 export function unregister() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
@@ -50,7 +46,6 @@ export function unregister() {
       });
   }
 }
-
 function showUpdateNotification() {
   // Create a notification element
   const notification = document.createElement('div');
@@ -87,15 +82,12 @@ function showUpdateNotification() {
       </button>
     </div>
   `;
-
   // Add to page
   document.body.appendChild(notification);
-
   // Animate in
   setTimeout(() => {
     notification.classList.remove('translate-x-full');
   }, 100);
-
   // Auto-remove after 10 seconds
   setTimeout(() => {
     if (notification.parentElement) {
@@ -108,7 +100,6 @@ function showUpdateNotification() {
     }
   }, 10000);
 }
-
 // Request notification permission
 export function requestNotificationPermission() {
   if ('Notification' in window) {
@@ -121,42 +112,35 @@ export function requestNotificationPermission() {
     }
   }
 }
-
 // Send notification
 export function sendNotification(title: string, options?: NotificationOptions) {
   if ('Notification' in window && Notification.permission === 'granted') {
     new Notification(title, options);
   }
 }
-
 // Check if app is running as PWA
 export function isPWA(): boolean {
   return window.matchMedia('(display-mode: standalone)').matches ||
          (window.navigator as any).standalone === true;
 }
-
 // Install prompt handling
 export function handleInstallPrompt() {
   let deferredPrompt: any;
-
   window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();
     
     // Stash the event so it can be triggered later
     deferredPrompt = e;
-
     // Show install button or notification
     showInstallPrompt();
   });
-
   window.addEventListener('appinstalled', () => {
     console.log('PWA was installed');
     // Hide install prompt
     hideInstallPrompt();
   });
 }
-
 function showInstallPrompt() {
   // Create install prompt element
   const prompt = document.createElement('div');
@@ -194,15 +178,12 @@ function showInstallPrompt() {
       </button>
     </div>
   `;
-
   // Add to page
   document.body.appendChild(prompt);
-
   // Animate in
   setTimeout(() => {
     prompt.classList.remove('translate-y-full');
   }, 100);
-
   // Add install button functionality
   const installButton = document.getElementById('install-button');
   if (installButton) {
@@ -221,7 +202,6 @@ function showInstallPrompt() {
     });
   }
 }
-
 function hideInstallPrompt() {
   const prompt = document.getElementById('install-prompt');
   if (prompt) {

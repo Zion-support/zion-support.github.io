@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
-
 interface SEOProps {
   title?: string;
   description?: string;
@@ -15,7 +14,6 @@ interface SEOProps {
   section?: string;
   tags?: string[];
 }
-
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Leading AI & Technology Solutions',
   description = 'Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. Transform your business with cutting-edge technology.',
@@ -31,7 +29,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 }) => {
   const location = useLocation();
   const currentUrl = url || `${window.location.origin}${location.pathname}`;
-
   // Generate structured data for better SEO
   const generateStructuredData = () => {
     const baseData = {
@@ -94,7 +91,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         ]
       }
     };
-
     // Add article-specific structured data if it's an article
     if (type === 'article') {
       return {
@@ -125,10 +121,8 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
         "keywords": keywords
       };
     }
-
     return baseData;
   };
-
   // Performance optimization: Only update meta tags when necessary
   useEffect(() => {
     // Update page title for better UX
@@ -138,7 +132,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     const preloadImage = new Image();
     preloadImage.src = image;
   }, [title, image]);
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}

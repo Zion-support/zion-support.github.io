@@ -143,7 +143,6 @@ export function AIServicesShowcase() {
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-bounce"></div>
         <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-ping"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header Section */}
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -166,7 +165,6 @@ export function AIServicesShowcase() {
             <Link to="/services" className="text-zion-cyan underline">Browse all services</Link>
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div className="flex flex-wrap justify-center gap-4 mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           {categories.map((category, index) => (<motion.button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${selectedCategory === category
@@ -175,7 +173,6 @@ export function AIServicesShowcase() {
               {category}
             </motion.button>))}
         </motion.div>
-
         {/* Services Grid */}
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <AnimatePresence mode="wait">
@@ -198,16 +195,13 @@ export function AIServicesShowcase() {
                     </div>
                     {getStatusBadge(service.status)}
                   </div>
-
                   <p className="text-zion-slate-light mb-4">{service.description}</p>
-
                   <div className="grid grid-cols-2 gap-2 mb-4">
                     {service.features.slice(0, 4).map((feature, i) => (<div key={i} className="flex items-center gap-2 text-sm text-zion-slate-light">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                         {feature}
                       </div>))}
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="text-zion-cyan font-semibold">{service.price}</div>
                     <Link to="/services" className="inline-flex items-center gap-2 text-white/90 hover:text-white">
@@ -218,7 +212,6 @@ export function AIServicesShowcase() {
               </motion.div>))}
           </AnimatePresence>
         </motion.div>
-
         {/* CTA */}
         <div className="text-center">
           <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-blue text-white border border-zion-cyan/30">

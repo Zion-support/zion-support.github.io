@@ -87,10 +87,8 @@ import {
 } from 'lucide-react';
 import { revolutionary2025AdvancedMicroSaasServices } from '../data/revolutionary-2025-advanced-micro-saas-v2';
 import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-2025-specialized-it-ai-services';
-
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-
 const Revolutionary2025ServicesShowcase: React.FC = () => {
   const [services, setServices] = useState<any[]>(ALL_SERVICES);
   const [searchTerm, setSearchTerm] = useState('');
@@ -100,11 +98,9 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
   const [sortBy, setSortBy] = useState('title');
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'comparison'>('grid');
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
-
   // Filter services based on search and filters
   useEffect(() => {
     let filtered = ALL_SERVICES;
-
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -112,11 +108,9 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
-
     if (selectedPriceRange !== 'all') {
       const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {
@@ -127,7 +121,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         return price >= min;
       });
     }
-
     if (selectedROI !== 'all') {
       const [min, max] = selectedROI.split('-').map(Number);
       filtered = filtered.filter(service => {
@@ -138,7 +131,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         return roi >= min;
       });
     }
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -152,12 +144,9 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           return a.name.localeCompare(b.name);
       }
     });
-
     setServices(filtered);
   }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
-
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-
   const handleServiceSelect = (serviceId: string) => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
@@ -165,9 +154,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         : [...prev, serviceId]
     );
   };
-
   const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -192,7 +179,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
       <section className="py-12 bg-black/30">
         <div className="container mx-auto px-4">
@@ -208,7 +194,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
               />
             </div>
-
             {/* Filters */}
             <div className="flex flex-wrap gap-4">
               <select
@@ -221,7 +206,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
-
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
@@ -233,7 +217,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <option value="1000-1500">$1,000 - $1,500</option>
                 <option value="1500-9999">Over $1,500</option>
               </select>
-
               <select
                 value={selectedROI}
                 onChange={(e) => setSelectedROI(e.target.value)}
@@ -245,7 +228,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <option value="700-800">700% - 800%</option>
                 <option value="800-999">800%+</option>
               </select>
-
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -257,7 +239,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <option value="customers">Sort by Customers</option>
               </select>
             </div>
-
             {/* View Mode Toggle */}
             <div className="flex gap-2">
               <button
@@ -294,7 +275,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI Service Recommendation Engine */}
       <section className="py-16 bg-gradient-to-r from-slate-900/40 to-gray-900/40">
         <div className="container mx-auto px-4">
@@ -385,7 +365,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Service Comparison Matrix */}
       <section className="py-16 bg-gradient-to-r from-slate-800/40 to-gray-800/40">
         <div className="container mx-auto px-4">
@@ -470,7 +449,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid/List */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -482,7 +460,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               Explore our cutting-edge solutions designed to transform your business operations
             </p>
           </div>
-
           {viewMode === 'grid' && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
@@ -512,7 +489,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                       <span>{service.customers} customers</span>
                     </div>
                   </div>
-
                   <div className="space-y-2 mb-6">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-400">
@@ -521,7 +497,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                       </div>
                     ))}
                   </div>
-
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">{service.category}</span>
                     <a 
@@ -537,7 +512,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               ))}
             </div>
           )}
-
           {viewMode === 'list' && (
             <div className="space-y-6">
               {services.map((service, index) => (
@@ -573,7 +547,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                           <div className="text-white">{service.category}</div>
                         </div>
                       </div>
-
                       <div className="flex items-center justify-between">
                         <div className="flex gap-2">
                           {service.features.slice(0, 4).map((feature, idx) => (
@@ -597,14 +570,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               ))}
             </div>
           )}
-
           {viewMode === 'comparison' && (
             <div className="space-y-8">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-white mb-4">Service Comparison</h3>
                 <p className="text-gray-300">Select up to 3 services to compare features and pricing</p>
               </div>
-
               {selectedServicesData.length > 0 ? (
                 <div className="overflow-x-auto">
                   <table className="w-full bg-slate-800/50 rounded-xl border border-slate-700">
@@ -691,7 +662,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Pricing Comparison Section */}
       <section className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -841,7 +811,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
         <div className="container mx-auto px-4 text-center">
@@ -879,7 +848,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Service Evolution Roadmap */}
       <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -987,7 +955,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Technology Stack Section */}
       <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -1076,7 +1043,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Statistics Section */}
       <section className="py-20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">
         <div className="container mx-auto px-4 text-center">
@@ -1131,7 +1097,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -1208,7 +1173,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -1236,7 +1200,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="mailto:kleber@ziontechgroup.com"
@@ -1258,18 +1221,15 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
     </div>
   );
 };
-
 // Grid and List icons for the view mode toggle
 const Grid = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
   </svg>
 );
-
 const List = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
   </svg>
 );
-
 export default Revolutionary2025ServicesShowcase;

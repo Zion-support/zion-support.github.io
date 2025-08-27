@@ -60,7 +60,6 @@ export function MainSidebar() {
           Tech & AI Marketplace
         </p>
       </div>
-
       <nav className="space-y-6">
         {sidebarSections.map((section) => (<div key={section.title}>
             <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
@@ -78,7 +77,6 @@ export function MainSidebar() {
             </ul>
           </div>))}
       </nav>
-
       <div className="mt-8 pt-6 border-t border-zion-blue-light">
         <div className="text-zion-slate-light text-xs">
           <p className="mb-2">Need help?</p>

@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
-=======
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Heart, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   const socialLinks = [
     { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
     { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
@@ -19,7 +11,6 @@ export const Footer: React.FC = () => {
     { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
     { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
   ];
-
   const footerSections = [
     {
       title: "Core Services",
@@ -35,20 +26,11 @@ export const Footer: React.FC = () => {
     {
       title: "Company",
       links: [
-<<<<<<< HEAD
-        { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/about" },
-        { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/news" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
-=======
         { name: 'AI Solutions', path: '/services/ai' },
         { name: 'Cloud & DevOps', path: '/services/cloud' },
         { name: 'Cybersecurity', path: '/services/cybersecurity' },
         { name: 'Infrastructure', path: '/services/infrastructure' },
         { name: 'Digital Transformation', path: '/services/digital-transformation' }
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       ]
     },
     {
@@ -75,24 +57,16 @@ export const Footer: React.FC = () => {
       ]
     }
   ];
-
   const contactInfo = [
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
-
-<<<<<<< HEAD
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-=======
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" }
   ];
-
   const socialLinks = [
     {
       name: "Email",
@@ -113,12 +87,9 @@ export const Footer: React.FC = () => {
       )
     }
   ];
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
@@ -127,14 +98,6 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-<<<<<<< HEAD
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h3>
-              <p className="text-slate-300 mt-4 max-w-md">
-                Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. 
-                Transform your business with cutting-edge technology.
-=======
               <motion.span 
                 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
                 whileHover={{ scale: 1.05 }}
@@ -163,7 +126,6 @@ export const Footer: React.FC = () => {
                 <span>Delaware, USA</span>
               </div>
             </div>
-
             {/* Social media - Updated with working links */}
             <div className="flex space-x-4">
               <motion.a
@@ -202,7 +164,6 @@ export const Footer: React.FC = () => {
               </motion.a>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
@@ -214,7 +175,6 @@ export const Footer: React.FC = () => {
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact Us</Link></li>
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
@@ -226,7 +186,6 @@ export const Footer: React.FC = () => {
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
             </ul>
           </div>
-
           {/* Support & Resources */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
@@ -248,14 +207,12 @@ export const Footer: React.FC = () => {
             <FooterNewsletter />
           </div>
         </div>
-
         {/* Bottom section */}
         <div className="pt-8 border-t border-zion-blue-light">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
               <p className="text-zion-slate-light text-sm">
                 &copy; {currentYear} Zion Tech Group. All rights reserved.
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
               </p>
             </div>
             
@@ -276,26 +233,6 @@ export const Footer: React.FC = () => {
                 </div>
               ))}
             </div>
-
-<<<<<<< HEAD
-            {/* Social Links */}
-            <div className="mt-6">
-              <h4 className="text-white font-semibold mb-3">Follow Us</h4>
-              <div className="flex space-x-3">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-lg transition-all duration-200 ${social.color} hover:scale-110`}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-=======
             {/* Back to Top */}
             <motion.button
               onClick={scrollToTop}
@@ -306,9 +243,7 @@ export const Footer: React.FC = () => {
               <ArrowUp className="w-4 h-4" />
               <span>Back to Top</span>
             </motion.button>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           </div>
-
           {/* Footer Sections */}
           {footerSections.map((section, index) => (
             <div key={index}>
@@ -328,7 +263,6 @@ export const Footer: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Newsletter Section */}
         <div className="mt-12 pt-8 border-t border-slate-700/50">
           <div className="max-w-2xl mx-auto text-center">
@@ -347,7 +281,6 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
       <div className="border-t border-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -371,7 +304,6 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
@@ -381,10 +313,5 @@ export const Footer: React.FC = () => {
       </button>
     </footer>
   );
-<<<<<<< HEAD
-};
-=======
 }
-
 export default Footer;
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

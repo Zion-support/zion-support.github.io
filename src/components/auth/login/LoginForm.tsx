@@ -5,7 +5,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
-
 export function LoginForm() {
   const { login, isLoading } = useAuth();
   const navigate = useNavigate();
@@ -16,7 +15,6 @@ export function LoginForm() {
     password: "",
   });
   const [errors, setErrors] = useState({});
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -31,7 +29,6 @@ export function LoginForm() {
       }));
     }
   };
-
   const validateForm = () => {
     const newErrors = {};
     
@@ -50,7 +47,6 @@ export function LoginForm() {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
   const onSubmit = async (e) => {
     e.preventDefault();
     
@@ -70,7 +66,6 @@ export function LoginForm() {
       setIsSubmitting(false);
     }
   };
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <div className="max-w-md w-full space-y-8 p-8">
@@ -106,7 +101,6 @@ export function LoginForm() {
               <p className="text-red-400 text-sm mt-1">{errors.email}</p>
             )}
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-light mb-2">
               Password
@@ -143,7 +137,6 @@ export function LoginForm() {
               <p className="text-red-400 text-sm mt-1">{errors.password}</p>
             )}
           </div>
-
           <div className="flex items-center justify-between">
             <div className="text-sm">
               <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -151,7 +144,6 @@ export function LoginForm() {
               </Link>
             </div>
           </div>
-
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"

@@ -13,7 +13,6 @@ import {
   Cpu,
   HardDrive
 } from 'lucide-react';
-
 export default function InfrastructureServices() {
   const infrastructureServices = [
     {
@@ -65,7 +64,6 @@ export default function InfrastructureServices() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   const infrastructureTypes = [
     {
       type: "On-Premises",
@@ -92,7 +90,6 @@ export default function InfrastructureServices() {
       icon: "🌐"
     }
   ];
-
   const benefits = [
     {
       icon: Zap,
@@ -115,7 +112,6 @@ export default function InfrastructureServices() {
       description: "24/7 monitoring and support across all time zones"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -140,7 +136,6 @@ export default function InfrastructureServices() {
           </motion.div>
         </div>
       </section>
-
       {/* Infrastructure Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -182,7 +177,6 @@ export default function InfrastructureServices() {
           </div>
         </div>
       </section>
-
       {/* Infrastructure Types Section */}
       <section className="py-20 bg-black/30">
         <div className="container mx-auto px-4">
@@ -222,7 +216,6 @@ export default function InfrastructureServices() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -257,7 +250,6 @@ export default function InfrastructureServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="container mx-auto px-4 text-center">

@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
 interface TalentProfile {
   full_name: string;
   skills?: string[];
   availability_type?: string;
 }
-
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>;
 }
-
 // Simple error component to replace Next.js ErrorPage
 const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
   <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
@@ -22,7 +19,6 @@ const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
     </div>
   </div>
 );
-
 // Simple loading component
 const ProfileLoadingState: React.FC = () => (
   <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
@@ -32,13 +28,11 @@ const ProfileLoadingState: React.FC = () => (
     </div>
   </div>
 );
-
 const TalentProfilePage: React.FC = () => {
   const { id } = useParams();
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) return;
@@ -65,15 +59,12 @@ const TalentProfilePage: React.FC = () => {
         setLoading(false);
       }
     };
-
     if (id) {
       fetchProfile();
     }
   }, [id]);
-
   if (loading) return <ProfileLoadingState />;
   if (error || !profile) return <Navigate to="/404" replace />;
-
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">
       <div className="container mx-auto px-4 space-y-4">
@@ -115,5 +106,4 @@ const TalentProfilePage: React.FC = () => {
     </main>
   );
 };
-
 export default TalentProfilePage;

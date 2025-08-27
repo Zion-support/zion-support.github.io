@@ -87,7 +87,6 @@ export default function HelpCenter() {
         <meta name="keywords" content="help center, support, FAQ, tutorials, Zion Tech Group"/>
         <link rel="canonical" href="https://ziontechgroup.com/help-center"/>
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4">
@@ -106,7 +105,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Help Categories */}
         <section className="py-16 px-4">
           <div className="container mx-auto">
@@ -134,7 +132,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Popular Articles */}
         <section className="py-16 px-4 bg-zion-blue-light/10">
           <div className="container mx-auto">
@@ -150,7 +147,6 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
         {/* Contact Support */}
         <section className="py-16 px-4">
           <div className="container mx-auto text-center">

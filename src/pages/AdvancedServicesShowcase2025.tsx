@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
 import { specializedITServices2025 } from '../data/2025-specialized-it-ai-services';
-import SEOHead from '../components/SEOHead';
+import SEOHead from '../components/SEOHead.jsx';
 const AdvancedServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -97,7 +97,6 @@ const AdvancedServicesShowcase2025 = () => {
             description: "Discover our comprehensive collection of 20+ advanced real micro SAAS, IT, and AI services. Market-ready solutions with proven ROI and competitive pricing.",
             keywords: "advanced services, micro SAAS, AI services, IT solutions, real services, enterprise solutions, Zion Tech Group"
         }}/>
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -129,7 +128,6 @@ const AdvancedServicesShowcase2025 = () => {
               </div>
             </div>
           </motion.div>
-
           {/* Navigation Links */}
           <motion.div className="flex flex-wrap justify-center gap-4 mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
             <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 flex items-center space-x-2">
@@ -143,7 +141,6 @@ const AdvancedServicesShowcase2025 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Filters and Search */}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
@@ -154,7 +151,6 @@ const AdvancedServicesShowcase2025 = () => {
                 <label className="block text-sm font-medium text-gray-300 mb-2">Search Services</label>
                 <input type="text" placeholder="Search by name, description, or features..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
               </div>
-
               {/* Category Filter */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
@@ -164,7 +160,6 @@ const AdvancedServicesShowcase2025 = () => {
                     </option>))}
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
@@ -179,7 +174,6 @@ const AdvancedServicesShowcase2025 = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -199,17 +193,14 @@ const AdvancedServicesShowcase2025 = () => {
                       <span>Popular</span>
                     </div>)}
                 </div>
-
                 {/* Tagline */}
                 <p className="text-gray-300 mb-4">{service.tagline}</p>
-
                 {/* Price */}
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-blue-400">{service.price}</span>
                   <span className="text-gray-400">{service.period}</span>
                   <span className="text-sm text-gray-500 ml-2">({service.marketPrice} market rate)</span>
                 </div>
-
                 {/* Features */}
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>
@@ -221,7 +212,6 @@ const AdvancedServicesShowcase2025 = () => {
                     {service.features.length > 4 && (<li className="text-sm text-blue-400">+{service.features.length - 4} more features</li>)}
                   </ul>
                 </div>
-
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                   <div className="flex items-center space-x-2">
@@ -241,13 +231,11 @@ const AdvancedServicesShowcase2025 = () => {
                     <span className="text-gray-400">{service.growthRate}</span>
                   </div>
                 </div>
-
                 {/* ROI and Market Info */}
                 <div className="mb-4 p-3 bg-white/5 rounded-lg">
                   <p className="text-sm text-green-400 font-medium mb-1">ROI: {service.roi}</p>
                   <p className="text-xs text-gray-400">Market Size: {service.marketSize}</p>
                 </div>
-
                 {/* Technology Stack */}
                 <div className="mb-4">
                   <h4 className="text-sm font-medium text-gray-300 mb-2">Technology:</h4>
@@ -260,7 +248,6 @@ const AdvancedServicesShowcase2025 = () => {
                       </span>)}
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex space-x-2">
                   <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-sm font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 text-center">
@@ -272,7 +259,6 @@ const AdvancedServicesShowcase2025 = () => {
                 </div>
               </motion.div>))}
           </motion.div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (<motion.div className="text-center py-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <div className="text-6xl mb-4">🔍</div>
@@ -281,7 +267,6 @@ const AdvancedServicesShowcase2025 = () => {
             </motion.div>)}
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-4xl mx-auto text-center">

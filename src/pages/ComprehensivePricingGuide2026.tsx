@@ -21,34 +21,29 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { allPricing2026 } from '../data/comprehensivePricingGuide2026';
-
 const ComprehensivePricingGuide2026: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<string | null>(null);
-
   const categories = [
     { id: 'all', name: 'All Services', icon: Star, count: allPricing2026.microSaas.length + allPricing2026.itInfrastructure.length + allPricing2026.aiServices.length },
     { id: 'microSaas', name: 'Micro SAAS', icon: Zap, count: allPricing2026.microSaas.length },
     { id: 'itInfrastructure', name: 'IT Infrastructure', icon: Cpu, count: allPricing2026.itInfrastructure.length },
     { id: 'aiServices', name: 'AI Services', icon: Brain, count: allPricing2026.aiServices.length }
   ];
-
   const filteredServices = () => {
     let services: any[] = [];
     
     if (activeCategory === 'all' || activeCategory === 'microSaas') {
-      services.push(...allPricing2026.microSaas);
+      services(...allPricing2026.microSaas);
     }
     if (activeCategory === 'all' || activeCategory === 'itInfrastructure') {
-      services.push(...allPricing2026.itInfrastructure);
+      services(...allPricing2026.itInfrastructure);
     }
     if (activeCategory === 'all' || activeCategory === 'aiServices') {
-      services.push(...allPricing2026.aiServices);
+      services(...allPricing2026.aiServices);
     }
-
     return services;
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Quantum Computing':
@@ -67,7 +62,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
         return <Star className="w-5 h-5" />;
     }
   };
-
   const formatPrice = (price: number, model: string) => {
     if (model === 'hourly') {
       return `$${price}/hr`;
@@ -77,7 +71,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
       return `$${price.toLocaleString()}/mo`;
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       <SEO 
@@ -131,7 +124,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Category Filter */}
       <section className="px-4 py-8">
         <div className="max-w-7xl mx-auto">
@@ -156,7 +148,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Pricing */}
       <section className="px-4 py-8">
         <div className="max-w-7xl mx-auto">
@@ -193,7 +184,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Pricing Tiers */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   {service.tiers.map((tier, tierIndex) => (
@@ -212,7 +202,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                         </div>
                         <p className="text-sm text-zinc-400">{tier.billingCycle}</p>
                       </div>
-
                       {/* Features */}
                       <div className="space-y-3 mb-6">
                         <h4 className="font-semibold text-white text-sm">Features:</h4>
@@ -223,7 +212,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                           </div>
                         ))}
                       </div>
-
                       {/* Limitations */}
                       {tier.limitations.length > 0 && (
                         <div className="space-y-3 mb-6">
@@ -236,7 +224,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                           ))}
                         </div>
                       )}
-
                       {/* Best For */}
                       <div className="mb-6">
                         <h4 className="font-semibold text-white text-sm mb-2">Best For:</h4>
@@ -248,7 +235,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       {/* ROI and Setup */}
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center gap-2 text-green-400">
@@ -267,7 +253,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Market Comparison */}
                 <div className="bg-white/5 rounded-lg p-6 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4">Market Comparison</h3>
@@ -290,7 +275,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* ROI Analysis */}
                 <div className="bg-white/5 rounded-lg p-6 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4">ROI Analysis</h3>
@@ -309,7 +293,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Volume Discounts */}
                 <div className="bg-white/5 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-4">Volume Discounts</h3>
@@ -335,7 +318,6 @@ const ComprehensivePricingGuide2026: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
@@ -402,5 +384,4 @@ const ComprehensivePricingGuide2026: React.FC = () => {
     </div>
   );
 };
-
 export default ComprehensivePricingGuide2026;

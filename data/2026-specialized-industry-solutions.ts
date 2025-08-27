@@ -37,14 +37,12 @@ export interface SpecializedIndustrySolution {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform',
@@ -247,7 +245,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     ],
   }
 ];
-
 export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',
   'FinTech Solutions',

@@ -5,7 +5,6 @@ import {
   Shield, Cpu, Globe, Eye, Building, Lightbulb, Target,
   TrendingUp, Users, Clock, Award
 } from 'lucide-react';
-
 interface Service {
   id: string;
   name: string;
@@ -24,13 +23,11 @@ interface Service {
   integration?: string[];
   useCases?: string[];
 }
-
 interface UltraFuturisticServiceCard2036Props {
   service: Service;
   variant?: 'ai' | 'quantum' | 'space' | 'automation' | 'cyber' | 'default';
   className?: string;
 }
-
 const categoryIcons: { [key: string]: React.ReactNode } = {
   'AI & Data': <Brain className="w-5 h-5" />,
   'Quantum Technology': <Atom className="w-5 h-5" />,
@@ -48,7 +45,6 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Autonomous Systems': <Rocket className="w-5 h-5" />,
   'Climate Technology': <Globe className="w-5 h-5" />
 };
-
 const variantConfig = {
   ai: {
     gradient: 'from-green-500 via-emerald-500 to-teal-500',
@@ -93,14 +89,12 @@ const variantConfig = {
     bg: 'from-gray-900/20 to-slate-900/20'
   }
 };
-
 export default function UltraFuturisticServiceCard2036({ 
   service, 
   variant = 'default',
   className = ''
 }: UltraFuturisticServiceCard2036Props) {
   const config = variantConfig[variant];
-
   const cardVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: { 
@@ -121,7 +115,6 @@ export default function UltraFuturisticServiceCard2036({
       }
     }
   };
-
   const iconVariants = {
     hidden: { rotate: -180, scale: 0 },
     visible: { 
@@ -141,7 +134,6 @@ export default function UltraFuturisticServiceCard2036({
       }
     }
   };
-
   return (
     <motion.div
       variants={cardVariants}
@@ -163,7 +155,6 @@ export default function UltraFuturisticServiceCard2036({
           Popular
         </motion.div>
       )}
-
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
         <div className="flex-1">
@@ -194,7 +185,6 @@ export default function UltraFuturisticServiceCard2036({
           </p>
         </div>
       </div>
-
       {/* Price Section */}
       <div className="mb-6 p-4 bg-gray-800/30 rounded-xl border border-gray-700/50">
         <div className="flex items-center justify-between">
@@ -218,7 +208,6 @@ export default function UltraFuturisticServiceCard2036({
           </div>
         )}
       </div>
-
       {/* Features */}
       <div className="mb-6">
         <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center gap-2">
@@ -245,7 +234,6 @@ export default function UltraFuturisticServiceCard2036({
           )}
         </div>
       </div>
-
       {/* Additional Info */}
       {(service.targetAudience || service.competitiveAdvantage) && (
         <div className="mb-6 space-y-3">
@@ -270,7 +258,6 @@ export default function UltraFuturisticServiceCard2036({
           )}
         </div>
       )}
-
       {/* CTA Button */}
       <motion.div
         whileHover={{ scale: 1.05 }}
@@ -287,7 +274,6 @@ export default function UltraFuturisticServiceCard2036({
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700" />
         </button>
       </motion.div>
-
       {/* Hover Effects */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       

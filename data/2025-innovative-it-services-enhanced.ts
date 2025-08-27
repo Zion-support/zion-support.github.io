@@ -37,14 +37,12 @@ export interface InnovativeITService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
   {
     id: 'quantum-cloud-infrastructure',
@@ -91,7 +89,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 67
   },
-
   // Edge Computing Orchestration
   {
     id: 'edge-computing-orchestration',
@@ -138,7 +135,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 123
   },
-
   // Zero Trust Security Platform
   {
     id: 'zero-trust-network-architecture',
@@ -185,7 +181,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 189
   },
-
   // Blockchain Enterprise Platform
   {
     id: 'blockchain-infrastructure-platform',
@@ -232,7 +227,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.7,
     reviews: 62
   },
-
   // AI-Powered DevOps
   {
     id: 'ai-powered-devops',
@@ -279,7 +273,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 145
   },
-
   // Quantum Networking
   {
     id: 'quantum-networking',
@@ -326,7 +319,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 5.0,
     reviews: 18
   },
-
   // Autonomous IT Operations
   {
     id: 'autonomous-it-operations',
@@ -373,7 +365,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 98
   },
-
   // Quantum Data Center
   {
     id: 'quantum-data-center',
@@ -420,7 +411,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 34
   },
-
   // Quantum Cybersecurity
   {
     id: 'quantum-cybersecurity',
@@ -467,7 +457,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 134
   },
-
   // Quantum Cloud Migration
   {
     id: 'quantum-cloud-migration',
@@ -514,7 +503,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.7,
     reviews: 56
   },
-
   // Blockchain Infrastructure Platform
   {
     id: 'blockchain-infrastructure-platform',
@@ -567,7 +555,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 89
   },
-
   // New Innovative IT Services for 2025
   {
     id: 'quantum-secure-cloud-infrastructure',
@@ -620,7 +607,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 5.0,
     reviews: 3
   },
-
   // Autonomous IT Operations Center
   {
     id: 'autonomous-it-operations-center',
@@ -673,7 +659,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 16
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -726,7 +711,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 28
   },
-
   // Blockchain Infrastructure Platform
   {
     id: 'blockchain-infrastructure-platform',
@@ -779,7 +763,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.7,
     reviews: 24
   },
-
   // AI-Powered DevOps Platform
   {
     id: 'ai-powered-devops-platform',
@@ -832,7 +815,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.8,
     reviews: 42
   },
-
   // Zero Trust Security Platform
   {
     id: 'zero-trust-security-platform',
@@ -885,7 +867,6 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
     rating: 4.9,
     reviews: 19
   },
-
   // Quantum Networking Platform
   {
     id: 'quantum-networking',

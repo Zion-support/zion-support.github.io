@@ -51,12 +51,10 @@ function ClientDashboardContent() {
             </Button>
           </div>
         </div>
-
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value)}>

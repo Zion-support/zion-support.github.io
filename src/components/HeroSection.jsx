@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield, Search } from "lucide-react";
 import { useRef } from "react";
-
 export function HeroSection() {
   const { t } = useTranslation();
   const containerRef = useRef(null);
@@ -111,7 +110,6 @@ export function HeroSection() {
           style={{ animationDelay: '2.5s' }}
         />
       </div>
-
       {/* Enhanced decorative geometric shapes with animations */}
       <motion.div 
         className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" 
@@ -149,7 +147,6 @@ export function HeroSection() {
             {t('home.hero_title') || "The Future of Tech & AI"}
           </GradientHeading>
         </motion.div>
-
         {/* Enhanced subtitle with better spacing and animations */}
         <motion.p 
           variants={itemVariants} 
@@ -157,7 +154,6 @@ export function HeroSection() {
         >
           {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
         </motion.p>
-
         {/* Enhanced feature highlights with icons and animations */}
         <motion.div 
           variants={itemVariants} 
@@ -196,7 +192,6 @@ export function HeroSection() {
             <span className="font-medium">24/7 Support</span>
           </motion.div>
         </motion.div>
-
         {/* Enhanced CTA buttons with better animations and effects */}
         <motion.div 
           variants={itemVariants} 
@@ -231,7 +226,6 @@ export function HeroSection() {
             </Link>
           </motion.div>
         </motion.div>
-
         {/* Enhanced trust indicators with better visuals */}
         <motion.div 
           variants={itemVariants} 
@@ -261,7 +255,6 @@ export function HeroSection() {
             />
           </div>
         </motion.div>
-
         {/* New stats section */}
         <motion.div 
           variants={itemVariants} 

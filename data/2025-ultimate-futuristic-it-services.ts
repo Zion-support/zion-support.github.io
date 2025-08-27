@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface UltimateFuturisticITService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface UltimateFuturisticITService {
   rating: number;
   reviews: number;
 }
-
 export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
   // Zero-Trust Quantum Security Platform
   {
@@ -94,7 +92,6 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.9,
     reviews: 11
   },
-
   // Autonomous DevOps Platform
   {
     id: 'autonomous-devops-platform',
@@ -147,7 +144,6 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.8,
     reviews: 18
   },
-
   // Quantum-Enhanced Cloud Infrastructure
   {
     id: 'quantum-enhanced-cloud-infrastructure',
@@ -200,7 +196,6 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.9,
     reviews: 7
   },
-
   // AI-Powered IT Asset Management
   {
     id: 'ai-powered-it-asset-management',
@@ -253,7 +248,6 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.7,
     reviews: 45
   },
-
   // Autonomous Network Management
   {
     id: 'autonomous-network-management',
@@ -306,7 +300,6 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.8,
     reviews: 23
   },
-
   // Quantum-Secure Data Center
   {
     id: 'quantum-secure-data-center',
@@ -359,7 +352,6 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.9,
     reviews: 5
   },
-
   // AI-Powered IT Service Desk
   {
     id: 'ai-powered-it-service-desk',
@@ -412,7 +404,6 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.6,
     reviews: 34
   },
-
   // Quantum-Enhanced Backup & Recovery
   {
     id: 'quantum-enhanced-backup-recovery',
@@ -465,7 +456,6 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     rating: 4.8,
     reviews: 12
   },
-
   // Autonomous IT Compliance Platform
   {
     id: 'autonomous-it-compliance-platform',

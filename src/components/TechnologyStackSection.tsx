@@ -298,7 +298,6 @@ export function TechnologyStackSection() {
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div className="text-center mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -309,7 +308,6 @@ export function TechnologyStackSection() {
             Discover our comprehensive technology stack that powers innovative solutions across 
             frontend, backend, cloud, AI, and development tools. Built for scale, performance, and reliability.
           </p>
-
           {/* Technology stats */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {technologyStats.map((stat, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -321,7 +319,6 @@ export function TechnologyStackSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Category Navigation */}
         <motion.div className="mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
           <div className="flex flex-wrap justify-center gap-4">
@@ -333,7 +330,6 @@ export function TechnologyStackSection() {
               </button>))}
           </div>
         </motion.div>
-
         {/* Technology Grid */}
         <motion.div className="mb-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -357,11 +353,9 @@ export function TechnologyStackSection() {
                       <div className="text-zion-slate-light text-xs">{tech.expertise}</div>
                     </div>
                   </div>
-
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                     {tech.description}
                   </p>
-
                   {/* Quick stats */}
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
@@ -373,7 +367,6 @@ export function TechnologyStackSection() {
                       <div className="text-zion-slate-light text-xs">Rating</div>
                     </div>
                   </div>
-
                   {/* Features preview */}
                   <div className="mb-4">
                     <div className="text-zion-cyan font-semibold text-sm mb-2">Key Features:</div>
@@ -386,7 +379,6 @@ export function TechnologyStackSection() {
                         </span>)}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
@@ -394,7 +386,6 @@ export function TechnologyStackSection() {
                     </span>
                     <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
                   </div>
-
                   {/* Expanded details */}
                   <AnimatePresence>
                     {selectedTech === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -407,7 +398,6 @@ export function TechnologyStackSection() {
                               </span>))}
                           </div>
                         </div>
-
                         {/* Alternatives */}
                         <div className="mb-4">
                           <h5 className="text-zion-cyan font-semibold text-sm mb-2">Alternatives:</h5>
@@ -415,7 +405,6 @@ export function TechnologyStackSection() {
                             {tech.alternatives.join(", ")}
                           </div>
                         </div>
-
                         {/* Expertise Badge */}
                         <div className="text-center p-2 rounded-lg bg-zion-cyan/20 border border-zion-cyan/30">
                           <div className="text-zion-cyan font-bold text-sm">{tech.expertise} Level</div>
@@ -427,7 +416,6 @@ export function TechnologyStackSection() {
               </motion.div>))}
           </div>
         </motion.div>
-
         {/* Call to action */}
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

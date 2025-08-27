@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button } from './ui/button';
-
 export const QuoteRequestForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,20 +10,17 @@ export const QuoteRequestForm = () => {
     budget: '',
     timeline: ''
   });
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
   };
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-dark rounded-xl p-8 border border-zion-cyan/20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -43,7 +39,6 @@ export const QuoteRequestForm = () => {
             placeholder="Enter your full name"
           />
         </div>
-
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
             Email Address *
@@ -59,7 +54,6 @@ export const QuoteRequestForm = () => {
             placeholder="Enter your email"
           />
         </div>
-
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
             Company
@@ -74,7 +68,6 @@ export const QuoteRequestForm = () => {
             placeholder="Enter company name"
           />
         </div>
-
         <div>
           <label htmlFor="projectType" className="block text-sm font-medium text-white mb-2">
             Project Type *
@@ -96,7 +89,6 @@ export const QuoteRequestForm = () => {
           </select>
         </div>
       </div>
-
       <div>
         <label htmlFor="description" className="block text-sm font-medium text-white mb-2">
           Project Description *
@@ -112,7 +104,6 @@ export const QuoteRequestForm = () => {
           placeholder="Describe your project requirements, goals, and any specific details..."
         />
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
@@ -133,7 +124,6 @@ export const QuoteRequestForm = () => {
             <option value="over-500k">Over $500,000</option>
           </select>
         </div>
-
         <div>
           <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2">
             Timeline
@@ -154,7 +144,6 @@ export const QuoteRequestForm = () => {
           </select>
         </div>
       </div>
-
       <div className="text-center">
         <Button
           type="submit"
@@ -163,12 +152,10 @@ export const QuoteRequestForm = () => {
           Request Quote
         </Button>
       </div>
-
       <p className="text-center text-zion-slate-light text-sm">
         We'll get back to you within 24 hours with a detailed quote and next steps.
       </p>
     </form>
   );
 };
-
 export default QuoteRequestForm;

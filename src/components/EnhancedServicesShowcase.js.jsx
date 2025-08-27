@@ -69,7 +69,6 @@ const EnhancedServicesShowcase = () => {
               </div>
             </div>
           </motion.div>
-
           {/* Search and Filter */}
           <motion.div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
             <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80"/>
@@ -84,7 +83,6 @@ const EnhancedServicesShowcase = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -98,10 +96,8 @@ const EnhancedServicesShowcase = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                   <p className="text-sm text-blue-400 font-medium">{service.category.replace('-', ' ').toUpperCase()}</p>
                 </div>
-
                 {/* Tagline */}
                 <p className="text-gray-300 text-sm mb-4 text-center">{service.tagline}</p>
-
                 {/* Pricing */}
                 <div className="bg-white/5 rounded-lg p-4 mb-4">
                   <h4 className="text-sm font-semibold text-green-400 mb-2">Pricing</h4>
@@ -111,7 +107,6 @@ const EnhancedServicesShowcase = () => {
                     <div>Setup: {service.pricing.setup}</div>
                   </div>
                 </div>
-
                 {/* Key Features */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features</h4>
@@ -122,7 +117,6 @@ const EnhancedServicesShowcase = () => {
                       </li>))}
                   </ul>
                 </div>
-
                 {/* Benefits */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-yellow-400 mb-2">Key Benefits</h4>
@@ -133,7 +127,6 @@ const EnhancedServicesShowcase = () => {
                       </li>))}
                   </ul>
                 </div>
-
                 {/* ROI and Setup */}
                 <div className="bg-white/5 rounded-lg p-3 mb-4">
                   <div className="text-xs text-gray-300">
@@ -141,7 +134,6 @@ const EnhancedServicesShowcase = () => {
                     <div><span className="text-blue-400 font-medium">Setup:</span> {service.setupTime}</div>
                   </div>
                 </div>
-
                 {/* CTA */}
                 <div className="text-center">
                   <Link to={service.link} className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm">
@@ -153,7 +145,6 @@ const EnhancedServicesShowcase = () => {
                 </div>
               </motion.div>))}
           </motion.div>
-
           {/* No Results Message */}
           {filteredServices.length === 0 && (<motion.div className="text-center py-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
               <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
@@ -166,7 +157,6 @@ const EnhancedServicesShowcase = () => {
             </motion.div>)}
         </div>
       </section>
-
       {/* Enhanced CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -185,7 +175,6 @@ const EnhancedServicesShowcase = () => {
               Call: +1 302 464 0950
             </a>
           </motion.div>
-
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }}>
             <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
@@ -207,7 +196,6 @@ const EnhancedServicesShowcase = () => {
               </div>
             </div>
           </motion.div>
-
           <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8 }}>
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>

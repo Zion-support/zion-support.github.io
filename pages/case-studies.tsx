@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
@@ -106,7 +105,6 @@ export default function CaseStudiesPage() {
       featured: false
     }
   ];
-
   const industries = [
     'All Industries',
     'Retail & E-commerce',
@@ -117,9 +115,7 @@ export default function CaseStudiesPage() {
     'Government & Defense',
     'Technology'
   ];
-
   const featuredCaseStudy = caseStudies.find(study => study.featured);
-
   return (
     <>
       <Head>
@@ -128,7 +124,6 @@ export default function CaseStudiesPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -141,7 +136,6 @@ export default function CaseStudiesPage() {
             </p>
           </div>
         </section>
-
         {/* Featured Case Study */}
         {featuredCaseStudy && (
           <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -201,7 +195,6 @@ export default function CaseStudiesPage() {
             </div>
           </section>
         )}
-
         {/* Industry Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
           <div className="max-w-7xl mx-auto">
@@ -221,7 +214,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-
         {/* Case Studies Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -287,7 +279,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
           <div className="max-w-4xl mx-auto text-center">
@@ -314,7 +305,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">

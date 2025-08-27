@@ -15,7 +15,6 @@ import {
   Clock,
   Target
 } from 'lucide-react';
-
 interface Stat {
   icon: React.ComponentType<any>;
   value: string;
@@ -26,12 +25,10 @@ interface Stat {
   suffix?: string;
   prefix?: string;
 }
-
 export default function EnhancedStatsSection() {
   const [counts, setCounts] = useState<{ [key: string]: number }>({});
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   const stats: Stat[] = [
     {
       icon: Users,
@@ -87,7 +84,6 @@ export default function EnhancedStatsSection() {
       suffix: "+"
     }
   ];
-
   useEffect(() => {
     if (isInView) {
       stats.forEach((stat) => {
@@ -114,7 +110,6 @@ export default function EnhancedStatsSection() {
       });
     }
   }, [isInView, stats]);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -124,7 +119,6 @@ export default function EnhancedStatsSection() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.9 },
     visible: {
@@ -137,7 +131,6 @@ export default function EnhancedStatsSection() {
       }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Background decoration */}
@@ -146,7 +139,6 @@ export default function EnhancedStatsSection() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/5 rounded-full blur-3xl"></div>
       </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <motion.div
@@ -163,7 +155,6 @@ export default function EnhancedStatsSection() {
             Our track record speaks for itself. Here are the key metrics that demonstrate our commitment to excellence and innovation.
           </p>
         </motion.div>
-
         {/* Stats grid */}
         <motion.div
           ref={ref}
@@ -184,7 +175,6 @@ export default function EnhancedStatsSection() {
                 <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className={`w-10 h-10 ${stat.color}`} />
                 </div>
-
                 {/* Value */}
                 <div className="mb-4">
                   <span className="text-4xl lg:text-5xl font-bold text-white">
@@ -193,24 +183,20 @@ export default function EnhancedStatsSection() {
                     {stat.suffix || ''}
                   </span>
                 </div>
-
                 {/* Label */}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {stat.label}
                 </h3>
-
                 {/* Description */}
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {stat.description}
                 </p>
-
                 {/* Hover effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
             </motion.div>
           ))}
         </motion.div>
-
         {/* Additional metrics */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -249,7 +235,6 @@ export default function EnhancedStatsSection() {
             </div>
           </div>
         </motion.div>
-
         {/* Trust indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

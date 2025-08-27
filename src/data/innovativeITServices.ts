@@ -28,7 +28,6 @@ export interface InnovativeITService {
   marketSize: string;
   growthRate: string;
 }
-
 export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
   // Quantum Computing as a Service (QCaaS)
   {
@@ -89,7 +88,6 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$1.9 billion",
     growthRate: "56.7% annually"
   },
-
   // Edge Computing Infrastructure
   {
     id: "edge-computing-infrastructure",
@@ -149,7 +147,6 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$15.7 billion",
     growthRate: "37.4% annually"
   },
-
   // Zero Trust Security Architecture
   {
     id: "zero-trust-security-architecture",
@@ -209,7 +206,6 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$19.6 billion",
     growthRate: "17.4% annually"
   },
-
   // Multi-Cloud Management Platform
   {
     id: "multi-cloud-management-platform",
@@ -269,7 +265,6 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$6.3 billion",
     growthRate: "28.9% annually"
   },
-
   // API Management and Governance
   {
     id: "api-management-governance",
@@ -329,7 +324,6 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$4.5 billion",
     growthRate: "32.7% annually"
   },
-
   // DevOps Automation Platform
   {
     id: "devops-automation-platform",
@@ -389,7 +383,6 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$8.9 billion",
     growthRate: "24.3% annually"
   },
-
   // Data Mesh Architecture Platform
   {
     id: "data-mesh-architecture-platform",
@@ -449,7 +442,6 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
     marketSize: "$12.8 billion",
     growthRate: "21.4% annually"
   },
-
   // Green IT Infrastructure
   {
     id: "green-it-infrastructure",

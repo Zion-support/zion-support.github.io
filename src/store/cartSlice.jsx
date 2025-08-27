@@ -24,7 +24,7 @@ const cartSlice = createSlice({
                 existing.quantity += 1;
             }
             else {
-                state.items.push({
+                state.items({
                     id: action.payload.id,
                     name: action.payload.title,
                     price: action.payload.price,

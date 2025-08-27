@@ -135,7 +135,6 @@ const AdvancedAnalyticsDashboard = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Metrics Cards */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {metrics.map((metric, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 * index }}>
@@ -164,7 +163,6 @@ const AdvancedAnalyticsDashboard = () => {
             </Card>
           </motion.div>))}
       </motion.div>
-
       {/* Service Performance Table */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="mb-8">
         <Card>
@@ -227,7 +225,6 @@ const AdvancedAnalyticsDashboard = () => {
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Charts and Insights */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
@@ -255,7 +252,6 @@ const AdvancedAnalyticsDashboard = () => {
             </div>
           </CardContent>
         </Card>
-
         {/* Key Insights */}
         <Card>
           <CardHeader>
@@ -299,7 +295,6 @@ const AdvancedAnalyticsDashboard = () => {
           </CardContent>
         </Card>
       </motion.div>
-
       {/* CTA Section */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">

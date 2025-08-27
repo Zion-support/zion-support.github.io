@@ -20,7 +20,6 @@ const AIAutonomousRobotics = () => {
               The future of robotics is here - intelligent machines that think, learn, and work autonomously with human-like capabilities
             </p>
           </div>
-
           {/* Robotics Capabilities */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center">
@@ -44,7 +43,6 @@ const AIAutonomousRobotics = () => {
               <p className="text-gray-300">Instant decision making</p>
             </div>
           </div>
-
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -83,7 +81,6 @@ const AIAutonomousRobotics = () => {
               <p className="text-gray-300">Centralized control and data sharing</p>
             </div>
           </div>
-
           {/* Robotics Process */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Autonomous Robotics Process</h2>
@@ -119,7 +116,6 @@ const AIAutonomousRobotics = () => {
               </div>
             </div>
           </div>
-
           {/* Robotics Applications */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Robotics Applications</h2>
@@ -129,7 +125,6 @@ const AIAutonomousRobotics = () => {
                 </div>))}
             </div>
           </div>
-
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white text-center mb-12">Industry Solutions</h2>
@@ -150,7 +145,6 @@ const AIAutonomousRobotics = () => {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">Ready for Autonomous Robotics?</h2>

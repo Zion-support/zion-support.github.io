@@ -55,7 +55,6 @@ export function AdvancedServicesShowcase() {
             </div>
           </div>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {FEATURED_SERVICES.map((service) => (<Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300 hover:scale-105">
@@ -106,7 +105,6 @@ export function AdvancedServicesShowcase() {
               </CardContent>
             </Card>))}
         </div>
-
         {/* Service Categories Overview */}
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold text-white mb-6">Comprehensive Service Categories</h3>
@@ -136,7 +134,6 @@ export function AdvancedServicesShowcase() {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-zion-blue-dark rounded-2xl p-8 border border-zion-blue-light max-w-4xl mx-auto">

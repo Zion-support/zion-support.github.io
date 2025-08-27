@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,6 @@ export default function EnterpriseDemo() {
               Experience how Zion's AI-powered platform can transform your talent acquisition and marketplace operations
             </p>
           </div>
-
           {/* Demo Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <Card className="bg-zion-blue-dark border-zion-purple/20">
@@ -34,7 +33,6 @@ export default function EnterpriseDemo() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -47,7 +45,6 @@ export default function EnterpriseDemo() {
                 </CardDescription>
               </CardContent>
             </Card>
-
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader className="text-center">
                 <div className="bg-zion-purple/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -61,7 +58,6 @@ export default function EnterpriseDemo() {
               </CardContent>
             </Card>
           </div>
-
           {/* Demo Options */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {/* Live Demo */}
@@ -93,7 +89,6 @@ export default function EnterpriseDemo() {
                 </Button>
               </CardContent>
             </Card>
-
             {/* Self-Guided Demo */}
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardHeader>
@@ -124,7 +119,6 @@ export default function EnterpriseDemo() {
               </CardContent>
             </Card>
           </div>
-
           {/* What You'll See */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">What You'll See in the Demo</h2>
@@ -158,7 +152,6 @@ export default function EnterpriseDemo() {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to See Zion in Action?</h2>

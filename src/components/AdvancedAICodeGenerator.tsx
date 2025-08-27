@@ -7,19 +7,16 @@ const mockCodeSnippets = [
         description: 'Custom hook for managing API calls with loading states and error handling',
         language: 'typescript',
         code: `import { useState, useEffect } from 'react';
-
 interface UseApiOptions<T> {
   url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
   body?: any;
   headers?: Record<string, string>;
 }
-
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const execute = async () => {
     try {
       setLoading(true);
@@ -33,11 +30,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         },
         body: body ? JSON.stringify(body) : undefined,
       });
-
       if (!response.ok) {
         throw new Error(\`HTTP error! status: \${response.status}\`);
       }
-
       const result = await response.json();
       setData(result);
     } catch (err) {
@@ -46,13 +41,11 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       setLoading(false);
     }
   };
-
   useEffect(() => {
     if (method === 'GET') {
       execute();
     }
   }, [url]);
-
   return { data, loading, error, execute };
 }`,
         tags: ['react', 'hooks', 'api', 'typescript'],
@@ -86,17 +79,14 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     animation: shimmer 1.5s infinite;
   }
 }
-
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
 }
-
 @keyframes glow {
   from { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
   to { box-shadow: 0 0 30px rgba(59, 130, 246, 0.8); }
 }
-
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -126,31 +116,26 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     this.errors = new Map();
     this.init();
   }
-
   addRule(field, rule) {
     if (!this.rules.has(field)) {
       this.rules.set(field, []);
     }
-    this.rules.get(field).push(rule);
+    this.rules.get(field)(rule);
   }
-
   validateField(field) {
     const value = this.form[field]?.value;
     const fieldRules = this.rules.get(field) || [];
     const fieldErrors = [];
-
     for (const rule of fieldRules) {
       const result = rule(value, this.form);
       if (result !== true) {
-        fieldErrors.push(result);
+        fieldErrors(result);
       }
     }
-
     this.errors.set(field, fieldErrors);
     this.updateFieldUI(field);
     return fieldErrors.length === 0;
   }
-
   validateForm() {
     let isValid = true;
     for (const field of this.rules.keys()) {
@@ -160,7 +145,6 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
     }
     return isValid;
   }
-
   updateFieldUI(field) {
     const fieldElement = this.form[field];
     const errors = this.errors.get(field) || [];
@@ -173,15 +157,12 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       this.hideFieldErrors(field);
     }
   }
-
   showFieldErrors(field, errors) {
     // Implementation for showing field-specific errors
   }
-
   hideFieldErrors(field) {
     // Implementation for hiding field-specific errors
   }
-
   init() {
     if (this.options.validateOnBlur) {
       this.form.addEventListener('blur', (e) => {
@@ -190,7 +171,6 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         }
       }, true);
     }
-
     if (this.options.validateOnSubmit) {
       this.form.addEventListener('submit', (e) => {
         if (!this.validateForm()) {
@@ -247,7 +227,6 @@ const mockAIGenerations = [
         id: '1',
         prompt: 'Create a React hook for managing local storage with TypeScript',
         generatedCode: `import { useState, useEffect } from 'react';
-
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     try {
@@ -258,7 +237,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       return initialValue;
     }
   });
-
   const setValue = (value: T | ((val: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
@@ -268,7 +246,6 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       console.error(\`Error setting localStorage key "\${key}":\`, error);
     }
   };
-
   return [storedValue, setValue] as const;
 }`,
         language: 'typescript',
@@ -384,7 +361,6 @@ export function AdvancedAICodeGenerator() {
           </button>
         </div>
       </div>
-
       {/* Controls */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-zion-slate-light/50">
         <div className="flex items-center space-x-4">
@@ -416,7 +392,6 @@ export function AdvancedAICodeGenerator() {
           </button>
         </div>
       </div>
-
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         <button onClick={() => setActiveTab('generator')} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === 'generator'
@@ -444,7 +419,6 @@ export function AdvancedAICodeGenerator() {
           AI Generations
         </button>
       </div>
-
       {/* Content */}
       <div className="flex-1 overflow-auto p-6">
         {activeTab === 'generator' && (<div className="space-y-6">
@@ -479,7 +453,6 @@ export function AdvancedAICodeGenerator() {
                 </div>
               </div>
             </div>
-
             {generatedCode && (<div className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
@@ -499,7 +472,6 @@ export function AdvancedAICodeGenerator() {
                 </pre>
               </div>)}
           </div>)}
-
         {activeTab === 'snippets' && (<div className="space-y-4">
             {codeSnippets.map((snippet) => (<div key={snippet.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-3">
@@ -546,7 +518,6 @@ export function AdvancedAICodeGenerator() {
                 </div>
               </div>))}
           </div>)}
-
         {activeTab === 'analysis' && (<div className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
@@ -594,7 +565,6 @@ export function AdvancedAICodeGenerator() {
                 </div>
               </div>
             </div>
-
             <div className="space-y-4">
               {codeAnalysis.map((analysis) => {
                 const snippet = codeSnippets.find(s => s.id === analysis.snippetId);
@@ -663,7 +633,6 @@ export function AdvancedAICodeGenerator() {
             })}
             </div>
           </div>)}
-
         {activeTab === 'ai' && (<div className="space-y-4">
             {aiGenerations.map((generation) => (<div key={generation.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg p-4">
                 <div className="flex items-start justify-between mb-4">

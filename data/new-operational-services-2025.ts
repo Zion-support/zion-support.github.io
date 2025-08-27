@@ -14,7 +14,6 @@ export interface NewOperationalService2025 {
     address: string;
   };
 }
-
 export const newOperationalServices2025: NewOperationalService2025[] = [
   {
     id: "smart-operations-center",

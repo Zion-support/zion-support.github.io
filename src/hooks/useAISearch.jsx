@@ -28,26 +28,26 @@ export function useAISearch() {
                         return;
                     if (!matchSkill(t.skills))
                         return;
-                    items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
+                    items({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
                 });
             }
             if (!filters.type || filters.type === "job" || filters.type === "all") {
                 JOB_POSTS.forEach((j) => {
                     if (!matchSkill(j.skills))
                         return;
-                    items.push({ id: j.id, type: "job", title: j.title, description: j.description });
+                    items({ id: j.id, type: "job", title: j.title, description: j.description });
                 });
             }
             if (!filters.type || filters.type === "project" || filters.type === "all") {
                 PROJECTS.forEach((p) => {
-                    items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
+                    items({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary });
                 });
             }
             setResults(items);
             setLoading(false);
         }
         finally { }
-        ;
+
         return { results, loading, search };
     };
 }

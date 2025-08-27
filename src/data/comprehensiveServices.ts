@@ -1,5 +1,4 @@
 import { ProductListing } from "@/types/listings";
-
 // Comprehensive Micro SAAS Services, IT Services, and AI Services
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services
@@ -193,7 +192,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 94
   },
-
   // IT Infrastructure Services
   {
     id: "cloud-migration-consulting",
@@ -472,7 +470,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "3-4 Weeks",
     aiScore: 89
   },
-
   // Micro SAAS Solutions
   {
     id: "inventory-management-saas",
@@ -561,7 +558,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "2-3 Weeks",
     aiScore: 90
   },
-
   // Advanced AI Solutions
   {
     id: "computer-vision-api",
@@ -590,7 +586,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     pricingTier: "Enterprise"
   }
 ];
-
 export const SERVICE_CATEGORIES = [
   "AI Services",
   "IT Services", 
@@ -602,7 +597,6 @@ export const SERVICE_CATEGORIES = [
   "IoT Solutions",
   "Education"
 ];
-
 export const SERVICE_SUBCATEGORIES = {
   "AI Services": ["Chatbots & Virtual Assistants", "Content Generation", "Business Intelligence", "Computer Vision", "Natural Language Processing"],
   "IT Services": ["Cloud Services", "Cybersecurity", "DevOps", "Infrastructure", "Data Management"],
@@ -614,7 +608,6 @@ export const SERVICE_SUBCATEGORIES = {
   "IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
   "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"]
 };
-
 export const PRICING_TIERS = {
   "Starter": { min: 500, max: 2000, label: "Starter ($500 - $2,000)" },
   "Professional": { min: 2000, max: 5000, label: "Professional ($2,000 - $5,000)" },
@@ -668,7 +661,6 @@ export const PRICING_TIERS = {
     availability: "3-4 Weeks",
     aiScore: 96
   },
-
   // IT Consulting & Strategy
   {
     id: "digital-transformation-strategy",
@@ -716,7 +708,6 @@ export const PRICING_TIERS = {
     availability: "3-4 Weeks",
     aiScore: 88
   },
-
   // Specialized Micro SAAS
   {
     id: "hr-automation-platform",
@@ -787,7 +778,6 @@ export const PRICING_TIERS = {
     aiScore: 90
   }
 ];
-
 // Service Categories for better organization
 export const SERVICE_CATEGORIES = [
   {
@@ -815,7 +805,6 @@ export const SERVICE_CATEGORIES = [
     services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS")
   }
 ];
-
 // Pricing Tiers for different service levels
 export const PRICING_TIERS = [
   {
@@ -858,7 +847,6 @@ export const PRICING_TIERS = [
     ]
   }
 ];
-
 // Contact Information
 export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",

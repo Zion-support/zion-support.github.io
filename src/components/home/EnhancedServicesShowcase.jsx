@@ -29,7 +29,6 @@ export function EnhancedServicesShowcase() {
             Discover our extensive portfolio of micro SAAS services, AI solutions, and enterprise-grade IT services designed to transform your business operations
           </p>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service) => {
@@ -71,7 +70,6 @@ export function EnhancedServicesShowcase() {
                         {tag}
                       </Badge>))}
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <TrendingUp className="w-4 h-4"/>
@@ -88,7 +86,6 @@ export function EnhancedServicesShowcase() {
               </Card>);
         })}
         </div>
-
         {/* Service Categories Overview */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
@@ -131,7 +128,6 @@ export function EnhancedServicesShowcase() {
             </p>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="bg-zion-blue rounded-lg p-8 border border-zion-blue-light">
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -169,7 +165,6 @@ export function EnhancedServicesShowcase() {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-white mb-6">

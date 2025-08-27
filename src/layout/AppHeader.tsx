@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
 import React, { useState, useEffect } from 'react';
@@ -1080,4 +1081,24 @@ export function AppHeader() {
     </>
 >>>>>>> add-innovative-services-2025
   );
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { MainNavigation } from './MainNavigation.tsx';
+export function AppHeader() {
+	return (
+		<header className="bg-white shadow-sm border-b border-gray-200">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex justify-between items-center h-16">
+					<div className="flex items-center">
+						<Link to="/" className="text-xl font-bold text-gray-900">
+							Zion Tech Group
+						</Link>
+					</div>
+					<MainNavigation />
+				</div>
+			</div>
+		</header>
+	);
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 }

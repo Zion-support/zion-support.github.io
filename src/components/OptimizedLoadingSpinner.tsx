@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'default' | 'minimal' | 'futuristic';
@@ -9,7 +8,6 @@ interface LoadingSpinnerProps {
   progress?: number;
   className?: string;
 }
-
 export const OptimizedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'lg',
   variant = 'futuristic',
@@ -20,7 +18,6 @@ export const OptimizedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }) => {
   const [dots, setDots] = useState('');
   const [mounted, setMounted] = useState(false);
-
   // Size variants
   const sizeClasses = {
     sm: 'w-16 h-16',
@@ -28,25 +25,20 @@ export const OptimizedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     lg: 'w-32 h-32',
     xl: 'w-48 h-48'
   };
-
   // Animated dots effect
   useEffect(() => {
     setMounted(true);
     const interval = setInterval(() => {
       setDots(prev => prev.length >= 3 ? '' : prev + '.');
     }, 500);
-
     return () => clearInterval(interval);
   }, []);
-
   // Progress bar animation
   const progressVariants = {
     initial: { width: 0 },
     animate: { width: `${progress}%` }
   };
-
   if (!mounted) return null;
-
   if (variant === 'minimal') {
     return (
       <div className={`flex items-center justify-center ${className}`}>
@@ -62,7 +54,6 @@ export const OptimizedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </div>
     );
   }
-
   if (variant === 'default') {
     return (
       <div className={`flex flex-col items-center justify-center ${className}`}>
@@ -91,7 +82,6 @@ export const OptimizedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </div>
     );
   }
-
   // Futuristic variant (default)
   return (
     <div className={`flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 ${className}`}>
@@ -177,7 +167,6 @@ export const OptimizedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   );
 };
-
 // Skeleton loading component for content
 export const SkeletonLoader: React.FC<{
   className?: string;
@@ -195,7 +184,6 @@ export const SkeletonLoader: React.FC<{
     ))}
   </div>
 );
-
 // Inline loading component
 export const InlineLoader: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
   const sizeClasses = {
@@ -203,12 +191,10 @@ export const InlineLoader: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = '
     md: 'w-6 h-6',
     lg: 'w-8 h-8'
   };
-
   return (
     <div className={`${sizeClasses[size]} border-2 border-gray-200 border-t-cyan-500 rounded-full animate-spin`} />
   );
 };
-
 // Page loading component
 export const PageLoader: React.FC = () => (
   <div className="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex items-center justify-center">

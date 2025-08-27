@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-<<<<<<< HEAD
-=======
 import { TrustedBySection } from "../TrustedBySection";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 const blockchainServices = [
     {
         id: "smart-contracts",
@@ -208,7 +205,6 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -231,7 +227,6 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -254,7 +249,6 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Blockchain Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -314,7 +308,6 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
@@ -345,7 +338,6 @@ export default function BlockchainServicesPage() {
           </div>
         </div>
       </section>
-
       <TrustedBySection />
     </div>);
 }

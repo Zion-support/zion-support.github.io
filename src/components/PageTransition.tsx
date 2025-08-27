@@ -1,11 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-
 interface PageTransitionProps {
   children: React.ReactNode
   className?: string
 }
-
 export default function PageTransition({ children, className = '' }: PageTransitionProps) {
   return (
     <motion.div

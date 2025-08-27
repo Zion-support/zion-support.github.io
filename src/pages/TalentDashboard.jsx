@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { SEO } from "../components/SEOHead";
+import SEOHead from "../components/SEOHead.jsx";
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
@@ -47,10 +47,8 @@ function TalentDashboardContent() {
             </Button>
           </div>
         </div>
-
         {/* Project Offer Banner - Show pending offers */}
         <ProjectOfferBanner />
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <Card className="mb-8">

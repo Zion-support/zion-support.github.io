@@ -61,14 +61,12 @@ import {
 import ThemeToggle from './ThemeToggle';
 import Search from './Search';
 import ScrollToTop from './ScrollToTop';
-
 interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
   icon?: React.ComponentType<{ className?: string }>;
 }
-
 const navigation: NavItem[] = [
   { label: 'Home', href: '/', icon: Home },
   { 
@@ -88,7 +86,6 @@ const navigation: NavItem[] = [
   { label: 'About', href: '/about', icon: Building },
   { label: 'Contact', href: '/contact', icon: Phone }
 ];
-
 const sidebarNavigation: NavItem[] = [
 <<<<<<< HEAD
   { 
@@ -200,7 +197,6 @@ const sidebarNavigation: NavItem[] = [
   ]}
 >>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
 ];
-
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -208,8 +204,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [sidebarDropdownOpen, setSidebarDropdownOpen] = useState<string | null>(null);
   const location = useLocation();
-
   const isActive = (href: string) => location.pathname === href;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   // Handle scroll effect for header
@@ -234,10 +230,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 =======
 >>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   const toggleSidebarDropdown = (label: string) => {
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
-
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -247,6 +244,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
+<<<<<<< HEAD
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-foreground rounded-lg flex items-center justify-center">
                 <ZapIcon className="w-5 h-5 text-white" />
@@ -254,6 +252,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </Link>
 
+=======
+            <div className="flex-shrink-0">
+              <Link to="/" className="flex items-center space-x-2 group">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
+                  <span className="text-white font-bold text-sm">Z</span>
+                </div>
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </Link>
+            </div>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             {/* Desktop Navigation */}
 <<<<<<< HEAD
             <nav className="hidden md:flex items-center space-x-6">
@@ -332,6 +342,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                           </Link>
                         ))}
                       </div>
+<<<<<<< HEAD
                     </div>
                   )}
                 </div>
@@ -340,6 +351,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
+=======
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* CTA Button and Search */}
+            <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
               <Search />
               <ThemeToggle />
               <button
@@ -358,7 +378,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 Get Started
               </Link>
             </div>
-
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center space-x-2">
               <button
@@ -379,9 +398,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
 
         {/* Mobile Menu */}
+=======
+        </nav>
+        {/* Mobile Navigation */}
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
         {mobileMenuOpen && (
           <div className="md:hidden border-t bg-background">
             <div className="container mx-auto px-4 py-4">
@@ -435,6 +459,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         )}
       </header>
+<<<<<<< HEAD
 
       {/* Main Content */}
       <div className="flex">
@@ -486,6 +511,85 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                       <span>{item.label}</span>
                     </Link>
                   )}
+=======
+      {/* Sidebar */}
+      {sidebarOpen && (
+        <div className="fixed inset-0 z-50 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity" onClick={() => setSidebarOpen(false)} />
+            <div className="fixed inset-y-0 right-0 pl-10 max-w-full flex">
+              <div className="w-screen max-w-md">
+                <div className="h-full flex flex-col py-6 bg-white shadow-xl">
+                  <div className="px-4 sm:px-6">
+                    <div className="flex items-start justify-between">
+                      <h2 className="text-lg font-medium text-gray-900">Navigation</h2>
+                      <button
+                        onClick={() => setSidebarOpen(false)}
+                        className="rounded-md text-gray-400 hover:text-gray-500 focus:outline-none"
+                      >
+                        <X className="h-6 w-6" />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="mt-6 h-0 flex-1 px-4 sm:px-6 overflow-y-auto">
+                    <nav className="space-y-1">
+                      {sidebarNavigation.map((item) => (
+                        <div key={item.label}>
+                          <button
+                            onClick={() => toggleSidebarDropdown(item.label)}
+                            className="w-full flex items-center justify-between px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                          >
+                            <div className="flex items-center">
+                              {item.icon && <item.icon className="w-4 h-4 mr-2" />}
+                              {item.label}
+                            </div>
+                            {item.children && (
+                              <ChevronRight 
+                                className={`w-4 h-4 transition-transform ${
+                                  sidebarDropdownOpen === item.label ? 'rotate-90' : ''
+                                }`} 
+                              />
+                            )}
+                          </button>
+                          {item.children && sidebarDropdownOpen === item.label && (
+                            <div className="ml-4 space-y-1">
+                              {item.children.map((child) => (
+                                <Link
+                                  key={child.label}
+                                  to={child.href}
+                                  className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                                  onClick={() => setSidebarOpen(false)}
+                                >
+                                  {child.icon && <child.icon className="w-4 h-4 mr-2" />}
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Main Content */}
+      <main className="flex-1">
+        {children}
+      </main>
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div className="col-span-1 lg:col-span-2">
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">Z</span>
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                 </div>
 <<<<<<< HEAD
               ))}
@@ -511,7 +615,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </div>
             </div>
-
             {/* Quick Links */}
             <div>
               <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Services</h3>
@@ -523,7 +626,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><a href="/services" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Consulting</a></li>
               </ul>
             </div>
-
             {/* Contact Info */}
             <div>
               <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">Contact</h3>
@@ -537,6 +639,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
 >>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
           </div>
+<<<<<<< HEAD
         </aside>
 
 <<<<<<< HEAD
@@ -548,6 +651,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </main>
       </div>
 =======
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
           <div className="mt-8 pt-8 border-t border-slate-800">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-slate-400 text-sm text-center md:text-left">
@@ -562,9 +667,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+<<<<<<< HEAD
 >>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
 
       {/* Scroll to top button */}
+=======
+>>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       <ScrollToTop />
 
       {/* Mobile sidebar toggle */}

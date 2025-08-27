@@ -32,7 +32,6 @@ export interface EnhancedMicroSaasService {
   competitors?: string[];
   marketSize?: string;
 }
-
 // New AI & Machine Learning Services
 export const AI_ML_SERVICES: EnhancedMicroSaasService[] = [
   {
@@ -162,7 +161,6 @@ export const AI_ML_SERVICES: EnhancedMicroSaasService[] = [
     marketSize: "$23.9 billion by 2025"
   }
 ];
-
 // New Cybersecurity Services
 export const CYBERSECURITY_SERVICES: EnhancedMicroSaasService[] = [
   {
@@ -229,7 +227,6 @@ export const CYBERSECURITY_SERVICES: EnhancedMicroSaasService[] = [
     marketSize: "$2.8 billion by 2025"
   }
 ];
-
 // New IT Infrastructure Services
 export const IT_INFRASTRUCTURE_SERVICES: EnhancedMicroSaasService[] = [
   {
@@ -296,7 +293,6 @@ export const IT_INFRASTRUCTURE_SERVICES: EnhancedMicroSaasService[] = [
     marketSize: "$8.9 billion by 2025"
   }
 ];
-
 // New Green Technology Services
 export const GREEN_TECH_SERVICES: EnhancedMicroSaasService[] = [
   {
@@ -363,7 +359,6 @@ export const GREEN_TECH_SERVICES: EnhancedMicroSaasService[] = [
     marketSize: "$4.2 billion by 2025"
   }
 ];
-
 // New Healthcare AI Services
 export const HEALTHCARE_AI_SERVICES: EnhancedMicroSaasService[] = [
   {
@@ -430,7 +425,6 @@ export const HEALTHCARE_AI_SERVICES: EnhancedMicroSaasService[] = [
     marketSize: "$1.5 billion by 2025"
   }
 ];
-
 // New Financial Technology Services
 export const FINTECH_SERVICES: EnhancedMicroSaasService[] = [
   {
@@ -497,7 +491,6 @@ export const FINTECH_SERVICES: EnhancedMicroSaasService[] = [
     marketSize: "$18.7 billion by 2025"
   }
 ];
-
 // Export all services
 export const ALL_ENHANCED_SERVICES = [
   ...AI_ML_SERVICES,
@@ -507,5 +500,4 @@ export const ALL_ENHANCED_SERVICES = [
   ...HEALTHCARE_AI_SERVICES,
   ...FINTECH_SERVICES
 ];
-
 export default ALL_ENHANCED_SERVICES;

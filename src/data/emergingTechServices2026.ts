@@ -35,7 +35,6 @@ export interface EmergingTechService2026 {
   demoUrl?: string;
   caseStudies?: string[];
 }
-
 export const EMERGING_TECH_SERVICES_2026: EmergingTechService2026[] = [
   // Space Technology Solutions
   {
@@ -104,7 +103,6 @@ export const EMERGING_TECH_SERVICES_2026: EmergingTechService2026[] = [
     demoUrl: "https://ziontechgroup.com/demo/space-technology",
     caseStudies: ["Satellite operator 50% cost reduction", "Government agency improved space safety"]
   },
-
   // 5G Enterprise Network Solutions
   {
     id: "5g-enterprise-network-solutions",
@@ -172,7 +170,6 @@ export const EMERGING_TECH_SERVICES_2026: EmergingTechService2026[] = [
     demoUrl: "https://ziontechgroup.com/demo/5g-enterprise",
     caseStudies: ["Factory 10x faster connectivity", "Hospital improved remote surgery"]
   },
-
   // Green IT Solutions
   {
     id: "green-it-solutions",
@@ -241,5 +238,4 @@ export const EMERGING_TECH_SERVICES_2026: EmergingTechService2026[] = [
     caseStudies: ["Data center 40% energy reduction", "Office 60% carbon footprint reduction"]
   }
 ];
-
 export default EMERGING_TECH_SERVICES_2026;

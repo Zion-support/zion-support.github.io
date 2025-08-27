@@ -9,7 +9,6 @@ export interface PricingTier {
   setupTime: string;
   support: string;
 }
-
 export interface ServicePricing {
   serviceId: string;
   serviceName: string;
@@ -33,7 +32,6 @@ export interface ServicePricing {
     customPricing: boolean;
   };
 }
-
 // Comprehensive Pricing Guide for 2026 Revolutionary Services
 export const comprehensivePricingGuide2026: ServicePricing[] = [
   {
@@ -505,7 +503,6 @@ export const comprehensivePricingGuide2026: ServicePricing[] = [
     }
   }
 ];
-
 // IT Infrastructure Services Pricing
 export const itInfrastructurePricing2026: ServicePricing[] = [
   {
@@ -597,7 +594,6 @@ export const itInfrastructurePricing2026: ServicePricing[] = [
     }
   }
 ];
-
 // AI Services Pricing
 export const aiServicesPricing2026: ServicePricing[] = [
   {
@@ -692,12 +688,10 @@ export const aiServicesPricing2026: ServicePricing[] = [
     }
   }
 ];
-
 // Export all pricing data
 export const allPricing2026 = {
   microSaas: comprehensivePricingGuide2026,
   itInfrastructure: itInfrastructurePricing2026,
   aiServices: aiServicesPricing2026
 };
-
 export default allPricing2026;

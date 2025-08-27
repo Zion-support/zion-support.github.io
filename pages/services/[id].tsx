@@ -8,7 +8,6 @@ import { innovativeAIServices } from '../../data/innovative-ai-services'
 import { addedMicroSaaS2025 } from '../../data/2025-added-micro-saas'
 import { addedITServices2025 } from '../../data/2025-added-it-services'
 import { addedAIServices2025 } from '../../data/2025-added-ai-services'
-
 interface ServiceItem {
 	id: string
 	name: string
@@ -21,7 +20,6 @@ interface ServiceItem {
 	color?: string
 	textColor?: string
 }
-
 function collectAllServices(): ServiceItem[] {
 	const arrays: any[] = [
 		innovativeRealMicroSaasServices2025,
@@ -52,13 +50,11 @@ function collectAllServices(): ServiceItem[] {
 	}
 	return Array.from(map.values())
 }
-
 export const getStaticPaths: GetStaticPaths = async () => {
 	const services = collectAllServices()
 	const paths = services.map((s) => ({ params: { id: s.id } }))
 	return { paths, fallback: false }
 }
-
 export const getStaticProps: GetStaticProps = async (context) => {
 	const id = context.params?.id as string
 	const services = collectAllServices()
@@ -68,7 +64,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 	}
 	return { props: { service } }
 }
-
 export default function ServiceDetail({ service }: { service: ServiceItem }) {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'

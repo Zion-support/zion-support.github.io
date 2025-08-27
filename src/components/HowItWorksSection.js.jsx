@@ -97,7 +97,7 @@ export function HowItWorksSection() {
             }
         }
     };
-    ;
+
     const statsVariants = {
         hidden: { opacity: 0, scale: 0.8 },
         visible: {
@@ -117,7 +117,6 @@ export function HowItWorksSection() {
             backgroundSize: '40px 40px'
         }}/>
       </div>
-
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}/>
@@ -135,7 +134,6 @@ export function HowItWorksSection() {
             Experience the Zion difference with our proven methodology.
           </p>
         </motion.div>
-
         {/* Stats section */}
         <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {stats.map((stat, index) => (<motion.div key={index} variants={statsVariants} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -175,7 +173,6 @@ export function HowItWorksSection() {
                   <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
                     {step.description}
                   </p>
-
                   {/* Duration and success rate */}
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center justify-center gap-2 text-zion-cyan/80 text-xs">
@@ -187,7 +184,6 @@ export function HowItWorksSection() {
                       <span>{step.success}</span>
                     </div>
                   </div>
-
                   {/* Interactive details on hover */}
                   <AnimatePresence>
                     {hoveredStep === index && (<motion.div className="mt-4 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial={{ opacity: 0, height: 0, y: 10 }} animate={{ opacity: 1, height: "auto", y: 0 }} exit={{ opacity: 0, height: 0, y: 10 }} transition={{ duration: 0.3 }}>
@@ -200,7 +196,6 @@ export function HowItWorksSection() {
                         </div>
                       </motion.div>)}
                   </AnimatePresence>
-
                   {/* Hover indicator */}
                   <div className="mt-4 text-zion-cyan/60 text-xs">
                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
@@ -232,7 +227,6 @@ export function HowItWorksSection() {
             </div>
           </div>
         </motion.div>
-
         {/* Additional features */}
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -261,6 +255,6 @@ export function HowItWorksSection() {
         </motion.div>
       </div>);
     section >
-    ;
-    ;
+
+
 }

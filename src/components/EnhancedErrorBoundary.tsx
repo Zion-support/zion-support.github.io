@@ -1,50 +1,41 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
-
 export class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error, errorInfo: null };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to console
     console.error('🚨 Error Boundary Caught Error:', error, errorInfo);
-
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // You can integrate with Sentry, LogRocket, or other error tracking services here
       this.logErrorToService(error, errorInfo);
     }
   }
-
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     try {
       // Example: Send to analytics or error tracking service
@@ -58,22 +49,18 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       console.warn('Failed to log error to external service:', e);
     }
   };
-
   private handleRetry = () => {
     this.setState({ hasError: false, error: null, errorInfo: null });
   };
-
   private handleReload = () => {
     window.location.reload();
   };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-red-900 via-red-800 to-red-900 flex items-center justify-center p-6">
           <motion.div
@@ -92,7 +79,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
               </svg>
             </motion.div>
-
             {/* Error Message */}
             <motion.h1
               initial={{ opacity: 0 }}
@@ -102,7 +88,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             >
               Oops! Something went wrong
             </motion.h1>
-
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -111,7 +96,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             >
               We encountered an unexpected error. Our team has been notified and is working to fix it.
             </motion.p>
-
             {/* Action Buttons */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -132,7 +116,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                 Reload Page
               </button>
             </motion.div>
-
             {/* Error Details (Development Only) */}
             {this.props.showDetails && this.state.error && (
               <motion.details
@@ -159,7 +142,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                 </div>
               </motion.details>
             )}
-
             {/* Support Contact */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -176,7 +158,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }

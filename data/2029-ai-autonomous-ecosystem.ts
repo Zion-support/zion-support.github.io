@@ -9,7 +9,6 @@ export interface AiAutonomousEcosystem2029 {
   category: string;
   technology: string[];
 }
-
 export const aiAutonomousEcosystem2029: AIAutonomousEcosystem2029[] = [
   {
   description: string;
@@ -23,7 +22,6 @@ export const aiAutonomousEcosystem2029: AIAutonomousEcosystem2029[] = [
     address: string;
   };
 }
-
 export const aiAutonomousEcosystemServices2029: AiAutonomousEcosystem2029[] = [
   {
     id: "2029-ai-autonomous-ecosystem",

@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { EnhancedServicesShowcase } from '@/components/EnhancedServicesShowcase';
-import { SEO } from '@/components/SEO';
-
-export default function EnhancedServicesPage() {
-  return (
-    <>
-      <SEO 
-        title="Enhanced Micro SAAS Services 2025 - Zion Tech Group"
-        description="Discover our comprehensive collection of cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with innovative technology services."
-        canonical="/enhanced-services"
-        url="https://ziontechgroup.com/enhanced-services"
-      />
-      
-      <EnhancedServicesShowcase />
-    </>
-  );
-}
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/header/Header';
@@ -28,18 +8,15 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Users, CheckCircle } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
 export default function EnhancedServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
-
     const CONTACT_INFO = {
         mobile: '+1 (555) 123-4567',
         email: 'info@ziontechgroup.com',
         address: '123 Tech Street, Innovation City, IC 12345',
         website: 'https://ziontechgroup.com'
     };
-
     const serviceCategories = [
         { id: 'all', name: 'All Services', icon: Globe },
         { id: 'ai', name: 'AI & Machine Learning', icon: Brain },
@@ -49,7 +26,6 @@ export default function EnhancedServicesPage() {
         { id: 'development', name: 'Development', icon: Code },
         { id: 'infrastructure', name: 'Infrastructure', icon: Zap }
     ];
-
     const services = [
         {
             id: 'ai-content-generation',
@@ -118,16 +94,14 @@ export default function EnhancedServicesPage() {
             popular: false
         }
     ];
-
     const filteredServices = services.filter(service => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                              service.description.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
         return matchesSearch && matchesCategory;
     });
-
     return (
-        <>
+<>
             <SEO 
                 title="Enhanced Services - Zion Tech Group" 
                 description="Discover our comprehensive range of AI-powered services, cloud solutions, and enterprise technology services." 
@@ -151,7 +125,6 @@ export default function EnhancedServicesPage() {
                                 Discover our comprehensive suite of AI-powered services, cloud solutions, and enterprise technology services designed to accelerate your digital transformation.
                             </p>
                         </div>
-
                         {/* Search and Filter */}
                         <div className="max-w-4xl mx-auto mb-12">
                             <div className="relative mb-6">
@@ -186,7 +159,6 @@ export default function EnhancedServicesPage() {
                         </div>
                     </div>
                 </section>
-
                 {/* Services Grid */}
                 <section className="py-16 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto">
@@ -253,7 +225,6 @@ export default function EnhancedServicesPage() {
                         </div>
                     </div>
                 </section>
-
                 {/* Why Choose Us */}
                 <section className="py-16 bg-zion-blue-dark">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -304,7 +275,6 @@ export default function EnhancedServicesPage() {
                         </div>
                     </div>
                 </section>
-
                 {/* Contact Section */}
                 <section id="contact-section" className="py-16 bg-zion-blue">
                     <div className="container mx-auto px-4">
@@ -339,7 +309,6 @@ export default function EnhancedServicesPage() {
                                     </div>
                                 </div>
                             </div>
-
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light" onClick={() => window.open(`tel:${CONTACT_INFO.mobile}`, '_self')}>
                                     <Phone className="w-5 h-5 mr-2"/>
@@ -354,7 +323,6 @@ export default function EnhancedServicesPage() {
                                     Visit Website
                                 </Button>
                             </div>
-
                             <div className="mt-12 p-6 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
                                 <h3 className="text-xl font-bold text-white mb-4">Special Enterprise Offerings</h3>
                                 <p className="text-zion-slate-light mb-4">
@@ -369,7 +337,6 @@ export default function EnhancedServicesPage() {
                 </section>
             </main>
             <Footer />
-        </>
+</>
     );
 }
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
