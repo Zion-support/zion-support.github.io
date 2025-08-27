@@ -42,6 +42,7 @@ export function AppHeader() {
     { name: '2025 Services', href: '/comprehensive-services-showcase-2025', current: false, featured: true },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
     { name: '2027 Services', href: '/services2027', current: false, featured: true },
+    { name: '2030 Services', href: '/revolutionary-services-2030', current: false, featured: true, revolutionary: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -51,6 +52,7 @@ export function AppHeader() {
     // Featured & New Services
     { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true },
     { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
+    { name: '2030 Revolutionary Services', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future of Technology - Revolutionary Solutions', category: 'Featured', featured: true, revolutionary: true },
     
     // AI & Machine Learning
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML' },

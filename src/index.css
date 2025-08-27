@@ -1091,3 +1091,162 @@
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(var(--zion-cyan-light), var(--zion-purple-light));
 }
+
+/* Futuristic neon glow effects */
+.neon-glow {
+  box-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
+
+.neon-glow-cyan {
+  box-shadow: 
+    0 0 5px #22ddd2,
+    0 0 10px #22ddd2,
+    0 0 15px #22ddd2,
+    0 0 20px #22ddd2;
+}
+
+.neon-glow-purple {
+  box-shadow: 
+    0 0 5px #8c15e9,
+    0 0 10px #8c15e9,
+    0 0 15px #8c15e9,
+    0 0 20px #8c15e9;
+}
+
+/* Matrix rain effect */
+.matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(34, 221, 210, 0.1) 50%,
+    transparent 100%
+  );
+  animation: matrix-rain 3s linear infinite;
+}
+
+/* Futuristic border animations */
+.futuristic-border {
+  position: relative;
+  background: linear-gradient(45deg, #22ddd2, #8c15e9, #22ddd2);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.futuristic-border::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: var(--bg-color, #0f172a);
+  border-radius: inherit;
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    rgba(34, 221, 210, 0.1),
+    rgba(139, 92, 246, 0.1),
+    rgba(16, 185, 129, 0.1),
+    rgba(34, 221, 210, 0.1)
+  );
+  background-size: 400% 400%;
+  animation: holographic-shift 4s ease infinite;
+}
+
+/* Quantum particle effect */
+.quantum-particles {
+  position: relative;
+}
+
+.quantum-particles::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(34, 221, 210, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);
+  animation: quantum-float 8s ease-in-out infinite;
+}
+
+/* Keyframe animations for futuristic effects */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+@keyframes quantum-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% { 
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-40px) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% { 
+    transform: translateY(-20px) rotate(270deg);
+    opacity: 0.6;
+  }
+}
+
+/* Enhanced responsive design */
+@media (max-width: 768px) {
+  .neon-glow {
+    box-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      0 0 9px currentColor;
+  }
+  
+  .futuristic-border {
+    background-size: 150% 150%;
+  }
+  
+  .quantum-particles::after {
+    animation-duration: 6s;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .neon-glow,
+  .futuristic-border,
+  .holographic,
+  .quantum-particles::after {
+    animation: none;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 2px currentColor;
+  }
+}

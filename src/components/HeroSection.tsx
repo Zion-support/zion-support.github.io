@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Star, Zap, Shield, Users, TrendingUp } from 'lucide-react';
+import { ArrowRight, Play, Star, Zap, Shield, Users, TrendingUp, Rocket } from 'lucide-react';
 
 export function HeroSection() {
   const [currentFeature, setCurrentFeature] = useState(0);
@@ -107,6 +107,16 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
+            <Link
+              to="/revolutionary-services-2030"
+              className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl font-semibold text-white hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+            >
+              <span className="flex items-center gap-2">
+                <Rocket className="w-5 h-5" />
+                Revolutionary 2030
+              </span>
+            </Link>
+            
             <Link
               to="/services"
               className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
