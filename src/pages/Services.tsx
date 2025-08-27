@@ -1,115 +1,291 @@
-import { SEO } from '@/components/SEO';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { servicesCatalog } from '@/data/servicesCatalog';
-import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Zap, 
+  Users, 
+  BarChart3, 
+  Globe, 
+  Rocket,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Server,
+  Smartphone,
+  Leaf
+} from 'lucide-react';
+
+const services = [
+  {
+    category: 'AI & Machine Learning',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+    services: [
+      {
+        name: 'AI Solutions',
+        description: 'Custom AI development and implementation',
+        href: '/services/ai',
+        features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      },
+      {
+        name: 'AI Content Generation',
+        description: 'Automated content creation and management',
+        href: '/ai-content-generator',
+        features: ['Text Generation', 'Image Creation', 'Video Production', 'Content Optimization']
+      },
+      {
+        name: 'AI Talent Matching',
+        description: 'Intelligent recruitment and talent acquisition',
+        href: '/zion-hire-ai',
+        features: ['Skill Matching', 'Cultural Fit Analysis', 'Performance Prediction', 'Automated Screening']
+      }
+    ]
+  },
+  {
+    category: 'Cybersecurity',
+    icon: Shield,
+    color: 'from-red-500 to-orange-500',
+    services: [
+      {
+        name: 'Cybersecurity Services',
+        description: 'Comprehensive security solutions',
+        href: '/services/cybersecurity',
+        features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Security Audits']
+      },
+      {
+        name: 'SOC2 Compliance',
+        description: 'Automated compliance and reporting',
+        href: '/soc2-compliance-automation',
+        features: ['Automated Monitoring', 'Compliance Reporting', 'Risk Assessment', 'Policy Management']
+      },
+      {
+        name: 'Zero Trust Security',
+        description: 'Advanced security architecture',
+        href: '/zero-trust-network-architecture',
+        features: ['Identity Verification', 'Access Control', 'Network Segmentation', 'Continuous Monitoring']
+      }
+    ]
+  },
+  {
+    category: 'Cloud & Infrastructure',
+    icon: Cloud,
+    color: 'from-blue-500 to-cyan-500',
+    services: [
+      {
+        name: 'Cloud Services',
+        description: 'Scalable cloud solutions',
+        href: '/services/cloud',
+        features: ['Cloud Migration', 'Cost Optimization', 'Performance Tuning', 'Disaster Recovery']
+      },
+      {
+        name: 'Infrastructure Services',
+        description: 'Robust infrastructure management',
+        href: '/services/infrastructure',
+        features: ['Server Management', 'Network Design', 'Storage Solutions', 'Load Balancing']
+      },
+      {
+        name: 'DevOps Automation',
+        description: 'Streamlined development operations',
+        href: '/devops-platform',
+        features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting', 'Automated Testing']
+      }
+    ]
+  },
+  {
+    category: 'Digital Transformation',
+    icon: Zap,
+    color: 'from-yellow-500 to-orange-500',
+    services: [
+      {
+        name: 'Digital Transformation',
+        description: 'End-to-end business transformation',
+        href: '/services/transformation',
+        features: ['Process Automation', 'Digital Workflows', 'Change Management', 'Performance Optimization']
+      },
+      {
+        name: 'Consulting Services',
+        description: 'Strategic technology consulting',
+        href: '/services/consulting',
+        features: ['Technology Strategy', 'Architecture Design', 'Implementation Planning', 'ROI Analysis']
+      },
+      {
+        name: 'Business Operations',
+        description: 'Autonomous business operations platform',
+        href: '/autonomous-business-operations-platform',
+        features: ['Process Automation', 'Decision Intelligence', 'Performance Analytics', 'Operational Excellence']
+      }
+    ]
+  },
+  {
+    category: 'Emerging Technologies',
+    icon: Rocket,
+    color: 'from-indigo-500 to-purple-500',
+    services: [
+      {
+        name: 'Quantum Technology',
+        description: 'Next-generation quantum solutions',
+        href: '/quantum-technology',
+        features: ['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Networks']
+      },
+      {
+        name: 'Space Technology',
+        description: 'Innovative space tech solutions',
+        href: '/space-tech',
+        features: ['Satellite Systems', 'Space Analytics', 'Orbital Solutions', 'Space Data Processing']
+      },
+      {
+        name: '5G Enterprise Solutions',
+        description: 'Advanced 5G business applications',
+        href: '/5g-enterprise-solutions',
+        features: ['Network Infrastructure', 'IoT Integration', 'Edge Computing', 'Low Latency Applications']
+      }
+    ]
+  },
+  {
+    category: 'Specialized Solutions',
+    icon: Cpu,
+    color: 'from-green-500 to-emerald-500',
+    services: [
+      {
+        name: 'Green IT Solutions',
+        description: 'Sustainable technology solutions',
+        href: '/green-it',
+        features: ['Energy Optimization', 'Carbon Footprint Reduction', 'Sustainable Infrastructure', 'Green Computing']
+      },
+      {
+        name: 'Mobile Solutions',
+        description: 'Cross-platform mobile applications',
+        href: '/mobile',
+        features: ['iOS Development', 'Android Development', 'Cross-Platform Apps', 'Mobile Optimization']
+      },
+      {
+        name: 'Financial Solutions',
+        description: 'Technology for financial services',
+        href: '/financial-solutions',
+        features: ['Fintech Platforms', 'Payment Systems', 'Risk Management', 'Compliance Solutions']
+      }
+    ]
+  }
+];
 
 export default function Services() {
-	const contact = {
-		mobile: '+1 302 464 0950',
-		email: 'kleber@ziontechgroup.com',
-		address: '364 E Main St STE 1008 Middletown DE 19709',
-		website: 'https://ziontechgroup.com',
-	};
+  return (
+    <>
+      <SEO 
+        title="Services - Zion Tech Group"
+        description="Comprehensive technology services including AI, cybersecurity, cloud solutions, and emerging technologies. Transform your business with Zion Tech Group."
+        canonical="/services"
+        url="https://ziontechgroup.com/services"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            Our Services
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Comprehensive technology solutions designed to accelerate your business transformation and drive innovation
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started
+            </Link>
+            <Link 
+              to="/request-quote" 
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Request Quote
+            </Link>
+          </div>
+        </div>
+      </section>
 
-	return (
-		<>
-			<SEO
-				title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group"
-				description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started."
-				canonical="/services"
-				url="https://ziontechgroup.com/services"
-			/>
+      {/* Services Grid */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid gap-12">
+            {services.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="space-y-8">
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full mb-4">
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{category.category}</h2>
+                  <div className="w-24 h-1 bg-gradient-to-r from-zion-purple to-zion-cyan mx-auto"></div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {category.services.map((service, serviceIndex) => (
+                    <div 
+                      key={serviceIndex}
+                      className="bg-zion-slate border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
+                    >
+                      <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                      <p className="text-gray-400 mb-4">{service.description}</p>
+                      
+                      <ul className="space-y-2 mb-6">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                            <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      <Link
+                        to={service.href}
+                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan/80 transition-colors font-medium"
+                      >
+                        Learn More
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-			<main className="min-h-screen bg-zion-blue pt-24 pb-20">
-				<div className="container mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-12">
-						<h1 className="text-4xl md:text-6xl font-bold text-white">Services & Solutions</h1>
-						<p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-							Real, ready-to-deploy offerings across Micro SaaS, AI, Cybersecurity, Data, and Cloud.
-						</p>
-					</div>
-
-					<div className="grid grid-cols-1 gap-12">
-						{servicesCatalog.map((category) => (
-							<section key={category.slug}>
-								<h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">{category.name}</h2>
-								<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-									{category.items.map((item) => (
-										<div key={item.id} className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan transition-all">
-											<div className="flex items-start justify-between gap-4">
-												<div>
-													<h3 className="text-xl font-semibold text-white">{item.title}</h3>
-													<p className="text-zion-slate-light mt-2">{item.description}</p>
-												</div>
-												<div className="text-right min-w-[120px]">
-													<div className="text-zion-cyan font-semibold">{item.price}</div>
-													<div className="text-zion-slate-light text-sm">
-														{item.billing === 'month'
-															? 'Monthly'
-															: item.billing === 'hour'
-															? 'Hourly'
-															: 'Project-based'}
-													</div>
-												</div>
-											</div>
-
-											<ul className="mt-4 space-y-2 text-zion-slate-light text-sm list-disc list-inside">
-												{item.features.map((f, idx) => (
-													<li key={idx}>{f}</li>
-												))}
-											</ul>
-
-											<div className="mt-6 flex items-center justify-between">
-												<Link
-													to={item.href}
-													target={item.external ? '_blank' : undefined}
-													rel={item.external ? 'noopener noreferrer' : undefined}
-													className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium py-2 px-4 rounded-lg border border-zion-cyan/40 hover:shadow-lg hover:shadow-zion-cyan/20"
-												>
-													<span>{item.ctaLabel}</span>
-													{item.external && <ExternalLink className="w-4 h-4" />}
-												</Link>
-												<span className="text-zion-slate-light text-sm">Category: {item.category}</span>
-											</div>
-										</div>
-									))}
-								</div>
-							</section>
-						))}
-					</div>
-
-					<section className="mt-16">
-						<h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">Contact Us</h2>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-								<div className="flex items-center gap-3 text-white">
-									<Phone className="w-5 h-5" />
-									<span>{contact.mobile}</span>
-								</div>
-							</div>
-							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-								<div className="flex items-center gap-3 text-white">
-									<Mail className="w-5 h-5" />
-									<span>{contact.email}</span>
-								</div>
-							</div>
-							<div className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6">
-								<div className="flex items-center gap-3 text-white">
-									<MapPin className="w-5 h-5" />
-									<span>{contact.address}</span>
-								</div>
-							</div>
-						</div>
-						<div className="mt-6">
-							<Link to="/contact" className="inline-flex items-center gap-2 text-white underline">
-								Go to contact page
-							</Link>
-						</div>
-					</section>
-				</div>
-			</main>
-		</>
-	);
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our experts help you implement the right technology solutions for your unique needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg font-semibold text-white hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 transform hover:scale-105"
+            >
+              Schedule Consultation
+            </Link>
+            <Link 
+              to="/case-studies" 
+              className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300"
+            >
+              View Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 =======
 

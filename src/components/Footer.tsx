@@ -5,59 +5,6 @@ import { Link } from 'react-router-dom';
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼" },
-    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦" },
-    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻" },
-    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺" },
-    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮" }
-  ];
-
-  const footerSections = [
-    {
-      title: "Core Services",
-      links: [
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Instagram, 
-  Youtube,
-  ArrowUp,
-  Heart,
-  Shield,
-  Zap,
-  Users,
-  Globe
-} from 'lucide-react';
-
-export function Footer() {
-  const currentYear = new Date().getFullYear();
-
-  const footerSections = [
-    {
-      title: "Services",
-      links: [
-        { name: "AI & Analytics", href: "/services/ai-analytics" },
-        { name: "Cybersecurity", href: "/services/cybersecurity" },
-        { name: "Cloud & DevOps", href: "/services/cloud-devops" },
-        { name: "Digital Transformation", href: "/services/digital-transformation" },
-        { name: "Consulting", href: "/services/consulting" }
-      ]
-    },
-    {
-      title: "Solutions",
-      links: [
-        { name: "Micro SAAS", href: "/micro-saas" },
-        { name: "Enterprise Solutions", href: "/enterprise" },
-        { name: "Startup Support", href: "/startups" },
-        { name: "Government", href: "/government" },
-        { name: "Healthcare", href: "/healthcare" }
-=======
         { label: "AI Solutions", path: "/ai-business-solutions" },
         { label: "Cloud Infrastructure", path: "/cloud-infrastructure" },
         { label: "Cybersecurity", path: "/cybersecurity-suite" },
@@ -348,6 +295,51 @@ export function Footer() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
       </button>
+=======
+  return (
+    <footer className="bg-zion-slate-dark text-white py-12">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400 text-sm">
+              Transforming businesses through cutting-edge technology solutions
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link to="/services" className="hover:text-zion-cyan">AI Solutions</Link></li>
+              <li><Link to="/services" className="hover:text-zion-cyan">Cybersecurity</Link></li>
+              <li><Link to="/services" className="hover:text-zion-cyan">Cloud Services</Link></li>
+              <li><Link to="/services" className="hover:text-zion-cyan">Digital Transformation</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link to="/about" className="hover:text-zion-cyan">About Us</Link></li>
+              <li><Link to="/team" className="hover:text-zion-cyan">Our Team</Link></li>
+              <li><Link to="/contact" className="hover:text-zion-cyan">Contact</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Contact</h4>
+            <div className="text-sm text-gray-400 space-y-2">
+              <p>kleber@ziontechgroup.com</p>
+              <p>+1 302 464 0950</p>
+              <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-zion-purple/20 mt-8 pt-8 text-center text-sm text-gray-400">
+          <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
   );
 };

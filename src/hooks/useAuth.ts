@@ -13,13 +13,13 @@ interface User {
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-=======
 export const useAuth = () => {
   const [authState, setAuthState] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
     isLoading: true,
   });
+=======
 
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
@@ -63,13 +63,8 @@ export const useAuth = () => {
       userType: 'creator',
     };
     
-    setAuthState({
-      user: mockUser,
-      isAuthenticated: true,
-      isLoading: false,
-    });
+    setUser(mockUser);
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken', 'dummy-token');
     return mockUser;
   };
 

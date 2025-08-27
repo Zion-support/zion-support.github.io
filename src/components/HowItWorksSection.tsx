@@ -1,10 +1,4 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award } from 'lucide-react';
-=======
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
 const steps = [
   {
@@ -75,6 +69,8 @@ const stats = [
   { icon: <Target className="w-6 h-6" />, value: "98%", label: "Client Satisfaction" },
   { icon: <TrendingUp className="w-6 h-6" />, value: "3x", label: "Faster Delivery" }
 ];
+=======
+import React from 'react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -99,63 +95,72 @@ const itemVariants = {
 };
 
 export function HowItWorksSection() {
-<<<<<<< HEAD
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-  const [activeStep, setActiveStep] = useState<number>(0);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
+  const steps = [
+    {
+      icon: "🔍",
+      title: "Discover",
+      description: "Browse our comprehensive catalog of services, talent, and solutions",
+      color: "from-zion-cyan to-zion-cyan-dark"
+    },
+    {
+      icon: "🤝",
+      title: "Connect",
+      description: "Get matched with the perfect team or service for your project",
+      color: "from-zion-purple to-zion-purple-dark"
+    },
+    {
+      icon: "📋",
+      title: "Plan",
+      description: "Collaborate on project requirements, timeline, and deliverables",
+      color: "from-zion-blue to-zion-blue-dark"
+    },
+    {
+      icon: "🚀",
+      title: "Execute",
+      description: "Watch your vision come to life with our expert execution",
+      color: "from-zion-cyan-light to-zion-cyan"
+    },
+    {
+      icon: "✅",
+      title: "Deliver",
+      description: "Receive your completed project with ongoing support and maintenance",
+      color: "from-zion-purple-light to-zion-purple"
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-=======
   const [activeStep, setActiveStep] = useState<number | null>(null);
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decorative elements */}
+=======
+  const stats = [
+    { icon: "⏱️", value: "3x Faster", label: "Project Delivery" },
+    { icon: "🎯", value: "99.9%", label: "Success Rate" },
+    { icon: "📈", value: "50%", label: "Cost Reduction" },
+    { icon: "🏆", value: "1000+", label: "Projects Completed" }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
+      {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
-        <motion.div
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-<<<<<<< HEAD
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            How We Work
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
             Our proven methodology ensures successful project delivery and maximum value for your business
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className="relative"
-=======
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
             How It Works
           </h2>
@@ -167,140 +172,11 @@ export function HowItWorksSection() {
         {/* Steps Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-<<<<<<< HEAD
-          {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-zion-cyan/30 via-zion-purple/30 to-zion-blue/30 transform -translate-y-1/2 z-0"></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
-            {steps.map((step, index) => (
-              <motion.div 
-                key={index} 
-                className="text-center group"
-                variants={itemVariants}
-                onHoverStart={() => setHoveredStep(index)}
-                onHoverEnd={() => setHoveredStep(null)}
-              >
-                <div className="relative">
-                  {/* Step number background */}
-                  <div className={`w-20 h-20 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-2xl shadow-zion-cyan/25`}>
-                    {index + 1}
-                  </div>
-                  
-                  {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-r ${step.bgColor} rounded-full flex items-center justify-center text-3xl mx-auto mb-6 shadow-lg border-2 border-zion-cyan/20 group-hover:scale-110 transition-transform duration-300`}>
-                    {step.icon}
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-zion-cyan transition-colors">
-                  {step.title}
-                </h3>
-                
-                <p className="text-zion-slate-light text-sm leading-relaxed mb-4">
-                  {step.description}
-                </p>
-
-                {/* Hover details */}
-                <AnimatePresence>
-                  {hoveredStep === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-4 border border-zion-cyan/20">
-                        <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
-                        <ul className="space-y-1 text-xs text-zion-slate-light">
-                          {step.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-center">
-                              <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2"></div>
-                              {detail}
-                            </li>
-                          ))}
-                        </ul>
-                        <div className="mt-3 pt-3 border-t border-zion-cyan/20">
-                          <div className="flex justify-between text-xs">
-                            <span className="text-zion-cyan">Duration: {step.duration}</span>
-                            <span className="text-zion-cyan">Success: {step.success}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Stats Section */}
-        <motion.div 
-          className="mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div 
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">
-                  <div className="text-zion-cyan">
-                    {stat.icon}
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-zion-slate-light text-sm">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 rounded-3xl p-8 border border-zion-cyan/20 backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto text-lg">
-              Our team is ready to guide you through every step of your digital transformation journey
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your Project
-                <Rocket className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-transparent text-zion-cyan font-semibold rounded-xl border-2 border-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Explore Services
-              </a>
-            </div>
-          </div>
-        </motion.div>
-=======
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
@@ -422,7 +298,50 @@ export function HowItWorksSection() {
             </div>
           </div>
         </motion.div>
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+        {/* Stats section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+              <div className="text-zion-cyan mb-2 flex justify-center text-2xl">
+                {stat.icon}
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-zion-slate-light text-sm">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Steps */}
+        <div className="relative">
+          {/* Connection line */}
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {steps.map((step, index) => (
+              <div key={index} className="relative text-center group">
+                {/* Step number */}
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6 relative z-10">
+                  {index + 1}
+                </div>
+                
+                {/* Step content */}
+                <div className="bg-zion-blue-dark/40 backdrop-blur-sm p-6 rounded-xl border border-zion-blue-light/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
+                  <div className="text-4xl mb-4">{step.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                  <p className="text-zion-slate-light text-sm leading-relaxed">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25">
+            Get Started Today
+          </button>
+        </div>
       </div>
     </section>
   );

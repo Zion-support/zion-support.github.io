@@ -1,70 +1,3 @@
-            <div className="flex items-center gap-2">
-              <button onClick={() => setIsMinimized(!isMinimized)} className="p-1 hover:bg-white/20 rounded transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                </svg>
-              </button>
-              <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-white/20 rounded transition-colors">
-                <X className="w-4 h-4"/>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {!isMinimized && (<>
-            {/* Messages */}
-            <div className="flex-1 p-4 overflow-y-auto h-80 bg-gray-50">
-              {chatHistory.length === 0 && (<div className="text-center text-gray-500 py-8">
-                  <Bot className="w-12 h-12 mx-auto mb-3 text-gray-300"/>
-                  <p className="text-sm">Hi! I'm your Zion AI assistant. How can I help you today?</p>
-                </div>)}
-              
-              {chatHistory.map((chat) => (<motion.div key={chat.id} className={`mb-4 flex ${chat.type === 'user' ? 'justify-end' : 'justify-start'}`} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-                  <div className={`flex gap-2 max-w-[80%] ${chat.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm ${chat.type === 'user' ? 'bg-zion-cyan' : 'bg-zion-purple'}`}>
-                      {chat.type === 'user' ? <User className="w-4 h-4"/> : <Bot className="w-4 h-4"/>}
-                    </div>
-                    <div className={`rounded-2xl px-4 py-2 ${chat.type === 'user'
-                    ? 'bg-zion-cyan text-white rounded-br-md'
-                    : 'bg-white text-gray-800 rounded-bl-md shadow-sm border'}`}>
-                      <p className="text-sm">{chat.content}</p>
-                      <p className={`text-xs mt-1 ${chat.type === 'user' ? 'text-white/70' : 'text-gray-500'}`}>
-                        {formatTime(chat.timestamp)}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>))}
-              
-              {/* Typing indicator */}
-              {isTyping && (<motion.div className="flex gap-2 mb-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                  <div className="w-8 h-8 bg-zion-purple rounded-full flex items-center justify-center">
-                    <Bot className="w-4 h-4 text-white"/>
-                  </div>
-                  <div className="bg-white rounded-2xl px-4 py-2 shadow-sm border">
-                    <div className="flex gap-1">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                    </div>
-                  </div>
-                </motion.div>)}
-              
-              <div ref={messagesEndRef}/>
-            </div>
-            
-            {/* Input */}
-            <div className="p-4 border-t border-gray-100 bg-white">
-              <div className="flex gap-2">
-                <input ref={inputRef} type="text" value={message} onChange={(e) => setMessage(e.target.value)} onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()} placeholder="Type your message..." className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all"/>
-                <motion.button onClick={handleSendMessage} className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:shadow-lg transition-all duration-200 flex items-center gap-2" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} disabled={!message.trim()}>
-                  <Send className="w-4 h-4"/>
-                </motion.button>
-              </div>
-            </div>
-          </>)}
-      </motion.div>
-    </AnimatePresence>);
-=======
 import React, { useState } from 'react';
 
 export function ChatAssistant() {
@@ -102,79 +35,53 @@ export function ChatAssistant() {
   const formatTime = (date: Date) => {
     return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
+=======
+import React, { useState } from 'react';
+
+export function ChatAssistant() {
+  const [isOpen, setIsOpen] = useState(false);
 
   if (!isOpen) {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 z-50 group"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 z-50"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-        </svg>
+        💬
       </button>
     );
   }
 
   return (
-    <div className="fixed bottom-6 right-6 w-80 h-96 bg-white rounded-lg shadow-2xl border border-gray-200 z-50 flex flex-col">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
-        <h3 className="font-semibold">AI Assistant</h3>
-        <button
-          onClick={() => setIsOpen(false)}
-          className="text-white hover:text-gray-200 transition-colors"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Chat Messages */}
-      <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
-        {chatHistory.length === 0 && (
-          <div className="text-center text-gray-500 text-sm">
-            <p>👋 Hi! I'm here to help you with any questions about our services.</p>
-          </div>
-        )}
-        
-        {chatHistory.map((msg, index) => (
-          <div key={index} className={`mb-4 ${msg.type === 'user' ? 'text-right' : 'text-left'}`}>
-            <div className={`inline-block max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-              msg.type === 'user' 
-                ? 'bg-cyan-500 text-white' 
-                : 'bg-white text-gray-800 border border-gray-200'
-            }`}>
-              <p className="text-sm">{msg.content}</p>
-              <p className={`text-xs mt-1 ${
-                msg.type === 'user' ? 'text-cyan-100' : 'text-gray-500'
-              }`}>
-                {formatTime(msg.timestamp)}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Input */}
-      <div className="p-4 border-t border-gray-200">
-        <div className="flex space-x-2">
-          <input
-            type="text"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-            placeholder="Type your message..."
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
+    <div className="fixed bottom-6 right-6 w-80 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-2xl z-50">
+      <div className="p-4 border-b border-zion-purple/20">
+        <div className="flex items-center justify-between">
+          <h3 className="text-white font-semibold">Chat Assistant</h3>
           <button
-            onClick={handleSendMessage}
-            className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+            onClick={() => setIsOpen(false)}
+            className="text-zion-cyan hover:text-white transition-colors"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-            </svg>
+            ✕
+          </button>
+        </div>
+      </div>
+      
+      <div className="p-4">
+        <div className="bg-zion-slate rounded-lg p-3 mb-4">
+          <p className="text-gray-300 text-sm">
+            Hello! I'm here to help you with any questions about our services, marketplace, or technical support. How can I assist you today?
+          </p>
+        </div>
+        
+        <div className="space-y-2">
+          <button className="w-full text-left p-2 text-sm text-gray-300 hover:bg-zion-slate rounded transition-colors">
+            Tell me about your AI services
+          </button>
+          <button className="w-full text-left p-2 text-sm text-gray-300 hover:bg-zion-slate rounded transition-colors">
+            How can I get started?
+          </button>
+          <button className="w-full text-left p-2 text-sm text-gray-300 hover:bg-zion-slate rounded transition-colors">
+            Contact sales team
           </button>
         </div>
       </div>

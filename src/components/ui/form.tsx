@@ -15,25 +15,14 @@ export function Form({ children, onSubmit, className = '' }: FormProps) {
 }
 
 interface FormFieldProps {
-  children: React.ReactNode;
+  control: any;
   name: string;
-  control?: any;
-  render?: (props: any) => React.ReactNode;
+  render: (props: { field: any }) => React.ReactNode;
 }
 
-export function FormField({ children, name, control, render }: FormFieldProps) {
-  if (render) {
-    return render({ field: { name } });
-  }
-  return <>{children}</>;
-}
-
-interface FormControlProps {
-  children: React.ReactNode;
-}
-
-export function FormControl({ children }: FormControlProps) {
-  return <>{children}</>;
+export function FormField({ control, name, render }: FormFieldProps) {
+  const field = { name, value: '', onChange: () => {} };
+  return render({ field });
 }
 
 interface FormItemProps {
@@ -62,16 +51,23 @@ export function FormLabel({ children, className = '' }: FormLabelProps) {
   );
 }
 
+interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+}
+
 interface FormMessageProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 
 export function FormMessage({ children, className = '' }: FormMessageProps) {
-  if (!children) return null;
   return (
-    <p className={className}>
+    <div className={className}>
       {children}
-    </p>
+    </div>
   );
 }

@@ -61,13 +61,13 @@ export function HeroSection() {
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Zap, Users, Brain, Sparkles, Star, TrendingUp, Shield, Cloud } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 export function HeroSection() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const { scrollYProgress } = useScroll({

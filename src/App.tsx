@@ -5,51 +5,60 @@ import Layout from './components/Layout'
 import EnhancedLoadingSpinner from './components/EnhancedLoadingSpinner'
 import PerformanceMonitor from './components/PerformanceMonitor'
 
-// Lazy load pages
+// Lazy load essential pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const ComprehensiveServicesShowcase = React.lazy(() => import('../pages/comprehensive-services-showcase-2026'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Signup = React.lazy(() => import('./pages/Signup'));
 
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-futuristic">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold">
-        ZION
-      </div>
+// Enhanced loading component with skeleton
+const LoadingFallback = () => (
+  <div className="min-h-screen bg-background flex items-center justify-center">
+    <div className="text-center space-y-4">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
+      <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
+      <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
     </div>
   </div>
 );
 
 function App() {
   return (
-    <HelmetProvider>
-      <Layout>
-        <Suspense fallback={<EnhancedLoadingSpinner size="lg" text="Loading page..." />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Suspense>
-        <PerformanceMonitor />
-      </Layout>
-    </HelmetProvider>
-  )
+    <Router>
+      <div className="min-h-screen bg-background text-foreground">
+        <AppHeader />
+        <main className="flex-1">
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/signup" element={<Signup />} />
+              
+              {/* Catch-all route for 404 */}
+              <Route path="*" element={
+                <div className="min-h-screen flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold text-zion-cyan mb-4">404</h1>
+                    <p className="text-xl text-muted-foreground mb-8">Page not found</p>
+                    <a href="/" className="text-zion-cyan hover:underline">Go back home</a>
+                  </div>
+                </div>
+              } />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+        <ChatAssistant />
+      </div>
+    </Router>
+  );
 }
 
 export default App;
