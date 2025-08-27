@@ -134,7 +134,7 @@ const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensiveP
 // Additional routes
 const API = React.lazy(() => import('./pages/API'));
 const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
-const ApiDemo = React.lazy(() => import('./pages/ApiDemo'));
+const ApiDemo = React.lazy(() => import('./components/ApiDemo'));
 
 // Service pages
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));

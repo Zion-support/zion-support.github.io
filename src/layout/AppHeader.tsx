@@ -50,14 +50,9 @@ export function AppHeader() {
   // Enhanced services by category with better organization
   const services = [
     // Featured & New Services
-<<<<<<< HEAD
-    { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true },
-    { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
-    { name: '2030 Revolutionary Services', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future of Technology - Revolutionary Solutions', category: 'Featured', featured: true, revolutionary: true },
-=======
     { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
     { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
->>>>>>> main
+    { name: '2030 Revolutionary Services', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future of Technology - Revolutionary Solutions', category: 'Featured', featured: true, revolutionary: true, color: 'from-red-500 to-pink-500' },
     
     // AI & Machine Learning
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
