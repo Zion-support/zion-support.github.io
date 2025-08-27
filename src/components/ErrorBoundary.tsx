@@ -1,118 +1,100 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
-function ErrorFallback({ error, resetError }) {
-    const navigate = useNavigate();
-    return (<div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">
-      <div className="max-w-md w-full text-center">
-        <div className="mb-6">
-          <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <AlertTriangle className="w-10 h-10 text-zion-purple"/>
-          </div>
-          <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
-          <p className="text-zion-slate-light">
-            We encountered an unexpected error. Don't worry, our team has been notified.
-          </p>
-        </div>
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-        {error && process.env.NODE_ENV === 'development' && (<details className="mb-6 text-left">
-            <summary className="cursor-pointer text-zion-cyan hover:text-zion-cyan-light mb-2">
-              Error Details (Development)
-            </summary>
-            <div className="bg-zion-slate-dark p-3 rounded text-xs text-zion-slate-light overflow-auto">
-              <pre>{error.stack}</pre>
-            </div>
-          </details>)}
-
-        <div className="space-y-3">
-          <Button onClick={resetError} className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
-            <RefreshCw className="w-4 h-4 mr-2"/>
-            Try Again
-          </Button>
-          
-          <Button variant="outline" onClick={() => navigate(-1)} className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
-            <ArrowLeft className="w-4 h-4 mr-2"/>
-            Go Back
-          </Button>
-          
-          <Link to="/" className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors">
-            <Home className="w-4 h-4 inline mr-2"/>
-            Go Home
-          </Link>
-        </div>
-
-        <div className="mt-6 text-xs text-zion-slate-light">
-          <p>If this problem persists, please contact our support team.</p>
-          <p className="mt-1">
-            Error ID: {error?.name || 'Unknown'} - {new Date().toISOString()}
-          </p>
-        </div>
-      </div>
-    </div>);
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
 }
-export function ErrorBoundary({ children, fallback, onError }) {
-    const [hasError, setHasError] = useState(false);
-    const [error, setError] = useState(null);
-    useEffect(() => {
-        const handleError = (event) => {
-            setHasError(true);
-            setError(event.error);
-            if (onError) {
-                onError(event.error, { componentStack: event.error?.stack });
-            }
-            // Log error to console in development
-            if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:', event.error);
-            }
-        };
-        const handleUnhandledRejection = (event) => {
-            setHasError(true);
-            setError(new Error(event.reason));
-            if (onError) {
-                onError(new Error(event.reason), { componentStack: event.reason?.stack });
-            }
-            // Log error to console in development
-            if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
-            }
-        };
-        window.addEventListener('error', handleError);
-        window.addEventListener('unhandledrejection', handleUnhandledRejection);
-        return () => {
-            window.removeEventListener('error', handleError);
-            window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-        };
-    }, [onError]);
-    const resetError = () => {
-        setHasError(false);
-        setError(null);
-    };
-    if (hasError) {
-        if (fallback) {
-            return fallback;
-        }
-        return (<ErrorFallback error={error || undefined} resetError={resetError}/>);
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to analytics service
+    if (window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: true
+      });
     }
-    return <>{children}</>;
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    window.location.reload();
+  };
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
+          <div className="bg-white/5 backdrop-blur-xl border border-red-500/30 rounded-2xl p-8 max-w-lg w-full text-center shadow-2xl">
+            <AlertTriangle className="h-16 w-16 text-red-500 mx-auto mb-6" />
+            <h2 className="text-3xl font-bold text-white mb-4">Oops! Something went wrong.</h2>
+            <p className="text-zion-slate-light text-lg mb-6">
+              We're sorry for the inconvenience. Our team has been notified and is working to fix the issue.
+            </p>
+
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="text-left bg-red-900/30 border border-red-700/50 rounded-lg p-4 mb-6 text-red-300 text-sm overflow-auto max-h-48">
+                <h3 className="font-semibold mb-2">Error Details:</h3>
+                <p className="font-mono break-all">{this.state.error.toString()}</p>
+                {this.state.errorInfo?.componentStack && (
+                  <pre className="mt-2 whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                )}
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleRetry}
+                className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium text-base shadow-lg hover:shadow-xl"
+              >
+                <RefreshCw className="h-5 w-5 mr-2" /> Try Again
+              </button>
+              <Link
+                to="/"
+                className="inline-flex items-center border border-zion-cyan text-zion-cyan px-6 py-3 rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium text-base"
+              >
+                <Home className="h-5 w-5 mr-2" /> Go to Homepage
+              </Link>
+            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 mt-4"
+            >
+              <Mail className="h-4 w-4 mr-2" /> Contact Support
+            </Link>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
 }
-// Hook for functional components to handle errors
-export function useErrorHandler() {
-    const [error, setError] = useState(null);
-    const handleError = React.useCallback((error) => {
-        setError(error);
-        console.error('Error caught by useErrorHandler:', error);
-    }, []);
-    const clearError = React.useCallback(() => {
-        setError(null);
-    }, []);
-    return { error, handleError, clearError };
-}
-// Higher-order component for wrapping components with error handling
-export function withErrorBoundary(Component, errorBoundaryProps) {
-    return function WithErrorBoundary(props) {
-        return (<ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props}/>
-      </ErrorBoundary>);
-    };
-}
+
+export default ErrorBoundary;
