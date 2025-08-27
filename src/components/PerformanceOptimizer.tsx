@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, TrendingUp, Gauge, Cpu, Memory, Wifi, Battery, Activity } from 'lucide-react';
+import { Zap, TrendingUp, Gauge, Cpu, HardDrive, Wifi, Battery, Activity } from 'lucide-react';
 
 interface PerformanceMetrics {
   fps: number;
@@ -169,7 +169,7 @@ export function PerformanceOptimizer() {
           {/* Memory */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Memory className="w-4 h-4 text-blue-500" />
+                              <HardDrive className="w-4 h-4 text-blue-500" />
               <span className="text-sm text-gray-600">Memory</span>
             </div>
             <span className={`font-mono text-sm ${metrics.memory < 50 ? 'text-green-600' : metrics.memory < 100 ? 'text-yellow-600' : 'text-red-600'}`}>

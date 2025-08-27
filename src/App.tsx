@@ -1,22 +1,24 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Layout Components
-import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import { AppHeader } from './layout/AppHeader.tsx';
+import { Footer } from './components/Footer.tsx';
 
 // Enhanced Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer.tsx';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer.tsx';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { SEO } from './components/SEO';
-import { FloatingActionButton } from './components/FloatingActionButton';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
-import { ChatAssistant } from './components/ChatAssistant';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer.tsx';
+import { SEO } from './components/SEO.tsx';
+import { FloatingActionButton } from './components/FloatingActionButton.tsx';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics.tsx';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem.tsx';
+import { ChatAssistant } from './components/ChatAssistant.tsx';
+import { ErrorBoundary } from './components/ErrorBoundary.tsx';
+import { ErrorFallback } from './components/ErrorFallback.tsx';
+import { LoadingSpinner } from './components/ui/LoadingSpinner.tsx';
 
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
@@ -134,7 +136,7 @@ const LoadingSpinner = () => (
 );
 
 // Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }) => (
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 via-red-800 to-red-900">
     <div className="text-center text-white">
       <h1 className="text-6xl font-bold mb-4">Something went wrong</h1>
@@ -151,9 +153,10 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => (
 
 function App() {
   return (
-    <HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
-        <div className="App min-h-screen bg-white">
+    <Router>
+      <HelmetProvider>
+        <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
+          <div className="App min-h-screen bg-white">
             {/* SEO Component */}
             <SEO />
             
@@ -397,9 +400,8 @@ function App() {
               theme="auto"
               language="en"
             />
-                      </div>
+          </div>
         </ErrorBoundary>
-    </HelmetProvider>
   );
 }
 
