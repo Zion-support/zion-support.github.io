@@ -12,6 +12,47 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
+<<<<<<< HEAD
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        process: 'readonly',
+        console: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly'
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'module',
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1eae
       parser: tsparser,
       parserOptions: {
         ecmaFeatures: {
@@ -19,9 +60,16 @@ export default [
         }
       },
       globals: {
+<<<<<<< HEAD
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        process: 'readonly',
+=======
         // Browser globals
         window: 'readonly',
         document: 'readonly',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1eae
         console: 'readonly',
         localStorage: 'readonly',
         sessionStorage: 'readonly',
@@ -29,6 +77,9 @@ export default [
         setTimeout: 'readonly',
         setInterval: 'readonly',
         clearTimeout: 'readonly',
+<<<<<<< HEAD
+        clearInterval: 'readonly'
+=======
         clearInterval: 'readonly',
         requestAnimationFrame: 'readonly',
         cancelAnimationFrame: 'readonly',
@@ -75,6 +126,7 @@ export default [
         EventListener: 'readonly',
         FileReader: 'readonly',
         Image: 'readonly'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1eae
       }
     },
     plugins: {
