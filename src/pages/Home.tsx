@@ -270,27 +270,37 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {[
               {
                 icon: Brain,
                 title: "AI-Powered Solutions",
-                description: "Cutting-edge artificial intelligence that transforms your business operations and decision-making processes."
+                description: "Cutting-edge artificial intelligence that transforms your business operations and decision-making processes.",
+                color: "from-purple-500 to-pink-500"
               },
               {
                 icon: Cloud,
                 title: "Micro SAAS Platform",
-                description: "Innovative software-as-a-service solutions designed for modern businesses and startups."
+                description: "Innovative software-as-a-service solutions designed for modern businesses and startups.",
+                color: "from-blue-500 to-cyan-500"
               },
               {
                 icon: Server,
                 title: "IT Infrastructure",
-                description: "Robust and scalable IT solutions that keep your business running smoothly and securely."
+                description: "Robust and scalable IT solutions that keep your business running smoothly and securely.",
+                color: "from-green-500 to-emerald-500"
               },
               {
                 icon: Rocket,
                 title: "Emerging Technologies",
-                description: "Next-generation technologies including quantum computing, blockchain, and edge computing."
+                description: "Next-generation technologies including quantum computing, blockchain, and edge computing.",
+                color: "from-orange-500 to-red-500"
               }
             ].map((feature, index) => (
               <motion.div

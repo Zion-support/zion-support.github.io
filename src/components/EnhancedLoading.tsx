@@ -391,7 +391,7 @@ export const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
               </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Sparkles Effect */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
