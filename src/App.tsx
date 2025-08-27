@@ -4,6 +4,8 @@ import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.jsx';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
+import { EnhancedSEO } from './components/EnhancedSEO';
 
 // Lazy load pages - comprehensive import list with enhanced chunking
 const Home = React.lazy(() => import('./pages/Home.jsx'));
@@ -180,6 +182,9 @@ function App() {
         
         {/* Chat Assistant */}
         <ChatAssistant />
+        
+        {/* Enhanced Accessibility */}
+        <EnhancedAccessibility />
       </div>
     </Router>
   );

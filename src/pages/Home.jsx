@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { EnhancedSEO } from '../components/EnhancedSEO.tsx';
 import { 
   ArrowRight, 
   Shield, 
@@ -230,9 +231,16 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
+    <>
+      <EnhancedSEO 
+        title="Zion Tech Group - Advanced Technology Solutions"
+        description="Leading provider of AI, cybersecurity, cloud services, and digital transformation solutions. Transform your business with cutting-edge technology services."
+        keywords="AI solutions, cybersecurity, cloud services, digital transformation, technology consulting, IT services, machine learning, quantum computing"
+        canonical="https://ziontechgroup.com"
+      />
+      <div className="min-h-screen bg-futuristic">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full animate-pulse"></div>
@@ -591,6 +599,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
