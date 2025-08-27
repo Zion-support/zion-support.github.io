@@ -75,7 +75,7 @@ export function FooterNewsletter() {
   );
 }
 
-export function Footer() {
+function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -185,5 +185,4 @@ export function Footer() {
   );
 };
 
-export { Footer };
 export default Footer;
