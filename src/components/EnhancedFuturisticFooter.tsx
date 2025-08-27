@@ -56,7 +56,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
@@ -92,11 +92,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Micro SaaS',
+      links: [
+        { name: 'Micro SaaS Overview', href: '/micro-saas' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking' },
+        { name: 'Mobile Survey Platform', href: '/services/mobile-survey' },
+        { name: 'IT Helpdesk', href: '/services/it-helpdesk' },
+        { name: 'Green IT Solutions', href: '/green-it' }
+      ]
+    },
+    {
       title: 'Business Solutions',
       links: [
-        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking' },
-        { name: 'IT Helpdesk', href: '/services/it-helpdesk' },
-        { name: 'Green IT Solutions', href: '/green-it' },
         { name: 'Marketplace', href: '/marketplace' },
         { name: 'Talent Solutions', href: '/talent' },
         { name: 'Equipment Services', href: '/equipment' },

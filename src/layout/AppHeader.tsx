@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Calendar } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -42,15 +42,6 @@ export function AppHeader() {
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'AI Solutions', href: '/ai-solutions', current: false },
-    { name: 'Case Studies', href: '/case-studies', current: false },
-    { name: 'Research', href: '/research-development', current: false },
-    { name: 'Events', href: '/events', current: false },
-    { name: 'News', href: '/news', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
-    { name: 'Partners', href: '/partners', current: false },
-    { name: 'Blog', href: '/blog', current: false },
-    { name: 'Help', href: '/help', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Careers', href: '/careers', current: false },
@@ -60,7 +51,7 @@ export function AppHeader() {
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Quantum Solutions' },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Quantum Solutions' },
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart Devices & Networks' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
     { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield, description: 'AI-Powered Security' },
@@ -95,12 +86,15 @@ export function AppHeader() {
   ];
 
   const quickLinks = [
-    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+    { name: 'Research', href: '/research-development', icon: Brain },
+    { name: 'Events', href: '/events', icon: Calendar },
+    { name: 'News', href: '/news', icon: Globe },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Partners', href: '/partners', icon: Users },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
-    { name: 'Partners', href: '/partners', icon: Users },
-    { name: 'Careers', href: '/careers', icon: Users },
     { name: 'Help Center', href: '/help', icon: MessageCircle },
   ];
 

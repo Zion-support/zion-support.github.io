@@ -81,7 +81,7 @@ const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'))
 const ReturnsManagement = React.lazy(() => import('./pages/services/ReturnsManagement'));
 const EmailSequencer = React.lazy(() => import('./pages/services/EmailSequencer'));
 const PodcastTranscription = React.lazy(() => import('./pages/services/PodcastTranscription'));
-const MicroCRM = React.lazy(() => import('./pages/services/MicroCRM'));
+const MicroCRM = React.lazy(() => import('./pages/services/micro-crm'));
 // New real service pages
 const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalytics'));
 const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
@@ -97,6 +97,7 @@ const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatf
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
 // New innovative AI services
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/ai-workflow-automation'));
 const AIProjectManager = React.lazy(() => import('./pages/services/AIProjectManager'));
 const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGenerator'));
 const AICustomerSupport = React.lazy(() => import('./pages/services/AICustomerSupport'));
@@ -209,6 +210,7 @@ function App() {
               <Route path="/research-development" element={<ResearchDevelopment />} />
               
               {/* Service Routes - only for existing pages */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
               <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
