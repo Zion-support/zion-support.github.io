@@ -2,9 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
+  Briefcase, 
   Brain, 
-  Shield, 
   Cloud, 
+<<<<<<< HEAD
   Code,
   Database,
   Network,
@@ -21,67 +22,55 @@ import {
   ArrowRight,
   CheckCircle,
   Star
+=======
+  Shield, 
+  Server, 
+  RefreshCw, 
+  Lightbulb,
+  ArrowRight,
+  CheckCircle
+>>>>>>> cursor/website-audit-and-enhancement-8260
 } from 'lucide-react';
 
 export default function Services() {
-  const serviceCategories = [
+  const services = [
     {
-      title: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions",
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence and machine learning services",
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      services: [
-        "AI-Powered Business Intelligence",
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision Solutions",
-        "Predictive Analytics",
-        "AI Chatbots & Virtual Assistants"
-      ]
+      path: "/services/ai",
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
+    },
+    {
+      title: "Cloud & DevOps",
+      description: "Scalable cloud infrastructure and development operations",
+      icon: Cloud,
+      path: "/services/cloud",
+      features: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Infrastructure as Code"]
     },
     {
       title: "Cybersecurity",
-      description: "Advanced security and compliance solutions",
+      description: "Comprehensive security solutions to protect your business",
       icon: Shield,
-      color: "from-red-500 to-orange-500",
-      services: [
-        "Zero Trust Architecture",
-        "Threat Detection & Response",
-        "Penetration Testing",
-        "Security Audits & Compliance",
-        "Incident Response",
-        "Vulnerability Assessment"
-      ]
+      path: "/services/cybersecurity",
+      features: ["Threat Detection", "Security Audits", "Compliance", "Incident Response"]
     },
     {
-      title: "Cloud & Infrastructure",
-      description: "Scalable cloud solutions and DevOps",
-      icon: Cloud,
-      color: "from-blue-500 to-cyan-500",
-      services: [
-        "Cloud Migration",
-        "DevOps Automation",
-        "Infrastructure as Code",
-        "Container Orchestration",
-        "Serverless Architecture",
-        "Multi-Cloud Management"
-      ]
+      title: "IT Infrastructure",
+      description: "Robust and scalable IT infrastructure solutions",
+      icon: Server,
+      path: "/services/infrastructure",
+      features: ["Network Design", "Server Management", "Database Administration", "Monitoring"]
     },
     {
-      title: "Software Development",
-      description: "Custom software and application development",
-      icon: Code,
-      color: "from-green-500 to-emerald-500",
-      services: [
-        "Web Application Development",
-        "Mobile App Development",
-        "API Development",
-        "Microservices Architecture",
-        "Legacy System Modernization",
-        "Quality Assurance & Testing"
-      ]
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation services",
+      icon: RefreshCw,
+      path: "/services/transformation",
+      features: ["Process Automation", "Technology Modernization", "Change Management", "Strategy"]
     },
     {
+<<<<<<< HEAD
       title: "Data & Analytics",
       description: "Data-driven insights and business intelligence",
       icon: Database,
@@ -167,10 +156,28 @@ export default function Services() {
         <div className="relative container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
+=======
+      title: "Technology Consulting",
+      description: "Strategic technology consulting and advisory services",
+      icon: Lightbulb,
+      path: "/services/consulting",
+      features: ["Technology Strategy", "Digital Innovation", "Process Optimization", "Change Management"]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+>>>>>>> cursor/website-audit-and-enhancement-8260
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Our
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -192,6 +199,27 @@ export default function Services() {
               <Link
                 to="/solutions"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+=======
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-6">
+              <Briefcase className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              Our Services
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive technology solutions to drive your business forward
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <Link 
+                to="/solutions" 
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+>>>>>>> cursor/website-audit-and-enhancement-8260
               >
                 View Solutions
               </Link>
@@ -200,6 +228,7 @@ export default function Services() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Service Categories */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -214,6 +243,17 @@ export default function Services() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We offer a comprehensive range of technology services to meet all your business needs
+=======
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              What We Offer
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From AI and cloud solutions to cybersecurity and digital transformation
+>>>>>>> cursor/website-audit-and-enhancement-8260
             </p>
           </motion.div>
           
@@ -275,8 +315,8 @@ export default function Services() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -284,6 +324,7 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-8 rounded-xl border border-zinc-700"
               >
+<<<<<<< HEAD
                 <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-lg w-16 h-16 mb-6 flex items-center justify-center">
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
@@ -309,6 +350,31 @@ export default function Services() {
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-center block"
                 >
                   Get Started
+=======
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-400 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <Link 
+                  to={service.path}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+                >
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+>>>>>>> cursor/website-audit-and-enhancement-8260
                 </Link>
               </motion.div>
             ))}
@@ -316,6 +382,7 @@ export default function Services() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Testimonials */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -391,6 +458,32 @@ export default function Services() {
               </Link>
             </div>
           </motion.div>
+=======
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our services can help you achieve your technology goals
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Consultation
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/solutions"
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              View Solutions
+            </Link>
+          </div>
+>>>>>>> cursor/website-audit-and-enhancement-8260
         </div>
       </section>
     </div>
