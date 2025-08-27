@@ -2,9 +2,11 @@ import type { ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
+
 interface LayoutProps {
   children: ReactNode;
 }
+
 const Layout = ({ children }: LayoutProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -20,30 +22,55 @@ const Layout = ({ children }: LayoutProps) => {
   ];
 
   const services = [
-    { name: 'AI Development', href: '/services#ai-development' },
-    { name: 'Cloud Migration', href: '/services#cloud-migration' },
-    { name: 'Web Development', href: '/services#web-development' },
-    { name: 'Mobile Apps', href: '/services#mobile-development' },
-    { name: 'Cybersecurity', href: '/services#cybersecurity' },
-    { name: 'Data Analytics', href: '/services#data-analytics' },
-    { name: 'Blockchain', href: '/services#blockchain' },
-    { name: 'IoT Platforms', href: '/services#iot-platforms' },
-    { name: 'Solutions Overview', href: '/solutions' },
-    { name: 'Research & Development', href: '/research-development' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Events & Webinars', href: '/events' },
-    { name: 'Expanded Services 2027', href: '/expanded-services-2027/' },
-    { name: 'Pricing Guide 2027', href: '/expanded-services-pricing-2027/' },
+    { name: 'AI & Analytics', href: '/services/ai-analytics' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Data Analytics', href: '/services/data-analytics' },
+    { name: 'Digital Twin', href: '/services/digital-twin' },
+    { name: 'IoT & Edge', href: '/services/iot-edge' },
+    { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+    { name: 'Quantum Computing', href: '/services/quantum-computing' },
+    { name: 'Blockchain', href: '/services/blockchain' },
+    { name: 'Sustainability', href: '/services/sustainability' },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+  ];
+
+  const microSaas = [
+    { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
+    { name: 'Customer Experience', href: '/micro-saas/customer-experience' },
+    { name: 'Quantum Computing', href: '/micro-saas/quantum-computing' },
+    { name: 'Supply Chain', href: '/micro-saas/supply-chain' },
+    { name: 'Cybersecurity', href: '/micro-saas/cybersecurity' },
+    { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge-computing' },
+    { name: 'Content Creation', href: '/micro-saas/content-creation' },
+    { name: 'HR Platform', href: '/micro-saas/hr-platform' },
+  ];
+
+  const itServices = [
+    { name: 'Infrastructure', href: '/it-services/infrastructure' },
+    { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
+    { name: 'Consulting', href: '/it-services/consulting' },
+    { name: 'Onsite Support', href: '/it-services/onsite-support' },
+    { name: 'Green IT', href: '/it-services/green-it' },
+    { name: '5G Solutions', href: '/it-services/5g-solutions' },
+  ];
+
+  const marketplace = [
+    { name: 'Products', href: '/marketplace/products' },
+    { name: 'Talent', href: '/marketplace/talent' },
+    { name: 'Equipment', href: '/marketplace/equipment' },
+    { name: 'Services', href: '/marketplace/services' },
   ];
 
   const products = [
     { name: 'ZionAI Content Studio', href: '/products#zionai-content-studio' },
-    { name: 'SmartLead Pro', href: '/products#secureshield-pro' },
+    { name: 'SmartLead Pro', href: '/products#smartlead-pro' },
     { name: 'CodeGenius AI', href: '/products#codegenius-ai' },
     { name: 'TaskMaster AI', href: '/products#taskmaster-ai' },
     { name: 'SecureShield Pro', href: '/products#secureshield-pro' },
     { name: 'BlockchainForge', href: '/products#blockchainforge' },
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Head>
@@ -99,8 +126,9 @@ const Layout = ({ children }: LayoutProps) => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <div className="py-2">
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-600 border-b border-gray-200">Core Services</div>
                     {services.map((service) => (
                       <Link
                         key={service.name}
@@ -108,6 +136,78 @@ const Layout = ({ children }: LayoutProps) => {
                         className="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                       >
                         {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Micro SAAS Dropdown */}
+              <div className="relative group">
+                <button className="text-white hover:text-blue-300 transition-colors font-medium flex items-center">
+                  Micro SAAS
+                  <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="py-2">
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-600 border-b border-gray-200">AI-Powered Solutions</div>
+                    {microSaas.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* IT Services Dropdown */}
+              <div className="relative group">
+                <button className="text-white hover:text-blue-300 transition-colors font-medium flex items-center">
+                  IT Services
+                  <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="py-2">
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-600 border-b border-gray-200">Enterprise Solutions</div>
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Marketplace Dropdown */}
+              <div className="relative group">
+                <button className="text-white hover:text-blue-300 transition-colors font-medium flex items-center">
+                  Marketplace
+                  <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="py-2">
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-600 border-b border-gray-200">Digital Solutions</div>
+                    {marketplace.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        {item.name}
                       </Link>
                     ))}
                   </div>
@@ -161,7 +261,7 @@ const Layout = ({ children }: LayoutProps) => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="md:hidden bg-white/95 backdrop-blur-sm rounded-lg mt-2 mb-4 shadow-xl">
+            <div className="md:hidden bg-white/95 backdrop-blur-sm rounded-lg mt-2 mb-4 shadow-xl max-h-96 overflow-y-auto">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navigation.map((item) => (
                   <Link
@@ -176,7 +276,7 @@ const Layout = ({ children }: LayoutProps) => {
                 
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-2">
-                  <div className="px-3 py-2 text-sm font-semibold text-gray-600">Services</div>
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-600">Core Services</div>
                   {services.map((service) => (
                     <Link
                       key={service.name}
@@ -185,6 +285,51 @@ const Layout = ({ children }: LayoutProps) => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {service.name}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Mobile Micro SAAS */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-600">Micro SAAS</div>
+                  {microSaas.map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="block px-6 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Mobile IT Services */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-600">IT Services</div>
+                  {itServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="block px-6 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Mobile Marketplace */}
+                <div className="border-t border-gray-200 pt-2">
+                  <div className="px-3 py-2 text-sm font-semibold text-gray-600">Marketplace</div>
+                  {marketplace.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-6 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
                     </Link>
                   ))}
                 </div>
@@ -226,7 +371,7 @@ const Layout = ({ children }: LayoutProps) => {
       {/* Footer */}
       <footer className="bg-white/10 backdrop-blur-sm border-t border-white/20 mt-20">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-5 gap-8">
             {/* Company Info */}
             <div className="md:col-span-2">
               <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
@@ -244,6 +389,30 @@ const Layout = ({ children }: LayoutProps) => {
               </div>
             </div>
 
+            {/* Services */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Core Services</h4>
+              <ul className="space-y-2">
+                <li><Link href="/services/ai-analytics" className="text-gray-300 hover:text-blue-400 transition-colors">AI & Analytics</Link></li>
+                <li><Link href="/services/cybersecurity" className="text-gray-300 hover:text-blue-400 transition-colors">Cybersecurity</Link></li>
+                <li><Link href="/services/cloud-devops" className="text-gray-300 hover:text-blue-400 transition-colors">Cloud & DevOps</Link></li>
+                <li><Link href="/services/quantum-computing" className="text-gray-300 hover:text-blue-400 transition-colors">Quantum Computing</Link></li>
+                <li><Link href="/services/blockchain" className="text-gray-300 hover:text-blue-400 transition-colors">Blockchain</Link></li>
+              </ul>
+            </div>
+
+            {/* Micro SAAS */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4">Micro SAAS</h4>
+              <ul className="space-y-2">
+                <li><Link href="/micro-saas/ai-business-intelligence" className="text-gray-300 hover:text-blue-400 transition-colors">AI Business Intelligence</Link></li>
+                <li><Link href="/micro-saas/customer-experience" className="text-gray-300 hover:text-blue-400 transition-colors">Customer Experience</Link></li>
+                <li><Link href="/micro-saas/quantum-computing" className="text-gray-300 hover:text-blue-400 transition-colors">Quantum Computing</Link></li>
+                <li><Link href="/micro-saas/supply-chain" className="text-gray-300 hover:text-blue-400 transition-colors">Supply Chain</Link></li>
+                <li><Link href="/micro-saas/cybersecurity" className="text-gray-300 hover:text-blue-400 transition-colors">Cybersecurity</Link></li>
+              </ul>
+            </div>
+
             {/* Quick Links */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
@@ -251,20 +420,8 @@ const Layout = ({ children }: LayoutProps) => {
                 <li><Link href="/" className="text-gray-300 hover:text-blue-400 transition-colors">Home</Link></li>
                 <li><Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
                 <li><Link href="/services" className="text-gray-300 hover:text-blue-400 transition-colors">Services</Link></li>
-                <li><Link href="/products" className="text-gray-300 hover:text-blue-400 transition-colors">Products</Link></li>
+                <li><Link href="/solutions" className="text-gray-300 hover:text-blue-400 transition-colors">Solutions</Link></li>
                 <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
-              </ul>
-            </div>
-
-            {/* Services */}
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
-              <ul className="space-y-2">
-                <li><Link href="/services#ai-development" className="text-gray-300 hover:text-blue-400 transition-colors">AI Development</Link></li>
-                <li><Link href="/services#cloud-migration" className="text-gray-300 hover:text-blue-400 transition-colors">Cloud Migration</Link></li>
-                <li><Link href="/services#cybersecurity" className="text-gray-300 hover:text-blue-400 transition-colors">Cybersecurity</Link></li>
-                <li><Link href="/services#web-development" className="text-gray-300 hover:text-blue-400 transition-colors">Web Development</Link></li>
-                <li><Link href="/services#blockchain" className="text-gray-300 hover:text-blue-400 transition-colors">Blockchain</Link></li>
               </ul>
             </div>
           </div>
