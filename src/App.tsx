@@ -10,6 +10,7 @@ import About from './pages/About';
 import Contact from './pages/Contact.tsx';
 import ServicesPage from './pages/ServicesPage';
 import EnhancedServicesShowcase2025 from './pages/EnhancedServicesShowcase2025';
+import UltimateServicesShowcase2026 from './pages/UltimateServicesShowcase2026';
 import NotFound from './pages/NotFound';
 
 // Import other pages as needed
@@ -44,6 +45,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
+            <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
             
             {/* Auth Pages */}
             <Route path="/login" element={<Login />} />
