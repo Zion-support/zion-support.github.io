@@ -27,6 +27,13 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const News = React.lazy(() => import('./pages/News'));
+const SolutionsPage = React.lazy(() => import('./pages/Solutions'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Help = React.lazy(() => import('./pages/Help'));
+const Signup = React.lazy(() => import('./pages/Signup'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -84,17 +91,24 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/help" element={<Help />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/services" element={<Services />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
               <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/signup" element={<Signup />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />

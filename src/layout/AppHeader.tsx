@@ -37,12 +37,12 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Partners', href: '/partners', current: false },
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Help', href: '/help', current: false },
     { name: 'About', href: '/about', current: false },
@@ -67,6 +67,7 @@ export function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Sitemap', href: '/sitemap', icon: Globe },
   ];
 
   return (
