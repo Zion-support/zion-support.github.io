@@ -1,82 +1,97 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Globe, Users, Clock, Award, CheckCircle } from 'lucide-react';
+import { 
+  Globe, 
+  MapPin, 
+  Users, 
+  Clock, 
+  Star,
+  Award,
+  CheckCircle
+} from 'lucide-react';
 
-export function GlobalPresenceSection() {
-  const globalOffices = [
+export const GlobalPresenceSection: React.FC = () => {
+  const locations = [
     {
-      city: "New York",
-      country: "United States",
-      address: "123 Tech Avenue, Manhattan, NY 10001",
-      phone: "+1 (212) 555-0123",
-      email: "nyc@ziontechgroup.com",
-      services: ["AI Solutions", "Cybersecurity", "Cloud Services"],
-      timezone: "EST (UTC-5)",
-      image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      city: 'New York',
+      country: 'United States',
+      flag: '🇺🇸',
+      timezone: 'EST (UTC-5)',
+      services: ['AI Development', 'Cloud Solutions', 'Cybersecurity'],
+      teamSize: '25+',
+      established: '2018'
     },
     {
-      city: "London",
-      country: "United Kingdom",
-      address: "456 Innovation Street, Canary Wharf, E14 5AB",
-      phone: "+44 20 7123 4567",
-      email: "london@ziontechgroup.com",
-      services: ["Digital Transformation", "IT Consulting", "AI Research"],
-      timezone: "GMT (UTC+0)",
-      image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      city: 'London',
+      country: 'United Kingdom',
+      flag: '🇬🇧',
+      timezone: 'GMT (UTC+0)',
+      services: ['Digital Transformation', 'FinTech Solutions', 'Compliance'],
+      teamSize: '20+',
+      established: '2019'
     },
     {
-      city: "Singapore",
-      country: "Singapore",
-      address: "789 Digital Hub, Marina Bay, 018956",
-      phone: "+65 6789 0123",
-      email: "singapore@ziontechgroup.com",
-      services: ["Cloud Solutions", "DevOps", "FinTech"],
-      timezone: "SGT (UTC+8)",
-      image: "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      city: 'Singapore',
+      country: 'Singapore',
+      flag: '🇸🇬',
+      timezone: 'SGT (UTC+8)',
+      services: ['APAC Operations', 'Supply Chain Tech', 'Smart Cities'],
+      teamSize: '15+',
+      established: '2020'
     },
     {
-      city: "São Paulo",
-      country: "Brazil",
-      address: "321 Tech Plaza, Vila Madalena, 05433-000",
-      phone: "+55 11 98765 4321",
-      email: "saopaulo@ziontechgroup.com",
-      services: ["Latin America HQ", "AI Development", "Local Support"],
-      timezone: "BRT (UTC-3)",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      city: 'Toronto',
+      country: 'Canada',
+      flag: '🇨🇦',
+      timezone: 'EST (UTC-5)',
+      services: ['Healthcare Tech', 'AI Research', 'Startup Incubation'],
+      teamSize: '18+',
+      established: '2021'
+    },
+    {
+      city: 'Berlin',
+      country: 'Germany',
+      flag: '🇩🇪',
+      timezone: 'CET (UTC+1)',
+      services: ['IoT Solutions', 'Manufacturing Tech', 'Green Tech'],
+      teamSize: '12+',
+      established: '2022'
+    },
+    {
+      city: 'Sydney',
+      country: 'Australia',
+      flag: '🇦🇺',
+      timezone: 'AEST (UTC+10)',
+      services: ['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
+      teamSize: '10+',
+      established: '2022'
     }
   ];
 
   const globalStats = [
-    { icon: Globe, value: "25+", label: "Countries Served" },
-    { icon: Users, value: "500+", label: "Global Team Members" },
-    { icon: Clock, value: "24/7", label: "Global Support" },
-    { icon: Award, value: "15+", label: "Years Experience" }
-  ];
-
-  const globalCapabilities = [
-    "Multi-language Support",
-    "Local Compliance & Regulations",
-    "Cultural Adaptation",
-    "Time Zone Coverage",
-    "Local Talent Networks",
-    "Regional Expertise"
+    { label: 'Countries', value: '6', icon: Globe },
+    { label: 'Cities', value: '6', icon: MapPin },
+    { label: 'Team Members', value: '100+', icon: Users },
+    { label: '24/7 Support', value: 'Yes', icon: Clock },
+    { label: 'Client Satisfaction', value: '98%', icon: Star },
+    { label: 'Certifications', value: '50+', icon: Award }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Global Presence
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Serving clients worldwide with local expertise and global reach. Our international 
-            presence ensures 24/7 support and localized solutions.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Serving clients worldwide with local expertise and global reach. 
+            Our distributed team ensures 24/7 support and cultural understanding.
           </p>
         </motion.div>
 
@@ -85,114 +100,112 @@ export function GlobalPresenceSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
         >
-          {globalStats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="text-center"
-            >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/10 border border-cyan-500/20 rounded-xl mb-4">
-                <stat.icon className="w-8 h-8 text-cyan-400" />
+          {globalStats.map((stat, index) => {
+            const IconComponent = stat.icon;
+            return (
+              <div key={stat.label} className="text-center">
+                <div className="flex justify-center mb-3">
+                  <div className="p-2 bg-blue-100 rounded-lg">
+                    <IconComponent className="h-6 w-6 text-blue-600" />
+                  </div>
+                </div>
+                <div className="text-2xl font-bold text-gray-900 mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-600">{stat.label}</div>
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
-            </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
 
-        {/* Global Offices */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {globalOffices.map((office, index) => (
+        {/* Locations Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {locations.map((location, index) => (
             <motion.div
-              key={index}
+              key={location.city}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="group"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
             >
-              <div className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden transition-all duration-300 group-hover:border-slate-500 group-hover:bg-slate-800/70">
-                <div className="relative">
-                  <img
-                    src={office.image}
-                    alt={`${office.city} office`}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4 bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    {office.country}
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <MapPin className="w-5 h-5 text-cyan-400 mr-2" />
-                    <h3 className="text-xl font-semibold text-white">{office.city}</h3>
-                  </div>
-
-                  <div className="space-y-3 mb-6">
-                    <div className="text-gray-400 text-sm">
-                      <strong className="text-gray-300">Address:</strong> {office.address}
-                    </div>
-                    <div className="text-gray-400 text-sm">
-                      <strong className="text-gray-300">Phone:</strong> {office.phone}
-                    </div>
-                    <div className="text-gray-400 text-sm">
-                      <strong className="text-gray-300">Email:</strong> {office.email}
-                    </div>
-                    <div className="text-gray-400 text-sm">
-                      <strong className="text-gray-300">Timezone:</strong> {office.timezone}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Services:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {office.services.map((service, serviceIndex) => (
-                        <span
-                          key={serviceIndex}
-                          className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full border border-slate-600"
-                        >
-                          {service}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">{location.flag}</span>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {location.city}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{location.country}</p>
                 </div>
               </div>
+
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center text-sm text-gray-600">
+                  <Clock className="h-4 w-4 mr-2 text-blue-500" />
+                  <span>{location.timezone}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <Users className="h-4 w-4 mr-2 text-blue-500" />
+                  <span>Team: {location.teamSize}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <CheckCircle className="h-4 w-4 mr-2 text-blue-500" />
+                  <span>Since {location.established}</span>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm">Services:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {location.services.map((service, serviceIndex) => (
+                    <span
+                      key={serviceIndex}
+                      className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full"
+                    >
+                      {service}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <button className="w-full text-center py-2 px-4 border border-blue-200 text-blue-600 hover:bg-blue-50 rounded-lg text-sm font-medium transition-colors duration-200">
+                Contact Local Team
+              </button>
             </motion.div>
           ))}
         </div>
 
-        {/* Global Capabilities */}
+        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-6">
-              Global Capabilities
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Go Global?
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              {globalCapabilities.map((capability, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  {capability}
-                </div>
-              ))}
-            </div>
-            <p className="text-gray-300 text-lg">
-              Our global network ensures that no matter where you are, you have access to 
-              world-class technology solutions with local expertise and cultural understanding.
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Whether you're expanding internationally or need local expertise, 
+              our global presence ensures you get the support you need, when you need it.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Find Your Local Team
+                <MapPin className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+                Global Services
+                <Globe className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>
     </section>
   );
-}
+};
+
+export default GlobalPresenceSection;

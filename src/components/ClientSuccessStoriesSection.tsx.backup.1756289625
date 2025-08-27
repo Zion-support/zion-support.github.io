@@ -1,0 +1,328 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Star, Quote, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+
+export function ClientSuccessStoriesSection() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO",
+      company: "TechRetail Inc.",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      rating: 5,
+      quote: "Zion Tech Group transformed our e-commerce platform with AI-powered recommendations. Our revenue increased by 140% within 6 months, and customer satisfaction is at an all-time high.",
+      results: ["140% revenue increase", "65% reduction in cart abandonment", "85% improvement in customer satisfaction"]
+    },
+    {
+      name: "Michael Chen",
+      role: "Director of IT",
+      company: "GlobalBank Corp.",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      rating: 5,
+      quote: "Their cybersecurity overhaul was exceptional. We went from outdated systems to a modern, zero-trust architecture that reduced security incidents by 90%.",
+      results: ["90% reduction in security incidents", "98% compliance score", "$2M annual cost savings"]
+    },
+    {
+      name: "Dr. Emily Rodriguez",
+      role: "VP of Operations",
+      company: "ManufactureTech Ltd.",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      rating: 5,
+      quote: "The cloud migration and DevOps automation exceeded our expectations. Our development velocity increased by 200% and infrastructure costs dropped by 60%.",
+      results: ["200% increase in development velocity", "60% reduction in infrastructure costs", "99.9% uptime achieved"]
+=======
+import { 
+  Star, 
+  Quote, 
+  TrendingUp, 
+  Users, 
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Heart
+} from 'lucide-react';
+
+export const ClientSuccessStoriesSection: React.FC = () => {
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      company: 'TechFlow Solutions',
+      avatar: '👩‍💼',
+      rating: 5,
+      quote: 'Zion Tech Group transformed our legacy systems into a modern, AI-powered platform. The results exceeded our expectations with 300% performance improvement.',
+      metrics: ['300% Performance', '60% Cost Reduction', '2x Faster Deployment']
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CEO',
+      company: 'Global Manufacturing Co.',
+      avatar: '👨‍💼',
+      rating: 5,
+      quote: 'Their cybersecurity expertise helped us achieve SOC 2 compliance in record time. The team is professional, knowledgeable, and delivers exceptional results.',
+      metrics: ['SOC 2 Compliance', '99.9% Uptime', 'Zero Security Breaches']
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'VP of Operations',
+      company: 'HealthTech Innovations',
+      avatar: '👩‍⚕️',
+      rating: 5,
+      quote: 'The AI solutions they implemented have revolutionized our patient care processes. We\'ve seen a 40% improvement in diagnostic accuracy.',
+      metrics: ['40% Accuracy', '50% Time Savings', 'HIPAA Compliant']
+    },
+    {
+      name: 'David Thompson',
+      role: 'Founder',
+      company: 'StartupXYZ',
+      avatar: '👨‍💻',
+      rating: 5,
+      quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
+      metrics: ['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+    }
+  ];
+
+  const successMetrics = [
+<<<<<<< HEAD
+    { icon: TrendingUp, value: "140%", label: "Average Revenue Growth" },
+    { icon: Users, value: "500+", label: "Satisfied Clients" },
+    { icon: Star, value: "4.9/5", label: "Client Rating" },
+    { icon: CheckCircle, value: "98%", label: "Project Success Rate" }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+=======
+    { label: 'Client Satisfaction', value: '98%', icon: Heart },
+    { label: 'Project Success Rate', value: '99%', icon: CheckCircle },
+    { label: 'Client Retention', value: '95%', icon: Users },
+    { label: 'Average Rating', value: '4.9/5', icon: Star }
+  ];
+
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+<<<<<<< HEAD
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Client Success Stories
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Real results from real clients. See how we've helped businesses achieve 
+            extraordinary outcomes through innovative technology solutions.
+=======
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Client Success Stories
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Real results from real clients. Discover how we've helped businesses 
+            across industries achieve remarkable transformations and measurable success.
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+          </p>
+        </motion.div>
+
+        {/* Success Metrics */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+        >
+<<<<<<< HEAD
+          {successMetrics.map((metric, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/10 border border-cyan-500/20 rounded-xl mb-4">
+                <metric.icon className="w-8 h-8 text-cyan-400" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{metric.value}</div>
+              <div className="text-sm text-gray-400">{metric.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Testimonials */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="group"
+            >
+              <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 h-full transition-all duration-300 group-hover:border-slate-500 group-hover:bg-slate-800/70">
+                <div className="flex items-center mb-6">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover border-2 border-slate-600 group-hover:border-cyan-500 transition-colors duration-300"
+                  />
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
+                    <p className="text-cyan-400 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+
+                <Quote className="w-8 h-8 text-cyan-400/30 mb-4" />
+                
+                <blockquote className="text-gray-300 text-sm leading-relaxed mb-6 italic">
+                  "{testimonial.quote}"
+                </blockquote>
+
+                <div className="space-y-2">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Results:</h4>
+                  {testimonial.results.map((result, resultIndex) => (
+                    <div key={resultIndex} className="flex items-center text-gray-400 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                      {result}
+                    </div>
+                  ))}
+                </div>
+=======
+          {successMetrics.map((metric, index) => {
+            const IconComponent = metric.icon;
+            return (
+              <div key={metric.label} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-green-100 rounded-full">
+                    <IconComponent className="h-8 w-8 text-green-600" />
+                  </div>
+                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">
+                  {metric.value}
+                </div>
+                <div className="text-gray-600">{metric.label}</div>
+              </div>
+            );
+          })}
+        </motion.div>
+
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={testimonial.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="flex items-center mb-6">
+                <div className="text-4xl mr-4">{testimonial.avatar}</div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-gray-600">{testimonial.role}</p>
+                  <p className="text-blue-600 font-medium">{testimonial.company}</p>
+                </div>
+                <div className="ml-auto flex">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </div>
+
+              <blockquote className="mb-6">
+                <Quote className="h-8 w-8 text-blue-200 mb-2" />
+                <p className="text-gray-700 italic leading-relaxed">
+                  "{testimonial.quote}"
+                </p>
+              </blockquote>
+
+              <div className="space-y-2">
+                {testimonial.metrics.map((metric, metricIndex) => (
+                  <div key={metricIndex} className="flex items-center text-sm text-gray-700">
+                    <TrendingUp className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                    {metric}
+                  </div>
+                ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Join Our Success Stories?
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Let us help you achieve extraordinary results with our proven technology solutions 
+              and expert team.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                <TrendingUp className="w-5 h-5 mr-2" />
+                Start Your Success Story
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                <Users className="w-5 h-5 mr-2" />
+                Schedule Consultation
+=======
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Write Your Success Story?
+            </h3>
+            <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have transformed their 
+              businesses with our innovative technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
+                View All Case Studies
+                <Award className="ml-2 h-5 w-5" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+export default ClientSuccessStoriesSection;
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1

@@ -1,0 +1,399 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { ArrowRight, TrendingUp, Users, DollarSign, Clock, Star, CheckCircle } from 'lucide-react';
+
+export function CaseStudiesSection() {
+  const caseStudies = [
+    {
+      title: "AI-Powered E-commerce Transformation",
+      company: "TechRetail Inc.",
+      industry: "E-commerce",
+      challenge: "Legacy system causing 40% cart abandonment and poor customer experience",
+      solution: "Implemented AI-powered recommendation engine and modern cloud infrastructure",
+      results: [
+        "Cart abandonment reduced by 65%",
+        "Revenue increased by 140%",
+        "Customer satisfaction improved by 85%",
+        "System performance enhanced by 300%"
+      ],
+      duration: "6 months",
+      team: "8 experts",
+      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      technologies: ["AI/ML", "Cloud", "React", "Node.js"]
+    },
+    {
+      title: "Cybersecurity Infrastructure Overhaul",
+      company: "GlobalBank Corp.",
+      industry: "Financial Services",
+      challenge: "Outdated security systems vulnerable to modern cyber threats",
+      solution: "Implemented zero-trust architecture with advanced threat detection",
+      results: [
+        "Security incidents reduced by 90%",
+        "Compliance score improved to 98%",
+        "Response time decreased by 75%",
+        "Cost savings of $2M annually"
+      ],
+      duration: "8 months",
+      team: "12 experts",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      technologies: ["Cybersecurity", "Zero Trust", "SIEM", "Compliance"]
+    },
+    {
+      title: "Cloud Migration & DevOps Automation",
+      company: "ManufactureTech Ltd.",
+      industry: "Manufacturing",
+      challenge: "On-premise infrastructure causing scalability issues and high maintenance costs",
+      solution: "Migrated to cloud with automated CI/CD pipelines and monitoring",
+      results: [
+        "Infrastructure costs reduced by 60%",
+        "Deployment time decreased by 80%",
+        "Uptime improved to 99.9%",
+        "Development velocity increased by 200%"
+      ],
+      duration: "10 months",
+      team: "10 experts",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
+      technologies: ["AWS", "Kubernetes", "DevOps", "Monitoring"]
+    }
+  ];
+
+  const stats = [
+    { icon: TrendingUp, value: "140%", label: "Average Revenue Increase" },
+    { icon: Users, value: "500+", label: "Happy Clients" },
+    { icon: DollarSign, value: "$50M+", label: "Value Delivered" },
+    { icon: Clock, value: "99.9%", label: "Uptime Guarantee" }
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto px-6">
+=======
+import { 
+  TrendingUp, 
+  Users, 
+  DollarSign, 
+  Clock, 
+  ArrowRight,
+  Star,
+  CheckCircle
+} from 'lucide-react';
+
+export const CaseStudiesSection: React.FC = () => {
+  const caseStudies = [
+    {
+      company: 'TechCorp Solutions',
+      industry: 'Financial Services',
+      challenge: 'Legacy system modernization and digital transformation',
+      solution: 'Implemented AI-powered automation and cloud migration',
+      results: [
+        '40% reduction in operational costs',
+        '60% improvement in customer satisfaction',
+        '3x faster transaction processing'
+      ],
+      logo: '🏦',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      company: 'Global Manufacturing Inc.',
+      industry: 'Manufacturing',
+      challenge: 'Supply chain optimization and predictive maintenance',
+      solution: 'IoT sensors and AI-powered analytics platform',
+      results: [
+        '25% reduction in downtime',
+        '30% improvement in supply chain efficiency',
+        '$2M annual cost savings'
+      ],
+      logo: '🏭',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      company: 'HealthTech Innovations',
+      industry: 'Healthcare',
+      challenge: 'Patient data security and compliance management',
+      solution: 'Zero-trust security framework and automated compliance',
+      results: [
+        '99.9% security compliance rate',
+        '50% reduction in audit preparation time',
+        'Enhanced patient data protection'
+      ],
+      logo: '🏥',
+      color: 'from-purple-500 to-pink-500'
+    }
+  ];
+
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+<<<<<<< HEAD
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Success Stories
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Real results from real clients. See how we've transformed businesses across industries 
+            with innovative technology solutions.
+          </p>
+        </motion.div>
+
+        {/* Case Studies Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {caseStudies.map((study, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="group"
+            >
+              <div className="bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden transition-all duration-300 group-hover:border-slate-500 group-hover:bg-slate-800/70">
+                <div className="relative">
+                  <img
+                    src={study.image}
+                    alt={study.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4 bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {study.industry}
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                    {study.title}
+                  </h3>
+                  
+                  <p className="text-cyan-400 text-sm font-medium mb-4">
+                    {study.company}
+                  </p>
+
+                  <div className="space-y-3 mb-6">
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:</h4>
+                      <p className="text-gray-400 text-sm">{study.challenge}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:</h4>
+                      <p className="text-gray-400 text-sm">{study.solution}</p>
+                    </div>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-3">Results:</h4>
+                    <ul className="space-y-2">
+                      {study.results.map((result, resultIndex) => (
+                        <li key={resultIndex} className="flex items-center text-gray-400 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {study.duration}
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="w-4 h-4 mr-1" />
+                      {study.team}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {study.technologies.map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full border border-slate-600"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link
+                    to="/case-studies"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium text-sm"
+                  >
+                    Read Full Case Study
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </div>
+              </div>
+=======
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Success Stories
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover how we've helped businesses across industries achieve 
+            remarkable results through innovative technology solutions.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index) => (
+            <motion.div
+              key={study.company}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
+            >
+              <div className="flex items-center mb-6">
+                <div className={`p-3 rounded-xl bg-gradient-to-r ${study.color} mr-4`}>
+                  <span className="text-2xl">{study.logo}</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {study.company}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{study.industry}</p>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                <p className="text-gray-600 text-sm mb-4">{study.challenge}</p>
+                
+                <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                <p className="text-gray-600 text-sm">{study.solution}</p>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Results:</h4>
+                <ul className="space-y-2">
+                  {study.results.map((result, resultIndex) => (
+                    <li key={resultIndex} className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      {result}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center text-sm text-gray-600">
+                  <Star className="h-4 w-4 text-yellow-500 mr-1" />
+                  <span>5.0</span>
+                  <span className="mx-2">•</span>
+                  <span>Verified Results</span>
+                </div>
+                <Link
+                  to="/case-studies"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200"
+                >
+                  Read Full Case Study
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </Link>
+              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+            </motion.div>
+          ))}
+        </div>
+
+<<<<<<< HEAD
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/10 border border-cyan-500/20 rounded-xl mb-4">
+                <stat.icon className="w-8 h-8 text-cyan-400" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+              <div className="text-sm text-gray-400">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center"
+        >
+          <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Create Your Success Story?
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Join hundreds of satisfied clients who have transformed their businesses with our innovative technology solutions.
+=======
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Write Your Success Story?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have transformed their 
+              businesses with our innovative technology solutions.
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+<<<<<<< HEAD
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <Star className="w-5 h-5 mr-2" />
+                Start Your Journey
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                <TrendingUp className="w-5 h-5 mr-2" />
+                View All Case Studies
+=======
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
+              >
+                Start Your Project
+                <TrendingUp className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200"
+              >
+                View All Case Studies
+                <ArrowRight className="ml-2 h-5 w-5" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+<<<<<<< HEAD
+}
+=======
+};
+
+export default CaseStudiesSection;
+>>>>>>> origin/cursor/website-audit-and-enhancement-36a1

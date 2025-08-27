@@ -114,37 +114,12 @@ const TermsOfService = React.lazy(() => import('./pages/TermsOfService'));
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
-const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-
-// Enhanced loading spinner with futuristic design
-const LoadingSpinner = () => (
-  <div 
-    className="min-h-screen futuristic-bg flex items-center justify-center"
-    role="status"
-    aria-label="Loading page content"
-  >
-    <div className="text-center">
-      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4 neon-glow"></div>
-      <p className="text-zion-cyan text-lg font-semibold">Loading...</p>
-      <div className="sr-only">Loading page content, please wait...</div>
-    </div>
-  </div>
-);
-
-// Error boundary component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen futuristic-bg flex items-center justify-center p-4">
-    <div className="text-center max-w-md">
-      <h2 className="text-2xl font-bold text-red-400 mb-4">Something went wrong</h2>
-      <p className="text-zion-slate-light mb-6">{error.message}</p>
-      <button
-        onClick={resetErrorBoundary}
-        className="btn-futuristic"
-      >
-        Try again
-      </button>
+      <div className="relative">
+        <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <div className="absolute inset-0 w-16 h-16 border-4 border-zion-purple border-t-transparent rounded-full animate-spin mx-auto mb-4" style={{ animationDelay: '-0.5s' }}></div>
+      </div>
+      <p className="text-zion-cyan text-lg font-medium">Loading Zion Tech Group...</p>
+      <p className="text-zion-slate-light text-sm mt-2">Preparing your experience</p>
     </div>
   </div>
 );
@@ -231,12 +206,30 @@ function App() {
               <Route path="/solutions/government" element={<GovernmentSolutions />} />
               <Route path="/solutions/retail" element={<RetailSolutions />} />
               
-              {/* Admin Routes */}
-              <Route path="/admin" element={<Admin />} />
-              <Route path="/admin/dashboard" element={<AdminDashboard />} />
+              {/* Innovative Services 2027 Routes */}
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
+              <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
               
-              {/* Catch-all route for 404 */}
-              <Route path="*" element={<NotFound />} />
+              {/* Emerging Tech Routes */}
+              <Route path="/emerging-tech" element={<GreenIT />} />
+              <Route path="/emerging-tech/:service" element={<GreenIT />} />
+              
+              {/* 404 route */}
+              <Route path="*" element={
+                <div className="min-h-screen bg-futuristic flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-6xl font-bold text-zion-cyan mb-4">404</h1>
+                    <p className="text-xl text-zion-slate-light mb-8">Page not found</p>
+                    <button
+                      onClick={() => window.history.back()}
+                      className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-transform"
+                    >
+                      Go Back
+                    </button>
+                  </div>
+                </div>
+              } />
             </Routes>
           </Suspense>
         </main>
