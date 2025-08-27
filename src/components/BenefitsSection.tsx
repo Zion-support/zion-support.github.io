@@ -91,7 +91,7 @@ export function BenefitsSection() {
         delayChildren: 0.1
       }
     }
-  ];
+  };
 
   const stats = [
     { value: "500+", label: "Projects Delivered", icon: Rocket },

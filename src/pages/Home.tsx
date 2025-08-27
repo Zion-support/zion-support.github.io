@@ -39,6 +39,7 @@ import {
   Zap as ZapIcon
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
+import ComprehensiveServicesShowcase2025 from '../components/ComprehensiveServicesShowcase2025';
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -59,24 +60,26 @@ const EnhancedLoadingSpinner = () => (
 // Futuristic animated background component
 const FuturisticBackground = () => (
   <div className="fixed inset-0 overflow-hidden pointer-events-none">
-    {/* Animated grid */}
-    <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+    {/* Animated grid with neon effect */}
+    <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
     
-    {/* Floating particles */}
+    {/* Enhanced floating particles with neon glow */}
     <div className="absolute inset-0">
-      {[...Array(20)].map((_, i) => (
+      {[...Array(30)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
           animate={{
-            x: [0, 100, 0],
-            y: [0, -100, 0],
-            opacity: [0.6, 1, 0.6],
+            x: [0, 150, 0],
+            y: [0, -150, 0],
+            opacity: [0.4, 1, 0.4],
+            scale: [0.5, 1.5, 0.5],
           }}
           transition={{
-            duration: 3 + i * 0.5,
+            duration: 4 + i * 0.3,
             repeat: Infinity,
-            delay: i * 0.2,
+            delay: i * 0.1,
+            ease: "easeInOut"
           }}
           style={{
             left: `${Math.random() * 100}%`,
@@ -86,9 +89,98 @@ const FuturisticBackground = () => (
       ))}
     </div>
     
-    {/* Gradient orbs */}
-    <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-    <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    {/* Enhanced gradient orbs with neon glow */}
+    <motion.div 
+      className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl"
+      animate={{
+        scale: [1, 1.2, 1],
+        opacity: [0.3, 0.6, 0.3],
+      }}
+      transition={{
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    />
+    <motion.div 
+      className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl"
+      animate={{
+        scale: [1.2, 1, 1.2],
+        opacity: [0.6, 0.3, 0.6],
+      }}
+      transition={{
+        duration: 5,
+        repeat: Infinity,
+        ease: "easeInOut",
+        delay: 1
+      }}
+    />
+    
+    {/* New neon accent orbs */}
+    <motion.div 
+      className="absolute top-1/2 left-1/4 w-48 h-48 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-2xl"
+      animate={{
+        scale: [1, 1.3, 1],
+        opacity: [0.2, 0.5, 0.2],
+      }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        ease: "easeInOut",
+        delay: 2
+      }}
+    />
+    
+    {/* Animated neon lines */}
+    <div className="absolute inset-0">
+      {[...Array(5)].map((_, i) => (
+        <motion.div
+          key={`line-${i}`}
+          className="absolute h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+          style={{
+            top: `${20 + i * 15}%`,
+            left: '0%',
+            right: '0%',
+          }}
+          animate={{
+            opacity: [0, 1, 0],
+            scaleX: [0, 1, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            delay: i * 0.5,
+            ease: "easeInOut"
+          }}
+        />
+      ))}
+    </div>
+    
+    {/* Floating geometric shapes */}
+    <div className="absolute inset-0">
+      {[...Array(8)].map((_, i) => (
+        <motion.div
+          key={`shape-${i}`}
+          className={`absolute border border-cyan-400/30 opacity-40 ${
+            i % 2 === 0 ? 'w-8 h-8' : 'w-6 h-6'
+          }`}
+          style={{
+            left: `${10 + i * 10}%`,
+            top: `${15 + i * 8}%`,
+          }}
+          animate={{
+            rotate: [0, 360],
+            scale: [0.8, 1.2, 0.8],
+            opacity: [0.2, 0.6, 0.2],
+          }}
+          transition={{
+            duration: 8 + i,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      ))}
+    </div>
   </div>
 );
 
@@ -111,7 +203,7 @@ export default function Home() {
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
       cta: "Explore AI Solutions",
-      path: "/services/ai-solutions",
+      path: "/ai-solutions",
       features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
       icon: Brain,
       color: "from-blue-500 to-cyan-500"
@@ -122,7 +214,7 @@ export default function Home() {
       description: "Access the future of computing with our quantum neural network platform. Solve complex problems that are impossible for classical computers.",
       image: "/images/hero-quantum.jpg",
       cta: "Discover Quantum Solutions",
-      path: "/services/quantum",
+      path: "/services/ai-quantum-hybrid-platform",
       features: ["Quantum Processing", "Neural Networks", "Advanced Algorithms", "Breakthrough Computing"],
       icon: Cpu,
       color: "from-purple-500 to-pink-500"
@@ -133,7 +225,7 @@ export default function Home() {
       description: "Revolutionize your operations with autonomous AI systems that make intelligent decisions, optimize processes, and run your business 24/7.",
       image: "/images/hero-autonomous.jpg",
       cta: "Learn More",
-      path: "/services/autonomous",
+      path: "/services/ai-autonomous-research-assistant",
       features: ["Autonomous Decision Making", "Process Optimization", "Predictive Maintenance", "Resource Allocation"],
       icon: Rocket,
       color: "from-green-500 to-emerald-500"
@@ -152,7 +244,7 @@ export default function Home() {
       title: "AI Autonomous Business Operations",
       description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time.",
       icon: Rocket,
-      path: "/services/autonomous",
+      path: "/services/ai-autonomous-research-assistant",
       rating: 4.9,
       reviewCount: 127,
       highlights: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics"],
@@ -162,7 +254,7 @@ export default function Home() {
       title: "Quantum Neural Network Platform",
       description: "Revolutionary quantum computing platform that combines quantum processing with neural networks to solve previously impossible computational challenges.",
       icon: Cpu,
-      path: "/services/quantum",
+      path: "/services/ai-quantum-hybrid-platform",
       rating: 4.8,
       reviewCount: 89,
       highlights: ["Quantum Processing", "Neural Networks", "Advanced Algorithms", "Breakthrough Computing"],
@@ -172,7 +264,7 @@ export default function Home() {
       title: "AI-Powered Cybersecurity Suite",
       description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time.",
       icon: Shield,
-      path: "/services/cybersecurity",
+      path: "/services/ai-cybersecurity-platform",
       rating: 4.9,
       reviewCount: 156,
       highlights: ["AI Threat Detection", "Real-time Response", "Advanced Analytics", "Compliance Ready"],
@@ -490,6 +582,56 @@ export default function Home() {
 
         {/* Ultimate Services Showcase */}
         <UltimateServicesShowcase2025 />
+        
+        {/* Comprehensive Services Showcase Section */}
+        <section className="py-20 bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:100px_100px] animate-pulse" />
+            <div className="absolute inset-0 bg-gradient-to-br from-zion-purple/10 via-transparent to-zion-cyan/10" />
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
+                Revolutionary Services 2025
+              </h2>
+              <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+                Explore our comprehensive collection of AI-powered, quantum computing, blockchain, and emerging technology solutions
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
+                  <span className="text-zion-cyan font-semibold">🚀 100+ Services</span>
+                </div>
+                <div className="bg-zion-purple/20 border border-zion-purple/30 rounded-full px-6 py-3">
+                  <span className="text-zion-purple font-semibold">⚡ Cutting-edge Tech</span>
+                </div>
+                <div className="bg-zion-pink/20 border border-zion-pink/30 rounded-full px-6 py-3">
+                  <span className="text-zion-pink font-semibold">💎 Premium Quality</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/comprehensive-services-showcase-2025"
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Explore All Services
+                </a>
+                <a 
+                  href="/contact"
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan/10 transition-all duration-300"
+                >
+                  Get Started
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
         
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">

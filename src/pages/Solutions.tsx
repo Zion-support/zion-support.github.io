@@ -23,5 +23,6 @@ export default function Solutions() {
         </div>
       </section>
     </div>
+    </div>
   );
 }
