@@ -401,7 +401,7 @@ export default function Solutions() {
                   viewport={{ once: true }}
                   className="group cursor-pointer"
                 >
-                  <Link href={`/solutions#${category.id}`}>
+                  <Link to={`/solutions#${category.id}`}>
                     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300 h-full">
                       <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         <IconComponent className="w-8 h-8 text-white" />
@@ -469,7 +469,7 @@ export default function Solutions() {
                   </div>
                   <div className="mt-4">
                     <Link
-                      href={`/solutions/${industry.industry.toLowerCase()}`}
+                      to={`/solutions/${industry.industry.toLowerCase()}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                     >
                       View {industry.industry} Solutions
@@ -564,7 +564,7 @@ export default function Solutions() {
                       </span>
                     </div>
                     <Link
-                      href={`/solutions/${solution.id}`}
+                      to={`/solutions/${solution.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                     >
                       Learn More
@@ -597,14 +597,14 @@ export default function Solutions() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                href="/case-studies"
+                to="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
               >
                 View Case Studies

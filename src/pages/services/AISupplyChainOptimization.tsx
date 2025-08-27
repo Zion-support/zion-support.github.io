@@ -105,7 +105,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Intelligent Inventory Management</h3>
-                  <p className="text-gray-300">Automated inventory optimization with safety stock calculations and reorder point recommendations</p>
+                  <p className="text-gray-300">Automated inventory optimization with real-time tracking and predictive reorder points</p>
                 </div>
               </div>
               
@@ -113,15 +113,15 @@ const AISupplyChainOptimization: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Route Optimization</h3>
-                  <p className="text-gray-300">AI-powered route planning considering traffic, weather, fuel costs, and delivery windows</p>
+                  <p className="text-gray-300">AI-powered logistics optimization considering traffic, weather, and delivery windows</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Real-time Tracking</h3>
-                  <p className="text-gray-300">Live shipment tracking with IoT sensors and predictive arrival times</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Supplier Performance Analytics</h3>
+                  <p className="text-gray-300">Comprehensive supplier evaluation and performance tracking with AI insights</p>
                 </div>
               </div>
             </div>
@@ -130,8 +130,8 @@ const AISupplyChainOptimization: React.FC = () => {
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Supplier Performance Analytics</h3>
-                  <p className="text-gray-300">Comprehensive supplier scoring and performance monitoring with automated alerts</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Real-time Monitoring</h3>
+                  <p className="text-gray-300">24/7 supply chain visibility with instant alerts and automated responses</p>
                 </div>
               </div>
               
@@ -139,7 +139,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Risk Management</h3>
-                  <p className="text-gray-300">Proactive risk identification and mitigation strategies for supply chain disruptions</p>
+                  <p className="text-gray-300">Proactive identification and mitigation of supply chain risks and disruptions</p>
                 </div>
               </div>
               
@@ -147,15 +147,15 @@ const AISupplyChainOptimization: React.FC = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-2">Sustainability Optimization</h3>
-                  <p className="text-gray-300">Carbon footprint tracking and eco-friendly route optimization for green supply chains</p>
+                  <p className="text-gray-300">Green logistics optimization reducing carbon footprint and environmental impact</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Multi-Platform Integration</h3>
-                  <p className="text-gray-300">Seamless integration with ERP, WMS, TMS, and other supply chain systems</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Integration Hub</h3>
+                  <p className="text-gray-300">Seamless integration with ERP, WMS, TMS, and other enterprise systems</p>
                 </div>
               </div>
             </div>
@@ -175,161 +175,155 @@ const AISupplyChainOptimization: React.FC = () => {
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
                 <Truck className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Manufacturing</h3>
-              <p className="text-gray-300">Optimize production schedules, raw material procurement, and finished goods distribution</p>
+              <h3 className="text-lg font-semibold text-white mb-3">Manufacturing</h3>
+              <p className="text-gray-300">Optimize production planning, inventory management, and supplier relationships</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-green-400" />
+                <Globe className="w-6 h-6 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Retail & E-commerce</h3>
+              <h3 className="text-lg font-semibold text-white mb-3">Retail & E-commerce</h3>
               <p className="text-gray-300">Demand forecasting, inventory optimization, and last-mile delivery optimization</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Database className="w-6 h-6 text-purple-400" />
+                <Shield className="w-6 h-6 text-purple-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Healthcare</h3>
-              <p className="text-gray-300">Medical supply chain optimization, cold chain management, and emergency response logistics</p>
+              <h3 className="text-lg font-semibold text-white mb-3">Healthcare</h3>
+              <p className="text-gray-300">Medical supply chain optimization and pharmaceutical distribution management</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <div className="w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-cyan-400" />
+                <BarChart3 className="w-6 h-6 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Food & Beverage</h3>
-              <p className="text-gray-300">Fresh food logistics, temperature monitoring, and expiration date optimization</p>
+              <h3 className="text-lg font-semibold text-white mb-3">Logistics</h3>
+              <p className="text-gray-300">Route optimization, fleet management, and warehouse automation</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="w-6 h-6 text-orange-400" />
+                <Target className="w-6 h-6 text-orange-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Global Trade</h3>
-              <p className="text-gray-300">International logistics, customs optimization, and multi-modal transportation</p>
+              <h3 className="text-lg font-semibold text-white mb-3">Food & Beverage</h3>
+              <p className="text-gray-300">Perishable goods management and cold chain optimization</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <div className="w-12 h-12 bg-red-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-red-400" />
+                <Users className="w-6 h-6 text-red-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Defense & Aerospace</h3>
-              <p className="text-gray-300">Critical supply chain security, compliance tracking, and mission-critical logistics</p>
+              <h3 className="text-lg font-semibold text-white mb-3">Automotive</h3>
+              <p className="text-gray-300">Just-in-time manufacturing and global supply chain coordination</p>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Pricing Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Competitive Pricing
+            Transparent Pricing
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-slate-800/50 border-slate-700 p-8 text-center relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge variant="secondary">Starter</Badge>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$499</span>
-                <span className="text-gray-400">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8 text-left">
+            <Card className="bg-slate-800/50 border-slate-700 p-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
+              <div className="text-4xl font-bold text-white mb-2">$1,299</div>
+              <div className="text-gray-400 mb-6">/month</div>
+              <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   Up to 5 locations
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic demand forecasting
+                  Basic AI forecasting
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard reporting
+                  Standard integrations
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   Email support
                 </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Monthly reports
+                </li>
               </ul>
               <Button className="w-full bg-green-600 hover:bg-green-700">
-                Start Free Trial
-              </Button>
-            </Card>
-            
-            <Card className="bg-gradient-to-br from-green-600 to-blue-600 p-8 text-center relative transform scale-105">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge variant="secondary" className="bg-white text-green-600">Most Popular</Badge>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$1,299</span>
-                <span className="text-green-100">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8 text-left">
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Up to 25 locations
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Advanced AI features
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Custom dashboards
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Priority support
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  API access
-                </li>
-              </ul>
-              <Button className="w-full bg-white text-green-600 hover:bg-gray-100">
                 Get Started
               </Button>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-8 text-center relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge variant="secondary">Enterprise</Badge>
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <Badge variant="secondary" className="bg-blue-600 text-white">
+                  Most Popular
+                </Badge>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Ultimate</h3>
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$2,999</span>
-                <span className="text-gray-400">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8 text-left">
+              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
+              <div className="text-4xl font-bold text-white mb-2">$2,199</div>
+              <div className="text-gray-400 mb-6">/month</div>
+              <ul className="text-left space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Up to 25 locations
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Advanced AI analytics
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Custom workflows
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Priority support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Real-time monitoring
+                </li>
+              </ul>
+              <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                Get Started
+              </Button>
+            </Card>
+            
+            <Card className="bg-slate-800/50 border-slate-700 p-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="text-4xl font-bold text-white mb-2">$2,999</div>
+              <div className="text-gray-400 mb-6">/month</div>
+              <ul className="text-left space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   Unlimited locations
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Full AI capabilities
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom integrations
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  24/7 dedicated support
+                  Full AI suite
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   White-label options
                 </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Dedicated support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Custom integrations
+                </li>
               </ul>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700">
+              <Button className="w-full bg-purple-600 hover:bg-purple-700">
                 Contact Sales
               </Button>
             </Card>
@@ -341,32 +335,35 @@ const AISupplyChainOptimization: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Market Analysis & ROI
+            Market Opportunity
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">$67.2B</div>
-              <div className="text-gray-300">Global Supply Chain Market (2026)</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">400-800%</div>
-              <div className="text-gray-300">Average ROI for AI Supply Chain</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">35%</div>
-              <div className="text-gray-300">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">50%</div>
-              <div className="text-gray-300">Faster Delivery Times</div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="bg-slate-800/50 border-slate-700 p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Market Size</h3>
+              <p className="text-gray-300 mb-4">
+                The global supply chain management market is valued at <strong className="text-white">$67.2 billion</strong> in 2024 and is expected to reach <strong className="text-white">$89.5 billion</strong> by 2026.
+              </p>
+              <p className="text-gray-300">
+                AI-powered supply chain optimization represents the fastest-growing segment with a CAGR of <strong className="text-white">32.1%</strong>.
+              </p>
+            </Card>
+            
+            <Card className="bg-slate-800/50 border-slate-700 p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">ROI & Benefits</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li>• <strong className="text-white">400-800% ROI</strong> within 12 months</li>
+                <li>• <strong className="text-white">35% reduction</strong> in operational costs</li>
+                <li>• <strong className="text-white">50% faster</strong> delivery times</li>
+                <li>• <strong className="text-white">95% improvement</strong> in demand accuracy</li>
+              </ul>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Ready to Optimize Your Supply Chain?
@@ -375,18 +372,14 @@ const AISupplyChainOptimization: React.FC = () => {
             Join industry leaders already using AI to revolutionize their supply chain operations.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="flex items-center justify-center space-x-3 text-gray-300">
-              <Phone className="w-5 h-5 text-green-400" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <div className="flex items-center text-gray-300">
+              <Phone className="w-5 h-5 mr-2" />
               <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center justify-center space-x-3 text-gray-300">
-              <Mail className="w-5 h-5 text-green-400" />
+            <div className="flex items-center text-gray-300">
+              <Mail className="w-5 h-5 mr-2" />
               <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center space-x-3 text-gray-300">
-              <Globe className="w-5 h-5 text-green-400" />
-              <span>ziontechgroup.com</span>
             </div>
           </div>
           
@@ -397,10 +390,11 @@ const AISupplyChainOptimization: React.FC = () => {
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
               Schedule Demo
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-              Download Case Study
-            </Button>
           </div>
+          
+          <p className="text-sm text-gray-400 mt-6">
+            Visit us at <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a>
+          </p>
         </div>
       </section>
     </div>

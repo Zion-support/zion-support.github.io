@@ -636,7 +636,7 @@ export default function ResearchDevelopment() {
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <Link
-                      href={`/research-development/projects/${project.id}`}
+                      to={`/research-development/projects/${project.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                     >
                       Learn More
@@ -708,7 +708,7 @@ export default function ResearchDevelopment() {
                   </div>
                   <div className="ml-6">
                     <Link
-                      href={`/research-development/publications/${pub.id}`}
+                      to={`/research-development/publications/${pub.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                     >
                       Read Paper
@@ -780,7 +780,7 @@ export default function ResearchDevelopment() {
 
                 <div className="flex items-center justify-between">
                   <Link
-                    href={`/research-development/patents/${patent.id}`}
+                    to={`/research-development/patents/${patent.id}`}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                   >
                     View Details
@@ -816,14 +816,14 @@ export default function ResearchDevelopment() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
               >
                 Start Collaboration
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                href="/case-studies"
+                to="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
               >
                 View Research Impact
