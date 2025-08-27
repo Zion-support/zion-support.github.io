@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface RealMarketService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface RealMarketService {
   rating: number;
   reviews: number;
 }
-
 export const realMarketServices: RealMarketService[] = [
   // AI-Powered Business Intelligence
   {
@@ -94,7 +92,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 950
   },
-
   // Customer Success Automation Platform
   {
     id: 'customer-success-automation',
@@ -147,7 +144,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 680
   },
-
   // API Security & Monitoring Suite
   {
     id: 'api-security-monitoring-suite',
@@ -200,7 +196,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.6,
     reviews: 520
   },
-
   // E-commerce Automation Platform
   {
     id: 'ecommerce-automation-platform',
@@ -253,7 +248,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 1100
   },
-
   // HR Automation Suite
   {
     id: 'hr-automation-suite',
@@ -306,7 +300,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 890
   },
-
   // Financial Analytics Platform
   {
     id: 'financial-analytics-platform',
@@ -359,7 +352,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 780
   },
-
   // Project Management AI Platform
   {
     id: 'project-management-ai-platform',
@@ -412,7 +404,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 1050
   },
-
   // Marketing Automation Suite
   {
     id: 'marketing-automation-suite',
@@ -465,7 +456,6 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7,
     reviews: 1250
   },
-
   // Legal Document Automation
   {
     id: 'legal-document-automation',

@@ -12,14 +12,12 @@ import {
   Sparkles, Crown, Target, Microscope,
   MessageCircle, Calendar, ExternalLink
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: '🧠 Revolutionary AI Services',
@@ -113,7 +111,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const companyLinks = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -124,7 +121,6 @@ const companyLinks = [
   { name: 'Services Advertising', href: '/services-advertising' },
   { name: 'Market Pricing', href: '/market-pricing' }
 ];
-
 const supportLinks = [
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },
@@ -133,13 +129,11 @@ const supportLinks = [
   { name: 'Training', href: '/training', description: 'Learn to use our platforms' },
   { name: 'Community', href: '/community', description: 'Connect with other users' }
 ];
-
 const quickActions = [
   { name: 'Get Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" />, color: 'from-green-500 to-emerald-600' },
   { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4" />, color: 'from-blue-500 to-cyan-600' },
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" />, color: 'from-purple-500 to-pink-600' }
 ];
-
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" />, color: 'hover:text-blue-400' },
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" />, color: 'hover:text-blue-600' },
@@ -148,7 +142,6 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" />, color: 'hover:text-red-500' },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" />, color: 'hover:text-gray-400' }
 ];
-
 export default function UltraFuturisticFooter2034() {
   return (
     <footer className="relative bg-black/95 backdrop-blur-xl border-t border-cyan-500/30 overflow-hidden">
@@ -158,7 +151,6 @@ export default function UltraFuturisticFooter2034() {
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-7 gap-8 mb-12">
@@ -183,7 +175,6 @@ export default function UltraFuturisticFooter2034() {
               Pioneering the future of autonomous technology and AI-driven innovation. 
               We deliver cutting-edge solutions that transform businesses and accelerate growth.
             </p>
-
             {/* Contact Information */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200">
@@ -210,7 +201,6 @@ export default function UltraFuturisticFooter2034() {
               </div>
             </div>
           </div>
-
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <div key={category.title} className="xl:col-span-1">
@@ -245,7 +235,6 @@ export default function UltraFuturisticFooter2034() {
             </div>
           ))}
         </div>
-
         {/* Quick Actions & Social */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Quick Actions */}
@@ -267,7 +256,6 @@ export default function UltraFuturisticFooter2034() {
               ))}
             </div>
           </div>
-
           {/* Social Links */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -289,7 +277,6 @@ export default function UltraFuturisticFooter2034() {
             </div>
           </div>
         </div>
-
         {/* Company & Support Links */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Company Links */}
@@ -311,7 +298,6 @@ export default function UltraFuturisticFooter2034() {
               ))}
             </div>
           </div>
-
           {/* Support Links */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -332,7 +318,6 @@ export default function UltraFuturisticFooter2034() {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-700/50">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
@@ -342,7 +327,6 @@ export default function UltraFuturisticFooter2034() {
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-200 ml-2">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-200 ml-2">Terms of Service</Link>
             </div>
-
             {/* Stats */}
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
@@ -363,4 +347,9 @@ export default function UltraFuturisticFooter2034() {
       </div>
     </footer>
   );
+<<<<<<< HEAD
+};
+export default UltraFuturisticFooter2034;
+=======
 }
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87

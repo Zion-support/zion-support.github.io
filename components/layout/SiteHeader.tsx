@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-
 export default function SiteHeader() {
 	return (
 		<header className="w-full sticky top-0 z-50 border-b border-gray-200/20 bg-white/90 backdrop-blur-md">

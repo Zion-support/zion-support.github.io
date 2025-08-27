@@ -5,7 +5,6 @@ export interface Real2026Q4NewService {
   price: string;
   features: string[];
 }
-
 export const real2026Q4NewServices: Real2026Q4NewService[] = [
   {
     id: 'q4-2026-new-service-1',

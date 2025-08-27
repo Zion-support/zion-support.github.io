@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Link from 'next/link';
-
 export default function PartnersPage() {
   const partnerCategories = [
     {
@@ -112,7 +111,6 @@ export default function PartnersPage() {
       ]
     }
   ];
-
   const partnershipBenefits = [
     {
       title: 'Technology Integration',
@@ -145,7 +143,6 @@ export default function PartnersPage() {
       icon: '🛡️'
     }
   ];
-
   const partnershipTypes = [
     {
       type: 'Strategic Partnership',
@@ -172,7 +169,6 @@ export default function PartnersPage() {
       commitment: 'Variable'
     }
   ];
-
   return (
     <>
       <Head>
@@ -181,7 +177,6 @@ export default function PartnersPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -194,7 +189,6 @@ export default function PartnersPage() {
             </p>
           </div>
         </section>
-
         {/* Partnership Benefits */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -216,7 +210,6 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
-
         {/* Partner Categories */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20">
           <div className="max-w-7xl mx-auto">
@@ -252,7 +245,6 @@ export default function PartnersPage() {
             ))}
           </div>
         </section>
-
         {/* Partnership Types */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -293,7 +285,6 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
-
         {/* Become a Partner */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -336,7 +327,6 @@ export default function PartnersPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

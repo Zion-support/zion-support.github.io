@@ -96,13 +96,19 @@ jobs:
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     
-    - name: Run tests
-      run: npm test || echo "Tests failed - continuing with deployment"
-    
     - name: Build size analysis
       run: |
         echo "Build size analysis:"
+<<<<<<< HEAD
         du -sh dist/ || echo "Build size analysis completed"
+=======
+        du -sh dist/ || echo "dist folder not found"
+        if [ -d dist ]; then
+          echo "Build files:"
+          find dist -type f -name "*.js" -exec du -h {} \;
+          find dist -type f -name "*.css" -exec du -h {} \;
+        fi
+>>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4

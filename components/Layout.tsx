@@ -1,11 +1,20 @@
+<<<<<<< HEAD
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+=======
 import type { ReactNode } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
 interface LayoutProps {
   children: ReactNode;
 }
+<<<<<<< HEAD
+export default function Layout({ children }: LayoutProps) {
+=======
 
 const Layout = ({ children }: LayoutProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,6 +47,7 @@ const Layout = ({ children }: LayoutProps) => {
     { name: 'BlockchainForge', href: '/products#blockchainforge' },
   ];
 
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Head>

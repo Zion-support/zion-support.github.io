@@ -8,14 +8,12 @@ import {
   Heart, Sparkles, TrendingUp, Users, Briefcase, BookOpen,
   MessageCircle, BarChart3, Home, Layers, DollarSign
 } from 'lucide-react';
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -78,7 +76,6 @@ const serviceCategories = [
     ]
   }
 ];
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -89,7 +86,6 @@ const mainNavigation = [
   { name: 'Careers', href: '/careers', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: Facebook },
   { name: 'Twitter', href: '#', icon: Twitter },
@@ -98,7 +94,6 @@ const socialLinks = [
   { name: 'YouTube', href: '#', icon: Youtube },
   { name: 'GitHub', href: '#', icon: Github }
 ];
-
 const UltraFuturisticFooter2030: React.FC = () => {
   return (
     <footer className="relative bg-slate-900 border-t border-purple-500/20 overflow-hidden">
@@ -118,7 +113,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
           />
         </div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
@@ -148,7 +142,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
             <p className="text-slate-300 mb-6 leading-relaxed">
               Leading the future with cutting-edge AI, quantum computing, space technology, and innovative solutions that transform businesses and advance humanity.
             </p>
-
             {/* Contact Info */}
             <div className="space-y-3">
               <Link
@@ -171,7 +164,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <motion.div
@@ -201,7 +193,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Quick Links Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -223,7 +214,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
             ))}
           </div>
         </motion.div>
-
         {/* Bottom Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -239,7 +229,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
               <Heart className="w-4 h-4 text-red-400" />
               <span>Made with innovation</span>
             </div>
-
             {/* Social Links */}
             <div className="flex items-center space-x-4">
               {socialLinks.map((social, index) => (
@@ -253,7 +242,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
               ))}
             </div>
           </div>
-
           {/* Additional Info */}
           <div className="mt-6 pt-6 border-t border-slate-700">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-400">
@@ -273,7 +261,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
@@ -304,5 +291,4 @@ const UltraFuturisticFooter2030: React.FC = () => {
     </footer>
   );
 };
-
 export default UltraFuturisticFooter2030;

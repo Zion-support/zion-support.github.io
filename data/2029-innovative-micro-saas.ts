@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Innovative2029MicroSaasService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Innovative2029MicroSaasService {
   rating: number;
   reviews: number;
 }
-
 export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] = [
   // AI & Machine Learning Services
   {

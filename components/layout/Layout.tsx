@@ -4,7 +4,6 @@ import EnhancedNavigation2025 from './EnhancedNavigation2025';
 import UltraFuturisticFooter2034 from './UltraFuturisticFooter2034';
 import TopContactBar from './TopContactBar';
 import NeoFuturisticFooter from './NeoFuturisticFooter';
-
 interface LayoutProps {
   children: React.ReactNode;
   backgroundIntensity?: 'low' | 'medium' | 'high' | 'extreme';
@@ -14,7 +13,6 @@ interface LayoutProps {
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
 }
-
 export default function Layout({ 
   children, 
   backgroundIntensity = 'medium',
@@ -25,12 +23,10 @@ export default function Layout({
   enableQuantumEffects = true
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   // Close sidebar on route change
   useEffect(() => {
     setSidebarOpen(false);
   }, []);
-
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Top Contact Bar */}

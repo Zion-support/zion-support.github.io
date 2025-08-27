@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTech2028Service {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface EmergingTech2028Service {
   rating: number;
   reviews: number;
 }
-
 export const emergingTech2028Services: EmergingTech2028Service[] = [
   // Biometric Authentication Platform
   {
@@ -94,7 +92,6 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     rating: 4.8,
     reviews: 134
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -147,7 +144,6 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     rating: 4.7,
     reviews: 68
   },
-
   // 5G Network Optimization Platform
   {
     id: '5g-network-optimization-platform',
@@ -200,7 +196,6 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     rating: 4.9,
     reviews: 48
   },
-
   // Blockchain Supply Chain Platform
   {
     id: 'blockchain-supply-chain-platform',
@@ -253,7 +248,6 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     rating: 4.8,
     reviews: 98
   },
-
   // AI-Powered Content Creation Suite
   {
     id: 'ai-content-creation-suite',
@@ -306,7 +300,6 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     rating: 4.7,
     reviews: 189
   },
-
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -359,7 +352,6 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     rating: 4.9,
     reviews: 32
   },
-
   // Autonomous Vehicle Fleet Management
   {
     id: 'autonomous-vehicle-fleet-management',
@@ -412,7 +404,6 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     rating: 4.8,
     reviews: 67
   },
-
   // Digital Twin Platform
   {
     id: 'digital-twin-platform',

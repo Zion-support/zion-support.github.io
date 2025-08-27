@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const Sidebar: React.FC = () => {
 	return (
 		<aside className="hidden md:block w-64 shrink-0 border-r border-gray-200 bg-white">
@@ -57,5 +56,4 @@ const Sidebar: React.FC = () => {
 		</aside>
 	);
 };
-
 export default Sidebar;

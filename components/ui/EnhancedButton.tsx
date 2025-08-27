@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-
 interface EnhancedButtonProps {
   children: ReactNode;
   onClick?: () => void;
@@ -7,7 +6,6 @@ interface EnhancedButtonProps {
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
 }
-
 export default function EnhancedButton({ 
   children, 
   onClick, 

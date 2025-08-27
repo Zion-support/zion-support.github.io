@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-
 interface Particle {
   x: number;
   y: number;
@@ -11,29 +10,23 @@ interface Particle {
   color: string;
   type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk';
 }
-
 export default function UltraFuturisticBackground2029() {
   const [isClient, setIsClient] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
-
   useEffect(() => {
     setIsClient(true);
   }, []);
-
   useEffect(() => {
     if (!isClient) return;
     
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     let animationFrameId: number;
     let particles: Array<{
       x: number;
@@ -47,12 +40,36 @@ export default function UltraFuturisticBackground2029() {
       life: number;
       maxLife: number;
     }> = [];
-
     // Initialize particles with enhanced variety
     const initParticles = () => {
+<<<<<<< HEAD
+      particles = [];
+      for (let i = 0; i < 200; i++) {
+        const type = Math.random() > 0.7 ? 'quantum' : Math.random() > 0.5 ? 'neon' : 'hologram';
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: (Math.random() - 0.5) * 0.8,
+          size: Math.random() * 3 + 1,
+          color: type === 'quantum' ? ['#00ffff', '#ff00ff', '#ffff00'][Math.floor(Math.random() * 3)] :
+                 type === 'neon' ? ['#ff0080', '#8000ff', '#00ff80'][Math.floor(Math.random() * 3)] :
+                 ['#ffffff', '#00ffff', '#ff8000'][Math.floor(Math.random() * 3)],
+          opacity: Math.random() * 0.9 + 0.1,
+          type,
+          life: Math.random() * 100,
+          maxLife: 100
+        });
+      }
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Initialize particles
+    const initParticles = () => {
+=======
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
       const particles: Particle[] = [];
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
-
       for (let i = 0; i < particleCount; i++) {
         const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][Math.floor(Math.random() * 4)] as Particle['type'];
         const colors = {
@@ -61,7 +78,6 @@ export default function UltraFuturisticBackground2029() {
           neural: ['#10b981', '#059669', '#047857'],
           cyberpunk: ['#ec4899', '#f97316', '#f59e0b']
         };
-
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -73,9 +89,11 @@ export default function UltraFuturisticBackground2029() {
           type
         });
       }
-
       particlesRef.current = particles;
     };
+<<<<<<< HEAD
+    initParticles();
+=======
 
     const resizeCanvas = () => {
       if (canvas) {
@@ -88,10 +106,10 @@ export default function UltraFuturisticBackground2029() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
+>>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Create gradient background
       const gradient = ctx.createRadialGradient(
         canvas.width / 2,
@@ -108,19 +126,16 @@ export default function UltraFuturisticBackground2029() {
       
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.opacity;
@@ -154,7 +169,6 @@ export default function UltraFuturisticBackground2029() {
               }
             }
             break;
-
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
@@ -166,7 +180,6 @@ export default function UltraFuturisticBackground2029() {
             ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
             ctx.fill();
             break;
-
           case 'neural':
             // Neural particles with network connections
             ctx.fillStyle = particle.color;
@@ -195,7 +208,6 @@ export default function UltraFuturisticBackground2029() {
               });
             }
             break;
-
           case 'cyberpunk':
             // Cyberpunk particles with electric effect
             ctx.strokeStyle = particle.color;
@@ -210,30 +222,23 @@ export default function UltraFuturisticBackground2029() {
             ctx.stroke();
             break;
         }
-
         ctx.restore();
       });
-
       // Draw floating geometric shapes
       drawGeometricShapes(ctx, canvas.width, canvas.height);
-
       // Draw energy waves
       drawEnergyWaves(ctx, canvas.width, canvas.height);
-
       animationRef.current = requestAnimationFrame(animate);
     };
-
     // Handle window resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       initParticles();
     };
-
     window.addEventListener('resize', handleResize);
     initParticles();
     animate();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
@@ -241,7 +246,6 @@ export default function UltraFuturisticBackground2029() {
       }
     };
   }, []);
-
   const drawGeometricShapes = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
     const time = Date.now() * 0.0005;
     
@@ -267,7 +271,6 @@ export default function UltraFuturisticBackground2029() {
       ctx.stroke();
       ctx.restore();
     }
-
     // Floating triangles
     for (let i = 0; i < 3; i++) {
       const x = (width * 0.8) + Math.sin(time * 0.8 + i) * 120;
@@ -291,7 +294,6 @@ export default function UltraFuturisticBackground2029() {
       ctx.restore();
     }
   };
-
   const drawEnergyWaves = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
     const time = Date.now() * 0.001;
     
@@ -314,7 +316,6 @@ export default function UltraFuturisticBackground2029() {
       ctx.stroke();
       ctx.restore();
     }
-
     // Vertical energy waves
     for (let i = 0; i < 2; i++) {
       ctx.save();
@@ -335,7 +336,6 @@ export default function UltraFuturisticBackground2029() {
       ctx.restore();
     }
   };
-
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Animated gradient overlay */}

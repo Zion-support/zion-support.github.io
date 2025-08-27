@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeNewService2025 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface InnovativeNewService2025 {
   rating: number;
   reviews: number;
 }
-
 export const innovativeNewServices2025: InnovativeNewService2025[] = [
   // AI-Powered Content Intelligence Platform
   {
@@ -94,7 +92,6 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.8,
     reviews: 23
   },
-
   // Quantum-Secure Communication Network
   {
     id: 'quantum-secure-communication-network',
@@ -147,7 +144,6 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 5.0,
     reviews: 8
   },
-
   // Autonomous AI Operations Center
   {
     id: 'autonomous-ai-operations-center',
@@ -200,7 +196,6 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Blockchain-Powered Supply Chain Intelligence
   {
     id: 'blockchain-supply-chain-intelligence',
@@ -253,7 +248,6 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.7,
     reviews: 19
   },
-
   // Metaverse Development Platform
   {
     id: 'metaverse-development-platform',
@@ -306,7 +300,6 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.6,
     reviews: 21
   },
-
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading-platform',
@@ -359,7 +352,6 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 5.0,
     reviews: 12
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics-platform',
@@ -412,7 +404,6 @@ export const innovativeNewServices2025: InnovativeNewService2025[] = [
     rating: 4.9,
     reviews: 14
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',

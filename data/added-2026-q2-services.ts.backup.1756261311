@@ -5,7 +5,6 @@ export interface Added2026Q2Service {
   price: string;
   features: string[];
 }
-
 export const added2026Q2Services: Added2026Q2Service[] = [
   {
     id: 'q2-2026-service-1',
