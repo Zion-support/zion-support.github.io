@@ -37,12 +37,11 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
-    { name: 'Partners', href: '/partners', current: false },
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Partners', href: '/partners', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Help', href: '/help', current: false },
     { name: 'About', href: '/about', current: false },
@@ -65,6 +64,10 @@ export function AppHeader() {
     { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart, description: 'E‑commerce RMA automation' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated follow‑ups' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen, description: 'Transcripts & show notes' },
+    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Local business CRM' },
   ];
 
   const quickLinks = [

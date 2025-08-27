@@ -53,6 +53,10 @@ const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/Custom
 const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
 const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
+const ReturnsManagement = React.lazy(() => import('./pages/services/ReturnsManagement'));
+const EmailSequencer = React.lazy(() => import('./pages/services/EmailSequencer'));
+const PodcastTranscription = React.lazy(() => import('./pages/services/PodcastTranscription'));
+const MicroCRM = React.lazy(() => import('./pages/services/MicroCRM'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -131,6 +135,10 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              <Route path="/services/returns-management" element={<ReturnsManagement />} />
+              <Route path="/services/email-sequencer" element={<EmailSequencer />} />
+              <Route path="/services/podcast-transcription" element={<PodcastTranscription />} />
+              <Route path="/services/micro-crm" element={<MicroCRM />} />
               
               {/* Catch all route to generic page (covers docs, webinars, training, enterprise, etc.) */}
               <Route path="*" element={<GenericPage />} />
