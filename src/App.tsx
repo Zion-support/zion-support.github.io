@@ -9,6 +9,7 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { FloatingActionButton } from './components/FloatingActionButton';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -347,6 +348,7 @@ function App() {
         <PerformanceOptimizer />
         <AccessibilityEnhancer enabled={true} showControls={true} />
         <MobileExperienceEnhancer enabled={true} />
+        <FloatingActionButton />
       </div>
     </ErrorBoundary>
   );
