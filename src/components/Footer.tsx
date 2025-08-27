@@ -1,5 +1,5 @@
 import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp } from "lucide-react";
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Heart, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
         { name: 'Cloud & DevOps', path: '/services/cloud' },
         { name: 'Cybersecurity', path: '/services/cybersecurity' },
         { name: 'Infrastructure', path: '/services/infrastructure' },
-        { name: 'Digital Transformation', path: '/services/transformation' }
+        { name: 'Digital Transformation', path: '/services/digital-transformation' }
       ]
     },
     {
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     {
       name: "Email",
-      url: "mailto:contact@ziontechgroup.com",
+      url: "mailto:info@ziontechgroup.com",
       icon: (
         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -82,6 +82,10 @@ const Footer: React.FC = () => {
       )
     }
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
@@ -126,9 +130,8 @@ const Footer: React.FC = () => {
                 <span>Delaware, USA</span>
               </div>
             </div>
-          </motion.div>
 
-            {/* Social media */}
+            {/* Social media - Updated with working links */}
             <div className="flex space-x-4">
               <motion.a
                 href="https://twitter.com/lovable_dev"
@@ -143,43 +146,7 @@ const Footer: React.FC = () => {
                 <Twitter className="h-5 w-5" aria-label="Twitter" />
               </motion.a>
               <motion.a
-                href="https://www.linkedin.com/company/zion-marketplace"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full"
-                aria-label="LinkedIn"
-                title="LinkedIn"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Linkedin className="h-5 w-5" aria-label="LinkedIn" />
-              </motion.a>
-              <motion.a
-                href="https://www.facebook.com/zionmarketplace"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full"
-                aria-label="Facebook"
-                title="Facebook"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Facebook className="h-5 w-5" aria-label="Facebook" />
-              </motion.a>
-              <motion.a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full"
-                aria-label="Instagram"
-                title="Instagram"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Instagram className="h-5 w-5" aria-label="Instagram" />
-              </motion.a>
-              <motion.a
-                href="https://github.com"
+                href="https://github.com/Zion-Holdings"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full"
@@ -190,6 +157,16 @@ const Footer: React.FC = () => {
               >
                 <Github className="h-5 w-5" aria-label="GitHub" />
               </motion.a>
+              <motion.a
+                href="mailto:info@ziontechgroup.com"
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full"
+                aria-label="Email"
+                title="Email"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Mail className="h-5 w-5" aria-label="Email" />
+              </motion.a>
             </div>
           </div>
 
@@ -198,9 +175,9 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
             <ul className="space-y-2">
               <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
-              <li><Link to="/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
-              <li><Link to="/quantum-technology" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Technology</Link></li>
-              <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/services/ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
+              <li><Link to="/services/quantum-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Technology</Link></li>
+              <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact Us</Link></li>
             </ul>
           </div>
@@ -221,10 +198,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="/resources" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Resources</Link></li>
-              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog & Insights</Link></li>
-              <li><Link to="/reports" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Reports</Link></li>
               <li><Link to="/docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Documentation</Link></li>
+              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog & Insights</Link></li>
+              <li><Link to="/white-papers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">White Papers</Link></li>
+              <li><Link to="/webinars" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Webinars</Link></li>
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
             </ul>
           </div>
@@ -238,43 +215,13 @@ const Footer: React.FC = () => {
             <FooterNewsletter />
           </div>
         </div>
-      </motion.div>
-
-        {/* Bottom section */}
-        <div className="pt-8 border-t border-zion-blue-light">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-4 text-zion-slate-light text-sm mb-4 md:mb-0">
-              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
-              <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link to="/privacy" className="hover:text-zion-cyan transition-colors duration-300">Privacy Policy</Link>
-              <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link to="/terms" className="hover:text-zion-cyan transition-colors duration-300">Terms of Service</Link>
-              <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>
-            </div>
-            
-            <div className="flex items-center gap-6">
-              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
-              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Cookies</Link>
-              <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Accessibility</Link>
-            </div>
-            <motion.div 
-              className="flex items-center space-x-2 text-zion-slate-light text-sm"
-              whileHover={{ scale: 1.05 }}
-            >
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-400 animate-pulse" />
-              <span>for the future of technology</span>
-            </motion.div>
-=======
 
         {/* Bottom section */}
         <div className="pt-8 border-t border-zion-blue-light">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
               <p className="text-zion-slate-light text-sm">
-                &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+                &copy; {currentYear} Zion Tech Group. All rights reserved.
               </p>
               <div className="flex items-center gap-2 text-zion-slate-light/60">
                 <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
@@ -312,7 +259,7 @@ const Footer: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <ArrowUpIcon className="w-4 h-4" />
+              <ArrowUp className="w-4 h-4" />
               <span>Back to Top</span>
             </motion.button>
           </div>
@@ -365,4 +312,5 @@ const Footer: React.FC = () => {
     </footer>
   );
 }
-=======
+
+export default Footer;
