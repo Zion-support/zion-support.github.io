@@ -1,141 +1,93 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer.jsx';
-<<<<<<< HEAD
+import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 
-// Lazy load pages with better chunking
-const Home = lazy(() => import('./pages/Home.tsx'));
-const About = lazy(() => import('./pages/About.tsx'));
-const Contact = lazy(() => import('./pages/Contact.tsx'));
-const Blog = lazy(() => import('./pages/Blog.tsx'));
-const PartnersPage = lazy(() => import('./pages/Partners.tsx'));
-const Login = lazy(() => import('./pages/Login.jsx'));
-const FAQ = lazy(() => import('./pages/FAQ.tsx'));
-const Careers = lazy(() => import('./pages/Careers.tsx'));
-const Privacy = lazy(() => import('./pages/Privacy.tsx'));
-const Terms = lazy(() => import('./pages/Terms.tsx'));
-const Sitemap = lazy(() => import('./pages/Sitemap.tsx'));
-const GreenIT = lazy(() => import('./pages/GreenIT.tsx'));
+// Lazy load essential pages only
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Profile = React.lazy(() => import('./pages/Profile'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
-// Enhanced loading component with better UX
-=======
-import { ChatAssistant } from './components/ChatAssistant.jsx';
-// Lazy load only the pages we know work
-const Home = lazy(() => import('./pages/Home.jsx'));
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
+// Simple loading component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
     <div className="text-center">
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan mx-auto mb-4"></div>
       <p className="text-zion-slate-light text-lg">Loading Zion Tech Group...</p>
-      <div className="mt-4 space-y-2">
-        <div className="h-2 bg-zion-slate rounded-full w-48 mx-auto">
-          <div className="h-2 bg-zion-cyan rounded-full animate-pulse" style={{ width: '60%' }}></div>
-        </div>
-        <div className="h-2 bg-zion-slate rounded-full w-32 mx-auto">
-          <div className="h-2 bg-zion-purple rounded-full animate-pulse" style={{ width: '40%' }}></div>
-        </div>
-      </div>
     </div>
   </div>
 );
 
-// Error boundary component
-const ErrorFallback = ({ error, resetErrorBoundary }) => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="text-center max-w-md mx-auto p-8">
-      <div className="text-6xl mb-4">⚠️</div>
-      <h1 className="text-2xl font-bold text-zion-cyan mb-4">Something went wrong</h1>
-      <p className="text-zion-slate-light mb-6">
-        We encountered an unexpected error. Please try refreshing the page.
-      </p>
-      <div className="space-y-3">
-        <button
-          onClick={resetErrorBoundary}
-          className="bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors w-full"
-        >
-          Try Again
-        </button>
-        <button
-          onClick={() => window.location.href = '/'}
-          className="bg-zion-slate text-white px-6 py-3 rounded-lg hover:bg-zion-slate-dark transition-colors w-full"
-        >
-          Go Home
-        </button>
-      </div>
-      {process.env.NODE_ENV === 'development' && (
-        <details className="mt-6 text-left">
-          <summary className="cursor-pointer text-zion-slate-light">Error Details</summary>
-          <pre className="mt-2 text-xs text-red-400 bg-zion-slate-dark p-3 rounded overflow-auto">
-            {error.message}
-          </pre>
-        </details>
-      )}
-    </div>
-  </div>
-);
-
-// 404 page component
-const NotFound = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="text-center">
-      <h1 className="text-6xl font-bold text-zion-cyan mb-4">404</h1>
-      <h2 className="text-2xl font-semibold text-zion-slate-light mb-4">Page Not Found</h2>
-      <p className="text-zion-slate-light mb-6 max-w-md mx-auto">
-        The page you're looking for doesn't exist or has been moved.
-      </p>
-      <div className="space-y-3">
-        <a 
-          href="/" 
-          className="inline-block bg-zion-purple text-white px-6 py-3 rounded-lg hover:bg-zion-purple-dark transition-colors"
-        >
-          Go Home
-        </a>
-        <button 
-          onClick={() => window.history.back()}
-          className="block mx-auto mt-3 bg-zion-slate text-white px-6 py-3 rounded-lg hover:bg-zion-slate-dark transition-colors"
-        >
-          Go Back
-        </button>
-      </div>
-    </div>
-  </div>
-);
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <div className="App min-h-screen bg-zion-slate-dark">
+        {/* App Header */}
         <AppHeader />
         
-        <main className="flex-1">
+        {/* Main Content */}
+        <main id="main-content" className="pt-24">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              {/* Main pages */}
+              {/* Main Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/services" element={<ServicesPage />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-
+              <Route path="/signup" element={<Signup />} />
+              
+              {/* Information Pages */}
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+              <Route path="/help-center" element={<HelpCenter />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              
+              {/* User Pages */}
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/partners" element={<Partners />} />
+              
               {/* Catch-all route for 404 */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
-
+        
+        {/* Footer */}
         <Footer />
+        
+        {/* Chat Assistant */}
         <ChatAssistant />
       </div>
     </Router>
   );
 }
+
 export default App;

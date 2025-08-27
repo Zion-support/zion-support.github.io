@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import { 
   Menu, 
   X, 
@@ -18,14 +17,12 @@ import {
   Rocket 
 } from 'lucide-react';
 
-=======
-import { Menu, X, ChevronDown, Globe, Sun, Moon } from 'lucide-react';
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
+  
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -34,19 +31,13 @@ export function AppHeader() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location.pathname]);
-<<<<<<< HEAD
 
-=======
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    // In a real app, this would toggle the theme
-  };
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
     { 
@@ -67,18 +58,8 @@ export function AppHeader() {
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
-<<<<<<< HEAD
 
   const isActive = (path) => location.pathname === path;
-
-=======
-  const isActiveRoute = (path) => {
-    if (path === '/') {
-      return location.pathname === '/';
-    }
-    return location.pathname.startsWith(path);
-  };
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -174,12 +155,7 @@ export function AppHeader() {
               </div>
             ))}
           </nav>
-<<<<<<< HEAD
-
-          {/* CTA Buttons */}
-=======
           {/* Actions */}
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
@@ -196,8 +172,6 @@ export function AppHeader() {
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-<<<<<<< HEAD
-=======
         {/* Mobile Menu */}
         <AnimatePresence>
           {mobileMenuOpen && (
@@ -212,7 +186,7 @@ export function AppHeader() {
                 <nav className="space-y-4">
                   {navigationItems.map((item) => (
                     <div key={item.path}>
-                      {item.hasDropdown ? (
+                      {item.dropdown ? (
                         <div>
                           <button
                             onClick={() => setDropdownOpen(dropdownOpen === item.path ? null : item.path)}
@@ -288,7 +262,6 @@ export function AppHeader() {
             </motion.div>
           )}
         </AnimatePresence>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       </div>
 
       {/* Mobile Menu */}

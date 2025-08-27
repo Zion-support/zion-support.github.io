@@ -136,11 +136,11 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-zion-slate-light/20;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-zion-slate-dark text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
     font-family: var(--font-sans);
     overflow-x: hidden;
