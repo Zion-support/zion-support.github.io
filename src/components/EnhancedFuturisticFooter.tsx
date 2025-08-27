@@ -74,7 +74,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Helpdesk Platform', href: '/services/helpdesk' },
         { name: 'Website Analytics', href: '/services/website-analytics' },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal' },
-        { name: 'Security Headers & CSP', href: '/services/security-headers-csp' }
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp' },
+        { name: 'AI Project Manager', href: '/services/ai-project-manager' },
+        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support' },
+        { name: 'AI Data Analytics', href: '/services/ai-data-analytics' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' }
       ]
     },
     {

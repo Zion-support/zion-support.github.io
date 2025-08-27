@@ -7,6 +7,7 @@ import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -71,6 +72,12 @@ const InterviewAssessmentAI = React.lazy(() => import('./pages/services/Intervie
 const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
+// New innovative AI services
+const AIProjectManager = React.lazy(() => import('./pages/services/AIProjectManager'));
+const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGenerator'));
+const AICustomerSupport = React.lazy(() => import('./pages/services/AICustomerSupport'));
+const AIDataAnalytics = React.lazy(() => import('./pages/services/AIDataAnalytics'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -112,9 +119,10 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
+        <FuturisticAnimatedBackground />
         <AppHeader />
         
-        <main className="flex-1">
+        <main className="flex-1 relative z-10">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -178,6 +186,12 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+              {/* New innovative AI service routes */}
+              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
+              <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
+              <Route path="/services/ai-customer-support" element={<AICustomerSupport />} />
+              <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
