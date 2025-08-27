@@ -1,20 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, TrendingUp, BarChart3, Users, Shield, Zap, CheckCircle, Star, Phone, Mail, ExternalLink } from 'lucide-react';
+import { Rocket, Satellite, Globe, Zap, Phone } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AIBusinessIntelligence() {
+export default function SpaceTechnologyPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
-        title="AI Business Intelligence Platform | Zion Tech Group"
-        description="Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports."
-        keywords="AI business intelligence, data analytics, machine learning, business insights, predictive analytics"
+        title="Space Technology Platform | Zion Tech Group"
+        description="Advanced space technology platform for satellite operations, space data analytics, and orbital infrastructure management."
+        keywords="space technology, satellite operations, space data, orbital infrastructure, space analytics, satellite management"
       />
 
       {/* Hero Section */}
       <motion.div 
-        className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 py-20"
+        className="relative overflow-hidden bg-gradient-to-r from-black via-slate-900 to-blue-900 py-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -27,20 +27,20 @@ export default function AIBusinessIntelligence() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI Business Intelligence
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Space Technology
             </span>
             <br />
             <span className="text-white">Platform</span>
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-4xl mx-auto"
+            className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Next-generation business intelligence platform that uses AI to automatically analyze data, 
-            generate insights, and create actionable reports for business decision-making.
+            Advanced space technology platform for satellite operations, space data analytics, 
+            and orbital infrastructure management with cutting-edge space tech solutions.
           </motion.p>
           <motion.div 
             className="flex flex-wrap justify-center gap-4"
@@ -49,13 +49,13 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-cyan-300 font-semibold">$2,999</span>/month
+              <span className="text-blue-300 font-semibold">$5,999</span>/month
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-green-300 font-semibold">250-400%</span> ROI
+              <span className="text-purple-300 font-semibold">600-900%</span> ROI
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-purple-300 font-semibold">6-8 weeks</span> delivery
+              <span className="text-pink-300 font-semibold">20-24 weeks</span> delivery
             </div>
           </motion.div>
         </div>
@@ -71,28 +71,28 @@ export default function AIBusinessIntelligence() {
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-          <p className="text-xl text-gray-300">Powerful AI-driven capabilities for modern businesses</p>
+          <p className="text-xl text-gray-300">Cutting-edge space technology for the future</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { icon: Brain, title: "AI-powered data analysis", description: "Advanced machine learning algorithms analyze your data automatically" },
-            { icon: TrendingUp, title: "Predictive analytics", description: "Forecast future trends and identify opportunities before they happen" },
-            { icon: BarChart3, title: "Real-time dashboards", description: "Live monitoring and visualization of your business metrics" },
-            { icon: Users, title: "Natural language queries", description: "Ask questions in plain English and get instant insights" },
-            { icon: Shield, title: "Enterprise security", description: "SOC 2, GDPR, and HIPAA compliant with end-to-end encryption" },
-            { icon: Zap, title: "Automated reporting", description: "Generate comprehensive reports automatically on schedule" }
+            { icon: Satellite, title: "Satellite operations", description: "Comprehensive satellite management and control" },
+            { icon: Globe, title: "Space data analytics", description: "Advanced analysis of space-based data streams" },
+            { icon: Rocket, title: "Launch management", description: "End-to-end launch planning and execution" },
+            { icon: Zap, title: "Orbital tracking", description: "Real-time orbital position and trajectory monitoring" },
+            { icon: Satellite, title: "Ground station ops", description: "Ground station network management and optimization" },
+            { icon: Globe, title: "Space weather", description: "Space weather monitoring and forecasting" }
           ].map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -104,7 +104,7 @@ export default function AIBusinessIntelligence() {
 
       {/* CTA Section */}
       <motion.div 
-        className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 py-20"
+        className="bg-gradient-to-r from-black via-slate-900 to-blue-900 py-20"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -112,15 +112,15 @@ export default function AIBusinessIntelligence() {
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business Intelligence?
+            Ready to Reach for the Stars with Space Technology?
           </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Connect with our team to discuss how AI-powered business intelligence can drive your business forward.
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Connect with our team to discuss how space technology can transform your operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 text-lg"
+              className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 text-lg"
             >
               Get Started Today
             </a>

@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, TrendingUp, BarChart3, Users, Shield, Zap, CheckCircle, Star, Phone, Mail, ExternalLink } from 'lucide-react';
+import { Zap, TrendingUp, Activity, Shield, Phone } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AIBusinessIntelligence() {
+export default function AIEnergyManagementSystem() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
-        title="AI Business Intelligence Platform | Zion Tech Group"
-        description="Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports."
-        keywords="AI business intelligence, data analytics, machine learning, business insights, predictive analytics"
+        title="AI Energy Management System | Zion Tech Group"
+        description="Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial buildings."
+        keywords="AI energy management, energy optimization, smart buildings, sustainability, energy efficiency"
       />
 
       {/* Hero Section */}
@@ -28,10 +28,10 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8 }}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI Business Intelligence
+              AI Energy Management
             </span>
             <br />
-            <span className="text-white">Platform</span>
+            <span className="text-white">System</span>
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-4xl mx-auto"
@@ -39,8 +39,8 @@ export default function AIBusinessIntelligence() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Next-generation business intelligence platform that uses AI to automatically analyze data, 
-            generate insights, and create actionable reports for business decision-making.
+            Intelligent energy management platform that uses AI to optimize energy consumption, 
+            predict demand, and reduce costs for commercial buildings.
           </motion.p>
           <motion.div 
             className="flex flex-wrap justify-center gap-4"
@@ -49,10 +49,10 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-cyan-300 font-semibold">$2,999</span>/month
+              <span className="text-cyan-300 font-semibold">$1,599</span>/month
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-green-300 font-semibold">250-400%</span> ROI
+              <span className="text-green-300 font-semibold">200-350%</span> ROI
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
               <span className="text-purple-300 font-semibold">6-8 weeks</span> delivery
@@ -71,17 +71,17 @@ export default function AIBusinessIntelligence() {
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-          <p className="text-xl text-gray-300">Powerful AI-driven capabilities for modern businesses</p>
+          <p className="text-xl text-gray-300">Advanced AI-powered energy management</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { icon: Brain, title: "AI-powered data analysis", description: "Advanced machine learning algorithms analyze your data automatically" },
-            { icon: TrendingUp, title: "Predictive analytics", description: "Forecast future trends and identify opportunities before they happen" },
-            { icon: BarChart3, title: "Real-time dashboards", description: "Live monitoring and visualization of your business metrics" },
-            { icon: Users, title: "Natural language queries", description: "Ask questions in plain English and get instant insights" },
-            { icon: Shield, title: "Enterprise security", description: "SOC 2, GDPR, and HIPAA compliant with end-to-end encryption" },
-            { icon: Zap, title: "Automated reporting", description: "Generate comprehensive reports automatically on schedule" }
+            { icon: Activity, title: "Energy consumption monitoring", description: "Real-time monitoring of energy usage across all systems" },
+            { icon: TrendingUp, title: "Demand prediction", description: "AI-powered energy demand forecasting and planning" },
+            { icon: Zap, title: "Smart grid integration", description: "Seamless integration with smart grid technologies" },
+            { icon: Shield, title: "Sustainability reporting", description: "Comprehensive environmental impact and sustainability metrics" },
+            { icon: Activity, title: "Real-time alerts", description: "Instant notifications for energy anomalies and opportunities" },
+            { icon: TrendingUp, title: "Cost optimization", description: "AI-driven energy cost reduction strategies" }
           ].map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -112,10 +112,10 @@ export default function AIBusinessIntelligence() {
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business Intelligence?
+            Ready to Optimize Your Energy Management with AI?
           </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Connect with our team to discuss how AI-powered business intelligence can drive your business forward.
+            Connect with our team to discuss how AI-powered energy management can reduce costs and improve sustainability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

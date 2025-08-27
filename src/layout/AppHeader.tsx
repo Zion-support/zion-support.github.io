@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Target, TrendingUp, Award, Code, Truck, Building, Phone, Mail, ExternalLink, Sparkles, Flame, Crown, Infinity, Sun, Moon } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -57,40 +57,52 @@ export function AppHeader() {
   ];
 
   const services = [
-    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    // AI & Analytics Services
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics & insights', category: 'AI & Analytics' },
+    { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analyzer', icon: Shield, description: 'Contract review & risk assessment', category: 'AI & Legal Tech' },
+    { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', icon: Heart, description: 'Medical imaging & diagnostics', category: 'AI & Healthcare' },
+    { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform', icon: DollarSign, description: 'Algorithmic trading & analysis', category: 'AI & Finance' },
+    { name: 'AI Supply Chain Optimizer', href: '/services/ai-supply-chain-optimizer', icon: Truck, description: 'Logistics & inventory optimization', category: 'AI & Logistics' },
+    { name: 'AI Energy Management', href: '/services/ai-energy-management-system', icon: Zap, description: 'Energy optimization & sustainability', category: 'AI & Energy' },
+    { name: 'AI Education Platform', href: '/services/ai-education-platform', icon: BookOpen, description: 'Personalized learning & analytics', category: 'AI & Education' },
+    { name: 'AI Real Estate Analytics', href: '/services/ai-real-estate-analytics', icon: Building, description: 'Market analysis & investment insights', category: 'AI & Real Estate' },
+    { name: 'AI Manufacturing QC', href: '/services/ai-manufacturing-quality-control', icon: Cpu, description: 'Quality control & defect detection', category: 'AI & Manufacturing' },
+    { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform', icon: Users, description: 'Personalization & optimization', category: 'AI & Customer Experience' },
+    
+    // Emerging Technology Services
+    { name: 'Blockchain DeFi Platform', href: '/services/blockchain-defi-platform', icon: Globe, description: 'Decentralized finance solutions', category: 'Blockchain & Web3' },
+    { name: 'Metaverse Development', href: '/services/metaverse-development-platform', icon: Rocket, description: 'Virtual worlds & VR/AR', category: 'Metaverse & VR/AR' },
+    { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', icon: Cpu, description: 'Distributed computing & IoT', category: 'Edge Computing & IoT' },
+    { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Atom, description: 'Quantum algorithms & optimization', category: 'Quantum Computing' },
+    { name: 'Autonomous Systems', href: '/services/autonomous-systems-platform', icon: Target, description: 'Robotics & automation', category: 'Autonomous Systems' },
+    { name: 'Digital Twin Platform', href: '/services/digital-twin-platform', icon: Workflow, description: 'Simulation & monitoring', category: 'Digital Twin' },
+    { name: 'Space Technology', href: '/services/space-technology-platform', icon: Rocket, description: 'Satellite operations & data', category: 'Space Technology' },
+    { name: 'Sustainable Technology', href: '/services/sustainable-technology-platform', icon: Sun, description: 'Green computing & energy', category: 'Sustainable Technology' },
+    
+    // Core Services
     { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Quantum Solutions' },
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: BookOpen, description: 'AI-Powered Content' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-    { name: 'IoT & Edge', href: '/services/it-infrastructure', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business Intelligence & Insights' },
-    { name: 'Healthcare Tech', href: '/services/ai-compliance-assistant', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Sustainability', href: '/services/green-it', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
-    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
-    { name: 'Mobile Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
-    { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
-    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
-    { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart, description: 'E‑commerce RMA automation' },
-    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated follow‑ups' },
-    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen, description: 'Transcripts & show notes' },
-    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Local business CRM' },
-    { name: 'Website Analytics', href: '/services/website-analytics', icon: Gauge, description: 'Privacy-first SMB analytics' },
-    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'Tickets, SLAs, portals' },
-    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: ShoppingCart, description: 'Partner revenue platform' },
+    { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users, description: 'AI-Powered HR' },
+    { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Sun, description: 'Green IT Solutions' },
+    { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: Gauge, description: 'Predictive Analytics' },
+    { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Atom, description: 'Quantum ML' },
+    
+    // Additional Services
+    { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales assistant' },
     { name: 'AI SEO Optimizer', href: '/services/ai-seo', icon: Search, description: 'Semantic SEO & content briefs' },
     { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'Structured interviews & scoring' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Tickets, KB, chat & AI' },
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: Gauge, description: 'Privacy-first SMB analytics' },
     { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA request workflow' },
     { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield, description: 'HSTS/CSP automation' },
     { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Target, description: 'Intelligent project management' },
-    { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'AI-powered content creation' },
+    { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: BookOpen, description: 'AI-powered content creation' },
     { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: '24/7 intelligent support' },
-    { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3, description: 'Predictive business intelligence' },
+    { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: Gauge, description: 'Predictive business intelligence' },
     { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Smart marketing optimization' },
   ];
 
@@ -98,295 +110,336 @@ export function AppHeader() {
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
-    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Support', href: '/support', icon: MessageCircle },
+    { name: 'Documentation', href: '/documentation', icon: BookOpen },
+    { name: 'API Reference', href: '/api', icon: Code },
+    { name: 'Status', href: '/status', icon: Gauge },
     { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Help Center', href: '/help', icon: MessageCircle },
   ];
 
-  const featuredServices = [
-    { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
-    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
-    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
-  ];
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
 
   return (
-    <>
-      <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        scrolled 
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
-      }`}>
-        <div className="container-responsive">
-          <div className="flex h-20 items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link to="/" className="flex-shrink-0 group">
-                <div className="flex items-center space-x-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Zap className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                  </div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                    Zion Tech Group
-                  </h1>
-                </div>
-              </Link>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-white/10 shadow-2xl' 
+        : 'bg-transparent'
+    }`}>
+      {/* Top Bar */}
+      <div className="bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 border-b border-white/20">
+        <div className="container mx-auto px-4 py-2">
+          <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center gap-6 text-cyan-100">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.phone}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </div>
             </div>
-            
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8" aria-label="Primary">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group ${
-                    item.featured ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30' : ''
-                  }`}
-                  aria-current={item.current ? 'page' : undefined}
-                >
-                  {item.name}
-                  {item.featured && (
-                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
-                  )}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
-              
-              {/* Services Dropdown */}
-              <div className="relative" aria-haspopup="true" aria-expanded={servicesDropdownOpen}>
-                <button
-                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                  onMouseEnter={() => setServicesDropdownOpen(true)}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}
-                  className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
-                  aria-controls="services-menu"
-                >
-                  Services
-                  <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
-                </button>
-                
-                {servicesDropdownOpen && (
-                  <div 
-                    id="services-menu"
-                    className="absolute top-full left-0 mt-2 w-[500px] bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
-                    onMouseEnter={() => setServicesDropdownOpen(true)}
-                    onMouseLeave={() => setServicesDropdownOpen(false)}
-                    role="menu"
-                    aria-label="Services"
-                  >
-                    <div className="p-6">
-                      {/* Featured Services */}
-                      <div className="mb-6">
-                        <h3 className="text-sm font-semibold text-cyan-300 mb-3 flex items-center gap-2">
-                          <Star className="w-4 h-4" />
-                          Featured Services
-                        </h3>
-                        <div className="grid grid-cols-1 gap-3">
-                          {featuredServices.map((service) => (
-                            <Link
-                              key={service.name}
-                              to={service.href}
-                              className="flex items-center p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105 border border-cyan-400/20"
-                            >
-                              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
-                                <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                              </div>
-                              <div className="ml-4 flex-1">
-                                <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
-                                  {service.name}
-                                </div>
-                                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                                  {service.description}
-                                </div>
-                              </div>
-                              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                <ChevronDown className="w-4 h-4 text-cyan-400 rotate-[-90deg]" />
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <a 
+                href="/contact" 
+                className="text-cyan-100 hover:text-white transition-colors text-sm"
+              >
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                      {/* All Services by Category */}
-                      <div className="grid grid-cols-2 gap-4">
-                        {services.slice(0, 20).map((service) => (
+      {/* Main Header */}
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="relative">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-7 h-7 text-white" />
+              </div>
+              <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
+            </div>
+            <div>
+              <div className="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                Zion Tech Group
+              </div>
+              <div className="text-xs text-cyan-300 uppercase tracking-wider">
+                Innovation • Technology • Future
+              </div>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-2 text-white hover:text-cyan-300 transition-colors py-2">
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
+                <div className="absolute top-full left-0 w-2 h-2 bg-cyan-500 transform rotate-45 -translate-y-1 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </button>
+              
+              {/* Mega Menu */}
+              <div className="absolute top-full left-0 w-screen max-w-7xl -ml-64 bg-slate-900/95 backdrop-blur-md border border-white/10 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-8">
+                  <div className="grid grid-cols-4 gap-8">
+                    {/* AI & Analytics */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                        <Brain className="w-5 h-5 text-cyan-400" />
+                        AI & Analytics
+                      </h3>
+                      <div className="space-y-3">
+                        {services.filter(s => s.category === 'AI & Analytics').slice(0, 4).map(service => (
                           <Link
                             key={service.name}
                             to={service.href}
-                            className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105"
-                            role="menuitem"
+                            className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group"
                           >
-                            <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-slate-600/20 to-slate-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/20 group-hover:to-blue-500/20 transition-all duration-200">
-                              <service.icon className="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" />
-                            </div>
-                            <div className="ml-3 flex-1">
-                              <div className="text-white text-sm font-medium group-hover:text-cyan-400 transition-colors">
+                            {React.createElement(service.icon, { className: "w-5 h-5 text-cyan-400" })}
+                            <div>
+                              <div className="text-white group-hover:text-cyan-300 transition-colors font-medium">
                                 {service.name}
                               </div>
-                              <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                                {service.description}
-                              </div>
+                              <div className="text-sm text-gray-400">{service.description}</div>
                             </div>
                           </Link>
                         ))}
                       </div>
-                      
-                      <div className="mt-6 pt-4 border-t border-slate-700/50">
-                        <div className="flex gap-3">
+                    </div>
+
+                    {/* Emerging Tech */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                        <Rocket className="w-5 h-5 text-purple-400" />
+                        Emerging Tech
+                      </h3>
+                      <div className="space-y-3">
+                        {services.filter(s => ['Blockchain & Web3', 'Metaverse & VR/AR', 'Quantum Computing', 'Space Technology'].includes(s.category)).slice(0, 4).map(service => (
                           <Link
-                            to="/services"
-                            className="flex-1 text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors py-2 px-4 rounded-lg hover:bg-cyan-400/10"
+                            key={service.name}
+                            to={service.href}
+                            className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group"
                           >
-                            View All Services
+                            {React.createElement(service.icon, { className: "w-5 h-5 text-purple-400" })}
+                            <div>
+                              <div className="text-white group-hover:text-purple-300 transition-colors font-medium">
+                                {service.name}
+                              </div>
+                              <div className="text-sm text-gray-400">{service.description}</div>
+                            </div>
                           </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Industry Solutions */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                        <Building className="w-5 h-5 text-green-400" />
+                        Industry Solutions
+                      </h3>
+                      <div className="space-y-3">
+                        {services.filter(s => ['AI & Healthcare', 'AI & Finance', 'AI & Manufacturing', 'AI & Education'].includes(s.category)).slice(0, 4).map(service => (
                           <Link
-                            to="/services2026"
-                            className="flex-1 text-center text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors py-2 px-4 rounded-lg hover:bg-yellow-400/10 border border-yellow-400/30"
+                            key={service.name}
+                            to={service.href}
+                            className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group"
                           >
-                            2026 Services →
+                            {React.createElement(service.icon, { className: "w-5 h-5 text-green-400" })}
+                            <div>
+                              <div className="text-white group-hover:text-green-300 transition-colors font-medium">
+                                {service.name}
+                              </div>
+                              <div className="text-sm text-gray-400">{service.description}</div>
+                            </div>
                           </Link>
-                        </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Quick Actions */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                        <Zap className="w-5 h-5 text-yellow-400" />
+                        Quick Actions
+                      </h3>
+                      <div className="space-y-3">
+                        <Link
+                          to="/innovative-services-showcase-2028"
+                          className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all group"
+                        >
+                          <Sparkles className="w-5 h-5 text-cyan-400" />
+                          <div>
+                            <div className="text-white group-hover:text-cyan-300 transition-colors font-medium">
+                              View All Services
+                            </div>
+                            <div className="text-sm text-cyan-300">Complete showcase</div>
+                          </div>
+                        </Link>
+                        
+                        <Link
+                          to="/contact"
+                          className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 hover:from-purple-500/30 hover:to-pink-500/30 transition-all group"
+                        >
+                          <MessageCircle className="w-5 h-5 text-purple-400" />
+                          <div>
+                            <div className="text-white group-hover:text-purple-300 transition-colors font-medium">
+                              Get Custom Quote
+                            </div>
+                            <div className="text-sm text-purple-300">Tailored solutions</div>
+                          </div>
+                        </Link>
+
+                        <Link
+                          to="/pricing"
+                          className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 hover:from-green-500/30 hover:to-emerald-500/30 transition-all group"
+                        >
+                          <DollarSign className="w-5 h-5 text-green-400" />
+                          <div>
+                            <div className="text-white group-hover:text-green-300 transition-colors font-medium">
+                              View Pricing
+                            </div>
+                            <div className="text-sm text-green-300">Transparent costs</div>
+                          </div>
+                        </Link>
                       </div>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
-            </nav>
+            </div>
 
-            {/* Right side actions */}
-            <div className="flex items-center space-x-4">
-              {/* Theme Toggle */}
-              <ThemeToggle />
-              
-              {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block relative">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+            {/* Other Navigation Items */}
+            {navigation.slice(2, 8).map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`text-white hover:text-cyan-300 transition-colors py-2 ${
+                  item.featured ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-4 py-2 rounded-lg border border-cyan-500/30' : ''
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Search and Actions */}
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Search */}
+            <form onSubmit={handleSearch} className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-64 pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+            </form>
+
+            {/* Action Buttons */}
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden text-white hover:text-cyan-300 transition-colors"
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
+          >
+            <div className="container mx-auto px-4 py-6">
+              <div className="space-y-6">
+                {/* Mobile Search */}
+                <form onSubmit={handleSearch} className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input
                     type="text"
                     placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-64 pl-10 pr-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
-                  {isSearching && (
-                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-                      <ZionLoadingSpinner size="sm" />
-                    </div>
-                  )}
-                </div>
-              </form>
+                </form>
 
-              {/* Quick actions placeholder removed for simplicity */}
-
-              {/* CTA Button */}
-              <Link
-                to="/contact"
-                className="hidden md:inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-              >
-                Get Started
-              </Link>
-
-              {/* Mobile menu button */}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-              >
-                {mobileMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-slate-800/95 border-t border-slate-700/50 backdrop-blur-xl"
-            >
-              <div className="container-responsive py-6">
+                {/* Mobile Navigation */}
                 <nav className="space-y-4">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                        item.featured 
-                          ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 border border-cyan-400/30' 
-                          : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+                      className={`block text-white hover:text-cyan-300 transition-colors py-2 ${
+                        item.featured ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-4 py-2 rounded-lg border border-cyan-500/30' : ''
                       }`}
                     >
                       {item.name}
-                      {item.featured && (
-                        <span className="ml-2 inline-block w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
-                      )}
                     </Link>
                   ))}
-                  
-                  {/* Mobile Services Section */}
-                  <div className="pt-4 border-t border-slate-700/50">
-                    <h3 className="px-4 text-sm font-semibold text-cyan-300 mb-3">Featured Services</h3>
-                    <div className="space-y-2">
-                      {featuredServices.map((service) => (
-                        <Link
-                          key={service.name}
-                          to={service.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center px-4 py-3 rounded-lg text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors"
-                        >
-                          <service.icon className="w-5 h-5 text-cyan-400 mr-3" />
-                          <span className="text-sm">{service.name}</span>
-                        </Link>
-                      ))}
+                </nav>
+
+                {/* Mobile Quick Links */}
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {quickLinks.slice(0, 6).map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center gap-2 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+                      >
+                        {React.createElement(link.icon, { className: "w-4 h-4 text-cyan-400" })}
+                        <span className="text-white text-sm">{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile Contact */}
+                <div className="border-t border-white/10 pt-4">
+                  <div className="space-y-3 text-sm">
+                    <div className="flex items-center gap-2 text-cyan-300">
+                      <Phone className="w-4 h-4" />
+                      <span>{contactInfo.phone}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-cyan-300">
+                      <Mail className="w-4 h-4" />
+                      <span>{contactInfo.email}</span>
                     </div>
                   </div>
-                </nav>
-              </div>
-
-              {/* Mobile quick links */}
-              <div className="mt-6 pt-6 border-t border-slate-700/50">
-                <h3 className="text-slate-400 text-sm font-medium mb-4">Quick Links</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
-                    >
-                      <link.icon className="w-4 h-4 text-cyan-400 mr-2" />
-                      <span className="text-white text-sm">{link.name}</span>
-                    </Link>
-                  ))}
                 </div>
               </div>
-
-              {/* Mobile CTA */}
-              <div className="mt-6 pt-6 border-t border-slate-700/50">
-                <Link
-                  to="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block w-full text-center py-3 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

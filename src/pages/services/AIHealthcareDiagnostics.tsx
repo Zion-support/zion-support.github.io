@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, TrendingUp, BarChart3, Users, Shield, Zap, CheckCircle, Star, Phone, Mail, ExternalLink } from 'lucide-react';
+import { Heart, Activity, Shield, CheckCircle, Phone } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AIBusinessIntelligence() {
+export default function AIHealthcareDiagnostics() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
-        title="AI Business Intelligence Platform | Zion Tech Group"
-        description="Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports."
-        keywords="AI business intelligence, data analytics, machine learning, business insights, predictive analytics"
+        title="AI Healthcare Diagnostics Platform | Zion Tech Group"
+        description="Advanced medical diagnostics platform that uses AI to analyze medical images, patient data, and provide diagnostic recommendations."
+        keywords="AI healthcare, medical diagnostics, medical imaging, AI medicine, healthcare AI"
       />
 
       {/* Hero Section */}
@@ -28,10 +28,10 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8 }}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI Business Intelligence
+              AI Healthcare
             </span>
             <br />
-            <span className="text-white">Platform</span>
+            <span className="text-white">Diagnostics</span>
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-cyan-100 mb-8 max-w-4xl mx-auto"
@@ -39,8 +39,8 @@ export default function AIBusinessIntelligence() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Next-generation business intelligence platform that uses AI to automatically analyze data, 
-            generate insights, and create actionable reports for business decision-making.
+            Advanced medical diagnostics platform that uses AI to analyze medical images, 
+            patient data, and provide diagnostic recommendations.
           </motion.p>
           <motion.div 
             className="flex flex-wrap justify-center gap-4"
@@ -49,13 +49,13 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-cyan-300 font-semibold">$2,999</span>/month
+              <span className="text-cyan-300 font-semibold">$3,499</span>/month
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-green-300 font-semibold">250-400%</span> ROI
+              <span className="text-green-300 font-semibold">400-600%</span> ROI
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-purple-300 font-semibold">6-8 weeks</span> delivery
+              <span className="text-purple-300 font-semibold">12-16 weeks</span> delivery
             </div>
           </motion.div>
         </div>
@@ -71,17 +71,17 @@ export default function AIBusinessIntelligence() {
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-          <p className="text-xl text-gray-300">Powerful AI-driven capabilities for modern businesses</p>
+          <p className="text-xl text-gray-300">Advanced AI-powered healthcare diagnostics</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { icon: Brain, title: "AI-powered data analysis", description: "Advanced machine learning algorithms analyze your data automatically" },
-            { icon: TrendingUp, title: "Predictive analytics", description: "Forecast future trends and identify opportunities before they happen" },
-            { icon: BarChart3, title: "Real-time dashboards", description: "Live monitoring and visualization of your business metrics" },
-            { icon: Users, title: "Natural language queries", description: "Ask questions in plain English and get instant insights" },
-            { icon: Shield, title: "Enterprise security", description: "SOC 2, GDPR, and HIPAA compliant with end-to-end encryption" },
-            { icon: Zap, title: "Automated reporting", description: "Generate comprehensive reports automatically on schedule" }
+            { icon: Activity, title: "Medical image analysis", description: "AI-powered analysis of X-rays, MRIs, CT scans, and more" },
+            { icon: Heart, title: "Patient data integration", description: "Comprehensive patient data analysis and insights" },
+            { icon: CheckCircle, title: "Diagnostic recommendations", description: "AI-generated diagnostic suggestions and treatment options" },
+            { icon: Shield, title: "HIPAA compliance", description: "Full HIPAA compliance with end-to-end encryption" },
+            { icon: Activity, title: "Real-time monitoring", description: "Continuous patient monitoring and alert systems" },
+            { icon: Heart, title: "Clinical decision support", description: "AI-powered clinical decision support tools" }
           ].map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -112,10 +112,10 @@ export default function AIBusinessIntelligence() {
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business Intelligence?
+            Ready to Transform Healthcare with AI?
           </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Connect with our team to discuss how AI-powered business intelligence can drive your business forward.
+            Connect with our team to discuss how AI-powered healthcare diagnostics can improve patient outcomes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

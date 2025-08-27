@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, TrendingUp, BarChart3, Users, Shield, Zap, CheckCircle, Star, Phone, Mail, ExternalLink } from 'lucide-react';
+import { Globe, Users, Eye, Zap, Phone } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AIBusinessIntelligence() {
+export default function MetaverseDevelopmentPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
-        title="AI Business Intelligence Platform | Zion Tech Group"
-        description="Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports."
-        keywords="AI business intelligence, data analytics, machine learning, business insights, predictive analytics"
+        title="Metaverse Development Platform | Zion Tech Group"
+        description="Comprehensive metaverse development platform for creating immersive 3D virtual worlds and experiences."
+        keywords="metaverse, virtual reality, 3D development, immersive experiences, VR development, digital worlds"
       />
 
       {/* Hero Section */}
@@ -28,7 +28,7 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8 }}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-              AI Business Intelligence
+              Metaverse Development
             </span>
             <br />
             <span className="text-white">Platform</span>
@@ -39,8 +39,8 @@ export default function AIBusinessIntelligence() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Next-generation business intelligence platform that uses AI to automatically analyze data, 
-            generate insights, and create actionable reports for business decision-making.
+            Comprehensive metaverse development platform for creating immersive 3D virtual worlds, 
+            experiences, and digital environments with advanced VR/AR capabilities.
           </motion.p>
           <motion.div 
             className="flex flex-wrap justify-center gap-4"
@@ -49,13 +49,13 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-cyan-300 font-semibold">$2,999</span>/month
+              <span className="text-cyan-300 font-semibold">$3,999</span>/month
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-green-300 font-semibold">250-400%</span> ROI
+              <span className="text-blue-300 font-semibold">400-600%</span> ROI
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/20">
-              <span className="text-purple-300 font-semibold">6-8 weeks</span> delivery
+              <span className="text-purple-300 font-semibold">12-16 weeks</span> delivery
             </div>
           </motion.div>
         </div>
@@ -71,17 +71,17 @@ export default function AIBusinessIntelligence() {
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-          <p className="text-xl text-gray-300">Powerful AI-driven capabilities for modern businesses</p>
+          <p className="text-xl text-gray-300">Immersive metaverse development powered by cutting-edge technology</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
-            { icon: Brain, title: "AI-powered data analysis", description: "Advanced machine learning algorithms analyze your data automatically" },
-            { icon: TrendingUp, title: "Predictive analytics", description: "Forecast future trends and identify opportunities before they happen" },
-            { icon: BarChart3, title: "Real-time dashboards", description: "Live monitoring and visualization of your business metrics" },
-            { icon: Users, title: "Natural language queries", description: "Ask questions in plain English and get instant insights" },
-            { icon: Shield, title: "Enterprise security", description: "SOC 2, GDPR, and HIPAA compliant with end-to-end encryption" },
-            { icon: Zap, title: "Automated reporting", description: "Generate comprehensive reports automatically on schedule" }
+            { icon: Globe, title: "3D world building", description: "Advanced 3D environment creation and customization" },
+            { icon: Users, title: "Multi-user experiences", description: "Collaborative virtual spaces and social interactions" },
+            { icon: Eye, title: "VR/AR integration", description: "Seamless virtual and augmented reality support" },
+            { icon: Zap, title: "Real-time rendering", description: "High-performance graphics and smooth interactions" },
+            { icon: Globe, title: "Asset marketplace", description: "Digital asset creation, trading, and monetization" },
+            { icon: Users, title: "Cross-platform support", description: "Accessible across devices and platforms" }
           ].map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -112,10 +112,10 @@ export default function AIBusinessIntelligence() {
       >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business Intelligence?
+            Ready to Build the Future with Metaverse Development?
           </h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            Connect with our team to discuss how AI-powered business intelligence can drive your business forward.
+            Connect with our team to discuss how metaverse development can create immersive digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
