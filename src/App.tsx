@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { ErrorBoundary } from './components/ErrorBoundary';

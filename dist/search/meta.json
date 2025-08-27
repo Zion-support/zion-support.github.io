@@ -20,6 +20,11 @@
     "h1": "2025 Innovative Services Showcase"
   },
   {
+    "route": "/contact",
+    "title": "Contact Us — Zion Tech Group | Get in Touch with AI & Quantum Experts",
+    "h1": "Get in Touch"
+  },
+  {
     "route": "/",
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
     "h1": "Zion Tech Group"
