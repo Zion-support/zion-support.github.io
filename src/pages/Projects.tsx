@@ -7,11 +7,17 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { Clock, Briefcase } from "lucide-react";
 function ProjectsContent() {
+<<<<<<< HEAD
   const { projects, isLoading } = useProjects();
 
   return (
     <>
       <SEOHead title="My Projects | Zion AI Marketplace" description="View and manage your projects." />
+=======
+    const { projects, isLoading } = useProjects();
+    return (<>
+      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">

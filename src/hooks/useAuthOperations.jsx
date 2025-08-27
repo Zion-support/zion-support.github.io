@@ -3,7 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { showApiError } from "@/utils/apiErrorHandler";
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
-import { cleanupAuthState } from "@/utils/authUtils";
+import { cleanupAuthState } from "../utils/auth-utils";
 export function useAuthOperations(setUser, setIsLoading) {
     // Check for referral code in URL when the hook is first used
     useEffect(() => {

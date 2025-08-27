@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -197,6 +198,81 @@ export default function AISolutions() {
 
   return (
     <div className="min-h-screen bg-futuristic">
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket } from 'lucide-react';
+const AISolutions = () => {
+    const aiServices = [
+        {
+            icon: Brain,
+            title: "AI Autonomous Systems",
+            description: "Self-learning AI systems that operate independently and continuously improve performance",
+            features: ["Machine Learning", "Neural Networks", "Predictive Analytics", "Automated Decision Making"],
+            path: "/ai-autonomous-systems"
+        },
+        {
+            icon: Cpu,
+            title: "AI Research Assistant",
+            description: "Intelligent research tools that accelerate discovery and analysis across all domains",
+            features: ["Data Mining", "Pattern Recognition", "Literature Review", "Hypothesis Generation"],
+            path: "/ai-autonomous-research-assistant"
+        },
+        {
+            icon: Shield,
+            title: "AI-Powered Cybersecurity",
+            description: "Advanced threat detection and prevention using artificial intelligence",
+            features: ["Threat Intelligence", "Behavioral Analysis", "Real-time Monitoring", "Automated Response"],
+            path: "/ai-powered-enterprise-security"
+        },
+        {
+            icon: Cloud,
+            title: "AI Business Intelligence",
+            description: "Comprehensive business analytics and insights powered by AI",
+            features: ["Data Visualization", "Predictive Modeling", "Performance Metrics", "Strategic Planning"],
+            path: "/ai-business-intelligence"
+        },
+        {
+            icon: Zap,
+            title: "AI Content Generation",
+            description: "Automated content creation for marketing, documentation, and communication",
+            features: ["Text Generation", "Image Creation", "Video Production", "Multilingual Support"],
+            path: "/ai-content-generator"
+        },
+        {
+            icon: Target,
+            title: "AI Sales & Marketing",
+            description: "Intelligent automation for sales processes and marketing campaigns",
+            features: ["Lead Scoring", "Customer Segmentation", "Campaign Optimization", "ROI Analysis"],
+            path: "/ai-agentic-sales-outreach"
+        }
+    ];
+    const benefits = [
+        {
+            icon: Rocket,
+            title: "Accelerated Innovation",
+            description: "Speed up development cycles and bring new solutions to market faster"
+        },
+        {
+            icon: Users,
+            title: "Enhanced User Experience",
+            description: "Create more intuitive and personalized user interactions"
+        },
+        {
+            icon: BarChart3,
+            title: "Data-Driven Decisions",
+            description: "Make better business decisions with AI-powered insights and analytics"
+        },
+        {
+            icon: Globe,
+            title: "Global Scalability",
+            description: "Scale your operations globally with AI automation and optimization"
+        }
+    ];
+    return (<div className="min-h-screen bg-background pt-20">
+      <SEO title="AI Solutions - Zion Tech Group" description="Discover cutting-edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group." keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence" canonical="https://ziontechgroup.com/ai-solutions"/>
+
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -262,6 +338,7 @@ export default function AISolutions() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -375,11 +452,31 @@ export default function AISolutions() {
                         {benefit}
                       </li>
                     ))}
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => (<div key={service.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group">
+                <div className="p-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-8 h-8 text-white"/>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature) => (<li key={feature} className="flex items-center text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                        {feature}
+                      </li>))}
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                   </ul>
                 </div>
+<<<<<<< HEAD
               </motion.div>
             ))}
           </motion.div>
+=======
+              </div>))}
+          </div>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
         </div>
       </section>
 
@@ -402,6 +499,7 @@ export default function AISolutions() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
@@ -556,6 +654,17 @@ export default function AISolutions() {
               </motion.div>
             ))}
           </motion.div>
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit) => (<div key={benefit.title} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="w-8 h-8 text-white"/>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>))}
+          </div>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
         </div>
       </section>
 
@@ -591,6 +700,12 @@ export default function AISolutions() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
     </div>
   );
 }
+=======
+    </div>);
+};
+export default AISolutions;
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

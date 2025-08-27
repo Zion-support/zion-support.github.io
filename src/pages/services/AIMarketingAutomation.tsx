@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, Analytics } from 'lucide-react';
+=======
+import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, BarChart3 } from 'lucide-react';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 const AIMarketingAutomation = () => {
     const features = [
         {
@@ -17,7 +21,11 @@ const AIMarketingAutomation = () => {
             benefits: ["Dynamic segmentation", "Behavioral analysis", "Predictive modeling", "Personalization"]
         },
         {
+<<<<<<< HEAD
             icon: Analytics,
+=======
+            icon: BarChart3,
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
             title: "Predictive Analytics",
             description: "Forecast customer behavior, campaign performance, and market trends using historical data and AI models",
             benefits: ["Customer lifetime value", "Churn prediction", "Demand forecasting", "Market trends"]
@@ -89,7 +97,11 @@ const AIMarketingAutomation = () => {
         {
             name: "Predictive Analytics",
             description: "Data-driven forecasting and optimization",
+<<<<<<< HEAD
             icon: Analytics
+=======
+            icon: BarChart3
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
         },
         {
             name: "Marketing Automation",

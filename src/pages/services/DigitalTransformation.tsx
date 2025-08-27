@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from "../components/SEOHead"';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, RefreshCw, Target, Users, Zap, Globe } from 'lucide-react';
 
 const DigitalTransformation: React.FC = () => {
@@ -79,6 +80,69 @@ const DigitalTransformation: React.FC = () => {
         keywords="digital transformation, process automation, digital strategy, change management, performance optimization"
         canonical="https://ziontechgroup.com/services/digital-transformation"
       />
+=======
+import { ArrowRight } from 'lucide-react';
+const DigitalTransformation = () => {
+    const transformationServices = [
+        {
+            title: "Process Automation",
+            description: "Streamline operations with intelligent automation solutions",
+            features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Efficiency Metrics"],
+            icon: "🤖"
+        },
+        {
+            title: "Workflow Optimization",
+            description: "Redesign and optimize business workflows for maximum efficiency",
+            features: ["Process Mapping", "Bottleneck Analysis", "Workflow Redesign", "Performance Monitoring"],
+            icon: "📊"
+        },
+        {
+            title: "Change Management",
+            description: "Guide your organization through digital transformation with expert change management",
+            features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
+            icon: "🔄"
+        },
+        {
+            title: "Business Process Optimization",
+            description: "Streamline operations and improve efficiency through digital workflows",
+            features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
+            icon: "⚡"
+        },
+        {
+            title: "Customer Experience Enhancement",
+            description: "Create seamless digital experiences that delight your customers",
+            features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
+            icon: "🎯"
+        },
+        {
+            title: "Data & Analytics Strategy",
+            description: "Leverage data insights to drive informed business decisions",
+            features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
+            icon: "📊"
+        },
+        {
+            title: "Technology Infrastructure",
+            description: "Modernize your technology stack for scalability and performance",
+            features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
+            icon: "🏗️"
+        }
+    ];
+    const benefits = [
+        "Increased operational efficiency by 50%",
+        "Enhanced customer experience and satisfaction",
+        "Reduced operational costs and waste",
+        "Improved decision-making with real-time data",
+        "Competitive advantage in the digital marketplace"
+    ];
+    const transformationApproach = [
+        { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
+        { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
+        { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" },
+        { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
+      <SEO title="Digital Transformation - Zion Tech Group" description="Transform your business for the digital age with our comprehensive digital transformation services." keywords="digital transformation, process automation, digital strategy, change management, performance optimization" canonical="https://ziontechgroup.com/services/digital-transformation"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

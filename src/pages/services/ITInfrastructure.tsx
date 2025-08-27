@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -51,6 +52,43 @@ const ITInfrastructure: React.FC = () => {
         keywords="IT infrastructure, server management, network design, data centers, infrastructure security"
         canonical="https://ziontechgroup.com/services/infrastructure"
       />
+=======
+const ITInfrastructure = () => {
+    const features = [
+        {
+            title: "Network Management",
+            description: "Comprehensive network infrastructure design, implementation, and maintenance",
+            features: ["Network Design", "Performance Optimization", "Security Implementation", "24/7 Monitoring"],
+            icon: "🌐"
+        },
+        {
+            title: "System Administration",
+            description: "Expert management of servers, operating systems, and enterprise applications",
+            features: ["Server Management", "OS Administration", "Application Support", "Performance Tuning"],
+            icon: "🖥️"
+        },
+        {
+            title: "Data Center Operations",
+            description: "Professional data center management and optimization services",
+            features: ["Facility Management", "Power & Cooling", "Hardware Maintenance", "Capacity Planning"],
+            icon: "🏢"
+        },
+        {
+            title: "Performance Optimization",
+            description: "System and network performance analysis and improvement",
+            features: ["Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Capacity Planning"],
+            icon: "⚡"
+        }
+    ];
+    const infrastructureFeatures = [
+        { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
+        { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
+        { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
+        { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
+    ];
+    return (<div className="min-h-screen bg-background">
+      <SEO title="IT Infrastructure - Zion Tech Group" description="Build a robust and scalable IT infrastructure with our expert solutions and management services." keywords="IT infrastructure, server management, network design, data centers, infrastructure security" canonical="https://ziontechgroup.com/services/infrastructure"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       title: "Network Infrastructure",
       description: "Design, implement, and maintain robust network solutions",
       features: ["Network Design", "Wireless Solutions", "VPN Implementation", "Network Security"],
