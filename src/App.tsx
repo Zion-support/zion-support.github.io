@@ -37,6 +37,11 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
+const AIPoweredEmailResponder = React.lazy(() => import('./pages/services/AIPoweredEmailResponder'));
+const MobileFirstSurveyTool = React.lazy(() => import('./pages/services/MobileFirstSurveyTool'));
+const RemoteMeetingSummarizer = React.lazy(() => import('./pages/services/RemoteMeetingSummarizer'));
+const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'));
+const DeveloperAPITester = React.lazy(() => import('./pages/services/DeveloperAPITester'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -100,6 +105,11 @@ function App() {
                 <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                 <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
                 <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                <Route path="/services/ai-email-responder" element={<AIPoweredEmailResponder />} />
+                <Route path="/services/mobile-first-surveys" element={<MobileFirstSurveyTool />} />
+                <Route path="/services/meeting-summarizer" element={<RemoteMeetingSummarizer />} />
+                <Route path="/services/ai-seo-optimizer" element={<AISEOOptimizer />} />
+                <Route path="/services/developer-api-tester" element={<DeveloperAPITester />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

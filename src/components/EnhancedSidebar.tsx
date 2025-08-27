@@ -81,7 +81,12 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu },
         { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp },
         { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain }
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
+        { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain },
+        { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users },
+        { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar },
+        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
+        { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
       ]
     },
     {

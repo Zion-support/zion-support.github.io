@@ -43,6 +43,11 @@ export function AppHeader() {
   ];
 
   const services = [
+    { name: 'AI Email Responder', href: '/services/ai-email-responder', icon: Brain, description: 'On-brand AI replies with HITL and analytics' },
+    { name: 'Mobile Surveys', href: '/services/mobile-first-surveys', icon: Users, description: 'High-converting responsive surveys' },
+    { name: 'Meeting Summarizer', href: '/services/meeting-summarizer', icon: MessageCircle, description: 'Auto minutes, action items, sync to Slack' },
+    { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', icon: TrendingUp, description: 'Briefs, schema, internal linking' },
+    { name: 'Developer API Tester', href: '/services/developer-api-tester', icon: Code, description: 'Mock servers and contract tests' },
     { name: 'AI & Analytics', href: '/services', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'Quantum Computing', href: '/services', icon: Rocket, description: 'Quantum AI & Optimization' },
     { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'AI-Powered Security' },
