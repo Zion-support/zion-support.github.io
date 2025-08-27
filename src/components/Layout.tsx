@@ -418,6 +418,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
 =======
+        </aside>
           <div className="mt-8 pt-8 border-t border-slate-800">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-slate-400 text-sm text-center md:text-left">
@@ -432,6 +433,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
+      {/* Scroll to top button */}
       <ScrollToTop />
       {/* Mobile sidebar toggle */}
       <button

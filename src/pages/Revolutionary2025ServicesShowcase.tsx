@@ -292,7 +292,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               Let our intelligent system find the perfect services for your business needs
             </p>
           </motion.div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30"
@@ -313,7 +312,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <option>Enterprise (200+ employees)</option>
               </select>
             </motion.div>
-            
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-6 rounded-xl border border-purple-500/30"
               initial={{ opacity: 0, y: 30 }}
@@ -335,7 +333,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <option>Education</option>
               </select>
             </motion.div>
-            
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30"
               initial={{ opacity: 0, y: 30 }}
@@ -357,10 +354,117 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               </select>
             </motion.div>
           </div>
-          
           <div className="text-center mt-8">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Get AI Recommendations
+            </button>
+          </div>
+        </div>
+      </section>
+      {/* Service Integration Showcase */}
+      <section className="py-16 bg-gradient-to-r from-violet-900/20 to-fuchsia-900/20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Seamless Service Integration
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our revolutionary services work together to create a comprehensive AI-powered ecosystem
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <motion.div
+              className="bg-gradient-to-r from-violet-600/20 to-purple-700/20 p-6 rounded-xl border border-violet-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center mb-4">
+                <Network className="w-8 h-8 text-violet-400 mr-3" />
+                <h3 className="text-xl font-semibold text-white">AI Autonomous</h3>
+              </div>
+              <p className="text-gray-300 mb-4">Self-driving business operations with intelligent decision-making</p>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
+                  Business Process Automation
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
+                  Intelligent Resource Management
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
+                  Predictive Analytics
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center mb-4">
+                <Atom className="w-8 h-8 text-blue-400 mr-3" />
+                <h3 className="text-xl font-semibold text-white">Quantum Enhanced</h3>
+              </div>
+              <p className="text-gray-300 mb-4">Quantum computing power for complex problem solving</p>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                  Quantum Cryptography
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                  Neural Network Optimization
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                  Financial Modeling
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center mb-4">
+                <Shield className="w-8 h-8 text-green-400 mr-3" />
+                <h3 className="text-xl font-semibold text-white">Cybersecurity</h3>
+              </div>
+              <p className="text-gray-300 mb-4">Advanced threat detection and zero-trust security</p>
+              <div className="space-y-2 text-sm text-gray-300">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  AI-Powered Threat Detection
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Zero-Trust Architecture
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  Compliance Automation
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-gray-400 mb-4">All services integrate seamlessly through our unified API platform</p>
+            <button className="px-8 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-600 rounded-lg font-semibold text-white hover:from-violet-600 hover:to-fuchsia-700 transition-all duration-300">
+              View Integration Guide
             </button>
           </div>
         </div>
@@ -382,7 +486,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               Compare our revolutionary services side by side to find the perfect fit
             </p>
           </motion.div>
-          
           <div className="overflow-x-auto">
             <table className="w-full max-w-7xl mx-auto bg-slate-800/50 rounded-xl overflow-hidden">
               <thead>
@@ -440,7 +543,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               </tbody>
             </table>
           </div>
-          
           <div className="text-center mt-8">
             <p className="text-gray-400 text-sm mb-4">All services include free setup, 45-day trial, and 24/7 support</p>
             <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
@@ -474,7 +576,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -528,7 +629,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-gray-300 mb-4">{service.description}</p>
-                      
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                         <div>
                           <span className="text-sm text-gray-400">Price</span>
@@ -671,7 +771,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
             Choose the perfect plan for your business needs with transparent pricing and unmatched value
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
@@ -705,7 +804,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 Get Started
               </button>
             </motion.div>
-            
             <motion.div
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-8 rounded-xl border-2 border-blue-500/50 transform scale-105"
               initial={{ opacity: 0, y: 30 }}
@@ -745,7 +843,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 Get Started
               </button>
             </motion.div>
-            
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
               initial={{ opacity: 0, y: 30 }}
@@ -787,7 +884,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               </button>
             </motion.div>
           </div>
-          
           <div className="mt-12 text-center">
             <p className="text-gray-400 mb-4">All plans include:</p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
@@ -811,6 +907,329 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           </div>
         </div>
       </section>
+      {/* Service Performance Dashboard */}
+      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Real-Time Service Performance
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Monitor live performance metrics and system health across all our revolutionary services
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-indigo-400 mb-2">99.99%</div>
+              <p className="text-gray-300 text-sm">Uptime</p>
+              <div className="w-16 h-2 bg-gray-700 rounded-full mx-auto mt-2">
+                <div className="w-15 h-2 bg-indigo-500 rounded-full"></div>
+              </div>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-purple-400 mb-2">25ms</div>
+              <p className="text-gray-300 text-sm">Response Time</p>
+              <div className="w-16 h-2 bg-gray-700 rounded-full mx-auto mt-2">
+                <div className="w-14 h-2 bg-purple-500 rounded-full"></div>
+              </div>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-cyan-400 mb-2">1.2M</div>
+              <p className="text-gray-300 text-sm">Requests/min</p>
+              <div className="w-16 h-2 bg-gray-700 rounded-full mx-auto mt-2">
+                <div className="w-16 h-2 bg-cyan-500 rounded-full"></div>
+              </div>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-green-400 mb-2">256-bit</div>
+              <p className="text-gray-300 text-sm">Encryption</p>
+              <div className="w-16 h-2 bg-gray-700 rounded-full mx-auto mt-2">
+                <div className="w-16 h-2 bg-green-500 rounded-full"></div>
+              </div>
+            </motion.div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <motion.div
+              className="bg-gradient-to-r from-indigo-600/20 to-purple-700/20 p-6 rounded-xl border border-indigo-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">AI Services</h3>
+              <div className="space-y-3 text-sm text-gray-300">
+                <div className="flex justify-between">
+                  <span>Processing Speed</span>
+                  <span className="text-green-400">2.5x faster</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Accuracy Rate</span>
+                  <span className="text-green-400">99.8%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Learning Rate</span>
+                  <span className="text-green-400">3.2x faster</span>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-purple-600/20 to-pink-700/20 p-6 rounded-xl border border-purple-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Quantum Services</h3>
+              <div className="space-y-3 text-sm text-gray-300">
+                <div className="flex justify-between">
+                  <span>Computing Power</span>
+                  <span className="text-green-400">1000x faster</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Security Level</span>
+                  <span className="text-green-400">Unbreakable</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Scalability</span>
+                  <span className="text-green-400">Infinite</span>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-pink-600/20 to-red-700/20 p-6 rounded-xl border border-pink-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
+              <div className="space-y-3 text-sm text-gray-300">
+                <div className="flex justify-between">
+                  <span>Threat Detection</span>
+                  <span className="text-green-400">99.99%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Response Time</span>
+                  <span className="text-green-400">50ms</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Zero-Day Protection</span>
+                  <span className="text-green-400">100%</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+          <div className="text-center mt-8">
+            <button className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold text-white hover:from-indigo-600 hover:to-purple-700 transition-all duration-300">
+              View Live Dashboard
+            </button>
+          </div>
+        </div>
+      </section>
+      {/* Customer Success Metrics */}
+      <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Proven Customer Success
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Real results from real businesses using our revolutionary services
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-emerald-400 mb-2">$2.4B</div>
+              <p className="text-gray-300 text-sm">Total Revenue Generated</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-teal-400 mb-2">1,500+</div>
+              <p className="text-gray-300 text-sm">Happy Clients</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-cyan-400 mb-2">800%</div>
+              <p className="text-gray-300 text-sm">Average ROI</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
+              <p className="text-gray-300 text-sm">Uptime Guarantee</p>
+            </motion.div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <motion.div
+              className="bg-gradient-to-r from-emerald-600/20 to-teal-700/20 p-6 rounded-xl border border-emerald-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Fortune 500 Success</h3>
+              <p className="text-gray-300 text-sm mb-4">"Zion Tech Group's AI services increased our operational efficiency by 300% and reduced costs by 40%."</p>
+              <div className="text-emerald-400 text-sm">- Global Manufacturing Corp</div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-teal-600/20 to-cyan-700/20 p-6 rounded-xl border border-teal-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Startup Growth</h3>
+              <p className="text-gray-300 text-sm mb-4">"Their quantum-enhanced solutions helped us scale from 10 to 1000 customers in just 6 months."</p>
+              <div className="text-teal-400 text-sm">- TechStart Inc</div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-6 rounded-xl border border-cyan-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Healthcare Innovation</h3>
+              <p className="text-gray-300 text-sm mb-4">"AI-powered diagnostics improved our accuracy by 95% and reduced patient wait times by 60%."</p>
+              <div className="text-cyan-400 text-sm">- Metro Health Systems</div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* Global Presence & Impact */}
+      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Global Presence & Impact
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Serving clients worldwide with revolutionary technology solutions
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-12">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-amber-400 mb-2">50+</div>
+              <p className="text-gray-300 text-sm">Countries</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-orange-400 mb-2">200+</div>
+              <p className="text-gray-300 text-sm">Cities</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-red-400 mb-2">24/7</div>
+              <p className="text-gray-300 text-sm">Support</p>
+            </motion.div>
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-4xl font-bold text-pink-400 mb-2">15+</div>
+              <p className="text-gray-300 text-sm">Languages</p>
+            </motion.div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            <motion.div
+              className="bg-gradient-to-r from-amber-600/20 to-orange-700/20 p-6 rounded-xl border border-amber-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">North America</h3>
+              <p className="text-gray-300 text-sm mb-4">Headquarters in Delaware, serving Fortune 500 companies across the continent</p>
+              <div className="text-amber-400 text-sm">United States • Canada • Mexico</div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-orange-600/20 to-red-700/20 p-6 rounded-xl border border-orange-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Europe & Asia</h3>
+              <p className="text-gray-300 text-sm mb-4">Strategic partnerships and regional offices serving global enterprises</p>
+              <div className="text-orange-400 text-sm">UK • Germany • Japan • Singapore</div>
+            </motion.div>
+            <motion.div
+              className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-xl font-semibold text-white mb-3">Emerging Markets</h3>
+              <p className="text-gray-300 text-sm mb-4">Expanding presence in high-growth regions with innovative solutions</p>
+              <div className="text-red-400 text-sm">India • Brazil • UAE • Australia</div>
+            </motion.div>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-400 mb-4">Ready to expand globally? Our revolutionary services scale seamlessly worldwide</p>
+            <button className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-600 rounded-lg font-semibold text-white hover:from-amber-600 hover:to-orange-700 transition-all duration-300">
+              Explore Global Solutions
+            </button>
+          </div>
+        </div>
+      </section>
       {/* Call to Action Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
         <div className="container mx-auto px-4 text-center">
@@ -826,7 +1245,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join thousands of businesses already transforming their operations with our revolutionary AI, Quantum, and Autonomous technology solutions
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button
                 onClick={() => setViewMode('grid')}
@@ -841,7 +1259,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 Get Free Consultation
               </a>
             </div>
-            
             <div className="text-gray-400 text-sm">
               <p>🚀 No setup fees • 📞 24/7 support • 💰 45-day free trial</p>
             </div>
@@ -857,11 +1274,9 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
             See how our services evolve and improve over time with cutting-edge technology
           </p>
-          
           <div className="relative max-w-6xl mx-auto">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-amber-500 to-orange-500"></div>
-            
             {/* Timeline Items */}
             <div className="space-y-16">
               <motion.div
@@ -885,7 +1300,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   <div className="text-amber-400 font-bold">Q4 2024</div>
                 </div>
               </motion.div>
-              
               <motion.div
                 className="relative flex items-center"
                 initial={{ opacity: 0, x: 50 }}
@@ -907,7 +1321,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-              
               <motion.div
                 className="relative flex items-center"
                 initial={{ opacity: 0, x: -50 }}
@@ -929,7 +1342,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   <div className="text-red-400 font-bold">Q4 2026</div>
                 </div>
               </motion.div>
-              
               <motion.div
                 className="relative flex items-center"
                 initial={{ opacity: 0, x: 50 }}
@@ -964,7 +1376,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
             Built with the latest AI, Quantum Computing, and Autonomous technologies
           </p>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="text-center group"
@@ -979,7 +1390,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <p className="text-gray-300 text-sm">Advanced Neural Networks, Deep Learning, NLP</p>
               </div>
             </motion.div>
-            
             <motion.div
               className="text-center group"
               initial={{ opacity: 0, y: 30 }}
@@ -993,7 +1403,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <p className="text-gray-300 text-sm">Quantum Algorithms, Superposition, Entanglement</p>
               </div>
             </motion.div>
-            
             <motion.div
               className="text-center group"
               initial={{ opacity: 0, y: 30 }}
@@ -1007,7 +1416,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <p className="text-gray-300 text-sm">Self-Driving Operations, Auto-Scaling, ML-Ops</p>
               </div>
             </motion.div>
-            
             <motion.div
               className="text-center group"
               initial={{ opacity: 0, y: 30 }}
@@ -1022,7 +1430,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               </div>
             </motion.div>
           </div>
-          
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-2xl font-bold text-blue-400 mb-2">99.99%</div>
@@ -1049,7 +1456,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
             Revolutionary Impact by the Numbers
           </h2>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="text-center"
@@ -1061,7 +1467,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">800%</div>
               <p className="text-gray-300">Average ROI</p>
             </motion.div>
-            
             <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
@@ -1072,7 +1477,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">90%</div>
               <p className="text-gray-300">Time Reduction</p>
             </motion.div>
-            
             <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
@@ -1083,7 +1487,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">1,500+</div>
               <p className="text-gray-300">Happy Clients</p>
             </motion.div>
-            
             <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
@@ -1106,7 +1509,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
             Discover how our revolutionary services are transforming businesses across industries
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <motion.div
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
@@ -1128,7 +1530,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <p className="text-gray-400 text-sm">CTO, TechCorp Solutions</p>
               </div>
             </motion.div>
-            
             <motion.div
               className="bg-gradient-to-r from-cyan-600/20 to-blue-700/20 p-8 rounded-xl border border-cyan-500/30"
               initial={{ opacity: 0, y: 30 }}
@@ -1149,7 +1550,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 <p className="text-gray-400 text-sm">CISO, GlobalBank Inc.</p>
               </div>
             </motion.div>
-            
             <motion.div
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
               initial={{ opacity: 0, y: 30 }}
@@ -1182,7 +1582,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact us to learn more about our revolutionary services and how they can drive your success
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
             <div className="flex flex-col items-center">
               <Phone className="w-8 h-8 text-cyan-400 mb-4" />

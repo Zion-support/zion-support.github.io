@@ -1,7 +1,6 @@
 import { useState } from "react";
 export default function Careers() {
   const [activeTab, setActiveTab] = useState("engineering");
-  
   // Sample job listings
   const jobs = {
     engineering: [
@@ -110,7 +109,6 @@ export default function Careers() {
             Help us build the future of AI and technology
           </p>
         </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
@@ -134,7 +132,6 @@ export default function Careers() {
             </div>
           </div>
         </div>
-        
         <div className="mb-24">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -147,10 +144,8 @@ export default function Careers() {
             ))}
           </div>
         </div>
-        
         <div className="mb-24">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
-          
           <div className="w-full">
             <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 mb-8 w-full flex flex-wrap justify-center rounded-lg p-2">
               {Object.keys(jobs).map((department) => (
@@ -167,7 +162,6 @@ export default function Careers() {
                 </button>
               ))}
             </div>
-            
             <div className="space-y-6">
               {jobs[activeTab].map((job, index) => (
                 <div key={index} className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 rounded-xl p-6">
@@ -190,7 +184,6 @@ export default function Careers() {
             </div>
           </div>
         </div>
-        
         <div className="bg-gradient-to-r from-zion-slate-dark/50 to-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 md:p-12 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">

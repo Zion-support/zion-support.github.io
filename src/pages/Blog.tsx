@@ -1,127 +1,244 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from '@/components/ui/select';
-import { Search, Calendar, Clock, User } from 'lucide-react';
-export default function Blog() {
-    const [searchQuery, setSearchQuery] = useState("");
-    const [selectedCategory, setSelectedCategory] = useState("All Categories");
-    const CATEGORIES = [
-        "All Categories",
-        "AI & Machine Learning",
-        "Cybersecurity",
-        "Cloud Computing",
-        "Digital Transformation",
-        "Tech Trends",
-        "Industry Insights"
-    ];
-    const blogPosts = [
-        {
-            id: 1,
-            title: "The Future of AI in Enterprise: 2024 Trends and Predictions",
-            excerpt: "Discover how artificial intelligence is reshaping enterprise operations and what to expect in the coming year.",
-            category: "AI & Machine Learning",
-            author: "Dr. Sarah Chen",
-            publishedDate: "Dec 15, 2024",
-            readTime: "8 min read",
-            slug: "future-ai-enterprise-2024",
-            featuredImage: "/images/blog/ai-enterprise.jpg",
-            isFeatured: true
-        },
-        {
-            id: 2,
-            title: "Zero Trust Security: Building a Modern Cybersecurity Framework",
-            excerpt: "Learn about implementing zero trust security principles to protect your organization from evolving threats.",
-            category: "Cybersecurity",
-            author: "Mike Rodriguez",
-            publishedDate: "Dec 12, 2024",
-            readTime: "6 min read",
-            slug: "zero-trust-security-framework",
-            featuredImage: "/images/blog/zero-trust.jpg",
-            isFeatured: false
-        },
-        {
-            id: 3,
-            title: "Cloud Migration Strategies: A Comprehensive Guide for Enterprises",
-            excerpt: "Navigate the complexities of cloud migration with proven strategies and best practices.",
-            category: "Cloud Computing",
-            author: "Lisa Thompson",
-            publishedDate: "Dec 10, 2024",
-            readTime: "10 min read",
-            slug: "cloud-migration-strategies",
-            featuredImage: "/images/blog/cloud-migration.jpg",
-            isFeatured: false
-        },
-        {
-            id: 4,
-            title: "Digital Transformation: Key Success Factors for Modern Businesses",
-            excerpt: "Explore the essential elements that drive successful digital transformation initiatives.",
-            category: "Digital Transformation",
-            author: "David Kim",
-            publishedDate: "Dec 8, 2024",
-            readTime: "7 min read",
-            slug: "digital-transformation-success-factors",
-            featuredImage: "/images/blog/digital-transformation.jpg",
-            isFeatured: false
-        },
-        {
-            id: 5,
-            title: "Emerging Tech Trends That Will Shape 2025",
-            excerpt: "Stay ahead of the curve with insights into the most promising technology trends for the coming year.",
-            category: "Tech Trends",
-            author: "Alex Johnson",
-            publishedDate: "Dec 5, 2024",
-            readTime: "9 min read",
-            slug: "emerging-tech-trends-2025",
-            featuredImage: "/images/blog/tech-trends.jpg",
-            isFeatured: false
-        },
-        {
-            id: 6,
-            title: "Sustainable Technology: Green IT Solutions for the Future",
-            excerpt: "Discover how organizations are implementing eco-friendly technology solutions.",
-            category: "Industry Insights",
-            author: "Emma Wilson",
-            publishedDate: "Dec 3, 2024",
-            readTime: "5 min read",
-            slug: "sustainable-technology-green-it",
-            featuredImage: "/images/blog/sustainable-tech.jpg",
-            isFeatured: false
-        }
-    ];
-    // Filter blog posts based on search and category
-    const filteredPosts = blogPosts.filter(post => {
-        const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-        const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
-        return matchesSearch && matchesCategory;
-    });
-    // Get featured posts
-    const featuredPosts = blogPosts.filter(post => post.isFeatured);
-    return (
-<>
-            <SEO 
-                title="Blog - AI & Tech Insights" 
-                description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." 
-                keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" 
-                canonical="https://ziontechgroup.com/blog" 
-            />
-            <Header />
-            <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-12 pb-20 px-4">
-                <div className="container mx-auto">
-                    <div className="text-center mb-12">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                            AI & Tech
-                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Insights</span>
-                        </h1>
-                        <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-                            Expert perspectives on artificial intelligence, tech innovation, and digital transformation
-                        </p>
+import { 
+  Search, 
+  Filter, 
+  Calendar, 
+  User, 
+  ArrowRight,
+  Clock,
+  Tag,
+  BookOpen,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  Code,
+  Network,
+  Atom,
+  TrendingUp,
+  Lightbulb,
+  Zap,
+  Globe,
+  Database,
+  Server,
+  Cpu,
+  Lock,
+  Eye,
+  Heart,
+  Share2,
+  MessageCircle,
+  ExternalLink
+} from 'lucide-react';
+const Blog: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const categories = [
+    { id: 'all', name: 'All Posts', icon: BookOpen, count: 24 },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 8 },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 5 },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Rocket, count: 3 },
+    { id: 'development', name: 'Development', icon: Code, count: 2 }
+  ];
+  const blogPosts = [
+    {
+      id: 1,
+      title: 'The Future of AI Consciousness: Breaking New Grounds in 2025',
+      excerpt: 'Explore the latest breakthroughs in AI consciousness research and how Zion Tech Group is pioneering new approaches to understanding artificial intelligence.',
+      author: 'Dr. Sarah Chen',
+      authorRole: 'Chief Executive Officer',
+      publishDate: '2025-01-15',
+      readTime: '8 min read',
+      category: 'ai',
+      tags: ['AI Consciousness', 'Research', 'Innovation', '2025'],
+      featured: true,
+      image: '/api/placeholder/600/400',
+      views: 2847,
+      likes: 156,
+      comments: 23
+    },
+    {
+      id: 2,
+      title: 'Zero-Trust Security Architecture: Protecting Enterprises in the Digital Age',
+      excerpt: 'Learn about implementing zero-trust security principles to protect your organization from modern cyber threats and data breaches.',
+      author: 'Emily Watson',
+      authorRole: 'Chief Security Officer',
+      publishDate: '2025-01-12',
+      readTime: '6 min read',
+      category: 'cybersecurity',
+      tags: ['Zero-Trust', 'Security', 'Enterprise', 'Cybersecurity'],
+      featured: false,
+      image: '/api/placeholder/600/400',
+      views: 1923,
+      likes: 89,
+      comments: 15
+    },
+    {
+      id: 3,
+      title: 'Quantum Computing Revolution: What Businesses Need to Know',
+      excerpt: 'Discover how quantum computing is transforming industries and what steps your business should take to prepare for the quantum future.',
+      author: 'Dr. James Kim',
+      authorRole: 'Chief Research Officer',
+      publishDate: '2025-01-10',
+      readTime: '10 min read',
+      category: 'emerging-tech',
+      tags: ['Quantum Computing', 'Business Strategy', 'Innovation', 'Technology'],
+      featured: false,
+      image: '/api/placeholder/600/400',
+      views: 1654,
+      likes: 72,
+      comments: 18
+    },
+    {
+      id: 4,
+      title: 'Cloud-Native Development: Building Scalable Applications for the Future',
+      excerpt: 'Master the principles of cloud-native development and learn how to build applications that scale automatically and handle modern workloads.',
+      author: 'Michael Rodriguez',
+      authorRole: 'Chief Technology Officer',
+      publishDate: '2025-01-08',
+      readTime: '7 min read',
+      category: 'cloud',
+      tags: ['Cloud-Native', 'Development', 'Scalability', 'Microservices'],
+      featured: false,
+      image: '/api/placeholder/600/400',
+      views: 1432,
+      likes: 65,
+      comments: 12
+    },
+    {
+      id: 5,
+      title: 'AI-Powered Business Intelligence: Transforming Data into Actionable Insights',
+      excerpt: 'See how artificial intelligence is revolutionizing business intelligence and helping companies make data-driven decisions faster than ever.',
+      author: 'Dr. Sarah Chen',
+      authorRole: 'Chief Executive Officer',
+      publishDate: '2025-01-05',
+      readTime: '9 min read',
+      category: 'ai',
+      tags: ['Business Intelligence', 'AI', 'Analytics', 'Data Science'],
+      featured: false,
+      image: '/api/placeholder/600/400',
+      views: 1876,
+      likes: 94,
+      comments: 21
+    },
+    {
+      id: 6,
+      title: 'DevOps Best Practices: Accelerating Software Delivery in 2025',
+      excerpt: 'Learn the latest DevOps practices and tools that are helping development teams deliver software faster and more reliably.',
+      author: 'Michael Rodriguez',
+      authorRole: 'Chief Technology Officer',
+      publishDate: '2025-01-03',
+      readTime: '6 min read',
+      category: 'cloud',
+      tags: ['DevOps', 'CI/CD', 'Automation', 'Software Delivery'],
+      featured: false,
+      image: '/api/placeholder/600/400',
+      views: 1234,
+      likes: 58,
+      comments: 9
+    }
+  ];
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+  const featuredPost = blogPosts.find(post => post.featured);
+  const regularPosts = filteredPosts.filter(post => !post.featured);
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-6xl mx-auto">
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold mb-8"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Zion Tech <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                Blog
+              </span>
+            </motion.h1>
+            <motion.p 
+              className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Insights, updates, and thought leadership from our team of technology experts. 
+              Stay ahead of the curve with the latest in AI, cybersecurity, and emerging tech.
+            </motion.p>
+            {/* Search and Filter */}
+            <motion.div 
+              className="max-w-4xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <div className="flex flex-col md:flex-row gap-4 mb-8">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+                  <input
+                    type="text"
+                    placeholder="Search articles, topics, or authors..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <Filter className="w-5 h-5 text-zion-cyan" />
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="px-4 py-3 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl text-white focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
+                  >
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.name} ({category.count})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* Featured Post */}
+      {featuredPost && (
+        <section className="py-20 bg-zion-slate-dark/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Featured</span> Article
+              </h2>
+            </motion.div>
+            <motion.div
+              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                <div className="relative h-64 lg:h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <BookOpen className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
+                      <p className="text-zion-slate-light">Featured Image</p>
                     </div>
                     {/* Featured Post Section */}
                     {featuredPosts.length > 0 && (

@@ -1,32 +1,38 @@
-const CACHE_NAME = 'zion-tech-group-v1.0.0';
-const STATIC_CACHE = 'zion-static-v1.0.0';
-const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
-// Files to cache immediately
-const STATIC_FILES = [
+// Install event - cache static files
+=======
+const CACHE_NAME = 'zion-tech-group-v1';
+const urlsToCache = [
   '/',
-  '/index.html',
+  '/offline.html',
   '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json',
-  '/favicon.ico',
-  '/images/zion-logo.png',
-  '/images/zion-tech-group-og.jpg'
+  '/static/css/main.css'
 ];
 // Install event - cache resources
-=======
-// Install event - cache static files
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('Opened cache');
-        return cache.addAll(STATIC_FILES);
-      })
-      .catch((error) => {
-        console.error('Cache installation failed:', error);
+        return cache.addAll(urlsToCache);
       })
   );
   self.skipWaiting();
+});
+// Fetch event - serve from cache when offline
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
+      })
+      .catch(() => {
+        // Return offline page if both cache and network fail
+        if (event.request.mode === 'navigate') {
+          return caches.match('/offline.html');
+        }
+      })
+  );
 });
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
@@ -34,7 +40,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+          if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
           }
@@ -44,7 +50,6 @@ self.addEventListener('activate', (event) => {
   );
   self.clients.claim();
 });
-=======
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
@@ -113,6 +118,7 @@ async function networkFirst(request, cacheName) {
     return new Response('Network error', { status: 503 });
   }
 }
+=======
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
@@ -121,44 +127,39 @@ self.addEventListener('sync', (event) => {
 });
 async function doBackgroundSync() {
   try {
-    // Process any pending offline actions
-    console.log('Background sync triggered');
-    // You can implement offline action processing here
-    // For example, sending queued form submissions
+    // Perform background sync operations
+    console.log('Background sync completed');
   } catch (error) {
     console.error('Background sync failed:', error);
   }
 }
 // Push notification handling
 self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/images/zion-logo.png',
-      badge: '/images/zion-logo.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: 1
+  const options = {
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'Explore',
+        icon: '/icon-192x192.png'
       },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Explore',
-          icon: '/images/zion-logo.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/images/zion-logo.png'
-        }
-      ]
-    };
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icon-192x192.png'
+      }
+    ]
+  };
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
 });
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
@@ -168,21 +169,4 @@ self.addEventListener('notificationclick', (event) => {
       clients.openWindow('/')
     );
   }
-});
-// Message handling for communication with main thread
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-  if (event.data && event.data.type === 'GET_VERSION') {
-    event.ports[0].postMessage({ version: CACHE_NAME });
-  }
-});
-// Error handling
-self.addEventListener('error', (event) => {
-  console.error('Service worker error:', event.error);
-});
-// Unhandled rejection handling
-self.addEventListener('unhandledrejection', (event) => {
-  console.error('Service worker unhandled rejection:', event.reason);
 });
