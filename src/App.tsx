@@ -30,7 +30,6 @@ const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Team = React.lazy(() => import('./pages/Team'));
 const News = React.lazy(() => import('./pages/News'));

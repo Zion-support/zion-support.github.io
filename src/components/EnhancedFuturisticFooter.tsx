@@ -366,7 +366,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </motion.div>
         ))}
       </div>
-      </div>
     </footer>
   );
 };
