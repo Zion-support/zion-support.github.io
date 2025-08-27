@@ -56,15 +56,15 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         <AppHeader />
-        
         <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              {/* Main pages */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
@@ -116,7 +116,6 @@ function App() {
             </Routes>
           </Suspense>
         </main>
-
         <Footer />
         <ChatAssistant />
       </div>

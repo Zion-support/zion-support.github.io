@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Badge = ({ children, className = '', variant = 'default' }) => {
     const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
     const variantClasses = {
@@ -12,7 +11,6 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
         <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
             {children}
         </div>
-========
     return (
       <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
         {children}
@@ -20,4 +18,6 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
     );
 };
 
+    );
+};
 export { Badge };

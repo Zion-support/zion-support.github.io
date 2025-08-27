@@ -12,10 +12,11 @@ import {
   BookOpen,
   MessageCircle,
   Heart,
-  Eye
+  Eye,
+  ArrowRight
 } from "lucide-react";
 
-export default function BlogPost() {
+function BlogPost() {
   const { id } = useParams();
   
   // Mock blog post data - in a real app, this would come from an API
@@ -40,190 +41,87 @@ export default function BlogPost() {
         <li><strong>Conversational AI:</strong> Chatbots and virtual assistants are improving customer service and engagement</li>
         <li><strong>AI in Cybersecurity:</strong> Machine learning is enhancing threat detection and response capabilities</li>
       </ul>
-      
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Predictions for 2024 and Beyond</h2>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        Looking ahead, we can expect several developments that will further accelerate AI adoption in business environments. These predictions are based on current trends, technological advances, and market dynamics.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">1. Increased Focus on AI Ethics and Governance</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        As AI becomes more pervasive, businesses will need to establish clear guidelines for responsible AI use. This includes addressing bias, ensuring transparency, and maintaining human oversight in critical decision-making processes.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">2. Rise of AI-Augmented Workforces</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        Rather than replacing humans, AI will increasingly augment human capabilities. We'll see more collaborative workflows where AI handles routine tasks while humans focus on creative problem-solving and strategic thinking.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">3. Hyper-Personalization at Scale</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        AI will enable businesses to deliver highly personalized experiences to individual customers at scale. This goes beyond basic recommendations to include customized products, services, and communication strategies.
-      </p>
-      
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Implementation Strategies for Businesses</h2>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        Successfully implementing AI requires careful planning and a strategic approach. Here are key considerations for businesses looking to adopt AI technologies.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">Start with Clear Objectives</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        Before diving into AI implementation, clearly define what you want to achieve. Whether it's improving customer satisfaction, reducing operational costs, or gaining market insights, having specific goals will guide your AI strategy.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">Invest in Data Quality</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        AI systems are only as good as the data they're trained on. Ensure you have clean, well-organized data and establish processes for ongoing data management and quality control.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">Build Internal AI Capabilities</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        While external AI services can provide quick wins, building internal expertise will be crucial for long-term success. Consider training existing staff and hiring AI specialists to develop custom solutions.
-      </p>
-      
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Challenges and Considerations</h2>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        Despite the tremendous potential of AI, businesses face several challenges in implementation and adoption.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">Data Privacy and Security</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        As AI systems process increasing amounts of data, concerns about privacy and security become paramount. Businesses must implement robust security measures and ensure compliance with relevant regulations.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">Change Management</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        AI adoption often requires significant changes to business processes and workflows. Effective change management strategies are essential to ensure smooth transitions and employee buy-in.
-      </p>
-      
-      <h3 class="text-xl font-semibold text-white mb-3 mt-6">Cost and ROI</h3>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        AI implementation can be expensive, and the return on investment may not be immediate. Businesses need to carefully evaluate costs and benefits, considering both short-term and long-term impacts.
-      </p>
-      
-      <h2 class="text-2xl font-bold text-white mb-4 mt-8">Looking Ahead</h2>
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        The future of AI in business is bright, but success will depend on how well organizations adapt to this rapidly evolving landscape. Companies that embrace AI strategically and responsibly will be best positioned to thrive in the digital economy.
-      </p>
-      
-      <p class="mb-6 text-zion-slate-light leading-relaxed">
-        As we continue through 2024, we can expect to see even more innovative AI applications emerge. The key is to stay informed, be strategic in your approach, and always keep your business objectives and customer needs at the center of your AI initiatives.
-      </p>
     `,
-    author: "Kleber",
-    authorAvatar: "K",
-    date: "2024-01-15",
-    readTime: "5 min read",
-    category: "AI & Machine Learning",
-    tags: ["AI", "Business", "Technology", "Trends", "Digital Transformation", "Innovation"],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&h=600",
+    author: "Kleber Santos",
+    authorAvatar: "KS",
+    publishDate: "2024-01-15",
+    readTime: "8 min read",
     views: "2.4k",
-    likes: 156,
-    comments: 23
+    likes: "156",
+    comments: "23",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop",
+    tags: ["AI", "Business", "Technology", "Innovation"],
+    relatedPosts: [
+      {
+        id: "2",
+        title: "AI-Powered Cybersecurity: Protecting Your Business",
+        excerpt: "Learn how AI is revolutionizing cybersecurity and protecting businesses from evolving threats.",
+        category: "Cybersecurity",
+        readTime: "6 min read",
+        publishDate: "2024-01-10",
+        slug: "ai-cybersecurity"
+      },
+      {
+        id: "3",
+        title: "The Rise of Quantum Computing in Business",
+        excerpt: "Explore how quantum computing will transform business operations and create new opportunities.",
+        category: "Quantum Computing",
+        readTime: "7 min read",
+        publishDate: "2024-01-05",
+        slug: "quantum-computing-business"
+      }
+    ]
   };
 
-  const relatedPosts = [
-    {
-      id: "2",
-      title: "Cybersecurity Best Practices for Small Businesses",
-      excerpt: "Essential security measures that every small business should implement to protect against cyber threats.",
-      category: "Cybersecurity",
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&h=200"
-    },
-    {
-      id: "3",
-      title: "Cloud Migration Strategies: A Complete Guide",
-      excerpt: "Step-by-step approach to migrating your business to the cloud while minimizing downtime and risks.",
-      category: "Cloud & DevOps",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=400&h=200"
-    }
-  ];
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">
-      {/* Back Navigation */}
-      <section className="py-6 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5" />
-            Back to Blog
-          </Link>
-        </div>
-      </section>
-
-      {/* Article Header */}
-      <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {/* Category and Date */}
-            <div className="flex items-center gap-4 mb-6">
-              <span className="px-4 py-2 bg-zion-purple/80 text-white text-sm rounded-full">
-                {blogPost.category}
-              </span>
-              <div className="flex items-center gap-4 text-zion-slate-light text-sm">
-                <div className="flex items-center gap-1">
-                  <Calendar className="h-4 w-4" />
-                  {new Date(blogPost.date).toLocaleDateString()}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
-                  {blogPost.readTime}
-                </div>
-              </div>
-            </div>
-
-            {/* Title */}
-            <motion.h1 
-              className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-20" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              {blogPost.title}
-            </motion.h1>
-
-            {/* Excerpt */}
-            <motion.p 
-              className="text-xl text-zion-slate-light mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {blogPost.excerpt}
-            </motion.p>
-
-            {/* Author and Stats */}
-            <motion.div 
-              className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-8 border-b border-zion-purple/30"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-zion-purple/80 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                  {blogPost.authorAvatar}
-                </div>
-                <div>
-                  <p className="text-white font-medium">{blogPost.author}</p>
-                  <p className="text-zion-slate-light text-sm">Zion Tech Group</p>
-                </div>
-              </div>
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors mb-8"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Back to Blog
+              </Link>
               
-              <div className="flex items-center gap-6 text-zion-slate-light text-sm">
-                <div className="flex items-center gap-1">
-                  <Eye className="h-4 w-4" />
-                  {blogPost.views}
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                {blogPost.title}
+              </h1>
+              
+              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                {blogPost.excerpt}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-zion-slate-light">
+                <div className="flex items-center gap-2">
+                  <User className="h-5 w-5" />
+                  <span>{blogPost.author}</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <Heart className="h-4 w-4" />
-                  {blogPost.likes}
+                <div className="flex items-center gap-2">
+                  <Calendar className="h-5 w-5" />
+                  <span>{formatDate(blogPost.publishDate)}</span>
                 </div>
-                <div className="flex items-center gap-1">
-                  <MessageCircle className="h-4 w-4" />
-                  {blogPost.comments}
+                <div className="flex items-center gap-2">
+                  <Clock className="h-5 w-5" />
+                  <span>{blogPost.readTime}</span>
                 </div>
               </div>
             </motion.div>
@@ -272,27 +170,6 @@ export default function BlogPost() {
                     ))}
                   </div>
                 </div>
-
-                {/* Share and Actions */}
-                <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <span className="text-zion-slate-light">Share:</span>
-                    <button className="p-2 bg-zion-purple/20 rounded-lg hover:bg-zion-purple/40 transition-colors">
-                      <Share2 className="h-5 w-5 text-zion-cyan" />
-                    </button>
-                  </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <button className="flex items-center gap-2 px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 rounded-lg hover:bg-zion-purple/40 transition-colors">
-                      <Heart className="h-5 w-5 text-zion-cyan" />
-                      Like
-                    </button>
-                    <button className="flex items-center gap-2 px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 rounded-lg hover:bg-zion-purple/40 transition-colors">
-                      <MessageCircle className="h-5 w-5 text-zion-cyan" />
-                      Comment
-                    </button>
-                  </div>
-                </div>
               </motion.div>
 
               {/* Sidebar */}
@@ -329,37 +206,9 @@ export default function BlogPost() {
                     </div>
                   </div>
                 </div>
-
-                {/* Related Posts */}
-                <div className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4">Related Articles</h3>
-                  <div className="space-y-4">
-                    {relatedPosts.map((post) => (
-                      <Link
-                        key={post.id}
-                        to={`/blog/${post.id}`}
-                        className="block group"
-                      >
-                        <div className="aspect-video rounded-lg overflow-hidden mb-3">
-                          <img
-                            src={post.image}
-                            alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <span className="text-xs text-zion-cyan bg-zion-purple/20 px-2 py-1 rounded">
-                          {post.category}
-                        </span>
-                        <h4 className="text-sm font-medium text-white mt-2 group-hover:text-zion-cyan transition-colors">
-                          {post.title}
-                        </h4>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
               </motion.div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -452,6 +301,6 @@ export default function BlogPost() {
       </section>
     </div>
   );
-};
+}
 
 export default BlogPost;

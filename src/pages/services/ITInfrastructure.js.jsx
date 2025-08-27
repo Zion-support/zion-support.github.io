@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+
 const ITInfrastructure = () => {
   const features = [
     {
@@ -28,18 +29,21 @@ const ITInfrastructure = () => {
       icon: "⚡"
     }
   ];
+
   const infrastructureFeatures = [
     { name: "High Availability", icon: "🔄", description: "99.9% uptime guarantee with redundancy" },
     { name: "Scalable Solutions", icon: "📈", description: "Infrastructure that grows with your business" },
     { name: "Proactive Monitoring", icon: "👁️", description: "24/7 monitoring and alerting" },
     { name: "Expert Support", icon: "👨‍💻", description: "Certified engineers and technicians" }
   ];
+
   const infrastructureAreas = [
     { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
     { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
     { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
+
   return (
     <>
       <Helmet>
@@ -50,6 +54,7 @@ const ITInfrastructure = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>
         <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>
       </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -74,6 +79,7 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
+
         {/* Features Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -85,6 +91,7 @@ const ITInfrastructure = () => {
                 Comprehensive IT infrastructure services for modern businesses
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -104,6 +111,7 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
+
         {/* Infrastructure Areas */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -115,6 +123,7 @@ const ITInfrastructure = () => {
                 Multi-layered approach to building robust IT infrastructure
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -132,6 +141,7 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
+
         {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -143,6 +153,7 @@ const ITInfrastructure = () => {
                 Proven expertise and cutting-edge technology for reliable infrastructure
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -153,6 +164,7 @@ const ITInfrastructure = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
                 <p className="text-gray-300">99.9% uptime guarantee with redundant systems</p>
               </div>
+              
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,6 +174,7 @@ const ITInfrastructure = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Scalability</h3>
                 <p className="text-gray-300">Grow your infrastructure as your business expands</p>
               </div>
+              
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -174,6 +187,7 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
@@ -192,4 +206,5 @@ const ITInfrastructure = () => {
     </>
   );
 };
+
 export default ITInfrastructure;

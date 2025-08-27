@@ -1,11 +1,10 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { EnhancedFuturisticNavigation } from './components/EnhancedFuturisticNavigation';
-import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
-import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
+import { AppHeader } from './layout/AppHeader';
+import Footer from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import SEO from './components/SEO';
+import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
@@ -25,16 +24,9 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
-// Enhanced services pages
-const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
-const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
+// Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
-const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
-const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
-const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
-const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -74,16 +66,12 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="App">
-          {/* Animated Background */}
-          <FuturisticAnimatedBackground />
+        <div className="min-h-screen bg-futuristic">
+          <SEO />
+          <AppHeader />
           
-          {/* Enhanced Futuristic Navigation */}
-          <EnhancedFuturisticNavigation />
-          
-          {/* Main Content */}
-          <main className="pt-24">
-            <Suspense fallback={<LoadingSpinner size="xl" />}>
+          <main className="flex-1">
+            <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -101,17 +89,6 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 
-                {/* Enhanced Services Routes */}
-                <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
-                <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
-                <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
-                <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
-                <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
-                <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
-                <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
-                <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
-                <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
-                
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -125,10 +102,7 @@ function App() {
             </Suspense>
           </main>
           
-          {/* Enhanced Futuristic Footer */}
-          <EnhancedFuturisticFooter />
-          
-          {/* Chat Assistant */}
+          <Footer />
           <ChatAssistant />
           <PerformanceOptimizer />
         </div>

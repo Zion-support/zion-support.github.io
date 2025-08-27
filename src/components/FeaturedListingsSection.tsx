@@ -1,34 +1,93 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Star, ArrowRight } from 'lucide-react';
 
-interface FeaturedService {
-  title: string;
-  description: string;
-  category: string;
-  rating: number;
-  reviews: number;
-  price: string;
-  image: string;
-  link: string;
-  features: string[];
-}
+const featuredListings = [
+  {
+    id: 1,
+    title: "AI-Powered E-commerce Platform",
+    category: "Web Development",
+    description: "Modern e-commerce solution with AI-driven product recommendations and personalized shopping experience",
+    rating: 4.9,
+    reviews: 127,
+    views: 2847,
+    likes: 156,
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    price: "$15,000",
+    tags: ["React", "Node.js", "AI/ML", "E-commerce"],
+    duration: "3-4 months",
+    team: "5 experts",
+    location: "Remote",
+    featured: true,
+    technologies: ["React", "Node.js", "MongoDB", "AI/ML", "AWS"],
+    highlights: ["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"]
+  },
+  {
+    id: 2,
+    title: "Mobile Banking Application",
+    category: "Mobile Development",
+    description: "Secure and user-friendly mobile banking app with biometric authentication and real-time transactions",
+    rating: 4.8,
+    reviews: 89,
+    views: 1956,
+    likes: 134,
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    price: "$22,000",
+    tags: ["React Native", "Security", "FinTech", "Biometrics"],
+    duration: "4-5 months",
+    team: "6 experts",
+    location: "Hybrid",
+    featured: true,
+    technologies: ["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],
+    highlights: ["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"]
+  },
+  {
+    id: 3,
+    title: "Cloud Infrastructure Migration",
+    category: "Cloud & DevOps",
+    description: "Complete migration from on-premise to cloud with automated CI/CD pipelines and monitoring",
+    rating: 4.7,
+    reviews: 156,
+    views: 3241,
+    likes: 189,
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
+    price: "$18,500",
+    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"],
+    duration: "2-3 months",
+    team: "4 experts",
+    location: "On-site",
+    featured: true,
+    technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],
+    highlights: ["Zero Downtime", "Auto-scaling", "Monitoring", "Security"]
+  }
+];
 
-const featuredServices: FeaturedService[] = [
+const featuredServices = [
   {
     title: 'AI-Powered Business Intelligence',
     description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-    category: 'AI & Analytics',
+    category: 'AI Solutions',
     rating: 4.9,
     reviews: 127,
-    price: 'From $2,500/month',
+    price: 'From $2,500',
     image: '🤖',
-    link: '/services/ai-business-intelligence',
-    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration']
+    link: '/services/ai',
+    features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
   },
   {
-    title: 'Cybersecurity & Threat Intelligence',
+    title: 'Cloud Migration & Optimization',
+    description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
+    category: 'Cloud & DevOps',
+    rating: 4.8,
+    reviews: 89,
+    price: 'From $5,000',
+    image: '☁️',
+    link: '/services/cloud',
+    features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
+  },
+  {
+    title: 'Cybersecurity Assessment & Implementation',
     description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
     category: 'Cybersecurity',
     rating: 4.9,
@@ -36,63 +95,18 @@ const featuredServices: FeaturedService[] = [
     price: 'From $3,500',
     image: '🔒',
     link: '/services/cybersecurity',
-    features: ['Security Audits', 'Threat Detection', 'Incident Response', 'Compliance Management']
-  },
-  {
-    title: 'Cloud Migration & DevOps',
-    description: 'Seamless cloud migration with automated DevOps pipelines for continuous delivery.',
-    category: 'Cloud & DevOps',
-    rating: 4.8,
-    reviews: 89,
-    price: 'From $5,000',
-    image: '☁️',
-    link: '/services/cloud-migration',
-    features: ['Infrastructure as Code', 'CI/CD Pipelines', 'Monitoring & Alerting', 'Cost Optimization']
-  },
-  {
-    title: 'Blockchain & DeFi Solutions',
-    description: 'Next-generation decentralized finance and blockchain infrastructure development.',
-    category: 'Blockchain',
-    rating: 4.7,
-    reviews: 73,
-    price: 'From $8,000',
-    image: '⛓️',
-    link: '/services/blockchain-defi',
-    features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Cross-chain Solutions']
-  },
-  {
-    title: 'IoT & Edge Computing',
-    description: 'Connected device management and real-time data processing at the edge.',
-    category: 'IoT & Edge',
-    rating: 4.6,
-    reviews: 94,
-    price: 'From $4,200',
-    image: '🌐',
-    link: '/services/iot-edge',
-    features: ['Device Management', 'Data Analytics', 'Security Protocols', 'Scalable Architecture']
-  },
-  {
-    title: 'Digital Transformation',
-    description: 'End-to-end digital transformation services for modern business operations.',
-    category: 'Digital Transformation',
-    rating: 4.8,
-    reviews: 112,
-    price: 'From $15,000',
-    image: '🚀',
-    link: '/services/digital-transformation',
-    features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Technology Strategy']
+    features: ['Security Audits', 'Threat Detection', 'Incident Response']
   }
 ];
 
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
+  const [showFilters, setShowFilters] = useState(false);
 
-  const filteredServices = selectedCategory === "All" 
-    ? featuredServices 
-    : featuredServices.filter(service => service.category === selectedCategory);
-
-  const categories = ["All", ...Array.from(new Set(featuredServices.map(service => service.category)))];
+  const filteredListings = selectedCategory === "All" 
+    ? featuredListings 
+    : featuredListings.filter(listing => listing.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -105,169 +119,86 @@ export function FeaturedListingsSection() {
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
-      <Star 
-        key={i} 
-        className={`w-4 h-4 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
-      />
+      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
+        ★
+      </span>
     ));
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Featured <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Services</span>
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Featured Services
           </h2>
-          <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Discover our most popular and highly-rated technology solutions
           </p>
-        </motion.div>
-
-        {/* Category Filter */}
-        <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25'
-                  : 'bg-white text-gray-600 border border-gray-200 hover:border-blue-300 hover:text-blue-600'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
+        </div>
         
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              onHoverStart={() => setHoveredListing(index)}
-              onHoverEnd={() => setHoveredListing(null)}
-              whileHover={{ y: -8 }}
-              transition={{ duration: 0.3 }}
-              className="group"
-            >
-              <div className="bg-white rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300 overflow-hidden h-full">
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                    <div className="flex items-center space-x-1">
-                      {renderStars(service.rating)}
-                      <span className="text-sm text-gray-600 ml-1">({service.reviews})</span>
-                    </div>
-                  </div>
-                  
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {service.image}
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600">
-                          <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-gray-900">{service.price}</span>
-                    <Link
-                      to={service.link}
-                      className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline flex items-center gap-1"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </Link>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredServices.map((service, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                    {service.category}
+                  </span>
+                  <div className="flex items-center space-x-1">
+                    {renderStars(service.rating)}
+                    <span className="text-sm text-gray-600 ml-1">({service.reviews})</span>
                   </div>
                 </div>
                 
-                <div className="px-6 pb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {service.image}
+                </div>
+                
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-gray-900">{service.price}</span>
                   <Link
                     to={service.link}
-                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-blue-600/25"
+                    className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
                   >
-                    Get Started
+                    Learn More →
                   </Link>
                 </div>
               </div>
-            </motion.div>
+              
+              <div className="px-6 pb-6">
+                <Link
+                  to={service.link}
+                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
           ))}
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-blue-600/25"
-          >
-            View All Services
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
