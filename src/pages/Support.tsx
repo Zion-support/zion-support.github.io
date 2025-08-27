@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Search, 
   MessageCircle, 
@@ -42,6 +42,7 @@ import {
 
 export default function Support() {
   const [activeCategory, setActiveCategory] = useState('general');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const faqCategories = {
     general: [
@@ -104,37 +105,6 @@ export default function Support() {
 
   const supportChannels = [
     {
-      name: '24/7 Email Support',
-      description: 'Get help anytime via email',
-      icon: '📧',
-      response: 'Within 2 hours',
-      link: '/contact'
-    },
-    {
-      name: 'Phone Support',
-      description: 'Speak directly with our experts',
-      icon: '📞',
-      response: 'Within 15 minutes',
-      link: '/contact'
-    },
-    {
-      name: 'Live Chat',
-      description: 'Real-time assistance',
-      icon: '💬',
-      response: 'Instant',
-      link: '/contact'
-    },
-    {
-      name: 'Knowledge Base',
-      description: 'Self-service resources',
-      icon: '📚',
-      response: 'Always available',
-      link: '/docs'
-    }
-  ];
-
-  const supportChannels = [
-    {
       title: 'Getting Started Guide',
       description: 'Step-by-step guide to implementing our solutions',
       icon: '🚀',
@@ -169,564 +139,335 @@ export default function Support() {
       description: 'Connect with other users and experts',
       icon: '👥',
       link: '/community'
-import { 
-  Ticket, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
-  Video, 
-  Users, 
-  Search,
-  Clock,
-  CheckCircle,
-  AlertTriangle,
-  XCircle,
-  Plus,
-  Filter,
-  Calendar
-} from 'lucide-react';
-
-const Support: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const supportTickets = [
-    {
-      id: "TICKET-001",
-      title: "API Integration Issue",
-      status: "open",
-      priority: "high",
-      category: "Technical",
-      assignedTo: "Support Team",
-      createdAt: "2025-01-20T10:30:00Z",
-      lastUpdated: "2025-01-20T15:45:00Z",
-      description: "Experiencing authentication errors when integrating with the REST API"
-    },
-    {
-      id: "TICKET-002",
-      title: "Billing Question",
-      status: "in-progress",
-      priority: "medium",
-      category: "Billing",
-      assignedTo: "Billing Team",
-      createdAt: "2025-01-19T14:20:00Z",
-      lastUpdated: "2025-01-20T09:15:00Z",
-      description: "Need clarification on monthly subscription charges"
-    },
-    {
-      id: "TICKET-003",
-      title: "Feature Request",
-      status: "closed",
-      priority: "low",
-      category: "Feature Request",
-      assignedTo: "Product Team",
-      createdAt: "2025-01-15T11:00:00Z",
-      lastUpdated: "2025-01-18T16:30:00Z",
-      description: "Request for additional export formats in the dashboard"
     }
   ];
 
-  const knowledgeBase = [
-    {
-      title: "Getting Started Guide",
-      category: "Onboarding",
-      description: "Complete guide to setting up your account and first project",
-      readTime: "5 min read",
-      tags: ["beginner", "setup", "onboarding"]
-    },
-    {
-      title: "API Authentication",
-      category: "Technical",
-      description: "Step-by-step guide to API key management and authentication",
-      readTime: "8 min read",
-      tags: ["api", "authentication", "security"]
-    },
-    {
-      title: "Troubleshooting Common Issues",
-      category: "Troubleshooting",
-      description: "Solutions to frequently encountered problems and errors",
-      readTime: "12 min read",
-      tags: ["troubleshooting", "errors", "solutions"]
-    },
-    {
-      title: "Best Practices",
-      category: "Guidelines",
-      description: "Recommended practices for optimal performance and security",
-      readTime: "10 min read",
-      tags: ["best-practices", "performance", "security"]
-
-const Support: React.FC = () => {
-  const supportChannels = [
+  const contactInfo = [
     {
       title: "Technical Support",
       description: "Get help with technical issues and system problems",
       contact: "support@ziontechgroup.com",
-      response: "Within 4 hours"
+      response: "Within 4 hours",
+      icon: Cpu
     },
     {
       title: "Sales & Billing",
       description: "Questions about our services, pricing, and billing",
       contact: "sales@ziontechgroup.com",
-      response: "Within 2 hours"
+      response: "Within 2 hours",
+      icon: CreditCard
     },
     {
       title: "General Inquiries",
       description: "General questions about Zion Tech Group",
       contact: "info@ziontechgroup.com",
-      response: "Within 24 hours"
+      response: "Within 24 hours",
+      icon: HelpCircle
     },
     {
       title: "Emergency Support",
       description: "Critical system issues requiring immediate attention",
       contact: "+1 (302) 464-0950",
-      response: "Immediate"
+      response: "Immediate",
+      icon: AlertCircle
     }
   ];
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'open':
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
-      case 'in-progress':
-        return <Clock className="w-4 h-4 text-blue-500" />;
-      case 'closed':
-        return <CheckCircle className="w-4 h-4 text-green-500" />;
-      default:
-        return <AlertTriangle className="w-4 h-4 text-gray-500" />;
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
     }
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'open':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
-      case 'in-progress':
-        return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
-      case 'closed':
-        return 'bg-green-500/20 text-green-400 border-green-500/30';
-      default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
-    }
-  };
-
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'high':
-        return 'bg-red-500/20 text-red-400 border-red-500/30';
-      case 'medium':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
-      case 'low':
-        return 'bg-green-500/20 text-green-400 border-green-500/30';
-      default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
-    }
-  };
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'short', 
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
-
-  const filteredTickets = supportTickets.filter(ticket =>
-    ticket.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    ticket.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    ticket.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  const filteredIssues = commonIssues.filter(issue => {
-    const matchesSearch = issue.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         issue.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         issue.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || issue.category === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
-
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'easy': return 'bg-green-500';
-      case 'medium': return 'bg-yellow-500';
-      case 'hard': return 'bg-red-500';
-      default: return 'bg-gray-500';
-    }
-  };
-
-  const getDifficultyText = (difficulty: string) => {
-    switch (difficulty) {
-      case 'easy': return 'Easy';
-      case 'medium': return 'Medium';
-      case 'hard': return 'Hard';
-      default: return 'Unknown';
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Support
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Portal
+    <div className="min-h-screen bg-futuristic">
+      {/* Hero Section */}
+      <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex justify-center mb-8">
+              <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+                <HelpCircle className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              Support &{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Resources
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Get the help you need with our comprehensive support resources, ticket system, and expert assistance.
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
+              Get the help you need with our comprehensive support resources, 
+              documentation, and expert assistance team.
             </p>
-          </div>
-
-          {/* Quick Actions */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:bg-white/20 transition-all duration-300">
-              <Ticket className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Create Ticket</h3>
-              <p className="text-gray-300 text-sm mb-4">Submit a new support request</p>
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                <Plus className="w-4 h-4 inline mr-2" />
-                New Ticket
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button 
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Support
+              </motion.button>
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                Browse Resources
               </button>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:bg-white/20 transition-all duration-300">
-              <Search className="w-12 h-12 text-green-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Knowledge Base</h3>
-              <p className="text-gray-300 text-sm mb-4">Find answers to common questions</p>
-              <Link to="/help" className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium">
-                Browse Articles
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:bg-white/20 transition-all duration-300">
-              <Phone className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Phone Support</h3>
-              <p className="text-gray-300 text-sm mb-4">Speak with our experts</p>
-              <a href="tel:+13024640950" className="inline-flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium">
-                +1 (302) 464-0950
-              </a>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center hover:bg-white/20 transition-all duration-300">
-              <Mail className="w-12 h-12 text-orange-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Email Support</h3>
-              <p className="text-gray-300 text-sm mb-4">Send us a detailed message</p>
-              <a href="mailto:support@ziontechgroup.com" className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium">
-                support@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-
-          {/* Tabs */}
-          <div className="mb-8">
-            <div className="flex flex-wrap gap-2 border-b border-white/20">
-              {[
-                { id: 'overview', label: 'Overview', icon: FileText },
-                { id: 'tickets', label: 'My Tickets', icon: Ticket },
-                { id: 'knowledge', label: 'Knowledge Base', icon: FileText },
-                { id: 'community', label: 'Community', icon: Users }
-              ].map((tab) => {
-                const IconComponent = tab.icon;
-                return (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-t-lg font-medium transition-all duration-300 ${
-                      activeTab === tab.id
-                        ? 'bg-white/20 text-white border-b-2 border-blue-400'
-                        : 'text-gray-400 hover:text-white hover:bg-white/10'
-                    }`}
-                  >
-                    <IconComponent className="w-4 h-4" />
-                    {tab.label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Tab Content */}
-          {activeTab === 'overview' && (
-            <div className="space-y-8">
-              {/* Support Statistics */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">{supportTickets.length}</div>
-                  <div className="text-gray-400">Total Tickets</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">
-                    {supportTickets.filter(t => t.status === 'open').length}
-                  </div>
-                  <div className="text-gray-400">Open Tickets</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">
-                    {supportTickets.filter(t => t.status === 'closed').length}
-                  </div>
-                  <div className="text-gray-400">Resolved</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                  <div className="text-gray-400">Support Available</div>
-                </div>
-              </div>
-
-              {/* Recent Activity */}
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Recent Activity</h3>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <div className="space-y-4">
-                    {supportTickets.slice(0, 3).map((ticket) => (
-                      <div key={ticket.id} className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
-                        <div className="flex items-center gap-4">
-                          {getStatusIcon(ticket.status)}
-                          <div>
-                            <div className="font-medium">{ticket.title}</div>
-                            <div className="text-sm text-gray-400">{ticket.category}</div>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-sm text-gray-400">{formatDate(ticket.createdAt)}</div>
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium border ${getStatusColor(ticket.status)}`}>
-                            {ticket.status}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'tickets' && (
-            <div>
-              {/* Search and Filter */}
-              <div className="mb-6">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="text"
-                      placeholder="Search tickets..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-                  <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                    <Plus className="w-4 h-4 inline mr-2" />
-                    New Ticket
-                  </button>
-                </div>
-              </div>
-
-              {/* Tickets List */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden">
-                <div className="overflow-x-auto">
-                  <table className="w-full">
-                    <thead className="bg-white/10">
-                      <tr>
-                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-300">Ticket</th>
-                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-300">Status</th>
-                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-300">Priority</th>
-                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-300">Category</th>
-                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-300">Assigned To</th>
-                        <th className="px-6 py-4 text-left text-sm font-medium text-gray-300">Last Updated</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-white/10">
-                      {filteredTickets.map((ticket) => (
-                        <tr key={ticket.id} className="hover:bg-white/5 transition-colors">
-                          <td className="px-6 py-4">
-                            <div>
-                              <div className="font-medium text-white">{ticket.title}</div>
-                              <div className="text-sm text-gray-400">{ticket.id}</div>
-                            </div>
-                          </td>
-                          <td className="px-6 py-4">
-                            <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(ticket.status)}`}>
-                              {ticket.status}
-                            </span>
-                          </td>
-                          <td className="px-6 py-4">
-                            <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getPriorityColor(ticket.priority)}`}>
-                              {ticket.priority}
-                            </span>
-                          </td>
-                          <td className="px-6 py-4 text-sm text-gray-300">{ticket.category}</td>
-                          <td className="px-6 py-4 text-sm text-gray-300">{ticket.assignedTo}</td>
-                          <td className="px-6 py-4 text-sm text-gray-400">{formatDate(ticket.lastUpdated)}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'knowledge' && (
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Knowledge Base</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {knowledgeBase.map((article, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <div className="flex items-start justify-between mb-4">
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full font-medium">
-                        {article.category}
-                      </span>
-                      <span className="text-sm text-gray-400">{article.readTime}</span>
-                    </div>
-                    <h4 className="text-lg font-semibold mb-2">{article.title}</h4>
-                    <p className="text-gray-300 mb-4">{article.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {article.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-2 py-1 bg-white/10 text-xs text-gray-300 rounded-full">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <Link to="/help" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm">
-                      Read Article
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'community' && (
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Community Support</h3>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
-                <Users className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-                <h4 className="text-xl font-semibold mb-4">Join Our Community</h4>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Connect with other users, share experiences, and get help from the community. Our community forum is a great place to find solutions and best practices.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="https://community.ziontechgroup.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                  >
-                    Visit Community Forum
-                  </a>
-                  <a
-                    href="mailto:community@ziontechgroup.com"
-                    className="border border-blue-500 text-blue-400 px-6 py-3 rounded-lg font-semibold hover:bg-blue-500/20 transition-all duration-300"
-                  >
-                    Contact Community Team
-                  </a>
-                </div>
-              </div>
-            </div>
-          )}
+          </motion.div>
         </div>
       </section>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Technical
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Support
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Expert technical support to help you resolve issues quickly 
-              and get back to business
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {supportChannels.map((channel, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
-                <p className="text-gray-300 mb-4">{channel.description}</p>
-                
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Contact:</span>
-                    <span className="text-blue-400 font-mono">{channel.contact}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400">Response Time:</span>
-                    <span className="text-green-400">{channel.response}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Need Immediate Help?</h3>
-              <p className="text-gray-300 mb-6">
-                For urgent technical issues, call our emergency support line 
-                or submit a support ticket for priority assistance.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-300"
-                >
-                  Emergency Support
-                </a>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
-                  Submit Ticket
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-import { CogIcon } from '@heroicons/react/24/outline';
 
-const $page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400" />
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
-          </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
+      {/* Search Section */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            Contact Us for More Information
-          </Link>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Find What You Need
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Search our knowledge base, documentation, and support resources 
+              to get answers to your questions quickly.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light" />
+              <input
+                type="text"
+                placeholder="Search for help articles, tutorials, or documentation..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Quick answers to common questions about our services, 
+              implementation, and support.
+            </p>
+          </motion.div>
+
+          {/* Category Tabs */}
+          <motion.div 
+            className="flex flex-wrap justify-center gap-4 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            {Object.keys(faqCategories).map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  activeCategory === category
+                    ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
+                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-cyan/20'
+                }`}
+              >
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </button>
+            ))}
+          </motion.div>
+
+          {/* FAQ Items */}
+          <motion.div 
+            className="max-w-4xl mx-auto space-y-6"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {faqCategories[activeCategory].map((item, index) => (
+              <motion.div 
+                key={index}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                variants={itemVariants}
+              >
+                <h3 className="text-xl font-bold text-white mb-3">{item.question}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{item.answer}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Support Channels */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Support Resources
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Access our comprehensive library of resources, documentation, 
+              and learning materials to help you succeed.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {supportChannels.map((channel, index) => (
+              <motion.div 
+                key={index}
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
+                variants={itemVariants}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="text-4xl mb-4">{channel.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
+                <p className="text-zion-slate-light mb-4 leading-relaxed">{channel.description}</p>
+                <button className="text-zion-cyan hover:text-white transition-colors duration-300 flex items-center gap-2 group-hover:gap-3">
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Support */}
+      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Can't find what you're looking for? Our support team is here to help 
+              with any questions or issues you may have.
+            </p>
+          </motion.div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {contactInfo.map((info, index) => (
+              <motion.div 
+                key={index}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 text-center"
+                variants={itemVariants}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <info.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{info.title}</h3>
+                <p className="text-zion-slate-light mb-4 leading-relaxed">{info.description}</p>
+                <div className="text-zion-cyan font-medium mb-2">{info.contact}</div>
+                <div className="text-sm text-zion-slate-light">Response: {info.response}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Need Immediate Help?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              For urgent technical issues or critical support needs, 
+              our emergency support team is available 24/7.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button 
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Emergency Support
+              </motion.button>
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                Schedule Call
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default $page;
+}
