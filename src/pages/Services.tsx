@@ -117,6 +117,27 @@ export default function Services() {
 
   const featuredServices = [
     {
+      name: '2025 Innovative Services',
+      href: '/innovative-services-landing-2025',
+      icon: Star,
+      description: 'Revolutionary Technology Services',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    {
+      name: '2025 Services Showcase',
+      href: '/comprehensive-services-showcase-2025',
+      icon: Star,
+      description: 'Complete Service Portfolio',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      name: '2025 Pricing Guide',
+      href: '/comprehensive-pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Complete Pricing & ROI Analysis',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
       name: '2026 Services Overview',
       href: '/ultimate-services-showcase-2026',
       icon: Star,
@@ -128,14 +149,14 @@ export default function Services() {
       href: '/comprehensive-services-showcase-2027',
       icon: Star,
       description: 'Cutting-edge Innovation & Emerging Tech',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       name: '2029 Cutting-Edge Services',
       href: '/zion-cutting-edge-services-2029',
       icon: Star,
       description: 'Future-ready Technology Solutions',
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-green-500 to-emerald-500'
     }
   ];
 
