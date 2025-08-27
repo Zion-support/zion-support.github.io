@@ -1,348 +1,222 @@
-import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
-import { motion, useInView } from 'framer-motion';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  threshold?: number;
-  rootMargin?: string;
-  className?: string;
-  delay?: number;
-  duration?: number;
-  direction?: 'up' | 'down' | 'left' | 'right' | 'fade';
-  onVisible?: () => void;
-  onHidden?: () => void;
-  priority?: 'low' | 'medium' | 'high';
-  preload?: boolean;
-}
+import React, { useEffect, useCallback, useRef } from 'react'
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage?: number;
-  fps: number;
+  fcp: number
+  lcp: number
+  fid: number
+  cls: number
+  ttfb: number
+  domLoad: number
+  windowLoad: number
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  threshold = 0.1,
-  rootMargin = '50px',
-  className = '',
-  delay = 0,
-  duration = 0.6,
-  direction = 'fade',
-  onVisible,
-  onHidden,
-  priority = 'medium',
-  preload = false
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const ref = useRef<HTMLDivElement>(null);
-  const loadStartTime = useRef<number>(Date.now());
-  const frameCount = useRef<number>(0);
-  const lastTime = useRef<number>(performance.now());
+interface PerformanceOptimizerProps {
+  enabled?: boolean
+  autoRefresh?: boolean
+  refreshInterval?: number
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void
+}
 
-  // Intersection Observer for visibility detection
-  const isInView = useInView(ref, {
-    threshold,
-    rootMargin,
-    once: priority === 'high' ? false : true
-  });
+export function PerformanceOptimizer({
+  enabled = true,
+  autoRefresh = false,
+  refreshInterval = 5000,
+  onMetricsUpdate
+}: PerformanceOptimizerProps) {
+  const metricsRef = useRef<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+    domLoad: 0,
+    windowLoad: 0
+  })
 
-  // Performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const measurePerformance = () => {
-        const now = performance.now();
-        const loadTime = now - loadStartTime.current;
-        
-        // Calculate FPS
-        frameCount.current++;
-        if (now - lastTime.current >= 1000) {
-          const fps = Math.round((frameCount.current * 1000) / (now - lastTime.current));
-          frameCount.current = 0;
-          lastTime.current = now;
-          
-          setMetrics(prev => ({
-            ...prev,
-            loadTime,
-            fps
-          }));
-        }
-      };
+  const observerRef = useRef<PerformanceObserver | null>(null)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
-      const interval = setInterval(measurePerformance, 100);
-      return () => clearInterval(interval);
-    }
-  }, []);
+  // Measure Core Web Vitals
+  const measureCoreWebVitals = useCallback(() => {
+    if (!('PerformanceObserver' in window)) return
 
-  // Memory usage monitoring (if available)
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory) {
-        const updateMemoryUsage = () => {
-          setMetrics(prev => ({
-            ...prev,
-            memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-          }));
-        };
-        
-        const interval = setInterval(updateMemoryUsage, 5000);
-        return () => clearInterval(interval);
-      }
-    }
-  }, []);
-
-  // Handle visibility changes
-  useEffect(() => {
-    if (isInView && !isVisible) {
-      setIsVisible(true);
-      onVisible?.();
-      
-      // Measure render time
-      const renderStart = performance.now();
-      requestAnimationFrame(() => {
-        const renderTime = performance.now() - renderStart;
-        setMetrics(prev => ({
-          ...prev,
-          renderTime
-        }));
-      });
-    } else if (!isInView && isVisible) {
-      setIsVisible(false);
-      onHidden?.();
-    }
-  }, [isInView, isVisible, onVisible, onHidden]);
-
-  // Preloading logic
-  useEffect(() => {
-    if (preload && priority === 'high') {
-      setIsLoaded(true);
-    }
-  }, [preload, priority]);
-
-  // Animation variants based on direction
-  const animationVariants = useMemo(() => {
-    const baseVariants = {
-      hidden: { opacity: 0 },
-      visible: { 
-        opacity: 1,
-        transition: {
-          duration,
-          delay,
-          ease: "easeOut"
-        }
-      }
-    };
-
-    switch (direction) {
-      case 'up':
-        return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, y: 50 },
-          visible: { ...baseVariants.visible, y: 0 }
-        };
-      case 'down':
-        return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, y: -50 },
-          visible: { ...baseVariants.visible, y: 0 }
-        };
-      case 'left':
-        return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, x: 50 },
-          visible: { ...baseVariants.visible, x: 0 }
-        };
-      case 'right':
-        return {
-          ...baseVariants,
-          hidden: { ...baseVariants.hidden, x: -50 },
-          visible: { ...baseVariants.visible, x: 0 }
-        };
-      default:
-        return baseVariants;
-    }
-  }, [direction, duration, delay]);
-
-  // Lazy loading with priority
-  const shouldRender = useMemo(() => {
-    if (priority === 'high') return true;
-    if (priority === 'medium') return isInView;
-    return isVisible;
-  }, [priority, isInView, isVisible]);
-
-  // Performance optimization: debounced visibility update
-  const debouncedSetVisible = useCallback(
-    (() => {
-      let timeoutId: NodeJS.Timeout;
-      return (visible: boolean) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-          setIsVisible(visible);
-        }, 100);
-      };
-    })(),
-    []
-  );
-
-  // Handle intersection observer manually for better control
-  useEffect(() => {
-    if (!ref.current) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
+    try {
+      // First Contentful Paint (FCP)
+      observerRef.current = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            debouncedSetVisible(true);
-          } else if (priority !== 'high') {
-            debouncedSetVisible(false);
+          if (entry.name === 'first-contentful-paint') {
+            metricsRef.current.fcp = entry.startTime
+            onMetricsUpdate?.(metricsRef.current)
           }
-        });
-      },
-      {
-        threshold,
-        rootMargin
-      }
-    );
+        })
+      })
+      observerRef.current.observe({ entryTypes: ['paint'] })
 
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [threshold, rootMargin, priority, debouncedSetVisible]);
+      // Largest Contentful Paint (LCP)
+      observerRef.current = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            metricsRef.current.lcp = entry.startTime
+            onMetricsUpdate?.(metricsRef.current)
+          }
+        })
+      })
+      observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] })
 
-  // Performance debugging (only in development)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && metrics) {
-      console.log('Performance Metrics:', {
-        component: 'PerformanceOptimizer',
-        loadTime: `${metrics.loadTime.toFixed(2)}ms`,
-        renderTime: metrics.renderTime ? `${metrics.renderTime.toFixed(2)}ms` : 'N/A',
-        fps: metrics.fps || 'N/A',
-        memoryUsage: metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(2)}MB` : 'N/A'
-      });
+      // First Input Delay (FID)
+      observerRef.current = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry) => {
+          if (entry.entryType === 'first-input') {
+            metricsRef.current.fid = entry.processingStart - entry.startTime
+            onMetricsUpdate?.(metricsRef.current)
+          }
+        })
+      })
+      observerRef.current.observe({ entryTypes: ['first-input'] })
+
+      // Cumulative Layout Shift (CLS)
+      observerRef.current = new PerformanceObserver((list) => {
+        let clsValue = 0
+        const entries = list.getEntries()
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value
+          }
+        })
+        metricsRef.current.cls = clsValue
+        onMetricsUpdate?.(metricsRef.current)
+      })
+      observerRef.current.observe({ entryTypes: ['layout-shift'] })
+    } catch (error) {
+      console.warn('PerformanceObserver not supported:', error)
     }
-  }, [metrics]);
+  }, [onMetricsUpdate])
 
-  if (!shouldRender && priority !== 'high') {
-    return (
-      <div 
-        ref={ref} 
-        className={`performance-optimizer-placeholder ${className}`}
-        style={{ 
-          minHeight: '100px',
-          background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
-          backgroundSize: '200% 100%',
-          animation: 'loading 1.5s infinite'
-        }}
-      />
-    );
-  }
+  // Measure additional performance metrics
+  const measureAdditionalMetrics = useCallback(() => {
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (navigation) {
+        metricsRef.current.ttfb = navigation.responseStart - navigation.requestStart
+        metricsRef.current.domLoad = navigation.domContentLoadedEventEnd - navigation.navigationStart
+        metricsRef.current.windowLoad = navigation.loadEventEnd - navigation.navigationStart
+        onMetricsUpdate?.(metricsRef.current)
+      }
+    }
+  }, [onMetricsUpdate])
 
-  return (
-    <motion.div
-      ref={ref}
-      className={`performance-optimizer ${className}`}
-      variants={animationVariants}
-      initial="hidden"
-      animate={isVisible ? "visible" : "hidden"}
-      onAnimationComplete={() => {
-        if (isVisible && !isLoaded) {
-          setIsLoaded(true);
+  // Optimize images with lazy loading
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]')
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement
+          img.src = img.dataset.src!
+          img.classList.remove('lazy')
+          imageObserver.unobserve(img)
         }
-      }}
-    >
-      {children}
-      
-      {/* Performance overlay (development only) */}
-      {process.env.NODE_ENV === 'development' && metrics && (
-        <div className="performance-overlay">
-          <div className="performance-metrics">
-            <span>Load: {metrics.loadTime.toFixed(0)}ms</span>
-            {metrics.renderTime && (
-              <span>Render: {metrics.renderTime.toFixed(0)}ms</span>
-            )}
-            {metrics.fps && <span>FPS: {metrics.fps}</span>}
-            {metrics.memoryUsage && (
-              <span>Memory: {metrics.memoryUsage.toFixed(1)}MB</span>
-            )}
-          </div>
-        </div>
-      )}
-    </motion.div>
-  );
-};
+      })
+    })
 
-// HOC for performance optimization
-export const withPerformanceOptimization = <P extends object>(
-  Component: React.ComponentType<P>,
-  options: Omit<PerformanceOptimizerProps, 'children'> = {}
-) => {
-  return React.forwardRef<any, P>((props, ref) => (
-    <PerformanceOptimizer {...options}>
-      <Component {...props} ref={ref} />
-    </PerformanceOptimizer>
-  ));
-};
+    images.forEach((img) => imageObserver.observe(img))
+  }, [])
 
-// Hook for performance monitoring
-export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/images/zion-logo.png',
+      '/images/zion-tech-group-og.jpg'
+    ]
 
-  const startMonitoring = useCallback(() => {
-    setIsMonitoring(true);
-    // Implementation for performance monitoring
-  }, []);
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.href = resource
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+      link.crossOrigin = resource.startsWith('http') ? 'anonymous' : undefined
+      document.head.appendChild(link)
+    })
+  }, [])
 
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
-  }, []);
+  // Optimize fonts
+  const optimizeFonts = useCallback(() => {
+    if ('fonts' in document) {
+      // Preload and optimize font loading
+      const fontFaceSet = document.fonts
+      fontFaceSet.ready.then(() => {
+        console.log('Fonts loaded successfully')
+      })
+    }
+  }, [])
 
-  return {
-    metrics,
-    isMonitoring,
-    startMonitoring,
-    stopMonitoring
-  };
-};
+  // Monitor memory usage
+  const monitorMemory = useCallback(() => {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory
+      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
+        console.warn('High memory usage detected')
+      }
+    }
+  }, [])
 
-// CSS for loading animation
-const loadingStyles = `
-  @keyframes loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-  
-  .performance-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 8px;
-    font-size: 12px;
-    border-radius: 4px;
-    z-index: 1000;
-  }
-  
-  .performance-metrics {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  
-  .performance-metrics span {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2px 6px;
-    border-radius: 3px;
-  }
-`;
+  // Setup performance monitoring
+  useEffect(() => {
+    if (!enabled) return
 
-// Inject styles
-if (typeof document !== 'undefined') {
-  const style = document.createElement('style');
-  style.textContent = loadingStyles;
-  document.head.appendChild(style);
+    // Measure initial metrics
+    measureCoreWebVitals()
+    measureAdditionalMetrics()
+
+    // Optimize resources
+    optimizeImages()
+    preloadCriticalResources()
+    optimizeFonts()
+
+    // Setup auto-refresh if enabled
+    if (autoRefresh) {
+      intervalRef.current = setInterval(() => {
+        measureAdditionalMetrics()
+        monitorMemory()
+      }, refreshInterval)
+    }
+
+    // Cleanup
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect()
+      }
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+      }
+    }
+  }, [enabled, autoRefresh, refreshInterval, measureCoreWebVitals, measureAdditionalMetrics, optimizeImages, preloadCriticalResources, optimizeFonts, monitorMemory])
+
+  // Log performance metrics to console in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      const logMetrics = () => {
+        console.group('🚀 Performance Metrics')
+        console.log('FCP:', metricsRef.current.fcp.toFixed(2), 'ms')
+        console.log('LCP:', metricsRef.current.lcp.toFixed(2), 'ms')
+        console.log('FID:', metricsRef.current.fid.toFixed(2), 'ms')
+        console.log('CLS:', metricsRef.current.cls.toFixed(4))
+        console.log('TTFB:', metricsRef.current.ttfb.toFixed(2), 'ms')
+        console.log('DOM Load:', metricsRef.current.domLoad.toFixed(2), 'ms')
+        console.log('Window Load:', metricsRef.current.windowLoad.toFixed(2), 'ms')
+        console.groupEnd()
+      }
+
+      // Log metrics after a delay to allow them to be measured
+      const timeoutId = setTimeout(logMetrics, 3000)
+      return () => clearTimeout(timeoutId)
+    }
+  }, [])
+
+  // Return null as this is a utility component
+  return null
 }
