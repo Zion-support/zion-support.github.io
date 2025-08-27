@@ -1,5 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+export function LoadingSpinner({ size = 'md', color = 'primary', customColor, className, text = 'Loading...', showText = false }) {
+    const sizeClasses = {
+        sm: 'w-4 h-4',
+        md: 'w-6 h-6',
+        lg: 'w-8 h-8',
+        xl: 'w-12 h-12'
+    };
+    const colorClasses = {
+        primary: 'border-zion-purple',
+        secondary: 'border-zion-cyan',
+        white: 'border-white',
+        custom: ''
+    };
+    const borderColor = customColor || colorClasses[color];
+    return (<div className={cn('flex flex-col items-center justify-center', className)}>
+      <motion.div className={cn('border-2 border-t-transparent rounded-full animate-spin', sizeClasses[size], borderColor)} animate={{ rotate: 360 }} transition={{
+            duration: 1,
+            repeat: Infinity,
+            ease: "linear"
+        }} role="status" aria-label="Loading"/>
+      
+      {showText && (<motion.p className="mt-3 text-sm text-zion-slate-light text-center" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+          {text}
+        </motion.p>)}
+    </div>);
+=======
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -95,6 +122,7 @@ export default function LoadingSpinner({
       </div>
     </div>
   );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-436f
 }
 // Skeleton loading component for content
 export function SkeletonLoader({ className, lines = 3, height = 'h-4' }) {
