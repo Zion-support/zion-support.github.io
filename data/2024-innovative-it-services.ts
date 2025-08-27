@@ -3,16 +3,43 @@ export interface InnovativeITService2024 {
   name: string;
   tagline: string;
   price: string;
-  variant: string;
+  period: string;
+  description: string;
   features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
   rating: number;
-  customers: string;
+  reviews: number;
 }
 
 export const innovativeITServices2024: InnovativeITService2024[] = [
-  {
-  },
-
   // Zero Trust Network Architecture
   {
     id: 'zero-trust-network-architecture',

@@ -23,7 +23,7 @@ const contactInfo = {
 const serviceCategories = [
   {
     title: '🧠 Revolutionary AI Services',
-    icon: Brain,
+    icon: <Brain className="w-5 h-5 text-violet-400" />,
     color: 'from-violet-500 to-purple-600',
     services: [
       { name: 'AI Consciousness Evolution Pro', href: '/ai-consciousness-evolution-pro' },
@@ -40,7 +40,7 @@ const serviceCategories = [
   },
   {
     title: '⚛️ Quantum & Emerging Tech',
-    icon: Atom,
+    icon: <Atom className="w-5 h-5 text-indigo-400" />,
     color: 'from-indigo-500 to-blue-600',
     services: [
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
@@ -57,7 +57,7 @@ const serviceCategories = [
   },
   {
     title: '🏙️ Enterprise IT Solutions',
-    icon: Cpu,
+    icon: <Cpu className="w-5 h-5 text-blue-400" />,
     color: 'from-blue-500 to-cyan-600',
     services: [
       { name: 'Quantum Cloud Infrastructure Pro', href: '/quantum-cloud-infrastructure-pro' },
@@ -363,6 +363,4 @@ export default function UltraFuturisticFooter2034() {
       </div>
     </footer>
   );
-};
-
-export default UltraFuturisticFooter2034;
+}

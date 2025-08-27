@@ -14,7 +14,7 @@ export interface Revolutionary2028FintechDigitalBankingService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -68,7 +68,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-digital-banking-platform-2028',
     marketPosition: 'Competes with Chime ($0/month), Revolut ($0-16/month), and N26 ($0-16/month). Our advantage: AI-powered insights, comprehensive banking, and competitive pricing.',
-    targetAudience: 'Banks', 'Credit unions', 'Fintech companies', 'Financial institutions', 'Digital banks',
+    targetAudience: ['Banks', 'Credit unions', 'Fintech companies', 'Financial institutions', 'Digital banks'],
     trialDays: 30,
     setupTime: '3 months',
     category: 'Digital Banking',
@@ -121,7 +121,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-investment-management-platform-2028',
     marketPosition: 'Competes with Betterment ($0.25-0.40%/year), Wealthfront ($0.25%/year), and Robinhood ($0/month). Our advantage: AI-powered insights, automated trading, and comprehensive investment management.',
-    targetAudience: 'Investment firms', 'Wealth managers', 'Financial advisors', 'Individual investors', 'Institutional investors',
+    targetAudience: ['Investment firms', 'Wealth managers', 'Financial advisors', 'Individual investors', 'Institutional investors'],
     trialDays: 21,
     setupTime: '2 months',
     category: 'Investment Management',
@@ -174,7 +174,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/blockchain-payment-platform-2028',
     marketPosition: 'Competes with Ripple ($0.00001/transaction), Stellar ($0.00001/transaction), and Circle ($0.30/transaction). Our advantage: AI fraud detection, smart contracts, and comprehensive payment solutions.',
-    targetAudience: 'Payment processors', 'Banks', 'E-commerce businesses', 'Financial institutions', 'Cross-border companies',
+    targetAudience: ['Payment processors', 'Banks', 'E-commerce businesses', 'Financial institutions', 'Cross-border companies'],
     trialDays: 30,
     setupTime: '1 month',
     category: 'Blockchain Payments',
@@ -227,7 +227,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-insurance-platform-2028',
     marketPosition: 'Competes with Lemonade ($5-25/month), Root ($0-200/month), and Metromile ($29-199/month). Our advantage: AI-powered insights, automated processing, and comprehensive insurance solutions.',
-    targetAudience: 'Insurance companies', 'Insurance brokers', 'Risk managers', 'Financial institutions', 'Technology companies',
+    targetAudience: ['Insurance companies', 'Insurance brokers', 'Risk managers', 'Financial institutions', 'Technology companies'],
     trialDays: 30,
     setupTime: '2 months',
     category: 'AI Insurance',
@@ -280,7 +280,7 @@ export const revolutionary2028FintechDigitalBankingServices: Revolutionary2028Fi
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/defi-lending-borrowing-platform-2028',
     marketPosition: 'Competes with Aave ($0-0.09%/transaction), Compound ($0-0.5%/transaction), and MakerDAO ($0-0.5%/transaction). Our advantage: AI risk management, comprehensive DeFi, and competitive pricing.',
-    targetAudience: 'DeFi protocols', 'Lending platforms', 'Financial institutions', 'Crypto companies', 'Individual investors',
+    targetAudience: ['DeFi protocols', 'Lending platforms', 'Financial institutions', 'Crypto companies', 'Individual investors'],
     trialDays: 21,
     setupTime: '1 month',
     category: 'DeFi Lending',

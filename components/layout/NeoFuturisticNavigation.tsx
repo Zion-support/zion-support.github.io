@@ -36,7 +36,6 @@ import {
 	Target,
 	Building,
 	Award,
-	ChartBar,
 	Lock,
 	Smartphone,
 	Palette,
@@ -315,10 +314,12 @@ export default function NeoFuturisticNavigation() {
 											<div className="text-gray-400 text-sm">
 												<span className="text-cyan-400 font-semibold">500+</span> Revolutionary Services Available
 											</div>
-											<Button href="/services" variant="quantum" size="sm">
-												View All Services
-												<ArrowRight className="w-4 h-4 ml-2" />
-											</Button>
+											<Link href="/services">
+												<Button variant="default" size="sm">
+													View All Services
+													<ArrowRight className="w-4 h-4 ml-2" />
+												</Button>
+											</Link>
 										</div>
 									</div>
 								</div>
@@ -421,10 +422,12 @@ export default function NeoFuturisticNavigation() {
 											</div>
 										))}
 										<div className="pt-3">
-											<Button href="/services" variant="quantum" size="sm" className="w-full">
-												View All Services
-												<ArrowRight className="w-4 h-4 ml-2" />
-											</Button>
+											<Link href="/services">
+												<Button variant="default" size="sm">
+													View All Services
+													<ArrowRight className="w-4 h-4 ml-2" />
+												</Button>
+											</Link>
 										</div>
 									</div>
 								)}
@@ -489,13 +492,17 @@ export default function NeoFuturisticNavigation() {
 								</div>
 
 								<div className="mt-6 space-y-3">
-									<Button href="/services" variant="quantum" size="lg" className="w-full">
-										Explore Services
-										<ArrowRight className="w-5 h-5 ml-2" />
-									</Button>
-									<Button href="/contact" variant="secondary" size="lg" className="w-full">
-										Contact Us
-									</Button>
+									<Link href="/services">
+										<Button variant="default" size="lg" className="w-full">
+											Explore Services
+											<ArrowRight className="w-5 h-5 ml-2" />
+										</Button>
+									</Link>
+									<Link href="/contact">
+										<Button variant="outline" size="lg" className="w-full">
+											Contact Us
+										</Button>
+									</Link>
 								</div>
 							</div>
 						</div>

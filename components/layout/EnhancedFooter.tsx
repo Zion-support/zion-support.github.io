@@ -7,7 +7,6 @@ import {
   Zap, Atom, Building2, Star,
   ArrowRight, ExternalLink
 } from 'lucide-react';
-import Link from 'next/link';
 
 const EnhancedFooter: React.FC = () => {
 	return (

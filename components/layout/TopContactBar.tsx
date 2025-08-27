@@ -230,6 +230,4 @@ export default function TopContactBar() {
       </div>
     </motion.div>
   );
-};
-
-export default TopContactBar;
+}
