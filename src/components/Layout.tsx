@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, ChevronDown, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
-import Search from './Search'
+
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -108,9 +108,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 							))}
 						</nav>
 
-						{/* Right side - Search, Theme Toggle, Mobile Menu Button */}
+						{/* Right side - Theme Toggle, Mobile Menu Button */}
 						<div className="flex items-center space-x-4">
-							<Search />
 							<ThemeToggle />
 							<button
 								onClick={() => setIsMobileMenuOpen(true)}

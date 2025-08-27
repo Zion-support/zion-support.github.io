@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
+
 
 export default function Terms() {
 	return (
-		<PageTransition>
+		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -265,6 +265,6 @@ export default function Terms() {
 					</Link>
 				</div>
 			</section>
-		</PageTransition>
+		</>
 	)
 }

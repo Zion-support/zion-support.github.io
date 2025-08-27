@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Calendar, Clock, ArrowRight, Tag, User } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
+
 
 export default function News() {
 	const newsArticles = [
@@ -70,7 +70,7 @@ export default function News() {
 	const categories = ['All', 'Product Launch', 'Company News', 'Industry Insights', 'Customer Success', 'Security']
 
 	return (
-		<PageTransition>
+		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -255,6 +255,6 @@ export default function News() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
+		</>
 	)
 }

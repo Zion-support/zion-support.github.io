@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
+
 
 export default function Events() {
 	const upcomingEvents = [
@@ -71,7 +71,7 @@ export default function Events() {
 	]
 
 	return (
-		<PageTransition>
+		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -262,6 +262,6 @@ export default function Events() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
+		</>
 	)
 }
