@@ -32,6 +32,11 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 
+// Innovative Services Pages
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
+const AdvancedInnovativeServicesShowcase2026 = React.lazy(() => import('./pages/AdvancedInnovativeServicesShowcase2026'));
+const InnovativeServicesHub = React.lazy(() => import('./pages/InnovativeServicesHub'));
+
 // Simple placeholder pages for missing ones
 const FAQ = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -158,6 +163,11 @@ function App() {
                 <Route path="/news" element={<News />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/marketplace" element={<Marketplace />} />
+                
+                {/* Innovative Services Routes */}
+                <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+                <Route path="/advanced-services-2026" element={<AdvancedInnovativeServicesShowcase2026 />} />
+                <Route path="/innovative-services-hub" element={<InnovativeServicesHub />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
