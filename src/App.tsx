@@ -33,6 +33,7 @@ const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServ
 const ComprehensiveServicesOverview2027 = lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
 const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const EnhancedInnovativeServicesShowcase2027 = lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview.tsx'));
 
 // Additional pages
 const Marketplace = lazy(() => import('./pages/Marketplace'));
@@ -80,6 +81,7 @@ function App() {
               <Route path="/comprehensive-services-2027" element={<ComprehensiveServicesOverview2027 />} />
               <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
               
               {/* Additional Routes */}
               <Route path="/marketplace" element={<Marketplace />} />
