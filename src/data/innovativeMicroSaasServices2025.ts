@@ -1761,6 +1761,47 @@ export const SPECIALIZED_SERVICES = [
     price: 3200,
     marketPrice: "$3,200 - $9,000/month"
   }
+  ,
+  {
+    id: "ai-sales-copilot-b2b-outreach",
+    title: "AI Sales Copilot for B2B Outreach",
+    description: "Autonomously researches accounts, drafts personalized emails, schedules follow-ups, and syncs to CRM with human-in-the-loop approvals.",
+    category: "AI & Revenue",
+    price: 799,
+    marketPrice: "$799 - $2,499/month"
+  },
+  {
+    id: "seo-content-orchestrator",
+    title: "SEO Content Orchestrator",
+    description: "Keyword clustering, brief generation, programmatic internal linking, and performance tracking with CMS integrations.",
+    category: "Marketing Automation",
+    price: 499,
+    marketPrice: "$499 - $1,999/month"
+  },
+  {
+    id: "gdpr-ccpa-compliance-monitor",
+    title: "GDPR/CCPA Compliance Monitor",
+    description: "Scans properties for data leaks, cookie violations, DPIA risks, and produces auditor-ready reports and remediation workflows.",
+    category: "Security & Compliance",
+    price: 1299,
+    marketPrice: "$1,299 - $4,999/month"
+  },
+  {
+    id: "cx-voice-insights",
+    title: "Customer Voice Insights",
+    description: "Aggregates tickets, calls, chats and reviews; performs topic modeling, sentiment, and churn-risk detection with dashboards.",
+    category: "AI & Analytics",
+    price: 999,
+    marketPrice: "$999 - $3,499/month"
+  },
+  {
+    id: "cloud-finops-optimizer-smb",
+    title: "Cloud FinOps Optimizer (SMB)",
+    description: "Detects idle/overprovisioned resources, rightsizes workloads, enforces budgets and savings plans across AWS/Azure/GCP.",
+    category: "Cloud & DevOps",
+    price: 349,
+    marketPrice: "$349 - $1,499/month"
+  }
 ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;
