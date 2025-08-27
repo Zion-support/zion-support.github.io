@@ -95,6 +95,284 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     }
   },
 
+  // AI Sales Co-pilot for SMBs
+  {
+    id: "ai-sales-copilot-smb",
+    title: "AI Sales Co‑pilot for SMBs",
+    description: "Conversational AI that prioritizes leads, drafts emails, summarizes calls, and updates your CRM automatically. Trains on your deals and playbooks for on‑brand outreach.",
+    category: "AI & Customer Experience",
+    subcategory: "Sales Enablement",
+    price: 799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Lead scoring with behavioral intent",
+      "Auto‑generated email sequences",
+      "Meeting transcription + action items",
+      "CRM sync (HubSpot, Salesforce, Pipedrive)",
+      "Playbook and objection handling",
+      "Multilingual outreach",
+      "Calendar + dialer integrations",
+      "Pipeline risk detection",
+      "Rep performance coaching",
+      "Admin analytics dashboard"
+    ],
+    benefits: [
+      "30–50% lift in meeting bookings",
+      "2–3x faster follow‑ups",
+      "Consistent pipeline hygiene",
+      "Shorter sales cycles",
+      "Lower CAC via improved targeting"
+    ],
+    useCases: [
+      "Inbound lead triage",
+      "Outbound personalization",
+      "Post‑demo follow‑ups",
+      "Quarterly pipeline reviews",
+      "Manager coaching"
+    ],
+    targetAudience: ["SMB sales teams", "RevOps", "Founders doing sales"],
+    tags: ["AI", "Sales", "CRM", "Email", "Automation"],
+    estimatedDelivery: "1–2 weeks",
+    supportLevel: "professional",
+    marketPrice: "$499 – $1,499/month",
+    roi: "200–350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["LLM", "Vector DB", "RAG", "Webhooks"],
+      integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"],
+      apiEndpoints: 42,
+      uptime: "99.9%",
+      security: ["SOC 2", "GDPR", "SAML SSO"]
+    }
+  },
+
+  // FinOps cost optimization for cloud
+  {
+    id: "cloud-finops-optimizer",
+    title: "Cloud FinOps Optimizer",
+    description: "Automated rightsizing, commitment planning, and anomaly detection across AWS, Azure, and GCP with policy‑driven savings actions and executive reporting.",
+    category: "Cloud & Infrastructure",
+    subcategory: "Cost Optimization",
+    price: 1499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Rightsizing + scheduling",
+      "Savings Plans/RIs recommendations",
+      "Egress + storage tiering",
+      "Kubernetes cost allocation (Kubecost API)",
+      "Anomaly detection",
+      "Chargeback/showback",
+      "Automated policy actions",
+      "Forecasting",
+      "Multi‑cloud support",
+      "Slack/Teams alerts"
+    ],
+    benefits: [
+      "15–35% cloud bill reduction",
+      "Faster budget cycles",
+      "Predictable spend",
+      "Cleaner tagging and governance",
+      "Fewer surprise bills"
+    ],
+    useCases: ["CFO reporting", "K8s allocation", "Dev/test scheduling", "Data egress control"],
+    targetAudience: ["FinOps", "Platform Engineering", "CFOs"],
+    tags: ["FinOps", "Cloud", "Kubernetes", "AWS", "Azure", "GCP"],
+    estimatedDelivery: "2–4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,200 – $5,000/month",
+    roi: "200–500%",
+    innovationLevel: "Professional",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["AWS CUR", "BigQuery", "Athena", "Prometheus"],
+      integrations: ["AWS", "Azure", "GCP", "Datadog", "PagerDuty"],
+      apiEndpoints: 65,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "SSO"]
+    }
+  },
+
+  // Managed MLOps platform
+  {
+    id: "managed-mlops-platform",
+    title: "Managed MLOps Platform",
+    description: "End‑to‑end model lifecycle with experiment tracking, feature store, CI/CD for ML, drift monitoring, and governance—fully managed by Zion Tech Group.",
+    category: "AI & Analytics",
+    subcategory: "MLOps",
+    price: 3299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Experiment tracking",
+      "Feature store",
+      "Model registry",
+      "Canary + shadow deploys",
+      "Online/offline evaluation",
+      "Data + model lineage",
+      "Drift + bias monitoring",
+      "Approval workflows",
+      "Audit + governance",
+      "SDK + API access"
+    ],
+    benefits: [
+      "Faster time‑to‑production",
+      "Lower operational risk",
+      "Improved model quality",
+      "Compliance‑ready",
+      "Scalable across teams"
+    ],
+    useCases: ["Churn models", "LTV scoring", "Quality inspection", "Forecasting"],
+    targetAudience: ["Data Science", "ML Engineers", "Risk & Compliance"],
+    tags: ["MLOps", "Feature Store", "Monitoring", "Compliance"],
+    estimatedDelivery: "4–8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 – $8,000/month",
+    roi: "250–400%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"],
+      integrations: ["SageMaker", "Vertex AI", "Databricks", "Snowflake"],
+      apiEndpoints: 93,
+      uptime: "99.95%",
+      security: ["SOC 2", "HIPAA", "GDPR"]
+    }
+  },
+
+  // eCommerce personalization micro‑SaaS
+  {
+    id: "ecommerce-personalization-engine",
+    title: "eCommerce Personalization Engine",
+    description: "Plug‑and‑play recommendations, bundles, and on‑site search tuning that lift AOV and conversion without heavy dev work.",
+    category: "AI & Content Marketing",
+    subcategory: "Personalization",
+    price: 499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "1:1 product recommendations",
+      "Search relevance optimization",
+      "Bundle + upsell widgets",
+      "Email + SMS triggers",
+      "A/B testing + holdouts",
+      "Shopify/BigCommerce/WooCommerce apps",
+      "Headless SDK",
+      "Attribution dashboards",
+      "Latency <100ms",
+      "Multi‑region edge"
+    ],
+    benefits: [
+      "5–12% conversion lift",
+      "+10–20% AOV",
+      "Less merch ops overhead",
+      "Faster experimentation",
+      "No heavy integration"
+    ],
+    useCases: ["PLP/PDP recommendations", "Cart cross‑sell", "Search re‑ranking"],
+    targetAudience: ["DTC brands", "Retailers", "Marketplaces"],
+    tags: ["eCommerce", "Personalization", "Shopify", "Search", "CDP"],
+    estimatedDelivery: "3–7 days",
+    supportLevel: "professional",
+    marketPrice: "$299 – $1,999/month",
+    roi: "300–700%",
+    innovationLevel: "Professional",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  },
+
+  // SOC2-in-a-box compliance automation
+  {
+    id: "soc2-in-a-box",
+    title: "SOC 2‑in‑a‑Box Compliance Automation",
+    description: "Prebuilt controls, evidence collection, risk register, and auditor‑ready reports with integrations to your cloud and tooling.",
+    category: "Cybersecurity & AI",
+    subcategory: "Compliance Automation",
+    price: 999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Automated evidence gathering",
+      "Policy management",
+      "Risk register + treatments",
+      "Vendor management",
+      "Access reviews",
+      "Change management hooks",
+      "Continuous monitoring",
+      "Pre‑audit readiness",
+      "Auditor collaboration",
+      "Report generation"
+    ],
+    benefits: [
+      "Audit time cut by 60%",
+      "Lower external audit fees",
+      "Reduced compliance toil",
+      "Improved security posture",
+      "Board‑ready reporting"
+    ],
+    useCases: ["SOC 2", "ISO 27001", "HIPAA readiness"],
+    targetAudience: ["Startups", "Scaleups", "Security & GRC"],
+    tags: ["Compliance", "Security", "Audit", "GRC"],
+    estimatedDelivery: "2–3 weeks",
+    supportLevel: "professional",
+    marketPrice: "$700 – $3,500/month",
+    roi: "200–400%",
+    innovationLevel: "Professional",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  },
+
+  // Data platform in a week (modern stack)
+  {
+    id: "modern-data-platform-week",
+    title: "Modern Data Platform in a Week",
+    description: "Fixed‑scope build of ingestion, warehouse, metrics layer, and BI with dbt, a cloud warehouse, and a production‑grade CI/CD.",
+    category: "AI & Analytics",
+    subcategory: "Data Platform",
+    price: 19999,
+    currency: "$",
+    pricingModel: "one-time",
+    features: [
+      "Ingestion (ELT) setup",
+      "Warehouse + role modeling",
+      "dbt transformations",
+      "Metrics/semantic layer",
+      "Dashboards + alerts",
+      "CI/CD + testing",
+      "Data contracts",
+      "Cost controls",
+      "Runbook + handoff",
+      "Enablement sessions"
+    ],
+    benefits: [
+      "Production analytics in 5 days",
+      "Lower ongoing costs",
+      "Reliable, testable models",
+      "Self‑serve metrics",
+      "Future‑proof architecture"
+    ],
+    useCases: ["Executive KPIs", "Marketing attribution", "RevOps metrics"],
+    targetAudience: ["Founders", "Data leaders", "Ops"],
+    tags: ["Data", "dbt", "Snowflake", "BigQuery", "Metrics"],
+    estimatedDelivery: "1 week",
+    supportLevel: "professional",
+    marketPrice: "$15,000 – $45,000 one‑time",
+    roi: "150–300%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"],
+      integrations: ["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"],
+      apiEndpoints: 18,
+      uptime: "99.9%",
+      security: ["SSO", "Row‑level security"]
+    }
+  }
+
   // Blockchain-Based Supply Chain Transparency
   {
     id: "blockchain-supply-chain-transparency",
