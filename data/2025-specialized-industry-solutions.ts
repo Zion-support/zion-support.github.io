@@ -38,7 +38,6 @@ export interface SpecializedIndustrySolution {
   rating: number;
   reviews: number;
 }
-
 export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
   // MANUFACTURING & INDUSTRIAL SOLUTIONS
   {
@@ -92,7 +91,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     rating: 4.8,
     reviews: 67
   },
-
   // HEALTHCARE & MEDICAL SOLUTIONS
   {
     id: 'ai-powered-clinical-decision-support',
@@ -145,7 +143,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     rating: 4.9,
     reviews: 89
   },
-
   // FINANCIAL SERVICES SOLUTIONS
   {
     id: 'autonomous-financial-risk-manager',
@@ -198,7 +195,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // RETAIL & E-COMMERCE SOLUTIONS
   {
     id: 'ai-powered-retail-optimization-platform',
@@ -251,7 +247,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     rating: 4.7,
     reviews: 134
   },
-
   // EDUCATION & LEARNING SOLUTIONS
   {
     id: 'ai-powered-adaptive-learning-platform',
@@ -304,7 +299,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     rating: 4.6,
     reviews: 56
   },
-
   // TRANSPORTATION & LOGISTICS SOLUTIONS
   {
     id: 'autonomous-logistics-optimizer',
@@ -357,7 +351,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     rating: 4.7,
     reviews: 78
   },
-
   // ENERGY & UTILITIES SOLUTIONS
   {
     id: 'ai-powered-energy-optimization-platform',
@@ -411,7 +404,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     reviews: 42
   }
 ];
-
 export const industryCategories2025: string[] = Array.from(
   new Set(
     specializedIndustrySolutions2025
@@ -419,17 +411,14 @@ export const industryCategories2025: string[] = Array.from(
       .filter((v): v is string => Boolean(v))
   )
 ).sort();
-
 export const getSolutionsByIndustry = (industry: string) => {
   if (!industry || industry === 'All') return specializedIndustrySolutions2025;
   return specializedIndustrySolutions2025.filter((s) => s.industry === industry);
 };
-
 export const getSolutionsByCategory = (category: string) => {
   if (!category || category === 'All') return specializedIndustrySolutions2025;
   return specializedIndustrySolutions2025.filter((s) => s.category === category);
 };
-
 export const getPopularIndustrySolutions = () =>
   specializedIndustrySolutions2025
     .filter((s) => !!s.popular)

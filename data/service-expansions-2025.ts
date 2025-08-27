@@ -14,7 +14,6 @@ export interface ServiceExpansion2025 {
     address: string;
   };
 }
-
 export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
     id: "ai-workflow-automation",

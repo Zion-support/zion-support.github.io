@@ -38,7 +38,6 @@ export interface SpecializedAIService {
   rating: number;
   reviews: number;
 }
-
 export const specializedAIServices: SpecializedAIService[] = [
   {
     id: 'ai-powered-legal-contract-analyzer',

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTechService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface EmergingTechService {
   rating: number;
   reviews: number;
 }
-
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet Security Platform
   {
@@ -94,7 +92,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 5.0,
     reviews: 8
   },
-
   // Neural Interface Development Platform
   {
     id: 'neural-interface-development-platform',
@@ -147,7 +144,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.9,
     reviews: 28
   },
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -200,7 +196,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Space Technology Development Platform
   {
     id: 'space-technology-development-platform',
@@ -253,7 +248,6 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 5.0,
     reviews: 6
   },
-
   // Biotech AI Development Platform
   {
     id: 'biotech-ai-development-platform',

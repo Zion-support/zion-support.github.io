@@ -4,12 +4,10 @@ import React from 'react'
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services'
 import { advancedITServices } from '../data/advanced-it-services'
 import { innovativeAIServices } from '../data/innovative-ai-services'
-
 export default function Services(){
 	const microSaaS = innovativeRealMicroSaasServices2025.slice(0, 12)
 	const itServices = advancedITServices.slice(0, 12)
 	const aiServices = innovativeAIServices.slice(0, 12)
-
 	return (
 		<main style={{padding:20,fontFamily:'sans-serif', lineHeight:1.6}}>
 			<Head>
@@ -18,7 +16,6 @@ export default function Services(){
 			</Head>
 			<h1 style={{marginBottom:8}}>Services</h1>
 			<p style={{marginTop:0, color:'#374151'}}>We deliver real, production-ready Micro SaaS, IT, and AI solutions. Explore highlights below or <Link href="/contact" style={{color:'#2563eb', textDecoration:'underline'}}>contact us</Link> for a tailored plan.</p>
-
 			<section style={{marginTop:24}}>
 				<h2 style={{marginBottom:8}}>Featured Micro SaaS</h2>
 				<div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(260px, 1fr))', gap:16}}>
@@ -38,7 +35,6 @@ export default function Services(){
 					))}
 				</div>
 			</section>
-
 			<section style={{marginTop:32}}>
 				<h2 style={{marginBottom:8}}>Advanced IT Services</h2>
 				<div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(260px, 1fr))', gap:16}}>
@@ -58,7 +54,6 @@ export default function Services(){
 					))}
 				</div>
 			</section>
-
 			<section style={{marginTop:32}}>
 				<h2 style={{marginBottom:8}}>Innovative AI Services</h2>
 				<div style={{display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(260px, 1fr))', gap:16}}>
@@ -78,7 +73,6 @@ export default function Services(){
 					))}
 				</div>
 			</section>
-
 			<section style={{marginTop:40, background:'#f9fafb', padding:16, borderRadius:8}}>
 				<h2 style={{marginBottom:6}}>Why Zion Tech Group</h2>
 				<ul style={{paddingLeft:18, color:'#374151'}}>

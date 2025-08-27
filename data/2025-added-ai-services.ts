@@ -1,12 +1,10 @@
 import type { InnovativeAIService } from './innovative-ai-services'
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 }
-
 export const addedAIServices2025: InnovativeAIService[] = [
   {
     id: 'agentic-customer-support-suite',
@@ -492,6 +490,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     competitors: ['Cresta', 'Vivun AI'],
     marketSize: '$4B presales tooling',
     growthRate: '19% YoY',
+    variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Knowledge ingestion, agent tools, repo templates, export to PDF',
@@ -532,6 +531,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     competitors: ['Jasper', 'Writer'],
     marketSize: '$10B genAI content',
     growthRate: '26% YoY',
+    variant: 'marketing-futuristic',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'Brief generator, content drafts, review queues, publish connectors',
@@ -572,6 +572,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     competitors: ['Monitaur', 'Calypso AI'],
     marketSize: '$3B AI risk management',
     growthRate: '23% YoY',
+    variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
     implementationDetails: 'System registry, test runners, evidence store, reporting',

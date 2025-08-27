@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Revolutionary2027ITInfrastructureCybersecurityService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface Revolutionary2027ITInfrastructureCybersecurityService {
   rating: number;
   reviews: number;
 }
-
 export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutionary2027ITInfrastructureCybersecurityService[] = [
   // Zero-Trust Security Platform
   {
@@ -94,7 +92,6 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     rating: 4.9,
     reviews: 850
   },
-
   // Quantum-Resistant Cryptography Platform
   {
     id: 'quantum-resistant-cryptography-2027',
@@ -147,7 +144,6 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     rating: 4.8,
     reviews: 320
   },
-
   // AI-Powered Network Operations Center
   {
     id: 'ai-powered-noc-2027',
@@ -200,7 +196,6 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     rating: 4.7,
     reviews: 1250
   },
-
   // Edge Computing Infrastructure Platform
   {
     id: 'edge-computing-infrastructure-2027',
@@ -253,7 +248,6 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     rating: 4.6,
     reviews: 480
   },
-
   // AI-Powered DevOps Automation Platform
   {
     id: 'ai-powered-devops-automation-2027',

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedBlockchainWeb3Service {
   id: string;
   name: string;
@@ -14,7 +13,7 @@ export interface AdvancedBlockchainWeb3Service {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -39,14 +38,12 @@ export interface AdvancedBlockchainWeb3Service {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   {
     id: 'ai-powered-defi-protocol',
@@ -73,7 +70,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-powered-defi-protocol',
     marketPosition: 'First AI-powered DeFi protocol. Our advantage: Machine learning optimization with comprehensive risk management and cross-chain capabilities.',
-    targetAudience: 'DeFi protocols', 'Cryptocurrency investors', 'Financial institutions', 'Hedge funds', 'Retail investors',
+    targetAudience: ['DeFi protocols', 'Cryptocurrency investors', 'Financial institutions', 'Hedge funds', 'Retail investors'],
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI DeFi & Blockchain Finance',
@@ -93,7 +90,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.8,
     reviews: 28
   },
-
   {
     id: 'quantum-resistant-blockchain',
     name: 'Quantum-Resistant Blockchain',
@@ -119,7 +115,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-resistant-blockchain',
     marketPosition: 'First quantum-resistant blockchain platform. Our advantage: Post-quantum cryptography with comprehensive security and enterprise-grade features.',
-    targetAudience: 'Government agencies', 'Financial institutions', 'Defense contractors', 'Healthcare organizations', 'Critical infrastructure',
+    targetAudience: ['Government agencies', 'Financial institutions', 'Defense contractors', 'Healthcare organizations', 'Critical infrastructure'],
     trialDays: 60,
     setupTime: '6-8 weeks',
     category: 'Quantum-Safe Blockchain & Security',
@@ -139,7 +135,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.9,
     reviews: 15
   },
-
   {
     id: 'web3-identity-platform',
     name: 'Web3 Identity Platform',
@@ -165,7 +160,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/web3-identity-platform',
     marketPosition: 'Leading Web3 identity platform. Our advantage: Comprehensive decentralized identity with privacy-preserving features and enterprise integration.',
-    targetAudience: 'Web3 applications', 'Enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services',
+    targetAudience: ['Web3 applications', 'Enterprises', 'Government agencies', 'Healthcare organizations', 'Financial services'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Web3 Identity & Authentication',
@@ -185,7 +180,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.7,
     reviews: 58
   },
-
   {
     id: 'ai-nft-marketplace',
     name: 'AI NFT Marketplace',
@@ -211,7 +205,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/ai-nft-marketplace',
     marketPosition: 'Leading AI-powered NFT marketplace. Our advantage: Intelligent trading with AI insights and automated portfolio management.',
-    targetAudience: 'NFT creators', 'Collectors', 'Investors', 'Artists', 'Gaming companies',
+    targetAudience: ['NFT creators', 'Collectors', 'Investors', 'Artists', 'Gaming companies'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'AI NFT & Digital Art',
@@ -231,7 +225,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.6,
     reviews: 89
   },
-
   {
     id: 'blockchain-supply-chain-orchestrator',
     name: 'Blockchain Supply Chain Orchestrator',
@@ -257,7 +250,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/blockchain-supply-chain-orchestrator',
     marketPosition: 'Leading blockchain supply chain solution. Our advantage: Comprehensive traceability with IoT integration and smart contract automation.',
-    targetAudience: 'Manufacturing companies', 'Logistics firms', 'Retail chains', 'Food companies', 'Pharmaceutical companies',
+    targetAudience: ['Manufacturing companies', 'Logistics firms', 'Retail chains', 'Food companies', 'Pharmaceutical companies'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Blockchain Supply Chain & Logistics',
@@ -277,7 +270,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.8,
     reviews: 52
   },
-
   {
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
@@ -303,7 +295,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/metaverse-development-platform',
     marketPosition: 'Leading metaverse development platform. Our advantage: AI-powered content generation with blockchain ownership and comprehensive development tools.',
-    targetAudience: 'Game developers', 'Content creators', 'Entertainment companies', 'Educational institutions', 'Brands and marketers',
+    targetAudience: ['Game developers', 'Content creators', 'Entertainment companies', 'Educational institutions', 'Brands and marketers'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Metaverse & Virtual Reality',
