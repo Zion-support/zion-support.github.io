@@ -36,6 +36,7 @@ const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusin
 const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
 const AdvancedInnovativeServicesShowcase2026 = React.lazy(() => import('./pages/AdvancedInnovativeServicesShowcase2026'));
 const InnovativeServicesHub = React.lazy(() => import('./pages/InnovativeServicesHub'));
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 
 // Simple placeholder pages for missing ones
 const FAQ = () => (
@@ -168,6 +169,7 @@ function App() {
                 <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
                 <Route path="/advanced-services-2026" element={<AdvancedInnovativeServicesShowcase2026 />} />
                 <Route path="/innovative-services-hub" element={<InnovativeServicesHub />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />

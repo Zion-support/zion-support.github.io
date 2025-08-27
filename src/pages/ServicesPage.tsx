@@ -30,7 +30,11 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon,
-  Heart
+  Heart,
+  Gamepad2,
+  Music,
+  Building,
+  Truck
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
@@ -38,6 +42,8 @@ import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSol
 import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
 import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
+import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
+import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -69,7 +75,19 @@ export default function ServicesPage() {
     { id: 'educational-technology', name: 'Educational Technology', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
     { id: 'real-estate-technology', name: 'Real Estate Technology', icon: Building, color: 'from-zion-orange to-zion-blue' },
     { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
-    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
+    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' },
+    { id: 'revolutionary-ai', name: 'Revolutionary AI', icon: Rocket, color: 'from-zion-purple to-zion-orange' },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Cpu, color: 'from-zion-orange to-zion-green' },
+    { id: 'neuromorphic-computing', name: 'Neuromorphic Computing', icon: Brain, color: 'from-zion-green to-zion-blue' },
+    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Heart, color: 'from-zion-blue to-zion-purple' },
+    { id: 'advanced-robotics', name: 'Advanced Robotics', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'advanced-materials', name: 'Advanced Materials', icon: Cpu, color: 'from-zion-cyan to-zion-orange' },
+    { id: 'advanced-energy', name: 'Advanced Energy', icon: Zap, color: 'from-zion-orange to-zion-green' },
+    { id: 'advanced-transportation', name: 'Advanced Transportation', icon: Truck, color: 'from-zion-green to-zion-blue' },
+    { id: 'advanced-communication', name: 'Advanced Communication', icon: Globe, color: 'from-zion-blue to-zion-purple' },
+    { id: 'advanced-manufacturing', name: 'Advanced Manufacturing', icon: Cpu, color: 'from-zion-purple to-zion-orange' },
+    { id: 'advanced-gaming', name: 'Advanced Gaming', icon: Gamepad2, color: 'from-zion-orange to-zion-pink' },
+    { id: 'advanced-entertainment', name: 'Advanced Entertainment', icon: Music, color: 'from-zion-pink to-zion-purple' }
   ];
 
   const priceRanges = [
@@ -94,7 +112,9 @@ export default function ServicesPage() {
     ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
     ...NEXT_GEN_AI_SERVICES_2025,
     ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
-    ...IOT_EDGE_COMPUTING_SERVICES_2025
+    ...IOT_EDGE_COMPUTING_SERVICES_2025,
+    ...REVOLUTIONARY_SERVICES_2030,
+    ...EMERGING_TECH_SERVICES_2030
   ];
 
   // Filter and sort services
