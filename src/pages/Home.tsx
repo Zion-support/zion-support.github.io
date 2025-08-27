@@ -157,10 +157,10 @@ const LazyCTASection = lazy(() => import('../components/home/CTASection'));
 
 const Home: React.FC = () => {
   const heroFeatures = [
-    { icon: Brain, title: 'AI-Powered Solutions', description: 'Cutting-edge artificial intelligence for modern businesses' },
-    { icon: Shield, title: 'Cybersecurity Excellence', description: 'Advanced protection for your digital assets' },
-    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud solutions for growth' },
-    { icon: Zap, title: 'Digital Transformation', description: 'Transform your business with innovative technology' }
+    { icon: Brain, title: 'AI-Powered Solutions', description: 'Cutting-edge artificial intelligence for modern businesses', color: 'from-zion-cyan to-zion-blue' },
+    { icon: Shield, title: 'Cybersecurity Excellence', description: 'Advanced protection for your digital assets', color: 'from-zion-purple to-zion-pink' },
+    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud solutions for growth', color: 'from-zion-blue to-zion-cyan' },
+    { icon: Zap, title: 'Digital Transformation', description: 'Transform your business with innovative technology', color: 'from-zion-green to-zion-blue' }
   ];
 
   const services = [
@@ -200,20 +200,33 @@ const Home: React.FC = () => {
         'IT Consulting',
         'Onsite Support',
         'Green IT Solutions',
-        '5G Network Solutions'
+        'Legacy System Modernization'
       ]
     },
     {
       category: 'Emerging Tech',
       icon: Rocket,
-      color: 'from-zion-cyan to-zion-purple',
+      color: 'from-zion-pink to-zion-purple',
       items: [
         'Quantum Computing',
-        'Blockchain & DeFi',
+        'Neuromorphic Systems',
+        'Synthetic Biology',
         'Space Technology',
-        'Biotechnology',
-        'Nanotechnology',
-        'AR/VR Development'
+        'Brain-Computer Interface',
+        'Advanced Materials'
+      ]
+    },
+    {
+      category: 'Industry Solutions',
+      icon: Building,
+      color: 'from-zion-orange to-zion-red',
+      items: [
+        'Healthcare AI',
+        'Financial Technology',
+        'Manufacturing 4.0',
+        'Smart Cities',
+        'Retail Innovation',
+        'Transportation Tech'
       ]
     }
   ];
@@ -310,11 +323,11 @@ const Home: React.FC = () => {
               {heroFeatures.map((feature, index) => (
                 <div 
                   key={feature.title}
-                  className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
+                  className="card-futuristic text-center hover:scale-105 transition-all duration-300 group"
                   role="article"
                   aria-labelledby={`feature-${index}-title`}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 glow-cyan`}>
                     <feature.icon className="w-8 h-8 text-white" aria-hidden="true" />
                   </div>
                   <h3 id={`feature-${index}-title`} className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
