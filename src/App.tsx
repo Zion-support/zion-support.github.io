@@ -59,6 +59,10 @@ const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
 
+// 2026 Innovative Services - Our core services
+const UltimateInnovativeServices2026 = React.lazy(() => import('./pages/UltimateInnovativeServices2026'));
+const ComprehensiveServicesOverview2026 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2026'));
+
 // Service pages
 const AIServices = React.lazy(() => import('./pages/services/AIServices'));
 const CybersecurityServices = React.lazy(() => import('./pages/services/CybersecurityServices'));
@@ -176,6 +180,8 @@ function App() {
                   <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
                   <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
                   <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
+                  <Route path="/ultimate-innovative-services-2026" element={<UltimateInnovativeServices2026 />} />
+                  <Route path="/comprehensive-services-overview-2026" element={<ComprehensiveServicesOverview2026 />} />
                   
                   {/* Additional Routes */}
                   <Route path="/partners" element={<Partners />} />
