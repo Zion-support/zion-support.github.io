@@ -849,3 +849,76 @@
   outline: 3px solid #ffff00;
   outline-offset: 3px;
 }
+
+/* Show focus indicators when enabled */
+.show-focus-indicators *:focus {
+  outline: 3px solid #22ddd2;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.3);
+}
+
+/* Color blind friendly mode */
+.color-blind-friendly {
+  filter: grayscale(100%) contrast(120%);
+}
+
+.color-blind-friendly * {
+  filter: grayscale(100%) contrast(120%);
+}
+
+/* Large text mode */
+[style*="--text-scale: 1.2"] {
+  font-size: 1.2em;
+}
+
+[style*="--text-scale: 1.2"] h1 { font-size: 2.4em; }
+[style*="--text-scale: 1.2"] h2 { font-size: 2.0em; }
+[style*="--text-scale: 1.2"] h3 { font-size: 1.8em; }
+[style*="--text-scale: 1.2"] p { font-size: 1.2em; }
+[style*="--text-scale: 1.2"] span { font-size: 1.2em; }
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Enhanced keyboard navigation */
+.keyboard-navigation *:focus {
+  outline: 3px solid #22ddd2;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.3);
+}
+
+/* High contrast mode enhancements */
+.high-contrast .bg-cyan-600 {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+}
+
+.high-contrast .text-cyan-400 {
+  color: #ffff00 !important;
+}
+
+.high-contrast .border-cyan-500 {
+  border-color: #ffff00 !important;
+}
