@@ -77,6 +77,7 @@ const Contact: NextPage = () => {
                     <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 text-lg">
                       +1 (302) 464-0950
                     </a>
+                    <p className="text-gray-300 text-sm">Available Monday-Friday, 9 AM - 6 PM EST</p>
                   </div>
                 </div>
 
@@ -91,6 +92,7 @@ const Contact: NextPage = () => {
                     <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
                       kleber@ziontechgroup.com
                     </a>
+                    <p className="text-gray-300 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
 
@@ -103,10 +105,9 @@ const Contact: NextPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
-                    <p className="text-white text-lg">
-                      364 E Main St STE 1008<br />
-                      Middletown, DE 19709
-                    </p>
+                    <p className="text-white text-lg">364 E Main St STE 1008</p>
+                    <p className="text-white text-lg">Middletown, DE 19709</p>
+                    <p className="text-gray-300 text-sm">United States</p>
                   </div>
                 </div>
 
@@ -118,10 +119,9 @@ const Contact: NextPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Business Hours</h3>
-                    <p className="text-white text-lg">
-                      Mon-Fri: 9AM-6PM EST<br />
-                      Sat: 10AM-2PM EST
-                    </p>
+                    <p className="text-white text-lg">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                    <p className="text-white text-lg">Saturday: 10:00 AM - 2:00 PM EST</p>
+                    <p className="text-gray-300 text-sm">Sunday: Closed</p>
                   </div>
                 </div>
               </div>
@@ -129,156 +129,160 @@ const Contact: NextPage = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="space-y-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-white font-medium mb-2">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your full name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="email" className="block text-white font-medium mb-2">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your.email@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="company" className="block text-white font-medium mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="phone" className="block text-white font-medium mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                </div>
-
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+            <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="service" className="block text-white font-medium mb-2">
-                    Service of Interest
+                  <label htmlFor="name" className="block text-white font-semibold mb-2">
+                    Full Name *
                   </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service} className="bg-gray-800 text-white">
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
                     onChange={handleChange}
                     required
-                    rows={5}
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
-                    placeholder="Tell us about your project, requirements, or any questions you have..."
+                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your full name"
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                <div>
+                  <label htmlFor="email" className="block text-white font-semibold mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="company" className="block text-white font-semibold mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-white font-semibold mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="service" className="block text-white font-semibold mb-2">
+                  Service of Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  Send Message
-                </button>
-              </form>
-            </div>
+                  <option value="">Select a service</option>
+                  {services.map((service, index) => (
+                    <option key={index} value={service} className="bg-gray-800 text-white">
+                      {service}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-white font-semibold mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  placeholder="Tell us about your project, requirements, or questions..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300 text-lg"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center text-white mt-20">
+        {/* Additional Contact Methods */}
+        <div className="mt-20 text-center text-white">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
-            <p className="text-xl mb-8">
-              Let's discuss how Zion Tech Group can help you leverage cutting-edge technology 
-              to achieve your business goals. We offer free consultations and custom solution design.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                📞 Call +1 (302) 464-0950
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                ✉️ Schedule Consultation
-              </a>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6 text-sm">
+            <h2 className="text-3xl font-bold mb-6">Other Ways to Connect</h2>
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div>
-                <h3 className="text-white font-semibold mb-2">📍 Location</h3>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-              </div>
-              <div>
-                <h3 className="text-white font-semibold mb-2">🌐 Website</h3>
-                <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
+                <h3 className="text-xl font-semibold mb-3 text-blue-400">🌐 Website</h3>
+                <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
                   https://ziontechgroup.com
                 </a>
+                <p className="text-gray-300 text-sm mt-2">Visit our website for more information about our services and products</p>
               </div>
               <div>
-                <h3 className="text-white font-semibold mb-2">⏰ Business Hours</h3>
-                <p className="text-gray-300">Mon-Fri: 9AM-6PM EST<br />Sat: 10AM-2PM EST</p>
+                <h3 className="text-xl font-semibold mb-3 text-green-400">📱 Mobile</h3>
+                <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 text-lg">
+                  +1 (302) 464-0950
+                </a>
+                <p className="text-gray-300 text-sm mt-2">Call or text us for immediate assistance</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3 text-purple-400">📧 Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
+                  kleber@ziontechgroup.com
+                </a>
+                <p className="text-gray-300 text-sm mt-2">Send us detailed project requirements or questions</p>
+              </div>
+            </div>
+            
+            <div className="border-t border-white/20 pt-8">
+              <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+              <p className="text-lg mb-6">Contact us today for a free consultation and custom solution design</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                  📞 Call Now
+                </a>
+                <a href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                  ✉️ Send Email
+                </a>
               </div>
             </div>
           </div>
@@ -289,4 +293,3 @@ const Contact: NextPage = () => {
 };
 
 export default Contact;
-
