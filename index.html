@@ -1,11 +1,9 @@
-<!-- Cleaned: removed duplicate HTML block to ensure valid Vite index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#0f172a" />
     <meta
       name="description"
@@ -14,6 +12,9 @@
     <meta name="keywords" content="AI, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group" />
     <meta name="author" content="Zion Tech Group" />
     <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="color-scheme" content="dark light" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -37,7 +38,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="/logo192.png" />
@@ -80,7 +85,7 @@
       }
     </script>
   </head>
-  <body>
+  <body class="antialiased">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
