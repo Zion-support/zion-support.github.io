@@ -36,12 +36,13 @@ import {
   ChevronDown,
   Handshake,
   Atom,
-  Link,
+  Link as LinkIcon,
   Wifi,
   HeartPulse,
   DollarSign,
   Leaf,
-  Building
+  Building,
+  User
 } from 'lucide-react';
 
 export const EnhancedSidebar: React.FC = () => {
