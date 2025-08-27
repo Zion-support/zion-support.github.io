@@ -12,6 +12,9 @@
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
 
+<<<<<<< HEAD
+# Redirects for legacy URLs
+=======
 # Explicitly disable Next.js plugin for Vite project
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -25,6 +28,7 @@
     cloud_name = "${CLOUDINARY_CLOUD_NAME}"
 
 # Optional: a few redirects that were present
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3d25
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -61,16 +65,23 @@
   status = 301
 
 [[redirects]]
+<<<<<<< HEAD
+=======
   from = "/ai-content-marketing-automation"
   to = "/intelligent-content-automation-platform"
   status = 301
 
 [[redirects]]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3d25
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
 
+<<<<<<< HEAD
+# Catch-all redirect for SPA routing
+=======
 # SPA fallback for client-side routing
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3d25
 [[redirects]]
   from = "/*"
   to = "/index.html"

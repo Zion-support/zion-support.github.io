@@ -214,6 +214,16 @@ export const FuturisticNavigation: React.FC = () => {
     {
       name: "AI & Machine Learning",
       icon: Brain,
+<<<<<<< HEAD
+      services: [
+        { name: "AI Services", href: "/ai-services" },
+        { name: "Machine Learning", href: "/ai-services/machine-learning" },
+        { name: "Computer Vision", href: "/ai-services/computer-vision" },
+        { name: "Natural Language Processing", href: "/ai-services/nlp" },
+        { name: "Autonomous AI Agents", href: "/ai-services/autonomous-agents" },
+        { name: "Healthcare AI", href: "/ai-services/healthcare" },
+        { name: "Financial AI", href: "/ai-services/financial" }
+=======
       color: 'from-zion-cyan to-zion-blue',
       dropdown: [
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
@@ -224,6 +234,7 @@ export const FuturisticNavigation: React.FC = () => {
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3d25
       ]
     },
     {

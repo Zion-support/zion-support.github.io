@@ -1,4 +1,7 @@
 import React from 'react';
+<<<<<<< HEAD
+import { SEO } from '@/components/SEO';
+=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -385,8 +388,18 @@ const AIServices = [
         category: "Content",
         link: "/request-quote?service=ai-content"
     }
+>>>>>>> cursor/website-audit-and-enhancement-1eed
 ];
 const categories = [
+<<<<<<< HEAD
+  { name: 'AI Research', icon: Brain, count: 2, color: 'from-indigo-600 to-purple-700' },
+  { name: 'Quantum AI', icon: Atom, count: 1, color: 'from-pink-600 to-red-700' },
+  { name: 'Infrastructure', icon: Server, count: 1, color: 'from-blue-600 to-cyan-700' },
+  { name: 'Model Development', icon: Network, count: 1, color: 'from-green-600 to-emerald-700' },
+  { name: 'Ethics & Governance', icon: Shield, count: 1, color: 'from-yellow-600 to-orange-700' },
+  { name: 'Business Intelligence', icon: BarChart3, count: 1, color: 'from-purple-600 to-indigo-700' }
+];
+=======
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -449,6 +462,7 @@ const AIServicesPage: React.FC = () => {
       benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization']
     }
   ];
+>>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-48d7
 
   const caseStudies = [
     {
@@ -473,6 +487,7 @@ const AIServicesPage: React.FC = () => {
       results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes']
     }
   ];
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3d25
 
 const AIServicesPage = () => {
   return (
