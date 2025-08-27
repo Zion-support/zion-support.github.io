@@ -9,7 +9,7 @@ import { Footer } from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer.tsx';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
