@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { Menu, X, Search, User, Bell } from 'lucide-react';
+
+>>>>>>> add-innovative-services-2025
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 

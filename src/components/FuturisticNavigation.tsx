@@ -98,97 +98,25 @@ import {
   MicOff,
   Volume2,
   VolumeX,
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlayCircle,
-  PauseCircle,
-  StopCircle,
-  SkipBackCircle,
-  SkipForwardCircle,
-  RewindCircle,
-  FastForwardCircle,
-  ShuffleCircle,
-  RepeatCircle,
-  Repeat1Circle,
-  Shuffle2Circle,
-  SkipBack2Circle,
-  SkipForward2Circle,
-  PlaySquare,
-  PauseSquare,
-  StopSquare,
-  SkipBackSquare,
-  SkipForwardSquare,
-  RewindSquare,
-  FastForwardSquare,
-  ShuffleSquare,
-  RepeatSquare,
-  Repeat1Square,
-  Shuffle2Square,
-  SkipBack2Square,
-  SkipForward2Square,
-  PlayTriangle,
-  PauseTriangle,
-  StopTriangle,
-  SkipBackTriangle,
-  SkipForwardTriangle,
-  RewindTriangle,
-  FastForwardTriangle,
-  ShuffleTriangle,
-  RepeatTriangle,
-  Repeat1Triangle,
-  Shuffle2Triangle,
-  SkipBack2Triangle,
-  SkipForward2Triangle,
-  PlayOctagon,
-  PauseOctagon,
-  StopOctagon,
-  SkipBackOctagon,
-  SkipForwardOctagon,
-  RewindOctagon,
-  FastForwardOctagon,
-  ShuffleOctagon,
-  RepeatOctagon,
-  Repeat1Octagon,
-  Shuffle2Octagon,
-  SkipBack2Octagon,
-  SkipForward2Octagon,
-  PlayDodecagon,
-  PauseDodecagon,
-  StopDodecagon,
-  SkipBackDodecagon,
-  SkipForwardDodecagon,
-  RewindDodecagon,
-  FastForwardDodecagon,
-  ShuffleDodecagon,
-  RepeatDodecagon,
-  Repeat1Dodecagon,
-  Shuffle2Dodecagon,
-  SkipBack2Dodecagon,
-  SkipForward2Dodecagon
+  Building,
+  Leaf,
+  Space,
+  Handshake,
+  Calendar
 } from 'lucide-react';
 
 export const FuturisticNavigation: React.FC = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -196,7 +124,7 @@ export const FuturisticNavigation: React.FC = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setActiveDropdown(null);
-  }, [location.pathname]);
+  }, [location]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -226,61 +154,57 @@ export const FuturisticNavigation: React.FC = () => {
       ]
     },
     {
-      name: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: Code,
-      color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' },
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' },
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', icon: ShieldCheck, description: 'Advanced threat protection' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' },
-        { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' },
-        { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
-      ]
-    },
-    {
       name: 'IT Services',
       href: '/it-services',
       icon: Network,
       color: 'from-zion-blue to-zion-purple',
       dropdown: [
-        { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
-        { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support', icon: Wifi, description: '24/7 onsite technical support' },
-        { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' },
-        { name: '5G Network Solutions', href: '/it-services/5g-solutions', icon: Satellite, description: 'Next-gen network infrastructure' }
+        { name: 'Infrastructure Management', href: '/services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
+        { name: 'IT Consulting', href: '/services/consulting', icon: Users, description: 'Expert IT consulting services' },
+        { name: 'Enterprise IT', href: '/services/enterprise-it', icon: Building, description: 'Enterprise-grade IT solutions' },
+        { name: 'Green IT Solutions', href: '/services/green-it', icon: Leaf, description: 'Sustainable IT infrastructure' },
+        { name: 'Space Technology', href: '/services/space-technology', icon: Space, description: 'Space tech solutions' }
       ]
     },
     {
-      name: 'Emerging Tech',
-      href: '/emerging-tech',
-      icon: Rocket,
-      color: 'from-zion-cyan to-zion-purple',
-      dropdown: [
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' },
-        { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' },
-        { name: 'Biotechnology', href: '/emerging-tech/biotech', icon: Dna, description: 'Biotech and healthcare solutions' },
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech', icon: Microscope, description: 'Nanotechnology applications' },
-        { name: 'Augmented Reality', href: '/emerging-tech/ar-vr', icon: Eye, description: 'AR/VR development services' }
-      ]
-    },
-    {
-      name: 'Marketplace',
-      href: '/marketplace',
-      icon: ShoppingCart,
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
       color: 'from-zion-purple to-zion-cyan',
       dropdown: [
-        { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' },
-        { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' },
-        { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' },
-        { name: 'Professional Services', href: '/marketplace/services', icon: Briefcase, description: 'Expert professional services' },
-        { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' },
-        { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
+        { name: 'Business Solutions', href: '/solutions/business', icon: Briefcase, description: 'Comprehensive business solutions' },
+        { name: 'Technology Solutions', href: '/solutions/technology', icon: Cpu, description: 'Advanced technology solutions' },
+        { name: 'Industry Solutions', href: '/solutions/industry', icon: Building, description: 'Industry-specific solutions' },
+        { name: 'Innovation Hub', href: '/solutions/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
+      ]
+    },
+    {
+      name: 'Company',
+      href: '/about',
+      icon: Building,
+      color: 'from-zion-cyan to-zion-purple',
+      dropdown: [
+        { name: 'About Us', href: '/about', icon: Building, description: 'Learn about our mission and values' },
+        { name: 'Team', href: '/team', icon: Users, description: 'Meet our expert team' },
+        { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
+        { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
+        { name: 'News', href: '/news', icon: FileText, description: 'Latest company updates' },
+        { name: 'Events', href: '/events', icon: Calendar, description: 'Upcoming events' }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: BookOpen,
+      color: 'from-zion-purple to-zion-cyan',
+      dropdown: [
+        { name: 'Blog', href: '/blog', icon: FileText, description: 'Industry insights and articles' },
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories and results' },
+        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'In-depth research and analysis' },
+        { name: 'Webinars', href: '/webinars', icon: Video, description: 'Educational webinars' },
+        { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
+        { name: 'Support', href: '/support', icon: HelpCircle, description: 'Technical support and help' }
       ]
     },
     {
