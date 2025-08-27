@@ -120,6 +120,27 @@ export function Footer() {
 
   return (
     <footer className="bg-futuristic border-t border-zion-cyan/20 pt-20 pb-8 relative overflow-hidden">
+<<<<<<< HEAD
+              {/* Animated background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse"></div>
+          <div className="absolute bottom-32 right-32 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
+          <div className="absolute top-40 right-40 w-16 h-16 border border-zion-cyan rounded-full animate-pulse delay-3000"></div>
+          <div className="absolute top-60 left-1/4 w-20 h-20 border border-zion-green rounded-full animate-pulse delay-4000"></div>
+          <div className="absolute bottom-20 left-1/3 w-12 h-12 border border-zion-pink rounded-full animate-pulse delay-5000"></div>
+        </div>
+
+        {/* Matrix rain effect */}
+        <div className="absolute inset-0 opacity-3">
+          <div className="matrix-rain w-full h-full"></div>
+        </div>
+
+        {/* Cyber grid overlay */}
+        <div className="absolute inset-0 opacity-2">
+          <div className="cyber-grid w-full h-full"></div>
+        </div>
+=======
       {/* Enhanced animated background elements */}
       <div className="absolute inset-0 opacity-15">
         <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse neon-glow"></div>
@@ -134,6 +155,7 @@ export function Footer() {
       
       {/* Particle field */}
       <div className="absolute inset-0 particle-field opacity-20"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
 
       <div className="container-responsive relative z-10">
         {/* Main footer content */}
@@ -212,10 +234,16 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
+<<<<<<< HEAD
+                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 hover:scale-110 group"
+                >
+                  <social.icon className="w-5 h-5 group-hover:animate-bounce" />
+=======
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 hover:scale-110 relative group"
                 >
                   <social.icon className="w-5 h-5" />
                   <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/10 to-zion-cyan/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
                 </a>
               ))}
             </motion.div>
@@ -337,6 +365,9 @@ export function Footer() {
             <span className="hidden sm:inline">•</span>
             <span className="hidden sm:inline">Made with <Heart className="w-4 h-4 inline text-zion-cyan" /> for innovation</span>
           </div>
+<<<<<<< HEAD
+        </div>
+=======
           
           <div className="flex items-center space-x-4">
             <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
@@ -365,6 +396,7 @@ export function Footer() {
           <ArrowUp className="w-5 h-5" />
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 hover:opacity-100 transition-opacity duration-300 shimmer-effect"></div>
         </motion.button>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
       </div>
     </footer>
   );

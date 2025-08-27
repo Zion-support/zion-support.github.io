@@ -75,6 +75,69 @@ body {
 .text-zion-purple { color: var(--zion-purple); }
 .text-zion-purple-light { color: var(--zion-purple-light); }
 
+<<<<<<< HEAD
+.border-zion-blue-dark { border-color: var(--zion-blue-dark); }
+.border-zion-blue { border-color: var(--zion-blue); }
+.border-zion-blue-light { border-color: var(--zion-blue-light); }
+.border-zion-slate-dark { border-color: var(--zion-slate-dark); }
+.border-zion-slate { border-color: var(--zion-slate); }
+.border-zion-slate-light { border-color: var(--zion-slate-light); }
+.border-zion-cyan { border-color: var(--zion-cyan); }
+.border-zion-cyan-light { border-color: var(--zion-cyan-light); }
+.border-zion-purple { border-color: var(--zion-purple); }
+.border-zion-purple-light { border-color: var(--zion-purple-light); }
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Components */
+.btn-primary {
+  @apply bg-zion-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors duration-300;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-zion-slate-light/20 hover:shadow-md transition-shadow duration-300;
+}
+
+.input {
+  @apply w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+=======
     --sidebar-background: 228 12% 92%;
     --sidebar-foreground: 0 0% 7%;
     --sidebar-primary: 216 84% 53%;
@@ -177,6 +240,7 @@ body {
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 262 83% 58%;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
   }
 }
 
@@ -559,6 +623,30 @@ body {
     to { transform: translateY(0); opacity: 1; }
   }
 
+<<<<<<< HEAD
+  @keyframes grid-move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(20px, 20px); }
+  }
+
+  @keyframes holographic-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes particle-drift {
+    0% { transform: translateX(-100px) translateY(0px); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateX(calc(100vw + 100px)) translateY(-100px); opacity: 0; }
+  }
+
+  @keyframes cyber-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(1deg); }
+    50% { transform: translateY(-20px) rotate(0deg); }
+    75% { transform: translateY(-10px) rotate(-1deg); }
+=======
   @keyframes matrix-rain {
     0% { background-position: 0% 0%; }
     100% { background-position: 200% 0%; }
@@ -593,6 +681,7 @@ body {
   @keyframes shimmer {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
   }
 
   /* Utility Classes */
@@ -628,6 +717,9 @@ body {
   .heading-responsive {
     @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
   }
+<<<<<<< HEAD
+}
+=======
 
   /* Enhanced futuristic utilities */
   .text-gradient {
@@ -694,3 +786,4 @@ body {
     @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-zion-cyan/20 before:to-transparent before:animate-[shimmer_2s_linear_infinite];
   }
 }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de

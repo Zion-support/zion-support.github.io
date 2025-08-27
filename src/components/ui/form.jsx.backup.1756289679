@@ -1,5 +1,25 @@
 import React from 'react';
 
+<<<<<<< HEAD
+// Simple form components for now
+export const Form = ({ children, ...props }) => (
+  <form {...props}>{children}</form>
+);
+
+export const FormControl = ({ children }) => children;
+
+export const FormField = ({ name, render }) => render({ field: { name } });
+
+export const FormItem = ({ children }) => <div>{children}</div>;
+
+export const FormLabel = ({ children, className }) => (
+  <label className={className}>{children}</label>
+);
+
+export const FormMessage = ({ children, className }) => (
+  <div className={className}>{children}</div>
+);
+=======
 // Simple form components for basic form functionality
 export const Form = ({ children, ...props }) => (
   <form {...props}>
@@ -35,3 +55,4 @@ export const FormMessage = ({ children, className = '', ...props }) => (
     {children}
   </div>
 );
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de

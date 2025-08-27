@@ -1,9 +1,15 @@
 // Simple production logger utility
 export const logErrorToProduction = (message, error) => {
   // In production, you might want to send this to a logging service
+<<<<<<< HEAD
+  // For now, we'll just console.log in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log('Production Logger:', message, error);
+=======
   // For now, we'll just console.error in development
   if (process.env.NODE_ENV === 'development') {
     console.error('Production Logger:', message, error);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
   }
   
   // In production, you could send to:
@@ -11,4 +17,8 @@ export const logErrorToProduction = (message, error) => {
   // - LogRocket
   // - Custom logging service
   // - Analytics service
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de

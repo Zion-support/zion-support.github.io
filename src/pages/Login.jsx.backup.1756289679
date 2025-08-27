@@ -18,9 +18,14 @@ export default function Login() {
 
   useEffect(() => {
     // This effect handles token processing (e.g., from magic link)
+<<<<<<< HEAD
+    // It runs when component mounts or location.search changes
+    const params = new URLSearchParams(location.search);
+=======
     // It runs when component mounts or location.search (containing query) changes
     const queryString = location.search;
     const params = new URLSearchParams(queryString);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
     const token = params.get('token');
     if (token) {
       safeStorage.setItem('zion_token', token);
@@ -29,7 +34,11 @@ export default function Login() {
       // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
     }
+<<<<<<< HEAD
+  }, [location.search, location.pathname, navigate]);
+=======
   }, [location.search, location.pathname, navigate]); // Depend on location.search
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
@@ -37,6 +46,18 @@ export default function Login() {
       const next = new URLSearchParams(location.search).get('next') || '/dashboard';
       navigate(next, { replace: true });
     }
+<<<<<<< HEAD
+  }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.search]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-futuristic flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-zion-cyan/20 rounded-full animate-spin border-t-zion-cyan mx-auto mb-4"></div>
+          <p className="text-zion-slate-light">Loading...</p>
+        </div>
+      </div>
+=======
   }, [isAuthenticated, isLoading, navigate, location.search, reduxDispatch]);
 
   // Render LoginForm if not authenticated and auth is not loading
@@ -45,6 +66,7 @@ export default function Login() {
       <ErrorBoundary>
         <LoginForm />
       </ErrorBoundary>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
     );
   }
 

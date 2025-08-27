@@ -3,21 +3,18 @@ import { Link } from 'react-router-dom';
 
 export function MainNavigation() {
   return (
-    <nav className="hidden md:flex space-x-8">
-      <Link to="/services" className="text-gray-700 hover:text-zion-purple transition-colors">
+    <nav className="flex items-center space-x-8">
+      <Link to="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
+        Home
+      </Link>
+      <Link to="/services" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
         Services
       </Link>
-      <Link to="/solutions" className="text-gray-700 hover:text-zion-purple transition-colors">
-        Solutions
-      </Link>
-      <Link to="/about" className="text-gray-700 hover:text-zion-purple transition-colors">
+      <Link to="/about" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
         About
       </Link>
-      <Link to="/contact" className="text-gray-700 hover:text-zion-purple transition-colors">
+      <Link to="/contact" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">
         Contact
-      </Link>
-      <Link to="/marketplace" className="text-gray-700 hover:text-zion-purple transition-colors">
-        Marketplace
       </Link>
     </nav>
   );

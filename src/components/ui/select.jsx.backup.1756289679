@@ -2,12 +2,26 @@ import React from 'react';
 
 export function Select({ children, className = '', value, onValueChange }) {
     return (
+<<<<<<< HEAD
+        <select 
+            className={`w-full px-3 py-2 border border-gray-300 rounded-md ${className}`} 
+            value={value} 
+            onChange={onValueChange}
+        >
+=======
         <select className={`${className}`} value={value} onChange={onValueChange}>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
             {children}
         </select>
     );
 }
 
+<<<<<<< HEAD
+export function SelectTrigger({ children, className = '', ...props }) {
+    return (
+        <button
+            className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
+=======
 export function SelectValue({ placeholder }) {
     return <span className="text-sm">{placeholder || 'Select an option'}</span>;
 }
@@ -16,6 +30,7 @@ export function SelectTrigger({ children, className = '', ...props }) {
     return (
         <button 
             className={`flex h-10 w-full items-center justify-between rounded-md border border-zion-blue-light/30 bg-zion-blue-dark/90 px-3 py-2 text-sm text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-blue-dark ${className}`}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
             {...props}
         >
             {children}
@@ -23,6 +38,13 @@ export function SelectTrigger({ children, className = '', ...props }) {
     );
 }
 
+<<<<<<< HEAD
+export function SelectValue({ placeholder }) {
+    return <span className="text-sm">{placeholder || 'Select an option'}</span>;
+}
+
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
 export function SelectContent({ children, className = '' }) {
     return (
         <div className={`
@@ -43,10 +65,14 @@ export function SelectItem({ children, className = '', value, ...props }) {
             hover:bg-zion-blue/20 focus:bg-zion-blue/20 
             focus:text-white transition-colors
             ${className}
+<<<<<<< HEAD
+        `} data-value={value} {...props}>
+=======
         `} 
         data-value={value} 
         {...props}
         >
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
             {children}
         </div>
     );

@@ -8,7 +8,11 @@ export const Badge = ({ children, className = '', variant = 'default' }) => {
         destructive: 'border-transparent bg-destructive text-destructive-foreground',
         outline: 'text-foreground'
     };
+<<<<<<< HEAD
+    
+========
 =======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-59de
     return (
         <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
             {children}
