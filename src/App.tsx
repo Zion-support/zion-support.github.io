@@ -1,7 +1,6 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HelmetProvider } from 'react-helmet-async';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
@@ -17,7 +16,7 @@ import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { ErrorFallback } from './components/ErrorFallback';
+
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
@@ -378,6 +377,8 @@ function App() {
             />
           </div>
         </ErrorBoundary>
+      </HelmetProvider>
+    </Router>
   );
 }
 
