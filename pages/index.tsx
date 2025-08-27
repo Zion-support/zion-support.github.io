@@ -134,6 +134,50 @@ const Home: NextPage = () => {
           </div>
         </div>
 
+        {/* Emerging Technology Services */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">🚀 Revolutionary Emerging Tech Services 2027</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the future of technology with our breakthrough services that are reshaping industries and creating new possibilities.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-lg p-6 text-center hover:from-purple-500/30 hover:to-pink-500/30 transition-all duration-300 border border-purple-400/30">
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Quantum Internet Infrastructure</h3>
+              <p className="text-gray-300 text-sm mb-4">Next-generation quantum internet enabling ultra-secure communications and quantum network protocols.</p>
+              <div className="text-sm text-purple-400 mb-3">Starting at $25,000/month</div>
+              <a href="/emerging-tech-services" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                Explore Quantum Tech →
+              </a>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-lg p-6 text-center hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 border border-blue-400/30">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Threat Intelligence</h3>
+              <p className="text-gray-300 text-sm mb-4">Advanced AI-driven threat detection with behavioral analysis and predictive security insights.</p>
+              <div className="text-sm text-blue-400 mb-3">Starting at $8,999/month</div>
+              <a href="/advanced-cybersecurity" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                Explore AI Security →
+              </a>
+            </div>
+            <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-lg p-6 text-center hover:from-green-500/30 hover:to-teal-500/30 transition-all duration-300 border border-green-400/30">
+              <div className="text-4xl mb-4">🧬</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Biocomputing Platform</h3>
+              <p className="text-gray-300 text-sm mb-4">Revolutionary DNA and cellular computing for massive parallel processing and energy efficiency.</p>
+              <div className="text-sm text-green-400 mb-3">Starting at $15,000/month</div>
+              <a href="/emerging-tech-services" className="text-green-400 hover:text-green-300 text-sm font-medium">
+                Explore Biocomputing →
+              </a>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <a href="/emerging-tech-services" className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-block">
+              View All Emerging Tech Services
+            </a>
+          </div>
+        </div>
+
         {/* Why Choose Us */}
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
