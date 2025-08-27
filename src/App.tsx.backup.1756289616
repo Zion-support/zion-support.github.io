@@ -5,6 +5,12 @@ import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from 'react-error-boundary';
 
+<<<<<<< HEAD
+// Enhanced lazy loading with preloading hints
+const Home = lazy(() => import('./pages/Home'), {
+  suspense: true
+});
+=======
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
@@ -23,6 +29,7 @@ const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-dc02
 
 const About = lazy(() => import('./pages/About'), {
   suspense: true
@@ -48,6 +55,11 @@ const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/Comprehen
 const ExpandedServicesShowcase2027 = React.lazy(() => import('./pages/ExpandedServicesShowcase2027'));
 const ExpandedServicesPricingGuide2027 = React.lazy(() => import('./pages/ExpandedServicesPricingGuide2027'));
 
+<<<<<<< HEAD
+const Blog = lazy(() => import('./pages/Blog'), {
+  suspense: true
+});
+=======
 // Micro SAAS pages
 const AIBusinessIntelligenceSAAS = React.lazy(() => import('./pages/micro-saas/AIBusinessIntelligence'));
 const CustomerExperience = React.lazy(() => import('./pages/micro-saas/CustomerExperience'));
@@ -59,6 +71,7 @@ const Infrastructure = React.lazy(() => import('./pages/it-services/Infrastructu
 const Products = React.lazy(() => import('./pages/marketplace/Products'));
 
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-dc02
 
 const BlogPost = lazy(() => import('./pages/BlogPost'), {
   suspense: true
