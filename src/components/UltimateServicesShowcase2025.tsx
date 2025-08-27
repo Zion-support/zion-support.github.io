@@ -299,7 +299,6 @@ const UltimateServicesShowcase2025: React.FC = () => {
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'list' 
                       ? 'bg-cyan-500/30 text-cyan-400' 
-                      : 'text-cyan-400 hover:text-white' 
                       : 'text-gray-400 hover:text-white'
                   }`}
                 >
