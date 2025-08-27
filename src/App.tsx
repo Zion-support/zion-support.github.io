@@ -45,6 +45,12 @@ const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
 const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
 
+// Additional service pages
+const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
+const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -131,6 +137,12 @@ function App() {
               <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
               <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
               <Route path="/services/mobile-survey" element={<MobileSurvey />} />
+              
+              {/* Additional service routes */}
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              <Route path="/services/green-it" element={<GreenIT />} />
+              <Route path="/services/data-analytics" element={<DataAnalytics />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
