@@ -96,6 +96,77 @@ const MicroSaaS: React.FC = () => {
       pricing: 'From $69/mo',
       href: 'https://ziontechgroup.com/services'
     }
+    ,
+    {
+      icon: Mail,
+      name: 'Cold Outreach Sequencer with Enrichment',
+      desc: 'Find contacts, enrich accounts, personalize emails with AI, and auto-sync replies to CRM.',
+      pricing: 'From $99/mo + usage',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: BarChart3,
+      name: 'Ad Spend Anomaly Guard',
+      desc: 'Monitors Google/Facebook/TikTok ads for spend spikes, CPA drift, and pauses waste automatically.',
+      pricing: 'From $59/mo',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Shield,
+      name: 'Vendor Risk Tracker',
+      desc: 'Third-party inventory, SOC2 mapping, auto-questionnaires, breach monitoring, and renewal reminders.',
+      pricing: 'From $79/mo',
+      href: 'https://ziontechgroup.com/it-services'
+    },
+    {
+      icon: FileSearch,
+      name: 'Contract Clause Finder',
+      desc: 'Upload contracts, flag risky clauses, extract key terms, and compare against policy playbooks.',
+      pricing: 'From $89/mo',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Bug,
+      name: 'CI/CD Secret Scanner',
+      desc: 'Scans repos and pipelines for leaked secrets, keys rotation workflows, and blocking policies.',
+      pricing: 'From $49/mo',
+      href: 'https://ziontechgroup.com/it-services'
+    },
+    {
+      icon: Globe,
+      name: 'Local SEO Listings Manager',
+      desc: 'Manage Google Business, Apple, Yelp, and citations with review replies and rank tracking.',
+      pricing: 'From $39/mo',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: CreditCard,
+      name: 'Revenue Leak Detector',
+      desc: 'Stripe/Shopify monitors for failed webhooks, tax/shipping mismatches, and AR aging alerts.',
+      pricing: 'From $69/mo',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: ShoppingCart,
+      name: 'Subscription Paywall Kit',
+      desc: 'Drop-in pricing pages, trials, entitlements, receipts and usage metering for SaaS startups.',
+      pricing: 'From $79/mo',
+      href: 'https://ziontechgroup.com/micro-saas'
+    },
+    {
+      icon: Bell,
+      name: 'User Churn Predictor',
+      desc: 'Detects churn risk cohorts, triggers save-offers, and creates tasks in CRM/helpdesk.',
+      pricing: 'From $69/mo',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Languages,
+      name: 'Localization QA Bot',
+      desc: 'Screenshots diffing and string coverage checks across locales; flags overflows and untranslated text.',
+      pricing: 'From $59/mo',
+      href: 'https://ziontechgroup.com/services'
+    }
   ];
 
   return (

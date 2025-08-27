@@ -59,6 +59,43 @@ const AIServices: React.FC = () => {
       desc: 'Transcription, speaker diarization, topic extraction, and highlight reels for calls, webinars, and support.',
       price: '$4,000 - $35,000+'
     }
+    ,
+    {
+      icon: Brain,
+      title: 'GenAI Safety, Evaluation & Red Teaming',
+      desc: 'Automated evals for toxicity, bias, jailbreaks, PII leaks; alignment tests and mitigations with measurable quality gates.',
+      price: '$3,500 - $40,000+'
+    },
+    {
+      icon: Bot,
+      title: 'Sales & Support AI Agents',
+      desc: 'Goal-driven multi-tool agents for lead qualification, outbound sequences, and L2 support with CRM/ITSM integrations.',
+      price: '$6,000 - $55,000+'
+    },
+    {
+      icon: Database,
+      title: 'Synthetic Data & Data Anonymization',
+      desc: 'Privacy-preserving tabular/time-series/image data generation, k-anonymity, differential privacy, and safe-sharing pipelines.',
+      price: '$5,000 - $45,000+'
+    },
+    {
+      icon: Shield,
+      title: 'AI Security Posture & Model Hardening',
+      desc: 'Prompt injection defenses, model access controls, secrets isolation, rate limiting, and audit trails for regulated workloads.',
+      price: '$4,000 - $35,000+'
+    },
+    {
+      icon: LineChart,
+      title: 'MLOps Platform & Observability',
+      desc: 'Feature stores, drift/quality monitoring, canary/rollback, offline/online testing, and lineage with policy guardrails.',
+      price: '$8,000 - $90,000+'
+    },
+    {
+      icon: Globe,
+      title: 'Edge & On‑prem AI Deployments',
+      desc: 'On-device inference, GPU sizing, model quantization, and offline-first patterns for plants, clinics, and retail sites.',
+      price: '$7,000 - $85,000+'
+    }
   ];
 
   const ctas = [

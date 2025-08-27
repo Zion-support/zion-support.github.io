@@ -14,6 +14,15 @@ const ITServices: React.FC = () => {
     { icon: Wrench, title: 'Platform Engineering', desc: 'Golden paths, internal developer platforms, Backstage portals, and paved-road governance.', price: '$8,000 - $90,000+' },
     { icon: Database, title: 'Data Platforms & MLOps', desc: 'Lakehouse setups, ELT pipelines, feature stores, and ML deployment with observability.', price: '$7,000 - $95,000+' },
     { icon: Building, title: 'Enterprise SaaS Rollouts', desc: 'Okta SSO, RBAC, tenant provisioning, and SOC2-aligned configuration baselines at scale.', price: '$5,000 - $70,000+' }
+    ,
+    { icon: Cloud, title: 'FinOps & Cloud Cost Governance', desc: 'Unit economics, budgets/alerts, rightsizing, savings plans/RI strategy, and showback/chargeback.', price: '$3,000 - $35,000+' },
+    { icon: Server, title: 'Zero-Downtime Migration Factory', desc: 'Repeatable playbooks for DB cutovers, blue/green, data sync, and rollback plans across portfolios.', price: '$12,000 - $150,000+' },
+    { icon: Shield, title: 'Security Engineering & IAM', desc: 'CSPM, CIEM, secrets management, PAM, policy-as-code, and detective controls with evidence pipelines.', price: '$6,000 - $80,000+' },
+    { icon: Cpu, title: 'Edge Networking & SD‑WAN', desc: 'SASE/SD‑WAN, private mesh, ZTNA, and observability with automated failover and policy rollout.', price: '$8,000 - $95,000+' },
+    { icon: LifeBuoy, title: 'Disaster Recovery as Code', desc: 'Automated DR drills, cross-region replication, RTO/RPO contracts, and compliance-ready reports.', price: '$4,000 - $45,000+' },
+    { icon: Wrench, title: 'Platform SRE & Reliability', desc: 'SLOs, error budgets, toil reduction, capacity planning, incident/postmortem program and on-call.', price: '$7,000 - $85,000+' },
+    { icon: Database, title: 'Data Mesh & Governance', desc: 'Domain data products, catalog/lineage, PII classification, policy controls and auditing.', price: '$9,000 - $110,000+' },
+    { icon: Building, title: 'Microsoft 365 & Google Workspace at Scale', desc: 'Identity, device posture, DLP, retention, and tenant governance with automation.', price: '$5,000 - $65,000+' }
   ];
 
   return (
