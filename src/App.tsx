@@ -67,7 +67,6 @@ function App() {
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-futuristic">
-          <SEO />
           <AppHeader />
           
           <main className="flex-1">
