@@ -25,6 +25,8 @@ const Layout = ({ children }: LayoutProps) => {
     { name: 'Data Analytics', href: '/services#data-analytics' },
     { name: 'Blockchain', href: '/services#blockchain' },
     { name: 'IoT Platforms', href: '/services#iot-platforms' },
+    { name: 'Expanded Services 2027', href: '/expanded-services-2027/' },
+    { name: 'Pricing Guide 2027', href: '/expanded-services-pricing-2027/' },
   ];
 
   const products = [

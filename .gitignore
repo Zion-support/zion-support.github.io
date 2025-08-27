@@ -16,3 +16,4 @@ automation/data/*.json
 dist/
 .next/
 yarn.lock
+tsconfig.tsbuildinfo
