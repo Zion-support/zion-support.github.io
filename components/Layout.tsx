@@ -25,6 +25,8 @@ const Layout = ({ children }: LayoutProps) => {
     { name: 'Data Analytics', href: '/services#data-analytics' },
     { name: 'Blockchain', href: '/services#blockchain' },
     { name: 'IoT Platforms', href: '/services#iot-platforms' },
+    { name: 'Emerging Tech Services', href: '/emerging-tech-services' },
+    { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity' },
   ];
 
   const products = [
@@ -256,6 +258,8 @@ const Layout = ({ children }: LayoutProps) => {
                 <li><Link href="/services#cybersecurity" className="text-gray-300 hover:text-blue-400 transition-colors">Cybersecurity</Link></li>
                 <li><Link href="/services#web-development" className="text-gray-300 hover:text-blue-400 transition-colors">Web Development</Link></li>
                 <li><Link href="/services#blockchain" className="text-gray-300 hover:text-blue-400 transition-colors">Blockchain</Link></li>
+                <li><Link href="/emerging-tech-services" className="text-gray-300 hover:text-blue-400 transition-colors">Emerging Tech Services</Link></li>
+                <li><Link href="/advanced-cybersecurity" className="text-gray-300 hover:text-blue-400 transition-colors">Advanced Cybersecurity</Link></li>
               </ul>
             </div>
           </div>
