@@ -46,114 +46,6 @@ interface SitemapSection {
   }>;
 }
 
-function Sitemap() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">
-      {/* Header */}
-      <div className="bg-zion-slate-dark/50 backdrop-blur-sm border-b border-cyan-400/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
-              Site Map
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Complete overview of all pages and services available on Zion Tech Group
-            </p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {sitemapSections.map((section, index) => (
-            <motion.div
-              key={section.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300"
-            >
-              {/* Section Header */}
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                  <section.icon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h2 className="text-xl font-bold text-white">{section.title}</h2>
-                  <p className="text-sm text-gray-400">{section.description}</p>
-                </div>
-              </div>
-
-              {/* Section Links */}
-              <div className="space-y-2">
-                {section.links.map((link) => (
-                  <Link
-                    key={link.name}
-                    to={link.href}
-                    className="flex items-center justify-between p-3 rounded-lg hover:bg-cyan-400/10 transition-all duration-200 group"
-                  >
-                    <div className="flex-1">
-                      <div className="font-medium text-gray-200 group-hover:text-cyan-400 transition-colors duration-200">
-                        {link.name}</div>
-                      {link.description && (
-                        <div className="text-sm text-gray-400 group-hover:text-cyan-300 transition-colors duration-200">
-                          {link.description}
-                        </div>
-                      )}
-                    </div>
-                    <ArrowRight className="w-4 h-6 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-200" />
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Quick Navigation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Quick Navigation</h3>
-            <p className="text-gray-300 mb-6">
-              Can't find what you're looking for? Use these quick links to get started.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
-              >
-                Contact Us
-              </Link>
-              <Link
-                to="/services"
-                className="px-6 py-3 border border-cyan-400/30 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
-                View All Services
-              </Link>
-              <Link
-                to="/help"
-                className="px-6 py-3 border border-cyan-400/30 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
-                Get Help
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
-
 const sitemapSections: SitemapSection[] = [
   {
     title: 'Main Pages',
@@ -297,12 +189,12 @@ const sitemapSections: SitemapSection[] = [
   }
 ];
 
-export function Sitemap() {
+export default function Sitemap() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">
       {/* Header */}
-      <div className="bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="bg-zion-slate-dark/50 backdrop-blur-sm border-b border-cyan-400/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -359,7 +251,7 @@ export function Sitemap() {
                         </div>
                       )}
                     </div>
-                    <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-200" />
+                    <ArrowRight className="w-4 h-6 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-200" />
                   </Link>
                 ))}
               </div>
@@ -405,5 +297,3 @@ export function Sitemap() {
     </div>
   );
 }
-
-export default Sitemap;

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
@@ -17,7 +17,6 @@ import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { ErrorFallback } from './components/ErrorFallback';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
@@ -57,7 +56,7 @@ const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
@@ -120,26 +119,9 @@ const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 
-// Additional service pages
-const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
-const AICybersecurity = lazy(() => import('./pages/services/ai-cybersecurity'));
-const AIHRPlatform = lazy(() => import('./pages/services/ai-hr-platform'));
-const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
-const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
-const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
-const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
-const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
 
-// Additional missing imports for routes
-const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
-const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
-const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
-const AIContentCreationSuite = lazy(() => import('./pages/services/AIContentCreationSuite'));
-const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
-const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
-const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics'));
-const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin'));
+
+
 
 function App() {
   return (

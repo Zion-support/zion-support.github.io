@@ -191,7 +191,8 @@ export class ServiceWorkerManager {
 
   async getRegistration(): Promise<ServiceWorkerRegistration | null> {
     if (!this.isSupported) return null;
-    return navigator.serviceWorker.getRegistration() || null;
+    const registration = await navigator.serviceWorker.getRegistration();
+    return registration || null;
   }
 
   async getController(): Promise<ServiceWorker | null> {
