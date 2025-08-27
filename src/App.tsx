@@ -26,8 +26,8 @@ const Services = lazy(() => import('./pages/services'));
 const Contact = lazy(() => import('./pages/contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Careers = lazy(() => import('./pages/Careers'));
-
-
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Team = lazy(() => import('./pages/Team'));
 
 // Additional missing page imports
 const Dashboard = lazy(() => import('./pages/Dashboard'));
@@ -98,8 +98,70 @@ const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnal
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
+// Comprehensive improvements components
+const AdvancedAIServicesHub = lazy(() => import('./components/AdvancedAIServicesHub'));
+const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
+const EnhancedSEOManager = lazy(() => import('./components/EnhancedSEOManager'));
+const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveImprovements2025'));
+
+// New innovative AI services
+const AIAutonomousResearchAssistant = lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMarketingSuite'));
+const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
+
+// Additional new innovative AI services
+const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
+const AIContentCreationSuite = lazy(() => import('./pages/services/AIContentCreationSuite'));
+
+// Comprehensive services showcase
+const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// Innovative services showcase
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+
+// New 2028 comprehensive services
+const ComprehensiveServicesLanding2028 = lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
+
+// Additional service pages
+const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin'));
+const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics'));
+
+// 2026 Services pages
+const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
+const AICybersecurity = lazy(() => import('./pages/services/ai-cybersecurity'));
+const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
+const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
+const AIHRPlatform = lazy(() => import('./pages/services/ai-hr-platform'));
+const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
+const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
+
+// Additional missing components
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
+const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
+const ComprehensivePricing2028 = lazy(() => import('./pages/ComprehensivePricing2028'));
+const API = lazy(() => import('./pages/API'));
+const DeveloperPortal = lazy(() => import('./pages/DeveloperPortal'));
+const ApiDemo = lazy(() => import('./components/ApiDemo'));
+
+// Additional pages
+const Marketplace = lazy(() => import('./pages/Marketplace'));
+const ITConsulting = lazy(() => import('./pages/ITConsulting'));
+const SpaceTech = lazy(() => import('./pages/SpaceTech'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
+
+// 2029 Services Showcase
+const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
+
 // Additional innovative AI services
-const AIQuantumFinancialTrading = lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
 const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
 const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
@@ -118,20 +180,6 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveImprovements2025'));
-
-// 2029 Services Showcase
-const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
-
-// Additional pages
-const Marketplace = lazy(() => import('./pages/Marketplace'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const ITConsulting = lazy(() => import('./pages/ITConsulting'));
-const SpaceTech = lazy(() => import('./pages/SpaceTech'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
-
-
-
-
 
 function App() {
   return (
@@ -239,34 +287,61 @@ function App() {
                       </motion.div>
                     } 
                   />
+                  <Route 
+                    path="/pricing" 
+                    element={
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Pricing />
+                      </motion.div>
+                    } 
+                  />
+                  <Route 
+                    path="/team" 
+                    element={
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <Team />
+                      </motion.div>
+                    } 
+                  />
                   
                   {/* Service Routes */}
                   <Route path="/ai-services" element={<AIServices />} />
                   <Route path="/it-services" element={<ITServices />} />
                   <Route path="/micro-saas" element={<MicroSaaS />} />
                   
-                  {/* 2029 Cutting-Edge Services */}
-                  <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                  {/* Additional Routes */}
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/faq" element={<FAQ />} />
+                  <Route path="/search" element={<SearchPage />} />
+                  <Route path="/partners" element={<Partners />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/case-studies" element={<CaseStudies />} />
+                  <Route path="/help" element={<HelpCenter />} />
                   
-                  {/* 2026 AI Marketplace Services */}
-                  <Route path="/zion-ai-marketplace-2026" element={<Zion2026AIMarketplaceShowcase />} />
-                  
-                  {/* Sitemap-aligned pages */}
+                  {/* New sitemap routes */}
                   <Route path="/ai-solutions" element={<AiSolutions />} />
                   <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
                   <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
                   
-                  {/* Enhanced services pages */}
-                  <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                  
-                  {/* Service pages */}
+                  {/* Service Routes - only for existing pages */}
                   <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                   <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                   <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                   <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
                   <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
                   <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />
-                  <Route path="/services/customer-feedback-surveys" element={<CustomerFeedbackSurveys />} />
+                  <Route path="/services/mobile-feedback-surveys" element={<CustomerFeedbackSurveys />} />
                   <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
                   <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
                   <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
@@ -274,31 +349,80 @@ function App() {
                   <Route path="/services/email-sequencer" element={<EmailSequencer />} />
                   <Route path="/services/podcast-transcription" element={<PodcastTranscription />} />
                   <Route path="/services/micro-crm" element={<MicroCRM />} />
-                  
-                  {/* New real service pages */}
                   <Route path="/services/website-analytics" element={<WebsiteAnalytics />} />
                   <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
                   <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
                   <Route path="/services/mobile-survey" element={<MobileSurvey />} />
-                  
-                  {/* Additional innovative services */}
-                  <Route path="/services/ai-autonomous-code-reviewer" element={<AIAutonomousCodeReviewer />} />
-                  <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
-                  
-                  {/* Additional new service pages */}
-                  <Route path="/services/ai-powered-seo" element={<AIPoweredSEO />} />
-                  <Route path="/services/interview-assessment-ai" element={<InterviewAssessmentAI />} />
-                  <Route path="/services/helpdesk-platform" element={<HelpdeskPlatform />} />
+                  {/* Additional new service routes */}
+                  <Route path="/services/ai-seo" element={<AIPoweredSEO />} />
+                  <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
+                  <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
                   <Route path="/services/dsr-portal" element={<DSRPortal />} />
                   <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
-                  
-                  {/* New AI-powered micro SAAS services */}
+                  {/* New AI-powered micro SAAS service routes */}
                   <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
                   <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                   <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
                   <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                  
                   {/* Additional innovative AI services */}
                   <Route path="/services/ai-quantum-financial-trading" element={<AIQuantumFinancialTrading />} />
+                  <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+                  
+                  {/* New innovative AI services */}
+                  <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                  <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                  <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+                  <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                  <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+                  <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                  
+                  {/* Additional new innovative AI services */}
+                  <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                  <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                  <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                  <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />
+                  
+                  {/* New 2025 service routes */}
+                  <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
+                  <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
+                  <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                  <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                  <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+                  <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+                  
+                  {/* New 2026 service routes */}
+                  <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
+                  <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
+                  <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
+                  <Route path="/pricing-2026" element={<ComprehensivePricing2026 />} />
+                  
+                  {/* 2028 Pricing */}
+                  <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+                  <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
+                  
+                  {/* 2028 Comprehensive Services */}
+                  <Route path="/comprehensive-services-2028" element={<ComprehensiveServicesLanding2028 />} />
+                  <Route path="/services-2028" element={<ComprehensiveServicesLanding2028 />} />
+                  
+                  {/* Additional service routes */}
+                  <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                  <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                  <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                  <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+                  <Route path="/services/ai" element={<AiSolutions />} />
+                  
+                  {/* 2026 Services routes */}
+                  <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                  <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                  <Route path="/services/ai-iot-edge-computing" element={<IoTEdgeComputing />} />
+                  <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                  <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+                  <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
+                  <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+                  <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+                  
+                  {/* Additional innovative AI services */}
                   <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                   <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
                   <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />

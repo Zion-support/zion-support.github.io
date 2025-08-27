@@ -112,7 +112,7 @@ const footerSections = [
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
       { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
       { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-              { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
+      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
       { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
       { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
     ]
@@ -170,26 +170,14 @@ const footerSections = [
     ]
   },
   {
-    title: '2029 Services Showcase',
-    icon: Rocket,
-    links: [
-      { name: 'Comprehensive Services 2029', path: '/comprehensive-services-showcase-2029', icon: Star },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
-      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
-    ]
-  },
-  {
-    title: 'Additional Services',
+    title: 'Featured Services',
     icon: Star,
     links: [
-      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
-      { name: 'Pricing Guide', path: '/pricing', icon: DollarSign },
-      { name: 'Case Studies', path: '/case-studies', icon: FileText },
-      { name: 'News & Updates', path: '/news', icon: Newspaper },
-      { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Help Center', path: '/help', icon: HelpCircle },
-      { name: 'Sitemap', path: '/sitemap', icon: Globe }
+      { name: '2025 New Innovative Services', path: '/new-innovative-services-2025', icon: Star },
+      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', icon: Star },
+      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', icon: Star },
+      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', icon: Star },
+      { name: '2029 Comprehensive Services Showcase', path: '/comprehensive-services-showcase-2029', icon: Star }
     ]
   },
   {
@@ -198,13 +186,12 @@ const footerSections = [
     links: [
       { name: 'Help Center', path: '/help', icon: HelpCircle },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Blog', path: '/blog', icon: BookOpen },
-      { name: 'News', path: '/news', icon: Newspaper },
-      { name: 'Case Studies', path: '/case-studies', icon: FileText },
-      { name: 'Pricing', path: '/pricing', icon: DollarSign },
-      { name: 'Contact Support', path: '/contact', icon: MessageCircle },
-      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
-      { name: 'Sitemap', path: '/sitemap', icon: FileText }
+      { name: 'Documentation', path: '/documentation', icon: BookOpen },
+      { name: 'API Documentation', path: '/api-docs', icon: Code },
+      { name: 'Developer Portal', path: '/developer', icon: Cpu },
+      { name: 'Training', path: '/training', icon: GraduationCap },
+      { name: 'Webinars', path: '/webinars', icon: Video },
+      { name: 'White Papers', path: '/white-papers', icon: FileText }
     ]
   }
 ];

@@ -60,7 +60,7 @@ export function AppHeader() {
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: GitFork, description: 'AI-powered workflow automation', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
     { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
     { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
-    { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
+    { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-zion-blue to-indigo-500' },
     { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
     { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
     { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML', color: 'from-orange-500 to-red-500' },
@@ -111,6 +111,13 @@ export function AppHeader() {
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'IT support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp, description: 'Affiliate program management', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
+    { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone, description: 'Mobile survey platform', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle, description: 'Audio to text conversion', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail, description: 'Automated email campaigns', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+    { name: 'Returns Management', href: '/services/returns-management', icon: Truck, description: 'Product returns system', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText, description: 'AI content creation', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' }
   ];
 
   // Quick links for easy access
