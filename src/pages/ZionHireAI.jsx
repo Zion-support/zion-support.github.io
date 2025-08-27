@@ -1,6 +1,17 @@
-return (<>
-      <SEO title="Zion Hire AI - White-labeled AI Recruiting Assistant" description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience." keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI" canonical="https://ziontechgroup.com/zion-hire-ai"/>
-      
+import React from 'react';
+import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Footer } from '@/components/Footer';
+
+const ZionHireAI = () => {
+  const successMetrics = [
+    { metric: '95%', label: 'Faster Hiring' },
+    { metric: '87%', label: 'Better Matches' },
+    { metric: '92%', label: 'Cost Reduction' },
+    { metric: '89%', label: 'Candidate Satisfaction' }
+  ];
+
+  return (
+    <>
       <main className="flex-1">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">
@@ -12,10 +23,18 @@ return (<>
               Revolutionary AI-powered hiring platform that transforms recruitment, screening, onboarding, and retention
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://ziontechgroup.com" className="px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://ziontechgroup.com" 
+                className="px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 Start Free Trial
               </a>
-              <a href="#demo" className="px-8 py-4 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-colors">
+              <a 
+                href="#demo" 
+                className="px-8 py-4 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-colors"
+              >
                 Watch Demo
               </a>
             </div>
@@ -23,7 +42,8 @@ return (<>
 
           {/* Success Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {successMetrics.map((item, index) => (<div key={index} className="text-center">
+            {successMetrics.map((item, index) => (
+              <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">
                   {item.metric}
                 </div>
@@ -31,12 +51,18 @@ return (<>
                   {item.label}
                 </div>
               </div>
-        ,
-            <div className="relative hidden md:block">
-                <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
-                <img loading="lazy" src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI" alt="Zion Hire AI Dashboard" className="relative z-10 rounded-lg shadow-xl"/>
-              </div>))}
-            </div>
+            ))}
+          </div>
+
+          {/* Demo Section */}
+          <div className="relative hidden md:block mb-16">
+            <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
+            <img 
+              loading="lazy" 
+              src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI" 
+              alt="Zion Hire AI Dashboard" 
+              className="relative z-10 rounded-lg shadow-xl mx-auto"
+            />
           </div>
 
           {/* Contact Section */}
@@ -67,18 +93,22 @@ return (<>
             </div>
             
             <div className="text-center">
-              <a href="https://ziontechgroup.com" className="inline-flex items-center px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors" target="_blank" rel="noopener noreferrer">
+              <a 
+                href="https://ziontechgroup.com" 
+                className="inline-flex items-center px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 Start Your Free Trial Today
                 <ArrowRight className="w-5 h-5 ml-2"/>
               </a>
             </div>
           </div>
         </div>
-      </>);
-div >
-;
- >
-;
-;
-;
+      </main>
+      <Footer />
+    </>
+  );
+};
+
 export default ZionHireAI;

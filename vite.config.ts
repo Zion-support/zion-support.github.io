@@ -13,7 +13,8 @@ export default defineConfig({
   build: {
     target: 'esnext',
     minify: 'esbuild',
-    sourcemap: false,
+    sourcemap: true,
+    outDir: 'dist',
     rollupOptions: {
       input: path.resolve(__dirname, 'index.html'),
       output: {
@@ -65,9 +66,5 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
   },
 })

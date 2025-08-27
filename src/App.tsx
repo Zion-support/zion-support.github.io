@@ -115,7 +115,6 @@ const Team = lazy(() => import('./pages/Team'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Partners = lazy(() => import('./pages/Partners'));
-const Blog = lazy(() => import('./pages/Blog'));
 const News = lazy(() => import('./pages/News'));
 // Service detail pages
 const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
