@@ -18,25 +18,25 @@ export default function Terms() {
       icon: Users,
       title: "Acceptance of Terms",
       description: "By using our services, you agree to be bound by these terms and conditions",
-      color: "from-blue-500 to-cyan-500"
+      color: "from-zion-blue to-zion-cyan"
     },
     {
       icon: Shield,
       title: "Service Description",
       description: "We provide technology consulting, AI solutions, and digital transformation services",
-      color: "from-green-500 to-emerald-500"
+      color: "from-zion-green to-zion-cyan"
     },
     {
       icon: Lock,
       title: "Intellectual Property",
       description: "All content and technology remain the property of Zion Tech Group",
-      color: "from-purple-500 to-pink-500"
+      color: "from-zion-purple to-zion-pink"
     },
     {
       icon: Globe,
       title: "Limitation of Liability",
       description: "We provide services as-is with reasonable limitations on liability",
-      color: "from-orange-500 to-red-500"
+      color: "from-zion-orange to-zion-red"
     }
   ];
 
@@ -69,9 +69,9 @@ export default function Terms() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
       {/* Hero Section */}
-      <section className="pt-24 pb-20">
+      <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -79,13 +79,13 @@ export default function Terms() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
               Terms of Service
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Please read these terms carefully before using our services
             </p>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
               These Terms of Service govern your use of Zion Tech Group's services and website. 
               By using our services, you agree to be bound by these terms.
             </p>
@@ -94,32 +94,37 @@ export default function Terms() {
       </section>
 
       {/* Terms Overview Section */}
-      <section className="py-20 bg-black/30">
+      <section className="py-20 bg-zion-slate-dark/20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Terms Overview
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Terms <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Overview</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Key aspects of our terms and conditions
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Key aspects of our terms and conditions that govern your use of our services
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {termsSections.map((section, index) => (
               <motion.div
                 key={index}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 group hover:bg-slate-800/70"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.02 }}
               >
-                <div className={`inline-flex p-4 rounded-full mb-6 bg-gradient-to-r ${section.color}`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-xl flex items-center justify-center mx-auto mb-6`}>
                   <section.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
-                <p className="text-gray-300">{section.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{section.title}</h3>
+                <p className="text-zion-slate-light">{section.description}</p>
               </motion.div>
             ))}
           </div>
@@ -129,28 +134,33 @@ export default function Terms() {
       {/* Key Terms Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Terms & Definitions
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Key <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Definitions</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Important terms you should understand
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Important terms and their definitions to help you understand our agreement
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {keyTerms.map((term, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {keyTerms.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6"
+                  whileHover={{ y: -5, scale: 1.02 }}
                 >
-                  <h3 className="text-xl font-bold text-cyan-400 mb-3">{term.term}</h3>
-                  <p className="text-gray-300 text-sm">{term.definition}</p>
+                  <h3 className="text-lg font-semibold text-zion-cyan mb-3">{item.term}</h3>
+                  <p className="text-zion-slate-light text-sm leading-relaxed">{item.definition}</p>
                 </motion.div>
               ))}
             </div>
@@ -159,32 +169,39 @@ export default function Terms() {
       </section>
 
       {/* User Obligations Section */}
-      <section className="py-20 bg-black/30">
+      <section className="py-20 bg-zion-slate-dark/20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Your Obligations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              What we expect from you when using our services
-            </p>
-          </div>
-          
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {userObligations.map((obligation, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center space-x-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{obligation}</span>
-                </motion.div>
-              ))}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                User <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Obligations</span>
+              </h2>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                Your responsibilities when using our services and platform
+              </p>
+            </motion.div>
+            
+            <div className="bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {userObligations.map((obligation, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-center space-x-3"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                    <span className="text-zion-slate-light">{obligation}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -194,22 +211,27 @@ export default function Terms() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Important Disclaimers
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Important <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Disclaimers</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
                 Please note these important limitations and disclaimers
               </p>
-            </div>
+            </motion.div>
             
-            <div className="bg-slate-800/50 p-8 rounded-xl border border-slate-700">
+            <div className="bg-zion-slate-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <AlertTriangle className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">Service Availability</h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-zion-slate-light text-sm">
                       We strive to provide reliable services but cannot guarantee 100% uptime. 
                       Services are provided "as-is" without warranties of any kind.
                     </p>
@@ -217,10 +239,10 @@ export default function Terms() {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Shield className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                  <Shield className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">Limitation of Liability</h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-zion-slate-light text-sm">
                       Zion Tech Group's liability is limited to the amount paid for services. 
                       We are not liable for indirect, incidental, or consequential damages.
                     </p>
@@ -228,10 +250,10 @@ export default function Terms() {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <FileText className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <FileText className="w-6 h-6 text-zion-purple mt-1 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-bold text-white mb-2">Changes to Terms</h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-zion-slate-light text-sm">
                       We may update these terms from time to time. Continued use of services 
                       after changes constitutes acceptance of the updated terms.
                     </p>
@@ -244,25 +266,25 @@ export default function Terms() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Questions About Our Terms?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             If you have any questions about these terms or need clarification, 
             please don't hesitate to contact our legal team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg font-semibold text-white hover:from-zion-cyan/80 hover:to-zion-blue/80 transition-all duration-300 transform hover:scale-105"
             >
               Contact Us
             </Link>
             <Link 
               to="/privacy"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
               Privacy Policy
             </Link>
