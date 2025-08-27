@@ -15,7 +15,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
 
   // Zero Trust Network Architecture
   {
-=======
     id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Never trust, always verify - secure by design',
@@ -383,6 +382,5 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: 720,
     rating: 4.8,
     reviews: 410
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

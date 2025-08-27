@@ -58,7 +58,6 @@ function generateBundleReport() {
     .sort((a, b) => b.size - a.size);
 
   console.log('\n📋 Bundle Size Report:');
-  console.log('=====================');
   
   let totalSize = 0;
   jsFiles.forEach(file => {
@@ -66,7 +65,6 @@ function generateBundleReport() {
     console.log(`${file.name.padEnd(30)} ${file.sizeKB.padStart(8)} KB`);
   });
 
-  console.log('=====================');
   console.log(`Total JS Size: ${(totalSize / 1024).toFixed(2)} KB`);
 
   // Recommendations

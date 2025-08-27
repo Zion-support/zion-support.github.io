@@ -102,8 +102,8 @@ export const FuturisticAnimatedBackground: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(34, 221, 210, ${0.1 * (1 - distance / 100)})`;
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = `rgba(139, 21, 233, ${0.1 * (1 - distance / 100)})`;
+            ctx.lineWidth = 1;
             ctx.stroke();
           }
         });
@@ -123,83 +123,43 @@ export const FuturisticAnimatedBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="fixed inset-0 pointer-events-none z-0"
+    >
       <canvas
         ref={canvasRef}
         className="w-full h-full"
-        style={{ background: 'transparent' }}
+        style={{
+          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)'
+        }}
       />
       
-      {/* Animated geometric shapes */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2],
-            rotate: [0, 360]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 right-32 w-24 h-24 border border-zion-purple/20 rounded-full"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.5, 0.2, 0.5],
-            rotate: [360, 0]
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full"
-          animate={{
-            scale: [1, 1.5, 1],
-            opacity: [0.3, 0.6, 0.3],
-            rotate: [0, 180, 360]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-
-      {/* Floating neon orbs */}
-      <div className="absolute inset-0">
-        {[...Array(5)].map((_, i) => (
+      {/* Floating elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-zion-cyan rounded-full shadow-lg shadow-zion-cyan/50"
+            className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20"
             style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -20, 0],
-              opacity: [0.3, 1, 0.3],
-              scale: [0.5, 1, 0.5]
+              opacity: [0.2, 0.6, 0.2],
             }}
             transition={{
-              duration: 3 + i,
+              duration: 3 + Math.random() * 2,
               repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.5
+              delay: Math.random() * 2,
             }}
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 =======
@@ -365,4 +325,4 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>);
 };
 export default FuturisticAnimatedBackground;
->>>>>>> cursor/website-audit-and-enhancement-1eed
+>>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
