@@ -14,7 +14,16 @@ const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const Services = React.lazy(() => import('./pages/ServicesPage'));
+const Services = React.lazy(() => import('./pages/Services'));
+const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const News = React.lazy(() => import('./pages/News'));
+const Events = React.lazy(() => import('./pages/Events'));
+const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
+const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
+const Demo = React.lazy(() => import('./pages/Demo'));
+const Support = React.lazy(() => import('./pages/Support'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
@@ -90,6 +99,15 @@ function App() {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/ai-solutions" element={<AiSolutions />} />
+                <Route path="/research-development" element={<ResearchDevelopment />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/events" element={<Events />} />
+                <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
+                <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+                <Route path="/demo" element={<Demo />} />
+                <Route path="/support" element={<Support />} />
                 <Route path="/ai-services" element={<AIServices />} />
                 <Route path="/it-services" element={<ITServices />} />
                 <Route path="/micro-saas" element={<MicroSaaS />} />

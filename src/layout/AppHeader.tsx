@@ -36,14 +36,16 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
+    { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'News', href: '/news', current: false },
+    { name: 'Events', href: '/events', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Careers', href: '/careers', current: false },
   ];
 
   const services = [
@@ -53,14 +55,14 @@ export function AppHeader() {
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'IoT & Edge', href: '/services', icon: Cpu, description: 'Smart Devices & Networks' },
     { name: 'Blockchain', href: '/services', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Healthcare Tech', href: '/solutions/healthcare', icon: Heart, description: 'AI Medicine & Diagnostics' },
     { name: 'Sustainability', href: '/services', icon: Globe, description: 'Green IT Solutions' },
     { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
   ];
 
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
-    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
   ];

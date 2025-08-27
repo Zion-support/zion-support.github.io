@@ -67,7 +67,9 @@ export const EnhancedSidebar: React.FC = () => {
       icon: Home,
       items: [
         { name: "Home", href: "/", icon: Home },
+        { name: "Solutions", href: "/solutions", icon: Target },
         { name: "Services", href: "/services", icon: Zap },
+        { name: "Case Studies", href: "/case-studies", icon: FileText },
         { name: "Blog", href: "/blog", icon: FileText },
         { name: "About", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
@@ -92,7 +94,8 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
-        { name: "Login", href: "/login", icon: User }
+        { name: "Login", href: "/login", icon: User },
+        { name: "Support", href: "/support", icon: HelpCircle }
       ]
     }
   ];
