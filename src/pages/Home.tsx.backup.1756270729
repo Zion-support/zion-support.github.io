@@ -2,6 +2,325 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import SEO from '../components/SEO';
+import { 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Zap, 
+  Rocket, 
+  Users, 
+  Award, 
+  TrendingUp,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  BarChart3,
+  FileImage,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  ShoppingCart,
+  Settings,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Target,
+  Lightbulb,
+  ShieldCheck,
+  Server,
+  Smartphone,
+  Monitor,
+  Wifi,
+  Bluetooth,
+  Satellite,
+  Atom,
+  Dna,
+  Microscope,
+  Flask,
+  TestTube,
+  Syringe,
+  Stethoscope,
+  HeartPulse,
+  BrainCircuit,
+  Eye,
+  Ear,
+  Hand,
+  Foot,
+  Bone,
+  Tooth,
+  Pill,
+  Bandage,
+  Thermometer,
+  Scale,
+  Calculator,
+  ChartBar,
+  PieChart,
+  LineChart,
+  Activity,
+  TrendingDown,
+  Minus,
+  Plus,
+  Equal,
+  Divide,
+  Percent,
+  DollarSign,
+  Euro,
+  Pound,
+  Yen,
+  Bitcoin,
+  Ethereum,
+  CreditCard,
+  Wallet,
+  Banknote,
+  Coins,
+  PiggyBank,
+  Safe,
+  Vault,
+  LockKeyhole,
+  Key,
+  Fingerprint,
+  QrCode,
+  Barcode,
+  Scan,
+  Camera,
+  VideoOff,
+  Mic,
+  MicOff,
+  Volume2,
+  VolumeX,
+  Play,
+  Pause,
+  Stop,
+  SkipBack,
+  SkipForward,
+  Rewind,
+  FastForward,
+  Shuffle,
+  Repeat,
+  Repeat1,
+  Shuffle2,
+  SkipBack2,
+  SkipForward2,
+  PlayTriangle,
+  PauseTriangle,
+  StopTriangle,
+  SkipBackTriangle,
+  SkipForwardTriangle,
+  RewindTriangle,
+  FastForwardTriangle,
+  ShuffleTriangle,
+  RepeatTriangle,
+  Repeat1Triangle,
+  Shuffle2Triangle,
+  SkipBack2Triangle,
+  SkipForward2Triangle,
+  PlayOctagon,
+  PauseOctagon,
+  StopOctagon,
+  SkipBackOctagon,
+  SkipForwardOctagon,
+  RewindOctagon,
+  FastForwardOctagon,
+  ShuffleOctagon,
+  RepeatOctagon,
+  Repeat1Octagon,
+  Shuffle2Octagon,
+  SkipBack2Octagon,
+  SkipForward2Octagon,
+  PlayDodecagon,
+  PauseDodecagon,
+  StopDodecagon,
+  SkipBackDodecagon,
+  SkipForwardDodecagon,
+  RewindDodecagon,
+  FastForwardDodecagon,
+  ShuffleDodecagon,
+  RepeatDodecagon,
+  Repeat1Dodecagon,
+  Shuffle2Dodecagon,
+  SkipBack2Dodecagon,
+  SkipForward2Dodecagon
+} from 'lucide-react';
+
+// Lazy load components for better performance
+const LazyHeroFeatures = lazy(() => import('../components/home/HeroFeatures'));
+const LazyServicesOverview = lazy(() => import('../components/home/ServicesOverview'));
+const LazyStatsSection = lazy(() => import('../components/home/StatsSection'));
+const LazyTestimonials = lazy(() => import('../components/home/Testimonials'));
+const LazyCTASection = lazy(() => import('../components/home/CTASection'));
+
+const Home: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="AI-Powered Technology Solutions & Digital Transformation"
+        description="Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions. Expert IT consulting and innovative technology services."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT consulting, machine learning, blockchain, IoT, quantum computing"
+        type="website"
+      />
+      
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-7xl font-bold text-white mb-6"
+            >
+              <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
+                Future-Ready
+              </span>
+              <br />
+              <span className="text-zion-slate-light">Technology Solutions</span>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-zion-cyan/80 mb-8 max-w-3xl mx-auto"
+            >
+              Transform your business with cutting-edge AI, cybersecurity, and cloud infrastructure. 
+              We deliver innovative solutions that drive growth and competitive advantage.
+            </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link
+                to="/services"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-zion-cyan/25"
+              >
+                Explore Services
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-200"
+              >
+                Get Started
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Rest of the content */}
+        <LazyMotion features={domAnimation}>
+          <Suspense fallback={<div className="h-64 flex items-center justify-center"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div></div>}>
+            <LazyHeroFeatures features={heroFeatures} />
+            <LazyServicesOverview services={services} />
+            <LazyStatsSection />
+            <LazyTestimonials />
+            <LazyCTASection />
+          </Suspense>
+        </LazyMotion>
+      </div>
+    </>
+  );
+
+  const heroFeatures = [
+    { icon: Brain, title: 'AI-Powered Solutions', description: 'Cutting-edge artificial intelligence for modern businesses' },
+    { icon: Shield, title: 'Cybersecurity Excellence', description: 'Advanced protection for your digital assets' },
+    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud solutions for growth' },
+    { icon: Zap, title: 'Digital Transformation', description: 'Transform your business with innovative technology' }
+  ];
+
+  const services = [
+    {
+      category: 'AI Services',
+      icon: Brain,
+      color: 'from-zion-cyan to-zion-blue',
+      items: [
+        'AI Consciousness Simulator',
+        'Quantum Emotion Processor',
+        'AI Autonomous Systems',
+        'Neural Network Architect',
+        'AI Ethics Framework',
+        'Predictive Analytics'
+      ]
+    },
+    {
+      category: 'Micro SAAS',
+      icon: Code,
+      color: 'from-zion-purple to-zion-cyan',
+      items: [
+        'AI Business Intelligence',
+        'Customer Experience Hub',
+        'Quantum Computing Suite',
+        'Supply Chain Optimizer',
+        'Cybersecurity Platform',
+        'IoT Edge Computing'
+      ]
+    },
+    {
+      category: 'IT Services',
+      icon: Network,
+      color: 'from-zion-blue to-zion-purple',
+      items: [
+        'Infrastructure Management',
+        'Digital Transformation',
+        'IT Consulting',
+        'Onsite Support',
+        'Green IT Solutions',
+        '5G Network Solutions'
+      ]
+    },
+    {
+      category: 'Emerging Tech',
+      icon: Rocket,
+      color: 'from-zion-cyan to-zion-purple',
+      items: [
+        'Quantum Computing',
+        'Blockchain & DeFi',
+        'Space Technology',
+        'Biotechnology',
+        'Nanotechnology',
+        'AR/VR Development'
+      ]
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Clients Worldwide', icon: Users },
+    { number: '50+', label: 'AI Solutions', icon: Brain },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '24/7', label: 'Support Available', icon: MessageCircle }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO, TechCorp',
+      content: 'Zion Tech Group transformed our infrastructure with AI-powered solutions that increased our efficiency by 300%.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CEO, InnovateLab',
+      content: 'Their cybersecurity expertise protected us from sophisticated threats and gave us peace of mind.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'VP Engineering, DataFlow',
+      content: 'The quantum computing solutions opened new possibilities we never thought possible.',
+      rating: 5
+    }
+  ];
+=======
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -105,6 +424,7 @@ const featuredServices = [
     rating: 4.9
   }
 ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d6be
 
 export default function Home() {
   const [isVisible, setIsVisible] = React.useState(false);
