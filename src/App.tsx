@@ -11,7 +11,8 @@ import { Footer } from './components/Footer';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { SEO } from './components/SEO';
+import { EnhancedSEO } from './components/EnhancedSEO';
+import { ServiceWorker } from './components/ServiceWorker';
 import { FloatingActionButton } from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
@@ -135,7 +136,15 @@ function App() {
       <ErrorBoundary>
         <div className="App min-h-screen bg-white">
           {/* SEO Component */}
-          <SEO />
+          <EnhancedSEO 
+            title="Zion Tech Group - Empowering the Future Through Technology"
+            description="Leading provider of AI, IT consulting, and digital transformation services. Discover cutting-edge solutions for your business needs."
+            keywords={['AI services', 'IT consulting', 'digital transformation', 'technology solutions']}
+            type="website"
+          />
+          
+          {/* Service Worker */}
+          <ServiceWorker />
           
           {/* Performance Optimizer */}
           <PerformanceOptimizer enabled={true} />
