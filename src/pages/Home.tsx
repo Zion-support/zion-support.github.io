@@ -289,7 +289,10 @@ export default function Home() {
                       {heroSlides[currentSlide].cta}
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </Link>
-                    <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm">
+                    <button 
+                      className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-300 backdrop-blur-sm"
+                      aria-label="Watch demo video"
+                    >
                       <Play className="mr-2 w-5 h-5" />
                       Watch Demo
                     </button>
@@ -313,11 +316,14 @@ export default function Home() {
             </AnimatePresence>
             
             {/* Slide navigation */}
-            <div className="flex justify-center space-x-2 mt-8">
+            <div className="flex justify-center space-x-2 mt-8" role="tablist" aria-label="Hero slides">
               {heroSlides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
+                  role="tab"
+                  aria-selected={index === currentSlide}
+                  aria-label={`Go to slide ${index + 1}: ${heroSlides[index].title}`}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentSlide 
                       ? 'bg-cyan-400 scale-125' 
