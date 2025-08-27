@@ -1,3 +1,89 @@
+<<<<<<< HEAD
+import React from 'react';
+
+interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'profile' | 'product';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  structuredData?: object;
+  twitterHandle?: string;
+  facebookAppId?: string;
+}
+
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions. Expert IT consulting and innovative technology services.',
+  keywords = 'AI, artificial intelligence, cybersecurity, cloud computing, digital transformation, IT consulting, technology solutions, machine learning, blockchain, IoT',
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = []
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
+  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+
+  // Structured data for rich snippets
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/images/zion-logo.png',
+    description: 'Leading provider of AI-powered technology solutions and digital transformation services.',
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-ZION-TECH',
+      contactType: 'customer service',
+      email: 'info@ziontechgroup.com'
+    },
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup',
+      'https://facebook.com/ziontechgroup'
+    ],
+    offers: {
+      '@type': 'Offer',
+      category: 'Technology Services',
+      description: 'AI, Cybersecurity, Cloud Computing, Digital Transformation'
+    }
+  };
+
+  // Additional structured data for articles
+  if (type === 'article') {
+    structuredData['@type'] = 'Article';
+    structuredData.headline = title;
+    structuredData.description = description;
+    structuredData.author = {
+      '@type': 'Person',
+      name: author
+    };
+    if (publishedTime) structuredData.datePublished = publishedTime;
+    if (modifiedTime) structuredData.dateModified = modifiedTime;
+    if (section) structuredData.articleSection = section;
+    if (tags.length > 0) structuredData.keywords = tags.join(', ');
+  }
+
+=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
@@ -20,9 +106,12 @@ export default function SEO({
 }: SEOProps) {
   const fullTitle = `${title} | Zion Tech Group`
   
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfcf
   return (
     <Helmet>
       <title>{fullTitle}</title>
+<<<<<<< HEAD
+=======
 export interface SEOProps {
   title: string;
   description: string;
@@ -168,6 +257,7 @@ export function SEO({ title, description, keywords, canonical, url }: SEOProps) 
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfcf
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -194,6 +284,9 @@ export function SEO({ title, description, keywords, canonical, url }: SEOProps) 
         })}
       </script>
     </Helmet>
+<<<<<<< HEAD
+  );
+=======
     // Update meta keywords if provided
     if (keywords) {
       let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -220,6 +313,7 @@ export function SEO({ title, description, keywords, canonical, url }: SEOProps) 
   return null; // This component doesn't render anything
 =======
   )
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfcf
 }
 =======
       

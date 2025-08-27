@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
+=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-dfcf
 
 export function SEO({ title, description, keywords, image, canonical, ogImage, url }) {
   const siteName = 'Zion Tech Group';
