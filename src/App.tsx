@@ -5,24 +5,27 @@ import { FuturisticFooter } from './components/FuturisticFooter';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { ChatAssistant } from './components/ChatAssistant';
 
-// Lazy load pages - only import existing ones
+// Lazy load pages - comprehensive import list with enhanced chunking
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
+const Services = React.lazy(() => import('./pages/Services'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Careers = React.lazy(() => import('./pages/Careers'));
+const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Services = React.lazy(() => import('./pages/Services'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 
-// New service pages
+// Revolutionary Services 2030 - Preserved from our integration
+const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
+
+// New service pages from remote
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
@@ -98,6 +101,9 @@ function App() {
               {/* AI Services Routes */}
               <Route path="/ai-services" element={<AIServicesPage />} />
               <Route path="/ai-services/:service" element={<AIServicesPage />} />
+              
+              {/* Revolutionary Services Routes - Preserved from our integration */}
+              <Route path="/revolutionary-services-2030" element={<RevolutionaryServicesShowcase2030 />} />
               
               {/* Micro SAAS Routes */}
               <Route path="/micro-saas" element={<MicroSAASServicesPage />} />
