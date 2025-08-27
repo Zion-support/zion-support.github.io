@@ -12,6 +12,7 @@ export function Header() {
 					<div className="hidden md:flex space-x-8">
 						<Link to="/services" className="text-white hover:text-cyan-400">Services</Link>
 						<Link to="/blog" className="text-white hover:text-cyan-400">Blog</Link>
+						<Link to="/solutions" className="text-white hover:text-cyan-400">Solutions</Link>
 						<Link to="/about" className="text-white hover:text-cyan-400">About</Link>
 						<Link to="/contact" className="text-white hover:text-cyan-400">Contact</Link>
 					</div>
