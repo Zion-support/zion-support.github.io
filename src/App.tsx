@@ -4,29 +4,31 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Layout Components
-import { AppHeader } from './layout/AppHeader.tsx';
-import { Footer } from './components/Footer.tsx';
+import { AppHeader } from './layout/AppHeader';
+import { Footer } from './components/Footer';
 
 // Enhanced Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer.tsx';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer.tsx';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer.tsx';
-import { SEO } from './components/SEO.tsx';
-import { FloatingActionButton } from './components/FloatingActionButton.tsx';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics.tsx';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem.tsx';
-import { ChatAssistant } from './components/ChatAssistant.tsx';
-import { ErrorBoundary } from './components/ErrorBoundary.tsx';
-import { ErrorFallback } from './components/ErrorFallback.tsx';
-import { LoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { SEO } from './components/SEO';
+import { FloatingActionButton } from './components/FloatingActionButton';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { ChatAssistant } from './components/ChatAssistant';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { ErrorFallback } from './components/ErrorFallback';
+import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
-const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
-const About = lazy(() => import('./pages/About').then(module => ({ default: module.About })));
-const Services = lazy(() => import('./pages/Services').then(module => ({ default: module.Services })));
-const Contact = lazy(() => import('./pages/Contact').then(module => ({ default: module.Contact })));
-const Blog = lazy(() => import('./pages/Blog').then(module => ({ default: module.Blog })));
-const Careers = lazy(() => import('./pages/Careers').then(module => ({ default: module.Careers })));
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Careers = lazy(() => import('./pages/Careers'));
+
+
 
 // Additional missing page imports
 const Dashboard = lazy(() => import('./pages/Dashboard'));
@@ -125,38 +127,12 @@ const QuantumComputing = lazy(() => import('./pages/services/quantum-computing')
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
 
-// Loading spinner component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-    <div className="text-center text-white">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mx-auto mb-4"></div>
-      <h2 className="text-2xl font-semibold">Loading...</h2>
-    </div>
-  </div>
-);
 
-// Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 via-red-800 to-red-900">
-    <div className="text-center text-white">
-      <h1 className="text-6xl font-bold mb-4">Something went wrong</h1>
-      <p className="text-xl mb-8">{error.message}</p>
-      <button
-        onClick={resetErrorBoundary}
-        className="px-6 py-3 bg-white text-red-900 rounded-lg hover:bg-gray-100 transition-colors"
-      >
-        Try again
-      </button>
-    </div>
-  </div>
-);
 
 function App() {
   return (
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
-          <div className="App min-h-screen bg-white">
+    <ErrorBoundary>
+      <div className="App min-h-screen bg-white">
             {/* SEO Component */}
             <SEO />
             

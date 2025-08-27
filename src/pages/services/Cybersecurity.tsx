@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   Shield, 
   Lock, 
   Eye, 
   Zap, 
-  Target, 
+  Award,
   Users, 
   CheckCircle,
   ArrowRight,
@@ -119,7 +120,7 @@ export default function CybersecurityServices() {
     {
       name: "NIST",
       description: "National Institute of Standards and Technology",
-      icon: Target,
+      icon: Award,
       color: "from-cyan-500 to-blue-600"
     }
   ];
