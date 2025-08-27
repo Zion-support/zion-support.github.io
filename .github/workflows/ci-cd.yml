@@ -33,20 +33,21 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
-    - name: Install dependencies
+        cache: 'yarn'
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
       run: |
-        npm ci --prefer-offline --no-audit
-        npm audit --audit-level=moderate || true
+        corepack enable
+        yarn --version
+        yarn install --frozen-lockfile --non-interactive
     - name: Run ESLint
-      run: npm run lint || echo "Linting issues found - continuing with build"
+      run: yarn run lint || echo "Linting issues found - continuing with build"
     - name: Type checking
-      run: npm run type-check || echo "Type checking issues found - continuing with build"
+      run: yarn run type-check || echo "Type checking issues found - continuing with build"
     - name: Security audit
       run: |
-        npm audit --audit-level=moderate || true
-        npm audit fix --audit-level=moderate || true
+        npx npm@${{ env.NPM_VERSION }} audit --audit-level=moderate || true
+        npx npm@${{ env.NPM_VERSION }} audit fix --audit-level=moderate || true
     - name: Check for secrets
       uses: trufflesecurity/trufflehog@main
       with:
@@ -71,12 +72,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        cache-dependency-path: package-lock.json
-    - name: Install dependencies
-      run: npm ci --prefer-offline --no-audit
+        cache: 'yarn'
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
+      run: |
+        corepack enable
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: npm run build
+      run: yarn run build
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     - name: Build size analysis
@@ -108,14 +111,17 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-    - name: Install dependencies
-      run: npm ci
+        cache: 'yarn'
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
+      run: |
+        corepack enable
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: npm run build
+      run: yarn run build
     - name: Start application
       run: |
-        npm start &
+        yarn start &
         sleep 30
     - name: Run Lighthouse CI
       uses: treosh/lighthouse-ci-action@v10
@@ -144,11 +150,14 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
-    - name: Install dependencies
-      run: npm ci
+        cache: 'yarn'
+        cache-dependency-path: yarn.lock
+    - name: Install dependencies (yarn)
+      run: |
+        corepack enable
+        yarn install --frozen-lockfile --non-interactive
     - name: Build application
-      run: npm run build
+      run: yarn run build
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     - name: Deploy to GitHub Pages
