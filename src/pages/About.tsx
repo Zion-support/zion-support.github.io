@@ -1,53 +1,493 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { 
+  Users, 
+  Target, 
+  Award, 
+  Globe, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Rocket, 
+  Star, 
+  CheckCircle, 
+  TrendingUp, 
+  Heart, 
+  Cpu, 
+  Atom, 
+  Network, 
+  Eye, 
+  PenTool, 
+  Lock, 
+  BarChart3, 
+  Code, 
+  Server, 
+  Chip, 
+  Wifi, 
+  ShieldCheck, 
+  Bot, 
+  Workflow, 
+  Sparkles, 
+  Flame, 
+  Sun, 
+  Moon, 
+  Infinity, 
+  ArrowRight, 
+  DollarSign, 
+  Workflow as WorkflowIcon,
+  Building,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Github
+} from 'lucide-react';
+
 export default function About() {
+  const currentYear = new Date().getFullYear();
+
+  const companyStats = [
+    { number: '10+', label: 'Years of Experience', icon: Award },
+    { number: '500+', label: 'Projects Delivered', icon: Target },
+    { number: '50+', label: 'Expert Team Members', icon: Users },
+    { number: '99.9%', label: 'Client Satisfaction', icon: Star },
+  ];
+
+  const coreValues = [
+    {
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
+      icon: Sparkles,
+      color: 'from-cyan-400 to-blue-500'
+    },
+    {
+      title: 'Client Success',
+      description: 'Your success is our success. We measure our achievements by the impact we create for our clients.',
+      icon: Target,
+      color: 'from-green-400 to-emerald-500'
+    },
+    {
+      title: 'Excellence',
+      description: 'We maintain the highest standards in everything we do, from code quality to client communication.',
+      icon: Award,
+      color: 'from-yellow-400 to-orange-500'
+    },
+    {
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and partnership, both within our team and with our clients.',
+      icon: Users,
+      color: 'from-purple-400 to-pink-500'
+    },
+    {
+      title: 'Sustainability',
+      description: 'We\'re committed to building solutions that are not only powerful but also environmentally responsible.',
+      icon: Globe,
+      color: 'from-emerald-400 to-teal-500'
+    },
+    {
+      title: 'Continuous Learning',
+      description: 'In the fast-paced world of technology, we never stop learning and evolving our skills.',
+      icon: Brain,
+      color: 'from-indigo-400 to-purple-500'
+    }
+  ];
+
+  const expertiseAreas = [
+    {
+      title: 'Artificial Intelligence & Machine Learning',
+      description: 'Advanced AI solutions including business intelligence, automation, and predictive analytics.',
+      icon: Brain,
+      services: ['AI Business Intelligence', 'Machine Learning Models', 'Natural Language Processing', 'Computer Vision']
+    },
+    {
+      title: 'Quantum Computing',
+      description: 'Cutting-edge quantum solutions for complex computational challenges.',
+      icon: Atom,
+      services: ['Quantum Algorithms', 'Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation']
+    },
+    {
+      title: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure and automated development operations.',
+      icon: Cloud,
+      services: ['Cloud Architecture', 'DevOps Automation', 'Container Orchestration', 'Serverless Solutions']
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      icon: Shield,
+      services: ['Zero Trust Security', 'Threat Detection', 'Compliance Management', 'Security Auditing']
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Connected devices and edge computing solutions for real-time data processing.',
+      icon: Network,
+      services: ['IoT Platforms', 'Edge Computing', 'Sensor Networks', 'Real-time Analytics']
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Strategic technology consulting to modernize your business operations.',
+      icon: Rocket,
+      services: ['Technology Strategy', 'Process Optimization', 'Change Management', 'Digital Innovation']
+    }
+  ];
+
+  const teamMembers = [
+    {
+      name: 'Kleber',
+      role: 'Founder & CEO',
+      expertise: 'AI, Quantum Computing, Strategic Leadership',
+      avatar: '👨‍💼'
+    },
+    {
+      name: 'AI Research Team',
+      role: 'AI & ML Specialists',
+      expertise: 'Machine Learning, Deep Learning, AI Ethics',
+      avatar: '🤖'
+    },
+    {
+      name: 'Quantum Engineers',
+      role: 'Quantum Computing Experts',
+      expertise: 'Quantum Algorithms, Quantum Hardware, Quantum Software',
+      avatar: '⚛️'
+    },
+    {
+      name: 'Cloud Architects',
+      role: 'Infrastructure Specialists',
+      expertise: 'Cloud Platforms, DevOps, Scalability',
+      avatar: '☁️'
+    },
+    {
+      name: 'Security Experts',
+      role: 'Cybersecurity Professionals',
+      expertise: 'Security Architecture, Threat Intelligence, Compliance',
+      avatar: '🔒'
+    },
+    {
+      name: 'Digital Strategists',
+      role: 'Transformation Consultants',
+      expertise: 'Business Strategy, Technology Roadmaps, Change Management',
+      avatar: '📊'
+    }
+  ];
+
+  const contactInfo = [
+    { name: 'Email', value: 'kleber@ziontechgroup.com', url: 'mailto:kleber@ziontechgroup.com', icon: Mail },
+    { name: 'Phone', value: '+1 302 464 0950', url: 'tel:+13024640950', icon: Phone },
+    { name: 'Address', value: '364 E Main St STE 1008 Middletown DE 19709', url: 'https://www.google.com/maps/search/?api=1&query=364+E+Main+St+STE+1008+Middletown+DE+19709', icon: MapPin },
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github },
+  ];
+
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="About Us - Zion Tech Group"
+        description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions."
+      />
+      
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            About <span className="text-zion-cyan">Zion Tech Group</span>
-          </h1>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            We are a forward-thinking technology company dedicated to transforming businesses 
-            through innovative AI solutions and cutting-edge technology services.
-          </p>
-        </div>
-      </section>
-      {/* Mission Section */}
-      <section className="py-16 bg-zion-slate-dark">
+      <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Our Mission</h2>
-            <p className="text-lg text-zion-slate-light leading-relaxed">
-              To empower businesses with cutting-edge technology solutions that drive innovation, 
-              efficiency, and growth in the digital age.
-            </p>
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-bold text-white mb-6"
+            >
+              About
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Zion Tech Group</span>
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-slate-300 mb-8 leading-relaxed"
+            >
+              Pioneering the future of business technology through AI, quantum computing, and innovative solutions. 
+              We're not just building software – we're building the future.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-wrap justify-center gap-4"
+            >
+              <Link
+                to="/contact"
+                className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/services"
+                className="px-8 py-3 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
+              >
+                Our Services
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
-      {/* Values Section */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
+
+      {/* Company Stats */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-white mb-4">Innovation</h3>
-              <p className="text-zion-slate-light">
-                Constantly pushing the boundaries of what's possible with technology.
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {companyStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-slate-400 text-sm">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision */}
+      <section className="py-16 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                To democratize cutting-edge technology and empower businesses of all sizes to leverage the power of AI, 
+                quantum computing, and emerging technologies to solve their most complex challenges.
               </p>
+              <p className="text-lg text-slate-300 leading-relaxed">
+                We believe that every organization deserves access to the tools and expertise that will drive their 
+                digital transformation and secure their competitive advantage in the rapidly evolving technological landscape.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="w-64 h-64 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-full flex items-center justify-center mx-auto">
+                <Target className="w-32 h-32 text-cyan-400" />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Values */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Core Values</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              The principles that guide everything we do and every decision we make.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {coreValues.map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200 hover:bg-slate-800/50"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-4`}>
+                  <value.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                <p className="text-slate-400 leading-relaxed">{value.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Areas of Expertise */}
+      <section className="py-16 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Areas of Expertise</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              We specialize in the most advanced and emerging technologies that are shaping the future of business.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {expertiseAreas.map((area, index) => (
+              <motion.div
+                key={area.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200 hover:bg-slate-800/50"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <area.icon className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
+                    <p className="text-slate-400 mb-4 leading-relaxed">{area.description}</p>
+                    <div className="space-y-2">
+                      {area.services.map((service, serviceIndex) => (
+                        <div key={serviceIndex} className="flex items-center space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          <span className="text-sm text-slate-300">{service}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Overview */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Team</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Meet the brilliant minds behind our innovative solutions and cutting-edge technology.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200 hover:bg-slate-800/50 text-center"
+              >
+                <div className="text-6xl mb-4">{member.avatar}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-cyan-400 font-medium mb-3">{member.role}</p>
+                <p className="text-slate-400 text-sm leading-relaxed">{member.expertise}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              We're not just another technology company – we're your strategic partner in innovation.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Cutting-Edge Expertise</h3>
+              <p className="text-slate-400">Our team stays ahead of the curve with the latest technologies and methodologies.</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Results-Driven Approach</h3>
+              <p className="text-slate-400">We focus on delivering measurable business value and ROI for our clients.</p>
+            </div>
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Collaborative Partnership</h3>
+              <p className="text-slate-400">We work closely with you to understand your needs and deliver tailored solutions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Let's discuss how we can help transform your business with cutting-edge technology solutions.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="space-y-4">
+              {contactInfo.map((contact) => (
+                <a
+                  key={contact.name}
+                  href={contact.url}
+                  className="flex items-center space-x-4 p-4 rounded-lg border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-200 hover:bg-slate-800/50"
+                >
+                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                    <contact.icon className="w-5 h-5 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-medium">{contact.name}</h3>
+                    <p className="text-slate-400 text-sm">{contact.value}</p>
+                  </div>
+                </a>
+              ))}
             </div>
             <div className="text-center">
-              <h3 className="text-xl font-semibold text-white mb-4">Excellence</h3>
-              <p className="text-zion-slate-light">
-                Delivering the highest quality solutions and services to our clients.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-white mb-4">Integrity</h3>
-              <p className="text-zion-slate-light">
-                Building trust through honest, transparent, and ethical business practices.
-              </p>
+              <Link
+                to="/contact"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
+              >
+                Contact Us Today
+              </Link>
+              <div className="mt-6">
+                <p className="text-slate-400 mb-4">Follow us on social media</p>
+                <div className="flex justify-center space-x-4">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center hover:from-cyan-400/40 hover:to-blue-500/40 transition-all duration-200"
+                    >
+                      <social.icon className="w-5 h-5 text-cyan-400" />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
