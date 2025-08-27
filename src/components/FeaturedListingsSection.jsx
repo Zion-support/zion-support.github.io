@@ -180,7 +180,8 @@ export function FeaturedListingsSection() {
         </motion.div>
         
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {filteredListings.map((listing) => (<motion.div key={listing.id} variants={itemVariants} onHoverStart={() => setHoveredListing(listing.id)} onHoverEnd={() => setHoveredListing(null)}>
+          {filteredListings.map((listing) => (
+            <motion.div key={listing.id} variants={itemVariants} onHoverStart={() => setHoveredListing(listing.id)} onHoverEnd={() => setHoveredListing(null)}>
               <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
                 {/* Featured badge */}
                 {listing.featured && (<div className="absolute top-4 left-4 z-10">
@@ -296,8 +297,9 @@ export function FeaturedListingsSection() {
                   Get Started
                 </Link>
               </div>
-            </div>))}
-        </></div>
+            </motion.div>
+          ))}
+        </motion.div>
         
         {/* Enhanced bottom CTA */}
         <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
@@ -313,8 +315,7 @@ export function FeaturedListingsSection() {
             </div>
           </div>
         </motion.div>
-      </div>);
-    section >
-    ;
-    ;
+      </div>
+    </section>
+  );
 }

@@ -1,88 +1,28 @@
 import React from 'react';
 
-export const Form = ({ children, ...props }) => (
-    <form {...props}>
-        {children}
-    </form>
-);
-
-export const FormControl = ({ children }) => (
-    <div>
-        {children}
-    </div>
-);
-
-export const FormField = ({ control, name, render }) => {
-    return render({
-        field: {
-            name,
-            onChange: () => {},
-            onBlur: () => {},
-            value: '',
-        },
-    });
-};
-
-export const FormItem = ({ children }) => (
-    <div className="space-y-2">
-        {children}
-    </div>
-);
-
-export const FormLabel = ({ children, className = '' }) => (
-    <label className={`block text-sm font-medium ${className}`}>
-        {children}
-    </label>
-);
-
-export const FormMessage = ({ children, className = '' }) => (
-    <p className={`text-sm ${className}`}>
-        {children}
-    </p>
-);
-=======
 
 // Form components for building accessible forms
+=======
 export const Form = ({ children, ...props }) => {
   return <form {...props}>{children}</form>;
 };
 
-export const FormField = ({ children, ...props }) => {
-  return <div {...props}>{children}</div>;
+export const FormControl = ({ children }) => {
+  return <div className="form-control">{children}</div>;
 };
 
-export const FormItem = ({ children, className = '', ...props }) => {
-  return (
-    <div className={`space-y-2 ${className}`} {...props}>
-      {children}
-    </div>
-  );
+export const FormField = ({ control, name, render }) => {
+  return render({ field: { name, value: '', onChange: () => {} } });
 };
 
-export const FormLabel = ({ children, className = '', ...props }) => {
-  return (
-    <label className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`} {...props}>
-      {children}
-    </label>
-  );
+export const FormItem = ({ children }) => {
+  return <div className="form-item">{children}</div>;
 };
 
-export const FormControl = ({ children, ...props }) => {
-  return <div {...props}>{children}</div>;
+export const FormLabel = ({ children, className = '' }) => {
+  return <label className={`form-label ${className}`}>{children}</label>;
 };
 
-export const FormMessage = ({ children, className = '', ...props }) => {
-  return (
-    <p className={`text-sm font-medium ${className}`} {...props}>
-      {children}
-    </p>
-  );
-};
-
-export const FormDescription = ({ children, className = '', ...props }) => {
-  return (
-    <p className={`text-sm text-muted-foreground ${className}`} {...props}>
-      {children}
-    </p>
-  );
+export const FormMessage = ({ className = '' }) => {
+  return <div className={`form-message ${className}`}></div>;
 };
