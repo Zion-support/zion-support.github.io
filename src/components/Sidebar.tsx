@@ -71,15 +71,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'Featured Services',
       featured: true,
       items: [
-        { name: '2026 Services Overview', href: '/services2026', icon: Star, featured: true },
-        { name: '2027 Services Overview', href: '/services2027', icon: Star, featured: true },
         { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, featured: true },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, featured: true },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
         { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: PenTool },
         { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users },
-        { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Globe },
         { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: TrendingUp },
         { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain },
       ]
@@ -115,22 +112,21 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       title: 'Cybersecurity & Privacy',
       items: [
-        { name: 'Cybersecurity Services', href: '/services/cybersecurity', icon: Shield },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity', icon: Shield },
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
-        { name: 'Privacy & Compliance', href: '/privacy', icon: Shield },
+        { name: 'Privacy Policy', href: '/privacy', icon: Shield },
       ]
     },
     {
       title: 'Data & Analytics',
       items: [
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
-        { name: 'Business Intelligence', href: '/services/business-intelligence', icon: TrendingUp },
-        { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3 },
-        { name: 'Performance Analytics', href: '/services/performance-analytics', icon: TrendingUp },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: TrendingUp },
         { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart },
       ]
     },
     {
@@ -138,10 +134,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
-        { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain },
         { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
       ]
     },
     {

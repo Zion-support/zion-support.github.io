@@ -39,18 +39,16 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
-    { name: '2025 Services', href: '/comprehensive-services-showcase-2025', current: false, featured: true },
-    { name: '2026 Services', href: '/services2026', current: false, featured: true },
-    { name: '2027 Services', href: '/services2027', current: false, featured: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
+    { name: 'Sitemap', href: '/sitemap', current: false },
   ];
 
   // Organized services by category
   const services = [
     // Featured & New Services
-    { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true },
-    { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
+    { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, description: 'Comprehensive AI services', category: 'Featured', featured: true },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-gen computational power', category: 'Featured', featured: true },
     
     // AI & Machine Learning
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML' },
@@ -68,28 +66,26 @@ export function AppHeader() {
     { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3, description: 'Financial operations automation', category: 'Cloud & DevOps' },
     
     // Cybersecurity
-    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced security solutions', category: 'Cybersecurity' },
+    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'AI-powered security solutions', category: 'Cybersecurity' },
     { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock, description: 'Web security hardening', category: 'Cybersecurity' },
     { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA compliance', category: 'Cybersecurity' },
+    { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock, description: 'Advanced network security', category: 'Cybersecurity' },
     
     // Digital Transformation
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation' },
     { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic technology consulting', category: 'Digital Transformation' },
-    { name: 'IT Consulting', href: '/services/it-consulting', icon: Cpu, description: 'Technology strategy & planning', category: 'Digital Transformation' },
+    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Digital Transformation' },
     
     // Emerging Technologies
-    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-gen computational power', category: 'Emerging Tech' },
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks', category: 'Emerging Tech' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock, description: 'Distributed ledger technology', category: 'Emerging Tech' },
-    
-    // Data & Analytics
-    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics' },
-    { name: 'Business Intelligence', href: '/services/business-intelligence', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics' },
+    { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart, description: 'Healthcare AI solutions', category: 'Emerging Tech' },
+    { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'Independent research automation', category: 'Emerging Tech' },
     
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS' },
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS' },
+    { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle, description: 'Feedback collection tools', category: 'Micro SaaS' },
   ];
 
   const quickLinks = [
@@ -102,10 +98,10 @@ export function AppHeader() {
   ];
 
   const featuredServices = [
-    { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
-    { name: '2027 Services', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
+    { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, description: 'Comprehensive AI services', category: 'Featured', featured: true },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-generation quantum solutions', category: 'Featured', featured: true },
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
-    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
+    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'AI-powered security solutions', category: 'Cybersecurity', featured: true },
   ];
 
   // Group services by category for better organization
@@ -392,7 +388,7 @@ export function AppHeader() {
                   <div className="pt-4 border-t border-slate-700/50">
                     <h3 className="px-4 text-sm font-semibold text-cyan-300 mb-3">Featured Services</h3>
                     <div className="space-y-2">
-                      {featuredServices.map((service) => (
+                      {featuredServices.slice(0, 3).map((service) => (
                         <Link
                           key={service.name}
                           to={service.href}
@@ -403,6 +399,14 @@ export function AppHeader() {
                           <span className="text-sm">{service.name}</span>
                         </Link>
                       ))}
+                      <Link
+                        to="/services"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center px-4 py-3 rounded-lg text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
+                        <ArrowRight className="w-4 h-4 mr-3" />
+                        <span className="text-sm">View All Services</span>
+                      </Link>
                     </div>
                   </div>
                 </nav>
