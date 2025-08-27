@@ -1,16 +1,95 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import { 
+  Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+  ChevronDown,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  PanelLeft,
+  ShoppingCart,
+  Settings,
+  LogOut,
+  HelpCircle,
+  BookOpen
+} from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+=======
 =======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const [scrolled, setScrolled] = useState(false);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [searchFocused, setSearchFocused] = useState(false);
+  const location = useLocation();
+  const { user, logout } = useAuth();
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+<<<<<<< HEAD
+
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (activeDropdown && !(event.target as Element).closest('.dropdown-container')) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [activeDropdown]);
+=======
 =======
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+>>>>>>> ae97ec95e9a8b948888cb6c3d8a6b65c04b4d239
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();

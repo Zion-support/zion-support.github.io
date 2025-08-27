@@ -1,0 +1,9 @@
+export default {
+<<<<<<< HEAD
+  plugins: {
+    tailwindcss: {},
+    'autoprefixer': {},
+  },
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
+};

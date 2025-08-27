@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React from 'react';
+
+export const FeaturedListingsSection = () => {
+  return (
+    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <div className="max-w-7xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold text-white mb-8">
+          Featured Listings
+        </h2>
+        <p className="text-xl text-gray-300">
+          This section will showcase featured service listings and products.
+        </p>
+=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, Award } from 'lucide-react';
@@ -358,6 +372,7 @@ export function FeaturedListingsSection() {
             </div>
           </div>
         </motion.div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
       </div>
     </section>
   );

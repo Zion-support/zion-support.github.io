@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+}
+
+export function SEO({ 
+  title = "Zion Tech Group - Innovative Technology Solutions",
+  description = "Leading provider of AI, cybersecurity, cloud solutions, and digital transformation services. Transform your business with cutting-edge technology.",
+  keywords = "AI, cybersecurity, cloud solutions, digital transformation, IT consulting, technology services",
+  image = "https://ziontechgroup.com/og-image.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website"
+}: SEOProps) {
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+=======
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -171,9 +212,16 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       
+<<<<<<< HEAD
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+=======
       {/* Article specific meta tags */}
       {type === 'article' && publishedTime && (
         <meta property="article:published_time" content={publishedTime} />
@@ -205,6 +253,7 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Additional Performance Optimizations */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
@@ -218,6 +267,35 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Manifest */}
       <link rel="manifest" href="/site.webmanifest" />
       
+<<<<<<< HEAD
+      {/* Theme Color */}
+      <meta name="theme-color" content="#0ea5e9" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": description,
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://github.com/Zion-Technologies"
+          ]
+        })}
+      </script>
+=======
       {/* Enhanced Mobile Meta Tags */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
@@ -243,6 +321,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="x5-orientation" content="portrait" />
       <meta name="x5-fullscreen" content="true" />
       <meta name="x5-page-mode" content="app" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
     </Helmet>
   );
 };

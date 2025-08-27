@@ -5,6 +5,15 @@ export function logErrorToProduction(message, error) {
   if (process.env.NODE_ENV === 'development') {
     console.error(message, error);
   }
+<<<<<<< HEAD
+  
+  // TODO: Implement production logging service (e.g., Sentry, LogRocket, etc.)
+  // if (process.env.NODE_ENV === 'production') {
+  //   // Send to production logging service
+  // }
+}
+=======
   // In production, this could send to a logging service
   // For now, just console.error in development
 };
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd

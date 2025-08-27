@@ -1,4 +1,253 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  Video, 
+  Calendar, 
+  Clock, 
+  Users, 
+  Search,
+  Filter,
+  ArrowRight,
+  Play,
+  Pause,
+  Stop,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Award,
+  Rocket,
+  Brain,
+  Shield,
+  Code,
+  Zap,
+  Lightbulb,
+  Target,
+  Building,
+  Globe,
+  CheckCircle,
+  FileText,
+  BookOpen,
+  ChevronDown,
+  ChevronRight,
+  Plus,
+  Minus,
+  Eye,
+  Bookmark,
+  Share2,
+  Download
+} from 'lucide-react';
+
+const Webinars: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const categories = [
+    { id: 'all', name: 'All Webinars', count: 45, icon: Video },
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 18, icon: Brain },
+    { id: 'quantum', name: 'Quantum Computing', count: 12, icon: Atom },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 10, icon: Shield },
+    { id: 'iot', name: 'IoT & Edge Computing', count: 5, icon: Wifi }
+  ];
+
+  const webinars = [
+    {
+      id: 1,
+      title: 'AI Consciousness Simulation: Breakthroughs & Applications',
+      description: 'Join us for an exclusive webinar exploring our revolutionary AI consciousness simulator technology and its real-world applications.',
+      category: 'ai-ml',
+      date: '2025-02-15',
+      time: '14:00',
+      timezone: 'EST',
+      duration: '90 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Sarah Chen',
+      speakerTitle: 'Chief Executive Officer',
+      image: '/webinars/ai-consciousness-simulator.jpg',
+      tags: ['AI', 'Consciousness', 'Live', 'Breakthrough'],
+      featured: true,
+      attendees: 1250,
+      maxAttendees: 2000,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/ai-consciousness-simulator',
+      recording: false,
+      abstract: 'Discover how our AI consciousness simulator is revolutionizing our understanding of artificial intelligence and consciousness. Learn about the technology behind this breakthrough and explore potential applications in research, healthcare, and beyond.'
+    },
+    {
+      id: 2,
+      title: 'Quantum Computing in Financial Services: Real-World Applications',
+      description: 'Explore how quantum computing is transforming financial services, from risk assessment to portfolio optimization.',
+      category: 'quantum',
+      date: '2025-02-20',
+      time: '15:30',
+      timezone: 'EST',
+      duration: '75 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Michael Rodriguez',
+      speakerTitle: 'Quantum Research Director',
+      image: '/webinars/quantum-financial-services.jpg',
+      tags: ['Quantum Computing', 'Financial Services', 'Live', 'Applications'],
+      featured: true,
+      attendees: 980,
+      maxAttendees: 1500,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/quantum-financial-services',
+      recording: false,
+      abstract: 'Learn about practical applications of quantum computing in financial services, including risk modeling, portfolio optimization, and algorithmic trading strategies.'
+    },
+    {
+      id: 3,
+      title: 'Zero Trust Security Architecture: Implementation Guide',
+      description: 'Comprehensive guide to implementing zero trust security architecture in enterprise environments.',
+      category: 'cybersecurity',
+      date: '2025-02-25',
+      time: '13:00',
+      timezone: 'EST',
+      duration: '60 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Alex Thompson',
+      speakerTitle: 'Chief Security Officer',
+      image: '/webinars/zero-trust-security.jpg',
+      tags: ['Cybersecurity', 'Zero Trust', 'Live', 'Implementation'],
+      featured: false,
+      attendees: 750,
+      maxAttendees: 1000,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/zero-trust-security',
+      recording: false,
+      abstract: 'Step-by-step guide to implementing zero trust security architecture, including best practices, common pitfalls, and real-world case studies.'
+    },
+    {
+      id: 4,
+      title: 'IoT Edge Computing: Building Smart Infrastructure',
+      description: 'Learn how to design and implement IoT edge computing solutions for smart cities and industrial applications.',
+      category: 'iot',
+      date: '2025-03-01',
+      time: '14:30',
+      timezone: 'EST',
+      duration: '80 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Emily Watson',
+      speakerTitle: 'IoT Solutions Architect',
+      image: '/webinars/iot-edge-computing.jpg',
+      tags: ['IoT', 'Edge Computing', 'Live', 'Smart Infrastructure'],
+      featured: false,
+      attendees: 620,
+      maxAttendees: 800,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/iot-edge-computing',
+      recording: false,
+      abstract: 'Explore the fundamentals of IoT edge computing and learn how to build scalable, efficient smart infrastructure solutions.'
+    },
+    {
+      id: 5,
+      title: 'AI-Powered Healthcare: Transforming Patient Care',
+      description: 'Discover how AI is revolutionizing healthcare delivery and improving patient outcomes.',
+      category: 'ai-ml',
+      date: '2025-03-05',
+      time: '16:00',
+      timezone: 'EST',
+      duration: '70 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Sarah Chen',
+      speakerTitle: 'Chief Executive Officer',
+      image: '/webinars/ai-powered-healthcare.jpg',
+      tags: ['AI', 'Healthcare', 'Live', 'Patient Care'],
+      featured: false,
+      attendees: 890,
+      maxAttendees: 1200,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/ai-powered-healthcare',
+      recording: false,
+      abstract: 'Learn about the latest AI applications in healthcare, including diagnostic tools, treatment optimization, and patient monitoring systems.'
+    },
+    {
+      id: 6,
+      title: 'Blockchain in Enterprise: Beyond Cryptocurrency',
+      description: 'Explore practical enterprise applications of blockchain technology for supply chain and digital identity.',
+      category: 'cybersecurity',
+      date: '2025-03-10',
+      time: '15:00',
+      timezone: 'EST',
+      duration: '65 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Marcus Chen',
+      speakerTitle: 'Blockchain Solutions Lead',
+      image: '/webinars/blockchain-enterprise.jpg',
+      tags: ['Blockchain', 'Enterprise', 'Live', 'Supply Chain'],
+      featured: false,
+      attendees: 540,
+      maxAttendees: 700,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/blockchain-enterprise',
+      recording: false,
+      abstract: 'Discover how blockchain technology is transforming enterprise operations beyond cryptocurrency, including supply chain transparency and digital identity management.'
+    },
+    {
+      id: 7,
+      title: '5G and Beyond: Future of Wireless Communication',
+      description: 'Comprehensive overview of 5G technology and the roadmap to 6G and beyond.',
+      category: 'iot',
+      date: '2025-03-15',
+      time: '14:00',
+      timezone: 'EST',
+      duration: '85 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. James Wilson',
+      speakerTitle: 'Network Technology Director',
+      image: '/webinars/5g-beyond-future.jpg',
+      tags: ['5G', 'Wireless Communication', 'Live', 'Technology'],
+      featured: false,
+      attendees: 720,
+      maxAttendees: 900,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/5g-beyond-future',
+      recording: false,
+      abstract: 'Explore the evolution of wireless communication technologies, from current 5G deployments to future 6G capabilities and applications.'
+    },
+    {
+      id: 8,
+      title: 'Machine Learning Operations (MLOps): Best Practices',
+      description: 'Learn how to implement MLOps best practices for production AI systems.',
+      category: 'ai-ml',
+      date: '2025-03-20',
+      time: '15:30',
+      timezone: 'EST',
+      duration: '75 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Lisa Park',
+      speakerTitle: 'MLOps Engineering Lead',
+      image: '/webinars/mlops-best-practices.jpg',
+      tags: ['MLOps', 'Machine Learning', 'Live', 'Best Practices'],
+      featured: false,
+      attendees: 680,
+      maxAttendees: 850,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/mlops-best-practices',
+      recording: false,
+      abstract: 'Comprehensive guide to MLOps implementation, covering model deployment, monitoring, and maintenance in production environments.'
+    }
+  ];
+
+  const filteredWebinars = webinars.filter(webinar => {
+    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const featuredWebinars = webinars.filter(webinar => webinar.featured);
+  const regularWebinars = filteredWebinars.filter(webinar => !webinar.featured);
+=======
 import Link from 'next/link';
 import { Video, Brain, Cpu, Shield, Zap, Rocket, Building } from 'lucide-react';
 export default function Webinars() {
@@ -115,6 +364,7 @@ export default function Webinars() {
           </div>
 =======
 import {CogIcon} from '@heroicons/react/24/outline';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

@@ -24,6 +24,193 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
+interface CookieCategory {
+  id: string;
+  name: string;
+  description: string;
+  examples: string[];
+  necessary: boolean;
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+const cookieCategories: CookieCategory[] = [
+  {
+    id: 'essential',
+    name: 'Essential Cookies',
+    description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
+    examples: [
+      'Authentication and security cookies',
+      'Session management cookies',
+      'Load balancing cookies',
+      'User preference cookies'
+    ],
+    necessary: true,
+    icon: Shield
+  },
+  {
+    id: 'functional',
+    name: 'Functional Cookies',
+    description: 'These cookies enable enhanced functionality and personalization.',
+    examples: [
+      'Language preference cookies',
+      'Theme preference cookies',
+      'Form auto-fill cookies',
+      'User interface customization'
+    ],
+    necessary: false,
+    icon: Settings
+  },
+  {
+    id: 'analytics',
+    name: 'Analytics Cookies',
+    description: 'These cookies help us understand how visitors interact with our website.',
+    examples: [
+      'Page view tracking',
+      'User behavior analysis',
+      'Performance monitoring',
+      'Traffic source identification'
+    ],
+    necessary: false,
+    icon: BarChart3
+  },
+  {
+    id: 'marketing',
+    name: 'Marketing Cookies',
+    description: 'These cookies are used to deliver relevant advertisements and track marketing campaign performance.',
+    examples: [
+      'Ad targeting cookies',
+      'Social media integration',
+      'Email marketing tracking',
+      'Conversion tracking'
+    ],
+    necessary: false,
+    icon: Users
+  },
+  {
+    id: 'third-party',
+    name: 'Third-Party Cookies',
+    description: 'These cookies are set by third-party services integrated with our website.',
+    examples: [
+      'Social media platform cookies',
+      'Payment processor cookies',
+      'Analytics service cookies',
+      'Advertising network cookies'
+    ],
+    necessary: false,
+    icon: Globe
+  }
+];
+
+const cookieTableData = [
+  {
+    name: 'session_id',
+    purpose: 'Maintains user session and authentication state',
+    duration: 'Session',
+    category: 'Essential',
+    provider: 'Zion Tech Group'
+  },
+  {
+    name: 'user_preferences',
+    purpose: 'Stores user interface preferences and settings',
+    duration: '1 year',
+    category: 'Functional',
+    provider: 'Zion Tech Group'
+  },
+  {
+    name: 'analytics_id',
+    purpose: 'Tracks user behavior and website performance',
+    duration: '2 years',
+    category: 'Analytics',
+    provider: 'Zion Tech Group'
+  },
+  {
+    name: 'marketing_tracker',
+    purpose: 'Tracks marketing campaign effectiveness',
+    duration: '90 days',
+    category: 'Marketing',
+    provider: 'Zion Tech Group'
+  },
+  {
+    name: '_ga',
+    purpose: 'Google Analytics tracking cookie',
+    duration: '2 years',
+    category: 'Analytics',
+    provider: 'Google'
+  },
+  {
+    name: '_fbp',
+    purpose: 'Facebook pixel tracking cookie',
+    duration: '90 days',
+    category: 'Marketing',
+    provider: 'Facebook'
+  }
+];
+
+export default function Cookies() {
+  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set(['essential']));
+  const [cookiePreferences, setCookiePreferences] = useState({
+    functional: true,
+    analytics: true,
+    marketing: false,
+    thirdParty: false
+  });
+
+  const toggleCategory = (categoryId: string) => {
+    const newExpanded = new Set(expandedCategories);
+    if (newExpanded.has(categoryId)) {
+      newExpanded.delete(categoryId);
+    } else {
+      newExpanded.add(categoryId);
+    }
+    setExpandedCategories(newExpanded);
+  };
+
+  const updateCookiePreference = (category: keyof typeof cookiePreferences) => {
+    setCookiePreferences(prev => ({
+      ...prev,
+      [category]: !prev[category]
+    }));
+  };
+
+  const savePreferences = () => {
+    // In a real implementation, this would save preferences to localStorage/cookies
+    // and update the actual cookie settings
+    console.log('Cookie preferences saved:', cookiePreferences);
+    // Show success message
+    alert('Cookie preferences updated successfully!');
+  };
+
+  const acceptAll = () => {
+    setCookiePreferences({
+      functional: true,
+      analytics: true,
+      marketing: true,
+      thirdParty: true
+    });
+    savePreferences();
+  };
+
+  const rejectAll = () => {
+    setCookiePreferences({
+      functional: false,
+      analytics: false,
+      marketing: false,
+      thirdParty: false
+    });
+    savePreferences();
+  };
+
+  return (
+    <div className="min-h-screen bg-futuristic">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan/20 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-32 h-32 border border-zion-purple/20 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-zion-blue-light rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+        </div>
+=======
 export default function Cookies() {
   const cookieTypes = [
     {
@@ -124,6 +311,7 @@ export default function Cookies() {
             </p>
           </div>
         </motion.div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
 
         <div className="container-responsive relative z-10 py-20">
           <motion.div 

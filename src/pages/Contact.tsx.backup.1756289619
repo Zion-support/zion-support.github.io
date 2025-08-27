@@ -10,14 +10,32 @@ import {
   CheckCircle, 
   AlertCircle,
   Building,
+<<<<<<< HEAD
+  Globe,
+  Users,
+=======
   Send,
   CheckCircle,
   ArrowRight,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
   Zap,
   Brain,
   Shield,
   Cloud,
+<<<<<<< HEAD
+  Rocket,
+  Code,
+  Building2,
+  Heart,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  ExternalLink
+=======
   Rocket
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
 } from 'lucide-react';
 
 interface ContactMethod {
@@ -185,10 +203,17 @@ export default function Contact() {
     newsletter: false
   });
 
+<<<<<<< HEAD
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+=======
   const [formStatus, setFormStatus] = useState('idle');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
@@ -224,6 +249,8 @@ export default function Contact() {
     }, 3000);
   };
 
+<<<<<<< HEAD
+=======
   const contactInfo = [
     {
       icon: Phone,
@@ -286,6 +313,7 @@ export default function Contact() {
     { icon: Zap, title: "Quantum Computing", description: "Next-gen computing power" }
   ];
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -334,6 +362,18 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
+<<<<<<< HEAD
+            <h2 className="text-3xl font-bold text-white mb-4">How Can We Help You?</h2>
+            <p className="text-zion-slate-light text-lg">
+              Choose the best way to get in touch with our team
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactMethods.map((method, index) => (
+              <motion.div
+                key={method.id}
+=======
             Get in Touch
           </motion.h1>
           <motion.p 
@@ -364,12 +404,36 @@ export default function Contact() {
               <motion.div 
                 key={index} 
                 className="text-center group"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
+<<<<<<< HEAD
+                <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <method.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-2">{method.title}</h3>
+                <p className="text-zion-slate-light text-sm mb-4">{method.description}</p>
+                
+                <div className="space-y-2 mb-4">
+                  <div className="text-white font-medium">{method.primary}</div>
+                  {method.secondary && (
+                    <div className="text-zion-slate-light text-sm">{method.secondary}</div>
+                  )}
+                </div>
+                
+                <a
+                  href={method.href}
+                  className={`inline-flex items-center gap-2 text-sm font-medium bg-gradient-to-r ${method.color} bg-clip-text text-transparent hover:opacity-80 transition-opacity`}
+                >
+                  {method.action}
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+=======
                 <motion.div 
                   className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-cyan-500/25"
                   whileHover={{ rotate: 5 }}
@@ -381,12 +445,30 @@ export default function Contact() {
                 </h3>
                 <p className="text-cyan-400 mb-2 font-medium">{info.details}</p>
                 <p className="text-sm text-gray-400 leading-relaxed">{info.description}</p>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
               </motion.div>
             ))}
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+      {/* Contact Form and Office Locations */}
+      <div className="container-responsive py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+              <p className="text-zion-slate-light mb-8">
+                Fill out the form below and we'll get back to you as soon as possible. 
+                All fields marked with * are required.
+=======
       {/* Contact Form */}
       <section className="py-20 relative z-10">
         <div className="max-w-5xl mx-auto px-6">
@@ -401,6 +483,7 @@ export default function Contact() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Send Us a Message</h2>
               <p className="text-gray-300 text-lg leading-relaxed">
                 Tell us about your project and we'll get back to you within 24 hours.
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -636,9 +719,15 @@ export default function Contact() {
         </div>
       </div>
 
+<<<<<<< HEAD
+      {/* Social Media and Additional Info */}
+      <div className="container-responsive py-16">
+        <div className="max-w-4xl mx-auto">
+=======
       {/* Global Presence */}
       <section className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-6 text-center">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dcd
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
