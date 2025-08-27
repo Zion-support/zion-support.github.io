@@ -75,6 +75,10 @@ const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateSe
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 
+// New 2029 service imports
+const InnovativeServicesShowcase2029 = React.lazy(() => import('./pages/InnovativeServicesShowcase2029'));
+const ComprehensivePricing2029 = React.lazy(() => import('./pages/ComprehensivePricing2029'));
+
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
@@ -312,6 +316,12 @@ function App() {
               {/* 2028 Pricing */}
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
+              
+              {/* 2029 Innovative Services */}
+              <Route path="/innovative-services-2029" element={<InnovativeServicesShowcase2029 />} />
+              <Route path="/services-2029" element={<InnovativeServicesShowcase2029 />} />
+              <Route path="/comprehensive-pricing-2029" element={<ComprehensivePricing2029 />} />
+              <Route path="/pricing-2029" element={<ComprehensivePricing2029 />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />

@@ -71,7 +71,8 @@ export function Footer() {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: '2029 Innovative Services', path: '/innovative-services-2029', icon: Star }
       ]
     },
     {
