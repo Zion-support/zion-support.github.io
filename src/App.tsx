@@ -267,6 +267,11 @@ function App() {
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
+              {/* New comprehensive improvements routes */}
+              <Route path="/ai-services-hub" element={<AdvancedAIServicesHub />} />
+              <Route path="/performance-analytics" element={<PerformanceAnalytics />} />
+              <Route path="/comprehensive-improvements-2025" element={<ComprehensiveImprovements2025 />} />
+              
               {/* New innovative AI services */}
               <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
