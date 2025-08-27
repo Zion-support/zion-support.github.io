@@ -35,6 +35,8 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
 const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
 const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
+const Revolutionary2026ServicesShowcase = React.lazy(() => import('./pages/Revolutionary2026ServicesShowcase.tsx'));
+const Revolutionary2026PricingGuide = React.lazy(() => import('./pages/Revolutionary2026PricingGuide.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -180,6 +182,8 @@ function App() {
                 <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
                 <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
                 <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
+                <Route path="/revolutionary-2026-services" element={<Revolutionary2026ServicesShowcase />} />
+                <Route path="/revolutionary-2026-pricing" element={<Revolutionary2026PricingGuide />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
