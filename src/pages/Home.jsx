@@ -15,7 +15,7 @@ import { InnovationResearchSection } from "@/components/InnovationResearchSectio
 import { ClientSuccessStoriesSection } from "@/components/ClientSuccessStoriesSection";
 import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
-import { AIServicesShowcase } from "@/components/InteractiveTestimonials";
+// import { AIServicesShowcase } from "@/components/InteractiveTestimonials";
 export default function Home() {
   return (
     <div className="min-h-screen bg-futuristic">

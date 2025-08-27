@@ -1,44 +1,43 @@
 {
+  "name": "Zion Tech Group - AI & Quantum Technology Solutions",
   "short_name": "Zion Tech",
-  "name": "Zion Tech Group - AI & Technology Solutions",
-  "description": "Empowering businesses with cutting-edge AI solutions and innovative technology services",
+  "description": "Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#22ddd2",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
     },
     {
-      "src": "logo192.png",
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "192x192"
+      "purpose": "maskable any"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff",
-  "orientation": "portrait-primary",
-  "categories": ["business", "productivity", "technology"],
-  "lang": "en-US",
-  "dir": "ltr",
-  "scope": "/",
-  "prefer_related_applications": false,
-  "related_applications": [],
   "screenshots": [
     {
-      "src": "screenshot-wide.png",
+      "src": "/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "screenshot-narrow.png",
+      "src": "/screenshot-narrow.png",
       "sizes": "750x1334",
       "type": "image/png",
       "form_factor": "narrow"
@@ -50,36 +49,26 @@
       "short_name": "Services",
       "description": "View our technology services",
       "url": "/services",
-      "icons": [
-        {
-          "src": "logo192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "AI Solutions",
-      "short_name": "AI Solutions",
-      "description": "Explore AI solutions",
-      "url": "/ai-solutions",
-      "icons": [
-        {
-          "src": "logo192.png",
-          "sizes": "192x192"
-        }
-      ]
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Contact",
       "short_name": "Contact",
       "description": "Get in touch with us",
       "url": "/contact",
-      "icons": [
-        {
-          "src": "logo192.png",
-          "sizes": "192x192"
-        }
-      ]
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "AI Services",
+      "short_name": "AI",
+      "description": "Explore AI solutions",
+      "url": "/ai-services",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
     }
-  ]
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
 }
