@@ -50,6 +50,9 @@ const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026Servic
 // Enhanced 2028 Services
 const EnhancedServicesShowcase2028 = React.lazy(() => import('./pages/EnhancedServicesShowcase2028'));
 
+// Quantum Computing Services
+const QuantumComputingServices = React.lazy(() => import('./pages/services/QuantumComputingServices'));
+
 // Revolutionary 2025 Services
 const Revolutionary2025ServicesShowcase = React.lazy(() => import('./pages/Revolutionary2025ServicesShowcase'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
@@ -224,6 +227,9 @@ function App() {
                 
                 {/* Enhanced 2028 Service Routes */}
                 <Route path="/enhanced-services-2028" element={<EnhancedServicesShowcase2028 />} />
+                
+                {/* Quantum Computing Service Routes */}
+                <Route path="/services/quantum-computing" element={<QuantumComputingServices />} />
                 
                 {/* Revolutionary 2025 Service Routes */}
                 <Route path="/revolutionary-2025" element={<Revolutionary2025ServicesShowcase />} />
