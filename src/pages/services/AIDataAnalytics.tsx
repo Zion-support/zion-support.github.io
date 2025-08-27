@@ -1,332 +1,403 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Clock,
-  CheckCircle,
-  Database,
-  PieChart,
-  LineChart,
+import { SEO } from '../../components/SEO';
+import {
+  BarChart3,
+  Brain,
   Target,
-  Search,
+  Zap,
+  TrendingUp,
+  Clock,
+  Award,
+  Star,
   Globe,
+  Cpu,
+  Database,
+  CheckCircle,
+  Eye,
   Users,
   FileText,
-  Sparkles
+  Shield,
+  Search,
+  Download,
+  Upload,
+  PieChart,
+  LineChart,
+  Activity
 } from 'lucide-react';
 
 export default function AIDataAnalytics() {
   const features = [
     {
       icon: Brain,
-      title: 'Predictive Analytics',
-      description: 'AI-powered forecasting models that predict future trends, customer behavior, and business outcomes'
+      title: "AI-Powered Insights",
+      description: "Intelligent data analysis with machine learning algorithms and predictive modeling."
     },
     {
       icon: BarChart3,
-      title: 'Real-time Dashboards',
-      description: 'Interactive visualizations and live data monitoring with customizable KPI tracking'
-    },
-    {
-      icon: Search,
-      title: 'Natural Language Queries',
-      description: 'Ask questions about your data in plain English and get instant insights and visualizations'
+      title: "Advanced Analytics",
+      description: "Comprehensive business intelligence with real-time dashboards and reporting."
     },
     {
       icon: Target,
-      title: 'Anomaly Detection',
-      description: 'Automatically identify unusual patterns, outliers, and potential issues in your data'
-    },
-    {
-      icon: Users,
-      title: 'Customer Segmentation',
-      description: 'AI-driven customer clustering and behavioral analysis for targeted marketing strategies'
+      title: "Predictive Analytics",
+      description: "Forecast trends, identify patterns, and make data-driven decisions with AI."
     },
     {
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with AI-powered insights and recommendations'
+      title: "Real-Time Processing",
+      description: "Instant data processing and analysis for immediate business insights."
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Tracking",
+      description: "Monitor KPIs and track business performance with intelligent alerts."
+    },
+    {
+      icon: Shield,
+      title: "Data Security",
+      description: "Enterprise-grade security with data encryption and compliance features."
     }
   ];
 
   const benefits = [
-    'Increase revenue by 25% with data-driven insights',
-    'Reduce decision-making time by 70% with real-time analytics',
-    'Improve customer retention by 40% through behavioral analysis',
-    'Cut operational costs by 30% with predictive maintenance',
-    'Boost marketing ROI by 50% with customer segmentation',
-    'Identify new business opportunities with trend analysis'
+    "Increase data-driven decision making by 60-80% with AI insights",
+    "Improve business performance by 25-45% through predictive analytics",
+    "Reduce analysis time by 70-90% with automated processing",
+    "Enhance forecasting accuracy by 40-70% with ML algorithms",
+    "Identify new business opportunities with pattern recognition",
+    "Optimize operations and reduce costs by 20-35%"
   ];
 
-  const pricing = [
+  const analyticsTypes = [
     {
-      name: 'Analyst',
-      price: '$129',
-      period: '/month',
-      description: 'Perfect for small teams and individual analysts',
-      features: [
-        'Up to 10GB data storage',
-        'Basic AI analytics models',
-        'Standard dashboard templates',
-        'Email support',
-        'Basic reporting tools',
-        '5 user accounts'
-      ],
-      cta: 'Start Free Trial',
-      popular: false
+      type: "Descriptive Analytics",
+      description: "Historical data analysis, reporting, and performance measurement",
+      icon: BarChart3
     },
     {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses and data teams',
-      features: [
-        'Up to 100GB data storage',
-        'Advanced AI models and ML algorithms',
-        'Custom dashboard creation',
-        'Priority support',
-        'Advanced reporting and automation',
-        'API access',
-        '25 user accounts',
-        'Real-time data processing'
-      ],
-      cta: 'Start Free Trial',
-      popular: true
+      type: "Diagnostic Analytics",
+      description: "Root cause analysis and why events occurred investigation",
+      icon: Search
     },
     {
-      name: 'Enterprise',
-      price: '$699',
-      period: '/month',
-      description: 'For large organizations with complex data needs',
-      features: [
-        'Unlimited data storage',
-        'Custom AI model training',
-        'White-label solution',
-        'Dedicated account manager',
-        'SLA guarantees',
-        'Advanced security and compliance',
-        'Custom integrations',
-        'Unlimited users'
-      ],
-      cta: 'Contact Sales',
-      popular: false
+      type: "Predictive Analytics",
+      description: "Future trend forecasting and probability modeling",
+      icon: TrendingUp
+    },
+    {
+      type: "Prescriptive Analytics",
+      description: "Actionable recommendations and optimization suggestions",
+      icon: Target
+    },
+    {
+      type: "Real-Time Analytics",
+      description: "Live data processing and instant insights delivery",
+      icon: Activity
+    },
+    {
+      type: "Big Data Analytics",
+      description: "Large-scale data processing and complex pattern analysis",
+      icon: Database
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: "E-commerce",
+      description: "Customer behavior analysis, inventory optimization, and sales forecasting"
+    },
+    {
+      industry: "Financial Services",
+      description: "Risk assessment, fraud detection, and investment portfolio optimization"
+    },
+    {
+      industry: "Healthcare",
+      description: "Patient outcome prediction, treatment optimization, and resource planning"
+    },
+    {
+      industry: "Manufacturing",
+      description: "Predictive maintenance, quality control, and supply chain optimization"
+    },
+    {
+      industry: "Marketing",
+      description: "Campaign performance analysis, customer segmentation, and ROI optimization"
     }
   ];
 
   return (
-    <>
-      <SEO 
-        title="AI Data Analytics - Intelligent Business Intelligence Platform"
-        description="Transform your data into actionable insights with AI-powered analytics, predictive modeling, and real-time dashboards. Boost revenue by 25% with data-driven decisions."
-        canonical="/services/ai-data-analytics"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="AI Data Analytics - Zion Tech Group"
+        description="Transform your business with AI-powered data analytics, predictive insights, and intelligent business intelligence solutions. Make data-driven decisions with confidence."
       />
-      
-      <div className="min-h-screen bg-futuristic">
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-red-600/10 to-pink-600/10"></div>
-          <div className="container-responsive relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
-                AI Data Analytics
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Transform your data into actionable insights with AI-powered analytics, 
-                predictive modeling, and intelligent business intelligence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
-                  Watch Demo
-                </button>
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-full border border-violet-400/30 mb-6">
+              <BarChart3 className="w-5 h-5 text-violet-400 mr-2" />
+              <span className="text-violet-300 font-medium">AI Data Analytics</span>
+            </div>
+
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              Unlock Business Intelligence with
+              <span className="bg-gradient-to-r from-violet-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent">
+                {" "}AI-Powered Analytics
+              </span>
+            </h1>
+
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your data into actionable insights with intelligent analytics, predictive
+              modeling, and AI-driven business intelligence that drives growth and innovation.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-violet-500/25"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-violet-400/30 text-violet-300 font-semibold rounded-lg hover:bg-violet-400/10 transition-all duration-300"
+              >
+                Schedule Demo
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Advanced Analytics Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered data analytics platform combines cutting-edge artificial intelligence
+              with proven business intelligence methodologies to deliver exceptional insights.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-violet-400/30 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-violet-400/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-violet-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Measurable Analytics Impact
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See real results with our AI-powered data analytics solutions that deliver
+              quantifiable improvements across all aspects of your business intelligence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="flex items-start space-x-3"
+                  >
+                    <CheckCircle className="w-6 h-6 text-violet-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 bg-black/30">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                AI-Powered Analytics Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage artificial intelligence to uncover hidden patterns, predict future trends, 
-                and make data-driven decisions that drive business growth.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 group"
-                >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
-              ))}
             </div>
-          </div>
-        </section>
 
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Proven Business Impact
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join hundreds of companies that have transformed their business intelligence 
-                with AI-powered analytics and predictive insights.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 bg-black/30">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Simple, Transparent Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your data analytics needs and team size. 
-                All plans include a 14-day free trial.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                    plan.popular 
-                      ? 'border-orange-500/50 shadow-lg shadow-orange-500/20' 
-                      : 'border-slate-700/50'
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-orange-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300">{plan.description}</p>
-                  </div>
-
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white'
-                      : 'border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white'
-                  }`}>
-                    {plan.cta}
-                  </button>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container-responsive">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Unlock Your Data's Potential?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using AI to transform raw data into 
-                actionable insights that drive growth and competitive advantage.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
-                  Schedule Demo
-                </button>
+            <div className="bg-gradient-to-br from-violet-500/10 to-purple-500/10 p-8 rounded-xl border border-violet-400/20">
+              <h3 className="text-2xl font-semibold text-white mb-6">Why Choose Zion Tech Group?</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Industry-leading AI analytics algorithms</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Enterprise-grade security & compliance</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Globe className="w-5 h-5 text-blue-400" />
+                  <span className="text-gray-300">Global analytics expertise and support</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-purple-400" />
+                  <span className="text-gray-300">24/7 analytics support & training</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Award className="w-5 h-5 text-violet-400" />
+                  <span className="text-gray-300">Proven analytics success track record</span>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Analytics Types Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Comprehensive Analytics Types
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform provides a complete range of analytics capabilities, from
+              basic reporting to advanced predictive and prescriptive analytics.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {analyticsTypes.map((analyticsType, index) => (
+              <motion.div
+                key={analyticsType.type}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-violet-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-violet-400/20 to-purple-500/20 rounded-lg flex items-center justify-center">
+                    <analyticsType.icon className="w-5 h-5 text-violet-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{analyticsType.type}</h3>
+                </div>
+                <p className="text-gray-300 text-sm">{analyticsType.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered data analytics solutions are designed to work across industries,
+              providing tailored analytics strategies for your specific business needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-violet-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-violet-400/20 to-purple-500/20 rounded-lg flex items-center justify-center">
+                    <Globe className="w-5 h-5 text-violet-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
+                </div>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10 p-12 rounded-2xl border border-violet-400/20 text-center"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Data?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join hundreds of businesses that have already revolutionized their analytics
+              with our AI-powered data intelligence solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-violet-500/25"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-violet-400/30 text-violet-300 font-semibold rounded-lg hover:bg-violet-400/10 transition-all duration-300"
+              >
+                Contact Sales
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }
