@@ -1,9 +1,9 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
@@ -81,6 +81,9 @@ const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalyt
 const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
 const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
+// Additional innovative services
+const AIAutonomousCodeReviewer = React.lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
+const ZeroTrustNetworkAccess = React.lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
 // Additional new service pages
 const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
 const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
@@ -259,6 +262,7 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <PWAUpdater />
       </div>
     </ErrorBoundary>
   );
