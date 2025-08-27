@@ -37,6 +37,9 @@ const Careers = React.lazy(() => import('./pages/Careers'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Resources = React.lazy(() => import('./pages/Resources'));
 
+// Lazy load innovative services 2028
+const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
+
 // Enhanced loading spinner with futuristic design
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -156,6 +159,9 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/resources" element={<Resources />} />
+              
+              {/* Innovative Services 2028 */}
+              <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
               
               {/* 404 Route */}
               <Route path="*" element={<NotFound />} />
