@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Footer } from './components/Footer';
-import LoadingSpinner from './components/ui/LoadingSpinner';
+import Footer from './components/Footer';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
@@ -13,13 +13,13 @@ const Services = React.lazy(() => import('./pages/services'));
 const Products = React.lazy(() => import('./pages/products'));
 
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
+
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const Solutions = React.lazy(() => import('./pages/Solutions'));
 const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
 const News = React.lazy(() => import('./pages/News'));
-const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+
 
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
@@ -68,7 +68,7 @@ function App() {
               <Route path="/services-page" element={<ServicesPage />} />
               
               {/* Utility Routes */}
-              <Route path="/login" element={<Login />} />
+
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/help" element={<HelpCenter />} />
               <Route path="/faq" element={<FAQ />} />
@@ -77,7 +77,7 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
+
 
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
