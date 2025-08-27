@@ -238,7 +238,7 @@ const CaseStudies = () => {
   GraduationCap
 } from 'lucide-react';
 import { CASE_STUDIES } from "@/data/case-studies";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -1207,7 +1207,7 @@ export default function CaseStudies() {
   };
 import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, TrendingUp, Users, Award, Clock, DollarSign, CheckCircle, Star, Zap, Shield, Globe, Target, Brain, Rocket } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
 const CaseStudies = () => {
   const caseStudies = [
@@ -3682,7 +3682,7 @@ const CaseStudies = () => {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Case Studies | Success Stories - Zion Tech Group"
         description="Explore our client success stories and case studies. See how Zion Tech Group has helped businesses transform with AI, cybersecurity, and innovative technology solutions."
         keywords="case studies, client success stories, digital transformation, AI solutions, cybersecurity, technology consulting"
@@ -4258,7 +4258,7 @@ const CaseStudies = () => {
                           <span className="text-cyan-400 mr-2">✓</span>
                           {result}
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Link } from 'react-router-dom';
 
 export default function CaseStudies() {
@@ -4360,7 +4360,7 @@ export default function CaseStudies() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Case Studies - Zion Tech Group" 
         description="Explore real-world success stories and results from Zion Tech Group's innovative technology solutions"
         keywords="case studies, success stories, results, implementations, Zion Tech Group"

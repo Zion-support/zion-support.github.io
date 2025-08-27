@@ -3,20 +3,33 @@ import { Link } from 'react-router-dom';
 import { SEO } from './SEO';
 import { completeSitemap } from '../config/sitemap';
 export default function SitemapPage() {
-    const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
-    const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&
-        route.requiredRoles &&
-        (route.requiredRoles.includes('jobSeeker') ||
-            route.requiredRoles.includes('creator')));
-    const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&
-        route.requiredRoles &&
-        (route.requiredRoles.includes('employer') ||
-            route.requiredRoles.includes('buyer')));
-    const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&
-        route.requiredRoles &&
-        route.requiredRoles.includes('admin'));
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https://ziontechgroup.com/content/sitemap-page"/>
+  const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
+  const talentRoutes = completeSitemap.filter(route => 
+    route.requiredAuth && 
+    route.requiredRoles && 
+    (route.requiredRoles.includes('jobSeeker') ||
+     route.requiredRoles.includes('creator'))
+  );
+  const employerRoutes = completeSitemap.filter(route => 
+    route.requiredAuth && 
+    route.requiredRoles && 
+    (route.requiredRoles.includes('employer') ||
+     route.requiredRoles.includes('buyer'))
+  );
+  const adminRoutes = completeSitemap.filter(route => 
+    route.requiredAuth && 
+    route.requiredRoles && 
+    route.requiredRoles.includes('admin')
+  );
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEOHead 
+        title="Sitemap"
+        description="Complete navigation guide for Zion Tech Group website"
+        keywords="sitemap, navigation, website structure, Zion Tech Group"
+        canonical="https://ziontechgroup.com/content/sitemap-page"
+      />
       
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">

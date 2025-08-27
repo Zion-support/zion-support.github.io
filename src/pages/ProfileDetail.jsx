@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -68,7 +68,7 @@ export default function ProfileDetail() {
       </div>);
     }
     return (<>
-      <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
+      <SEOHead title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
       
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">

@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
@@ -166,20 +166,29 @@ function ProjectDetailsContent() {
             </Button>
           </CardContent>
         </Card>
-      </div>);
-    }
-    // Check if user is either the client or the talent
-    const isClient = user?.id === project.client_id;
-    const isTalent = user?.id === project.talent_id;
-    if (!isClient && !isTalent) {
-        router.push("/unauthorized");
-        return null;
-    }
-    const isOfferPending = project.status === "offer_sent";
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-    const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
-    return (<>
-      <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
+      </div>
+    );
+  }
+  
+  // Check if user is either the client or the talent
+  const isClient = user?.id === project.client_id;
+  const isTalent = user?.id === project.talent_id;
+  
+  if (!isClient && !isTalent) {
+    router.push("/unauthorized");
+    return null;
+  }
+  
+  const isOfferPending = project.status === "offer_sent";
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  
+  return (
+    <>
+      <SEOHead 
+        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
+        description="View and manage your project details and collaboration."
+      />
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">

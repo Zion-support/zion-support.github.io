@@ -1,166 +1,176 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import Link from 'next/link';
 import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target } from 'lucide-react';
 export default function DataAnalyticsServices() {
-    const analyticsServices = [
-        {
-            icon: BarChart3,
-            title: 'Business Intelligence & Reporting',
-            description: 'Transform raw data into actionable insights with interactive dashboards and automated reporting.',
-            price: 'From $3,500/month',
-            marketPrice: '$2,500 - $8,000/month',
-            features: [
-                'Interactive dashboards with real-time data',
-                'Automated report generation and distribution',
-                'Custom KPI tracking and alerts',
-                'Multi-source data integration',
-                'Role-based access control',
-                'Mobile-responsive design'
-            ],
-            benefits: [
-                'Faster decision-making with real-time insights',
-                'Reduced manual reporting time by 80%',
-                'Improved data accuracy and consistency',
-                'Enhanced stakeholder communication'
-            ]
-        },
-        {
-            icon: TrendingUp,
-            title: 'Predictive Analytics & Forecasting',
-            description: 'Leverage machine learning to predict future trends and make data-driven decisions.',
-            price: 'From $5,000/month',
-            marketPrice: '$4,000 - $12,000/month',
-            features: [
-                'Advanced statistical modeling',
-                'Machine learning algorithms',
-                'Scenario planning and what-if analysis',
-                'Automated forecasting models',
-                'Confidence interval reporting',
-                'Model performance monitoring'
-            ],
-            benefits: [
-                'Proactive business planning',
-                'Risk mitigation and opportunity identification',
-                'Improved resource allocation',
-                'Competitive advantage through foresight'
-            ]
-        },
-        {
-            icon: Database,
-            title: 'Data Engineering & ETL',
-            description: 'Build robust data pipelines and warehouses for scalable analytics infrastructure.',
-            price: 'From $4,500/month',
-            marketPrice: '$3,500 - $10,000/month',
-            features: [
-                'Data pipeline development and maintenance',
-                'ETL/ELT process optimization',
-                'Data quality monitoring and validation',
-                'Real-time data streaming',
-                'Cloud-native data warehousing',
-                'Data governance and compliance'
-            ],
-            benefits: [
-                'Centralized data access and management',
-                'Improved data quality and reliability',
-                'Faster data processing and delivery',
-                'Reduced data silos and duplication'
-            ]
-        },
-        {
-            icon: Users,
-            title: 'Customer Analytics & Segmentation',
-            description: 'Understand customer behavior and create targeted marketing strategies.',
-            price: 'From $3,800/month',
-            marketPrice: '$3,000 - $9,000/month',
-            features: [
-                'Customer journey mapping and analysis',
-                'Behavioral segmentation and clustering',
-                'Churn prediction and prevention',
-                'Customer lifetime value analysis',
-                'A/B testing and optimization',
-                'Personalization engine integration'
-            ],
-            benefits: [
-                'Improved customer retention and loyalty',
-                'Higher marketing ROI through targeting',
-                'Better product-market fit',
-                'Enhanced customer experience'
-            ]
-        },
-        {
-            icon: Shield,
-            title: 'Data Governance & Compliance',
-            description: 'Ensure data security, privacy, and regulatory compliance across your analytics platform.',
-            price: 'From $4,200/month',
-            marketPrice: '$3,500 - $8,500/month',
-            features: [
-                'GDPR, CCPA, and HIPAA compliance',
-                'Data privacy and security controls',
-                'Audit trails and data lineage',
-                'Access control and encryption',
-                'Compliance reporting and monitoring',
-                'Data retention and deletion policies'
-            ],
-            benefits: [
-                'Reduced compliance risks and penalties',
-                'Enhanced data security and trust',
-                'Streamlined audit processes',
-                'Protection of sensitive information'
-            ]
-        },
-        {
-            icon: Zap,
-            title: 'Real-Time Analytics & Monitoring',
-            description: 'Monitor business performance in real-time with instant alerts and notifications.',
-            price: 'From $4,800/month',
-            marketPrice: '$4,000 - $11,000/month',
-            features: [
-                'Real-time data streaming and processing',
-                'Instant alerting and notifications',
-                'Performance monitoring dashboards',
-                'Anomaly detection and alerting',
-                'Mobile push notifications',
-                'Integration with incident management'
-            ],
-            benefits: [
-                'Immediate issue identification and response',
-                'Improved operational efficiency',
-                'Better customer experience',
-                'Reduced downtime and losses'
-            ]
-        }
-    ];
-    const industries = [
-        'Financial Services & Banking',
-        'Healthcare & Life Sciences',
-        'Retail & E-commerce',
-        'Manufacturing & Supply Chain',
-        'Energy & Utilities',
-        'Telecommunications',
-        'Transportation & Logistics',
-        'Government & Public Sector'
-    ];
-    const technologies = [
-        'Tableau & Power BI',
-        'Python & R for Analytics',
-        'Apache Spark & Kafka',
-        'Snowflake & BigQuery',
-        'AWS Redshift & Azure Synapse',
-        'Databricks & Dataiku',
-        'Alteryx & KNIME',
-        'TensorFlow & PyTorch'
-    ];
-    const benefits = [
-        'Data-driven decision making and strategy',
-        'Improved operational efficiency and cost reduction',
-        'Enhanced customer understanding and engagement',
-        'Competitive advantage through insights',
-        'Risk mitigation and compliance',
-        'Scalable analytics infrastructure'
-    ];
-    return (<div className="min-h-screen bg-background">
-      <SEO title="Data Analytics & Business Intelligence Services - Zion Tech Group" description="Comprehensive data analytics, business intelligence, and predictive analytics solutions to transform your business with data-driven insights." keywords="data analytics, business intelligence, predictive analytics, data engineering, ETL, data visualization, reporting" canonical="https://ziontechgroup.com/services/data-analytics"/>
+  const analyticsServices = [
+    {
+      icon: BarChart3,
+      title: 'Business Intelligence & Reporting',
+      description: 'Transform raw data into actionable insights with interactive dashboards and automated reporting.',
+      price: 'From $3,500/month',
+      marketPrice: '$2,500 - $8,000/month',
+      features: [
+        'Interactive dashboards with real-time data',
+        'Automated report generation and distribution',
+        'Custom KPI tracking and alerts',
+        'Multi-source data integration',
+        'Role-based access control',
+        'Mobile-responsive design'
+      ],
+      benefits: [
+        'Faster decision-making with real-time insights',
+        'Reduced manual reporting time by 80%',
+        'Improved data accuracy and consistency',
+        'Enhanced stakeholder communication'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      title: 'Predictive Analytics & Forecasting',
+      description: 'Leverage machine learning to predict future trends and make data-driven decisions.',
+      price: 'From $5,000/month',
+      marketPrice: '$4,000 - $12,000/month',
+      features: [
+        'Advanced statistical modeling',
+        'Machine learning algorithms',
+        'Scenario planning and what-if analysis',
+        'Automated forecasting models',
+        'Confidence interval reporting',
+        'Model performance monitoring'
+      ],
+      benefits: [
+        'Proactive business planning',
+        'Risk mitigation and opportunity identification',
+        'Improved resource allocation',
+        'Competitive advantage through foresight'
+      ]
+    },
+    {
+      icon: Database,
+      title: 'Data Engineering & ETL',
+      description: 'Build robust data pipelines and warehouses for scalable analytics infrastructure.',
+      price: 'From $4,500/month',
+      marketPrice: '$3,500 - $10,000/month',
+      features: [
+        'Data pipeline development and maintenance',
+        'ETL/ELT process optimization',
+        'Data quality monitoring and validation',
+        'Real-time data streaming',
+        'Cloud-native data warehousing',
+        'Data governance and compliance'
+      ],
+      benefits: [
+        'Centralized data access and management',
+        'Improved data quality and reliability',
+        'Faster data processing and delivery',
+        'Reduced data silos and duplication'
+      ]
+    },
+    {
+      icon: Users,
+      title: 'Customer Analytics & Segmentation',
+      description: 'Understand customer behavior and create targeted marketing strategies.',
+      price: 'From $3,800/month',
+      marketPrice: '$3,000 - $9,000/month',
+      features: [
+        'Customer journey mapping and analysis',
+        'Behavioral segmentation and clustering',
+        'Churn prediction and prevention',
+        'Customer lifetime value analysis',
+        'A/B testing and optimization',
+        'Personalization engine integration'
+      ],
+      benefits: [
+        'Improved customer retention and loyalty',
+        'Higher marketing ROI through targeting',
+        'Better product-market fit',
+        'Enhanced customer experience'
+      ]
+    },
+    {
+      icon: Shield,
+      title: 'Data Governance & Compliance',
+      description: 'Ensure data security, privacy, and regulatory compliance across your analytics platform.',
+      price: 'From $4,200/month',
+      marketPrice: '$3,500 - $8,500/month',
+      features: [
+        'GDPR, CCPA, and HIPAA compliance',
+        'Data privacy and security controls',
+        'Audit trails and data lineage',
+        'Access control and encryption',
+        'Compliance reporting and monitoring',
+        'Data retention and deletion policies'
+      ],
+      benefits: [
+        'Reduced compliance risks and penalties',
+        'Enhanced data security and trust',
+        'Streamlined audit processes',
+        'Protection of sensitive information'
+      ]
+    },
+    {
+      icon: Zap,
+      title: 'Real-Time Analytics & Monitoring',
+      description: 'Monitor business performance in real-time with instant alerts and notifications.',
+      price: 'From $4,800/month',
+      marketPrice: '$4,000 - $11,000/month',
+      features: [
+        'Real-time data streaming and processing',
+        'Instant alerting and notifications',
+        'Performance monitoring dashboards',
+        'Anomaly detection and alerting',
+        'Mobile push notifications',
+        'Integration with incident management'
+      ],
+      benefits: [
+        'Immediate issue identification and response',
+        'Improved operational efficiency',
+        'Better customer experience',
+        'Reduced downtime and losses'
+      ]
+    }
+  ];
+
+  const industries = [
+    'Financial Services & Banking',
+    'Healthcare & Life Sciences',
+    'Retail & E-commerce',
+    'Manufacturing & Supply Chain',
+    'Energy & Utilities',
+    'Telecommunications',
+    'Transportation & Logistics',
+    'Government & Public Sector'
+  ];
+
+  const technologies = [
+    'Tableau & Power BI',
+    'Python & R for Analytics',
+    'Apache Spark & Kafka',
+    'Snowflake & BigQuery',
+    'AWS Redshift & Azure Synapse',
+    'Databricks & Dataiku',
+    'Alteryx & KNIME',
+    'TensorFlow & PyTorch'
+  ];
+
+  const benefits = [
+    'Data-driven decision making and strategy',
+    'Improved operational efficiency and cost reduction',
+    'Enhanced customer understanding and engagement',
+    'Competitive advantage through insights',
+    'Risk mitigation and compliance',
+    'Scalable analytics infrastructure'
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Data Analytics & Business Intelligence Services - Zion Tech Group" 
+        description="Comprehensive data analytics, business intelligence, and predictive analytics solutions to transform your business with data-driven insights."
+        keywords="data analytics, business intelligence, predictive analytics, data engineering, ETL, data visualization, reporting"
+        canonical="https://ziontechgroup.com/services/data-analytics"
+      />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">

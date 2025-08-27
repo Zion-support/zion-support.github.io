@@ -7,7 +7,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter } from "lucide-react";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
+
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
     {
@@ -89,47 +90,59 @@ const MOCK_SUPPORT_REQUESTS = [
     }
 ];
 export default function SupportRequests() {
-    const [searchQuery, setSearchQuery] = useState("");
-    const [statusFilter, setStatusFilter] = useState(null);
-    const [priorityFilter, setPriorityFilter] = useState(null);
-    const [categoryFilter, setCategoryFilter] = useState(null);
-    // Apply filters to the request data
-    const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-        // Apply search query filter
-        if (searchQuery &&
-            !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
-            !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
-            !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-            return false;
-        }
-        // Apply status filter
-        if (statusFilter && request.status !== statusFilter) {
-            return false;
-        }
-        // Apply priority filter
-        if (priorityFilter && request.priority !== priorityFilter) {
-            return false;
-        }
-        // Apply category filter
-        if (categoryFilter && request.category !== categoryFilter) {
-            return false;
-        }
-        return true;
-    });
-    // Count by status for the summary dashboard
-    const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-    const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-    const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-    const totalCount = MOCK_SUPPORT_REQUESTS.length;
-    const resetFilters = () => {
-        setSearchQuery("");
-        setStatusFilter(null);
-        setPriorityFilter(null);
-        setCategoryFilter(null);
-    };
-    return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"/>
-        ,
-            <div className="container mx-auto px-4 py-8">
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  
+  // Apply filters to the request data
+  const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
+    // Apply search query filter
+    if (searchQuery && 
+        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+      return false;
+    }
+    
+    // Apply status filter
+    if (statusFilter && request.status !== statusFilter) {
+      return false;
+    }
+    
+    // Apply priority filter
+    if (priorityFilter && request.priority !== priorityFilter) {
+      return false;
+    }
+    
+    // Apply category filter
+    if (categoryFilter && request.category !== categoryFilter) {
+      return false;
+    }
+    
+    return true;
+  });
+  
+  // Count by status for the summary dashboard
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+  const totalCount = MOCK_SUPPORT_REQUESTS.length;
+  
+  const resetFilters = () => {
+    setSearchQuery("");
+    setStatusFilter(null);
+    setPriorityFilter(null);
+    setCategoryFilter(null);
+  };
+  
+  return (
+    
+      <SEOHead 
+        title="Support Requests | Admin Dashboard"
+        description="Manage and track user support requests and issues"
+      />
+      <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">

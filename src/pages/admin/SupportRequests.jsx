@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter } from "lucide-react";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
     {
@@ -127,7 +127,7 @@ export default function SupportRequests() {
         setPriorityFilter(null);
         setCategoryFilter(null);
     };
-    return (<SEO title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"/>
+    return (<SEOHead title="Support Requests | Admin Dashboard" description="Manage and track user support requests and issues"/>
         ,
             <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">

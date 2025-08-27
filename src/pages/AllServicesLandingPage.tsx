@@ -6,53 +6,64 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings } from 'lucide-react';
 import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
+
 export default function AllServicesLandingPage() {
-    const getCategoryIcon = (category) => {
-        switch (category) {
-            case 'AI Services': return '🤖';
-            case 'Micro SAAS': return '☁️';
-            case 'IT Services': return '💻';
-            case 'Digital Services': return '🚀';
-            default: return '⚡';
-        }
-    };
-    const getCategoryIconComponent = (category) => {
-        switch (category) {
-            case 'AI Services': return <Brain className="h-6 w-6"/>;
-            case 'Micro SAAS': return <Cloud className="h-6 w-6"/>;
-            case 'IT Services': return <Code className="h-6 w-6"/>;
-            case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>;
-            default: return <Settings className="h-6 w-6"/>;
-        }
-    };
-    const getPricingModelColor = (model) => {
-        switch (model) {
-            case 'subscription': return 'bg-blue-100 text-blue-800';
-            case 'project-based': return 'bg-purple-100 text-purple-800';
-            case 'one-time': return 'bg-green-100 text-green-800';
-            case 'usage-based': return 'bg-orange-100 text-orange-800';
-            default: return 'bg-gray-100 text-gray-800';
-        }
-    };
-    const getServiceIcon = (subcategory) => {
-        switch (subcategory) {
-            case 'Customer Service': return <MessageSquare className="h-5 w-5"/>;
-            case 'Analytics': return <BarChart3 className="h-5 w-5"/>;
-            case 'Content Creation': return <FileText className="h-5 w-5"/>;
-            case 'Inventory Management': return <Database className="h-5 w-5"/>;
-            case 'HR Analytics': return <Users className="h-5 w-5"/>;
-            case 'Financial Management': return <BarChart3 className="h-5 w-5"/>;
-            case 'Cloud Solutions': return <Cloud className="h-5 w-5"/>;
-            case 'Cybersecurity': return <Lock className="h-5 w-5"/>;
-            case 'DevOps': return <Code className="h-5 w-5"/>;
-            case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>;
-            case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>;
-            default: return <Settings className="h-5 w-5"/>;
-        }
-    };
-    return (<div className="min-h-screen bg-background">
-      <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"/>
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI Services': return '🤖';
+      case 'Micro SAAS': return '☁️';
+      case 'IT Services': return '💻';
+      case 'Digital Services': return '🚀';
+      default: return '⚡';
+    }
+  };
+
+  const getCategoryIconComponent = (category: string) => {
+    switch (category) {
+      case 'AI Services': return <Brain className="h-6 w-6" />;
+      case 'Micro SAAS': return <Cloud className="h-6 w-6" />;
+      case 'IT Services': return <Code className="h-6 w-6" />;
+      case 'Digital Services': return <ArrowUpRight className="h-6 w-6" />;
+      default: return <Settings className="h-6 w-6" />;
+    }
+  };
+
+  const getPricingModelColor = (model: string) => {
+    switch (model) {
+      case 'subscription': return 'bg-blue-100 text-blue-800';
+      case 'project-based': return 'bg-purple-100 text-purple-800';
+      case 'one-time': return 'bg-green-100 text-green-800';
+      case 'usage-based': return 'bg-orange-100 text-orange-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getServiceIcon = (subcategory: string) => {
+    switch (subcategory) {
+      case 'Customer Service': return <MessageSquare className="h-5 w-5" />;
+      case 'Analytics': return <BarChart3 className="h-5 w-5" />;
+      case 'Content Creation': return <FileText className="h-5 w-5" />;
+      case 'Inventory Management': return <Database className="h-5 w-5" />;
+      case 'HR Analytics': return <Users className="h-5 w-5" />;
+      case 'Financial Management': return <BarChart3 className="h-5 w-5" />;
+      case 'Cloud Solutions': return <Cloud className="h-5 w-5" />;
+      case 'Cybersecurity': return <Lock className="h-5 w-5" />;
+      case 'DevOps': return <Code className="h-5 w-5" />;
+      case 'Transformation': return <ArrowUpRight className="h-5 w-5" />;
+      case 'E-commerce': return <ShoppingCart className="h-5 w-5" />;
+      default: return <Settings className="h-5 w-5" />;
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" 
+        description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses."
+        keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group"
+        canonical="https://ziontechgroup.com/services"
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">

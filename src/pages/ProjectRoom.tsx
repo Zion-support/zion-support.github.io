@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -8,49 +8,64 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lu
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
 export default function ProjectRoom() {
-    const { projectId } = useParams();
-    const [activeTab, setActiveTab] = useState('chat');
-    const [isInCall, setIsInCall] = useState(false);
-    const [callParticipants, setCallParticipants] = useState([
-        {
-            id: 'user-1',
-            name: 'You',
-            isHost: true,
-            isVideoEnabled: true,
-            isMuted: false
-        }
-    ]);
-    const startVideoCall = () => {
-        setIsInCall(true);
-        toast.success("Video call started", {
-            description: "Others can join with the project room link"
-        });
-        // Switch to video tab if not already there
-        if (activeTab !== 'video') {
-            setActiveTab('video');
-        }
-    };
-    const endVideoCall = () => {
-        setIsInCall(false);
-        toast.info("Video call ended", {
-            description: "Call duration and participants will be logged"
-        });
-    };
-    const simulateUserJoining = () => {
-        // This is just for demo purposes - in a real app, this would be handled by the video call service
-        const mockUsers = [
-            { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-            { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-            { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-        ];
-        const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-        if (!callParticipants.find(p => p.id === randomUser.id)) {
-            setCallParticipants(prev => [...prev, randomUser]);
-            toast(`${randomUser.name} joined the call`);
-        }
-    };
-    return (<>
-      <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
+  const { projectId } = useParams() as { projectId: string };
+  const [activeTab, setActiveTab] = useState('chat');
+  const [isInCall, setIsInCall] = useState(false);
+  const [callParticipants, setCallParticipants] = useState<Array<{
+    id: string;
+    name: string;
+    avatar?: string;
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
+    isHost?: boolean;
+  }>>([
+    {
+      id: 'user-1',
+      name: 'You',
+      isHost: true,
+      isVideoEnabled: true,
+      isMuted: false
+    }
+  ]);
+  
+  const startVideoCall = () => {
+    setIsInCall(true);
+    toast.success("Video call started", {
+      description: "Others can join with the project room link"
+    });
+    // Switch to video tab if not already there
+    if (activeTab !== 'video') {
+      setActiveTab('video');
+    }
+  };
+  
+  const endVideoCall = () => {
+    setIsInCall(false);
+    toast.info("Video call ended", {
+      description: "Call duration and participants will be logged"
+    });
+  };
+  
+  const simulateUserJoining = () => {
+    // This is just for demo purposes - in a real app, this would be handled by the video call service
+    const mockUsers = [
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+    ];
+    
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    
+    if (!callParticipants.find(p => p.id === randomUser.id)) {
+      setCallParticipants(prev => [...prev, randomUser]);
+      toast(`${randomUser.name} joined the call`);
+    }
+  };
+  
+  return (
+    <>
+      <SEOHead title={`Project Room - ${projectId}`} description="Collaborate on your project" />
       
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">

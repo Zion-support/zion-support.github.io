@@ -52,7 +52,7 @@ export default function Team() {
   const teamMembers = [
     {
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Link } from 'react-router-dom';
 
 export default function Team() {
@@ -342,7 +342,7 @@ export default function Team() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO 
+      <SEOHead 
         title="Our Team - Zion Tech Group" 
         description="Meet the exceptional team of innovators, engineers, and industry experts driving Zion Tech Group's mission to revolutionize technology."
         tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]}
@@ -933,7 +933,7 @@ export default function Team() {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">{head.avatar}</span>
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Our Team - Zion Tech Group" 
         description="Meet the visionary leaders and experts behind Zion Tech Group's revolutionary technology solutions"
         keywords="team, leadership, founders, experts, AI, quantum computing, Zion Tech Group"
