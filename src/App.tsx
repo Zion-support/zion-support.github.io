@@ -26,12 +26,23 @@ const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+
+// Enhanced Services 2025
+const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025.tsx'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025.tsx'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025.tsx'));
+
+// Innovative Services 2027
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview'));
-const ComprehensivePricingGuide2027New = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+
+// Admin pages
+const Admin = React.lazy(() => import('./pages/Admin.tsx'));
+const AdminDashboard = React.lazy(() => import('./pages/AdminDashboard.tsx'));
+
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -90,6 +101,11 @@ function App() {
               <Route path="/it-services" element={<ITServicesPage />} />
               <Route path="/it-services/:service" element={<ITServicesPage />} />
               
+              {/* Enhanced Services 2025 Routes */}
+              <Route path="/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
+              <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              
               {/* Innovative Services 2027 Routes */}
               <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
               <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
@@ -98,7 +114,6 @@ function App() {
               
               {/* New Comprehensive Routes */}
               <Route path="/services-overview" element={<ComprehensiveServicesOverview />} />
-              <Route path="/pricing-guide" element={<ComprehensivePricingGuide2027New />} />
               
               {/* Emerging Tech Routes */}
               <Route path="/emerging-tech" element={<GreenIT />} />
