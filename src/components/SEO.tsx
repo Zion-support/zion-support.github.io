@@ -1,1 +1,1 @@
-export { SEO } from './SEO.jsx';
+export { SEOHead as SEO } from './SEOHead';
