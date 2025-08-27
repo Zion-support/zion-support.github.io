@@ -46,11 +46,12 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: false },
   ];
 
-  // Organized services by category
+  // Organized services by category with proper routing
   const services = [
     // Featured & New Services
     { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true },
     { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
+    { name: '2025 Services Overview', href: '/comprehensive-services-showcase-2025', icon: Star, description: 'Comprehensive AI & Digital Solutions', category: 'Featured', featured: true },
     
     // AI & Machine Learning
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML' },
@@ -60,6 +61,8 @@ export function AppHeader() {
     { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
     { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'Automated content creation', category: 'AI & ML' },
     { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: TrendingUp, description: 'Intelligent marketing workflows', category: 'AI & ML' },
     
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps' },
@@ -71,6 +74,7 @@ export function AppHeader() {
     { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced security solutions', category: 'Cybersecurity' },
     { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock, description: 'Web security hardening', category: 'Cybersecurity' },
     { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA compliance', category: 'Cybersecurity' },
+    { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock, description: 'Advanced network security', category: 'Cybersecurity' },
     
     // Digital Transformation
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation' },
@@ -81,15 +85,25 @@ export function AppHeader() {
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-gen computational power', category: 'Emerging Tech' },
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks', category: 'Emerging Tech' },
     { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock, description: 'Distributed ledger technology', category: 'Emerging Tech' },
+    { name: 'Space Technology', href: '/services/space-tech', icon: Rocket, description: 'Advanced space solutions', category: 'Emerging Tech' },
     
     // Data & Analytics
     { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics' },
     { name: 'Business Intelligence', href: '/services/business-intelligence', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics' },
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Web performance insights', category: 'Data & Analytics' },
     
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS' },
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated email workflows', category: 'Micro SaaS' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle, description: 'Audio content processing', category: 'Micro SaaS' },
+    
+    // Industry Solutions
+    { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart, description: 'Healthcare technology solutions', category: 'Industry Solutions' },
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, description: 'Large-scale enterprise solutions', category: 'Industry Solutions' },
+    { name: 'Financial Solutions', href: '/solutions/financial', icon: DollarSign, description: 'Financial technology services', category: 'Industry Solutions' },
+    { name: 'Government Solutions', href: '/solutions/government', icon: Building, description: 'Public sector technology', category: 'Industry Solutions' },
   ];
 
   const quickLinks = [
@@ -99,6 +113,8 @@ export function AppHeader() {
     { name: 'Partners', href: '/partners', icon: Users },
     { name: 'Careers', href: '/careers', icon: Star },
     { name: 'Help Center', href: '/help', icon: HelpCircle },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Case Studies', href: '/case-studies', icon: Award },
   ];
 
   const featuredServices = [

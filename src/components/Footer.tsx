@@ -36,7 +36,25 @@ import {
   GraduationCap,
   BarChart3,
   Sparkles,
-  Award
+  Award,
+  Star,
+  Code,
+  Lock,
+  Network,
+  Smartphone,
+  Database,
+  Server,
+  Eye,
+  Atom,
+  ShoppingCart,
+  MessageCircle,
+  BookOpen,
+  Calendar,
+  ShieldCheck,
+  Globe2,
+  Bot,
+  Workflow,
+  Truck
 } from 'lucide-react';
 
 export function Footer() {
@@ -57,7 +75,10 @@ export function Footer() {
         { name: 'Solutions', path: '/solutions', icon: Target },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Blog', path: '/blog', icon: Newspaper },
-        { name: 'Contact', path: '/contact', icon: Phone }
+        { name: 'Contact', path: '/contact', icon: Phone },
+        { name: 'Team', path: '/team', icon: Users },
+        { name: 'News', path: '/news', icon: Newspaper },
+        { name: 'Events', path: '/events', icon: Calendar }
       ]
     },
     {
@@ -71,7 +92,9 @@ export function Footer() {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Customer Support', path: '/services/ai-customer-support', icon: MessageCircle },
+        { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield }
       ]
     },
     {
@@ -80,12 +103,14 @@ export function Footer() {
       links: [
         { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
         { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
-        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
         { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
-        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
         { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
-        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Shield }
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: ShieldCheck },
+        { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Lock },
+        { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Heart }
       ]
     },
     {
@@ -98,84 +123,76 @@ export function Footer() {
         { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
         { name: 'IT Services', path: '/it-services', icon: Building },
         { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
-        { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
-        { name: 'All Services', path: '/services', icon: Zap }
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'IT Consulting', path: '/services/it-consulting', icon: Cpu },
+        { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
+        { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle }
       ]
     },
     {
-      title: 'Innovation Hub',
-      icon: Sparkles,
+      title: 'Industry Solutions',
+      icon: Target,
       links: [
-        { name: 'Innovative Services 2028', path: '/innovative-services-showcase-2028', icon: Sparkles },
-        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
-        { name: 'Ultimate Services 2026', path: '/ultimate-services-showcase-2026', icon: Rocket },
-        { name: 'Services 2026', path: '/services-2026', icon: Target },
-        { name: 'New Services 2025', path: '/new-services-showcase-2025', icon: TrendingUp },
-        { name: 'Ultimate Services 2025', path: '/ultimate-services-showcase-2025', icon: Award },
-        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe }
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
+        { name: 'Education Solutions', path: '/solutions/education', icon: GraduationCap },
+        { name: 'Energy Solutions', path: '/solutions/energy', icon: Zap },
+        { name: 'Transportation Solutions', path: '/solutions/transportation', icon: Truck },
+        { name: 'Real Estate Solutions', path: '/solutions/real-estate', icon: Building }
+      ]
+    },
+    {
+      title: 'Resources & Support',
+      icon: BookOpen,
+      links: [
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'API Reference', path: '/api', icon: Code },
+        { name: 'Developer Portal', path: '/developers', icon: Code },
+        { name: 'Training', path: '/training', icon: GraduationCap },
+        { name: 'Webinars', path: '/webinars', icon: Video },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'Case Studies', path: '/case-studies', icon: Award },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: MessageCircle }
       ]
     }
+  ];
+
+  const quickLinks = [
+    { name: 'Request Quote', path: '/request-quote', icon: MessageCircle },
+    { name: 'Pricing', path: '/pricing', icon: DollarSign },
+    { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+    { name: 'Blog', path: '/blog', icon: Newspaper },
+    { name: 'Careers', path: '/careers', icon: Briefcase },
+    { name: 'Partners', path: '/partners', icon: Users }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
+  ];
+
+  const contactInfo = [
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: Globe, text: 'ziontechgroup.com', href: 'https://ziontechgroup.com' },
+    { icon: MapPin, text: 'Delaware, United States', href: '#' }
   ];
 
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
     { name: "Cookie Policy", path: "/cookies" },
-    { name: "Sitemap", path: "/sitemap" }
-  ];
-
-  const socialLinks = [
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com/company/ziontechgroup",
-      icon: Linkedin,
-      color: "hover:text-blue-600"
-    },
-    {
-      name: "Twitter",
-      url: "https://twitter.com/ziontechgroup",
-      icon: Twitter,
-      color: "hover:text-blue-400"
-    },
-    {
-      name: "Facebook",
-      url: "https://facebook.com/ziontechgroup",
-      icon: Facebook,
-      color: "hover:text-blue-600"
-    },
-    {
-      name: "Instagram",
-      url: "https://instagram.com/ziontechgroup",
-      icon: Instagram,
-      color: "hover:text-pink-500"
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/ziontechgroup",
-      icon: Github,
-      color: "hover:text-gray-400"
-    }
-  ];
-
-  const contactInfo = [
-    {
-      name: "Email",
-      value: "kleber@ziontechgroup.com",
-      url: "mailto:kleber@ziontechgroup.com",
-      icon: Mail
-    },
-    {
-      name: "Phone",
-      value: "+1 302 464 0950",
-      url: "tel:+13024640950",
-      icon: Phone
-    },
-    {
-      name: "Address",
-      value: "364 E Main St STE 1008 Middletown DE 19709",
-      url: "https://www.google.com/maps/search/?api=1&query=364+E+Main+St+STE+1008+Middletown+DE+19709",
-      icon: MapPin
-    }
+    { name: "Sitemap", path: "/sitemap" },
+    { name: "Accessibility", path: "/accessibility" }
   ];
 
   return (
@@ -207,12 +224,12 @@ export function Footer() {
             <div className="space-y-3">
               {contactInfo.map((contact) => (
                 <a
-                  key={contact.name}
-                  href={contact.url}
+                  key={contact.text}
+                  href={contact.href}
                   className="flex items-center space-x-3 text-zion-slate-light hover:text-white transition-colors duration-200"
                 >
                   <contact.icon className="w-4 h-4 text-zion-cyan" />
-                  <span className="text-sm">{contact.value}</span>
+                  <span className="text-sm">{contact.text}</span>
                 </a>
               ))}
             </div>
@@ -258,7 +275,7 @@ export function Footer() {
                   <Link
                     key={item.name}
                     to={item.path}
-                    className="hover:text-white transition-colors duration-200"
+                    className="hover:text-zion-cyan transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -271,7 +288,7 @@ export function Footer() {
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
-                  href={social.url}
+                  href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`text-zion-slate-light ${social.color} transition-colors duration-200 p-2 rounded-lg hover:bg-zion-slate-light/10`}
