@@ -386,6 +386,91 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
         </div>
       </section>
 
+      {/* Service Comparison Matrix */}
+      <section className="py-16 bg-gradient-to-r from-slate-800/40 to-gray-800/40">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Service Comparison Matrix
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Compare our revolutionary services side by side to find the perfect fit
+            </p>
+          </motion.div>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full max-w-7xl mx-auto bg-slate-800/50 rounded-xl overflow-hidden">
+              <thead>
+                <tr className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+                  <th className="px-6 py-4 text-left text-white font-semibold">Service Features</th>
+                  <th className="px-6 py-4 text-center text-white font-semibold">AI Autonomous</th>
+                  <th className="px-6 py-4 text-center text-white font-semibold">Quantum Enhanced</th>
+                  <th className="px-6 py-4 text-center text-white font-semibold">Cybersecurity</th>
+                  <th className="px-6 py-4 text-center text-white font-semibold">Space Tech</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-700">
+                <tr className="hover:bg-slate-700/30 transition-colors">
+                  <td className="px-6 py-4 text-gray-300">Response Time</td>
+                  <td className="px-6 py-4 text-center text-green-400">50ms</td>
+                  <td className="px-6 py-4 text-center text-green-400">25ms</td>
+                  <td className="px-6 py-4 text-center text-green-400">100ms</td>
+                  <td className="px-6 py-4 text-center text-green-400">75ms</td>
+                </tr>
+                <tr className="hover:bg-slate-700/30 transition-colors">
+                  <td className="px-6 py-4 text-gray-300">Accuracy Rate</td>
+                  <td className="px-6 py-4 text-center text-green-400">99.8%</td>
+                  <td className="px-6 py-4 text-center text-green-400">99.99%</td>
+                  <td className="px-6 py-4 text-center text-green-400">99.9%</td>
+                  <td className="px-6 py-4 text-center text-green-400">99.7%</td>
+                </tr>
+                <tr className="hover:bg-slate-700/30 transition-colors">
+                  <td className="px-6 py-4 text-gray-300">ROI Potential</td>
+                  <td className="px-6 py-4 text-center text-green-400">800%</td>
+                  <td className="px-6 py-4 text-center text-green-400">1200%</td>
+                  <td className="px-6 py-4 text-center text-green-400">600%</td>
+                  <td className="px-6 py-4 text-center text-green-400">900%</td>
+                </tr>
+                <tr className="hover:bg-slate-700/30 transition-colors">
+                  <td className="px-6 py-4 text-gray-300">Setup Time</td>
+                  <td className="px-6 py-4 text-center text-green-400">2 hours</td>
+                  <td className="px-6 py-4 text-center text-green-400">4 hours</td>
+                  <td className="px-6 py-4 text-center text-green-400">1 hour</td>
+                  <td className="px-6 py-4 text-center text-green-400">6 hours</td>
+                </tr>
+                <tr className="hover:bg-slate-700/30 transition-colors">
+                  <td className="px-6 py-4 text-gray-300">Support Level</td>
+                  <td className="px-6 py-4 text-center text-green-400">24/7</td>
+                  <td className="px-6 py-4 text-center text-green-400">24/7</td>
+                  <td className="px-6 py-4 text-center text-green-400">24/7</td>
+                  <td className="px-6 py-4 text-center text-green-400">24/7</td>
+                </tr>
+                <tr className="hover:bg-slate-700/30 transition-colors">
+                  <td className="px-6 py-4 text-gray-300">Customization</td>
+                  <td className="px-6 py-4 text-center text-green-400">High</td>
+                  <td className="px-6 py-4 text-center text-green-400">Very High</td>
+                  <td className="px-6 py-4 text-center text-green-400">Medium</td>
+                  <td className="px-6 py-4 text-center text-green-400">Very High</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-gray-400 text-sm mb-4">All services include free setup, 45-day trial, and 24/7 support</p>
+            <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+              Download Full Comparison
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid/List */}
       <section className="py-20">
         <div className="container mx-auto px-4">
