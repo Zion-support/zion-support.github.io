@@ -277,6 +277,41 @@ export default function Home() {
     }
   ];
 
+  const newAIServices = [
+    {
+      icon: Shield,
+      title: "AI Data Governance Platform",
+      description: "AI-powered data governance with automated compliance and intelligent classification",
+      color: "from-indigo-500 to-purple-500",
+      href: "/services/ai-data-governance-platform",
+      features: ["Automated Data Classification", "Compliance Monitoring", "Real-time Risk Assessment", "Privacy Protection"]
+    },
+    {
+      icon: Brain,
+      title: "AI Customer Experience Analytics",
+      description: "Transform customer insights with AI-powered analytics and predictive modeling",
+      color: "from-purple-500 to-pink-500",
+      href: "/services/ai-customer-experience-analytics",
+      features: ["Sentiment Analysis", "Customer Journey Mapping", "Predictive Analytics", "Personalization Engine"]
+    },
+    {
+      icon: Shield,
+      title: "AI Financial Risk Management",
+      description: "Intelligent financial risk assessment with AI-driven predictive analytics",
+      color: "from-red-500 to-orange-500",
+      href: "/services/ai-financial-risk-management",
+      features: ["Risk Assessment", "Compliance Monitoring", "Portfolio Optimization", "Real-time Alerts"]
+    },
+    {
+      icon: Code,
+      title: "AI Code Review Security Scanner",
+      description: "Automated code security analysis with AI-powered vulnerability detection",
+      color: "from-green-500 to-emerald-500",
+      href: "/services/ai-code-review-security-scanner",
+      features: ["Vulnerability Detection", "Security Scanning", "Code Quality Analysis", "CI/CD Integration"]
+    }
+  ];
+
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -363,6 +398,57 @@ export default function Home() {
           <Suspense fallback={<div className="text-center text-cyan-400">Loading services...</div>}>
             <UltimateServicesShowcase2025 />
           </Suspense>
+        </div>
+      </section>
+
+      {/* New AI Services Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="new-ai-services-heading">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 id="new-ai-services-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">New AI-Powered Services 2025</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover our latest AI-driven solutions designed to transform your business operations and drive innovation</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {newAIServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/40 transition-all duration-300 group"
+              >
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-8 h-8 text-white" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-purple-400">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6">
+                  <Link 
+                    to={service.href} 
+                    className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-200"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -41,7 +41,9 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
-    { name: 'Improvements 2025', href: '/comprehensive-improvements-2025', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Marketplace', href: '/marketplace', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Careers', href: '/careers', current: false },
@@ -117,7 +119,13 @@ export function AppHeader() {
     { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle, description: 'Audio to text conversion', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail, description: 'Automated email campaigns', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
     { name: 'Returns Management', href: '/services/returns-management', icon: Truck, description: 'Product returns system', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText, description: 'AI content creation', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' }
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText, description: 'AI content creation', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
+    
+    // New AI-Powered Services
+    { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'AI-powered financial risk assessment', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
+    { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code, description: 'Automated code security analysis', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
   ];
 
   // Quick links for easy access
@@ -150,7 +158,9 @@ export function AppHeader() {
         { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', description: 'AI-powered customer insights' },
         { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', description: 'Advanced analytics & ML insights' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' }
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', description: 'AI-powered financial risk assessment' },
+        { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', description: 'Automated code security analysis' }
       ]
     },
     {
