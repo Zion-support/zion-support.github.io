@@ -5,7 +5,6 @@ node_modules
 .next/
 tsconfig.tsbuildinfo
 dist/
-dist/
 out/
 
 # Automation logs and data (continuously changing)
@@ -13,4 +12,3 @@ automation/logs/*.log
 automation/logs/*.runtime.log
 automation/data/*.json
 !automation/data/autonomous-config.json
-.next/

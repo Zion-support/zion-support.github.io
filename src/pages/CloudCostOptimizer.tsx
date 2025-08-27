@@ -1,11 +1,10 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Cloud, Zap, TrendingDown, BarChart3, Globe, Users, DollarSign, Clock, Star, PieChart, Settings } from "lucide-react";
+import { Check, Cloud, BarChart3, Globe, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function CloudCostOptimizer() {
   const features = [
     "AI-driven cost optimization algorithms",
@@ -135,7 +134,7 @@ export default function CloudCostOptimizer() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">
-      <SEO 
+      <SEOHead 
         title="Cloud Cost Optimizer - Zion Tech Group" 
         description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%."
         keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings"
@@ -162,7 +161,7 @@ export default function CloudCostOptimizer() {
               Start Free Cost Analysis
             </Button>
             <Button size="lg" variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500/10 px-8 py-4 text-lg">
-              <Cloud className="h-5 w-5 mr-2" />
+              <Cloud className="h-5 w-5 mr-2"/>
               Cost Calculator
             </Button>
           </div>
@@ -182,15 +181,13 @@ export default function CloudCostOptimizer() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {costSavings.map((saving, index) => (
-              <Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
+            {costSavings.map((saving, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
                   <div className="text-3xl font-bold text-blue-400 mb-2">{saving.value}</div>
                   <h3 className="text-lg font-semibold mb-2 text-white">{saving.metric}</h3>
                   <p className="text-zion-slate-light text-sm">{saving.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -208,8 +205,7 @@ export default function CloudCostOptimizer() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {optimizationServices.map((service, index) => (
-              <Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
+            {optimizationServices.map((service, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 text-center">
                 <CardContent className="p-6">
                   <div className="mb-4 flex justify-center">
                     {service.icon}
@@ -217,8 +213,7 @@ export default function CloudCostOptimizer() {
                   <h3 className="text-lg font-semibold mb-2 text-white">{service.title}</h3>
                   <p className="text-zion-slate-light text-sm">{service.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -236,14 +231,12 @@ export default function CloudCostOptimizer() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {supportedClouds.map((cloud, index) => (
-              <Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+            {supportedClouds.map((cloud, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
                 <CardContent className="p-4 text-center">
-                  <Cloud className="h-6 w-6 text-blue-400 mx-auto mb-2" />
+                  <Cloud className="h-6 w-6 text-blue-400 mx-auto mb-2"/>
                   <span className="text-sm text-zion-slate-light">{cloud}</span>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -261,16 +254,14 @@ export default function CloudCostOptimizer() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+            {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
+                    <Check className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0"/>
                     <span className="text-zion-slate-light">{feature}</span>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -288,15 +279,12 @@ export default function CloudCostOptimizer() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'border-blue-500 border-2 scale-105' : 'border-blue-500/20'} bg-zion-slate/50 hover:border-blue-500/40 transition-all duration-300`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-blue-500 border-2 scale-105' : 'border-blue-500/20'} bg-zion-slate/50 hover:border-blue-500/40 transition-all duration-300`}>
+                {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2">
                       Most Popular
                     </Badge>
-                  </div>
-                )}
+                  </div>)}
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-2xl font-bold text-white">{plan.name}</CardTitle>
                   <div className="flex items-baseline justify-center gap-1">
@@ -306,20 +294,17 @@ export default function CloudCostOptimizer() {
                   <CardDescription className="text-zion-slate-light">{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start gap-3">
-                      <Check className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0" />
+                  {plan.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-start gap-3">
+                      <Check className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0"/>
                       <span className="text-sm text-zion-slate-light">{feature}</span>
-                    </div>
-                  ))}
+                    </div>))}
                 </CardContent>
                 <div className="p-6 pt-0">
                   <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-blue-500 hover:bg-blue-600'}`}>
                     Get Started
                   </Button>
                 </div>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -350,6 +335,5 @@ export default function CloudCostOptimizer() {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 }

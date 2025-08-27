@@ -1,8 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'node:path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node:path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
 		react({
@@ -54,6 +53,9 @@ export default defineConfig({
 					'animation-vendor': ['framer-motion'],
 					'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
 					'icons-vendor': ['lucide-react'],
+					'charts-vendor': ['recharts'],
+					'date-vendor': ['date-fns', 'react-day-picker'],
+					'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
 					'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
 					'router-vendor': ['react-router-dom']
 				},

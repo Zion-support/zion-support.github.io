@@ -107,7 +107,7 @@ export default function DeveloperPortal() {
         }
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https://ziontechgroup.com/developers"/>
+      <SEOHead title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https://ziontechgroup.com/developers"/>
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}

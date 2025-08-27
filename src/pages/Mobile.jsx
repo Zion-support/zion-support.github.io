@@ -106,7 +106,7 @@ const Mobile = () => {
         }
     ];
     return (<>
-      <SEO title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>
+      <SEOHead title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
         <main className="pt-12">

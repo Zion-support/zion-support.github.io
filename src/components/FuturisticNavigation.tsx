@@ -139,6 +139,22 @@ export const FuturisticNavigation: React.FC = () => {
 
   const navigationItems = [
     {
+      name: 'Cutting-Edge Innovations',
+      href: '/innovative-services',
+      icon: Zap,
+      color: 'from-zion-cyan to-zion-purple',
+      dropdown: [
+        { name: 'AI Business Automation', href: '/innovative-services#ai-automation', icon: Brain, description: 'AI-powered business process automation' },
+        { name: 'Quantum Computing Services', href: '/innovative-services#quantum-computing', icon: Atom, description: 'Quantum computing as a service' },
+        { name: 'Enterprise Blockchain', href: '/innovative-services#blockchain', icon: Lock, description: 'Enterprise blockchain solutions' },
+        { name: 'IoT Edge Computing', href: '/innovative-services#iot-edge', icon: Wifi, description: 'IoT and edge computing platform' },
+        { name: 'Zero Trust Security', href: '/innovative-services#cybersecurity', icon: Shield, description: 'Advanced cybersecurity platform' },
+        { name: 'Digital Twin Technology', href: '/innovative-services#digital-twin', icon: Eye, description: 'Digital twin and simulation platform' },
+        { name: 'Metaverse & VR', href: '/innovative-services#metaverse', icon: Globe2, description: 'Metaverse and virtual reality platform' },
+        { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' }
+      ]
+    },
+    {
       name: 'AI Services',
       href: '/ai-services',
       icon: Brain,

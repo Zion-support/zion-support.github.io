@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIClimatePredictionPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Climate Prediction Platform - Zion Tech Group" description="AI-powered climate prediction platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI climate prediction platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiclimatepredictionplatform/"/>
+      <SEOHead title="Climate Prediction Platform - Zion Tech Group" description="AI-powered climate prediction platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI climate prediction platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiclimatepredictionplatform/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

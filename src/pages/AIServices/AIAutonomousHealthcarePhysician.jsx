@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIAutonomousHealthcarePhysician() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Autonomous Healthcare Physician - Zion Tech Group" description="AI-powered autonomous healthcare physician solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous healthcare physician, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomoushealthcarephysician/"/>
+      <SEOHead title="Autonomous Healthcare Physician - Zion Tech Group" description="AI-powered autonomous healthcare physician solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous healthcare physician, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomoushealthcarephysician/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

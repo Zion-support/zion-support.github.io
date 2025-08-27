@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { Users, Target, Award, Globe, Zap, Shield, TrendingUp, CheckCircle } from 'lucide-react'
 import PageTransition from '../src/components/PageTransition'
 

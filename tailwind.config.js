@@ -6,6 +6,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: ["class"],
   theme: {
     extend: {
       colors: {
@@ -149,6 +150,7 @@ module.exports = {
             opacity: "0",
           },
           "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
           "100%": {
             transform: "translateX(calc(100vw + 100px)) translateY(-100px)",
             opacity: "0",

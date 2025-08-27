@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIAutonomousLogistics() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Autonomous Logistics - Zion Tech Group" description="AI-powered autonomous logistics solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous logistics, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomouslogistics/"/>
+      <SEOHead title="Autonomous Logistics - Zion Tech Group" description="AI-powered autonomous logistics solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous logistics, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomouslogistics/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
