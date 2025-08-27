@@ -100,7 +100,10 @@ const Cookies = () => {
                   <strong>Email:</strong> privacy@ziontechgroup.com<br />
                   <strong>Phone:</strong> +1 (302) 464-0950<br />
                   <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 const Cookies: React.FC = () => {}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -157,7 +160,10 @@ const Cookies: React.FC = () => {}
                 <p className="text-gray-300 text-sm">
                   Personalize content and improve functionality
                 </p>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 import {SEO} from "@/components/SEO";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -545,13 +551,15 @@ export default function Cookies() {}
 };
 
 export default Cookies;
-=======
       </main>
       <Footer />
     </div>
   );
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 import {SEO} from '@/components/SEO';
 import {GradientHeading} from '@/components/GradientHeading';
 

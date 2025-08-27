@@ -113,7 +113,10 @@ export default function Webinars() {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61e30eca5fbfc0775ada7e1bb633889d4df21738
 import {CogIcon} from '@heroicons/react/24/outline';
 
 const $page: React.FC = () => {}
