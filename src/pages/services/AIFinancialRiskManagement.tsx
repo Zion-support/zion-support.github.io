@@ -1,52 +1,52 @@
-import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Package, TrendingUp, Globe, Zap, Target, Clock, Shield } from 'lucide-react';
+import { Shield, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, TrendingUp, AlertTriangle, Zap, Target, Clock, DollarSign, Globe } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AIFinancialRiskManagement() {
   const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain monitoring and risk assessment',
-    'Intelligent route optimization and logistics planning',
-    'Automated supplier performance analysis and scoring',
-    'Predictive maintenance for supply chain equipment',
-    'Advanced cost optimization and budget management',
-    'Multi-tier supplier relationship management',
-    'Real-time shipment tracking and visibility',
-    'AI-driven supply chain risk mitigation',
-    'Automated compliance and regulatory reporting'
+    'AI-powered credit risk assessment and scoring',
+    'Real-time market risk monitoring and alerts',
+    'Intelligent fraud detection and prevention',
+    'Advanced portfolio risk analysis and optimization',
+    'Predictive risk modeling and scenario analysis',
+    'Automated compliance monitoring and reporting',
+    'Multi-asset class risk management',
+    'Real-time risk dashboard and analytics',
+    'AI-driven risk mitigation recommendations',
+    'Advanced stress testing and stress scenarios'
   ];
 
   const benefits = [
-    'Reduce supply chain costs by 25-40%',
-    'Improve inventory accuracy by 90%',
-    'Reduce lead times by 30-50%',
-    'Increase supplier performance by 35%',
-    'Eliminate stockouts and overstock situations',
-    'Enable real-time supply chain visibility'
+    'Reduce credit losses by 40-60%',
+    'Improve risk-adjusted returns by 25%',
+    'Detect fraud with 99.5% accuracy',
+    'Reduce compliance costs by 50%',
+    'Enable real-time risk monitoring',
+    'Automate 90% of risk assessment tasks'
   ];
 
   const useCases = [
-    'Manufacturing supply chain optimization',
-    'Retail inventory and distribution management',
-    'Healthcare supply chain and logistics',
-    'E-commerce fulfillment optimization',
-    'Food and beverage supply chain',
-    'Automotive parts and logistics'
+    'Commercial banking and lending',
+    'Investment management and wealth advisory',
+    'Insurance risk assessment',
+    'Fintech and digital banking',
+    'Corporate treasury management',
+    'Regulatory compliance and reporting'
   ];
 
   const tiers = [
     { 
-      name: 'Supply Chain Starter', 
-      price: '$599/mo', 
-      details: ['Up to 100 SKUs', 'Basic AI optimization', 'Standard reporting', 'Email support'] 
+      name: 'Risk Starter', 
+      price: '$799/mo', 
+      details: ['Up to 1,000 accounts', 'Basic AI risk assessment', 'Standard reporting', 'Email support'] 
     },
     { 
-      name: 'Supply Chain Pro', 
-      price: '$1,499/mo', 
-      details: ['Up to 1,000 SKUs', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      name: 'Risk Professional', 
+      price: '$1,999/mo', 
+      details: ['Up to 10,000 accounts', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
     { 
-      name: 'Enterprise Supply Chain', 
-      price: '$4,999/mo', 
-      details: ['Unlimited SKUs', 'Full AI suite', 'White-label options', '24/7 support'] 
+      name: 'Enterprise Risk', 
+      price: '$5,999/mo', 
+      details: ['Unlimited accounts', 'Full AI suite', 'White-label options', '24/7 support'] 
     },
   ];
 
@@ -55,17 +55,17 @@ export default function AISupplyChainOptimization() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-powered supply chain optimization
+            <Shield className="w-4 h-4 mr-2" /> AI-powered financial risk management
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Supply Chain Optimization</h1>
-          <p className="text-zion-slate-light text-xl">Revolutionize your supply chain with AI-powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Financial Risk Management</h1>
+          <p className="text-zion-slate-light text-xl">Intelligent financial risk management that automatically detects, assesses, and mitigates risks while ensuring regulatory compliance and optimizing returns.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Supply Chain Features</h2>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Advanced Risk Management Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -114,9 +114,9 @@ export default function AISupplyChainOptimization() {
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {[
-            { icon: Package, title: 'Inventory Optimization', desc: 'AI-powered demand forecasting and stock management' },
-            { icon: TrendingUp, title: 'Cost Reduction', desc: 'Intelligent cost optimization and budget management' },
-            { icon: Clock, title: 'Lead Time Reduction', desc: 'Streamlined logistics and faster delivery times' }
+            { icon: AlertTriangle, title: 'Risk Detection', desc: 'AI-powered identification of potential risks and threats' },
+            { icon: TrendingUp, title: 'Portfolio Optimization', desc: 'Intelligent risk-adjusted portfolio management' },
+            { icon: Clock, title: 'Real-time Monitoring', desc: 'Continuous risk assessment and alerting' }
           ].map((item) => (
             <div key={item.title} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <item.icon className="w-6 h-6 text-zion-cyan mb-3" />
@@ -127,7 +127,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Perfect For These Industries</h3>
+          <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Perfect For These Financial Services</h3>
           <div className="grid md:grid-cols-2 gap-4">
             {useCases.map((uc) => (
               <div key={uc} className="flex items-center">
@@ -139,7 +139,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-zion-slate-light mb-2">Ready to manage your financial risks intelligently?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950

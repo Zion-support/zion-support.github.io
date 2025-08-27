@@ -1,52 +1,52 @@
-import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Package, TrendingUp, Globe, Zap, Target, Clock, Shield } from 'lucide-react';
+import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Heart, TrendingUp, MessageSquare, Eye, Zap, Target, Globe } from 'lucide-react';
 
-export default function AISupplyChainOptimization() {
+export default function AICustomerExperienceAnalytics() {
   const features = [
-    'AI-powered demand forecasting and inventory optimization',
-    'Real-time supply chain monitoring and risk assessment',
-    'Intelligent route optimization and logistics planning',
-    'Automated supplier performance analysis and scoring',
-    'Predictive maintenance for supply chain equipment',
-    'Advanced cost optimization and budget management',
-    'Multi-tier supplier relationship management',
-    'Real-time shipment tracking and visibility',
-    'AI-driven supply chain risk mitigation',
-    'Automated compliance and regulatory reporting'
+    'AI-powered customer journey mapping and analysis',
+    'Real-time sentiment analysis and emotion detection',
+    'Predictive customer behavior modeling',
+    'Automated customer feedback collection and analysis',
+    'Multi-channel experience tracking and optimization',
+    'Intelligent customer segmentation and personalization',
+    'Advanced customer lifetime value prediction',
+    'Automated customer satisfaction scoring',
+    'Real-time customer experience monitoring',
+    'AI-driven customer experience optimization recommendations'
   ];
 
   const benefits = [
-    'Reduce supply chain costs by 25-40%',
-    'Improve inventory accuracy by 90%',
-    'Reduce lead times by 30-50%',
-    'Increase supplier performance by 35%',
-    'Eliminate stockouts and overstock situations',
-    'Enable real-time supply chain visibility'
+    'Increase customer satisfaction scores by 45%',
+    'Reduce customer churn by 60%',
+    'Improve customer lifetime value by 35%',
+    'Boost customer engagement by 50%',
+    'Reduce customer support costs by 40%',
+    'Enable data-driven customer experience decisions'
   ];
 
   const useCases = [
-    'Manufacturing supply chain optimization',
-    'Retail inventory and distribution management',
-    'Healthcare supply chain and logistics',
-    'E-commerce fulfillment optimization',
-    'Food and beverage supply chain',
-    'Automotive parts and logistics'
+    'E-commerce customer experience optimization',
+    'SaaS product user experience improvement',
+    'Banking and financial services CX',
+    'Healthcare patient experience enhancement',
+    'Retail customer journey optimization',
+    'Hospitality guest experience management'
   ];
 
   const tiers = [
     { 
-      name: 'Supply Chain Starter', 
-      price: '$599/mo', 
-      details: ['Up to 100 SKUs', 'Basic AI optimization', 'Standard reporting', 'Email support'] 
+      name: 'CX Starter', 
+      price: '$399/mo', 
+      details: ['Up to 10K customers', 'Basic AI analytics', 'Standard reporting', 'Email support'] 
     },
     { 
-      name: 'Supply Chain Pro', 
-      price: '$1,499/mo', 
-      details: ['Up to 1,000 SKUs', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      name: 'CX Professional', 
+      price: '$999/mo', 
+      details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
     { 
-      name: 'Enterprise Supply Chain', 
-      price: '$4,999/mo', 
-      details: ['Unlimited SKUs', 'Full AI suite', 'White-label options', '24/7 support'] 
+      name: 'CX Enterprise', 
+      price: '$2,999/mo', 
+      details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support'] 
     },
   ];
 
@@ -55,17 +55,17 @@ export default function AISupplyChainOptimization() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Truck className="w-4 h-4 mr-2" /> AI-powered supply chain optimization
+            <Users className="w-4 h-4 mr-2" /> AI-powered customer experience analytics
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Supply Chain Optimization</h1>
-          <p className="text-zion-slate-light text-xl">Revolutionize your supply chain with AI-powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Customer Experience Analytics</h1>
+          <p className="text-zion-slate-light text-xl">Transform customer insights into actionable intelligence with AI-powered analytics that predict, optimize, and enhance every customer interaction.</p>
         </div>
       </section>
 
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent Supply Chain Features</h2>
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Intelligent CX Features</h2>
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
@@ -114,9 +114,9 @@ export default function AISupplyChainOptimization() {
 
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {[
-            { icon: Package, title: 'Inventory Optimization', desc: 'AI-powered demand forecasting and stock management' },
-            { icon: TrendingUp, title: 'Cost Reduction', desc: 'Intelligent cost optimization and budget management' },
-            { icon: Clock, title: 'Lead Time Reduction', desc: 'Streamlined logistics and faster delivery times' }
+            { icon: Heart, title: 'Customer Satisfaction', desc: 'AI-powered sentiment analysis and satisfaction scoring' },
+            { icon: TrendingUp, title: 'Behavior Prediction', desc: 'Predict customer actions and optimize experiences' },
+            { icon: MessageSquare, title: 'Real-time Insights', desc: 'Instant feedback analysis and optimization' }
           ].map((item) => (
             <div key={item.title} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <item.icon className="w-6 h-6 text-zion-cyan mb-3" />
@@ -139,7 +139,7 @@ export default function AISupplyChainOptimization() {
         </div>
 
         <div className="mt-14 text-center">
-          <div className="text-sm text-zion-slate-light mb-2">Ready to optimize your supply chain?</div>
+          <div className="text-sm text-zion-slate-light mb-2">Ready to transform your customer experience?</div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
