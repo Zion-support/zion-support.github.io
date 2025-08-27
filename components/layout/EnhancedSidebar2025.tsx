@@ -37,6 +37,7 @@ import {
   Target,
   TrendingUp,
   Star
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -52,6 +53,8 @@ import {
   Palette, Code, FileText, BookOpen as BookIcon, 
   Users as UsersIcon, Cloud
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -62,6 +65,9 @@ interface SidebarItem {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 const quickActions = [
   {
     name: 'Get Quote',
@@ -404,6 +410,9 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
           {/* Quick Actions */}
           <div className="p-6 border-b border-cyan-500/30">

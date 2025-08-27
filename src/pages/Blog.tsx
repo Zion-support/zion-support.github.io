@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -149,12 +153,26 @@ const Blog: React.FC = () => {
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+<<<<<<< HEAD
     
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
     return matchesSearch && matchesCategory;
   });
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
+<<<<<<< HEAD
+=======
+
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

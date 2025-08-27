@@ -7,10 +7,17 @@ const urlsToCache = [
 ];
 
 // Install event - cache resources
+<<<<<<< HEAD
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
+=======
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
       })
@@ -37,9 +44,15 @@ self.addEventListener('fetch', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
+<<<<<<< HEAD
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
+=======
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
           if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName);
             return caches.delete(cacheName);
@@ -57,6 +70,7 @@ self.addEventListener('sync', (event) => {
   }
 });
 
+<<<<<<< HEAD
 async function doBackgroundSync() {
   try {
     // Perform background sync operations
@@ -64,6 +78,11 @@ async function doBackgroundSync() {
   } catch (error) {
     console.error('Background sync failed:', error);
   }
+=======
+function doBackgroundSync() {
+  // Handle background sync logic
+  console.log('Background sync triggered');
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 }
 
 // Push notification handling

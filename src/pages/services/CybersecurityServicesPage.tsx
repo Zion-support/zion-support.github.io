@@ -1,78 +1,66 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-<<<<<<< HEAD
-=======
-import { TrustedBySection } from "../TrustedBySection";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-const blockchainServices = [
-=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Database, 
-  Link as LinkIcon, 
-  Zap, 
   Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
+  Zap, 
+  Users, 
   Globe, 
-  CheckCircle, 
+  CheckCircle,
   ArrowRight,
   Clock,
   Star,
   TrendingUp,
-  Users,
-  Lock,
-  BarChart3,
-  Settings,
-  Lightbulb,
-  Rocket,
-  Coins
+  Database,
+  Network,
+  Server
 } from 'lucide-react';
 
-const BlockchainServicesPage = () => {
-  const blockchainServices = [
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+const CybersecurityServicesPage = () => {
+  const securityServices = [
     {
-      id: 'smart-contracts',
-      title: 'Smart Contracts',
-      description: 'Develop and deploy secure, audited smart contracts for various use cases',
-      icon: <Database className="w-8 h-8" />,
-      features: ['Contract Development', 'Security Auditing', 'Testing & Deployment', 'Maintenance'],
-      useCases: ['DeFi Applications', 'NFT Platforms', 'Supply Chain', 'Voting Systems'],
-      pricing: 'Starting from $4,500/month'
+      id: 'threat-detection',
+      title: 'Threat Detection & Response',
+      description: 'Advanced threat detection and automated incident response systems',
+      icon: <Eye className="w-8 h-8" />,
+      features: ['Real-time Monitoring', 'AI-Powered Detection', 'Automated Response', 'Threat Intelligence'],
+      useCases: ['Network Security', 'Endpoint Protection', 'Cloud Security', 'IoT Security'],
+      pricing: 'Starting from $3,500/month'
     },
     {
-      id: 'defi-solutions',
-      title: 'DeFi Solutions',
-      description: 'Build decentralized finance applications and protocols',
-      icon: <Coins className="w-8 h-8" />,
-      features: ['DEX Development', 'Lending Protocols', 'Yield Farming', 'Staking Platforms'],
-      useCases: ['Cryptocurrency Trading', 'Lending & Borrowing', 'Asset Management', 'Insurance'],
-      pricing: 'Starting from $6,000/month'
+      id: 'security-audits',
+      title: 'Security Audits & Assessments',
+      description: 'Comprehensive security evaluations and compliance assessments',
+      icon: <Shield className="w-8 h-8" />,
+      features: ['Vulnerability Assessment', 'Penetration Testing', 'Compliance Review', 'Risk Analysis'],
+      useCases: ['Regulatory Compliance', 'Security Posture', 'Risk Management', 'Due Diligence'],
+      pricing: 'Starting from $2,800/month'
     },
     {
-      id: 'nft-platforms',
-      title: 'NFT Platforms',
-      description: 'Create and manage non-fungible token marketplaces and applications',
-      icon: <LinkIcon className="w-8 h-8" />,
-      features: ['Marketplace Development', 'Minting Services', 'Metadata Management', 'Royalty Systems'],
-      useCases: ['Digital Art', 'Gaming', 'Collectibles', 'Real Estate'],
-      pricing: 'Starting from $3,800/month'
+      id: 'compliance-management',
+      title: 'Compliance Management',
+      description: 'Ensure adherence to industry standards and regulatory requirements',
+      icon: <Lock className="w-8 h-8" />,
+      features: ['GDPR Compliance', 'SOC 2 Type II', 'ISO 27001', 'HIPAA Compliance'],
+      useCases: ['Data Protection', 'Privacy Regulations', 'Industry Standards', 'Audit Preparation'],
+      pricing: 'Starting from $2,200/month'
     },
     {
-      id: 'enterprise-blockchain',
-      title: 'Enterprise Blockchain',
-      description: 'Private and consortium blockchain solutions for enterprise use',
-      icon: <Globe className="w-8 h-8" />,
-      features: ['Private Networks', 'Consortium Management', 'Permission Systems', 'Integration'],
-      useCases: ['Supply Chain', 'Identity Management', 'Asset Tracking', 'Compliance'],
-      pricing: 'Starting from $8,500/month'
+      id: 'incident-response',
+      title: 'Incident Response',
+      description: '24/7 incident response and recovery services',
+      icon: <AlertTriangle className="w-8 h-8" />,
+      features: ['Emergency Response', 'Forensic Analysis', 'Recovery Planning', 'Post-Incident Review'],
+      useCases: ['Data Breaches', 'Ransomware Attacks', 'System Compromises', 'Business Continuity'],
+      pricing: 'Starting from $4,000/month'
     }
   ];
 
-  const blockchainPlatforms = [
-    'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum'
+  const complianceFrameworks = [
+    'GDPR', 'SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS', 'NIST', 'COBIT', 'CIS Controls'
   ];
 
   const containerVariants = {
@@ -107,43 +95,43 @@ const BlockchainServicesPage = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
-            <Database className="w-10 h-10 text-white" />
+            <Shield className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Blockchain
+              Cybersecurity
             </span> Services
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Transform your business with blockchain technology. From smart contracts to DeFi solutions, 
-            we help you build secure, transparent, and decentralized applications.
+            Protect your digital assets with enterprise-grade cybersecurity solutions. 
+            From threat detection to compliance management, we keep your business secure.
           </p>
           
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">100%</div>
-              <div className="text-zion-slate-light">Transparency</div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>
+              <div className="text-zion-slate-light">Threat Detection Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-purple mb-2">Immutable</div>
-              <div className="text-zion-slate-light">Data Security</div>
+              <div className="text-3xl font-bold text-zion-purple mb-2">24/7</div>
+              <div className="text-zion-slate-light">Security Monitoring</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-blue mb-2">Decentralized</div>
-              <div className="text-zion-slate-light">Architecture</div>
+              <div className="text-3xl font-bold text-zion-blue mb-2">15min</div>
+              <div className="text-zion-slate-light">Response Time</div>
             </div>
           </div>
         </motion.div>
 
-        {/* Blockchain Services Grid */}
+        {/* Security Services Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
         >
-          {blockchainServices.map((service, index) => (
+          {securityServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -196,7 +184,7 @@ const BlockchainServicesPage = () => {
 
               {/* CTA Button */}
               <Link
-                to={`/blockchain-services/${service.id}`}
+                to={`/services/cybersecurity/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
               >
                 Learn More
@@ -206,7 +194,7 @@ const BlockchainServicesPage = () => {
           ))}
         </motion.div>
 
-        {/* Blockchain Platforms */}
+        {/* Compliance Frameworks */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -215,30 +203,30 @@ const BlockchainServicesPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Blockchain Platforms We Support
+              Compliance Frameworks
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              We have expertise across major blockchain platforms and can help you choose 
-              the best solution for your specific use case.
+              We help organizations achieve and maintain compliance with major industry standards 
+              and regulatory requirements.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {blockchainPlatforms.map((platform, index) => (
+            {complianceFrameworks.map((framework, index) => (
               <motion.div
-                key={platform}
+                key={framework}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="text-zion-cyan font-medium">{platform}</div>
+                <div className="text-zion-cyan font-medium">{framework}</div>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Blockchain Benefits */}
+        {/* Security Features */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -247,38 +235,38 @@ const BlockchainServicesPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Benefits of Blockchain Technology
+              Advanced Security Features
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Network className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Enhanced Security</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Network Security</h3>
               <p className="text-zion-slate-light">
-                Cryptographic security and immutable data records
+                Advanced firewall protection and network monitoring
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="w-8 h-8 text-white" />
+                <Database className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Transparency</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Data Protection</h3>
               <p className="text-zion-slate-light">
-                Public ledger with verifiable transaction history
+                Encryption and secure data handling practices
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <Server className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Efficiency</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Infrastructure Security</h3>
               <p className="text-zion-slate-light">
-                Automated processes and reduced intermediaries
+                Secure cloud and on-premises infrastructure
               </p>
             </div>
           </div>
@@ -292,24 +280,24 @@ const BlockchainServicesPage = () => {
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build on the Blockchain?
+            Secure Your Digital Future
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our blockchain experts help you create innovative, secure, and transparent 
-            applications that transform your business.
+            Don't wait for a security breach. Let our cybersecurity experts help you 
+            build a robust defense strategy for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
             >
-              Start Blockchain Project
+              Get Security Assessment
             </Link>
             <Link
               to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              View Blockchain Pricing
+              View Security Pricing
             </Link>
           </div>
         </motion.div>
@@ -318,4 +306,4 @@ const BlockchainServicesPage = () => {
   );
 };
 
-export default BlockchainServicesPage;
+export default CybersecurityServicesPage;

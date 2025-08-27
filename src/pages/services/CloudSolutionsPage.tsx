@@ -1,18 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-<<<<<<< HEAD
-=======
-import { TrustedBySection } from "../TrustedBySection";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-const blockchainServices = [
-=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
+  Cloud, 
+  Server, 
   Database, 
-  Link as LinkIcon, 
   Zap, 
   Shield, 
   Globe, 
@@ -24,55 +16,51 @@ import {
   Users,
   Lock,
   BarChart3,
-  Settings,
-  Lightbulb,
-  Rocket,
-  Coins
+  Settings
 } from 'lucide-react';
 
-const BlockchainServicesPage = () => {
-  const blockchainServices = [
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+const CloudSolutionsPage = () => {
+  const cloudServices = [
     {
-      id: 'smart-contracts',
-      title: 'Smart Contracts',
-      description: 'Develop and deploy secure, audited smart contracts for various use cases',
-      icon: <Database className="w-8 h-8" />,
-      features: ['Contract Development', 'Security Auditing', 'Testing & Deployment', 'Maintenance'],
-      useCases: ['DeFi Applications', 'NFT Platforms', 'Supply Chain', 'Voting Systems'],
-      pricing: 'Starting from $4,500/month'
+      id: 'cloud-migration',
+      title: 'Cloud Migration',
+      description: 'Seamless migration of applications and infrastructure to the cloud',
+      icon: <Cloud className="w-8 h-8" />,
+      features: ['Lift & Shift', 'Re-architecture', 'Hybrid Cloud', 'Multi-Cloud Strategy'],
+      useCases: ['Legacy Modernization', 'Cost Optimization', 'Scalability', 'Disaster Recovery'],
+      pricing: 'Starting from $5,000/month'
     },
     {
-      id: 'defi-solutions',
-      title: 'DeFi Solutions',
-      description: 'Build decentralized finance applications and protocols',
-      icon: <Coins className="w-8 h-8" />,
-      features: ['DEX Development', 'Lending Protocols', 'Yield Farming', 'Staking Platforms'],
-      useCases: ['Cryptocurrency Trading', 'Lending & Borrowing', 'Asset Management', 'Insurance'],
-      pricing: 'Starting from $6,000/month'
+      id: 'devops-automation',
+      title: 'DevOps Automation',
+      description: 'Automate your development and deployment processes',
+      icon: <Zap className="w-8 h-8" />,
+      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automated Testing', 'Monitoring & Alerting'],
+      useCases: ['Faster Deployments', 'Quality Assurance', 'Team Collaboration', 'Reduced Errors'],
+      pricing: 'Starting from $3,500/month'
     },
     {
-      id: 'nft-platforms',
-      title: 'NFT Platforms',
-      description: 'Create and manage non-fungible token marketplaces and applications',
-      icon: <LinkIcon className="w-8 h-8" />,
-      features: ['Marketplace Development', 'Minting Services', 'Metadata Management', 'Royalty Systems'],
-      useCases: ['Digital Art', 'Gaming', 'Collectibles', 'Real Estate'],
-      pricing: 'Starting from $3,800/month'
+      id: 'container-orchestration',
+      title: 'Container Orchestration',
+      description: 'Manage and scale containerized applications efficiently',
+      icon: <Server className="w-8 h-8" />,
+      features: ['Kubernetes', 'Docker Management', 'Service Mesh', 'Auto-scaling'],
+      useCases: ['Microservices', 'Application Scaling', 'Resource Optimization', 'High Availability'],
+      pricing: 'Starting from $4,200/month'
     },
     {
-      id: 'enterprise-blockchain',
-      title: 'Enterprise Blockchain',
-      description: 'Private and consortium blockchain solutions for enterprise use',
+      id: 'serverless-architecture',
+      title: 'Serverless Architecture',
+      description: 'Build scalable applications without managing infrastructure',
       icon: <Globe className="w-8 h-8" />,
-      features: ['Private Networks', 'Consortium Management', 'Permission Systems', 'Integration'],
-      useCases: ['Supply Chain', 'Identity Management', 'Asset Tracking', 'Compliance'],
-      pricing: 'Starting from $8,500/month'
+      features: ['Function as a Service', 'Event-Driven', 'Auto-scaling', 'Pay-per-use'],
+      useCases: ['Web Applications', 'API Development', 'Data Processing', 'IoT Backends'],
+      pricing: 'Starting from $2,800/month'
     }
   ];
 
-  const blockchainPlatforms = [
-    'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum'
+  const cloudProviders = [
+    'AWS', 'Azure', 'Google Cloud', 'Digital Ocean', 'IBM Cloud', 'Oracle Cloud'
   ];
 
   const containerVariants = {
@@ -107,43 +95,43 @@ const BlockchainServicesPage = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
-            <Database className="w-10 h-10 text-white" />
+            <Cloud className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Blockchain
-            </span> Services
+              Cloud Solutions
+            </span> & DevOps
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Transform your business with blockchain technology. From smart contracts to DeFi solutions, 
-            we help you build secure, transparent, and decentralized applications.
+            Transform your infrastructure with modern cloud solutions and DevOps practices. 
+            From migration to automation, we help you build scalable, resilient systems.
           </p>
           
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">100%</div>
-              <div className="text-zion-slate-light">Transparency</div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>
+              <div className="text-zion-slate-light">Uptime Guarantee</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-purple mb-2">Immutable</div>
-              <div className="text-zion-slate-light">Data Security</div>
+              <div className="text-3xl font-bold text-zion-purple mb-2">50%+</div>
+              <div className="text-zion-slate-light">Cost Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-blue mb-2">Decentralized</div>
-              <div className="text-zion-slate-light">Architecture</div>
+              <div className="text-3xl font-bold text-zion-blue mb-2">10x</div>
+              <div className="text-zion-slate-light">Faster Deployments</div>
             </div>
           </div>
         </motion.div>
 
-        {/* Blockchain Services Grid */}
+        {/* Cloud Services Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
         >
-          {blockchainServices.map((service, index) => (
+          {cloudServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -196,7 +184,7 @@ const BlockchainServicesPage = () => {
 
               {/* CTA Button */}
               <Link
-                to={`/blockchain-services/${service.id}`}
+                to={`/services/cloud/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
               >
                 Learn More
@@ -206,7 +194,7 @@ const BlockchainServicesPage = () => {
           ))}
         </motion.div>
 
-        {/* Blockchain Platforms */}
+        {/* Cloud Providers */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -215,30 +203,30 @@ const BlockchainServicesPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Blockchain Platforms We Support
+              Cloud Providers We Work With
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              We have expertise across major blockchain platforms and can help you choose 
-              the best solution for your specific use case.
+              We have expertise across major cloud platforms and can help you choose 
+              the best solution for your needs.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {blockchainPlatforms.map((platform, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {cloudProviders.map((provider, index) => (
               <motion.div
-                key={platform}
+                key={provider}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="text-zion-cyan font-medium">{platform}</div>
+                <div className="text-zion-cyan font-medium">{provider}</div>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Blockchain Benefits */}
+        {/* DevOps Benefits */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -247,38 +235,38 @@ const BlockchainServicesPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Benefits of Blockchain Technology
+              DevOps Benefits
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Clock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Enhanced Security</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Faster Delivery</h3>
               <p className="text-zion-slate-light">
-                Cryptographic security and immutable data records
+                Reduce time-to-market with automated CI/CD pipelines
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Transparency</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Improved Security</h3>
               <p className="text-zion-slate-light">
-                Public ledger with verifiable transaction history
+                Security integrated into every stage of development
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <BarChart3 className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Efficiency</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Better Quality</h3>
               <p className="text-zion-slate-light">
-                Automated processes and reduced intermediaries
+                Automated testing and continuous monitoring
               </p>
             </div>
           </div>
@@ -292,24 +280,24 @@ const BlockchainServicesPage = () => {
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build on the Blockchain?
+            Ready to Scale in the Cloud?
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our blockchain experts help you create innovative, secure, and transparent 
-            applications that transform your business.
+            Let our cloud experts help you build a scalable, resilient infrastructure 
+            that grows with your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
             >
-              Start Blockchain Project
+              Get Cloud Consultation
             </Link>
             <Link
               to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              View Blockchain Pricing
+              View Cloud Pricing
             </Link>
           </div>
         </motion.div>
@@ -318,4 +306,4 @@ const BlockchainServicesPage = () => {
   );
 };
 
-export default BlockchainServicesPage;
+export default CloudSolutionsPage;

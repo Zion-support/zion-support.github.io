@@ -99,9 +99,12 @@ import {
   Stop,
   SkipBack,
   SkipForward,
+<<<<<<< HEAD
   Truck,
   Package,
   FileText,
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
   Rewind,
   FastForward,
   Shuffle,
@@ -186,6 +189,7 @@ import {
 >>>>>>> add-innovative-services-2025
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const footerSections = {
   aiServices: {
     title: 'AI Services',
@@ -199,12 +203,48 @@ const footerSections = {
       { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' }
 =======
       { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
+=======
+const footerNavigation = {
+  cuttingEdgeInnovations: {
+    title: 'Cutting-Edge Innovations',
+    items: [
+      { name: 'AI Business Automation Suite', href: '/innovative-services#ai-automation', icon: Brain, description: 'AI-powered business process automation' },
+      { name: 'Quantum Computing as a Service', href: '/innovative-services#quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
+      { name: 'Enterprise Blockchain Platform', href: '/innovative-services#blockchain', icon: Lock, description: 'Enterprise blockchain solutions' },
+      { name: 'IoT Edge Computing Platform', href: '/innovative-services#iot-edge', icon: Wifi, description: 'IoT and edge computing platform' },
+      { name: 'Zero Trust Cybersecurity', href: '/innovative-services#cybersecurity', icon: Shield, description: 'Advanced cybersecurity platform' },
+      { name: 'Digital Twin Technology', href: '/innovative-services#digital-twin', icon: Eye, description: 'Digital twin and simulation platform' },
+      { name: 'Metaverse & VR Platform', href: '/innovative-services#metaverse', icon: Globe2, description: 'Metaverse and virtual reality platform' },
+      { name: 'Green Tech Solutions', href: '/innovative-services#green-tech', icon: Leaf, description: 'Sustainability and green technology' }
+    ],
+  },
+  aiServices: {
+    title: 'AI Services',
+    items: [
+      { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research' },
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
       { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
       { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
       { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
       { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
       { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
+<<<<<<< HEAD
 >>>>>>> add-innovative-services-2025
+=======
+    ],
+  },
+  microSaas: {
+    title: 'Micro SAAS',
+    items: [
+      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics' },
+      { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
+      { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
+      { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain', icon: Globe, description: 'AI-powered supply chain management' },
+      { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity', icon: ShieldCheck, description: 'Advanced threat protection' },
+      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' },
+      { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' },
+      { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
     ],
   },
   itServices: {
@@ -338,12 +378,6 @@ export const FuturisticFooter: React.FC = () => {
                     </a>
                   </div>
                   <div className="flex items-center space-x-3 text-zion-slate-light">
-                    <Globe className="w-4 h-4 text-zion-cyan" />
-                    <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-zion-cyan transition-colors duration-300">
-                      {contactInfo.website.replace('https://', '')}
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-3 text-zion-slate-light">
                     <MapPin className="w-4 h-4 text-zion-cyan" />
                     <span>{contactInfo.address}</span>
                   </div>
@@ -368,6 +402,7 @@ export const FuturisticFooter: React.FC = () => {
               </motion.div>
             </div>
 
+<<<<<<< HEAD
             {/* Footer Sections */}
             {Object.entries(footerSections).map(([key, section]) => (
               <div key={key}>
@@ -390,6 +425,25 @@ export const FuturisticFooter: React.FC = () => {
                   {section.items.map((item, index) => (
                     <motion.li
                       key={index}
+=======
+            {/* Navigation sections */}
+            {Object.entries(footerNavigation).map(([key, section], index) => (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <h4 className="text-lg font-semibold text-zion-cyan flex items-center space-x-2">
+                  <span>{section.title}</span>
+                </h4>
+                <div className="space-y-2">
+                  {section.items.map((item, itemIndex) => (
+                    <motion.div
+                      key={item.name}
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { 
   Menu, 
   X, 
@@ -16,6 +17,9 @@ import {
   Lock, 
   Rocket 
 } from 'lucide-react';
+=======
+import { Menu, X, ChevronDown, Globe, Sun, Moon } from 'lucide-react';
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

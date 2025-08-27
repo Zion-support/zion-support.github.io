@@ -2,12 +2,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowUp, Heart, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -82,6 +85,7 @@ export const Footer: React.FC = () => {
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   const scrollToTop = () => {
@@ -114,6 +118,8 @@ export const Footer: React.FC = () => {
     }
   ];
 >>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

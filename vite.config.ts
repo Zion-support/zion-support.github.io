@@ -33,10 +33,14 @@ export default defineConfig({
 						'@radix-ui/react-alert-dialog',
 						'@radix-ui/react-avatar',
 						'@radix-ui/react-checkbox',
+						'@radix-ui/react-collapsible',
 						'@radix-ui/react-context-menu',
 						'@radix-ui/react-dialog',
 						'@radix-ui/react-dropdown-menu',
+						'@radix-ui/react-hover-card',
 						'@radix-ui/react-label',
+						'@radix-ui/react-menubar',
+						'@radix-ui/react-navigation-menu',
 						'@radix-ui/react-popover',
 						'@radix-ui/react-progress',
 						'@radix-ui/react-radio-group',
@@ -48,14 +52,12 @@ export default defineConfig({
 						'@radix-ui/react-switch',
 						'@radix-ui/react-tabs',
 						'@radix-ui/react-toast',
+						'@radix-ui/react-toggle',
 						'@radix-ui/react-tooltip'
 					],
 					'animation-vendor': ['framer-motion'],
 					'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
 					'icons-vendor': ['lucide-react'],
-					'charts-vendor': ['recharts'],
-					'date-vendor': ['date-fns', 'react-day-picker'],
-					'i18n-vendor': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
 					'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
 					'router-vendor': ['react-router-dom']
 				},
@@ -104,6 +106,7 @@ export default defineConfig({
 			'react-router-dom',
 			'framer-motion',
 			'lucide-react',
+<<<<<<< HEAD
 			'@radix-ui/react-accordion',
 			'@radix-ui/react-alert-dialog',
 			'@radix-ui/react-aspect-ratio',
@@ -125,6 +128,11 @@ export default defineConfig({
 			'@radix-ui/react-tabs',
 			'@radix-ui/react-toast',
 			'@radix-ui/react-tooltip'
+=======
+			'clsx',
+			'tailwind-merge',
+			'class-variance-authority'
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 		],
 		exclude: ['@radix-ui/react-icons'],
 		// Enhanced dependency optimization

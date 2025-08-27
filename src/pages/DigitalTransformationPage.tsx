@@ -1,78 +1,67 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-<<<<<<< HEAD
-=======
-import { TrustedBySection } from "../TrustedBySection";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-const blockchainServices = [
-=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Database, 
-  Link as LinkIcon, 
-  Zap, 
-  Shield, 
   Globe, 
+  Zap, 
+  Users, 
+  TrendingUp, 
+  Shield, 
   CheckCircle, 
   ArrowRight,
   Clock,
   Star,
-  TrendingUp,
-  Users,
-  Lock,
   BarChart3,
   Settings,
   Lightbulb,
+  Briefcase,
+  Award,
   Rocket,
-  Coins
+  Target
 } from 'lucide-react';
 
-const BlockchainServicesPage = () => {
-  const blockchainServices = [
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+const DigitalTransformationPage = () => {
+  const transformationServices = [
     {
-      id: 'smart-contracts',
-      title: 'Smart Contracts',
-      description: 'Develop and deploy secure, audited smart contracts for various use cases',
-      icon: <Database className="w-8 h-8" />,
-      features: ['Contract Development', 'Security Auditing', 'Testing & Deployment', 'Maintenance'],
-      useCases: ['DeFi Applications', 'NFT Platforms', 'Supply Chain', 'Voting Systems'],
+      id: 'process-digitization',
+      title: 'Process Digitization',
+      description: 'Transform manual processes into automated, digital workflows',
+      icon: <Zap className="w-8 h-8" />,
+      features: ['Workflow Automation', 'Process Mapping', 'Digital Forms', 'Integration'],
+      useCases: ['HR Processes', 'Finance Operations', 'Customer Service', 'Supply Chain'],
       pricing: 'Starting from $4,500/month'
     },
     {
-      id: 'defi-solutions',
-      title: 'DeFi Solutions',
-      description: 'Build decentralized finance applications and protocols',
-      icon: <Coins className="w-8 h-8" />,
-      features: ['DEX Development', 'Lending Protocols', 'Yield Farming', 'Staking Platforms'],
-      useCases: ['Cryptocurrency Trading', 'Lending & Borrowing', 'Asset Management', 'Insurance'],
-      pricing: 'Starting from $6,000/month'
+      id: 'customer-experience',
+      title: 'Customer Experience',
+      description: 'Enhance customer interactions through digital channels and platforms',
+      icon: <Users className="w-8 h-8" />,
+      features: ['Omnichannel Strategy', 'Digital Platforms', 'Customer Analytics', 'Personalization'],
+      useCases: ['E-commerce', 'Mobile Apps', 'Customer Portals', 'Support Systems'],
+      pricing: 'Starting from $5,200/month'
     },
     {
-      id: 'nft-platforms',
-      title: 'NFT Platforms',
-      description: 'Create and manage non-fungible token marketplaces and applications',
-      icon: <LinkIcon className="w-8 h-8" />,
-      features: ['Marketplace Development', 'Minting Services', 'Metadata Management', 'Royalty Systems'],
-      useCases: ['Digital Art', 'Gaming', 'Collectibles', 'Real Estate'],
+      id: 'data-strategy',
+      title: 'Data Strategy',
+      description: 'Develop comprehensive data strategies for informed decision making',
+      icon: <BarChart3 className="w-8 h-8" />,
+      features: ['Data Architecture', 'Analytics Platforms', 'Business Intelligence', 'Data Governance'],
+      useCases: ['Performance Monitoring', 'Predictive Analytics', 'Reporting', 'Insights'],
       pricing: 'Starting from $3,800/month'
     },
     {
-      id: 'enterprise-blockchain',
-      title: 'Enterprise Blockchain',
-      description: 'Private and consortium blockchain solutions for enterprise use',
+      id: 'technology-integration',
+      title: 'Technology Integration',
+      description: 'Seamlessly integrate new technologies with existing systems',
       icon: <Globe className="w-8 h-8" />,
-      features: ['Private Networks', 'Consortium Management', 'Permission Systems', 'Integration'],
-      useCases: ['Supply Chain', 'Identity Management', 'Asset Tracking', 'Compliance'],
-      pricing: 'Starting from $8,500/month'
+      features: ['API Development', 'System Integration', 'Legacy Modernization', 'Cloud Migration'],
+      useCases: ['Enterprise Systems', 'Third-party Services', 'Cloud Platforms', 'Mobile Solutions'],
+      pricing: 'Starting from $6,500/month'
     }
   ];
 
-  const blockchainPlatforms = [
-    'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum'
+  const transformationPhases = [
+    'Assessment', 'Strategy', 'Implementation', 'Optimization', 'Scale'
   ];
 
   const containerVariants = {
@@ -107,43 +96,43 @@ const BlockchainServicesPage = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
-            <Database className="w-10 h-10 text-white" />
+            <Globe className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Blockchain
-            </span> Services
+              Digital Transformation
+            </span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Transform your business with blockchain technology. From smart contracts to DeFi solutions, 
-            we help you build secure, transparent, and decentralized applications.
+            Transform your business for the digital age. We help organizations modernize operations, 
+            enhance customer experiences, and drive innovation through strategic technology adoption.
           </p>
           
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">100%</div>
-              <div className="text-zion-slate-light">Transparency</div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">40%+</div>
+              <div className="text-zion-slate-light">Efficiency Gain</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-purple mb-2">Immutable</div>
-              <div className="text-zion-slate-light">Data Security</div>
+              <div className="text-3xl font-bold text-zion-purple mb-2">60%+</div>
+              <div className="text-zion-slate-light">Cost Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-blue mb-2">Decentralized</div>
-              <div className="text-zion-slate-light">Architecture</div>
+              <div className="text-3xl font-bold text-zion-blue mb-2">3x</div>
+              <div className="text-zion-slate-light">Faster Delivery</div>
             </div>
           </div>
         </motion.div>
 
-        {/* Blockchain Services Grid */}
+        {/* Transformation Services Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
         >
-          {blockchainServices.map((service, index) => (
+          {transformationServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -196,7 +185,7 @@ const BlockchainServicesPage = () => {
 
               {/* CTA Button */}
               <Link
-                to={`/blockchain-services/${service.id}`}
+                to={`/digital-transformation/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
               >
                 Learn More
@@ -206,7 +195,7 @@ const BlockchainServicesPage = () => {
           ))}
         </motion.div>
 
-        {/* Blockchain Platforms */}
+        {/* Transformation Phases */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -215,30 +204,31 @@ const BlockchainServicesPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Blockchain Platforms We Support
+              Our Transformation Approach
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              We have expertise across major blockchain platforms and can help you choose 
-              the best solution for your specific use case.
+              We follow a proven methodology to ensure successful digital transformation 
+              with measurable outcomes and sustainable results.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {blockchainPlatforms.map((platform, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+            {transformationPhases.map((phase, index) => (
               <motion.div
-                key={platform}
+                key={phase}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="text-zion-cyan font-medium">{platform}</div>
+                <div className="text-zion-cyan font-medium text-sm">{phase}</div>
+                <div className="text-zion-slate-light text-xs mt-1">Phase {index + 1}</div>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Blockchain Benefits */}
+        {/* Why Digital Transformation */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -247,38 +237,38 @@ const BlockchainServicesPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Benefits of Blockchain Technology
+              Why Digital Transformation?
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Enhanced Security</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Competitive Advantage</h3>
               <p className="text-zion-slate-light">
-                Cryptographic security and immutable data records
+                Stay ahead of competitors with modern technology
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Lightbulb className="w-8 h-8 text-white" />
+                <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Transparency</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Operational Efficiency</h3>
               <p className="text-zion-slate-light">
-                Public ledger with verifiable transaction history
+                Streamline processes and reduce operational costs
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <Rocket className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Efficiency</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Innovation</h3>
               <p className="text-zion-slate-light">
-                Automated processes and reduced intermediaries
+                Enable new business models and opportunities
               </p>
             </div>
           </div>
@@ -292,24 +282,24 @@ const BlockchainServicesPage = () => {
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build on the Blockchain?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our blockchain experts help you create innovative, secure, and transparent 
-            applications that transform your business.
+            Let our digital transformation experts guide you through the journey 
+            to a more efficient, innovative, and competitive organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
             >
-              Start Blockchain Project
+              Start Transformation
             </Link>
             <Link
               to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              View Blockchain Pricing
+              View Transformation Pricing
             </Link>
           </div>
         </motion.div>
@@ -318,4 +308,4 @@ const BlockchainServicesPage = () => {
   );
 };
 
-export default BlockchainServicesPage;
+export default DigitalTransformationPage;

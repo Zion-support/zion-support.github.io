@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO";
+=======
+import { SEO } from "../components/SEOHead";
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS = [
     // AI & Machine Learning Services
@@ -5977,7 +5981,16 @@ export default function ServicesPage() {
         return () => clearInterval(interval);
     }, []);
     return (<div className="min-h-screen bg-background">
+<<<<<<< HEAD
       <SEO title="IT & AI Services - Zion Tech Group" description="Find expert technology service providers for your business needs, from AI development to infrastructure management." keywords="IT services, AI services, technology consulting, Zion Tech Group" url="https://ziontechgroup.com/services"/>
+=======
+      <SEOHead 
+        title="Comprehensive IT & AI Services 2025 - Zion Tech Group" 
+        description="Discover cutting-edge AI, Quantum Computing, Blockchain, Metaverse, and specialized industry solutions. From micro SAAS to enterprise platforms, transform your business with Zion Tech Group's innovative technology services." 
+        keywords="AI services, quantum computing, blockchain AI, metaverse platform, cybersecurity, cloud infrastructure, business intelligence, Zion Tech Group, IT services, technology consulting, micro SAAS, enterprise solutions" 
+        url="https://ziontechgroup.com/services"
+      />
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
       
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">

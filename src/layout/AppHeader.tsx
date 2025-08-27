@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
 import React, { useState, useEffect } from 'react';
@@ -47,10 +48,16 @@ import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
 >>>>>>> add-innovative-services-2025
 =======
 >>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -92,6 +99,9 @@ export function AppHeader() {
 =======
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 >>>>>>> add-innovative-services-2025
+=======
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
 =======
 >>>>>>> 6447ea7d6f37373918d49062850ab24e95262bc9
@@ -103,6 +113,7 @@ export function AppHeader() {
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -618,6 +629,8 @@ export function AppHeader() {
             {/* Search */}
             <form onSubmit={handleSearch} className="hidden md:flex relative">
 =======
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
@@ -712,12 +725,16 @@ export function AppHeader() {
           {/* Search Bar - Hidden on mobile */}
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
+<<<<<<< HEAD
 >>>>>>> add-innovative-services-2025
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
               <input
                 type="text"
                 placeholder="Search services, talent, equipment..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 placeholder="Search services..."
                 className="input-futuristic w-64 pr-10"
@@ -728,6 +745,8 @@ export function AppHeader() {
               >
                 <Search className="w-4 h-4" />
 =======
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
                 className="w-full bg-slate-800/20 border border-slate-700/20 rounded-lg px-4 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
               <button
@@ -735,11 +754,15 @@ export function AppHeader() {
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors"
               >
                 <Search className="h-4 h-4" />
+<<<<<<< HEAD
 >>>>>>> add-innovative-services-2025
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
               </button>
             </form>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Quick Actions */}
             <div className="hidden lg:flex items-center space-x-2">
@@ -804,6 +827,8 @@ export function AppHeader() {
               </div>
             )}
 =======
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
           {/* Right side actions */}
           <div className="ml-6 flex items-center space-x-4">
             {/* Notifications */}
@@ -815,11 +840,15 @@ export function AppHeader() {
             <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
               <User className="h-5 w-5" />
             </button>
+<<<<<<< HEAD
 >>>>>>> add-innovative-services-2025
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="lg:hidden p-2 rounded-lg hover:bg-zinc-800/50 transition-all duration-200"
@@ -834,6 +863,8 @@ export function AppHeader() {
 <<<<<<< HEAD
                 <Menu className="w-6 h-6 text-zinc-400" />
 =======
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
               className="md:hidden p-2 text-slate-400 hover:text-cyan-400 transition-colors"
             >
               {mobileMenuOpen ? (
@@ -851,6 +882,7 @@ export function AppHeader() {
 <<<<<<< HEAD
       </div>
 
+<<<<<<< HEAD
       {/* Mobile Navigation */}
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -909,6 +941,8 @@ export function AppHeader() {
                       {action.name}
 =======
 
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden">
@@ -1078,6 +1112,9 @@ export function AppHeader() {
         )}
       </header>
     </>
+<<<<<<< HEAD
 >>>>>>> add-innovative-services-2025
+=======
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
   );
 }

@@ -1,18 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-<<<<<<< HEAD
-=======
-import { TrustedBySection } from "../TrustedBySection";
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
-const blockchainServices = [
-=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Database, 
-  Link as LinkIcon, 
+  Cpu, 
+  Atom, 
   Zap, 
   Shield, 
   Globe, 
@@ -26,53 +17,51 @@ import {
   BarChart3,
   Settings,
   Lightbulb,
-  Rocket,
-  Coins
+  Rocket
 } from 'lucide-react';
 
-const BlockchainServicesPage = () => {
-  const blockchainServices = [
->>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
+const QuantumTechnologyPage = () => {
+  const quantumServices = [
     {
-      id: 'smart-contracts',
-      title: 'Smart Contracts',
-      description: 'Develop and deploy secure, audited smart contracts for various use cases',
-      icon: <Database className="w-8 h-8" />,
-      features: ['Contract Development', 'Security Auditing', 'Testing & Deployment', 'Maintenance'],
-      useCases: ['DeFi Applications', 'NFT Platforms', 'Supply Chain', 'Voting Systems'],
-      pricing: 'Starting from $4,500/month'
+      id: 'quantum-algorithms',
+      title: 'Quantum Algorithms',
+      description: 'Develop and optimize quantum algorithms for complex computational problems',
+      icon: <Cpu className="w-8 h-8" />,
+      features: ['Algorithm Design', 'Quantum Circuit Optimization', 'Error Correction', 'Performance Analysis'],
+      useCases: ['Cryptography', 'Optimization Problems', 'Machine Learning', 'Financial Modeling'],
+      pricing: 'Starting from $8,000/month'
     },
     {
-      id: 'defi-solutions',
-      title: 'DeFi Solutions',
-      description: 'Build decentralized finance applications and protocols',
-      icon: <Coins className="w-8 h-8" />,
-      features: ['DEX Development', 'Lending Protocols', 'Yield Farming', 'Staking Platforms'],
-      useCases: ['Cryptocurrency Trading', 'Lending & Borrowing', 'Asset Management', 'Insurance'],
-      pricing: 'Starting from $6,000/month'
+      id: 'quantum-security',
+      title: 'Quantum Security',
+      description: 'Next-generation security solutions leveraging quantum principles',
+      icon: <Shield className="w-8 h-8" />,
+      features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Random Number Generation', 'Security Audits'],
+      useCases: ['Secure Communications', 'Financial Transactions', 'Government Systems', 'Critical Infrastructure'],
+      pricing: 'Starting from $6,500/month'
     },
     {
-      id: 'nft-platforms',
-      title: 'NFT Platforms',
-      description: 'Create and manage non-fungible token marketplaces and applications',
-      icon: <LinkIcon className="w-8 h-8" />,
-      features: ['Marketplace Development', 'Minting Services', 'Metadata Management', 'Royalty Systems'],
-      useCases: ['Digital Art', 'Gaming', 'Collectibles', 'Real Estate'],
-      pricing: 'Starting from $3,800/month'
+      id: 'quantum-simulation',
+      title: 'Quantum Simulation',
+      description: 'Simulate quantum systems for research and development',
+      icon: <Atom className="w-8 h-8" />,
+      features: ['System Modeling', 'Quantum Chemistry', 'Material Science', 'Drug Discovery'],
+      useCases: ['Research & Development', 'Pharmaceuticals', 'Materials Engineering', 'Scientific Discovery'],
+      pricing: 'Starting from $7,200/month'
     },
     {
-      id: 'enterprise-blockchain',
-      title: 'Enterprise Blockchain',
-      description: 'Private and consortium blockchain solutions for enterprise use',
-      icon: <Globe className="w-8 h-8" />,
-      features: ['Private Networks', 'Consortium Management', 'Permission Systems', 'Integration'],
-      useCases: ['Supply Chain', 'Identity Management', 'Asset Tracking', 'Compliance'],
-      pricing: 'Starting from $8,500/month'
+      id: 'quantum-research',
+      title: 'Research & Development',
+      description: 'Cutting-edge quantum research and development services',
+      icon: <Rocket className="w-8 h-8" />,
+      features: ['Quantum Computing Research', 'Hardware Development', 'Software Frameworks', 'Academic Collaboration'],
+      useCases: ['Technology Innovation', 'Academic Research', 'Industry Partnerships', 'Patent Development'],
+      pricing: 'Starting from $10,000/month'
     }
   ];
 
-  const blockchainPlatforms = [
-    'Ethereum', 'Polygon', 'Solana', 'Cardano', 'Polkadot', 'Hyperledger', 'Corda', 'Quorum'
+  const quantumApplications = [
+    'Cryptography', 'Optimization', 'Machine Learning', 'Chemistry', 'Finance', 'Logistics', 'AI', 'Cybersecurity'
   ];
 
   const containerVariants = {
@@ -107,43 +96,43 @@ const BlockchainServicesPage = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
-            <Database className="w-10 h-10 text-white" />
+            <Cpu className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Blockchain
-            </span> Services
+              Quantum Technology
+            </span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Transform your business with blockchain technology. From smart contracts to DeFi solutions, 
-            we help you build secure, transparent, and decentralized applications.
+            Harness the power of quantum computing for revolutionary breakthroughs. 
+            From quantum algorithms to quantum security, we're at the forefront of the quantum revolution.
           </p>
           
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">100%</div>
-              <div className="text-zion-slate-light">Transparency</div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">1000x</div>
+              <div className="text-zion-slate-light">Faster Processing</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-purple mb-2">Immutable</div>
-              <div className="text-zion-slate-light">Data Security</div>
+              <div className="text-3xl font-bold text-zion-purple mb-2">Unlimited</div>
+              <div className="text-zion-slate-light">Computational Power</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-blue mb-2">Decentralized</div>
-              <div className="text-zion-slate-light">Architecture</div>
+              <div className="text-3xl font-bold text-zion-blue mb-2">Future</div>
+              <div className="text-zion-slate-light">Technology Today</div>
             </div>
           </div>
         </motion.div>
 
-        {/* Blockchain Services Grid */}
+        {/* Quantum Services Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
         >
-          {blockchainServices.map((service, index) => (
+          {quantumServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -196,7 +185,7 @@ const BlockchainServicesPage = () => {
 
               {/* CTA Button */}
               <Link
-                to={`/blockchain-services/${service.id}`}
+                to={`/quantum-technology/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
               >
                 Learn More
@@ -206,7 +195,7 @@ const BlockchainServicesPage = () => {
           ))}
         </motion.div>
 
-        {/* Blockchain Platforms */}
+        {/* Quantum Applications */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -215,30 +204,30 @@ const BlockchainServicesPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Blockchain Platforms We Support
+              Quantum Applications
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              We have expertise across major blockchain platforms and can help you choose 
-              the best solution for your specific use case.
+              Quantum computing opens up new possibilities across various fields, 
+              revolutionizing how we solve complex problems.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {blockchainPlatforms.map((platform, index) => (
+            {quantumApplications.map((application, index) => (
               <motion.div
-                key={platform}
+                key={application}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="text-zion-cyan font-medium">{platform}</div>
+                <div className="text-zion-cyan font-medium">{application}</div>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Blockchain Benefits */}
+        {/* Why Quantum Computing */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -247,18 +236,18 @@ const BlockchainServicesPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Benefits of Blockchain Technology
+              Why Quantum Computing?
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Enhanced Security</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Exponential Speed</h3>
               <p className="text-zion-slate-light">
-                Cryptographic security and immutable data records
+                Solve problems that are impossible for classical computers
               </p>
             </div>
 
@@ -266,9 +255,9 @@ const BlockchainServicesPage = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Lightbulb className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Transparency</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Innovation</h3>
               <p className="text-zion-slate-light">
-                Public ledger with verifiable transaction history
+                Unlock new possibilities in science and technology
               </p>
             </div>
 
@@ -276,9 +265,9 @@ const BlockchainServicesPage = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Efficiency</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Competitive Edge</h3>
               <p className="text-zion-slate-light">
-                Automated processes and reduced intermediaries
+                Stay ahead of the competition with quantum technology
               </p>
             </div>
           </div>
@@ -292,24 +281,24 @@ const BlockchainServicesPage = () => {
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build on the Blockchain?
+            Ready for the Quantum Future?
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our blockchain experts help you create innovative, secure, and transparent 
-            applications that transform your business.
+            Join the quantum revolution and discover how quantum computing can transform 
+            your business and research capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
             >
-              Start Blockchain Project
+              Explore Quantum Solutions
             </Link>
             <Link
               to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              View Blockchain Pricing
+              View Quantum Pricing
             </Link>
           </div>
         </motion.div>
@@ -318,4 +307,4 @@ const BlockchainServicesPage = () => {
   );
 };
 
-export default BlockchainServicesPage;
+export default QuantumTechnologyPage;

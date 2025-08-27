@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { SEOHead } from '../components/seo/SEOHead';
+=======
+import { SEO } from '@/components/SEO';
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -76,6 +80,7 @@ export default function CybersecurityServicesPage() {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <SEOHead 
         title="Cybersecurity Services - Zion Tech Group"
@@ -92,6 +97,13 @@ export default function CybersecurityServicesPage() {
             "name": "Zion Tech Group"
           }
         }}
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
+      <SEO 
+        title="Cybersecurity Services - Zion Tech Group" 
+        description="Enterprise-grade cybersecurity solutions including zero trust architecture, threat detection, and compliance services." 
+        keywords="cybersecurity, zero trust, threat detection, security compliance, SOC2, enterprise security"
+>>>>>>> ff4f0c93d22f1112230dad999864f5dae02b17b2
       />
       
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
