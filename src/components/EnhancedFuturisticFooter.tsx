@@ -68,7 +68,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Data Analytics', href: '/services/data-analytics' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' }
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo' },
+        { name: 'Interview Assessment AI', href: '/services/interview-assessment' },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk' },
+        { name: 'Website Analytics', href: '/services/website-analytics' },
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal' },
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp' }
       ]
     },
     {

@@ -66,6 +66,12 @@ const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalyt
 const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
 const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
+// Additional new service pages
+const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
+const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
+const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
+const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
+const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -162,6 +168,12 @@ function App() {
               <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
               <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
               <Route path="/services/mobile-survey" element={<MobileSurvey />} />
+              {/* Additional new service routes */}
+              <Route path="/services/ai-seo" element={<AIPoweredSEO />} />
+              <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
+              <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
+              <Route path="/services/dsr-portal" element={<DSRPortal />} />
+              <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
