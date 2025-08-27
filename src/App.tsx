@@ -72,6 +72,12 @@ const InterviewAssessmentAI = React.lazy(() => import('./pages/services/Intervie
 const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
+// New AI-powered micro SAAS services
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
+const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -174,6 +180,12 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+              {/* New AI-powered micro SAAS service routes */}
+              <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+              <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
+              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
