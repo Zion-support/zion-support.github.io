@@ -11,9 +11,9 @@ export default defineConfig({
     }
   },
   build: {
-    target: 'esnext',
-    minify: 'esbuild',
-    sourcemap: process.env.NODE_ENV !== 'production',
+    target: 'es2022',
+    minify: 'terser',
+    sourcemap: process.env.NODE_ENV !== 'production' ? 'hidden' : false,
     reportCompressedSize: false,
     outDir: 'dist',
     cssCodeSplit: true,
@@ -68,7 +68,16 @@ export default defineConfig({
       },
       external: [],
     },
-    terserOptions: undefined,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        passes: 2
+      },
+      format: {
+        comments: false
+      }
+    },
   },
   esbuild: {
     legalComments: 'none',

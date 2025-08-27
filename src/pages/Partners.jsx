@@ -1,15 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Handshake, 
-  Users, 
-  Globe, 
-  Award,
-  TrendingUp,
-  Building,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shield, Rocket, Target, TrendingUp, Heart, Crown, Sparkles, Flame, Thunder, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega } from 'lucide-react';
 export default function Partners() {
   const partnershipTypes = [
     {

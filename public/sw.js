@@ -1,4 +1,3 @@
-=======
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
@@ -18,29 +17,12 @@ const API_ROUTES = [
   '/api/blog'
 ];
 // Install event - cache resources
-// Install event - cache static files
-const CACHE_NAME = 'zion-tech-group-v1';
-const urlsToCache = [
-  '/',
-  '/offline.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css'
-];
 // Install event - cache resources
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
-      })
-      .then(() => {
-        console.log('Static files cached successfully');
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Error caching static files:', error);
-      })
+    caches.open(STATIC_CACHE)
+      .then((cache) => cache.addAll(STATIC_FILES))
+      .then(() => self.skipWaiting())
   );
 });
 // Fetch event - serve from cache when offline
@@ -62,21 +44,13 @@ self.addEventListener('fetch', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
+    caches.keys().then((cacheNames) => Promise.all(
+      cacheNames.map((cacheName) => {
+        if (![STATIC_CACHE, DYNAMIC_CACHE].includes(cacheName)) {
+          return caches.delete(cacheName);
+        }
       })
-      .then(() => {
-        console.log('Service worker activated');
-        return self.clients.claim();
-      })
+    )).then(() => self.clients.claim())
   );
 });
 // Fetch event - serve from cache or network
@@ -122,31 +96,16 @@ async function handleApiRequest(request) {
     const cache = await caches.open(DYNAMIC_CACHE);
     const cachedResponse = await cache.match(request);
     if (cachedResponse) {
-      // Return cached response and update in background
-      fetch(request)
-        .then((response) => {
-          if (response.status === 200) {
-            cache.put(request, response);
-          }
-        })
-        .catch(() => {
-          // Ignore fetch errors for background updates
-        });
+      fetch(request).then((response) => {
+        if (response.status === 200) cache.put(request, response.clone());
+      }).catch(() => {});
       return cachedResponse;
     }
-    // If not cached, fetch from network
     const response = await fetch(request);
-    if (response.status === 200) {
-      cache.put(request, response.clone());
-    }
+    if (response.status === 200) cache.put(request, response.clone());
     return response;
   } catch (error) {
-    console.error('API request failed:', error);
-    // Return offline fallback for API requests
-    return new Response(JSON.stringify({ error: 'Service temporarily unavailable' }), {
-      status: 503,
-      headers: { 'Content-Type': 'application/json' }
-    });
+    return new Response(JSON.stringify({ error: 'Service temporarily unavailable' }), { status: 503, headers: { 'Content-Type': 'application/json' } });
   }
 }
 // Handle navigation requests with offline fallback
@@ -160,7 +119,6 @@ async function handleNavigationRequest(request) {
     }
     return response;
   } catch (error) {
-    console.error('Navigation request failed:', error);
     // Try to serve from cache
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
@@ -224,8 +182,6 @@ async function handleStaticAsset(request) {
     }
     return response;
   } catch (error) {
-=======
-    console.error('Static asset fetch failed:', error);
     return new Response('Asset not available', { status: 404 });
   }
 }
@@ -235,7 +191,6 @@ self.addEventListener('sync', (event) => {
     event.waitUntil(doBackgroundSync());
   }
 });
-=======
 async function doBackgroundSync() {
   try {
     // Sync any pending offline actions
@@ -272,32 +227,12 @@ self.addEventListener('push', (event) => {
         dateOfArrival: Date.now(),
         primaryKey: 1
       },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192x192.png'
-      }
-    ]
-  };
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
       actions: [
-        {
-          action: 'explore',
-          title: 'View Services',
-          icon: '/icon-192x192.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/icon-192x192.png'
-        }
+        { action: 'explore', title: 'View Services', icon: '/icon-192x192.png' },
+        { action: 'close', title: 'Close', icon: '/icon-192x192.png' }
       ]
     };
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
+    event.waitUntil(self.registration.showNotification(data.title || 'Zion Tech Group', options));
   }
 });
 // Notification click handling

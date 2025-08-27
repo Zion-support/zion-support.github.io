@@ -876,6 +876,296 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
       website: "https://ziontechgroup.com"
     }
   }
+  ,
+  // Cloud Cost Optimization AI
+  {
+    id: "cloud-cost-optimizer-ai",
+    title: "Cloud Cost Optimizer AI",
+    description: "Autonomous cloud cost optimization that rightsizes, schedules, and negotiates waste across AWS, Azure, and GCP using reinforcement learning and business policies.",
+    category: "AI & Financial Services",
+    subcategory: "FinOps Automation",
+    price: 1499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Automated rightsizing & scheduling",
+      "Spot/RI/Savings Plans optimization",
+      "Multi-cloud & multi-account support",
+      "Unit economics & chargeback",
+      "Cost anomaly detection",
+      "Kubernetes cost allocation (COSTaaS)",
+      "Policy-based guardrails",
+      "Ticketing integrations (Jira, ServiceNow)",
+      "Slack/MS Teams notifications",
+      "FinOps reports & forecasts"
+    ],
+    benefits: [
+      "Cut cloud spend by 20-45%",
+      "Automate savings with guardrails",
+      "Improve forecasting accuracy",
+      "Reduce toil for platform teams",
+      "Transparent chargeback/showback"
+    ],
+    useCases: [
+      "SaaS infra optimization",
+      "Kubernetes platform cost control",
+      "Budget governance",
+      "Anomaly detection",
+      "CFO reporting"
+    ],
+    targetAudience: [
+      "FinOps teams",
+      "Platform engineering",
+      "CIO/CTO",
+      "CFO/Finance",
+      "DevOps"
+    ],
+    tags: ["FinOps", "Cloud", "Kubernetes", "Cost Optimization", "AI"],
+    estimatedDelivery: "2-4 weeks",
+    supportLevel: "professional",
+    marketPrice: "$1,499 - $6,999/month",
+    roi: "200-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "dbt", "BigQuery", "Athena", "K8s"],
+      integrations: ["AWS", "Azure", "GCP", "Datadog", "Snowflake"],
+      apiEndpoints: 85,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001"]
+    }
+  },
+  // SOC 2 & ISO 27001 Compliance Copilot
+  {
+    id: "soc2-iso-compliance-copilot",
+    title: "Compliance Copilot for SOC 2 & ISO 27001",
+    description: "Evidence collection, control mapping, and auditor-ready reports with continuous monitoring across your SaaS stack.",
+    category: "AI & Legal Tech",
+    subcategory: "Compliance Automation",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Automated evidence collection",
+      "Control library & mapping",
+      "Change monitoring & drift alerts",
+      "Vendor risk management",
+      "Access reviews & backups",
+      "Prebuilt auditor templates",
+      "Ticketing & workflow automation",
+      "SSO/SaaS integrations",
+      "Data lineage & retention",
+      "Board-ready reports"
+    ],
+    benefits: [
+      "Cut audit prep time by 70%",
+      "Reduce compliance costs",
+      "Always-on readiness",
+      "Lower security risk",
+      "Faster enterprise deals"
+    ],
+    useCases: ["SOC 2 Type II", "ISO 27001", "HIPAA", "GDPR", "Vendor DD"],
+    targetAudience: ["Security", "GRC", "Legal", "Founders", "Ops"],
+    tags: ["Compliance", "Security", "Audit", "GRC", "Automation"],
+    estimatedDelivery: "3-6 weeks",
+    supportLevel: "professional",
+    marketPrice: "$1,999 - $7,999/month",
+    roi: "150-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Node.js", "PostgreSQL", "OpenAPI", "LLM"],
+      integrations: ["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"],
+      apiEndpoints: 110,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "SAML", "SCIM"]
+    }
+  },
+  // Data Pipeline Observability Platform
+  {
+    id: "data-pipeline-observability",
+    title: "Data Pipeline Observability Platform",
+    description: "End-to-end data quality, freshness, and lineage monitoring for modern data stacks with incident auto-remediation.",
+    category: "AI & Analytics",
+    subcategory: "Data Reliability",
+    price: 1290,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Freshness & volume SLAs",
+      "Schema change detection",
+      "Anomaly detection with LLM root-cause",
+      "Data lineage graph",
+      "dbt & ETL integrations",
+      "Auto-ticketing & runbooks",
+      "Incident postmortems",
+      "Cost & performance insights",
+      "Column-level profiling",
+      "Alert deduplication"
+    ],
+    benefits: [
+      "Reduce data incidents by 60%",
+      "Improve trust in analytics",
+      "Faster incident resolution",
+      "Fewer false positives",
+      "Better SLA adherence"
+    ],
+    useCases: ["Analytics SLAs", "ML data drift", "Reverse ETL quality", "Compliance"],
+    targetAudience: ["Data engineering", "Analytics", "Platform"],
+    tags: ["DataOps", "Observability", "LLM", "dbt", "Lineage"],
+    estimatedDelivery: "3-5 weeks",
+    supportLevel: "professional",
+    marketPrice: "$1,290 - $5,999/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["Python", "Airflow", "dbt", "Spark"],
+      integrations: ["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"],
+      apiEndpoints: 95,
+      uptime: "99.9%",
+      security: ["SOC 2", "Row-level security"]
+    }
+  },
+  // AI Customer Support Agent Platform
+  {
+    id: "ai-customer-support-agent",
+    title: "AI Customer Support Agent Platform",
+    description: "RAG-powered omnichannel support with secure retrieval over your docs, CRM, and tickets. Escalates with full context.",
+    category: "AI & Customer Experience",
+    subcategory: "Support Automation",
+    price: 899,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Omnichannel (chat, email, voice)",
+      "Secure RAG over private data",
+      "Hallucination guardrails",
+      "CRM/ticketing sync",
+      "Analytics & deflection",
+      "Agent assist & macros",
+      "Intent/routing",
+      "Multilingual",
+      "A/B workflows",
+      "Feedback loops"
+    ],
+    benefits: [
+      "30-60% ticket deflection",
+      "Higher CSAT",
+      "Faster resolution",
+      "Lower support costs",
+      "24/7 coverage"
+    ],
+    useCases: ["Support deflection", "Agent assist", "Self-service", "Onboarding"],
+    targetAudience: ["CX leaders", "Support ops", "Founders"],
+    tags: ["RAG", "LLM", "CX", "Zendesk", "Intercom"],
+    estimatedDelivery: "2-4 weeks",
+    supportLevel: "professional",
+    marketPrice: "$899 - $3,999/month",
+    roi: "200-600%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["Typescript", "Vector DB", "LLM", "gRPC"],
+      integrations: ["Zendesk", "Intercom", "Salesforce", "HubSpot"],
+      apiEndpoints: 70,
+      uptime: "99.9%",
+      security: ["SOC 2", "PII redaction"]
+    }
+  },
+  // Privacy Request Automation (DSAR)
+  {
+    id: "privacy-request-automation",
+    title: "Privacy Request Automation (DSAR)",
+    description: "Automated data subject request intake, identity verification, and data discovery across SaaS and data lakes.",
+    category: "AI & Legal Tech",
+    subcategory: "Privacy Automation",
+    price: 1090,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "DSAR intake portal",
+      "Identity verification",
+      "Automated data discovery",
+      "Deletion/rectification workflows",
+      "Auditable timelines",
+      "Multi-jurisdiction templates",
+      "PII detection & redaction",
+      "Data map & lineage",
+      "SaaS connectors",
+      "Legal hold integration"
+    ],
+    benefits: [
+      "Avoid regulatory fines",
+      "Reduce manual review",
+      "Improve accuracy",
+      "Meet SLA requirements",
+      "Improve trust"
+    ],
+    useCases: ["GDPR/CCPA DSAR", "Right to be forgotten", "DPIA support"],
+    targetAudience: ["Legal", "Privacy", "Security", "Data"],
+    tags: ["Privacy", "Compliance", "DSAR", "Automation"],
+    estimatedDelivery: "3-6 weeks",
+    supportLevel: "professional",
+    marketPrice: "$1,090 - $4,999/month",
+    roi: "200-400%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  },
+  // MLOps Continuous Delivery Platform
+  {
+    id: "mlops-continuous-delivery",
+    title: "MLOps Continuous Delivery Platform",
+    description: "Feature store, model registry, canary deployments, drift detection, and governance for reliable AI delivery.",
+    category: "AI & Analytics",
+    subcategory: "MLOps Platform",
+    price: 2490,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Feature store & pipelines",
+      "Model registry & lineage",
+      "Shadow/canary/blue-green",
+      "Real-time drift & bias detection",
+      "Monitoring & alerting",
+      "Rollback & governance",
+      "RBAC & audit trails",
+      "Cloud-native deployment",
+      "SDK & CLI",
+      "Compliance templates"
+    ],
+    benefits: [
+      "Ship models faster",
+      "Reduce incidents",
+      "Improve accuracy",
+      "Lower ops costs",
+      "Meet compliance"
+    ],
+    useCases: ["Personalization", "Forecasting", "Fraud", "NLP", "Vision"],
+    targetAudience: ["ML engineers", "Data science", "Platform"],
+    tags: ["MLOps", "LLMOps", "Feature Store", "Registry"],
+    estimatedDelivery: "4-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,490 - $9,999/month",
+    roi: "200-500%",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["Kubernetes", "Kafka", "Ray", "Feast"],
+      integrations: ["SageMaker", "Vertex AI", "Databricks", "MLflow"],
+      apiEndpoints: 140,
+      uptime: "99.95%",
+      security: ["SOC 2", "RBAC", "IAM"]
+    }
+  }
 ];
 
 export default EXPANDED_INNOVATIVE_SERVICES_2025;
