@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  showDetails?: boolean;
 }
 
 interface State {
@@ -21,7 +23,7 @@ export class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
@@ -36,8 +38,8 @@ export class ErrorBoundary extends Component<Props, State> {
     this.logErrorToService(error, errorInfo);
     
     this.setState({
-      error,
-      errorInfo
+      errorInfo,
+      recoveryAttempts: this.state.recoveryAttempts + 1
     });
   }
 
@@ -228,4 +230,32 @@ Please provide any additional context about what you were doing when this error 
   }
 }
 
-export default ErrorBoundary;
+// Hook for functional components to catch errors
+export const useErrorHandler = () => {
+  const handleError = (error: Error, errorInfo?: any) => {
+    console.error('Error caught by useErrorHandler:', error, errorInfo);
+    
+    // You can add custom error handling logic here
+    // For example, sending to an error reporting service
+    
+    // Re-throw the error to be caught by the nearest ErrorBoundary
+    throw error;
+  };
+
+  return { handleError };
+};
+
+// Higher-order component for error handling
+export const withErrorBoundary = <P extends object>(
+  Component: React.ComponentType<P>,
+  errorBoundaryProps?: Partial<Props>
+) => {
+  const WrappedComponent = (props: P) => (
+    <ErrorBoundary {...errorBoundaryProps}>
+      <Component {...props} />
+    </ErrorBoundary>
+  );
+
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+  return WrappedComponent;
+};

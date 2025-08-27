@@ -5,8 +5,10 @@ import { EnhancedLayout } from './components/EnhancedLayout';
 import { ChatAssistant } from './components/ChatAssistant';
 import { AIChatbotSystem } from './components/AIChatbotSystem';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { NotificationSystem } from './components/NotificationSystem';
+import { EnhancedLoading, loadingConfigs } from './components/EnhancedLoading';
 import { AccessibilityProvider } from './components/AccessibilityProvider';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { SEO } from './components/SEO';
 
 // Lazy load pages - only import existing ones
@@ -24,18 +26,11 @@ const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-    <div className="relative">
-      <div className="w-32 h-32 border-4 border-zion-cyan/20 rounded-full"></div>
-      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-lg">
-        ZION
-      </div>
-      <div className="mt-4 text-center">
-        <div className="text-zion-cyan text-sm animate-pulse">Loading amazing experiences...</div>
-      </div>
-    </div>
-  </div>
+  <EnhancedLoading
+    isLoading={true}
+    {...loadingConfigs.pageLoad}
+    autoComplete={false}
+  />
 );
 
 function App() {
@@ -80,8 +75,11 @@ function App() {
             {/* AI Chatbot System */}
             <AIChatbotSystem />
             
-            {/* Performance Monitor */}
-            <PerformanceMonitor />
+            {/* Performance Optimizer */}
+            <PerformanceOptimizer />
+            
+            {/* Notification System */}
+            <NotificationSystem />
           </Router>
         </AccessibilityProvider>
       </ErrorBoundary>
