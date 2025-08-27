@@ -99,18 +99,19 @@ const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
-// Additional innovative AI services
-const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
-const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
-const AIHRTalentPlatform = React.lazy(() => import('./pages/services/AIHRTalentPlatform'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
-const InnovativeAIServicesShowcase = React.lazy(() => import('./pages/InnovativeAIServicesShowcase'));
+// 2026 Services pages
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'));
+const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
+const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
 
-// Innovative new services
-const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
-const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
-const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
-const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
+// Additional pages
+const API = React.lazy(() => import('./pages/API'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 
 // Accessibility page
 const Accessibility = () => (
@@ -235,21 +236,19 @@ function App() {
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               
-              {/* Additional innovative AI service routes */}
-              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
-              <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
-              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
-              <Route path="/services/ai-hr-talent-platform" element={<AIHRTalentPlatform />} />
-              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
-              
-              {/* Showcase Pages */}
-              <Route path="/innovative-ai-services" element={<InnovativeAIServicesShowcase />} />
-              
-              {/* New Innovative Services */}
-              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              {/* 2026 Services routes */}
+              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
               <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
-              <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
               <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+              <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+              <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+              <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
+              <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+              <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+              
+              {/* Additional routes */}
+              <Route path="/api" element={<API />} />
+              <Route path="/developers" element={<DeveloperPortal />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
