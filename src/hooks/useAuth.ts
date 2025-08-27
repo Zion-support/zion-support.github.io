@@ -10,12 +10,15 @@ interface User {
   avatarUrl?: string;
 }
 
+<<<<<<< HEAD
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
 }
 
+=======
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);

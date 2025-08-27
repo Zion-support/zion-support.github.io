@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+<<<<<<< HEAD
 import {
   Brain, Cloud, Database, Shield, Settings, Zap, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart,
   Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Filter, Building
@@ -75,6 +76,11 @@ interface Service {
   benefits?: string[];
 }
 
+=======
+import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, Star, DollarSign, Clock, Users, Search, Building } from 'lucide-react';
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
+import { SEO } from '@/components/SEO';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 export default function ComprehensiveServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -100,6 +106,7 @@ export default function ComprehensiveServicesPage() {
         };
         return colorMap[type] || 'bg-gray-100 text-gray-800';
     };
+<<<<<<< HEAD
     return colorMap[type] || 'bg-gray-100 text-gray-800';
   };
 
@@ -111,6 +118,10 @@ export default function ComprehensiveServicesPage() {
           keywords="micro SAAS, IT services, AI solutions, Zion Tech Group"
           url="https://ziontechgroup.com/comprehensive-services"
         />
+=======
+    return (<div className="min-h-screen bg-zion-blue-dark">
+              <SEO title="Comprehensive Micro SAAS Solutions - Zion Tech Group" description="Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth" keywords="micro SAAS, IT services, AI solutions, Zion Tech Group" url="https://ziontechgroup.com/comprehensive-services"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
@@ -354,6 +365,7 @@ export default function ComprehensiveServicesPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
     <>
       <SEOHead 
@@ -694,3 +706,7 @@ export default function ComprehensiveServicesPage() {
     </>
   );
 }
+=======
+    </div>);
+}
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

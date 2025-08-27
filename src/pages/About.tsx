@@ -74,7 +74,7 @@ import {
   Layers,
   Layout,
   LifeBuoy,
-  Link,
+  Link as LinkIcon,
   Link2,
   List,
   Loader,

@@ -195,11 +195,10 @@
 
 /* Enhanced Text Gradients */
 .text-gradient {
-  background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-blue) 50%, var(--zion-purple) 100%);
+  background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-purple) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradientShift 3s ease-in-out infinite;
 }
 
 /* Advanced Holographic Effects */
@@ -259,8 +258,6 @@
   background-size: 200px 100px;
   animation: particleFloat 20s linear infinite;
   opacity: 0.6;
-}
-  background-clip: text;
 }
 
 .text-gradient-cyan {

@@ -112,10 +112,6 @@ import {
   FastForwardTriangle,
   ShuffleTriangle,
   RepeatTriangle,
-  Repeat1Triangle,
-  Shuffle2Triangle,
-  SkipBack2Triangle,
-  SkipForward2Triangle,
   PlayOctagon,
   PauseOctagon,
   StopOctagon,
@@ -137,11 +133,7 @@ import {
   RewindDodecagon,
   FastForwardDodecagon,
   ShuffleDodecagon,
-  RepeatDodecagon,
-  Repeat1Triangle,
-  Shuffle2Triangle,
-  SkipBack2Triangle,
-  SkipForward2Triangle
+  RepeatDodecagon
 } from 'lucide-react';
 
 // Import the enhanced services showcase component

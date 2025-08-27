@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 
 import { SEO } from "../components/SEOHead";
+=======
+import { SEO } from "@/components/SEO";
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 import { ApplicationsTracker } from "@/components/jobs/applications";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Inbox } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
+<<<<<<< HEAD
   const isMobile = useIsMobile();
   
   return (
@@ -14,6 +19,11 @@ function ApplicationStatusTrackerContent() {
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
+=======
+    const isMobile = useIsMobile();
+    return (<>
+      <SEO title="Application Status Tracker | Zion AI Marketplace" description="Track the status of your job applications in the Zion AI marketplace."/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
