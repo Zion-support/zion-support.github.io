@@ -1,17 +1,16 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
-import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { FloatingActionButton } from './components/ui/FloatingActionButton';
 
-// Lazy load pages with enhanced services
-const Home = React.lazy(() => import('./pages/Home'));
+// Lazy load only existing pages
+const Home = React.lazy(() => import('./pages/index'));
 const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+const Contact = React.lazy(() => import('./pages/contact'));
+const Services = React.lazy(() => import('./pages/services'));
+const Products = React.lazy(() => import('./pages/products'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
@@ -25,181 +24,90 @@ const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Events = React.lazy(() => import('./pages/Events'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
 
-// Enhanced services pages
-const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
-const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
-const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
-const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
-const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
-const InnovativeServices2028 = React.lazy(() => import('./pages/InnovativeServices2028'));
-
-// Service pages - only import existing ones
+// Service pages
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 
-// Simple placeholder pages for missing ones
-const FAQ = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="FAQ - Zion Tech Group"
-      description="Frequently asked questions about our AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">FAQ</h1>
-      <p className="text-xl text-gray-300">Frequently asked questions</p>
-    </div>
-  </div>
-);
-
-const Careers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
-    </div>
-  </div>
-);
-
-const Privacy = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Privacy Policy - Zion Tech Group"
-      description="Learn how Zion Tech Group protects your data and maintains privacy in our technology solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
-      <p className="text-xl text-gray-300">How we protect your data</p>
-    </div>
-  </div>
-);
-
-const Terms = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Terms of Service - Zion Tech Group"
-      description="Terms and conditions for using Zion Tech Group's AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-      <p className="text-xl text-gray-300">Our terms and conditions</p>
-    </div>
-  </div>
-);
-
-const Sitemap = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Sitemap - Zion Tech Group"
-      description="Complete site navigation structure for Zion Tech Group's technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
-      <p className="text-xl text-gray-300">Site navigation structure</p>
-    </div>
-  </div>
-);
-
-const Signup = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Sign Up - Zion Tech Group"
-      description="Create your account to access Zion Tech Group's AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Sign Up</h1>
-      <p className="text-xl text-gray-300">Create your account</p>
-    </div>
-  </div>
-);
-
-const Marketplace = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Marketplace - Zion Tech Group"
-      description="Browse our comprehensive range of AI-powered technology solutions, cloud services, and cybersecurity offerings."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
-      <p className="text-xl text-gray-300">Browse our services and solutions</p>
-    </div>
-  </div>
-);
-
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-futuristic">
-        <SEO />
-        <AppHeader />
-        
-        <main className="flex-1">
-          <ErrorBoundary>
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/green-it" element={<GreenIT />} />
-                <Route path="/partners" element={<PartnersPage />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/search" element={<SearchPage />} />
-                <Route path="/help-center" element={<HelpCenter />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/research-development" element={<ResearchDevelopment />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/request-quote" element={<RequestQuote />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                
-                {/* Enhanced Services Routes */}
-                <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
-                <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
-                <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
-                <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
-                <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
-                <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
-                <Route path="/enhanced-zion-services-2025" element={<EnhancedZionServicesShowcase2025 />} />
-                <Route path="/zion-tech-group-marketing-2025" element={<ZionTechGroupMarketing2025 />} />
-                <Route path="/innovative-services-2028" element={<InnovativeServices2028 />} />
-                
-                {/* Service Routes - only for existing pages */}
-                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                
-                {/* Catch all route */}
-                <Route path="*" element={<Home />} />
-              </Routes>
-            </Suspense>
-          </ErrorBoundary>
-        </main>
-        
-        <Footer />
-        <ChatAssistant />
-        <FloatingActionButton />
-      </div>
+      <ErrorBoundary>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              {/* Main Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/solutions" element={<Solutions />} />
+              
+              {/* Content Routes */}
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              
+              {/* Service Routes */}
+              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              <Route path="/services-page" element={<ServicesPage />} />
+              
+              {/* Utility Routes */}
+              <Route path="/login" element={<Login />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/help" element={<HelpCenter />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              
+              {/* Catch-all route */}
+              <Route path="*" element={
+                <div className="min-h-screen flex items-center justify-center">
+                  <SEO 
+                    title="Page Not Found - Zion Tech Group"
+                    description="The page you're looking for doesn't exist."
+                  />
+                  <div className="text-center text-white">
+                    <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+                    <p className="text-xl text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                    <a 
+                      href="/" 
+                      className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 transition-all"
+                    >
+                      Go Home
+                    </a>
+                  </div>
+                </div>
+              } />
+            </Routes>
+          </Suspense>
+          <Footer />
+        </div>
+      </ErrorBoundary>
     </Router>
   );
 }
