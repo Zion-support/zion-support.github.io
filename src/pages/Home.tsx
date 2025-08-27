@@ -198,6 +198,7 @@ import {
   Video2,
   VideoOff,
   Voicemail,
+  Voicemail,
   Volume,
   Volume1,
   Volume2,
@@ -212,7 +213,10 @@ import {
   Youtube,
   Zap2,
   ZoomIn,
-  ZoomOut
+  ZoomOut,
+  Quote,
+  Calendar,
+  Building2
 } from 'lucide-react';
 
 export default function Home() {
@@ -249,28 +253,32 @@ export default function Home() {
       title: "AI & Machine Learning",
       description: "Revolutionary AI solutions that transform business operations",
       features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Autonomous Systems"],
-      link: "/services/ai"
+      link: "/services/ai",
+      color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Cloud,
       title: "Cloud Infrastructure",
       description: "Scalable cloud solutions for modern enterprises",
       features: ["Multi-Cloud Strategy", "DevOps Automation", "Serverless Architecture", "Cost Optimization"],
-      link: "/services/cloud"
+      link: "/services/cloud",
+      color: "from-purple-500 to-pink-500"
     },
     {
       icon: Shield,
       title: "Cybersecurity",
       description: "Advanced security solutions for digital protection",
       features: ["Zero Trust Architecture", "Threat Intelligence", "Incident Response", "Compliance"],
-      link: "/services/cybersecurity"
+      link: "/services/cybersecurity",
+      color: "from-green-500 to-emerald-500"
     },
     {
       icon: Zap,
       title: "Digital Transformation",
       description: "End-to-end digital transformation services",
       features: ["Process Automation", "Legacy Modernization", "Data Strategy", "Change Management"],
-      link: "/services/transformation"
+      link: "/services/transformation",
+      color: "from-orange-500 to-red-500"
     }
   ];
 
@@ -297,6 +305,57 @@ export default function Home() {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      role: "CTO, TechCorp Global",
+      company: "TechCorp Global",
+      content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.",
+      rating: 5,
+      avatar: "/images/testimonials/sarah-chen.jpg"
+    },
+    {
+      name: "Marcus Rodriguez",
+      role: "VP Engineering, InnovateTech",
+      company: "InnovateTech",
+      content: "The quantum computing solutions they implemented are revolutionary. We're seeing performance improvements we never thought possible.",
+      rating: 5,
+      avatar: "/images/testimonials/marcus-rodriguez.jpg"
+    },
+    {
+      name: "Dr. Elena Petrov",
+      role: "Research Director, QuantumLabs",
+      company: "QuantumLabs",
+      content: "Working with Zion Tech Group has been transformative. Their expertise in autonomous systems is unmatched in the industry.",
+      rating: 5,
+      avatar: "/images/testimonials/elena-petrov.jpg"
+    }
+  ];
+
+  const latestNews = [
+    {
+      title: "AI Consciousness Breakthrough",
+      excerpt: "Our team has achieved a major milestone in AI consciousness research...",
+      date: "2025-01-26",
+      category: "AI Research",
+      readTime: "5 min read"
+    },
+    {
+      title: "Quantum Computing Milestone",
+      excerpt: "New quantum algorithms are revolutionizing our approach to complex problems...",
+      date: "2025-01-24",
+      category: "Quantum Tech",
+      readTime: "7 min read"
+    },
+    {
+      title: "Autonomous Systems Launch",
+      excerpt: "Launching our next-generation autonomous business operations platform...",
+      date: "2025-01-22",
+      category: "Innovation",
+      readTime: "4 min read"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -309,6 +368,15 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6"
+            >
+              <Star className="w-4 h-4 mr-2" />
+              Leading the Future of Technology
+            </motion.div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Revolutionary
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -321,7 +389,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
               >
                 Explore Services
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -354,11 +422,15 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-center group"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-4">
+                <motion.div 
+                  className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-4 group-hover:scale-110 transition-transform duration-300"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <stat.icon className="h-8 w-8 text-white" />
-                </div>
+                </motion.div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold text-zion-cyan mb-1">{stat.label}</div>
                 <div className="text-sm text-zion-slate-light">{stat.description}</div>
@@ -394,9 +466,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-xl p-6 border border-zion-slate/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-xl p-6 border border-zion-slate/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105 group"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl mb-4">
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
@@ -411,7 +483,7 @@ export default function Home() {
                 </ul>
                 <Link
                   to={service.link}
-                  className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                  className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors group-hover:translate-x-1 duration-300"
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -448,13 +520,130 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-center group"
               >
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
+                <motion.div 
+                  className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6 group-hover:scale-110 transition-transform duration-300"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
                   <feature.icon className="h-10 w-10 text-white" />
-                </div>
+                </motion.div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              What Our <span className="text-zion-cyan">Clients Say</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what industry leaders have to say about working with us.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-xl p-6 border border-zion-slate/20 hover:border-zion-cyan/50 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mr-3">
+                    <User className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
+                    <p className="text-zion-cyan text-sm">{testimonial.company}</p>
+                  </div>
+                </div>
+                <div className="flex items-center mb-3">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <blockquote className="text-zion-slate-light italic">
+                  "{testimonial.content}"
+                </blockquote>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News Section */}
+      <section className="py-20 bg-zion-slate-dark/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Latest <span className="text-zion-cyan">News</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Stay updated with our latest breakthroughs, research findings, and industry insights.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {latestNews.map((news, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/30 backdrop-blur-sm rounded-xl p-6 border border-zion-slate/20 hover:border-zion-cyan/50 transition-all duration-300 group"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
+                    {news.category}
+                  </span>
+                  <span className="text-zion-slate-light text-xs flex items-center">
+                    <Clock className="h-3 w-3 mr-1" />
+                    {news.readTime}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
+                  {news.title}
+                </h3>
+                <p className="text-zion-slate-light text-sm mb-3">
+                  {news.excerpt}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-zion-slate-light text-xs flex items-center">
+                    <Calendar className="h-3 w-3 mr-1" />
+                    {new Date(news.date).toLocaleDateString()}
+                  </span>
+                  <Link
+                    to="/blog"
+                    className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors duration-300"
+                  >
+                    Read More →
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -469,28 +658,31 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl p-12 text-center"
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl p-12 text-center relative overflow-hidden"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Join hundreds of companies already leveraging our revolutionary technology solutions to achieve unprecedented growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-zion-slate-dark font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-slate-dark transition-all duration-300"
-              >
-                View All Services
-              </Link>
+            <div className="absolute inset-0 bg-black/10"></div>
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+                Join hundreds of companies already leveraging our revolutionary technology solutions to achieve unprecedented growth and innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-white text-zion-slate-dark font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Start Your Journey
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-slate-dark transition-all duration-300"
+                >
+                  View All Services
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
