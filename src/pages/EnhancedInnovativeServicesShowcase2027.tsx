@@ -37,7 +37,7 @@ import {
   Play,
   Eye,
   X,
-  Flask
+  FlaskConical
 } from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
 
@@ -87,7 +87,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       case 'AI & Energy Management': return <Zap className="w-5 h-5" />;
       case 'Quantum & Networking': return <Globe className="w-5 h-5" />;
       case 'AI & Education Technology': return <Users className="w-5 h-5" />;
-      case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />;
+      case 'Quantum & Materials Science': return <FlaskConical className="w-5 h-5" />;
       case 'AI & Space Technology': return <Rocket className="w-5 h-5" />;
       case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;
