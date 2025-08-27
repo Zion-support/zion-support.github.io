@@ -38,10 +38,12 @@ import {
   Sparkles,
   Zap as ZapIcon
 } from 'lucide-react';
-import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
-import ComprehensiveServicesShowcase2025 from '../components/ComprehensiveServicesShowcase2025';
-import { InteractiveTestimonials } from '../components/InteractiveTestimonials';
-import { SEO } from '../components/SEO';
+
+// Lazy load components for better performance
+const UltimateServicesShowcase2025 = React.lazy(() => import('../components/UltimateServicesShowcase2025'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('../components/ComprehensiveServicesShowcase2025'));
+const InteractiveTestimonials = React.lazy(() => import('../components/InteractiveTestimonials'));
+const SEO = React.lazy(() => import('../components/SEO'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -59,26 +61,26 @@ const EnhancedLoadingSpinner = () => (
   </div>
 );
 
-// Futuristic animated background component
-const FuturisticBackground = () => (
+// Futuristic animated background component with performance optimizations
+const FuturisticBackground = React.memo(() => (
   <div className="fixed inset-0 overflow-hidden pointer-events-none">
     {/* Animated grid with neon effect */}
     <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
     
-    {/* Enhanced floating particles with neon glow */}
+    {/* Enhanced floating particles with neon glow - optimized for performance */}
     <div className="absolute inset-0">
-      {[...Array(30)].map((_, i) => (
+      {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
           animate={{
-            x: [0, 150, 0],
-            y: [0, -150, 0],
+            x: [0, 100, 0],
+            y: [0, -100, 0],
             opacity: [0.4, 1, 0.4],
-            scale: [0.5, 1.5, 0.5],
+            scale: [0.5, 1.2, 0.5],
           }}
           transition={{
-            duration: 4 + i * 0.3,
+            duration: 3 + i * 0.2,
             repeat: Infinity,
             delay: i * 0.1,
             ease: "easeInOut"
@@ -104,87 +106,23 @@ const FuturisticBackground = () => (
         ease: "easeInOut"
       }}
     />
+    
     <motion.div 
-      className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl"
+      className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-l from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
       animate={{
         scale: [1.2, 1, 1.2],
-        opacity: [0.6, 0.3, 0.6],
+        opacity: [0.4, 0.7, 0.4],
       }}
       transition={{
         duration: 5,
         repeat: Infinity,
-        ease: "easeInOut",
-        delay: 1
+        ease: "easeInOut"
       }}
     />
-    
-    {/* New neon accent orbs */}
-    <motion.div 
-      className="absolute top-1/2 left-1/4 w-48 h-48 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-2xl"
-      animate={{
-        scale: [1, 1.3, 1],
-        opacity: [0.2, 0.5, 0.2],
-      }}
-      transition={{
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: 2
-      }}
-    />
-    
-    {/* Animated neon lines */}
-    <div className="absolute inset-0">
-      {[...Array(5)].map((_, i) => (
-        <motion.div
-          key={`line-${i}`}
-          className="absolute h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
-          style={{
-            top: `${20 + i * 15}%`,
-            left: '0%',
-            right: '0%',
-          }}
-          animate={{
-            opacity: [0, 1, 0],
-            scaleX: [0, 1, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            delay: i * 0.5,
-            ease: "easeInOut"
-          }}
-        />
-      ))}
-    </div>
-    
-    {/* Floating geometric shapes */}
-    <div className="absolute inset-0">
-      {[...Array(8)].map((_, i) => (
-        <motion.div
-          key={`shape-${i}`}
-          className={`absolute border border-cyan-400/30 opacity-40 ${
-            i % 2 === 0 ? 'w-8 h-8' : 'w-6 h-6'
-          }`}
-          style={{
-            left: `${10 + i * 10}%`,
-            top: `${15 + i * 8}%`,
-          }}
-          animate={{
-            rotate: [0, 360],
-            scale: [0.8, 1.2, 0.8],
-            opacity: [0.2, 0.6, 0.2],
-          }}
-          transition={{
-            duration: 8 + i,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-      ))}
-    </div>
   </div>
-);
+));
+
+FuturisticBackground.displayName = 'FuturisticBackground';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
