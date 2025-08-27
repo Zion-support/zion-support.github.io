@@ -1,19 +1,15 @@
-
 import React, { useState } from "react";
 import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-
 export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth();
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-  
-  // Show loading while checking authentication
-  if (isLoading) {
-    return (
-      <div className="flex justify-center items-center min-h-screen bg-zion-blue">
+    const { isAuthenticated, isLoading } = useAuth();
+    const [generatedDescription, setGeneratedDescription] = useState(null);
+    // Show loading while checking authentication
+    if (isLoading) {
+        return (<div className="flex justify-center items-center min-h-screen bg-zion-blue">
         <div className="animate-pulse text-zion-purple text-lg">
           Loading...
         </div>
@@ -33,7 +29,7 @@ export default function ServiceDescriptionGenerator() {
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
-      <SEO 
+      <SEOHead 
         title="Service Description Generator" 
         description="Generate professional service descriptions using AI"
         keywords="service description, AI content, professional description generator"
@@ -47,18 +43,12 @@ export default function ServiceDescriptionGenerator() {
           </p>
           
           <div className="space-y-8">
-            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
+            <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription}/>
             
-            {generatedDescription && (
-              <GeneratedDescriptionDisplay 
-                description={generatedDescription}
-                onSave={handleDescriptionSave}
-              />
-            )}
+            {generatedDescription && (<GeneratedDescriptionDisplay description={generatedDescription} onSave={handleDescriptionSave}/>)}
           </div>
         </div>
       </main>
       
-    </div>
-  );
+    </div>);
 }

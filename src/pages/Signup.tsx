@@ -1,7 +1,7 @@
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
@@ -9,19 +9,6 @@ import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucid
 import { useAuth } from "@/hooks/useAuth";
 import { register } from "@/services/auth";
 import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 
 // Form validation schema
 const signupSchema = z
@@ -43,8 +30,6 @@ const signupSchema = z
     path: ["confirmPassword"],
   });
 
-type SignupFormValues = z.infer<typeof signupSchema>;
-
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
@@ -52,7 +37,6 @@ export default function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   // Track confirm password locally to prevent it from clearing on blur
   const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
-  const passwordValue = form.watch("password");
   const [isSubmitting, setIsSubmitting] = useState(false);
   
   // Initialize react-hook-form
@@ -65,10 +49,12 @@ export default function Signup() {
       confirmPassword: "",
       termsAccepted: false,
     },
-  }) as UseFormReturn<SignupFormValues>;
+  });
+
+  const passwordValue = form.watch("password");
 
   // Form submission handler
-  const onSubmit = async (data: SignupFormValues) => {
+  const onSubmit = async (data) => {
     if (isSubmitting) return; // Prevent multiple submissions
 
     setIsSubmitting(true);
@@ -93,49 +79,50 @@ export default function Signup() {
         setUser(resData.user);
         setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null });
 
-      // Handle email verification required case
-      if (resData?.emailVerificationRequired) {
-        setShowVerificationMessage(true);
-        // Do not proceed to set session or navigate
-      } else if (resData?.session) {
-        // Set the session directly if verification is not required
-        const { error: sessionError } = await supabase.auth.setSession(resData.session);
-        if (sessionError) {
-          console.error("Error setting session:", sessionError);
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.");
+        // Handle email verification required case
+        if (resData?.emailVerificationRequired) {
+          setShowVerificationMessage(true);
+          // Do not proceed to set session or navigate
+        } else if (resData?.session) {
+          // Set the session directly if verification is not required
+          const { error: sessionError } = await supabase.auth.setSession(resData.session);
+          if (sessionError) {
+            console.error("Error setting session:", sessionError);
+            form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
+            toast.error(sessionError.message || "Failed to set session. Please try logging in.");
+            return;
+          }
+          // The onAuthStateChange listener in AuthProvider should now handle
+          // updating user state and navigating if necessary for other cases.
+          // For direct signup with session, we can navigate.
+          toast.success("Welcome to ZionAI 🎉");
+          navigate("/dashboard");
+        } else {
+          // This case might indicate an unexpected response from the API
+          console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
+          form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
+          toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
+          // Potentially navigate to login or show a more specific error
           return;
         }
-        // The onAuthStateChange listener in AuthProvider should now handle
-        // updating user state and navigating if necessary for other cases.
-        // For direct signup with session, we can navigate.
-        toast.success("Welcome to ZionAI 🎉");
-        navigate("/dashboard");
-      } else {
-        // This case might indicate an unexpected response from the API
-        console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
-        form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
-        toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
-        // Potentially navigate to login or show a more specific error
-        return;
-      }
 
-      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
-      if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
-        try {
-          await mailchimpService.addSubscriber({
-            email: data.email,
-            mergeFields: { FNAME: data.displayName }
-          });
-          await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
-        } catch (err) {
-          console.error('Mailchimp subscription failed', err);
-          // Non-critical error, don't block user flow
+        // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
+        if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
+          try {
+            await mailchimpService.addSubscriber({
+              email: data.email,
+              mergeFields: { FNAME: data.displayName }
+            });
+            await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
+          } catch (err) {
+            console.error('Mailchimp subscription failed', err);
+            // Non-critical error, don't block user flow
+          }
         }
+        // Toast and navigation are handled above if session is present
+        // If emailVerificationRequired, no toast/navigation here, message is shown
       }
-      // Toast and navigation are handled above if session is present
-      // If emailVerificationRequired, no toast/navigation here, message is shown
-    } catch (err: any) {
+    } catch (err) {
       const message = err.message ?? "Registration failed";
       form.setError("root", { message });
       toast.error(message);
@@ -144,8 +131,8 @@ export default function Signup() {
     }
   };
 
-  const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof SignupFormValues;
+  const onInvalid = (errors) => {
+    const firstError = Object.keys(errors)[0];
     if (firstError) {
       form.setFocus(firstError);
     }
@@ -391,7 +378,7 @@ export default function Signup() {
                       <path d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z" fill="#EA4335" />
                       <path d="M23.49 12.275C23.49 11.49 23.415 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.34 17.25 16.08 18.1L19.945 21.1C22.2 19.01 23.49 15.92 23.49 12.275Z" fill="#4285F4" />
                       <path d="M5.26498 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26498 9.7049L1.275 6.60986C0.46 8.22986 0 10.0599 0 11.9999C0 13.9399 0.46 15.7699 1.28 17.3899L5.26498 14.2949Z" fill="#FBBC05" />
-                      <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.2654 14.29L1.27539 17.385C3.25539 21.31 7.3104 24 12.0004 24Z" fill="#34A853" />
+                      <path d="M12.0004 24C15.2404 24 17.9654 22.935 19.9454 21.095L16.0804 18.095C15.0054 18.82 13.6204 19.245 12.0004 19.245C8.8704 19.245 6.21537 17.135 5.26540 14.29L1.27539 17.385C3.25539 21.31 7.31040 24 12.0004 24Z" fill="#34A853" />
                     </svg>
                   </Button>
                   <Button

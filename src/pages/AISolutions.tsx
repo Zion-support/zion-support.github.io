@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket } from 'lucide-react';
 
 const AISolutions: React.FC = () => {
@@ -73,7 +73,7 @@ const AISolutions: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background pt-20">
-      <SEO 
+      <SEOHead 
         title="AI Solutions - Zion Tech Group" 
         description="Discover cutting-edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group."
         keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence"
@@ -118,31 +118,24 @@ const AISolutions: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <div
-                key={service.title}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group"
-              >
+            {aiServices.map((service, index) => (<div key={service.title} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group">
                 <div className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
+                    <service.icon className="w-8 h-8 text-white"/>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-600">
+                    {service.features.map((feature) => (<li key={feature} className="flex items-center text-sm text-gray-600">
                         <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                         {feature}
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
                   <button className="w-full py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                     Learn More
                   </button>
                 </div>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -160,15 +153,13 @@ const AISolutions: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit) => (
-              <div key={benefit.title} className="text-center">
+            {benefits.map((benefit) => (<div key={benefit.title} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit.icon className="w-8 h-8 text-white"/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
+              </div>))}
           </div>
         </div>
       </section>
@@ -193,8 +184,6 @@ const AISolutions: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 };
-
 export default AISolutions;

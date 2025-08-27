@@ -11,7 +11,31 @@ import {
   Mail, 
   MapPin,
   ChevronRight,
-  Search
+  Search,
+  Home,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Globe,
+  ChevronDown,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Users,
+  FileText,
+  HelpCircle,
+  BookOpen,
+  Target,
+  TrendingUp,
+  Star
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -38,7 +62,7 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Home',
     href: '/',
-    icon: <Zap className="w-4 h-4" />
+    icon: <Home className="w-4 h-4" />
   },
   {
     name: 'Services',
@@ -56,12 +80,12 @@ const sidebarItems: SidebarItem[] = [
   {
     name: 'Pricing',
     href: '/pricing/',
-    icon: <Sparkles className="w-4 h-4" />
+    icon: <Award className="w-4 h-4" />
   },
   {
     name: 'Blog',
     href: '/blog/',
-    icon: <Sparkles className="w-4 h-4" />
+    icon: <BookOpen className="w-4 h-4" />
   },
   {
     name: 'Contact',

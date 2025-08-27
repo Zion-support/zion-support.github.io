@@ -5,9 +5,9 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
 
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(['getting-started']);
+  const [expandedCategories, setExpandedCategories] = useState(['getting-started']);
 
-  const toggleCategory = (category: string) => {
+  const toggleCategory = (category) => {
     setExpandedCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)
@@ -374,7 +374,7 @@ const HelpCenter: React.FC = () => {
 import React from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
@@ -506,7 +506,7 @@ export default function HelpCenter() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Help Center - Zion Tech Group" 
         description="Get help and support for using Zion Tech Group's AI and tech marketplace platform."
         keywords="help, support, documentation, Zion Tech Group, AI marketplace, tech services"
@@ -577,7 +577,7 @@ const $page: React.FC = () => {
                 );
               })}
 import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -662,7 +662,7 @@ export default function HelpCenter() {
 
   return (
     <AppLayout>
-      <SEO 
+      <SEOHead 
         title="Help Center - Zion Tech Group Support" 
         description="Get help and support for using the Zion AI and tech marketplace. Find answers to common questions and contact our support team." 
         keywords="help center, support, FAQ, Zion marketplace, customer service"
@@ -829,237 +829,7 @@ export default function HelpCenter() {
             </div>
           </div>
         </section>
-
-        {/* Contact Support */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Still Need Help?</h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Our support team is here to help you 24/7. Get in touch with us through any of these channels.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <MessageSquare className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
-                <p className="text-zion-slate-light text-sm mb-4">Get instant help from our support team</p>
-                <button className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                  Start Chat
-                </button>
-              </div>
-              
-              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
-                <p className="text-zion-slate-light text-sm mb-4">Send us a detailed message</p>
-                <Link
-                  to="/contact"
-                  className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
-                >
-                  Send Email
-                </Link>
-              </div>
-              
-              <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-6 h-6 text-zion-cyan" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
-                <p className="text-zion-slate-light text-sm mb-4">Call us directly for urgent issues</p>
-                <a
-                  href="tel:+13024640950"
-                  className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
-                >
-                  Call Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </>
-  );
-}
-          
-          {/* Popular Articles */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Popular Articles</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {popularArticles.map((article, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 cursor-pointer">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-semibold text-white">{article.title}</h3>
-                    <span className="text-xs text-gray-400 bg-white/10 px-2 py-1 rounded-full">
-                      {article.views} views
-                    </span>
-                  </div>
-                  <p className="text-gray-400 text-sm mb-3">{article.category}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-500">{article.readTime}</span>
-                    <span className="text-blue-400 text-sm">Read Article →</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          
-          {/* Quick Actions */}
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Still Need Help?</h3>
-              <p className="text-gray-300 mb-6">
-                Can't find what you're looking for? Our support team is here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/support"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
-                  Contact Support
-                </Link>
-                <Link
-                  to="/tutorials"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
-                  Browse Tutorials
-                </Link>
-                <Link
-                  to="/docs"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
-                  View Documentation
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default $page;
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-            <div className="max-w-4xl mx-auto">
-              <Accordion type="single" collapsible className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg">
-                    <AccordionTrigger className="px-6 py-4 text-white hover:text-zion-cyan">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6 pb-4 text-zion-slate-light">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
-
-          {/* Contact Section */}
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Still need help?</h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Our support team is here to help you get the most out of Zion. 
-              Don't hesitate to reach out with any questions or concerns.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                <Link to="/contact">Contact Support</Link>
-              </Button>
-              <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
-                Schedule a Call
-              </Button>
-            </div>
-          </div>
-        </div>
-      </main>
-    </AppLayout>
-  );
-}
-        </section>
-
-        {/* Additional Resources */}
-        <section className="py-16 bg-zion-blue-dark">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Additional Resources</h2>
-              <p className="text-zion-slate-light max-w-2xl mx-auto">
-                Explore our comprehensive library of resources to help you succeed on Zion Tech Group
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="bg-zion-blue border-zion-purple/20">
-                <CardContent className="p-6 text-center">
-                  <Video className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">Video Tutorials</h3>
-                  <p className="text-zion-slate-light mb-4">
-                    Step-by-step video guides for all major platform features
-                  </p>
-                  <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                    Watch Tutorials
-                  </Button>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-zion-blue border-zion-purple/20">
-                <CardContent className="p-6 text-center">
-                  <FileText className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">API Documentation</h3>
-                  <p className="text-zion-slate-light mb-4">
-                    Technical documentation for developers and integrators
-                  </p>
-                  <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                    View Docs
-                  </Button>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-zion-blue border-zion-purple/20">
-                <CardContent className="p-6 text-center">
-                  <Users className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">Community Forum</h3>
-                  <p className="text-zion-slate-light mb-4">
-                    Connect with other users and share best practices
-                  </p>
-                  <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                    Join Community
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Support */}
-        <section className="py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Still Need Help?</h2>
-            <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Our support team is available 24/7 to help you with any questions or issues you may encounter.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan/90">
-                  Contact Support Team
-                </Button>
-              </Link>
-              <Link to="/faq">
-                <Button variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                  View FAQ
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -506,7 +506,7 @@ export default function CybersecurityServicesPage() {
       </div>
     </div>
     <>
-      <SEO 
+      <SEOHead 
         title="Cybersecurity Services & Solutions - Zion Tech Group" 
         description="Protect your business with enterprise-grade cybersecurity solutions including threat detection, zero trust security, and compliance services. 24/7 monitoring and support."
       />

@@ -1,15 +1,16 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import SEOHead from "../components/SEOHead";
+import { FuturisticNavigation } from "../components/FuturisticNavigation";
+import { FuturisticFooter } from "../components/FuturisticFooter";
 export default function Privacy() {
     return (<>
-      <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://ziontechgroup.com/privacy"/>
-      <Header />
+      <SEOHead title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://ziontechgroup.com/privacy" />
+      <FuturisticNavigation />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <GradientHeading>Privacy Policy</GradientHeading>
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent mb-6">
+              Privacy Policy
+            </h1>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Your privacy is important to us. This page explains how we collect,
               use, and safeguard your information.
@@ -39,6 +40,6 @@ export default function Privacy() {
           </div>
         </div>
       </main>
-      <Footer />
+      <FuturisticFooter />
     </>);
 }

@@ -13,7 +13,7 @@ import {
 import Wifi from 'lucide-react/dist/esm/icons/wifi';
 import Target from 'lucide-react/dist/esm/icons/target';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
 const categoryIcons = {
   "AI & Machine Learning": Brain,

@@ -101,7 +101,7 @@ const stats = [
 ];
 export default function DigitalTransformation() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation"/>
+      <SEOHead title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

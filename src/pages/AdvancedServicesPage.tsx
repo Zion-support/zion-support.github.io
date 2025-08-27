@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ADVANCED_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/advancedServices';
-import { ProductListing } from '@/types/listings';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
@@ -28,7 +27,7 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
 export default function AdvancedServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -66,7 +65,7 @@ export default function AdvancedServicesPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Advanced AI & IT Services - Zion Tech Group" 
         description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation."
         keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation"
@@ -87,15 +86,15 @@ export default function AdvancedServicesPage() {
           {/* Contact Information */}
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"/>
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center gap-2 text-zion-cyan">
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"/>
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center gap-2 text-zion-cyan">
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5"/>
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
@@ -116,32 +115,17 @@ export default function AdvancedServicesPage() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <Input
-                placeholder="Search services, technologies, or solutions..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light"
-              />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"/>
+              <Input placeholder="Search services, technologies, or solutions..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light"/>
             </div>
             
             <div className="flex gap-2">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md"
-              >
+              <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md">
                 <option value="all">All Categories</option>
-                {uniqueCategories.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
+                {uniqueCategories.map(category => (<option key={category} value={category}>{category}</option>))}
               </select>
               
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md"
-              >
+              <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="px-4 py-2 bg-zion-blue border border-zion-blue-light text-white rounded-md">
                 <option value="featured">Featured</option>
                 <option value="price-low">Price: Low to High</option>
                 <option value="price-high">Price: High to Low</option>
@@ -164,8 +148,7 @@ export default function AdvancedServicesPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SERVICE_CATEGORIES.map((category) => (
-              <Card key={category.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300">
+            {SERVICE_CATEGORIES.map((category) => (<Card key={category.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300">
                 <CardHeader className="text-center">
                   <div className="text-4xl mb-2">{category.icon}</div>
                   <CardTitle className="text-xl">{category.name}</CardTitle>
@@ -178,8 +161,7 @@ export default function AdvancedServicesPage() {
                     {category.count} Services
                   </Badge>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -197,9 +179,7 @@ export default function AdvancedServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedServices.map((service) => (
-              <ServiceCard key={service.id} service={service} />
-            ))}
+            {sortedServices.map((service) => (<ServiceCard key={service.id} service={service}/>))}
           </div>
         </div>
       </section>
@@ -215,8 +195,7 @@ export default function AdvancedServicesPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {PRICING_TIERS.map((tier, index) => (
-              <Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
+            {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>
                   <div className="text-4xl font-bold text-zion-cyan">{tier.price}</div>
@@ -226,19 +205,16 @@ export default function AdvancedServicesPage() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2">
-                        <CheckCircle className="w-5 h-5 text-zion-cyan" />
+                    {tier.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center gap-2">
+                        <CheckCircle className="w-5 h-5 text-zion-cyan"/>
                         <span>{feature}</span>
-                      </li>
-                    ))}
+                      </li>))}
                   </ul>
                   <Button className="w-full mt-6 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
                     Get Started
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
           </div>
         </div>
       </section>
@@ -256,7 +232,7 @@ export default function AdvancedServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-zion-blue" />
+                <Brain className="w-8 h-8 text-zion-blue"/>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">AI Expertise</h3>
               <p className="text-zion-slate">Cutting-edge AI solutions with proven results</p>
@@ -264,7 +240,7 @@ export default function AdvancedServicesPage() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-zion-blue" />
+                <Shield className="w-8 h-8 text-zion-blue"/>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise Security</h3>
               <p className="text-zion-slate">Bank-level security and compliance standards</p>
@@ -272,7 +248,7 @@ export default function AdvancedServicesPage() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-zion-blue" />
+                <Users className="w-8 h-8 text-zion-blue"/>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Expert Team</h3>
               <p className="text-zion-slate">Certified professionals with industry experience</p>
@@ -280,7 +256,7 @@ export default function AdvancedServicesPage() {
             
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-zion-blue" />
+                <TrendingUp className="w-8 h-8 text-zion-blue"/>
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Proven Results</h3>
               <p className="text-zion-slate">Track record of successful implementations</p>
@@ -299,11 +275,11 @@ export default function AdvancedServicesPage() {
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2"/>
               Call +1 302 464 0950
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2"/>
               Email kleber@ziontechgroup.com
             </Button>
           </div>
@@ -311,37 +287,23 @@ export default function AdvancedServicesPage() {
           <div className="text-zion-slate-light">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1"
-              >
-                ziontechgroup.com <ExternalLink className="w-4 h-4" />
+              <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:text-zion-cyan-dark inline-flex items-center gap-1">
+                ziontechgroup.com <ExternalLink className="w-4 h-4"/>
               </a>
             </p>
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 }
-
 // Service Card Component
-function ServiceCard({ service }: { service: ProductListing }) {
-  return (
-    <Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
+function ServiceCard({ service }) {
+    return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
       <div className="relative">
-        <img 
-          src={service.images[0]} 
-          alt={service.title}
-          className="w-full h-48 object-cover rounded-t-lg"
-        />
-        {service.featured && (
-          <Badge className="absolute top-3 right-3 bg-zion-cyan text-zion-blue">
+        <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+        {service.featured && (<Badge className="absolute top-3 right-3 bg-zion-cyan text-zion-blue">
             Featured
-          </Badge>
-        )}
+          </Badge>)}
       </div>
       
       <CardHeader>
@@ -363,29 +325,27 @@ function ServiceCard({ service }: { service: ProductListing }) {
       <CardContent className="space-y-4">
         {/* Tags */}
         <div className="flex flex-wrap gap-2">
-          {service.tags.slice(0, 3).map((tag, index) => (
-            <Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
+          {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
               {tag}
-            </Badge>
-          ))}
+            </Badge>))}
         </div>
         
         {/* Service Details */}
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div className="flex items-center gap-2 text-zion-slate">
-            <Star className="w-4 h-4 text-yellow-500" />
+            <Star className="w-4 h-4 text-yellow-500"/>
             <span>{service.rating} ({service.reviewCount} reviews)</span>
           </div>
           <div className="flex items-center gap-2 text-zion-slate">
-            <Brain className="w-4 h-4 text-zion-cyan" />
+            <Brain className="w-4 h-4 text-zion-cyan"/>
             <span>AI Score: {service.aiScore}</span>
           </div>
           <div className="flex items-center gap-2 text-zion-slate">
-            <Clock className="w-4 h-4 text-zion-cyan" />
+            <Clock className="w-4 h-4 text-zion-cyan"/>
             <span>{service.availability}</span>
           </div>
           <div className="flex items-center gap-2 text-zion-slate">
-            <Globe className="w-4 h-4 text-zion-cyan" />
+            <Globe className="w-4 h-4 text-zion-cyan"/>
             <span>{service.location}</span>
           </div>
         </div>
@@ -393,9 +353,7 @@ function ServiceCard({ service }: { service: ProductListing }) {
         {/* Category */}
         <div className="text-sm text-zion-slate">
           <strong>Category:</strong> {service.category}
-          {service.subcategory && (
-            <span className="ml-2 text-zion-cyan">• {service.subcategory}</span>
-          )}
+          {service.subcategory && (<span className="ml-2 text-zion-cyan">• {service.subcategory}</span>)}
         </div>
         
         {/* CTA Buttons */}
@@ -408,6 +366,5 @@ function ServiceCard({ service }: { service: ProductListing }) {
           </Button>
         </div>
       </CardContent>
-    </Card>
-  );
+    </Card>);
 }
