@@ -5,15 +5,10 @@ import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
+import { ContactSection } from "@/components/ContactSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { ServicesShowcase } from "@/components/ServicesShowcase";
-import { EnhancedServicesOverview } from "@/components/home/EnhancedServicesOverview";
-import { EnhancedComprehensiveServicesShowcase } from "@/components/EnhancedComprehensiveServicesShowcase";
-import { ContactSection } from "@/components/ContactSection";
 
 export default function Home() {
   return (
@@ -24,13 +19,8 @@ export default function Home() {
         keywords="AI solutions, IT services, technology consulting, digital transformation, cybersecurity, cloud computing"
       />
       
-      <HeroSection />
       <QuickAccess />
       <FeatureHighlights />
-      <EnhancedServicesOverview />
-      <EnhancedComprehensiveServicesShowcase />
-      <ServicesShowcase />
-      <FeatureCTAs />
       <ITServiceRequestHero />
       <CategoriesSection />
       <BenefitsSection />

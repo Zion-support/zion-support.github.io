@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card.jsx";
+import { Button } from "./ui/button.jsx";
 import { 
   Phone, 
   Mail, 
@@ -18,7 +17,7 @@ import {
   CheckCircle,
   ArrowRight
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -103,14 +102,14 @@ export function ContactSection() {
                     <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
                       Full Name *
                     </label>
-                    <Input
+                    <input
                       type="text"
                       id="name"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="bg-white/10 border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan rounded-lg"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -118,14 +117,14 @@ export function ContactSection() {
                     <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                       Email Address *
                     </label>
-                    <Input
+                    <input
                       type="email"
                       id="email"
                       name="email"
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="bg-white/10 border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan rounded-lg"
                       placeholder="Enter your email"
                     />
                   </div>
@@ -136,13 +135,13 @@ export function ContactSection() {
                     <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
                       Company Name
                     </label>
-                    <Input
+                    <input
                       type="text"
                       id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="bg-white/10 border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan rounded-lg"
                       placeholder="Enter company name"
                     />
                   </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+
 import { 
   COMPREHENSIVE_SERVICES,
   ComprehensiveService 
@@ -35,7 +35,7 @@ import {
   Clock,
   Award
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const categoryIcons = {
   'AI & Machine Learning': Brain,
@@ -140,12 +140,12 @@ export function EnhancedComprehensiveServicesShowcase() {
           <div className="max-w-4xl mx-auto">
             <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <Input
+              <input
                 type="text"
                 placeholder="Search services, features, or use cases..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 py-4 text-lg bg-white/10 border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan"
+                className="w-full pl-12 py-4 text-lg bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:bg-white/20 focus:border-zion-cyan rounded-lg"
               />
             </div>
             
