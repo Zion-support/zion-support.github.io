@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Bug, Home, ArrowLeft } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -25,110 +26,189 @@ export class ErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+      errorInfo: null,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ errorInfo });
-    console.error("Uncaught error:", error, errorInfo);
-    // You can also log the error to an error reporting service here
-    this.logErrorToService(error, errorInfo, this.state.errorId);
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Log error to analytics service if available
+    if (window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: true
+      });
+    }
+
+    // In production, you could send this to an error reporting service
+    // Example: Sentry.captureException(error, { extra: errorInfo });
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo, errorId: string) => {
-    // Example: Send error to a logging service
-    console.log(`Error ID: ${errorId}`);
-    console.log('Logging error to service:', { error, errorInfo });
-    // fetch('/api/log-error', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ error: error.message, stack: errorInfo.componentStack, errorId })
-    // });
-  };
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: null, errorInfo: null, errorId: '' });
-    // Optionally, navigate to home or reload part of the app
+  handleReload = () => {
     window.location.reload();
   };
 
-  handleReportError = () => {
-    const subject = encodeURIComponent(`Error Report (ID: ${this.state.errorId})`);
-    const body = encodeURIComponent(
-      `Error ID: ${this.state.errorId}\n\n` +
-      `Error Message: ${this.state.error?.message}\n\n` +
-      `Component Stack: ${this.state.errorInfo?.componentStack}\n\n` +
-      `User Agent: ${navigator.userAgent}\n` +
-      `URL: ${window.location.href}\n\n` +
-      `Please describe what you were doing when this error occurred:`
-    );
-    window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`, '_blank');
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  handleGoBack = () => {
+    window.history.back();
+  };
+
+  generateErrorReport = () => {
+    const { error, errorInfo, errorId } = this.state;
+    if (!error) return;
+
+    const report = {
+      errorId,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href,
+      error: {
+        name: error.name,
+        message: error.message,
+        stack: error.stack
+      },
+      errorInfo: errorInfo ? {
+        componentStack: errorInfo.componentStack
+      } : null
+    };
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(JSON.stringify(report, null, 2))
+      .then(() => {
+        alert('Error report copied to clipboard. Please send this to support.');
+      })
+      .catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = JSON.stringify(report, null, 2);
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert('Error report copied to clipboard. Please send this to support.');
+      });
   };
 
   render() {
     if (this.state.hasError) {
+      const { error, errorId } = this.state;
+
+      // Use fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      return (
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white p-4 text-center"
-        >
-          <AlertTriangle className="h-24 w-24 text-red-500 mb-6 animate-pulse" />
-          <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-            Oops! Something went wrong.
-          </h1>
-          <p className="text-xl text-gray-300 mb-6 max-w-2xl">
-            We're sorry, but an unexpected error occurred. Our team has been notified.
-          </p>
-          <p className="text-sm text-gray-400 mb-8">
-            Error ID: <span className="font-mono text-cyan-400">{this.state.errorId}</span>
-          </p>
-          
-          {/* Error Details (for developers, can be toggled) */}
-          {/* <details className="mb-8 text-left bg-zion-slate-dark p-4 rounded-lg border border-zion-slate-light/20 max-w-3xl w-full">
-            <summary className="text-lg font-semibold text-cyan-400 cursor-pointer">Error Details</summary>
-            <pre className="mt-4 text-sm text-gray-500 whitespace-pre-wrap break-words">
-              {this.state.error?.toString()}
-              {this.state.errorInfo?.componentStack}
-            </pre>
-          </details> */}
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={this.handleRetry}
-              className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-            >
-              <RefreshCw className="h-5 w-5 mr-2" /> Try Again
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={this.handleReportError}
-              className="flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-800 transition-all duration-300"
-            >
-              <Bug className="h-5 w-5 mr-2" /> Report Error
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.location.href = '/'}
-              className="flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-800 transition-all duration-300"
-            >
-              <Home className="h-5 w-5 mr-2" /> Go to Homepage
-            </motion.button>
-          </div>
-        </motion.div>
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="max-w-2xl w-full bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-8 border border-zion-slate/20"
+          >
+            {/* Error Icon */}
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500/20 rounded-full mb-4">
+                <AlertTriangle className="h-10 w-10 text-red-400" />
+              </div>
+              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
+              <p className="text-zion-slate-light">
+                We've encountered an unexpected error. Our team has been notified.
+              </p>
+            </div>
+
+            {/* Error Details */}
+            <div className="bg-zion-slate/20 rounded-lg p-4 mb-6">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm text-zion-slate-light">Error ID:</span>
+                <code className="text-xs bg-zion-slate/30 text-zion-cyan px-2 py-1 rounded">
+                  {errorId}
+                </code>
+              </div>
+              {error && (
+                <div className="text-sm">
+                  <div className="text-red-400 font-medium mb-1">{error.name}</div>
+                  <div className="text-zion-slate-light">{error.message}</div>
+                </div>
+              )}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+              <button
+                onClick={this.handleReload}
+                className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-lg transition-colors"
+              >
+                <RefreshCw className="h-4 w-4" />
+                Reload Page
+              </button>
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate/30 hover:bg-zion-slate/50 text-white rounded-lg transition-colors"
+              >
+                <Home className="h-4 w-4" />
+                Go Home
+              </button>
+              <button
+                onClick={this.handleGoBack}
+                className="flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate/30 hover:bg-zion-slate/50 text-white rounded-lg transition-colors"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                Go Back
+              </button>
+            </div>
+
+            {/* Additional Actions */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={this.generateErrorReport}
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple rounded-lg transition-colors text-sm"
+              >
+                <Bug className="h-4 w-4" />
+                Copy Error Report
+              </button>
+              <Link
+                to="/contact"
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-zion-slate/20 hover:bg-zion-slate/30 text-zion-slate-light rounded-lg transition-colors text-sm"
+              >
+                <Mail className="h-4 w-4" />
+                Contact Support
+              </Link>
+            </div>
+
+            {/* Helpful Tips */}
+            <div className="mt-6 p-4 bg-zion-cyan/10 rounded-lg border border-zion-cyan/20">
+              <div className="flex items-start gap-3">
+                <Zap className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                <div className="text-sm text-zion-slate-light">
+                  <div className="font-medium text-zion-cyan mb-1">Troubleshooting Tips:</div>
+                  <ul className="space-y-1 text-xs">
+                    <li>• Try refreshing the page</li>
+                    <li>• Clear your browser cache</li>
+                    <li>• Check your internet connection</li>
+                    <li>• Try a different browser</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       );
     }
     return this.props.children;
