@@ -11,6 +11,8 @@ import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnh
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import { FloatingActionButton } from './components/FloatingActionButton';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -310,6 +312,8 @@ function App() {
         <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
         <MobileExperienceEnhancer enabled={true} />
         <PerformanceMonitor enabled={true} showMetrics={true} />
+        <AdvancedAnalytics enabled={true} showMetrics={true} />
+        <SmartNotificationSystem enabled={true} />
         <FloatingActionButton />
       </div>
     </ErrorBoundary>
