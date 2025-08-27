@@ -196,26 +196,11 @@ export const FuturisticNavigation: React.FC = () => {
       icon: Building,
       color: 'from-zion-cyan to-zion-purple',
       dropdown: [
-        { name: 'About Us', href: '/about', icon: Building, description: 'Learn about our mission and values' },
-        { name: 'Team', href: '/team', icon: Users, description: 'Meet our expert team' },
-        { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-        { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
-        { name: 'News', href: '/news', icon: FileText, description: 'Latest company updates' },
-        { name: 'Events', href: '/events', icon: Calendar, description: 'Upcoming events' }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '/resources',
-      icon: BookOpen,
-      color: 'from-zion-purple to-zion-cyan',
-      dropdown: [
-        { name: 'Blog', href: '/blog', icon: FileText, description: 'Industry insights and articles' },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories and results' },
-        { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'In-depth research and analysis' },
-        { name: 'Webinars', href: '/webinars', icon: Video, description: 'Educational webinars' },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions' },
-        { name: 'Support', href: '/support', icon: HelpCircle, description: 'Technical support and help' }
+        { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
+        { name: 'Comprehensive Services Overview', href: '/comprehensive-services-overview', icon: BarChart3, description: 'Complete organized service categories' },
+        { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
+        { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
+        { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
       ]
     }
   ];

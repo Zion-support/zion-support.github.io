@@ -1,8 +1,10 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Brain, Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
+// Create a ZapIcon component since it's not exported from lucide-react
+const ZapIcon = Zap;
 import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
 const categories = [
   {
     title: "Comprehensive Services",
@@ -195,39 +197,3 @@ export function CategoriesSection() {
               </Link>
             </motion.div>
           ))}
-        </motion.div>
-        {/* CTA Section */}
-        <motion.div
-          className="text-center mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-2xl p-12 text-white">
-            <h2 className="text-3xl font-bold mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that trust Zion Tech Group for their technology needs
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-zion-blue font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
-              >
-                Contact Us
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue transition-colors duration-300"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>);
-}
