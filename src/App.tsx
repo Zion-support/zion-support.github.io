@@ -131,10 +131,8 @@ const SustainableTechnology = lazy(() => import('./pages/services/sustainable-te
 
 function App() {
   return (
-    <Router>
-      <HelmetProvider>
-        <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
-          <div className="App min-h-screen bg-white">
+    <ErrorBoundary>
+      <div className="App min-h-screen bg-white">
             {/* SEO Component */}
             <SEO />
             
@@ -380,8 +378,6 @@ function App() {
             />
           </div>
         </ErrorBoundary>
-      </HelmetProvider>
-    </Router>
   );
 }
 
