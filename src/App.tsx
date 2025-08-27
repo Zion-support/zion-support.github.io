@@ -21,6 +21,7 @@ const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
 const Services2026 = React.lazy(() => import('./pages/Services2026'));
 const Services2027 = React.lazy(() => import('./pages/InnovativeServices2027'));
+const Services2028 = React.lazy(() => import('./pages/Services2028'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const AISolutions = React.lazy(() => import('./pages/AISolutions'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
@@ -221,6 +222,7 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/services2026" element={<Services2026 />} />
               <Route path="/services2027" element={<Services2027 />} />
+              <Route path="/services2028" element={<Services2028 />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/it-services" element={<ITServices />} />
