@@ -33,7 +33,6 @@ const News = React.lazy(() => import('./pages/News'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
@@ -42,7 +41,6 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-const Documentation = React.lazy(() => import('./pages/Documentation'));
 
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
@@ -91,7 +89,6 @@ const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHea
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const GreenIT = React.lazy(() => import('./pages/services/GreenIT'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
 // Accessibility page
