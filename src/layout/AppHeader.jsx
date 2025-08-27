@@ -63,6 +63,11 @@ export function AppHeader() {
         { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
       ]
     },
+    { name: 'Pricing', path: '/pricing', icon: null },
+    { name: 'Marketplace', path: '/marketplace', icon: null },
+    { name: 'Blog', path: '/blog', icon: null },
+    { name: 'Careers', path: '/careers', icon: null },
+    { name: 'Request Quote', path: '/request-quote', icon: null },
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
