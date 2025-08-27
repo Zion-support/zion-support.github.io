@@ -99,8 +99,8 @@ export const EnhancedSidebar: React.FC = () => {
 
   const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
-    { name: "Book Demo", href: "/demo", icon: Calendar, variant: "secondary" },
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
+    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
+    { name: "Support", href: "/faq", icon: HelpCircle, variant: "secondary" }
   ];
 
   return (
