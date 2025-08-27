@@ -80,6 +80,14 @@ export default defineConfig({
     cors: true,
     hmr: {
       overlay: false
+    },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
     }
   },
   preview: {
