@@ -24,7 +24,6 @@ export interface EnterpriseITBreakthroughService2029 {
   useCases: string[];
   enterpriseCapabilities: string[];
 }
-
 export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughService2029[] = [
   {
     id: "ai-business-intelligence-suite",

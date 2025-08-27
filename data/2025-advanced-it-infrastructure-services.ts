@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedITInfrastructureService {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface AdvancedITInfrastructureService {
   rating: number;
   reviews: number;
 }
-
 export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
   // Multi-Cloud Orchestration Platform
   {
@@ -94,7 +92,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Autonomous Edge Computing Network
   {
     id: 'autonomous-edge-computing-network',
@@ -147,7 +144,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.8,
     reviews: 45
   },
-
   // Zero-Trust Network Security Platform
   {
     id: 'zero-trust-network-security',
@@ -200,7 +196,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.8,
     reviews: 28
   },
-
   // AI-Powered DevOps Automation Platform
   {
     id: 'ai-devops-automation',
@@ -253,7 +248,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.7,
     reviews: 67
   },
-
   // Quantum-Resistant Data Storage Platform
   {
     id: 'quantum-resistant-storage',
@@ -306,7 +300,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.8,
     reviews: 18
   },
-
   // Intelligent Data Center Management Platform
   {
     id: 'intelligent-data-center',
@@ -359,7 +352,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.7,
     reviews: 34
   },
-
   // Federated Learning Infrastructure Platform
   {
     id: 'federated-learning-infrastructure',
@@ -412,7 +404,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // New Advanced IT Infrastructure Services for 2025
   {
     id: 'quantum-cloud-infrastructure-platform',
@@ -465,7 +456,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 5.0,
     reviews: 3
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform-v2',
@@ -518,7 +508,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.9,
     reviews: 19
   },
-
   // Zero Trust Security Architecture Platform
   {
     id: 'zero-trust-security-architecture-platform',
@@ -571,7 +560,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 5.0,
     reviews: 12
   },
-
   // Autonomous Data Center Platform
   {
     id: 'autonomous-data-center-platform',
@@ -624,7 +612,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 5.0,
     reviews: 5
   },
-
   // Quantum Networking Infrastructure
   {
     id: 'quantum-networking-infrastructure',
@@ -677,7 +664,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.9,
     reviews: 12
   },
-
   // New Advanced IT Infrastructure Services for 2025
   {
     id: 'quantum-cloud-infrastructure-platform',
@@ -730,7 +716,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 5.0,
     reviews: 3
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform-v2',
@@ -783,7 +768,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.9,
     reviews: 19
   },
-
   // Zero Trust Security Architecture Platform
   {
     id: 'zero-trust-security-architecture-platform',
@@ -836,7 +820,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 5.0,
     reviews: 12
   },
-
   // Autonomous Data Center Platform
   {
     id: 'autonomous-data-center-platform',
@@ -889,7 +872,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 5.0,
     reviews: 5
   },
-
   // Quantum Networking Infrastructure
   {
     id: 'quantum-networking-infrastructure',
@@ -942,7 +924,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 5.0,
     reviews: 2
   },
-
   // AI-Powered Infrastructure Management
   {
     id: 'ai-powered-infrastructure-management',
@@ -995,7 +976,6 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     rating: 4.8,
     reviews: 18
   },
-
   // Hybrid Cloud Orchestration Platform
   {
     id: 'hybrid-cloud-orchestration-platform',
@@ -1049,5 +1029,4 @@ export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
     reviews: 24
   }
 ];
-
 export default advancedITInfrastructure2025;

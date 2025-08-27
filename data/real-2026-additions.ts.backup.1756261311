@@ -5,7 +5,6 @@ export interface Real2026Addition {
   price: string;
   features: string[];
 }
-
 export const real2026Additions: Real2026Addition[] = [
   {
     id: '2026-addition-1',

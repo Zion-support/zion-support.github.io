@@ -90,27 +90,27 @@ const Home: NextPage = () => {
             Welcome to Zion Tech Group
           </h1>
           <p className="text-xl mb-8 max-w-4xl mx-auto">
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, cybersecurity, and innovative development services.
+            We are a leading technology solutions provider, specializing in AI development, 
+            cloud architecture, cybersecurity, and emerging technologies. Our mission is to 
+            transform businesses through innovative digital solutions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 mb-12 justify-center">
-            <Link href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors">
-              Explore Our Services
-            </Link>
-            <Link href="/products" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-10 py-4 rounded-lg font-semibold text-lg transition-colors">
-              View Products
-            </Link>
-            <a href="tel:+13024640950" className="bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors">
-              📞 Call Now
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              Get Started Today
+            </a>
+            <a href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              Explore Services
             </a>
           </div>
+        </div>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        {/* Stats Section */}
+        <div className="mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <div className="text-3xl font-bold text-blue-400 mb-2">{stat.number}</div>
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
@@ -122,15 +122,59 @@ const Home: NextPage = () => {
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Our Core Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/15 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
                 <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <Link href={service.link} className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                  Learn More
-                </Link>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                <a href={service.link} className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                  Learn More →
+                </a>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Emerging Technology Services */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4">🚀 Revolutionary Emerging Tech Services 2027</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the future of technology with our breakthrough services that are reshaping industries and creating new possibilities.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-lg p-6 text-center hover:from-purple-500/30 hover:to-pink-500/30 transition-all duration-300 border border-purple-400/30">
+              <div className="text-4xl mb-4">🌐</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Quantum Internet Infrastructure</h3>
+              <p className="text-gray-300 text-sm mb-4">Next-generation quantum internet enabling ultra-secure communications and quantum network protocols.</p>
+              <div className="text-sm text-purple-400 mb-3">Starting at $25,000/month</div>
+              <a href="/emerging-tech-services" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                Explore Quantum Tech →
+              </a>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-lg p-6 text-center hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 border border-blue-400/30">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Threat Intelligence</h3>
+              <p className="text-gray-300 text-sm mb-4">Advanced AI-driven threat detection with behavioral analysis and predictive security insights.</p>
+              <div className="text-sm text-blue-400 mb-3">Starting at $8,999/month</div>
+              <a href="/advanced-cybersecurity" className="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                Explore AI Security →
+              </a>
+            </div>
+            <div className="bg-gradient-to-br from-green-500/20 to-teal-500/20 backdrop-blur-sm rounded-lg p-6 text-center hover:from-green-500/30 hover:to-teal-500/30 transition-all duration-300 border border-green-400/30">
+              <div className="text-4xl mb-4">🧬</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Biocomputing Platform</h3>
+              <p className="text-gray-300 text-sm mb-4">Revolutionary DNA and cellular computing for massive parallel processing and energy efficiency.</p>
+              <div className="text-sm text-green-400 mb-3">Starting at $15,000/month</div>
+              <a href="/emerging-tech-services" className="text-green-400 hover:text-green-300 text-sm font-medium">
+                Explore Biocomputing →
+              </a>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <a href="/emerging-tech-services" className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-block">
+              View All Emerging Tech Services
+            </a>
           </div>
         </div>
 
@@ -138,33 +182,33 @@ const Home: NextPage = () => {
         <div className="mb-20">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChooseUs.map((reason, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                <div className="text-4xl mb-4">{reason.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{reason.title}</h3>
-                <p className="text-gray-300 text-sm">{reason.description}</p>
+            {whyChooseUs.map((feature, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Technology Stack */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-20">
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">Technologies We Master</h2>
+        <div className="mb-20">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center">Our Technology Stack</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <h3 className="text-xl font-semibold text-white mb-4">AI & Machine Learning</h3>
               <div className="text-gray-300 text-sm space-y-1">
-                <div>• TensorFlow & PyTorch</div>
-                <div>• Natural Language Processing</div>
-                <div>• Computer Vision</div>
-                <div>• Predictive Analytics</div>
+                <div>• TensorFlow, PyTorch</div>
+                <div>• OpenAI, Anthropic APIs</div>
+                <div>• Custom Model Training</div>
+                <div>• RAG & Vector Databases</div>
               </div>
             </div>
             <div className="text-center">
               <h3 className="text-xl font-semibold text-white mb-4">Cloud & DevOps</h3>
               <div className="text-gray-300 text-sm space-y-1">
-                <div>• AWS, Azure, Google Cloud</div>
+                <div>• AWS, Azure, GCP</div>
                 <div>• Kubernetes & Docker</div>
                 <div>• CI/CD Pipelines</div>
                 <div>• Infrastructure as Code</div>

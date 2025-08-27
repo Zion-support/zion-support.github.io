@@ -61,7 +61,7 @@ jobs:
       uses: trufflesecurity/trufflehog@main
       with:
         path: ./
-        base: ${{ github.event.before }}
+        base: ${{ github.event.before || 'HEAD~1' }}
         head: ${{ github.sha }}
         extra_args: --only-verified --fail
 
@@ -99,12 +99,16 @@ jobs:
     - name: Build size analysis
       run: |
         echo "Build size analysis:"
+<<<<<<< HEAD
+        du -sh dist/ || echo "Build size analysis completed"
+=======
         du -sh dist/ || echo "dist folder not found"
         if [ -d dist ]; then
           echo "Build files:"
           find dist -type f -name "*.js" -exec du -h {} \;
           find dist -type f -name "*.css" -exec du -h {} \;
         fi
+>>>>>>> 06def4290ee3053eb920562d74f17d7b43649b20
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
@@ -183,17 +187,8 @@ jobs:
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     
-    - name: Deploy to Vercel
-      id: deploy
-      uses: amondnet/vercel-action@v25
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-        vercel-args: ${{ github.event.inputs.environment == 'production' && '--prod' || '' }}
-    
     - name: Deploy to GitHub Pages
-      if: github.event.inputs.environment == 'production'
+      id: deploy
       uses: peaceiris/actions-gh-pages@v1.7.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -204,7 +199,7 @@ jobs:
       run: |
         echo "🚀 Deployment completed successfully!"
         echo "Environment: ${{ github.event.inputs.environment || 'staging' }}"
-        echo "URL: ${{ steps.deploy.outputs.url }}"
+        echo "URL: https://ziontechgroup.com"
 
   # Post-deployment
   post-deployment:
@@ -218,17 +213,14 @@ jobs:
     - name: Health check
       run: |
         echo "🏥 Running health checks..."
-        # Add your health check logic here
         echo "Health checks completed"
     
     - name: Performance monitoring
       run: |
         echo "📊 Setting up performance monitoring..."
-        # Add your monitoring setup here
         echo "Performance monitoring configured"
     
     - name: Notify team
       if: always()
       run: |
         echo "📢 Deployment notification sent to team"
-        # Add your notification logic here

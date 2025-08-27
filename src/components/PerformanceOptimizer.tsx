@@ -1,297 +1,326 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Zap, Clock, TrendingUp, Activity } from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface PerformanceMetrics {
   loadTime: number;
+  domContentLoaded: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
+  firstInputDelay: number;
 }
 
-export const PerformanceOptimizer: React.FC = () => {
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+  showMetrics?: boolean;
+}
+
+export function PerformanceOptimizer({ children, showMetrics = false }: PerformanceOptimizerProps) {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    // Measure performance metrics
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
-        
-        const fcp = paint.find(entry => entry.name === 'first-contentful-paint');
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-        
-        setMetrics({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          firstContentfulPaint: fcp ? fcp.startTime : 0,
-          largestContentfulPaint: lcp ? lcp.startTime : 0,
-          cumulativeLayoutShift: 0, // Would need to implement CLS measurement
-        });
-      }
-    };
+  const measurePerformance = useCallback(() => {
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = paintEntries.find(entry => entry.name === 'largest-contentful-paint');
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-      return () => window.removeEventListener('load', measurePerformance);
+      const performanceMetrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        firstContentfulPaint: fcp ? fcp.startTime : 0,
+        largestContentfulPaint: lcp ? lcp.startTime : 0,
+        cumulativeLayoutShift: 0, // Would need to be calculated from LayoutShift API
+        firstInputDelay: 0 // Would need to be calculated from FirstInput API
+      };
+
+      setMetrics(performanceMetrics);
     }
   }, []);
 
-  const optimizePerformance = async () => {
-    setIsOptimizing(true);
-    
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical CSS and fonts
     const criticalResources = [
-      '/src/components/FuturisticNavigation.tsx',
-      '/src/components/Home.tsx',
+      '/fonts/Orbitron-Regular.woff2',
+      '/fonts/Orbitron-Bold.woff2'
     ];
-    
+
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      link.as = 'script';
+      link.as = 'font';
+      link.type = 'font/woff2';
+      link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     });
-    
-    setIsOptimizing(false);
+  }, []);
+
+  const optimizeImages = useCallback(() => {
+    // Add loading="lazy" to non-critical images
+    const images = document.querySelectorAll('img:not([data-critical])');
+    images.forEach(img => {
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+    });
+  }, []);
+
+  const enableIntersectionObserver = useCallback(() => {
+    // Lazy load components when they come into view
+    const observerOptions = {
+      root: null,
+      rootMargin: '50px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const lazyElements = document.querySelectorAll('[data-lazy]');
+    lazyElements.forEach(el => observer.observe(el));
+  }, []);
+
+  useEffect(() => {
+    // Optimize on mount
+    preloadCriticalResources();
+    optimizeImages();
+    enableIntersectionObserver();
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      setTimeout(measurePerformance, 100);
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(measurePerformance, 100);
+      });
+    }
+
+    setIsLoaded(true);
+
+    return () => {
+      // Cleanup
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [preloadCriticalResources, optimizeImages, enableIntersectionObserver, measurePerformance]);
+
+  const getPerformanceScore = (metrics: PerformanceMetrics): number => {
+    let score = 100;
+
+    // Deduct points based on performance metrics
+    if (metrics.firstContentfulPaint > 2000) score -= 20;
+    if (metrics.largestContentfulPaint > 4000) score -= 20;
+    if (metrics.loadTime > 3000) score -= 15;
+    if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
+
+    return Math.max(0, score);
   };
 
-  if (!metrics) return null;
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-400';
+    if (score >= 70) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  if (showMetrics && metrics) {
+    const score = getPerformanceScore(metrics);
+    
+    return (
+      <>
+        <PerformanceMetricsDisplay metrics={metrics} score={score} />
+        {children}
+      </>
+    );
+  }
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoaded ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
+interface PerformanceMetricsDisplayProps {
+  metrics: PerformanceMetrics;
+  score: number;
+}
+
+function PerformanceMetricsDisplay({ metrics, score }: PerformanceMetricsDisplayProps) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isVisible) return null;
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed bottom-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 max-w-sm z-50"
+      className="fixed top-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-4 text-white z-50 max-w-sm"
     >
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-zion-cyan font-semibold text-sm">Performance Monitor</h3>
-        <button
-          onClick={optimizePerformance}
-          disabled={isOptimizing}
-          className="text-xs bg-zion-cyan/20 hover:bg-zion-cyan/30 text-zion-cyan px-2 py-1 rounded transition-colors disabled:opacity-50"
-        >
-          {isOptimizing ? 'Optimizing...' : 'Optimize'}
-        </button>
+        <h3 className="text-sm font-semibold">Performance Score</h3>
+        <span className={`text-lg font-bold ${getScoreColor(score)}`}>
+          {score}/100
+        </span>
       </div>
       
       <div className="space-y-2 text-xs">
-        <div className="flex items-center justify-between">
-          <span className="text-zion-slate-light">Load Time:</span>
-          <span className="text-white">{metrics.loadTime.toFixed(0)}ms</span>
-        </div>
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between">
           <span className="text-zion-slate-light">FCP:</span>
-          <span className="text-white">{metrics.firstContentfulPaint.toFixed(0)}ms</span>
+          <span className={metrics.firstContentfulPaint < 2000 ? 'text-green-400' : 'text-red-400'}>
+            {Math.round(metrics.firstContentfulPaint)}ms
+          </span>
         </div>
-        <div className="flex items-center justify-between">
+        
+        <div className="flex justify-between">
           <span className="text-zion-slate-light">LCP:</span>
-          <span className="text-white">{metrics.largestContentfulPaint.toFixed(0)}ms</span>
+          <span className={metrics.largestContentfulPaint < 4000 ? 'text-green-400' : 'text-red-400'}>
+            {Math.round(metrics.largestContentfulPaint)}ms
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-zion-slate-light">Load Time:</span>
+          <span className={metrics.loadTime < 3000 ? 'text-green-400' : 'text-red-400'}>
+            {Math.round(metrics.loadTime)}ms
+          </span>
         </div>
       </div>
       
-      <div className="mt-3 pt-2 border-t border-zion-slate/20">
-        <div className="flex items-center text-xs text-zion-cyan">
-          <Activity className="h-3 w-3 mr-1" />
-          Performance Score: {metrics.loadTime < 1000 ? 'Excellent' : metrics.loadTime < 2000 ? 'Good' : 'Needs Improvement'}
+      <div className="mt-3 pt-2 border-t border-zion-slate-light/20">
+        <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
+          <div 
+            className={`h-2 rounded-full transition-all duration-500 ${
+              score >= 90 ? 'bg-green-400' : score >= 70 ? 'bg-yellow-400' : 'bg-red-400'
+            }`}
+            style={{ width: `${score}%` }}
+          />
         </div>
       </div>
     </motion.div>
   );
-};
+}
 
-// Lazy loading wrapper for images
-export const LazyImage: React.FC<{
+// Lazy loading hook
+export function useLazyLoad<T>(
+  data: T[],
+  itemsPerPage: number = 10
+) {
+  const [displayedItems, setDisplayedItems] = useState<T[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+
+  useEffect(() => {
+    const startIndex = 0;
+    const endIndex = currentPage * itemsPerPage;
+    const newItems = data.slice(startIndex, endIndex);
+    
+    setDisplayedItems(newItems);
+    setHasMore(endIndex < data.length);
+  }, [data, currentPage, itemsPerPage]);
+
+  const loadMore = useCallback(() => {
+    if (hasMore) {
+      setCurrentPage(prev => prev + 1);
+    }
+  }, [hasMore]);
+
+  return {
+    displayedItems,
+    hasMore,
+    loadMore,
+    currentPage
+  };
+}
+
+// Image optimization component
+interface OptimizedImageProps {
   src: string;
   alt: string;
   className?: string;
-  placeholder?: string;
-}> = ({ src, alt, className = '', placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzM0MTU2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iI2YzZjRmNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+' }) => {
-  const [imageSrc, setImageSrc] = useState(placeholder);
+  critical?: boolean;
+  sizes?: string;
+  onLoad?: () => void;
+}
+
+export function OptimizedImage({
+  src,
+  alt,
+  className = '',
+  critical = false,
+  sizes = '100vw',
+  onLoad
+}: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setImageSrc(src);
-      setIsLoaded(true);
-    };
-  }, [src]);
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
 
-  return (
-    <img
-      src={imageSrc}
-      alt={alt}
-      className={`${className} transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-60'}`}
-    />
-  );
-};
-
-// Intersection observer hook for performance
-export const useIntersectionObserver = (
-  options: IntersectionObserverInit = {}
-) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const [ref, setRef] = useState<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (!ref) return;
-
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsIntersecting(entry.isIntersecting);
-    }, options);
-
-    observer.observe(ref);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [ref, options]);
-
-  return [setRef, isIntersecting] as const;
-};
-
-// Performance monitoring component
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0
-  });
-
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
-    }
-  }, []);
-
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
+  const handleError = () => {
+    setHasError(true);
+  };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-      <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-      <div>FID: {metrics.fid.toFixed(0)}ms</div>
-      <div>CLS: {metrics.cls.toFixed(3)}</div>
-    </div>
-  );
-};
-
-// Virtual scrolling component for large lists
-export const VirtualList: React.FC<{
-  items: any[];
-  itemHeight: number;
-  containerHeight: number;
-  renderItem: (item: any, index: number) => React.ReactNode;
-}> = ({ items, itemHeight, containerHeight, renderItem }) => {
-  const [scrollTop, setScrollTop] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const visibleItemCount = Math.ceil(containerHeight / itemHeight);
-  const startIndex = Math.floor(scrollTop / itemHeight);
-  const endIndex = Math.min(startIndex + visibleItemCount + 1, items.length);
-
-  const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
-  }, []);
-
-  const totalHeight = items.length * itemHeight;
-  const offsetY = startIndex * itemHeight;
-
-  return (
-    <div
-      ref={containerRef}
-      style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}
-    >
-      <div style={{ height: totalHeight, position: 'relative' }}>
-        <div style={{ transform: `translateY(${offsetY}px)` }}>
-          {items.slice(startIndex, endIndex).map((item, index) =>
-            renderItem(item, startIndex + index)
-          )}
+    <div className={`relative overflow-hidden ${className}`}>
+      {!isLoaded && !hasError && (
+        <div className="absolute inset-0 bg-zion-slate-light/20 animate-pulse rounded" />
+      )}
+      
+      {hasError ? (
+        <div className="absolute inset-0 bg-zion-slate-light/10 flex items-center justify-center">
+          <span className="text-zion-slate-light text-sm">Image failed to load</span>
         </div>
-      </div>
+      ) : (
+        <img
+          src={src}
+          alt={alt}
+          sizes={sizes}
+          loading={critical ? 'eager' : 'lazy'}
+          data-critical={critical ? 'true' : undefined}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+        />
+      )}
     </div>
   );
-};
+}
 
-// Debounced input hook for search optimization
-export const useDebounce = (value: any, delay: number) => {
-  const [debouncedValue, setDebouncedValue] = useState(value);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-};
-
-// Memoized component wrapper for expensive computations
-export const MemoizedComponent = React.memo<{
+// Code splitting wrapper
+interface LazyComponentProps {
+  fallback?: React.ReactNode;
   children: React.ReactNode;
-  className?: string;
-}>(({ children, className = '' }) => (
-  <div className={className}>{children}</div>
-));
+}
 
-MemoizedComponent.displayName = 'MemoizedComponent';
+export function LazyComponent({ 
+  fallback = <div className="animate-pulse bg-zion-slate-light/20 h-32 rounded" />,
+  children 
+}: LazyComponentProps) {
+  return (
+    <React.Suspense fallback={fallback}>
+      {children}
+    </React.Suspense>
+  );
+}

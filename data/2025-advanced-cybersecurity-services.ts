@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedCybersecurityService {
   id: string;
   name: string;
@@ -39,14 +38,12 @@ export interface AdvancedCybersecurityService {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   {
     id: 'ai-threat-hunting-platform',
@@ -93,7 +90,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.9,
     reviews: 67
   },
-
   {
     id: 'quantum-resistant-encryption-suite',
     name: 'Quantum-Resistant Encryption Suite',
@@ -139,7 +135,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.8,
     reviews: 23
   },
-
   {
     id: 'zero-trust-security-framework',
     name: 'Zero Trust Security Framework',
@@ -185,7 +180,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.7,
     reviews: 89
   },
-
   {
     id: 'ai-powered-security-operations-center',
     name: 'AI-Powered Security Operations Center',
@@ -231,7 +225,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.9,
     reviews: 45
   },
-
   {
     id: 'blockchain-security-auditor',
     name: 'Blockchain Security Auditor',
@@ -277,7 +270,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.6,
     reviews: 78
   },
-
   {
     id: 'iot-security-orchestrator',
     name: 'IoT Security Orchestrator',

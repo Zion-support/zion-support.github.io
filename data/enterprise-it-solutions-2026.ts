@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EnterpriseITSolutions2026 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface EnterpriseITSolutions2026 {
   rating: number;
   reviews: number;
 }
-
 export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
   // Zero Trust Network Architecture
   {
@@ -94,7 +92,6 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.9,
     reviews: 112
   },
-
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -147,7 +144,6 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.8,
     reviews: 156
   },
-
   // 5G Private Network Solutions
   {
     id: '5g-private-network-solutions',
@@ -200,7 +196,6 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.9,
     reviews: 67
   },
-
   // Blockchain Infrastructure Platform
   {
     id: 'blockchain-infrastructure-platform',
@@ -253,7 +248,6 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [
     rating: 4.8,
     reviews: 198
   },
-
   // AI-Powered IT Operations Center
   {
     id: 'ai-powered-it-operations-center',

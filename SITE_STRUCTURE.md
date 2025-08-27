@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+# Zion Tech Group - Site Structure Documentation
 # Zion Tech Group - Site Structure Documentation
 
 ## 🌐 Overview
@@ -513,7 +513,6 @@ zion-tech-group-website/
 - **Tree Shaking**: Unused code elimination
 - **Lazy Loading**: Component-level lazy loading for better performance
 - **Bundle Analysis**: Optimized bundle sizes
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
 
 ### **Performance Metrics**
 - **Build Time**: ~3 seconds
@@ -525,12 +524,6 @@ zion-tech-group-website/
 
 ## 📱 **Responsive Design & Accessibility**
 
-<<<<<<< HEAD
-### **Security Features**
-- **HTTPS**: Secure communication protocols
-- **Content Security Policy**: XSS protection
-- **Input Validation**: Secure form handling
-=======
 ### **Breakpoints**
 - **Mobile**: 320px - 768px
 - **Tablet**: 768px - 1024px
@@ -618,131 +611,10 @@ zion-tech-group-website/
 - **HTTPS**: Secure communication
 - **Content Security Policy**: XSS protection
 - **Input Validation**: Comprehensive form validation
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
 - **Authentication**: Secure user authentication
 
 ### **Compliance**
 - **GDPR**: Data protection compliance
-<<<<<<< HEAD
-- **Accessibility**: WCAG 2.1 compliance
-- **Privacy**: Privacy policy and data handling
-
----
-
-## 📱 Mobile Experience
-
-### **Mobile Components** (`src/mobile/`)
-- **Mobile Navigation**: Touch-optimized navigation
-- **Mobile Forms**: Mobile-friendly form inputs
-- **Touch Interactions**: Gesture-based interactions
-- **Performance**: Mobile-optimized performance
-
-### **Progressive Web App (PWA)**
-- **Service Worker**: Offline functionality
-- **App Manifest**: Installable web app
-- **Push Notifications**: User engagement features
-
----
-
-## 🔄 State Management
-
-### **Redux Store** (`src/store/`)
-- **User State**: Authentication and user data
-- **Service State**: Service catalog and selections
-- **UI State**: Interface state management
-- **Cart State**: Shopping cart functionality
-
-### **React Context**
-- **Theme Context**: Dark/light mode management
-- **Language Context**: Internationalization state
-- **Auth Context**: Authentication state
-
----
-
-## 🌐 API Integration
-
-### **External Services**
-- **Firebase**: Authentication and backend services
-- **Supabase**: Database and real-time features
-- **Vercel**: Deployment and hosting
-- **Analytics**: User behavior tracking
-
-### **API Structure**
-- **RESTful APIs**: Standard REST API endpoints
-- **GraphQL**: Modern data querying (if applicable)
-- **WebSocket**: Real-time communication
-
----
-
-## 📈 Future Roadmap
-
-### **Planned Features**
-- **AI Chatbot**: Enhanced customer support
-- **Advanced Analytics**: Business intelligence dashboard
-- **Mobile App**: Native mobile applications
-- **API Marketplace**: Third-party integrations
-
-### **Technology Upgrades**
-- **React 19**: Latest React features
-- **Vite 6**: Enhanced build performance
-- **TypeScript 6**: Advanced type safety
-- **Performance**: Continuous optimization
-
----
-
-## 📚 Documentation
-
-### **Code Documentation**
-- **JSDoc**: Function and component documentation
-- **TypeScript**: Type definitions and interfaces
-- **README**: Project setup and usage
-- **API Docs**: Service integration guides
-
-### **User Documentation**
-- **User Guides**: Service usage instructions
-- **FAQ**: Common questions and answers
-- **Support**: Technical support resources
-- **Tutorials**: Step-by-step guides
-
----
-
-## 🎯 Key Metrics & KPIs
-
-### **Performance Targets**
-- **Page Load Time**: < 2 seconds
-- **Lighthouse Score**: > 90 for all categories
-- **Core Web Vitals**: All metrics in "Good" range
-- **Mobile Performance**: Optimized for mobile devices
-
-### **Business Metrics**
-- **Service Inquiries**: Track conversion rates
-- **User Engagement**: Time on site and page views
-- **Mobile Usage**: Mobile vs desktop traffic
-- **Conversion Funnel**: Lead generation optimization
-
----
-
-## 🔍 Troubleshooting
-
-### **Common Issues**
-- **Build Failures**: Check Node.js version and dependencies
-- **Performance Issues**: Monitor Core Web Vitals
-- **Mobile Issues**: Test responsive design
-- **SEO Issues**: Verify meta tags and structured data
-
-### **Debug Tools**
-- **Browser DevTools**: Performance and debugging
-- **Lighthouse**: Performance and accessibility testing
-- **Performance Monitor**: Real-time metrics
-- **Error Tracking**: Error monitoring and reporting
-
----
-
-**Last Updated**: $(date)  
-**Version**: 1.0.0  
-**Maintainer**: Zion Tech Group Development Team  
-**Status**: Production Ready ✅
-=======
 - **Accessibility**: WCAG AA standards
 - **Performance**: Core Web Vitals compliance
 
@@ -823,4 +695,3 @@ zion-tech-group-website/
 *Last Updated: August 26, 2025*
 *Version: 1.0.0*
 *Status: Production Ready* 🎊
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7

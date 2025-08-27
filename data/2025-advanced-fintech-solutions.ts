@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedFintechSolution2025 {
   id: string;
   name: string;
@@ -40,7 +39,6 @@ export interface AdvancedFintechSolution2025 {
   rating: number;
   reviews: number;
 }
-
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
   {
     id: 'ai-powered-credit-risk-assessment',

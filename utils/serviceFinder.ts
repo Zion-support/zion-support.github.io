@@ -14,9 +14,7 @@ import { newOperationalServices2025 } from '../data/new-operational-services-202
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import { professionalServices } from '../data/professional-services';
-
 export type ServiceRecord = any;
-
 const allServiceArrays: ServiceRecord[][] = [
 	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices,
@@ -35,7 +33,6 @@ const allServiceArrays: ServiceRecord[][] = [
 	emergingTech2025Services,
 	professionalServices
 ];
-
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
 		const hit = arr.find((s: any) => {
@@ -55,7 +52,6 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	}
 	return undefined;
 }
-
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
 	const results: ServiceRecord[] = [];
 	for (const arr of allServiceArrays) {
@@ -74,4 +70,3 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		return true;
 	});
 }
-

@@ -14,7 +14,6 @@ export interface Revolutionary2027MicroSaas {
     address: string;
   };
 }
-
 export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = [
   {
     id: "2027-revolutionary-micro-saas",

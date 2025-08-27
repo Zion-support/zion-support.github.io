@@ -14,7 +14,6 @@ export interface InnovativeMicroSaasService {
     address: string;
   };
 }
-
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   {
     id: "smart-project-manager",

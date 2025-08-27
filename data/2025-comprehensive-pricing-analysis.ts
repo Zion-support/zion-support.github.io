@@ -39,7 +39,6 @@ export interface PricingAnalysis {
     website: string;
   };
 }
-
 export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
   // AI AUTONOMOUS BUSINESS MANAGER
   {
@@ -101,7 +100,6 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       website: 'https://ziontechgroup.com'
     }
   },
-
   // QUANTUM NEURAL NETWORK PLATFORM
   {
     serviceId: 'quantum-neural-network-platform',
@@ -162,7 +160,6 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       website: 'https://ziontechgroup.com'
     }
   },
-
   // AUTONOMOUS DEFI TRADING PLATFORM
   {
     serviceId: 'autonomous-defi-trading-platform',
@@ -223,7 +220,6 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       website: 'https://ziontechgroup.com'
     }
   },
-
   // AI-POWERED THREAT HUNTING PLATFORM
   {
     serviceId: 'ai-powered-threat-hunting-platform',
@@ -284,7 +280,6 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       website: 'https://ziontechgroup.com'
     }
   },
-
   // AUTONOMOUS MANUFACTURING OPTIMIZER
   {
     serviceId: 'autonomous-manufacturing-optimizer',
@@ -346,16 +341,13 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
     }
   }
 ];
-
 export const getPricingAnalysisByService = (serviceId: string) => {
   return comprehensivePricingAnalysis2025.find(s => s.serviceId === serviceId);
 };
-
 export const getPricingAnalysisByCategory = (category: string) => {
   if (!category || category === 'All') return comprehensivePricingAnalysis2025;
   return comprehensivePricingAnalysis2025.filter(s => s.category === category);
 };
-
 export const getMarketInsights = () => {
   const insights = {
     totalMarketSize: '$1.2T+',
@@ -368,7 +360,6 @@ export const getMarketInsights = () => {
   };
   return insights;
 };
-
 export const getCompetitiveLandscape = () => {
   return {
     aiServices: ['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],

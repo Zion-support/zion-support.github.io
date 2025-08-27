@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedBlockchainWeb3Service {
   id: string;
   name: string;
@@ -39,14 +38,12 @@ export interface AdvancedBlockchainWeb3Service {
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   {
     id: 'ai-powered-defi-protocol',
@@ -93,7 +90,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.8,
     reviews: 28
   },
-
   {
     id: 'quantum-resistant-blockchain',
     name: 'Quantum-Resistant Blockchain',
@@ -139,7 +135,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.9,
     reviews: 15
   },
-
   {
     id: 'web3-identity-platform',
     name: 'Web3 Identity Platform',
@@ -185,7 +180,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.7,
     reviews: 58
   },
-
   {
     id: 'ai-nft-marketplace',
     name: 'AI NFT Marketplace',
@@ -231,7 +225,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.6,
     reviews: 89
   },
-
   {
     id: 'blockchain-supply-chain-orchestrator',
     name: 'Blockchain Supply Chain Orchestrator',
@@ -277,7 +270,6 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.8,
     reviews: 52
   },
-
   {
     id: 'metaverse-development-platform',
     name: 'Metaverse Development Platform',
