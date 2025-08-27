@@ -1,6 +1,6 @@
 import React from 'react';
 import { EnhancedServicesShowcase } from '@/components/EnhancedServicesShowcase';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function EnhancedServicesPage() {
   return (

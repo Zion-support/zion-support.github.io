@@ -1,121 +1,26 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Zap, Brain, Shield, Cloud, Rocket, Cpu, Lock, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, Star, TrendingUp, Award, Target, Lightbulb } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Zap, Brain, Shield, Cloud, Rocket, Cpu, Lock, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, Star, TrendingUp, Award, Target, Lightbulb, FileText, BarChart3, Network, Server, Eye, TestTube, Handshake, HelpCircle, Twitter, Linkedin, Facebook, Instagram, Github } from 'lucide-react';
 
-const footerNavigation = {
-  services: {
-    title: 'Core Services',
-    items: [
-      { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Machine learning and data insights' },
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Protect your digital assets' },
-      { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Scalable infrastructure solutions' },
-      { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Connected device management' },
-      { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Next-generation computing' },
-      { name: 'Blockchain', href: '/services/blockchain', icon: Code, description: 'Decentralized solutions' },
-      { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Virtual replica technology' },
-      { name: 'Sustainability', href: '/services/sustainability', icon: Heart, description: 'Green IT solutions' }
-    ],
-  },
-  microSaas: {
-    title: 'Micro SAAS Solutions',
-    items: [
-      { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: Brain, description: 'Smart analytics platform' },
-      { name: 'Customer Experience', href: '/micro-saas/customer-experience', icon: Users, description: 'Enhanced customer engagement' },
-      { name: 'Quantum Computing', href: '/micro-saas/quantum-computing', icon: Rocket, description: 'Quantum-powered solutions' },
-      { name: 'Supply Chain', href: '/micro-saas/supply-chain', icon: Truck, description: 'Optimized logistics management' },
-      { name: 'Cybersecurity', href: '/micro-saas/cybersecurity', icon: Shield, description: 'Advanced security tools' },
-      { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge device solutions' },
-      { name: 'Content Creation', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content tools' },
-      { name: 'HR Platform', href: '/micro-saas/hr-platform', icon: Users, description: 'Human resources automation' }
-    ],
-  },
-  enterprise: {
-    title: 'Enterprise Solutions',
-    items: [
-      { name: 'Cloud Migration', href: '/enterprise-solutions/cloud-migration', icon: Cloud, description: 'Enterprise cloud transformation' },
-      { name: 'Digital Transformation', href: '/enterprise-solutions/digital-transformation', icon: Rocket, description: 'End-to-end transformation' },
-      { name: 'Cybersecurity Framework', href: '/enterprise-solutions/cybersecurity', icon: Shield, description: 'Enterprise security solutions' },
-      { name: 'Data Analytics', href: '/enterprise-solutions/data-analytics', icon: BarChart3, description: 'Enterprise data insights' },
-      { name: 'Process Automation', href: '/enterprise-solutions/automation', icon: Zap, description: 'Intelligent automation' },
-      { name: 'System Integration', href: '/enterprise-solutions/integration', icon: Network, description: 'Seamless integration' },
-      { name: 'Infrastructure Modernization', href: '/enterprise-solutions/infrastructure', icon: Server, description: 'Modern infrastructure' },
-      { name: 'Strategic Consulting', href: '/enterprise-solutions/consulting', icon: Users, description: 'Technology advisory' }
-    ],
-  },
-  nextGenAI: {
-    title: 'Next-Gen AI',
-    items: [
-      { name: 'Autonomous AI Systems', href: '/next-gen-ai/autonomous-systems', icon: Brain, description: 'Self-learning AI systems' },
-      { name: 'Advanced NLP', href: '/next-gen-ai/nlp', icon: MessageCircle, description: 'Natural language processing' },
-      { name: 'Computer Vision AI', href: '/next-gen-ai/computer-vision', icon: Eye, description: 'Advanced visual AI' },
-      { name: 'AI Ethics Platform', href: '/next-gen-ai/ethics', icon: Shield, description: 'Responsible AI development' },
-      { name: 'Quantum-Classical AI', href: '/next-gen-ai/quantum-ai', icon: Rocket, description: 'Hybrid quantum AI' },
-      { name: 'Federated Learning', href: '/next-gen-ai/federated-learning', icon: Network, description: 'Privacy-preserving AI' },
-      { name: 'AI Research Platform', href: '/next-gen-ai/research', icon: TestTube, description: 'AI research tools' },
-      { name: 'AI Optimization Engine', href: '/next-gen-ai/optimization', icon: Target, description: 'Advanced optimization' }
-    ],
-  },
-  industrySolutions: {
-    title: 'Industry Solutions',
-    items: [
-      { name: 'Healthcare AI', href: '/industry-solutions/healthcare', icon: HealthIcon, description: 'AI-powered healthcare' },
-      { name: 'FinTech Solutions', href: '/industry-solutions/fintech', icon: FinanceIcon, description: 'Financial technology' },
-      { name: 'Smart Manufacturing', href: '/industry-solutions/manufacturing', icon: Factory, description: 'IoT manufacturing' },
-      { name: 'Retail AI Platform', href: '/industry-solutions/retail', icon: ShoppingCart, description: 'AI retail solutions' },
-      { name: 'Education Technology', href: '/industry-solutions/education', icon: BookOpen, description: 'EdTech platform' },
-      { name: 'Government Solutions', href: '/industry-solutions/government', icon: GovernmentIcon, description: 'Government tech' },
-      { name: 'Energy Optimization', href: '/industry-solutions/energy', icon: EnergyIcon, description: 'Energy management' },
-      { name: 'Transportation & Logistics', href: '/industry-solutions/transportation', icon: TransportIcon, description: 'Smart logistics' }
-    ],
-  },
-  iotEdge: {
-    title: 'IoT & Edge Computing',
-    items: [
-      { name: 'Smart City Platform', href: '/iot-edge/smart-city', icon: Building, description: 'Smart city solutions' },
-      { name: 'Industrial IoT Suite', href: '/iot-edge/industrial-iot', icon: Factory, description: 'Industrial IoT' },
-      { name: 'Edge AI Platform', href: '/iot-edge/edge-ai', icon: Cpu, description: 'Edge AI computing' },
-      { name: 'Connected Device Management', href: '/iot-edge/device-management', icon: Smartphone, description: 'IoT device management' },
-      { name: 'Sensor Network Platform', href: '/iot-edge/sensor-networks', icon: Radio, description: 'Sensor networks' },
-      { name: 'Edge Computing Infrastructure', href: '/iot-edge/edge-infrastructure', icon: Server, description: 'Edge infrastructure' },
-      { name: 'IoT Security Platform', href: '/iot-edge/iot-security', icon: Shield, description: 'IoT security' },
-      { name: 'IoT Data Analytics', href: '/iot-edge/iot-analytics', icon: BarChart3, description: 'IoT analytics' }
-    ],
-  },
-  company: {
-    title: 'Company',
-    items: [
-      { name: 'About Us', href: '/about', icon: Users, description: 'Learn our story' },
-      { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights' },
-      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic alliances' },
-      { name: 'Careers', href: '/careers', icon: Users, description: 'Join our team' },
-      { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch' },
-      { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Common questions' },
-      { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation' },
-      { name: 'Green IT', href: '/green-it', icon: Heart, description: 'Sustainability initiatives' }
-    ],
-  },
-  support: {
-    title: 'Support & Resources',
-    items: [
-      { name: 'Help Center', href: '/help-center', icon: HelpCircle, description: 'Get help and support' },
-      { name: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Reach our team' },
-      { name: 'Terms of Service', href: '/terms', icon: FileText, description: 'Legal terms' },
-      { name: 'Privacy Policy', href: '/privacy', icon: Shield, description: 'Data protection' },
-      { name: 'Security', href: '/security', icon: SecurityIcon, description: 'Security practices' },
-      { name: 'System Status', href: '/status', icon: CheckCircle, description: 'Service status' },
-      { name: 'Research & Development', href: '/research-development', icon: TestTube, description: 'R&D initiatives' },
-      { name: 'News', href: '/news', icon: TrendingUp, description: 'Latest updates' }
-    ],
-  },
-};
-
-const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-500' },
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+// Contact information
+const contactInfo = [
+  { label: 'Email', value: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com', icon: Mail },
+  { label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567', icon: Phone },
+  { label: 'Address', value: '123 Tech Street, Innovation City, IC 12345', href: '#', icon: MapPin },
+  { label: 'Website', value: 'ziontechgroup.com', href: 'https://ziontechgroup.com', icon: Globe },
 ];
+
+// Social media links
+const socialLinks = [
+  { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+  { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
+  { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-500' },
+  { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
+  { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+];
+
+// Current year
+const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
@@ -190,7 +95,7 @@ const socialLinks = [
         { label: "Emergency Support", path: "/support/emergency", description: "24/7 Critical Support" }
       ]
     }
-  };
+  ];
 
   const achievements = [
     { icon: Award, label: "500+", description: "Projects Delivered" },
@@ -360,27 +265,7 @@ const socialLinks = [
             </div>
 
             {/* Navigation sections */}
-            {Object.entries(footerNavigation).map(([key, section]) => (
-              <div key={key} className="space-y-4">
-                <h3 className="text-lg font-semibold text-zion-cyan flex items-center space-x-2">
-                  {section.icon ? <section.icon className="w-5 h-5" /> : <Users className="w-5 h-5" />}
-                  <span>{section.title}</span>
-                </h3>
-                <ul className="space-y-2">
-                  {section.items.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        to={item.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-zion-cyan transition-colors duration-300 group"
-                      >
-                        <item.icon className="w-4 h-4 text-zion-cyan group-hover:scale-110 transition-transform duration-200" />
-                        <span className="text-sm">{item.name}</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+            {/* This section was removed as per the new_code, as the footerNavigation object was removed. */}
           </div>
         </div>
 

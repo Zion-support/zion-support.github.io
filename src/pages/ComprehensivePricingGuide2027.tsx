@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { COMPREHENSIVE_PRICING_GUIDE_2027 } from '@/data/comprehensivePricingGuide2027';
 
 const ComprehensivePricingGuide2027: React.FC = () => {

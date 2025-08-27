@@ -287,9 +287,9 @@ export function AppHeader() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </header>
+      </header>
+    </>
   );
 }
