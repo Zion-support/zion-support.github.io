@@ -39,6 +39,9 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 
+// New Innovative Services Showcase
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./components/InnovativeServicesShowcase2025'));
+
 // Additional pages
 const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
 const Login = createLazyComponent(() => import('./pages/Login'));
@@ -51,7 +54,7 @@ const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
 
 // Enhanced loading component
 const EnhancedLoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+  <div className="flex items-center justify-center min-h-screen futuristic-bg">
     <div className="relative">
       <div className="w-16 h-16 border-4 border-cyan-400/20 rounded-full"></div>
       <div className="absolute top-0 left-0 w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
@@ -65,7 +68,7 @@ const EnhancedLoadingSpinner = () => (
 function App() {
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <div className="min-h-screen futuristic-bg">
         <SEO 
           title="Zion Tech Group - Leading AI & Technology Solutions"
           description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
@@ -93,6 +96,10 @@ function App() {
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
+              
+              {/* New Innovative Services Showcase */}
+              <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               
               {/* Additional Routes */}
               <Route path="/dashboard" element={<Dashboard />} />
