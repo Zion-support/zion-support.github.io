@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import {
   Brain,
   Shield,
@@ -401,7 +401,7 @@ export default function Solutions() {
                   viewport={{ once: true }}
                   className="group cursor-pointer"
                 >
-                  <Link href={`/solutions#${category.id}`}>
+                  <Link to={`/solutions#${category.id}`}>
                     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300 h-full">
                       <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         <IconComponent className="w-8 h-8 text-white" />

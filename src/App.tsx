@@ -27,6 +27,10 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Solutions = React.lazy(() => import('./pages/solutions'));
+const Support = React.lazy(() => import('./pages/Support'));
+const SystemStatus = React.lazy(() => import('./pages/SystemStatus'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -90,6 +94,7 @@ function App() {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/solutions" element={<Solutions />} />
                 <Route path="/ai-services" element={<AIServices />} />
                 <Route path="/it-services" element={<ITServices />} />
                 <Route path="/micro-saas" element={<MicroSaaS />} />
@@ -98,6 +103,9 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/status" element={<SystemStatus />} />
+                <Route path="/sitemap" element={<Sitemap />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
