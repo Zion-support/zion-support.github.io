@@ -68,8 +68,12 @@ export function Footer() {
         { name: 'AI Services', path: '/ai-services', icon: Brain },
         { name: 'IT Services', path: '/it-services', icon: Building },
         { name: 'Micro SaaS', path: '/micro-saas', icon: Zap },
-        { name: 'All Services', path: '/services', icon: Zap },
-        { name: 'Pricing', path: '/pricing', icon: DollarSign }
+        { name: 'AI Auto Email', path: '/services/ai-auto-email-responder', icon: Mail },
+        { name: 'Feedback Surveys', path: '/services/mobile-feedback-surveys', icon: Users },
+        { name: 'Compliance Copilot', path: '/services/ai-compliance-copilot', icon: Shield },
+        { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText },
+        { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+        { name: 'All Services', path: '/services', icon: Zap }
       ]
     },
     {
