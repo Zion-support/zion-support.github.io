@@ -283,7 +283,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               <Link to="/terms" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
                 Terms of Service
               </Link>
-              <Link to="/sitemap" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
+              <Link to="/sitemap.xml" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
                 Sitemap
               </Link>
             </div>
