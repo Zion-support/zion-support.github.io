@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle } from 'lucide-react';
+import { Menu, X, Search, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -60,7 +60,7 @@ export function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Partners', href: '/partners', icon: Users },
     { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Help Center', href: '/help-center', icon: MessageCircle },
+    { name: 'Help Center', href: '/help', icon: MessageCircle },
   ];
 
   return (
@@ -190,15 +190,7 @@ export function AppHeader() {
                 </div>
               </form>
 
-              {/* Quick actions */}
-              <div className="hidden md:flex items-center space-x-2">
-                <button className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200">
-                  <Bell className="w-5 h-5" />
-                </button>
-                <button className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200">
-                  <User className="w-5 h-5" />
-                </button>
-              </div>
+              {/* Quick actions placeholder removed for simplicity */}
 
               {/* CTA Button */}
               <Link
@@ -321,9 +313,9 @@ export function AppHeader() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </header>
+      </header>
+    </>
   );
 }

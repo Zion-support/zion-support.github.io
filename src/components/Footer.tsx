@@ -59,25 +59,25 @@ export function Footer() {
       title: 'Services',
       icon: Zap,
       links: [
-        { name: 'AI Solutions', path: '/services/ai', icon: Brain },
+        { name: 'AI Solutions', path: '/services/ai-business-intelligence', icon: Brain },
         { name: 'Cloud & DevOps', path: '/services/cloud', icon: Cloud },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Infrastructure', path: '/services/infrastructure', icon: Building },
-        { name: 'Digital Transformation', path: '/services/transformation', icon: Rocket },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Technology', path: '/space-technology', icon: Rocket }
+        { name: 'Infrastructure', path: '/services/it-infrastructure', icon: Building },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+        { name: 'Quantum Technology', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket }
       ]
     },
     {
       title: 'Solutions',
       icon: Shield,
       links: [
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-        { name: 'SMB Solutions', path: '/solutions/smb', icon: Target },
-        { name: 'Startup Solutions', path: '/solutions/startup', icon: Rocket },
-        { name: 'Government Solutions', path: '/solutions/government', icon: Shield },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
-        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign }
+        { name: 'Enterprise Solutions', path: '/solutions', icon: Building },
+        { name: 'SMB Solutions', path: '/solutions', icon: Target },
+        { name: 'Startup Solutions', path: '/solutions', icon: Rocket },
+        { name: 'Government Solutions', path: '/solutions', icon: Shield },
+        { name: 'Healthcare Solutions', path: '/solutions', icon: Heart },
+        { name: 'Financial Solutions', path: '/solutions', icon: DollarSign }
       ]
     },
     {
@@ -89,7 +89,7 @@ export function Footer() {
         { name: 'White Papers', path: '/white-papers', icon: FileText },
         { name: 'Webinars', path: '/webinars', icon: Video },
         { name: 'Research & Development', path: '/research-development', icon: TestTube },
-        { name: 'Insights', path: '/insights', icon: TrendingUp }
+        { name: 'Insights', path: '/blog', icon: TrendingUp }
       ]
     },
     {

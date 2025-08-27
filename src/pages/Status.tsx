@@ -1,4 +1,19 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
+
+export default function Status() {
+	return (
+		<div className="min-h-screen bg-slate-900 text-white py-16">
+			<SEO title="Status - Zion Tech Group" description="System status and uptime information." />
+			<div className="container mx-auto px-4 max-w-4xl">
+				<h1 className="text-4xl font-bold mb-4">System Status</h1>
+				<p className="text-zinc-300">All systems operational.</p>
+			</div>
+		</div>
+	);
+}
+
+import React from 'react';
 import { 
   CheckCircle, 
   AlertTriangle, 
