@@ -1,14 +1,15 @@
 import React, { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe } from 'lucide-react';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, Rocket } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 import { NEW_SERVICES_2025 } from '../data/newServices2025';
+import { NEW_INNOVATIVE_SERVICES_2025 } from '../data/newInnovativeServices2025';
 
 const Services: React.FC = () => {
   const [query, setQuery] = useState('');
-  const services = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025, ...NEW_SERVICES_2025];
+  const services = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025, ...NEW_SERVICES_2025, ...NEW_INNOVATIVE_SERVICES_2025];
   const featuredCategories = [
     { icon: Workflow, title: 'Process Automation', desc: 'Human + AI workflows across CRMs, ERPs and support.', href: '/ai-services' },
     { icon: MessageSquare, title: 'Helpdesk & Knowledge', desc: 'Tickets, KB, and chatbots trained on your docs.', href: '/micro-saas' },
@@ -74,12 +75,19 @@ const Services: React.FC = () => {
             See more at <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
           </div>
           
-          <div className="mt-8 text-center">
+          <div className="mt-8 text-center space-y-4">
             <Link to="/innovative-ai-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 font-semibold">
               <Sparkles className="w-5 h-5 mr-2" />
               Explore Our Innovative AI Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+            <div>
+              <Link to="/new-innovative-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:from-green-400 hover:to-blue-400 transition-all duration-300 font-semibold">
+                <Rocket className="w-5 h-5 mr-2" />
+                Discover New Services 2025
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {featuredCategories.map((c) => (
