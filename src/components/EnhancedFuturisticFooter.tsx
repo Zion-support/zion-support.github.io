@@ -22,37 +22,13 @@ import {
   Crown,
   Sparkles,
   Flame,
+<<<<<<< HEAD
   Thunder,
+=======
+>>>>>>> b853260fd825552ae78a5c6124dfc100e849b8d4
   Sun,
   Moon,
-  Planet,
-  Galaxy,
-  Universe,
   Infinity,
-  Alpha,
-  Beta,
-  Gamma,
-  Delta,
-  Epsilon,
-  Zeta,
-  Eta,
-  Theta,
-  Iota,
-  Kappa,
-  Lambda,
-  Mu,
-  Nu,
-  Xi,
-  Omicron,
-  Pi,
-  Rho,
-  Sigma,
-  Tau,
-  Upsilon,
-  Phi,
-  Chi,
-  Psi,
-  Omega,
   Cloud,
   Cpu,
   Users
@@ -82,6 +58,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     {
       title: 'Core Services',
       links: [
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'Data Analytics', href: '/services/data-analytics' },
@@ -92,7 +72,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Helpdesk Platform', href: '/services/helpdesk' },
         { name: 'Website Analytics', href: '/services/website-analytics' },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal' },
-        { name: 'Security Headers & CSP', href: '/services/security-headers-csp' }
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp' },
+        { name: 'AI Project Manager', href: '/services/ai-project-manager' },
+        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support' },
+        { name: 'AI Data Analytics', href: '/services/ai-data-analytics' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' }
       ]
     },
     {

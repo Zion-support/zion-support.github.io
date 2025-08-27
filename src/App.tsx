@@ -1,12 +1,13 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 
 // Lazy load only the essential, working pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -80,17 +81,40 @@ const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalyt
 const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
 const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
+// Additional innovative services
+const AIAutonomousCodeReviewer = React.lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
+const ZeroTrustNetworkAccess = React.lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
 // Additional new service pages
 const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
 const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
 const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
 const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
+// New innovative AI services
+const AIProjectManager = React.lazy(() => import('./pages/services/AIProjectManager'));
+const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGenerator'));
+const AICustomerSupport = React.lazy(() => import('./pages/services/AICustomerSupport'));
+const AIDataAnalytics = React.lazy(() => import('./pages/services/AIDataAnalytics'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+
+// 2026 Services pages
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'));
+const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
+const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
+
+// Additional pages
+const API = React.lazy(() => import('./pages/API'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
 
 // Accessibility page
 const Accessibility = () => (
@@ -125,9 +149,10 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
+        <FuturisticAnimatedBackground />
         <AppHeader />
         
-        <main className="flex-1">
+        <main className="flex-1 relative z-10">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -203,11 +228,31 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+              {/* New innovative AI service routes */}
+              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
+              <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
+              <Route path="/services/ai-customer-support" element={<AICustomerSupport />} />
+              <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              
+              {/* 2026 Services routes */}
+              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+              <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+              <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+              <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+              <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
+              <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+              <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+              
+              {/* Additional routes */}
+              <Route path="/api" element={<API />} />
+              <Route path="/developers" element={<DeveloperPortal />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
@@ -218,6 +263,7 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <PWAUpdater />
       </div>
     </ErrorBoundary>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shield, Rocket, Target, TrendingUp, Heart, Crown, Sparkles, Flame, Zap as Lightning, Sun, Moon, Globe as Planet, Star as Galaxy, Infinity, Zap as Alpha, Zap as Beta, Zap as Gamma, Zap as Delta, Zap as Epsilon, Zap as Zeta, Zap as Eta, Zap as Theta, Zap as Iota, Zap as Kappa, Zap as Lambda, Zap as Mu, Zap as Nu, Zap as Xi, Zap as Omicron, Zap as Pi, Zap as Rho, Zap as Sigma, Zap as Tau, Zap as Upsilon, Zap as Phi, Zap as Chi, Zap as Psi, Zap as Omega } from 'lucide-react';
+import { Users, Globe, Building2, Award, Star, ArrowRight, CheckCircle, Zap, Shield, Rocket, Target, TrendingUp, Heart, Crown, Sparkles, Flame, Sun, Moon, Infinity } from 'lucide-react';
 export default function Partners() {
   const partnershipTypes = [
     {
