@@ -117,6 +117,77 @@ export function AppHeader() {
     { name: 'Help Center', href: '/help', icon: HelpCircle },
   ];
 
+  // Services categories for organized navigation
+  const servicesCategories = [
+    {
+      title: 'Featured & New Services',
+      icon: Star,
+      services: [
+        { name: '2025 New Innovative Services', href: '/new-innovative-services-2025', description: 'Revolutionary AI & Micro SAAS Solutions' },
+        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', description: 'Future-ready Technology Solutions' },
+        { name: 'Comprehensive Services 2029', href: '/comprehensive-services-showcase-2029', description: 'Complete Technology Portfolio' }
+      ]
+    },
+    {
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      services: [
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'AI-powered workflow automation' },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', description: 'AI-powered data governance' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', description: 'AI-powered customer insights' },
+        { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', description: 'Advanced analytics & ML insights' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' }
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
+      icon: Cloud,
+      services: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Financial operations automation' }
+      ]
+    },
+    {
+      title: 'Cybersecurity',
+      icon: Shield,
+      services: [
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', description: 'Web security hardening' },
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', description: 'GDPR/CCPA compliance' },
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', description: 'Modern security architecture' }
+      ]
+    },
+    {
+      title: 'Digital Transformation',
+      icon: Zap,
+      services: [
+        { name: 'IT Consulting', href: '/it-consulting', description: 'Technology strategy & planning' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Strategic technology consulting' },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business solutions' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Atom,
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen computational power' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'Smart device networks' },
+        { name: 'Space Technology', href: '/space-tech', description: 'Space-based solutions' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
+      services: [
+        { name: 'Micro CRM', href: '/services/micro-crm', description: 'Customer relationship management' },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', description: 'Customer support system' },
+        { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance tracking & insights' }
+      ]
+    }
+  ];
+
   // Enhanced futuristic background component
   const FuturisticBackground = () => (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
