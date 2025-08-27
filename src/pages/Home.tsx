@@ -21,8 +21,25 @@ import {
   Code,
   Lock,
   Cpu,
-  Database
+  Database,
+  Sparkles,
+  Target,
+  Lightbulb,
+  Server,
+  Wifi,
+  Monitor,
+  Laptop,
+  Handshake,
+  FileImage,
+  Network,
+  Heart,
+  BarChart3,
+  BookOpen,
+  ShoppingCart,
+  CpuIcon,
+  MessageCircle
 } from 'lucide-react';
+import { innovativeMicroSaasServices2026, specializedServices2026, zionContactInfo } from '../data/innovativeMicroSaasServices2026';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -71,117 +88,142 @@ export default function Home() {
 
   const featuredServices = [
     {
-      title: "AI Business Intelligence",
-      description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
+      title: "ZionAI Business Intelligence Suite",
+      description: "Next-generation AI-powered business intelligence platform with real-time analytics, predictive modeling, and automated insights generation.",
       icon: Brain,
       path: "/services/ai-analytics",
       category: "AI Solutions",
-      price: "$2,500/mo",
+      price: "$2,999/mo",
       rating: 4.9,
       reviewCount: 127,
-      highlights: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "AI Insights"]
+      highlights: ["Real-time Analytics", "Predictive Modeling", "Custom AI Models", "Multi-source Integration"],
+      contact: zionContactInfo
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
-      icon: Cloud,
-      path: "/services/cloud-devops",
-      category: "Infrastructure",
-      price: "$1,800/mo",
-      rating: 4.8,
-      reviewCount: 89,
-      highlights: ["99.9% Uptime", "Auto-scaling", "Security First", "Cost Optimization"]
-    },
-    {
-      title: "Cybersecurity Services",
-      description: "Protect your business with enterprise-grade security solutions. From threat detection to compliance management, we've got you covered.",
+      title: "ZionShield Enterprise Security",
+      description: "Comprehensive cybersecurity platform with AI-powered threat detection, compliance management, and zero-trust architecture.",
       icon: Shield,
       path: "/services/cybersecurity",
       category: "Security",
-      price: "$3,200/mo",
+      price: "$2,499/mo",
+      rating: 4.8,
+      reviewCount: 89,
+      highlights: ["AI Threat Detection", "Zero-trust Security", "Compliance Automation", "24/7 SOC Support"],
+      contact: zionContactInfo
+    },
+    {
+      title: "ZionQuantum Computing Platform",
+      description: "Access to quantum computing resources for complex problem solving, optimization, and research applications.",
+      icon: Rocket,
+      path: "/services/quantum-computing",
+      category: "Future Tech",
+      price: "$4,999/mo",
       rating: 4.9,
-      reviewCount: 156,
-      highlights: ["Threat Detection", "24/7 Monitoring", "Compliance", "Incident Response"]
+      reviewCount: 45,
+      highlights: ["Quantum Algorithms", "Hybrid Computing", "Research Tools", "Expert Consultation"],
+      contact: zionContactInfo
     }
   ];
 
-  const features = [
+  const serviceCategories = [
     {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Optimized performance that scales with your business needs"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security with SOC2 compliance and regular audits"
-    },
-    {
-      icon: Globe,
-      title: "Global Reach",
-      description: "Serve customers worldwide with our distributed infrastructure"
-    },
-    {
+      name: "AI & Analytics",
       icon: Brain,
-      title: "AI-Powered",
-      description: "Intelligent automation and insights that drive business growth"
+      description: "Machine learning, predictive analytics, and business intelligence",
+      services: ["AI Business Intelligence", "Data Analytics", "Predictive Modeling", "Process Automation"],
+      path: "/services/ai-analytics",
+      color: "from-zion-cyan to-zion-purple"
+    },
+    {
+      name: "Cybersecurity",
+      icon: Shield,
+      description: "Enterprise-grade security and compliance solutions",
+      services: ["Threat Detection", "Zero-trust Security", "Compliance Management", "Incident Response"],
+      path: "/services/cybersecurity",
+      color: "from-zion-purple to-zion-pink"
+    },
+    {
+      name: "Cloud & DevOps",
+      icon: Cloud,
+      description: "Scalable infrastructure and automated deployment",
+      services: ["Cloud Management", "CI/CD Pipelines", "Infrastructure as Code", "Auto-scaling"],
+      path: "/services/cloud-devops",
+      color: "from-zion-blue to-zion-cyan"
+    },
+    {
+      name: "IoT & Edge",
+      icon: Cpu,
+      description: "Connected devices and edge computing solutions",
+      services: ["Device Management", "Edge Computing", "Real-time Analytics", "Predictive Maintenance"],
+      path: "/services/iot-edge",
+      color: "from-zion-cyan to-zion-green"
+    },
+    {
+      name: "Quantum Computing",
+      icon: Rocket,
+      description: "Next-generation computing for complex problems",
+      services: ["Quantum Algorithms", "Optimization Solvers", "Research Tools", "Hybrid Computing"],
+      path: "/services/quantum-computing",
+      color: "from-zion-purple to-zion-orange"
+    },
+    {
+      name: "Blockchain & Web3",
+      icon: Lock,
+      description: "Decentralized solutions and digital assets",
+      services: ["Smart Contracts", "Supply Chain", "Identity Management", "DeFi Integration"],
+      path: "/services/blockchain",
+      color: "from-zion-orange to-zion-yellow"
     }
   ];
 
-  const testimonials = [
+  const industrySolutions = [
     {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp Solutions",
-      content: "Zion Tech Group transformed our business operations with their AI solutions. We've seen a 40% increase in efficiency and significant cost savings.",
-      rating: 5,
-      company: "TechCorp"
+      name: "Healthcare",
+      icon: Heart,
+      description: "Digital health solutions and medical technology",
+      solutions: ["Telemedicine", "AI Diagnostics", "Patient Management", "Medical IoT"],
+      path: "/solutions/healthcare"
     },
     {
-      name: "Michael Chen",
-      role: "CEO, InnovateLab",
-      content: "The team at Zion delivered exceptional results. Their expertise in cloud infrastructure and cybersecurity gave us the confidence to scale rapidly.",
-      rating: 5,
-      company: "InnovateLab"
+      name: "Finance",
+      icon: BarChart3,
+      description: "Fintech solutions and financial technology",
+      solutions: ["Digital Banking", "AI Trading", "Risk Management", "Blockchain Finance"],
+      path: "/solutions/finance"
     },
     {
-      name: "Emily Rodriguez",
-      role: "VP Engineering, DataFlow Inc",
-      content: "Working with Zion has been a game-changer. Their AI-powered insights have helped us make better decisions and improve customer satisfaction.",
-      rating: 5,
-      company: "DataFlow"
+      name: "Manufacturing",
+      icon: CpuIcon,
+      description: "Smart manufacturing and Industry 4.0",
+      solutions: ["Digital Twin", "Predictive Maintenance", "Supply Chain", "Quality Control"],
+      path: "/solutions/manufacturing"
+    },
+    {
+      name: "Retail",
+      icon: ShoppingCart,
+      description: "E-commerce and retail technology",
+      solutions: ["Omnichannel", "AI Personalization", "Inventory Management", "Customer Analytics"],
+      path: "/solutions/retail"
     }
   ];
 
-  const quickActions = [
-    { name: "Find Talent", icon: Users, path: "/talent", color: "from-blue-500 to-cyan-500" },
-    { name: "Browse Services", icon: Code, path: "/services", color: "from-purple-500 to-pink-500" },
-    { name: "Get Equipment", icon: Cpu, path: "/equipment", color: "from-green-500 to-teal-500" },
-    { name: "Request Quote", icon: Rocket, path: "/request-quote", color: "from-orange-500 to-red-500" }
-  ];
-
+  // Auto-advance slides
   useEffect(() => {
     if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
+    
+    const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
-
-    return () => clearInterval(interval);
+    
+    return () => clearInterval(timer);
   }, [isAutoPlaying, heroSlides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    setIsAutoPlaying(false);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -192,252 +234,203 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen futuristic-bg">
+      {/* Particle Effects */}
+      <div className="particles">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${10 + Math.random() * 10}s`
+            }}
+          />
+        ))}
+      </div>
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-20">
-        {/* Enhanced background with animated elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20"></div>
-          <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-zion-blue/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Enhanced Search Bar */}
-          <motion.div 
-            className="max-w-2xl mx-auto mb-12"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search for services, talent, equipment, or solutions..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg"
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300"
-              >
-                <Search className="h-5 w-5" />
-              </button>
-            </form>
-          </motion.div>
-
-          {/* Hero Carousel */}
-          <div className="relative">
-            <div className="overflow-hidden rounded-3xl shadow-2xl">
-              <div className="flex transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-                {heroSlides.map((slide, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[600px] p-8 lg:p-12">
-                      <motion.div 
-                        className="text-center lg:text-left"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                      >
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                          {slide.title}
-                        </h1>
-                        <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-                          {slide.description}
-                        </p>
-                        <div className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start">
-                          {slide.features.map((feature, featureIndex) => (
-                            <motion.span 
-                              key={featureIndex} 
-                              className="px-4 py-2 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30"
-                              initial={{ opacity: 0, scale: 0.8 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              transition={{ duration: 0.3, delay: 0.4 + featureIndex * 0.1 }}
-                            >
-                              {feature}
-                            </motion.span>
-                          ))}
-                        </div>
-                        <motion.div
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: 0.6 }}
-                        >
-                          <Link
-                            to={slide.path}
-                            className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105"
-                          >
-                            {slide.cta}
-                            <ArrowRight className="ml-2 h-5 w-5" />
-                          </Link>
-                        </motion.div>
-                      </motion.div>
-                      
-                      <motion.div 
-                        className="relative"
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
-                      >
-                        <div className={`w-full h-80 lg:h-96 bg-gradient-to-br ${slide.gradient} rounded-2xl flex items-center justify-center shadow-2xl`}>
-                          <div className="text-center text-white">
-                            <div className="text-6xl mb-4">🚀</div>
-                            <p className="text-xl font-semibold">Innovation Hub</p>
-                          </div>
-                        </div>
-                      </motion.div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Enhanced Navigation Controls */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-xl border border-zion-cyan/30 text-white p-3 rounded-full hover:bg-zion-cyan/20 transition-all duration-300"
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="container-responsive relative z-10">
+          <div className="text-center space-y-8">
+            {/* Hero Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
             >
-              <ChevronLeft className="h-6 w-6" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-xl border border-zion-cyan/30 text-white p-3 rounded-full hover:bg-zion-cyan/20 transition-all duration-300"
-            >
-              <ChevronRight className="h-6 w-6" />
-            </button>
+              <h1 className="futuristic-heading text-4xl sm:text-5xl lg:text-7xl xl:text-8xl">
+                Zion Tech Group
+              </h1>
+              <p className="futuristic-subheading text-xl sm:text-2xl lg:text-3xl max-w-4xl mx-auto">
+                Pioneering the future of technology with innovative AI, cybersecurity, and digital transformation solutions
+              </p>
+              <p className="text-lg text-white/80 max-w-3xl mx-auto">
+                Empowering businesses worldwide with cutting-edge technology solutions that drive innovation, 
+                enhance security, and accelerate digital transformation.
+              </p>
+            </motion.div>
 
-            {/* Enhanced Slide Indicators */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'bg-zion-cyan w-8' 
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
+            {/* Search Bar */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="max-w-2xl mx-auto"
+            >
+              <form onSubmit={handleSearch} className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-cyan/60" />
+                <input
+                  type="text"
+                  placeholder="Search for AI services, cybersecurity, cloud solutions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-black/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-cyan/60 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 text-lg transition-all duration-300"
                 />
-              ))}
-            </div>
+                <button
+                  type="submit"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 futuristic-btn px-6 py-2"
+                >
+                  Search
+                </button>
+              </form>
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            >
+              <Link
+                to="/services"
+                className="futuristic-btn px-8 py-4 text-lg font-semibold"
+              >
+                Explore Services
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 text-lg font-semibold border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-black rounded-lg transition-all duration-300"
+              >
+                Get in Touch
+              </Link>
+            </motion.div>
           </div>
         </div>
-      </section>
 
-      {/* Quick Actions Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">Quick Actions</h2>
-            <p className="text-zion-slate-light text-lg">Get started with Zion Tech Group in seconds</p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {quickActions.map((action, index) => (
-              <motion.div
-                key={action.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Link
-                  to={action.path}
-                  className="block p-6 bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 text-center group"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${action.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <action.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold text-lg">{action.name}</h3>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+        {/* Floating Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full float-animation"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple/20 rounded-full float-animation-delayed"></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-zion-cyan/10 rounded-full float-animation-slow"></div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-20 relative">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-8 w-8 text-white" />
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-zion-cyan font-semibold mb-2">{stat.label}</div>
-                <div className="text-zion-slate-light text-sm">{stat.description}</div>
+                <div className="neon-text-cyan text-4xl font-bold mb-2">{stat.value}</div>
+                <div className="text-white font-semibold mb-2">{stat.label}</div>
+                <div className="text-zion-cyan/70 text-sm">{stat.description}</div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Featured Services Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
+      {/* Featured Services */}
+      <section className="py-20 relative">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Featured Services</h2>
-            <p className="text-zion-slate-light text-lg">Discover our most popular solutions</p>
+            <h2 className="futuristic-heading text-4xl lg:text-5xl mb-6">
+              Featured Services
+            </h2>
+            <p className="futuristic-subheading text-xl text-zion-cyan max-w-3xl mx-auto">
+              Discover our most innovative and impactful technology solutions
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="futuristic-grid">
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
+                className="futuristic-card p-8"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-white font-semibold text-xl mb-2">{service.title}</h3>
-                <p className="text-zion-slate-light mb-4">{service.description}</p>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-zion-cyan font-semibold">{service.price}</span>
-                  <div className="flex items-center">
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <span className="text-white ml-1">{service.rating}</span>
-                    <span className="text-zion-slate-light ml-1">({service.reviewCount})</span>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-zion-cyan">{service.price}</div>
+                    <div className="text-sm text-zion-cyan/70">{service.category}</div>
                   </div>
                 </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {service.highlights.map((highlight, highlightIndex) => (
-                    <span key={highlightIndex} className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                      {highlight}
-                    </span>
+
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-white/80 mb-6 leading-relaxed">{service.description}</p>
+
+                <div className="space-y-3 mb-6">
+                  {service.highlights.map((highlight, i) => (
+                    <div key={i} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <span className="text-white/90">{highlight}</span>
+                    </div>
                   ))}
                 </div>
+
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-2">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`w-4 h-4 ${
+                            i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-white/70 text-sm">({service.reviewCount} reviews)</span>
+                  </div>
+                </div>
+
                 <Link
                   to={service.path}
-                  className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                  className="futuristic-btn w-full text-center py-3"
                 >
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                  Learn More
                 </Link>
               </motion.div>
             ))}
@@ -445,111 +438,182 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
+      {/* Service Categories */}
+      <section className="py-20 relative">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
-            <p className="text-zion-slate-light text-lg">Built for the future, designed for success</p>
+            <h2 className="futuristic-heading text-4xl lg:text-5xl mb-6">
+              Service Categories
+            </h2>
+            <p className="futuristic-subheading text-xl text-zion-cyan max-w-3xl mx-auto">
+              Comprehensive technology solutions across all major domains
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceCategories.map((category, index) => (
               <motion.div
-                key={feature.title}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
+                key={category.name}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                className="futuristic-card p-6 group cursor-pointer"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="text-white font-semibold text-lg mb-2">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <Link to={category.path}>
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                    {category.name}
+                  </h3>
+                  
+                  <p className="text-white/70 mb-4 leading-relaxed">
+                    {category.description}
+                  </p>
+                  
+                  <div className="space-y-2 mb-4">
+                    {category.services.map((service, i) => (
+                      <div key={i} className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                        <span className="text-white/80 text-sm">{service}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center text-zion-cyan group-hover:text-white transition-colors duration-300">
+                    <span className="text-sm font-medium">Learn More</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
+      {/* Industry Solutions */}
+      <section className="py-20 relative">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-zion-slate-light text-lg">Trusted by businesses worldwide</p>
+            <h2 className="futuristic-heading text-4xl lg:text-5xl mb-6">
+              Industry Solutions
+            </h2>
+            <p className="futuristic-subheading text-xl text-zion-cyan max-w-3xl mx-auto">
+              Tailored technology solutions for specific industry challenges
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {industrySolutions.map((industry, index) => (
               <motion.div
-                key={testimonial.name}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6"
-                initial={{ opacity: 0, y: 20 }}
+                key={industry.name}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
+                className="futuristic-card p-8"
               >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mr-3">
-                    <span className="text-white font-semibold">{testimonial.name.charAt(0)}</span>
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+                    <industry.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <div className="text-white font-semibold">{testimonial.name}</div>
-                    <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
+                    <h3 className="text-2xl font-bold text-white">{industry.name}</h3>
+                    <p className="text-zion-cyan/80">{industry.description}</p>
                   </div>
                 </div>
+
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {industry.solutions.map((solution, i) => (
+                    <div key={i} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <span className="text-white/90 text-sm">{solution}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  to={industry.path}
+                  className="futuristic-btn w-full text-center py-3"
+                >
+                  Explore {industry.name} Solutions
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      {/* Contact CTA */}
+      <section className="py-20 relative">
+        <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-zion-slate-light text-lg mb-8">Join thousands of businesses already leveraging our innovative solutions</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center border border-zion-cyan text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300 font-medium text-lg"
-              >
-                Contact Sales
-              </Link>
+            <div className="futuristic-card p-12 max-w-4xl mx-auto">
+              <h2 className="futuristic-heading text-4xl lg:text-5xl mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="futuristic-subheading text-xl text-zion-cyan mb-8 max-w-3xl mx-auto">
+                Let's discuss how our innovative technology solutions can drive your success
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <MessageCircle className="w-6 h-6 text-zion-cyan" />
+                  </div>
+                  <div className="text-white font-semibold">Contact Us</div>
+                  <div className="text-zion-cyan/70 text-sm">{zionContactInfo.phone}</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-zion-purple/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-zion-purple" />
+                  </div>
+                  <div className="text-white font-semibold">Email Us</div>
+                  <div className="text-zion-cyan/70 text-sm">{zionContactInfo.email}</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-zion-blue/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <MapPin className="w-6 h-6 text-zion-blue" />
+                  </div>
+                  <div className="text-white font-semibold">Visit Us</div>
+                  <div className="text-zion-cyan/70 text-sm">{zionContactInfo.address}</div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  to="/contact"
+                  className="futuristic-btn px-8 py-4 text-lg font-semibold"
+                >
+                  Get Started Today
+                </Link>
+                <Link
+                  to="/request-quote"
+                  className="px-8 py-4 text-lg font-semibold border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-black rounded-lg transition-all duration-300"
+                >
+                  Request Quote
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -557,3 +621,17 @@ export default function Home() {
     </div>
   );
 }
+
+// Missing icon components
+const Mail = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>
+);
+
+const MapPin = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+);
