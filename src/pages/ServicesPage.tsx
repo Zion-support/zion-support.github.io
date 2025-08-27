@@ -15,6 +15,7 @@ import {
   Star,
   TrendingUp
 } from 'lucide-react';
+<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/Footer';
@@ -104,6 +105,121 @@ const ServicesPage = () => {
       path: '/enterprise',
       features: ['Enterprise Architecture', 'System Integration', 'Legacy Modernization', 'Enterprise Security'],
       priority: 'high'
+=======
+import { SEO } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSolutions2025";
+import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
+import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
+import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
+import { ADVANCED_IT_SERVICES_2030 } from "@/data/advancedITServices2030";
+
+export default function ServicesPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
+    { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'ai-finance', name: 'AI & Finance', icon: TrendingUp, color: 'from-zion-purple to-zion-blue' },
+    { id: 'ai-legal', name: 'AI & Legal', icon: Shield, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-cyan to-zion-green' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'quantum-ml', name: 'Quantum ML', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
+    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
+    { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
+    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
+    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
+    { id: 'ai-content-marketing', name: 'AI Content & Marketing', icon: Code, color: 'from-zion-orange to-zion-pink' },
+    { id: 'data-privacy-compliance', name: 'Data Privacy & Compliance', icon: Lock, color: 'from-zion-red to-zion-purple' },
+    { id: 'green-tech-sustainability', name: 'Green Tech & Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
+    { id: 'remote-work-collaboration', name: 'Remote Work & Collaboration', icon: Users, color: 'from-zion-blue to-zion-purple' },
+    { id: 'ecommerce-retail', name: 'E-commerce & Retail', icon: ShoppingCart, color: 'from-zion-green to-zion-orange' },
+    { id: 'healthcare-technology', name: 'Healthcare Technology', icon: Heart, color: 'from-zion-pink to-zion-red' },
+    { id: 'educational-technology', name: 'Educational Technology', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
+    { id: 'real-estate-technology', name: 'Real Estate Technology', icon: Building, color: 'from-zion-orange to-zion-blue' },
+    { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
+    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' },
+    { id: 'quantum-ai', name: 'Quantum AI', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
+    { id: 'autonomous-ai', name: 'Autonomous AI', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'neuromorphic-computing', name: 'Neuromorphic Computing', icon: Cpu, color: 'from-zion-green to-zion-blue' },
+    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Heart, color: 'from-zion-pink to-zion-green' },
+    { id: 'quantum-security', name: 'Quantum Security', icon: Shield, color: 'from-zion-red to-zion-blue' },
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Brain, color: 'from-zion-purple to-zion-pink' },
+    { id: 'fusion-energy', name: 'Fusion Energy', icon: Zap, color: 'from-zion-orange to-zion-yellow' },
+    { id: 'space-technology', name: 'Space Technology', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
+    { id: 'holographic-technology', name: 'Holographic Technology', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'devops', name: 'DevOps', icon: Code, color: 'from-zion-green to-zion-blue' },
+    { id: 'edge-computing', name: 'Edge Computing', icon: Cpu, color: 'from-zion-blue to-zion-green' },
+    { id: 'green-it', name: 'Green IT', icon: Globe, color: 'from-zion-green to-zion-blue' },
+    { id: 'digital-twin', name: 'Digital Twin', icon: Cpu, color: 'from-zion-purple to-zion-cyan' }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
+    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
+    { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
+  ];
+
+  const sortOptions = [
+    { id: 'featured', name: 'Featured' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'newest', name: 'Newest' },
+    { id: 'popular', name: 'Most Popular' },
+    { id: 'innovation', name: 'Innovation Level' }
+  ];
+
+  // Combine all services
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
+    ...NEXT_GEN_AI_SERVICES_2025,
+    ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
+    ...IOT_EDGE_COMPUTING_SERVICES_2025,
+    ...REVOLUTIONARY_SERVICES_2030,
+    ...ADVANCED_IT_SERVICES_2030
+  ];
+
+  // Filter and sort services
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || 
+                           service.category.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
+                           service.subcategory.toLowerCase().includes(selectedCategory.replace('-', ' '));
+    
+    const matchesPrice = selectedPriceRange === 'all' || 
+                        (selectedPriceRange === 'budget' && service.price <= 1000) ||
+                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
+                        (selectedPriceRange === 'enterprise' && service.price > 5000);
+    
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'newest':
+        return new Date(b.createdAt || '2025-01-01').getTime() - new Date(a.createdAt || '2025-01-01').getTime();
+      case 'innovation':
+        const innovationOrder = { 'Cutting-edge': 3, 'Advanced': 2, 'Standard': 1 };
+        return (innovationOrder[b.innovationLevel] || 0) - (innovationOrder[a.innovationLevel] || 0);
+      default:
+        return 0;
+>>>>>>> e71ddb0f29f9adf76b34755be1a22b5dd2a9388b
     }
   ];
 
@@ -149,6 +265,7 @@ const ServicesPage = () => {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -168,6 +285,107 @@ const ServicesPage = () => {
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-500/20 text-red-400 border border-red-500/30">
                     <Star className="w-3 h-3 mr-1" />
                     Priority
+=======
+        <div className="container-responsive relative z-10">
+          <motion.div 
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="heading-responsive font-bold mb-6">
+              <span className="text-gradient-primary">Revolutionary Technology</span>
+              <br />
+              <span className="text-white">Services & Solutions</span>
+            </h1>
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+              Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing, 
+              blockchain applications to healthcare AI, discover the future of business technology with our comprehensive platform.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search for services, technologies, or solutions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="input-futuristic w-full px-12 py-4 text-lg placeholder-slate-400 focus:ring-2 focus:ring-cyan-400/20"
+                />
+              </div>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <motion.div 
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
+                <div className="text-slate-300">Innovative Services</div>
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <div className="text-3xl font-bold text-purple-400 mb-2">{categories.length - 1}</div>
+                <div className="text-slate-300">Technology Categories</div>
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
+                <div className="text-slate-300">Uptime Guarantee</div>
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-slate-300">Support Available</div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Filters and Categories */}
+      <section className="py-12 bg-slate-800/50">
+        <div className="container-responsive">
+          {/* Category Pills */}
+          <motion.div 
+            className="flex flex-wrap gap-3 mb-8 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 group ${
+                  selectedCategory === category.id
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                    : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50'
+                }`}
+              >
+                <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
+                {category.name}
+                {category.id !== 'all' && (
+                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+                    {categoryStats[category.id] || 0}
+>>>>>>> e71ddb0f29f9adf76b34755be1a22b5dd2a9388b
                   </span>
                 </div>
               )}

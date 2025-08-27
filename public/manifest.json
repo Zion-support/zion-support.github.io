@@ -2,12 +2,15 @@
   "name": "Zion Tech Group - AI-Powered Technology Solutions",
   "short_name": "Zion Tech",
   "theme_color": "#22ddd2",
+<<<<<<< HEAD
 =======
   "description": "Leading-edge technology solutions and autonomous innovation platform",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
+=======
+>>>>>>> e71ddb0f29f9adf76b34755be1a22b5dd2a9388b
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -55,12 +58,15 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+<<<<<<< HEAD
     },
     {
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
 =======
+=======
+>>>>>>> e71ddb0f29f9adf76b34755be1a22b5dd2a9388b
     }
   ],
   "shortcuts": [
@@ -115,5 +121,15 @@
       "type": "image/png",
       "form_factor": "narrow"
     }
+<<<<<<< HEAD
   ]
 }
+=======
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
+>>>>>>> e71ddb0f29f9adf76b34755be1a22b5dd2a9388b
