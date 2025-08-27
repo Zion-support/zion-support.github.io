@@ -81,7 +81,6 @@ export function Footer() {
         { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
         { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
-        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
         { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
@@ -98,7 +97,6 @@ export function Footer() {
         { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
         { name: 'IT Services', path: '/it-services', icon: Building },
         { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
-        { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
         { name: 'All Services', path: '/services', icon: Zap }
       ]
     },
@@ -106,13 +104,13 @@ export function Footer() {
       title: 'Innovation Hub',
       icon: Sparkles,
       links: [
-        { name: 'Innovative Services 2028', path: '/innovative-services-showcase-2028', icon: Sparkles },
-        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
+        { name: '2027 Services Overview', path: '/services2027', icon: Sparkles },
+        { name: '2026 Services Overview', path: '/services2026', icon: Rocket },
         { name: 'Ultimate Services 2026', path: '/ultimate-services-showcase-2026', icon: Rocket },
-        { name: 'Services 2026', path: '/services-2026', icon: Target },
-        { name: 'New Services 2025', path: '/new-services-showcase-2025', icon: TrendingUp },
-        { name: 'Ultimate Services 2025', path: '/ultimate-services-showcase-2025', icon: Award },
-        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe }
+        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-showcase-2025', icon: Globe },
+        { name: 'AI Solutions Hub', path: '/ai-solutions', icon: Brain },
+        { name: 'Quantum Solutions', path: '/services/quantum-computing', icon: Cpu },
+        { name: 'Emerging Tech', path: '/services/ai-content-creation', icon: PenTool }
       ]
     }
   ];

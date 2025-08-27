@@ -56,6 +56,8 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SystemStatus = React.lazy(() => import('./pages/SystemStatus'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const WebsiteAnalyzer = React.lazy(() => import('./components/WebsiteAnalyzer'));
+const SitemapGenerator = React.lazy(() => import('./components/SitemapGenerator'));
 
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
@@ -215,6 +217,8 @@ function App() {
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/system-status" element={<SystemStatus />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/website-analyzer" element={<WebsiteAnalyzer />} />
+              <Route path="/sitemap-generator" element={<SitemapGenerator />} />
               
               {/* Additional Routes */}
               <Route path="/events" element={<Events />} />
