@@ -52,6 +52,5 @@ jobs:
           delete-branch: true
           signoff: false
           labels: |
-            maintenance
-            automated
-            weekly
+            automation
+            improvement

@@ -1,40 +1,31 @@
 import React from 'react';
-import { useFormContext } from 'react-hook-form';
 
 interface FormProps {
   children: React.ReactNode;
-  [key: string]: any;
+  onSubmit?: (e: React.FormEvent) => void;
+  className?: string;
 }
 
-export function Form({ children, ...props }: FormProps) {
-  return <form {...props}>{children}</form>;
+export function Form({ children, onSubmit, className = '' }: FormProps) {
+  return (
+    <form onSubmit={onSubmit} className={className}>
+      {children}
+    </form>
+  );
 }
 
 interface FormFieldProps {
+  children: React.ReactNode;
   name: string;
-  children: React.ReactNode;
+  control?: any;
+  render?: (props: any) => React.ReactNode;
 }
 
-export function FormField({ name, children }: FormFieldProps) {
+export function FormField({ children, name, control, render }: FormFieldProps) {
+  if (render) {
+    return render({ field: { name } });
+  }
   return <>{children}</>;
-}
-
-interface FormItemProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function FormItem({ children, className = '' }: FormItemProps) {
-  return <div className={className}>{children}</div>;
-}
-
-interface FormLabelProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function FormLabel({ children, className = '' }: FormLabelProps) {
-  return <label className={className}>{children}</label>;
 }
 
 interface FormControlProps {
@@ -45,10 +36,42 @@ export function FormControl({ children }: FormControlProps) {
   return <>{children}</>;
 }
 
-interface FormMessageProps {
+interface FormItemProps {
+  children: React.ReactNode;
   className?: string;
 }
 
-export function FormMessage({ className = '' }: FormMessageProps) {
-  return <span className={className}></span>;
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+}
+
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return (
+    <label className={className}>
+      {children}
+    </label>
+  );
+}
+
+interface FormMessageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+  if (!children) return null;
+  return (
+    <p className={className}>
+      {children}
+    </p>
+  );
 }

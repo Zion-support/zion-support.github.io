@@ -1,0 +1,120 @@
+<<<<<<< HEAD
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
+  </div>
+);
+
+// Lazy load pages
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensivePricing2027 = React.lazy(() => import('./pages/ComprehensivePricing2027'));
+
+// Catch-all route component for undefined routes
+const NotFound = React.lazy(() => import('./components/NotFound'));
+
+// Enhanced loading component with skeleton
+const LoadingFallback = () => (
+  <div className="min-h-screen bg-background flex items-center justify-center">
+    <div className="text-center space-y-4">
+      <div className="w-16 h-16 border-4 border-zion-cyan border-t-transparent rounded-full animate-spin mx-auto"></div>
+      <p className="text-zion-cyan text-lg font-medium">Loading Zion...</p>
+      <p className="text-muted-foreground text-sm">Preparing your AI marketplace experience</p>
+    </div>
+  </div>
+);
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-futuristic">
+        <AppHeader />
+        
+        <main className="flex-1">
+          <Suspense fallback={<LoadingFallback />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/green-it" element={<GreenIT />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
+              
+              {/* New Innovative Services Route */}
+              <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricing2027 />} />
+              
+              {/* Additional service routes */}
+              <Route path="/quantum-neural-network-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/autonomous-business-operations-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ai-powered-it-asset-management" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/soc2-compliance-automation" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ai-autonomous-research-assistant" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/5g-enterprise-solutions" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/space-technology-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/quantum-cryptography-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ai-climate-intelligence-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/blockchain-defi-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/advanced-iot-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/robotics-automation-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ar-vr-enterprise-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/digital-twin-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/biometric-security-platform" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/neuromorphic-computing-platform" element={<InnovativeServicesShowcase2027 />} />
+              
+              {/* Catch-all route for undefined paths */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </main>
+        
+        <Footer />
+        <ChatAssistant />
+        <PerformanceMonitor />
+      </div>
+    </Router>
+  );
+=======
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Index from '../pages/index'
+import Services from '../pages/services'
+import Contact from '../pages/contact'
+import ComprehensiveServices from './pages/ComprehensiveServices'
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  )
+>>>>>>> origin/cursor/website-audit-and-enhancement-1535
+}
+
+export default App;

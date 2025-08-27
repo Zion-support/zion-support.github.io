@@ -4,8 +4,8 @@ import { AppHeader } from './layout/AppHeader';
 import Footer from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant';
 
-// Lazy load only the essential pages that we know exist
-const Home = React.lazy(() => import('./pages/Home.jsx'));
+// Lazy load all pages
+const Home = React.lazy(() => import('./pages/Home.tsx'));
 const About = React.lazy(() => import('./pages/About.tsx'));
 const Contact = React.lazy(() => import('./pages/Contact.tsx'));
 const Blog = React.lazy(() => import('./pages/Blog.tsx'));
@@ -16,8 +16,33 @@ const Careers = React.lazy(() => import('./pages/Careers.tsx'));
 const Privacy = React.lazy(() => import('./pages/Privacy.tsx'));
 const Terms = React.lazy(() => import('./pages/Terms.tsx'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'));
-const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePricing.tsx'));
+
+// Services pages
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
+
+// Marketplace pages
+const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
+
+// Support pages
+const Support = React.lazy(() => import('./pages/Support.tsx'));
+const Security = React.lazy(() => import('./pages/Security.tsx'));
+const SystemStatus = React.lazy(() => import('./pages/SystemStatus.tsx'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
+
+// Documentation pages
+const Documentation = React.lazy(() => import('./pages/Documentation.tsx'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers.tsx'));
+const Webinars = React.lazy(() => import('./pages/Webinars.tsx'));
+const Training = React.lazy(() => import('./pages/Training.tsx'));
+const Research = React.lazy(() => import('./pages/Research.tsx'));
+
+// Search and categories
+const Search = React.lazy(() => import('./pages/Search.tsx'));
+const Categories = React.lazy(() => import('./pages/Categories.tsx'));
+
+// API Playground
+const ApiPlayground = React.lazy(() => import('./pages/ApiPlayground.tsx'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -45,10 +70,36 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/pricing" element={<ComprehensivePricing />} />
+
+              {/* Services routes */}
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/pricing" element={<ServicesPricingPage />} />
+
+              {/* Marketplace routes */}
+              <Route path="/marketplace" element={<Marketplace />} />
+
+              {/* Support routes */}
+              <Route path="/support" element={<Support />} />
+              <Route path="/security" element={<Security />} />
+              <Route path="/status" element={<SystemStatus />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+
+              {/* Documentation routes */}
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="/research" element={<Research />} />
+
+              {/* Search and categories */}
+              <Route path="/search" element={<Search />} />
+              <Route path="/categories" element={<Categories />} />
+
+              {/* API Playground */}
+              <Route path="/api-playground" element={<ApiPlayground />} />
 
               {/* Catch-all route for 404 */}
               <Route path="*" element={

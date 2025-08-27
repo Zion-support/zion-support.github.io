@@ -1,38 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export interface SEOProps {
-	title?: string;
-	description?: string;
-	canonical?: string;
-	ogImage?: string;
-	keywords?: string | string[];
-	image?: string;
-	url?: string;
-	type?: 'website' | 'article' | 'product';
-	publishedTime?: string;
-	modifiedTime?: string;
-	author?: string;
-	section?: string;
-	tags?: string[];
-	structuredData?: unknown;
-	noindex?: boolean;
-	nofollow?: boolean;
-}
-
-const DEFAULTS = {
-	title: 'Zion Tech Group — AI, Cloud, and Cybersecurity Solutions',
-	description:
-		'We build autonomous AI systems, cloud-native platforms, and secure infrastructure that scale your business.',
-	url: 'https://ziontechgroup.com',
-	image: '/og-image.svg',
-};
-
-function toAbsoluteUrl(baseUrl: string, urlOrPath: string | undefined): string | undefined {
-	if (!urlOrPath) return undefined;
-	if (/^(https?:)?\/\//.test(urlOrPath)) return urlOrPath;
-	const base = baseUrl.replace(/\/$/, '');
-	return base + (urlOrPath.startsWith('/') ? urlOrPath : `/${urlOrPath}`);
+interface SEOProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'profile' | 'product';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
+  nofollow?: boolean;
+  structuredData?: object;
 }
 
 function withTrailingSlash(u: string): string {

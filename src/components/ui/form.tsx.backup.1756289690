@@ -1,0 +1,128 @@
+import React from 'react';
+<<<<<<< HEAD
+import { useFormContext } from 'react-hook-form';
+
+interface FormProps {
+  children: React.ReactNode;
+  [key: string]: any;
+}
+
+export function Form({ children, ...props }: FormProps) {
+  return <form {...props}>{children}</form>;
+}
+
+interface FormFieldProps {
+  name: string;
+  children: React.ReactNode;
+}
+
+export function FormField({ name, children }: FormFieldProps) {
+  return <>{children}</>;
+}
+
+interface FormItemProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return <div className={className}>{children}</div>;
+}
+
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return <label className={className}>{children}</label>;
+}
+
+=======
+
+interface FormProps {
+  children: React.ReactNode;
+  onSubmit?: (e: React.FormEvent) => void;
+  className?: string;
+}
+
+export function Form({ children, onSubmit, className = '' }: FormProps) {
+  return (
+    <form onSubmit={onSubmit} className={className}>
+      {children}
+    </form>
+  );
+}
+
+interface FormFieldProps {
+  children: React.ReactNode;
+  name: string;
+  control?: any;
+  render?: (props: any) => React.ReactNode;
+}
+
+export function FormField({ children, name, control, render }: FormFieldProps) {
+  if (render) {
+    return render({ field: { name } });
+  }
+  return <>{children}</>;
+}
+
+>>>>>>> origin/cursor/website-audit-and-enhancement-1535
+interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+}
+
+<<<<<<< HEAD
+interface FormMessageProps {
+  className?: string;
+}
+
+export function FormMessage({ className = '' }: FormMessageProps) {
+  return <span className={className}></span>;
+}
+=======
+interface FormItemProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
+}
+
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return (
+    <label className={className}>
+      {children}
+    </label>
+  );
+}
+
+interface FormMessageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export function FormMessage({ children, className = '' }: FormMessageProps) {
+  if (!children) return null;
+  return (
+    <p className={className}>
+      {children}
+    </p>
+  );
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-1535

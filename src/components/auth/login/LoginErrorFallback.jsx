@@ -1,59 +1,36 @@
 import React from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple p-4">
-      <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+    <div className="min-h-screen bg-background flex items-center justify-center p-4">
+      <div className="max-w-md w-full space-y-8">
         <div className="text-center">
-          <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-red-100 mb-4">
-            <AlertTriangle className="h-8 w-8 text-red-600" />
-          </div>
-          
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
             Something went wrong
           </h2>
-          
-          <p className="text-zion-slate-light mb-6">
-            We encountered an error while loading the login page. This might be a temporary issue.
+          <p className="text-muted-foreground mb-6">
+            We encountered an error while loading the login page. Please try again.
           </p>
-          
           {error && (
-            <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 mb-6">
-              <p className="text-red-200 text-sm font-mono">
-                {error.message || 'Unknown error occurred'}
-              </p>
-            </div>
+            <details className="text-left mb-6">
+              <summary className="cursor-pointer text-sm text-muted-foreground">
+                Error details
+              </summary>
+              <pre className="mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto">
+                {error.message}
+              </pre>
+            </details>
           )}
-          
-          <div className="space-y-3">
-            <button
-              onClick={resetErrorBoundary}
-              className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-            >
-              <RefreshCw className="w-5 h-5" />
-              Try Again
-            </button>
-            
-            <button
-              onClick={() => window.location.href = '/'}
-              className="w-full bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
-            >
-              Go to Homepage
-            </button>
-          </div>
-          
-          <p className="text-zion-slate-light text-sm mt-6">
-            If the problem persists, please contact our support team at{' '}
-            <a 
-              href="mailto:kleber@ziontechgroup.com" 
-              className="text-zion-cyan hover:text-zion-cyan-light underline"
-            >
-              kleber@ziontechgroup.com
-            </a>
-          </p>
+          <button
+            onClick={resetErrorBoundary}
+            className="w-full bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded-md font-medium"
+          >
+            Try Again
+          </button>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default LoginErrorFallback;

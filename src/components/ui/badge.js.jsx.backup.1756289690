@@ -1,0 +1,30 @@
+import React from 'react';
+<<<<<<<< HEAD:src/components/ui/badge.js.jsx
+export const Badge = ({ children, className = '', variant = 'default' }) => {
+========
+
+const Badge = ({ children, className = '', variant = 'default' }) => {
+>>>>>>>> origin/cursor/website-audit-and-enhancement-1535:src/components/ui/badge.jsx
+    const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
+    const variantClasses = {
+        default: 'border-transparent bg-primary text-primary-foreground',
+        secondary: 'border-transparent bg-secondary text-secondary-foreground',
+        destructive: 'border-transparent bg-destructive text-destructive-foreground',
+        outline: 'text-foreground'
+    };
+<<<<<<<< HEAD:src/components/ui/badge.js.jsx
+=======
+    return (
+        <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+            {children}
+        </div>
+========
+    return (
+      <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+        {children}
+      </div>
+>>>>>>>> origin/cursor/website-audit-and-enhancement-1535:src/components/ui/badge.jsx
+    );
+};
+
+export { Badge };
