@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/Button.jsx";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
 import { useEffect, useState } from "react";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEO.jsx";
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS = [
     // AI & Machine Learning Services
@@ -6448,7 +6448,7 @@ export default function ServicesPage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
-            <Link to="/comprehensive-services">
+            <Link to="/enhanced-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2"/>
                 View All Services

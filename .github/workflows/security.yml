@@ -1,7 +1,4 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> b07a947e3ed806892d2ef9a89cd423d3d7cd59a2
 name: Security & Dependency Management
 
 on:
@@ -245,9 +242,6 @@ jobs:
       if: failure()
       run: |
         echo "🚨 Security issues detected - notifying team"
-<<<<<<< HEAD
-        # Add notification logic here (Slack, email, etc.)
-=======
         # Add notification logic here (Slack, email, etc.)
 =======
 name: Security
@@ -311,4 +305,3 @@ jobs:
           echo "Check the uploaded artifacts for detailed vulnerability information"
           echo "Consider running 'yarn audit fix' locally if vulnerabilities are found"
 >>>>>>> origin/cursor/add-new-services-2025
->>>>>>> b07a947e3ed806892d2ef9a89cd423d3d7cd59a2

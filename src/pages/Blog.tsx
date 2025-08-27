@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -150,6 +149,7 @@ const Blog: React.FC = () => {
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    
     return matchesSearch && matchesCategory;
   });
 
