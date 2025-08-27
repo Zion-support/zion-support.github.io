@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -72,54 +72,52 @@ const Marketplace = () => (
 function App() {
   return (
     <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-futuristic">
-          <AppHeader />
-          
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/cookies" element={<Cookies />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/ai-services" element={<AIServices />} />
-                <Route path="/it-services" element={<ITServices />} />
-                <Route path="/micro-saas" element={<MicroSaaS />} />
-                <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-                <Route path="/request-quote" element={<RequestQuote />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/marketplace" element={<Marketplace />} />
-                
-                {/* Service Routes - only for existing pages */}
-                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                <Route path="/services/digital-twin" element={<DigitalTwin />} />
-                <Route path="/services/data-analytics" element={<DataAnalytics />} />
-                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
-                <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
-                <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
-                
-                {/* Catch all route */}
-                <Route path="*" element={<Home />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-          <ChatAssistant />
-          <PerformanceOptimizer />
-        </div>
-      </Router>
+      <div className="min-h-screen bg-futuristic">
+        <AppHeader />
+        
+        <main className="flex-1">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/micro-saas" element={<MicroSaaS />} />
+              <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              
+              {/* Service Routes - only for existing pages */}
+              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+              <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+              <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+              
+              {/* Catch all route */}
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </Suspense>
+        </main>
+        
+        <Footer />
+        <ChatAssistant />
+        <PerformanceOptimizer />
+      </div>
     </ErrorBoundary>
   );
 }
