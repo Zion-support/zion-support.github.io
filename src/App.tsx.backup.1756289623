@@ -42,6 +42,10 @@ const EnterpriseIT = React.lazy(() => import('./pages/EnterpriseIT'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const Careers = React.lazy(() => import('./pages/Careers'));
+<<<<<<< HEAD
+const Partners = React.lazy(() => import('./pages/Partners'));
+const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
+=======
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
@@ -79,6 +83,7 @@ const ContentCreation = React.lazy(() => import('./pages/services/AIMarketingAut
 const HRPlatform = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
 
 // Marketplace pages
+>>>>>>> origin/cursor/website-audit-and-enhancement-4982
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/EquipmentPage'));
@@ -185,6 +190,10 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+<<<<<<< HEAD
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/reset-password" element={<ResetPassword />} />
+=======
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/services-advertising" element={<ServicesAdvertising />} />
               <Route path="/solutions" element={<Solutions />} />
@@ -193,6 +202,7 @@ function App() {
               <Route path="/events" element={<Events />} />
               <Route path="/news" element={<News />} />
               <Route path="/request-quote" element={<RequestQuote />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-4982
               
               {/* Information Pages */}
               <Route path="/faq" element={<FAQ />} />

@@ -26,7 +26,37 @@ import {
   FileText,
   Heart,
   PanelLeft,
+<<<<<<< HEAD
+  ShoppingCart,
+  Settings,
+  LogOut,
+  HelpCircle,
+  BookOpen,
+  Factory,
+  Home,
+  Truck,
+  Building,
+  Target,
+  Eye,
+  TestTube,
+  Dna,
+  ShoppingCart as Cart,
+  Home as House,
+  Truck as Transport,
+  Building as Government,
+  Target as Optimization,
+  Eye as Vision,
+  TestTube as Research,
+  Dna as Biotech,
+  Phone,
+  Mail,
+  Handshake,
+  Server,
+  Smartphone,
+  Radio
+=======
   FlaskConical
+>>>>>>> origin/cursor/website-audit-and-enhancement-4982
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 =======
@@ -70,6 +100,12 @@ export function AppHeader() {
       icon: Brain,
       color: 'from-zion-cyan to-zion-purple'
     },
+<<<<<<< HEAD
+    { 
+      name: 'Tech Talent', 
+      href: '/talent', 
+      description: 'Expert Developers & Engineers',
+=======
     {
       name: 'Solutions',
       href: '/solutions',
@@ -99,6 +135,7 @@ export function AppHeader() {
     {
       name: 'Micro SAAS',
       href: '/micro-saas',
+>>>>>>> origin/cursor/website-audit-and-enhancement-4982
       icon: Code,
       color: 'from-zion-blue to-zion-cyan'
     },
