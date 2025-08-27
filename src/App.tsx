@@ -26,6 +26,9 @@ const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const Zion2026InnovativeServicesShowcase = React.lazy(() => import('./pages/Zion2026InnovativeServicesShowcase'));
+const Zion2026ServicesOverview = React.lazy(() => import('./pages/Zion2026ServicesOverview'));
+const Zion2026ComprehensivePricingGuide = React.lazy(() => import('./pages/Zion2026ComprehensivePricingGuide'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
@@ -107,6 +110,10 @@ function App() {
               {/* Marketplace Routes */}
               <Route path="/marketplace" element={<GreenIT />} />
               <Route path="/marketplace/:service" element={<GreenIT />} />
+
+              <Route path="/zion-2026-services" element={<Zion2026InnovativeServicesShowcase />} />
+              <Route path="/zion-2026-overview" element={<Zion2026ServicesOverview />} />
+              <Route path="/zion-2026-pricing" element={<Zion2026ComprehensivePricingGuide />} />
             </Routes>
           </Suspense>
         </main>
