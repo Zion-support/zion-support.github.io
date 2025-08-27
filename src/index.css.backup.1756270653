@@ -125,6 +125,35 @@
     --popover: 0 0% 100%;
     --popover-foreground: 224 71% 4%;
 
+<<<<<<< HEAD
+    --primary: 262 83% 58%;
+    --primary-foreground: 224 71% 4%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+
+    --sidebar-background: 220 14.3% 95.9%;
+    --sidebar-foreground: 220.9 39.3% 11%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 224 71% 4%;
+    --sidebar-accent: 220 14.3% 95.9%;
+    --sidebar-accent-foreground: 220.9 39.3% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 262 83% 58%;
+=======
     --primary: 216 84% 50%;
     --primary-foreground: 224 71% 4%;
 
@@ -151,6 +180,7 @@
     --sidebar-accent-foreground: 224 71% 4%;
     --sidebar-border: 0 0% 90%;
     --sidebar-ring: 216 84% 53%;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
   }
 
   * {
@@ -158,6 +188,105 @@
   }
 
   body {
+<<<<<<< HEAD
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-sans);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+  }
+
+  /* Accessibility Enhancements */
+  .high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --secondary: 0 0% 20%;
+    --muted: 0 0% 20%;
+    --accent: 0 0% 100%;
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 0 0% 100%;
+  }
+
+  .high-contrast * {
+    border-color: hsl(var(--border)) !important;
+  }
+
+  .show-focus-indicator *:focus {
+    outline: 3px solid var(--zion-cyan) !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Screen Reader Only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--zion-cyan);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--zion-blue);
+  }
+
+  /* Focus Management */
+  .focus-visible:focus-visible {
+    outline: 2px solid var(--zion-cyan);
+    outline-offset: 2px;
+  }
+
+  /* Skip Links */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--zion-cyan);
+    color: var(--zion-slate-dark);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 10000;
+    transition: top 0.3s;
+  }
+
+  .skip-link:focus {
+    top: 6px;
+  }
+
+  /* Performance Optimizations */
+=======
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
@@ -195,6 +324,7 @@
   }
 
   /* Performance optimizations */
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
   .will-change-transform {
     will-change: transform;
   }
@@ -203,6 +333,25 @@
     will-change: opacity;
   }
 
+<<<<<<< HEAD
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(34, 221, 210, 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(34, 221, 210, 0.8);
+=======
   /* Enhanced animations */
   @keyframes gradient-x {
     0%, 100% {
@@ -256,10 +405,31 @@
     100% {
       transform: scale(1);
       opacity: 1;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
     }
   }
 
   @keyframes slide-in-up {
+<<<<<<< HEAD
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+=======
     0% {
       transform: translateY(100%);
       opacity: 0;
@@ -267,10 +437,20 @@
     100% {
       transform: translateY(0);
       opacity: 1;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
     }
   }
 
   @keyframes slide-in-left {
+<<<<<<< HEAD
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+=======
     0% {
       transform: translateX(-100%);
       opacity: 0;
@@ -278,10 +458,24 @@
     100% {
       transform: translateX(0);
       opacity: 1;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
     }
   }
 
   @keyframes slide-in-right {
+<<<<<<< HEAD
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Animation Classes */
+=======
     0% {
       transform: translateX(100%);
       opacity: 0;
@@ -318,10 +512,92 @@
     animation: gradient-x 3s ease infinite;
   }
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
 
+<<<<<<< HEAD
+  .animate-float-delayed {
+    animation: float-delayed 6s ease-in-out infinite 2s;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-in-up {
+    animation: slide-in-up 0.6s ease-out;
+  }
+
+  .animate-slide-in-down {
+    animation: slide-in-down 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out;
+  }
+
+  /* Utility Classes */
+  .bg-futuristic {
+    background: linear-gradient(135deg, var(--zion-slate-dark) 0%, var(--zion-slate) 50%, var(--zion-blue) 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-blue) 50%, var(--zion-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient {
+    border: 2px solid;
+    border-image: linear-gradient(135deg, var(--zion-cyan), var(--zion-blue), var(--zion-purple)) 1;
+  }
+
+  /* Enhanced Button Styles */
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 text-zion-cyan hover:bg-zion-cyan/10 rounded-xl transition-all duration-300;
+  }
+
+  /* Card Styles */
+  .card-modern {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25;
+  }
+
+  .card-glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-all duration-300;
+  }
+
+  /* Input Styles */
+  .input-modern {
+    @apply bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:border-zion-cyan focus:outline-none transition-all duration-300;
+  }
+
+  /* Loading States */
+  .loading-skeleton {
+    @apply animate-pulse bg-white/10 rounded;
+  }
+
+  /* Responsive Utilities */
+  .container-responsive {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Print Styles */
+=======
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
   }
@@ -498,10 +774,93 @@
   }
 
   /* Print styles */
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
   @media print {
     .no-print {
       display: none !important;
     }
+<<<<<<< HEAD
+    
+    body {
+      background: white !important;
+      color: black !important;
+    }
+  }
+
+  /* High DPI Displays */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .retina-image {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  }
+
+  /* Dark Mode Toggle Animation */
+  .theme-toggle {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .theme-toggle:hover {
+    transform: rotate(180deg);
+  }
+
+  /* Accessibility Focus Ring */
+  .focus-ring:focus {
+    outline: 2px solid var(--zion-cyan);
+    outline-offset: 2px;
+  }
+
+  /* Custom Slider Styles */
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .slider::-webkit-slider-track {
+    background: hsl(var(--muted));
+    height: 8px;
+    border-radius: 4px;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--zion-cyan);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .slider::-webkit-slider-thumb:hover {
+    background: var(--zion-blue);
+    transform: scale(1.1);
+  }
+
+  .slider::-moz-range-track {
+    background: hsl(var(--muted));
+    height: 8px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .slider::-moz-range-thumb {
+    background: var(--zion-cyan);
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+  }
+
+  .slider::-moz-range-thumb:hover {
+    background: var(--zion-blue);
+    transform: scale(1.1);
+=======
   }
 
   /* High contrast mode support */
@@ -524,5 +883,6 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4670
   }
 }
