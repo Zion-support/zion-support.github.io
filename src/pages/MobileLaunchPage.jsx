@@ -1,0 +1,188 @@
+import React from 'react';
+import { Download, Smartphone, Zap, Shield, Users, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+
+const MobileLaunchPage = () => {
+  const features = [
+    {
+      icon: <Zap className="h-8 w-8 text-blue-400" />,
+      title: "Lightning Fast",
+      description: "Optimized performance for seamless AI marketplace experience"
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-green-400" />,
+      title: "Secure & Private",
+      description: "Enterprise-grade security for your data and transactions"
+    },
+    {
+      icon: <Users className="h-8 w-8 text-purple-400" />,
+      title: "Community Driven",
+      description: "Connect with AI experts and tech professionals worldwide"
+    },
+    {
+      icon: <Globe className="h-8 w-8 text-cyan-400" />,
+      title: "Global Access",
+      description: "Access Zion's AI marketplace from anywhere, anytime"
+    }
+  ];
+
+  const appStores = [
+    {
+      name: "App Store",
+      icon: "🍎",
+      url: "#",
+      color: "bg-black hover:bg-gray-800"
+    },
+    {
+      name: "Google Play",
+      icon: "🤖",
+      url: "#",
+      color: "bg-green-600 hover:bg-green-700"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-blue-600/20 rounded-full">
+                <Smartphone className="h-16 w-16 text-blue-400"/>
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Zion Mobile App
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Take the AI marketplace with you. Hire talent, find opportunities, and manage projects on the go with our powerful mobile app.
+            </p>
+            
+            {/* App Store Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              {appStores.map((store) => (
+                <a
+                  key={store.name}
+                  href={store.url}
+                  className={`${store.color} text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-3`}
+                >
+                  <span className="text-2xl">{store.icon}</span>
+                  <div className="text-left">
+                    <div className="text-xs">Download on</div>
+                    <div className="text-lg">{store.name}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Why Choose Zion Mobile?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* App Screenshots */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">App Screenshots</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[1, 2, 3].map((screen) => (
+                <div key={screen} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+                  <div className="aspect-[9/16] bg-slate-700 rounded-lg flex items-center justify-center mb-4">
+                    <div className="text-slate-500 text-center">
+                      <Smartphone className="h-16 w-16 mx-auto mb-2" />
+                      <p>Screen {screen}</p>
+                    </div>
+                  </div>
+                  <h3 className="text-lg font-bold text-center">Feature {screen}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Key Benefits */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+                <h3 className="text-2xl font-bold mb-6 text-blue-400">For Talent</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <span>Browse and apply to AI projects on the go</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <span>Manage your profile and portfolio anywhere</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <span>Real-time notifications for new opportunities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <span>Chat with clients and team members</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+                <h3 className="text-2xl font-bold mb-6 text-purple-400">For Clients</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <span>Post projects and hire AI talent instantly</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <span>Track project progress in real-time</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <span>Manage payments and invoices</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                    <span>Access project analytics and insights</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-slate-800/50 rounded-2xl p-12 border border-slate-700 max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Download the Zion mobile app today and experience the future of AI talent marketplace.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                  <Download className="h-5 w-5" />
+                  Download Now
+                </button>
+                <button className="border border-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-slate-700 transition-colors flex items-center justify-center gap-2">
+                  Learn More
+                  <ArrowRight className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default MobileLaunchPage;
