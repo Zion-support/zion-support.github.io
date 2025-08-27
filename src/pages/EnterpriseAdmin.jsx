@@ -2,7 +2,7 @@ import React from "react";
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
     const { user } = useAuth();
@@ -12,7 +12,7 @@ export default function EnterpriseAdmin() {
         return <Navigate to="/unauthorized"/>;
     }
     return (<ProtectedRoute>
-      <SEO title="Enterprise Admin - Zion AI Marketplace" description="Manage your team's access, roles, and usage on the Zion AI Marketplace."/>
+      <SEOHead title="Enterprise Admin - Zion AI Marketplace" description="Manage your team's access, roles, and usage on the Zion AI Marketplace."/>
       
       <main className="min-h-screen bg-background">
         <AdminDashboard />

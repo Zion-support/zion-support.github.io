@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Search, Star, Clock, Globe, TrendingUp, Shield, Brain, Users, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 export default function AdvancedServicesPage() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -35,7 +35,7 @@ export default function AdvancedServicesPage() {
     });
     const uniqueCategories = Array.from(new Set(ADVANCED_SERVICES.map(service => service.category)));
     return (<div className="min-h-screen bg-background">
-      <SEO title="Advanced AI & IT Services - Zion Tech Group" description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation." keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation" canonical="https://ziontechgroup.com/advanced-services"/>
+      <SEOHead title="Advanced AI & IT Services - Zion Tech Group" description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation." keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation" canonical="https://ziontechgroup.com/advanced-services"/>
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">

@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Suspense } from "react";
 import CreatePostButton from "@/components/community/CreatePostButton";
 import { Input } from "@/components/ui/input";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import PostCard from "@/components/community/PostCard";
 import { usePostsByCategory } from "@/hooks/usePostsByCategory";
 import NotFound from "./NotFound";
@@ -118,7 +118,7 @@ export default function ForumCategoryPage() {
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
     return (<>
-      <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
+      <SEOHead title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
 
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>

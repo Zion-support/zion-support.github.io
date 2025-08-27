@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Search, MapPin, Briefcase, Star } from 'lucide-react';
 const TalentDirectory = () => {
     const talents = [
@@ -81,7 +81,7 @@ const TalentDirectory = () => {
         "UI/UX Design"
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com/talent-directory"/>
+      <SEOHead title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com/talent-directory"/>
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-purple-900 text-white py-20">

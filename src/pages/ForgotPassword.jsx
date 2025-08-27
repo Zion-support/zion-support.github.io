@@ -26,7 +26,7 @@ export default function ForgotPassword() {
     };
     if (isSubmitted) {
         return (<>
-        <SEO title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password"/>
+        <SEOHead title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password"/>
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="max-w-md w-full mx-auto p-6">
             <div className="text-center">
