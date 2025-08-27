@@ -5,6 +5,7 @@ import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
+import FuturisticAnimatedBackground from './components/FuturisticAnimatedBackground';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
@@ -66,7 +67,8 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-futuristic">
+        <div className="min-h-screen bg-futuristic relative">
+          <FuturisticAnimatedBackground />
           <SEO />
           <AppHeader />
           

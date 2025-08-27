@@ -37,6 +37,7 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Research', href: '/research-development', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -44,6 +45,9 @@ export function AppHeader() {
 
   const services = [
     { name: 'AI & Analytics', href: '/services', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'SOC-as-a-Service (MDR)', href: '/services', icon: Shield, description: '24/7 monitoring & incident response' },
+    { name: 'Cloud Cost Optimizer', href: '/services', icon: Cloud, description: 'FinOps savings with automation' },
+    { name: 'AI SEO Optimizer', href: '/services', icon: Rocket, description: 'Content scoring & SERP parity' },
     { name: 'Quantum Computing', href: '/services', icon: Rocket, description: 'Quantum AI & Optimization' },
     { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Cloud Services', href: '/services', icon: Cloud, description: 'DevOps & Infrastructure' },

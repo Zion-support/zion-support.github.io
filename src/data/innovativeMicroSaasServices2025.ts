@@ -1760,6 +1760,144 @@ export const SPECIALIZED_SERVICES = [
     category: "Quantum AI Research Enterprise",
     price: 3200,
     marketPrice: "$3,200 - $9,000/month"
+  },
+  {
+    id: "ai-autonomous-email-responder",
+    title: "AI Autonomous Email Responder",
+    description: "Autonomously triages, drafts and sends replies for routine inquiries; routes high-priority threads to humans with summaries.",
+    category: "AI & Automation",
+    subcategory: "Customer Support",
+    price: 39,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Gmail/Outlook integration",
+      "Intent + sentiment detection",
+      "Response templates with few-shot prompts",
+      "Auto-follow-up and SLA timers",
+      "PII redaction and audit logs"
+    ],
+    benefits: [
+      "Reduce response times by 70%",
+      "Deflect up to 60% Tier-1 tickets",
+      "Improve CSAT via consistent replies"
+    ],
+    useCases: [
+      "Customer support Tier-1",
+      "Sales inquiry triage",
+      "Vendor and internal IT requests"
+    ],
+    targetAudience: ["SMB", "Mid-market", "Support teams"],
+    tags: ["email", "automation", "RAG", "LLM"],
+    estimatedDelivery: "Same day",
+    supportLevel: "standard",
+    marketPrice: "$29 - $79/month/seat",
+    roi: "2-5x",
+    innovationLevel: "Practical",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["Typescript", "Node.js", "Vercel/Cloudflare Workers", "OpenAI/Anthropic"],
+      integrations: ["Gmail", "Outlook", "Zendesk", "Freshdesk"],
+      apiEndpoints: 18,
+      uptime: "99.9%",
+      security: ["OAuth 2.0", "Data encryption at rest/in-transit"]
+    },
+    competitors: ["Front Copilot", "Superhuman AI", "Gmelius"],
+    marketSize: "$3.2B+ helpdesk automation"
+  },
+  {
+    id: "mdr-soc-as-a-service",
+    title: "Managed Detection & Response (SOC-as-a-Service)",
+    description: "24/7 threat monitoring, triage, and incident response with AI-driven detections and human validation.",
+    category: "Cybersecurity",
+    subcategory: "Security Operations",
+    price: 1499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "SIEM + EDR integration",
+      "24/7 monitoring and alerting",
+      "Threat hunting and weekly reports",
+      "Incident response playbooks",
+      "Compliance mappings (SOC2, HIPAA, PCI)"
+    ],
+    benefits: [
+      "Reduce breach dwell time",
+      "Meet compliance faster",
+      "Lower TCO vs in-house SOC"
+    ],
+    useCases: ["SMB to Enterprise", "Healthcare", "Finance"],
+    targetAudience: ["CIO", "CISO", "IT Directors"],
+    tags: ["SOC", "MDR", "EDR", "SIEM"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,000 - $10,000+/month",
+    roi: "3-10x",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
+    technicalSpecs: {
+      technology: ["CrowdStrike", "Microsoft Defender", "Elastic SIEM", "Sigma rules"],
+      integrations: ["AWS", "Azure", "GCP", "Okta", "M365"],
+      apiEndpoints: 42,
+      uptime: "99.95%",
+      security: ["ISO 27001", "SOC 2", "Encryption"]
+    },
+    competitors: ["Arctic Wolf", "Rapid7 MDR", "Palo Alto Unit 42"],
+    marketSize: "$6.7B MDR market"
+  },
+  {
+    id: "ai-seo-optimizer",
+    title: "AI SEO Content Optimizer",
+    description: "Realtime SEO scoring, keyword clustering, and AI rewriting for top-3 SERP parity.",
+    category: "AI & Content",
+    subcategory: "SEO",
+    price: 59,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "SERP diff and gap analysis",
+      "Outline and brief generator",
+      "Entity extraction and internal linking",
+      "Programmatic SEO support",
+      "CMS plugins (WordPress, Webflow)"
+    ],
+    benefits: ["Increase organic traffic", "Faster content production", "Higher conversion"],
+    useCases: ["Blogs", "Ecommerce", "SaaS docs"],
+    targetAudience: ["Content teams", "Agencies", "Founders"],
+    tags: ["SEO", "NLP", "content"],
+    estimatedDelivery: "Same day",
+    supportLevel: "standard",
+    marketPrice: "$39 - $199/month",
+    roi: "2-6x",
+    innovationLevel: "Practical",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+  },
+  {
+    id: "cloud-cost-optimizer",
+    title: "Cloud Cost Optimizer",
+    description: "Agentless cost reduction across AWS/Azure/GCP with AI recommendations and auto-remediation.",
+    category: "Cloud & DevOps",
+    subcategory: "FinOps",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly + savings share",
+    features: [
+      "Right-sizing and idle resource cleanup",
+      "RI/SP recommendations",
+      "S3 and egress optimization",
+      "Kubernetes cluster autoscaling",
+      "Daily anomaly detection"
+    ],
+    benefits: ["20-40% cost savings", "Automated enforcement", "Executive reporting"],
+    useCases: ["AWS", "Azure", "GCP"],
+    targetAudience: ["FinOps", "DevOps", "CFO"],
+    tags: ["FinOps", "cloud", "cost"],
+    estimatedDelivery: "3-5 days",
+    supportLevel: "premium",
+    marketPrice: "$99 - $999/month + % of savings",
+    roi: "4-15x",
+    innovationLevel: "Advanced",
+    contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
   }
 ];
 
