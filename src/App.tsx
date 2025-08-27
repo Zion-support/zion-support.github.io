@@ -402,6 +402,8 @@ function App() {
             />
           </div>
         </ErrorBoundary>
+      </HelmetProvider>
+    </Router>
   );
 }
 
