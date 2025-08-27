@@ -1,6 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 export interface RealMicroSaasService2024 {
   id: string;
   name: string;
@@ -18,7 +16,6 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
 
   // AI Customer Success Automation
   {
-=======
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
     tagline: 'Automate customer success with intelligent workflows',
@@ -439,6 +436,5 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 1050
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

@@ -121,6 +121,49 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
+  },
+  {
+    id: "ai-customer-support",
+    title: "AI Customer Support Suite",
+    description: "Intelligent customer support platform with AI-powered ticket routing, automated responses, sentiment analysis, and customer satisfaction tracking.",
+    category: "Business Solutions",
+    subcategory: "Customer Support",
+    price: 89,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI ticket routing",
+      "Automated responses",
+      "Sentiment analysis",
+      "Customer satisfaction tracking",
+      "Multi-channel support",
+      "Knowledge base"
+    ],
+    benefits: [
+      "Reduce support response time by 80%",
+      "Improve customer satisfaction by 60%",
+      "Handle 10x more support requests",
+      "24/7 automated support availability"
+    ],
+    targetAudience: ["E-commerce", "SaaS companies", "Customer service teams", "Support centers"],
+    marketPrice: "$89-199/month",
+    website: "https://ziontechgroup.com/ai-customer-support",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["AI Support", "Customer Service", "Automation", "NLP"],
+    aiScore: 92,
+    rating: 4.7,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z"
   }
 ];
 

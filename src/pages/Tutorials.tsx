@@ -131,7 +131,6 @@ const Tutorials: React.FC = () => {
       level: "Advanced to Expert"
     }
   ];
-=======
 import { CogIcon } from '@heroicons/react/24/outline';
 
 const $page: React.FC = () => {

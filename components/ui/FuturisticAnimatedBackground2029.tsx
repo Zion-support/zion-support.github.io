@@ -1,4 +1,3 @@
-=======
     <div className={`fixed inset-0 pointer-events-none ${className}`}>
       <canvas
         ref={canvasRef}
@@ -20,8 +19,6 @@
   );
 }
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-=======
 import React, { useEffect, useRef } from 'react';
 
 interface FuturisticAnimatedBackground2029Props {
@@ -235,4 +232,3 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
     </div>
   );
 }
->>>>>>> 18387717d15ccf03c1ec9067d44024cbf63a6917
