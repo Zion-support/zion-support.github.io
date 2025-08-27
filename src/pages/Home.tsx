@@ -39,6 +39,7 @@ import {
   Zap as ZapIcon
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
+import { TestimonialsSection } from '../components/TestimonialsSection';
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -581,6 +582,9 @@ export default function Home() {
 
         {/* Ultimate Services Showcase */}
         <UltimateServicesShowcase2025 />
+        
+        {/* Testimonials Section */}
+        <TestimonialsSection />
         
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
