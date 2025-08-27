@@ -2,7 +2,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, Workflow, Shield, Atom, Cpu } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -26,7 +26,8 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-import { ServicesShowcase } from "@/components/ServicesShowcase";
+import { ServicesShowcase } from "@/components/ServicesShowcase.tsx";
+import { EnhancedServicesShowcase } from "@/components/EnhancedServicesShowcase";
 
 export default function Home() {
   const stats = [
@@ -53,6 +54,39 @@ export default function Home() {
       label: "Uptime Guarantee",
       description: "Reliable infrastructure and services",
       icon: CheckCircle
+    }
+  ];
+
+  const innovativeServices = [
+    {
+      title: 'AI Workflow Automation',
+      description: 'Transform business operations with intelligent automation that learns and scales',
+      price: 'From $299/month',
+      path: '/services/ai-workflow-automation',
+      icon: Workflow
+    },
+    {
+      title: 'AI Cybersecurity',
+      description: 'Protect your business with AI-powered threat detection and prevention',
+      price: 'From $499/month',
+      path: '/services/ai-cybersecurity',
+      icon: Shield
+    },
+    {
+      title: 'Quantum Computing',
+      description: 'Solve complex problems 1000x faster with quantum computing solutions',
+      price: 'From $2,999/month',
+      path: '/services/quantum-computing-solutions',
+      icon: Atom
+    },
+    {
+      title: 'IoT Edge Computing',
+      description: 'Process data at the edge and reduce latency by 90%',
+      price: 'From $399/month',
+      path: '/services/iot-edge-computing',
+      icon: Cpu
+    }
+  ];
     }
   ];
 
@@ -236,42 +270,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Services Section */}
+      {/* Innovative Services Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              AI-Powered Solutions
+              Innovative Technology Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how artificial intelligence can transform your business operations and drive innovation
+              Discover cutting-edge solutions that combine AI, quantum computing, IoT, and cybersecurity to transform your business
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {innovativeServices.map((service, index) => (
+              <motion.div 
+                key={index} 
+                className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
+                  <service.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <div className="text-cyan-400 text-sm font-semibold mb-3">{service.price}</div>
                 <Link 
                   to={service.path}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group text-sm"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -704,8 +738,8 @@ const containerVariants = {
       {/* Enhanced Featured Listings Section */}
       <FeaturedListingsSection />
 
-      {/* Comprehensive Services Showcase */}
-      <ServicesShowcase />
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase />
 
       {/* Enhanced Newsletter Section */}
       <NewsletterSection />
