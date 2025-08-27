@@ -260,8 +260,6 @@
   animation: particleFloat 20s linear infinite;
   opacity: 0.6;
 }
-  background-clip: text;
-}
 
 .text-gradient-cyan {
   background: linear-gradient(135deg, var(--zion-cyan) 0%, var(--zion-cyan-light) 100%);
