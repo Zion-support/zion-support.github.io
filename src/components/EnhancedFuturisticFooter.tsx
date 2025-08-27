@@ -73,7 +73,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'AI Customer Support', href: '/services/ai-customer-support' },
         { name: 'AI Data Analytics', href: '/services/ai-data-analytics' },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' }
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
+        { name: 'AI Blockchain Integration', href: '/services/ai-blockchain-integration' },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics' },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' }
       ]
     },
     {

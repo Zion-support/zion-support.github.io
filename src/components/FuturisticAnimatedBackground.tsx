@@ -18,6 +18,32 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
+    // Add enhanced grid background
+    const gridCanvas = document.createElement('canvas');
+    const gridCtx = gridCanvas.getContext('2d');
+    if (gridCtx) {
+      gridCanvas.width = canvas.width;
+      gridCanvas.height = canvas.height;
+      
+      // Draw enhanced grid
+      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+      gridCtx.lineWidth = 1;
+      
+      for (let x = 0; x < gridCanvas.width; x += 40) {
+        gridCtx.beginPath();
+        gridCtx.moveTo(x, 0);
+        gridCtx.lineTo(x, gridCanvas.height);
+        gridCtx.stroke();
+      }
+      
+      for (let y = 0; y < gridCanvas.height; y += 40) {
+        gridCtx.beginPath();
+        gridCtx.moveTo(0, y);
+        gridCtx.lineTo(gridCanvas.width, y);
+        gridCtx.stroke();
+      }
+    }
+
     // Animation variables
     let animationId: number;
     let time = 0;

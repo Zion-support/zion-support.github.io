@@ -36,7 +36,9 @@ import {
   Workflow,
   Eye,
   Sparkles,
-  Zap as ZapIcon
+  Zap as ZapIcon,
+  Stethoscope,
+  Truck
 } from 'lucide-react';
 import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
 
@@ -149,34 +151,44 @@ export default function Home() {
 
   const featuredServices = [
     {
-      title: "AI Autonomous Business Operations",
-      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time.",
-      icon: Rocket,
-      path: "/services/autonomous",
+      title: "AI Healthcare Diagnostics",
+      description: "Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support.",
+      icon: Stethoscope,
+      path: "/services/ai-healthcare-diagnostics",
       rating: 4.9,
-      reviewCount: 127,
-      highlights: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics"],
-      price: "From $2,500/month"
+      reviewCount: 234,
+      highlights: ["98.5% Diagnostic Accuracy", "Real-time Analysis", "Multi-modal Imaging", "HIPAA Compliant"],
+      price: "From $3,500/month"
     },
     {
-      title: "Quantum Neural Network Platform",
-      description: "Revolutionary quantum computing platform that combines quantum processing with neural networks to solve previously impossible computational challenges.",
-      icon: Cpu,
-      path: "/services/quantum",
+      title: "AI Financial Trading Platform",
+      description: "Advanced AI-powered trading platform with predictive analytics, automated risk management, and multi-asset support for maximum returns.",
+      icon: TrendingUp,
+      path: "/services/ai-financial-trading",
       rating: 4.8,
-      reviewCount: 89,
-      highlights: ["Quantum Processing", "Neural Networks", "Advanced Algorithms", "Breakthrough Computing"],
-      price: "From $5,000/month"
+      reviewCount: 189,
+      highlights: ["AI Trading Algorithms", "Risk Management", "Multi-Asset Support", "Real-time Analytics"],
+      price: "From $4,500/month"
     },
     {
-      title: "AI-Powered Cybersecurity Suite",
-      description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time.",
-      icon: Shield,
-      path: "/services/cybersecurity",
+      title: "AI Supply Chain Optimization",
+      description: "Intelligent supply chain optimization platform with AI-powered demand forecasting, route optimization, and inventory management.",
+      icon: Truck,
+      path: "/services/ai-supply-chain-optimization",
       rating: 4.9,
-      reviewCount: 156,
-      highlights: ["AI Threat Detection", "Real-time Response", "Advanced Analytics", "Compliance Ready"],
-      price: "From $1,800/month"
+      reviewCount: 167,
+      highlights: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Real-time Tracking"],
+      price: "From $3,800/month"
+    },
+    {
+      title: "AI Blockchain Integration",
+      description: "Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations.",
+      icon: Brain,
+      path: "/services/ai-blockchain-integration",
+      rating: 4.7,
+      reviewCount: 145,
+      highlights: ["AI Smart Contracts", "Enhanced Security", "Real-time Processing", "Predictive Analytics"],
+      price: "From $2,500/month"
     }
   ];
 

@@ -2,8 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
-  Truck, 
-  Package, 
+  Heart, 
+  Eye, 
+  Stethoscope, 
   CheckCircle, 
   Star, 
   Users, 
@@ -21,113 +22,97 @@ import {
   Rocket,
   Shield,
   Zap,
-  Activity,
-  LineChart,
-  PieChart,
-  Target as TargetIcon,
-  BrainCircuit,
-  Clock,
-  AlertTriangle,
-  TrendingDown,
-  DollarSign as DollarIcon,
-  BarChart,
-  PieChart as PieChartIcon,
-  Warehouse,
-  Route,
-  MapPin,
-  Calendar,
   TrendingUp,
-  Gauge,
-  Settings,
-  RefreshCw
+  Activity,
+  Microscope,
+  Pill,
+  Syringe,
+  Thermometer,
+  BrainCircuit
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AISupplyChainOptimization() {
+export default function AIHealthcareDiagnostics() {
   const features = [
     {
       icon: Brain,
-      title: "AI Demand Forecasting",
-      description: "Predict customer demand with 95% accuracy using advanced machine learning"
+      title: "AI-Powered Diagnosis",
+      description: "Advanced machine learning algorithms for accurate disease detection and diagnosis"
     },
     {
-      icon: Truck,
-      title: "Route Optimization",
-      description: "AI-powered route planning for maximum efficiency and cost reduction"
+      icon: Eye,
+      title: "Medical Imaging AI",
+      description: "Computer vision for X-rays, MRIs, CT scans, and ultrasound analysis"
     },
     {
-      icon: Warehouse,
-      title: "Inventory Management",
-      description: "Smart inventory control with automated reorder points and safety stock"
+      icon: Heart,
+      title: "Predictive Analytics",
+      description: "Early disease prediction and risk assessment using patient data"
     },
     {
-      icon: Route,
-      title: "Real-time Tracking",
-      description: "End-to-end visibility across your entire supply chain network"
+      icon: Stethoscope,
+      title: "Clinical Decision Support",
+      description: "AI-powered recommendations for treatment plans and medication"
     }
   ];
 
-  const optimizationAreas = [
+  const diagnosticCapabilities = [
     {
-      name: "Demand Planning",
-      description: "AI-powered demand forecasting and inventory planning",
-      improvement: "40%",
-      metric: "Reduced Stockouts",
-      icon: TrendingUp
+      category: "Radiology",
+      services: ["X-ray Analysis", "MRI Interpretation", "CT Scan Review", "Ultrasound Assessment"],
+      accuracy: "98.5%",
+      icon: Eye
     },
     {
-      name: "Route Optimization",
-      description: "Intelligent route planning for logistics and delivery",
-      improvement: "35%",
-      metric: "Fuel Cost Reduction",
-      icon: Route
+      category: "Cardiology",
+      services: ["ECG Analysis", "Heart Disease Detection", "Arrhythmia Detection", "Risk Assessment"],
+      accuracy: "97.8%",
+      icon: Heart
     },
     {
-      name: "Warehouse Management",
-      description: "Smart warehouse operations and space utilization",
-      improvement: "50%",
-      metric: "Efficiency Increase",
-      icon: Warehouse
+      category: "Oncology",
+      services: ["Tumor Detection", "Cancer Screening", "Treatment Response", "Prognosis Analysis"],
+      accuracy: "96.9%",
+      icon: Microscope
     },
     {
-      name: "Supplier Management",
-      description: "AI-driven supplier selection and performance monitoring",
-      improvement: "45%",
-      metric: "Cost Reduction",
-      icon: Users
+      category: "Neurology",
+      services: ["Brain Scan Analysis", "Stroke Detection", "Alzheimer's Screening", "Seizure Detection"],
+      accuracy: "97.2%",
+      icon: BrainCircuit
     }
   ];
 
   const benefits = [
-    "Reduce supply chain costs by up to 40%",
-    "Improve delivery accuracy by 85%",
-    "Reduce inventory carrying costs by 30%",
-    "Increase order fulfillment rate to 99.5%",
-    "Optimize warehouse space utilization by 60%",
-    "Real-time visibility across all supply chain nodes"
+    "Reduce diagnostic errors by up to 85%",
+    "Improve early detection rates by 60%",
+    "Cut diagnosis time by 70%",
+    "Enhance treatment accuracy by 75%",
+    "Reduce healthcare costs by 40%",
+    "Enable remote diagnostics and telemedicine"
   ];
 
   const pricing = [
     {
       name: "Basic",
-      price: "$3,800",
+      price: "$3,500",
       period: "/month",
       features: [
-        "Up to 5 locations",
-        "Basic demand forecasting",
-        "Route optimization",
+        "Up to 1,000 scans/month",
+        "Basic AI diagnosis",
         "Standard reporting",
-        "Email support"
+        "Email support",
+        "Basic integrations"
       ]
     },
     {
       name: "Professional",
-      price: "$8,500",
+      price: "$7,500",
       period: "/month",
       features: [
-        "Up to 25 locations",
-        "Advanced AI forecasting",
-        "Multi-modal optimization",
+        "Up to 10,000 scans/month",
+        "Advanced AI algorithms",
+        "Custom reporting",
         "Priority support",
         "API access",
         "Custom integrations"
@@ -135,10 +120,10 @@ export default function AISupplyChainOptimization() {
     },
     {
       name: "Enterprise",
-      price: "$22,000",
+      price: "$18,000",
       period: "/month",
       features: [
-        "Unlimited locations",
+        "Unlimited scans",
         "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
@@ -148,25 +133,25 @@ export default function AISupplyChainOptimization() {
     }
   ];
 
-  const supportedIndustries = [
-    "E-commerce & Retail",
-    "Manufacturing",
-    "Healthcare & Pharma",
-    "Food & Beverage",
-    "Automotive",
-    "Logistics & Transportation"
+  const complianceFeatures = [
+    "HIPAA Compliant",
+    "FDA Approved Algorithms",
+    "SOC 2 Type II Certified",
+    "GDPR Compliant",
+    "ISO 27001 Certified",
+    "End-to-end Encryption"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization - Zion Tech Group"
-        description="Revolutionary AI-powered supply chain optimization platform for intelligent demand forecasting, route optimization, and inventory management."
+        title="AI Healthcare Diagnostics - Zion Tech Group"
+        description="Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-green-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -174,29 +159,29 @@ export default function AISupplyChainOptimization() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-center mb-6">
-              <Truck className="w-12 h-12 text-blue-400 mr-3" />
+              <Stethoscope className="w-12 h-12 text-green-400 mr-3" />
               <h1 className="text-4xl md:text-6xl font-bold text-white">
-                AI Supply Chain Optimization
+                AI Healthcare Diagnostics
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your supply chain with AI-powered optimization, intelligent demand forecasting, 
-              and automated logistics management for maximum efficiency and cost savings.
+              Revolutionize healthcare with AI-powered diagnostics, medical imaging analysis, 
+              and clinical decision support for accurate and timely patient care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
               >
-                Optimize Now
+                Schedule Demo
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
               >
-                Schedule Demo
+                Learn More
               </motion.button>
             </div>
           </motion.div>
@@ -213,11 +198,11 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Intelligent Supply Chain Capabilities
+              Advanced AI Diagnostic Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge machine learning with supply chain expertise 
-              to deliver unprecedented optimization and efficiency gains.
+              Our AI platform combines cutting-edge machine learning with medical expertise 
+              to deliver unprecedented diagnostic accuracy and speed.
             </p>
           </motion.div>
 
@@ -228,9 +213,9 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 group"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -241,7 +226,7 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
 
-      {/* Optimization Areas Section */}
+      {/* Diagnostic Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -251,44 +236,51 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Optimization Areas
+              Specialized Diagnostic Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform optimizes every aspect of your supply chain for maximum 
-              efficiency and cost reduction.
+              Comprehensive AI-powered diagnostics across all major medical specialties 
+              with industry-leading accuracy rates.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {optimizationAreas.map((area, index) => (
+            {diagnosticCapabilities.map((capability, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg flex items-center justify-center mr-4">
-                    <area.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                    <capability.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">{area.name}</h3>
-                    <p className="text-gray-300 text-sm">{area.description}</p>
+                    <h3 className="text-2xl font-bold text-white">{capability.category}</h3>
+                    <div className="flex items-center">
+                      <span className="text-green-400 font-semibold text-lg">{capability.accuracy}</span>
+                      <span className="text-gray-400 ml-2">accuracy</span>
+                    </div>
                   </div>
                 </div>
                 
-                <div className="text-center">
-                  <div className="text-blue-400 font-bold text-3xl mb-2">{area.improvement}</div>
-                  <div className="text-gray-400 text-sm">{area.metric}</div>
-                </div>
+                <ul className="space-y-3">
+                  {capability.services.map((service, serviceIndex) => (
+                    <li key={serviceIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{service}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Supported Industries Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -298,45 +290,11 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry-Specific Solutions
+              Transform Healthcare Delivery
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored AI optimization solutions for various industries and business models.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportedIndustries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center hover:border-blue-400/50 transition-all duration-300"
-              >
-                <Package className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <span className="text-white font-semibold text-lg">{industry}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Supply Chain
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI optimization platform delivers measurable improvements in efficiency, 
-              cost reduction, and customer satisfaction.
+              Our AI diagnostics platform delivers measurable improvements in healthcare outcomes, 
+              efficiency, and cost reduction.
             </p>
           </motion.div>
 
@@ -349,8 +307,43 @@ export default function AISupplyChainOptimization() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Enterprise-Grade Security & Compliance
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built with healthcare-grade security and compliance standards to protect 
+              patient data and ensure regulatory adherence.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {complianceFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center"
+              >
+                <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <span className="text-white font-semibold text-lg">{feature}</span>
               </motion.div>
             ))}
           </div>
@@ -370,7 +363,8 @@ export default function AISupplyChainOptimization() {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your supply chain needs. All plans include our core AI features.
+              Choose the plan that fits your healthcare facility's needs. All plans include 
+              our core AI diagnostic capabilities.
             </p>
           </motion.div>
 
@@ -383,13 +377,13 @@ export default function AISupplyChainOptimization() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
                   index === 1 
-                    ? 'border-blue-400/50 shadow-lg shadow-blue-500/25' 
+                    ? 'border-green-400/50 shadow-lg shadow-green-500/25' 
                     : 'border-slate-600/50'
                 } relative`}
               >
                 {index === 1 && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -406,7 +400,7 @@ export default function AISupplyChainOptimization() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -417,8 +411,8 @@ export default function AISupplyChainOptimization() {
                   whileTap={{ scale: 0.95 }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     index === 1
-                      ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:shadow-lg hover:shadow-blue-500/25'
-                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400/10'
+                      ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:shadow-lg hover:shadow-green-500/25'
+                      : 'border border-green-400 text-green-400 hover:bg-green-400/10'
                   }`}
                 >
                   Get Started
@@ -430,7 +424,7 @@ export default function AISupplyChainOptimization() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-green-500/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -438,24 +432,24 @@ export default function AISupplyChainOptimization() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Healthcare with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading companies worldwide who have already transformed their 
-              supply chain operations with our AI platform.
+              Join leading healthcare facilities worldwide in adopting AI-powered diagnostics 
+              for better patient outcomes and operational efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
               >
-                Start Free Trial
+                Schedule Consultation
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>

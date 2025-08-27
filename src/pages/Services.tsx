@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles } from 'lucide-react';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Stethoscope, Truck, Brain } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 import { NEW_SERVICES_2025 } from '../data/newServices2025';
@@ -8,16 +8,52 @@ import { NEW_SERVICES_2025 } from '../data/newServices2025';
 export default function Services() {
   const aiServices = [
     {
-      title: "AI Autonomous Business Operations",
-      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time.",
-      icon: Bot,
-      price: "From $2,500/month",
-      features: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics", "Predictive Maintenance", "Resource Allocation"],
-      benefits: ["Reduce operational costs by up to 40%", "Improve process efficiency by 60%", "Eliminate manual errors and delays", "24/7 automated operations"],
-      path: "/services/autonomous",
+      title: "AI Healthcare Diagnostics",
+      description: "Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support.",
+      icon: Stethoscope,
+      price: "From $3,500/month",
+      features: ["AI-Powered Diagnosis", "Medical Imaging AI", "Predictive Analytics", "Clinical Decision Support", "Multi-modal Analysis", "HIPAA Compliance"],
+      benefits: ["Reduce diagnostic errors by up to 85%", "Improve early detection rates by 60%", "Cut diagnosis time by 70%", "Enhance treatment accuracy by 75%"],
+      path: "/services/ai-healthcare-diagnostics",
       rating: 4.9,
-      reviewCount: 127,
-      category: "AI & Automation"
+      reviewCount: 234,
+      category: "AI & Healthcare"
+    },
+    {
+      title: "AI Financial Trading Platform",
+      description: "Advanced AI-powered trading platform with predictive analytics, automated risk management, and multi-asset support for maximum returns.",
+      icon: TrendingUp,
+      price: "From $4,500/month",
+      features: ["AI Trading Algorithms", "Predictive Analytics", "Risk Management", "High-Frequency Trading", "Multi-Asset Support", "Real-time Analytics"],
+      benefits: ["Increase trading profits by up to 300%", "Reduce trading risks by 65%", "24/7 automated trading operations", "Real-time market analysis and alerts"],
+      path: "/services/ai-financial-trading",
+      rating: 4.8,
+      reviewCount: 189,
+      category: "AI & Finance"
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Intelligent supply chain optimization platform with AI-powered demand forecasting, route optimization, and inventory management.",
+      icon: Truck,
+      price: "From $3,800/month",
+      features: ["AI Demand Forecasting", "Route Optimization", "Inventory Management", "Real-time Tracking", "Supplier Management", "Multi-modal Optimization"],
+      benefits: ["Reduce supply chain costs by up to 40%", "Improve delivery accuracy by 85%", "Reduce inventory carrying costs by 30%", "Increase order fulfillment rate to 99.5%"],
+      path: "/services/ai-supply-chain-optimization",
+      rating: 4.9,
+      reviewCount: 167,
+      category: "AI & Logistics"
+    },
+    {
+      title: "AI Blockchain Integration",
+      description: "Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations.",
+      icon: Brain,
+      price: "From $2,500/month",
+      features: ["AI-Powered Smart Contracts", "Enhanced Security", "Real-time Processing", "Predictive Analytics", "Multi-layer Security", "Compliance Automation"],
+      benefits: ["Reduce transaction costs by up to 60%", "Improve security with AI threat detection", "Automate complex blockchain operations", "Real-time fraud prevention and detection"],
+      path: "/services/ai-blockchain-integration",
+      rating: 4.7,
+      reviewCount: 145,
+      category: "AI & Blockchain"
     },
     {
       title: "AI-Powered Cybersecurity Suite",
