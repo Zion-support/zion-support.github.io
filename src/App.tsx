@@ -92,7 +92,7 @@ const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnal
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
-// Additional innovative services
+// Additional innovative AI service routes
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
 const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
@@ -312,7 +312,7 @@ function App() {
                     <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
                     <Route path="/new-innovative-services-2025" element={<NewServicesShowcase2025 />} />
                     
-                    {/* Additional innovative AI service routes */}
+                    {/* Additional innovative AI services */}
                     <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
                     <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
                     <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
