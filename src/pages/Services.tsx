@@ -6,7 +6,8 @@ import {
   MessageCircle, HelpCircle, DollarSign, Target, TrendingUp, 
   Atom, Network, Eye, PenTool, Heart, Building, Truck, 
   Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
-  Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText
+  Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
+  Workflow
 } from 'lucide-react';
 
 export default function Services() {
@@ -33,6 +34,11 @@ export default function Services() {
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart, description: 'Healthcare data insights' },
         { name: 'AI Financial Trading', href: '/services/ai-financial-trading', icon: DollarSign, description: 'Algorithmic trading solutions' },
         { name: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite', icon: PenTool, description: 'Comprehensive content creation tools' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent workflow automation' },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered compliance automation' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: BarChart3, description: 'Customer sentiment & behavior analytics' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Intelligent supply chain management' },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'Real-time risk monitoring & optimization' },
       ]
     },
     {
@@ -136,6 +142,13 @@ export default function Services() {
       icon: DollarSign,
       description: 'Complete Pricing & ROI Analysis',
       color: 'from-green-500 to-emerald-500'
+    },
+    {
+      name: '2025 New Services',
+      href: '/new-innovative-services-2025',
+      icon: Star,
+      description: 'Latest AI-Powered Micro SAAS Solutions',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       name: '2026 Services Overview',
