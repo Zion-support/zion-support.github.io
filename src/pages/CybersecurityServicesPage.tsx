@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { SEOHead } from '../components/seo/SEOHead';
-=======
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import SEOHead from "../components/SEOHead.jsx";
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -33,59 +27,6 @@ import {
   Monitor,
   TrendingUp
 } from 'lucide-react';
-<<<<<<< HEAD
-
-export default function CybersecurityServicesPage() {
-  const services = [
-    {
-      title: "Zero Trust Security Framework",
-      description: "Implement enterprise-grade security with our comprehensive zero trust architecture",
-      features: ["Identity verification", "Continuous monitoring", "Threat detection", "Compliance reporting"],
-      price: "From $3,000/month",
-      icon: Shield
-    },
-    {
-      title: "Advanced Threat Detection",
-      description: "AI-powered security monitoring and real-time threat response",
-      features: ["24/7 monitoring", "AI threat analysis", "Automated response", "Incident management"],
-      price: "From $2,500/month",
-      icon: Eye
-    },
-    {
-      title: "Security Compliance & Auditing",
-      description: "Ensure your organization meets industry security standards and regulations",
-      features: ["SOC2 compliance", "GDPR compliance", "Regular audits", "Risk assessment"],
-      price: "From $4,000/month",
-      icon: CheckCircle
-    }
-  ];
-
-  const features = [
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security with SOC2 compliance and 24/7 monitoring"
-    },
-    {
-      icon: Brain,
-      title: "AI-Powered Protection",
-      description: "Advanced threat detection using machine learning algorithms"
-    },
-    {
-      icon: Network,
-      title: "Network Security",
-      description: "Comprehensive network protection and firewall management"
-    },
-    {
-      icon: Users,
-      title: "Access Control",
-      description: "Secure user authentication and role-based permissions"
-    }
-  ];
-
-  return (
-    <>
-=======
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service => 
@@ -499,7 +440,6 @@ export default function CybersecurityServicesPage() {
               Ready to strengthen your cybersecurity posture? Contact our security experts today.
             </p>
           </div>
-          
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <Phone className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
@@ -524,7 +464,6 @@ export default function CybersecurityServicesPage() {
       </div>
     </div>
 <>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       <SEOHead 
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
@@ -541,7 +480,6 @@ export default function CybersecurityServicesPage() {
           }
         }}
       />
-      
       <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
         {/* Hero Section */}
         <section className="py-32 px-4 relative overflow-hidden">
@@ -551,7 +489,6 @@ export default function CybersecurityServicesPage() {
             <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />
             <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
           </div>
-
           <div className="relative z-10 max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent">
@@ -560,12 +497,10 @@ export default function CybersecurityServicesPage() {
               <br />
               <span className="text-white">That Never Sleeps</span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Protect your business with enterprise-grade cybersecurity solutions. Our AI-powered security 
               platform provides 24/7 protection against evolving cyber threats.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
@@ -583,63 +518,15 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Features Section */}
-        <section className="py-20 bg-black/20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Security?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine advanced technology with proven expertise to deliver security that exceeds expectations
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-lg w-16 h-16 mx-auto mb-6 flex items-center justify-center">
-                    <feature.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-400">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 bg-black/20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Security Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
         {/* Security Service Categories */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4">Security Service Categories</h2>
               <p className="text-muted-foreground max-w-3xl mx-auto">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                 Comprehensive cybersecurity solutions designed to protect your business from all angles
               </p>
             </div>
-            
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Card key={index} className="bg-gradient-to-br from-zinc-800 to-zinc-900 border-zinc-700">
-=======
             <div className="grid gap-6 md:grid-cols-2">
               {SECURITY_SERVICE_CATEGORIES.map((category) => {
                 const IconComponent = category.icon;
@@ -709,7 +596,6 @@ export default function CybersecurityServicesPage() {
                 Enterprise-grade protection with the agility and pricing of a startup
               </p>
             </div>
-            
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               <div className="text-center">
                 <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -720,7 +606,6 @@ export default function CybersecurityServicesPage() {
                   Round-the-clock security monitoring and threat detection
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-8 w-8 text-red-600" />
@@ -730,7 +615,6 @@ export default function CybersecurityServicesPage() {
                   Advanced AI algorithms for faster threat identification
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="h-8 w-8 text-red-600" />
@@ -740,7 +624,6 @@ export default function CybersecurityServicesPage() {
                   Meet SOC2, GDPR, HIPAA, and other compliance requirements
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Zap className="h-8 w-8 text-red-600" />
@@ -762,7 +645,6 @@ export default function CybersecurityServicesPage() {
                 Our proven methodology ensures comprehensive security implementation and ongoing protection
               </p>
             </div>
-            
             <div className="grid gap-8 md:grid-cols-4">
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
@@ -773,7 +655,6 @@ export default function CybersecurityServicesPage() {
                   Comprehensive security audit and vulnerability assessment
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   2
@@ -783,7 +664,6 @@ export default function CybersecurityServicesPage() {
                   Develop security roadmap and compliance strategy
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   3
@@ -793,7 +673,6 @@ export default function CybersecurityServicesPage() {
                   Deploy security solutions and monitoring systems
                 </p>
               </div>
-              
               <div className="text-center">
                 <div className="bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   4
@@ -815,7 +694,6 @@ export default function CybersecurityServicesPage() {
                 Our security solutions help you meet industry standards and regulatory requirements
               </p>
             </div>
-            
             <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
               {[
                 { name: 'SOC2', icon: '🔒', description: 'Security Controls' },
@@ -826,7 +704,6 @@ export default function CybersecurityServicesPage() {
                 { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
               ].map((standard) => (
                 <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                   <CardHeader>
                     <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-lg w-16 h-16 mb-4 flex items-center justify-center">
                       <service.icon className="h-8 w-8 text-white" />
@@ -859,18 +736,10 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
         {/* Contact CTA */}
         <section className="py-16 bg-zion-blue">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -893,15 +762,8 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-      </div>
-    </>
-  );
-}
-=======
         <TrustedBySection />
       </main>
-      
       <Footer />
 </>
   );
@@ -954,14 +816,11 @@ export default function CybersecurityServicesPage() {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
     const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    
     let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = service.price < 500;
     else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;
     else if (priceRange === 'high') matchesPrice = service.price >= 1000;
-    
     return matchesSearch && matchesSubcategory && matchesPrice;
   });
   const getPricingModelIcon = (model: string) => {
@@ -999,7 +858,6 @@ export default function CybersecurityServicesPage() {
           AI Score: {service.aiScore}
         </Badge>
       </div>
-      
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
           <div className="text-2xl">🔒</div>
@@ -1012,13 +870,11 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </div>
-        
         <CardTitle className="text-lg leading-tight">{service.title}</CardTitle>
         <CardDescription className="line-clamp-3">
           {service.description}
         </CardDescription>
       </CardHeader>
-      
       <CardContent className="space-y-4">
         {/* Rating and Reviews */}
         <div className="flex items-center gap-2">
@@ -1030,21 +886,18 @@ export default function CybersecurityServicesPage() {
             ({service.reviewCount} reviews)
           </span>
         </div>
-        
         {/* Market Price */}
         <div className="flex items-center gap-2 text-sm">
           <TrendingUp className="h-4 w-4 text-green-600" />
           <span className="text-muted-foreground">Market Price:</span>
           <span className="font-medium">{service.marketPrice}</span>
         </div>
-        
         {/* Delivery Time */}
         <div className="flex items-center gap-2 text-sm">
           <Clock className="h-4 w-4 text-blue-600" />
           <span className="text-muted-foreground">Delivery:</span>
           <span className="font-medium">{service.deliveryTime}</span>
         </div>
-        
         {/* Key Features */}
         <div className="space-y-2">
           <h4 className="font-medium text-sm">Key Features:</h4>
@@ -1057,7 +910,6 @@ export default function CybersecurityServicesPage() {
             ))}
           </ul>
         </div>
-        
         {/* Contact Information */}
         <div className="pt-4 border-t">
           <div className="space-y-2 text-sm">
@@ -1071,7 +923,6 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </div>
-        
         {/* Action Buttons */}
         <div className="flex gap-2 pt-4">
           <Button className="flex-1 bg-red-600 hover:bg-red-700">
@@ -1179,7 +1030,6 @@ const CybersecurityServicesPage = () => {
               Stay protected against evolving cyber threats with our comprehensive security solutions
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -1188,7 +1038,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Ransomware Attacks</h3>
               <p className="text-gray-600">Protect against data encryption and extortion attempts with advanced threat detection</p>
             </div>
-            
             <div className="text-center">
               <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-orange-600" />
@@ -1196,7 +1045,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Social Engineering</h3>
               <p className="text-gray-600">Defend against phishing, pretexting, and other human-based attack vectors</p>
             </div>
-            
             <div className="text-center">
               <div className="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Server className="h-8 w-8 text-yellow-600" />
@@ -1204,7 +1052,6 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Supply Chain Attacks</h3>
               <p className="text-gray-600">Secure your software and hardware supply chain against compromise</p>
             </div>
-            
             <div className="text-center">
               <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Database className="h-8 w-8 text-purple-600" />
@@ -1267,7 +1114,6 @@ const CybersecurityServicesPage = () => {
                       <span>{service.availability}</span>
                     </div>
                   </div>
-                  
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
@@ -1320,19 +1166,16 @@ const CybersecurityServicesPage = () => {
               <div className="text-white font-semibold">Threat Detection Rate</div>
               <div className="text-zion-slate-light text-sm">Advanced AI-powered threat detection</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
               <div className="text-white font-semibold">Security Monitoring</div>
               <div className="text-zion-slate-light text-sm">Round-the-clock threat monitoring</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">15min</div>
               <div className="text-white font-semibold">Response Time</div>
               <div className="text-zion-slate-light text-sm">Average incident response time</div>
             </div>
-            
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">100%</div>
               <div className="text-white font-semibold">Compliance Success</div>
@@ -1349,7 +1192,6 @@ const CybersecurityServicesPage = () => {
               security challenges and protect your business assets.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service) => (
               <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
@@ -1363,10 +1205,8 @@ const CybersecurityServicesPage = () => {
                     <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
                   </div>
                 </div>
-                
                 <h3 className="text-white text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-zion-slate-light mb-4">{service.description}</p>
-                
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -1378,7 +1218,6 @@ const CybersecurityServicesPage = () => {
                     ))}
                   </ul>
                 </div>
-                
                 <div className="border-t border-zion-blue-light pt-4 mb-4">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center text-zion-cyan">
@@ -1391,7 +1230,6 @@ const CybersecurityServicesPage = () => {
                     </div>
                   </div>
                 </div>
-                
                 <Link to="/request-quote">
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     Get Quote
@@ -1414,7 +1252,6 @@ const CybersecurityServicesPage = () => {
               comprehensive protection for your business.
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {securityTechnologies.map((tech, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1439,7 +1276,6 @@ const CybersecurityServicesPage = () => {
               requirements across multiple sectors.
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {complianceStandards.map((standard, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1464,7 +1300,6 @@ const CybersecurityServicesPage = () => {
               and 24/7 security monitoring services.
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {threatIntelligence.map((intel, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1489,7 +1324,6 @@ const CybersecurityServicesPage = () => {
               solutions that protect your business and build customer trust.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1501,7 +1335,6 @@ const CybersecurityServicesPage = () => {
                 extensive experience in enterprise security.
               </p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-white" />
@@ -1512,7 +1345,6 @@ const CybersecurityServicesPage = () => {
                 with zero major security breaches.
               </p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
@@ -1538,7 +1370,6 @@ const CybersecurityServicesPage = () => {
               flexible payment options and comprehensive protection.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Essential Security</h3>
@@ -1557,7 +1388,6 @@ const CybersecurityServicesPage = () => {
                 </Button>
               </Link>
             </div>
-            
             <div className="bg-gradient-to-br from-zion-purple to-zion-purple-dark border border-zion-purple rounded-lg p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-zion-cyan text-zion-blue px-4 py-2 rounded-full text-sm font-bold">
@@ -1580,7 +1410,6 @@ const CybersecurityServicesPage = () => {
                 </Button>
               </Link>
             </div>
-            
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Enterprise Security</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">
@@ -1611,7 +1440,6 @@ const CybersecurityServicesPage = () => {
             Contact our cybersecurity experts today to discuss how we can help you 
             protect your business from evolving threats.
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1623,7 +1451,6 @@ const CybersecurityServicesPage = () => {
                 Middletown DE 19709
               </p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -1633,7 +1460,6 @@ const CybersecurityServicesPage = () => {
                 +1 302 464 0950
               </p>
             </div>
-            
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
@@ -1644,7 +1470,6 @@ const CybersecurityServicesPage = () => {
               </p>
             </div>
           </div>
-          
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/request-quote">
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
@@ -1952,7 +1777,6 @@ const CybersecurityServicesPage = () => {
                 </a>
               </div>
             </div>
-            
             <div>
               <h3 className="text-xl font-semibold mb-6 text-red-400">Contact Information</h3>
               <div className="space-y-4">
@@ -1971,7 +1795,6 @@ const CybersecurityServicesPage = () => {
               </div>
             </div>
           </div>
-          
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
           </div>
@@ -1986,4 +1809,3 @@ export default CybersecurityServicesPage;
     </Card>
   );
 }
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

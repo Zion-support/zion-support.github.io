@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-export const handleApiError = (error: any, fallbackMessage: string = 'An error occurred') => {
-  if (error?.response?.data?.message) {
-    return error.response.data.message;
-=======
 /**
  * API Error Handler utility for consistent error handling across the application
  */
@@ -18,7 +13,6 @@ export interface ApiError {
  */
 export const showApiError = (error: any, fallbackMessage?: string): void => {
   let errorMessage = fallbackMessage || 'An unexpected error occurred';
-  
   // Handle different error formats
   if (typeof error === 'string') {
     errorMessage = error;
@@ -45,7 +39,6 @@ export const showApiError = (error: any, fallbackMessage?: string): void => {
  */
 export const handleHttpError = (status: number, error?: any): void => {
   let message = 'An unexpected error occurred';
-  
   switch (status) {
     case 400:
       message = 'Bad request. Please check your input.';
@@ -93,39 +86,15 @@ export const handleHttpError = (status: number, error?: any): void => {
 export const extractErrorMessage = (error: any): string => {
   if (typeof error === 'string') {
     return error;
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   }
-  
   if (error?.message) {
     return error.message;
   }
-  
   if (typeof error === 'string') {
     return error;
   }
-  
   return fallbackMessage;
 };
-<<<<<<< HEAD
-
-export const isNetworkError = (error: any) => {
-  return error?.code === 'NETWORK_ERROR' || 
-         error?.message?.includes('Network Error') ||
-         error?.message?.includes('Failed to fetch');
-};
-
-export const isAuthError = (error: any) => {
-  return error?.status === 401 || 
-         error?.status === 403 ||
-         error?.response?.status === 401 ||
-         error?.response?.status === 403;
-};
-
-export const showApiError = (error: any, fallbackMessage: string = 'An error occurred') => {
-  const message = handleApiError(error, fallbackMessage);
-  console.error('API Error:', { error, message });
-  return message;
-=======
 /**
  * Checks if an error is a network error
  */
@@ -152,7 +121,6 @@ export const showNetworkError = (): void => {
  */
 export const handleAuthError = (error: any): void => {
   const message = extractErrorMessage(error);
-  
   if (message.includes('token') || message.includes('expired') || message.includes('invalid')) {
     toast({
       title: 'Authentication Error',
@@ -162,5 +130,4 @@ export const handleAuthError = (error: any): void => {
   } else {
     showApiError(error, 'Authentication failed');
   }
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 };

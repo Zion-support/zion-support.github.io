@@ -28,11 +28,9 @@ import {
   Clock,
   TrendingUp
 } from 'lucide-react';
-
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const serviceCategories = [
     {
       id: 'ai-ml',
@@ -217,18 +215,15 @@ export default function Services() {
       ]
     }
   ];
-
   const filteredCategories = selectedCategory === 'all' 
     ? serviceCategories 
     : serviceCategories.filter(cat => cat.id === selectedCategory);
-
   const filteredServices = filteredCategories.flatMap(cat => 
     cat.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       {/* Hero Section */}
@@ -240,7 +235,6 @@ export default function Services() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Comprehensive AI-powered technology solutions designed to transform your business and drive innovation across all industries.
           </p>
-          
           {/* Search and Filter */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
@@ -254,7 +248,6 @@ export default function Services() {
               />
             </div>
           </div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <button
@@ -282,7 +275,6 @@ export default function Services() {
             ))}
           </div>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, idx) => (
@@ -304,7 +296,6 @@ export default function Services() {
                   </p>
                 </div>
               </div>
-
               {/* Features */}
               <div className="mb-4">
                 <h4 className="text-sm font-medium text-gray-300 mb-2">Key Features:</h4>
@@ -317,7 +308,6 @@ export default function Services() {
                   ))}
                 </ul>
               </div>
-
               {/* Pricing */}
               <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">
                 <div className="flex items-center space-x-2 text-sm text-gray-300">
@@ -325,7 +315,6 @@ export default function Services() {
                   <span>{service.pricing}</span>
                 </div>
               </div>
-
               {/* CTA Button */}
               <Link
                 to={service.path}
@@ -336,10 +325,7 @@ export default function Services() {
               </Link>
             </div>
           ))}
-<<<<<<< HEAD
-=======
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -377,7 +363,6 @@ export default function Services() {
             </div>
           </div>
         </motion.div>
-
         {/* Footer Section */}
         <div className="bg-zion-slate-dark py-12 border-t border-zion-blue-light">
           <div className="container mx-auto px-4">
@@ -395,7 +380,6 @@ export default function Services() {
                   </a>
                 </div>
               </div>
-
               {/* Contact Info */}
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
@@ -405,7 +389,6 @@ export default function Services() {
                   <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-
               {/* Quick Links */}
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
@@ -425,7 +408,6 @@ export default function Services() {
                 </div>
               </div>
             </div>
-            
             <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
               <p className="text-zion-slate-light text-sm">
                 © 2024 Zion Tech Group. All rights reserved. | 
@@ -434,9 +416,7 @@ export default function Services() {
               </p>
             </div>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e52d
         </div>
-
         {/* Empty State */}
         {filteredServices.length === 0 && (
           <div className="text-center py-16">
@@ -445,7 +425,6 @@ export default function Services() {
             <p className="text-gray-500">Try adjusting your search or filter criteria.</p>
           </div>
         )}
-
                   {/* CTA Section */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">

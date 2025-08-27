@@ -37,13 +37,6 @@ export interface SpecializedIndustrySolution2025 {
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution2025[] = [
   // Healthcare & Life Sciences
   {
-<<<<<<< HEAD
-    id: "ai-healthcare-diagnostic-platform",
-    title: "AI Healthcare Diagnostic Platform Pro",
-    description: "Advanced AI-powered diagnostic platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
-    category: "Healthcare & Life Sciences",
-    subcategory: "AI Diagnostics",
-=======
     id: "ai-healthcare-diagnostics",
     title: "AI-Powered Healthcare Diagnostics Platform",
     description: "Advanced medical diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
@@ -244,7 +237,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     description: "Advanced retail platform that uses AI to analyze customer behavior, optimize inventory, personalize experiences, and drive sales through intelligent insights.",
     category: "Retail",
     subcategory: "Analytics & Personalization",
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     price: 3999,
     currency: "$",
     pricingModel: "monthly",
@@ -304,7 +296,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     demoUrl: "https://ziontechgroup.com/demo/ai-healthcare-diagnostics",
     caseStudies: ["Hospital 40% faster diagnosis", "Clinic 95% accuracy improvement"]
   },
-
   // Financial Services & Banking
   {
     id: "ai-fraud-detection-suite",
@@ -370,7 +361,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["FICO", "LexisNexis", "Experian", "TransUnion"],
     demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection"
   },
-
   // Manufacturing & Industry 4.0
   {
     id: "smart-manufacturing-platform",
@@ -436,7 +426,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Siemens", "GE Digital", "Rockwell Automation", "ABB"],
     demoUrl: "https://ziontechgroup.com/demo/smart-manufacturing"
   },
-
   // Retail & E-commerce
   {
     id: "ai-retail-optimization-platform",
@@ -502,12 +491,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce", "Oracle Commerce"],
     demoUrl: "https://ziontechgroup.com/demo/ai-retail-optimization"
   },
-<<<<<<< HEAD
-
-  // Transportation & Logistics
-=======
   // Renewable Energy Management & Optimization Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: "autonomous-logistics-platform",
     title: "Autonomous Logistics Platform Pro",
@@ -572,7 +556,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Manhattan Associates", "Oracle Transportation", "SAP Transportation", "JDA Software"],
     demoUrl: "https://ziontechgroup.com/demo/autonomous-logistics"
   },
-
   // Energy & Utilities
   {
     id: "smart-energy-management-platform",
@@ -638,7 +621,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
     demoUrl: "https://ziontechgroup.com/demo/smart-energy-management"
   },
-
   // Education & EdTech
   {
     id: "ai-education-platform",
@@ -704,7 +686,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Blackboard", "Canvas", "Moodle", "Google Classroom"],
     demoUrl: "https://ziontechgroup.com/demo/ai-education-platform"
   },
-
   // Real Estate & Property Management
   {
     id: "smart-property-management-platform",
@@ -770,7 +751,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
     competitors: ["Yardi", "RealPage", "AppFolio", "Buildium"],
     demoUrl: "https://ziontechgroup.com/demo/smart-property-management"
   },
-
   // Legal & Compliance
   {
     id: "ai-legal-compliance-platform",

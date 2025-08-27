@@ -1,35 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<<< HEAD:src/pages/Leadership.tsx.backup.1756207985
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  Globe, 
-  Target, 
-  Zap,
-  ArrowRight,
-  Linkedin,
-  Mail,
-  MapPin,
-  Calendar
-} from 'lucide-react';
-=======
 import Link from 'next/link';
 import { Users, Award, Globe, Lightbulb, Target, Heart, Shield, Rocket, Brain, Code, Palette, Database, Network, Zap, Star, Linkedin, Twitter, Mail } from 'lucide-react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
-<<<<<<< HEAD
-========
 import Link from 'next/link';
 import { Users, Award, Globe, Lightbulb, Target, Heart, Shield, Rocket, Brain, Code, Palette, Database, Network, Zap, Star, Linkedin, Twitter, Mail } from 'lucide-react';
->>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:src/pages/Leadership.tsx
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 const Leadership: React.FC = () => {
   const leadershipTeam = [
     {
@@ -141,7 +115,6 @@ const Leadership: React.FC = () => {
       location: "New York, NY"
     }
   ];
-
   const companyValues = [
     {
       title: "Innovation First",
@@ -164,7 +137,6 @@ const Leadership: React.FC = () => {
       icon: Target
     }
   ];
-
   const vision = {
     title: "Our Vision",
     description: "To be the leading force in technological innovation, transforming businesses and society through cutting-edge AI, quantum computing, and sustainable technology solutions.",
@@ -175,7 +147,6 @@ const Leadership: React.FC = () => {
       "Build the most trusted technology partner network"
     ]
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -205,7 +176,6 @@ const Leadership: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Vision Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -229,7 +199,6 @@ const Leadership: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Leadership Team */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,7 +211,6 @@ const Leadership: React.FC = () => {
               business, and innovation.
             </p>
           </div>
-          
           <div className="space-y-16">
             {leadershipTeam.map((leader, index) => (
               <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 border border-slate-100 ${
@@ -276,21 +244,17 @@ const Leadership: React.FC = () => {
                       </a>
                     </div>
                   </div>
-                  
                   <div className="md:col-span-2">
                     <p className="text-slate-600 mb-6 leading-relaxed">
                       {leader.bio}
                     </p>
-                    
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Experience</h4>
                         <p className="text-slate-600 text-sm mb-4">{leader.experience}</p>
-                        
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Education</h4>
                         <p className="text-slate-600 text-sm">{leader.education}</p>
                       </div>
-                      
                       <div>
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Expertise</h4>
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -300,7 +264,6 @@ const Leadership: React.FC = () => {
                             </span>
                           ))}
                         </div>
-                        
                         <h4 className="text-lg font-semibold text-slate-900 mb-3">Key Achievements</h4>
                         <ul className="space-y-1">
                           {leader.achievements.map((achievement, achievementIndex) => (
@@ -319,7 +282,6 @@ const Leadership: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Company Values */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -331,7 +293,6 @@ const Leadership: React.FC = () => {
               The principles that guide our decisions, shape our culture, and drive our success.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value, index) => (
               <div key={index} className="text-center">
@@ -349,7 +310,6 @@ const Leadership: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -379,5 +339,4 @@ const Leadership: React.FC = () => {
     </div>
   );
 };
-
 export default Leadership;

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export {};
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -274,4 +271,3 @@ export default function Partners() {
     </div>
   );
 }
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

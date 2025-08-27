@@ -24,7 +24,6 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
 const pricingTiers = [
   {
     name: "Starter",
@@ -93,7 +92,6 @@ const pricingTiers = [
     popular: false
   }
 ];
-
 const serviceCategories = [
   {
     name: "AI Services",
@@ -133,288 +131,9 @@ const serviceCategories = [
       { name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 },
       { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
       { name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }
-<<<<<<< HEAD
-    ]
-  },
-  {
-    name: "Managed IT & Support",
-    description: "Comprehensive IT services for SMBs and enterprises",
-    icon: Users,
-    services: [
-      {
-        name: "Managed Help Desk",
-        price: 49,
-        period: "user/month",
-        description: "24/7 end-user IT support with SLA-backed response times",
-        features: [
-          "Unlimited tickets",
-          "Remote assistance",
-          "Onboarding support",
-          "Asset tracking",
-          "Monthly reporting",
-          "SLA-backed"
-        ],
-        popular: true,
-        link: "https://ziontechgroup.com/managed-help-desk"
-      },
-      {
-        name: "Managed Endpoint Security",
-        price: 7,
-        period: "device/month",
-        description: "Next-gen AV/EDR with centralized monitoring and response",
-        features: [
-          "NGAV/EDR",
-          "Policy management",
-          "Threat hunting",
-          "Automated quarantine",
-          "Patch enforcement",
-          "Compliance reports"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/managed-endpoint-security"
-      },
-      {
-        name: "IT Infrastructure Management",
-        price: 999,
-        period: "month",
-        description: "Proactive management of servers, networks, and cloud workloads",
-        features: [
-          "24/7 monitoring",
-          "Backup & DR",
-          "Capacity planning",
-          "Change management",
-          "Config baseline",
-          "Security hardening"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/it-infrastructure-management"
-      }
-    ]
-  },
-  {
-    name: "Micro SaaS Suite",
-    description: "Practical, focused SaaS tools to automate everyday workflows",
-    icon: Zap,
-    services: [
-      {
-        name: "ReviewResponder.ai",
-        price: 19,
-        period: "month",
-        description: "Auto-generate professional responses to customer reviews across platforms",
-        features: [
-          "GMB + Yelp + Facebook",
-          "Tone presets",
-          "Multilingual",
-          "Bulk replies",
-          "Approval workflow",
-          "Analytics"
-        ],
-        popular: true,
-        link: "https://ziontechgroup.com/review-responder"
-      },
-      {
-        name: "InvoiceSync",
-        price: 15,
-        period: "user/month",
-        description: "Generate and reconcile invoices with QuickBooks/Xero via AI",
-        features: [
-          "OCR extraction",
-          "Duplicate detection",
-          "Vendor matching",
-          "Auto reminders",
-          "Export to CSV",
-          "APIs"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/invoice-sync"
-      },
-      {
-        name: "UptimePulse",
-        price: 9,
-        period: "site/month",
-        description: "Global uptime, SSL, DNS, and performance monitoring with alerts",
-        features: [
-          "30+ locations",
-          "SMS/Email/Slack alerts",
-          "Lighthouse audits",
-          "Core Web Vitals",
-          "Status page",
-          "Public API"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/uptime-pulse"
-      }
-    ]
-  },
-  {
-    name: "Compliance & Governance",
-    description: "Automated compliance and audit readiness for regulated industries",
-    icon: Shield,
-    services: [
-      {
-        name: "SOC 2 Readiness Automation",
-        price: 799,
-        period: "month",
-        description: "Map controls, gather evidence, and track remediation to pass audits",
-        features: [
-          "Control mapping",
-          "Evidence collection",
-          "Policy templates",
-          "Risk register",
-          "Vendor reviews",
-          "Audit workspace"
-        ],
-        popular: true,
-        link: "https://ziontechgroup.com/soc2-readiness"
-      },
-      {
-        name: "HIPAA Compliance Toolkit",
-        price: 499,
-        period: "month",
-        description: "Safeguards, BAAs, and assessments tailored for healthcare organizations",
-        features: [
-          "Security rule mapping",
-          "Gap assessments",
-          "PHI worksheets",
-          "BAA templates",
-          "Training modules",
-          "Audit logs"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/hipaa-toolkit"
-      },
-      {
-        name: "GDPR/CCPA Data Requests",
-        price: 149,
-        period: "month",
-        description: "Automate DSAR intake, identity verification, fulfillment, and logging",
-        features: [
-          "Secure portal",
-          "Identity checks",
-          "Workflow automation",
-          "Deadline tracking",
-          "Redaction tools",
-          "Export evidence"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/privacy-requests"
-      }
-    ]
-  },
-  {
-    name: "AI Services for SMBs",
-    description: "Ready-to-use AI solutions tailored for small and medium businesses",
-    icon: Brain,
-    services: [
-      {
-        name: "AI Sales Copilot",
-        price: 39,
-        period: "user/month",
-        description: "Draft emails, qualify leads, and summarize calls from your CRM",
-        features: [
-          "CRM integrations",
-          "Call summaries",
-          "Lead scoring",
-          "Opportunity insights",
-          "Playbooks",
-          "Admin console"
-        ],
-        popular: true,
-        link: "https://ziontechgroup.com/ai-sales-copilot"
-      },
-      {
-        name: "AI Customer Support Bot",
-        price: 29,
-        period: "agent/month",
-        description: "Multichannel chatbot trained on your docs with seamless handoffs",
-        features: [
-          "Website + WhatsApp + Messenger",
-          "Docs ingestion",
-          "Intent detection",
-          "Live agent handoff",
-          "CSAT tracking",
-          "No-code flows"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/ai-support-bot"
-      },
-      {
-        name: "AI Website Personalization",
-        price: 59,
-        period: "month",
-        description: "Boost conversions with dynamic content tailored to each visitor",
-        features: [
-          "Segmentation",
-          "Rules + ML",
-          "A/B testing",
-          "Banner & CTA variants",
-          "Geo/UTM targeting",
-          "Analytics"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/ai-personalization"
-      }
-    ]
-  },
-  {
-    name: "Data & Analytics Services",
-    description: "Hands-on analytics implementation and managed reporting",
-    icon: BarChart3,
-    services: [
-      {
-        name: "BI Dashboard Implementation",
-        price: 3500,
-        period: "one-time",
-        description: "End-to-end KPI dashboard setup in Power BI/Tableau/Looker",
-        features: [
-          "KPI workshop",
-          "Data modeling",
-          "Dashboards & alerts",
-          "Source integrations",
-          "Training",
-          "Handover docs"
-        ],
-        popular: true,
-        link: "https://ziontechgroup.com/bi-dashboard-implementation"
-      },
-      {
-        name: "Analytics as a Service",
-        price: 1499,
-        period: "month",
-        description: "Ongoing analysis, reporting, and data engineering on retainer",
-        features: [
-          "Monthly roadmap",
-          "Ad-hoc analysis",
-          "ELT pipelines",
-          "Quality checks",
-          "Stakeholder reviews",
-          "Priority SLA"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/analytics-as-a-service"
-      },
-      {
-        name: "Marketing Attribution Setup",
-        price: 2500,
-        period: "one-time",
-        description: "Server-side tracking and MMM to recover lost signal",
-        features: [
-          "Server-side GTM",
-          "Channel mapping",
-          "Attribution model",
-          "Privacy compliance",
-          "Lift tests",
-          "Executive report"
-        ],
-        popular: false,
-        link: "https://ziontechgroup.com/marketing-attribution"
-      }
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ]
   }
 ];
-
 const benefits = [
   {
     icon: <CheckCircle className="w-8 h-8" />,
@@ -447,10 +166,8 @@ const benefits = [
     description: "Regular updates and new features to keep you ahead"
   }
 ];
-
 export default function ServicesPricing() {
   const [selectedTier, setSelectedTier] = useState<string>('professional');
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO 
@@ -459,7 +176,6 @@ export default function ServicesPricing() {
         keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing"
         url="https://ziontechgroup.com/services-pricing"
       />
-
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -482,7 +198,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark py-4 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
@@ -508,7 +223,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Pricing Tiers */}
       <div className="py-20 px-4">
         <div className="container mx-auto">
@@ -520,7 +234,6 @@ export default function ServicesPricing() {
               All plans include our core features with additional capabilities as you scale up
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index) => (
               <Card 
@@ -536,7 +249,6 @@ export default function ServicesPricing() {
                     </Badge>
                   </div>
                 )}
-                
                 <CardHeader className="text-center pb-6">
                   <CardTitle className="text-2xl text-white mb-2">{tier.name}</CardTitle>
                   <CardDescription className="text-zion-slate-light mb-4">
@@ -547,7 +259,6 @@ export default function ServicesPricing() {
                     <div className="text-zion-slate-light text-sm">Range: ${tier.priceRange}</div>
                   </div>
                 </CardHeader>
-                
                 <CardContent className="space-y-4">
                   <div className="space-y-3">
                     <h4 className="text-white font-semibold mb-3">What's Included:</h4>
@@ -558,7 +269,6 @@ export default function ServicesPricing() {
                       </div>
                     ))}
                   </div>
-                  
                   {tier.notIncluded.length > 0 && (
                     <div className="space-y-3 pt-4 border-t border-zion-blue-light">
                       <h4 className="text-white font-semibold mb-3">Not Included:</h4>
@@ -570,7 +280,6 @@ export default function ServicesPricing() {
                       ))}
                     </div>
                   )}
-                  
                   <Button 
                     className={`w-full mt-6 bg-gradient-to-r ${tier.color} hover:opacity-90 text-white`}
                     size="lg"
@@ -584,7 +293,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* Service Category Pricing */}
       <div className="py-20 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
@@ -596,7 +304,6 @@ export default function ServicesPricing() {
               Detailed pricing for each service category. Contact us for custom enterprise solutions.
             </p>
           </div>
-
           <Tabs value={selectedTier} onValueChange={setSelectedTier} className="max-w-6xl mx-auto">
             <TabsList className="grid w-full grid-cols-3 bg-zion-blue border-zion-blue-light">
               <TabsTrigger value="starter" className="data-[state=active]:bg-zion-purple data-[state=active]:text-white">
@@ -609,7 +316,6 @@ export default function ServicesPricing() {
                 Enterprise
               </TabsTrigger>
             </TabsList>
-            
             <TabsContent value={selectedTier} className="mt-8">
               <div className="space-y-8">
                 {serviceCategories.map((category, index) => (
@@ -620,7 +326,6 @@ export default function ServicesPricing() {
                       </div>
                       <h3 className="text-xl font-bold text-white">{category.name}</h3>
                     </div>
-                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {category.services.map((service, serviceIndex) => (
                         <div key={serviceIndex} className="flex items-center justify-between p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
@@ -641,7 +346,6 @@ export default function ServicesPricing() {
           </Tabs>
         </div>
       </div>
-
       {/* Benefits Section */}
       <div className="py-20 px-4">
         <div className="container mx-auto">
@@ -653,7 +357,6 @@ export default function ServicesPricing() {
               We deliver more than just software - we deliver business transformation
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light bg-zion-blue-dark">
@@ -667,7 +370,6 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">

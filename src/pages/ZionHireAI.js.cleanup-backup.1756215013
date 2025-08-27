@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-export default function ZionHireAI() {
-    return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Zion Hire AI - Zion Tech Group", description: "AI-powered hiring platform for finding the perfect tech talent.", canonical: "https://ziontechgroup.com/zion-hire-ai" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Zion Hire AI" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Revolutionize your hiring process with our AI-powered talent matching platform." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Coming Soon" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Zion Hire AI is currently under development and will revolutionize how you find and hire tech talent." })] }) })] }) }), _jsx(Footer, {})] }));
-}
-=======
 return (<>
       <SEO title="Zion Hire AI - White-labeled AI Recruiting Assistant" description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience." keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI" canonical="https://ziontechgroup.com/zion-hire-ai"/>
-      
       <main className="flex-1">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">
@@ -30,7 +19,6 @@ return (<>
               </a>
             </div>
           </div>
-
           {/* Success Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
             {successMetrics.map((item, index) => (<div key={index} className="text-center">
@@ -48,7 +36,6 @@ return (<>
               </div>))}
             </div>
           </div>
-
           {/* Contact Section */}
           <div className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white text-center mb-4">
@@ -57,7 +44,6 @@ return (<>
             <p className="text-zion-slate-light text-center mb-6">
               Join hundreds of companies already using Zion Hire AI to revolutionize their recruitment
             </p>
-            
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
               <div>
                 <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-2"/>
@@ -75,7 +61,6 @@ return (<>
                 <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
             <div className="text-center">
               <a href="https://ziontechgroup.com" className="inline-flex items-center px-8 py-4 bg-zion-cyan hover:bg-zion-cyan-light text-white font-semibold rounded-lg transition-colors" target="_blank" rel="noopener noreferrer">
                 Start Your Free Trial Today
@@ -92,4 +77,3 @@ div >
 ;
 ;
 export default ZionHireAI;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

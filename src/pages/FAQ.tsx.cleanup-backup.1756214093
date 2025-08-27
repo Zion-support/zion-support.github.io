@@ -1,107 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-const FAQ: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
-    );
-  };
-
-  const faqData = [
-    {
-      question: "What services does Zion Tech Group offer?",
-      answer: "We offer comprehensive technology solutions including AI and machine learning, cloud computing and DevOps, cybersecurity, IT infrastructure management, digital transformation consulting, and enterprise software development. Our services are tailored to help businesses of all sizes leverage cutting-edge technology for growth and efficiency."
-    },
-    {
-      question: "How does Zion Tech Group's AI implementation process work?",
-      answer: "Our AI implementation follows a structured approach: 1) Initial consultation and needs assessment, 2) Data analysis and strategy development, 3) Custom solution design and prototyping, 4) Implementation and integration, 5) Testing and optimization, 6) Training and deployment support. We ensure seamless integration with your existing systems and provide ongoing maintenance and updates."
-    },
-    {
-      question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, transportation, and professional services. Our solutions are adaptable to any industry that can benefit from digital transformation, AI implementation, or improved IT infrastructure."
-    },
-    {
-      question: "How long does a typical project take to complete?",
-      answer: "Project timelines vary depending on complexity and scope. Small AI implementations can take 4-8 weeks, while large-scale digital transformations may take 6-12 months. We provide detailed project timelines during the initial consultation and maintain transparent communication throughout the process."
-    },
-    {
-      question: "Do you provide ongoing support after project completion?",
-      answer: "Yes, we offer comprehensive post-implementation support including 24/7 monitoring, regular maintenance, updates, and technical support. We also provide training for your team and can scale our support based on your needs."
-    },
-    {
-      question: "What cybersecurity measures do you implement?",
-      answer: "Our cybersecurity approach includes comprehensive threat detection, vulnerability assessments, compliance frameworks (SOC 2, ISO 27001, GDPR), real-time monitoring, incident response planning, and regular security audits. We ensure your data and systems remain protected against evolving threats."
-    },
-    {
-      question: "How do you ensure data privacy and compliance?",
-      answer: "We strictly adhere to international privacy standards including GDPR, CCPA, and industry-specific regulations. Our solutions include data encryption, access controls, audit trails, and privacy-by-design principles. We also provide compliance documentation and regular privacy assessments."
-    },
-    {
-      question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including project-based pricing, subscription services, and managed services agreements. Pricing depends on project scope, complexity, and ongoing support requirements. We provide detailed proposals with transparent pricing during the consultation phase."
-    },
-    {
-      question: "Do you work with small businesses or only enterprise clients?",
-      answer: "We work with businesses of all sizes, from startups to Fortune 500 companies. Our solutions are scalable and we customize our approach based on your business size, budget, and specific needs. We believe every business deserves access to cutting-edge technology solutions."
-    },
-    {
-      question: "How do I get started with Zion Tech Group?",
-      answer: "Getting started is easy! Simply contact us through our website, email us at contact@ziontechgroup.com, or call us at +1-302-464-0950. We'll schedule a free consultation to discuss your needs and provide a customized proposal. No obligation required."
-=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { HelpCircle, Users, ShoppingCart, Shield, Zap, Globe } from "lucide-react";
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
-
 export default function FAQ() {
   const faqCategories = [
     {
-<<<<<<< HEAD
-      title: "General Questions",
-      items: [
-        {
-          question: "What is Zion Tech Group?",
-          answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented AI specialists, innovative companies, and cutting-edge technological solutions in one seamless ecosystem."
-        },
-        {
-          question: "Is Zion really free to use?",
-          answer: "Yes! Zion's core marketplace platform is completely free to use. We believe in democratizing access to AI and technology solutions. Some premium features may have associated costs, but the basic marketplace functionality is free."
-        },
-        {
-          question: "How do you make money if the platform is free?",
-          answer: "We generate revenue through premium services, enterprise solutions, and value-added features while keeping the core marketplace free and accessible to everyone."
-=======
 import React from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
@@ -114,20 +27,12 @@ import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-
 export default function FAQ() {
   const faqData = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       question: "What is Zion Tech Group?",
       answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented professionals with innovative companies, offering a comprehensive platform for AI services, tech talent, and specialized equipment."
     },
@@ -174,24 +79,6 @@ export default function FAQ() {
     {
       question: "How can I get started on Zion?",
       answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      category: "Getting Started",
-      questions: [
-        {
-          question: "What is Zion Tech Group?",
-          answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented professionals, innovative services, and cutting-edge equipment in one comprehensive platform."
-        },
-        {
-          question: "How do I create an account?",
-          answer: "Creating an account is simple! Click the 'Sign Up' button in the top right corner and choose whether you're a talent/creator or a client/employer. Fill in your details and you'll be ready to start using the platform."
-        },
-        {
-          question: "Is Zion Tech Group really free to use?",
-          answer: "Yes! Our core marketplace platform is completely free to use. We believe in democratizing access to tech talent and services. There are no hidden fees or subscription costs for basic usage."
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
-=======
       title: "Getting Started",
       icon: Zap,
       questions: [
@@ -206,27 +93,10 @@ export default function FAQ() {
         {
           question: "Is Zion really free to use?",
           answer: "Yes! Zion is completely free to use. We believe in democratizing access to AI and tech solutions, so there are no subscription fees or hidden costs for using our platform."
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
         }
       ]
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: "For Talent & Creators",
-      items: [
-        {
-          question: "How do I create a talent profile?",
-          answer: "Simply sign up for an account and select 'Talent' during registration. You can then complete your profile by adding your skills, experience, portfolio, and availability."
-        },
-        {
-          question: "What types of talent are you looking for?",
-          answer: "We welcome all AI specialists, developers, data scientists, tech consultants, and technology professionals. Whether you're a freelancer, consultant, or full-time professional, there's a place for you on Zion."
-        },
-        {
-          question: "How do I get hired through Zion?",
-          answer: "Create a compelling profile, showcase your work, and actively engage with the community. Clients can discover you through our AI-powered matching system or by browsing talent directories."
-=======
       category: "For Talent & Creators",
       questions: [
         {
@@ -240,26 +110,10 @@ export default function FAQ() {
         {
           question: "How do I get hired?",
           answer: "Optimize your profile with relevant keywords, showcase your best work, maintain a high rating, and respond promptly to client inquiries. You can also actively browse job postings and submit proposals."
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
         }
       ]
     },
     {
-<<<<<<< HEAD
-      title: "For Clients & Employers",
-      items: [
-        {
-          question: "How do I find the right talent for my project?",
-          answer: "Use our AI-powered matching system, browse talent directories by category, or post a job listing. Our platform helps you find the perfect match based on skills, experience, and project requirements."
-        },
-        {
-          question: "What types of services can I find on Zion?",
-          answer: "Zion offers a wide range of services including AI development, software engineering, data analysis, IT consulting, equipment rentals, and specialized technology solutions."
-        },
-        {
-          question: "How do I ensure quality when hiring through Zion?",
-          answer: "All talent on Zion are verified professionals with reviewed profiles, portfolios, and ratings. You can also review their work history and communicate directly before making hiring decisions."
-=======
       category: "For Clients & Employers",
       questions: [
         {
@@ -273,7 +127,6 @@ export default function FAQ() {
         {
           question: "How do I ensure quality work?",
           answer: "Review talent profiles, check ratings and reviews, request portfolios, and start with smaller projects to test the relationship. Our dispute resolution system also protects both parties."
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
       title: "For Clients",
       icon: Users,
@@ -307,27 +160,10 @@ export default function FAQ() {
         {
           question: "Can I work with international clients?",
           answer: "Absolutely! Zion is a global platform connecting talent and clients worldwide. You can work with clients from any country and expand your professional network internationally."
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
         }
       ]
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: "Technical & Security",
-      items: [
-        {
-          question: "How secure is my data on Zion?",
-          answer: "We implement enterprise-grade security measures including encryption, secure authentication, and regular security audits. Your data is protected and never shared with unauthorized parties."
-        },
-        {
-          question: "What payment methods do you support?",
-          answer: "Zion supports multiple payment methods including credit cards, bank transfers, and digital wallets. All transactions are processed securely through our payment partners."
-        },
-        {
-          question: "Can I integrate Zion with my existing systems?",
-          answer: "Yes! Zion provides APIs and integration tools for enterprise clients who want to connect our marketplace with their existing workflows and systems."
-=======
       category: "Marketplace & Services",
       questions: [
         {
@@ -341,7 +177,6 @@ export default function FAQ() {
         {
           question: "Are there any guarantees on services?",
           answer: "Yes, we offer satisfaction guarantees and our dispute resolution system ensures fair outcomes. Most professionals also offer revisions and support to ensure your complete satisfaction."
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
       title: "Platform Features",
       icon: ShoppingCart,
@@ -357,30 +192,10 @@ export default function FAQ() {
         {
           question: "What community features are available?",
           answer: "Join our community forums to connect with other professionals, share knowledge, ask questions, and stay updated on the latest AI and tech trends."
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
         }
       ]
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: "Community & Support",
-      items: [
-        {
-          question: "How can I get help if I have issues?",
-          answer: "Our support team is available through multiple channels including email, live chat, and our help center. We also have an active community forum where users help each other."
-        },
-        {
-          question: "Are there networking opportunities on Zion?",
-          answer: "Absolutely! Zion hosts regular virtual events, webinars, and networking sessions. Our community features allow you to connect with other professionals in your field."
-        },
-        {
-          question: "How can I contribute to Zion's growth?",
-          answer: "Share feedback, refer other professionals, participate in community discussions, and help us improve by reporting bugs or suggesting new features."
-        }
-      ]
->>>>>>> origin/cursor/website-audit-and-enhancement-35e5
-=======
       category: "Technical Support",
       questions: [
         {
@@ -413,7 +228,6 @@ export default function FAQ() {
           answer: "We maintain compliance with major regulations including GDPR, SOC 2, and industry-specific requirements. Our legal team ensures all contracts and terms meet your business needs."
         }
       ]
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
       question: "What is Zion Tech Group?",
       answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect businesses with top AI and tech talent, services, and equipment in one comprehensive platform."
@@ -453,7 +267,6 @@ export default function FAQ() {
     {
       question: "Can I rent equipment through Zion?",
       answer: "Absolutely! Our equipment marketplace offers a wide range of tech equipment for rent, from development hardware to specialized AI computing resources, making it easier for businesses to access what they need without large capital investments."
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 =======
       title: "Security & Trust",
       icon: Shield,
@@ -473,7 +286,6 @@ export default function FAQ() {
       ]
     }
   ];
-
   const contactMethods = [
     {
       title: "Email Support",
@@ -486,18 +298,10 @@ export default function FAQ() {
       description: "For business partnerships",
       contact: "commercial@ziontechgroup.com",
       icon: Users
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
-
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     <>
       <SEO 
         title="FAQ - Frequently Asked Questions" 
@@ -506,37 +310,13 @@ export default function FAQ() {
         canonical="https://ziontechgroup.com/faq"
       />
       <Header />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Helmet>
-        <title>FAQ - Zion Tech Group</title>
-        <meta name="description" content="Frequently asked questions about Zion Tech Group's services, AI solutions, cybersecurity, and digital transformation expertise. Get answers to common questions about working with us." />
-        <meta name="keywords" content="FAQ, frequently asked questions, Zion Tech Group, AI services, cybersecurity, digital transformation" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Find answers to common questions about our services, processes, and how we can help transform your business
-=======
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-
 interface FAQItem {
   question: string;
   answer: string;
   category: string;
 }
-
 const faqData: FAQItem[] = [
   {
     question: "What is Zion Tech Group?",
@@ -599,16 +379,13 @@ const faqData: FAQItem[] = [
     category: "General"
   }
 ];
-
 export default function FAQ() {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
   const filteredFAQ = selectedCategory === 'All' 
     ? faqData 
     : faqData.filter(item => item.category === selectedCategory);
-
   const toggleItem = (index: number) => {
     const newOpenItems = new Set(openItems);
     if (newOpenItems.has(index)) {
@@ -618,7 +395,6 @@ export default function FAQ() {
     }
     setOpenItems(newOpenItems);
   };
-
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -627,7 +403,6 @@ export default function FAQ() {
         keywords="FAQ, frequently asked questions, Zion Tech Group, AI marketplace, support"
         canonical="https://ziontechgroup.com/faq"
       />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -636,38 +411,9 @@ export default function FAQ() {
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Find answers to common questions about Zion Tech Group and our AI marketplace
->>>>>>> origin/cursor/website-audit-and-enhancement-6726
           </p>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* FAQ Section */}
-      <section className="pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4">
-            {faqData.map((item, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg border border-white/10 overflow-hidden">
-                <button
-                  onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between text-white hover:bg-slate-700/50 transition-colors duration-300"
-                >
-                  <span className="text-lg font-medium">{item.question}</span>
-                  <svg
-                    className={`w-5 h-5 transition-transform duration-300 ${
-                      openItems.includes(index) ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {openItems.includes(index) && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-300 leading-relaxed">{item.answer}</p>
-=======
       {/* FAQ Content */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -687,7 +433,6 @@ export default function FAQ() {
               </button>
             ))}
           </div>
-
           {/* FAQ Items */}
           <div className="max-w-4xl mx-auto space-y-4">
             {filteredFAQ.map((item, index) => (
@@ -706,51 +451,14 @@ export default function FAQ() {
                     <ChevronDown className="w-5 h-5 text-zion-cyan" />
                   )}
                 </button>
-                
                 {openItems.has(index) && (
                   <div className="px-6 pb-4">
                     <p className="text-zion-slate-light leading-relaxed">{item.answer}</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-6726
                   </div>
                 )}
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Still Have Questions?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Can't find the answer you're looking for? Our team is here to help. 
-            Contact us for personalized assistance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:contact@ziontechgroup.com"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email Us
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Call Us
-            </a>
-=======
-
           {/* Contact CTA */}
           <div className="text-center mt-16">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -766,9 +474,7 @@ export default function FAQ() {
         keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
         canonical="https://ziontechgroup.com/faq"
       />
-      
       <AppHeader />
-      
       <main className="pt-16 pb-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
@@ -779,7 +485,6 @@ export default function FAQ() {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Find answers to common questions about Zion Tech Group's AI and tech marketplace platform
             </p>
-            
             {/* Search Bar */}
             <div className="mt-8 max-w-md mx-auto">
               <div className="relative">
@@ -793,7 +498,6 @@ export default function FAQ() {
             </div>
           </div>
         </section>
-
         {/* FAQ Content */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -831,7 +535,6 @@ export default function FAQ() {
             </div>
           </div>
         </section>
-
         {/* Contact Support Section */}
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 text-center">
@@ -840,44 +543,22 @@ export default function FAQ() {
             </h2>
             <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Can't find what you're looking for? Our support team is here to help you with any questions or concerns.
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-<<<<<<< HEAD
-                className="bg-zion-cyan text-zion-blue-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-=======
                 className="inline-flex items-center justify-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors"
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
               >
                 Contact Support
               </a>
               <a
                 href="/help-center"
-<<<<<<< HEAD
-                className="border-2 border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors"
-=======
                 className="inline-flex items-center justify-center px-6 py-3 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-colors"
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
               >
                 Visit Help Center
               </a>
             </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-6726
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-<<<<<<< HEAD
-};
-
-export default FAQ;
-=======
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-6726
 =======
     <>
       <SEO
@@ -890,25 +571,17 @@ export default FAQ;
         title="FAQ - Frequently Asked Questions | Zion Tech Group"
         description="Find answers to common questions about Zion's AI and tech marketplace platform, services, and how to get started."
         keywords="FAQ, help, support, Zion marketplace, AI services, tech talent"
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
         canonical="https://ziontechgroup.com/faq"
       />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <GradientHeading>Frequently Asked Questions</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Find answers to the most common questions about Zion Tech Group and our marketplace platform
             </p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
               {faqData.map((item, index) => (
@@ -925,7 +598,6 @@ export default FAQ;
               ))}
             </Accordion>
           </div>
-          
           <div className="mt-16 text-center">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
@@ -945,27 +617,9 @@ export default FAQ;
                 >
                   Help Center
                 </a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              Find answers to the most common questions about Zion Tech Group
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            {faqCategories.map((category, categoryIndex) => (
-              <Card key={categoryIndex} className="bg-zion-blue-dark border border-zion-blue-light mb-8">
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-bold text-white mb-6">{category.title}</h2>
-                  <Accordion type="single" collapsible className="w-full">
-                    {category.items.map((item, itemIndex) => (
-                      <AccordionItem key={itemIndex} value={`item-${categoryIndex}-${itemIndex}`}>
-                        <AccordionTrigger className="text-left text-zion-cyan hover:text-zion-cyan-light">
-=======
               Find answers to common questions about Zion's platform, services, and how to get started
             </p>
           </div>
-
           {/* FAQ Categories */}
           <div className="space-y-12 mb-16">
             {faqCategories.map((category, categoryIndex) => (
@@ -981,7 +635,6 @@ export default FAQ;
                     {category.questions.map((item, questionIndex) => (
                       <AccordionItem key={questionIndex} value={`item-${categoryIndex}-${questionIndex}`}>
                         <AccordionTrigger className="text-left text-zion-slate-light hover:text-zion-cyan">
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
                           {item.question}
                         </AccordionTrigger>
                         <AccordionContent className="text-zion-slate-light">
@@ -994,35 +647,12 @@ export default FAQ;
               </Card>
             ))}
           </div>
-
-<<<<<<< HEAD
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-white mb-6">Still have questions?</h2>
-              <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-                Can't find what you're looking for? Our support team is here to help you get the answers you need.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white font-medium rounded-lg transition-all"
-                >
-                  Contact Support
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white font-medium rounded-lg transition-all"
-                >
-                  Visit Contact Page
-                </a>
-=======
           {/* Contact Section */}
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Still Need Help?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our support team is here to help you get the most out of Zion.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
               {contactMethods.map((method, index) => (
                 <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
@@ -1046,7 +676,6 @@ export default FAQ;
                 </Card>
               ))}
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                 <Link to="/contact">Contact Support</Link>
@@ -1056,7 +685,6 @@ export default FAQ;
               </Button>
             </div>
           </div>
-
           {/* Quick Links */}
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6 text-center">Quick Navigation</h3>
@@ -1084,40 +712,25 @@ export default FAQ;
                   <Link to="/terms" className="block text-zion-cyan hover:text-zion-purple transition-colors">Terms of Service</Link>
                   <Link to="/privacy" className="block text-zion-cyan hover:text-zion-purple transition-colors">Privacy Policy</Link>
                 </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               </div>
             </div>
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <Footer />
     </>
   );
 }
-<<<<<<< HEAD
-=======
     </>
   );
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-35e5
-=======
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
 =======
     <div className="min-h-screen bg-background">
       <SEO 
@@ -1126,7 +739,6 @@ export default FAQ;
         keywords="FAQ, Zion Tech Group, AI marketplace, tech services, support"
         canonical="https://ziontechgroup.com/faq"
       />
-
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">
@@ -1136,7 +748,6 @@ export default FAQ;
             Get answers to common questions about Zion Tech Group's AI and tech marketplace platform
           </p>
         </div>
-
         <div className="max-w-4xl mx-auto">
           <Card className="bg-zion-blue-dark border-zion-purple/20">
             <CardHeader>
@@ -1160,7 +771,6 @@ export default FAQ;
               </Accordion>
             </CardContent>
           </Card>
-
           <div className="mt-12 text-center">
             <Card className="bg-zion-blue-dark border-zion-purple/20">
               <CardContent className="pt-6">
@@ -1192,10 +802,6 @@ export default FAQ;
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 =======
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

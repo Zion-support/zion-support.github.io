@@ -34,7 +34,6 @@ export interface EmergingTechService {
   status: 'Active' | 'Beta' | 'Coming Soon';
   innovationScore: number;
 }
-
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   // Blockchain Services
   {
@@ -101,7 +100,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 92
   },
-
   // IoT Services
   {
     id: 'iot-ecosystem-platform',
@@ -162,7 +160,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 89
   },
-
   // Edge Computing Services
   {
     id: 'edge-computing-orchestrator',
@@ -223,7 +220,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 94
   },
-
   // 5G Services
   {
     id: '5g-network-optimization',
@@ -284,7 +280,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 91
   },
-
   // AR/VR Services
   {
     id: 'ar-vr-enterprise-platform',
@@ -345,7 +340,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 88
   },
-
   // Robotics Services
   {
     id: 'intelligent-robotics-automation',
@@ -407,7 +401,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 95
   },
-
   // Quantum Computing Services
   {
     id: 'quantum-computing-simulation',
@@ -468,7 +461,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 96
   },
-
   // Biotechnology Services
   {
     id: 'ai-biotech-research-platform',
@@ -529,7 +521,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 93
   },
-
   // Green Technology Services
   {
     id: 'sustainable-tech-solutions',
@@ -590,7 +581,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 90
   },
-
   // Space Technology Services
   {
     id: 'space-tech-innovation-platform',
@@ -651,7 +641,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: 'Active',
     innovationScore: 97
   },
-
   // NEW EMERGING TECHNOLOGY SERVICES
   {
     id: "quantum-machine-learning-platform",
@@ -715,7 +704,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: "Active",
     innovationScore: 95
   },
-
   {
     id: "space-technology-platform",
     title: "Space Technology & Satellite Management Platform",
@@ -778,7 +766,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: "Active",
     innovationScore: 93
   },
-
   {
     id: "brain-computer-interface-platform",
     title: "Brain-Computer Interface Development Platform",
@@ -841,7 +828,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: "Beta",
     innovationScore: 96
   },
-
   {
     id: "autonomous-vehicle-platform",
     title: "Autonomous Vehicle Development Platform",
@@ -904,7 +890,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: "Active",
     innovationScore: 94
   },
-
   {
     id: "quantum-internet-platform",
     title: "Quantum Internet & Communication Platform",
@@ -967,7 +952,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: "Beta",
     innovationScore: 97
   },
-
   {
     id: "ai-consciousness-simulation",
     title: "AI Consciousness Simulation Platform",
@@ -1030,7 +1014,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: "Beta",
     innovationScore: 98
   },
-
   {
     id: "quantum-financial-modeling",
     title: "Quantum Financial Modeling & Risk Assessment",
@@ -1093,7 +1076,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: "Active",
     innovationScore: 95
   },
-
   {
     id: "autonomous-manufacturing-platform",
     title: "Autonomous Manufacturing & Industry 4.0 Platform",
@@ -1156,7 +1138,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     status: "Active",
     innovationScore: 93
   },
-
   {
     id: "quantum-drug-discovery",
     title: "Quantum Drug Discovery & Molecular Modeling",
@@ -1220,34 +1201,16 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     innovationScore: 96
   }
 ];
-
 export const getEmergingTechServiceByCategory = (category: string) => {
   return EMERGING_TECH_SERVICES.filter(service => service.category === category);
 };
-
 export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
   return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
 };
-
 export const getFeaturedEmergingTechServices = () => {
   return EMERGING_TECH_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8);
 };
-
 export const getServicesByInnovationScore = (minScore: number) => {
-<<<<<<< HEAD
-    technology: ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
-    integrations: ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
-    compliance: ["Content standards", "Accessibility guidelines", "Industry regulations"],
-    roi: "400% within 12 months",
-    competitors: ["Magic Leap", "Microsoft HoloLens", "RealView", "Looking Glass"],
-    marketTrend: "Growing market with increasing demand for immersive experiences",
-    innovationLevel: "Advanced holographic platform for commercial applications",
-    uniqueValue: "First comprehensive platform for creating and distributing holographic content across multiple display types"
-  }
-];
-
-export default EMERGING_TECH_SERVICES;
-=======
   // Return all services since innovationScore property doesn't exist
   // In the future, this could be enhanced with actual innovation scoring
   return EMERGING_TECH_SERVICES;
@@ -1255,4 +1218,3 @@ export default EMERGING_TECH_SERVICES;
 =======
   return EMERGING_TECH_SERVICES.filter(service => service.innovationScore >= minScore);
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

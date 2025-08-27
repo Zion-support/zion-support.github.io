@@ -16,7 +16,6 @@ import {
   Settings,
   Monitor
 } from 'lucide-react';
-
 const ITInfrastructure: React.FC = () => {
   const infrastructureServices = [
     {
@@ -95,7 +94,6 @@ const ITInfrastructure: React.FC = () => {
                 Comprehensive solutions to build and maintain your IT foundation
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureServices.map((service, index) => (
                 <motion.div 
@@ -109,7 +107,6 @@ const ITInfrastructure: React.FC = () => {
                   <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -137,7 +134,6 @@ const ITInfrastructure: React.FC = () => {
                 End-to-end infrastructure solutions across all critical areas
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
                 <motion.div 
@@ -154,13 +150,6 @@ const ITInfrastructure: React.FC = () => {
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                         {solution}
-<<<<<<< HEAD
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-=======
                       </li>))}
                   </ul>
                 </div>))}
@@ -178,7 +167,6 @@ const ITInfrastructure: React.FC = () => {
                 Proven expertise and cutting-edge technology for reliable infrastructure
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -189,7 +177,6 @@ const ITInfrastructure: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
                 <p className="text-gray-300">99.9% uptime guarantee with redundant systems</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -199,7 +186,6 @@ const ITInfrastructure: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Scalability</h3>
                 <p className="text-gray-300">Grow your infrastructure as your business expands</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,7 +195,6 @@ const ITInfrastructure: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Security</h3>
                 <p className="text-gray-300">Multi-layered security for comprehensive protection</p>
               </div>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             </div>
           </div>
         </section>
@@ -244,10 +229,5 @@ const ITInfrastructure: React.FC = () => {
 </>
   );
 };
-<<<<<<< HEAD
-
-export default ITInfrastructure;
-=======
 export default ITInfrastructure;</>);
 };
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

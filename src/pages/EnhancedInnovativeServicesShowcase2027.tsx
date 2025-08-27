@@ -1,124 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  CheckCircle,
-  Clock,
-  Users,
-  Target,
-  BarChart3,
-  Rocket,
-  Cpu,
-  Network,
-  Database,
-  Lock,
-  Leaf,
-  Scale,
-  Stethoscope,
-  Car,
-  Building2,
-  DollarSign,
-  Award,
-  Lightbulb,
-  ArrowRight,
-  ChevronRight,
-  ChevronLeft,
-  Play,
-  Eye,
-  X,
-  Flask
-} from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
-
-const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
-  const [services, setServices] = useState<EnhancedInnovativeService2027[]>(ENHANCED_INNOVATIVE_SERVICES_2027);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
-  const [sortBy, setSortBy] = useState('title');
-  const [selectedService, setSelectedService] = useState<EnhancedInnovativeService2027 | null>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const categories = ['all', ...Array.from(new Set(services.map(s => s.category)))];
-  const innovationLevels = ['all', ...Array.from(new Set(services.map(s => s.innovationLevel)))];
-
-  const filteredServices = services.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
-    
-    return matchesSearch && matchesCategory && matchesInnovation;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
-        return a.price - b.price;
-      case 'innovation':
-        const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Innovative': 1 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
-               (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
-      case 'roi':
-        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
-      default:
-        return a.title.localeCompare(b.title);
-    }
-  });
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />;
-      case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
-      case 'AI & Supply Chain': return <Network className="w-5 h-5" />;
-      case 'Neurotechnology & AI': return <Brain className="w-5 h-5" />;
-      case 'AI & Energy Management': return <Zap className="w-5 h-5" />;
-      case 'Quantum & Networking': return <Globe className="w-5 h-5" />;
-      case 'AI & Education Technology': return <Users className="w-5 h-5" />;
-      case 'Quantum & Materials Science': return <Flask className="w-5 h-5" />;
-      case 'AI & Space Technology': return <Rocket className="w-5 h-5" />;
-      case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />;
-    }
-  };
-
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
-      case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
-      case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
-      case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gray-600';
-    }
-  };
-
-  const handleServiceClick = (service: EnhancedInnovativeService2027) => {
-    setSelectedService(service);
-    setCurrentSlide(0);
-  };
-
-  const nextSlide = () => {
-    if (selectedService) {
-      setCurrentSlide((prev) => (prev + 1) % 4);
-    }
-  };
-
-  const prevSlide = () => {
-    if (selectedService) {
-      setCurrentSlide((prev) => (prev - 1 + 4) % 4);
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
@@ -185,7 +65,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       transition: {
         duration: 0.3
       }
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     }
   };
   return (
@@ -200,62 +79,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-6">
-              Enhanced Innovative Services 2027
-            </h1>
-            <p className="text-xl text-zion-gray-light mb-8 max-w-3xl mx-auto">
-              Discover the future of technology with our comprehensive suite of AI, quantum computing, 
-              and cutting-edge innovative services designed to revolutionize your business.
-            </p>
-            <div className="flex justify-center space-x-4">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <Eye className="w-5 h-5" />
-                <span>Explore Services</span>
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <Phone className="w-5 h-5" />
-                <span>Contact Us</span>
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Search and Filter Section */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan"
-              />
-            </div>
-
-=======
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Enhanced Innovative
             </span>
             <br />
             <span className="text-zion-neon">Services Showcase 2027</span>
           </motion.h1>
-          
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -287,7 +116,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       <section className="py-12 bg-black/20 backdrop-blur-sm sticky top-0 z-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -299,44 +127,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
-<<<<<<< HEAD
-            </select>
-
-            {/* Innovation Level Filter */}
-            <select
-              value={selectedInnovationLevel}
-              onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-            >
-              {innovationLevels.map(level => (
-                <option key={level} value={level}>
-                  {level === 'all' ? 'All Innovation Levels' : level}
-                </option>
-              ))}
-            </select>
-
-            {/* Sort By */}
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-            >
-              <option value="title">Sort by Title</option>
-              <option value="price">Sort by Price</option>
-              <option value="innovation">Sort by Innovation</option>
-              <option value="roi">Sort by ROI</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      {/* Services Grid */}
-      <div id="services-grid" className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-=======
             </div>
             {/* View Toggle */}
             <div className="flex gap-2">
@@ -379,93 +169,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.h2
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group"
               onClick={() => handleServiceClick(service)}
             >
-<<<<<<< HEAD
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-2">
-                  {getCategoryIcon(service.category)}
-                  <span className="text-zion-gray-light text-sm">{service.category}</span>
-                </div>
-                <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
-                  {service.innovationLevel}
-                </span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                {service.title}
-              </h3>
-
-              <p className="text-zion-gray-light mb-4 leading-relaxed">
-                {service.description}
-              </p>
-
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-2xl font-bold text-zion-cyan">
-                  ${service.price.toLocaleString()}<span className="text-sm text-zion-gray-light">/month</span>
-                </div>
-                <div className="text-right">
-                  <div className="text-lg font-semibold text-green-400">{service.roi}</div>
-                  <div className="text-sm text-zion-gray-light">ROI</div>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {service.tags.slice(0, 3).map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full"
-                  >
-                    {tag}
-                  </span>
-                ))}
-                {service.tags.length > 3 && (
-                  <span className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full">
-                    +{service.tags.length - 3}
-                  </span>
-                )}
-              </div>
-
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-2 text-zion-gray-light text-sm">
-                  <Clock className="w-4 h-4" />
-                  <span>{service.estimatedDelivery}</span>
-                </div>
-                <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform" />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Service Detail Modal */}
-      {selectedService && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="bg-zion-slate-dark rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto"
-          >
-            <div className="p-8">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center space-x-4">
-                  {getCategoryIcon(selectedService.category)}
-                  <div>
-                    <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
-                    <p className="text-zion-gray-light">{selectedService.category}</p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setSelectedService(null)}
-                  className="text-zion-gray-light hover:text-white transition-colors"
-=======
               Featured Services
             </motion.h2>
             <motion.div 
@@ -481,12 +190,10 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                   className={`flex flex-col lg:flex-row gap-12 items-center ${
                     index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                   }`}
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               {/* Navigation Tabs */}
               <div className="flex space-x-4 mb-6 border-b border-zion-gray-dark">
                 {['Overview', 'Features', 'Technical Specs', 'Contact'].map((tab, index) => (
@@ -503,7 +210,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                   </button>
                 ))}
               </div>
-
               {/* Content Slides */}
               <div className="relative">
                 {/* Overview Slide */}
@@ -517,7 +223,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       <h3 className="text-xl font-semibold text-white mb-4">{selectedService.marketingContent?.headline}</h3>
                       <p className="text-zion-gray-light leading-relaxed">{selectedService.marketingContent?.valueProposition}</p>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -533,7 +238,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
                           <Target className="w-5 h-5 text-zion-cyan" />
@@ -553,7 +257,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                     </div>
                   </motion.div>
                 )}
-
                 {/* Features Slide */}
                 {currentSlide === 1 && (
                   <motion.div
@@ -576,7 +279,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
                           <Lightbulb className="w-5 h-5 text-zion-purple" />
@@ -594,7 +296,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                     </div>
                   </motion.div>
                 )}
-
                 {/* Technical Specs Slide */}
                 {currentSlide === 2 && selectedService.technicalSpecs && (
                   <motion.div
@@ -619,7 +320,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
                           <Network className="w-5 h-5 text-green-400" />
@@ -637,7 +337,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4">Performance</h4>
@@ -652,7 +351,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           </div>
                         </div>
                       </div>
-
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4">Security</h4>
                         <div className="flex flex-wrap gap-2">
@@ -666,7 +364,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       <div className="bg-white/5 rounded-xl p-6">
                         <h4 className="text-lg font-semibold text-white mb-4">Compliance</h4>
                         <div className="flex flex-wrap gap-2">
@@ -683,7 +380,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                     </div>
                   </motion.div>
                 )}
-
                 {/* Contact Slide */}
                 {currentSlide === 3 && (
                   <motion.div
@@ -696,16 +392,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                       <p className="text-zion-gray-light mb-6">
                         Contact our team to discuss how {selectedService.title} can revolutionize your operations.
                       </p>
-<<<<<<< HEAD
-                      
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div className="bg-white/10 rounded-xl p-6">
-                          <h4 className="text-lg font-semibold text-white mb-4">Pricing Information</h4>
-                          <div className="space-y-3">
-                            <div className="flex justify-between">
-                              <span className="text-zion-gray-light">Monthly Price:</span>
-                              <span className="text-2xl font-bold text-zion-cyan">${selectedService.price.toLocaleString()}</span>
-=======
                       {/* Innovation Level Badge */}
                       <div className="inline-block">
                         <span className={`px-4 py-2 rounded-full text-sm font-bold ${
@@ -795,7 +481,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <h4 className="text-xl font-bold text-white mb-2">Interactive Demo</h4>
                           <p className="text-zion-cyan/70">Experience this technology</p>
                         </div>
-                        
                         {/* Demo Placeholder */}
                         <div className="bg-black/30 rounded-lg p-6 border border-zion-cyan/20">
                           <div className="text-center text-zion-cyan/50">
@@ -809,7 +494,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           <div className="text-center">
                             <div className="text-2xl font-bold text-zion-cyan">
                               {(service as any).technicalSpecs?.apiEndpoints || '100+'}
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                             </div>
                             <div className="flex justify-between">
                               <span className="text-zion-gray-light">Market Range:</span>
@@ -825,7 +509,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                             </div>
                           </div>
                         </div>
-
                         <div className="bg-white/10 rounded-xl p-6">
                           <h4 className="text-lg font-semibold text-white mb-4">Contact Information</h4>
                           <div className="space-y-3">
@@ -855,65 +538,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
                           </div>
                         </div>
                       </div>
-<<<<<<< HEAD
-
-                      <div className="flex justify-center space-x-4">
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                          onClick={() => window.open(`tel:${selectedService.contactInfo.phone}`)}
-                        >
-                          <Phone className="w-5 h-5" />
-                          <span>Call Now</span>
-                        </motion.button>
-                        <motion.button
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                          className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2"
-                          onClick={() => window.open(`mailto:${selectedService.contactInfo.email}`)}
-                        >
-                          <Mail className="w-5 h-5" />
-                          <span>Email Us</span>
-                        </motion.button>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </div>
-
-              {/* Navigation Arrows */}
-              <div className="flex items-center justify-between mt-8">
-                <button
-                  onClick={prevSlide}
-                  className="flex items-center space-x-2 text-zion-gray-light hover:text-white transition-colors"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                  <span>Previous</span>
-                </button>
-
-                <div className="flex space-x-2">
-                  {[0, 1, 2, 3].map((index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        currentSlide === index ? 'bg-zion-cyan' : 'bg-zion-gray-dark'
-                      }`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={nextSlide}
-                  className="flex items-center space-x-2 text-zion-gray-light hover:text-white transition-colors"
-                >
-                  <span>Next</span>
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-=======
                     </motion.div>
                   </div>
                 </motion.div>
@@ -1091,7 +715,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           >
             Ready to Experience the Future?
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1112,7 +735,6 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
             >
               Schedule Demo
             </Link>
-            
             <a
               href="tel:+13024640950"
               className="bg-transparent border-2 border-zion-cyan text-zion-cyan font-bold py-4 px-8 rounded-lg text-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
@@ -1128,11 +750,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           >
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
           </motion.div>
         </div>
       )}
-
       {/* Contact Section */}
       <div id="contact" className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 text-center">
@@ -1140,27 +760,23 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
           <p className="text-zion-gray-light mb-8 max-w-2xl mx-auto">
             Contact our team to discuss your needs and discover how our innovative services can transform your business.
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="bg-white/10 rounded-xl p-6">
               <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
               <p className="text-zion-gray-light">+1 302 464 0950</p>
             </div>
-            
             <div className="bg-white/10 rounded-xl p-6">
               <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
               <p className="text-zion-gray-light">kleber@ziontechgroup.com</p>
             </div>
-            
             <div className="bg-white/10 rounded-xl p-6">
               <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-zion-gray-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

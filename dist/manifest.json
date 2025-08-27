@@ -1,19 +1,55 @@
 {
   "name": "Zion Tech Group - AI-Powered Technology Solutions",
   "short_name": "Zion Tech",
-  "description": "Leading provider of AI services, cybersecurity, cloud computing, and digital transformation solutions.",
+  "description": "Leading provider of AI-powered business solutions, cloud infrastructure, and cybersecurity services",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#17072b",
-  "theme_color": "#17072b",
+  "theme_color": "#22ddd2",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
+      "src": "/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
       "type": "image/png",
       "purpose": "maskable any"
     },
@@ -22,13 +58,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
-<<<<<<< HEAD
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-=======
     }
   ],
   "shortcuts": [
@@ -67,7 +96,6 @@
           "sizes": "96x96"
         }
       ]
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     }
   ],
   "screenshots": [
@@ -84,35 +112,6 @@
       "form_factor": "narrow"
     }
   ],
-<<<<<<< HEAD
-  "shortcuts": [
-    {
-      "name": "AI Services",
-      "short_name": "AI",
-      "description": "Explore our AI services",
-      "url": "/ai-services",
-      "icons": [
-        {
-          "src": "/icon-ai.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Contact Us",
-      "short_name": "Contact",
-      "description": "Get in touch with our team",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/icon-contact.png",
-          "sizes": "96x96"
-        }
-      ]
-    }
-  ],
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {

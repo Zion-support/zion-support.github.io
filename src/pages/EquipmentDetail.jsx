@@ -9,8 +9,6 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
-<<<<<<< HEAD
-=======
 export const SAMPLE_EQUIPMENT = [
     {
         id: 1,
@@ -73,7 +71,6 @@ export const SAMPLE_EQUIPMENT = [
         warranty: "5-year enterprise warranty"
     }
 ];
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export default function EquipmentDetail() {
     const { equipmentId } = useParams();
     const navigate = useNavigate();
@@ -144,7 +141,6 @@ export default function EquipmentDetail() {
                 <div className="aspect-video w-full relative">
                   <img src={equipment.images[selectedImageIndex]} alt={equipment.name} className="w-full h-full object-contain bg-zion-blue-light/10 p-4"/>
                 </div>
-                
                 {/* Thumbnail Gallery */}
                 {equipment.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
                     {equipment.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${index === selectedImageIndex ? "border-zion-purple" : "border-transparent"}`}>
@@ -166,7 +162,6 @@ export default function EquipmentDetail() {
                       Features
                     </TabsTrigger>
                   </TabsList>
-                  
                   <TabsContent value="description" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <p className="text-zion-slate-light whitespace-pre-line">
@@ -174,7 +169,6 @@ export default function EquipmentDetail() {
                       </p>
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="specifications" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -187,7 +181,6 @@ export default function EquipmentDetail() {
                       </div>
                     </div>
                   </TabsContent>
-                  
                   <TabsContent value="features" className="mt-4">
                     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                       <ul className="space-y-2">
@@ -201,7 +194,6 @@ export default function EquipmentDetail() {
                 </Tabs>
               </div>
             </div>
-            
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
@@ -214,11 +206,9 @@ export default function EquipmentDetail() {
                       {equipment.subcategory}
                     </Badge>)}
                 </div>
-                
                 {/* Product Title */}
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
-                
                 {/* Rating */}
                 {equipment.rating && (<div className="flex items-center gap-2 mb-4">
                     <div className="flex items-center">
@@ -230,12 +220,10 @@ export default function EquipmentDetail() {
                       {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews)
                     </span>
                   </div>)}
-                
                 {/* Price */}
                 <div className="text-3xl font-bold text-white mb-4">
                   {equipment.currency}{equipment.price.toLocaleString()}
                 </div>
-                
                 {/* Stock Status */}
                 <div className="mb-6">
                   {equipment.inStock ? (<div className="text-emerald-400 flex items-center gap-1">
@@ -249,7 +237,6 @@ export default function EquipmentDetail() {
                       <span>Out of Stock</span>
                     </div>)}
                 </div>
-                
                 {/* Quantity */}
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
@@ -263,19 +250,16 @@ export default function EquipmentDetail() {
                     </button>
                   </div>
                 </div>
-                
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
                   <Button onClick={handleBuyNow} disabled={isAdding || !equipment.inStock} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
-                  
                   <Button onClick={handleAddToCart} disabled={isAdding || !equipment.inStock} variant="outline" className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                     <ShoppingCart className="h-4 w-4 mr-2"/>
                     Add to Cart
                   </Button>
                 </div>
-                
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">
                   {/* Shipping */}
@@ -286,7 +270,6 @@ export default function EquipmentDetail() {
                       <p className="text-xs">For orders over $100 within the US</p>
                     </div>
                   </div>
-                  
                   {/* Warranty */}
                   {equipment.warranty && (<div className="flex gap-3 text-zion-slate-light">
                       <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0"/>
@@ -295,7 +278,6 @@ export default function EquipmentDetail() {
                         <p className="text-xs">{equipment.warranty}</p>
                       </div>
                     </div>)}
-                  
                   {/* Return Policy */}
                   {equipment.returnPolicy && (<div className="flex gap-3 text-zion-slate-light">
                       <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0"/>

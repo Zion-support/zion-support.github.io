@@ -23,7 +23,6 @@ import {
   Star
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -173,43 +172,13 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ];
-
   const stats = [
     { icon: Brain, value: "50+", label: "AI Solutions" },
     { icon: Cloud, value: "100+", label: "Cloud Projects" },
     { icon: Shield, value: "200+", label: "Security Audits" },
     { icon: Rocket, value: "95%", label: "Success Rate" }
   ];
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <SEOHead 
-        config={{
-          title: "Our Services - Zion Tech Group",
-          description: "Discover our comprehensive range of technology services including AI solutions, cloud infrastructure, cybersecurity, blockchain, and digital transformation.",
-          keywords: "IT services, AI solutions, cloud computing, cybersecurity, blockchain, digital transformation, Zion Tech Group",
-          type: "website"
-        }}
-      />
-
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-gray-900 to-gray-800">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Our Services
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Comprehensive technology solutions designed to drive innovation, enhance security, and accelerate your business growth
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-              <ArrowRight className="ml-2 h-5 w-5" />
-=======
     <>
       <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
@@ -232,7 +201,6 @@ const ServicesPage: React.FC = () => {
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
               </Button>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4e39
             </Link>
             <Link
               to="/pricing"
@@ -243,7 +211,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-gray-800">
         <div className="max-w-7xl mx-auto px-6">
@@ -262,7 +229,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Categories */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -274,7 +240,6 @@ const ServicesPage: React.FC = () => {
               Explore our comprehensive range of technology services organized by category
             </p>
           </div>
-
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="bg-gray-800 rounded-2xl p-8">
@@ -287,14 +252,12 @@ const ServicesPage: React.FC = () => {
                     <p className="text-gray-300 text-lg">{category.description}</p>
                   </div>
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="bg-gray-700 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500">
                       <div className="mb-4">
                         <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
                         <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                        
                         <div className="flex items-center mb-4">
                           <div className="flex items-center text-yellow-400">
                             {[...Array(5)].map((_, i) => (
@@ -303,10 +266,8 @@ const ServicesPage: React.FC = () => {
                           </div>
                           <span className="ml-2 text-sm text-gray-400">({service.rating})</span>
                         </div>
-
                         <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                       </div>
-
                       <div className="mb-6">
                         <h5 className="font-semibold text-white mb-2">Key Features:</h5>
                         <ul className="space-y-1">
@@ -318,7 +279,6 @@ const ServicesPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <Link
                         to={service.path}
                         className="w-full inline-flex items-center justify-center bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-lg text-sm"
@@ -334,7 +294,6 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -364,5 +323,4 @@ const ServicesPage: React.FC = () => {
     </div>
   );
 };
-
 export default ServicesPage;

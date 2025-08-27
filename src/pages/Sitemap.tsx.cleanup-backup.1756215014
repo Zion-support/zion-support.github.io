@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import Head from 'next/head';
 import Link from 'next/link';
-
 const Sitemap: React.FC = () => {
   const sitemapSections = [
     {
@@ -79,22 +73,14 @@ import { AppLayout } from "@/layout/AppLayout";
 import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 =======
-
-<<<<<<< HEAD
-=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { SEO } from "@/components/SEO";
 import { completeSitemap } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout";
-
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -107,7 +93,6 @@ import { AppLayout } from "@/layout";
             technology solutions, resources, and company information.
           </p>
         </div>
-
         {/* Sitemap Sections */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {sitemapSections.map((section) => (
@@ -141,7 +126,6 @@ import { AppLayout } from "@/layout";
             </div>
           ))}
         </div>
-
         {/* Quick Links Section */}
         <div className="mt-16 bg-slate-800/50 rounded-xl p-8 border border-white/10">
           <h2 className="text-2xl font-bold text-white mb-6 text-center">
@@ -174,7 +158,6 @@ import { AppLayout } from "@/layout";
             </Link>
           </div>
         </div>
-
         {/* Contact Information */}
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold text-white mb-6">
@@ -183,9 +166,7 @@ import { AppLayout } from "@/layout";
           <p className="text-gray-300 mb-8">
             Can't find what you're looking for? Our team is here to help.
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { 
   MapIcon, 
   CogIcon, 
@@ -194,7 +175,6 @@ import {
   RocketLaunchIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-
 const Sitemap: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -217,7 +197,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Main Navigation */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -236,7 +215,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/blog" className="text-gray-300 hover:text-white transition-colors duration-300">Blog</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-green-400">Company</h3>
               <ul className="space-y-2">
@@ -248,7 +226,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors duration-300">Pricing</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">Resources</h3>
               <ul className="space-y-2">
@@ -260,7 +237,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/news" className="text-gray-300 hover:text-white transition-colors duration-300">News</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-orange-400">Legal</h3>
               <ul className="space-y-2">
@@ -273,7 +249,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* AI & Technology Services */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -293,7 +268,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-code-review" className="text-gray-300 hover:text-white transition-colors duration-300">AI Code Review</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-green-400">AI Autonomous Systems</h3>
               <ul className="space-y-2 text-sm">
@@ -305,7 +279,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-autonomous-testing" className="text-gray-300 hover:text-white transition-colors duration-300">AI Testing</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">AI Specialized Services</h3>
               <ul className="space-y-2 text-sm">
@@ -317,7 +290,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-autonomous-robotics" className="text-gray-300 hover:text-white transition-colors duration-300">AI Robotics</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-orange-400">AI Research & Development</h3>
               <ul className="space-y-2 text-sm">
@@ -329,7 +301,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-consciousness-evolution" className="text-gray-300 hover:text-white transition-colors duration-300">AI Consciousness</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">AI Content & Marketing</h3>
               <ul className="space-y-2 text-sm">
@@ -341,7 +312,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/ai-ad-creative-generator" className="text-gray-300 hover:text-white transition-colors duration-300">AI Ad Creative Generator</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-pink-400">AI Infrastructure</h3>
               <ul className="space-y-2 text-sm">
@@ -356,7 +326,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Quantum & Advanced Tech */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -376,7 +345,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/quantum-services" className="text-gray-300 hover:text-white transition-colors duration-300">Quantum Services</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-blue-400">5G & Network Services</h3>
               <ul className="space-y-2 text-sm">
@@ -386,7 +354,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/5g-private-network-solutions" className="text-gray-300 hover:text-white transition-colors duration-300">5G Private Network Solutions</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-green-400">Advanced Services</h3>
               <ul className="space-y-2 text-sm">
@@ -399,7 +366,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Infrastructure & Business Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -419,7 +385,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/enterprise-it" className="text-gray-300 hover:text-white transition-colors duration-300">Enterprise IT</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-blue-400">Business Operations</h3>
               <ul className="space-y-2 text-sm">
@@ -429,7 +394,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/autonomous-business-operations" className="text-gray-300 hover:text-white transition-colors duration-300">Autonomous Business Operations</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">Specialized Solutions</h3>
               <ul className="space-y-2 text-sm">
@@ -443,7 +407,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Special Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -461,7 +424,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/accessibility-scanner" className="text-gray-300 hover:text-white transition-colors duration-300">Accessibility Scanner</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">AI Tools & Platforms</h3>
               <ul className="space-y-2 text-sm">
@@ -471,7 +433,6 @@ const Sitemap: React.FC = () => {
                 <li><Link to="/affiliate-attribution-hub" className="text-gray-300 hover:text-white transition-colors duration-300">Affiliate Attribution Hub</Link></li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
               <h3 className="text-xl font-semibold mb-4 text-pink-400">Service Management</h3>
               <ul className="space-y-2 text-sm">
@@ -484,7 +445,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -529,19 +489,13 @@ const Sitemap: React.FC = () => {
 =======
 =======
     <AppLayout>
-<<<<<<< HEAD
-=======
     <>
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       <SEO
         title="Sitemap | Zion AI Marketplace"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 =======
 =======
@@ -565,7 +519,6 @@ const Sitemap: React.FC = () => {
             <p className="text-zion-slate-light mb-8 text-lg">
               Navigate through all our services, pages, and resources
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-zion-cyan">Main Pages</h2>
@@ -581,7 +534,6 @@ const Sitemap: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-zion-cyan">Services</h2>
                 <ul className="space-y-2">
@@ -596,7 +548,6 @@ const Sitemap: React.FC = () => {
                   ))}
                 </ul>
               </div>
-              
               <div>
                 <h2 className="text-2xl font-semibold mb-4 text-zion-cyan">Marketplace</h2>
                 <ul className="space-y-2">
@@ -615,8 +566,6 @@ const Sitemap: React.FC = () => {
           </div>
         </div>
       </main>
-=======
-<<<<<<< HEAD
 =======
         canonical="https://ziontechgroup.com/sitemap"
       />
@@ -637,9 +586,7 @@ const Sitemap: React.FC = () => {
       </main>
       <Footer />
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     </>
   );
 };
-
 export default Sitemap;

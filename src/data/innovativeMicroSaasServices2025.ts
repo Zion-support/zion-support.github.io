@@ -1061,10 +1061,6 @@ export const SPECIALIZED_SERVICES = [
     marketPrice: "$1,800 - $5,400/month"
   }
 ];
-<<<<<<< HEAD
-
-export default INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-=======
 // NEW EXPANDED SERVICES - AI & Machine Learning
 export const EXPANDED_AI_SERVICES: InnovativeMicroSaasService[] = [
   {
@@ -3663,4 +3659,3 @@ export const ALL_INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   ...ADVANCED_CUSTOMER_SUPPORT_SERVICES
 ];
 export default ALL_INNOVATIVE_SERVICES;
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

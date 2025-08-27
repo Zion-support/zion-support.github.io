@@ -25,13 +25,8 @@ export interface EnterpriseSolution {
   sla: string;
   support: string;
 }
-<<<<<<< HEAD
-
-export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
-=======
 export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[] = [
   // AI-Powered Enterprise Resource Planning (ERP) Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'enterprise-cloud-migration',
     title: 'Enterprise Cloud Migration & Strategy',
@@ -75,10 +70,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     sla: '99.9% uptime guarantee',
     support: '24/7 dedicated support team'
   },
-<<<<<<< HEAD
-=======
   // Quantum-Resistant Cybersecurity Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'enterprise-cybersecurity',
     title: 'Enterprise Cybersecurity Framework',
@@ -122,10 +114,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     sla: '99.99% security guarantee',
     support: '24/7 SOC team support'
   },
-<<<<<<< HEAD
-=======
   // AI-Powered Business Process Automation Suite
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'digital-transformation',
     title: 'Digital Transformation Consulting',
@@ -169,10 +158,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     sla: 'Transformation success guarantee',
     support: 'Dedicated transformation team'
   },
-<<<<<<< HEAD
-=======
   // Next-Generation Business Intelligence & Analytics Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'enterprise-data-analytics',
     title: 'Enterprise Data Analytics Platform',
@@ -216,10 +202,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     sla: '99.9% data availability',
     support: '24/7 analytics support'
   },
-<<<<<<< HEAD
-=======
   // Enterprise Digital Twin Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'enterprise-automation',
     title: 'Enterprise Process Automation',
@@ -393,14 +376,12 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: AdvancedEnterpriseSolution2025[
     support: 'Strategic advisory team'
   }
 ];
-
 export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[] => {
   if (category === 'All') {
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
   }
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category);
 };
-
 export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
 };

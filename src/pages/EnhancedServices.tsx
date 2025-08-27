@@ -34,34 +34,6 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-<<<<<<< HEAD
-import { ENHANCED_INNOVATIVE_SERVICES_2025 } from '../data/enhancedInnovativeServices2025';
-import { SEO } from '../components/SEO';
-
-export default function EnhancedServices() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('featured');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
-  const [aiScoreRange, setAiScoreRange] = useState<[number, number]>([0, 100]);
-  const [showFilters, setShowFilters] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const element = document.getElementById('enhanced-services-page');
-    if (element) {
-      observer.observe(element);
-=======
 const EnhancedServices: React.FC = () => {
   const enhancedServices = [
     {
@@ -103,12 +75,9 @@ const EnhancedServices: React.FC = () => {
       useCases: ['Smart Homes', 'Industrial IoT', 'Healthcare Monitoring', 'Environmental Sensing'],
       pricing: 'Starting at $30,000',
       timeline: '2-4 months'
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     }
-
     return () => observer.disconnect();
   }, []);
-
   const categories = [
     { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5" />, color: 'from-zion-cyan to-zion-purple', count: ENHANCED_INNOVATIVE_SERVICES_2025.length },
     { id: 'Quantum AI Services', name: 'Quantum AI', icon: <Brain className="h-5 w-5" />, color: 'from-purple-500 to-pink-500', count: ENHANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'Quantum AI Services').length },
@@ -121,51 +90,6 @@ const EnhancedServices: React.FC = () => {
     { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: <Eye className="h-5 w-5" />, color: 'from-indigo-500 to-purple-500', count: ENHANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'AR/VR & Metaverse').length },
     { id: 'Advanced Analytics & BI', name: 'Analytics', icon: <BarChart3 className="h-5 w-5" />, color: 'from-cyan-500 to-blue-500', count: ENHANCED_INNOVATIVE_SERVICES_2025.filter(s => s.category === 'Advanced Analytics & BI').length }
   ];
-<<<<<<< HEAD
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Quantum AI Services': return <Brain className="h-6 w-6" />;
-      case 'Blockchain & Web3': return <Network className="h-6 w-6" />;
-      case 'IoT & Edge Computing': return <Zap className="h-6 w-6" />;
-      case 'Cybersecurity': return <Shield className="h-6 w-6" />;
-      case 'Green Tech & Sustainability': return <Leaf className="h-6 w-6" />;
-      case 'Healthcare Technology': return <Heart className="h-6 w-6" />;
-      case 'FinTech & RegTech': return <DollarSign className="h-6 w-6" />;
-      case 'AR/VR & Metaverse': return <Eye className="h-6 w-6" />;
-      case 'Advanced Analytics & BI': return <BarChart3 className="h-6 w-6" />;
-      default: return <Sparkles className="h-6 w-6" />;
-    }
-  };
-
-  const filteredServices = ENHANCED_INNOVATIVE_SERVICES_2025.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
-    const matchesAiScore = service.aiScore >= aiScoreRange[0] && service.aiScore <= aiScoreRange[1];
-    
-    return matchesCategory && matchesSearch && matchesPrice && matchesAiScore;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-      case 'price-low':
-        return a.price - b.price;
-      case 'price-high':
-        return b.price - a.price;
-      case 'ai-score':
-        return b.aiScore - a.aiScore;
-      case 'rating':
-        return b.rating - a.rating;
-      case 'newest':
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-      default:
-        return 0;
-=======
   const advancedSolutions = [
     {
       title: 'AI-Powered Analytics',
@@ -218,10 +142,8 @@ const EnhancedServices: React.FC = () => {
       icon: Cloud,
       title: 'Cloud-Native',
       description: 'Microservices, containers, and serverless computing'
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     }
   });
-
   const stats = [
     { label: 'Total Services', value: ENHANCED_INNOVATIVE_SERVICES_2025.length, icon: <Sparkles className="h-6 w-6" /> },
     { label: 'Categories', value: categories.length - 1, icon: <Grid className="h-6 w-6" /> },
@@ -235,7 +157,6 @@ const EnhancedServices: React.FC = () => {
         description="Discover our cutting-edge portfolio of AI-powered, blockchain-enabled, and quantum-ready solutions. Transform your business with the latest technologies."
         keywords="AI services, blockchain solutions, quantum computing, cybersecurity, IoT, healthcare technology, fintech, AR/VR, analytics"
       />
-      
       <div id="enhanced-services-page" className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-zion-slate-dark/80 to-zion-blue-dark/80">
@@ -254,7 +175,6 @@ const EnhancedServices: React.FC = () => {
                 Transform your business with our cutting-edge portfolio of AI-powered, blockchain-enabled, 
                 and quantum-ready solutions across cybersecurity, IoT, healthcare, and beyond.
               </p>
-              
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
                 {stats.map((stat, index) => (
@@ -275,131 +195,6 @@ const EnhancedServices: React.FC = () => {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Search and Filters */}
-        <section className="py-8 bg-zion-slate-dark/50">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-              {/* Search */}
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
-                />
-              </div>
-
-              {/* View Mode Toggle */}
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'grid' 
-                      ? 'bg-zion-cyan text-white' 
-                      : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
-                  }`}
-                >
-                  <Grid className="h-5 w-5" />
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'list' 
-                      ? 'bg-zion-cyan text-white' 
-                      : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
-                  }`}
-                >
-                  <List className="h-5 w-5" />
-                </button>
-              </div>
-
-              {/* Sort */}
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
-              >
-                <option value="featured">Featured First</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="ai-score">AI Score</option>
-                <option value="rating">Rating</option>
-                <option value="newest">Newest</option>
-              </select>
-
-              {/* Filters Toggle */}
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-zion-slate-light hover:bg-white/20 transition-all duration-300"
-              >
-                <Filter className="h-5 w-5" />
-                Filters
-                {showFilters ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
-              </button>
-            </div>
-
-            {/* Advanced Filters */}
-            <AnimatePresence>
-              {showFilters && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="mt-6 pt-6 border-t border-white/20"
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Price Range */}
-                    <div>
-                      <label className="block text-zion-slate-light mb-2">Price Range: ${priceRange[0]} - ${priceRange[1]}</label>
-                      <div className="flex gap-4">
-                        <input
-                          type="range"
-                          min="0"
-                          max="10000"
-                          value={priceRange[0]}
-                          onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
-                          className="flex-1"
-                        />
-                        <input
-                          type="range"
-                          min="0"
-                          max="10000"
-                          value={priceRange[1]}
-                          onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                          className="flex-1"
-                        />
-                      </div>
-                    </div>
-
-                    {/* AI Score Range */}
-                    <div>
-                      <label className="block text-zion-slate-light mb-2">AI Score Range: {aiScoreRange[0]} - {aiScoreRange[1]}</label>
-                      <div className="flex gap-4">
-                        <input
-                          type="range"
-                          min="0"
-                          max="100"
-                          value={aiScoreRange[0]}
-                          onChange={(e) => setAiScoreRange([parseInt(e.target.value), aiScoreRange[1]])}
-                          className="flex-1"
-                        />
-                        <input
-                          type="range"
-                          min="0"
-                          max="100"
-                          value={aiScoreRange[1]}
-                          onChange={(e) => setAiScoreRange([aiScoreRange[0], parseInt(e.target.value)])}
-                          className="flex-1"
-                        />
-                      </div>
-                    </div>
-=======
         </div>
       </section>
       {/* Enhanced Services Grid */}
@@ -466,14 +261,12 @@ const EnhancedServices: React.FC = () => {
                   <div className="flex items-center gap-4">
                     <span className="text-zion-cyan font-semibold">{service.pricing}</span>
                     <span className="text-zion-slate-light text-sm">Timeline: {service.timeline}</span>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
         </section>
-
         {/* Category Filter */}
         <section className="py-8 bg-zion-slate-dark/30">
           <div className="container mx-auto px-4">
@@ -496,7 +289,6 @@ const EnhancedServices: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Grid/List */}
         <section className="py-12">
           <div className="container mx-auto px-4">
@@ -553,7 +345,6 @@ const EnhancedServices: React.FC = () => {
                             )}
                           </div>
                         </div>
-
                         {/* Service Content */}
                         <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">
                           {service.title}
@@ -561,7 +352,6 @@ const EnhancedServices: React.FC = () => {
                         <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
                           {service.description}
                         </p>
-
                         {/* Key Features */}
                         <div className="mb-4">
                           <div className="text-xs text-zion-slate-light/70 mb-2 flex items-center gap-2">
@@ -577,7 +367,6 @@ const EnhancedServices: React.FC = () => {
                             ))}
                           </div>
                         </div>
-
                         {/* Technology Stack */}
                         <div className="mb-4">
                           <div className="text-xs text-zion-slate-light/70 mb-2 flex items-center gap-2">
@@ -592,7 +381,6 @@ const EnhancedServices: React.FC = () => {
                             ))}
                           </div>
                         </div>
-
                         {/* Price and Rating */}
                         <div className="flex items-center justify-between mb-4">
                           <div className="text-left">
@@ -605,7 +393,6 @@ const EnhancedServices: React.FC = () => {
                             <span className="text-xs text-zion-slate-light/70">({service.reviewCount})</span>
                           </div>
                         </div>
-
                         {/* AI Score */}
                         <div className="mb-4">
                           <div className="flex items-center justify-between text-sm">
@@ -619,7 +406,6 @@ const EnhancedServices: React.FC = () => {
                             ></div>
                           </div>
                         </div>
-
                         {/* Contact Information */}
                         <div className="mb-4 p-3 bg-zion-slate-dark/50 rounded-lg border border-zion-slate-light/20">
                           <div className="flex items-center gap-2 text-xs text-zion-slate-light mb-2">
@@ -635,7 +421,6 @@ const EnhancedServices: React.FC = () => {
                             {service.contactEmail}
                           </div>
                         </div>
-
                         {/* CTA Buttons */}
                         <div className="flex gap-2">
                           <Link
@@ -663,7 +448,6 @@ const EnhancedServices: React.FC = () => {
                             {getCategoryIcon(service.category)}
                           </div>
                         </div>
-                        
                         <div className="flex-1">
                           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
                             <div>
@@ -684,7 +468,6 @@ const EnhancedServices: React.FC = () => {
                                 {service.description}
                               </p>
                             </div>
-                            
                             <div className="text-right">
                               <div className="text-3xl font-bold text-white mb-2">{service.currency}{service.price}</div>
                               <div className="text-zion-slate-light mb-2">/{service.pricingModel}</div>
@@ -704,7 +487,6 @@ const EnhancedServices: React.FC = () => {
                               </div>
                             </div>
                           </div>
-                          
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                               <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
@@ -720,7 +502,6 @@ const EnhancedServices: React.FC = () => {
                                 ))}
                               </div>
                             </div>
-                            
                             <div>
                               <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                                 <Cpu className="h-4 w-4" />
@@ -735,7 +516,6 @@ const EnhancedServices: React.FC = () => {
                               </div>
                             </div>
                           </div>
-                          
                           <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-zion-slate-light">
                               <div className="flex items-center gap-2">
@@ -751,7 +531,6 @@ const EnhancedServices: React.FC = () => {
                                 {service.contactEmail}
                               </div>
                             </div>
-                            
                             <div className="flex gap-2">
                               <Link
                                 to={`/services/${service.id}`}
@@ -779,26 +558,6 @@ const EnhancedServices: React.FC = () => {
               </div>
             )}
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-br from-zion-slate-dark/80 to-zion-blue-dark/80">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-                Contact our team of experts to discuss how our innovative services can drive your business forward.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
-=======
         </div>
       </section>
       {/* Advanced Solutions Overview */}
@@ -830,7 +589,6 @@ const EnhancedServices: React.FC = () => {
               >
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6">{solution.description}</p>
-                
                 <div>
                   <h4 className="font-semibold text-white mb-3">Key Benefits:</h4>
                   <ul className="space-y-2">
@@ -942,10 +700,8 @@ const EnhancedServices: React.FC = () => {
             <p className="text-xl text-zion-slate-light mb-8">
               Let's explore how our enhanced services can transform your business
             </p>
-            
             <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl mb-4 border border-zion-cyan/30">
                     <Phone className="h-8 w-8 text-zion-cyan" />
@@ -953,7 +709,6 @@ const EnhancedServices: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-zion-slate-light">+1 302 464 0950</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl mb-4 border border-zion-cyan/30">
                     <Mail className="h-8 w-8 text-zion-cyan" />
@@ -961,7 +716,6 @@ const EnhancedServices: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
                   <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl mb-4 border border-zion-cyan/30">
                     <MapPin className="h-8 w-8 text-zion-cyan" />
@@ -970,7 +724,6 @@ const EnhancedServices: React.FC = () => {
                   <p className="text-zion-slate-light">Middletown, DE 19709</p>
                 </div>
               </div>
-              
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/25"
@@ -985,9 +738,5 @@ const EnhancedServices: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
 };
 export default EnhancedServices;
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

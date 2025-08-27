@@ -1,10 +1,5 @@
-
-
 import React, { useState, useEffect, Suspense } from 'react';
-<<<<<<< HEAD
-=======
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
 import { Link } from 'react-router-dom';
 import { 
   ChevronLeft, 
@@ -39,29 +34,11 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-
-<<<<<<< HEAD
-import React from 'react';
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { FuturisticBackground } from "@/components/ui/FuturisticBackground";
-import { ServicesShowcase } from "@/components/home/ServicesShowcase";
-=======
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
 const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
 const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
 const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
-
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string }) => (
   <div className="flex items-center justify-center py-12">
@@ -69,11 +46,9 @@ const LoadingFallback = ({ message }: { message: string }) => (
     <span className="ml-3 text-gray-600">{message}</span>
   </div>
 );
-
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const heroSlides = [
     {
       title: "AI-Powered Solutions",
@@ -103,14 +78,12 @@ const Home: React.FC = () => {
       color: "from-green-400 to-teal-500"
     }
   ];
-
   const stats = [
     { icon: Users, value: "500+", label: "Happy Clients" },
     { icon: TrendingUp, value: "95%", label: "Success Rate" },
     { icon: Award, value: "10+", label: "Years Experience" },
     { icon: Globe, value: "25+", label: "Countries Served" }
   ];
-
   const featuredServices = [
     {
       title: "AI Content Hub Pro",
@@ -149,7 +122,6 @@ const Home: React.FC = () => {
       features: ["IBM Quantum", "Google Quantum", "Real-time Visualization", "Enterprise Security"]
     }
   ];
-
   const whyChooseUs = [
     {
       icon: Zap,
@@ -172,7 +144,6 @@ const Home: React.FC = () => {
       description: "Insights that drive better business decisions"
     }
   ];
-
   const seoMetadata = {
     title: "Zion Tech Group - AI-Powered Solutions & IT Services",
     description: "Transform your business with cutting-edge AI solutions, comprehensive IT services, and innovative micro-SaaS platforms. Expert technology consulting and digital transformation.",
@@ -180,112 +151,37 @@ const Home: React.FC = () => {
     ogImage: "/images/zion-tech-group-og.jpg",
     ogType: "website"
   };
-
   useEffect(() => {
     let interval: NodeJS.Timeout;
-    
     if (isAutoPlaying) {
       interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
       }, 5000);
     }
-
     return () => {
       if (interval) clearInterval(interval);
     };
   }, [isAutoPlaying, heroSlides.length]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
-
 export default function Home() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-background relative">
-      {/* Futuristic Background */}
-      <FuturisticBackground variant="default" intensity="medium" />
-      
-      <SEO 
-        title="Zion Tech Group - Leading AI & Technology Marketplace" 
-        description="Transform your business with cutting-edge AI and technology solutions. Connect with world-class experts, innovative services, and enterprise-grade solutions."
-        keywords="AI, artificial intelligence, technology marketplace, cloud services, cybersecurity, data analytics, machine learning, blockchain, IoT, enterprise solutions"
-        canonical="https://ziontechgroup.com/"
-      />
-
-            {/* Enhanced Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {[
-                { number: "10+", label: "AI-Powered Solutions", icon: "🤖", color: "from-cyan-400 to-blue-400" },
-                { number: "24/7", label: "Expert Support", icon: "🔧", color: "from-blue-400 to-purple-400" },
-                { number: "300%+", label: "Average ROI", icon: "📈", color: "from-purple-400 to-pink-400" },
-                { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
-              ].map((stat, index) => (
-                <div key={index} className="text-center animate-fade-in-up group" style={{ animationDelay: `${index * 0.2}s` }}>
-                  <div className="relative mb-4">
-                    <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">{stat.icon}</div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                  <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-400 font-medium">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-      {/* IT Service Request Hero */}
-      <ITServiceRequestHero />
-      
-      {/* Quick Access */}
-      <QuickAccess />
-      
-      {/* Feature Highlights */}
-      <FeatureHighlights />
-      
-      {/* Feature CTAs with new services */}
-      <FeatureCTAs />
-      
-      {/* Services Showcase */}
-      <ServicesShowcase />
-      
-      {/* Categories Section */}
-      <CategoriesSection />
-      
-      {/* Benefits Section */}
-      <BenefitsSection />
-      
-      {/* How It Works Section */}
-      <HowItWorksSection />
-      
-      {/* Featured Listings */}
-      <FeaturedListingsSection />
-      
-      {/* Newsletter Section */}
-      <NewsletterSection />
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead {...seoMetadata} />
-      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
         {/* Animated Hero Content */}
         <AnimatePresence mode="wait">
           <motion.div
@@ -306,7 +202,6 @@ export default function Home() {
                 {heroSlides[currentSlide].title}
               </span>
             </motion.h1>
-            
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -315,7 +210,6 @@ export default function Home() {
             >
               {heroSlides[currentSlide].subtitle}
             </motion.h2>
-            
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -324,7 +218,6 @@ export default function Home() {
             >
               {heroSlides[currentSlide].description}
             </motion.p>
-            
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -338,7 +231,6 @@ export default function Home() {
                 Explore Services
                 <ArrowRightIcon className="ml-2 w-5 h-5" />
               </Link>
-              
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300"
@@ -348,7 +240,6 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </AnimatePresence>
-
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
@@ -356,14 +247,12 @@ export default function Home() {
         >
           <ChevronLeft className="w-6 h-6 text-white" />
         </button>
-        
         <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
         >
           <ChevronRight className="w-6 h-6 text-white" />
         </button>
-
         {/* Slide Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {heroSlides.map((_, index) => (
@@ -377,7 +266,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -401,7 +289,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Featured Services Section */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -413,7 +300,6 @@ export default function Home() {
               Discover our most popular AI-powered solutions and enterprise services
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
               <motion.div
@@ -427,15 +313,12 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-400 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
@@ -447,7 +330,6 @@ export default function Home() {
                   </div>
                   <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                 </div>
-                
                 <Link
                   to={service.path}
                   className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -460,7 +342,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -472,7 +353,6 @@ export default function Home() {
               We combine cutting-edge technology with proven expertise to deliver exceptional results
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((feature, index) => (
               <motion.div
@@ -497,26 +377,20 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Lazy Loaded Sections */}
       <Suspense fallback={<LoadingFallback message="Loading services..." />}>
         <LazyServicesSection />
       </Suspense>
-
       <Suspense fallback={<LoadingFallback message="Loading features..." />}>
         <LazyFeaturesSection />
       </Suspense>
-
       <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
         <LazyTestimonialsSection />
       </Suspense>
-
       <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
         <LazyCTASection />
       </Suspense>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
     </div>
   );
 };
-
 export default Home;

@@ -99,51 +99,6 @@ import {
   X
 } from 'lucide-react';
 import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';
-<<<<<<< HEAD
-import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2027 } from '../data/revolutionaryMicroSaasServices2027';
-import { ADVANCED_IT_SERVICES_2027 } from '../data/advancedITServices2027';
-
-interface ServiceCardProps {
-  service: any;
-  index: number;
-  onViewDetails: (service: any) => void;
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, onViewDetails }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const getIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'AI & Quantum Computing': <Brain className="w-8 h-8" />,
-      'AI & Business Automation': <Rocket className="w-8 h-8" />,
-      'AI & Cybersecurity': <Shield className="w-8 h-8" />,
-      'AI & Data Analytics': <BarChart3 className="w-8 h-8" />,
-      'IoT & Edge Computing': <Globe className="w-8 h-8" />,
-      'Content Creation & Marketing': <FileText className="w-8 h-8" />,
-      'Financial Management': <DollarSign className="w-8 h-8" />,
-      'Customer Success': <Users className="w-8 h-8" />,
-      'Project Management': <Briefcase className="w-8 h-8" />,
-      'Human Resources': <Users className="w-8 h-8" />,
-      'Cloud & Infrastructure': <Cloud className="w-8 h-8" />,
-      'Cybersecurity': <Shield className="w-8 h-8" />,
-      'Data Center & Infrastructure': <Server className="w-8 h-8" />,
-      'Networking & Security': <Network className="w-8 h-8" />,
-      'Edge Computing & IoT': <Wifi className="w-8 h-8" />
-    };
-    return iconMap[category] || <Code className="w-8 h-8" />;
-  };
-
-  const getInnovationColor = (level: string) => {
-    const colorMap: { [key: string]: string } = {
-      'Revolutionary': 'from-red-500 to-pink-500',
-      'Breakthrough': 'from-purple-500 to-indigo-500',
-      'Innovative': 'from-blue-500 to-cyan-500',
-      'Advanced': 'from-green-500 to-emerald-500'
-    };
-    return colorMap[level] || 'from-gray-500 to-gray-600';
-  };
-
-=======
 import { COMPREHENSIVE_PRICING_GUIDE_2027, MARKET_ANALYSIS_2027 } from '../data/comprehensivePricingGuide2027';
 export function UltimateServicesShowcase2027() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -247,7 +202,6 @@ export function UltimateServicesShowcase2027() {
             Experience the future of technology with our revolutionary quantum AI, autonomous systems, and cutting-edge solutions. 
             Transform your business with zero human error and 24/7 autonomous operation.
           </p>
-          
           {/* Market Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
             <motion.div
@@ -531,7 +485,6 @@ export function UltimateServicesShowcase2027() {
               {(() => {
                 const service = ULTIMATE_INNOVATIVE_SERVICES_2027.find(s => s.id === selectedService);
                 const pricing = getServicePricing(selectedService);
-                
                 if (!service) return null;
                 return (
                   <div>
@@ -669,7 +622,6 @@ export function UltimateServicesShowcase2027() {
 }
 // Helper component for graduation cap icon
 function GraduationCap(props: any) {
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -686,24 +638,20 @@ function GraduationCap(props: any) {
             {service.innovationLevel}
           </div>
         </div>
-
         {/* Service Icon */}
         <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
           <div className="text-zion-cyan">
             {getIcon(service.category)}
           </div>
         </div>
-
         {/* Service Title */}
         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
           {service.title}
         </h3>
-
         {/* Service Description */}
         <p className="text-gray-300 text-sm mb-4 line-clamp-3">
           {service.description}
         </p>
-
         {/* Price and ROI */}
         <div className="flex items-center justify-between mb-4">
           <div className="text-2xl font-bold text-zion-cyan">
@@ -715,7 +663,6 @@ function GraduationCap(props: any) {
             <div className="text-lg font-bold text-green-400">{service.roi}</div>
           </div>
         </div>
-
         {/* Key Features */}
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
@@ -728,13 +675,11 @@ function GraduationCap(props: any) {
             ))}
           </div>
         </div>
-
         {/* Market Info */}
         <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
           <span>Market: {service.marketPrice}</span>
           <span>Delivery: {service.estimatedDelivery}</span>
         </div>
-
         {/* Action Button */}
         <button
           onClick={() => onViewDetails(service)}
@@ -743,7 +688,6 @@ function GraduationCap(props: any) {
           View Details
           <ArrowRight className="w-4 h-4 ml-2 inline" />
         </button>
-
         {/* Hover Effects */}
         <AnimatePresence>
           {isHovered && (
@@ -759,16 +703,13 @@ function GraduationCap(props: any) {
     </motion.div>
   );
 };
-
 interface ServiceDetailsModalProps {
   service: any | null;
   isOpen: boolean;
   onClose: () => void;
 }
-
 const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOpen, onClose }) => {
   if (!service) return null;
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -793,12 +734,10 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOp
             >
               <X className="w-6 h-6" />
             </button>
-
             {/* Service Header */}
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">{service.title}</h2>
               <p className="text-xl text-gray-300 mb-6">{service.description}</p>
-              
               {/* Price and Innovation Level */}
               <div className="flex items-center justify-center space-x-8 mb-6">
                 <div className="text-center">
@@ -815,7 +754,6 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOp
                 </div>
               </div>
             </div>
-
             {/* Service Details Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Features */}
@@ -830,7 +768,6 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOp
                   ))}
                 </div>
               </div>
-
               {/* Benefits */}
               <div>
                 <h3 className="text-xl font-bold text-zion-cyan mb-4">Benefits</h3>
@@ -843,7 +780,6 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOp
                   ))}
                 </div>
               </div>
-
               {/* Use Cases */}
               <div>
                 <h3 className="text-xl font-bold text-zion-cyan mb-4">Use Cases</h3>
@@ -856,7 +792,6 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOp
                   ))}
                 </div>
               </div>
-
               {/* Target Audience */}
               <div>
                 <h3 className="text-xl font-bold text-zion-cyan mb-4">Target Audience</h3>
@@ -870,7 +805,6 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOp
                 </div>
               </div>
             </div>
-
             {/* Technical Specifications */}
             {service.technicalSpecs && (
               <div className="mt-8">
@@ -906,7 +840,6 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOp
                 </div>
               </div>
             )}
-
             {/* Contact Information */}
             <div className="mt-8 p-6 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-xl border border-zion-cyan/20">
               <h3 className="text-xl font-bold text-zion-cyan mb-4">Get Started Today</h3>
@@ -943,18 +876,15 @@ const ServiceDetailsModal: React.FC<ServiceDetailsModalProps> = ({ service, isOp
     </AnimatePresence>
   );
 };
-
 export const UltimateServicesShowcase2027: React.FC = () => {
   const [selectedService, setSelectedService] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
-
   const allServices = [
     ...ULTIMATE_INNOVATIVE_SERVICES_2027,
     ...REVOLUTIONARY_MICRO_SAAS_SERVICES_2027,
     ...ADVANCED_IT_SERVICES_2027
   ];
-
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
     { id: 'ai', name: 'AI Services', count: allServices.filter(s => s.category.includes('AI')).length },
@@ -962,7 +892,6 @@ export const UltimateServicesShowcase2027: React.FC = () => {
     { id: 'it', name: 'IT Services', count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Cybersecurity') || s.category.includes('Data Center') || s.category.includes('Networking') || s.category.includes('Edge')).length },
     { id: 'quantum', name: 'Quantum & Emerging', count: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('IoT')).length }
   ];
-
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
@@ -972,12 +901,10 @@ export const UltimateServicesShowcase2027: React.FC = () => {
         if (activeCategory === 'quantum') return service.category.includes('Quantum') || service.category.includes('IoT');
         return true;
       });
-
   const handleViewDetails = (service: any) => {
     setSelectedService(service);
     setIsModalOpen(true);
   };
-
   return (
     <section className="py-20 relative">
       {/* Section Header */}
@@ -1002,7 +929,6 @@ export const UltimateServicesShowcase2027: React.FC = () => {
           Discover our revolutionary collection of AI-powered services, innovative Micro SAAS solutions, and cutting-edge IT infrastructure services designed to transform your business in 2027 and beyond.
         </motion.p>
       </div>
-
       {/* Category Filter */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -1027,7 +953,6 @@ export const UltimateServicesShowcase2027: React.FC = () => {
           </button>
         ))}
       </motion.div>
-
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-6">
         {filteredServices.map((service, index) => (
@@ -1039,7 +964,6 @@ export const UltimateServicesShowcase2027: React.FC = () => {
           />
         ))}
       </div>
-
       {/* Call to Action */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -1070,7 +994,6 @@ export const UltimateServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Service Details Modal */}
       <ServiceDetailsModal
         service={selectedService}

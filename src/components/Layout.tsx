@@ -87,76 +87,6 @@ const navigation: NavItem[] = [
   { label: 'Contact', href: '/contact', icon: Phone }
 ];
 const sidebarNavigation: NavItem[] = [
-<<<<<<< HEAD
-  { 
-    label: 'Main', 
-    icon: Home, 
-    href: '/', 
-    children: [
-      { label: 'Home', href: '/', icon: Home },
-      { label: 'Services', href: '/services', icon: Briefcase },
-      { label: 'Contact', href: '/contact', icon: Phone }
-    ]
-  },
-  { 
-    label: 'Services', 
-    icon: Briefcase, 
-    href: '/services', 
-    children: [
-      { label: 'AI Autonomous Systems', href: '/services#ai', icon: Brain },
-      { label: 'Cloud Platforms', href: '/services#cloud', icon: Cloud },
-      { label: 'Cybersecurity', href: '/services#cybersecurity', icon: Shield },
-      { label: 'Micro SaaS', href: '/services#saas', icon: Code },
-      { label: 'Technical Consulting', href: '/services', icon: Users },
-      { label: 'System Integration', href: '/services', icon: Network }
-    ]
-  },
-  { 
-    label: 'Company', 
-    icon: Building, 
-    href: '#', 
-    children: [
-      { label: 'About Us', href: '/', icon: Building },
-      { label: 'Our Team', href: '/', icon: Users },
-      { label: 'Careers', href: '/', icon: Target },
-      { label: 'Partners', href: '/', icon: Users2 }
-    ]
-  },
-  { 
-    label: 'Resources', 
-    icon: BookOpen, 
-    href: '#', 
-    children: [
-      { label: 'Blog', href: '/', icon: FileText },
-      { label: 'Case Studies', href: '/', icon: BarChart3 },
-      { label: 'White Papers', href: '/', icon: FileText },
-      { label: 'Webinars', href: '/', icon: Video },
-      { label: 'Documentation', href: '/', icon: HelpCircle }
-    ]
-  },
-  { 
-    label: 'Support', 
-    icon: HelpCircle, 
-    href: '#', 
-    children: [
-      { label: 'Help Center', href: '/', icon: HelpCircle },
-      { label: 'Contact Support', href: '/contact', icon: MessageSquare },
-      { label: 'Training', href: '/', icon: GraduationCap },
-      { label: 'Status Page', href: '/', icon: Activity }
-    ]
-  },
-  { 
-    label: 'Legal', 
-    icon: Shield, 
-    href: '#', 
-    children: [
-      { label: 'Privacy Policy', href: '/privacy', icon: Shield },
-      { label: 'Terms of Service', href: '/terms', icon: FileText },
-      { label: 'Cookie Policy', href: '/', icon: Cookie },
-      { label: 'GDPR Compliance', href: '/', icon: Lock }
-    ]
-  }
-=======
   { label: 'Main', icon: Home, href: '/', children: [
     { label: 'Home', href: '/', icon: Home },
     { label: 'Services', href: '/services', icon: Briefcase },
@@ -195,7 +125,6 @@ const sidebarNavigation: NavItem[] = [
     { label: 'Cookie Policy', href: '/', icon: Cookie },
     { label: 'GDPR Compliance', href: '/', icon: Lock }
   ]}
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
 ];
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -205,33 +134,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [sidebarDropdownOpen, setSidebarDropdownOpen] = useState<string | null>(null);
   const location = useLocation();
   const isActive = (href: string) => location.pathname === href;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  // Handle scroll effect for header
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setSidebarOpen(false);
-  }, [location]);
-
-  const toggleDropdown = (label: string) => {
-    setDropdownOpen(dropdownOpen === label ? null : label);
-  };
-
 =======
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   const toggleSidebarDropdown = (label: string) => {
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
@@ -244,15 +147,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-<<<<<<< HEAD
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-foreground rounded-lg flex items-center justify-center">
-                <ZapIcon className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </Link>
-
-=======
             <div className="flex-shrink-0">
               <Link to="/" className="flex items-center space-x-2 group">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
@@ -263,38 +157,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </span>
               </Link>
             </div>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             {/* Desktop Navigation */}
-<<<<<<< HEAD
-            <nav className="hidden md:flex items-center space-x-6">
-              {navigation.map((item) => (
-                <div key={item.label} className="relative">
-                  {item.children ? (
-                    <button
-                      onClick={() => toggleDropdown(item.label)}
-                      className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary"
-                    >
-                      {item.icon && <item.icon className="w-4 h-4" />}
-                      <span>{item.label}</span>
-                      <ChevronDown className="w-3 h-3" />
-                    </button>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary ${
-                        isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
-                      }`}
-                    >
-                      {item.icon && <item.icon className="w-4 h-4" />}
-                      <span>{item.label}</span>
-                    </Link>
-                  )}
-
-                  {/* Dropdown Menu */}
-                  {item.children && dropdownOpen === item.label && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-background border rounded-lg shadow-lg z-50">
-                      <div className="p-2">
-=======
             <div className="hidden lg:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 {navigation.map((item) => (
@@ -322,36 +185,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         {item.label}
                       </Link>
                     )}
-                    
                     {/* Dropdown Menu */}
                     {item.children && dropdownOpen === item.label && (
                       <div className="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-50 border border-gray-200 animate-in fade-in-0 zoom-in-95">
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
                             to={child.href}
-<<<<<<< HEAD
-                            className="flex items-center space-x-2 px-3 py-2 text-sm rounded-md hover:bg-accent transition-colors"
-=======
                             className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
                           >
                             {child.icon && <child.icon className="w-4 h-4" />}
                             <span>{child.label}</span>
                           </Link>
                         ))}
                       </div>
-<<<<<<< HEAD
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Right side actions */}
-            <div className="flex items-center space-x-4">
-=======
                     )}
                   </div>
                 ))}
@@ -359,12 +206,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
             {/* CTA Button and Search */}
             <div className="hidden lg:flex items-center space-x-4">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
               <Search />
               <ThemeToggle />
               <button
-<<<<<<< HEAD
-=======
                 onClick={() => setSidebarOpen(true)}
                 className="p-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
                 title="Open Sidebar"
@@ -390,7 +234,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <button
                 type="button"
                 className="text-gray-700 hover:text-blue-600 p-2 transition-colors"
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden p-2"
               >
@@ -398,14 +241,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-
-        {/* Mobile Menu */}
-=======
         </nav>
         {/* Mobile Navigation */}
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
         {mobileMenuOpen && (
           <div className="md:hidden border-t bg-background">
             <div className="container mx-auto px-4 py-4">
@@ -459,59 +296,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         )}
       </header>
-<<<<<<< HEAD
-
-      {/* Main Content */}
-      <div className="flex">
-        {/* Sidebar */}
-        <aside className={`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:translate-x-0`}>
-          <div className="p-4">
-            <nav className="space-y-2">
-              {sidebarNavigation.map((item) => (
-                <div key={item.label}>
-                  {item.children ? (
-                    <div>
-                      <button
-                        onClick={() => toggleSidebarDropdown(item.label)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
-                      >
-                        <span className="flex items-center space-x-2">
-                          {item.icon && <item.icon className="w-4 h-4" />}
-                          <span>{item.label}</span>
-                        </span>
-                        <ChevronRight className={`w-4 h-4 transition-transform ${
-                          sidebarDropdownOpen === item.label ? 'rotate-90' : ''
-                        }`} />
-                      </button>
-                      {sidebarDropdownOpen === item.label && (
-                        <div className="ml-4 mt-2 space-y-1">
-                          {item.children.map((child) => (
-                            <Link
-                              key={child.label}
-                              to={child.href}
-                              className="flex items-center space-x-2 px-3 py-2 text-sm rounded-md hover:bg-accent transition-colors"
-                            >
-                              {child.icon && <child.icon className="w-4 h-4" />}
-                              <span>{child.label}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors ${
-                        isActive(item.href) ? 'bg-accent text-accent-foreground' : ''
-                      }`}
-                    >
-                      {item.icon && <item.icon className="w-4 h-4" />}
-                      <span>{item.label}</span>
-                    </Link>
-                  )}
-=======
       {/* Sidebar */}
       {sidebarOpen && (
         <div className="fixed inset-0 z-50 overflow-hidden">
@@ -589,12 +373,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">Z</span>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                 </div>
-<<<<<<< HEAD
-              ))}
-            </nav>
-=======
                 <span className="text-xl font-bold">Zion Tech Group</span>
               </div>
               <p className="text-slate-300 mb-4 max-w-md">
@@ -637,22 +416,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><a href="/" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Careers</a></li>
               </ul>
             </div>
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
           </div>
-<<<<<<< HEAD
-        </aside>
-
-<<<<<<< HEAD
-        {/* Main content area */}
-        <main className={`flex-1 transition-all duration-300 ${
-          sidebarOpen ? 'ml-64' : 'ml-0'
-        } md:ml-64`}>
-          {children}
-        </main>
-      </div>
 =======
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
           <div className="mt-8 pt-8 border-t border-slate-800">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-slate-400 text-sm text-center md:text-left">
@@ -667,14 +432,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       </footer>
-<<<<<<< HEAD
->>>>>>> 21609cb0b9465853a33ecfd9fe47ae5458ef4cd4
-
-      {/* Scroll to top button */}
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       <ScrollToTop />
-
       {/* Mobile sidebar toggle */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}

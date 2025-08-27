@@ -131,7 +131,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
       ]
     }
   },
-
   // Space Tech Infrastructure Platform
   {
     id: "space-tech-infrastructure-platform",
@@ -216,12 +215,7 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
       ]
     }
   },
-<<<<<<< HEAD
-
-  // Neural Interface Development Platform
-=======
   // Quantum-Secure Blockchain Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: "neural-interface-development-platform",
     title: "Neural Interface Development Platform",
@@ -305,7 +299,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
       ]
     }
   },
-
   // Synthetic Biology Platform
   {
     id: "synthetic-biology-platform",
@@ -390,7 +383,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
       ]
     }
   },
-
   // Advanced Robotics & Automation Platform
   {
     id: "advanced-robotics-automation-platform",
@@ -447,11 +439,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-<<<<<<< HEAD
-      technology: ["ROS 2", "TensorFlow", "PyTorch", "Computer Vision", "SLAM"],
-      integrations: ["Industrial Robots", "Sensors", "PLC Systems", "ERP Systems"],
-      apiEndpoints: 250,
-=======
       technology: ["Post-Quantum Cryptography", "Ethereum", "Polkadot", "Rust", "WebAssembly"],
       integrations: ["MetaMask", "WalletConnect", "Chainlink", "Uniswap"],
       apiEndpoints: 200,
@@ -785,33 +772,10 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
       technology: ["GPT-5", "UiPath", "Automation Anywhere", "Blue Prism", "Celonis"],
       integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics"],
       apiEndpoints: 200,
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       uptime: "99.9%",
       security: ["Industrial Security", "Network Security", "Access Control"],
       compliance: ["ISO 13482", "ANSI/RIA R15.06", "Safety Standards"]
     },
-<<<<<<< HEAD
-    competitors: ["ABB", "KUKA", "FANUC", "Universal Robots", "Boston Dynamics"],
-    marketTrend: "High Growth",
-    marketingContent: {
-      headline: "Transform Your Operations with Intelligent Robotics & Automation",
-      valueProposition: "Advanced robotics and automation platform that combines AI, computer vision, and intelligent systems for next-generation industrial automation.",
-      keyFeatures: [
-        "AI-powered robot control systems",
-        "Advanced computer vision and perception",
-        "Autonomous navigation and mapping",
-        "Human-robot collaboration tools",
-        "Industrial automation workflows"
-      ],
-      competitiveAdvantages: [
-        "35% increase in manufacturing efficiency",
-        "25% reduction in operational costs",
-        "90% improvement in workplace safety",
-        "24/7 autonomous operations",
-        "Flexible and adaptive automation"
-      ]
-    }
-=======
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Celonis"],
     marketTrend: "High Growth"
   },
@@ -1012,7 +976,6 @@ export const INNOVATIVE_SERVICES_2027: InnovativeService2027[] = [
     },
     competitors: ["Sphera", "EcoVadis", "Sustainalytics", "MSCI"],
     marketTrend: "High Growth"
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   }
 ];
 export default INNOVATIVE_SERVICES_2027;

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, Mail, Bug } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-=======
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
@@ -38,12 +28,10 @@ function ErrorFallback({ error, resetError }) {
             <RefreshCw className="w-4 h-4 mr-2"/>
             Try Again
           </Button>
-          
           <Button variant="outline" onClick={() => navigate(-1)} className="w-full border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
             <ArrowLeft className="w-4 h-4 mr-2"/>
             Go Back
           </Button>
-          
           <Link to="/" className="block w-full px-4 py-2 text-center border border-zion-purple text-zion-purple rounded-md hover:bg-zion-purple hover:text-white transition-colors">
             <Home className="w-4 h-4 inline mr-2"/>
             Go Home
@@ -57,16 +45,13 @@ function ErrorFallback({ error, resetError }) {
         </div>
       </div>
     </div>);
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
-
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -77,32 +62,26 @@ export class ErrorBoundary extends Component<Props, State> {
       errorId: null,
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Generate unique error ID for tracking
     const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    
     this.setState({
       errorInfo,
       errorId,
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
-
     // In production, you could send this to an error reporting service
     // this.logErrorToService(error, errorInfo, errorId);
   }
-
   private logErrorToService = (error: Error, errorInfo: ErrorInfo, errorId: string) => {
     // Example: Send to error reporting service
     try {
@@ -115,16 +94,13 @@ export class ErrorBoundary extends Component<Props, State> {
         userAgent: navigator.userAgent,
         url: window.location.href,
       };
-
       // You can implement your error reporting logic here
       // Example: fetch('/api/errors', { method: 'POST', body: JSON.stringify(errorData) });
-      
       console.log('Error logged to service:', errorData);
     } catch (logError) {
       console.error('Failed to log error:', logError);
     }
   };
-
   private handleRetry = () => {
     this.setState({
       hasError: false,
@@ -133,25 +109,19 @@ export class ErrorBoundary extends Component<Props, State> {
       errorId: null,
     });
   };
-
   private handleReportError = () => {
     const { error, errorInfo, errorId } = this.state;
-    
     if (error && errorInfo) {
       const errorReport = `
 Error Report (ID: ${errorId})
-
 Error: ${error.message}
 Stack: ${error.stack}
-
 Component Stack:
 ${errorInfo.componentStack}
-
 URL: ${window.location.href}
 User Agent: ${navigator.userAgent}
 Timestamp: ${new Date().toISOString()}
       `;
-
       // Copy to clipboard
       navigator.clipboard.writeText(errorReport).then(() => {
         alert('Error report copied to clipboard. Please send this to support.');
@@ -167,14 +137,12 @@ Timestamp: ${new Date().toISOString()}
       });
     }
   };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -199,7 +167,6 @@ Timestamp: ${new Date().toISOString()}
                 We're sorry, but something unexpected happened. Our team has been notified.
               </p>
             </motion.div>
-
             {/* Error Details */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -215,7 +182,6 @@ Timestamp: ${new Date().toISOString()}
                   </span>
                 )}
               </div>
-              
               {this.state.error && (
                 <div className="space-y-3">
                   <div>
@@ -226,7 +192,6 @@ Timestamp: ${new Date().toISOString()}
                       {this.state.error.message}
                     </p>
                   </div>
-                  
                   {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                     <div>
                       <label className="text-sm font-medium text-zinc-400 block mb-1">
@@ -240,7 +205,6 @@ Timestamp: ${new Date().toISOString()}
                 </div>
               )}
             </motion.div>
-
             {/* Action Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -255,7 +219,6 @@ Timestamp: ${new Date().toISOString()}
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              
               <Link
                 to="/"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
@@ -263,7 +226,6 @@ Timestamp: ${new Date().toISOString()}
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
               </Link>
-              
               <button
                 onClick={this.handleReportError}
                 className="inline-flex items-center justify-center px-6 py-3 bg-zinc-700/50 border border-zinc-600 text-zinc-300 rounded-lg font-semibold hover:bg-zinc-700 hover:text-white transition-all duration-300"
@@ -271,7 +233,6 @@ Timestamp: ${new Date().toISOString()}
                 <Bug className="w-4 h-4 mr-2" />
                 Report Error
               </button>
-              
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-zinc-700/50 border border-zinc-600 text-zinc-300 rounded-lg font-semibold hover:bg-zinc-700 hover:text-white transition-all duration-300"
@@ -280,7 +241,6 @@ Timestamp: ${new Date().toISOString()}
                 Contact Support
               </Link>
             </motion.div>
-
             {/* Help Text */}
             <motion.p
               initial={{ opacity: 0 }}
@@ -294,27 +254,21 @@ Timestamp: ${new Date().toISOString()}
         </motion.div>
       );
     }
-
     return this.props.children;
   }
 }
-
 // Hook for functional components to handle errors
 export function useErrorHandler() {
   const [error, setError] = React.useState<Error | null>(null);
-
   const handleError = React.useCallback((error: Error) => {
     setError(error);
     console.error('Error caught by hook:', error);
   }, []);
-
   const clearError = React.useCallback(() => {
     setError(null);
   }, []);
-
   return { error, handleError, clearError };
 }
-
 // Higher-order component for error handling
 export function withErrorBoundary<P extends object>(
   Component: React.ComponentType<P>,

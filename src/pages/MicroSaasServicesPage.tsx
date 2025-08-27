@@ -6,14 +6,12 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
-
 const categories = [
   { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
   { id: 'AI Services', name: 'AI Services', icon: <Zap className="w-5 h-5" />, count: getMicroSaasServicesByCategory('AI Services').length },
   { id: 'IT Services', name: 'IT Services', icon: <Code className="w-5 h-5" />, count: getMicroSaasServicesByCategory('IT Services').length },
   { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: getMicroSaasServicesByCategory('Business Solutions').length }
 ];
-
 const pricingModels = [
   { id: 'all', name: 'All Pricing' },
   { id: 'monthly', name: 'Monthly' },
@@ -21,27 +19,22 @@ const pricingModels = [
   { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
-
 export default function MicroSaasServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredServices, setFilteredServices] = useState<MicroSaasService[]>(MICRO_SAAS_SERVICES);
   const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
-
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
-
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
-
     // Filter by pricing model
     if (selectedPricing !== 'all') {
       filtered = filtered.filter(service => service.pricingModel === selectedPricing);
     }
-
     // Filter by search query
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
@@ -52,7 +45,6 @@ export default function MicroSaasServicesPage() {
         service.subcategory.toLowerCase().includes(query)
       );
     }
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -68,10 +60,8 @@ export default function MicroSaasServicesPage() {
           return 0;
       }
     });
-
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-
   const ServiceCard = ({ service }: { service: MicroSaasService }) => (
     <div className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20">
       {/* Featured Badge */}
@@ -80,7 +70,6 @@ export default function MicroSaasServicesPage() {
           Featured
         </div>
       )}
-
       {/* Service Image */}
       <div className="relative mb-6 overflow-hidden rounded-xl">
         <img 
@@ -102,7 +91,6 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </div>
-
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -133,11 +121,9 @@ import {
   Sparkles
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 export default function MicroSaasServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
-
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -145,18 +131,15 @@ export default function MicroSaasServicesPage() {
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const formatPrice = (price: number, currency: string, model: string) => {
     if (model === 'monthly') return `${currency}${price}/month`;
     if (model === 'yearly') return `${currency}${price}/year`;
     if (model === 'one-time') return `${currency}${price}`;
     return `${currency}${price}`;
   };
-
   const ServiceCard = ({ service }: { service: MicroSaasService }) => (
     <Card className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20">
       <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
       <CardHeader className="relative z-10">
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
@@ -168,7 +151,6 @@ export default function MicroSaasServicesPage() {
             </CardDescription>
           </div>
         </div>
-        
         <div className="flex items-center gap-2 mb-3">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
             {service.category}
@@ -178,7 +160,6 @@ export default function MicroSaasServicesPage() {
           </Badge>
         </div>
       </CardHeader>
-
       <CardContent className="relative z-10 space-y-4">
         {/* Pricing */}
         <div className="flex items-center justify-between p-3 bg-zion-blue/20 rounded-lg border border-zion-blue-light/20">
@@ -196,7 +177,6 @@ export default function MicroSaasServicesPage() {
             </Badge>
           </div>
         </div>
-
         {/* Features */}
         <div>
           <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
@@ -217,7 +197,6 @@ export default function MicroSaasServicesPage() {
             {service.description}
           </p>
         </div>
-
         {/* AI Score */}
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
@@ -229,7 +208,6 @@ export default function MicroSaasServicesPage() {
             {service.subcategory}
           </Badge>
         </div>
-
         {/* Pricing */}
         <div className="flex items-center justify-between">
           <div>
@@ -241,7 +219,6 @@ export default function MicroSaasServicesPage() {
             <p className="text-sm text-zion-cyan font-medium">{service.marketPrice}</p>
           </div>
         </div>
-
         {/* Features Preview */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-white">Key Features:</p>
@@ -258,7 +235,6 @@ export default function MicroSaasServicesPage() {
             )}
           </div>
         </div>
-
         {/* Benefits */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-white">Benefits:</p>
@@ -271,7 +247,6 @@ export default function MicroSaasServicesPage() {
             ))}
           </div>
         </div>
-
         {/* Target Audience */}
         <div>
           <p className="text-sm font-medium text-white mb-2">Perfect for:</p>
@@ -283,7 +258,6 @@ export default function MicroSaasServicesPage() {
             ))}
           </div>
         </div>
-
         {/* Action Buttons */}
         <div className="flex space-x-3 pt-4">
           <Button 
@@ -309,7 +283,6 @@ export default function MicroSaasServicesPage() {
       </div>
     </div>
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">
       <SEO 
@@ -318,7 +291,6 @@ export default function MicroSaasServicesPage() {
         keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group"
         canonical="https://ziontechgroup.com/micro-saas-services"
       />
-
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-20">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-20" />
@@ -363,14 +335,8 @@ export default function MicroSaasServicesPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-      {/* Filters and Search */}
-      <div className="sticky top-16 z-40 bg-zion-slate-dark/80 backdrop-blur-md border-b border-zion-blue-light/20 py-4">
-=======
       {/* Category Filter */}
       <div className="py-8 bg-zion-blue-dark/50">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             {/* Search */}
@@ -385,7 +351,6 @@ export default function MicroSaasServicesPage() {
                 />
               </div>
             </div>
-
             {/* Category Filters */}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -407,7 +372,6 @@ export default function MicroSaasServicesPage() {
                 </Button>
               ))}
             </div>
-
             {/* Pricing Filter */}
             <div className="flex gap-2">
               {pricingModels.map((model) => (
@@ -425,7 +389,6 @@ export default function MicroSaasServicesPage() {
                 </Button>
               ))}
             </div>
-
             {/* Sort */}
             <select
               value={sortBy}
@@ -463,7 +426,6 @@ export default function MicroSaasServicesPage() {
                 <span className="text-zion-cyan font-medium">{MICRO_SAAS_SERVICES.length}</span> services
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {filteredServices.map((service) => (
                 <ServiceCard key={service.id} service={service} />

@@ -24,14 +24,8 @@ export interface NextGenAIService {
     address: string;
   };
 }
-<<<<<<< HEAD
-
-export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
-  // Revolutionary AI Services
-=======
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
   // Autonomous AI Agents Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: "ai-consciousness-simulator",
     title: "AI Consciousness Simulation Platform",
@@ -74,9 +68,6 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
       "Technology companies",
       "Government agencies"
     ],
-<<<<<<< HEAD
-    tags: ["AI", "Consciousness", "Innovation", "Enterprise", "Revolutionary"],
-=======
     tags: ["AI", "Autonomous Agents", "Machine Learning", "Automation", "NLP"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
@@ -210,7 +201,6 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
       "Agencies"
     ],
     tags: ["AI", "Content Generation", "Creative", "Marketing", "Multimodal"],
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     estimatedDelivery: "6-8 weeks",
     supportLevel: "24/7 Premium Support",
     marketPrice: "Starting from $25,000/month",
@@ -223,10 +213,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   },
-<<<<<<< HEAD
-=======
   // Quantum Machine Learning Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: "quantum-ai-optimization",
     title: "Quantum-Enhanced AI Optimization Suite",
@@ -282,10 +269,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService2025[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   },
-<<<<<<< HEAD
-=======
   // AI-Powered Predictive Maintenance Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: "neural-architecture-search",
     title: "Autonomous Neural Architecture Search Platform",

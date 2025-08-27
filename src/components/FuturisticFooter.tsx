@@ -93,89 +93,6 @@ import {
   MicOff,
   Volume2,
   VolumeX,
-<<<<<<< HEAD
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Truck,
-  Package,
-  FileText,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlayCircle,
-  PauseCircle,
-  StopCircle,
-  SkipBackCircle,
-  SkipForwardCircle,
-  RewindCircle,
-  FastForwardCircle,
-  ShuffleCircle,
-  RepeatCircle,
-  Repeat1Circle,
-  Shuffle2Circle,
-  SkipBack2Circle,
-  SkipForward2Circle,
-  PlaySquare,
-  PauseSquare,
-  StopSquare,
-  SkipBackSquare,
-  SkipForwardSquare,
-  RewindSquare,
-  FastForwardSquare,
-  ShuffleSquare,
-  RepeatSquare,
-  Repeat1Square,
-  Shuffle2Square,
-  SkipBack2Square,
-  SkipForward2Square,
-  PlayTriangle,
-  PauseTriangle,
-  StopTriangle,
-  SkipBackTriangle,
-  SkipForwardTriangle,
-  RewindTriangle,
-  FastForwardTriangle,
-  ShuffleTriangle,
-  RepeatTriangle,
-  Repeat1Triangle,
-  Shuffle2Triangle,
-  SkipBack2Triangle,
-  SkipForward2Triangle,
-  PlayOctagon,
-  PauseOctagon,
-  StopOctagon,
-  SkipBackOctagon,
-  SkipForwardOctagon,
-  RewindOctagon,
-  FastForwardOctagon,
-  ShuffleOctagon,
-  RepeatOctagon,
-  Repeat1Octagon,
-  Shuffle2Octagon,
-  SkipBack2Octagon,
-  SkipForward2Octagon,
-  PlayDodecagon,
-  PauseDodecagon,
-  StopDodecagon,
-  SkipBackDodecagon,
-  SkipForwardDodecagon,
-  RewindDodecagon,
-  FastForwardDodecagon,
-  ShuffleDodecagon,
-  RepeatDodecagon,
-  Repeat1Dodecagon,
-  Shuffle2Dodecagon,
-  SkipBack2Dodecagon,
-  SkipForward2Dodecagon
-=======
   Leaf,
   Space,
   Handshake,
@@ -183,32 +100,17 @@ import {
   FileText,
   BarChart3,
   Video
->>>>>>> add-innovative-services-2025
 } from 'lucide-react';
-<<<<<<< HEAD
-
-const footerSections = {
-=======
 const footerNavigation = {
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   aiServices: {
     title: 'AI Services',
     items: [
-<<<<<<< HEAD
-      { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
-      { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
-      { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
-      { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' },
-      { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },
-      { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' }
-=======
       { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
       { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
       { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },
       { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },
       { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },
       { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
->>>>>>> add-innovative-services-2025
     ],
   },
   itServices: {
@@ -316,7 +218,6 @@ export const FuturisticFooter: React.FC = () => {
                     <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>
                   </div>
                 </div>
-                
                 <p className="text-zion-slate-light leading-relaxed">
                   Leading the future of technology with cutting-edge AI services, innovative solutions, 
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.
@@ -364,31 +265,6 @@ export const FuturisticFooter: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-<<<<<<< HEAD
-
-            {/* Footer Sections */}
-            {Object.entries(footerSections).map(([key, section]) => (
-              <div key={key}>
-                <motion.h3
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-lg font-semibold text-white mb-4"
-                >
-                  {section.title}
-                </motion.h3>
-                <motion.ul
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="space-y-2"
-                >
-                  {section.items.map((item, index) => (
-                    <motion.li
-                      key={index}
-=======
             {/* Navigation sections */}
             {Object.entries(footerNavigation).map(([key, section], index) => (
               <motion.div
@@ -407,7 +283,6 @@ export const FuturisticFooter: React.FC = () => {
                   {section.items.map((item, itemIndex) => (
                     <motion.div
                       key={item.name}
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
@@ -427,19 +302,13 @@ export const FuturisticFooter: React.FC = () => {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-
-        {/* Bottom Footer */}
-=======
         {/* Bottom section */}
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
         <div className="border-t border-zion-cyan/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="text-zion-slate-light text-sm">
                 © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
               </div>
-              
               <div className="flex items-center space-x-6 text-sm">
                 <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                   Privacy Policy
@@ -451,8 +320,6 @@ export const FuturisticFooter: React.FC = () => {
                   Sitemap
                 </Link>
               </div>
-<<<<<<< HEAD
-=======
               <div className="flex items-center space-x-4">
                 <motion.button
                   onClick={scrollToTop}
@@ -463,11 +330,9 @@ export const FuturisticFooter: React.FC = () => {
                   <ArrowUp className="w-5 h-5" />
                 </motion.button>
               </div>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             </div>
           </div>
         </div>
-
         {/* Scroll to top button */}
         <motion.button
           onClick={scrollToTop}

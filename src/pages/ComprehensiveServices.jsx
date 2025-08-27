@@ -1,29 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Shield, Zap, Eye, Phone, Mail, MapPin, Globe, DollarSign, Clock, Users, Search, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, PRICING_TIERS } from '@/data/comprehensiveServices';
-export default function ComprehensiveServicesPage() {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPricingTier, setSelectedPricingTier] = useState('all');
-    const filteredServices = useMemo(() => {
-        return COMPREHENSIVE_SERVICES.filter(service => {
-            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-            const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
-            return matchesSearch && matchesCategory && matchesPricing;
-        });
-    }, [searchTerm, selectedCategory, selectedPricingTier]);
-    return (<div className="min-h-screen bg-zion-blue-dark">
-=======
 import { motion } from 'framer-motion';
 import { 
   Search, 
@@ -122,7 +98,6 @@ export default function ComprehensiveServices() {
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
@@ -147,17 +122,6 @@ export default function ComprehensiveServices() {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Contact Information */}
-      <div className="bg-zion-blue py-8 px-4">
-        <div className="container mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-white">
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-zion-cyan"/>
-              <span>+1 302 464 0950</span>
-=======
       </section>
       {/* Contact Information Banner */}
       <section className="py-6 bg-zion-blue-dark border-b border-zion-blue-light">
@@ -166,7 +130,6 @@ export default function ComprehensiveServices() {
             <div className="flex items-center gap-4">
               <Phone className="w-5 h-5 text-zion-cyan" />
               <span className="text-white font-medium">{ZION_TECH_GROUP_CONTACT.phone}</span>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-zion-cyan"/>
@@ -184,17 +147,6 @@ export default function ComprehensiveServices() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Search and Filter Controls */}
-      <div className="bg-zion-blue-dark py-8 px-4">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto">
-            <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"/>
-              <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light"/>
-=======
       </section>
       {/* Search and Filter Section */}
       <section className="py-8 bg-zinc-800">
@@ -238,7 +190,6 @@ export default function ComprehensiveServices() {
                 <option value="price-high">Price: High to Low</option>
                 <option value="rating">Rating</option>
               </select>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             </div>
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>
               <SelectTrigger className="w-full md:w-48 bg-zion-blue border-zion-blue-light text-white">
@@ -260,19 +211,6 @@ export default function ComprehensiveServices() {
             </Select>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Services Grid */}
-      <div className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredServices.map((service) => (<Card key={service.id} className="bg-zion-blue border-zion-blue-light hover:border-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
-                <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between">
-                    <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg flex items-center justify-center text-zion-cyan mb-3">
-                      <Building className="w-6 h-6"/>
-=======
       </section>
       {/* Services Grid */}
       <section className="py-16">
@@ -307,20 +245,11 @@ export default function ComprehensiveServices() {
                       <Star className="w-5 h-5 text-yellow-500 fill-current" />
                       <span className="font-medium">4.9</span>
                       <span className="text-zinc-500 text-sm">(150+)</span>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                     </div>
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
                       {service.category}
                     </Badge>
                   </div>
-<<<<<<< HEAD
-                  <CardTitle className="text-white text-lg">{service.title}</CardTitle>
-                  <CardDescription className="text-zion-slate-light">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-=======
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="font-semibold text-zinc-800 mb-2">Key Features:</h4>
@@ -345,7 +274,6 @@ export default function ComprehensiveServices() {
                       ))}
                     </div>
                   </div>
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag) => (<Badge key={tag} variant="secondary" className="bg-zion-blue-light text-zion-cyan">
@@ -363,31 +291,6 @@ export default function ComprehensiveServices() {
                       <span>{service.location}</span>
                     </div>
                   </div>
-<<<<<<< HEAD
-
-                  {/* Action Buttons */}
-                  <div className="flex gap-2 pt-2">
-                    <Button className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                      <Phone className="w-4 h-4 mr-2"/>
-                      Get Quote
-                    </Button>
-                    <Button variant="outline" className="border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
-                      <Eye className="w-4 h-4"/>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>))}
-          </div>
-
-          {filteredServices.length === 0 && (<div className="text-center py-16">
-              <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
-              <Button onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedSubcategory('all');
-                setPriceRange('all');
-            }}>
-=======
                   {/* Market Information */}
                   <div className="mb-6 p-3 bg-zinc-50 rounded-lg">
                     <div className="text-sm">
@@ -432,26 +335,10 @@ export default function ComprehensiveServices() {
                 }}
                 className="px-6 py-3 bg-zion-cyan text-white rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
               >
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
                 Clear Filters
               </Button>
             </div>)}
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Service Categories Overview */}
-      <div className="py-16 px-4 bg-zion-blue-dark">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Service Categories</h2>
-            <p className="text-zion-slate-light text-lg">
-              Explore our comprehensive range of technology services
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
       </section>
       {/* Why Choose Zion Tech Group */}
       <section className="py-20 bg-zinc-800">
@@ -464,7 +351,6 @@ export default function ComprehensiveServices() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
             {[
             {
                 icon: <Zap className="w-8 h-8"/>,
@@ -495,35 +381,6 @@ export default function ComprehensiveServices() {
               </div>))}
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Contact CTA Section */}
-      <div className="py-20 px-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
-            Get in touch with our experts to discuss your technology needs and discover how we can help you achieve your goals.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan hover:text-white">
-              <Phone className="w-5 h-5 mr-2"/>
-              Call +1 302 464 0950
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple">
-              <Mail className="w-5 h-5 mr-2"/>
-              Email kleber@ziontechgroup.com
-            </Button>
-          </div>
-          <div className="mt-8 text-zion-cyan">
-            <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>Website: <a href="https://ziontechgroup.com" className="underline hover:text-white">https://ziontechgroup.com</a></p>
-          </div>
-        </div>
-      </div>
-    </div>);
-}
-=======
       </section>
       {/* Pricing Tiers */}
       <section className="py-20 bg-zinc-900">
@@ -658,4 +515,3 @@ export default function ComprehensiveServices() {
     </div>
   );
 }
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

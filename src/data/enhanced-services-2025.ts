@@ -31,18 +31,6 @@ export interface EnhancedService {
     website: string;
   };
 }
-<<<<<<< HEAD
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-export const enhancedServices2025: EnhancedService[] = [
-  // MICRO SAAS SERVICES
-=======
 export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
   // AI-Powered Autonomous Services
   {
@@ -84,7 +72,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     }
   },
   // Quantum Computing Services
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'ai-powered-code-review-assistant',
     name: 'AI-Powered Code Review Assistant',
@@ -130,11 +117,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/ai-code-review-assistant',
     contactInfo
   },
-<<<<<<< HEAD
-
-=======
   // Advanced Cybersecurity Services
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'intelligent-incident-response-platform',
     name: 'Intelligent Incident Response Platform',
@@ -159,14 +142,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       'Knowledge base management',
       'Performance metrics dashboard'
     ],
-<<<<<<< HEAD
-    benefits: [
-      'Reduce incident response time by 70%',
-      'Improve incident resolution by 45%',
-      'Automate routine response tasks',
-      'Enhance team collaboration',
-      'Maintain compliance standards'
-=======
     useCases: ["Enterprise security", "Compliance", "Threat prevention", "Incident response"],
     integrations: ["Active Directory", "SIEM systems", "Cloud platforms", "Network devices"],
     marketPosition: "Comprehensive zero-trust security solution for modern enterprises",
@@ -205,7 +180,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       "Real-time data processing",
       "Low-latency applications",
       "Scalable infrastructure"
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     ],
     technology: ['AI/ML', 'Automation', 'Security Orchestration', 'Real-time Analytics'],
     integrations: ['SIEM', 'EDR', 'Firewall', 'Slack', 'Teams', 'Jira'],
@@ -221,11 +195,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/incident-response-platform',
     contactInfo
   },
-<<<<<<< HEAD
-
-=======
   // AI-Powered Healthcare Services
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'smart-invoice-management-system',
     name: 'Smart Invoice Management System',
@@ -271,11 +241,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/invoice-management',
     contactInfo
   },
-<<<<<<< HEAD
-
-=======
   // Financial AI Services
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'ai-customer-success-automation',
     name: 'AI Customer Success Automation',
@@ -300,14 +266,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       'Custom dashboards',
       'API access'
     ],
-<<<<<<< HEAD
-    benefits: [
-      'Increase customer retention by 25%',
-      'Reduce churn by 30%',
-      'Automate routine tasks',
-      'Improve customer satisfaction',
-      'Scale customer success operations'
-=======
     useCases: ["Personal finance", "Investment management", "Retirement planning", "Risk management"],
     integrations: ["Banking systems", "Investment platforms", "Tax software", "Financial data providers"],
     marketPosition: "Intelligent financial advisor for personalized wealth management",
@@ -346,7 +304,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       "Compliance monitoring",
       "Legal research",
       "Document generation"
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     ],
     technology: ['AI/ML', 'Predictive Analytics', 'Automation', 'CRM Integration'],
     integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zendesk', 'Intercom', 'Slack'],
@@ -362,11 +319,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/customer-success-automation',
     contactInfo
   },
-<<<<<<< HEAD
-
-=======
   // Marketing AI Services
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'intelligent-data-analytics-dashboard',
     name: 'Intelligent Data Analytics Dashboard',
@@ -412,12 +365,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/analytics-dashboard',
     contactInfo
   },
-<<<<<<< HEAD
-
-  // IT SERVICES
-=======
   // Supply Chain AI Services
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'network-security-monitoring',
     name: 'Network Security Monitoring',
@@ -463,11 +411,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/network-security-monitoring',
     contactInfo
   },
-<<<<<<< HEAD
-
-=======
   // Education AI Services
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 'data-backup-recovery-solutions',
     name: 'Data Backup & Recovery Solutions',
@@ -513,7 +457,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/backup-recovery',
     contactInfo
   },
-
   {
     id: 'it-asset-management-platform',
     name: 'IT Asset Management Platform',
@@ -559,7 +502,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/asset-management',
     contactInfo
   },
-
   // AI SERVICES
   {
     id: 'ai-chatbot-development',
@@ -606,7 +548,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/ai-chatbot',
     contactInfo
   },
-
   {
     id: 'predictive-analytics-platform',
     name: 'Predictive Analytics Platform',
@@ -652,7 +593,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/predictive-analytics',
     contactInfo
   },
-
   {
     id: 'computer-vision-solutions',
     name: 'Computer Vision Solutions',
@@ -698,7 +638,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/computer-vision',
     contactInfo
   },
-
   // EMERGING TECH SERVICES
   {
     id: 'quantum-computing-solutions',
@@ -745,7 +684,6 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     link: '/services/quantum-computing',
     contactInfo
   },
-
   {
     id: 'blockchain-web3-solutions',
     name: 'Blockchain & Web3 Solutions',
@@ -792,5 +730,4 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     contactInfo
   }
 ];
-
 export default enhancedServices2025;

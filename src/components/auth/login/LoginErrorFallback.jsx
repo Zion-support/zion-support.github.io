@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
@@ -11,15 +6,12 @@ export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
         <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
           <AlertTriangle className="w-8 h-8 text-red-400" />
         </div>
-        
         <h2 className="text-2xl font-bold text-white mb-4">
           Login Error
         </h2>
-        
         <p className="text-zion-slate-light mb-6">
           We encountered an error while processing your login. This might be a temporary issue.
         </p>
-        
         {process.env.NODE_ENV === 'development' && (
           <details className="mb-6 text-left">
             <summary className="text-zion-cyan cursor-pointer mb-2">
@@ -31,7 +23,6 @@ export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
             </pre>
           </details>
         )}
-        
         <div className="flex flex-col gap-3">
           <button
             onClick={resetErrorBoundary}
@@ -40,7 +31,6 @@ export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
             <RefreshCw className="w-4 h-4 mr-2" />
             Try Again
           </button>
-          
           <a
             href="/"
             className="inline-flex items-center justify-center px-6 py-3 border border-zion-cyan/20 text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
@@ -49,7 +39,6 @@ export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
             Go Home
           </a>
         </div>
-        
         <p className="text-sm text-zion-slate-light mt-6">
           If this problem persists, please contact our support team.
         </p>
@@ -57,9 +46,3 @@ export const LoginErrorFallback = ({ error, resetErrorBoundary }) => {
     </div>
   );
 };
-<<<<<<< HEAD
-
-export default LoginErrorFallback;
-
-=======
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83

@@ -471,7 +471,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   badge?: string;
   icon: string;
 }
-
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-content-generator",
@@ -861,9 +860,6 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
-<<<<<<< HEAD
-
-=======
 export const MICRO_SAAS_CATEGORIES = [
   'AI Business Solutions',
   'IT Infrastructure', 
@@ -896,7 +892,6 @@ export const CONTACT_INFO = {
   phone: '+1 (555) 123-4567',
   address: '123 Tech Street, Innovation City, IC 12345'
 };
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };

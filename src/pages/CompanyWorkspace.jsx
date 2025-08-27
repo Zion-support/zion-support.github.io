@@ -2,21 +2,15 @@ import React from "react";
 import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate, useParams } from "react-router-dom";
-<<<<<<< HEAD
-import { SEOHead } from "../components/seo/SEOHead";
-=======
 import SEOHead from "../components/SEOHead.jsx";
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 import { useWhitelabel } from "@/context/WhitelabelContext";
-
 export default function CompanyWorkspace() {
     const { companySlug } = useParams();
     const { user } = useAuth();
     const { company, isLoading, error } = useCompanyWorkspace(companySlug);
     const { isWhitelabel, tenant, brandName } = useWhitelabel();
-
     if (isLoading) {
         return (
             <div className="flex items-center justify-center min-h-screen">
@@ -24,24 +18,20 @@ export default function CompanyWorkspace() {
             </div>
         );
     }
-
     if (error || !company) {
         return <Navigate to="/" />;
     }
-
     // In white-label mode, use the tenant's theme instead of the company's theme
     const effectiveTheme = isWhitelabel ? {
         primaryColor: tenant?.primary_color || company.theme?.primaryColor,
         backgroundColor: company.theme?.backgroundColor || 'var(--background)',
         textColor: company.theme?.textColor || 'var(--foreground)'
     } : company.theme;
-
     // Check if user has access to this company workspace
     const hasAccess = true; // For demo purposes, always grant access
     if (!hasAccess) {
         return <Navigate to="/unauthorized" />;
     }
-
     return (
         <ProtectedRoute>
             <SEOHead 

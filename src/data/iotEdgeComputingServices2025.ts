@@ -4,7 +4,6 @@ export interface ServiceContact {
   website: string;
   address: string;
 }
-
 export interface IoTEdgeComputingService {
   id: number;
   name: string;
@@ -40,14 +39,8 @@ export interface IoTEdgeComputingService {
   aiIntegration: boolean;
   predictiveAnalytics: boolean;
 }
-<<<<<<< HEAD
-
-// IoT & Edge Computing Services for 2025
-export const iotEdgeComputingServices2025: IoTEdgeComputingService[] = [
-=======
 export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
   // Smart City IoT Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 1,
     name: "Smart City IoT Platform",
@@ -104,10 +97,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
     aiIntegration: true,
     predictiveAnalytics: true
   },
-<<<<<<< HEAD
-=======
   // Industrial IoT Edge Computing Platform
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
   {
     id: 2,
     name: "Industrial IoT Edge AI",
@@ -164,11 +154,6 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
     aiIntegration: true,
     predictiveAnalytics: true
   },
-<<<<<<< HEAD
-  {
-    id: 3,
-    name: "Healthcare IoT Monitor",
-=======
   // Edge AI Computing Service
   {
     id: "edge-ai-computing-service",
@@ -304,7 +289,6 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
     id: "connected-healthcare-iot",
     title: "Connected Healthcare IoT Platform",
     description: "Comprehensive IoT platform for healthcare that connects medical devices, monitors patient health, and provides real-time insights for improved care delivery.",
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     category: "Healthcare IoT",
     description: "Comprehensive healthcare IoT monitoring platform with patient tracking, medical device management, and health analytics",
     pricing: "Professional",
@@ -527,5 +511,4 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeComputingService2025[] = [
     predictiveAnalytics: true
   }
 ];
-
 export default iotEdgeComputingServices2025;

@@ -1,56 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
-import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
-
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  websiteUrl?: string;
-  technology?: string[];
-  integrations?: string[];
-  compliance?: string[];
-  roi?: string;
-  competitors?: string[];
-  demoUrl?: string;
-  caseStudies?: string[];
-  marketTrend?: string;
-  industryFocus?: string[];
-  scalability?: string;
-  customizationLevel?: string;
-  innovationLevel?: string;
-  serviceLevel?: string;
-}
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-
 const UltimatePricing2025: React.FC = () => {
   const pricingTiers = [
     {
@@ -325,7 +274,6 @@ const UltimatePricing2025: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -361,7 +309,6 @@ const UltimatePricing2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       {pricingTiers.map((tier, tierIndex) => (
         <section key={tierIndex} className={`py-20 px-4 sm:px-6 lg:px-8 ${tierIndex % 2 === 0 ? 'bg-white/5' : ''}`}>
@@ -374,7 +321,6 @@ const UltimatePricing2025: React.FC = () => {
                 {tier.description}
               </p>
             </div>
-            
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {tier.plans.map((plan, planIndex) => (
                 <div
@@ -389,7 +335,6 @@ const UltimatePricing2025: React.FC = () => {
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
-                  
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-green-400 mb-3">Features:</h4>
                     <ul className="space-y-2">
@@ -401,7 +346,6 @@ const UltimatePricing2025: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-yellow-400 mb-3">Key Benefits:</h4>
                     <ul className="space-y-2">
@@ -413,19 +357,16 @@ const UltimatePricing2025: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   <div className="mb-6 space-y-4">
                     <div className="bg-white/5 rounded-lg p-4">
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Market Position</h4>
                       <p className="text-sm text-gray-300">{plan.marketPosition}</p>
                     </div>
-                    
                     <div className="bg-white/5 rounded-lg p-4">
                       <h4 className="text-sm font-semibold text-purple-400 mb-2">Competitive Advantage</h4>
                       <p className="text-sm text-gray-300">{plan.competitiveAdvantage}</p>
                     </div>
                   </div>
-                  
                   <div className="text-center">
                     <Link
                       to="/contact"
@@ -440,7 +381,6 @@ const UltimatePricing2025: React.FC = () => {
           </div>
         </section>
       ))}
-
       {/* Value Proposition Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -452,38 +392,32 @@ const UltimatePricing2025: React.FC = () => {
               Our competitive pricing combined with unmatched expertise and support delivers exceptional value
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">💎</div>
               <h3 className="text-xl font-semibold text-white mb-3">Premium Quality</h3>
               <p className="text-gray-300">Enterprise-grade solutions at competitive market rates with superior quality and performance</p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovation Leadership</h3>
               <p className="text-gray-300">Cutting-edge technology solutions that position your business ahead of the competition</p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold text-white mb-3">Custom Solutions</h3>
               <p className="text-gray-300">Tailored implementations designed specifically for your business needs and objectives</p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">🛡️</div>
               <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>
               <p className="text-gray-300">Dedicated support teams and ongoing optimization to ensure your success</p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">📈</div>
               <h3 className="text-xl font-semibold text-white mb-3">ROI Focused</h3>
               <p className="text-gray-300">Solutions designed to deliver measurable business value and rapid return on investment</p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center">
               <div className="text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
@@ -492,7 +426,6 @@ const UltimatePricing2025: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Enhanced CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -526,5 +459,4 @@ const UltimatePricing2025: React.FC = () => {
     </div>
   );
 };
-
 export default UltimatePricing2025;

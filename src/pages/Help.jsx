@@ -19,14 +19,8 @@ import {
 } from 'lucide-react';
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
-  const [openCategories, setOpenCategories] = useState([]);
-
-  const toggleCategory = (category) => {
-=======
   const [openCategories, setOpenCategories] = useState<string[]>([]);
   const toggleCategory = (category: string) => {
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
     setOpenCategories(prev => 
       prev.includes(category) 
         ? prev.filter(c => c !== category)
@@ -205,7 +199,6 @@ export default function Help() {
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
             Find answers to your questions, learn how to use our services, and get the support you need
           </p>
-          
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto relative">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
@@ -267,7 +260,6 @@ export default function Help() {
                     <ChevronDown className="w-5 h-5 text-zion-cyan" />
                   )}
                 </button>
-                
                 {openCategories.includes(category.id) && (
                   <div className="px-6 pb-4 border-t border-zion-cyan/20">
                     <div className="space-y-3 pt-4">
@@ -289,7 +281,6 @@ export default function Help() {
                 )}
               </div>
             ))}
-            
             {filteredCategories.length === 0 && (
               <div className="text-center py-16">
                 <FileText className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
@@ -321,7 +312,6 @@ export default function Help() {
                 </button>
               </div>
             </div>
-            
             <div className="bg-zion-blue-dark/50 rounded-lg border border-zion-cyan/20 overflow-hidden">
               <div className="aspect-video bg-zion-blue-dark/30 flex items-center justify-center">
                 <Video className="w-16 h-16 text-zion-cyan" />
@@ -334,7 +324,6 @@ export default function Help() {
                 </button>
               </div>
             </div>
-            
             <div className="bg-zion-blue-dark/50 rounded-lg border border-zion-cyan/20 overflow-hidden">
               <div className="aspect-video bg-zion-blue-dark/30 flex items-center justify-center">
                 <Video className="w-16 h-16 text-zion-cyan" />
@@ -359,7 +348,6 @@ export default function Help() {
           <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Our support team is here to help you. Contact us through any of the channels below and we'll get back to you as soon as possible.
           </p>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
               <MessageCircle className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
@@ -371,7 +359,6 @@ export default function Help() {
                 Start Chat
               </button>
             </div>
-            
             <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
               <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
@@ -385,7 +372,6 @@ export default function Help() {
                 Call Now
               </a>
             </div>
-            
             <div className="bg-zion-blue-dark/50 p-6 rounded-lg border border-zion-cyan/20">
               <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>

@@ -1,37 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-
-const Enterprise: React.FC = () => {
-  const enterpriseSolutions = [
-    {
-      title: "AI-Powered Business Intelligence",
-      description: "Advanced analytics and business intelligence solutions that provide real-time insights and predictive capabilities.",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "Data Integration"]
-    },
-    {
-      title: "Cloud Infrastructure & DevOps",
-      description: "Scalable cloud solutions with automated DevOps practices for enterprise-grade applications.",
-      features: ["Cloud Migration", "DevOps Automation", "Infrastructure as Code", "Performance Optimization"]
-    },
-    {
-      title: "Cybersecurity & Compliance",
-      description: "Comprehensive security solutions including SOC2 compliance automation and threat detection.",
-      features: ["Threat Detection", "Compliance Automation", "Security Audits", "Incident Response"]
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation consulting and implementation for modern enterprises.",
-      features: ["Process Automation", "Change Management", "Technology Strategy", "ROI Optimization"]
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Check, Users, Shield, BarChart3, Zap, Globe, Phone, Lock } from 'lucide-react';
-
 export default function Enterprise() {
   const features = [
     {
@@ -65,7 +36,6 @@ export default function Enterprise() {
       description: "Priority support with dedicated account managers and 24/7 technical assistance."
     }
   ];
-
   const plans = [
     {
       name: "Starter",
@@ -105,47 +75,9 @@ export default function Enterprise() {
         "Custom security",
         "On-premise options"
       ]
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     }
   ];
-
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Enterprise
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed for enterprise-scale organizations 
-              seeking digital transformation and competitive advantage
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {enterpriseSolutions.map((solution, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
-                <p className="text-gray-300 mb-4">{solution.description}</p>
-                
-                <div>
-                  <h4 className="font-semibold text-blue-400 mb-2">Key Features</h4>
-                  <ul className="space-y-1">
-                    {solution.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     <div className="min-h-screen bg-background">
       <SEO 
         title="Enterprise Solutions - Zion Tech Group" 
@@ -153,7 +85,6 @@ export default function Enterprise() {
         keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group"
         canonical="https://ziontechgroup.com/enterprise"
       />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -174,7 +105,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -186,7 +116,6 @@ export default function Enterprise() {
               Everything you need to manage large-scale tech operations efficiently and securely
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="bg-zion-blue border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
@@ -204,7 +133,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* Plans Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -216,7 +144,6 @@ export default function Enterprise() {
               Choose the plan that fits your organization's needs and scale
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {plans.map((plan, index) => (
               <Card key={index} className={`bg-zion-blue-dark border-zion-purple/20 ${
@@ -237,37 +164,10 @@ export default function Enterprise() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-zion-slate-light">
                         <Check className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                         {feature}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h3>
-              <p className="text-gray-300 mb-6">
-                Let's discuss how our enterprise solutions can drive innovation, 
-                efficiency, and growth for your organization.
-              </p>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Schedule a Consultation
-              </Link>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                   <Button 
                     className={`w-full ${
                       plan.name === "Professional" 
@@ -283,7 +183,6 @@ export default function Enterprise() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
@@ -302,24 +201,10 @@ export default function Enterprise() {
               <Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
                 Download Brochure
               </Button>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-};
-
-export default Enterprise;
-=======
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
