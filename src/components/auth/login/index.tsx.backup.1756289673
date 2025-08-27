@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+export { LoginForm as LoginContent } from './LoginForm';
+=======
+export { default as LoginContent } from './LoginForm';
+>>>>>>> origin/cursor/website-audit-and-enhancement-1195
+export { default as LoginErrorFallback } from './LoginErrorFallback';

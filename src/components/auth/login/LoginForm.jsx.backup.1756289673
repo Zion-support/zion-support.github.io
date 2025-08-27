@@ -15,7 +15,11 @@ const loginSchema = z.object({
     email: z.string().email("Please enter a valid email").min(1, "Email is required"),
     password: z.string().min(6, "Password must be at least 6 characters"),
 });
+<<<<<<< HEAD
+export function LoginForm() {
+=======
 function LoginForm() {
+>>>>>>> origin/cursor/website-audit-and-enhancement-1195
     const { login, isLoading } = useAuth();
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
@@ -95,5 +99,8 @@ function LoginForm() {
       <LoadingOverlay visible={isLoading || isSubmitting}/>
     </Form>);
 }
+<<<<<<< HEAD
+=======
 
 export default LoginForm;
+>>>>>>> origin/cursor/website-audit-and-enhancement-1195

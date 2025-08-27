@@ -6,7 +6,7 @@ import { DollarSign } from "lucide-react";
 import { RatingStars } from "@/components/RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
 // Using regular img tag instead of Next.js Image
-const ProductListingCardComponent = ({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) => {
+export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
     const isGrid = view === 'grid';
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
@@ -124,6 +124,3 @@ const ProductListingCardComponent = ({ listing, view = 'grid', onRequestQuote, d
       </div>
     </div>);
 }
-;
-export const ProductListingCard = React.memo(ProductListingCardComponent);
-ProductListingCard.displayName = 'ProductListingCard';

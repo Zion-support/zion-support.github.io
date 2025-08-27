@@ -14,6 +14,12 @@ const Events = React.lazy(() => import('./pages/Events'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
+<<<<<<< HEAD
+const Services = React.lazy(() => import('./pages/Services'));
+const Search = React.lazy(() => import('./pages/Search'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+=======
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
@@ -33,6 +39,7 @@ const LoadingSpinner = () => (
     </div>
   </div>
 );
+>>>>>>> origin/cursor/website-audit-and-enhancement-1195
 
 function App() {
   useEffect(() => {
@@ -80,6 +87,10 @@ function App() {
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+<<<<<<< HEAD
+              <Route path="/search" element={<Search />} />
+              <Route path="*" element={<NotFound />} />
+=======
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
@@ -88,6 +99,7 @@ function App() {
               <Route path="/micro-saas" element={<MicroSAAS />} />
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="*" element={<GenericPage />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-1195
             </Routes>
           </Suspense>
         </main>
