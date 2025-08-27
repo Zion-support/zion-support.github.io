@@ -1,7 +1,7 @@
 {
-  "name": "Zion Tech Group - AI & Quantum Technology Solutions",
+  "name": "Zion Tech Group - AI & Technology Solutions",
   "short_name": "Zion Tech",
-  "description": "Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services",
+  "description": "Leading AI solutions, cloud services, cybersecurity, and digital transformation expertise",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -22,11 +22,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
     }
   ],
   "screenshots": [
@@ -60,15 +55,12 @@
     },
     {
       "name": "AI Services",
-      "short_name": "AI",
-      "description": "Explore AI solutions",
+      "short_name": "AI Services",
+      "description": "Explore our AI solutions",
       "url": "/ai-services",
       "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
     }
   ],
   "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  }
+  "prefer_related_applications": false
 }
