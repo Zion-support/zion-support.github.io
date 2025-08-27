@@ -55,12 +55,12 @@ body {
 
 /* Navigation Link Styles */
 .nav-link {
-  @apply text-gray-300 hover:text-neon-blue transition-colors duration-300 font-medium relative;
+  @apply text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium relative;
 }
 
 .nav-link::after {
   content: '';
-  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-purple transition-all duration-300;
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300;
 }
 
 .nav-link:hover::after {
@@ -69,21 +69,21 @@ body {
 
 /* Mobile Navigation Link Styles */
 .mobile-nav-link {
-  @apply block text-gray-300 hover:text-neon-blue transition-colors duration-300 font-medium py-2;
+  @apply block text-gray-700 hover:text-blue-600 transition-colors duration-300 font-medium py-2;
 }
 
 /* Enhanced Button Styles */
 .btn-primary {
-  @apply px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold rounded-lg hover:from-neon-purple hover:to-neon-blue transition-all duration-300 shadow-lg hover:shadow-neon-blue/25;
+  @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl;
 }
 
 .btn-secondary {
-  @apply px-6 py-3 bg-transparent border-2 border-neon-blue text-neon-blue font-semibold rounded-lg hover:bg-neon-blue hover:text-white transition-all duration-300;
+  @apply px-6 py-3 bg-transparent border-2 border-blue-600 text-blue-600 font-semibold rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300;
 }
 
 /* Enhanced Card Styles */
 .card {
-  @apply bg-black/40 backdrop-blur-sm border border-neon-blue/20 rounded-2xl p-6 hover:border-neon-blue/40 transition-all duration-300 hover:bg-black/60;
+  @apply bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 hover:border-blue-300 transition-all duration-300 hover:shadow-xl;
 }
 
 .card-hover {
@@ -92,7 +92,7 @@ body {
 
 /* Enhanced Input Styles */
 .input-modern {
-  @apply px-4 py-3 bg-white/10 border border-neon-blue/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-neon-blue/40 focus:ring-2 focus:ring-neon-blue/20;
+  @apply px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20;
 }
 
 /* Enhanced Animation Classes */
@@ -115,15 +115,15 @@ body {
 /* Enhanced Background Patterns */
 .bg-cyber-pattern {
   background-image: 
-    radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
 }
 
 .bg-matrix-pattern {
   background-image: 
-    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -133,29 +133,29 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-black/20;
+  @apply bg-gray-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neon-blue/30 rounded-full;
+  @apply bg-blue-300 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neon-blue/50;
+  @apply bg-blue-400;
 }
 
 /* Enhanced Selection */
 ::selection {
-  @apply bg-neon-blue/30 text-white;
+  @apply bg-blue-300 text-white;
 }
 
 ::-moz-selection {
-  @apply bg-neon-blue/30 text-white;
+  @apply bg-blue-300 text-white;
 }
 
 /* Enhanced Focus States */
 .focus-neon:focus {
-  @apply outline-none ring-2 ring-neon-blue/50 ring-offset-2 ring-offset-black;
+  @apply outline-none ring-2 ring-blue-500/50 ring-offset-2 ring-offset-white;
 }
 
 /* Enhanced Loading States */
@@ -164,7 +164,7 @@ body {
 }
 
 .loading-dots > div {
-  @apply w-2 h-2 bg-neon-blue rounded-full animate-bounce;
+  @apply w-2 h-2 bg-blue-600 rounded-full animate-bounce;
 }
 
 .loading-dots > div:nth-child(2) {
@@ -177,11 +177,11 @@ body {
 
 /* Enhanced Typography */
 .text-gradient {
-  @apply bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent;
 }
 
 .text-glow {
-  @apply text-neon-blue drop-shadow-[0_0_10px_rgba(0,212,255,0.5)];
+  @apply text-blue-600 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)];
 }
 
 /* Enhanced Spacing Utilities */
@@ -208,7 +208,7 @@ body {
 }
 
 .hover-glow {
-  @apply transition-shadow duration-300 hover:shadow-neon-blue/25;
+  @apply transition-shadow duration-300 hover:shadow-blue-500/25;
 }
 
 .hover-scale {
@@ -217,34 +217,34 @@ body {
 
 /* Enhanced Border Effects */
 .border-glow {
-  @apply border border-neon-blue/20 hover:border-neon-blue/40 transition-colors duration-300;
+  @apply border border-blue-300 hover:border-blue-500 transition-colors duration-300;
 }
 
 .border-gradient {
-  background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+  background: linear-gradient(45deg, var(--zion-blue), var(--zion-purple));
   padding: 1px;
 }
 
 .border-gradient > * {
-  @apply bg-black rounded-lg;
+  @apply bg-white rounded-xl;
 }
 
 /* Enhanced Background Effects */
 .bg-glass {
-  @apply bg-white/5 backdrop-blur-md border border-white/10;
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
 }
 
 .bg-neon {
-  @apply bg-gradient-to-r from-neon-blue/20 to-neon-purple/20;
+  @apply bg-gradient-to-r from-blue-600/20 to-purple-600/20;
 }
 
 /* Enhanced Text Effects */
 .text-shadow-neon {
-  text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue);
+  text-shadow: 0 0 10px var(--zion-blue), 0 0 20px var(--zion-blue), 0 0 30px var(--zion-blue);
 }
 
 .text-shadow-glow {
-  text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple);
+  text-shadow: 0 0 10px var(--zion-purple), 0 0 20px var(--zion-purple);
 }
 
 /* Enhanced Animation Keyframes */
@@ -254,16 +254,16 @@ body {
 }
 
 @keyframes glow {
-  0% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
-  100% { box-shadow: 0 0 30px rgba(0, 212, 255, 0.6); }
+  0% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+  100% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
 }
 
 @keyframes neon-pulse {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(0, 212, 255, 0.5), 0 0 10px rgba(0, 212, 255, 0.3), 0 0 15px rgba(0, 212, 255, 0.1);
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5), 0 0 10px rgba(59, 130, 246, 0.3), 0 0 15px rgba(59, 130, 246, 0.1);
   }
   50% {
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(0, 212, 255, 0.5), 0 0 30px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3);
   }
 }
 
@@ -369,7 +369,7 @@ body {
 }
 
 .focus-visible:focus {
-  @apply outline-none ring-2 ring-neon-blue/50 ring-offset-2 ring-offset-black;
+  @apply outline-none ring-2 ring-blue-500/50 ring-offset-2 ring-offset-white;
 }
 
 /* Enhanced Print Styles */
@@ -386,22 +386,18 @@ body {
 /* Enhanced Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #000000;
-    --bg-secondary: #0a0a0a;
-    --bg-tertiary: #1a1a1a;
+    --bg-primary: #1f2937;
+    --bg-secondary: #374151;
+    --bg-tertiary: #4b5563;
   }
 }
 
 /* Enhanced High Contrast Mode Support */
 @media (prefers-contrast: high) {
   :root {
-    --neon-blue: #00ffff;
-    --neon-purple: #ff00ff;
-    --neon-pink: #ff0080;
-    --neon-green: #00ff00;
-    --neon-orange: #ff8000;
-    --neon-red: #ff0000;
-    --neon-yellow: #ffff00;
+    --zion-blue: #2563eb;
+    --zion-purple: #7c3aed;
+    --zion-indigo: #4f46e5;
   }
 }
 
