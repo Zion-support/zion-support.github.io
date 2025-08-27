@@ -32,8 +32,14 @@ import {
   Globe as GlobeIcon,
   Heart
 } from 'lucide-react';
-import { SEO } from "../components/SEOHead";
-import { ALL_INNOVATIVE_SERVICES, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { SEO } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSolutions2025";
+import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
+import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
+import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
+import { ADVANCED_IT_SERVICES_2030 } from "@/data/advancedITServices2030";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -65,7 +71,20 @@ export default function ServicesPage() {
     { id: 'educational-technology', name: 'Educational Technology', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
     { id: 'real-estate-technology', name: 'Real Estate Technology', icon: Building, color: 'from-zion-orange to-zion-blue' },
     { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
-    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
+    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' },
+    { id: 'quantum-ai', name: 'Quantum AI', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
+    { id: 'autonomous-ai', name: 'Autonomous AI', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'neuromorphic-computing', name: 'Neuromorphic Computing', icon: Cpu, color: 'from-zion-green to-zion-blue' },
+    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Heart, color: 'from-zion-pink to-zion-green' },
+    { id: 'quantum-security', name: 'Quantum Security', icon: Shield, color: 'from-zion-red to-zion-blue' },
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Brain, color: 'from-zion-purple to-zion-pink' },
+    { id: 'fusion-energy', name: 'Fusion Energy', icon: Zap, color: 'from-zion-orange to-zion-yellow' },
+    { id: 'space-technology', name: 'Space Technology', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
+    { id: 'holographic-technology', name: 'Holographic Technology', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'devops', name: 'DevOps', icon: Code, color: 'from-zion-green to-zion-blue' },
+    { id: 'edge-computing', name: 'Edge Computing', icon: Cpu, color: 'from-zion-blue to-zion-green' },
+    { id: 'green-it', name: 'Green IT', icon: Globe, color: 'from-zion-green to-zion-blue' },
+    { id: 'digital-twin', name: 'Digital Twin', icon: Cpu, color: 'from-zion-purple to-zion-cyan' }
   ];
 
   const priceRanges = [
@@ -90,7 +109,9 @@ export default function ServicesPage() {
     ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
     ...NEXT_GEN_AI_SERVICES_2025,
     ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
-    ...IOT_EDGE_COMPUTING_SERVICES_2025
+    ...IOT_EDGE_COMPUTING_SERVICES_2025,
+    ...REVOLUTIONARY_SERVICES_2030,
+    ...ADVANCED_IT_SERVICES_2030
   ];
 
   // Filter and sort services
@@ -176,25 +197,25 @@ export default function ServicesPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="heading-responsive font-bold mb-6">
-              <span className="text-gradient">Innovative Micro SAAS</span>
+              <span className="text-gradient-primary">Revolutionary Technology</span>
               <br />
               <span className="text-white">Services & Solutions</span>
             </h1>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing, 
-              blockchain applications to healthcare AI, discover the future of business technology with our comprehensive micro SAAS platform.
+              blockchain applications to healthcare AI, discover the future of business technology with our comprehensive platform.
             </p>
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for services, technologies, or solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
+                  className="input-futuristic w-full px-12 py-4 text-lg placeholder-slate-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
             </div>
@@ -207,7 +228,8 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="text-zion-slate-light">Innovative Services</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
+                <div className="text-slate-300">Innovative Services</div>
               </motion.div>
               <motion.div 
                 className="text-center"
@@ -215,8 +237,8 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length - 1}</div>
-                <div className="text-zion-slate-light">Technology Categories</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">{categories.length - 1}</div>
+                <div className="text-slate-300">Technology Categories</div>
               </motion.div>
               <motion.div 
                 className="text-center"
@@ -224,8 +246,8 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="text-3xl font-bold text-zion-blue mb-2">99.9%</div>
-                <div className="text-zion-slate-light">Uptime Guarantee</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
+                <div className="text-slate-300">Uptime Guarantee</div>
               </motion.div>
               <motion.div 
                 className="text-center"
@@ -233,8 +255,8 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                <div className="text-3xl font-bold text-zion-green mb-2">24/7</div>
-                <div className="text-zion-slate-light">Support Available</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-slate-300">Support Available</div>
               </motion.div>
             </div>
           </motion.div>
@@ -242,7 +264,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Filters and Categories */}
-      <section className="py-12 bg-zion-slate-dark/50">
+      <section className="py-12 bg-slate-800/50">
         <div className="container-responsive">
           {/* Category Pills */}
           <motion.div 
@@ -258,7 +280,7 @@ export default function ServicesPage() {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 group ${
                   selectedCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
-                    : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white'
+                    : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50'
                 }`}
               >
                 <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
@@ -672,6 +694,70 @@ export default function ServicesPage() {
                 </Link>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Revolutionary 2025 Services Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
+        <div className="container-responsive">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="heading-responsive font-bold mb-6">
+              Revolutionary <span className="text-gradient">2025 Services</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+            <motion.div
+              className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30 hover:border-purple-400 transition-all duration-300 group hover:from-purple-600/30 hover:to-indigo-700/30"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-flex p-4 rounded-full mb-6 bg-gradient-to-r from-purple-500 to-indigo-600">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Revolutionary 2025 Services</h3>
+              <p className="text-zion-slate-light mb-6">
+                Explore our cutting-edge AI, Quantum Computing, and Autonomous Technology Solutions that are reshaping the future of business and technology.
+              </p>
+              
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  AI-Powered Platforms
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  Quantum-Enhanced Solutions
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  Autonomous Operations
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  Next-Gen Technology
+                </div>
+              </div>
+              
+              <Link 
+                to="/revolutionary-2025-services"
+                className="btn-neon px-8 py-4 text-lg inline-flex items-center"
+              >
+                Explore Revolutionary Services <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>

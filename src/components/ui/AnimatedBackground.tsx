@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+
 export function AnimatedBackground({ className = '', variant = 'grid' }) {
     const canvasRef = useRef(null);
     useEffect(() => {

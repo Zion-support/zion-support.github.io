@@ -18,9 +18,7 @@ export interface PracticalBusinessSolution2029 {
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [
   {
 ];
-=======
 ];
-=======
     id: "2029-practical-business-solution",
     name: "2029 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2029",

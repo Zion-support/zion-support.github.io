@@ -280,13 +280,13 @@ export const FuturisticFooter: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light border-t border-zion-cyan/20 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light border-t border-zion-cyan/20 overflow-hidden quantum-particles">
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/10 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/10 rounded-full animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/10 rounded-full animate-pulse delay-2000"></div>
+          <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/10 rounded-full animate-pulse holographic"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/10 rounded-full animate-pulse delay-1000 holographic"></div>
+          <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/10 rounded-full animate-pulse delay-2000 holographic"></div>
         </div>
       </div>
 
@@ -304,11 +304,11 @@ export const FuturisticFooter: React.FC = () => {
                 className="space-y-6"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25 holographic neon-glow">
                     <span className="text-2xl font-bold text-white">Z</span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                    <h3 className="text-2xl font-bold text-gradient">
                       ZION TECH GROUP
                     </h3>
                     <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>
@@ -356,7 +356,7 @@ export const FuturisticFooter: React.FC = () => {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`p-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} hover:bg-zion-cyan/10 hover:border-zion-cyan/40 transition-all duration-300`}
+                      className={`p-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} hover:bg-zion-cyan/10 hover:border-zion-cyan/40 transition-all duration-300 hover:neon-glow`}
                     >
                       <social.icon className="w-5 h-5" />
                     </motion.a>
@@ -375,7 +375,7 @@ export const FuturisticFooter: React.FC = () => {
                 viewport={{ once: true }}
                 className="space-y-4"
               >
-                <h4 className="text-lg font-semibold text-zion-cyan flex items-center space-x-2">
+                <h4 className="text-lg font-semibold text-gradient flex items-center space-x-2">
                   <section.icon className="w-5 h-5" />
                   <span>{section.title}</span>
                 </h4>

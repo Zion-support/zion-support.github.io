@@ -18,7 +18,8 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
 export function TabsList({ children, className = '' }) {
     return (<div className={`flex border-b border-gray-200 ${className}`}>
       {children}
-    </div>);
+    </button>
+  );
 }
 ;
 export function TabsTrigger({ children, value, className = '' }) {

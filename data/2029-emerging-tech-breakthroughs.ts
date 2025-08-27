@@ -12,7 +12,6 @@ export interface EmergingTechBreakthrough2029 {
 
 export const emergingTechBreakthroughs2029: EmergingTechBreakthrough2029[] = [
   {
-=======
   description: string;
   features: string[];
   link: string;
