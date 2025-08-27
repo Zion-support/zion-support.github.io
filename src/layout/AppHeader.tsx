@@ -40,20 +40,10 @@ export function AppHeader() {
     { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
-    { name: 'AI Services', href: '/ai-services', current: false },
-    { name: 'IT Services', href: '/it-services', current: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false },
-    { name: 'Products', href: '/products', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
-    { name: 'Case Studies', href: '/case-studies', current: false },
-    { name: 'Partners', href: '/partners', current: false },
-    { name: 'Research', href: '/research-development', current: false },
-    { name: 'Events', href: '/events', current: false },
-    { name: 'News', href: '/news', current: false },
-    { name: 'Blog', href: '/blog', current: false },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Careers', href: '/careers', current: false },
   ];
 
   // Organized services by category
