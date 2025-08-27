@@ -57,6 +57,11 @@ const ReturnsManagement = React.lazy(() => import('./pages/services/ReturnsManag
 const EmailSequencer = React.lazy(() => import('./pages/services/EmailSequencer'));
 const PodcastTranscription = React.lazy(() => import('./pages/services/PodcastTranscription'));
 const MicroCRM = React.lazy(() => import('./pages/services/MicroCRM'));
+// New real service pages
+const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalytics'));
+const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
+const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
+const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -139,6 +144,10 @@ function App() {
               <Route path="/services/email-sequencer" element={<EmailSequencer />} />
               <Route path="/services/podcast-transcription" element={<PodcastTranscription />} />
               <Route path="/services/micro-crm" element={<MicroCRM />} />
+              <Route path="/services/website-analytics" element={<WebsiteAnalytics />} />
+              <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
+              <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
+              <Route path="/services/mobile-survey" element={<MobileSurvey />} />
               
               {/* Catch all route to generic page (covers docs, webinars, training, enterprise, etc.) */}
               <Route path="*" element={<GenericPage />} />
