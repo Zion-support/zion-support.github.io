@@ -83,6 +83,9 @@ const Status = React.lazy(() => import('./pages/Status.tsx'));
 const Cookies = React.lazy(() => import('./pages/Cookies.tsx'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
 
+// Zion 2026 Cutting Edge Services
+const Zion2026CuttingEdgeServicesShowcase = React.lazy(() => import('./pages/Zion2026CuttingEdgeServicesShowcase'));
+
 // Enhanced loading spinner with accessibility
 const LoadingSpinner = () => (
   <div 
@@ -175,6 +178,9 @@ function App() {
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
               <Route path="/services/consulting" element={<ConsultingServices />} />
               <Route path="/services/five-g" element={<FiveGSolutions />} />
+              
+              {/* Zion 2026 Cutting Edge Services */}
+              <Route path="/zion-2026-cutting-edge-services" element={<Zion2026CuttingEdgeServicesShowcase />} />
               
               {/* Micro SAAS Routes */}
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
