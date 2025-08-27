@@ -2,414 +2,224 @@ export interface AdvancedITInfrastructureService {
   id: string;
   title: string;
   description: string;
-  category: string;
-  subcategory: string;
+  category: 'Cloud Infrastructure' | 'Edge Computing' | 'Network Optimization' | 'Data Center' | 'DevOps' | 'Hybrid Cloud';
   price: number;
   currency: string;
-  pricingModel: string;
+  pricingModel: 'monthly' | 'yearly' | 'usage-based' | 'project-based';
   features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  implementation?: string;
-  sla?: string;
+  technicalSpecs: {
+    performance: string;
+    scalability: string;
+    reliability: string;
+    security: string;
+  };
+  deploymentTime: string;
+  supportLevel: 'Basic' | 'Standard' | 'Premium' | 'Enterprise';
   contactInfo: {
-    phone: string;
+    mobile: string;
     email: string;
-    website: string;
     address: string;
+    website: string;
   };
 }
 
-export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureService[] = [
-  // Edge Computing & 5G Integration
+export const ADVANCED_IT_INFRASTRUCTURE_SERVICES: AdvancedITInfrastructureService[] = [
   {
-    id: "intelligent-edge-computing-platform",
-    title: "Intelligent Edge Computing Platform",
-    description: "Next-generation edge computing infrastructure that processes data at the source with AI acceleration, 5G integration, and real-time decision-making capabilities.",
-    category: "Edge Computing",
-    subcategory: "AI-Powered Infrastructure",
-    price: 15000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'hybrid-cloud-orchestration',
+    title: 'Hybrid Cloud Orchestration Platform',
+    description: 'Intelligent platform that seamlessly manages and orchestrates workloads across multiple cloud providers and on-premises infrastructure.',
+    category: 'Hybrid Cloud',
+    price: 3999,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "AI-accelerated edge processors",
-      "5G network integration",
-      "Real-time data processing",
-      "Edge-to-cloud orchestration",
-      "Autonomous scaling",
-      "Ultra-low latency (<1ms)",
-      "Edge security protocols",
-      "Multi-tenant isolation"
+      'Multi-cloud workload management',
+      'Intelligent workload placement',
+      'Cost optimization engine',
+      'Unified monitoring dashboard',
+      'Automated scaling policies',
+      'Disaster recovery automation',
+      'Compliance management',
+      'Performance optimization'
     ],
-    benefits: [
-      "99.99% uptime guarantee",
-      "Reduce latency by 95%",
-      "Process data 10x faster",
-      "50% cost reduction vs cloud-only",
-      "Enhanced security at edge",
-      "Real-time insights"
-    ],
-    useCases: [
-      "Autonomous vehicles",
-      "Smart manufacturing",
-      "AR/VR applications",
-      "IoT sensor networks",
-      "Real-time analytics",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Telecommunications providers",
-      "Automotive industry",
-      "Smart city projects",
-      "Healthcare systems"
-    ],
-    tags: ["Edge Computing", "5G", "AI", "Real-time", "IoT"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "24/7 Premium Support",
-    marketPrice: "Starting from $15,000/month",
-    implementation: "Turnkey deployment with dedicated engineers",
-    sla: "99.99% uptime with performance guarantees",
+    technicalSpecs: {
+      performance: '99.9% uptime SLA',
+      scalability: 'Unlimited workloads',
+      reliability: '99.99% availability',
+      security: 'Enterprise-grade encryption'
+    },
+    deploymentTime: '4-6 weeks',
+    supportLevel: 'Premium',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     }
   },
   {
-    id: "quantum-secure-cloud-infrastructure",
-    title: "Quantum-Secure Cloud Infrastructure",
-    description: "Revolutionary cloud infrastructure protected by quantum-resistant encryption and quantum key distribution for ultimate security against future quantum attacks.",
-    category: "Cloud Security",
-    subcategory: "Quantum Protection",
-    price: 25000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'edge-computing-platform',
+    title: 'Edge Computing Infrastructure Platform',
+    description: 'Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and bandwidth usage.',
+    category: 'Edge Computing',
+    price: 2499,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Post-quantum cryptography",
-      "Quantum key distribution",
-      "Hybrid cloud architecture",
-      "Zero-trust security model",
-      "Quantum-safe data storage",
-      "Advanced threat detection",
-      "Compliance automation",
-      "Global quantum network"
+      'Distributed edge nodes',
+      'Real-time data processing',
+      'Low-latency applications',
+      'Edge AI capabilities',
+      'Automatic failover',
+      'Load balancing',
+      'Security at the edge',
+      'Monitoring and analytics'
     ],
-    benefits: [
-      "Future-proof security",
-      "Quantum-resistant protection",
-      "Regulatory compliance",
-      "100% data integrity",
-      "Advanced threat prevention",
-      "Global scalability"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Government agencies",
-      "Healthcare systems",
-      "Defense contractors",
-      "Critical infrastructure",
-      "Research institutions"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Government agencies",
-      "Financial services",
-      "Healthcare organizations",
-      "Defense contractors"
-    ],
-    tags: ["Quantum Security", "Cloud", "Encryption", "Zero Trust"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "24/7 Quantum Expert Support",
-    marketPrice: "Starting from $25,000/month",
-    implementation: "Phased migration with quantum security specialists",
-    sla: "99.999% availability with quantum-grade security",
+    technicalSpecs: {
+      performance: '<10ms latency',
+      scalability: 'Up to 1000 edge nodes',
+      reliability: '99.95% uptime',
+      security: 'Zero-trust edge security'
+    },
+    deploymentTime: '2-4 weeks',
+    supportLevel: 'Standard',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     }
   },
   {
-    id: "autonomous-infrastructure-management",
-    title: "Autonomous Infrastructure Management System",
-    description: "Self-managing IT infrastructure powered by AI that automatically optimizes performance, predicts failures, and resolves issues without human intervention.",
-    category: "Infrastructure Automation",
-    subcategory: "AI Operations",
-    price: 12000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'ai-powered-devops-automation',
+    title: 'AI-Powered DevOps Automation Platform',
+    description: 'Intelligent DevOps platform that automates software development, testing, deployment, and operations using AI and machine learning.',
+    category: 'DevOps',
+    price: 1899,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Autonomous healing systems",
-      "Predictive failure analysis",
-      "Performance optimization AI",
-      "Resource auto-scaling",
-      "Security incident response",
-      "Compliance monitoring",
-      "Cost optimization",
-      "24/7 automated operations"
+      'Intelligent CI/CD pipelines',
+      'Automated testing and QA',
+      'Smart deployment strategies',
+      'Performance monitoring',
+      'Incident prediction',
+      'Automated rollbacks',
+      'Security scanning',
+      'Compliance automation'
     ],
-    benefits: [
-      "99.9% problem prevention",
-      "Reduce operational costs by 60%",
-      "Zero-downtime operations",
-      "Proactive issue resolution",
-      "Enhanced performance",
-      "Simplified management"
-    ],
-    useCases: [
-      "Enterprise data centers",
-      "Cloud infrastructure",
-      "Multi-cloud environments",
-      "Hybrid architectures",
-      "Mission-critical systems",
-      "DevOps pipelines"
-    ],
-    targetAudience: [
-      "IT operations teams",
-      "Cloud architects",
-      "DevOps engineers",
-      "Infrastructure managers",
-      "CTOs"
-    ],
-    tags: ["AI Operations", "Automation", "Predictive", "Self-Healing"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "24/7 AI Operations Support",
-    marketPrice: "Starting from $12,000/month",
-    implementation: "Gradual rollout with AI training period",
-    sla: "99.9% automated resolution rate",
+    technicalSpecs: {
+      performance: '10x faster deployments',
+      scalability: 'Unlimited projects',
+      reliability: '99.9% success rate',
+      security: 'Built-in security scanning'
+    },
+    deploymentTime: '1-2 weeks',
+    supportLevel: 'Standard',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     }
   },
   {
-    id: "immersive-collaboration-infrastructure",
-    title: "Immersive Collaboration Infrastructure",
-    description: "Advanced infrastructure supporting virtual and augmented reality collaboration with spatial computing, haptic feedback, and real-time 3D rendering capabilities.",
-    category: "Collaboration Technology",
-    subcategory: "Immersive Computing",
-    price: 18000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'quantum-ready-infrastructure',
+    title: 'Quantum-Ready Infrastructure Platform',
+    description: 'Future-proof infrastructure designed to seamlessly integrate with quantum computing systems while maintaining classical computing capabilities.',
+    category: 'Cloud Infrastructure',
+    price: 5999,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Spatial computing platform",
-      "Real-time 3D rendering",
-      "Haptic feedback systems",
-      "Multi-user VR/AR spaces",
-      "Gesture recognition",
-      "Voice spatial audio",
-      "Digital twin integration",
-      "Cross-platform compatibility"
+      'Quantum-classical hybrid architecture',
+      'Quantum algorithm optimization',
+      'Post-quantum cryptography',
+      'Quantum simulation environment',
+      'Classical computing integration',
+      'Quantum security protocols',
+      'Performance benchmarking',
+      'Future migration tools'
     ],
-    benefits: [
-      "Enhanced collaboration experience",
-      "Reduce travel costs by 80%",
-      "Improve productivity by 45%",
-      "Global team connectivity",
-      "Immersive training capabilities",
-      "Revolutionary meeting experiences"
-    ],
-    useCases: [
-      "Remote team collaboration",
-      "Design and engineering",
-      "Training and education",
-      "Product visualization",
-      "Virtual conferences",
-      "3D modeling sessions"
-    ],
-    targetAudience: [
-      "Architecture firms",
-      "Engineering companies",
-      "Design agencies",
-      "Educational institutions",
-      "Technology companies"
-    ],
-    tags: ["VR/AR", "Collaboration", "Spatial Computing", "3D Rendering"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "Specialized VR/AR Support",
-    marketPrice: "Starting from $18,000/month",
-    implementation: "Custom setup with immersive technology specialists",
-    sla: "99.5% availability with performance optimization",
+    technicalSpecs: {
+      performance: 'Quantum advantage ready',
+      scalability: 'Hybrid quantum-classical',
+      reliability: '99.99% availability',
+      security: 'Post-quantum encryption'
+    },
+    deploymentTime: '8-12 weeks',
+    supportLevel: 'Enterprise',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     }
   },
   {
-    id: "green-computing-optimization-platform",
-    title: "Green Computing Optimization Platform",
-    description: "Sustainable IT infrastructure solution that optimizes energy consumption, reduces carbon footprint, and maximizes renewable energy usage through AI-driven efficiency.",
-    category: "Sustainable Computing",
-    subcategory: "Green Technology",
-    price: 8000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: '5g-network-optimization',
+    title: '5G Network Optimization & Management',
+    description: 'Advanced 5G network optimization platform that maximizes network performance, coverage, and user experience through AI-driven analytics.',
+    category: 'Network Optimization',
+    price: 3499,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Energy consumption optimization",
-      "Carbon footprint tracking",
-      "Renewable energy integration",
-      "Efficient cooling systems",
-      "Workload optimization",
-      "Sustainability reporting",
-      "Green certification compliance",
-      "Cost-benefit analysis"
+      'Real-time network monitoring',
+      'AI-powered optimization',
+      'Coverage optimization',
+      'Capacity planning',
+      'Performance analytics',
+      'Predictive maintenance',
+      'User experience optimization',
+      'Network slicing management'
     ],
-    benefits: [
-      "Reduce energy costs by 40%",
-      "Lower carbon footprint by 60%",
-      "ESG compliance achievement",
-      "Enhanced brand reputation",
-      "Operational cost savings",
-      "Regulatory compliance"
-    ],
-    useCases: [
-      "Data center optimization",
-      "Corporate sustainability",
-      "Green cloud computing",
-      "ESG reporting",
-      "Renewable energy projects",
-      "Sustainable operations"
-    ],
-    targetAudience: [
-      "Sustainability officers",
-      "Data center managers",
-      "IT operations teams",
-      "Environmental consultants",
-      "Corporate executives"
-    ],
-    tags: ["Sustainability", "Green Computing", "Energy Efficiency", "ESG"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "Green Technology Support",
-    marketPrice: "Starting from $8,000/month",
-    implementation: "Sustainability assessment and gradual optimization",
-    sla: "Guaranteed energy savings with monitoring",
+    technicalSpecs: {
+      performance: '99.99% network availability',
+      scalability: 'Multi-carrier support',
+      reliability: '99.9% uptime',
+      security: '5G security standards'
+    },
+    deploymentTime: '6-8 weeks',
+    supportLevel: 'Premium',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     }
   },
   {
-    id: "blockchain-infrastructure-as-a-service",
-    title: "Enterprise Blockchain Infrastructure as a Service",
-    description: "Complete blockchain infrastructure platform supporting multiple protocols, smart contracts, DeFi applications, and enterprise-grade security for Web3 transformation.",
-    category: "Blockchain Infrastructure",
-    subcategory: "Web3 Platform",
-    price: 20000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'green-data-center-solutions',
+    title: 'Green Data Center & Sustainability Solutions',
+    description: 'Eco-friendly data center solutions that reduce carbon footprint while maintaining high performance and reliability standards.',
+    category: 'Data Center',
+    price: 2799,
+    currency: 'USD',
+    pricingModel: 'monthly',
     features: [
-      "Multi-protocol blockchain support",
-      "Smart contract deployment",
-      "DeFi integration platform",
-      "NFT marketplace infrastructure",
-      "Cross-chain interoperability",
-      "Enterprise security",
-      "Regulatory compliance tools",
-      "Performance optimization"
+      'Renewable energy integration',
+      'Energy-efficient cooling systems',
+      'Carbon footprint monitoring',
+      'Sustainable hardware options',
+      'Waste heat recycling',
+      'Green certification support',
+      'Environmental reporting',
+      'Sustainability consulting'
     ],
-    benefits: [
-      "Accelerate Web3 adoption",
-      "Reduce blockchain complexity",
-      "Enterprise-grade security",
-      "Multi-chain compatibility",
-      "Regulatory compliance",
-      "Scalable architecture"
-    ],
-    useCases: [
-      "DeFi applications",
-      "NFT marketplaces",
-      "Supply chain tracking",
-      "Digital identity systems",
-      "Smart contract automation",
-      "Cryptocurrency integration"
-    ],
-    targetAudience: [
-      "Blockchain developers",
-      "Financial institutions",
-      "Technology companies",
-      "Government agencies",
-      "Web3 startups"
-    ],
-    tags: ["Blockchain", "Web3", "DeFi", "Smart Contracts", "Enterprise"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "24/7 Blockchain Expert Support",
-    marketPrice: "Starting from $20,000/month",
-    implementation: "Blockchain architecture design and deployment",
-    sla: "99.9% network availability with security guarantees",
+    technicalSpecs: {
+      performance: 'PUE <1.2',
+      scalability: 'Modular expansion',
+      reliability: '99.99% uptime',
+      security: 'Enterprise security'
+    },
+    deploymentTime: '12-16 weeks',
+    supportLevel: 'Premium',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-  {
-    id: "hyper-converged-ai-infrastructure",
-    title: "Hyper-Converged AI Infrastructure Platform",
-    description: "Integrated infrastructure combining compute, storage, networking, and AI acceleration in a single platform optimized for machine learning workloads and AI applications.",
-    category: "AI Infrastructure",
-    subcategory: "Hyper-Converged Systems",
-    price: 30000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "GPU acceleration clusters",
-      "AI-optimized storage",
-      "High-speed networking",
-      "Distributed computing",
-      "Model training pipelines",
-      "Inference optimization",
-      "Auto-scaling capabilities",
-      "Performance monitoring"
-    ],
-    benefits: [
-      "10x faster AI training",
-      "Simplified AI deployment",
-      "Cost-effective scaling",
-      "Optimized performance",
-      "Reduced complexity",
-      "Enterprise reliability"
-    ],
-    useCases: [
-      "Machine learning training",
-      "AI model deployment",
-      "Deep learning research",
-      "Computer vision applications",
-      "Natural language processing",
-      "Predictive analytics"
-    ],
-    targetAudience: [
-      "AI researchers",
-      "Data scientists",
-      "Machine learning engineers",
-      "Technology companies",
-      "Research institutions"
-    ],
-    tags: ["AI Infrastructure", "GPU Computing", "Machine Learning", "HCI"],
-    estimatedDelivery: "10-12 weeks",
-    supportLevel: "24/7 AI Infrastructure Support",
-    marketPrice: "Starting from $30,000/month",
-    implementation: "Custom AI infrastructure design and optimization",
-    sla: "99.95% availability with performance guarantees",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
     }
   }
 ];
