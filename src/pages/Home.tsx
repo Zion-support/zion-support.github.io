@@ -172,11 +172,71 @@ const Home: React.FC = () => {
     }
   ];
 
+  // Enhanced services data for the overview section
+  const servicesOverview = [
+    {
+      category: "AI & Analytics",
+      icon: Brain,
+      color: "from-zion-cyan to-zion-blue",
+      items: ["Machine Learning", "Predictive Analytics", "Natural Language Processing", "Computer Vision"],
+      description: "Transform your data into actionable insights with cutting-edge AI technologies."
+    },
+    {
+      category: "Cybersecurity",
+      icon: Shield,
+      color: "from-zion-purple to-zion-cyan",
+      items: ["Threat Detection", "Incident Response", "Compliance Management", "Security Audits"],
+      description: "Protect your digital assets with enterprise-grade security solutions."
+    },
+    {
+      category: "Cloud & DevOps",
+      icon: Cloud,
+      color: "from-zion-blue to-zion-purple",
+      items: ["CI/CD Automation", "Infrastructure as Code", "Cloud Migration", "Performance Optimization"],
+      description: "Accelerate your development workflow with modern cloud practices."
+    },
+    {
+      category: "IoT & Edge",
+      icon: Cpu,
+      color: "from-zion-cyan to-zion-neon",
+      items: ["Device Management", "Edge Computing", "Data Collection", "Real-time Processing"],
+      description: "Connect and manage your IoT devices with intelligent edge solutions."
+    }
+  ];
+
   const stats = [
-    { number: "500+", label: "Projects Delivered", description: "Successfully completed projects across industries", avatar: "🚀" },
-    { number: "99.9%", label: "Uptime Guarantee", description: "Reliable infrastructure you can count on", avatar: "⚡" },
-    { number: "24/7", label: "Support Available", description: "Round-the-clock technical assistance", avatar: "🛡️" },
-    { number: "50+", label: "Expert Engineers", description: "Skilled professionals at your service", avatar: "👨‍💻" }
+    { 
+      number: "500+", 
+      label: "Projects Delivered", 
+      description: "Successfully completed projects across industries", 
+      avatar: "🚀",
+      icon: TrendingUp,
+      color: "from-zion-cyan to-zion-blue"
+    },
+    { 
+      number: "99.9%", 
+      label: "Uptime Guarantee", 
+      description: "Reliable infrastructure you can count on", 
+      avatar: "⚡",
+      icon: Award,
+      color: "from-zion-purple to-zion-cyan"
+    },
+    { 
+      number: "24/7", 
+      label: "Support Available", 
+      description: "Round-the-clock technical assistance", 
+      avatar: "🛡️",
+      icon: Clock,
+      color: "from-zion-blue to-zion-purple"
+    },
+    { 
+      number: "50+", 
+      label: "Expert Engineers", 
+      description: "Skilled professionals at your service", 
+      avatar: "👨‍💻",
+      icon: Users,
+      color: "from-zion-cyan to-zion-neon"
+    }
   ];
 
   // Animation variants for staggered animations
@@ -283,7 +343,7 @@ const Home: React.FC = () => {
       <section className="py-20 bg-zion-slate">
         <div className="container mx-auto px-4">
           <Suspense fallback={<EnhancedLoadingSpinner />}>
-            <LazyServicesOverview services={services} />
+            <LazyServicesOverview services={servicesOverview} />
           </Suspense>
         </div>
       </section>
