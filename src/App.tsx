@@ -38,6 +38,7 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
 
 const Signup = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -90,6 +91,7 @@ function App() {
               <Route path="/news" element={<News />} />
               <Route path="/request-quote" element={<RequestQuote />} />
               <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/InnovativeServicesShowcase2028" element={<InnovativeServicesShowcase2028 />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />

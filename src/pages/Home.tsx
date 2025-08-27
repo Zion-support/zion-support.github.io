@@ -525,6 +525,70 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 2028 Innovation Hub Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">🚀 2028 Innovation Hub</h2>
+            <p className="text-zion-slate-light text-lg">Discover our cutting-edge micro SAAS services for the future</p>
+          </motion.div>
+
+          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20 backdrop-blur-xl border border-zion-cyan/30 rounded-3xl p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Next-Generation AI & Autonomous Solutions</h3>
+              <p className="text-zion-slate-light text-lg mb-6">
+                Experience the future of business technology with our revolutionary 2028 service portfolio
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-white font-semibold text-lg mb-2">AI Autonomous Business Operations</h4>
+                <p className="text-zion-slate-light text-sm mb-4">Fully autonomous business management with AI decision-making</p>
+                <span className="text-zion-cyan font-semibold">$15,000/mo</span>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Cpu className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-white font-semibold text-lg mb-2">Quantum-Enhanced AI Research</h4>
+                <p className="text-zion-slate-light text-sm mb-4">Breakthrough research capabilities with quantum computing</p>
+                <span className="text-zion-cyan font-semibold">$25,000/mo</span>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-white font-semibold text-lg mb-2">Autonomous Cybersecurity Defense</h4>
+                <p className="text-zion-slate-light text-sm mb-4">Self-learning security systems that adapt to threats</p>
+                <span className="text-zion-cyan font-semibold">$18,000/mo</span>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/InnovativeServicesShowcase2028"
+                className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium text-lg shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                Explore 2028 Innovation Portfolio
+                <Rocket className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
