@@ -268,9 +268,8 @@ const ComprehensiveServicesShowcase2025 = () => {
             <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300">
               Download Case Studies
             </motion.button>
-          </div>
-        </div>
-      </motion.section>
-    </div>);
-};
+    </div>
+  );
+}
+
 export default ComprehensiveServicesShowcase2025;

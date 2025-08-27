@@ -222,6 +222,7 @@ const Cookies = () => {
             })}
           </p>
         </motion.div>
+      </section>
 
       {/* What Are Cookies Section */}
       <section className="py-20 bg-zion-slate-dark">

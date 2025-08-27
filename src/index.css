@@ -4,6 +4,310 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom CSS Variables */
+:root {
+  --zion-cyan: #0ea5e9;
+  --zion-cyan-light: #38bdf8;
+  --zion-cyan-dark: #0284c7;
+  --zion-slate: #64748b;
+  --zion-slate-light: #94a3b8;
+  --zion-slate-dark: #475569;
+  --zion-purple: #8b5cf6;
+  --zion-purple-light: #a78bfa;
+  --zion-purple-dark: #7c3aed;
+  --zion-green: #10b981;
+  --zion-green-light: #34d399;
+  --zion-green-dark: #059669;
+  --zion-red: #ef4444;
+  --zion-red-light: #f87171;
+  --zion-red-dark: #dc2626;
+  --zion-yellow: #f59e0b;
+  --zion-yellow-light: #fbbf24;
+  --zion-yellow-dark: #d97706;
+  --zion-orange: #f97316;
+  --zion-orange-light: #fb923c;
+  --zion-orange-dark: #ea580c;
+  --zion-pink: #ec4899;
+  --zion-pink-light: #f472b6;
+  --zion-pink-dark: #db2777;
+  --zion-indigo: #6366f1;
+  --zion-indigo-light: #818cf8;
+  --zion-indigo-dark: #4f46e5;
+  --zion-violet: #8b5cf6;
+  --zion-violet-light: #a78bfa;
+  --zion-violet-dark: #7c3aed;
+  --zion-emerald: #10b981;
+  --zion-emerald-light: #34d399;
+  --zion-emerald-dark: #059669;
+  --zion-teal: #14b8a6;
+  --zion-teal-light: #2dd4bf;
+  --zion-teal-dark: #0d9488;
+  --zion-rose: #f43f5e;
+  --zion-rose-light: #fb7185;
+  --zion-rose-dark: #e11d48;
+  --zion-sky: #0ea5e9;
+  --zion-sky-light: #38bdf8;
+  --zion-sky-dark: #0284c7;
+  --zion-blue: #3b82f6;
+  --zion-blue-light: #60a5fa;
+  --zion-blue-dark: #2563eb;
+  --zion-cyan-50: #ecfeff;
+  --zion-cyan-100: #cffafe;
+  --zion-cyan-200: #a5f3fc;
+  --zion-cyan-300: #67e8f9;
+  --zion-cyan-400: #22d3ee;
+  --zion-cyan-500: #06b6d4;
+  --zion-cyan-600: #0891b2;
+  --zion-cyan-700: #0e7490;
+  --zion-cyan-800: #155e75;
+  --zion-cyan-900: #164e63;
+  --zion-cyan-950: #083344;
+  --zion-slate-50: #f8fafc;
+  --zion-slate-100: #f1f5f9;
+  --zion-slate-200: #e2e8f0;
+  --zion-slate-300: #cbd5e1;
+  --zion-slate-400: #94a3b8;
+  --zion-slate-500: #64748b;
+  --zion-slate-600: #475569;
+  --zion-slate-700: #334155;
+  --zion-slate-800: #1e293b;
+  --zion-slate-900: #0f172a;
+  --zion-slate-950: #020617;
+  --zion-purple-50: #faf5ff;
+  --zion-purple-100: #f3e8ff;
+  --zion-purple-200: #e9d5ff;
+  --zion-purple-300: #d8b4fe;
+  --zion-purple-400: #c084fc;
+  --zion-purple-500: #a855f7;
+  --zion-purple-600: #9333ea;
+  --zion-purple-700: #7c3aed;
+  --zion-purple-800: #6b21a8;
+  --zion-purple-900: #581c87;
+  --zion-purple-950: #3b0764;
+  --zion-green-50: #f0fdf4;
+  --zion-green-100: #dcfce7;
+  --zion-green-200: #bbf7d0;
+  --zion-green-300: #86efac;
+  --zion-green-400: #4ade80;
+  --zion-green-500: #22c55e;
+  --zion-green-600: #16a34a;
+  --zion-green-700: #15803d;
+  --zion-green-800: #166534;
+  --zion-green-900: #14532d;
+  --zion-green-950: #052e16;
+  --zion-red-50: #fef2f2;
+  --zion-red-100: #fee2e2;
+  --zion-red-200: #fecaca;
+  --zion-red-300: #fca5a5;
+  --zion-red-400: #f87171;
+  --zion-red-500: #ef4444;
+  --zion-red-600: #dc2626;
+  --zion-red-700: #b91c1c;
+  --zion-red-800: #991b1b;
+  --zion-red-900: #7f1d1d;
+  --zion-red-950: #450a0a;
+  --zion-yellow-50: #fffbeb;
+  --zion-yellow-100: #fef3c7;
+  --zion-yellow-200: #fde68a;
+  --zion-yellow-300: #fcd34d;
+  --zion-yellow-400: #fbbf24;
+  --zion-yellow-500: #f59e0b;
+  --zion-yellow-600: #d97706;
+  --zion-yellow-700: #b45309;
+  --zion-yellow-800: #92400e;
+  --zion-yellow-900: #78350f;
+  --zion-yellow-950: #451a03;
+  --zion-orange-50: #fff7ed;
+  --zion-orange-100: #ffedd5;
+  --zion-orange-200: #fed7aa;
+  --zion-orange-300: #fdba74;
+  --zion-orange-400: #fb923c;
+  --zion-orange-500: #f97316;
+  --zion-orange-600: #ea580c;
+  --zion-orange-700: #c2410c;
+  --zion-orange-800: #9a3412;
+  --zion-orange-900: #7c2d12;
+  --zion-orange-950: #431407;
+  --zion-pink-50: #fdf2f8;
+  --zion-pink-100: #fce7f3;
+  --zion-pink-200: #fbcfe8;
+  --zion-pink-300: #f9a8d4;
+  --zion-pink-400: #f472b6;
+  --zion-pink-500: #ec4899;
+  --zion-pink-600: #db2777;
+  --zion-pink-700: #be185d;
+  --zion-pink-800: #9d174d;
+  --zion-pink-900: #831843;
+  --zion-pink-950: #500724;
+  --zion-indigo-50: #eef2ff;
+  --zion-indigo-100: #e0e7ff;
+  --zion-indigo-200: #c7d2fe;
+  --zion-indigo-300: #a5b4fc;
+  --zion-indigo-400: #818cf8;
+  --zion-indigo-500: #6366f1;
+  --zion-indigo-600: #4f46e5;
+  --zion-indigo-700: #4338ca;
+  --zion-indigo-800: #3730a3;
+  --zion-indigo-900: #312e81;
+  --zion-indigo-950: #1e1b4b;
+  --zion-violet-50: #f5f3ff;
+  --zion-violet-100: #ede9fe;
+  --zion-violet-200: #ddd6fe;
+  --zion-violet-300: #c4b5fd;
+  --zion-violet-400: #a78bfa;
+  --zion-violet-500: #8b5cf6;
+  --zion-violet-600: #7c3aed;
+  --zion-violet-700: #6d28d9;
+  --zion-violet-800: #5b21b6;
+  --zion-violet-900: #4c1d95;
+  --zion-violet-950: #2e1065;
+  --zion-emerald-50: #ecfdf5;
+  --zion-emerald-100: #d1fae5;
+  --zion-emerald-200: #a7f3d0;
+  --zion-emerald-300: #6ee7b7;
+  --zion-emerald-400: #34d399;
+  --zion-emerald-500: #10b981;
+  --zion-emerald-600: #059669;
+  --zion-emerald-700: #047857;
+  --zion-emerald-800: #065f46;
+  --zion-emerald-900: #064e3b;
+  --zion-emerald-950: #022c22;
+  --zion-teal-50: #f0fdfa;
+  --zion-teal-100: #ccfbf1;
+  --zion-teal-200: #99f6e4;
+  --zion-teal-300: #5eead4;
+  --zion-teal-400: #2dd4bf;
+  --zion-teal-500: #14b8a6;
+  --zion-teal-600: #0d9488;
+  --zion-teal-700: #0f766e;
+  --zion-teal-800: #115e59;
+  --zion-teal-900: #134e4a;
+  --zion-teal-950: #042f2e;
+  --zion-rose-50: #fff1f2;
+  --zion-rose-100: #ffe4e6;
+  --zion-rose-200: #fecdd3;
+  --zion-rose-300: #fda4af;
+  --zion-rose-400: #fb7185;
+  --zion-rose-500: #f43f5e;
+  --zion-rose-600: #e11d48;
+  --zion-rose-700: #be123c;
+  --zion-rose-800: #9f1239;
+  --zion-rose-900: #881337;
+  --zion-rose-950: #4c0519;
+  --zion-sky-50: #f0f9ff;
+  --zion-sky-100: #e0f2fe;
+  --zion-sky-200: #bae6fd;
+  --zion-sky-300: #7dd3fc;
+  --zion-sky-400: #38bdf8;
+  --zion-sky-500: #0ea5e9;
+  --zion-sky-600: #0284c7;
+  --zion-sky-700: #0369a1;
+  --zion-sky-800: #075985;
+  --zion-sky-900: #0c4a6e;
+  --zion-sky-950: #082f49;
+  --zion-blue-50: #eff6ff;
+  --zion-blue-100: #dbeafe;
+  --zion-blue-200: #bfdbfe;
+  --zion-blue-300: #93c5fd;
+  --zion-blue-400: #60a5fa;
+  --zion-blue-500: #3b82f6;
+  --zion-blue-600: #2563eb;
+  --zion-blue-700: #1d4ed8;
+  --zion-blue-800: #1e40af;
+  --zion-blue-900: #1e3a8a;
+  --zion-blue-950: #172554;
+}
+
+/* Custom CSS classes */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Futuristic background effects */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.quantum-particles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.quantum-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(6, 182, 212, 0.6);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.quantum-particle:nth-child(1) {
+  left: 20%;
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.quantum-particle:nth-child(2) {
+  left: 80%;
+  top: 60%;
+  animation-delay: 2s;
+}
+
+.quantum-particle:nth-child(3) {
+  left: 60%;
+  top: 80%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-10px);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-20px) translateX(5px);
+    opacity: 1;
+  }
+}
+
+/* Enhanced animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .glass {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+}
+
 :root {
   --zion-cyan: 56 189 248;
   --zion-purple: 168 85 247;
@@ -340,12 +644,13 @@
     --accent: 228 12% 92%;
     --accent-foreground: 0 0% 7%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 142 71% 45%;
 
     --border: 0 0% 68%;
     --input: 0 0% 68%;
     --ring: 216 84% 53%;
+
     --sidebar-background: 228 12% 92%;
     --sidebar-foreground: 0 0% 7%;
     --sidebar-primary: 216 84% 53%;
@@ -355,241 +660,54 @@
     --sidebar-border: 0 0% 68%;
     --sidebar-ring: 216 84% 53%;
   }
-
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 224 71% 4%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
-
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 262 83% 58%;
-  }
-
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans;
-    font-feature-settings: "rlig" 1, "calt" 1;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-rajdhani font-semibold;
-  }
 }
 
 @layer components {
-  /* Futuristic Neon Effects */
-  .neon-glow {
-    box-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor,
-      0 0 20px currentColor;
+  .btn-primary {
+    @apply bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold py-3 px-6 rounded-lg 
+           hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 
+           focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-opacity-50;
   }
 
-  .neon-cyan {
-    color: #22ddd2;
-    text-shadow: 
-      0 0 5px #22ddd2,
-      0 0 10px #22ddd2,
-      0 0 15px #22ddd2,
-      0 0 20px #22ddd2;
+  .btn-secondary {
+    @apply bg-transparent border-2 border-zion-cyan text-zion-cyan font-semibold py-3 px-6 rounded-lg 
+           hover:bg-zion-cyan hover:text-white transition-all duration-300 transform hover:scale-105 
+           focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-opacity-50;
   }
 
-  .neon-purple {
-    color: #8c15e9;
-    text-shadow: 
-      0 0 5px #8c15e9,
-      0 0 10px #8c15e9,
-      0 0 15px #8c15e9,
-      0 0 20px #8c15e9;
+  .card {
+    @apply bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-blue/20 rounded-xl p-6 
+           hover:border-zion-blue/40 transition-all duration-300;
   }
 
-  .neon-blue {
-    color: #2e73ea;
-    text-shadow: 
-      0 0 5px #2e73ea,
-      0 0 10px #2e73ea,
-      0 0 15px #2e73ea,
-      0 0 20px #2e73ea;
+  .input {
+    @apply bg-zion-slate-dark/50 border border-zion-blue/20 rounded-lg px-4 py-3 text-white 
+           placeholder-zion-blue/50 focus:border-zion-cyan focus:outline-none focus:ring-2 
+           focus:ring-zion-cyan/20 transition-all duration-300;
   }
 
-  /* Animated Backgrounds */
-  .bg-futuristic {
-    background: 
-      radial-gradient(circle at 20% 80%, rgba(34, 221, 210, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(140, 21, 233, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(46, 115, 234, 0.1) 0%, transparent 50%),
-      linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-    background-size: 100% 100%;
-    animation: gradient-shift 15s ease infinite;
+  .heading {
+    @apply font-orbitron text-white font-bold;
   }
 
-  .bg-mesh-gradient {
-    background: linear-gradient(45deg, #8c15e9, #22ddd2, #2e73ea, #8c15e9);
-    background-size: 400% 400%;
-    animation: gradient-shift 3s ease infinite;
-  }
-
-  /* Glass Morphism */
-  .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  }
-
-  .glass-dark {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Floating Elements */
-  .float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .float-delayed {
-    animation: float 6s ease-in-out infinite;
-    animation-delay: 2s;
-  }
-
-  .float-slow {
-    animation: float 8s ease-in-out infinite;
-  }
-
-  /* Hover Effects */
-  .hover-lift {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .hover-glow:hover {
-    box-shadow: 0 0 30px rgba(34, 221, 210, 0.6);
-  }
-
-  /* Text Gradients */
   .text-gradient {
-    background: linear-gradient(45deg, #22ddd2, #8c15e9, #2e73ea);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
+    @apply bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent;
   }
 
-  .text-gradient-cyan {
-    background: linear-gradient(45deg, #22ddd2, #7aeae4);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .neon-glow {
+    @apply shadow-[0_0_20px_rgba(56,189,248,0.5)] shadow-zion-cyan/50;
   }
 
-  .text-gradient-purple {
-    background: linear-gradient(45deg, #8c15e9, #b971f2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .neon-glow-purple {
+    @apply shadow-[0_0_20px_rgba(168,85,247,0.5)] shadow-zion-purple/50;
   }
+}
 
-  /* Button Styles */
-  .btn-futuristic {
-    @apply relative overflow-hidden px-6 py-3 rounded-lg font-medium transition-all duration-300;
-    background: linear-gradient(45deg, #22ddd2, #8c15e9);
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
-  }
-
-  .btn-futuristic:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(34, 221, 210, 0.4);
-  }
-
-  .btn-neon {
-    @apply relative px-6 py-3 rounded-lg font-medium transition-all duration-300;
-    background: transparent;
-    border: 2px solid #22ddd2;
-    color: #22ddd2;
-  }
-
-  .btn-neon:hover {
-    background: #22ddd2;
-    color: #000;
-    box-shadow: 0 0 20px rgba(34, 221, 210, 0.6);
-  }
-
-  /* Card Styles */
-  .card-futuristic {
-    @apply relative overflow-hidden rounded-xl p-6 transition-all duration-300;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .card-futuristic:hover {
-    transform: translateY(-5px);
-    border-color: rgba(34, 221, 210, 0.5);
-    box-shadow: 0 20px 40px rgba(34, 221, 210, 0.2);
-  }
-
-  /* Navigation Styles */
-  .nav-link {
-    @apply relative px-4 py-2 text-sm font-medium transition-all duration-300;
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  .nav-link:hover {
-    color: #22ddd2;
-  }
-
-  .nav-link::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple transition-all duration-300;
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  /* Responsive Grid */
-  .grid-futuristic {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  /* Loading Animations */
-  .loading-dots {
-    display: inline-block;
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .loading-dots::after {
@@ -681,4 +799,89 @@
   .heading-responsive {
     @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
   }
+}
+
+/* Accessibility Styles */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.high-contrast {
+  --text-primary: #ffffff;
+  --text-secondary: #e5e7eb;
+  --bg-primary: #000000;
+  --bg-secondary: #111827;
+  --accent: #fbbf24;
+}
+
+.large-text {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+.focus-visible *:focus {
+  outline: 3px solid #fbbf24 !important;
+  outline-offset: 2px !important;
+}
+
+.keyboard-navigation *:focus {
+  outline: 3px solid #fbbf24 !important;
+  outline-offset: 2px !important;
+}
+
+.light-theme {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+}
+
+.dark-theme {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+}
+
+/* Focus styles for better accessibility */
+*:focus {
+  outline: 2px solid #22ddd2;
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #22ddd2;
+  color: #0f172a;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast focus styles */
+.high-contrast *:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 3px;
 }
