@@ -1,36 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Database, 
-  Users, 
-  Code, 
-  Lock, 
-  Rocket,
-  Search,
-  Phone,
-  Mail
-} from 'lucide-react';
+import { Menu, X, ChevronDown, Globe, Sun, Moon } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [searchOpen, setSearchOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
   const location = useLocation();
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -39,53 +22,83 @@ export function AppHeader() {
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null);
-    setSearchOpen(false);
+    setDropdownOpen(null);
   }, [location.pathname]);
 
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    // In a real app, this would toggle the theme
+  };
+
   const navigationItems = [
-    { name: 'Home', path: '/', icon: null },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
     { 
-      name: 'Services', 
       path: '/services', 
-      icon: null,
-      dropdown: [
-        { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500', description: 'Cutting-edge AI solutions' },
-        { name: 'Quantum Computing', path: '/services?category=quantum', icon: Zap, color: 'from-blue-500 to-cyan-500', description: 'Next-gen quantum solutions' },
-        { name: 'Blockchain & Web3', path: '/services?category=blockchain', icon: Lock, color: 'from-green-500 to-emerald-500', description: 'Decentralized solutions' },
-        { name: 'IoT & Edge Computing', path: '/services?category=iot', icon: Cloud, color: 'from-orange-500 to-red-500', description: 'Smart connected systems' },
-        { name: 'AR/VR Development', path: '/services?category=ar-vr', icon: Users, color: 'from-indigo-500 to-purple-500', description: 'Immersive experiences' },
-        { name: 'FinTech Solutions', path: '/services?category=fintech', icon: Database, color: 'from-yellow-500 to-orange-500', description: 'Financial technology' },
-        { name: 'Green Technology', path: '/services?category=green-tech', icon: Shield, color: 'from-green-400 to-teal-500', description: 'Sustainable solutions' },
-        { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500', description: 'Advanced security' },
-        { name: '5G & Networking', path: '/services?category=5g-networking', icon: Zap, color: 'from-blue-600 to-indigo-600', description: 'Network optimization' },
+      label: 'Services',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/services', label: 'All Services' },
+        { path: '/services/ai', label: 'AI & Analytics' },
+        { path: '/services/cybersecurity', label: 'Cybersecurity' },
+        { path: '/services/cloud', label: 'Cloud Solutions' },
+        { path: '/services/consulting', label: 'IT Consulting' },
+        { path: '/quantum-technology', label: 'Quantum Technology' },
+        { path: '/blockchain-services', label: 'Blockchain' },
+        { path: '/digital-transformation', label: 'Digital Transformation' },
+        { path: '/micro-saas', label: 'Micro SAAS' },
+        { path: '/enterprise', label: 'Enterprise Solutions' }
       ]
     },
-    { name: 'Innovative Services 2028', path: '/innovative-services-2028', icon: Rocket },
-    { name: 'About', path: '/about', icon: null },
-    { name: 'Contact', path: '/contact', icon: null },
+    { 
+      path: '/resources', 
+      label: 'Resources',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/blog', label: 'Blog' },
+        { path: '/case-studies', label: 'Case Studies' },
+        { path: '/events', label: 'Events' },
+        { path: '/webinars', label: 'Webinars' },
+        { path: '/white-papers', label: 'White Papers' },
+        { path: '/tutorials', label: 'Tutorials' },
+        { path: '/faq', label: 'FAQ' }
+      ]
+    },
+    { 
+      path: '/company', 
+      label: 'Company',
+      hasDropdown: true,
+      dropdownItems: [
+        { path: '/about', label: 'About Us' },
+        { path: '/team', label: 'Our Team' },
+        { path: '/careers', label: 'Careers' },
+        { path: '/partners', label: 'Partners' },
+        { path: '/press', label: 'Press' }
+      ]
+    },
+    { path: '/pricing', label: 'Pricing' },
+    { path: '/contact', label: 'Contact' },
+    { path: '/developers', label: 'Developers' }
   ];
 
-  const isActive = (path) => location.pathname === path;
-
-  const toggleDropdown = (name) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+  const isActiveRoute = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
   };
 
   return (
     <motion.header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled 
-          ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
-          : 'bg-black/80 backdrop-blur-md border-b border-cyan-500/20'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-black/95 backdrop-blur-md border-b border-zion-cyan/20' 
+          : 'bg-black/90 backdrop-blur-md'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Neon accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-60"></div>
-      
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -93,260 +106,239 @@ export function AppHeader() {
             <motion.div 
               className="relative"
               whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              transition={{ duration: 0.2 }}
             >
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
-                <span className="text-white font-bold text-lg lg:text-xl relative z-10">Z</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300 animate-pulse"></div>
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white font-bold text-lg lg:text-xl">Z</span>
               </div>
-              {/* Neon glow effect */}
-              <div className="absolute inset-0 bg-cyan-500/20 rounded-lg blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
             </motion.div>
             <div className="hidden sm:block">
-              <div className="text-xl lg:text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+              <motion.div 
+                className="text-xl lg:text-2xl font-bold text-white"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
                 ZION TECH GROUP
-              </div>
-              <div className="text-xs text-cyan-400 font-medium group-hover:text-purple-400 transition-colors duration-300">
+              </motion.div>
+              <motion.div 
+                className="text-xs text-zion-cyan font-medium"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
                 INNOVATION • TECHNOLOGY • FUTURE
-              </div>
+              </motion.div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300">Home</Link>
-            <Link to="/services" className="text-white hover:text-zion-cyan transition-colors duration-300">Services</Link>
-            <Link to="/solutions" className="text-white hover:text-zion-cyan transition-colors duration-300">Solutions</Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
-                onMouseEnter={() => setServicesDropdownOpen(true)}
-                onMouseLeave={() => setServicesDropdownOpen(false)}
-              >
-                Services <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              {servicesDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4"
-                  onMouseEnter={() => setServicesDropdownOpen(true)}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}
-                >
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Core Services</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/services/ai" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">AI Services</Link></li>
-                        <li><Link to="/services/cybersecurity" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Cybersecurity</Link></li>
-                        <li><Link to="/services/cloud" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Cloud Services</Link></li>
-                        <li><Link to="/services/blockchain" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Blockchain</Link></li>
-                        <li><Link to="/services/quantum" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Quantum Computing</Link></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Specialized</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/services/iot" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IoT Services</Link></li>
-                        <li><Link to="/services/digital-marketing" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Marketing</Link></li>
-                        <li><Link to="/it-onsite-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IT Onsite</Link></li>
-                        <li><Link to="/green-it" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Green IT</Link></li>
-                      </ul>
-                    </div>
+            {navigationItems.map((item, index) => (
+              <div key={item.path} className="relative">
+                {item.hasDropdown ? (
+                  <div
+                    onMouseEnter={() => setDropdownOpen(item.path)}
+                    onMouseLeave={() => setDropdownOpen(null)}
+                    className="relative"
+                  >
+                    <button className="flex items-center gap-1 text-white hover:text-zion-cyan transition-colors duration-300 py-2">
+                      {item.label}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        dropdownOpen === item.path ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    
+                    <AnimatePresence>
+                      {dropdownOpen === item.path && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 10 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute top-full left-0 mt-2 w-48 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl"
+                        >
+                          {item.dropdownItems.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.path}
+                              to={dropdownItem.path}
+                              className="block px-4 py-3 text-white hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors duration-200 first:rounded-t-lg last:rounded-b-lg"
+                            >
+                              {dropdownItem.label}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                </div>
-              )}
-            </div>
-
-            {/* Solutions Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
-                onMouseEnter={() => setSolutionsDropdownOpen(true)}
-                onMouseLeave={() => setSolutionsDropdownOpen(false)}
-              >
-                Solutions <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              {solutionsDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4"
-                  onMouseEnter={() => setSolutionsDropdownOpen(true)}
-                  onMouseLeave={() => setSolutionsDropdownOpen(false)}
-                >
-                  <div className="grid grid-cols-2 gap-4 px-4">
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Industry</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/solutions/enterprise" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Enterprise</Link></li>
-                        <li><Link to="/solutions/healthcare" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Healthcare</Link></li>
-                        <li><Link to="/solutions/government" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Government</Link></li>
-                        <li><Link to="/solutions/retail" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Retail</Link></li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Business</h3>
-                      <ul className="space-y-2">
-                        <li><Link to="/services/digital-transformation" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Transformation</Link></li>
-                        <li><Link to="/services/it-consulting" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IT Consulting</Link></li>
-                        <li><Link to="/services/custom-development" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Custom Development</Link></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Company Dropdown */}
-            <div className="relative group">
-              <button 
-                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
-                onMouseEnter={() => setCompanyDropdownOpen(true)}
-                onMouseLeave={() => setCompanyDropdownOpen(false)}
-              >
-                Company <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              {companyDropdownOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4"
-                  onMouseEnter={() => setCompanyDropdownOpen(true)}
-                  onMouseLeave={() => setCompanyDropdownOpen(false)}
-                >
-                  <div className="px-4 space-y-2">
-                    <Link to="/about" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">About Us</Link>
-                    <Link to="/careers" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">Careers</Link>
-                    <Link to="/partners" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">Partners</Link>
-                    <Link to="/blog" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">Blog</Link>
-                    <Link to="/contact" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors py-2">Contact</Link>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link to="/pricing" className="text-white hover:text-zion-cyan transition-colors duration-300">Pricing</Link>
-            <Link to="/marketplace" className="text-white hover:text-zion-cyan transition-colors duration-300">Marketplace</Link>
+                ) : (
+                  <Link 
+                    to={item.path} 
+                    className={`relative py-2 transition-colors duration-300 ${
+                      isActiveRoute(item.path) 
+                        ? 'text-zion-cyan' 
+                        : 'text-white hover:text-zion-cyan'
+                    }`}
+                  >
+                    {item.label}
+                    {isActiveRoute(item.path) && (
+                      <motion.div
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-zion-cyan"
+                        layoutId="activeTab"
+                        initial={false}
+                        transition={{ duration: 0.3 }}
+                      />
+                    )}
+                  </Link>
+                )}
+              </div>
+            ))}
           </nav>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Search Button */}
-            <button
-              onClick={() => setSearchOpen(!searchOpen)}
-              className="p-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+          {/* Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Theme Toggle */}
+            <motion.button
+              onClick={toggleDarkMode}
+              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 rounded-lg hover:bg-zion-cyan/10"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <Search className="w-5 h-5" />
-            </button>
-
-            {/* Contact Info - Hidden on mobile */}
-            <div className="hidden md:flex items-center space-x-4">
-              <a
-                href="tel:+13024640950"
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium">+1 302 464 0950</span>
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-              >
-                <Mail className="w-4 h-4" />
-                <span className="text-sm font-medium">kleber@ziontechgroup.com</span>
-              </a>
-            </div>
-
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="hidden md:inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </motion.button>
+            
+            {/* Language Selector */}
+            <motion.button
+              className="flex items-center gap-2 p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 rounded-lg hover:bg-zion-cyan/10"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              Get Started
+              <Globe className="w-4 h-4" />
+              <span className="text-sm">EN</span>
+            </motion.button>
+            
+            <Link 
+              to="/login" 
+              className="text-white hover:text-zion-cyan transition-colors duration-300 font-medium"
+            >
+              Login
             </Link>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              <Link 
+                to="/contact" 
+                className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              >
+                Get Started
+              </Link>
+            </motion.div>
           </div>
+
+          {/* Mobile Menu Button */}
+          <motion.button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </motion.button>
         </div>
 
-        {/* Search Bar */}
+        {/* Mobile Menu */}
         <AnimatePresence>
-          {searchOpen && (
+          {mobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="py-4 border-t border-slate-700/50"
+              className="lg:hidden overflow-hidden"
             >
-              <div className="relative max-w-2xl mx-auto">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search our services, solutions, and more..."
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  autoFocus
-                />
+              <div className="py-6 border-t border-zion-cyan/20">
+                <nav className="space-y-4">
+                  {navigationItems.map((item) => (
+                    <div key={item.path}>
+                      {item.hasDropdown ? (
+                        <div>
+                          <button
+                            onClick={() => setDropdownOpen(dropdownOpen === item.path ? null : item.path)}
+                            className="flex items-center justify-between w-full text-white hover:text-zion-cyan transition-colors duration-300 py-2"
+                          >
+                            {item.label}
+                            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                              dropdownOpen === item.path ? 'rotate-180' : ''
+                            }`} />
+                          </button>
+                          
+                          <AnimatePresence>
+                            {dropdownOpen === item.path && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="ml-4 mt-2 space-y-2"
+                              >
+                                {item.dropdownItems.map((dropdownItem) => (
+                                  <Link
+                                    key={dropdownItem.path}
+                                    to={dropdownItem.path}
+                                    className="block text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 py-1"
+                                  >
+                                    {dropdownItem.label}
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          className={`block text-white hover:text-zion-cyan transition-colors duration-300 py-2 ${
+                            isActiveRoute(item.path) ? 'text-zion-cyan' : ''
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                  
+                  <div className="pt-4 border-t border-zion-cyan/20 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-slate-light">Theme:</span>
+                      <button
+                        onClick={toggleDarkMode}
+                        className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
+                      >
+                        {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                      </button>
+                    </div>
+                    
+                    <Link 
+                      to="/login" 
+                      className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium py-2"
+                    >
+                      Login
+                    </Link>
+                    <Link 
+                      to="/contact" 
+                      className="block px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </nav>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-zion-cyan/20">
-          <div className="px-4 py-6">
-            {/* Main Navigation */}
-            <div className="space-y-4 mb-6">
-              <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wide mb-3">Main</h3>
-              <Link to="/" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Home</Link>
-              <Link to="/services" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Services</Link>
-              <Link to="/solutions" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Solutions</Link>
-              <Link to="/about" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">About</Link>
-              <Link to="/marketplace" className="block text-white hover:text-zion-cyan transition-colors duration-300 py-2">Marketplace</Link>
-            </div>
-            
-            {/* Services */}
-            <div className="space-y-4 mb-6">
-              <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wide mb-3">Services</h3>
-              <Link to="/services/ai" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">AI Services</Link>
-              <Link to="/services/cybersecurity" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Cybersecurity</Link>
-              <Link to="/services/cloud" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Cloud Services</Link>
-              <Link to="/services/blockchain" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Blockchain</Link>
-              <Link to="/services/iot" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">IoT Services</Link>
-            </div>
-            
-            {/* Company */}
-            <div className="space-y-4 mb-6">
-              <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wide mb-3">Company</h3>
-              <Link to="/blog" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Blog</Link>
-              <Link to="/careers" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Careers</Link>
-              <Link to="/partners" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Partners</Link>
-              <Link to="/contact" className="block text-white/80 hover:text-zion-cyan transition-colors duration-300 py-1 text-sm">Contact</Link>
-            </div>
-            
-            <div className="pt-4 border-t border-zion-cyan/20 space-y-3">
-              <Link 
-                to="/login" 
-                className="block text-zion-cyan hover:text-white transition-colors duration-300 py-2"
-              >
-                Sign In
-              </Link>
-              <Link 
-                to="/signup" 
-                className="block px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.header>
   );
 }
