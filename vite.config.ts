@@ -21,8 +21,8 @@ export default defineConfig({
       polyfill: true,
     },
     assetsInlineLimit: 4096,
-    rollupOptions: {
-      input: path.resolve(__dirname, 'index.html'),
+          rollupOptions: {
+        input: path.resolve(__dirname, 'public/index.html'),
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],

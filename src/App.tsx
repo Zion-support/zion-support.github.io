@@ -8,7 +8,7 @@ import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
-// Lazy load pages - only import existing ones
+// Lazy load only the essential, working pages
 const Home = React.lazy(() => import('./pages/Home'));
 const Home2026 = React.lazy(() => import('./pages/Home2026'));
 const About = React.lazy(() => import('./pages/About'));
@@ -45,7 +45,6 @@ const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 
-
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
@@ -60,7 +59,6 @@ const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Product
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
 const MarketplaceServices = React.lazy(() => import('./pages/marketplace/Services'));
-const LoginPage = React.lazy(() => import('./pages/Login'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -159,10 +157,9 @@ function App() {
               <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
               <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
               <Route path="/marketplace/services" element={<MarketplaceServices />} />
-              <Route path="/login" element={<LoginPage />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services2026" element={<Services2026 />} />
-              <Route path="/pricing" element={<Pricing />} />
               <Route path="/products" element={<Products />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
@@ -180,8 +177,6 @@ function App() {
               <Route path="/support" element={<Support />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
-              <Route path="/solutions" element={<Solutions />} />
-              <Route path="/case-studies" element={<CaseStudies />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
