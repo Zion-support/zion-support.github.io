@@ -1,118 +1,134 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import { 
+  Star, 
+  Quote, 
+  ChevronLeft, 
+  ChevronRight,
+  Globe,
+  Building,
+  Users,
+  Award
+} from 'lucide-react';
 
 interface Testimonial {
-  id: number;
+  id: string;
   name: string;
-  role: string;
+  position: string;
   company: string;
+  companyLogo: string;
   content: string;
   rating: number;
-  avatar: string;
   industry: string;
-  projectType: string;
   results: string[];
+  avatar: string;
 }
 
+const testimonials: Testimonial[] = [
+  {
+    id: '1',
+    name: 'Sarah Chen',
+    position: 'CTO',
+    company: 'TechFlow Solutions',
+    companyLogo: '/images/company-logos/techflow.svg',
+    content: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',
+    rating: 5,
+    industry: 'Technology',
+    results: ['300% efficiency increase', '450% ROI in 6 months', 'Real-time insights'],
+    avatar: '/images/avatars/sarah-chen.jpg'
+  },
+  {
+    id: '2',
+    name: 'Marcus Rodriguez',
+    position: 'VP of Operations',
+    company: 'Global Manufacturing Corp',
+    companyLogo: '/images/company-logos/gmc.svg',
+    content: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain. We solved complex logistics problems in minutes that used to take weeks. The cost savings were immediate and substantial - over $2M annually.',
+    rating: 5,
+    industry: 'Manufacturing',
+    results: ['$2M annual savings', 'Weeks to minutes', 'Supply chain optimization'],
+    avatar: '/images/avatars/marcus-rodriguez.jpg'
+  },
+  {
+    id: '3',
+    name: 'Dr. Emily Watson',
+    position: 'Chief Medical Officer',
+    company: 'HealthTech Innovations',
+    companyLogo: '/images/company-logos/healthtech.svg',
+    content: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy. We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives. This technology is saving lives.',
+    rating: 5,
+    industry: 'Healthcare',
+    results: ['95% detection improvement', 'Reduced false positives', 'Lives saved'],
+    avatar: '/images/avatars/emily-watson.jpg'
+  },
+  {
+    id: '4',
+    name: 'James Thompson',
+    position: 'Head of Security',
+    company: 'FinSecure Bank',
+    companyLogo: '/images/company-logos/finsecure.svg',
+    content: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time. Our security incidents dropped by 80% in the first quarter.',
+    rating: 5,
+    industry: 'Financial Services',
+    results: ['80% fewer incidents', 'Real-time threat detection', 'Zero-trust security'],
+    avatar: '/images/avatars/james-thompson.jpg'
+  },
+  {
+    id: '5',
+    name: 'Lisa Park',
+    position: 'Director of IT',
+    company: 'CloudScale Enterprises',
+    companyLogo: '/images/company-logos/cloudscale.svg',
+    content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',
+    rating: 5,
+    industry: 'Cloud Services',
+    results: ['40% cost reduction', '60% performance boost', 'Unified management'],
+    avatar: '/images/avatars/lisa-park.jpg'
+  }
+];
+
 export default function EnhancedTestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const testimonials: Testimonial[] = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      role: "CTO",
-      company: "TechCorp Solutions",
-      content: "Zion Tech Group transformed our business operations with their AI solutions. We've seen a 40% increase in efficiency and significant cost savings. The team's expertise and dedication to our success exceeded all expectations.",
-      rating: 5,
-      avatar: "/images/avatars/sarah-johnson.jpg",
-      industry: "Technology",
-      projectType: "AI Implementation",
-      results: ["40% efficiency increase", "30% cost reduction", "Improved customer satisfaction"]
-    },
-    {
-      id: 2,
-      name: "Michael Chen",
-      role: "CEO",
-      company: "InnovateLab",
-      content: "The team at Zion delivered exceptional results. Their expertise in cloud infrastructure and cybersecurity gave us the confidence to scale rapidly. The implementation was seamless and the results were immediate.",
-      rating: 5,
-      avatar: "/images/avatars/michael-chen.jpg",
-      industry: "Healthcare",
-      projectType: "Cloud Migration",
-      results: ["99.9% uptime achieved", "50% faster deployment", "Enhanced security posture"]
-    },
-    {
-      id: 3,
-      name: "Emily Rodriguez",
-      role: "VP Engineering",
-      company: "DataFlow Inc",
-      content: "Working with Zion has been a game-changer. Their AI-powered insights have helped us make better decisions and improve customer satisfaction. The ROI was evident within the first quarter.",
-      rating: 5,
-      avatar: "/images/avatars/emily-rodriguez.jpg",
-      industry: "Finance",
-      projectType: "Data Analytics",
-      results: ["25% better decision making", "15% customer satisfaction increase", "Faster time to market"]
-    },
-    {
-      id: 4,
-      name: "David Thompson",
-      role: "IT Director",
-      company: "Global Manufacturing Co",
-      content: "Zion's cybersecurity solutions have been outstanding. They've helped us achieve SOC2 compliance and implement zero-trust architecture. Our security posture has never been stronger.",
-      rating: 5,
-      avatar: "/images/avatars/david-thompson.jpg",
-      industry: "Manufacturing",
-      projectType: "Cybersecurity",
-      results: ["SOC2 compliance achieved", "Zero-trust implemented", "Enhanced threat detection"]
-    },
-    {
-      id: 5,
-      name: "Lisa Wang",
-      role: "Operations Manager",
-      company: "GreenTech Solutions",
-      content: "The Green IT solutions from Zion have helped us reduce our carbon footprint while maintaining performance. It's been a win-win for both our business and the environment.",
-      rating: 5,
-      avatar: "/images/avatars/lisa-wang.jpg",
-      industry: "Environmental Tech",
-      projectType: "Green IT",
-      results: ["35% energy reduction", "Carbon neutral operations", "Cost savings achieved"]
-    }
-  ];
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, testimonials.length]);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     setIsAutoPlaying(false);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false);
   };
 
   const goToTestimonial = (index: number) => {
-    setCurrentIndex(index);
+    setCurrentTestimonial(index);
     setIsAutoPlaying(false);
   };
 
-  const toggleAutoPlay = () => {
-    setIsAutoPlaying(!isAutoPlaying);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
+  const currentTestimonialData = testimonials[currentTestimonial];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section header */}
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -124,153 +140,198 @@ export default function EnhancedTestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders have to say about working with Zion Tech Group.
+            Real results from real businesses. Discover how Zion Tech Group is transforming industries worldwide.
           </p>
         </motion.div>
 
-        {/* Testimonials carousel */}
-        <div className="max-w-6xl mx-auto">
-          <div className="relative">
-            {/* Main testimonial card */}
+        {/* Testimonials Carousel */}
+        <div className="relative max-w-6xl mx-auto">
+          <AnimatePresence mode="wait">
             <motion.div
-              key={currentTestimonial.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
+              key={currentTestimonial}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 lg:p-12 shadow-2xl"
+              className="relative"
             >
-              <div className="grid lg:grid-cols-3 gap-8 items-center">
-                {/* Left: Avatar and basic info */}
-                <div className="text-center lg:text-left">
-                  <div className="relative inline-block mb-6">
-                    <div className="w-24 h-24 lg:w-32 lg:h-32 rounded-full bg-gradient-to-br from-zion-cyan to-zion-purple p-1">
-                      <div className="w-full h-full rounded-full bg-zion-slate-dark flex items-center justify-center">
-                        <span className="text-2xl lg:text-3xl font-bold text-white">
-                          {currentTestimonial.name.charAt(0)}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
-                      <Quote className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
-                    {currentTestimonial.name}
-                  </h3>
-                  <p className="text-zion-cyan font-medium mb-1">
-                    {currentTestimonial.role}
-                  </p>
-                  <p className="text-gray-400 text-sm mb-4">
-                    {currentTestimonial.company}
-                  </p>
-                  
+              {/* Main Testimonial Card */}
+              <div className="bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+                {/* Background gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 opacity-50"></div>
+                
+                {/* Quote icon */}
+                <motion.div
+                  className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
+                  animate={{ rotate: [0, 360] }}
+                  transition={{ duration: 20, repeat: Infinity }}
+                >
+                  <Quote className="w-8 h-8 text-zion-cyan" />
+                </motion.div>
+
+                <div className="relative z-10">
                   {/* Rating */}
-                  <div className="flex items-center justify-center lg:justify-start space-x-1 mb-4">
-                    {[...Array(currentTestimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-6">
+                    {[...Array(currentTestimonialData.rating)].map((_, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <Star className="w-6 h-6 text-yellow-400 fill-current" />
+                      </motion.div>
                     ))}
                   </div>
-                  
-                  {/* Industry and project type */}
-                  <div className="space-y-2">
-                    <div className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                      {currentTestimonial.industry}
-                    </div>
-                    <div className="inline-block px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full ml-2">
-                      {currentTestimonial.projectType}
-                    </div>
-                  </div>
-                </div>
 
-                {/* Center: Testimonial content */}
-                <div className="lg:col-span-2">
-                  <blockquote className="text-lg lg:text-xl text-gray-300 leading-relaxed mb-8 italic">
-                    "{currentTestimonial.content}"
+                  {/* Content */}
+                  <blockquote className="text-2xl lg:text-3xl text-white leading-relaxed mb-8 font-medium">
+                    "{currentTestimonialData.content}"
                   </blockquote>
-                  
+
                   {/* Results */}
-                  <div className="space-y-3">
-                    <h4 className="text-white font-semibold mb-3">Key Results:</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                      {currentTestimonial.results.map((result, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.1 }}
-                          className="flex items-center space-x-2 text-sm text-gray-300"
-                        >
-                          <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                          <span>{result}</span>
-                        </motion.div>
-                      ))}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    {currentTestimonialData.results.map((result, index) => (
+                      <motion.div
+                        key={result}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 + index * 0.1 }}
+                        className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center"
+                      >
+                        <p className="text-zion-cyan font-semibold">{result}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Author Info */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-xl">
+                          {currentTestimonialData.name.split(' ').map(n => n[0]).join('')}
+                        </span>
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-bold text-white">{currentTestimonialData.name}</h4>
+                        <p className="text-zion-cyan">{currentTestimonialData.position}</p>
+                        <p className="text-gray-300">{currentTestimonialData.company}</p>
+                        <div className="flex items-center space-x-2 mt-1">
+                          <Building className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>
+          </AnimatePresence>
 
-            {/* Navigation controls */}
-            <div className="flex items-center justify-center mt-8 space-x-4">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200"
-              >
-                <ChevronLeft className="w-6 h-6 text-white" />
-              </button>
-              
-              <button
-                onClick={toggleAutoPlay}
-                className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200"
-              >
-                {isAutoPlaying ? (
-                  <Pause className="w-6 h-6 text-white" />
-                ) : (
-                  <Play className="w-6 h-6 text-white" />
-                )}
-              </button>
-              
-              <button
-                onClick={nextTestimonial}
-                className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200"
-              >
-                <ChevronRight className="w-6 h-6 text-white" />
-              </button>
-            </div>
-
-            {/* Dots indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-center mt-12 space-x-4">
+            <motion.button
+              onClick={prevTestimonial}
+              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ChevronLeft className="w-6 h-6 text-white" />
+            </motion.button>
+            
+            <div className="flex space-x-2">
               {testimonials.map((_, index) => (
-                <button
+                <motion.button
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentIndex 
+                    index === currentTestimonial 
                       ? 'bg-zion-cyan w-8' 
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
+                  whileHover={{ scale: 1.2 }}
                 />
               ))}
             </div>
+            
+            <motion.button
+              onClick={nextTestimonial}
+              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ChevronRight className="w-6 h-6 text-white" />
+            </motion.button>
           </div>
         </div>
 
-        {/* Trust indicators */}
+        {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 text-center"
+          className="mt-20"
         >
-          <p className="text-gray-400 mb-6">Trusted by industry leaders worldwide</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-50">
-            <div className="text-white font-semibold">Fortune 500</div>
-            <div className="text-white font-semibold">Startup Unicorns</div>
-            <div className="text-white font-semibold">Government Agencies</div>
-            <div className="text-white font-semibold">Healthcare Systems</div>
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-8">
+              Trusted by Industry Leaders
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {[
+                { icon: Users, label: '500+ Clients', value: 'Global Reach' },
+                { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
+                { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
+                { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
+              ].map((indicator, index) => (
+                <motion.div
+                  key={indicator.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">
+                    <indicator.icon className="w-8 h-8 text-zion-cyan" />
+                  </div>
+                  <div className="text-xl font-bold text-white mb-2">{indicator.label}</div>
+                  <div className="text-sm text-gray-400">{indicator.value}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Ready to Join Our Success Stories?
+            </h3>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how Zion Tech Group can transform your business with cutting-edge technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
+              >
+                Start Your Transformation
+              </a>
+              <a
+                href="/case-studies"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan/10 transition-all duration-300"
+              >
+                View Case Studies
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

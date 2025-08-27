@@ -1,275 +1,286 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { 
   Users, 
-  TrendingUp, 
-  Award, 
   Globe, 
+  TrendingUp, 
+  Star, 
   Zap, 
-  Shield, 
-  Brain, 
-  Cloud,
-  Star,
-  CheckCircle,
-  Clock,
-  Target
+  Shield,
+  Award,
+  Rocket
 } from 'lucide-react';
 
 interface Stat {
+  id: string;
   icon: React.ComponentType<any>;
   value: string;
   label: string;
   description: string;
   color: string;
   gradient: string;
-  suffix?: string;
-  prefix?: string;
 }
 
-export default function EnhancedStatsSection() {
-  const [counts, setCounts] = useState<{ [key: string]: number }>({});
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+const stats: Stat[] = [
+  {
+    id: 'clients',
+    icon: Users,
+    value: '500+',
+    label: 'Global Clients',
+    description: 'Serving businesses across 50+ countries',
+    color: 'zion-cyan',
+    gradient: 'from-zion-cyan to-zion-blue'
+  },
+  {
+    id: 'uptime',
+    icon: Shield,
+    value: '99.99%',
+    label: 'Uptime Guarantee',
+    description: 'Enterprise-grade reliability and performance',
+    color: 'zion-purple',
+    gradient: 'from-zion-purple to-zion-cyan'
+  },
+  {
+    id: 'roi',
+    icon: TrendingUp,
+    value: '600%',
+    label: 'Average ROI',
+    description: 'Proven business impact and cost savings',
+    color: 'zion-blue',
+    gradient: 'from-zion-blue to-zion-purple'
+  },
+  {
+    id: 'satisfaction',
+    icon: Star,
+    value: '4.9/5',
+    label: 'Client Satisfaction',
+    description: 'Consistently exceeding expectations',
+    color: 'zion-cyan',
+    gradient: 'from-zion-cyan to-zion-purple'
+  },
+  {
+    id: 'innovation',
+    icon: Zap,
+    value: '50+',
+    label: 'Patents & Innovations',
+    description: 'Leading edge technology development',
+    color: 'zion-purple',
+    gradient: 'from-zion-purple to-zion-blue'
+  },
+  {
+    id: 'growth',
+    icon: Rocket,
+    value: '300%',
+    label: 'Annual Growth',
+    description: 'Rapidly expanding global presence',
+    color: 'zion-blue',
+    gradient: 'from-zion-blue to-zion-cyan'
+  }
+];
 
-  const stats: Stat[] = [
-    {
-      icon: Users,
-      value: "500",
-      label: "Happy Clients",
-      description: "Trusted by businesses worldwide",
-      color: "text-zion-cyan",
-      gradient: "from-zion-cyan to-zion-blue"
-    },
-    {
-      icon: TrendingUp,
-      value: "95",
-      label: "Success Rate",
-      description: "Proven track record of delivery",
-      color: "text-zion-purple",
-      gradient: "from-zion-purple to-zion-cyan",
-      suffix: "%"
-    },
-    {
-      icon: Award,
-      value: "10",
-      label: "Years Experience",
-      description: "Deep industry expertise",
-      color: "text-zion-blue",
-      gradient: "from-zion-blue to-zion-purple",
-      suffix: "+"
-    },
-    {
-      icon: Globe,
-      value: "25",
-      label: "Countries Served",
-      description: "Global reach and support",
-      color: "text-zion-cyan",
-      gradient: "from-zion-cyan to-zion-purple",
-      suffix: "+"
-    },
-    {
-      icon: Zap,
-      value: "99.9",
-      label: "Uptime Guarantee",
-      description: "Reliable infrastructure",
-      color: "text-zion-purple",
-      gradient: "from-zion-purple to-zion-blue",
-      suffix: "%"
-    },
-    {
-      icon: Shield,
-      value: "1000",
-      label: "Security Audits",
-      description: "Enterprise-grade protection",
-      color: "text-zion-blue",
-      gradient: "from-zion-blue to-zion-cyan",
-      suffix: "+"
-    }
-  ];
+export default function EnhancedStatsSection() {
+  const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({});
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true
+  });
 
   useEffect(() => {
-    if (isInView) {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  const animateCount = (target: string, duration: number = 2000) => {
+    const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
+    const start = 0;
+    const increment = numericValue / (duration / 16); // 60fps
+
+    let current = start;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= numericValue) {
+        current = numericValue;
+        clearInterval(timer);
+      }
+      setCountedValues(prev => ({
+        ...prev,
+        [target]: Math.floor(current)
+      }));
+    }, 16);
+
+    return timer;
+  };
+
+  useEffect(() => {
+    if (inView) {
       stats.forEach((stat) => {
-        const targetValue = parseInt(stat.value);
-        const duration = 2000; // 2 seconds
-        const steps = 60;
-        const increment = targetValue / steps;
-        let currentValue = 0;
-        
-        const timer = setInterval(() => {
-          currentValue += increment;
-          if (currentValue >= targetValue) {
-            currentValue = targetValue;
-            clearInterval(timer);
-          }
-          
-          setCounts(prev => ({
-            ...prev,
-            [stat.label]: Math.floor(currentValue)
-          }));
-        }, duration / steps);
-        
-        return () => clearInterval(timer);
+        const timer = setTimeout(() => {
+          animateCount(stat.value);
+        }, stats.indexOf(stat) * 200);
+        return () => clearTimeout(timer);
       });
     }
-  }, [isInView, stats]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
+  }, [inView]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Background decoration */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-zion-blue/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section header */}
+        {/* Section Header */}
         <motion.div
+          ref={ref}
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          animate={controls}
+          variants={{
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.6
+              }
+            }
+          }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Zion Tech Group by the Numbers
+            Proven Results & Global Impact
           </h2>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
-            Our track record speaks for itself. Here are the key metrics that demonstrate our commitment to excellence and innovation.
+            Our track record speaks for itself - delivering exceptional value and innovation to businesses worldwide
           </p>
         </motion.div>
 
-        {/* Stats grid */}
-        <motion.div
-          ref={ref}
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <motion.div
-              key={stat.label}
-              variants={itemVariants}
-              className="relative group"
+              key={stat.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={controls}
+              variants={{
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.6,
+                    delay: index * 0.1
+                  }
+                }
+              }}
+              className="group relative"
             >
-              {/* Stat card */}
-              <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 text-center hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:-translate-y-2">
+              <motion.div
+                className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.02,
+                  borderColor: `rgba(34, 221, 210, 0.5)`
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Background gradient overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
                 {/* Icon */}
-                <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                  <stat.icon className={`w-10 h-10 ${stat.color}`} />
-                </div>
+                <motion.div
+                  className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
+                  whileHover={{ 
+                    rotate: 360,
+                    scale: 1.1
+                  }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <stat.icon className={`w-10 h-10 text-${stat.color}`} />
+                </motion.div>
 
                 {/* Value */}
-                <div className="mb-4">
-                  <span className="text-4xl lg:text-5xl font-bold text-white">
-                    {stat.prefix || ''}
-                    {counts[stat.label] || 0}
-                    {stat.suffix || ''}
+                <motion.div
+                  className="mb-4 relative z-10"
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                    {countedValues[stat.value] || 0}
+                    {stat.value.includes('%') && '%'}
+                    {stat.value.includes('/') && stat.value.split('/')[1]}
                   </span>
-                </div>
+                </motion.div>
 
                 {/* Label */}
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3 relative z-10">
                   {stat.label}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 leading-relaxed relative z-10">
                   {stat.description}
                 </p>
 
-                {/* Hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              </div>
+                {/* Hover effect overlay */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={false}
+                />
+              </motion.div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Additional metrics */}
+        {/* Bottom Achievement Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          animate={controls}
+          variants={{
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 0.6,
+                delay: 0.6
+              }
+            }
+          }}
           className="mt-16"
         >
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { icon: Star, label: "Client Satisfaction", value: "98%", color: "text-yellow-400" },
-                { icon: CheckCircle, label: "Project Success", value: "99.2%", color: "text-green-400" },
-                { icon: Clock, label: "Response Time", value: "<2hrs", color: "text-zion-cyan" },
-                { icon: Target, label: "Goal Achievement", value: "96%", color: "text-zion-purple" }
-              ].map((metric, index) => (
-                <motion.div
-                  key={metric.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 * index }}
-                  className="text-center"
-                >
-                  <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/10 flex items-center justify-center`}>
-                    <metric.icon className={`w-8 h-8 ${metric.color}`} />
-                  </div>
-                  <div className={`text-2xl font-bold ${metric.color} mb-2`}>
-                    {metric.value}
-                  </div>
-                  <div className="text-sm text-gray-300">
-                    {metric.label}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Trust indicators */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
-        >
-          <div className="inline-flex items-center space-x-8 text-gray-400">
-            <div className="flex items-center space-x-2">
-              <Shield className="w-5 h-5 text-zion-cyan" />
-              <span>ISO 27001 Certified</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Cloud className="w-5 h-5 text-zion-purple" />
-              <span>AWS Advanced Partner</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Brain className="w-5 h-5 text-zion-blue" />
-              <span>AI Ethics Certified</span>
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">
+            <motion.div
+              className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
+              whileHover={{ rotate: 360 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Award className="w-10 h-10 text-white" />
+            </motion.div>
+            
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Industry Recognition & Awards
+            </h3>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>
+                <div className="text-gray-300">Industry Awards</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-zion-purple mb-2">Top 10</div>
+                <div className="text-gray-300">Global Tech Companies</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>
+                <div className="text-gray-300">Client Retention</div>
+              </div>
             </div>
           </div>
         </motion.div>
