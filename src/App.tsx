@@ -95,6 +95,7 @@ function App() {
               <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview2027 />} />
               <Route path="/comprehensive-pricing-guide" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
+              <Route path="/enhanced-innovative-services-2027/:service" element={<EnhancedInnovativeServicesShowcase2027 />} />
               
               {/* New Comprehensive Routes */}
               <Route path="/services-overview" element={<ComprehensiveServicesOverview />} />
