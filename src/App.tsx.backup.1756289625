@@ -102,6 +102,24 @@ const ResetPassword = React.lazy(() => import('./pages/ResetPassword'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 
+<<<<<<< HEAD
+// Service pages
+const CybersecurityServices = React.lazy(() => import('./pages/CybersecurityServices.tsx'));
+const CloudServices = React.lazy(() => import('./pages/services/Cloud.tsx'));
+const BlockchainServices = React.lazy(() => import('./pages/BlockchainServicesPage.tsx'));
+const IoTServices = React.lazy(() => import('./pages/IoTServicesPage.tsx'));
+const QuantumServices = React.lazy(() => import('./pages/services/QuantumServices.tsx'));
+const AIServices = React.lazy(() => import('./pages/AIServicesPage.tsx'));
+const DigitalMarketingServices = React.lazy(() => import('./pages/DigitalMarketingServicesPage.tsx'));
+const FinancialSolutions = React.lazy(() => import('./pages/FinancialSolutions.tsx'));
+const ManufacturingSolutions = React.lazy(() => import('./pages/ManufacturingSolutions.tsx'));
+const UltimateInnovativeServices2026 = React.lazy(() => import('./pages/UltimateInnovativeServices2026.tsx'));
+const ComprehensiveServicesOverview2026 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2026.tsx'));
+const EnterpriseSolutions = React.lazy(() => import('./pages/solutions/EnterpriseSolutions.tsx'));
+const HealthcareSolutions = React.lazy(() => import('./pages/solutions/HealthcareSolutions.tsx'));
+const GovernmentSolutions = React.lazy(() => import('./pages/solutions/GovernmentSolutions.tsx'));
+const RetailSolutions = React.lazy(() => import('./pages/solutions/RetailSolutions.tsx'));
+=======
 // Additional pages
 const Services = React.lazy(() => import('./pages/Services'));
 const Solutions = React.lazy(() => import('./pages/Solutions'));
@@ -117,6 +135,7 @@ const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-9258
 
 // Enhanced loading spinner with futuristic design
 const LoadingSpinner = () => (
@@ -182,18 +201,42 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/contact" element={<Contact />} />
+<<<<<<< HEAD
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services-advertising" element={<ServicesAdvertising />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              
+              {/* Information Pages */}
+              <Route path="/faq" element={<FAQ />} />
+=======
               <Route path="/services" element={<Services />} />
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
               <Route path="/case-studies" element={<CaseStudies />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-9258
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/careers" element={<Careers />} />
+<<<<<<< HEAD
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/partners-page" element={<PartnersPage />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/equipment" element={<Equipment />} />
+=======
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
               <Route path="/sitemap" element={<Sitemap />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-9258
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
               <Route path="/help" element={<HelpCenter />} />
