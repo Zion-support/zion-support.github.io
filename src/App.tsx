@@ -22,6 +22,7 @@ const Products = React.lazy(() => import('./pages/products'));
 const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
 const Solutions = React.lazy(() => import('./pages/solutions'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -72,6 +73,7 @@ function App() {
                     <Route path="/research-development" element={<ResearchDevelopment />} />
                     <Route path="/solutions" element={<Solutions />} />
                     <Route path="/green-it" element={<GreenIT />} />
+                    <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase />} />
                     
                     {/* Emerging Tech Routes */}
                     <Route path="/emerging-tech" element={<GreenIT />} />
