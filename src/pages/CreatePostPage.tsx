@@ -1,19 +1,8 @@
-
-import { useState, useEffect } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { Button } from "@/components/ui/button";
 import PostForm from "@/components/community/PostForm";
 import { useToast } from "@/hooks/use-toast";
-import { ForumCategory } from "@/types/community";
-
-interface PostFormValues {
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-  tags: string;
-}
-
 export default function CreatePostPage() {
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -52,7 +41,7 @@ export default function CreatePostPage() {
 
   return (
     
-      <SEO 
+      <SEOHead 
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
@@ -69,8 +58,6 @@ export default function CreatePostPage() {
         
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>
         
-        <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
-      </div>
-    
-  );
+        <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>
+      </div>);
 }

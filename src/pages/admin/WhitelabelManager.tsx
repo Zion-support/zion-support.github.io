@@ -1,12 +1,10 @@
-
 import React, { useState } from 'react';
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-
 export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
@@ -20,7 +18,7 @@ export default function WhitelabelManager() {
 
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="White-Label Management - Zion AI Marketplace"
         description="Create and manage white-label instances of the Zion AI Marketplace platform."
       />
@@ -100,6 +98,5 @@ export default function WhitelabelManager() {
         </div>
       </main>
       
-    </>
-  );
+    </>);
 }

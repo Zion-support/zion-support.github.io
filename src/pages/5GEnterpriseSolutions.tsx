@@ -192,7 +192,7 @@ export default function FiveGEnterpriseSolutions() {
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Shield, Users, TrendingUp, Globe, Lock, CheckCircle, Star, Cpu, Database, Building2, Network, Server, Monitor, Rocket, Code, Settings, Wifi, Signal, Smartphone, Cloud } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 
 const FiveGEnterpriseSolutions = () => {
   const solutions = [
@@ -1370,7 +1370,7 @@ const FiveGEnterpriseSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <>
-      <SEO 
+      <SEOHead 
         title="5G Enterprise Solutions | Next-Generation Connectivity"
         description="Transform your business with Zion Tech Group's 5G enterprise solutions. Private networks, edge computing, IoT integration, and industrial automation."
         keywords="5G enterprise, private 5G networks, edge computing, industrial automation, network slicing, 5G security"

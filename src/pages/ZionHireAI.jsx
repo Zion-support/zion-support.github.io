@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { SEO } from "../components/SEOHead"';
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 const successMetrics = [
@@ -12,7 +12,7 @@ const successMetrics = [
 const ZionHireAI = () => {
   return (
     <>
-      <SEO 
+      <SEOHead 
         title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
         description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience." 
         keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI" 

@@ -1,11 +1,9 @@
-
 import React from "react";
 import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
 import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-
 export default function EnterpriseAdmin() {
   const { user } = useAuth();
   
@@ -18,7 +16,7 @@ export default function EnterpriseAdmin() {
 
   return (
     <ProtectedRoute>
-      <SEO 
+      <SEOHead 
         title="Enterprise Admin - Zion AI Marketplace"
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace."
       />
@@ -27,6 +25,5 @@ export default function EnterpriseAdmin() {
         <AdminDashboard />
       </main>
       
-    </ProtectedRoute>
-  );
+    </ProtectedRoute>);
 }

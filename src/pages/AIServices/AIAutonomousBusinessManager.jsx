@@ -75,7 +75,7 @@ const testimonials = [
 ];
 export default function AIAutonomousBusinessManager() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="AI Autonomous Business Manager - Zion Tech Group" description="Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, real-time analytics, and automated operations." keywords="AI business manager, autonomous business, AI decision making, business automation, predictive analytics" canonical="https://ziontechgroup.com/ai-autonomous-business-manager/"/>
+      <SEOHead title="AI Autonomous Business Manager - Zion Tech Group" description="Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, real-time analytics, and automated operations." keywords="AI business manager, autonomous business, AI decision making, business automation, predictive analytics" canonical="https://ziontechgroup.com/ai-autonomous-business-manager/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
