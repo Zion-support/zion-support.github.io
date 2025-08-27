@@ -52,20 +52,3 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 	...mapToEnhanced(additionalEnhancedServices as unknown as any[]),
 ];
 
-export const serviceCategories: string[] = Array.from(
-	new Set(
-		enhancedRealMicroSaasServices
-			.map((s) => s.category)
-			.filter((v): v is string => Boolean(v))
-	)
-).sort();
-
-export const getServicesByCategory = (category: string) => {
-	if (!category || category === 'All') return enhancedRealMicroSaasServices;
-	return enhancedRealMicroSaasServices.filter((s) => s.category === category);
-};
-
-export const getPopularServices = () =>
-	enhancedRealMicroSaasServices
-		.filter((s) => !!s.popular)
-		.sort((a, b) => (b.rating || 0) - (a.rating || 0));
