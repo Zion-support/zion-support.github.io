@@ -1,228 +1,266 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '../../components/SEO';
-import { Globe, Satellite, Target, Lightbulb, Shield, Rocket, Zap } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+import { 
+  Globe, 
+  Satellite, 
+  Target, 
+  Lightbulb, 
+  Shield, 
+  Rocket,
+  Zap,
+  BarChart3,
+  Cpu,
+  Database,
+  Network
+} from 'lucide-react';
 
-const SpaceTech: React.FC = () => {
-  const spaceTechServices = [
+const SpaceTech = () => {
+  const spaceServices = [
     {
       title: "Earth Observation",
       description: "Environmental monitoring, climate research, and natural disaster assessment",
-      features: ["Satellite Imagery", "Climate Monitoring", "Disaster Response", "Environmental Analysis"],
-      icon: Globe
+      icon: Globe,
+      features: ["Satellite imagery", "Climate monitoring", "Disaster response", "Environmental analysis"]
     },
     {
       title: "Satellite Communications",
       description: "Global connectivity, broadband internet, and emergency communications",
-      features: ["Global Coverage", "High-Speed Internet", "Emergency Comms", "IoT Connectivity"],
-      icon: Satellite
+      icon: Satellite,
+      features: ["Global coverage", "High-speed internet", "Emergency communications", "Remote connectivity"]
     },
     {
       title: "Navigation & Positioning",
       description: "GPS, positioning systems, and autonomous vehicle guidance",
-      features: ["Precise Positioning", "Autonomous Navigation", "Location Services", "Mapping Solutions"],
-      icon: Target
+      icon: Target,
+      features: ["Precise positioning", "Autonomous navigation", "Location services", "Mapping solutions"]
     },
     {
       title: "Space Research",
       description: "Space exploration, astronomy, and fundamental physics research",
-      features: ["Telescope Systems", "Space Missions", "Data Analysis", "Research Platforms"],
-      icon: Lightbulb
+      icon: Lightbulb,
+      features: ["Astronomy research", "Physics experiments", "Space exploration", "Scientific discovery"]
     },
     {
       title: "Defense & Security",
       description: "National security, surveillance, and strategic communications",
-      features: ["Surveillance Systems", "Secure Communications", "Threat Detection", "Strategic Defense"],
-      icon: Shield
+      icon: Shield,
+      features: ["Security monitoring", "Strategic communications", "Surveillance systems", "Defense technology"]
     },
     {
       title: "Commercial Space",
       description: "Space tourism, mining, and commercial satellite services",
-      features: ["Space Tourism", "Resource Mining", "Commercial Satellites", "Space Infrastructure"],
+      icon: Rocket,
+      features: ["Space tourism", "Resource mining", "Commercial satellites", "Space infrastructure"]
+    }
+  ];
+
+  const benefits = [
+    "Advanced technology innovation and development",
+    "Global connectivity and communication solutions",
+    "Environmental monitoring and climate research",
+    "National security and defense capabilities",
+    "Commercial space opportunities and revenue",
+    "Scientific discovery and knowledge advancement"
+  ];
+
+  const industries = [
+    {
+      title: "Government & Defense",
+      description: "National security and defense space technology solutions",
+      icon: Shield
+    },
+    {
+      title: "Telecommunications",
+      description: "Satellite communications and global connectivity",
+      icon: Satellite
+    },
+    {
+      title: "Environmental",
+      description: "Climate monitoring and environmental research",
+      icon: Globe
+    },
+    {
+      title: "Transportation",
+      description: "Navigation systems and autonomous vehicle technology",
+      icon: Target
+    },
+    {
+      title: "Research & Education",
+      description: "Space research and educational technology",
+      icon: Lightbulb
+    },
+    {
+      title: "Commercial Space",
+      description: "Space tourism and commercial space services",
       icon: Rocket
     }
   ];
 
-  const spaceTechAreas = [
-    { area: "Satellite Technology", solutions: ["Communication satellites", "Earth observation", "Navigation systems", "Research platforms"] },
-    { area: "Space Infrastructure", solutions: ["Launch vehicles", "Space stations", "Ground stations", "Mission control"] },
-    { area: "Space Applications", solutions: ["Remote sensing", "Telecommunications", "Navigation", "Scientific research"] },
-    { area: "Space Operations", solutions: ["Mission planning", "Satellite operations", "Data processing", "Ground support"] }
-  ];
-
-  const keyBenefits = [
-    "Global connectivity and communication",
-    "Environmental monitoring and climate research",
-    "Precise navigation and positioning",
-    "Scientific discovery and exploration",
-    "National security and defense",
-    "Commercial space opportunities"
-  ];
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
-        title="Space Technology - Zion Tech Group"
-        description="Cutting-edge space technology solutions for communication, navigation, research, and exploration."
-        keywords="space technology, satellite communications, space research, navigation systems, space infrastructure"
-        canonical="https://ziontechgroup.com/services/space-technology"
+        title="Space Technology Solutions - Zion Tech Group"
+        description="Cutting-edge space technology solutions including satellite communications, navigation systems, and space research."
+        keywords="space technology, satellite communications, GPS, space research, satellite technology"
+        canonical="https://ziontechgroup.com/services/space-tech"
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Space
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Technology
-              </span>
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
+              <Rocket className="w-4 h-4 mr-2" />
+              Space Technology
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Next-Generation
+              <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"> Space Tech</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Pioneering the future of space exploration and satellite technology. 
-              Our advanced solutions enable communication, navigation, research, and exploration beyond Earth.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Explore the final frontier with our cutting-edge space technology solutions 
+              that enable communication, navigation, research, and exploration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#services"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Explore Services
+              </a>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Explore Space Solutions
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Space Tech Services */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Space Technology Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive space technology solutions for modern applications
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {spaceTechServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Benefits of Space Technology
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Revolutionary solutions that transform how we live and work
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {keyBenefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300"
-                >
-                  <div className="text-3xl mb-4">🚀</div>
-                  <p className="text-gray-300">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Space Tech Areas */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Space Technology Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive coverage across all space technology domains
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {spaceTechAreas.map((area, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
-                >
-                  <h3 className="text-2xl font-semibold text-white mb-4">{area.area}</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {area.solutions.map((solution, solutionIndex) => (
-                      <div key={solutionIndex} className="flex items-center">
-                        <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-                        <span className="text-gray-300">{solution}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Explore Space Technology?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our space technology experts help you reach new heights with cutting-edge solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Get Started
               </Link>
-              <Link
-                to="/case-studies"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                View Case Studies
-              </Link>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
+      {/* Space Services Grid */}
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Space Technology Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive space technology solutions designed to advance exploration, 
+              communication, and scientific discovery.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {spaceServices.map((service, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-center">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                      <span className="text-purple-400 mr-2">•</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Benefits of Space Technology
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Transform industries and advance human knowledge with space technology
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">✓</span>
+                </div>
+                <p className="text-white font-medium">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Solutions */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry-Specific Space Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Tailored space technology solutions for your industry's unique requirements
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <industry.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{industry.title}</h3>
+                <p className="text-gray-300 text-center">{industry.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Explore Space Technology?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our space technology experts help you implement cutting-edge solutions 
+            that advance your mission and expand human capabilities.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get Space Tech Consultation
+            </Link>
+            <Link
+              to="/services"
+              className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,33 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '../../components/SEO';
-import { Target, Search, BarChart3, Users, Zap } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-const Consulting: React.FC = () => {
+const Consulting = () => {
   const consultingServices = [
     {
       title: "Technology Assessment",
       description: "Comprehensive evaluation of your current technology landscape and capabilities",
       features: ["Infrastructure Review", "Technology Stack Analysis", "Gap Identification", "Recommendations"],
-      icon: Search
+      icon: "🔍"
     },
     {
       title: "Strategic Planning",
       description: "Develop long-term technology strategy aligned with business objectives",
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
-      icon: BarChart3
+      icon: "📋"
     },
     {
       title: "Vendor Selection",
       description: "Expert guidance in selecting the right technology partners and solutions",
       features: ["Requirements Analysis", "Vendor Evaluation", "Contract Negotiation", "Implementation Support"],
-      icon: Users
+      icon: "🤝"
     },
     {
       title: "Project Management",
       description: "Professional project management for successful technology implementations",
       features: ["Project Planning", "Team Coordination", "Timeline Management", "Quality Assurance"],
-      icon: Target
+      icon: "📊"
     }
   ];
 
@@ -101,7 +100,7 @@ const Consulting: React.FC = () => {
               {consultingApproach.map((step, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="text-4xl mb-4">{step.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{step.step}</h3>
@@ -112,7 +111,7 @@ const Consulting: React.FC = () => {
           </div>
         </section>
 
-        {/* Consulting Services */}
+        {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -128,19 +127,15 @@ const Consulting: React.FC = () => {
               {consultingServices.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300"
                 >
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
-                  </div>
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                        <span className="text-cyan-400 mr-2">✓</span>
                         {feature}
                       </li>
                     ))}
@@ -156,10 +151,10 @@ const Consulting: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Specialized Consulting Areas
+                Consulting Areas
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Deep expertise across key technology domains
+                Specialized expertise across key technology domains
               </p>
             </div>
             
@@ -167,17 +162,17 @@ const Consulting: React.FC = () => {
               {consultingAreas.map((area, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
-                  <h3 className="text-2xl font-semibold text-white mb-4">{area.area}</h3>
-                  <div className="grid grid-cols-2 gap-4">
+                  <h3 className="text-xl font-semibold text-white mb-4">{area.area}</h3>
+                  <ul className="space-y-2">
                     {area.solutions.map((solution, solutionIndex) => (
-                      <div key={solutionIndex} className="flex items-center">
-                        <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-                        <span className="text-gray-300">{solution}</span>
-                      </div>
+                      <li key={solutionIndex} className="flex items-center text-gray-300">
+                        <span className="text-cyan-400 mr-2">•</span>
+                        {solution}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               ))}
             </div>
@@ -191,22 +186,15 @@ const Consulting: React.FC = () => {
               Ready to Transform Your Technology Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our expert consultants help you make the right technology decisions for your business.
+              Let our expert consultants help you make the right technology decisions 
+              and achieve your business objectives.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Schedule Consultation
-              </Link>
-              <Link
-                to="/case-studies"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                View Case Studies
-              </Link>
-            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
+            >
+              Schedule Free Consultation
+            </Link>
           </div>
         </section>
       </div>

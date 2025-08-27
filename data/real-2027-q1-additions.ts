@@ -13,7 +13,5 @@ export const real2027Q1Additions: Real2027Q1Addition[] = [
     tagline: 'First quarter 2027 addition',
     price: '$1199',
     features: ['Q1 2027 features', 'Future innovations', 'Next-gen solutions']
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];
