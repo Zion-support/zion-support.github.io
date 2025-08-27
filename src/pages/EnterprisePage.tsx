@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
-  Zap, 
-  Code, 
-  Database, 
+  Building, 
   Users, 
   Shield, 
+  Globe, 
   CheckCircle, 
   ArrowRight,
   Clock,
@@ -19,51 +18,52 @@ import {
   Award,
   Rocket,
   Target,
-  Globe
+  Database,
+  Network
 } from 'lucide-react';
 
-const MicroSAASPage = () => {
-  const saasServices = [
+const EnterprisePage = () => {
+  const enterpriseServices = [
     {
-      id: 'custom-applications',
-      title: 'Custom Applications',
-      description: 'Tailored software solutions designed for your specific business needs',
-      icon: <Code className="w-8 h-8" />,
-      features: ['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
-      useCases: ['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
-      pricing: 'Starting from $2,500/month'
+      id: 'enterprise-architecture',
+      title: 'Enterprise Architecture',
+      description: 'Design and implement scalable enterprise technology architectures',
+      icon: <Building className="w-8 h-8" />,
+      features: ['System Design', 'Integration Planning', 'Scalability Design', 'Performance Optimization'],
+      useCases: ['Large Organizations', 'Multi-site Operations', 'Complex Systems', 'Legacy Modernization'],
+      pricing: 'Starting from $15,000/month'
     },
     {
-      id: 'api-development',
-      title: 'API Development',
-      description: 'Robust and scalable APIs to connect your applications and services',
-      icon: <Database className="w-8 h-8" />,
-      features: ['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
-      useCases: ['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
-      pricing: 'Starting from $1,800/month'
+      id: 'system-integration',
+      title: 'System Integration',
+      description: 'Seamlessly integrate diverse enterprise systems and applications',
+      icon: <Network className="w-8 h-8" />,
+      features: ['API Development', 'Data Integration', 'Workflow Automation', 'Real-time Sync'],
+      useCases: ['ERP Integration', 'CRM Systems', 'Legacy Systems', 'Cloud Platforms'],
+      pricing: 'Starting from $12,000/month'
     },
     {
-      id: 'scalable-architecture',
-      title: 'Scalable Architecture',
-      description: 'Cloud-native architectures that grow with your business',
-      icon: <Globe className="w-8 h-8" />,
-      features: ['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
-      useCases: ['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
-      pricing: 'Starting from $3,200/month'
+      id: 'legacy-modernization',
+      title: 'Legacy Modernization',
+      description: 'Transform legacy systems into modern, cloud-native applications',
+      icon: <Rocket className="w-8 h-8" />,
+      features: ['System Analysis', 'Migration Planning', 'Cloud Migration', 'Data Migration'],
+      useCases: ['Mainframe Systems', 'On-premise Applications', 'Outdated Technologies', 'Performance Issues'],
+      pricing: 'Starting from $20,000/month'
     },
     {
-      id: 'user-management',
-      title: 'User Management',
-      description: 'Comprehensive user authentication and authorization systems',
-      icon: <Users className="w-8 h-8" />,
-      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
-      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
-      pricing: 'Starting from $1,500/month'
+      id: 'enterprise-security',
+      title: 'Enterprise Security',
+      description: 'Comprehensive security solutions for enterprise environments',
+      icon: <Shield className="w-8 h-8" />,
+      features: ['Security Audits', 'Compliance Management', 'Threat Detection', 'Incident Response'],
+      useCases: ['Regulatory Compliance', 'Data Protection', 'Network Security', 'Access Control'],
+      pricing: 'Starting from $18,000/month'
     }
   ];
 
-  const saasBenefits = [
-    'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration'
+  const enterpriseFeatures = [
+    'Scalability', 'Security', 'Compliance', 'Integration', 'Performance', 'Reliability'
   ];
 
   const containerVariants = {
@@ -98,43 +98,43 @@ const MicroSAASPage = () => {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
-            <Zap className="w-10 h-10 text-white" />
+            <Building className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Micro SAAS
+              Enterprise
             </span> Solutions
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Build and scale your software-as-a-service business with our micro SAAS solutions. 
-            From custom applications to scalable architectures, we help you create successful SAAS products.
+            Enterprise-grade technology solutions designed for large organizations. 
+            From architecture design to system integration, we help enterprises scale and innovate.
           </p>
           
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">90%+</div>
-              <div className="text-zion-slate-light">Faster Development</div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">99.99%</div>
+              <div className="text-zion-slate-light">Uptime Guarantee</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-purple mb-2">50%+</div>
-              <div className="text-zion-slate-light">Cost Reduction</div>
+              <div className="text-3xl font-bold text-zion-purple mb-2">24/7</div>
+              <div className="text-zion-slate-light">Enterprise Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-zion-blue mb-2">24/7</div>
-              <div className="text-zion-slate-light">Uptime Support</div>
+              <div className="text-3xl font-bold text-zion-blue mb-2">Global</div>
+              <div className="text-zion-slate-light">Deployment</div>
             </div>
           </div>
         </motion.div>
 
-        {/* SAAS Services Grid */}
+        {/* Enterprise Services Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
           className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
         >
-          {saasServices.map((service, index) => (
+          {enterpriseServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
@@ -187,7 +187,7 @@ const MicroSAASPage = () => {
 
               {/* CTA Button */}
               <Link
-                to={`/micro-saas/${service.id}`}
+                to={`/enterprise/${service.id}`}
                 className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
               >
                 Learn More
@@ -197,7 +197,7 @@ const MicroSAASPage = () => {
           ))}
         </motion.div>
 
-        {/* SAAS Benefits */}
+        {/* Enterprise Features */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -206,30 +206,30 @@ const MicroSAASPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Benefits of Micro SAAS
+              Enterprise-Grade Features
             </h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto">
-              Discover why micro SAAS solutions are the future of software delivery 
-              and how they can transform your business.
+              Our enterprise solutions are built with the highest standards of quality, 
+              security, and performance to meet the demands of large organizations.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {saasBenefits.map((benefit, index) => (
+            {enterpriseFeatures.map((feature, index) => (
               <motion.div
-                key={benefit}
+                key={feature}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <div className="text-zion-cyan font-medium">{benefit}</div>
+                <div className="text-zion-cyan font-medium">{feature}</div>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Why Choose Our SAAS */}
+        {/* Why Enterprise Solutions */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -238,18 +238,18 @@ const MicroSAASPage = () => {
         >
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Why Choose Our SAAS Solutions?
+              Why Enterprise Solutions?
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-8 h-8 text-white" />
+                <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Rapid Development</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Scalable Growth</h3>
               <p className="text-zion-slate-light">
-                Get to market faster with our proven development process
+                Solutions that grow with your organization
               </p>
             </div>
 
@@ -259,7 +259,7 @@ const MicroSAASPage = () => {
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
               <p className="text-zion-slate-light">
-                Built with enterprise-grade security and compliance
+                Bank-level security and compliance
               </p>
             </div>
 
@@ -267,9 +267,9 @@ const MicroSAASPage = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-zion-blue to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Scalable Growth</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Performance</h3>
               <p className="text-zion-slate-light">
-                Architecture that grows with your business needs
+                Optimized for high-performance operations
               </p>
             </div>
           </div>
@@ -283,24 +283,24 @@ const MicroSAASPage = () => {
           className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Build Your SAAS?
+            Ready for Enterprise Solutions?
           </h2>
           <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-            Let our SAAS experts help you create a successful software product 
-            that scales with your business and delights your customers.
+            Let our enterprise experts help you build scalable, secure, and high-performance 
+            solutions that drive your organization forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
             >
-              Start SAAS Project
+              Get Enterprise Consultation
             </Link>
             <Link
               to="/services/pricing"
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
-              View SAAS Pricing
+              View Enterprise Pricing
             </Link>
           </div>
         </motion.div>
@@ -309,4 +309,4 @@ const MicroSAASPage = () => {
   );
 };
 
-export default MicroSAASPage;
+export default EnterprisePage;

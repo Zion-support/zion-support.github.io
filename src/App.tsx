@@ -8,7 +8,7 @@ import { PerformanceMonitor } from './components/PerformanceMonitor';
 // Lazy load pages with better chunking
 const Home = React.lazy(() => import('./pages/Home.jsx'));
 const About = React.lazy(() => import('./pages/About.jsx'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
@@ -19,6 +19,20 @@ const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
 const EnhancedZionServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedZionServicesShowcase2025.tsx'));
 const ZionTechGroupMarketing2025 = React.lazy(() => import('./pages/ZionTechGroupMarketing2025.tsx'));
+
+// Service pages
+const AIServicesPage = React.lazy(() => import('./pages/services/AIServicesPage.tsx'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/services/CybersecurityServicesPage.tsx'));
+const CloudSolutionsPage = React.lazy(() => import('./pages/services/CloudSolutionsPage.tsx'));
+const ITConsultingPage = React.lazy(() => import('./pages/services/ITConsultingPage.tsx'));
+const QuantumTechnologyPage = React.lazy(() => import('./pages/QuantumTechnologyPage.tsx'));
+const BlockchainServicesPage = React.lazy(() => import('./pages/BlockchainServicesPage.tsx'));
+const DigitalTransformationPage = React.lazy(() => import('./pages/DigitalTransformationPage.tsx'));
+const MicroSAASPage = React.lazy(() => import('./pages/MicroSAASPage.tsx'));
+const EnterprisePage = React.lazy(() => import('./pages/EnterprisePage.tsx'));
+
+// Company pages
+const TeamPage = React.lazy(() => import('./pages/TeamPage.tsx'));
 
 // Enhanced loading spinner with accessibility
 const LoadingSpinner = () => (
@@ -81,6 +95,22 @@ function App() {
               <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
+              
+              {/* Service Routes */}
+              <Route path="/services/ai" element={<AIServicesPage />} />
+              <Route path="/services/cybersecurity" element={<CybersecurityServicesPage />} />
+              <Route path="/services/cloud" element={<CloudSolutionsPage />} />
+              <Route path="/services/consulting" element={<ITConsultingPage />} />
+              <Route path="/quantum-technology" element={<QuantumTechnologyPage />} />
+              <Route path="/blockchain-services" element={<BlockchainServicesPage />} />
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              <Route path="/micro-saas" element={<MicroSAASPage />} />
+              <Route path="/enterprise" element={<EnterprisePage />} />
+              
+              {/* Company Routes */}
+              <Route path="/team" element={<TeamPage />} />
+              
+              {/* Legacy Routes */}
               <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
               <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
