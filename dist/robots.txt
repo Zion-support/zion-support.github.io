@@ -3,50 +3,30 @@ Allow: /
 
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-Sitemap: https://ziontechgroup.com/sitemap
 
-# Allow all crawlers
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
 Allow: /about
 Allow: /services
 Allow: /contact
 Allow: /blog
 Allow: /careers
-Allow: /faq
 Allow: /privacy
 Allow: /terms
-=======
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
-
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-Disallow: /temp/
-
-<<<<<<< HEAD
-# Crawl delay (optional)
-Crawl-delay: 1
-=======
-# Allow important pages
-Allow: /services/
-Allow: /solutions/
-Allow: /about/
-Allow: /contact/
-Allow: /blog/
-Allow: /careers/
 
 # Crawl delay (optional)
 Crawl-delay: 1
 
-# Specific rules for major search engines
+# Specific bot rules
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+Crawl-delay: 0.5
 
 User-agent: Bingbot
 Allow: /
@@ -54,27 +34,24 @@ Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Rate limiting for aggressive crawlers
+User-agent: *
 Crawl-delay: 2
-
-# Block AI training bots
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Claude-Web
-Disallow: /
-
-User-agent: Omgilibot
-Disallow: /
-<<<<<<< HEAD
-=======
->>>>>>> d90d56e42bb8d14354a8f976136c599e4dfca9d7
->>>>>>> 5de4620e97688b5970e7272b9ca46e6d1d512b87
