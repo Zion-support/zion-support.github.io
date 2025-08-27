@@ -134,6 +134,11 @@ const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthc
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 
+// New AI-powered micro SAAS services
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AIVirtualAssistant = React.lazy(() => import('./pages/services/AIVirtualAssistant'));
+const AIDataAnalytics = React.lazy(() => import('./pages/services/AIDataAnalytics'));
+
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
@@ -274,6 +279,11 @@ function App() {
               <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
               <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
               <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+              
+              {/* New AI-powered micro SAAS services */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
+              <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
               
               {/* New 2025 service routes */}
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />

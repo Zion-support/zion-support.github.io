@@ -64,6 +64,9 @@ export function Footer() {
       title: 'AI & Research Services',
       icon: Brain,
       links: [
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Zap },
+        { name: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant', icon: Users },
+        { name: 'AI Data Analytics', path: '/services/ai-data-analytics', icon: BarChart3 },
         { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
         { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
         { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
@@ -98,6 +101,7 @@ export function Footer() {
         { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
         { name: 'IT Services', path: '/it-services', icon: Building },
         { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
+        { name: 'Innovative Services 2025', path: '/innovative-services-showcase-2025', icon: Sparkles },
         { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
         { name: 'All Services', path: '/services', icon: Zap }
       ]

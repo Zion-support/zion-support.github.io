@@ -240,34 +240,34 @@ export default function Home() {
 
   const featuredServices = [
     {
-      title: "AI Autonomous Business Operations",
-      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time.",
-      icon: Rocket,
-      path: "/services/ai-autonomous-research-assistant",
+      title: "AI Workflow Automation",
+      description: "Transform business operations with intelligent process automation that reduces manual tasks by 80% and improves efficiency by 60%.",
+      icon: Workflow,
+      path: "/services/ai-workflow-automation",
       rating: 4.9,
       reviewCount: 127,
-      highlights: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics"],
-      price: "From $2,500/month"
+      highlights: ["Process Recognition", "Visual Designer", "Smart Triggers", "Performance Monitoring"],
+      price: "From $99/month"
     },
     {
-      title: "Quantum Neural Network Platform",
-      description: "Revolutionary quantum computing platform that combines quantum processing with neural networks to solve previously impossible computational challenges.",
-      icon: Cpu,
-      path: "/services/ai-quantum-hybrid-platform",
+      title: "AI Virtual Assistant",
+      description: "24/7 intelligent customer support and business operations with natural language processing and multi-channel support.",
+      icon: Bot,
+      path: "/services/ai-virtual-assistant",
       rating: 4.8,
       reviewCount: 89,
-      highlights: ["Quantum Processing", "Neural Networks", "Advanced Algorithms", "Breakthrough Computing"],
-      price: "From $5,000/month"
+      highlights: ["Natural Language Processing", "Multi-Channel Support", "24/7 Availability", "Personalized Interactions"],
+      price: "From $79/month"
     },
     {
-      title: "AI-Powered Cybersecurity Suite",
-      description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time.",
-      icon: Shield,
-      path: "/services/ai-cybersecurity-platform",
+      title: "AI Data Analytics",
+      description: "Transform data into actionable insights with machine learning, predictive analytics, and real-time dashboards.",
+      icon: BarChart3,
+      path: "/services/ai-data-analytics",
       rating: 4.9,
       reviewCount: 156,
-      highlights: ["AI Threat Detection", "Real-time Response", "Advanced Analytics", "Compliance Ready"],
-      price: "From $1,800/month"
+      highlights: ["Predictive Analytics", "Real-time Dashboards", "Data Integration", "Automated Insights"],
+      price: "From $149/month"
     }
   ];
 
@@ -581,6 +581,111 @@ export default function Home() {
 
         {/* Ultimate Services Showcase */}
         <UltimateServicesShowcase2025 />
+        
+        {/* Innovative Services Showcase */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Discover Our <span className="text-cyan-400">Innovative Services</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Explore our comprehensive suite of AI-powered micro SAAS services, IT solutions, and cutting-edge technology services
+              </p>
+              <Link
+                to="/innovative-services-showcase-2025"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+              >
+                <Sparkles className="mr-2 w-5 h-5" />
+                Explore All Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "AI & Machine Learning",
+                  description: "Advanced AI solutions for business automation and intelligence",
+                  icon: Brain,
+                  color: "from-cyan-500 to-blue-500",
+                  count: "12+ Services",
+                  path: "/innovative-services-showcase-2025?category=ai-ml"
+                },
+                {
+                  title: "Cloud & DevOps",
+                  description: "Scalable infrastructure and automation solutions",
+                  icon: Cloud,
+                  color: "from-purple-500 to-pink-500",
+                  count: "8+ Services",
+                  path: "/innovative-services-showcase-2025?category=cloud"
+                },
+                {
+                  title: "Cybersecurity",
+                  description: "Enterprise-grade security and compliance solutions",
+                  icon: Shield,
+                  color: "from-emerald-500 to-teal-500",
+                  count: "6+ Services",
+                  path: "/innovative-services-showcase-2025?category=security"
+                },
+                {
+                  title: "Data & Analytics",
+                  description: "Business intelligence and data-driven insights",
+                  icon: BarChart3,
+                  color: "from-orange-500 to-red-500",
+                  count: "10+ Services",
+                  path: "/innovative-services-showcase-2025?category=data"
+                },
+                {
+                  title: "Emerging Tech",
+                  description: "Quantum computing and next-generation solutions",
+                  icon: Atom,
+                  color: "from-indigo-500 to-purple-500",
+                  count: "5+ Services",
+                  path: "/innovative-services-showcase-2025?category=emerging"
+                },
+                {
+                  title: "View All Services",
+                  description: "Complete overview of our comprehensive service portfolio",
+                  icon: Sparkles,
+                  color: "from-yellow-500 to-orange-500",
+                  count: "40+ Services",
+                  path: "/innovative-services-showcase-2025"
+                }
+              ].map((category, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <Link to={category.path}>
+                    <div className="relative p-8 rounded-2xl border border-cyan-500/20 bg-slate-800/50 backdrop-blur-sm hover:border-cyan-500/40 transition-all duration-300 h-full">
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="relative">
+                        <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                          <category.icon className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
+                        <p className="text-gray-300 mb-4">{category.description}</p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-cyan-400 font-semibold">{category.count}</span>
+                          <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
         
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
