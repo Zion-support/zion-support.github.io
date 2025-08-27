@@ -59,6 +59,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: MicroSaasService[] = [
       enterprise: '$1,999/month',
       custom: 'Contact us'
     },
+<<<<<<< HEAD
+    estimatedTime: '2-4 weeks',
+    technologies: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL'],
+    aiScore: 95,
+    marketPrice: '$299-$1,999/month',
+    contactLink: 'https://ziontechgroup.com/contact',
+    status: 'active'
+=======
     technicalSpecs: {
       technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
@@ -1577,6 +1585,7 @@ export const SPECIALIZED_SERVICES = [
     category: "Quantum Finance",
     price: 8000,
     marketPrice: "$8,000 - $25,000/month"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ff4d
   },
   {
     id: 'quantum-cybersecurity',
