@@ -75,6 +75,9 @@ const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateSe
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 
+// 2029 Cutting-Edge Services
+const ZionCuttingEdgeServices2029 = React.lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
+
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
@@ -312,6 +315,10 @@ function App() {
               {/* 2028 Pricing */}
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
+              
+              {/* 2029 Cutting-Edge Services */}
+              <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+              <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
