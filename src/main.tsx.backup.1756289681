@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 
+<<<<<<< HEAD
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+=======
 // Render the app
 const rootElement = document.getElementById('root');
 if (rootElement) {
@@ -15,3 +26,4 @@ if (rootElement) {
     </React.StrictMode>
   );
 }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1cd3

@@ -55,4 +55,7 @@ export function Button({
   );
 }
 
+<<<<<<< HEAD
+=======
 export { Button, buttonVariants };
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1cd3

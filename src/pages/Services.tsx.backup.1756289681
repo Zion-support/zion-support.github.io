@@ -1,4 +1,240 @@
 import React from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  ArrowRight, 
+  Brain,
+  Shield,
+  Cloud,
+  Globe,
+  Zap,
+  Settings,
+  Users,
+  BarChart3,
+  Lock,
+  Server,
+  Code,
+  Database,
+  Smartphone,
+  Monitor,
+  Network
+} from "lucide-react";
+
+export default function Services() {
+  const mainServices = [
+    {
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence and machine learning solutions to transform your business operations",
+      icon: <Brain className="h-12 w-12 text-zion-cyan" />,
+      link: "/services/ai",
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI Automation", "Neural Networks"]
+    },
+    {
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets and ensure compliance",
+      icon: <Shield className="h-12 w-12 text-zion-purple" />,
+      link: "/services/cybersecurity",
+      features: ["Threat Detection", "Vulnerability Assessment", "Security Audits", "Compliance Management", "Incident Response", "Security Training"]
+    },
+    {
+      title: "Cloud & DevOps",
+      description: "Scalable cloud infrastructure and automation solutions for modern applications",
+      icon: <Cloud className="h-12 w-12 text-zion-cyan" />,
+      link: "/services/cloud",
+      features: ["Cloud Migration", "DevOps Automation", "Container Management", "Infrastructure as Code", "Monitoring & Logging", "Cost Optimization"]
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation consulting and implementation services",
+      icon: <Globe className="h-12 w-12 text-zion-purple" />,
+      link: "/services/transformation",
+      features: ["Process Optimization", "Technology Strategy", "Change Management", "Legacy Modernization", "Digital Strategy", "Innovation Consulting"]
+    }
+  ];
+
+  const specializedServices = [
+    {
+      title: "IT Infrastructure",
+      description: "Robust and scalable IT infrastructure solutions",
+      icon: <Server className="h-10 w-10 text-zion-cyan" />,
+      link: "/services/infrastructure"
+    },
+    {
+      title: "Software Development",
+      description: "Custom software solutions and application development",
+      icon: <Code className="h-10 w-10 text-zion-purple" />,
+      link: "/services/software"
+    },
+    {
+      title: "Data Analytics",
+      description: "Advanced data analytics and business intelligence solutions",
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
+      link: "/services/analytics"
+    },
+    {
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile application development",
+      icon: <Smartphone className="h-10 w-10 text-zion-purple" />,
+      link: "/services/mobile"
+    },
+    {
+      title: "Network Security",
+      description: "Comprehensive network security and monitoring solutions",
+      icon: <Network className="h-10 w-10 text-zion-cyan" />,
+      link: "/services/network"
+    },
+    {
+      title: "Database Management",
+      description: "Database design, optimization, and management services",
+      icon: <Database className="h-10 w-10 text-zion-purple" />,
+      link: "/services/database"
+    }
+  ];
+
+  const industrySolutions = [
+    {
+      title: "Healthcare",
+      description: "HIPAA-compliant technology solutions for healthcare organizations",
+      icon: "🏥"
+    },
+    {
+      title: "Finance",
+      description: "Secure financial technology solutions with regulatory compliance",
+      icon: "💳"
+    },
+    {
+      title: "Manufacturing",
+      description: "Industry 4.0 and smart manufacturing solutions",
+      icon: "🏭"
+    },
+    {
+      title: "Retail",
+      description: "E-commerce and retail technology solutions",
+      icon: "🛍️"
+    },
+    {
+      title: "Education",
+      description: "EdTech solutions for modern learning environments",
+      icon: "🎓"
+    },
+    {
+      title: "Government",
+      description: "Secure government technology solutions and consulting",
+      icon: "🏛️"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-zion-blue text-white">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light py-20">
+        <div className="absolute inset-0 bg-zion-blue-dark/20" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h1 
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Our Services
+            </motion.h1>
+            
+            <motion.p 
+              className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Comprehensive technology solutions designed to transform your business and drive innovation
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Link
+                to="/contact"
+                className="bg-zion-purple hover:bg-zion-purple/80 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+              >
+                Get Free Consultation
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="border border-zion-purple/30 text-zion-purple-light hover:bg-zion-purple/10 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105"
+              >
+                View Pricing
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+        "Monitoring & Logging",
+        "Cost Optimization"
+      ],
+      pricing: 'Starting from $15,000',
+      timeline: '4-8 weeks'
+    },
+    {
+      id: 'cloud-migration',
+      category: 'cloud',
+      title: 'Cloud Migration & Optimization',
+      description: 'Seamlessly migrate to the cloud with optimized performance and cost management.',
+      icon: Cloud,
+      features: [
+        'Multi-cloud strategy',
+        'Legacy system migration',
+        'Performance optimization',
+        'Cost management',
+        'Disaster recovery setup'
+      ],
+      link: "/services/cloud"
+    }
+  ];
+
+  const stats = [
+    { icon: Users, value: '500+', label: 'Happy Clients' },
+    { icon: TrendingUp, value: '95%', label: 'Success Rate' },
+    { icon: Lightbulb, value: '200+', label: 'Projects Completed' },
+    { icon: Rocket, value: '40%', label: 'Average Cost Savings' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            Our Services
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-zion-cyan/80 max-w-4xl mx-auto leading-relaxed"
+          >
+            Comprehensive technology services designed to accelerate your business growth, 
+            enhance efficiency, and drive digital transformation.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-black/30 relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+=======
       {/* Stats Section */}
       <section className="py-16 bg-black/50">
         <div className="max-w-7xl mx-auto px-6">
@@ -513,3 +749,4 @@ const Services: React.FC = () => {
 };
 
 export default Services;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1cd3

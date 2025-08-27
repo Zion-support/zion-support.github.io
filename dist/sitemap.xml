@@ -3,7 +3,6 @@
   <!-- Main Pages -->
   <url>
 =======
-=======
             <loc>https://ziontechgroup.com/</loc>
 =======
             <loc>https://ziontechgroup.com/</loc>
@@ -13,7 +12,6 @@
   </url>
   
   <url>
-=======
 =======
             <loc>https://ziontechgroup.com/about</loc>
 =======
@@ -213,7 +211,6 @@
   
   <!-- Legal Pages -->
   <url>
-=======
     <loc>https://ziontechgroup.com/blog/ai-ethics-frameworks</loc>
 =======
             <loc>https://ziontechgroup.com/blog/ai-ethics-frameworks</loc>
@@ -223,9 +220,6 @@
   </url>
   
   <url>
-    <loc>https://ziontechgroup.com/ai-consumer-willingness-to-try</loc>
-    <lastmod>2025-01-27</lastmod>
-=======
 =======
     <loc>https://ziontechgroup.com/blog/ai-talent-acquisition</loc>
 =======

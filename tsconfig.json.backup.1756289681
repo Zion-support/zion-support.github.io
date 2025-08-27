@@ -23,6 +23,13 @@
     /* Path mapping */
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+=======
       "@/*": [
         "./src/*"
       ]
@@ -53,4 +60,5 @@
     "temp_components.disabled/**/*",
     "node_modules"
   ]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-1cd3
 }
