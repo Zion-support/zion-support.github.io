@@ -45,6 +45,12 @@ const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
 const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
 const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
 
+// Innovative new services
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
+const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
+
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -131,6 +137,12 @@ function App() {
               <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
               <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
               <Route path="/services/mobile-survey" element={<MobileSurvey />} />
+              
+              {/* New Innovative Services */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+              <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
+              <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />

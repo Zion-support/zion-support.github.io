@@ -63,12 +63,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     {
       title: 'Services',
       links: [
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' }
+        { name: 'Digital Twin', href: '/services/digital-twin' }
       ]
     },
     {
