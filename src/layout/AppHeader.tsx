@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,7 +26,7 @@ export function AppHeader() {
     if (searchQuery.trim()) {
       setIsSearching(true);
       try {
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
+        await new Promise(resolve => setTimeout(resolve, 1000));
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
       } finally {
         setIsSearching(false);
@@ -36,72 +36,60 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false },
-    { name: '2026 Services', href: '/services2026', current: false, featured: true },
-    { name: 'AI Services', href: '/ai-services', current: false },
-    { name: 'IT Services', href: '/it-services', current: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'AI Solutions', href: '/ai-solutions', current: false },
-    { name: 'Case Studies', href: '/case-studies', current: false },
-    { name: 'Research', href: '/research-development', current: false },
-    { name: 'Events', href: '/events', current: false },
-    { name: 'News', href: '/news', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
-    { name: 'Partners', href: '/partners', current: false },
-    { name: 'Blog', href: '/blog', current: false },
-    { name: 'Help', href: '/help', current: false },
+    { name: 'Services', href: '/services', current: false },
+    { name: '2026 Services', href: '/services2026', current: false, featured: true },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Careers', href: '/careers', current: false },
   ];
 
+  // Organized services by category
   const services = [
-    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation' },
-    { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Quantum Solutions' },
-    { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
-    { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
-    { name: 'IoT & Edge', href: '/services/it-infrastructure', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business Intelligence & Insights' },
-    { name: 'Healthcare Tech', href: '/services/ai-compliance-assistant', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Sustainability', href: '/services/green-it', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
-    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
-    { name: 'Mobile Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
-    { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
-    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
-    { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart, description: 'E‑commerce RMA automation' },
-    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated follow‑ups' },
-    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen, description: 'Transcripts & show notes' },
-    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Local business CRM' },
-    { name: 'Website Analytics', href: '/services/website-analytics', icon: Gauge, description: 'Privacy-first SMB analytics' },
-    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'Tickets, SLAs, portals' },
-    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: ShoppingCart, description: 'Partner revenue platform' },
-    { name: 'AI SEO Optimizer', href: '/services/ai-seo', icon: Search, description: 'Semantic SEO & content briefs' },
-    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'Structured interviews & scoring' },
-    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Tickets, KB, chat & AI' },
-    { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA request workflow' },
-    { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield, description: 'HSTS/CSP automation' },
-    { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Target, description: 'Intelligent project management' },
-    { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'AI-powered content creation' },
-    { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: '24/7 intelligent support' },
-    { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3, description: 'Predictive business intelligence' },
-    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Smart marketing optimization' },
+    // AI & Machine Learning
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML' },
+    { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML' },
+    { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML' },
+    { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
+    
+    // Cloud & DevOps
+    { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps' },
+    { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'Cloud & DevOps' },
+    { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3, description: 'Financial operations automation', category: 'Cloud & DevOps' },
+    
+    // Cybersecurity
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced security solutions', category: 'Cybersecurity' },
+    { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock, description: 'Web security hardening', category: 'Cybersecurity' },
+    { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA compliance', category: 'Cybersecurity' },
+    
+    // Digital Transformation
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation' },
+    { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic technology consulting', category: 'Digital Transformation' },
+    { name: 'IT Consulting', href: '/services/it-consulting', icon: Cpu, description: 'Technology strategy & planning', category: 'Digital Transformation' },
+    
+    // Emerging Technologies
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-gen computational power', category: 'Emerging Tech' },
+    { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks', category: 'Emerging Tech' },
+    { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock, description: 'Distributed ledger technology', category: 'Emerging Tech' },
+    
+    // Data & Analytics
+    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics' },
+    { name: 'Business Intelligence', href: '/services/business-intelligence', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics' },
+    
+    // Micro SaaS Solutions
+    { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS' },
+    { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'Automated content creation', category: 'Micro SaaS' },
+    { name: 'Customer Support AI', href: '/services/ai-customer-support', icon: MessageCircle, description: 'Intelligent support automation', category: 'Micro SaaS' },
   ];
 
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
-    { name: 'Partners', href: '/partners', icon: Users },
-    { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Help Center', href: '/help', icon: MessageCircle },
   ];
 
   const featuredServices = [
@@ -117,6 +105,20 @@ export function AppHeader() {
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
       }`}>
+        {/* Top contact bar */}
+        <div className="hidden md:block border-b border-slate-700/40 bg-slate-900/60">
+          <div className="container-responsive py-2 flex items-center justify-between text-xs text-gray-300">
+            <div className="flex items-center gap-4">
+              <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a>
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
+              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition-colors">ziontechgroup.com</a>
+            </div>
+            <div className="hidden md:flex items-center gap-3">
+              <Link to="/request-quote" className="text-cyan-400 hover:text-cyan-300">Request Quote</Link>
+              <Link to="/contact" className="text-cyan-400 hover:text-cyan-300">Contact</Link>
+            </div>
+          </div>
+        </div>
         <div className="container-responsive">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
@@ -169,6 +171,7 @@ export function AppHeader() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 
+                {/* Enhanced Services Dropdown */}
                 {servicesDropdownOpen && (
                   <div 
                     id="services-menu"
@@ -210,44 +213,38 @@ export function AppHeader() {
                           ))}
                         </div>
                       </div>
-
-                      {/* All Services by Category */}
-                      <div className="grid grid-cols-2 gap-4">
-                        {services.slice(0, 20).map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105"
-                            role="menuitem"
-                          >
-                            <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-slate-600/20 to-slate-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/20 group-hover:to-blue-500/20 transition-all duration-200">
-                              <service.icon className="w-4 h-4 text-slate-400 group-hover:text-cyan-400 transition-colors" />
-                            </div>
-                            <div className="ml-3 flex-1">
-                              <div className="text-white text-sm font-medium group-hover:text-cyan-400 transition-colors">
-                                {service.name}
                               </div>
-                              <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
-                                {service.description}
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                      
-                      <div className="mt-6 pt-4 border-t border-slate-700/50">
-                        <div className="flex gap-3">
+
+                      {/* Quick Actions */}
+                      <div className="space-y-4">
+                        <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
+                        <div className="space-y-3">
+                          {quickLinks.map((link) => (
+                            <Link
+                              key={link.name}
+                              to={link.href}
+                              className="flex items-center p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group/item"
+                            >
+                              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform duration-200">
+                                <link.icon className="w-4 h-4 text-white" />
+                              </div>
+                              <div className="text-white font-medium group-hover/item:text-purple-400 transition-colors duration-200">
+                                {link.name}
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                        
+                        <div className="pt-4 border-t border-slate-700">
                           <Link
                             to="/services"
-                            className="flex-1 text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors py-2 px-4 rounded-lg hover:bg-cyan-400/10"
+                            className="inline-flex items-center justify-center w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                           >
                             View All Services
-                          </Link>
-                          <Link
-                            to="/services2026"
-                            className="flex-1 text-center text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors py-2 px-4 rounded-lg hover:bg-yellow-400/10 border border-yellow-400/30"
-                          >
-                            2026 Services →
                           </Link>
                         </div>
                       </div>
@@ -273,6 +270,7 @@ export function AppHeader() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-64 pl-10 pr-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
                   />
+                  <Search className="w-4 h-4 text-zinc-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
                   {isSearching && (
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                       <ZionLoadingSpinner size="sm" />
@@ -280,8 +278,6 @@ export function AppHeader() {
                   )}
                 </div>
               </form>
-
-              {/* Quick actions placeholder removed for simplicity */}
 
               {/* CTA Button */}
               <Link
@@ -306,7 +302,7 @@ export function AppHeader() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile Navigation */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
@@ -372,6 +368,13 @@ export function AppHeader() {
                   ))}
                 </div>
               </div>
+                    >
+                      <link.icon className="w-4 h-4 text-cyan-400 mr-2" />
+                      <span className="text-white text-sm">{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
               {/* Mobile CTA */}
               <div className="mt-6 pt-6 border-t border-slate-700/50">
@@ -383,9 +386,10 @@ export function AppHeader() {
                   Get Started
                 </Link>
               </div>
-            </div>
-          </div>
-        )}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
