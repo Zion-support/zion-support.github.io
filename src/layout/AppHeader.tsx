@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Star, Target, TrendingUp, Award } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Star, Target, TrendingUp, Award, Code, Truck, Building } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -46,6 +46,9 @@ export function AppHeader() {
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'Partners', href: '/partners', current: false },
+    { name: 'Research', href: '/research-development', current: false },
+    { name: 'Events', href: '/events', current: false },
+    { name: 'News', href: '/news', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Help', href: '/help', current: false },
     { name: 'About', href: '/about', current: false },
