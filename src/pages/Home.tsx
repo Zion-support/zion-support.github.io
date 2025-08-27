@@ -244,33 +244,63 @@ export default function Home() {
   const featuredServices = [
     {
       title: "AI Autonomous Business Operations",
-      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time.",
+      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time. Transform your business with 24/7 autonomous operations, AI decision making, and process optimization.",
       icon: Rocket,
       path: "/services/ai-autonomous-research-assistant",
       rating: 4.9,
       reviewCount: 127,
-      highlights: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics"],
+      highlights: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics", "Cost Reduction by 60%"],
       price: "From $2,500/month"
     },
     {
-      title: "Quantum Neural Network Platform",
-      description: "Revolutionary quantum computing platform that combines quantum processing with neural networks to solve previously impossible computational challenges.",
+      title: "Quantum Financial Trading Platform",
+      description: "Revolutionary trading platform that leverages quantum computing for ultra-fast market analysis, risk assessment, and algorithmic trading. Gain quantum advantage with 1000x faster processing and 40% improved trading accuracy.",
       icon: Cpu,
-      path: "/services/ai-quantum-hybrid-platform",
+      path: "/services/quantum-financial-trading-platform",
       rating: 4.8,
       reviewCount: 89,
-      highlights: ["Quantum Processing", "Neural Networks", "Advanced Algorithms", "Breakthrough Computing"],
-      price: "From $5,000/month"
+      highlights: ["Quantum Processing", "40% Trading Accuracy", "60% Risk Reduction", "Ultra-fast Execution", "Portfolio Optimization"],
+      price: "From $8,999/month"
     },
     {
-      title: "AI-Powered Cybersecurity Suite",
-      description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time.",
+      title: "AI-Powered Healthcare Analytics",
+      description: "Advanced healthcare analytics platform that uses AI to analyze patient data, predict outcomes, and optimize treatment plans. Improve patient outcomes by 45% and reduce readmission rates by 30%.",
       icon: Shield,
-      path: "/services/ai-cybersecurity-platform",
+      path: "/services/ai-powered-healthcare-analytics-platform",
       rating: 4.9,
       reviewCount: 156,
-      highlights: ["AI Threat Detection", "Real-time Response", "Advanced Analytics", "Compliance Ready"],
-      price: "From $1,800/month"
+      highlights: ["45% Better Outcomes", "30% Fewer Readmissions", "AI Treatment Plans", "Real-time Monitoring", "HIPAA Compliant"],
+      price: "From $3,299/month"
+    },
+    {
+      title: "AI Autonomous Supply Chain",
+      description: "Intelligent supply chain platform that autonomously optimizes logistics, inventory, and demand forecasting. Reduce inventory costs by 30%, improve delivery times by 40%, and optimize routes by 25%.",
+      icon: Workflow,
+      path: "/services/ai-autonomous-supply-chain-optimization",
+      rating: 4.7,
+      reviewCount: 98,
+      highlights: ["30% Cost Reduction", "40% Faster Delivery", "25% Route Optimization", "AI Forecasting", "Sustainability Metrics"],
+      price: "From $2,499/month"
+    },
+    {
+      title: "AI Content Marketing Suite",
+      description: "Comprehensive content marketing platform that automates content creation, distribution, and performance optimization. Increase engagement by 60%, reduce creation time by 70%, and improve SEO by 45%.",
+      icon: Brain,
+      path: "/services/ai-content-marketing-automation-suite",
+      rating: 4.6,
+      reviewCount: 134,
+      highlights: ["60% More Engagement", "70% Time Savings", "45% SEO Improvement", "Multi-channel", "ROI Tracking"],
+      price: "From $1,599/month"
+    },
+    {
+      title: "Quantum Machine Learning",
+      description: "Revolutionary platform that combines quantum computing with machine learning for solving complex computational problems. Solve problems 1000x faster with breakthrough computational power.",
+      icon: Zap,
+      path: "/services/quantum-machine-learning-platform",
+      rating: 4.9,
+      reviewCount: 67,
+      highlights: ["1000x Faster Processing", "60% Accuracy Improvement", "Quantum Algorithms", "Research Ready", "Future-proof Tech"],
+      price: "From $6,999/month"
     }
   ];
 
@@ -654,17 +684,55 @@ export default function Home() {
                 Revolutionary Services 2025
               </h2>
               <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-                Explore our comprehensive collection of AI-powered, quantum computing, blockchain, and emerging technology solutions
+                Explore our comprehensive collection of 40+ AI-powered, quantum computing, blockchain, and emerging technology solutions designed to transform your business
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
-                  <span className="text-zion-cyan font-semibold">🚀 100+ Services</span>
+                  <span className="text-zion-cyan font-semibold">🚀 40+ Services</span>
                 </div>
                 <div className="bg-zion-purple/20 border border-zion-purple/30 rounded-full px-6 py-3">
                   <span className="text-zion-purple font-semibold">⚡ Cutting-edge Tech</span>
                 </div>
                 <div className="bg-zion-pink/20 border border-zion-pink/30 rounded-full px-6 py-3">
                   <span className="text-zion-pink font-semibold">💎 Premium Quality</span>
+                </div>
+                <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
+                  <span className="text-zion-cyan font-semibold">💰 ROI: 200-1000%</span>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 text-left">
+                <div className="bg-zion-slate-800/50 rounded-xl p-6 border border-zion-cyan/20">
+                  <h3 className="text-zion-cyan font-bold text-lg mb-3">AI & Automation Services</h3>
+                  <p className="text-zion-slate-light text-sm mb-3">From $1,299/month</p>
+                  <ul className="text-zion-slate-light text-sm space-y-1">
+                    <li>• AI Content Creation Suite</li>
+                    <li>• AI Healthcare Analytics</li>
+                    <li>• AI Autonomous Operations</li>
+                    <li>• AI Predictive Maintenance</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-zion-slate-800/50 rounded-xl p-6 border border-zion-purple/20">
+                  <h3 className="text-zion-purple font-bold text-lg mb-3">Quantum Computing</h3>
+                  <p className="text-zion-slate-light text-sm mb-3">From $6,999/month</p>
+                  <ul className="text-zion-slate-light text-sm space-y-1">
+                    <li>• Quantum Financial Trading</li>
+                    <li>• Quantum Machine Learning</li>
+                    <li>• Quantum Neural Networks</li>
+                    <li>• Quantum Edge Computing</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-zion-slate-800/50 rounded-xl p-6 border border-zion-pink/20">
+                  <h3 className="text-zion-pink font-bold text-lg mb-3">Specialized Solutions</h3>
+                  <p className="text-zion-slate-light text-sm mb-3">From $1,699/month</p>
+                  <ul className="text-zion-slate-light text-sm space-y-1">
+                    <li>• Legal Document Automation</li>
+                    <li>• Supply Chain Optimization</li>
+                    <li>• Sustainable Technology</li>
+                    <li>• Autonomous Vehicles</li>
+                  </ul>
                 </div>
               </div>
               
@@ -673,16 +741,173 @@ export default function Home() {
                   href="/comprehensive-services-showcase-2025"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
-                  Explore All Services
+                  Explore All 40+ Services
                 </a>
                 <a 
                   href="/contact"
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan/10 transition-all duration-300"
                 >
-                  Get Started
+                  Get Started Today
                 </a>
               </div>
             </motion.div>
+          </div>
+        </section>
+        
+        {/* Contact Information & Get Started Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-slate-800 via-zion-slate-700 to-zion-slate-800 relative">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                  Ready to Transform Your Business?
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Join thousands of businesses already leveraging our cutting-edge AI and quantum computing solutions. Get started today with a free consultation and discover how our services can drive unprecedented growth and efficiency.
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Contact Information */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="bg-white/5 rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl font-bold text-white mb-6">Contact Zion Tech Group</h3>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-cyan-400 font-semibold">Phone</p>
+                        <p className="text-white text-lg">+1 302 464 0950</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-purple-400 font-semibold">Email</p>
+                        <p className="text-white text-lg">kleber@ziontechgroup.com</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-green-400 font-semibold">Address</p>
+                        <p className="text-white text-lg">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-blue-400 font-semibold">Website</p>
+                        <a href="https://ziontechgroup.com" className="text-white text-lg hover:text-cyan-400 transition-colors">
+                          ziontechgroup.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* Service Highlights & CTA */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-6"
+              >
+                <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/30">
+                  <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
+                  
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-white">40+ Cutting-edge AI & Quantum Services</span>
+                    </div>
+                    
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-white">Proven ROI: 200-1000% Return on Investment</span>
+                    </div>
+                    
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-white">Enterprise-grade Security & Compliance</span>
+                    </div>
+                    
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-white">24/7 Expert Support & Implementation</span>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <a 
+                      href="/contact"
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-4 rounded-xl font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-center block text-lg"
+                    >
+                      Get Free Consultation
+                    </a>
+                    
+                    <a 
+                      href="/comprehensive-services-showcase-2025"
+                      className="w-full border border-cyan-400/30 text-cyan-400 px-6 py-4 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 text-center block text-lg"
+                    >
+                      View All Services
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
         

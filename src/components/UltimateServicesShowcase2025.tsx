@@ -22,14 +22,22 @@ const UltimateServicesShowcase2025: React.FC = () => {
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
     { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },
+    { id: 'AI & Legal', name: 'AI & Legal', count: allServices.filter(s => s.category === 'AI & Legal').length, icon: '⚖️' },
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚚' },
     { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥' },
+    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: allServices.filter(s => s.category === 'AI & Manufacturing').length, icon: '🏭' },
     { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️' },
+    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s => s.category === 'AI & Transportation').length, icon: '🚗' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥' }
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
+    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s => s.category === 'Sustainability').length, icon: '🌱' },
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' }
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -99,52 +107,71 @@ const UltimateServicesShowcase2025: React.FC = () => {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-              Zion Tech Group
-              <span className="block text-4xl md:text-5xl mt-2">
-                Ultimate Services 2025
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
-              Discover our revolutionary portfolio of cutting-edge micro SAAS solutions, AI-powered innovations, and quantum computing services designed to transform your business and drive competitive advantage in the digital age
-            </p>
-          </motion.div>
-          
-          {/* Key Statistics */}
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group">
-              <div className="text-3xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">{allServices.length}+</div>
-              <div className="text-sm text-gray-300">Innovative Services</div>
-            </motion.div>
-            <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300 group">
-              <div className="text-3xl font-bold text-zion-purple mb-2 group-hover:scale-110 transition-transform duration-300">{categories.length}</div>
-              <div className="text-sm text-gray-300">Technology Categories</div>
-            </motion.div>
-            <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-zion-green/20 hover:border-zion-green/40 transition-all duration-300 group">
-              <div className="text-3xl font-bold text-zion-green mb-2 group-hover:scale-110 transition-transform duration-300">99%</div>
-              <div className="text-sm text-gray-300">Client Satisfaction</div>
-            </motion.div>
-            <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-zion-orange/20 hover:border-zion-orange/40 transition-all duration-300 group">
-              <div className="text-3xl font-bold text-zion-orange mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
-              <div className="text-sm text-gray-300">Support Available</div>
-            </motion.div>
-          </motion.div>
-
-          {/* Search and Filter */}
-          <motion.div 
-            className="max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
+              Ultimate Services Showcase 2025
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+              Discover our comprehensive portfolio of 40+ cutting-edge AI, quantum computing, and emerging technology solutions designed to transform your business and drive unprecedented growth
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
+                <span className="text-zion-cyan font-semibold">🚀 {allServices.length} Services</span>
+              </div>
+              <div className="bg-zion-purple/20 border border-zion-purple/30 rounded-full px-6 py-3">
+                <span className="text-zion-purple font-semibold">⚡ AI-Powered</span>
+              </div>
+              <div className="bg-zion-pink/20 border border-zion-pink/30 rounded-full px-6 py-3">
+                <span className="text-zion-pink font-semibold">💎 Enterprise Grade</span>
+              </div>
+              <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
+                <span className="text-zion-cyan font-semibold">💰 ROI: 200-1000%</span>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 text-left">
+              <div className="bg-zion-slate-800/50 rounded-xl p-6 border border-zion-cyan/20">
+                <h3 className="text-zion-cyan font-bold text-lg mb-3">AI & Automation</h3>
+                <p className="text-zion-slate-light text-sm">From $1,299/month</p>
+                <p className="text-zion-slate-light text-xs mt-2">Transform operations with intelligent automation</p>
+              </div>
+              
+              <div className="bg-zion-slate-800/50 rounded-xl p-6 border border-zion-purple/20">
+                <h3 className="text-zion-purple font-bold text-lg mb-3">Quantum Computing</h3>
+                <p className="text-zion-slate-light text-sm">From $6,999/month</p>
+                <p className="text-zion-slate-light text-xs mt-2">Solve impossible problems with quantum power</p>
+              </div>
+              
+              <div className="bg-zion-slate-800/50 rounded-xl p-6 border border-zion-pink/20">
+                <h3 className="text-zion-pink font-bold text-lg mb-3">Specialized Solutions</h3>
+                <p className="text-zion-slate-light text-sm">From $1,699/month</p>
+                <p className="text-zion-slate-light text-xs mt-2">Industry-specific AI solutions</p>
+              </div>
+              
+              <div className="bg-zion-slate-800/50 rounded-xl p-6 border border-zion-cyan/20">
+                <h3 className="text-zion-cyan font-bold text-lg mb-3">Emerging Tech</h3>
+                <p className="text-zion-slate-light text-sm">Custom pricing</p>
+                <p className="text-zion-slate-light text-xs mt-2">Cutting-edge innovation platforms</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className="px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <div className="relative mb-6">
               <input
@@ -158,7 +185,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
             </div>
 
             {/* Sort and View Controls */}
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
               <div className="flex items-center gap-2">
                 <label className="text-sm text-gray-300">Sort by:</label>
                 <select
@@ -192,31 +219,26 @@ const UltimateServicesShowcase2025: React.FC = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
 
-          {/* Category Filter */}
-          <motion.div 
-            className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            {categories.map((category) => (
-              <motion.button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
-                  activeCategory === category.id
-                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                    : 'glass border border-white/20 text-gray-300 hover:bg-white/10 hover:border-zion-cyan/30'
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="text-lg">{category.icon}</span>
-                {category.name} ({category.count})
-              </motion.button>
-            ))}
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => (
+                <motion.button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
+                    activeCategory === category.id
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
+                      : 'glass border border-white/20 text-gray-300 hover:bg-white/10 hover:border-zion-cyan/30'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="text-lg">{category.icon}</span>
+                  {category.name} ({category.count})
+                </motion.button>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
