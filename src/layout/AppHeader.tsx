@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -43,16 +43,15 @@ export function AppHeader() {
   ];
 
   const services = [
-    { name: 'AI & Analytics', href: '/services', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'Quantum Computing', href: '/services', icon: Rocket, description: 'Quantum AI & Optimization' },
+    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
     { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud Services', href: '/services', icon: Cloud, description: 'DevOps & Infrastructure' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'IoT & Edge', href: '/services', icon: Cpu, description: 'Smart Devices & Networks' },
     { name: 'Blockchain', href: '/services', icon: Lock, description: 'DeFi & Smart Contracts' },
     { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Green Tech', href: '/services', icon: Globe, description: 'Sustainability Solutions' },
-    { name: 'Space Tech', href: '/services', icon: Rocket, description: 'Space Exploration & Mining' },
-    { name: 'Autonomous AI', href: '/services', icon: Brain, description: 'Self-Learning Systems' },
+    { name: 'Sustainability', href: '/services', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
   ];
 
   const quickLinks = [
@@ -320,9 +319,9 @@ export function AppHeader() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      
     </header>
   );
 }
