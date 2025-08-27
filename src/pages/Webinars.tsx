@@ -1,0 +1,552 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Video, 
+  Calendar, 
+  Clock, 
+  Users, 
+  Search,
+  Filter,
+  ArrowRight,
+  Play,
+  Pause,
+  Stop,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Award,
+  Rocket,
+  Brain,
+  Shield,
+  Code,
+  Zap,
+  Lightbulb,
+  Target,
+  Building,
+  Globe,
+  CheckCircle,
+  FileText,
+  BookOpen,
+  ChevronDown,
+  ChevronRight,
+  Plus,
+  Minus,
+  Eye,
+  Bookmark,
+  Share2,
+  Download
+} from 'lucide-react';
+
+const Webinars: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const categories = [
+    { id: 'all', name: 'All Webinars', count: 45, icon: Video },
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 18, icon: Brain },
+    { id: 'quantum', name: 'Quantum Computing', count: 12, icon: Atom },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 10, icon: Shield },
+    { id: 'iot', name: 'IoT & Edge Computing', count: 5, icon: Wifi }
+  ];
+
+  const webinars = [
+    {
+      id: 1,
+      title: 'AI Consciousness Simulation: Breakthroughs & Applications',
+      description: 'Join us for an exclusive webinar exploring our revolutionary AI consciousness simulator technology and its real-world applications.',
+      category: 'ai-ml',
+      date: '2025-02-15',
+      time: '14:00',
+      timezone: 'EST',
+      duration: '90 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Sarah Chen',
+      speakerTitle: 'Chief Executive Officer',
+      image: '/webinars/ai-consciousness-simulator.jpg',
+      tags: ['AI', 'Consciousness', 'Live', 'Breakthrough'],
+      featured: true,
+      attendees: 1250,
+      maxAttendees: 2000,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/ai-consciousness-simulator',
+      recording: false,
+      abstract: 'Discover how our AI consciousness simulator is revolutionizing our understanding of artificial intelligence and consciousness. Learn about the technology behind this breakthrough and explore potential applications in research, healthcare, and beyond.'
+    },
+    {
+      id: 2,
+      title: 'Quantum Computing in Financial Services: Real-World Applications',
+      description: 'Explore how quantum computing is transforming financial services, from risk assessment to portfolio optimization.',
+      category: 'quantum',
+      date: '2025-02-20',
+      time: '15:30',
+      timezone: 'EST',
+      duration: '75 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Michael Rodriguez',
+      speakerTitle: 'Quantum Research Director',
+      image: '/webinars/quantum-financial-services.jpg',
+      tags: ['Quantum Computing', 'Financial Services', 'Live', 'Applications'],
+      featured: true,
+      attendees: 980,
+      maxAttendees: 1500,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/quantum-financial-services',
+      recording: false,
+      abstract: 'Learn about practical applications of quantum computing in financial services, including risk modeling, portfolio optimization, and algorithmic trading strategies.'
+    },
+    {
+      id: 3,
+      title: 'Zero Trust Security Architecture: Implementation Guide',
+      description: 'Comprehensive guide to implementing zero trust security architecture in enterprise environments.',
+      category: 'cybersecurity',
+      date: '2025-02-25',
+      time: '13:00',
+      timezone: 'EST',
+      duration: '60 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Alex Thompson',
+      speakerTitle: 'Chief Security Officer',
+      image: '/webinars/zero-trust-security.jpg',
+      tags: ['Cybersecurity', 'Zero Trust', 'Live', 'Implementation'],
+      featured: false,
+      attendees: 750,
+      maxAttendees: 1000,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/zero-trust-security',
+      recording: false,
+      abstract: 'Step-by-step guide to implementing zero trust security architecture, including best practices, common pitfalls, and real-world case studies.'
+    },
+    {
+      id: 4,
+      title: 'IoT Edge Computing: Building Smart Infrastructure',
+      description: 'Learn how to design and implement IoT edge computing solutions for smart cities and industrial applications.',
+      category: 'iot',
+      date: '2025-03-01',
+      time: '14:30',
+      timezone: 'EST',
+      duration: '80 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Emily Watson',
+      speakerTitle: 'IoT Solutions Architect',
+      image: '/webinars/iot-edge-computing.jpg',
+      tags: ['IoT', 'Edge Computing', 'Live', 'Smart Infrastructure'],
+      featured: false,
+      attendees: 620,
+      maxAttendees: 800,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/iot-edge-computing',
+      recording: false,
+      abstract: 'Explore the fundamentals of IoT edge computing and learn how to build scalable, efficient smart infrastructure solutions.'
+    },
+    {
+      id: 5,
+      title: 'AI-Powered Healthcare: Transforming Patient Care',
+      description: 'Discover how AI is revolutionizing healthcare delivery and improving patient outcomes.',
+      category: 'ai-ml',
+      date: '2025-03-05',
+      time: '16:00',
+      timezone: 'EST',
+      duration: '70 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Sarah Chen',
+      speakerTitle: 'Chief Executive Officer',
+      image: '/webinars/ai-powered-healthcare.jpg',
+      tags: ['AI', 'Healthcare', 'Live', 'Patient Care'],
+      featured: false,
+      attendees: 890,
+      maxAttendees: 1200,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/ai-powered-healthcare',
+      recording: false,
+      abstract: 'Learn about the latest AI applications in healthcare, including diagnostic tools, treatment optimization, and patient monitoring systems.'
+    },
+    {
+      id: 6,
+      title: 'Blockchain in Enterprise: Beyond Cryptocurrency',
+      description: 'Explore practical enterprise applications of blockchain technology for supply chain and digital identity.',
+      category: 'cybersecurity',
+      date: '2025-03-10',
+      time: '15:00',
+      timezone: 'EST',
+      duration: '65 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Marcus Chen',
+      speakerTitle: 'Blockchain Solutions Lead',
+      image: '/webinars/blockchain-enterprise.jpg',
+      tags: ['Blockchain', 'Enterprise', 'Live', 'Supply Chain'],
+      featured: false,
+      attendees: 540,
+      maxAttendees: 700,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/blockchain-enterprise',
+      recording: false,
+      abstract: 'Discover how blockchain technology is transforming enterprise operations beyond cryptocurrency, including supply chain transparency and digital identity management.'
+    },
+    {
+      id: 7,
+      title: '5G and Beyond: Future of Wireless Communication',
+      description: 'Comprehensive overview of 5G technology and the roadmap to 6G and beyond.',
+      category: 'iot',
+      date: '2025-03-15',
+      time: '14:00',
+      timezone: 'EST',
+      duration: '85 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. James Wilson',
+      speakerTitle: 'Network Technology Director',
+      image: '/webinars/5g-beyond-future.jpg',
+      tags: ['5G', 'Wireless Communication', 'Live', 'Technology'],
+      featured: false,
+      attendees: 720,
+      maxAttendees: 900,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/5g-beyond-future',
+      recording: false,
+      abstract: 'Explore the evolution of wireless communication technologies, from current 5G deployments to future 6G capabilities and applications.'
+    },
+    {
+      id: 8,
+      title: 'Machine Learning Operations (MLOps): Best Practices',
+      description: 'Learn how to implement MLOps best practices for production AI systems.',
+      category: 'ai-ml',
+      date: '2025-03-20',
+      time: '15:30',
+      timezone: 'EST',
+      duration: '75 minutes',
+      type: 'Live',
+      location: 'Virtual',
+      speaker: 'Dr. Lisa Park',
+      speakerTitle: 'MLOps Engineering Lead',
+      image: '/webinars/mlops-best-practices.jpg',
+      tags: ['MLOps', 'Machine Learning', 'Live', 'Best Practices'],
+      featured: false,
+      attendees: 680,
+      maxAttendees: 850,
+      registrationRequired: true,
+      registrationUrl: 'https://ziontechgroup.com/webinars/mlops-best-practices',
+      recording: false,
+      abstract: 'Comprehensive guide to MLOps implementation, covering model deployment, monitoring, and maintenance in production environments.'
+    }
+  ];
+
+  const filteredWebinars = webinars.filter(webinar => {
+    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const featuredWebinars = webinars.filter(webinar => webinar.featured);
+  const regularWebinars = filteredWebinars.filter(webinar => !webinar.featured);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
+              Webinars &
+              <span className="block text-zion-cyan">Live Events</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+              Join our live webinars and virtual events to learn from industry experts. 
+              Discover the latest technology trends, best practices, and innovative solutions.
+            </p>
+            <div className="flex items-center justify-center space-x-8 text-zion-slate-light">
+              <div className="flex items-center">
+                <Video className="w-6 h-6 mr-2 text-zion-cyan" />
+                <span>45+ Webinars</span>
+              </div>
+              <div className="flex items-center">
+                <Users className="w-6 h-6 mr-2 text-zion-cyan" />
+                <span>Live Interaction</span>
+              </div>
+              <div className="flex items-center">
+                <Calendar className="w-6 h-6 mr-2 text-zion-cyan" />
+                <span>Regular Events</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search Bar */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+              <input
+                type="text"
+                placeholder="Search webinars..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                    selectedCategory === category.id
+                      ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/20'
+                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-cyan/20'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4" />
+                  <span>{category.name}</span>
+                  <span className="text-xs opacity-75">({category.count})</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Webinars */}
+      {featuredWebinars.length > 0 && (
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">Featured Webinars</h2>
+              <p className="text-zion-slate-light">Don't miss our most anticipated live events</p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredWebinars.map((webinar, index) => (
+                <motion.article
+                  key={webinar.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+                    {/* Webinar Image Placeholder */}
+                    <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative">
+                      <Video className="w-16 h-16 text-zion-cyan" />
+                      <div className="absolute top-4 right-4">
+                        <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
+                          Featured
+                        </span>
+                      </div>
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 bg-red-500 text-white text-xs rounded-full font-semibold">
+                          Live
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">
+                        <span className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          {webinar.date}
+                        </span>
+                        <span className="flex items-center">
+                          <Clock className="w-4 h-4 mr-2" />
+                          {webinar.time} {webinar.timezone}
+                        </span>
+                        <span className="flex items-center">
+                          <Users className="w-4 h-4 mr-2" />
+                          {webinar.attendees}/{webinar.maxAttendees}
+                        </span>
+                      </div>
+
+                      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
+                        {webinar.title}
+                      </h3>
+                      
+                      <p className="text-zion-slate-light mb-4 leading-relaxed">
+                        {webinar.description}
+                      </p>
+
+                      <div className="mb-4">
+                        <h4 className="text-zion-cyan font-semibold mb-3">Abstract:</h4>
+                        <p className="text-zion-slate-light text-sm leading-relaxed">
+                          {webinar.abstract}
+                        </p>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {webinar.tags.map((tag, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center justify-between">
+                        <div className="text-sm">
+                          <p className="text-zion-cyan font-semibold">{webinar.speaker}</p>
+                          <p className="text-zion-slate-light">{webinar.speakerTitle}</p>
+                        </div>
+                        <button className="flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 group">
+                          Register Now
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Regular Webinars Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">All Webinars</h2>
+            <p className="text-zion-slate-light">Browse our complete calendar of upcoming events</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {regularWebinars.map((webinar, index) => (
+              <motion.article
+                key={webinar.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
+                  {/* Webinar Image Placeholder */}
+                  <div className="h-40 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative">
+                    <Video className="w-12 h-12 text-zion-cyan" />
+                    <div className="absolute top-2 left-2">
+                      <span className="px-2 py-1 bg-red-500 text-white text-xs rounded-full font-semibold">
+                        Live
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 flex-1">
+                    <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
+                      <span className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {webinar.date}
+                      </span>
+                      <span className="flex items-center">
+                        <Clock className="w-4 h-4 mr-2" />
+                        {webinar.time}
+                      </span>
+                    </div>
+
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
+                      {webinar.title}
+                    </h3>
+                    
+                    <p className="text-zion-slate-light mb-4 leading-relaxed line-clamp-3">
+                      {webinar.description}
+                    </p>
+
+                    <div className="mb-4">
+                      <h4 className="text-zion-cyan font-semibold mb-2 text-sm">Abstract:</h4>
+                      <p className="text-zion-slate-light text-xs leading-relaxed line-clamp-3">
+                        {webinar.abstract}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {webinar.tags.slice(0, 2).map((tag, idx) => (
+                        <span
+                          key={idx}
+                          className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex items-center justify-between mt-auto">
+                      <div className="text-sm">
+                        <p className="text-zion-cyan font-semibold">{webinar.speaker}</p>
+                        <p className="text-zion-slate-light">{webinar.duration}</p>
+                      </div>
+                      <button className="flex items-center text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-300 group">
+                        Register
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Stay Updated with Our Events
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Get notified about upcoming webinars, live events, and exclusive content. 
+              Never miss an opportunity to learn from our experts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Subscribe to Updates
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                Request Custom Webinar
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Webinars;
