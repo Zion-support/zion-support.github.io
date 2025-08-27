@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Atom, Globe } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection.jsx";
@@ -172,6 +173,108 @@ const Zion2026ServicesPreview = () => (
   </section>
 );
 
+// Zion 2027 Advanced Services Preview Section
+const Zion2027AdvancedServicesPreview = () => (
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-16">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-white mb-6"
+        >
+          Zion 2027
+          <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            Advanced Services
+          </span>
+        </motion.h2>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+        >
+          Experience the future of technology with our cutting-edge 2027 service portfolio. 
+          From quantum AI fusion to autonomous ecosystems, we're redefining what's possible.
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <Link 
+            to="/zion-2027-advanced-services"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-lg"
+          >
+            Explore 2027 Services
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </motion.div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
+        >
+          <div className="p-3 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 mb-4 inline-block">
+            <Atom className="w-6 h-6 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3">Quantum AI Fusion Platform</h3>
+          <p className="text-gray-300 mb-4">Merge quantum computing with AI for unprecedented problem-solving capabilities</p>
+          <div className="text-2xl font-bold text-white mb-4">$15,000/month</div>
+          <Link to="/zion-2027-advanced-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
+            Learn More →
+          </Link>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
+        >
+          <div className="p-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 mb-4 inline-block">
+            <Brain className="w-6 h-6 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3">Autonomous AI Ecosystem Manager</h3>
+          <p className="text-gray-300 mb-4">Self-managing AI systems that orchestrate your entire digital infrastructure</p>
+          <div className="text-2xl font-bold text-white mb-4">$8,500/month</div>
+          <Link to="/zion-2027-advanced-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
+            Learn More →
+          </Link>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
+        >
+          <div className="p-3 rounded-xl bg-gradient-to-r from-green-500 to-teal-500 mb-4 inline-block">
+            <Globe className="w-6 h-6 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white mb-3">Metaverse Business Platform</h3>
+          <p className="text-gray-300 mb-4">Complete business infrastructure for the metaverse economy</p>
+          <div className="text-2xl font-bold text-white mb-4">$12,000/month</div>
+          <Link to="/zion-2027-advanced-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
+            Learn More →
+          </Link>
+        </motion.div>
+      </div>
+    </div>
+  </section>
+);
+
 // Contact Information Section
 const ContactInformation = () => (
   <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -220,6 +323,9 @@ const Home = () => {
         
         {/* Zion 2026 Services Preview */}
         <Zion2026ServicesPreview />
+        
+        {/* Zion 2027 Advanced Services Preview */}
+        <Zion2027AdvancedServicesPreview />
         
         {/* Contact Information */}
         <ContactInformation />

@@ -60,6 +60,9 @@ const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePr
 const EnhancedInnovativeServicesShowcase2027 = lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 
+// Zion 2027 Advanced Services pages
+const Zion2027AdvancedServicesShowcase = lazy(() => import('./pages/Zion2027AdvancedServicesShowcase'));
+
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -151,6 +154,10 @@ function App() {
               <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/enhanced-innovative-services-2027" element={<EnhancedInnovativeServicesShowcase2027 />} />
               <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
+              
+              {/* Zion 2027 Advanced Services Routes */}
+              <Route path="/zion-2027-advanced-services" element={<Zion2027AdvancedServicesShowcase />} />
+              <Route path="/advanced-services-2027" element={<Zion2027AdvancedServicesShowcase />} />
               
               {/* Marketplace Routes */}
               <Route path="/marketplace" element={<GreenIT />} />
