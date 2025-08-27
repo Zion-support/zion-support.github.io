@@ -20,6 +20,7 @@ const Sitemap = React.lazy(() => import('./pages/Sitemap.tsx'));
 // Services pages
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage.tsx'));
 const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage.tsx'));
+const RealServices2029Q2 = React.lazy(() => import('./pages/RealServices2029Q2.tsx'));
 
 // Marketplace pages
 const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
@@ -77,6 +78,7 @@ function App() {
               {/* Services routes */}
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/services/pricing" element={<ServicesPricingPage />} />
+              <Route path="/services/2029-q2" element={<RealServices2029Q2 />} />
 
               {/* Marketplace routes */}
               <Route path="/marketplace" element={<Marketplace />} />
