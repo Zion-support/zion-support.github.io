@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer.jsx';
+import Footer from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load only the essential pages that we know exist
-const Home = React.lazy(() => import('./pages/Home.tsx'));
+const Home = React.lazy(() => import('./pages/Home.jsx'));
 const About = React.lazy(() => import('./pages/About.tsx'));
 const Contact = React.lazy(() => import('./pages/Contact.tsx'));
 const Blog = React.lazy(() => import('./pages/Blog.tsx'));

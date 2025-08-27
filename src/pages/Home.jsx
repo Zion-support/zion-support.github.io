@@ -1,32 +1,50 @@
 import React from 'react';
-import { CategoriesSection } from "@/components/CategoriesSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import FeaturedListingsSection from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import HeroSection from "@/components/HeroSection";
+import { motion } from 'framer-motion';
+import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import FeatureCTAs from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-
-
+import FeaturedListingsSection from "@/components/FeaturedListingsSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import BenefitsSection from "@/components/BenefitsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { SEO } from "@/components/SEO";
 
 export default function Home() {
-    return (<>
-      <SEO title="Zion Tech Group - Leading AI & Technology Solutions" description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem." canonical="/" url="https://ziontechgroup.com"/>
+  return (
+    <>
+      <SEO 
+        title="Zion Tech Group - Leading AI & Technology Solutions" 
+        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem." 
+        canonical="/" 
+        url="https://ziontechgroup.com"
+      />
       
-      <HeroSection />
-      <QuickAccess />
-      <FeatureCTAs />
-      <FeatureHighlights />
-      <CategoriesSection />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <NewsletterSection />
-      <ITServiceRequestHero />
-
-    </>);
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <HeroSection />
+        
+        {/* Quick Access */}
+        <QuickAccess />
+        
+        {/* Feature Highlights */}
+        <FeatureHighlights />
+        
+        {/* Featured Listings */}
+        <FeaturedListingsSection />
+        
+        {/* How It Works */}
+        <HowItWorksSection />
+        
+        {/* Benefits */}
+        <BenefitsSection />
+        
+        {/* Testimonials */}
+        <TestimonialsSection />
+        
+        {/* Feature CTAs */}
+        <FeatureCTAs />
+      </main>
+    </>
+  );
 }

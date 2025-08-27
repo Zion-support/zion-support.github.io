@@ -1,248 +1,179 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea.tsx';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Footer } from '@/components/Footer';
-
-const QuoteRequestForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    serviceType: '',
-    projectDescription: '',
-    timeline: '',
-    budget: ''
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label className="block text-sm font-medium text-zion-slate-light mb-2">
-            Full Name *
-          </label>
-          <Input
-            type="text"
-            required
-            value={formData.name}
-            onChange={(e) => handleChange('name', e.target.value)}
-            className="bg-zion-blue-light border-zion-purple/20 text-white placeholder-zion-slate-light"
-            placeholder="Enter your full name"
-          />
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-zion-slate-light mb-2">
-            Email Address *
-          </label>
-          <Input
-            type="email"
-            required
-            value={formData.email}
-            onChange={(e) => handleChange('email', e.target.value)}
-            className="bg-zion-blue-light border-zion-purple/20 text-white placeholder-zion-slate-light"
-            placeholder="Enter your email address"
-          />
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-zion-slate-light mb-2">
-            Company Name
-          </label>
-          <Input
-            type="text"
-            value={formData.company}
-            onChange={(e) => handleChange('company', e.target.value)}
-            className="bg-zion-blue-light border-zion-purple/20 text-white placeholder-zion-slate-light"
-            placeholder="Enter your company name"
-          />
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-zion-slate-light mb-2">
-            Phone Number
-          </label>
-          <Input
-            type="tel"
-            value={formData.phone}
-            onChange={(e) => handleChange('phone', e.target.value)}
-            className="bg-zion-blue-light border-zion-purple/20 text-white placeholder-zion-slate-light"
-            placeholder="Enter your phone number"
-          />
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-zion-slate-light mb-2">
-          Service Type *
-        </label>
-        <Select value={formData.serviceType} onValueChange={(value) => handleChange('serviceType', value)}>
-          <SelectTrigger className="bg-zion-blue-light border-zion-purple/20 text-white">
-            <SelectValue placeholder="Select a service type" />
-          </SelectTrigger>
-          <SelectContent className="bg-zion-blue-dark border-zion-purple/20">
-            <SelectItem value="ai-solutions">AI Solutions</SelectItem>
-            <SelectItem value="cloud-services">Cloud Services</SelectItem>
-            <SelectItem value="cybersecurity">Cybersecurity</SelectItem>
-            <SelectItem value="digital-transformation">Digital Transformation</SelectItem>
-            <SelectItem value="custom-development">Custom Development</SelectItem>
-            <SelectItem value="consulting">Consulting</SelectItem>
-            <SelectItem value="other">Other</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-zion-slate-light mb-2">
-          Project Description *
-        </label>
-        <Textarea
-          required
-          value={formData.projectDescription}
-          onChange={(e) => handleChange('projectDescription', e.target.value)}
-          className="bg-zion-blue-light border-zion-purple/20 text-white placeholder-zion-slate-light min-h-[120px]"
-          placeholder="Describe your project requirements, goals, and any specific needs..."
-        />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label className="block text-sm font-medium text-zion-slate-light mb-2">
-            Timeline
-          </label>
-          <Select value={formData.timeline} onValueChange={(value) => handleChange('timeline', value)}>
-            <SelectTrigger className="bg-zion-blue-light border-zion-purple/20 text-white">
-              <SelectValue placeholder="Select timeline" />
-            </SelectTrigger>
-            <SelectContent className="bg-zion-blue-dark border-zion-purple/20">
-              <SelectItem value="asap">ASAP</SelectItem>
-              <SelectItem value="1-2-weeks">1-2 weeks</SelectItem>
-              <SelectItem value="1-month">1 month</SelectItem>
-              <SelectItem value="2-3-months">2-3 months</SelectItem>
-              <SelectItem value="3-6-months">3-6 months</SelectItem>
-              <SelectItem value="6-months-plus">6+ months</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-        
-        <div>
-          <label className="block text-sm font-medium text-zion-slate-light mb-2">
-            Budget Range
-          </label>
-          <Select value={formData.budget} onValueChange={(value) => handleChange('budget', value)}>
-            <SelectTrigger className="bg-zion-blue-light border-zion-purple/20 text-white">
-              <SelectValue placeholder="Select budget range" />
-            </SelectTrigger>
-            <SelectContent className="bg-zion-blue-dark border-zion-purple/20">
-              <SelectItem value="under-10k">Under $10,000</SelectItem>
-              <SelectItem value="10k-25k">$10,000 - $25,000</SelectItem>
-              <SelectItem value="25k-50k">$25,000 - $50,000</SelectItem>
-              <SelectItem value="50k-100k">$50,000 - $100,000</SelectItem>
-              <SelectItem value="100k-plus">$100,000+</SelectItem>
-              <SelectItem value="to-be-discussed">To be discussed</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-
-      <div className="text-center">
-        <Button type="submit" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark px-8 py-3 text-lg">
-          Request Quote
-        </Button>
-      </div>
-    </form>
-  );
-};
-
-const RequestQuote = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-cyan">
-      <main className="pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+import React from 'react';
+<div className="min-h-screen bg-background">
+      <SEO title="Request Quote - Zion Tech Group" description="Get a custom quote for your AI and tech project needs from Zion Tech Group." keywords="quote, pricing, AI services, tech services, project quote, Zion Tech Group" canonical="https://ziontechgroup.com/request-quote"/>
+      
+      <AppHeader />
+      
+      <main className="pt-16 pb-20">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Request a Custom Quote
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get a personalized estimate for your IT services, AI solutions, or tech projects. 
-              Our team will analyze your requirements and provide you with a detailed quote.
+              Tell us about your project and we'll connect you with the perfect talent and services for your needs
             </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <QuoteRequestForm />
+          </div>
+        </div>
+import {SEO} from "@/components/SEO";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {QuoteRequestForm} from "@/components/QuoteRequestForm";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {CheckCircle, Clock, Users, Zap} from "lucide-react";
+
+export default function RequestQuote() {}
+  return (
+    <div className="min-h-screen bg-zion-blue">
+      <SEO title="Request a Quote | Zion Tech Group" description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs." keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes" canonical="https://ziontechgroup.com/request-quote"/>
+      <Header />
+      
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Get Your Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Whether you need AI services, IT solutions, top talent, or specialized equipment, 
+              we'll provide you with a detailed, competitive quote tailored to your specific requirements.
+            </p>
+          </div>
+
+          {/* Benefits Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
+                <CardTitle className="text-lg">Fast Response</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Get your quote within 24 hours
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
+                <CardTitle className="text-lg">Customized</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Tailored to your specific needs
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
+                <CardTitle className="text-lg">Expert Team</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Reviewed by industry experts
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
+              <CardHeader className="text-center">
+                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4"/>
+                <CardTitle className="text-lg">No Obligation</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <CardDescription className="text-zion-slate-light">
+                  Free quotes with no commitment
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Services Overview */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Our Service Categories
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              What We Can Quote For You
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl text-zion-cyan">AI & Machine Learning</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    Custom AI solutions and machine learning models
+                    Custom AI solutions, model development, and ML infrastructure
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="text-zion-slate-light space-y-2">
-                    <li>• Predictive analytics</li>
-                    <li>• Natural language processing</li>
-                    <li>• Computer vision</li>
-                    <li>• AI automation</li>
+                    <li>• Custom AI model development</li>
+                    <li>• Machine learning consulting</li>
+                    <li>• AI infrastructure setup</li>
+                    <li>• Data science services</li>
                   </ul>
                 </CardContent>
               </Card>
 
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Cloud & DevOps</CardTitle>
+                  <CardTitle className="text-xl text-zion-cyan">IT Services</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    Cloud infrastructure and deployment automation
+                    Onsite IT support, infrastructure, and digital transformation
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="text-zion-slate-light space-y-2">
+                    <li>• Onsite IT support</li>
+                    <li>• Infrastructure setup</li>
                     <li>• Cloud migration</li>
-                    <li>• CI/CD pipelines</li>
-                    <li>• Infrastructure as code</li>
-                    <li>• Monitoring & logging</li>
+                    <li>• Cybersecurity services</li>
                   </ul>
                 </CardContent>
               </Card>
 
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Cybersecurity</CardTitle>
+                  <CardTitle className="text-xl text-zion-cyan">Talent & Hiring</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    Security assessments and protection solutions
+                    AI-powered talent matching and recruitment services
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="text-zion-slate-light space-y-2">
-                    <li>• Security audits</li>
-                    <li>• Penetration testing</li>
-                    <li>• Incident response</li>
-                    <li>• Compliance consulting</li>
+                    <li>• AI talent matching</li>
+                    <li>• Recruitment services</li>
+                    <li>• Team building</li>
+                    <li>• Skill assessment</li>
                   </ul>
                 </CardContent>
               </Card>
 
               <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
                 <CardHeader>
-                  <CardTitle className="text-xl text-zion-cyan">Digital Transformation</CardTitle>
+                  <CardTitle className="text-xl text-zion-cyan">Equipment & Hardware</CardTitle>
+                  <CardDescription className="text-zion-slate-light">
+                    High-tech equipment, servers, and specialized hardware
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-zion-slate-light space-y-2">
+                    <li>• AI/ML hardware</li>
+                    <li>• Server infrastructure</li>
+                    <li>• Networking equipment</li>
+                    <li>• Green IT solutions</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-zion-blue-dark border-zion-purple/20 text-white hover:border-zion-purple/40 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-xl text-zion-cyan">Consulting</CardTitle>
                   <CardDescription className="text-zion-slate-light">
                     Strategic technology consulting and digital transformation
                   </CardDescription>
@@ -312,7 +243,33 @@ const RequestQuote = () => {
       
       <Footer />
     </div>
-  );
-};
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
 
-export default RequestQuote;
+export default function RequestQuote() {}
+  return (
+    <>
+      <SEO title="Request a Quote - Zion Tech Group" description="Get a customized quote for your IT services, AI solutions, or tech projects. Our team will provide you with a detailed estimate tailored to your needs." keywords="request quote, IT services quote, AI solutions quote, tech project estimate, custom pricing" canonical="https://ziontechgroup.com/request-quote"/>
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Request a Custom Quote
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Get a personalized estimate for your IT services, AI solutions, or tech projects. 
+              Our team will analyze your requirements and provide you with a detailed quote.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <QuoteRequestForm />
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
+</></>;

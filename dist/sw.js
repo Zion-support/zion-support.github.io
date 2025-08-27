@@ -13,10 +13,10 @@ const STATIC_ASSETS = [
   '/images/zion-logo-512.png'
 ];
 
-// Install event - cache resources
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
@@ -28,22 +28,6 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        return response || fetch(event.request);
-      })
-      .catch(() => {
-        // Return offline page if both cache and network fail
-        if (event.request.mode === 'navigate') {
-          return caches.match('/offline.html');
-        }
-      })
-  );
-});
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -69,14 +53,17 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
+
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
+
   // Skip chrome-extension and other non-http requests
   if (!url.protocol.startsWith('http')) {
     return;
   }
+
   // Handle different types of requests
   if (isStaticAsset(request)) {
     event.respondWith(handleStaticAsset(request));
@@ -190,6 +177,7 @@ async function handleDynamicRequest(request) {
     return caches.match('/offline.html');
   }
 }
+
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
@@ -197,8 +185,8 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-=======
 
+=======
 async function doBackgroundSync() {
   try {
     // Get any pending requests from IndexedDB
@@ -213,7 +201,7 @@ async function doBackgroundSync() {
       }
     }
   } catch (error) {
-    console.error('Background sync failed:', error);
+    console.log('Background sync failed:', error);
   }
 }
 
@@ -246,9 +234,11 @@ self.addEventListener('push', (event) => {
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
+
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
+
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')

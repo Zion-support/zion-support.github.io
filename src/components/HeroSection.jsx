@@ -63,18 +63,6 @@ export function HeroSection() {
         }
     };
     
-    const particleVariants = {
-        animate: {
-            y: [-10, 10, -10],
-            x: [-5, 5, -5],
-            transition: {
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }
-        }
-    };
-
     return (
         <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
             {/* Enhanced background with parallax effect */}
@@ -104,7 +92,7 @@ export function HeroSection() {
                 />
                 <motion.div 
                     className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light" 
-                    variants={particleVariants} 
+                    variants={pulseVariants} 
                     animate="animate" 
                     style={{ animationDelay: '0.5s' }}
                 />
@@ -161,10 +149,7 @@ export function HeroSection() {
                 </motion.div>
 
                 {/* Enhanced subtitle with better spacing and animations */}
-                <motion.p 
-                    variants={itemVariants} 
-                    className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light"
-                >
+                <motion.p variants={itemVariants} className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light">
                     {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
                 </motion.p>
 
@@ -178,7 +163,7 @@ export function HeroSection() {
                         <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
                             <Sparkles className="w-6 h-6 text-zion-cyan"/>
                         </div>
-                        <span className="text-lg">AI-Powered Solutions</span>
+                        <span className="text-lg font-medium">AI-Powered Solutions</span>
                     </motion.div>
                     
                     <motion.div 
@@ -187,9 +172,9 @@ export function HeroSection() {
                         transition={{ type: "spring", stiffness: 400 }}
                     >
                         <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
-                            <Shield className="w-6 h-6 text-zion-purple"/>
+                            <Zap className="w-6 h-6 text-zion-purple"/>
                         </div>
-                        <span className="text-lg">Enterprise Security</span>
+                        <span className="text-lg font-medium">Expert Talent</span>
                     </motion.div>
                     
                     <motion.div 
@@ -197,92 +182,47 @@ export function HeroSection() {
                         whileHover={{ scale: 1.05 }} 
                         transition={{ type: "spring", stiffness: 400 }}
                     >
-                        <div className="p-2 bg-zion-cyan-light/20 rounded-full group-hover:bg-zion-cyan-light/30 transition-colors">
-                            <Zap className="w-6 h-6 text-zion-cyan-light"/>
+                        <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
+                            <Shield className="w-6 h-6 text-zion-cyan"/>
                         </div>
-                        <span className="text-lg">Lightning Fast</span>
+                        <span className="text-lg font-medium">Secure Platform</span>
                     </motion.div>
                 </motion.div>
 
                 {/* Enhanced CTA buttons with better animations */}
                 <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button 
-                            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform transition-all duration-300 group" 
-                            size="lg" 
-                            asChild
-                        >
-                            <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
-                                Get Started Today
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
-                            </Link>
-                        </Button>
-                    </motion.div>
+                    <Button 
+                        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group" 
+                        size="lg" 
+                        asChild
+                    >
+                        <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
+                            Get Started Today
+                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
+                        </Link>
+                    </Button>
                     
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                        <Button 
-                            variant="outline" 
-                            className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 shadow-lg hover:shadow-xl transform transition-all duration-300 group" 
-                            size="lg" 
-                            asChild
-                        >
-                            <Link to="/services" role="button" aria-label="Explore Services" className="flex items-center gap-2">
-                                Explore Services
-                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
-                            </Link>
-                        </Button>
-                    </motion.div>
+                    <Button 
+                        variant="outline" 
+                        className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300" 
+                        size="lg" 
+                        asChild
+                    >
+                        <Link to="/services" role="button" aria-label="Explore Services">
+                            Explore Services
+                        </Link>
+                    </Button>
                 </motion.div>
 
-                {/* Enhanced trust indicators with animations */}
-                <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                    <motion.div 
-                        className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-                        whileHover={{ y: -5, scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                    >
-                        <div className="text-zion-cyan mb-2 flex justify-center">
-                            <Users className="w-6 h-6"/>
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-1">10K+</div>
-                        <div className="text-zion-slate-light text-sm">Active Users</div>
-                    </motion.div>
-                    
-                    <motion.div 
-                        className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-                        whileHover={{ y: -5, scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                    >
-                        <div className="text-zion-purple mb-2 flex justify-center">
-                            <TrendingUp className="w-6 h-6"/>
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-1">95%</div>
-                        <div className="text-zion-slate-light text-sm">Success Rate</div>
-                    </motion.div>
-                    
-                    <motion.div 
-                        className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-                        whileHover={{ y: -5, scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                    >
-                        <div className="text-zion-cyan-light mb-2 flex justify-center">
-                            <Shield className="w-6 h-6"/>
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-1">500+</div>
-                        <div className="text-zion-slate-light text-sm">Enterprise Clients</div>
-                    </motion.div>
-                    
-                    <motion.div 
-                        className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-                        whileHover={{ y: -5, scale: 1.02 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                    >
-                        <div className="text-zion-purple-light mb-2 flex justify-center">
-                            <Rocket className="w-6 h-6"/>
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-1">24/7</div>
-                        <div className="text-zion-slate-light text-sm">Support</div>
-                    </motion.div>
+                {/* Trust indicators */}
+                <motion.div variants={itemVariants} className="text-center">
+                    <p className="text-zion-slate-light mb-4">Trusted by leading companies worldwide</p>
+                    <div className="flex justify-center items-center gap-8 opacity-60">
+                        <div className="w-16 h-8 bg-white/20 rounded"></div>
+                        <div className="w-16 h-8 bg-white/20 rounded"></div>
+                        <div className="w-16 h-8 bg-white/20 rounded"></div>
+                        <div className="w-16 h-8 bg-white/20 rounded"></div>
+                    </div>
                 </motion.div>
             </motion.div>
         </section>
