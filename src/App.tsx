@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { EnhancedHeader } from './components/header/EnhancedHeader';
 import { EnhancedFooter } from './components/footer/EnhancedFooter';
 import { FuturisticAnimatedBackground } from './components/backgrounds/FuturisticAnimatedBackground';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import Analytics from './components/Analytics';
 
 // Lazy load pages - comprehensive import list
 const Home = React.lazy(() => import('./pages/Home'));
@@ -187,6 +189,12 @@ function App() {
         
         {/* Enhanced Footer */}
         <EnhancedFooter />
+        
+        {/* Performance Monitor */}
+        <PerformanceMonitor />
+        
+        {/* Analytics */}
+        <Analytics />
       </div>
     </Router>
   );

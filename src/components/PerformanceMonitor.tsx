@@ -1,188 +1,234 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
+import { BarChart3, Zap, Clock, HardDrive, Wifi, WifiOff } from 'lucide-react';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
+  pageLoadTime: number;
+  memoryUsage: number;
+  networkSpeed: number;
+  isOnline: boolean;
+  timestamp: number;
 }
 
-export const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    pageLoadTime: 0,
+    memoryUsage: 0,
+    networkSpeed: 0,
+    isOnline: navigator.onLine,
+    timestamp: Date.now()
+  });
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    // Only show in development or when explicitly enabled
-    if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
-      setIsVisible(true);
-    }
-
-    // Performance monitoring
-    if ('performance' in window && 'PerformanceObserver' in window) {
-      // First Contentful Paint (FCP)
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        if (fcp) {
-          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-        }
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        if (lcp) {
-          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        if (fid) {
-          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-        }
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        setMetrics(prev => ({ ...prev, cls: clsValue }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      // Time to First Byte (TTFB)
-      const navigationObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const navigation = entries[0] as PerformanceNavigationTiming;
+    // Track page load performance
+    const trackPageLoad = () => {
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
-          setMetrics(prev => ({ ...prev, ttfb: navigation.responseStart - navigation.requestStart }));
+          const loadTime = navigation.loadEventEnd - navigation.navigationStart;
+          setMetrics(prev => ({
+            ...prev,
+            pageLoadTime: loadTime,
+            timestamp: Date.now()
+          }));
         }
-      });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      }
+    };
 
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        navigationObserver.disconnect();
-      };
-    }
+    // Track memory usage
+    const trackMemory = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        const usedMemory = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: Math.round(usedMemory * 100) / 100
+        }));
+      }
+    };
+
+    // Track network status
+    const handleOnline = () => setMetrics(prev => ({ ...prev, isOnline: true }));
+    const handleOffline = () => setMetrics(prev => ({ ...prev, isOnline: false }));
+
+    // Track network speed (simplified)
+    const trackNetworkSpeed = async () => {
+      try {
+        const startTime = performance.now();
+        const response = await fetch('/api/health', { 
+          method: 'HEAD',
+          cache: 'no-cache'
+        });
+        const endTime = performance.now();
+        const responseTime = endTime - startTime;
+        
+        setMetrics(prev => ({
+          ...prev,
+          networkSpeed: Math.round(responseTime)
+        }));
+      } catch (error) {
+        // Network request failed, likely offline
+        setMetrics(prev => ({
+          ...prev,
+          networkSpeed: 0
+        }));
+      }
+    };
+
+    // Set up event listeners
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+    window.addEventListener('load', trackPageLoad);
+
+    // Initial tracking
+    trackMemory();
+    trackNetworkSpeed();
+
+    // Periodic updates
+    const interval = setInterval(() => {
+      trackMemory();
+      trackNetworkSpeed();
+    }, 10000); // Update every 10 seconds
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+      window.removeEventListener('load', trackPageLoad);
+      clearInterval(interval);
+    };
+  }, [location.pathname]);
+
+  // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+    return () => document.removeEventListener('keydown', handleKeyPress);
   }, []);
 
   if (!isVisible) return null;
 
-  const getScore = (metric: keyof PerformanceMetrics, value: number): { score: number; color: string; label: string } => {
-    const thresholds: Record<string, { good: number; needsImprovement: number }> = {
-      fcp: { good: 1800, needsImprovement: 3000 },
-      lcp: { good: 2500, needsImprovement: 4000 },
-      fid: { good: 100, needsImprovement: 300 },
-      cls: { good: 0.1, needsImprovement: 0.25 },
-      ttfb: { good: 800, needsImprovement: 1800 }
-    };
-
-    const threshold = thresholds[metric];
-    if (!threshold) return { score: 0, color: 'text-gray-400', label: 'Unknown' };
-
-    if (value <= threshold.good) {
-      return { score: 100, color: 'text-green-400', label: 'Good' };
-    } else if (value <= threshold.needsImprovement) {
-      return { score: 50, color: 'text-yellow-400', label: 'Needs Improvement' };
-    } else {
-      return { score: 0, color: 'text-red-400', label: 'Poor' };
-    }
+  const getPerformanceColor = (value: number, threshold: number) => {
+    if (value <= threshold) return 'text-green-400';
+    if (value <= threshold * 1.5) return 'text-yellow-400';
+    return 'text-red-400';
   };
 
-  const formatMetric = (metric: keyof PerformanceMetrics, value: number): string => {
-    if (metric === 'cls') return value.toFixed(3);
-    if (metric === 'fid') return `${Math.round(value)}ms`;
-    return `${Math.round(value)}ms`;
+  const getMemoryColor = (usage: number) => {
+    if (usage < 50) return 'text-green-400';
+    if (usage < 80) return 'text-yellow-400';
+    return 'text-red-400';
   };
-
-  const metricsList = [
-    { key: 'fcp' as keyof PerformanceMetrics, label: 'First Contentful Paint', icon: Activity },
-    { key: 'lcp' as keyof PerformanceMetrics, label: 'Largest Contentful Paint', icon: TrendingUp },
-    { key: 'fid' as keyof PerformanceMetrics, label: 'First Input Delay', icon: Zap },
-    { key: 'cls' as keyof PerformanceMetrics, label: 'Cumulative Layout Shift', icon: Clock },
-    { key: 'ttfb' as keyof PerformanceMetrics, label: 'Time to First Byte', icon: Activity }
-  ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed bottom-4 right-4 z-50 bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 rounded-lg p-4 max-w-sm shadow-xl"
-    >
+    <div className="fixed bottom-4 right-4 z-50 bg-zion-slate-dark/90 backdrop-blur-lg rounded-lg p-4 border border-zion-cyan/20 shadow-2xl min-w-[300px]">
       <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
-        <div className="text-xs text-zinc-400">
-          {process.env.NODE_ENV === 'development' ? 'DEV' : 'PROD'}
-        </div>
-      </div>
-      
-      <div className="space-y-2">
-        {metricsList.map(({ key, label, icon: Icon }) => {
-          const value = metrics?.[key];
-          if (value === undefined) return null;
-          
-          const { score, color, label: scoreLabel } = getScore(key, value);
-          
-          return (
-            <div key={key} className="flex items-center justify-between text-xs">
-              <div className="flex items-center space-x-2">
-                <Icon className="w-3 h-3 text-zinc-400" />
-                <span className="text-zinc-300">{label}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className={color}>{formatMetric(key, value)}</span>
-                <span className={`text-xs px-1.5 py-0.5 rounded ${color.replace('text-', 'bg-')}/10 border border-current/20`}>
-                  {scoreLabel}
-                </span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {metrics && (
-        <div className="mt-3 pt-3 border-t border-zinc-700/50">
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-zinc-400">Overall Score</span>
-            <span className="text-white font-medium">
-              {Math.round(
-                metricsList.reduce((acc, { key }) => {
-                  const { score } = getScore(key, metrics[key] || 0);
-                  return acc + score;
-                }, 0) / metricsList.length
-              )}/100
-            </span>
-          </div>
-        </div>
-      )}
-
-      <div className="mt-3 text-xs text-zinc-500">
+        <h3 className="text-zion-cyan font-semibold flex items-center gap-2">
+          <BarChart3 className="w-4 h-4" />
+          Performance Monitor
+        </h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-zinc-400 hover:text-white transition-colors"
+          className="text-zion-cyan/60 hover:text-zion-cyan transition-colors"
         >
-          Hide
+          ×
         </button>
       </div>
-    </motion.div>
+
+      <div className="space-y-3 text-sm">
+        {/* Page Load Time */}
+        <div className="flex items-center justify-between">
+          <span className="text-zion-slate-light flex items-center gap-2">
+            <Clock className="w-3 h-3" />
+            Load Time:
+          </span>
+          <span className={getPerformanceColor(metrics.pageLoadTime, 2000)}>
+            {metrics.pageLoadTime > 0 ? `${Math.round(metrics.pageLoadTime)}ms` : 'N/A'}
+          </span>
+        </div>
+
+        {/* Memory Usage */}
+        <div className="flex items-center justify-between">
+          <span className="text-zion-slate-light flex items-center gap-2">
+            <HardDrive className="w-3 h-3" />
+            Memory:
+          </span>
+          <span className={getMemoryColor(metrics.memoryUsage)}>
+            {metrics.memoryUsage > 0 ? `${metrics.memoryUsage}MB` : 'N/A'}
+          </span>
+        </div>
+
+        {/* Network Speed */}
+        <div className="flex items-center justify-between">
+          <span className="text-zion-slate-light flex items-center gap-2">
+            <Zap className="w-3 h-3" />
+            Response:
+          </span>
+          <span className={getPerformanceColor(metrics.networkSpeed, 100)}>
+            {metrics.networkSpeed > 0 ? `${metrics.networkSpeed}ms` : 'N/A'}
+          </span>
+        </div>
+
+        {/* Network Status */}
+        <div className="flex items-center justify-between">
+          <span className="text-zion-slate-light flex items-center gap-2">
+            {metrics.isOnline ? <Wifi className="w-3 h-3" /> : <WifiOff className="w-3 h-3" />}
+            Status:
+          </span>
+          <span className={metrics.isOnline ? 'text-green-400' : 'text-red-400'}>
+            {metrics.isOnline ? 'Online' : 'Offline'}
+          </span>
+        </div>
+
+        {/* Performance Score */}
+        <div className="pt-2 border-t border-zion-cyan/20">
+          <div className="flex items-center justify-between">
+            <span className="text-zion-slate-light">Performance Score:</span>
+            <span className="text-zion-cyan font-semibold">
+              {calculatePerformanceScore()}/100
+            </span>
+          </div>
+          <div className="w-full bg-zion-slate-dark rounded-full h-2 mt-1">
+            <div 
+              className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full transition-all duration-300"
+              style={{ width: `${calculatePerformanceScore()}%` }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-3 text-xs text-zion-cyan/60 text-center">
+        Press Ctrl+Shift+P to toggle
+      </div>
+    </div>
   );
+
+  function calculatePerformanceScore(): number {
+    let score = 100;
+
+    // Deduct points for slow page load
+    if (metrics.pageLoadTime > 3000) score -= 20;
+    else if (metrics.pageLoadTime > 2000) score -= 10;
+
+    // Deduct points for high memory usage
+    if (metrics.memoryUsage > 100) score -= 20;
+    else if (metrics.memoryUsage > 50) score -= 10;
+
+    // Deduct points for slow network
+    if (metrics.networkSpeed > 500) score -= 20;
+    else if (metrics.networkSpeed > 200) score -= 10;
+
+    // Deduct points for offline status
+    if (!metrics.isOnline) score -= 30;
+
+    return Math.max(0, score);
+  }
 };
+
+export default PerformanceMonitor;

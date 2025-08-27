@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { motion, LazyMotion, domAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { 
   Brain, 
   Shield, 
@@ -156,6 +157,78 @@ const LazyTestimonials = lazy(() => import('../components/home/Testimonials'));
 const LazyCTASection = lazy(() => import('../components/home/CTASection'));
 
 const Home: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="AI-Powered Technology Solutions & Digital Transformation"
+        description="Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and digital transformation solutions. Expert IT consulting and innovative technology services."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT consulting, machine learning, blockchain, IoT, quantum computing"
+        type="website"
+      />
+      
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-7xl font-bold text-white mb-6"
+            >
+              <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
+                Future-Ready
+              </span>
+              <br />
+              <span className="text-zion-slate-light">Technology Solutions</span>
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-zion-cyan/80 mb-8 max-w-3xl mx-auto"
+            >
+              Transform your business with cutting-edge AI, cybersecurity, and cloud infrastructure. 
+              We deliver innovative solutions that drive growth and competitive advantage.
+            </motion.p>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link
+                to="/services"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-zion-cyan/25"
+              >
+                Explore Services
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-200"
+              >
+                Get Started
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Rest of the content */}
+        <LazyMotion features={domAnimation}>
+          <Suspense fallback={<div className="h-64 flex items-center justify-center"><div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div></div>}>
+            <LazyHeroFeatures features={heroFeatures} />
+            <LazyServicesOverview services={services} />
+            <LazyStatsSection />
+            <LazyTestimonials />
+            <LazyCTASection />
+          </Suspense>
+        </LazyMotion>
+      </div>
+    </>
+  );
+
   const heroFeatures = [
     { icon: Brain, title: 'AI-Powered Solutions', description: 'Cutting-edge artificial intelligence for modern businesses' },
     { icon: Shield, title: 'Cybersecurity Excellence', description: 'Advanced protection for your digital assets' },
