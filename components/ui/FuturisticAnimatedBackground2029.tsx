@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface FuturisticAnimatedBackground2029Props {
   className?: string;
@@ -283,7 +283,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
   }, []);
 
   return (
-    <div className={`fixed inset-0 pointer-events-none -z-10 ${className}`}>
+    <div className={`fixed inset-0 pointer-events-none ${className}`}>
       <canvas
         ref={canvasRef}
         className="w-full h-full"

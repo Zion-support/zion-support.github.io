@@ -1,0 +1,123 @@
+<<<<<<< HEAD
+name: Deploy
+=======
+name: Deploy to Production
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+<<<<<<< HEAD
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+=======
+    runs-on: ubuntu-latest
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+<<<<<<< HEAD
+      - name: Run linting
+        run: npm run lint
+        continue-on-error: true
+
+      - name: Run type checking
+        run: npm run type-check
+
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+<<<<<<< HEAD
+          echo "Build successful - dist folder created"
+          
+          # Check for essential files
+          if [ -f dist/index.html ]; then
+            echo "✓ index.html found"
+          else
+            echo "✗ index.html not found"
+            exit 1
+          fi
+          
+          if [ -d dist/assets ]; then
+            echo "✓ assets folder found"
+          else
+            echo "✗ assets folder not found"
+            exit 1
+          fi
+=======
+          echo "Build completed successfully"
+          ls -la dist/
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-build
+          path: dist/
+          retention-days: 30
+
+<<<<<<< HEAD
+      - name: Deploy to Netlify (if configured)
+        if: env.NETLIFY_SITE_ID != ''
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: './dist'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+      - name: Deploy to Vercel (if configured)
+        if: env.VERCEL_TOKEN != ''
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: ./
+          vercel-args: '--prod'
+
+      - name: Deploy success notification
+        run: |
+          echo "🚀 Deployment completed successfully!"
+          echo "Build artifacts uploaded and ready for deployment"
+          echo "Configure deployment platforms (Netlify, Vercel, etc.) for automatic deployment"
+=======
+      - name: Deploy to production
+        run: |
+          echo "Deployment completed successfully"
+          echo "Build artifacts are available for manual deployment"
+          echo "To deploy to https://ziontechgroup.com:"
+          echo "1. Download the build artifacts"
+          echo "2. Upload to your web server"
+          echo "3. Ensure all routes are properly configured"
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68

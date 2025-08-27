@@ -1,64 +1,57 @@
 import React from 'react';
 
-// Form components for building forms
-export const Form = ({ children, onSubmit, className = '', ...props }: React.FormHTMLAttributes<HTMLFormElement>) => {
+export interface FormProps {
+  children: React.ReactNode;
+  onSubmit?: (e: React.FormEvent) => void;
+}
+
+export const Form: React.FC<FormProps> = ({ children, onSubmit }) => {
   return (
-    <form onSubmit={onSubmit} className={className} {...props}>
+    <form onSubmit={onSubmit}>
       {children}
     </form>
   );
 };
 
-export const FormField = ({ 
-  control, 
-  name, 
-  render, 
-  ...props 
-}: {
+export interface FormFieldProps {
   control: any;
   name: string;
-  render: (props: any) => React.ReactElement;
-  [key: string]: any;
-}) => {
-  return render({ field: { name, ...props } });
+  render: (props: any) => React.ReactNode;
+}
+
+export const FormField: React.FC<FormFieldProps> = ({ control, name, render }) => {
+  return render({ field: { name, value: '', onChange: () => {} } });
 };
 
-export const FormItem = ({ children, className = '', ...props }: React.HTMLAttributes<HTMLDivElement>) => {
-  return (
-    <div className={className} {...props}>
-      {children}
-    </div>
-  );
+export interface FormItemProps {
+  children: React.ReactNode;
+}
+
+export const FormItem: React.FC<FormItemProps> = ({ children }) => {
+  return <div className="form-item">{children}</div>;
 };
 
-export const FormLabel = ({ children, className = '', ...props }: React.LabelHTMLAttributes<HTMLLabelElement>) => {
-  return (
-    <label className={className} {...props}>
-      {children}
-    </label>
-  );
+export interface FormControlProps {
+  children: React.ReactNode;
+}
+
+export const FormControl: React.FC<FormControlProps> = ({ children }) => {
+  return <div className="form-control">{children}</div>;
 };
 
-export const FormControl = ({ children, className = '', ...props }: React.HTMLAttributes<HTMLDivElement>) => {
-  return (
-    <div className={className} {...props}>
-      {children}
-    </div>
-  );
+export interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const FormLabel: React.FC<FormLabelProps> = ({ children, className }) => {
+  return <label className={className}>{children}</label>;
 };
 
-export const FormMessage = ({ children, className = '', ...props }: React.HTMLAttributes<HTMLParagraphElement>) => {
-  return (
-    <p className={className} {...props}>
-      {children}
-    </p>
-  );
-};
+export interface FormMessageProps {
+  className?: string;
+}
 
-export const FormDescription = ({ children, className = '', ...props }: React.HTMLAttributes<HTMLParagraphElement>) => {
-  return (
-    <p className={className} {...props}>
-      {children}
-    </p>
-  );
+export const FormMessage: React.FC<FormMessageProps> = ({ className }) => {
+  return <div className={className} />;
 };

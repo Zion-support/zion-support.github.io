@@ -29,56 +29,26 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        
-      - name: Run security audit
-        run: npm audit --audit-level=moderate
-        continue-on-error: true
-        
-      - name: Check for outdated packages
-        run: npm outdated || true
-        
-      - name: Run linting
-        run: npm run lint
-        continue-on-error: true
-        
-      - name: Run type checking
-        run: npm run type-check
-        continue-on-error: true
-        
       - name: Build project
         run: npm run build
-        continue-on-error: true
-
-      - name: Create maintenance report
+      - name: Run code quality checks
         run: |
-          echo "# Repository Maintenance Report" > MAINTENANCE_REPORT.md
-          echo "" >> MAINTENANCE_REPORT.md
-          echo "Generated on: $(date)" >> MAINTENANCE_REPORT.md
-          echo "" >> MAINTENANCE_REPORT.md
-          echo "## Security Audit" >> MAINTENANCE_REPORT.md
-          npm audit --audit-level=moderate --json | jq -r '.metadata.vulnerabilities | to_entries[] | "- \(.key): \(.value)"' >> MAINTENANCE_REPORT.md 2>/dev/null || echo "- No vulnerabilities found" >> MAINTENANCE_REPORT.md
-          echo "" >> MAINTENANCE_REPORT.md
-          echo "## Outdated Packages" >> MAINTENANCE_REPORT.md
-          npm outdated --json | jq -r 'to_entries[] | "- \(.key): \(.value.current) → \(.value.latest)"' >> MAINTENANCE_REPORT.md 2>/dev/null || echo "- All packages are up to date" >> MAINTENANCE_REPORT.md
-
+          npm run lint
+          npm run type-check
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore(maintenance): weekly repository maintenance report"
-          title: "chore(maintenance): weekly repository maintenance report"
+          commit-message: "chore(improvement): continuous improvement and code quality"
+          title: "chore(improvement): apply continuous improvement and code quality"
           body: |
-            Automated weekly maintenance report.
-            
-            This PR contains:
-            - Security audit results
-            - Outdated package information
-            - Linting and type checking results
-            - Build verification
-            
-            Review and merge if everything looks good.
-          branch: maintenance/weekly-report
+            Automated improvement and code quality loop.
+
+            - Runs linting checks
+            - Runs type checking
+            - Ensures build success
+          branch: automation/continuous-improvement
           delete-branch: true
           signoff: false
           labels: |

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MainNavigation } from './MainNavigation.jsx';
-
+import { MainNavigation } from './MainNavigation.tsx';
 export function AppHeader() {
     return (
         <header className="bg-white shadow-sm border-b border-gray-200">

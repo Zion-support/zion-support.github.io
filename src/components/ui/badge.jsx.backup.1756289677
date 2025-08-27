@@ -1,0 +1,36 @@
+import React from 'react';
+
+<<<<<<< HEAD
+export const Badge = ({ children, className = '', variant = 'default' }) => {
+=======
+<<<<<<<< HEAD:src/components/ui/badge.jsx.backup.1756289672
+const Badge = ({ children, className = '', variant = 'default' }) => {
+========
+export const Badge = ({ children, className = '', variant = 'default' }) => {
+>>>>>>>> origin/cursor/website-audit-and-enhancement-4b68:src/components/ui/badge.jsx
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68
+    const baseClasses = 'inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors';
+    const variantClasses = {
+        default: 'border-transparent bg-primary text-primary-foreground',
+        secondary: 'border-transparent bg-secondary text-secondary-foreground',
+        destructive: 'border-transparent bg-destructive text-destructive-foreground',
+        outline: 'text-foreground'
+    };
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/components/ui/badge.jsx.backup.1756289672
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b914
+========
+>>>>>>>> origin/cursor/website-audit-and-enhancement-4b68:src/components/ui/badge.jsx
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68
+    return (
+        <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+            {children}
+        </div>
+    );
+};
+
+export { Badge };

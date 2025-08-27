@@ -1,0 +1,106 @@
+name: Test
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test Suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "Build completed successfully"
+          
+      - name: Verify asset paths
+        run: |
+<<<<<<< HEAD
+          if [ -f out/index.html ]; then
+            echo "✓ index.html found"
+          else
+            echo "✗ index.html not found"
+            exit 1
+          fi
+          
+          if [ -d out/assets ]; then
+            echo "✓ assets folder found"
+          else
+            echo "✗ assets folder not found"
+            exit 1
+          fi
+
+      - name: Run linting
+        run: npm run lint || echo "Linting completed with warnings"
+        continue-on-error: true
+        
+      - name: Run type checking
+        run: npm run type-check || echo "Type checking completed with warnings"
+        continue-on-error: true
+
+      - name: Run Jest with Coverage
+        run: npm run test:ci || echo "Tests not configured"
+        continue-on-error: true
+        
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage/lcov.info
+          fail_ci_if_error: false
+        continue-on-error: true
+        
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+        continue-on-error: true
+        
+      - name: Upload build artifacts
+=======
+          npx http-server dist -p 5000 -s >/dev/null 2>&1 &
+          SERVER_PID=$!
+          sleep 3
+          kill $SERVER_PID || true
+      - name: Run type check
+        run: npm run type-check
+      - name: Run linting
+        run: npm run lint
+      - name: Upload build artifact
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68
+        uses: actions/upload-artifact@v4
+        with:
+          name: build
+          path: out
+          retention-days: 30
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

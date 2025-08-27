@@ -1,375 +1,147 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  Clock, 
-  Users, 
-  Play, 
-  BookOpen, 
-  Video,
-  TrendingUp,
-  Lightbulb,
-  Zap,
-  Globe
-} from 'lucide-react';
-
-const webinars = [
-  {
-    id: 1,
-    title: 'AI in Enterprise: From Strategy to Implementation',
-    description: 'Learn how to develop and execute an AI strategy that drives real business value.',
-    category: 'AI & Analytics',
-    date: 'December 15, 2024',
-    time: '2:00 PM EST',
-    duration: '60 minutes',
-    speaker: 'Dr. Sarah Chen',
-    speakerTitle: 'Chief AI Officer',
-    image: '/api/placeholder/400/250',
-    registrationLink: '/contact',
-    isLive: false,
-    isUpcoming: true
-  },
-  {
-    id: 2,
-    title: 'Cybersecurity Best Practices for 2025',
-    description: 'Discover the latest cybersecurity threats and how to protect your organization.',
-    category: 'Security',
-    date: 'December 20, 2024',
-    time: '1:00 PM EST',
-    duration: '45 minutes',
-    speaker: 'Alex Thompson',
-    speakerTitle: 'VP of Cybersecurity',
-    image: '/api/placeholder/400/250',
-    registrationLink: '/contact',
-    isLive: false,
-    isUpcoming: true
-  },
-  {
-    id: 3,
-    title: 'Cloud Migration Strategies',
-    description: 'Best practices for migrating your infrastructure to the cloud safely and efficiently.',
-    category: 'Cloud & DevOps',
-    date: 'January 10, 2025',
-    time: '3:00 PM EST',
-    duration: '75 minutes',
-    speaker: 'Marcus Rodriguez',
-    speakerTitle: 'VP of Engineering',
-    image: '/api/placeholder/400/250',
-    registrationLink: '/contact',
-    isLive: false,
-    isUpcoming: true
-  },
-  {
-    id: 4,
-    title: 'Quantum Computing: The Future is Now',
-    description: 'Explore the revolutionary potential of quantum computing in business applications.',
-    category: 'Emerging Tech',
-    date: 'January 25, 2025',
-    time: '2:30 PM EST',
-    duration: '90 minutes',
-    speaker: 'Dr. James Kim',
-    speakerTitle: 'Head of Quantum Technology',
-    image: '/api/placeholder/400/250',
-    registrationLink: '/contact',
-    isLive: false,
-    isUpcoming: true
-  },
-  {
-    id: 5,
-    title: 'Digital Transformation Success Stories',
-    description: 'Real-world examples of successful digital transformation initiatives.',
-    category: 'Digital Transformation',
-    date: 'February 5, 2025',
-    time: '1:30 PM EST',
-    duration: '60 minutes',
-    speaker: 'Dr. Kleber Santos',
-    speakerTitle: 'CEO & Founder',
-    image: '/api/placeholder/400/250',
-    registrationLink: '/contact',
-    isLive: false,
-    isUpcoming: true
-  },
-  {
-    id: 6,
-    title: 'IoT and Edge Computing Solutions',
-    description: 'How IoT and edge computing are transforming industries and creating new opportunities.',
-    category: 'IoT & Edge',
-    date: 'February 20, 2025',
-    time: '2:00 PM EST',
-    duration: '75 minutes',
-    speaker: 'Dr. Emily Watson',
-    speakerTitle: 'Head of Research',
-    image: '/api/placeholder/400/250',
-    registrationLink: '/contact',
-    isLive: false,
-    isUpcoming: true
-  }
-];
-
-const upcomingWebinars = webinars.filter(w => w.isUpcoming);
-const pastWebinars = [
-  {
-    id: 7,
-    title: 'Machine Learning Fundamentals',
-    description: 'Introduction to machine learning concepts and practical applications.',
-    category: 'AI & Analytics',
-    date: 'November 30, 2024',
-    duration: '60 minutes',
-    speaker: 'Dr. Sarah Chen',
-    recordingLink: '/webinars/ml-fundamentals',
-    isLive: false,
-    isUpcoming: false
-  },
-  {
-    id: 8,
-    title: 'DevOps Automation Best Practices',
-    description: 'Streamline your development and deployment processes with automation.',
-    category: 'Cloud & DevOps',
-    date: 'November 15, 2024',
-    duration: '45 minutes',
-    speaker: 'Marcus Rodriguez',
-    recordingLink: '/webinars/devops-automation',
-    isLive: false,
-    isUpcoming: false
-  }
-];
-
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Video, Brain, Cpu, Shield, Zap, Rocket, Building } from 'lucide-react';
 export default function Webinars() {
-  return (
-    <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container-responsive relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
-              <Video className="w-10 h-10 text-white" />
-            </motion.div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [selectedStatus, setSelectedStatus] = useState('all');
+    const categories = [
+        { id: 'all', name: 'All Topics', icon: Video },
+        { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
+        { id: 'quantum', name: 'Quantum Technology', icon: Cpu },
+        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
+        { id: 'cloud', name: 'Cloud & DevOps', icon: Zap },
+        { id: 'business', name: 'Business Solutions', icon: Building },
+        { id: 'emerging-tech', name: 'Emerging Tech', icon: Rocket }
+    ];
+    const statuses = [
+        { id: 'all', name: 'All Webinars' },
+        { id: 'upcoming', name: 'Upcoming' },
+        { id: 'live', name: 'Live Now' },
+        { id: 'recorded', name: 'Recorded' }
+    ];
+    const Webinars = () => {
+        const webinars = [
+            {
+                title: "AI-Powered Business Transformation",
+                date: "March 25, 2024",
+                duration: "60 minutes",
+                speaker: "Dr. Sarah Chen",
+                description: "Learn how AI is revolutionizing business operations and creating new opportunities for growth.",
+                category: "AI & Business"
+            },
+            {
+                title: "Cybersecurity Best Practices 2024",
+                date: "April 10, 2024",
+                duration: "45 minutes",
+                speaker: "Michael Rodriguez",
+                description: "Essential cybersecurity strategies to protect your business from evolving threats.",
+                category: "Security"
+            },
+            {
+                title: "Cloud Migration Strategies",
+                date: "April 25, 2024",
+                duration: "75 minutes",
+                speaker: "David Kim",
+                description: "Step-by-step guide to successful cloud migration and optimization.",
+                category: "Cloud & DevOps"
+            }
+        ];
+        return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Expert
-              <span className="text-gradient block">Webinars</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}Webinars
+              </span>
             </h1>
-            
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join industry experts for in-depth discussions on technology trends, 
-              best practices, and innovative solutions that drive business transformation.
+              best practices, and innovative solutions
             </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center gap-2 text-zion-cyan">
-                <Calendar className="w-4 h-4" />
-                <span>Monthly Sessions</span>
-              </div>
-              <div className="flex items-center gap-2 text-zion-purple">
-                <Users className="w-4 h-4" />
-                <span>Industry Experts</span>
-              </div>
-              <div className="flex items-center gap-2 text-zion-blue">
-                <Play className="w-4 h-4" />
-                <span>Live & Recorded</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Upcoming Webinars */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Upcoming Webinars</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Register for our upcoming sessions and gain insights from industry leaders 
-              on the latest technology trends and best practices.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {upcomingWebinars.map((webinar, index) => (
-              <motion.div
-                key={webinar.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
-                <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
-                  <div className="text-center">
-                    <Video className="w-16 h-16 text-zion-cyan mx-auto mb-2" />
-                    <p className="text-zion-slate-light text-sm">Webinar Preview</p>
-                  </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {webinars.map((webinar, index) => (<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                <div className="mb-4">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">{webinar.category}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{webinar.title}</h3>
+                <p className="text-gray-300 mb-4">{webinar.description}</p>
+                
+                <div className="space-y-2 mb-4">
+                  <p className="text-gray-400 text-sm flex items-center">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                    {webinar.date}
+                  </p>
+                  <p className="text-gray-400 text-sm flex items-center">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    {webinar.duration}
+                  </p>
+                  <p className="text-gray-400 text-sm flex items-center">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                    {webinar.speaker}
+                  </p>
                 </div>
                 
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
-                      {webinar.category}
-                    </span>
-                    <span className="px-3 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full border border-zion-purple/30">
-                      Upcoming
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
-                    {webinar.title}
-                  </h3>
-                  
-                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
-                    {webinar.description}
-                  </p>
-                  
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Calendar className="w-4 h-4 text-zion-cyan" />
-                      <span>{webinar.date} at {webinar.time}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Clock className="w-4 h-4 text-zion-cyan" />
-                      <span>{webinar.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Users className="w-4 h-4 text-zion-cyan" />
-                      <span>{webinar.speaker}, {webinar.speakerTitle}</span>
-                    </div>
-                  </div>
-                  
-                  <a
-                    href={webinar.registrationLink}
-                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-                  >
-                    Register Now
-                  </a>
-                </div>
-              </motion.div>
-            ))}
+                <Link to="/contact" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                  Register Now
+                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                  </svg>
+                </Link>
+              </div>))}
           </div>
-        </div>
-      </section>
-
-      {/* Past Webinars */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Past Webinars</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Missed a session? Access recordings and materials from our previous webinars 
-              to continue learning at your own pace.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {pastWebinars.map((webinar, index) => (
-              <motion.div
-                key={webinar.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Play className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
-                        {webinar.category}
-                      </span>
-                      <span className="px-3 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full border border-zion-slate-light/30">
-                        Recorded
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-lg font-bold text-white mb-2">{webinar.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-3">{webinar.description}</p>
-                    
-                    <div className="flex items-center gap-4 text-zion-slate-light text-sm mb-4">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4 text-zion-cyan" />
-                        {webinar.date}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4 text-zion-cyan" />
-                        {webinar.duration}
-                      </span>
-                    </div>
-                    
-                    <a
-                      href={webinar.recordingLink}
-                      className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300"
-                    >
-                      <Play className="w-4 h-4" />
-                      <span className="text-sm font-medium">Watch Recording</span>
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Stay Informed</h2>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-              Subscribe to our webinar series and never miss an opportunity to learn 
-              from industry experts and technology leaders. Get notified about upcoming 
-              sessions and access exclusive content.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+          
+          <div className="text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4">Stay Informed</h3>
+              <p className="text-gray-300 mb-6">
+                Subscribe to our webinar series and never miss an opportunity to learn 
+                from industry experts and technology leaders.
+              </p>
+              <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                 Subscribe to Webinars
-              </a>
-              <a
-                href="/contact"
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Suggest Topics
-              </a>
+              </Link>
             </div>
-          </motion.div>
+          </div>
+=======
+import {CogIcon} from '@heroicons/react/24/outline';
+
+const $page: React.FC = () => {}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-blue-600/20 rounded-full">
+              <CogIcon className="h-12 w-12 text-blue-400"/>
+            </div>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            $page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            This page is under development. Contact us for more information.
+          </p>
+          <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
+            Contact Us for More Information
+          </Link>
         </div>
       </section>
     </div>
   );
+};
+
+export default $page;
+        </></></>);
+    };
 }

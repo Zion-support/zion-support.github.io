@@ -15,7 +15,37 @@ concurrency:
 
 jobs:
   build:
-    name: Build and Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint and type-check
+        run: |
+          npm run lint
+          npm run type-check
+
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
+          echo "Build completed successfully"
+
+  test:
+    name: Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
     
@@ -34,11 +64,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint and type-check
+      - name: Build project
+        run: npm run build
+
+      - name: Verify build output
         run: |
-          npm run lint || echo "Linting failed, continuing..."
-          npm run type-check || echo "Type checking failed, continuing..."
-        continue-on-error: true
+          if [ ! -d dist ]; then
+            echo "Build failed: dist folder not found"
+            exit 1
+          fi
 
       - name: Build project
         run: npm run build

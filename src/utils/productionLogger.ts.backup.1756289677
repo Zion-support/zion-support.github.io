@@ -1,0 +1,57 @@
+<<<<<<< HEAD
+// Production logger utility
+// Provides logging functionality that can be controlled based on environment
+
+const isProduction = process.env.NODE_ENV === 'production';
+
+export const productionLogger = {
+  log: (...args: any[]) => {
+    if (!isProduction) {
+      console.log(...args);
+    }
+  },
+  warn: (...args: any[]) => {
+    if (!isProduction) {
+      console.warn(...args);
+    }
+  },
+  error: (...args: any[]) => {
+    if (!isProduction) {
+      console.error(...args);
+    }
+  },
+  info: (...args: any[]) => {
+    if (!isProduction) {
+      console.info(...args);
+    }
+  },
+  debug: (...args: any[]) => {
+    if (!isProduction) {
+      console.debug(...args);
+    }
+  }
+};
+
+export const logErrorToProduction = (message: string, error?: any) => {
+  if (!isProduction) {
+    console.error(message, error);
+  }
+  // In production, you could send to a logging service like Sentry, LogRocket, etc.
+};
+
+export default productionLogger;
+=======
+export function logErrorToProduction(message: string, error?: any): void {
+  // In production, we might want to send errors to a logging service
+  // For now, we'll just use console.error in development
+  if (process.env.NODE_ENV === 'development') {
+    console.error(message, error);
+  }
+  
+  // In production, you could send to:
+  // - Sentry
+  // - LogRocket
+  // - Custom logging service
+  // - Analytics service
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b68
