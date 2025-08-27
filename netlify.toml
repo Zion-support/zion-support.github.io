@@ -4,12 +4,15 @@
 
 [build]
   # Use `yarn install` for deterministic installs, Vite builds to dist/
-  command = "yarn install --frozen-lockfile && yarn build"
+  command = "yarn cache clean && yarn install --frozen-lockfile && yarn build"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=4096"
+  # Force Yarn usage and skip npm
+  YARN_FLAGS = "--frozen-lockfile"
+  NPM_FLAGS = "--ignore-scripts"
   # Skip Netlify's Next.js plugin since this is a Vite static site
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
