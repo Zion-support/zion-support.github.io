@@ -184,6 +184,8 @@ export function AppHeader() {
       icon: HelpCircle,
       dropdown: [
         { name: 'Help Center', href: '/help-center', description: 'Find answers and support' },
+        { name: 'Help', href: '/help', description: 'Help and support resources' },
+        { name: 'Security', href: '/security', description: 'Security and compliance information' },
         { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
         { name: 'Contact Support', href: '/contact', description: 'Get help from our team' },
         { name: 'Request Quote', href: '/request-quote', description: 'Get project estimates' }

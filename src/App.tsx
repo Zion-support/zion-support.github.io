@@ -23,6 +23,7 @@ const News = React.lazy(() => import('./pages/News'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Security = React.lazy(() => import('./pages/Security'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 
 // Service pages - only import existing ones
@@ -85,7 +86,9 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/search" element={<SearchPage />} />
+              <Route path="/help" element={<HelpCenter />} />
               <Route path="/help-center" element={<HelpCenter />} />
+              <Route path="/security" element={<Security />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/solutions" element={<Solutions />} />
