@@ -1,8 +1,7 @@
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import React from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -26,9 +25,42 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
-import { ServicesShowcase } from "@/components/ServicesShowcase.tsx";
+import { ServicesShowcase } from "@/components/ServicesShowcase";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const stats = [
+    {
+      value: "500+",
+      label: "Projects Delivered",
+      description: "Successfully completed across industries",
+      icon: "🚀"
+    },
+    {
+      value: "50+",
+      label: "Expert Team",
+      description: "Certified professionals and specialists",
+      icon: "👥"
+    },
+    {
+      value: "99.9%",
+      label: "Uptime Guarantee",
+      description: "Reliable infrastructure and support",
+      icon: "⚡"
+    },
+    {
+      value: "24/7",
+      label: "Support Available",
+      description: "Round-the-clock technical assistance",
+      icon: "🛡️"
+    }
+  ];
+
   return (
     <>
       <SEO 
@@ -39,47 +71,7 @@ export default function Home() {
       />
       
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        {/* Hero Content */}
-        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/services" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Explore Our Services
-              </Link>
-              <Link 
-                to="/contact" 
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 animate-float">
-          <div className="w-4 h-4 bg-cyan-400 rounded-full opacity-60"></div>
-        </div>
-        <div className="absolute top-40 right-20 animate-float-delayed">
-          <div className="w-3 h-3 bg-blue-400 rounded-full opacity-60"></div>
-        </div>
-        <div className="absolute bottom-40 left-20 animate-float">
-          <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60"></div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Stats Section */}
       <section className="py-20 bg-black/50">
@@ -88,7 +80,7 @@ export default function Home() {
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-8 h-8 text-white" />
+                  <span className="text-2xl">{stat.icon}</span>
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold mb-2">{stat.label}</div>
