@@ -1,19 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
-<<<<<<< HEAD
-  plugins: [react()],
-  build: {
-    target: 'esnext',
-    outDir: 'dist',
-  },
-  server: {
-    port: 3000,
-    host: true,
-  },
-})
-=======
   root: '.',
   publicDir: 'public',
   plugins: [
@@ -178,4 +167,3 @@ export default defineConfig({
     }
   }
 });
->>>>>>> cf2ffffd833531dbba8aa60328cfcb5452a016af
