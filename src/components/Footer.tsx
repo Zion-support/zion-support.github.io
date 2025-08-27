@@ -98,7 +98,8 @@ export function Footer() {
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
-    { name: "Cookie Policy", path: "/cookies" }
+    { name: "Cookie Policy", path: "/cookies" },
+    { name: "Sitemap", path: "/sitemap" }
   ];
 
   const socialLinks = [
