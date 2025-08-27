@@ -26,6 +26,16 @@ const Contact = lazy(() => import('./pages/Contact').then(module => ({ default: 
 const Blog = lazy(() => import('./pages/Blog').then(module => ({ default: module.Blog })));
 const Careers = lazy(() => import('./pages/Careers').then(module => ({ default: module.Careers })));
 
+// Additional missing page imports
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Login = lazy(() => import('./pages/Login'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const SearchPage = lazy(() => import('./pages/SearchPage'));
+const Partners = lazy(() => import('./pages/Partners'));
+const News = lazy(() => import('./pages/News'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const ITServices = lazy(() => import('./pages/ITServices'));
