@@ -2,7 +2,6 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer.jsx';
-<<<<<<< HEAD
 import { ChatAssistant } from './components/ChatAssistant';
 
 // Lazy load pages with better chunking
@@ -20,11 +19,6 @@ const Sitemap = lazy(() => import('./pages/Sitemap.tsx'));
 const GreenIT = lazy(() => import('./pages/GreenIT.tsx'));
 
 // Enhanced loading component with better UX
-=======
-import { ChatAssistant } from './components/ChatAssistant.jsx';
-// Lazy load only the pages we know work
-const Home = lazy(() => import('./pages/Home.jsx'));
->>>>>>> b146bf389fafde756de41032cd8eb59c97440d83
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
     <div className="text-center">
@@ -103,39 +97,36 @@ const NotFound = () => (
     </div>
   </div>
 );
+
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         <AppHeader />
-        
         <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              {/* Main pages */}
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/green-it" element={<GreenIT />} />
-              <Route path="/partners" element={<PartnersPage />} />
-              <Route path="/login" element={<Login />} />
-
-              {/* Catch-all route for 404 */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
-
         <Footer />
         <ChatAssistant />
       </div>
     </Router>
   );
 }
+
 export default App;
