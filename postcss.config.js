@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 export default {
-=======
-module.exports = {
   plugins: {
     tailwindcss: {},
     'autoprefixer': {},
@@ -17,5 +14,4 @@ module.exports = {
       }]
     } : false,
   },
->>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 };
