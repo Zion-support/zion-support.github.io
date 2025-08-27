@@ -19,6 +19,7 @@ const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
 const Services2026 = React.lazy(() => import('./pages/Services2026'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
 const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
@@ -182,6 +183,7 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/services2026" element={<Services2026 />} />
               <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/ai-solutions" element={<AISolutions />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
