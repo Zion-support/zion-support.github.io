@@ -128,20 +128,20 @@ export function Footer() {
   const contactInfo = [
     {
       name: "Email",
-      value: "info@ziontechgroup.com",
-      url: "mailto:info@ziontechgroup.com",
+      value: "kleber@ziontechgroup.com",
+      url: "mailto:kleber@ziontechgroup.com",
       icon: Mail
     },
     {
       name: "Phone",
-      value: "+1 (555) 123-4567",
-      url: "tel:+15551234567",
+      value: "+1 302 464 0950",
+      url: "tel:+13024640950",
       icon: Phone
     },
     {
       name: "Address",
-      value: "123 Innovation Drive, Tech City, TC 12345",
-      url: "https://maps.google.com",
+      value: "364 E Main St STE 1008 Middletown DE 19709",
+      url: "https://maps.google.com/?q=364%20E%20Main%20St%20STE%201008%20Middletown%20DE%2019709",
       icon: MapPin
     }
   ];

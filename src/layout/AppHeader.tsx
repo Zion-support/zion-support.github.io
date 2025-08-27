@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -36,6 +36,9 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -53,6 +56,7 @@ export function AppHeader() {
     { name: 'Green Tech', href: '/services', icon: Globe, description: 'Sustainability Solutions' },
     { name: 'Space Tech', href: '/services', icon: Rocket, description: 'Space Exploration & Mining' },
     { name: 'Autonomous AI', href: '/services', icon: Brain, description: 'Self-Learning Systems' },
+    { name: 'Micro SaaS Products', href: '/services/micro-saas', icon: ShoppingCart, description: 'AI automations with transparent pricing' },
   ];
 
   const quickLinks = [
@@ -60,6 +64,8 @@ export function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Privacy', href: '/privacy', icon: Shield },
+    { name: 'Terms', href: '/terms', icon: BookOpen },
   ];
 
   return (
