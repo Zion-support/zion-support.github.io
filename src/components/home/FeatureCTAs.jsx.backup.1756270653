@@ -119,6 +119,11 @@ export function FeatureCTAs() {
           ))}
         </div>
       </div>
+<<<<<<< HEAD
+    </section>
+  );
+=======
     </section>);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-476b
 }
 
