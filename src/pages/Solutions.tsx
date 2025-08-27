@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Solutions: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Solutions</h1>
-			<p className="text-xl text-gray-300">Explore our business solutions.</p>
-		</div>
-	</div>
-);
-
-export default Solutions;
+export default function Solutions() {
+  return (
+    <div className="min-h-screen bg-futuristic text-white">
+      <div className="container-responsive py-20">
+        <h1 className="heading-responsive text-gradient mb-4">Solutions</h1>
+        <p className="text-responsive text-gray-300 max-w-2xl">Explore tailored industry solutions across AI, IT, security, and cloud. Contact us for a customized proposal.</p>
+      </div>
+    </div>
+  );
+}

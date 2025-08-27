@@ -15,8 +15,10 @@ const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const Services = React.lazy(() => import('./pages/Services'));
+const Services = React.lazy(() => import('./pages/ServicesPage'));
 const Services2026 = React.lazy(() => import('./pages/Services2026'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Products = React.lazy(() => import('./pages/Products'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
 const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
@@ -28,7 +30,6 @@ const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Team = React.lazy(() => import('./pages/Team'));
 const News = React.lazy(() => import('./pages/News'));
@@ -43,6 +44,7 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
+
 
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
@@ -160,6 +162,8 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services2026" element={<Services2026 />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/products" element={<Products />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
@@ -176,6 +180,8 @@ function App() {
               <Route path="/support" element={<Support />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />

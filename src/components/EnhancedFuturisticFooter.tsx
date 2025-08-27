@@ -23,7 +23,6 @@ import {
   Sparkles,
   Flame,
   Thunder,
-  Lightning,
   Sun,
   Moon,
   Planet,
