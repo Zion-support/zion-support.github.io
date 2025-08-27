@@ -195,7 +195,6 @@ const HeroSection = React.memo(() => {
                       </div>
                     ))}
                   </div>
-                  </div>
                 </div>
               </div>
             </motion.div>
