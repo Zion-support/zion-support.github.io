@@ -57,7 +57,8 @@ import {
   Truck,
   ExternalLink,
   ChevronDown,
-  Copyright
+  Copyright,
+  GitFork
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -108,7 +109,7 @@ const footerSections = [
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
       { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
       { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitBranch },
+              { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
       { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
       { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
     ]

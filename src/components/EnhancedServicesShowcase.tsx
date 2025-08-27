@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  GitBranch, 
+  GitFork, 
   Shield, 
   Atom, 
   Cpu, 
@@ -22,7 +22,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       description: 'Transform business operations with intelligent automation that learns and scales',
       price: 'From $299/month',
       path: '/services/ai-workflow-automation',
-              icon: GitBranch,
+              icon: GitFork,
       category: 'AI & Automation',
       features: ['Process optimization', 'AI-powered workflows', 'Real-time analytics', 'Scalable automation'],
       benefits: ['Reduce manual work by 70-85%', 'Improve efficiency by 60%', 'Cut operational costs by 40-50%'],

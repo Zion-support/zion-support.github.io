@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  GitBranch, 
+  GitFork, 
   Shield, 
   Users, 
   BarChart3, 
@@ -59,7 +59,7 @@ import {
   AlertTriangle,
   Zap,
   Target,
-  GitBranch as WorkflowIcon,
+      GitFork as WorkflowIcon,
   BookOpen,
   FileCheck,
   UserCheck,

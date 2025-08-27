@@ -52,7 +52,7 @@ import {
   Database as DatabaseIcon,
   ShieldCheck,
   Bot,
-  GitBranch,
+  GitFork,
   Eye as EyeIcon,
   Sparkles as SparklesIcon,
   Zap as ZapIcon

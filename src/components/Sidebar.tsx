@@ -35,7 +35,7 @@ import {
   Infinity,
   ArrowRight,
   DollarSign,
-  GitBranch,
+  GitFork,
   Briefcase,
   Newspaper,
   FileText,

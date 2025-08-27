@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  GitBranch, 
+  GitFork, 
   Brain, 
   Zap, 
   Target, 
@@ -69,7 +69,7 @@ export default function AIWorkflowOrchestrator() {
       benefits: ["30% faster workflow execution", "Intelligent task prioritization", "Predictive process optimization"]
     },
     {
-      icon: GitBranch,
+      icon: GitFork,
       title: "Visual Workflow Designer",
       description: "Drag-and-drop interface for creating complex business workflows with AI assistance",
       benefits: ["No-code workflow creation", "AI-suggested optimizations", "Real-time collaboration"]
