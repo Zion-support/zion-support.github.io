@@ -9,6 +9,7 @@ import { PerformanceMonitor } from './components/PerformanceMonitor';
 const Home = React.lazy(() => import('./pages/Home.jsx'));
 const About = React.lazy(() => import('./pages/About.jsx'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage.jsx'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage.tsx'));
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
@@ -75,6 +76,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/enhanced-services" element={<EnhancedServicesPage />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
