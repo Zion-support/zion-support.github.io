@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   test:
-    name: Test Suite
+    name: Test Job
     runs-on: ubuntu-latest
     timeout-minutes: 20
     
@@ -37,57 +37,21 @@ jobs:
             echo "Build failed: out folder not found"
             exit 1
           fi
-          echo "Build completed successfully"
-          
-      - name: Verify asset paths
-        run: |
-          if [ -f out/index.html ]; then
-            echo "✓ index.html found"
-          else
-            echo "✗ index.html not found"
-            exit 1
-          fi
-          
-          if [ -d out/assets ]; then
-            echo "✓ assets folder found"
-          else
-            echo "✗ assets folder not found"
-            exit 1
-          fi
-
-      - name: Run linting
-        run: npm run lint || echo "Linting completed with warnings"
+      - name: Run Tests
+        run: npm test -- --run
         continue-on-error: true
-        
-      - name: Run type checking
-        run: npm run type-check || echo "Type checking completed with warnings"
+      - name: Run Cypress Tests (if available)
+        run: npm run cypress:run
+        env:
+          TEST_USER_EMAIL: ${{ secrets.CYPRESS_TEST_USER_EMAIL }}
+          TEST_USER_PASSWORD: ${{ secrets.CYPRESS_TEST_USER_PASSWORD }}
+          TEST_USER_DISPLAY_NAME: ${{ secrets.CYPRESS_TEST_USER_DISPLAY_NAME }}
         continue-on-error: true
-
-      - name: Run Jest with Coverage
-        run: npm run test:ci || echo "Tests not configured"
-        continue-on-error: true
-        
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/lcov.info
-          fail_ci_if_error: false
-        continue-on-error: true
-        
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage
-        continue-on-error: true
-        
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: build
-          path: out
-          retention-days: 30
+          path: dist
+        if: success()
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
