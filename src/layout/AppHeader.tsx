@@ -1,10 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,8 +19,16 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
-    { name: 'Services', href: '/services', current: false },
     { name: 'Contact', href: '/contact', current: false },
+  ];
+
+  const services = [
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
   ];
 
   return (
@@ -45,6 +55,56 @@ export function AppHeader() {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                onMouseEnter={() => setServicesDropdownOpen(true)}
+                onMouseLeave={() => setServicesDropdownOpen(false)}
+                className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              >
+                Services
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {servicesDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md"
+                  onMouseEnter={() => setServicesDropdownOpen(true)}
+                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                >
+                  <div className="p-4">
+                    <div className="grid grid-cols-1 gap-2">
+                      {services.map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.href}
+                          className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 group"
+                        >
+                          <div className="flex-1">
+                            <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                              {service.name}
+                            </div>
+                            <div className="text-sm text-gray-400">
+                              {service.description}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-slate-700/50">
+                      <Link
+                        to="/services"
+                        className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
+                      >
+                        View All Services →
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Search Bar - Hidden on mobile */}
@@ -107,6 +167,23 @@ export function AppHeader() {
                 </Link>
               ))}
               
+              {/* Mobile Services */}
+              <div className="px-3 py-2">
+                <div className="text-slate-400 text-sm font-medium mb-2">Services</div>
+                <div className="space-y-1">
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="block text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm transition-colors duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
               {/* Mobile Search */}
               <form onSubmit={handleSearch} className="px-3 py-2">
                 <input
@@ -123,4 +200,25 @@ export function AppHeader() {
       </header>
     </>
   );
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { MainNavigation } from './MainNavigation.tsx';
+
+export function AppHeader() {
+	return (
+		<header className="bg-white shadow-sm border-b border-gray-200">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex justify-between items-center h-16">
+					<div className="flex items-center">
+						<Link to="/" className="text-xl font-bold text-gray-900">
+							Zion Tech Group
+						</Link>
+					</div>
+					<MainNavigation />
+				</div>
+			</div>
+		</header>
+	);
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 }

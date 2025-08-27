@@ -1,17 +1,18 @@
+# This is a VITE project, NOT a Next.js project
+# The build process uses Vite to create a static site in the 'dist' folder
+# No Next.js plugins or configurations are needed
+
 [build]
-  # Use `npm ci` for deterministic installs, Next.js plugin expects .next
+  # Use `npm ci` for deterministic installs, Vite builds to dist folder
   command = "npm ci && npm run build"
-  publish = ".next"
+  publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-# Optional: a few redirects that were present
+# Redirects for legacy URLs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
   to = "/ai-autonomous-ecosystem-manager"
@@ -48,21 +49,12 @@
   status = 301
 
 [[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/intelligent-content-automation-platform"
-  status = 301
-
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
-
-[[redirects]]
   from = "/browser-automation-cloud/"
   to = "/browser-automation-cloud"
   status = 301
+
+# Catch-all redirect for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -1,6 +1,6 @@
 import { JobPostingForm } from "@/components/jobs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { SEO } from "@/components/SEO";
+import { SEO } from "../components/SEOHead";
 import { useAuth } from "@/hooks/useAuth";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
@@ -12,7 +12,7 @@ export default function PostJob() {
       </div>);
     }
     return (<>
-      <SEO title="Post a Job | Zion AI Marketplace" description="Post a job to find the perfect AI talent for your project."/>
+      <SEOHead title="Post a Job | Zion AI Marketplace" description="Post a job to find the perfect AI talent for your project."/>
       
       <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>
         <Card className="border shadow-md">

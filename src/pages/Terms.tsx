@@ -1,86 +1,64 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   FileText, 
-  Shield, 
-  Users, 
-  Globe, 
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  Calendar,
-  Mail,
-  Phone,
-  MapPin,
-  Scale,
+  CheckCircle, 
+  AlertTriangle, 
+  Info,
+  HelpCircle,
+  Shield,
   Lock,
-  Eye,
+  UserCheck,
   Database,
-  Server,
-  Cpu,
-  Network,
-  Brain,
-  Code,
-  Rocket,
-  Atom,
-  Dna,
-  Microscope,
-  Flask,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Eye as EyeIcon,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale as ScaleIcon,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
+  Globe,
+  Building,
+  Clock,
+  Calendar,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
   Plus,
-  Equal,
-  Divide,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
+  Minus,
+  X,
+  Search,
+  Filter,
+  SortAsc,
+  SortDesc,
+  RefreshCw,
+  Save,
+  Edit,
+  Trash2,
+  Copy,
+  Link as LinkIcon,
+  Wifi,
+  WifiOff,
+  Signal,
+  SignalHigh,
+  SignalMedium,
+  SignalLow,
+  Battery,
+  BatteryCharging,
+  Power,
+  PowerOff,
   Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
+  Eye,
+  EyeOff,
+  EyeOn,
   Camera,
-  VideoOff,
-  Mic,
-  MicOff,
+  CameraOff,
+  Microphone,
+  MicrophoneOff,
   Volume2,
   VolumeX,
-  Play,
-  Pause,
-  Stop,
+  Volume1,
+  Volume,
+  Mute,
+  Unmute,
+  PlayCircle,
+  PauseCircle,
+  StopCircle,
   SkipBack,
   SkipForward,
   Rewind,
@@ -91,588 +69,413 @@ import {
   Shuffle2,
   SkipBack2,
   SkipForward2,
-  PlayTriangle,
-  PauseTriangle,
-  StopTriangle,
-  SkipBackTriangle,
-  SkipForwardTriangle,
-  RewindTriangle,
-  FastForwardTriangle,
-  ShuffleTriangle,
-  RepeatTriangle,
-  Repeat1Triangle,
-  Shuffle2Triangle,
-  SkipBack2Triangle,
-  SkipForward2Triangle,
-  PlayOctagon,
-  PauseOctagon,
-  StopOctagon,
-  SkipBackOctagon,
-  SkipForwardOctagon,
-  RewindOctagon,
-  FastForwardOctagon,
-  ShuffleOctagon,
-  RepeatOctagon,
-  Repeat1Octagon,
-  Shuffle2Octagon,
-  SkipBack2Octagon,
-  SkipForward2Octagon,
-  PlayDodecagon,
-  PauseDodecagon,
-  StopDodecagon,
-  SkipBackDodecagon,
-  SkipForwardDodecagon,
-  RewindDodecagon,
-  FastForwardDodecagon,
-  ShuffleDodecagon,
-  RepeatDodecagon,
-  Repeat1Dodecagon,
-  Shuffle2Dodecagon,
-  SkipBack2Dodecagon,
-  SkipForward2Dodecagon
+  PlaySquare,
+  PauseSquare,
+  StopSquare,
+  PlayButton,
+  PauseButton,
+  StopButton,
+  PlayIcon,
+  PauseIcon,
+  StopIcon,
+  PlayIcon2,
+  PauseIcon2,
+  StopIcon2,
+  PlayIcon3,
+  PauseIcon3,
+  StopIcon3,
+  PlayIcon4,
+  PauseIcon4,
+  StopIcon4,
+  PlayIcon5,
+  PauseIcon5,
+  StopIcon5,
+  PlayIcon6,
+  PauseIcon6,
+  StopIcon6,
+  PlayIcon7,
+  PauseIcon7,
+  StopIcon7,
+  PlayIcon8,
+  PauseIcon8,
+  StopIcon8,
+  PlayIcon9,
+  PauseIcon9,
+  StopIcon9,
+  PlayIcon10,
+  PauseIcon10,
+  StopIcon10
 } from 'lucide-react';
 
-const Terms: React.FC = () => {
-  const lastUpdated = 'January 15, 2025';
-  const companyInfo = {
-    name: 'Zion Tech Group',
-    address: '123 Innovation Drive, Tech Valley, CA 94000',
-    email: 'legal@ziontechgroup.com',
-    phone: '+1 (555) 123-4567',
-    website: 'https://ziontechgroup.com'
+export default function Terms() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
   };
 
-  const services = [
-    {
-      category: 'AI Services',
-      description: 'Artificial intelligence solutions including consciousness simulation, neural networks, and predictive analytics',
-      examples: ['AI Consciousness Simulator', 'Quantum Emotion Processor', 'Neural Network Architect']
-    },
-    {
-      category: 'Micro SAAS',
-      description: 'Software-as-a-service solutions for business intelligence, customer experience, and cybersecurity',
-      examples: ['AI Business Intelligence', 'Customer Experience Hub', 'Cybersecurity Platform']
-    },
-    {
-      category: 'IT Services',
-      description: 'Infrastructure management, digital transformation, and IT consulting services',
-      examples: ['Infrastructure Management', 'Digital Transformation', 'IT Consulting']
-    },
-    {
-      category: 'Emerging Tech',
-      description: 'Cutting-edge technology solutions including quantum computing, blockchain, and space technology',
-      examples: ['Quantum Computing', 'Blockchain & DeFi', 'Space Technology']
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
-  ];
-
-  const userObligations = [
-    {
-      obligation: 'Compliance',
-      description: 'Comply with all applicable laws and regulations when using our services'
-    },
-    {
-      obligation: 'Security',
-      description: 'Maintain the security of your account credentials and systems'
-    },
-    {
-      obligation: 'Acceptable Use',
-      description: 'Use our services only for lawful and intended purposes'
-    },
-    {
-      obligation: 'Intellectual Property',
-      description: 'Respect our intellectual property rights and those of third parties'
-    },
-    {
-      obligation: 'Data Protection',
-      description: 'Handle any personal data in accordance with applicable privacy laws'
-    },
-    {
-      obligation: 'Reporting',
-      description: 'Report any security vulnerabilities or misuse of our services'
-    }
-  ];
-
-  const prohibitedActivities = [
-    'Attempting to gain unauthorized access to our systems or other users\' accounts',
-    'Using our services for illegal activities or to harm others',
-    'Reverse engineering, decompiling, or disassembling our software',
-    'Distributing malware, viruses, or other harmful code',
-    'Interfering with the proper functioning of our services',
-    'Attempting to circumvent security measures or access controls',
-    'Using our services to violate intellectual property rights',
-    'Engaging in activities that could damage our reputation or business'
-  ];
-
-  const limitations = [
-    {
-      category: 'Service Availability',
-      description: 'We strive for 99.9% uptime but cannot guarantee uninterrupted service'
-    },
-    {
-      category: 'Data Loss',
-      description: 'We implement backup and recovery procedures but cannot guarantee against data loss'
-    },
-    {
-      category: 'Third-Party Services',
-      description: 'We are not responsible for third-party services integrated with our platform'
-    },
-    {
-      category: 'Force Majeure',
-      description: 'We are not liable for delays or failures due to circumstances beyond our control'
-    }
-  ];
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-6xl mx-auto">
-            <motion.h1 
-              className="text-5xl md:text-7xl font-bold mb-8"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Terms of <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+      <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex justify-center mb-8">
+              <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+                <FileText className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            
+            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
+              Terms of{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Service
               </span>
-            </motion.h1>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
+              Read the terms and conditions governing your use of Zion Tech Group's 
+              marketplace platform and services.
+            </p>
             
-            <motion.p 
-              className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              These terms govern your use of Zion Tech Group's services and outline the rights and 
-              responsibilities of both parties.
-            </motion.p>
-
-            <motion.div 
-              className="flex items-center justify-center gap-4 text-zion-slate-light"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Calendar className="w-5 h-5" />
-              <span>Last Updated: {lastUpdated}</span>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Information */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Zion Tech Group</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We provide cutting-edge technology solutions and services to businesses worldwide
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">Company Details</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-zion-slate-light">
-                    <Users className="w-5 h-5 text-zion-cyan mr-3" />
-                    <span>{companyInfo.name}</span>
-                  </div>
-                  <div className="flex items-center text-zion-slate-light">
-                    <MapPin className="w-5 h-5 text-zion-cyan mr-3" />
-                    <span>{companyInfo.address}</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">Contact Information</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center text-zion-slate-light">
-                    <Mail className="w-5 h-5 text-zion-cyan mr-3" />
-                    <span>{companyInfo.email}</span>
-                  </div>
-                  <div className="flex items-center text-zion-slate-light">
-                    <Phone className="w-5 h-5 text-zion-cyan mr-3" />
-                    <span>{companyInfo.phone}</span>
-                  </div>
-                  <div className="flex items-center text-zion-slate-light">
-                    <Globe className="w-5 h-5 text-zion-cyan mr-3" />
-                    <span>{companyInfo.website}</span>
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button 
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Download Terms
+              </motion.button>
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                Contact Us
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+      {/* Last Updated */}
+      <section className="py-8 bg-zion-slate-dark">
+        <div className="container mx-auto px-4 text-center">
+          <motion.p 
+            className="text-zion-slate-light"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Services</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We offer a comprehensive range of technology solutions designed to drive innovation and growth
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.category}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-4">
-                  <Server className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.category}</h3>
-                <p className="text-zion-slate-light mb-4">{service.description}</p>
-                <div>
-                  <h4 className="text-zion-cyan font-semibold mb-2">Examples:</h4>
-                  <ul className="space-y-1">
-                    {service.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="flex items-center text-zion-slate-light text-sm">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+            Last updated: {new Date().toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </motion.p>
         </div>
       </section>
 
-      {/* User Obligations */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Terms Content */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto space-y-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              User <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Obligations</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              By using our services, you agree to comply with these obligations and responsibilities
-            </p>
-          </motion.div>
+            {/* Acceptance of Terms */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                1. Acceptance of Terms
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  By accessing and using Zion Tech Group's marketplace platform ("Service"), 
+                  you accept and agree to be bound by the terms and provisions of this agreement. 
+                  If you do not agree to abide by these terms, please do not use this service.
+                </p>
+                <p className="text-zion-slate-light leading-relaxed">
+                  These terms constitute a legally binding agreement between you and Zion Tech Group. 
+                  We reserve the right to modify these terms at any time, with changes taking effect 
+                  immediately upon posting on our website.
+                </p>
+              </div>
+            </motion.section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {userObligations.map((obligation, index) => (
-              <motion.div
-                key={obligation.obligation}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
+            {/* Description of Service */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                2. Description of Service
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  Zion Tech Group provides a comprehensive marketplace platform that connects 
+                  AI and technology professionals with opportunities, services, and equipment. 
+                  Our platform includes:
+                </p>
+                <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
+                  <li>Talent marketplace for AI and tech professionals</li>
+                  <li>Service listings and bookings</li>
+                  <li>Equipment and product marketplace</li>
+                  <li>Community forums and networking</li>
+                  <li>AI matching and recommendation services</li>
+                  <li>Project management and collaboration tools</li>
+                  <li>Payment processing and escrow services</li>
+                </ul>
+              </div>
+            </motion.section>
+
+            {/* User Accounts */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                3. User Accounts
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-4">
+                    3.1 Account Creation
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    To access certain features of our Service, you must create an account. 
+                    You agree to provide accurate, current, and complete information during 
+                    registration and to update such information to keep it accurate, current, and complete.
+                  </p>
+                  <p className="text-zion-slate-light leading-relaxed">
+                    You must be at least 18 years old to create an account. By creating an account, 
+                    you represent and warrant that you meet this age requirement.
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">{obligation.obligation}</h3>
-                <p className="text-zion-slate-light text-sm">{obligation.description}</p>
-              </motion.div>
-            ))}
-          </div>
+
+                <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-4">
+                    3.2 Account Security
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    You are responsible for safeguarding your password and for all activities 
+                    that occur under your account. You agree not to disclose your password 
+                    to any third party and to take sole responsibility for any activities 
+                    or actions under your account.
+                  </p>
+                  <p className="text-zion-slate-light leading-relaxed">
+                    You must notify us immediately of any unauthorized use of your account 
+                    or any other breach of security.
+                  </p>
+                </div>
+              </div>
+            </motion.section>
+
+            {/* User Conduct */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                4. User Conduct
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  You agree not to use the Service to:
+                </p>
+                <ul className="list-disc list-inside text-zion-slate-light space-y-2 ml-4">
+                  <li>Violate any applicable laws or regulations</li>
+                  <li>Infringe upon the rights of others</li>
+                  <li>Upload or transmit malicious code or content</li>
+                  <li>Attempt to gain unauthorized access to our systems</li>
+                  <li>Interfere with the proper functioning of the Service</li>
+                  <li>Engage in fraudulent or deceptive practices</li>
+                  <li>Harass, abuse, or harm other users</li>
+                  <li>Spam or send unsolicited communications</li>
+                  <li>Impersonate another person or entity</li>
+                </ul>
+                <p className="text-zion-slate-light mt-4 leading-relaxed">
+                  Violation of these terms may result in account suspension or termination.
+                </p>
+              </div>
+            </motion.section>
+
+            {/* Content and Intellectual Property */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                5. Content and Intellectual Property
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-4">
+                    5.1 User Content
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    You retain ownership of content you submit to our platform. By submitting content, 
+                    you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, 
+                    modify, and distribute your content in connection with the Service.
+                  </p>
+                  <p className="text-zion-slate-light leading-relaxed">
+                    You represent and warrant that you have all necessary rights to grant this license 
+                    and that your content does not violate any third-party rights.
+                  </p>
+                </div>
+
+                <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-4">
+                    5.2 Platform Content
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    The Service and its original content, features, and functionality are owned by 
+                    Zion Tech Group and are protected by international copyright, trademark, patent, 
+                    trade secret, and other intellectual property laws.
+                  </p>
+                  <p className="text-zion-slate-light leading-relaxed">
+                    You may not copy, modify, distribute, sell, or lease any part of our Service 
+                    without our prior written consent.
+                  </p>
+                </div>
+              </div>
+            </motion.section>
+
+            {/* Marketplace Transactions */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                6. Marketplace Transactions
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-4">
+                    6.1 Service Agreements
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    When you engage with services or talent through our platform, you enter into 
+                    agreements with the respective service providers or professionals. Zion Tech Group 
+                    acts as a facilitator and is not a party to these agreements.
+                  </p>
+                  <p className="text-zion-slate-light leading-relaxed">
+                    We provide tools and services to facilitate these transactions but are not 
+                    responsible for the quality, delivery, or outcome of services provided by third parties.
+                  </p>
+                </div>
+
+                <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-4">
+                    6.2 Payment and Fees
+                  </h3>
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    All payments are processed through our secure payment system. We may charge 
+                    fees for certain services, which will be clearly disclosed before you commit 
+                    to a transaction.
+                  </p>
+                  <p className="text-zion-slate-light leading-relaxed">
+                    You are responsible for all applicable taxes and fees associated with your 
+                    use of the Service.
+                  </p>
+                </div>
+              </div>
+            </motion.section>
+
+            {/* Privacy and Data */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                7. Privacy and Data Protection
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  Your privacy is important to us. Our collection and use of personal information 
+                  is governed by our Privacy Policy, which is incorporated into these Terms by reference.
+                </p>
+                <p className="text-zion-slate-light leading-relaxed">
+                  By using our Service, you consent to the collection and use of your information 
+                  as described in our Privacy Policy.
+                </p>
+              </div>
+            </motion.section>
+
+            {/* Limitation of Liability */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                8. Limitation of Liability
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  To the maximum extent permitted by law, Zion Tech Group shall not be liable 
+                  for any indirect, incidental, special, consequential, or punitive damages, 
+                  including but not limited to loss of profits, data, or use.
+                </p>
+                <p className="text-zion-slate-light leading-relaxed">
+                  Our total liability to you for any claims arising from your use of the Service 
+                  shall not exceed the amount you paid us in the twelve months preceding the claim.
+                </p>
+              </div>
+            </motion.section>
+
+            {/* Contact Information */}
+            <motion.section variants={itemVariants}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                9. Contact Us
+              </h2>
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  If you have any questions about these Terms of Service, please contact us:
+                </p>
+                <div className="space-y-2 text-zion-slate-light">
+                  <p><strong>Email:</strong> legal@ziontechgroup.com</p>
+                  <p><strong>Phone:</strong> +1 (302) 464-0950</p>
+                  <p><strong>Address:</strong> Zion Tech Group, Legal Department</p>
+                </div>
+                <p className="text-zion-slate-light mt-4 leading-relaxed">
+                  We will respond to your inquiry within 30 days of receipt.
+                </p>
+              </div>
+            </motion.section>
+          </motion.div>
         </div>
       </section>
 
-      {/* Prohibited Activities */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Prohibited</span> Activities
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              The following activities are strictly prohibited and may result in immediate service termination
-            </p>
-          </motion.div>
-
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-            className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-2xl font-bold text-white text-center mb-6">Activities That Are Not Allowed</h3>
-            <ul className="space-y-3">
-              {prohibitedActivities.map((activity, index) => (
-                <li key={index} className="flex items-start text-zion-slate-light">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  {activity}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Service Limitations */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Service <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Limitations</span>
+              Questions About Our Terms?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Understanding the limitations and disclaimers of our services
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Our legal team is here to help. Contact us if you have any questions 
+              about these terms or need clarification on any specific provisions.
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {limitations.map((limitation, index) => (
-              <motion.div
-                key={limitation.category}
-                className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button 
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-4">
-                  <Scale className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{limitation.category}</h3>
-                <p className="text-zion-slate-light">{limitation.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Intellectual Property */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-6">
-                  <Lock className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Our Intellectual Property</h3>
-                <p className="text-zion-slate-light leading-relaxed mb-6">
-                  All content, software, technology, and intellectual property on our platform remain the exclusive 
-                  property of Zion Tech Group and our licensors.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    Software and applications
-                  </li>
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    Trademarks and brand assets
-                  </li>
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    Patents and proprietary technology
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center mb-6">
-                  <Eye className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Your Content</h3>
-                <p className="text-zion-slate-light leading-relaxed mb-6">
-                  You retain ownership of content you submit to our platform, but grant us a license to use it 
-                  for service provision and improvement.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    You own your data and content
-                  </li>
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    We can use it to provide services
-                  </li>
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    You can remove it at any time
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Termination & Contact */}
-      <section className="py-20 bg-zion-slate-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mb-6">
-                  <AlertTriangle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Service Termination</h3>
-                <p className="text-zion-slate-light leading-relaxed mb-6">
-                  We may terminate or suspend your access to our services for violations of these terms, 
-                  with or without notice.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    Immediate termination for violations
-                  </li>
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    30-day notice for other reasons
-                  </li>
-                  <li className="flex items-center text-zion-slate-light">
-                    <CheckCircle className="w-5 h-5 text-zion-cyan mr-2" />
-                    Data export available upon request
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center mb-6">
-                  <Mail className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Contact Legal Team</h3>
-                <p className="text-zion-slate-light leading-relaxed mb-6">
-                  If you have questions about these terms or need legal assistance, 
-                  please contact our legal team.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center text-zion-slate-light">
-                    <Mail className="w-5 h-5 text-zion-cyan mr-3" />
-                    <span>{companyInfo.email}</span>
-                  </div>
-                  <div className="flex items-center text-zion-slate-light">
-                    <Phone className="w-5 h-5 text-zion-cyan mr-3" />
-                    <span>{companyInfo.phone}</span>
-                  </div>
-                  <div className="flex items-center text-zion-slate-light">
-                    <MapPin className="w-5 h-5 text-zion-cyan mr-3" />
-                    <span>{companyInfo.address}</span>
-                  </div>
-                </div>
-                <Link 
-                  to="/contact"
-                  className="inline-flex items-center mt-6 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-                >
-                  Contact Legal Team
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Updates & Changes */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Terms <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Updates</span>
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              We may update these terms from time to time to reflect changes in our services or applicable laws. 
-              We will notify you of any material changes by posting the new terms on our website.
-            </p>
-            <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6">
-              <div className="flex items-center justify-center mb-4">
-                <AlertTriangle className="w-8 h-8 text-zion-cyan mr-3" />
-                <span className="text-zion-cyan font-semibold">Important Notice</span>
-              </div>
-              <p className="text-zion-slate-light text-center">
-                These terms were last updated on <strong>{lastUpdated}</strong>. 
-                Please review them periodically to stay informed about your rights and obligations.
-              </p>
+                Contact Legal Team
+              </motion.button>
+              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                Download Full Terms
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default Terms;
+}

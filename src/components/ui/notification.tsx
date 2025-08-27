@@ -5,6 +5,7 @@ import { Button } from './button';
 
 type NotificationType = 'success' | 'error' | 'warning' | 'info';
 
+<<<<<<< HEAD
 type NotificationItemType = {
 	id: string;
 	title: string;
@@ -19,10 +20,27 @@ type NotificationItemType = {
 type NotificationContextType = {
 	notifications: NotificationItemType[];
 	addNotification: (n: Omit<NotificationItemType, 'id' | 'timestamp'>) => void;
+=======
+type Notification = {
+	id: string;
+	title: string;
+	message?: string;
+	timestamp: Date;
+	dismissible?: boolean;
+	duration?: number;
+	type: NotificationType;
+	action?: { label: string; onClick: () => void };
+};
+
+type NotificationContextValue = {
+	notifications: Notification[];
+	addNotification: (n: Omit<Notification, 'id' | 'timestamp'>) => void;
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 	removeNotification: (id: string) => void;
 	clearAll: () => void;
 };
 
+<<<<<<< HEAD
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
 export function useNotifications() {
@@ -33,18 +51,41 @@ export function useNotifications() {
 
 export function NotificationProvider({ children, maxNotifications = 5, position = 'top-right' }: { children: ReactNode; maxNotifications?: number; position?: string; }) {
 	const [notifications, setNotifications] = useState<NotificationItemType[]>([]);
+=======
+const NotificationContext = createContext<NotificationContextValue | undefined>(undefined);
+
+export function useNotifications() {
+	const context = useContext(NotificationContext);
+	if (!context) {
+		throw new Error('useNotifications must be used within a NotificationProvider');
+	}
+	return context;
+}
+
+export function NotificationProvider({ children, maxNotifications = 5, position = 'top-right' }: { children: ReactNode; maxNotifications?: number; position?: string }) {
+	const [notifications, setNotifications] = useState<Notification[]>([]);
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
 	const removeNotification = useCallback((id: string) => {
 		setNotifications(prev => prev.filter(n => n.id !== id));
 	}, []);
 
+<<<<<<< HEAD
 	const addNotification = useCallback((notification: Omit<NotificationItemType, 'id' | 'timestamp'>) => {
 		const newNotification: NotificationItemType = {
+=======
+	const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp'>) => {
+		const newNotification: Notification = {
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 			...notification,
 			id: Math.random().toString(36).substr(2, 9),
 			timestamp: new Date(),
 			dismissible: notification.dismissible ?? true,
+<<<<<<< HEAD
 			duration: notification.duration ?? 5000
+=======
+			duration: notification.duration ?? 5000,
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 		};
 		setNotifications(prev => {
 			const updated = [newNotification, ...prev];
@@ -57,7 +98,11 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
 
 	const clearAll = useCallback(() => setNotifications([]), []);
 
+<<<<<<< HEAD
 	const value: NotificationContextType = { notifications, addNotification, removeNotification, clearAll };
+=======
+	const value: NotificationContextValue = { notifications, addNotification, removeNotification, clearAll };
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
 	return (
 		<NotificationContext.Provider value={value}>
@@ -71,6 +116,7 @@ function NotificationContainer({ position }: { position: string }) {
 	const { notifications, clearAll } = useNotifications();
 	const getPositionClasses = (pos: string) => {
 		switch (pos) {
+<<<<<<< HEAD
 			case 'top-right': return 'top-4 right-4';
 			case 'top-left': return 'top-4 left-4';
 			case 'bottom-right': return 'bottom-4 right-4';
@@ -78,6 +124,22 @@ function NotificationContainer({ position }: { position: string }) {
 			case 'top-center': return 'top-4 left-1/2 transform -translate-x-1/2';
 			case 'bottom-center': return 'bottom-4 left-1/2 transform -translate-x-1/2';
 			default: return 'top-4 right-4';
+=======
+			case 'top-right':
+				return 'top-4 right-4';
+			case 'top-left':
+				return 'top-4 left-4';
+			case 'bottom-right':
+				return 'bottom-4 right-4';
+			case 'bottom-left':
+				return 'bottom-4 left-4';
+			case 'top-center':
+				return 'top-4 left-1/2 transform -translate-x-1/2';
+			case 'bottom-center':
+				return 'bottom-4 left-1/2 transform -translate-x-1/2';
+			default:
+				return 'top-4 right-4';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 		}
 	};
 	if (notifications.length === 0) return null;
@@ -89,18 +151,31 @@ function NotificationContainer({ position }: { position: string }) {
 						<Bell className="w-4 h-4 text-zion-cyan" />
 						<span className="text-zinc-300 text-sm font-medium">{notifications.length} notifications</span>
 					</div>
+<<<<<<< HEAD
 					<Button size="sm" variant="ghost" onClick={clearAll} className="text-zinc-400 hover:text-zion-cyan text-xs">Clear all</Button>
+=======
+					<Button size="sm" variant="ghost" onClick={clearAll} className="text-zinc-400 hover:text-zion-cyan text-xs">
+						Clear all
+					</Button>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 				</div>
 			)}
 			<div className="space-y-2">
 				<AnimatePresence mode="popLayout">
+<<<<<<< HEAD
 					{notifications.map((n) => (<NotificationItem key={n.id} notification={n} />))}
+=======
+					{notifications.map((notification) => (
+						<NotificationItem key={notification.id} notification={notification} />
+					))}
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 				</AnimatePresence>
 			</div>
 		</div>
 	);
 }
 
+<<<<<<< HEAD
 function NotificationItem({ notification }: { notification: NotificationItemType }) {
 	const { removeNotification } = useNotifications();
 	const getIcon = (type: NotificationType) => {
@@ -110,24 +185,66 @@ function NotificationItem({ notification }: { notification: NotificationItemType
 			case 'warning': return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
 			case 'info':
 			default: return <Info className="w-5 h-5 text-blue-400" />;
+=======
+function NotificationItem({ notification }: { notification: Notification }) {
+	const { removeNotification } = useNotifications();
+	const getIcon = (type: NotificationType) => {
+		switch (type) {
+			case 'success':
+				return <CheckCircle className="w-5 h-5 text-green-400" />;
+			case 'error':
+				return <AlertCircle className="w-5 h-5 text-red-400" />;
+			case 'warning':
+				return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+			case 'info':
+				return <Info className="w-5 h-5 text-blue-400" />;
+			default:
+				return <Info className="w-5 h-5 text-blue-400" />;
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 		}
 	};
 	const getTypeClasses = (type: NotificationType) => {
 		switch (type) {
+<<<<<<< HEAD
 			case 'success': return 'border-green-500/30 bg-green-500/10';
 			case 'error': return 'border-red-500/30 bg-red-500/10';
 			case 'warning': return 'border-yellow-500/30 bg-yellow-500/10';
 			case 'info':
 			default: return 'border-zion-blue-light/30 bg-zion-blue/10';
+=======
+			case 'success':
+				return 'border-green-500/30 bg-green-500/10';
+			case 'error':
+				return 'border-red-500/30 bg-red-500/10';
+			case 'warning':
+				return 'border-yellow-500/30 bg-yellow-500/10';
+			case 'info':
+				return 'border-blue-500/30 bg-blue-500/10';
+			default:
+				return 'border-zion-blue-light/30 bg-zion-blue/10';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 		}
 	};
 	const getProgressColor = (type: NotificationType) => {
 		switch (type) {
+<<<<<<< HEAD
 			case 'success': return 'bg-green-400';
 			case 'error': return 'bg-red-400';
 			case 'warning': return 'bg-yellow-400';
 			case 'info':
 			default: return 'bg-blue-400';
+=======
+			case 'success':
+				return 'bg-green-400';
+			case 'error':
+				return 'bg-red-400';
+			case 'warning':
+				return 'bg-yellow-400';
+			case 'info':
+				return 'bg-blue-400';
+			default:
+				return 'bg-zion-cyan';
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 		}
 	};
 	return (
@@ -144,9 +261,16 @@ function NotificationItem({ notification }: { notification: NotificationItemType
 					className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`}
 					initial={{ width: '100%' }}
 					animate={{ width: '0%' }}
+<<<<<<< HEAD
 					transition={{ duration: (notification.duration || 0) / 1000, ease: 'linear' }}
 				/>
 			)}
+=======
+					transition={{ duration: notification.duration / 1000, ease: 'linear' }}
+				/>
+			)}
+
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 			<div className="flex items-start gap-3">
 				<div className="flex-shrink-0 mt-0.5">{getIcon(notification.type)}</div>
 				<div className="flex-1 min-w-0">
@@ -171,6 +295,7 @@ function NotificationItem({ notification }: { notification: NotificationItemType
 	);
 }
 
+<<<<<<< HEAD
 export function showSuccess(title: string, message?: string, options?: Partial<NotificationItemType>) {
 	return { type: 'success', title, message, ...options } as Omit<NotificationItemType, 'id' | 'timestamp'>;
 }
@@ -183,3 +308,6 @@ export function showWarning(title: string, message?: string, options?: Partial<N
 export function showInfo(title: string, message?: string, options?: Partial<NotificationItemType>) {
 	return { type: 'info', title, message, ...options } as Omit<NotificationItemType, 'id' | 'timestamp'>;
 }
+=======
+export { NotificationContext };
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc

@@ -1,6 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { cleanupAuthState } from "@/utils/authUtils";
+import { cleanupAuthState } from "../../utils/auth-utils";
 export const useEmailAuth = (setUser, setIsLoading) => {
     const login = async ({ email, password }) => {
         try {

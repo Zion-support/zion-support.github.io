@@ -134,6 +134,63 @@ const GreenIT: React.FC = () => {
       icon: TreePine,
       title: 'Carbon Capture',
       description: 'Technologies for carbon sequestration and reduction'
+    },
+    {
+      icon: Globe,
+      title: "Carbon-Neutral Operations",
+      description: "Comprehensive carbon offset programs and sustainable business practices across all operations.",
+      benefits: ["Carbon neutrality", "ESG compliance", "Brand reputation"]
+    }
+  ];
+
+  const services = [
+    {
+      title: "Green IT Consulting",
+      description: "Expert guidance on implementing sustainable technology practices and reducing environmental impact.",
+      features: ["Energy audits", "Sustainability roadmaps", "ROI analysis"],
+      price: "Starting at $5,000"
+    },
+    {
+      title: "Sustainable Infrastructure",
+      description: "Design and implementation of eco-friendly IT infrastructure and data centers.",
+      features: ["Energy-efficient hardware", "Smart cooling systems", "Renewable energy integration"],
+      price: "Custom pricing"
+    },
+    {
+      title: "E-waste Management",
+      description: "Comprehensive electronic waste collection, recycling, and disposal services.",
+      features: ["Secure data destruction", "Certified recycling", "Compliance reporting"],
+      price: "Starting at $2,000"
+    },
+    {
+      title: "Carbon Footprint Analysis",
+      description: "Detailed assessment of your IT operations' environmental impact with actionable recommendations.",
+      features: ["Comprehensive analysis", "Reduction strategies", "Progress tracking"],
+      price: "Starting at $3,500"
+    }
+  ];
+
+  const caseStudies = [
+    {
+      company: "TechCorp Global",
+      industry: "Technology",
+      challenge: "High energy costs and carbon footprint from data centers",
+      solution: "Implemented green data center solutions with renewable energy integration",
+      results: ["40% reduction in energy costs", "60% decrease in carbon emissions"]
+    },
+    {
+      company: "GreenBank Financial",
+      industry: "Financial Services",
+      challenge: "Need for sustainable IT practices to meet ESG requirements",
+      solution: "Comprehensive green IT transformation with carbon-neutral operations",
+      results: ["Achieved carbon neutrality", "Improved ESG ratings", "Enhanced brand reputation"]
+    },
+    {
+      company: "EcoManufacturing Inc",
+      industry: "Manufacturing",
+      challenge: "High e-waste generation and inefficient IT infrastructure",
+      solution: "Circular IT economy implementation with sustainable infrastructure",
+      results: ["70% reduction in e-waste", "50% improvement in IT efficiency"]
     }
   ];
 

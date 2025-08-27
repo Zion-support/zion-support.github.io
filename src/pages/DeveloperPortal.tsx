@@ -1,26 +1,7 @@
-
 import React from 'react';
-import SEO from '../SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
-import { Button } from '../ui/button';
-import { Badge } from '../ui/badge';
-import { 
-  Code, 
-  BookOpen, 
-  Zap, 
-  Shield, 
-  Users, 
-  MessageSquare, 
-  Github, 
-  ExternalLink,
-  Terminal,
-  Database,
-  Webhook,
-  Key,
-  Mail
-} from 'lucide-react';
+<<<<<<< HEAD
+import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 export default function DeveloperPortal() {
   const apiFeatures = [
     {
@@ -127,36 +108,158 @@ export default function DeveloperPortal() {
 
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEOHead 
         title="Developer Portal | Zion Tech Group" 
         description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools."
         keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers"
         canonical="https://ziontechgroup.com/developers"
       />
+=======
+import SEO from '../SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
+import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+export default function DeveloperPortal() {
+    const apiFeatures = [
+        {
+            title: 'RESTful APIs',
+            description: 'Clean, intuitive REST APIs for all major platform features',
+            icon: Code,
+            status: 'Stable',
+            docs: '/api-docs'
+        },
+        {
+            title: 'Webhooks',
+            description: 'Real-time notifications for platform events and updates',
+            icon: Webhook,
+            status: 'Beta',
+            docs: '/api-docs/webhooks'
+        },
+        {
+            title: 'Authentication',
+            description: 'Secure OAuth 2.0 and API key authentication',
+            icon: Key,
+            status: 'Stable',
+            docs: '/api-docs/auth'
+        },
+        {
+            title: 'SDKs & Libraries',
+            description: 'Official SDKs for JavaScript, Python, and more',
+            icon: Terminal,
+            status: 'Stable',
+            docs: '/api-docs/sdks'
+        }
+    ];
+    const quickStartSteps = [
+        {
+            step: 1,
+            title: 'Get API Keys',
+            description: 'Sign up and generate your API keys from the dashboard',
+            action: 'Get Started'
+        },
+        {
+            step: 2,
+            title: 'Read Documentation',
+            description: 'Explore our comprehensive API documentation and guides',
+            action: 'View Docs'
+        },
+        {
+            step: 3,
+            title: 'Test Endpoints',
+            description: 'Use our interactive API playground to test endpoints',
+            action: 'Try API'
+        },
+        {
+            step: 4,
+            title: 'Build & Deploy',
+            description: 'Integrate our APIs into your applications',
+            action: 'View Examples'
+        }
+    ];
+    const resources = [
+        {
+            title: 'API Reference',
+            description: 'Complete API endpoint documentation with examples',
+            icon: BookOpen,
+            href: '/api-docs',
+            badge: 'Complete'
+        },
+        {
+            title: 'Getting Started Guide',
+            description: 'Step-by-step tutorial for new developers',
+            icon: Zap,
+            href: '/api-docs/getting-started',
+            badge: 'Beginner'
+        },
+        {
+            title: 'Code Samples',
+            description: 'Ready-to-use code examples in multiple languages',
+            icon: Code,
+            href: '/api-docs/samples',
+            badge: 'Examples'
+        },
+        {
+            title: 'SDK Downloads',
+            description: 'Official SDKs and client libraries',
+            icon: Terminal,
+            href: '/api-docs/sdks',
+            badge: 'Download'
+        },
+        {
+            title: 'Community Forum',
+            description: 'Connect with other developers and get help',
+            icon: Users,
+            href: '/community',
+            badge: 'Community'
+        },
+        {
+            title: 'Support & Help',
+            description: 'Technical support and troubleshooting guides',
+            icon: MessageSquare,
+            href: '/help',
+            badge: 'Support'
+        }
+    ];
+    return (<div className="min-h-screen bg-background">
+      <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https://ziontechgroup.com/developers"/>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
-            <Code className="h-16 w-16 text-zion-cyan" />
+            <Code className="h-16 w-16 text-zion-cyan"/>
           </div>
           <h1 className="text-4xl font-bold text-white mb-4">Developer Portal</h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-6">
             Build powerful applications and integrations with our comprehensive APIs, SDKs, and developer tools.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+            <a href="/api-docs" className="bg-zion-purple hover:bg-zion-purple/90 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center">
+              <BookOpen className="h-5 w-5 mr-2"/>
+              View API Documentation
+            </a>
+            <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-bold py-3 px-6 rounded-lg flex items-center justify-center">
+              <Github className="h-5 w-5 mr-2"/>
+              View on GitHub
+            </a>
+=======
             <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple/90">
               <Link to="/api-docs">
-                <BookOpen className="h-5 w-5 mr-2" />
+                <BookOpen className="h-5 w-5 mr-2"/>
                 View API Documentation
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 mr-2" />
+                <Github className="h-5 w-5 mr-2"/>
                 View on GitHub
               </a>
             </Button>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           </div>
         </div>
 
@@ -165,12 +268,27 @@ export default function DeveloperPortal() {
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Powerful APIs & Tools</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {apiFeatures.map((feature) => {
-              const IconComponent = feature.icon;
-              return (
-                <Card key={feature.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
+            const IconComponent = feature.icon;
+<<<<<<< HEAD
+            return (<div key={feature.title} className="border border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors p-6 rounded-lg">
+                  <div className="flex items-center justify-between mb-3">
+                    <IconComponent className="h-8 w-8 text-zion-cyan"/>
+                    <span className="bg-zion-purple/20 text-zion-purple text-xs font-bold px-2 py-1 rounded-full">
+                        {feature.status}
+                    </span>
+                  </div>
+                  <h3 className="text-white text-lg font-bold mb-2">{feature.title}</h3>
+                  <p className="text-zion-slate-light mb-4">{feature.description}</p>
+                  <a href={feature.docs} className="text-zion-cyan hover:underline text-sm flex items-center">
+                    View Docs
+                    <ExternalLink className="h-4 w-4 ml-2"/>
+                  </a>
+                </div>);
+=======
+            return (<Card key={feature.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
-                      <IconComponent className="h-8 w-8 text-zion-cyan" />
+                      <IconComponent className="h-8 w-8 text-zion-cyan"/>
                       <Badge variant={feature.status === 'Stable' ? 'default' : 'secondary'}>
                         {feature.status}
                       </Badge>
@@ -184,13 +302,13 @@ export default function DeveloperPortal() {
                     <Button asChild variant="outline" size="sm" className="w-full">
                       <Link to={feature.docs}>
                         View Docs
-                        <ExternalLink className="h-4 w-4 ml-2" />
+                        <ExternalLink className="h-4 w-4 ml-2"/>
                       </Link>
                     </Button>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>);
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+        })}
           </div>
         </div>
 
@@ -198,24 +316,28 @@ export default function DeveloperPortal() {
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Started in 4 Steps</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {quickStartSteps.map((step) => (
-              <Card key={step.step} className="border-zion-blue-light text-center">
+<<<<<<< HEAD
+            {quickStartSteps.map((step) => (<div key={step.step} className="border border-zion-blue-light text-center p-6 rounded-lg">
+                <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+=======
+            {quickStartSteps.map((step) => (<Card key={step.step} className="border-zion-blue-light text-center">
                 <CardHeader>
                   <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
                     <span className="text-white font-bold text-lg">{step.step}</span>
-                  </div>
-                  <CardTitle className="text-white text-lg">{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-zion-slate-light mb-4">
-                    {step.description}
-                  </CardDescription>
-                  <Button variant="outline" size="sm" className="w-full">
+                </div>
+                <h3 className="text-white text-lg font-bold mb-2">{step.title}</h3>
+                <p className="text-zion-slate-light mb-4">{step.description}</p>
+                <a href="#" className="text-zion-cyan hover:underline text-sm">
                     {step.action}
+<<<<<<< HEAD
+                </a>
+              </div>))}
+=======
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>))}
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
           </div>
         </div>
 
@@ -224,12 +346,27 @@ export default function DeveloperPortal() {
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Developer Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {resources.map((resource) => {
-              const IconComponent = resource.icon;
-              return (
-                <Card key={resource.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
+            const IconComponent = resource.icon;
+<<<<<<< HEAD
+            return (<div key={resource.title} className="border border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors p-6 rounded-lg">
+                  <div className="flex items-center justify-between mb-3">
+                    <IconComponent className="h-6 w-6 text-zion-cyan"/>
+                    <span className="bg-zion-purple/20 text-zion-purple text-xs font-bold px-2 py-1 rounded-full">
+                        {resource.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-white text-lg font-bold mb-2">{resource.title}</h3>
+                  <p className="text-zion-slate-light mb-4">{resource.description}</p>
+                  <a href={resource.href} className="text-zion-cyan hover:underline text-sm flex items-center">
+                    {resource.badge === 'Download' ? 'Download' : 'Learn More'}
+                    <ExternalLink className="h-4 w-4 ml-2"/>
+                  </a>
+                </div>);
+=======
+            return (<Card key={resource.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
-                      <IconComponent className="h-6 w-6 text-zion-cyan" />
+                      <IconComponent className="h-6 w-6 text-zion-cyan"/>
                       <Badge variant="outline" className="text-xs">
                         {resource.badge}
                       </Badge>
@@ -243,21 +380,34 @@ export default function DeveloperPortal() {
                     <Button asChild variant="outline" size="sm" className="w-full">
                       <Link to={resource.href}>
                         {resource.badge === 'Download' ? 'Download' : 'Learn More'}
-                        <ExternalLink className="h-4 w-4 ml-2" />
+                        <ExternalLink className="h-4 w-4 ml-2"/>
                       </Link>
                     </Button>
                   </CardContent>
-                </Card>
-              );
-            })}
+                </Card>);
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
+        })}
           </div>
         </div>
 
         {/* API Status */}
+<<<<<<< HEAD
+        <div className="mb-16 border border-zion-blue-light p-6 rounded-lg">
+          <h2 className="text-2xl font-bold text-white mb-4 text-center">API Status & Performance</h2>
+          <p className="text-zion-slate-light text-center mb-4">Real-time status of our APIs and services</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>
+              <div className="text-zion-slate-light">Uptime</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">&lt;100ms</div>
+              <div className="text-zion-slate-light">Average Response Time</div>
+=======
         <Card className="mb-16 border-zion-blue-light">
           <CardHeader>
             <CardTitle className="text-white text-2xl flex items-center">
-              <Shield className="h-6 w-6 mr-2 text-zion-cyan" />
+              <Shield className="h-6 w-6 mr-2 text-zion-cyan"/>
               API Status & Performance
             </CardTitle>
             <CardDescription className="text-zion-slate-light">
@@ -283,14 +433,44 @@ export default function DeveloperPortal() {
               <Button asChild variant="outline">
                 <a href="/api-status" target="_blank" rel="noopener noreferrer">
                   View Detailed Status
-                  <ExternalLink className="h-4 w-4 ml-2" />
+                  <ExternalLink className="h-4 w-4 ml-2"/>
                 </a>
               </Button>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
             </div>
-          </CardContent>
-        </Card>
+            <div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>
+              <div className="text-zion-slate-light">Monitoring</div>
+            </div>
+          </div>
+          <div className="mt-6 text-center">
+            <a href="/api-status" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:underline text-sm flex items-center">
+              View Detailed Status
+              <ExternalLink className="h-4 w-4 ml-2"/>
+            </a>
+          </div>
+        </div>
 
         {/* Get Help */}
+<<<<<<< HEAD
+        <div className="border border-zion-blue-light bg-zion-blue-dark/50 p-6 rounded-lg">
+          <h2 className="text-2xl font-bold text-white mb-4 text-center">Need Developer Support?</h2>
+          <p className="text-zion-slate-light text-center mb-4">Our developer support team is here to help you build amazing applications.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+            <a href="/contact" className="bg-zion-purple hover:bg-zion-purple/90 text-white font-bold py-3 px-6 rounded-lg flex items-center justify-center">
+              <MessageSquare className="h-5 w-5 mr-2"/>
+              Contact Developer Support
+            </a>
+            <a href="mailto:dev-support@ziontechgroup.com" className="border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-bold py-3 px-6 rounded-lg flex items-center justify-center">
+              <Mail className="h-5 w-5 mr-2"/>
+              Email Support
+            </a>
+          </div>
+          <p className="text-zion-slate-light text-sm text-center">
+            Response time: Usually within 4 hours for developer inquiries
+          </p>
+        </div>
+=======
         <Card className="border-zion-blue-light bg-zion-blue-dark/50">
           <CardHeader className="text-center">
             <CardTitle className="text-white text-2xl">Need Developer Support?</CardTitle>
@@ -302,13 +482,13 @@ export default function DeveloperPortal() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
               <Button asChild className="bg-zion-purple hover:bg-zion-purple/90">
                 <Link to="/contact">
-                  <MessageSquare className="h-5 w-5 mr-2" />
+                  <MessageSquare className="h-5 w-5 mr-2"/>
                   Contact Developer Support
                 </Link>
               </Button>
               <Button asChild variant="outline">
                 <a href="mailto:dev-support@ziontechgroup.com">
-                  <Mail className="h-5 w-5 mr-2" />
+                  <Mail className="h-5 w-5 mr-2"/>
                   Email Support
                 </a>
               </Button>
@@ -318,7 +498,7 @@ export default function DeveloperPortal() {
             </p>
           </CardContent>
         </Card>
+>>>>>>> 2bf5372f7382c686e4764d0c383c85abea9dafdc
       </div>
-    </div>
-  );
+    </div>);
 }

@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIAutonomousLegalCounsel() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Autonomous Legal Counsel - Zion Tech Group" description="AI-powered autonomous legal counsel solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous legal counsel, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomouslegalcounsel/"/>
+      <SEOHead title="Autonomous Legal Counsel - Zion Tech Group" description="AI-powered autonomous legal counsel solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous legal counsel, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aiautonomouslegalcounsel/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

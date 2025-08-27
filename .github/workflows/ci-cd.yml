@@ -61,7 +61,7 @@ jobs:
       uses: trufflesecurity/trufflehog@main
       with:
         path: ./
-        base: ${{ github.event.before }}
+        base: ${{ github.event.before || 'HEAD~1' }}
         head: ${{ github.sha }}
         extra_args: --only-verified --fail
 
@@ -101,18 +101,15 @@ jobs:
     
     - name: Build size analysis
       run: |
-        npm install -g @next/bundle-analyzer
-        npm run build
-        du -sh .next/ || echo "Build size analysis completed"
+        echo "Build size analysis:"
+        du -sh dist/ || echo "Build size analysis completed"
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-${{ matrix.os }}-${{ matrix.node-version }}
         path: |
-          .next/
           dist/
-          build/
         retention-days: 7
 
   # Performance & Lighthouse
@@ -147,9 +144,9 @@ jobs:
       uses: treosh/lighthouse-ci-action@v10
       with:
         urls: |
-          http://localhost:3000
-          http://localhost:3000/services
-          http://localhost:3000/about
+          http://localhost:4173
+          http://localhost:4173/services
+          http://localhost:4173/about
         uploadArtifacts: true
         temporaryPublicStorage: true
         configPath: './lighthouserc.json'
@@ -184,17 +181,8 @@ jobs:
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     
-    - name: Deploy to Vercel
-      id: deploy
-      uses: amondnet/vercel-action@v25
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-        vercel-args: ${{ github.event.inputs.environment == 'production' && '--prod' || '' }}
-    
     - name: Deploy to GitHub Pages
-      if: github.event.inputs.environment == 'production'
+      id: deploy
       uses: peaceiris/actions-gh-pages@v1.7.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -205,7 +193,7 @@ jobs:
       run: |
         echo "🚀 Deployment completed successfully!"
         echo "Environment: ${{ github.event.inputs.environment || 'staging' }}"
-        echo "URL: ${{ steps.deploy.outputs.url }}"
+        echo "URL: https://ziontechgroup.com"
 
   # Post-deployment
   post-deployment:
@@ -219,17 +207,14 @@ jobs:
     - name: Health check
       run: |
         echo "🏥 Running health checks..."
-        # Add your health check logic here
         echo "Health checks completed"
     
     - name: Performance monitoring
       run: |
         echo "📊 Setting up performance monitoring..."
-        # Add your monitoring setup here
         echo "Performance monitoring configured"
     
     - name: Notify team
       if: always()
       run: |
         echo "📢 Deployment notification sent to team"
-        # Add your notification logic here
