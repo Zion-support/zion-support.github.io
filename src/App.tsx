@@ -30,51 +30,14 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 
-// Simple placeholder pages for missing ones
-const FAQ = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">FAQ</h1>
-      <p className="text-xl text-gray-300">Frequently asked questions</p>
-    </div>
-  </div>
-);
+// Import the new pages
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
 
-const Careers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
-    </div>
-  </div>
-);
-
-const Privacy = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
-      <p className="text-xl text-gray-300">How we protect your data</p>
-    </div>
-  </div>
-);
-
-const Terms = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-      <p className="text-xl text-gray-300">Our terms and conditions</p>
-    </div>
-  </div>
-);
-
-const Sitemap = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
-      <p className="text-xl text-gray-300">Site navigation structure</p>
-    </div>
-  </div>
-);
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
 const Signup = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -112,6 +75,7 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />

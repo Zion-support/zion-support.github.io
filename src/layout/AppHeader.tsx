@@ -148,7 +148,19 @@ export function AppHeader() {
         { name: 'Careers', href: '/careers', description: 'Join our team' },
         { name: 'Partners', href: '/partners', description: 'Strategic alliances' },
         { name: 'Blog', href: '/blog', description: 'Latest insights' },
+        { name: 'News', href: '/news', description: 'Company updates' },
         { name: 'Contact', href: '/contact', description: 'Get in touch' }
+      ]
+    },
+    {
+      name: 'Support',
+      href: '/help-center',
+      icon: HelpCircle,
+      dropdown: [
+        { name: 'Help Center', href: '/help-center', description: 'Find answers and support' },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+        { name: 'Contact Support', href: '/contact', description: 'Get help from our team' },
+        { name: 'Request Quote', href: '/request-quote', description: 'Get project estimates' }
       ]
     }
   ];

@@ -87,12 +87,13 @@ const footerNavigation = {
   support: {
     title: 'Support & Resources',
     items: [
-      { name: 'Help Center', href: '/help', description: 'Get help and support' },
+      { name: 'Help Center', href: '/help-center', description: 'Get help and support' },
+      { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
       { name: 'Contact Support', href: '/contact', description: 'Reach our team' },
+      { name: 'Request Quote', href: '/request-quote', description: 'Get project estimates' },
       { name: 'Terms of Service', href: '/terms', description: 'Legal terms' },
       { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
-      { name: 'Security', href: '/security', description: 'Security practices' },
-      { name: 'System Status', href: '/status', description: 'Service status' },
+      { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
     ],
   },
 };
