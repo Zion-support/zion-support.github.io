@@ -47,7 +47,7 @@ const About = () => {
     {
       icon: Brain,
       title: 'Innovation First',
-      description: 'We push the boundaries of what's possible with cutting-edge AI and technology solutions.',
+      description: 'We push the boundaries of what\'s possible with cutting-edge AI and technology solutions.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -65,7 +65,7 @@ const About = () => {
     {
       icon: Leaf,
       title: 'Sustainability',
-      description: 'We're committed to building technology that's good for business and the planet.',
+      description: 'We\'re committed to building technology that\'s good for business and the planet.',
       color: 'from-orange-500 to-red-500'
     }
   ];
