@@ -18,6 +18,9 @@ export default function Services() {
       description: 'Cutting-edge artificial intelligence solutions',
       color: 'from-blue-500 to-indigo-500',
       services: [
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Quantum-AI integration for unprecedented power' },
+        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'Self-directed AI research across domains' },
+        { name: 'AI Autonomous Threat Intelligence', href: '/services/ai-autonomous-threat-intelligence', icon: Shield, description: 'AI-powered cybersecurity threat response' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization' },
@@ -27,7 +30,6 @@ export default function Services() {
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation' },
         { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization' },
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign, description: 'Intelligent financial insights' },
-        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'Self-directed research automation' },
         { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: TrendingUp, description: 'Intelligent supply chain management' },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart, description: 'AI-powered healthcare solutions' },
         { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', icon: FileText, description: 'Automated legal document processing' },
@@ -37,7 +39,6 @@ export default function Services() {
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent workflow automation' },
         { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered compliance automation' },
         { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: BarChart3, description: 'Customer sentiment & behavior analytics' },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Intelligent supply chain management' },
         { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'Real-time risk monitoring & optimization' },
       ]
     },

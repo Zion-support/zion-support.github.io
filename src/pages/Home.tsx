@@ -202,9 +202,9 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
-              to="/services"
+              to="/comprehensive-services-showcase-2025"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
-              aria-label="Explore our services"
+              aria-label="Explore our comprehensive services"
             >
               <span>Explore Services</span>
               <ArrowRight className="w-5 h-5" />
