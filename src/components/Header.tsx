@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -303,3 +304,10 @@ export function Header() {
     </header>
   );
 }
+=======
+export { Header } from './header/Header';
+export { Logo } from './header/Logo';
+export { UserMenu } from './header/UserMenu';
+export { MobileMenu } from './header/MobileMenu';
+export { LanguageSelector } from './header/LanguageSelector';
+>>>>>>> enhance-zion-services-2025

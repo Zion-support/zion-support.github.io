@@ -10,12 +10,12 @@ const TermsOfService = () => {
         </p>
       </div>
 
-      <section>
-        <h2 className="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
-        <p className="text-gray-300 leading-relaxed">
-          By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.
-        </p>
-      </section>
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
+            <p className="text-gray-300 leading-relaxed">
+              By accessing and using Zion Tech Group's services, you accept and agree to be bound by the terms and provision of this agreement.
+            </p>
+          </section>
 
       <section>
         <h2 className="text-2xl font-semibold text-white mb-4">2. Description of Services</h2>
