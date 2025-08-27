@@ -130,10 +130,13 @@ export function HowItWorksSection() {
         <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
             {/* Enhanced background pattern */}
             <div className="absolute inset-0 opacity-5">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
-                    backgroundSize: '60px 60px'
-                }}/>
+                <div 
+                    className="absolute inset-0" 
+                    style={{
+                        backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
+                        backgroundSize: '60px 60px'
+                    }}
+                />
             </div>
             
             {/* Floating decorative elements */}
@@ -167,8 +170,7 @@ export function HowItWorksSection() {
                         How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
                     </h2>
                     <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-                        Our proven 5-step process ensures your project success from discovery to delivery. 
-                        We've streamlined every aspect to make your journey smooth and efficient.
+                        Our proven 5-step process ensures your project success from discovery to delivery
                     </p>
                 </motion.div>
 
@@ -196,13 +198,7 @@ export function HowItWorksSection() {
                 </motion.div>
                 
                 {/* Steps grid */}
-                <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20" 
-                    variants={containerVariants} 
-                    initial="hidden" 
-                    whileInView="visible" 
-                    viewport={{ once: true }}
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {steps.map((step, index) => (
                         <motion.div 
                             key={index} 
@@ -211,21 +207,16 @@ export function HowItWorksSection() {
                             onHoverEnd={() => setHoveredStep(null)} 
                             whileHover={{ y: -8 }} 
                             transition={{ type: "spring", stiffness: 300 }}
-                            className="relative"
+                            className="group"
                         >
-                            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
-                                {/* Step number */}
-                                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
-                                    {index + 1}
-                                </div>
-                                
+                            <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
                                 {/* Icon with enhanced background */}
                                 <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${step.color} mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
                                     <div className="text-white">
                                         {step.icon}
                                     </div>
                                 </div>
-                                
+
                                 {/* Title and description */}
                                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                                     {step.title}
@@ -233,7 +224,7 @@ export function HowItWorksSection() {
                                 <p className="text-zion-slate-light leading-relaxed text-sm mb-4">
                                     {step.description}
                                 </p>
-                                
+
                                 {/* Duration and success rate */}
                                 <div className="space-y-2 mb-4">
                                     <div className="flex items-center justify-center gap-2 text-zion-cyan/80 text-xs">
@@ -245,7 +236,7 @@ export function HowItWorksSection() {
                                         <span>{step.success}</span>
                                     </div>
                                 </div>
-                                
+
                                 {/* Interactive details on hover */}
                                 <AnimatePresence>
                                     {hoveredStep === index && (
@@ -274,7 +265,7 @@ export function HowItWorksSection() {
                                         </motion.div>
                                     )}
                                 </AnimatePresence>
-                                
+
                                 {/* Hover indicator */}
                                 <div className="mt-4 text-zion-cyan/60 text-xs">
                                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
@@ -282,7 +273,7 @@ export function HowItWorksSection() {
                             </div>
                         </motion.div>
                     ))}
-                </motion.div>
+                </div>
                 
                 {/* Enhanced bottom CTA */}
                 <motion.div 
@@ -341,5 +332,3 @@ export function HowItWorksSection() {
         </section>
     );
 }
-
-export default HowItWorksSection;

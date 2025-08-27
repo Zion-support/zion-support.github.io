@@ -1,0 +1,95 @@
+import React from 'react';
+
+<<<<<<< HEAD
+export function Select({ children, className = '', value, onChange, disabled }) {
+    const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
+=======
+export function Select({ children, className = '', value, onValueChange, disabled = false }) {
+    const baseClasses = "flex h-10 w-full items-center justify-between rounded-md border border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm text-white placeholder:text-zion-slate-light/50 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b914
+    
+    return (
+        <select 
+            className={`${baseClasses} ${className}`} 
+            value={value} 
+<<<<<<< HEAD
+            onChange={onChange} 
+=======
+            onChange={onValueChange} 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b914
+            disabled={disabled}
+        >
+            {children}
+        </select>
+    );
+}
+
+export function SelectTrigger({ children, className = '', ...props }) {
+    return (
+        <button 
+<<<<<<< HEAD
+            className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
+=======
+            className={`
+                flex h-10 w-full items-center justify-between rounded-md border 
+                border-zion-blue-light/30 bg-zion-blue-dark/50 px-3 py-2 text-sm 
+                text-white placeholder:text-zion-slate-light/50 focus:outline-none 
+                focus:ring-2 focus:ring-zion-cyan focus:border-transparent 
+                transition-colors cursor-pointer
+                ${className}
+            `}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b914
+            {...props}
+        >
+            {children}
+        </button>
+    );
+}
+
+<<<<<<< HEAD
+export function SelectItem({ children, value, className = '', ...props }) {
+=======
+export function SelectItem({ children, className = '', value, ...props }) {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b914
+    return (
+        <div 
+            className={`
+                relative flex w-full cursor-pointer select-none items-center 
+                rounded-sm px-3 py-2 text-sm text-white outline-none 
+                hover:bg-zion-blue/20 focus:bg-zion-blue/20 
+                focus:text-white transition-colors
+                ${className}
+            `} 
+            data-value={value} 
+            {...props}
+        >
+            {children}
+        </div>
+    );
+}
+
+export function SelectValue({ placeholder }) {
+<<<<<<< HEAD
+    return <span className="text-sm">{placeholder || 'Select an option'}</span>;
+=======
+    return (
+        <span className="text-sm text-zion-slate-light">
+            {placeholder || 'Select an option'}
+        </span>
+    );
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b914
+}
+
+export function SelectContent({ children, className = '' }) {
+    return (
+        <div 
+            className={`
+                absolute top-full left-0 right-0 z-50 mt-1 rounded-md border 
+                border-zion-blue-light/30 bg-zion-blue-dark/90 backdrop-blur-sm 
+                shadow-lg ${className}
+            `}
+        >
+            {children}
+        </div>
+    );
+}

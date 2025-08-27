@@ -110,7 +110,7 @@ export function FeaturedListingsSection() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.15,
-                delayChildren: 0.1
+                delayChildren: 0.2
             }
         }
     };
@@ -131,10 +131,13 @@ export function FeaturedListingsSection() {
         <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
             {/* Enhanced background pattern */}
             <div className="absolute inset-0 opacity-5">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
-                    backgroundSize: '60px 60px'
-                }}/>
+                <div 
+                    className="absolute inset-0" 
+                    style={{
+                        backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
+                        backgroundSize: '60px 60px'
+                    }}
+                />
             </div>
             
             {/* Floating decorative elements */}
@@ -168,12 +171,11 @@ export function FeaturedListingsSection() {
                         Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Projects</span>
                     </h2>
                     <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-                        Discover our most successful and innovative projects that showcase our expertise 
-                        across various technologies and industries.
+                        Discover our most successful and innovative projects that showcase our expertise and capabilities
                     </p>
                 </motion.div>
-                
-                {/* Listings Grid */}
+
+                {/* Featured listings grid */}
                 <motion.div 
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20" 
                     variants={containerVariants} 
@@ -181,7 +183,7 @@ export function FeaturedListingsSection() {
                     whileInView="visible" 
                     viewport={{ once: true }}
                 >
-                    {featuredListings.map((listing) => (
+                    {featuredListings.map((listing, index) => (
                         <motion.div 
                             key={listing.id} 
                             variants={itemVariants} 
@@ -191,40 +193,45 @@ export function FeaturedListingsSection() {
                             transition={{ type: "spring", stiffness: 300 }}
                             className="group"
                         >
-                            <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+                            <div className="bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
                                 {/* Image */}
                                 <div className="relative h-48 overflow-hidden">
                                     <img 
                                         src={listing.image} 
-                                        alt={listing.title}
+                                        alt={listing.title} 
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
                                     {listing.featured && (
-                                        <div className="absolute top-4 left-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-xs font-bold px-3 py-1 rounded-full">
-                                            FEATURED
+                                        <div className="absolute top-4 right-4">
+                                            <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-xs font-semibold">
+                                                Featured
+                                            </div>
                                         </div>
                                     )}
-                                    <div className="absolute top-4 right-4 bg-zion-blue-dark/80 backdrop-blur-sm text-white text-xs px-2 py-1 rounded-md">
-                                        {listing.category}
-                                    </div>
                                 </div>
                                 
                                 {/* Content */}
                                 <div className="p-6">
-                                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                                        {listing.title}
-                                    </h3>
-                                    <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">
+                                    {/* Category and title */}
+                                    <div className="mb-4">
+                                        <span className="text-zion-cyan text-sm font-medium">{listing.category}</span>
+                                        <h3 className="text-xl font-bold text-white mt-2 group-hover:text-zion-cyan transition-colors">
+                                            {listing.title}
+                                        </h3>
+                                    </div>
+                                    
+                                    {/* Description */}
+                                    <p className="text-zion-slate-light text-sm leading-relaxed mb-4 line-clamp-2">
                                         {listing.description}
                                     </p>
                                     
-                                    {/* Meta info */}
-                                    <div className="flex items-center gap-4 mb-4 text-xs text-zion-slate-light">
-                                        <div className="flex items-center gap-2">
+                                    {/* Meta information */}
+                                    <div className="grid grid-cols-2 gap-4 mb-4 text-xs">
+                                        <div className="flex items-center gap-2 text-zion-slate-light/80">
                                             <Clock className="w-3 h-3"/>
                                             <span>{listing.duration}</span>
                                         </div>
-                                        <div className="flex items-center gap-2">
+                                        <div className="flex items-center gap-2 text-zion-slate-light/80">
                                             <Users className="w-3 h-3"/>
                                             <span>{listing.team}</span>
                                         </div>
@@ -347,5 +354,3 @@ export function FeaturedListingsSection() {
         </section>
     );
 }
-
-export default FeaturedListingsSection;

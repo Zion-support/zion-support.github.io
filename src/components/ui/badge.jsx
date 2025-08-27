@@ -8,6 +8,7 @@ const Badge = ({ children, className = '', variant = 'default' }) => {
         destructive: 'border-transparent bg-destructive text-destructive-foreground',
         outline: 'text-foreground'
     };
+    
     return (
         <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
             {children}

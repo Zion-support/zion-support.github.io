@@ -1,16 +1,18 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield, Rocket } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield, Rocket } from "lucide-react";
+import { useRef } from "react";
 
 export function HeroSection() {
+    const { t } = useTranslation();
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
     });
-    
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
     
@@ -61,6 +63,18 @@ export function HeroSection() {
         }
     };
     
+    const particleVariants = {
+        animate: {
+            y: [-10, 10, -10],
+            x: [-5, 5, -5],
+            transition: {
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+            }
+        }
+    };
+    
     return (
         <section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
             {/* Enhanced background with parallax effect */}
@@ -90,7 +104,7 @@ export function HeroSection() {
                 />
                 <motion.div 
                     className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light" 
-                    variants={pulseVariants} 
+                    variants={particleVariants} 
                     animate="animate" 
                     style={{ animationDelay: '0.5s' }}
                 />
@@ -141,9 +155,9 @@ export function HeroSection() {
             >
                 {/* Enhanced title with better typography and animations */}
                 <motion.div variants={itemVariants} className="mb-8">
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan animate-gradient">
-                        The Future of Tech & AI
-                    </h1>
+                    <GradientHeading className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight">
+                        {t('home.hero_title') || "The Future of Tech & AI"}
+                    </GradientHeading>
                 </motion.div>
 
                 {/* Enhanced subtitle with better spacing and animations */}
@@ -151,7 +165,7 @@ export function HeroSection() {
                     variants={itemVariants} 
                     className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-16 max-w-5xl mx-auto leading-relaxed font-light"
                 >
-                    Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform.
+                    {t('home.hero_subtitle') || "Discover the world's most advanced AI marketplace. Connect with top tech talent, cutting-edge services, and revolutionary equipment in one seamless platform."}
                 </motion.p>
 
                 {/* Enhanced feature highlights with icons and animations */}
@@ -164,7 +178,7 @@ export function HeroSection() {
                         <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
                             <Sparkles className="w-6 h-6 text-zion-cyan"/>
                         </div>
-                        <span className="text-lg font-medium">AI-Powered Solutions</span>
+                        <span className="text-lg font-medium">AI-Powered</span>
                     </motion.div>
                     
                     <motion.div 
@@ -173,9 +187,9 @@ export function HeroSection() {
                         transition={{ type: "spring", stiffness: 400 }}
                     >
                         <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
-                            <Zap className="w-6 h-6 text-zion-purple"/>
+                            <Shield className="w-6 h-6 text-zion-purple"/>
                         </div>
-                        <span className="text-lg font-medium">Expert Talent</span>
+                        <span className="text-lg font-medium">Secure</span>
                     </motion.div>
                     
                     <motion.div 
@@ -183,76 +197,63 @@ export function HeroSection() {
                         whileHover={{ scale: 1.05 }} 
                         transition={{ type: "spring", stiffness: 400 }}
                     >
-                        <div className="p-2 bg-zion-cyan-light/20 rounded-full group-hover:bg-zion-cyan-light/30 transition-colors">
-                            <Shield className="w-6 h-6 text-zion-cyan-light"/>
+                        <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
+                            <Rocket className="w-6 h-6 text-zion-cyan"/>
                         </div>
-                        <span className="text-lg font-medium">Enterprise Security</span>
+                        <span className="text-lg font-medium">Fast</span>
                     </motion.div>
                 </motion.div>
 
-                {/* Enhanced CTA buttons with better styling */}
+                {/* Enhanced CTA buttons with better animations */}
                 <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                    <Button 
-                        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300" 
-                        size="lg" 
-                        asChild
-                    >
-                        <Link to="/contact" className="flex items-center gap-2">
-                            Get Started Today
-                            <ArrowRight className="w-5 h-5"/>
-                        </Link>
-                    </Button>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Button 
+                            className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-lg py-6 px-8 shadow-lg hover:shadow-xl transform transition-all duration-300 group" 
+                            size="lg" 
+                            asChild
+                        >
+                            <Link to="/services" role="button" aria-label="Explore Services" className="flex items-center gap-2">
+                                Explore Services
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
+                            </Link>
+                        </Button>
+                    </motion.div>
                     
-                    <Button 
-                        variant="outline" 
-                        className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6 px-8 transition-all duration-300" 
-                        size="lg"
-                        asChild
-                    >
-                        <Link to="/services" className="flex items-center gap-2">
-                            Explore Services
-                            <Rocket className="w-5 h-5"/>
-                        </Link>
-                    </Button>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Button 
+                            variant="outline" 
+                            className="border-2 border-zion-cyan/50 text-zion-cyan hover:bg-zion-cyan hover:text-white text-lg py-6 px-8 shadow-lg hover:shadow-xl transform transition-all duration-300 group" 
+                            size="lg" 
+                            asChild
+                        >
+                            <Link to="/contact" role="button" aria-label="Get Started Today" className="flex items-center gap-2">
+                                Get Started Today
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/>
+                            </Link>
+                        </Button>
+                    </motion.div>
                 </motion.div>
 
-                {/* Trust metrics */}
-                <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                {/* Enhanced trust indicators */}
+                <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                     <div className="text-center">
-                        <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <Users className="w-8 h-8 text-zion-cyan"/>
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-1">10K+</div>
-                        <div className="text-zion-slate-light text-sm">Active Users</div>
+                        <div className="text-3xl font-bold text-zion-cyan mb-2">10K+</div>
+                        <div className="text-zion-slate-light">Active Users</div>
                     </div>
-                    
                     <div className="text-center">
-                        <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <TrendingUp className="w-8 h-8 text-zion-purple"/>
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-1">95%</div>
-                        <div className="text-zion-slate-light text-sm">Success Rate</div>
+                        <div className="text-3xl font-bold text-zion-purple mb-2">95%</div>
+                        <div className="text-zion-slate-light">Success Rate</div>
                     </div>
-                    
                     <div className="text-center">
-                        <div className="w-16 h-16 bg-zion-cyan-light/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <Shield className="w-8 h-8 text-zion-cyan-light"/>
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-1">500+</div>
-                        <div className="text-zion-slate-light text-sm">Projects</div>
+                        <div className="text-3xl font-bold text-zion-cyan mb-2">500+</div>
+                        <div className="text-zion-slate-light">Projects</div>
                     </div>
-                    
                     <div className="text-center">
-                        <div className="w-16 h-16 bg-zion-purple-light/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <Star className="w-8 h-8 text-zion-purple-light"/>
-                        </div>
-                        <div className="text-2xl font-bold text-white mb-1">4.9</div>
-                        <div className="text-zion-slate-light text-sm">Rating</div>
+                        <div className="text-3xl font-bold text-zion-purple mb-2">24/7</div>
+                        <div className="text-zion-slate-light">Support</div>
                     </div>
                 </motion.div>
             </motion.div>
         </section>
     );
 }
-
-export default HeroSection;

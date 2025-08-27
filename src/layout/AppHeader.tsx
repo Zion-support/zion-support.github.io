@@ -47,192 +47,109 @@ export function AppHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
-        <div className="container flex h-16 items-center px-4 sm:px-6">
-          {/* Sidebar Toggle */}
-          <button
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
-            aria-label="Toggle sidebar"
-          >
-            <PanelLeft className="h-5 w-5" />
-          </button>
-          
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
-            </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
-          </Link>
-          
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex ml-8 space-x-1">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative">
-                {item.hasDropdown ? (
-                  <div className="relative group">
-                    <button className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center">
-                      {item.name}
-                      <ChevronDown className="ml-1 h-4 w-4" />
-                    </button>
-                    
-                    {/* Services Dropdown */}
-                    {item.name === 'Services' && (
-                      <div className="absolute left-0 mt-2 w-80 bg-slate-800 border border-slate-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div className="p-4">
-                          <h3 className="text-lg font-semibold text-white mb-3">Our Services</h3>
-                          <div className="grid grid-cols-1 gap-2">
-                            {services.map((service) => (
-                              <Link
-                                key={service.name}
-                                to={service.href}
-                                className="flex items-center p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200"
-                              >
-                                <div>
-                                  <div className="text-cyan-400 font-medium">{service.name}</div>
-                                  <div className="text-slate-400 text-sm">{service.description}</div>
-                                </div>
-                                <ChevronRight className="ml-auto h-4 w-4 text-slate-500" />
-                              </Link>
-                            ))}
-                          </div>
-                          <div className="mt-4 pt-3 border-t border-slate-700">
-                            <Link
-                              to="/services"
-                              className="block text-center text-cyan-400 hover:text-cyan-300 font-medium"
-                            >
-                              View All Services →
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    
-                    {/* Company Dropdown */}
-                    {item.name === 'Company' && (
-                      <div className="absolute left-0 mt-2 w-64 bg-slate-800 border border-slate-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div className="p-4">
-                          <h3 className="text-lg font-semibold text-white mb-3">Company</h3>
-                          <div className="space-y-2">
-                            {companyLinks.map((link) => (
-                              <Link
-                                key={link.name}
-                                to={link.href}
-                                className="block p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-slate-300 hover:text-cyan-400"
-                              >
-                                {link.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                    
-                    {/* Support Dropdown */}
-                    {item.name === 'Support' && (
-                      <div className="absolute left-0 mt-2 w-64 bg-slate-800 border border-slate-700 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <div className="p-4">
-                          <h3 className="text-lg font-semibold text-white mb-3">Support</h3>
-                          <div className="space-y-2">
-                            {supportLinks.map((link) => (
-                              <Link
-                                key={link.name}
-                                to={link.href}
-                                className="block p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-slate-300 hover:text-cyan-400"
-                              >
-                                {link.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          {/* Search Bar - Hidden on mobile */}
-          <div className="hidden md:flex ml-6 flex-1 max-w-md">
-            <form onSubmit={handleSearch} className="relative w-full">
-              <input
-                type="text"
-                placeholder="Search services, talent, equipment..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white/60 hover:text-white"
-              >
-                <Search className="h-4 h-4" />
-              </button>
-            </form>
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        scrolled 
+          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20' 
+          : 'bg-transparent'
+      }`}>
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/20 rounded-full animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full animate-pulse delay-2000"></div>
+            <div className="absolute top-20 right-20 w-20 h-20 border border-zion-green/20 rounded-full animate-pulse delay-3000"></div>
+            <div className="absolute bottom-10 left-1/3 w-12 h-12 border border-zion-pink/20 rounded-full animate-pulse delay-4000"></div>
           </div>
           
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 ml-8">
-            <Link to="/services" className="text-white/80 hover:text-white transition-colors">
-              Services
-            </Link>
-            <Link to="/pricing" className="text-white/80 hover:text-white transition-colors">
-              Pricing
-            </Link>
-            <Link to="/about" className="text-white/80 hover:text-white transition-colors">
-              About
-            </Link>
-            <Link to="/case-studies" className="text-white/80 hover:text-white transition-colors">
-              Case Studies
-            </Link>
-            <Link to="/news" className="text-white/80 hover:text-white transition-colors">
-              News
-            </Link>
-            <Link to="/careers" className="text-white/80 hover:text-white transition-colors">
-              Careers
-            </Link>
-            <Link to="/contact" className="text-white/80 hover:text-white transition-colors">
-              Contact
-            </Link>
-          </nav>
+          {/* Matrix rain effect */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="matrix-rain w-full h-full"></div>
+          </div>
           
-          {/* User Actions */}
-          <div className="flex items-center space-x-4 ml-6">
-            {/* Notifications */}
-            <button className="p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors">
-              <Bell className="h-5 w-5" />
-            </button>
-            
-            {/* User Menu */}
-            <Link to="/login" className="p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors">
-              <User className="h-5 w-5" />
-            </Link>
-            
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
-            >
-              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
+          {/* Cyber grid overlay */}
+          <div className="absolute inset-0 opacity-3">
+            <div className="cyber-grid w-full h-full"></div>
           </div>
         </div>
-        
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-zion-blue-dark border-t border-zion-purple/20">
-            <div className="px-4 py-6 space-y-4">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="relative">
+
+        <div className="container-responsive relative z-10">
+          <div className="flex h-20 items-center justify-between">
+            {/* Logo */}
+            <motion.div 
+              className="flex items-center"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Link to="/" className="flex items-center space-x-3 group">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-zion-cyan/50">
+                    <span className="text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">Z</span>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  
+                  {/* Holographic ring effect */}
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-border opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-spin-slow"></div>
+                </div>
+                <div className="hidden sm:block">
+                  <h1 className="text-2xl font-bold text-gradient group-hover:scale-105 transition-transform duration-300">ZION TECH GROUP</h1>
+                  <p className="text-xs text-zion-slate-light font-medium group-hover:text-zion-cyan transition-colors duration-300">Innovation • Intelligence • Impact</p>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-1">
+              {navigationItems.map((item) => (
+                <div key={item.name} className="relative">
+                  <button
+                    onClick={() => toggleDropdown(item.name)}
+                    className={`nav-link flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 ${
+                      activeDropdown === item.name 
+                        ? 'text-zion-cyan bg-zion-cyan/10' 
+                        : 'hover:text-zion-cyan hover:bg-zion-cyan/5'
+                    }`}
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                    <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl overflow-hidden"
+                      >
+                        <div className="p-2">
+                          {item.dropdown?.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="flex items-center space-x-3 px-4 py-3 rounded-lg text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-all duration-200 group"
+                            >
+                              {subItem.icon && <subItem.icon className="w-4 h-4 group-hover:text-zion-cyan" />}
+                              <span>{subItem.name}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
+            </nav>
+
+            {/* Search Bar */}
+            <div className="hidden md:flex flex-1 max-w-md mx-8">
+              <form onSubmit={handleSearch} className="relative w-full">
                 <input
                   type="text"
                   placeholder="Search services..."
