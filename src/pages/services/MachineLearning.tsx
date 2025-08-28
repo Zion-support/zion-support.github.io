@@ -1,20 +1,17 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Atom, 
   Brain, 
   Zap, 
   CheckCircle,
   Star,
   TrendingUp,
   Award,
-  Globe,
   Lock,
   Database,
   Cpu,
   Network,
-  BarChart3,
   FileText,
   MessageCircle,
   Phone,
@@ -32,113 +29,216 @@ import {
   Server,
   Globe2,
   ShieldCheck,
-  Infinity,
+  Wifi,
+  Smartphone,
+  Activity,
+  Clock,
+  BarChart,
+  PieChart,
+  GitBranch,
+  Code,
+  Package,
+  Play,
+  Settings,
+  Monitor,
+  Shield,
   Rocket,
-  Sparkles,
-  Flask
+  Globe,
+  Factory,
+  Car,
+  Heart,
+  LineChart,
+  Scatter,
+  Layers,
+  Target as TargetIcon,
+  Search,
+  Filter,
+  RefreshCw,
+  Download,
+  Upload,
+  Bell,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  Info,
+  Lightbulb,
+  Cpu as CpuIcon,
+  Database as DatabaseIcon,
+  Network as NetworkIcon,
+  FileText as FileTextIcon,
+  MessageCircle as MessageCircleIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Building as BuildingIcon,
+  Video as VideoIcon,
+  Eye as EyeIcon,
+  Target as TargetIcon2,
+  Users as UsersIcon,
+  ArrowRight as ArrowRightIcon,
+  Key as KeyIcon,
+  Fingerprint as FingerprintIcon,
+  EyeOff as EyeOffIcon,
+  Server as ServerIcon,
+  Globe2 as Globe2Icon,
+  ShieldCheck as ShieldCheckIcon,
+  Wifi as WifiIcon,
+  Smartphone as SmartphoneIcon,
+  Activity as ActivityIcon,
+  Clock as ClockIcon,
+  BarChart as BarChartIcon,
+  PieChart as PieChartIcon,
+  GitBranch as GitBranchIcon,
+  Code as CodeIcon,
+  Package as PackageIcon,
+  Play as PlayIcon,
+  Settings as SettingsIcon,
+  Monitor as MonitorIcon,
+  Shield as ShieldIcon,
+  Rocket as RocketIcon,
+  Globe as GlobeIcon,
+  Factory as FactoryIcon,
+  Car as CarIcon,
+  Heart as HeartIcon,
+  LineChart as LineChartIcon,
+  Scatter as ScatterIcon,
+  Layers as LayersIcon
 } from 'lucide-react';
 
-export default function QuantumComputing() {
+export default function MachineLearning() {
   const features = [
     {
-      icon: Atom,
-      title: 'Quantum Processing',
-      description: 'Harness the power of quantum mechanics for unprecedented computational speed',
+      icon: Brain,
+      title: 'Deep Learning',
+      description: 'Advanced neural networks for complex pattern recognition',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Brain,
-      title: 'Quantum AI',
-      description: 'Combine quantum computing with artificial intelligence for breakthrough insights',
+      icon: Target,
+      title: 'Predictive Analytics',
+      description: 'Forecast future trends and behaviors with high accuracy',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Zap,
-      title: 'Quantum Speed',
-      description: 'Solve complex problems in seconds that would take classical computers years',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Lock,
-      title: 'Quantum Security',
-      description: 'Unbreakable encryption using quantum key distribution and cryptography',
+      icon: Search,
+      title: 'Natural Language Processing',
+      description: 'Understand and process human language intelligently',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Network,
-      title: 'Quantum Networks',
-      description: 'Secure quantum communication networks for ultra-fast data transfer',
-      color: 'from-indigo-500 to-purple-500'
+      icon: Eye,
+      title: 'Computer Vision',
+      description: 'Advanced image and video analysis capabilities',
+      color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Database,
-      title: 'Quantum Databases',
-      description: 'Revolutionary database systems with quantum search algorithms',
+      icon: Zap,
+      title: 'Real-Time Learning',
+      description: 'Continuous model improvement and adaptation',
       color: 'from-red-500 to-pink-500'
+    },
+    {
+      icon: Shield,
+      title: 'AI Ethics & Safety',
+      description: 'Responsible AI development and deployment',
+      color: 'from-indigo-500 to-blue-500'
     }
   ];
 
   const benefits = [
-    'Solve problems 100x faster than classical computers',
-    'Breakthrough discoveries in drug development',
-    'Unbreakable quantum encryption',
-    'Revolutionary AI and machine learning',
-    'Optimize complex logistics and supply chains',
-    'Transform financial modeling and risk assessment'
+    'Improve decision accuracy by 85% with predictive insights',
+    'Automate complex tasks and reduce manual work by 70%',
+    'Unlock hidden patterns in data for competitive advantage',
+    'Scale operations without proportional cost increases',
+    'Provide personalized experiences for customers and users',
+    'Enable new business models and revenue opportunities'
   ];
 
   const useCases = [
     {
-      title: 'Drug Discovery',
-      description: 'Accelerate pharmaceutical research and molecular modeling',
-      icon: Flask
+      title: 'Customer Analytics',
+      description: 'Predict customer behavior and preferences',
+      icon: Users
     },
     {
-      title: 'Financial Modeling',
-      description: 'Revolutionary risk assessment and portfolio optimization',
-      icon: TrendingUp
+      title: 'Fraud Detection',
+      description: 'Identify suspicious activities in real-time',
+      icon: Shield
     },
     {
-      title: 'Climate Research',
-      description: 'Advanced climate modeling and environmental simulations',
-      icon: Globe
+      title: 'Recommendation Systems',
+      description: 'Personalized product and content suggestions',
+      icon: Target
     },
     {
-      title: 'AI & Machine Learning',
-      description: 'Quantum-enhanced artificial intelligence algorithms',
-      icon: Brain
+      title: 'Process Optimization',
+      description: 'Streamline operations and reduce inefficiencies',
+      icon: Activity
     }
   ];
 
-  const quantumApplications = [
+  const mlCapabilities = [
     {
-      name: 'Quantum Machine Learning',
-      description: 'Revolutionary AI algorithms powered by quantum computing',
-      examples: ['Pattern recognition', 'Optimization', 'Neural networks']
+      name: 'Supervised Learning',
+      description: 'Training models with labeled data for classification and regression',
+      examples: ['Classification', 'Regression', 'Object detection', 'Sentiment analysis']
     },
     {
-      name: 'Quantum Cryptography',
-      description: 'Unbreakable encryption using quantum principles',
-      examples: ['Key distribution', 'Secure communication', 'Digital signatures']
+      name: 'Unsupervised Learning',
+      description: 'Discovering hidden patterns in unlabeled data',
+      examples: ['Clustering', 'Dimensionality reduction', 'Anomaly detection']
     },
     {
-      name: 'Quantum Simulation',
-      description: 'Accurate modeling of complex quantum systems',
-      examples: ['Chemical reactions', 'Material properties', 'Quantum physics']
+      name: 'Reinforcement Learning',
+      description: 'Training agents to make decisions through trial and error',
+      examples: ['Game AI', 'Robotics', 'Autonomous systems', 'Resource optimization']
     },
     {
-      name: 'Quantum Optimization',
-      description: 'Solve complex optimization problems efficiently',
-      examples: ['Logistics', 'Scheduling', 'Resource allocation']
+      name: 'Neural Networks',
+      description: 'Deep learning models for complex pattern recognition',
+      examples: ['CNNs', 'RNNs', 'Transformers', 'GANs']
+    }
+  ];
+
+  const industries = [
+    {
+      name: 'Healthcare',
+      icon: Heart,
+      description: 'Medical diagnosis, drug discovery, and patient care'
+    },
+    {
+      name: 'Finance',
+      icon: BarChart,
+      description: 'Risk assessment, fraud detection, and trading algorithms'
+    },
+    {
+      name: 'Retail',
+      icon: ShoppingCart,
+      description: 'Customer segmentation, inventory optimization, and pricing'
+    },
+    {
+      name: 'Manufacturing',
+      icon: Factory,
+      description: 'Predictive maintenance, quality control, and supply chain'
+    },
+    {
+      name: 'Transportation',
+      icon: Car,
+      description: 'Autonomous vehicles, route optimization, and logistics'
+    },
+    {
+      name: 'Entertainment',
+      icon: Play,
+      description: 'Content recommendation, personalization, and analytics'
     }
   ];
 
   return (
     <>
       <SEO 
-        title="Quantum Computing - Zion Tech Group"
-        description="Revolutionary quantum computing solutions with AI integration, quantum cryptography, and breakthrough computational capabilities. Transform your business with quantum technology."
-        keywords="quantum computing, quantum AI, quantum cryptography, quantum machine learning, quantum optimization, quantum simulation"
+        title="Machine Learning - Zion Tech Group"
+        description="Revolutionary machine learning solutions including deep learning, predictive analytics, NLP, and computer vision. Transform your business with AI-powered insights."
+        keywords="machine learning, deep learning, AI, predictive analytics, natural language processing, computer vision, neural networks"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -152,21 +252,21 @@ export default function QuantumComputing() {
               className="text-center max-w-4xl mx-auto"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-400 text-sm font-medium mb-6">
-                <Atom className="w-4 h-4" />
-                Quantum Innovation
+                <Brain className="w-4 h-4" />
+                AI Innovation
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                Quantum
+                Machine
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  Computing
+                  Learning
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Experience the future of computing with our revolutionary quantum platform. 
-                Harness the power of quantum mechanics for breakthrough discoveries, 
-                unbreakable security, and computational capabilities beyond imagination.
+                Transform your business with revolutionary machine learning technology. 
+                Deep learning, predictive analytics, NLP, and computer vision that 
+                unlock insights and automate complex processes.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -175,14 +275,14 @@ export default function QuantumComputing() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
                 >
-                  Explore Quantum
+                  Get Started
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
-                  Schedule Demo
+                  View Demo
                 </motion.button>
               </div>
             </motion.div>
@@ -206,11 +306,11 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Revolutionary Quantum Features
+                Revolutionary ML Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our quantum platform combines cutting-edge quantum technology with 
-                practical applications to deliver unprecedented computational power.
+                Our machine learning platform combines cutting-edge algorithms with practical 
+                applications to deliver unprecedented insights and automation capabilities.
               </p>
             </motion.div>
             
@@ -252,13 +352,13 @@ export default function QuantumComputing() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                  Transform Your Computational Capabilities
+                  Transform Your Business with ML
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our quantum computing platform delivers breakthrough performance in 
-                  problem-solving, optimization, and simulation while opening new 
-                  possibilities in AI, cryptography, and scientific research.
+                  Our machine learning solutions deliver measurable improvements in decision 
+                  accuracy, operational efficiency, and customer experience while enabling 
+                  new business opportunities.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -271,7 +371,7 @@ export default function QuantumComputing() {
                       viewport={{ once: true }}
                       className="flex items-center gap-3"
                     >
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                       <span className="text-gray-300">{benefit}</span>
                     </motion.div>
                   ))}
@@ -288,29 +388,29 @@ export default function QuantumComputing() {
                 <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-3xl p-8 border border-purple-500/30">
                   <div className="text-center">
                     <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Infinity className="w-10 h-10 text-white" />
+                      <TrendingUp className="w-10 h-10 text-white" />
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Quantum Performance
+                      ML Impact
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-purple-400 mb-2">100x</div>
-                        <div className="text-sm text-gray-400">Faster Processing</div>
+                        <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
+                        <div className="text-sm text-gray-400">Decision Accuracy</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-pink-400 mb-2">∞</div>
-                        <div className="text-sm text-gray-400">Possibilities</div>
+                        <div className="text-3xl font-bold text-pink-400 mb-2">70%</div>
+                        <div className="text-sm text-gray-400">Work Reduction</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-cyan-400 mb-2">100%</div>
-                        <div className="text-sm text-gray-400">Secure</div>
+                        <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+                        <div className="text-sm text-gray-400">Automation</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-blue-400 mb-2">24/7</div>
-                        <div className="text-sm text-gray-400">Availability</div>
+                        <div className="text-3xl font-bold text-blue-400 mb-2">100%</div>
+                        <div className="text-sm text-gray-400">Scalability</div>
                       </div>
                     </div>
                   </div>
@@ -320,7 +420,7 @@ export default function QuantumComputing() {
           </div>
         </section>
 
-        {/* Quantum Applications Section */}
+        {/* ML Capabilities Section */}
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
@@ -331,18 +431,18 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Quantum Applications
+                Machine Learning Capabilities
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                From machine learning to cryptography, our quantum platform enables 
-                revolutionary applications across industries and domains.
+                Our platform provides comprehensive machine learning capabilities that 
+                transform data into actionable insights and automated processes.
               </p>
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {quantumApplications.map((application, index) => (
+              {mlCapabilities.map((capability, index) => (
                 <motion.div
-                  key={application.name}
+                  key={capability.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -350,15 +450,15 @@ export default function QuantumComputing() {
                   className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-purple-500/30 transition-all duration-300 group"
                 >
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                    {application.name}
+                    {capability.name}
                   </h3>
                   
                   <p className="text-gray-400 mb-4 leading-relaxed">
-                    {application.description}
+                    {capability.description}
                   </p>
                   
                   <div className="space-y-2">
-                    {application.examples.map((example, idx) => (
+                    {capability.examples.map((example, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
                         <div className="w-1.5 h-1.5 bg-purple-400 rounded-full"></div>
                         {example}
@@ -371,7 +471,7 @@ export default function QuantumComputing() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Industries Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div
@@ -382,11 +482,60 @@ export default function QuantumComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Quantum Computing Use Cases
+                Industries We Transform
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our quantum platform adapts to various industries and research areas, 
-                providing tailored solutions for complex computational challenges.
+                Our machine learning solutions are designed to revolutionize 
+                various industries with innovative AI applications and use cases.
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={industry.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-purple-500/30 transition-all duration-300 group"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <industry.icon className="w-6 h-6 text-white" />
+                    </div>
+                    
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                        {industry.name}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed">
+                        {industry.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Machine Learning Use Cases
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Our ML platform adapts to various business needs and industries, 
+                providing tailored solutions for different requirements.
               </p>
             </motion.div>
             
@@ -431,12 +580,12 @@ export default function QuantumComputing() {
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to Experience Quantum Computing?
+                Ready to Harness Machine Learning?
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading research institutions and companies that are already using 
-                our quantum platform to solve the world's most complex problems.
+                Join leading organizations that are already using our machine learning 
+                solutions to unlock insights and automate complex processes.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -445,7 +594,7 @@ export default function QuantumComputing() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
                 >
-                  Start Quantum Journey
+                  Start Today
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
