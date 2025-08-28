@@ -2,10 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+=======
 /* Import accessibility styles */
 @import './styles/accessibility.css';
 
 /* Custom CSS Variables */
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
 :root {
   --zion-slate-dark: #0f172a;
   --zion-slate: #1e293b;

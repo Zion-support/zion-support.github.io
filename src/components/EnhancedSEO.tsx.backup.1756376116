@@ -5,6 +5,10 @@ interface EnhancedSEOProps {
   title: string;
   description: string;
   keywords?: string[];
+<<<<<<< HEAD
+  type?: string;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
   image?: string;
   url?: string;
   author?: string;
@@ -13,6 +17,12 @@ interface EnhancedSEOProps {
   author?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
   structuredData?: object;
 }
 
@@ -20,8 +30,11 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   title,
   description,
   keywords = [],
+<<<<<<< HEAD
+=======
   image = '/images/zion-tech-group-og.jpg',
   url = window.location.href,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
   type = 'website',
   image,
   url,
@@ -36,6 +49,10 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   nofollow = false,
   structuredData
 }) => {
+<<<<<<< HEAD
+  const currentUrl = url || window.location.href;
+  const currentImage = image || '/images/zion-tech-group-og.jpg';
+=======
   const defaultKeywords = [
     'AI solutions',
     'cloud computing',
@@ -49,6 +66,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     'enterprise software',
     'Zion Tech Group'
   ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
 
   const generateStructuredData = useCallback(() => {
     const baseData = {
@@ -72,6 +90,153 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       }
     };
 
+<<<<<<< HEAD
+    if (type === 'article') {
+      return {
+        ...baseData,
+        '@type': 'Article',
+        headline: title,
+        author: {
+          '@type': 'Person',
+          name: author
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          logo: {
+            '@type': 'ImageObject',
+            url: '/images/zion-tech-group-logo.png'
+          }
+        },
+        datePublished: publishedTime,
+        dateModified: modifiedTime,
+        articleSection: section,
+        keywords: [...keywords, ...tags].join(', '),
+        image: currentImage
+      };
+    }
+
+    return baseData;
+  }, [title, description, keywords, type, currentUrl, currentImage, author, publishedTime, modifiedTime, section, tags]);
+
+  const generateMetaTags = useCallback(() => {
+    const tags = [
+      // Basic SEO
+      { name: 'description', content: description },
+      { name: 'keywords', content: keywords.join(', ') },
+      { name: 'author', content: author },
+      { name: 'robots', content: `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}` },
+      
+      // Open Graph
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:type', content: type },
+      { property: 'og:url', content: currentUrl },
+      { property: 'og:image', content: currentImage },
+      { property: 'og:site_name', content: 'Zion Tech Group' },
+      { property: 'og:locale', content: 'en_US' },
+      
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: currentImage },
+      { name: 'twitter:site', content: '@ziontechgroup' },
+      
+      // Additional SEO
+      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+      { name: 'theme-color', content: '#0ea5e9' },
+      { name: 'msapplication-TileColor', content: '#0ea5e9' },
+      { name: 'apple-mobile-web-app-capable', content: 'yes' },
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+      { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
+      
+      // Performance
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'mobile-web-app-capable', content: 'yes' }
+    ].filter(tag => tag.content);
+
+    return tags;
+  }, [title, description, keywords, author, noindex, nofollow, type, currentUrl, currentImage]);
+
+  const generateLinkTags = useCallback(() => {
+    const links = [
+      // Canonical
+      canonical && { rel: 'canonical', href: canonical },
+      
+      // Preconnect to external domains
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
+      
+      // DNS prefetch
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+      
+      // Favicon
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      
+      // Manifest
+      { rel: 'manifest', href: '/site.webmanifest' }
+    ].filter(Boolean);
+
+    return links;
+  }, [canonical]);
+
+  useEffect(() => {
+    // Update page title for better UX
+    document.title = title;
+    
+    // Add structured data to page
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+      
+      return () => {
+        document.head.removeChild(script);
+      };
+    }
+  }, [title, structuredData]);
+
+  const metaTags = generateMetaTags();
+  const linkTags = generateLinkTags();
+  const structuredDataScript = generateStructuredData();
+
+  // Generate article structured data if it's a blog post
+  const articleStructuredData = publishedTime ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": description,
+    "image": ogImage,
+    "author": {
+      "@type": "Organization",
+      "name": author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ziontechgroup.com/logo.svg"
+      }
+    },
+    "datePublished": publishedTime,
+    "dateModified": modifiedTime || publishedTime,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalUrl
+    },
+    "articleSection": section,
+    "keywords": keywords,
+    "wordCount": wordCount,
+    "timeRequired": readingTime ? `PT${readingTime}M` : undefined
+  } : null;
+=======
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -132,6 +297,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       ]
     }
   };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
 
   // Preload critical resources
   useEffect(() => {
@@ -176,6 +342,12 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     <Helmet>
       <title>{title}</title>
       
+<<<<<<< HEAD
+      {/* Meta tags */}
+      {metaTags.map((tag, index) => (
+        <meta key={index} {...tag} />
+      ))}
+=======
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -184,12 +356,16 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
       
       {/* Link tags */}
       {linkTags.map((link, index) => (
         <link key={index} {...link} />
       ))}
       
+<<<<<<< HEAD
+      {/* Structured data */}
+=======
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
@@ -213,9 +389,12 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Structured Data */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
       <script type="application/ld+json">
         {JSON.stringify(structuredDataScript)}
       </script>
+<<<<<<< HEAD
+=======
       
       {/* Additional SEO Meta Tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
@@ -225,6 +404,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
     </Helmet>
   );
 };

@@ -143,6 +143,10 @@ const HeroSection = React.memo(() => {
   }, [heroSlides.length]);
 
   return (
+<<<<<<< HEAD
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <FuturisticBackground />
+=======
     <>
       {/* Enhanced SEO Component */}
       <EnhancedSEO 
@@ -154,6 +158,7 @@ const HeroSection = React.memo(() => {
         tags={['technology', 'AI', 'cloud', 'cybersecurity', 'digital transformation']}
         structuredData={seoData.structuredData}
       />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
       
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <AnimatePresence mode="wait">
