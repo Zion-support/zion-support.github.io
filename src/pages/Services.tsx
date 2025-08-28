@@ -2,73 +2,74 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Search, 
-  Filter, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
   Brain, 
-  Cpu, 
-  Database, 
-  Network, 
+  Cloud, 
   Shield, 
   Rocket, 
-  Users, 
-  BarChart3, 
-  Code, 
-  Server, 
-  Chip, 
-  Globe, 
   Zap, 
-  Lock, 
-  ShieldCheck,
-  TrendingUp,
-  CheckCircle,
-  Clock,
-  DollarSign,
-  Target,
-  Handshake,
-  Lightbulb,
-  Scale,
+  Users, 
+  Globe, 
+  Cpu,
+  Lock,
   Heart,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Code,
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  MessageSquare,
+  FileText,
+  ShoppingCart,
+  Headphones,
+  Mail,
+  Search,
+  HelpCircle,
+  ShieldCheck,
+  Globe2,
   Leaf,
-  Eye,
-  Atom,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  City
+  Sparkles,
+  Target,
+  DollarSign,
+  Clock,
+  Award,
+  Phone,
+  Mail as MailIcon,
+  MapPin
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { SEO } from '../components/SEO';
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
+import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGuide2030';
 
-const Services: React.FC = () => {
+export default function Services() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-
-  // Enhanced categories with new services
+  // Get unique categories from services
   const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-zion-blue to-zion-indigo' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-zion-red to-zion-pink' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-zion-purple to-zion-violet' },
-    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: allServices.filter(s => s.category === 'AI & Green Tech').length, icon: '🌱', color: 'from-zion-green to-zion-emerald' },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: allServices.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-zion-purple to-zion-indigo' },
-    { id: 'AI & Blockchain', name: 'AI & Blockchain', count: allServices.filter(s => s.category === 'AI & Blockchain').length, icon: '🔗', color: 'from-zion-green to-zion-emerald' },
-    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', count: allServices.filter(s => s.category === 'AI & Edge Computing').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-zion-purple to-zion-pink' },
-    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: allServices.filter(s => s.category === 'AI & Space Tech').length, icon: '🚀', color: 'from-zion-indigo to-zion-purple' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-zion-orange to-zion-red' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-zion-purple to-zion-cyan' }
+    { id: 'all', name: 'All Services', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
+    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-green-500 to-emerald-500' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
+    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' },
+    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
+    { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' },
+    { id: 'Digital Twin', name: 'Digital Twin', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Digital Twin').length, icon: '🔄', color: 'from-blue-500 to-indigo-500' },
+    { id: 'Space Technology', name: 'Space Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
+    { id: 'Sustainable Technology', name: 'Sustainable Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
+    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
+    { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' },
+    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' }
   ];
 
-  const filteredServices = allServices.filter(service => {
+  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -84,7 +85,7 @@ const Services: React.FC = () => {
       case 'price':
         return a.price - b.price;
       case 'reviews':
-        return b.reviews - a.reviews;
+        return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title);
       default:
@@ -114,281 +115,367 @@ const Services: React.FC = () => {
     }
   };
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Analytics': return <Brain className="w-5 h-5" />;
-      case 'AI & Legal Tech': return <Scale className="w-5 h-5" />;
-      case 'AI & Healthcare': return <Heart className="w-5 h-5" />;
-      case 'AI & Research': return <Eye className="w-5 h-5" />;
-      case 'AI & Green Tech': return <Leaf className="w-5 h-5" />;
-      case 'AI & Metaverse': return <Globe className="w-5 h-5" />;
-      case 'AI & Blockchain': return <Lock className="w-5 h-5" />;
-      case 'AI & Edge Computing': return <Cpu className="w-5 h-5" />;
-      case 'Quantum Computing': return <Atom className="w-5 h-5" />;
-      case 'AI & Space Tech': return <Rocket className="w-5 h-5" />;
-      case 'AI & Content': return <Code className="w-5 h-5" />;
-      case 'Cybersecurity': return <Shield className="w-5 h-5" />;
-      case 'AI & HR': return <Users className="w-5 h-5" />;
-      default: return <Brain className="w-5 h-5" />;
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
-        <div className="relative container-responsive py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Revolutionary
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> AI Services</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our cutting-edge micro SAAS solutions powered by artificial intelligence, quantum computing, and next-generation technology
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/enhanced-pricing"
-                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Search and Filter Section */}
-      <div className="container-responsive py-8">
-        <div className="bg-slate-800/50 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50">
-          <div className="flex flex-col lg:flex-row gap-6 items-center">
-            {/* Search */}
-            <div className="flex-1 w-full">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services, features, or categories..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
-            </div>
-
-            {/* Sort */}
-            <div className="flex items-center gap-4">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="bg-slate-700/50 border border-slate-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              >
-                <option value="rating">Sort by Rating</option>
-                <option value="price">Sort by Price</option>
-                <option value="reviews">Sort by Reviews</option>
-                <option value="name">Sort by Name</option>
-              </select>
-
-              {/* View Mode Toggle */}
-              <div className="flex bg-slate-700/50 rounded-lg p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-colors ${
-                    viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  <div className="grid grid-cols-2 gap-1 w-4 h-4">
-                    <div className="bg-current rounded-sm"></div>
-                    <div className="bg-current rounded-sm"></div>
-                    <div className="bg-current rounded-sm"></div>
-                    <div className="bg-current rounded-sm"></div>
-                  </div>
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-colors ${
-                    viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  <div className="space-y-1 w-4 h-4">
-                    <div className="bg-current rounded-sm h-1"></div>
-                    <div className="bg-current rounded-sm h-1"></div>
-                    <div className="bg-current rounded-sm h-1"></div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Categories */}
-      <div className="container-responsive py-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {categories.map((category) => (
-            <motion.button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`p-4 rounded-xl border-2 transition-all duration-300 transform hover:scale-105 ${
-                activeCategory === category.id
-                  ? 'border-cyan-400 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 shadow-lg shadow-cyan-500/25'
-                  : 'border-slate-700 bg-slate-800/50 hover:border-slate-600 hover:bg-slate-700/50'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="text-center">
-                <div className="text-3xl mb-2">{category.icon}</div>
-                <h3 className="font-semibold text-white text-sm mb-1">{category.name}</h3>
-                <p className="text-cyan-400 text-xs">{category.count} services</p>
-              </div>
-            </motion.button>
-          ))}
-        </div>
-      </div>
-
-      {/* Services Grid/List */}
-      <div className="container-responsive py-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}
-        >
-          {sortedServices.map((service) => (
+    <>
+      <SEO 
+        title="Innovative Micro SAAS, IT & AI Services | Zion Tech Group"
+        description="Discover our comprehensive range of cutting-edge micro SAAS, IT, and AI services. From AI-powered business intelligence to quantum computing solutions."
+        keywords="micro SAAS, IT services, AI services, business intelligence, cybersecurity, cloud computing, quantum computing, blockchain, fintech"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              key={service.id}
-              variants={itemVariants}
-              className={`bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 overflow-hidden transition-all duration-300 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/25 transform hover:scale-105 ${
-                viewMode === 'list' ? 'flex' : ''
-              }`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mb-8"
             >
-              {viewMode === 'grid' ? (
-                // Grid View
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg">
-                        {getCategoryIcon(service.category)}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-white text-lg">{service.title}</h3>
-                        <p className="text-cyan-400 text-sm">{service.category}</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-white">${service.price.toLocaleString()}</div>
-                      <div className="text-gray-400 text-sm">per month</div>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0, 3).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-md"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-sm text-gray-400">
-                      <Clock className="w-4 h-4" />
-                      <span>{service.estimatedDelivery}</span>
-                    </div>
-                    <Link
-                      to={`/services/${service.id}`}
-                      className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Innovative Micro SAAS
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                  IT & AI Services
+                </span>
+              </h1>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+                Transform your business with our cutting-edge micro SAAS solutions, enterprise IT services, and AI-powered innovations. 
+                Delivering real results with proven ROI and enterprise-grade security.
+              </p>
+              
+              {/* Contact Information */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-5 h-5 text-cyan-400" />
+                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                    +1 302 464 0950
+                  </a>
                 </div>
-              ) : (
-                // List View
-                <div className="flex-1 p-6">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg">
-                        {getCategoryIcon(service.category)}
+                <div className="flex items-center gap-2">
+                  <MailIcon className="w-5 h-5 text-cyan-400" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-cyan-400" />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Search and Filter Controls */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent w-80"
+                  />
+                </div>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="reviews">Sort by Reviews</option>
+                  <option value="name">Sort by Name</option>
+                </select>
+              </div>
+            </motion.div>
+
+            {/* Category Filter */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mb-8"
+            >
+              <div className="flex flex-wrap justify-center gap-3">
+                <button
+                  onClick={() => setActiveCategory('all')}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                    activeCategory === 'all'
+                      ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
+                      : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600'
+                  }`}
+                >
+                  All Services ({COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length})
+                </button>
+                {categories.slice(1).map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setActiveCategory(category.id)}
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                      activeCategory === category.id
+                        ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
+                        : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600'
+                    }`}
+                  >
+                    {category.icon} {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              <AnimatePresence>
+                {sortedServices.map((service) => (
+                  <motion.div
+                    key={service.id}
+                    variants={itemVariants}
+                    layout
+                    className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 group"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                          <Brain className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                            {service.title}
+                          </h3>
+                          <p className="text-sm text-slate-400">{service.category}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="font-bold text-white text-xl">{service.title}</h3>
-                        <p className="text-cyan-400">{service.category}</p>
-                        <p className="text-gray-300 mt-2 max-w-2xl">{service.description}</p>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-slate-300">{service.rating}</span>
+                        <span className="text-xs text-slate-500">({service.reviewCount})</span>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold text-white">${service.price.toLocaleString()}</div>
-                      <div className="text-gray-400">per month</div>
-                      <Link
-                        to={`/services/${service.id}`}
-                        className="inline-flex items-center gap-2 mt-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+
+                    <p className="text-slate-300 mb-4 line-clamp-3">{service.description}</p>
+
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Price:</span>
+                        <span className="text-white font-semibold">${service.price.toLocaleString()}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Market Price:</span>
+                        <span className="text-slate-300">${service.marketPrice.toLocaleString()}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">ROI:</span>
+                        <span className="text-green-400 font-semibold">{service.roi}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Setup Time:</span>
+                        <span className="text-slate-300">{service.availability}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {service.tags.slice(0, 3).map((tag, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full border border-slate-600"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex gap-3">
+                      <a
+                        href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service.`}
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-center py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+                      >
+                        Get Started
+                      </a>
+                      <a
+                        href={service.contactInfo.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 border border-slate-600 text-slate-300 rounded-lg hover:border-cyan-500 hover:text-cyan-400 transition-colors"
                       >
                         Learn More
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
+                      </a>
                     </div>
-                  </div>
-                </div>
-              )}
+                  </motion.div>
+                ))}
+              </AnimatePresence>
             </motion.div>
-          ))}
-        </motion.div>
 
-        {sortedServices.length === 0 && (
-          <div className="text-center py-20">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+            {sortedServices.length === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-center py-16"
+              >
+                <Search className="w-16 h-16 text-slate-600 mx-auto mb-4" />
+                <h3 className="text-xl text-slate-400 mb-2">No services found</h3>
+                <p className="text-slate-500">Try adjusting your search or filter criteria</p>
+              </motion.div>
+            )}
           </div>
-        )}
-      </div>
+        </section>
 
-      {/* CTA Section */}
-      <div className="container-responsive py-20">
-        <div className="bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl p-12 text-center border border-cyan-400/20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of companies already using our AI-powered solutions to drive innovation, reduce costs, and accelerate growth.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/request-quote"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+        {/* Why Choose Zion Tech Group */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
             >
-              Get Your Custom Quote
-            </Link>
-            <Link
-              to="/contact"
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Talk to Our Experts
-            </Link>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>?
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                We deliver cutting-edge solutions with proven results, enterprise-grade security, and dedicated support.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: <TrendingUp className="w-8 h-8" />,
+                  title: "Proven ROI",
+                  description: "Our solutions deliver measurable business value with clear ROI metrics and performance tracking."
+                },
+                {
+                  icon: <ShieldCheck className="w-8 h-8" />,
+                  title: "Enterprise Security",
+                  description: "Bank-level security protocols and compliance standards to protect your business data and operations."
+                },
+                {
+                  icon: <Users className="w-8 h-8" />,
+                  title: "Expert Support",
+                  description: "24/7 technical support from certified professionals with deep industry expertise."
+                },
+                {
+                  icon: <Rocket className="w-8 h-8" />,
+                  title: "Innovation First",
+                  description: "Stay ahead with cutting-edge technologies and forward-thinking solutions that drive growth."
+                }
+              ].map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-slate-300">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-slate-300 mb-8">
+                Join hundreds of businesses already leveraging our innovative solutions to drive growth and efficiency.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+                >
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  to="/pricing-guide-2030"
+                  className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 hover:scale-105"
+                >
+                  View Pricing Guide
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                >
+                  Schedule Consultation
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Contact Information Footer */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MailIcon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-slate-300">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
-};
-
-export default Services;
+}
