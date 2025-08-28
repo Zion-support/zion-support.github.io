@@ -1,92 +1,97 @@
 import React from 'react';
+<<<<<<< HEAD
+import SEO from '@/components/SEO';
+import { Target, BarChart3, Users, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, TrendingUp, MessageSquare, Mail as MailIcon, Share2, Filter } from 'lucide-react';
+=======
 import { motion } from 'framer-motion';
 import { 
-  BarChart3, 
+  Target, 
   TrendingUp, 
-  DollarSign, 
+  Users, 
+  Clock, 
+  BarChart3, 
   Shield, 
   Zap, 
-  Clock, 
   CheckCircle,
   Brain,
   Workflow,
-  Target,
-  PieChart,
-  LineChart,
-  AlertTriangle,
+  MessageSquare,
+  Mail,
+  Smartphone,
+  Globe,
   Star,
   ArrowRight,
   Play,
   Cpu,
-  Globe,
-  Users,
-  Lock
+  Heart,
+  Eye
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-aaf9
 
-const AIFinancialAnalytics = () => {
+const AIMarketingAutomation = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Financial Forecasting",
-      description: "Machine learning models predict cash flow, revenue, and market trends with 95% accuracy",
-      price: "$79/month"
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Financial Dashboards",
-      description: "Live financial metrics and KPIs with intelligent alerts and recommendations",
-      price: "$49/month"
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Risk Analysis",
-      description: "AI identifies potential financial risks and suggests mitigation strategies",
-      price: "$89/month"
-    },
-    {
-      icon: Workflow,
-      title: "Automated Financial Reporting",
-      description: "Generate comprehensive financial reports automatically with AI insights",
+      title: "AI-Powered Audience Targeting",
+      description: "Machine learning algorithms identify and target your ideal customers with precision",
       price: "$59/month"
     },
     {
       icon: Target,
-      title: "Smart Budget Optimization",
-      description: "AI-driven recommendations for budget allocation and cost optimization",
+      title: "Smart Campaign Optimization",
+      description: "AI continuously optimizes campaigns for maximum ROI and engagement",
+      price: "$79/month"
+    },
+    {
+      icon: MessageSquare,
+      title: "Personalized Content Generation",
+      description: "AI creates personalized marketing content for each customer segment",
       price: "$69/month"
     },
     {
-      icon: Shield,
-      title: "Compliance & Audit Support",
-      description: "Automated compliance checking and audit trail generation",
+      icon: Workflow,
+      title: "Automated Marketing Workflows",
+      description: "Intelligent automation that nurtures leads and converts prospects",
+      price: "$89/month"
+    },
+    {
+      icon: BarChart3,
+      title: "Predictive Analytics",
+      description: "AI predicts customer behavior and campaign performance",
       price: "$99/month"
+    },
+    {
+      icon: Users,
+      title: "Multi-Channel Orchestration",
+      description: "Seamlessly coordinate campaigns across email, social, and web",
+      price: "$119/month"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$79",
+      price: "$59",
       period: "/month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small businesses starting with AI marketing",
       features: [
-        "Basic financial forecasting",
-        "Standard dashboards",
-        "Monthly reports",
+        "Basic audience targeting",
+        "Email automation",
+        "Social media posting",
         "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$149",
       period: "/month",
-      description: "Ideal for growing businesses and financial teams",
+      description: "Ideal for growing businesses with multiple marketing channels",
       features: [
         "All Starter features",
-        "Advanced analytics",
-        "Risk analysis",
+        "Advanced AI targeting",
+        "Multi-channel campaigns",
         "Priority support",
         "Custom integrations"
       ],
@@ -94,13 +99,13 @@ const AIFinancialAnalytics = () => {
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$399",
       period: "/month",
-      description: "For large organizations with complex financial needs",
+      description: "For large organizations with complex marketing needs",
       features: [
         "All Professional features",
         "Custom AI models",
-        "Advanced security",
+        "Advanced analytics",
         "Dedicated support",
         "White-label options"
       ],
@@ -111,37 +116,37 @@ const AIFinancialAnalytics = () => {
   const benefits = [
     {
       icon: TrendingUp,
-      title: "30% Better Financial Decisions",
-      description: "AI-powered insights lead to more informed financial strategies"
+      title: "300% Higher ROI",
+      description: "AI-optimized campaigns deliver significantly better returns"
     },
     {
       icon: Clock,
-      title: "80% Faster Analysis",
-      description: "Automate complex financial calculations and reporting"
+      title: "80% Time Savings",
+      description: "Automate repetitive marketing tasks and focus on strategy"
     },
     {
       icon: Target,
-      title: "95% Forecast Accuracy",
-      description: "Machine learning models improve prediction accuracy over time"
+      title: "5x Better Targeting",
+      description: "AI identifies and reaches your ideal customers with precision"
     },
     {
-      icon: Shield,
-      title: "100% Compliance",
-      description: "Automated compliance checking ensures regulatory adherence"
+      icon: Heart,
+      title: "Personalized Experience",
+      description: "Every customer receives relevant, personalized content"
     }
   ];
 
   return (
     <>
       <SEO 
-        title="AI Financial Analytics - Zion Tech Group"
-        description="Revolutionary AI-powered financial analytics platform that provides predictive insights, automated reporting, and intelligent risk analysis for better financial decision-making."
+        title="AI Marketing Automation - Zion Tech Group"
+        description="Revolutionary AI-powered marketing automation platform that personalizes campaigns, optimizes performance, and delivers exceptional ROI through intelligent automation."
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 px-4">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></div>
           <div className="container mx-auto max-w-7xl relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -149,26 +154,26 @@ const AIFinancialAnalytics = () => {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-400 text-sm font-medium mb-6">
-                <BarChart3 className="w-4 h-4 mr-2" />
-                AI Financial Analytics
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-pink-500/20 border border-pink-400/30 text-pink-400 text-sm font-medium mb-6">
+                <Target className="w-4 h-4 mr-2" />
+                AI Marketing Automation
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
-                  AI Financial Analytics
+                <span className="bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent">
+                  AI Marketing Automation
                 </span>
                 <br />
-                <span className="text-white">That Predicts the Future</span>
+                <span className="text-white">That Converts</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your financial decision-making with AI that analyzes patterns, predicts trends, and provides 
-                actionable insights. Make smarter financial decisions with confidence.
+                Transform your marketing with AI that personalizes campaigns, optimizes performance, and delivers 
+                exceptional ROI. Automate what you can, personalize what matters.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center"
+                  className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   <Play className="w-5 h-5 mr-2" />
                   Start Free Trial
@@ -176,7 +181,7 @@ const AIFinancialAnalytics = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
                 >
                   Watch Demo
                 </motion.button>
@@ -195,10 +200,10 @@ const AIFinancialAnalytics = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Transform Your Financial Intelligence
+                Transform Your Marketing Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See measurable improvements in financial decision-making, risk management, and operational efficiency
+                See measurable improvements in ROI, customer engagement, and campaign performance
               </p>
             </motion.div>
 
@@ -211,7 +216,7 @@ const AIFinancialAnalytics = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
@@ -232,10 +237,10 @@ const AIFinancialAnalytics = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                AI-Powered Features That Revolutionize Finance
+                AI-Powered Features That Revolutionize Marketing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI doesn't just analyze numbers—it understands patterns, predicts trends, and provides actionable insights
+                Our AI doesn't just automate—it personalizes, optimizes, and delivers results that matter
               </p>
             </motion.div>
 
@@ -246,14 +251,14 @@ const AIFinancialAnalytics = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group"
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/50 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <div className="text-green-400 font-semibold">{feature.price}</div>
+                  <div className="text-pink-400 font-semibold">{feature.price}</div>
                 </motion.div>
               ))}
             </div>
@@ -270,7 +275,7 @@ const AIFinancialAnalytics = () => {
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Choose Your AI Financial Analytics Plan
+                Choose Your AI Marketing Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Start with our free trial and scale as you grow. All plans include our core AI features.
@@ -286,13 +291,13 @@ const AIFinancialAnalytics = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                     plan.popular 
-                      ? 'border-green-400 shadow-lg shadow-green-400/20' 
+                      ? 'border-pink-400 shadow-lg shadow-pink-400/20' 
                       : 'border-slate-700/50'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -310,7 +315,7 @@ const AIFinancialAnalytics = () => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -321,8 +326,8 @@ const AIFinancialAnalytics = () => {
                     whileTap={{ scale: 0.98 }}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
-                        : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-white'
+                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
+                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white'
                     }`}
                   >
                     Get Started
@@ -342,16 +347,16 @@ const AIFinancialAnalytics = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Financial Intelligence?
+                Ready to Transform Your Marketing?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using AI to make smarter financial decisions
+                Join thousands of businesses already using AI to create personalized, high-converting campaigns
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center"
+                  className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -359,7 +364,7 @@ const AIFinancialAnalytics = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
                 >
                   Contact Sales
                 </motion.button>
@@ -372,4 +377,4 @@ const AIFinancialAnalytics = () => {
   );
 };
 
-export default AIFinancialAnalytics;
+export default AIMarketingAutomation;
