@@ -34,7 +34,32 @@ import {
   Moon,
   Infinity,
   ArrowRight,
+<<<<<<< HEAD
+  DollarSign,
+  Workflow,
+  Satellite,
+  Dna,
+  Robot,
+  Leaf,
+  Globe2,
+  Target,
+  Code,
+  GraduationCap,
+  Activity,
+  Building,
+  MessageCircle as MessageCircleIcon,
+  X,
+  Search,
+  FileText,
+  Mail,
+  Mic,
+  Briefcase,
+  Calendar,
+  Video,
+  Newspaper
+=======
   Target
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -119,7 +144,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool },
         { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle },
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },
+<<<<<<< HEAD
+        { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Settings },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', icon: FileText },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: TrendingUp },
+=======
         { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
       ]
     },
     {
@@ -150,6 +184,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'Emerging Technologies',
       icon: Atom,
       items: [
+<<<<<<< HEAD
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
+        { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Cpu },
+        { name: 'Green IT Solutions', href: '/services/green-it', icon: Leaf },
+=======
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
       ]
@@ -159,6 +200,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
       ]
     },
     {
@@ -167,12 +209,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart },
         { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
+<<<<<<< HEAD
+        { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle },
+        { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
+=======
         { name: 'Customer Feedback Surveys', href: '/services/customer-feedback-surveys', icon: MessageCircle },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: MessageCircle },
         { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle },
         { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen },
         { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart },
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
         { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle },
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
         { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },
@@ -200,9 +247,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'Business & Marketing',
       items: [
         { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+<<<<<<< HEAD
+=======
         { name: 'Talent Solutions', href: '/talent', icon: Users },
         { name: 'Equipment Services', href: '/equipment', icon: Server },
         { name: 'Green IT Solutions', href: '/services/green-it', icon: Globe },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
         { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
         { name: 'Partners', href: '/partners', icon: Users },
         { name: 'Careers', href: '/careers', icon: Briefcase },

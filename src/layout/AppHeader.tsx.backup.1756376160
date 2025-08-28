@@ -32,15 +32,23 @@ export function AppHeader() {
     { name: 'Services', href: '/services', current: false },
     { name: '2028 Services', href: '/ultimate-services-showcase-2028', current: false, featured: true, new: true },
     { name: '2027 Services', href: '/services2027', current: false, featured: true },
+<<<<<<< HEAD
+    { name: '2026 Services', href: '/services2026', current: false, featured: true },
+=======
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
+<<<<<<< HEAD
+  // Organized services by category with new 2028 services
+=======
   // Organized services by category - only include existing pages
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
   const services = [
     // Featured & New Services
     { name: '2028 Services Overview', href: '/ultimate-services-showcase-2028', icon: Crown, description: 'Revolutionary Emerging Tech & AI Solutions', category: 'Featured', featured: true, new: true },
@@ -55,14 +63,33 @@ export function AppHeader() {
     { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Personalized marketing campaigns & optimization', category: 'AI & ML' },
     { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML' },
     { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML' },
+<<<<<<< HEAD
+    { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
+    { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool, description: 'Automated content creation and marketing', category: 'AI & ML' },
+    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: TrendingUp, description: 'Intelligent supply chain management', category: 'AI & ML' },
+    { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart, description: 'Healthcare technology solutions', category: 'AI & ML' },
+    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced security with AI', category: 'AI & ML' },
+    { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Quantum-AI hybrid solutions', category: 'AI & ML' },
+    { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'Automated research and analysis', category: 'AI & ML' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'Intelligent project coordination', category: 'AI & ML' },
+    { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Automated customer service', category: 'AI & ML' },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign, description: 'Financial data analysis and insights', category: 'AI & ML' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: TrendingUp, description: 'Intelligent marketing workflows', category: 'AI & ML' },
+=======
     { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
     { name: 'Interview Assessment AI', href: '/services/interview-assessment-ai', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
     
     // Cloud & DevOps
     { name: 'Cloud DevOps Platform', href: '/services/cloud-devops-platform', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'Cloud & DevOps' },
     { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3, description: 'Financial operations automation', category: 'Cloud & DevOps' },
+<<<<<<< HEAD
+    { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic technology consulting', category: 'Cloud & DevOps' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Cloud & DevOps' },
+=======
     
     // Cybersecurity
     { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced AI security solutions', category: 'Cybersecurity' },
@@ -73,20 +100,52 @@ export function AppHeader() {
     // Digital Transformation
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation' },
     { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic technology consulting', category: 'Digital Transformation' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
     
     // Emerging Technologies
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks', category: 'Emerging Tech' },
+<<<<<<< HEAD
+    { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: PenTool, description: 'Automated content generation', category: 'Emerging Tech' },
+    { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users, description: 'Human resources automation', category: 'Emerging Tech' },
+    { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Globe, description: 'Green and eco-friendly solutions', category: 'Emerging Tech' },
+    { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: TrendingUp, description: 'Predictive analytics for maintenance', category: 'Emerging Tech' },
+    { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain, description: 'Quantum-enhanced ML algorithms', category: 'Emerging Tech' },
+=======
     { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Cpu, description: 'Quantum-AI integration', category: 'Emerging Tech' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
     
     // Data & Analytics
     { name: 'AI Data Analytics & BI', href: '/services/ai-data-analytics-bi', icon: BarChart3, description: 'AI-powered business intelligence', category: 'Data & Analytics', featured: true },
     { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics' },
+<<<<<<< HEAD
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Web performance and user behavior', category: 'Data & Analytics' },
+    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp, description: 'Affiliate program management', category: 'Data & Analytics' },
+=======
     { name: 'Website Analytics', href: '/services/website-analytics', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
     
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS' },
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS' },
+<<<<<<< HEAD
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Comprehensive web analytics', category: 'Analytics' },
+    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'IT support management', category: 'IT Services' },
+    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp, description: 'Affiliate program management', category: 'Business Solutions' },
+    { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone, description: 'Mobile survey platform', category: 'Business Solutions' },
+    { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
+    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS' },
+    { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Automated email management', category: 'Micro SaaS' },
+    { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle, description: 'Feedback collection and analysis', category: 'Micro SaaS' },
+    { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'Compliance assistance and monitoring', category: 'Micro SaaS' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: PenTool, description: 'Large language model content creation', category: 'Micro SaaS' },
+    { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart, description: 'Product returns processing', category: 'Micro SaaS' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated email sequences', category: 'Micro SaaS' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle, description: 'Audio content transcription', category: 'Micro SaaS' },
+    { name: 'Mobile Survey', href: '/services/mobile-survey', icon: MessageCircle, description: 'Mobile survey solutions', category: 'Micro SaaS' },
+=======
     { name: 'Customer Feedback Surveys', href: '/services/customer-feedback-surveys', icon: MessageCircle, description: 'Intelligent feedback collection', category: 'Micro SaaS' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
   ];
 
   // Quick links for easy access
@@ -103,11 +162,16 @@ export function AppHeader() {
 
   const featuredServices = [
     { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
+<<<<<<< HEAD
+    { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'Fully autonomous AI research platform', category: 'Featured', featured: true },
+    { name: 'Quantum AI Trading', href: '/services/quantum-ai-trading-platform', icon: Atom, description: 'Quantum-powered trading platform', category: 'Featured', featured: true },
+=======
     { name: '2027 Services', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
     { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced AI security solutions', category: 'Cybersecurity', featured: true },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation', featured: true },
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
   ];
 
   // Group services by category for better organization

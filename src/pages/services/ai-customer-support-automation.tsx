@@ -1,97 +1,97 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle } from 'lucide-react';
+import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIProjectManagement() {
+export default function AICustomerSupportAutomation() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Planning",
-      description: "Intelligent project planning with predictive analytics and resource optimization"
+      title: "AI-Powered Chatbots",
+      description: "Intelligent conversational AI that understands context and provides accurate responses"
     },
     {
-      icon: Target,
-      title: "Smart Goal Setting",
-      description: "AI-driven milestone tracking and adaptive goal adjustment"
-    },
-    {
-      icon: Users,
-      title: "Team Optimization",
-      description: "Automated team allocation and workload balancing"
+      icon: MessageCircle,
+      title: "Multi-Channel Support",
+      description: "Seamless support across email, chat, social media, and phone"
     },
     {
       icon: Clock,
-      title: "Predictive Scheduling",
-      description: "Forecast project timelines and identify potential delays"
+      title: "24/7 Availability",
+      description: "Round-the-clock customer support without human intervention"
+    },
+    {
+      icon: Target,
+      title: "Personalized Responses",
+      description: "AI learns customer preferences and provides tailored solutions"
     },
     {
       icon: BarChart3,
       title: "Real-Time Analytics",
-      description: "Live project insights and performance metrics"
+      description: "Live insights into customer satisfaction and support performance"
     },
     {
       icon: Shield,
-      title: "Risk Management",
-      description: "AI-powered risk identification and mitigation strategies"
+      title: "Secure & Compliant",
+      description: "Enterprise-grade security with GDPR and SOC2 compliance"
     }
   ];
 
   const benefits = [
-    "Reduce project delivery time by 30-50%",
-    "Improve resource utilization by 40-60%",
-    "Increase project success rate by 25-40%",
-    "Reduce project costs by 20-35%",
-    "Eliminate manual reporting by 80%",
-    "Improve stakeholder communication by 50%"
+    "Reduce support costs by 60-80%",
+    "Improve response time by 90%",
+    "Increase customer satisfaction by 40-60%",
+    "Handle 10x more support requests",
+    "Reduce agent workload by 70%",
+    "Provide 24/7 multilingual support"
   ];
 
   const solutions = [
     {
-      title: "AI Project Planning",
-      description: "Intelligent project planning and scheduling with predictive analytics",
-      features: ["Smart milestone planning", "Resource optimization", "Timeline forecasting"],
-      price: "From $3,000/month"
-    },
-    {
-      title: "Team Management AI",
-      description: "AI-powered team allocation and performance optimization",
-      features: ["Workload balancing", "Skill matching", "Performance tracking"],
-      price: "From $2,500/month"
-    },
-    {
-      title: "Risk Management Platform",
-      description: "Advanced risk identification and mitigation strategies",
-      features: ["Risk prediction", "Mitigation planning", "Real-time alerts"],
+      title: "AI Chatbot Platform",
+      description: "Intelligent conversational AI for website and app support",
+      features: ["Natural language processing", "Multi-language support", "Integration APIs"],
       price: "From $2,000/month"
     },
     {
-      title: "Complete PM Suite",
-      description: "Full AI-powered project management solution",
-      features: ["All features", "Custom integrations", "Enterprise support"],
-      price: "From $6,000/month"
+      title: "Email Support Automation",
+      description: "AI-powered email categorization and response generation",
+      features: ["Smart categorization", "Auto-response generation", "Sentiment analysis"],
+      price: "From $1,500/month"
+    },
+    {
+      title: "Voice Support AI",
+      description: "Intelligent voice recognition and response system",
+      features: ["Speech-to-text", "Voice synthesis", "Call routing"],
+      price: "From $3,000/month"
+    },
+    {
+      title: "Full Support Suite",
+      description: "Complete AI-powered customer support solution",
+      features: ["All channels", "Advanced analytics", "Custom integrations"],
+      price: "From $5,000/month"
     }
   ];
 
-  const projectTypes = [
-    "Software Development",
-    "Construction & Engineering",
-    "Marketing Campaigns",
-    "Product Launches",
-    "Research & Development",
-    "Event Management"
+  const useCases = [
+    "E-commerce Customer Support",
+    "SaaS Product Support",
+    "Financial Services",
+    "Healthcare Support",
+    "Travel & Hospitality",
+    "Education & Training"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Project Management Services - Zion Tech Group"
-        description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates."
+        title="AI Customer Support Automation Services - Zion Tech Group"
+        description="Revolutionary AI-powered customer support automation that reduces costs, improves response times, and enhances customer satisfaction. 24/7 intelligent support across all channels."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -99,30 +99,30 @@ export default function AIProjectManagement() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
-              <Target className="w-5 h-5 text-orange-400 mr-2" />
-              <span className="text-orange-300 font-medium">AI Project Management</span>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
+              <MessageCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span className="text-green-300 font-medium">AI Customer Support</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
-                AI Project Management
+              <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
+                AI Customer Support
               </span>
               <br />
-              <span className="text-white">That Delivers Results</span>
+              <span className="text-white">Automation</span>
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your project delivery with AI-powered management that optimizes 
-              planning, resource allocation, and risk management. Deliver projects faster, 
-              cheaper, and with unprecedented success rates.
+              Transform your customer support with AI-powered automation that works 24/7. 
+              Reduce costs, improve response times, and deliver exceptional customer experiences 
+              across all channels.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center"
               >
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Free Trial
@@ -130,7 +130,7 @@ export default function AIProjectManagement() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Video className="w-5 h-5 mr-2" />
                 Watch Demo
@@ -150,11 +150,11 @@ export default function AIProjectManagement() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced AI Technology for Better Project Delivery
+              Advanced AI Technology for Better Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management platform combines machine learning, 
-              predictive analytics, and automation to deliver exceptional project outcomes.
+              Our AI-powered customer support platform combines natural language processing, 
+              machine learning, and automation to deliver exceptional customer experiences.
             </p>
           </motion.div>
 
@@ -165,10 +165,10 @@ export default function AIProjectManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-300 group"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-300 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-300">
-                  <feature.icon className="w-6 h-6 text-orange-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-400/40 group-hover:to-emerald-500/40 transition-all duration-300">
+                  <feature.icon className="w-6 h-6 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -191,8 +191,8 @@ export default function AIProjectManagement() {
               Proven Results & Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management delivers measurable improvements 
-              in delivery time, cost reduction, and project success rates.
+              Our AI-powered customer support automation delivers measurable improvements 
+              in efficiency, cost reduction, and customer satisfaction.
             </p>
           </motion.div>
 
@@ -223,11 +223,11 @@ export default function AIProjectManagement() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Flexible Solutions for Every Project
+              Flexible Solutions for Every Business
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our range of AI-powered project management solutions designed to 
-              meet your specific project needs and scale with your organization.
+              Choose from our range of AI-powered customer support solutions designed to 
+              meet your specific business needs and scale with your growth.
             </p>
           </motion.div>
 
@@ -238,7 +238,7 @@ export default function AIProjectManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-orange-400/30 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-300"
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
@@ -246,14 +246,14 @@ export default function AIProjectManagement() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
                 
-                <div className="text-3xl font-bold text-orange-400 mb-6">{solution.price}</div>
-                <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
+                <div className="text-3xl font-bold text-green-400 mb-6">{solution.price}</div>
+                <button className="w-full py-4 px-6 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                   Get Started
                 </button>
               </motion.div>
@@ -262,7 +262,7 @@ export default function AIProjectManagement() {
         </div>
       </section>
 
-      {/* Project Types Section */}
+      {/* Use Cases Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
@@ -272,16 +272,16 @@ export default function AIProjectManagement() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Optimized for Any Project Type
+              Trusted Across Industries
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management platform is designed to handle 
-              diverse project types across all industries and complexity levels.
+              Our AI-powered customer support automation is successfully deployed across 
+              diverse industries, helping organizations deliver exceptional customer experiences.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {projectTypes.map((projectType, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -289,10 +289,10 @@ export default function AIProjectManagement() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <GitBranch className="w-6 h-6 text-orange-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Headphones className="w-6 h-6 text-green-400" />
                 </div>
-                <span className="text-white font-medium text-sm">{projectType}</span>
+                <span className="text-white font-medium text-sm">{useCase}</span>
               </motion.div>
             ))}
           </div>
@@ -300,7 +300,7 @@ export default function AIProjectManagement() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">
+      <section className="py-20 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -308,17 +308,17 @@ export default function AIProjectManagement() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Project Delivery?
+              Ready to Transform Your Customer Support?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI revolution in project management and deliver projects 
-              faster, cheaper, and with higher success rates.
+              Join the AI revolution in customer support and deliver exceptional experiences 
+              while reducing costs and improving efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Start Your Free Trial
@@ -326,7 +326,7 @@ export default function AIProjectManagement() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950

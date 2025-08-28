@@ -123,15 +123,31 @@ export function Footer() {
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
         { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
         { name: 'IT Services', path: '/it-services', icon: Building },
+<<<<<<< HEAD
+        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
+        { name: 'IT Consulting', path: '/services/it-consulting', icon: Cpu },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield }
+=======
         { name: 'Micro SaaS Solutions', path: '/services/micro-saas-solutions', icon: Zap },
         { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
         { name: 'All Services', path: '/services', icon: Zap }
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
       ]
     },
     {
       title: 'Resources & Support',
       icon: HelpCircle,
       links: [
+<<<<<<< HEAD
+        { name: '2026 Services', path: '/services2026', icon: Star },
+        { name: '2027 Services', path: '/services2027', icon: Star },
+        { name: 'Research & Development', path: '/research-development', icon: TestTube },
+        { name: 'Innovation Lab', path: '/innovation-lab', icon: Workflow },
+        { name: 'Future Technologies', path: '/future-tech', icon: Rocket },
+        { name: 'Emerging Solutions', path: '/emerging-solutions', icon: Sparkles },
+        { name: 'Technology Trends', path: '/tech-trends', icon: TrendingUp },
+        { name: 'Innovation Showcase', path: '/innovation-showcase', icon: Award }
+=======
         { name: 'Innovative Services 2028', path: '/innovative-services-showcase-2028', icon: Sparkles },
         { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
         { name: 'Ultimate Services 2026', path: '/ultimate-services-showcase-2026', icon: Rocket },
@@ -139,6 +155,7 @@ export function Footer() {
         { name: 'New Services 2025', path: '/new-services-showcase-2025', icon: TrendingUp },
         { name: 'Ultimate Services 2025', path: '/ultimate-services-showcase-2025', icon: Award },
         { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-c826
       ]
     }
   ];
