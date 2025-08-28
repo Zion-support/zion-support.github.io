@@ -58,6 +58,27 @@ import {
   Zap as ZapIcon2
 } from 'lucide-react';
 
+// Lazy load components for better performance
+const UltimateServicesShowcase2025 = React.lazy(() => import('../components/UltimateServicesShowcase2025'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('../components/ComprehensiveServicesShowcase2025'));
+const InteractiveTestimonials = React.lazy(() => import('../components/InteractiveTestimonials'));
+const SEO = React.lazy(() => import('../components/SEO'));
+
+// Enhanced loading component with better UX
+const EnhancedLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="relative">
+      <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg">
+        ZION
+      </div>
+      <div className="mt-4 text-center">
+        <div className="text-cyan-400 text-sm animate-pulse">Loading amazing experiences...</div>
+      </div>
+    </div>
+  </div>
+);
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -666,6 +687,5 @@ export default function Home() {
         </div>
       </section>
     </div>
->>>>>>> 00b3cc038c081fbd450e9ed2aa99a41a09359f75
   );
 }
