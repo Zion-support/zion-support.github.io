@@ -792,17 +792,50 @@
   transform: translateX(-50%) translateY(-8px);
 }
 
-/* High contrast focus styles */
-.high-contrast *:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 3px;
+/* Accessibility Enhancements */
+.high-contrast {
+  --text-color: #ffffff;
+  --bg-color: #000000;
+  --accent-color: #ffff00;
+  --border-color: #ffffff;
 }
 
-/* Show focus indicators when enabled */
-.show-focus-indicators *:focus {
-  outline: 3px solid #22ddd2;
-  outline-offset: 3px;
-  box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.3);
+.high-contrast * {
+  color: var(--text-color) !important;
+  background-color: var(--bg-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+.high-contrast .bg-gradient-to-r {
+  background: linear-gradient(to right, var(--accent-color), var(--accent-color)) !important;
+}
+
+.large-text {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+.large-text h1 { font-size: 2.5rem !important; }
+.large-text h2 { font-size: 2rem !important; }
+.large-text h3 { font-size: 1.75rem !important; }
+.large-text p { font-size: 1.125rem !important; }
+
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+.focus-visible *:focus {
+  outline: 3px solid #0ea5e9 !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast focus styles */
+.high-contrast .focus-visible *:focus {
+  outline: 3px solid var(--accent-color) !important;
+  outline-offset: 2px !important;
 }
 
 /* Color blind friendly mode */
