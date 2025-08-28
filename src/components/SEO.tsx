@@ -29,6 +29,28 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean;
   robots?: string;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  ogType?: 'website' | 'article' | 'book' | 'profile' | 'music.song' | 'music.album' | 'music.playlist' | 'music.radio_station' | 'video.movie' | 'video.episode' | 'video.tv_show' | 'video.other' | 'business.business' | 'website';
+  viewport?: string;
+  charset?: string;
+  language?: string;
+  themeColor?: string;
+  msApplicationTileColor?: string;
+  appleMobileWebAppTitle?: string;
+  appleMobileWebAppCapable?: boolean;
+  appleMobileWebAppStatusBarStyle?: 'default' | 'black' | 'black-translucent';
+  appleTouchIcon?: string;
+  favicon?: string;
+  manifest?: string;
+  preconnect?: string[];
+  dnsPrefetch?: string[];
+  preload?: Array<{
+    href: string;
+    as: string;
+    type?: string;
+    crossorigin?: boolean;
+  }>;
+  prefetch?: string[];
 }
 
 interface SEOAnalysis {
@@ -53,7 +75,24 @@ export function SEO({
   structuredData,
   noindex = false,
   nofollow = false,
-  robots
+  robots,
+  twitterCard = "summary_large_image",
+  ogType,
+  viewport = "width=device-width, initial-scale=1",
+  charset = "utf-8",
+  language = "en",
+  themeColor = "#000000",
+  msApplicationTileColor = "#000000",
+  appleMobileWebAppTitle = "Zion Tech Group",
+  appleMobileWebAppCapable = true,
+  appleMobileWebAppStatusBarStyle = "default",
+  appleTouchIcon = "/apple-touch-icon.png",
+  favicon = "/favicon.ico",
+  manifest = "/manifest.json",
+  preconnect = ["https://fonts.googleapis.com", "https://fonts.gstatic.com"],
+  dnsPrefetch = ["https://www.google-analytics.com"],
+  preload = [],
+  prefetch = []
 }: SEOProps) {
   
   // Enhanced structured data for organization
@@ -75,13 +114,17 @@ export function SEO({
       "@type": "Place",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
         "addressCountry": "US"
       }
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "info@ziontechgroup.com",
+      "email": "kleber@ziontechgroup.com",
       "availableLanguage": "English"
     },
     "sameAs": [
@@ -97,24 +140,24 @@ export function SEO({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "AI Solutions",
-            "description": "Artificial Intelligence and Machine Learning Services"
+            "name": "AI Business Intelligence",
+            "description": "Advanced analytics and machine learning insights"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Quantum Computing",
-            "description": "Next-generation quantum computing solutions"
+            "name": "Quantum Computing Solutions",
+            "description": "Next-generation computational power"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Micro SaaS",
-            "description": "Specialized software-as-a-service solutions"
+            "name": "Micro SAAS Platform",
+            "description": "Scalable software solutions"
           }
         }
       ]
@@ -125,153 +168,181 @@ export function SEO({
       "Quantum Computing",
       "Cloud Computing",
       "Cybersecurity",
+      "Digital Transformation",
       "Blockchain Technology",
       "Internet of Things",
-      "Digital Transformation"
-    ]
+      "Micro SaaS Solutions",
+      "Business Process Automation"
+    ],
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "United States"
+      },
+      {
+        "@type": "Country",
+        "name": "Canada"
+      },
+      {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      {
+        "@type": "Country",
+        "name": "Australia"
+      }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.4496,
+        "longitude": -75.7163
+      },
+      "geoRadius": "50000"
+    }
   };
 
-  let finalStructuredData = structuredData || defaultStructuredData;
+  // Merge custom structured data with default
+  const finalStructuredData = structuredData || defaultStructuredData;
 
-  // Enhanced meta tags
+  // Generate robots meta tag
+  const robotsContent = robots || (noindex ? "noindex" : "index") + (nofollow ? ",nofollow" : ",follow");
+
+  // Generate meta keywords
+  const metaKeywords = keywords;
+
+  // Generate meta tags
   const metaTags = [
-    // Basic SEO
+    // Basic meta tags
     { name: "description", content: description },
-    { name: "keywords", content: keywords },
+    { name: "keywords", content: metaKeywords },
     { name: "author", content: author },
-    { name: "robots", content: robots || (noindex ? "noindex" : "index") + (nofollow ? ",nofollow" : ",follow") },
+    { name: "robots", content: robotsContent },
+    { name: "viewport", content: viewport },
+    { name: "charset", content: charset },
+    { name: "language", content: language },
     
-    // Open Graph
+    // Open Graph tags
     { property: "og:title", content: title },
     { property: "og:description", content: description },
-    { property: "og:type", content: type },
-    { property: "og:url", content: canonicalUrl },
     { property: "og:image", content: ogImage },
-    { property: "og:image:width", content: "1200" },
-    { property: "og:image:height", content: "630" },
-    { property: "og:image:alt", content: title },
+    { property: "og:url", content: canonicalUrl },
+    { property: "og:type", content: ogType },
     { property: "og:site_name", content: "Zion Tech Group" },
     { property: "og:locale", content: "en_US" },
     
-    // Twitter Card
-    { name: "twitter:card", content: "summary_large_image" },
+    // Twitter Card tags
+    { name: "twitter:card", content: twitterCard },
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
     { name: "twitter:image", content: ogImage },
     { name: "twitter:site", content: "@ziontechgroup" },
     { name: "twitter:creator", content: "@ziontechgroup" },
     
-    // Additional SEO
-    { name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" },
-    { name: "theme-color", content: "#3B82F6" },
-    { name: "msapplication-TileColor", content: "#3B82F6" },
-    { name: "apple-mobile-web-app-capable", content: "yes" },
-    { name: "apple-mobile-web-app-status-bar-style", content: "default" },
-    { name: "apple-mobile-web-app-title", content: "Zion Tech Group" },
+    // Additional Open Graph tags for articles
+    ...(publishedTime ? [{ property: "og:published_time", content: publishedTime }] : []),
+    ...(modifiedTime ? [{ property: "og:modified_time", content: modifiedTime }] : []),
+    ...(section ? [{ property: "og:section", content: section }] : []),
+    ...(tags ? [{ property: "og:tag", content: tags.join(', ') }] : []),
     
-    // Security
-    { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
-    { "http-equiv": "Content-Security-Policy", content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;" },
+    // Mobile and PWA meta tags
+    { name: "theme-color", content: themeColor },
+    { name: "msapplication-TileColor", content: msApplicationTileColor },
+    { name: "apple-mobile-web-app-title", content: appleMobileWebAppTitle },
+    { name: "apple-mobile-web-app-capable", content: appleMobileWebAppCapable ? "yes" : "no" },
+    { name: "apple-mobile-web-app-status-bar-style", content: appleMobileWebAppStatusBarStyle },
     
-    // Performance
+    // Security and performance meta tags
+    { name: "referrer", content: "strict-origin-when-cross-origin" },
     { name: "format-detection", content: "telephone=no" },
     { name: "mobile-web-app-capable", content: "yes" },
     
-    // Business
-    { name: "application-name", content: "Zion Tech Group" },
-    { name: "msapplication-config", content: "/browserconfig.xml" }
+    // Business and contact information
+    { name: "geo.region", content: "US-DE" },
+    { name: "geo.placename", content: "Middletown, Delaware" },
+    { name: "geo.position", content: "39.4496;-75.7163" },
+    { name: "ICBM", content: "39.4496, -75.7163" },
+    
+    // Verification tags
+    { name: "google-site-verification", content: "your-google-verification-code" },
+    { name: "msvalidate.01", content: "your-bing-verification-code" },
+    { name: "yandex-verification", content: "your-yandex-verification-code" }
   ];
 
-  // Add conditional meta tags
-  if (publishedTime) {
-    metaTags.push(
-      { property: "article:published_time", content: publishedTime },
-      { property: "og:article:published_time", content: publishedTime }
-    );
-  }
-  
-  if (modifiedTime) {
-    metaTags.push(
-      { property: "article:modified_time", content: modifiedTime },
-      { property: "og:article:modified_time", content: modifiedTime }
-    );
-  }
-  
-  if (section) {
-    metaTags.push(
-      { property: "article:section", content: section },
-      { property: "og:article:section", content: section }
-    );
-  }
-  
-  if (tags.length > 0) {
-    metaTags.push(
-      { property: "article:tag", content: tags.join(", ") },
-      { property: "og:article:tag", content: tags.join(", ") }
-    );
-  }
+  // Generate link tags
+  const linkTags = [
+    // Canonical URL
+    { rel: "canonical", href: canonicalUrl },
+    
+    // Favicon and app icons
+    { rel: "icon", type: "image/x-icon", href: favicon },
+    { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+    { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+    { rel: "apple-touch-icon", sizes: "180x180", href: appleTouchIcon },
+    { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: themeColor },
+    
+    // Manifest and PWA
+    { rel: "manifest", href: manifest },
+    
+    // DNS prefetch and preconnect
+    ...dnsPrefetch.map(domain => ({ rel: "dns-prefetch", href: domain })),
+    ...preconnect.map(domain => ({ rel: "preconnect", href: domain })),
+    
+    // Preload critical resources
+    ...preload.map(resource => ({
+      rel: "preload",
+      href: resource.href,
+      as: resource.as,
+      type: resource.type,
+      crossOrigin: resource.crossorigin
+    })),
+    
+    // Prefetch non-critical resources
+    ...prefetch.map(resource => ({ rel: "prefetch", href: resource })),
+    
+    // Alternative languages
+    { rel: "alternate", hreflang: "en", href: canonicalUrl },
+    { rel: "alternate", hreflang: "x-default", href: canonicalUrl }
+  ];
 
-  // Enhanced structured data for articles
-  if (type === 'article') {
-    const articleStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": title,
-      "description": description,
-      "image": ogImage,
-      "author": {
-        "@type": "Organization",
-        "name": author
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://ziontechgroup.com/logo.png"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": canonicalUrl
-      },
-      "datePublished": publishedTime,
-      "dateModified": modifiedTime || publishedTime,
-      "keywords": keywords
+  // Generate script tags for structured data
+  const scriptTags = [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(finalStructuredData)
+    }
+  ];
+
+  // Performance optimization: Add resource hints
+  useEffect(() => {
+    // Add resource hints for better performance
+    const addResourceHints = () => {
+      // Preload critical CSS
+      const criticalCSS = document.createElement('link');
+      criticalCSS.rel = 'preload';
+      criticalCSS.href = '/src/index.css';
+      criticalCSS.as = 'style';
+      document.head.appendChild(criticalCSS);
+
+      // Preload hero image
+      const heroImage = document.createElement('link');
+      heroImage.rel = 'preload';
+      heroImage.href = '/images/hero-bg.jpg';
+      heroImage.as = 'image';
+      document.head.appendChild(heroImage);
+
+      // DNS prefetch for external domains
+      const dnsPrefetch = document.createElement('link');
+      dnsPrefetch.rel = 'dns-prefetch';
+      dnsPrefetch.href = 'https://www.google-analytics.com';
+      document.head.appendChild(dnsPrefetch);
     };
 
-    if (section) {
-      articleStructuredData.articleSection = section;
-    }
-
-    if (tags.length > 0) {
-      articleStructuredData.keywords = tags.join(", ");
-    }
-
-    finalStructuredData = articleStructuredData;
-  }
-
-  // Enhanced structured data for services
-  if (type === 'service') {
-    const serviceStructuredData = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": title,
-      "description": description,
-      "provider": {
-        "@type": "Organization",
-        "name": "Zion Tech Group"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United States"
-      },
-      "serviceType": "Technology Consulting",
-      "category": "Technology Services"
-    };
-
-    finalStructuredData = serviceStructuredData;
-  }
+    // Add resource hints after component mounts
+    const timer = setTimeout(addResourceHints, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <Helmet>
@@ -281,8 +352,10 @@ export function SEO({
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
+      {/* Meta tags */}
+      {metaTags.map((tag, index) => (
+        <meta key={index} {...tag} />
+      ))}
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
