@@ -2,16 +2,16 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Cpu, 
+  Cloud, 
   Brain, 
   Zap, 
   CheckCircle,
   Star,
   TrendingUp,
   Award,
-  Globe,
   Lock,
   Database,
+  Cpu,
   Network,
   BarChart3,
   FileText,
@@ -33,114 +33,121 @@ import {
   ShieldCheck,
   Wifi,
   Smartphone,
-  Cloud,
   Activity,
   Clock,
   BarChart,
-  PieChart
+  PieChart,
+  GitBranch,
+  Code,
+  Package,
+  Play,
+  Settings,
+  Monitor,
+  Shield,
+  Rocket
 } from 'lucide-react';
 
-export default function IoTEdgeComputing() {
+export default function CloudDevOps() {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Real-time data processing at the edge for instant decision making',
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions with automated provisioning and management',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Wifi,
-      title: 'IoT Connectivity',
-      description: 'Seamless connection of devices across multiple protocols and networks',
+      icon: GitBranch,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment workflows',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Brain,
-      title: 'AI at the Edge',
-      description: 'Machine learning models running locally for privacy and speed',
+      icon: Code,
+      title: 'Infrastructure as Code',
+      description: 'Version-controlled infrastructure with Terraform and CloudFormation',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Zap,
-      title: 'Real-Time Analytics',
-      description: 'Instant insights and monitoring with minimal latency',
+      icon: Monitor,
+      title: 'Monitoring & Logging',
+      description: 'Comprehensive observability and performance monitoring',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: ShieldCheck,
-      title: 'Edge Security',
-      description: 'Advanced security protocols for distributed IoT networks',
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with automated compliance checks',
       color: 'from-red-500 to-pink-500'
     },
     {
-      icon: Cloud,
-      title: 'Hybrid Cloud',
-      description: 'Seamless integration between edge devices and cloud infrastructure',
+      icon: Rocket,
+      title: 'Auto-scaling',
+      description: 'Intelligent resource scaling based on demand and performance',
       color: 'from-indigo-500 to-blue-500'
     }
   ];
 
   const benefits = [
-    'Reduce latency by 90% with edge processing',
-    'Lower bandwidth costs by 70%',
-    'Improve data privacy and security',
-    'Enable real-time decision making',
-    'Scale IoT deployments efficiently',
-    'Reduce cloud dependency and costs'
+    'Deploy applications 10x faster with automated pipelines',
+    'Reduce infrastructure costs by 40% with cloud optimization',
+    'Improve system reliability with 99.9% uptime',
+    'Enable rapid development and iteration cycles',
+    'Scale infrastructure automatically based on demand',
+    'Ensure security and compliance with automated checks'
   ];
 
   const useCases = [
     {
-      title: 'Smart Cities',
-      description: 'Intelligent urban infrastructure with real-time monitoring',
-      icon: Building
+      title: 'Web Applications',
+      description: 'Scalable web apps with automated deployment and scaling',
+      icon: Globe
     },
     {
-      title: 'Industrial IoT',
-      description: 'Predictive maintenance and process optimization',
-      icon: Factory
+      title: 'Microservices',
+      description: 'Containerized microservices with orchestration and monitoring',
+      icon: Package
     },
     {
-      title: 'Connected Vehicles',
-      description: 'Autonomous driving and traffic management',
-      icon: Car
+      title: 'Data Platforms',
+      description: 'Big data infrastructure with automated processing pipelines',
+      icon: Database
     },
     {
-      title: 'Healthcare IoT',
-      description: 'Remote patient monitoring and medical device management',
-      icon: Heart
+      title: 'Mobile Backends',
+      description: 'Scalable mobile app backends with real-time updates',
+      icon: Smartphone
     }
   ];
 
-  const edgeCapabilities = [
+  const devOpsCapabilities = [
     {
-      name: 'Real-Time Processing',
-      description: 'Instant data analysis and decision making at the edge',
-      examples: ['Stream processing', 'Event detection', 'Instant alerts']
+      name: 'Continuous Integration',
+      description: 'Automated code building, testing, and quality checks',
+      examples: ['Automated testing', 'Code quality gates', 'Build automation']
     },
     {
-      name: 'Local AI Models',
-      description: 'Machine learning algorithms running on edge devices',
-      examples: ['Image recognition', 'Predictive analytics', 'Anomaly detection']
+      name: 'Continuous Deployment',
+      description: 'Automated deployment to multiple environments',
+      examples: ['Staging deployment', 'Production rollout', 'Rollback automation']
     },
     {
-      name: 'Data Filtering',
-      description: 'Intelligent data selection and preprocessing',
-      examples: ['Noise reduction', 'Data compression', 'Quality filtering']
+      name: 'Infrastructure Management',
+      description: 'Version-controlled infrastructure with automation',
+      examples: ['Terraform scripts', 'CloudFormation templates', 'Resource provisioning']
     },
     {
-      name: 'Edge Analytics',
-      description: 'Advanced analytics and insights generation',
-      examples: ['Trend analysis', 'Pattern recognition', 'Performance metrics']
+      name: 'Monitoring & Alerting',
+      description: 'Real-time system monitoring and automated alerts',
+      examples: ['Performance metrics', 'Error tracking', 'Capacity planning']
     }
   ];
 
   return (
     <>
       <SEO 
-        title="IoT Edge Computing - Zion Tech Group"
-        description="Revolutionary IoT edge computing platform with real-time processing, AI at the edge, and seamless device connectivity. Transform your IoT infrastructure with cutting-edge edge technology."
-        keywords="IoT edge computing, edge processing, IoT connectivity, edge AI, real-time analytics, smart devices, edge security"
+        title="Cloud DevOps - Zion Tech Group"
+        description="Revolutionary cloud DevOps platform with automated CI/CD, infrastructure as code, and comprehensive monitoring. Transform your development and deployment processes."
+        keywords="cloud DevOps, CI/CD, infrastructure as code, cloud infrastructure, automated deployment, monitoring, cloud optimization"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -154,21 +161,21 @@ export default function IoTEdgeComputing() {
               className="text-center max-w-4xl mx-auto"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
-                <Cpu className="w-4 h-4" />
-                Edge Innovation
+                <Cloud className="w-4 h-4" />
+                DevOps Innovation
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                IoT
+                Cloud
                 <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-                  Edge Computing
+                  DevOps
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your IoT infrastructure with our revolutionary edge computing platform. 
-                Real-time processing, AI at the edge, and seamless connectivity that brings 
-                intelligence closer to your data sources.
+                Transform your development and deployment processes with our revolutionary cloud DevOps platform. 
+                Automated CI/CD, infrastructure as code, and comprehensive monitoring that accelerates 
+                your development cycles and ensures reliability.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -208,11 +215,11 @@ export default function IoTEdgeComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Revolutionary Edge Computing Features
+                Revolutionary DevOps Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our IoT edge platform combines cutting-edge technology with practical 
-                applications to deliver unprecedented performance and efficiency.
+                Our cloud DevOps platform combines cutting-edge technology with best practices 
+                to deliver unprecedented automation and efficiency.
               </p>
             </motion.div>
             
@@ -254,13 +261,13 @@ export default function IoTEdgeComputing() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                  Transform Your IoT Infrastructure
+                  Transform Your Development Process
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our IoT edge computing platform delivers measurable improvements in 
-                  performance, efficiency, and cost while enabling real-time decision 
-                  making and advanced analytics.
+                  Our cloud DevOps platform delivers measurable improvements in deployment speed, 
+                  infrastructure efficiency, and system reliability while reducing operational 
+                  overhead and costs.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -294,25 +301,25 @@ export default function IoTEdgeComputing() {
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Edge Performance
+                      DevOps Impact
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-blue-400 mb-2">90%</div>
-                        <div className="text-sm text-gray-400">Latency Reduction</div>
+                        <div className="text-3xl font-bold text-blue-400 mb-2">10x</div>
+                        <div className="text-sm text-gray-400">Faster Deployment</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                        <div className="text-sm text-gray-400">Bandwidth Savings</div>
+                        <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+                        <div className="text-sm text-gray-400">Cost Reduction</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-indigo-400 mb-2">24/7</div>
-                        <div className="text-sm text-gray-400">Real-Time Processing</div>
+                        <div className="text-3xl font-bold text-indigo-400 mb-2">99.9%</div>
+                        <div className="text-sm text-gray-400">Uptime</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-purple-400 mb-2">100%</div>
-                        <div className="text-sm text-gray-400">Edge Security</div>
+                        <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                        <div className="text-sm text-gray-400">Automation</div>
                       </div>
                     </div>
                   </div>
@@ -322,7 +329,7 @@ export default function IoTEdgeComputing() {
           </div>
         </section>
 
-        {/* Edge Capabilities Section */}
+        {/* DevOps Capabilities Section */}
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
@@ -333,16 +340,16 @@ export default function IoTEdgeComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Edge Computing Capabilities
+                DevOps Capabilities
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform provides comprehensive edge computing capabilities that 
-                bring intelligence and processing power closer to your data sources.
+                Our platform provides comprehensive DevOps capabilities that 
+                streamline your entire development and deployment lifecycle.
               </p>
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {edgeCapabilities.map((capability, index) => (
+              {devOpsCapabilities.map((capability, index) => (
                 <motion.div
                   key={capability.name}
                   initial={{ opacity: 0, y: 30 }}
@@ -384,11 +391,11 @@ export default function IoTEdgeComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                IoT Edge Computing Use Cases
+                Cloud DevOps Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our edge platform adapts to various industries and applications, 
-                providing tailored solutions for different IoT environments.
+                Our DevOps platform adapts to various application types and industries, 
+                providing tailored solutions for different development needs.
               </p>
             </motion.div>
             
@@ -433,12 +440,12 @@ export default function IoTEdgeComputing() {
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your IoT Infrastructure?
+                Ready to Transform Your DevOps?
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our IoT edge computing 
-                platform to revolutionize their connected device infrastructure.
+                Join leading organizations that are already using our cloud DevOps 
+                platform to accelerate their development and deployment processes.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -3,6 +3,10 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log('🔒 Starting continuous security audit automation...');
 
@@ -67,10 +71,10 @@ async function runSecurityAudit() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
     
-    console.log('✅ Security audit completed successfully');
+    console.log('✅ Continuous security audit completed successfully');
     
   } catch (error) {
-    console.error('❌ Security audit failed:', error.message);
+    console.error('❌ Continuous security audit failed:', error.message);
     // Don't exit, just log the error and continue
   }
 }

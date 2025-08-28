@@ -32,6 +32,16 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Legal = React.lazy(() => import('./pages/Legal'));
+const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
+
+// Enhanced components
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Developers = React.lazy(() => import('./pages/Developers'));
+const Demo = React.lazy(() => import('./pages/Demo'));
+
+// New pages
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 
 // Enhanced services pages - only import existing ones
@@ -49,7 +59,6 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
-
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -57,12 +66,10 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
-
 // Import real pages
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
-
 function App() {
   return (
     <ErrorBoundary>
@@ -75,7 +82,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<EnhancedContact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/faq" element={<FAQ />} />
@@ -106,7 +113,13 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
-
+                
+                {/* New Routes */}
+                <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/developers" element={<Developers />} />
+                <Route path="/demo" element={<Demo />} />
+                <Route path="/legal" element={<Legal />} />
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />

@@ -2,7 +2,11 @@
 
 import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path'; // Added missing import for path
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log('🔍 Starting continuous quality checks automation...');
 
@@ -88,10 +92,10 @@ async function runQualityChecks() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Quality report saved to ${reportPath}`);
     
-    console.log('✅ Quality checks completed successfully');
+    console.log('✅ Continuous quality checks completed successfully');
     
   } catch (error) {
-    console.error('❌ Quality checks failed:', error.message);
+    console.error('❌ Continuous quality checks failed:', error.message);
     // Don't exit, just log the error and continue
   }
 }

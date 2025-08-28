@@ -3,6 +3,10 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log('📦 Starting continuous dependency updates automation...');
 
@@ -34,7 +38,6 @@ async function runDependencyUpdates() {
         console.log('✅ Security vulnerabilities fixed');
       } catch (fixError) {
         console.log('❌ Could not fix security vulnerabilities');
-        // Don't exit, just log the error and continue
       }
     }
     
@@ -99,10 +102,10 @@ async function runDependencyUpdates() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
     
-    console.log('✅ Dependency updates completed successfully');
+    console.log('✅ Continuous dependency updates completed successfully');
     
   } catch (error) {
-    console.error('❌ Dependency updates failed:', error.message);
+    console.error('❌ Continuous dependency updates failed:', error.message);
     // Don't exit, just log the error and continue
   }
 }
