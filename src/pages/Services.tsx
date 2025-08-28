@@ -99,7 +99,8 @@ export default function Services() {
     { id: 'AI & Energy', name: 'AI & Energy', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Energy').length, icon: '⚡', color: 'from-yellow-500 to-orange-500' },
     { id: 'AI & Transportation', name: 'AI & Transportation', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Transportation').length, icon: '🚛', color: 'from-blue-500 to-gray-500' },
     { id: 'AI & Agriculture', name: 'AI & Agriculture', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Agriculture').length, icon: '🌾', color: 'from-green-500 to-yellow-500' },
-    { id: 'AI & Construction', name: 'AI & Construction', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Construction').length, icon: '🏗️', color: 'from-orange-500 to-red-500' }
+    { id: 'AI & Construction', name: 'AI & Construction', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Construction').length, icon: '🏗️', color: 'from-orange-500 to-red-500' },
+    { id: 'AI & IoT', name: 'AI & IoT', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & IoT').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' }
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
