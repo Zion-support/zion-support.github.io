@@ -27,6 +27,20 @@ export function AppHeader() {
   const { user, logout } = useAuth();
 
   const navigation = [
+<<<<<<< HEAD
+    { name: 'Home', href: '/', current: true, icon: Home },
+    { name: 'Services', href: '/services', current: false, icon: Rocket },
+    { name: 'AI Services', href: '/ai-services', current: false, icon: Brain },
+    { name: 'IT Services', href: '/it-services', current: false, icon: Cpu },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false, icon: ShoppingCart },
+    { name: 'Pricing', href: '/pricing', current: false, icon: DollarSign },
+    { name: 'Partners', href: '/partners', current: false, icon: Users },
+    { name: 'Blog', href: '/blog', current: false, icon: BookOpen },
+    { name: 'Help', href: '/help', current: false, icon: HelpCircle },
+    { name: 'About', href: '/about', current: false, icon: Star },
+    { name: 'Contact', href: '/contact', current: false, icon: MessageCircle },
+    { name: 'Careers', href: '/careers', current: false, icon: Users },
+=======
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
     { name: 'Advertising', href: '/services-advertising', current: false },
@@ -41,6 +55,7 @@ export function AppHeader() {
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Careers', href: '/careers', current: false },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ea1b
   ];
 
   // Organized services by category - only include existing pages

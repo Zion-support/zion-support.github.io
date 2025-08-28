@@ -39,11 +39,17 @@ const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
+<<<<<<< HEAD
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Team = React.lazy(() => import('./pages/Team'));
+const News = React.lazy(() => import('./pages/News'));
+=======
 const Signup = React.lazy(() => import('./pages/Signup'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
 const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
 const Help = React.lazy(() => import('./pages/Help'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ea1b
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
@@ -380,7 +386,12 @@ function App() {
               <Route path="/marketplace/services" element={<MarketplaceServices />} />
               <Route path="/login" element={<Login />} />
               <Route path="/services" element={<Services />} />
+<<<<<<< HEAD
+              <Route path="/services2026" element={<Services2026 />} />
+              <Route path="/products" element={<Products />} />
+=======
               <Route path="/services-advertising" element={<ServicesAdvertising />} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ea1b
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
