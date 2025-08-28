@@ -69,6 +69,10 @@ export function AppHeader() {
     { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: '24/7 intelligent support' },
     { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3, description: 'Predictive business intelligence' },
     { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Smart marketing optimization' },
+    { name: 'AI Blockchain Integration', href: '/services/ai-blockchain-integration', icon: Brain, description: 'AI-powered blockchain solutions' },
+    { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', icon: Stethoscope, description: 'Medical AI diagnostics' },
+    { name: 'AI Financial Trading', href: '/services/ai-financial-trading', icon: TrendingUp, description: 'AI trading algorithms' },
+    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Smart logistics optimization' },
   ];
 
   // Quick links for easy access

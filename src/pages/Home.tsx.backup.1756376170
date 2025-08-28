@@ -161,6 +161,36 @@ export default function Home() {
   // Memoized featured services for better performance
   const featuredServices = useMemo(() => [
     {
+<<<<<<< HEAD
+      title: "AI Business Intelligence Dashboard",
+      description: "Transform your business data into actionable insights with AI-powered analytics, predictive insights, and automated reporting that drives growth.",
+      icon: BarChart3,
+      path: "/services/ai-business-intelligence-dashboard",
+      rating: 4.9,
+      reviewCount: 156,
+      highlights: ["AI-Powered Insights", "Real-time Analytics", "Predictive Analytics", "Automated Reporting"],
+      price: "From $299/month"
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Optimize your supply chain with AI-powered forecasting, route optimization, and inventory management that reduces costs by 25-40%.",
+      icon: Truck,
+      path: "/services/ai-supply-chain-optimization",
+      rating: 4.8,
+      reviewCount: 134,
+      highlights: ["AI Forecasting", "Route Optimization", "Smart Inventory", "Global Visibility"],
+      price: "From $499/month"
+    },
+    {
+      title: "AI Customer Support Automation",
+      description: "Transform customer support with AI automation that provides 24/7 availability, instant responses, and reduces costs by 60-80%.",
+      icon: Bot,
+      path: "/services/ai-customer-support-automation",
+      rating: 4.9,
+      reviewCount: 189,
+      highlights: ["24/7 Availability", "Instant Responses", "Smart Routing", "Cost Reduction"],
+      price: "From $199/month"
+=======
       title: "AI Healthcare Diagnostics",
       description: "Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support.",
       icon: Stethoscope,
@@ -199,6 +229,7 @@ export default function Home() {
       reviewCount: 145,
       highlights: ["AI Smart Contracts", "Enhanced Security", "Real-time Processing", "Predictive Analytics"],
       price: "From $2,500/month"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19a6
     }
   ], []);
 

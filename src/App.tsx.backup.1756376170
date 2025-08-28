@@ -7,12 +7,8 @@ import { AppHeader } from './layout/AppHeader';
 import { Sidebar } from './components/Sidebar';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
-<<<<<<< HEAD
-import { FullScreenLoader } from './components/ui/LoadingSpinner.tsx';
-=======
 import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
 import { LoadingSpinner } from './components/ui/LoadingSpinner.tsx';
->>>>>>> origin/cursor/website-audit-and-enhancement-7761
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
@@ -134,6 +130,12 @@ const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGe
 const AICustomerSupport = React.lazy(() => import('./pages/services/AICustomerSupport'));
 const AIDataAnalytics = React.lazy(() => import('./pages/services/AIDataAnalytics'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+
+// Additional innovative services
+const AIBlockchainIntegration = React.lazy(() => import('./pages/services/AIBlockchainIntegration'));
+const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 
 // Additional service pages
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -412,7 +414,23 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+<<<<<<< HEAD
 
+=======
+              {/* New innovative AI service routes */}
+              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
+              <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
+              <Route path="/services/ai-customer-support" element={<AICustomerSupport />} />
+              <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              
+              {/* Additional innovative service routes */}
+              <Route path="/services/ai-blockchain-integration" element={<AIBlockchainIntegration />} />
+              <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+              <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19a6
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />

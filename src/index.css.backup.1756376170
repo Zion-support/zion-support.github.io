@@ -276,6 +276,14 @@
   }
 }
 
+<<<<<<< HEAD
+@keyframes cyber-grid {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+=======
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
@@ -420,6 +428,7 @@
   .glass {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-19a6
   }
 }
 
