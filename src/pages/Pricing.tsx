@@ -119,9 +119,13 @@ const servicePricing = [
     category: 'AI & Machine Learning',
     icon: Brain,
     services: [
+      { name: 'AI Autonomous Research Assistant', price: '$299/month', description: 'AI-powered autonomous research' },
+      { name: 'AI Supply Chain Optimization', price: '$799/month', description: 'AI-powered supply chain optimization' },
+      { name: 'AI Content Marketing Suite', price: '$499/month', description: 'AI-powered content creation & optimization' },
       { name: 'AI Workflow Orchestrator', price: '$299/month', description: 'AI-powered workflow automation' },
-      { name: 'AI Data Governance Platform', price: '$199/month', description: 'AI-powered data governance' },
       { name: 'AI Customer Experience Analytics', price: '$399/month', description: 'AI-powered customer insights' },
+      { name: 'AI Financial Risk Management', price: '$1,199/month', description: 'AI-powered financial risk assessment' },
+      { name: 'AI Data Governance Platform', price: '$199/month', description: 'AI-powered data governance' },
       { name: 'AI Business Intelligence Analytics', price: '$599/month', description: 'Advanced analytics & ML insights' }
     ]
   },
