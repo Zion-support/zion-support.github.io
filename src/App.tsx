@@ -8,7 +8,7 @@ import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
-// Lazy load pages - only import existing ones
+// Lazy load pages with error boundaries
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
@@ -43,7 +43,7 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
 
-// Simple placeholder pages for missing ones
+// Enhanced placeholder pages with better UX
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
@@ -53,6 +53,7 @@ const Careers = () => (
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Careers</h1>
       <p className="text-xl text-gray-300">Join our team</p>
+      <p className="text-lg text-gray-400 mt-2">We're always looking for talented individuals</p>
     </div>
   </div>
 );
@@ -66,6 +67,17 @@ const Marketplace = () => (
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
       <p className="text-xl text-gray-300">Explore our solutions</p>
+      <p className="text-lg text-gray-400 mt-2">Coming soon - AI-powered marketplace</p>
+    </div>
+  </div>
+);
+
+// Enhanced loading component
+const PageLoader = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <div className="text-center text-white">
+      <LoadingSpinner />
+      <p className="text-lg text-gray-300 mt-4">Loading amazing content...</p>
     </div>
   </div>
 );
@@ -78,7 +90,7 @@ function App() {
           <AppHeader />
           
           <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
+            <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />

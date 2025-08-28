@@ -1,62 +1,32 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'sm' | 'md' | 'lg';
   color?: string;
-  text?: string;
   className?: string;
 }
 
-export function LoadingSpinner({ 
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  color = 'text-cyan-400',
-  text,
+  color = 'text-zion-cyan',
   className = '' 
-}: LoadingSpinnerProps) {
+}) => {
   const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16',
-    xl: 'w-20 h-20'
-  };
-
-  const textSizes = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl'
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <motion.div
-        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full ${color}`}
-        animate={{ rotate: 360 }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        role="status"
-        aria-label="Loading"
-      />
-      
-      {text && (
-        <motion.p
-          className={`mt-4 text-gray-400 ${textSizes[size]} font-medium`}
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          <span className="text-slate-300 font-medium">{text}</span>
-        </motion.p>
-      )}
-      
-      <span className="sr-only">Loading...</span>
+    <div className={`inline-block ${sizeClasses[size]} ${className}`}>
+      <div className={`animate-spin rounded-full border-2 border-current border-t-transparent ${color}`}>
+        <span className="sr-only">Loading...</span>
+      </div>
     </div>
   );
-}
+};
+
+export default LoadingSpinner;
 
 // Enhanced loading spinner with dots
 export function LoadingDots({ 

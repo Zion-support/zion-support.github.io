@@ -5,57 +5,29 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  noindex?: boolean;
-  structuredData?: object;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  noIndex?: boolean;
   children?: React.ReactNode;
 }
 
-export function SEO({ 
-  title, 
-  description, 
-  keywords, 
-  image, 
-  url, 
-  type = 'website',
-  noindex = false,
-  structuredData 
-}: SEOProps) {
+export const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  canonical,
+  ogImage = '/images/zion-tech-group-og.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  noIndex = false,
+  children
+}) => {
   const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const defaultImage = '/images/zion-tech-group-og.jpg';
-  const defaultUrl = 'https://ziontechgroup.com';
-  
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading provider of AI-powered business solutions, IT services, and innovative technology solutions for modern enterprises.",
-    "foundingDate": "2014",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "category": "Technology Services"
-    }
-  };
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
 
   return (
     <Helmet>
@@ -63,56 +35,50 @@ export function SEO({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+      <link rel="canonical" href={fullCanonical} />
       
-      {/* Open Graph Meta Tags */}
+      {/* Robots */}
+      {noIndex && <meta name="robots" content="noindex, nofollow" />}
+      
+      {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url || defaultUrl} />
-      <meta property="og:image" content={image || defaultImage} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={`${siteUrl}${ogImage}`} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image || defaultImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
       
       {/* Additional Meta Tags */}
-      <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#2e73ea" />
-      <meta name="msapplication-TileColor" content="#2e73ea" />
+      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="msapplication-TileColor" content="#0ea5e9" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url || defaultUrl} />
-      
-      {/* Favicon and App Icons */}
+      {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
       
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
+      {/* Manifest */}
+      <link rel="manifest" href="/manifest.json" />
       
-      {/* Preconnect to external domains for performance */}
+      {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://images.unsplash.com" />
       
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+      {children}
     </Helmet>
   );
-}
+};
+
+export default SEO;
 
 // Specialized SEO components for different page types
 export function HomePageSEO() {
