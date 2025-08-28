@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 console.log('🔗 Starting continuous link integrity automation...');
 
@@ -93,10 +93,10 @@ async function runLinkIntegrity() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Link integrity report saved to ${reportPath}`);
     
-    console.log('✅ Link integrity check completed successfully');
+    console.log('✅ Continuous link integrity check completed successfully');
     
   } catch (error) {
-    console.error('❌ Link integrity check failed:', error.message);
+    console.error('❌ Continuous link integrity check failed:', error.message);
     // Don't exit, just log the error and continue
   }
 }

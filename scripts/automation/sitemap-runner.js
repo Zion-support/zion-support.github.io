@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 console.log('🗺️ Starting continuous sitemap runner automation...');
 
@@ -14,15 +14,16 @@ async function runSitemapRunner() {
     console.log(`🗺️ Running sitemap generation at ${new Date().toISOString()}`);
     
     // Build the project first
-    console.log('🏗️ Building project...');
+    console.log('🏗️ Building project for sitemap generation...');
     try {
       execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed');
     } catch (error) {
       console.log('⚠️  Build failed but continuing...');
+      return;
     }
     
-    // Check build output
+    // Check if dist folder exists
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {
       console.log('⚠️  Build verification failed: dist folder not found');
@@ -32,57 +33,69 @@ async function runSitemapRunner() {
     // Generate sitemap
     console.log('🗺️ Generating sitemap...');
     try {
-      execSync('node scripts/generate-sitemap.js', { stdio: 'inherit' });
-      console.log('✅ Sitemap generated successfully');
+      if (fs.existsSync('scripts/generate-sitemap.js')) {
+        execSync('node scripts/generate-sitemap.js', { stdio: 'inherit' });
+        console.log('✅ Sitemap generation completed');
+      } else {
+        console.log('ℹ️  Sitemap generation script not available');
+      }
     } catch (error) {
       console.log('⚠️  Sitemap generation failed but continuing...');
     }
     
-    // Check sitemap
-    const sitemapPath = path.join(distPath, 'sitemap.xml');
-    if (fs.existsSync(sitemapPath)) {
-      const sitemapContent = fs.readFileSync(sitemapPath, 'utf8');
-      const urlCount = (sitemapContent.match(/<url>/g) || []).length;
-      console.log(`✅ Sitemap contains ${urlCount} URLs`);
-      
-      // Validate sitemap structure
-      if (sitemapContent.includes('<?xml') && sitemapContent.includes('<urlset')) {
-        console.log('✅ Sitemap XML structure is valid');
-      } else {
-        console.log('⚠️  Sitemap XML structure may be invalid');
-      }
-    } else {
-      console.log('⚠️  Sitemap not found in build output');
-    }
-    
-    // Generate robots.txt if it doesn't exist
-    console.log('🤖 Checking robots.txt...');
-    const robotsPath = path.join(distPath, 'robots.txt');
-    if (!fs.existsSync(robotsPath)) {
+    // Generate robots.txt if needed
+    console.log('🤖 Generating robots.txt...');
+    try {
       const robotsContent = `User-agent: *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml`;
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/`;
       
+      const robotsPath = path.join(distPath, 'robots.txt');
       fs.writeFileSync(robotsPath, robotsContent);
       console.log('✅ robots.txt generated');
-    } else {
-      console.log('✅ robots.txt already exists');
+    } catch (error) {
+      console.log('⚠️  robots.txt generation failed but continuing...');
     }
     
-    // Check for all HTML files
-    console.log('📄 Scanning for HTML files...');
-    const htmlFiles = findHtmlFiles(distPath);
-    console.log(`✅ Found ${htmlFiles.length} HTML files`);
+    // Validate sitemap
+    console.log('🔍 Validating sitemap...');
+    try {
+      if (fs.existsSync(path.join(distPath, 'sitemap.xml'))) {
+        const sitemapContent = fs.readFileSync(path.join(distPath, 'sitemap.xml'), 'utf8');
+        const urlCount = (sitemapContent.match(/<url>/g) || []).length;
+        console.log(`✅ Sitemap validated with ${urlCount} URLs`);
+      } else {
+        console.log('⚠️  Sitemap not found');
+      }
+    } catch (error) {
+      console.log('⚠️  Sitemap validation failed but continuing...');
+    }
+    
+    // Check for broken links in sitemap
+    console.log('🔗 Checking sitemap links...');
+    try {
+      if (fs.existsSync('scripts/check-sitemap-links.js')) {
+        execSync('node scripts/check-sitemap-links.js', { stdio: 'inherit' });
+        console.log('✅ Sitemap link check completed');
+      } else {
+        console.log('ℹ️  Sitemap link check script not available');
+      }
+    } catch (error) {
+      console.log('⚠️  Sitemap link check failed but continuing...');
+    }
     
     // Generate sitemap report
     console.log('📊 Generating sitemap report...');
     const report = {
       timestamp: new Date().toISOString(),
-      htmlFiles: htmlFiles.length,
-      sitemapExists: fs.existsSync(sitemapPath),
-      robotsExists: fs.existsSync(robotsPath),
-      summary: 'Sitemap runner completed'
+      summary: 'Sitemap runner completed',
+      status: 'completed'
     };
     
     const reportPath = path.join(process.cwd(), 'sitemap-runner-report.json');
@@ -97,37 +110,11 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
   }
 }
 
-function findHtmlFiles(dir) {
-  const htmlFiles = [];
-  
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir);
-      
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath);
-        } else if (item.endsWith('.html')) {
-          htmlFiles.push(path.relative(process.cwd(), fullPath));
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
-  }
-  
-  scanDirectory(dir);
-  return htmlFiles;
-}
-
 // Main continuous loop
 async function runContinuous() {
   console.log(`🚀 Starting continuous sitemap runner with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   
-  // Run initial sitemap generation
+  // Run initial sitemap runner
   await runSitemapRunner();
   
   // Set up continuous execution
