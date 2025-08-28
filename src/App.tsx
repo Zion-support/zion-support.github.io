@@ -47,6 +47,9 @@ const News = lazy(() => import('./pages/News'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
+// New services overview page
+const InnovativeServicesOverview2025 = lazy(() => import('./pages/InnovativeServicesOverview2025'));
+
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const ITServices = lazy(() => import('./pages/ITServices'));
@@ -99,6 +102,12 @@ const HelpdeskPlatform = lazy(() => import('./pages/services/HelpdeskPlatform'))
 const DSRPortal = lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = lazy(() => import('./pages/services/SecurityHeadersCSP'));
 
+// New innovative services 2025
+const AICustomerSuccessPlatform = lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIFinancialCompliancePlatform = lazy(() => import('./pages/services/AIFinancialCompliancePlatform'));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
+
 // New AI-powered micro SAAS services
 const AIProjectManagement = lazy(() => import('./pages/services/AIProjectManagement'));
 const AICustomerSupportAutomation = lazy(() => import('./pages/services/AICustomerSupportAutomation'));
@@ -114,7 +123,6 @@ const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveIm
 
 // New innovative AI services
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
-const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMarketingSuite'));
 const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
@@ -315,6 +323,9 @@ function App() {
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
                     
+                    {/* New Services Overview */}
+                    <Route path="/innovative-services-2025" element={<InnovativeServicesOverview2025 />} />
+                    
                     {/* Revolutionary Services 2030 */}
                     <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                     
@@ -350,6 +361,13 @@ function App() {
                     <Route path="/services/helpdesk-platform" element={<HelpdeskPlatform />} />
                     <Route path="/services/dsr-portal" element={<DSRPortal />} />
                     <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+                    
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                    <Route path="/services/ai-financial-compliance-platform" element={<AIFinancialCompliancePlatform />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                    
                     <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
                     <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
@@ -358,7 +376,6 @@ function App() {
                     <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
                     <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
                     <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
-                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                     <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                     
                     {/* AI Service Routes */}
