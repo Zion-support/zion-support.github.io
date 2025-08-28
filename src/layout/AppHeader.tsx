@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Eye, BarChart3, Server, Target, DollarSign } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -37,6 +37,7 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'Blog', href: '/blog', current: false },
@@ -46,20 +47,20 @@ export function AppHeader() {
   ];
 
   const services = [
-    { name: 'AI & Analytics', href: '/services', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'Quantum Computing', href: '/services', icon: Rocket, description: 'Quantum AI & Optimization' },
-    { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'AI-Powered Security' },
-    { name: 'Cloud Services', href: '/services', icon: Cloud, description: 'DevOps & Infrastructure' },
-    { name: 'IoT & Edge', href: '/services', icon: Cpu, description: 'Smart Devices & Networks' },
-    { name: 'Blockchain', href: '/services', icon: Lock, description: 'DeFi & Smart Contracts' },
-    { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
-    { name: 'Green Tech', href: '/services', icon: Globe, description: 'Sustainability Solutions' },
-    { name: 'Space Tech', href: '/services', icon: Rocket, description: 'Space Exploration & Mining' },
-    { name: 'Autonomous AI', href: '/services', icon: Brain, description: 'Self-Learning Systems' },
+    { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, description: 'Comprehensive AI & ML Solutions' },
+    { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future Technology Solutions' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Operations' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual System Modeling' },
+    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business Intelligence' },
+    { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise Systems' },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'AI-Powered Analytics' },
     { name: 'Micro SaaS Products', href: '/services/micro-saas', icon: ShoppingCart, description: 'AI automations with transparent pricing' },
   ];
 
   const quickLinks = [
+    { name: 'Solutions', href: '/solutions', icon: Target },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },

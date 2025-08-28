@@ -24,6 +24,13 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
+// New pages
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
@@ -35,6 +42,8 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -49,6 +58,8 @@ const Careers = () => (
     </div>
   </div>
 );
+
+const Support = React.lazy(() => import('./pages/Support'));
 
 const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -83,6 +94,7 @@ function App() {
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
+                <Route path="/support" element={<Support />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
@@ -90,12 +102,21 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 
+                {/* New Routes */}
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/ai-solutions" element={<AISolutions />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
