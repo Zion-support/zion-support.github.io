@@ -1,6 +1,7 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
+import compression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -9,6 +10,18 @@ export default defineConfig(({ command, mode }) => {
   return {
     plugins: [
       react(),
+      compression({
+        algorithm: 'gzip',
+        ext: '.gz',
+        threshold: 10240,
+        deleteOriginFile: false
+      }),
+      compression({
+        algorithm: 'brotliCompress',
+        ext: '.br',
+        threshold: 10240,
+        deleteOriginFile: false
+      })
     ],
     resolve: {
       alias: {
@@ -21,7 +34,7 @@ export default defineConfig(({ command, mode }) => {
         '@styles': path.resolve(__dirname, './src/styles'),
         '@assets': path.resolve(__dirname, './src/assets'),
       },
-      dedupe: ['date-fns'],
+      dedupe: ['date-fns', 'react', 'react-dom'],
     },
     build: {
       target: 'es2018',
@@ -37,6 +50,10 @@ export default defineConfig(({ command, mode }) => {
         compress: {
           drop_console: true,
           drop_debugger: true,
+          pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        },
+        mangle: {
+          safari10: true,
         },
       },
       rollupOptions: {
@@ -51,6 +68,8 @@ export default defineConfig(({ command, mode }) => {
             'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
             'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
             'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
+            'animation-vendor': ['framer-motion'],
+            'icons-vendor': ['lucide-react'],
           },
           chunkFileNames: (chunkInfo) => {
             const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -76,9 +95,11 @@ export default defineConfig(({ command, mode }) => {
         },
       },
       brotliSize: true,
+      chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
-      include: ['react', 'react-dom', 'react-router-dom'],
+      include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
+      exclude: ['@rollup/rollup-linux-x64-gnu'],
       ...(isProduction && {
         force: true,
         esbuildOptions: {
@@ -91,6 +112,7 @@ export default defineConfig(({ command, mode }) => {
       port: 3000,
       host: true,
       open: true,
+      cors: true,
     },
     preview: {
       port: 4173,
