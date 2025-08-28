@@ -188,7 +188,7 @@ export default function EnhancedHeroSection() {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className={`p-3 rounded-2xl bg-gradient-to-r ${currentSlideData.gradient} bg-opacity-20 border border-zion-cyan/30`}>
-                    <currentSlideData.icon className="w-8 h-8 text-white" />
+                    {React.createElement(currentSlideData.icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   <span className="ml-3 text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">Featured Service</span>
                 </motion.div>
@@ -268,7 +268,7 @@ export default function EnhancedHeroSection() {
                       animate={{ rotate: [0, 360] }}
                       transition={{ duration: 20, repeat: Infinity }}
                     >
-                      <currentSlideData.icon className="w-12 h-12 text-zion-cyan" />
+                      {React.createElement(currentSlideData.icon, { className: "w-12 h-12 text-zion-cyan" })}
                     </motion.div>
                     <p className="text-lg font-medium">Visual Representation</p>
                   </div>
@@ -288,7 +288,7 @@ export default function EnhancedHeroSection() {
                 >
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-zion-cyan/20 rounded-xl">
-                      <stat.icon className="w-5 h-5 text-zion-cyan" />
+                      {React.createElement(stat.icon, { className: "w-5 h-5 text-zion-cyan" })}
                     </div>
                     <div>
                       <p className="text-xl font-bold text-white">{stat.value}</p>

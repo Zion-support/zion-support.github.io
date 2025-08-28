@@ -173,7 +173,7 @@ export default function Blockchain() {
         <div className="absolute bottom-20 right-10 animate-pulse delay-1000">
           <div className="w-40 h-40 bg-red-500/20 rounded-full blur-3xl" />
         </div>
-      </div>
+      </section>
 
       <div className="relative z-10">
         {/* Hero Section */}

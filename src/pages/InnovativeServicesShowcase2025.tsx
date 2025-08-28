@@ -464,6 +464,6 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
