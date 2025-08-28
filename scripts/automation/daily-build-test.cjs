@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 console.log('🏗️ Starting continuous build and test automation...');
 

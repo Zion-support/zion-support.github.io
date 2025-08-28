@@ -12,35 +12,48 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/about'));
-const Contact = React.lazy(() => import('../pages/contact'));
+const Contact = React.lazy(() => import('./pages/contact'));
+const EnhancedContact = React.lazy(() => import('./pages/EnhancedContact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
 const Solutions = React.lazy(() => import('./pages/Solutions'));
 const Resources = React.lazy(() => import('./pages/Resources'));
-const Pricing = React.lazy(() => import('./pages/Pricing'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-
-const Legal = React.lazy(() => import('./pages/Legal'));
-
-// New pages
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
+
+// New pages for missing routes
+const APIDocumentation = React.lazy(() => import('./pages/APIDocumentation'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Support = React.lazy(() => import('./pages/Support'));
+const Demo = React.lazy(() => import('./pages/Demo'));
+
+const Investors = React.lazy(() => import('./pages/Investors'));
+const Legal = React.lazy(() => import('./pages/Legal'));
+const Press = React.lazy(() => import('./pages/Press'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
-const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
+const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
+const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx'));
+const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -106,49 +119,54 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/faq" element={<FAQ />} />
+                <Route path="/docs" element={<Documentation />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/pricing" element={<Pricing />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Resources />} />
-                <Route path="/pricing" element={<Pricing />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
-                <Route path="/partners" element={<Partners />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
+                <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
-                
-                {/* New Routes */}
-                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
-                <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
-                <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
-                <Route path="/schedule-demo" element={<ScheduleDemo />} />
+
+                {/* New routes for missing pages */}
+                <Route path="/api-docs" element={<APIDocumentation />} />
+                <Route path="/developers" element={<DeveloperPortal />} />
+                <Route path="/training" element={<Training />} />
                 <Route path="/community" element={<Community />} />
-                <Route path="/developers" element={<Developers />} />
+                <Route path="/support" element={<Support />} />
                 <Route path="/demo" element={<Demo />} />
+
+                <Route path="/investors" element={<Investors />} />
                 <Route path="/legal" element={<Legal />} />
-                
+                <Route path="/press" element={<Press />} />
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                
+
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>
           </main>
-          
           <Footer />
           <ChatAssistant />
           <PerformanceOptimizer />
