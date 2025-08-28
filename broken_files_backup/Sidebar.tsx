@@ -12,7 +12,6 @@ import {
   Code, 
   Shield, 
   Zap, 
-  ChevronRight, 
   ChevronDown,
   Rocket,
   Cpu,
@@ -31,19 +30,6 @@ import {
   Activity,
   PieChart,
   BarChart,
-  LineChart,
-  Calendar,
-  Clock,
-  Mail,
-  Phone,
-  MapPin,
-  Globe2,
-  Heart,
-  ThumbsUp,
-  CheckCircle,
-  AlertCircle,
-  Info,
-  ExternalLink,
   X
 } from 'lucide-react';
 
