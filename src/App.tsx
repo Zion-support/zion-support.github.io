@@ -88,6 +88,7 @@ function App() {
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
+                <Route path="/services/comprehensive-2025" element={<ComprehensiveServicesLanding2025 />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />

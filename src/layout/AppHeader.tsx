@@ -98,79 +98,143 @@ export function AppHeader() {
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Edge Computing', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-yellow-500 to-orange-500'
     },
     { 
       name: 'AI & Space Tech', 
       href: '/services', 
       icon: Rocket, 
-      description: 'Satellite Operations & Missions',
+      description: 'Satellite & Space Operations',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
-      featured: true,
-      color: 'from-green-500 to-blue-500'
-    },
-    { 
-      name: 'Cloud Services', 
-      href: '/services', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'AI & FinTech', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'Financial Technology & Risk Management',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
-    },
-    { 
-      name: 'AI & Operations', 
-      href: '/services', 
-      icon: Settings, 
-      description: 'Supply Chain & Process Optimization',
-      featured: true,
-      color: 'from-gray-500 to-slate-500'
     },
     { 
       name: 'AI & Development', 
       href: '/services', 
       icon: Code, 
-      description: 'Quality Assurance & Testing',
+      description: 'Code Generation & DevOps',
       featured: true,
       color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI & Operations', 
+      href: '/services', 
+      icon: Settings, 
+      description: 'Process Optimization & Automation',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'AI & Education', 
+      href: '/services', 
+      icon: BookOpen, 
+      description: 'Personalized Learning & Analytics',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI & Entertainment', 
+      href: '/services', 
+      icon: Star, 
+      description: 'Content Creation & Recommendations',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI & Customer Support', 
+      href: '/services', 
+      icon: MessageCircle, 
+      description: 'Chatbots & Support Automation',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI & HR', 
+      href: '/services', 
+      icon: Users, 
+      description: 'Talent Acquisition & Management',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI & Marketing', 
+      href: '/services', 
+      icon: Target, 
+      description: 'Campaign Optimization & Analytics',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI & Content', 
+      href: '/services', 
+      icon: FileText, 
+      description: 'Content Generation & Management',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'Cybersecurity', 
+      href: '/services', 
+      icon: Shield, 
+      description: 'Zero Trust & Threat Detection',
+      featured: true,
+      color: 'from-red-500 to-orange-500'
+    },
+    { 
+      name: 'Cloud & DevOps', 
+      href: '/services', 
+      icon: Cloud, 
+      description: 'Infrastructure & Automation',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'IoT & Edge', 
+      href: '/services', 
+      icon: Cpu, 
+      description: 'Connected Devices & Edge Computing',
+      featured: true,
+      color: 'from-teal-500 to-cyan-500'
+    },
+    { 
+      name: 'Quantum Computing', 
+      href: '/services', 
+      icon: Atom, 
+      description: 'Quantum Algorithms & ML',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Digital Twin', 
+      href: '/services', 
+      icon: Eye, 
+      description: 'Virtual Replicas & Simulation',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'FinTech', 
+      href: '/services', 
+      icon: DollarSign, 
+      description: 'Financial Risk & Analytics',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'Space Technology', 
+      href: '/services', 
+      icon: Rocket, 
+      description: 'Satellite Management & Analytics',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Sustainable Tech', 
+      href: '/services', 
+      icon: Leaf, 
+      description: 'Environmental Monitoring & Green Solutions',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
     }
   ];
 
