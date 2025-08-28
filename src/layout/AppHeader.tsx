@@ -39,6 +39,8 @@ export function AppHeader() {
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Partners', href: '/partners', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -268,8 +270,10 @@ export function AppHeader() {
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Careers', href: '/careers', icon: Users },
+    { name: 'Solutions', href: '/solutions', icon: Target },
+    { name: 'Resources', href: '/resources', icon: BookOpen },
     { name: 'Partners', href: '/partners', icon: Handshake },
+    { name: 'Careers', href: '/careers', icon: Users },
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen },
   ];

@@ -146,13 +146,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },
-        { name: 'Documentation', href: '/docs', featured: false },
-        { name: 'API Reference', href: '/api-docs', featured: false },
-        { name: 'Developer Portal', href: '/developers', featured: false },
-        { name: 'Training & Certification', href: '/training', featured: false },
-        { name: 'Community Forum', href: '/community', featured: false },
+        { name: 'Documentation', href: '/resources', featured: false },
+        { name: 'API Reference', href: '/resources', featured: false },
+        { name: 'Developer Portal', href: '/resources', featured: false },
+        { name: 'Training & Certification', href: '/resources', featured: false },
+        { name: 'Community Forum', href: '/resources', featured: false },
         { name: 'Success Stories', href: '/case-studies', featured: false },
-        { name: 'White Papers', href: '/whitepapers', featured: false }
+        { name: 'White Papers', href: '/resources', featured: false }
       ]
     },
     {
@@ -165,7 +165,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Contact Us', href: '/contact', featured: true },
         { name: 'Request Quote', href: '/request-quote', featured: true },
         { name: 'Schedule Demo', href: '/schedule-demo', featured: false },
-        { name: 'Partnerships', href: '/partnerships', featured: false },
+        { name: 'Partnerships', href: '/partners', featured: false },
         { name: 'Investor Relations', href: '/investors', featured: false },
         { name: 'Press & Media', href: '/press', featured: false },
         { name: 'Legal & Privacy', href: '/legal', featured: false }
@@ -192,9 +192,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
     { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
-    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
-    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
-    { name: 'Join Community', href: '/community', icon: Users, featured: false },
+    { name: 'Schedule Demo', href: '/contact', icon: Play, featured: false },
+    { name: 'Get Support', href: '/faq', icon: HelpCircle, featured: false },
+    { name: 'Join Community', href: '/resources', icon: Users, featured: false },
     { name: 'Partner Program', href: '/partners', icon: Users, featured: false }
   ];
 
