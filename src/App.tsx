@@ -55,6 +55,12 @@ const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
 
+// 2029 Innovative Services Showcase
+const InnovativeServicesShowcase2029 = lazy(() => import('./pages/InnovativeServicesShowcase2029'));
+
+// 2029 Comprehensive Services Showcase
+const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
+
 // 2026 AI Marketplace Services
 const Zion2026AIMarketplaceShowcase = lazy(() => import('./pages/Zion2026AIMarketplaceShowcase'));
 
@@ -174,9 +180,6 @@ const Marketplace = lazy(() => import('./pages/Marketplace'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
-
-// 2029 Services Showcase
-const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
 
 // Additional innovative AI services
 const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
@@ -316,6 +319,12 @@ function App() {
                     
                     {/* Revolutionary Services 2030 */}
                     <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                    
+                    {/* 2029 Innovative Services Showcase */}
+                    <Route path="/innovative-services-2029" element={<InnovativeServicesShowcase2029 />} />
+                    
+                    {/* 2029 Comprehensive Services Showcase */}
+                    <Route path="/comprehensive-services-2029" element={<ComprehensiveServicesShowcase2029 />} />
                     
                     {/* Comprehensive Service Routes */}
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />

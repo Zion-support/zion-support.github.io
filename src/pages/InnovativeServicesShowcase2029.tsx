@@ -193,33 +193,19 @@ import {
 } from 'lucide-react';
 import { innovativeServices2029, serviceCategories, pricingTiers, Service } from '../data/innovativeServices2029';
 
-const ComprehensiveServicesShowcase2029: React.FC = () => {
+const InnovativeServicesShowcase2029: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [showPricingModal, setShowPricingModal] = useState(false);
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
 
-  const filteredServices = innovativeServices2029
-    .filter(service => {
-      const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'name':
-          return a.name.localeCompare(b.name);
-        case 'price':
-          return parseFloat(a.pricing.monthly.replace(/[^0-9.]/g, '')) - parseFloat(b.pricing.monthly.replace(/[^0-9.]/g, ''));
-        case 'category':
-          return a.category.localeCompare(b.category);
-        default:
-          return 0;
-      }
-    });
+  const filteredServices = innovativeServices2029.filter(service => {
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -243,14 +229,6 @@ const ComprehensiveServicesShowcase2029: React.FC = () => {
     }
   };
 
-  const getCategoryStats = () => {
-    const stats = serviceCategories.map(cat => {
-      const count = innovativeServices2029.filter(s => s.category === cat.id).length;
-      return { ...cat, count };
-    });
-    return stats;
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -263,7 +241,7 @@ const ComprehensiveServicesShowcase2029: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            Comprehensive Services 2029
+            Revolutionary Services 2029
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -271,29 +249,13 @@ const ComprehensiveServicesShowcase2029: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
           >
-            Discover our complete portfolio of innovative AI, cybersecurity, cloud, and micro SAAS solutions. 
-            Each service is designed to transform your business operations and drive measurable results.
+            Experience the future of technology with our cutting-edge AI, cybersecurity, and micro SAAS solutions. 
+            Transform your business with intelligent automation and next-generation security.
           </motion.p>
-          
-          {/* Stats */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto mb-8"
-          >
-            {getCategoryStats().map((stat, index) => (
-              <div key={stat.id} className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">{stat.count}</div>
-                <div className="text-sm text-zion-slate-light">{stat.name}</div>
-              </div>
-            ))}
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button 
@@ -312,7 +274,7 @@ const ComprehensiveServicesShowcase2029: React.FC = () => {
         </div>
       </section>
 
-      {/* Search, Filter, and Sort Section */}
+      {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-8">
@@ -326,43 +288,30 @@ const ComprehensiveServicesShowcase2029: React.FC = () => {
                 className="w-full pl-10 pr-4 py-3 border border-zion-slate-light rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
-            
-            <div className="flex items-center gap-4">
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
-                className="px-4 py-2 rounded-lg bg-white/10 text-white border border-zion-slate-light focus:outline-none focus:ring-2 focus:ring-blue-500"
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setActiveCategory('all')}
+                className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                  activeCategory === 'all'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
+                }`}
               >
-                <option value="name">Sort by Name</option>
-                <option value="price">Sort by Price</option>
-                <option value="category">Sort by Category</option>
-              </select>
-              
-              <div className="flex flex-wrap gap-2">
+                All Services
+              </button>
+              {serviceCategories.map((category) => (
                 <button
-                  onClick={() => setActiveCategory('all')}
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    activeCategory === 'all'
+                    activeCategory === category.id
                       ? 'bg-blue-600 text-white'
                       : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                   }`}
                 >
-                  All Services
+                  {category.icon} {category.name}
                 </button>
-                {serviceCategories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                      activeCategory === category.id
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
-                    }`}
-                  >
-                    {category.icon} {category.name}
-                  </button>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -419,59 +368,8 @@ const ComprehensiveServicesShowcase2029: React.FC = () => {
         </div>
       </section>
 
-      {/* Service Categories Overview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl font-bold text-white text-center mb-12"
-          >
-            Service Categories
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((category, index) => {
-              const services = innovativeServices2029.filter(s => s.category === category.id);
-              return (
-                <motion.div
-                  key={category.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-                >
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${getCategoryColor(category.id)} flex items-center justify-center mb-4`}>
-                    <span className="text-3xl">{category.icon}</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-2">{category.name}</h3>
-                  <p className="text-zion-slate-light mb-4">{category.description}</p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {services.slice(0, 3).map((service, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        <span>{service.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="text-center">
-                    <span className="text-sm text-zion-slate-light">
-                      {services.length} services available
-                    </span>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Information Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -742,4 +640,4 @@ const ComprehensiveServicesShowcase2029: React.FC = () => {
   );
 };
 
-export default ComprehensiveServicesShowcase2029;
+export default InnovativeServicesShowcase2029;
