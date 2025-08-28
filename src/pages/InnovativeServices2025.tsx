@@ -61,19 +61,15 @@ import {
   Key,
   CheckCircle as CheckCircleIcon,
   ArrowUpRight,
-  Play,
-  Calculator,
-  BarChart,
-  PieChart,
-  LineChart
+  Play
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSAASServices2025';
 
-export default function ComprehensivePricingGuide2025() {
+export default function InnovativeServices2025() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [priceRange, setPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('rating');
 
   // Get unique categories from services
   const categories = [
@@ -97,50 +93,29 @@ export default function ComprehensivePricingGuide2025() {
     { id: 'Quantum Computing', name: 'Quantum Computing', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' }
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'budget', name: 'Budget ($0-$500)', range: '0-500' },
-    { id: 'mid-range', name: 'Mid-Range ($500-$1000)', range: '500-1000' },
-    { id: 'premium', name: 'Premium ($1000-$2000)', range: '1000-2000' },
-    { id: 'enterprise', name: 'Enterprise ($2000+)', range: '2000+' }
-  ];
-
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    let matchesPrice = true;
-    if (priceRange !== 'all') {
-      const price = service.price;
-      switch (priceRange) {
-        case 'budget':
-          matchesPrice = price <= 500;
-          break;
-        case 'mid-range':
-          matchesPrice = price > 500 && price <= 1000;
-          break;
-        case 'premium':
-          matchesPrice = price > 1000 && price <= 2000;
-          break;
-        case 'enterprise':
-          matchesPrice = price > 2000;
-          break;
-      }
-    }
-    
-    return matchesCategory && matchesSearch && matchesPrice;
+    return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => a.price - b.price);
-
-  // Calculate pricing statistics
-  const totalServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.length;
-  const avgPrice = Math.round(INNOVATIVE_MICRO_SAAS_SERVICES_2025.reduce((sum, service) => sum + service.price, 0) / totalServices);
-  const minPrice = Math.min(...INNOVATIVE_MICRO_SAAS_SERVICES_2025.map(s => s.price));
-  const maxPrice = Math.max(...INNOVATIVE_MICRO_SAAS_SERVICES_2025.map(s => s.price));
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'rating':
+        return b.rating - a.rating;
+      case 'price':
+        return a.price - b.price;
+      case 'reviews':
+        return b.reviewCount - a.reviewCount;
+      case 'name':
+        return a.title.localeCompare(b.title);
+      default:
+        return 0;
+    }
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -167,9 +142,9 @@ export default function ComprehensivePricingGuide2025() {
   return (
     <>
       <SEO 
-        title="Comprehensive Pricing Guide 2025 | Zion Tech Group"
-        description="Complete pricing guide for all our innovative micro SAAS services. Compare prices, features, and ROI across different service categories."
-        keywords="pricing guide 2025, micro SAAS pricing, AI services pricing, technology services cost, ROI comparison"
+        title="Innovative Micro SAAS Services 2025 | Zion Tech Group"
+        description="Discover our cutting-edge micro SAAS services for 2025. From AI-powered content creation to quantum computing solutions, transform your business with innovative technology."
+        keywords="micro SAAS 2025, AI services, quantum computing, blockchain, IoT, edge computing, innovative technology, business transformation"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -184,36 +159,17 @@ export default function ComprehensivePricingGuide2025() {
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Comprehensive Pricing Guide
+                  Innovative Micro SAAS
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  2025
+                  Services 2025
                 </span>
               </h1>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-                Transparent pricing for all our innovative micro SAAS services. Compare costs, features, and ROI to find the perfect solution for your business.
+                Transform your business with our cutting-edge micro SAAS solutions. From AI-powered content creation to quantum computing, 
+                we deliver real results with proven ROI and enterprise-grade security.
               </p>
-              
-              {/* Pricing Statistics */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-                <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-600">
-                  <div className="text-2xl font-bold text-cyan-400">{totalServices}</div>
-                  <div className="text-sm text-slate-400">Total Services</div>
-                </div>
-                <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-600">
-                  <div className="text-2xl font-bold text-green-400">${avgPrice}</div>
-                  <div className="text-sm text-slate-400">Average Price</div>
-                </div>
-                <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-600">
-                  <div className="text-2xl font-bold text-blue-400">${minPrice}</div>
-                  <div className="text-sm text-slate-400">Starting Price</div>
-                </div>
-                <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-600">
-                  <div className="text-2xl font-bold text-purple-400">${maxPrice}</div>
-                  <div className="text-sm text-slate-400">Premium Price</div>
-                </div>
-              </div>
               
               {/* Contact Information */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
@@ -234,6 +190,31 @@ export default function ComprehensivePricingGuide2025() {
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
+              
+              {/* Quick Links */}
+              <div className="flex flex-wrap justify-center gap-4 mt-8">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  View All Services
+                </Link>
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <MessageSquare className="w-5 h-5 mr-2" />
+                  Request Quote
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
+                </a>
+              </div>
             </motion.div>
 
             {/* Search and Filter Controls */}
@@ -248,20 +229,21 @@ export default function ComprehensivePricingGuide2025() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                   <input
                     type="text"
-                    placeholder="Search services by name, category, or features..."
+                    placeholder="Search innovative services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent w-80"
                   />
                 </div>
                 <select
-                  value={priceRange}
-                  onChange={(e) => setPriceRange(e.target.value)}
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
                   className="px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
-                  {priceRanges.map(range => (
-                    <option key={range.id} value={range.id}>{range.name}</option>
-                  ))}
+                  <option value="rating">Sort by Rating</option>
+                  <option value="price">Sort by Price</option>
+                  <option value="reviews">Sort by Reviews</option>
+                  <option value="name">Sort by Name</option>
                 </select>
               </div>
             </motion.div>
@@ -282,7 +264,7 @@ export default function ComprehensivePricingGuide2025() {
                       : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-600'
                   }`}
                 >
-                  All Categories ({INNOVATIVE_MICRO_SAAS_SERVICES_2025.length})
+                  All Services ({INNOVATIVE_MICRO_SAAS_SERVICES_2025.length})
                 </button>
                 {categories.slice(1).map((category) => (
                   <button
@@ -340,30 +322,26 @@ export default function ComprehensivePricingGuide2025() {
 
                     <p className="text-slate-300 mb-4 line-clamp-3">{service.description}</p>
 
-                    {/* Pricing Details */}
-                    <div className="bg-slate-700/30 rounded-lg p-4 mb-4">
-                      <h4 className="text-sm font-semibold text-white mb-3">Pricing & ROI</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-400">Our Price:</span>
-                          <span className="text-white font-semibold">${service.price.toLocaleString()}</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-400">Market Price:</span>
-                          <span className="text-slate-300">{service.marketPrice}</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-400">ROI:</span>
-                          <span className="text-green-400 font-semibold">{service.roi}</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-400">Setup Time:</span>
-                          <span className="text-slate-300">{service.setupTime}</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span className="text-slate-400">AI Score:</span>
-                          <span className="text-cyan-400 font-semibold">{service.aiScore}/100</span>
-                        </div>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Price:</span>
+                        <span className="text-white font-semibold">${service.price.toLocaleString()}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Market Price:</span>
+                        <span className="text-slate-300">{service.marketPrice}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">ROI:</span>
+                        <span className="text-green-400 font-semibold">{service.roi}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">Setup Time:</span>
+                        <span className="text-slate-300">{service.setupTime}</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">AI Score:</span>
+                        <span className="text-cyan-400 font-semibold">{service.aiScore}/100</span>
                       </div>
                     </div>
 
@@ -380,10 +358,10 @@ export default function ComprehensivePricingGuide2025() {
 
                     <div className="flex gap-3">
                       <a
-                        href={`mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry for ${service.title}&body=Hi, I'm interested in the pricing for your ${service.title} service. Please provide detailed pricing information, implementation timeline, and any available discounts.`}
+                        href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service. Please provide more details about pricing, implementation timeline, and features.`}
                         className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-center py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                       >
-                        Get Pricing
+                        Get Started
                       </a>
                       <a
                         href={`tel:+13024640950`}
@@ -419,7 +397,7 @@ export default function ComprehensivePricingGuide2025() {
           </div>
         </section>
 
-        {/* Pricing Comparison Section */}
+        {/* Why Choose Zion Tech Group */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -430,61 +408,49 @@ export default function ComprehensivePricingGuide2025() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Pricing <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Comparison</span>
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>?
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Compare our competitive pricing with market rates and see the value we deliver.
+                We deliver cutting-edge solutions with proven results, enterprise-grade security, and dedicated support.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
-                  title: "Budget-Friendly",
-                  price: "$199 - $500",
-                  description: "Essential services for small businesses and startups",
-                  features: ["AI Content Creation", "Customer Support", "Basic Analytics", "Email Support"],
-                  color: "from-green-500 to-emerald-500"
+                  icon: <TrendingUp className="w-8 h-8" />,
+                  title: "Proven ROI",
+                  description: "Our solutions deliver measurable business value with clear ROI metrics and performance tracking."
                 },
                 {
-                  title: "Professional",
-                  price: "$500 - $1000",
-                  description: "Advanced solutions for growing businesses",
-                  features: ["AI HR Platform", "Legal Tech", "FinTech Analytics", "Priority Support"],
-                  color: "from-blue-500 to-cyan-500"
+                  icon: <ShieldCheck className="w-8 h-8" />,
+                  title: "Enterprise Security",
+                  description: "Bank-level security protocols and compliance standards to protect your business data and operations."
                 },
                 {
-                  title: "Enterprise",
-                  price: "$1000+",
-                  description: "Premium solutions for large organizations",
-                  features: ["Healthcare AI", "Space Tech", "Quantum Computing", "24/7 Support"],
-                  color: "from-purple-500 to-pink-500"
+                  icon: <Users className="w-8 h-8" />,
+                  title: "Expert Support",
+                  description: "24/7 technical support from certified professionals with deep industry expertise."
+                },
+                {
+                  icon: <Rocket className="w-8 h-8" />,
+                  title: "Innovation First",
+                  description: "Stay ahead with cutting-edge technologies and forward-thinking solutions that drive growth."
                 }
-              ].map((tier, index) => (
+              ].map((benefit, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-slate-800/50 rounded-xl p-6 border border-slate-600"
+                  className="text-center"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${tier.color} rounded-xl flex items-center justify-center text-white mx-auto mb-4`}>
-                    {index === 0 && <DollarSign className="w-8 h-8" />}
-                    {index === 1 && <BarChart className="w-8 h-8" />}
-                    {index === 2 && <Crown className="w-8 h-8" />}
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
+                    {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2 text-center">{tier.title}</h3>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2 text-center">{tier.price}</div>
-                  <p className="text-slate-300 mb-4 text-center">{tier.description}</p>
-                  <ul className="space-y-2">
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2 text-slate-300">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-slate-300">{benefit.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -501,10 +467,10 @@ export default function ComprehensivePricingGuide2025() {
               viewport={{ once: true }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Get Started?
+                Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-slate-300 mb-8">
-                Contact us today to discuss your specific needs and get a customized quote.
+                Join hundreds of businesses already leveraging our innovative solutions to drive growth and efficiency.
               </p>
               
               {/* Contact Methods */}
@@ -531,11 +497,11 @@ export default function ComprehensivePricingGuide2025() {
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                 >
-                  Get Custom Quote
+                  Get Started Today
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
-                  to="/services/innovative-2025"
+                  to="/services"
                   className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-400 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-pink-600 transition-all duration-200 hover:scale-105"
                 >
                   View All Services
@@ -558,7 +524,7 @@ export default function ComprehensivePricingGuide2025() {
                   📞 Call Now
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry&body=Hi, I'm interested in your services and would like to discuss pricing options."
+                  href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry&body=Hi, I'm interested in your innovative services. Please provide more information."
                   className="inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200"
                 >
                   📧 Email Us

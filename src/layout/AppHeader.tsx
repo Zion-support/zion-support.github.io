@@ -150,6 +150,14 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500'
     },
     { 
+      name: 'Innovative Services 2025', 
+      href: '/services/innovative-2025', 
+      icon: Sparkles, 
+      description: 'Cutting-edge micro SAAS solutions',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
       name: 'AI & FinTech', 
       href: '/services', 
       icon: DollarSign, 
@@ -268,7 +276,8 @@ export function AppHeader() {
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', icon: DollarSign },
+    { name: 'Innovative Services', href: '/services/innovative-2025', icon: Sparkles },
     { name: 'Careers', href: '/careers', icon: Users },
     { name: 'Partners', href: '/partners', icon: Handshake },
     { name: 'Privacy', href: '/privacy', icon: Shield },
