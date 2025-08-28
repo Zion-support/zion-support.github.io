@@ -1,169 +1,259 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { 
+  Star, 
+  MapPin, 
+  Clock, 
+  DollarSign, 
+  ArrowRight,
+  CheckCircle,
+  Users,
+  TrendingUp
+} from 'lucide-react';
 
-const featuredListings = [
+interface Listing {
+  id: string;
+  title: string;
+  description: string;
+  location: string;
+  duration: string;
+  budget: string;
+  rating: number;
+  reviews: number;
+  skills: string[];
+  client: {
+    name: string;
+    avatar: string;
+    verified: boolean;
+  };
+  posted: string;
+  proposals: number;
+  featured: boolean;
+}
+
+const featuredListings: Listing[] = [
   {
-    id: 1,
-    title: "AI-Powered Business Intelligence",
-    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
-    category: "AI Services",
-    price: "$299/month",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400",
-    rating: 4.8,
-    reviews: 156
-  },
-  {
-    id: 2,
-    title: "Quantum Computing Solutions",
-    description: "Next-generation quantum computing services for complex optimization problems.",
-    category: "Emerging Tech",
-    price: "$1,999/month",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",
+    id: '1',
+    title: 'AI-Powered E-commerce Platform Development',
+    description: 'Build a modern e-commerce platform with AI-driven product recommendations, personalized shopping experiences, and advanced analytics.',
+    location: 'Remote',
+    duration: '3-6 months',
+    budget: '$15,000 - $25,000',
     rating: 4.9,
-    reviews: 89
+    reviews: 127,
+    skills: ['React', 'Node.js', 'AI/ML', 'AWS', 'MongoDB'],
+    client: {
+      name: 'TechCorp Inc.',
+      avatar: '/images/client-1.jpg',
+      verified: true
+    },
+    posted: '2 days ago',
+    proposals: 23,
+    featured: true
   },
   {
-    id: 3,
-    title: "Blockchain Supply Chain Platform",
-    description: "Transparent and secure supply chain management using blockchain technology.",
-    category: "Blockchain",
-    price: "$599/month",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
+    id: '2',
+    title: 'Cybersecurity Infrastructure Audit & Implementation',
+    description: 'Comprehensive security assessment and implementation of enterprise-grade cybersecurity solutions including threat detection and compliance.',
+    location: 'Hybrid',
+    duration: '2-4 months',
+    budget: '$20,000 - $35,000',
+    rating: 4.8,
+    reviews: 89,
+    skills: ['Cybersecurity', 'Compliance', 'Network Security', 'Penetration Testing'],
+    client: {
+      name: 'SecureBank Ltd.',
+      avatar: '/images/client-2.jpg',
+      verified: true
+    },
+    posted: '1 week ago',
+    proposals: 18,
+    featured: true
+  },
+  {
+    id: '3',
+    title: 'Cloud Migration & DevOps Automation',
+    description: 'Migrate legacy systems to cloud infrastructure with automated CI/CD pipelines, monitoring, and scalable architecture.',
+    location: 'Remote',
+    duration: '4-8 months',
+    budget: '$25,000 - $40,000',
     rating: 4.7,
-    reviews: 234
-  },
-  {
-    id: 4,
-    title: "IoT Edge Computing Platform",
-    description: "Real-time IoT data processing and analytics at the edge for instant insights.",
-    category: "IoT",
-    price: "$449/month",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",
-    rating: 4.6,
-    reviews: 178
+    reviews: 156,
+    skills: ['AWS/Azure', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins'],
+    client: {
+      name: 'CloudTech Solutions',
+      avatar: '/images/client-3.jpg',
+      verified: true
+    },
+    posted: '3 days ago',
+    proposals: 31,
+    featured: true
   }
 ];
 
-export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
-
-  const filteredListings = selectedCategory === "All"
-    ? featuredListings
-    : featuredListings.filter(listing => listing.category === selectedCategory);
-
+export const FeaturedListingsSection: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
+        staggerChildren: 0.1
       }
     }
   };
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ★
-      </span>
-    ));
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
   };
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
-          className="text-center mb-16"
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured Services
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Featured Projects
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Discover our most popular and innovative technology solutions that are transforming businesses worldwide
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover exciting opportunities from top clients. These featured projects showcase 
+            the diverse range of technology challenges we help solve.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredServices.map((service, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                    {service.category}
-                  </span>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+        >
+          {featuredListings.map((listing) => (
+            <motion.div
+              key={listing.id}
+              variants={itemVariants}
+              className="group relative"
+            >
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 h-full transition-all duration-300 hover:bg-slate-700/50 hover:border-slate-600/50 hover:transform hover:scale-105">
+                {/* Featured Badge */}
+                {listing.featured && (
+                  <div className="absolute top-4 right-4">
+                    <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-semibold rounded-full">
+                      <Star className="w-3 h-3 mr-1" />
+                      Featured
+                    </span>
+                  </div>
+                )}
+
+                {/* Client Info */}
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white font-semibold mr-4">
+                    {listing.client.name.charAt(0)}
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-white font-semibold flex items-center">
+                      {listing.client.name}
+                      {listing.client.verified && (
+                        <CheckCircle className="w-4 h-4 text-cyan-400 ml-2" />
+                      )}
+                    </h4>
+                    <p className="text-gray-400 text-sm">{listing.posted}</p>
+                  </div>
                 </div>
 
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {service.image}
-                </div>
-
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {service.title}
+                {/* Project Title */}
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  {listing.title}
                 </h3>
 
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {service.description}
+                {/* Description */}
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {listing.description}
                 </p>
 
-                <div className="mb-4">
-                  <h4 className="text-sm font-medium text-gray-900 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
-                        {feature}
-                      </li>
+                {/* Project Details */}
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-gray-400">
+                    <MapPin className="w-4 h-4 mr-3" />
+                    <span className="text-sm">{listing.location}</span>
+                  </div>
+                  <div className="flex items-center text-gray-400">
+                    <Clock className="w-4 h-4 mr-3" />
+                    <span className="text-sm">{listing.duration}</span>
+                  </div>
+                  <div className="flex items-center text-gray-400">
+                    <DollarSign className="w-4 h-4 mr-3" />
+                    <span className="text-sm">{listing.budget}</span>
+                  </div>
+                </div>
+
+                {/* Skills */}
+                <div className="mb-6">
+                  <h5 className="text-white font-semibold mb-3">Required Skills:</h5>
+                  <div className="flex flex-wrap gap-2">
+                    {listing.skills.map((skill, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full border border-slate-600/50"
+                      >
+                        {skill}
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 </div>
 
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-gray-900">{service.price}</span>
-                  <Link
-                    to={service.link}
-                    className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
-                  >
-                    Learn More →
-                  </Link>
+                {/* Stats */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center text-gray-400">
+                    <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                    <span className="text-sm">{listing.rating}</span>
+                    <span className="text-sm text-gray-500 ml-1">({listing.reviews})</span>
+                  </div>
+                  <div className="flex items-center text-gray-400">
+                    <Users className="w-4 h-4 mr-1" />
+                    <span className="text-sm">{listing.proposals} proposals</span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="px-6 pb-6">
+                {/* CTA Button */}
                 <Link
-                  to={service.link}
-                  className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
+                  to={`/projects/${listing.id}`}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 group-hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
-                  Get Started
+                  View Project
+                  <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        <motion.div 
-          className="mt-16 text-center"
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-16"
         >
-          <Link 
-            to="/services"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
+          <Link
+            to="/projects"
+            className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105"
           >
-            View All Services
-            <span className="text-xl">→</span>
+            View All Projects
+            <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
         </motion.div>
       </div>
     </section>
   );
-}
+};
