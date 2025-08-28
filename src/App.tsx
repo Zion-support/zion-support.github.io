@@ -323,6 +323,7 @@ function App() {
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
+                    <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
                     
                     {/* Service Detail Routes */}
                     <Route path="/services/cloud-devops" element={<CloudDevOps />} />
