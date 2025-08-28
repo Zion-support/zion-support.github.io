@@ -1,11 +1,7 @@
 import { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
-interface PerformanceOptimizerProps {
-    children: React.ReactNode;
-}
-
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+export const PerformanceOptimizer = ({ children }) => {
     const location = useLocation();
 
     // Optimize images on route change
@@ -32,7 +28,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
 
         // Use requestIdleCallback for non-critical optimization
         if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-            (window as any).requestIdleCallback(optimizeImages);
+            window.requestIdleCallback(optimizeImages);
         } else {
             setTimeout(optimizeImages, 100);
         }
@@ -95,7 +91,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     // Intersection Observer for lazy loading
     useEffect(() => {
         if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-            const observer = new (window as any).IntersectionObserver((entries) => {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const target = entry.target;
@@ -139,7 +135,7 @@ if (typeof window !== 'undefined') {
                 });
             };
 
-            (window as any).scheduler.postTask(optimizeDOM, { priority: 'background' });
+            window.scheduler.postTask(optimizeDOM, { priority: 'background' });
         };
 
         // Run optimization periodically
@@ -150,11 +146,11 @@ if (typeof window !== 'undefined') {
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB
         const checkMemory = () => {
-            const memory = (performance as any).memory;
+            const memory = performance.memory;
             if (memory.usedJSHeapSize > memoryThreshold) {
                 // Trigger garbage collection if available
                 if ('gc' in window) {
-                    (window as any).gc();
+                    window.gc();
                 }
             }
         };
@@ -162,3 +158,4 @@ if (typeof window !== 'undefined') {
         setInterval(checkMemory, 60000); // Every minute
     }
 }
+

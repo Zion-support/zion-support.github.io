@@ -38,6 +38,10 @@ export default [
         ServiceWorkerRegistration: 'readonly',
         PushSubscription: 'readonly',
         NotificationPermission: 'readonly',
+        // Additional browser globals
+        IntersectionObserver: 'readonly',
+        requestIdleCallback: 'readonly',
+        HTMLElement: 'readonly',
         // Node.js globals
         process: 'readonly',
         global: 'readonly',
