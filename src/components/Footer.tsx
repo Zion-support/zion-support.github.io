@@ -81,6 +81,8 @@ const footerSections = [
     icon: Globe,
     links: [
       { name: 'About Us', path: '/about', icon: Users },
+      { name: 'Team', path: '/team', icon: Users },
+      { name: 'Leadership', path: '/leadership', icon: Users },
       { name: 'Partners', path: '/partners', icon: Users },
       { name: 'Careers', path: '/careers', icon: Briefcase },
       { name: 'Contact', path: '/contact', icon: Phone },
@@ -112,11 +114,11 @@ const footerSections = [
       { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
-      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
-      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
+      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
+      { name: 'AI Legal Document Automation', path: '/services/ai-legal-document-automation', icon: FileText },
+      { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Heart },
+      { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: DollarSign },
+      { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', icon: FileText }
     ]
   },
   {
@@ -129,7 +131,10 @@ const footerSections = [
       { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
       { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
       { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+      { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
     ]
   },
   {
@@ -151,8 +156,9 @@ const footerSections = [
       { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
       { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Brain },
       { name: 'Space Technology', path: '/space-tech', icon: Satellite },
-      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
-      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
+      { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', icon: Atom },
+      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: TrendingUp },
+      { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf }
     ]
   },
   {
@@ -172,37 +178,6 @@ const footerSections = [
     ]
   },
   {
-    title: 'New AI Services 2025',
-    icon: Sparkles,
-    links: [
-      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
-      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-    ]
-  },
-  {
-    title: '2029 Services Showcase',
-    icon: Rocket,
-    links: [
-      { name: 'Comprehensive Services 2029', path: '/comprehensive-services-showcase-2029', icon: Star },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
-      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
-    ]
-  },
-  {
-    title: 'Featured Services',
-    icon: Star,
-    links: [
-      { name: '2025 New Innovative Services', path: '/new-innovative-services-2025', icon: Star },
-      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', icon: Star },
-      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', icon: Star },
-      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', icon: Star },
-      { name: '2029 Comprehensive Services Showcase', path: '/comprehensive-services-showcase-2029', icon: Star }
-    ]
-  },
-  {
     title: 'Support & Resources',
     icon: HelpCircle,
     links: [
@@ -213,7 +188,9 @@ const footerSections = [
       { name: 'Developer Portal', path: '/developer', icon: Cpu },
       { name: 'Training', path: '/training', icon: GraduationCap },
       { name: 'Webinars', path: '/webinars', icon: Video },
-      { name: 'White Papers', path: '/white-papers', icon: FileText }
+      { name: 'White Papers', path: '/white-papers', icon: FileText },
+      { name: 'Pricing', path: '/pricing', icon: DollarSign },
+      { name: 'Sitemap', path: '/sitemap', icon: Globe }
     ]
   }
 ];
@@ -297,7 +274,7 @@ export function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-8 mb-12">
           {/* Company Section - Takes 2 columns on larger screens */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
@@ -335,7 +312,7 @@ export function Footer() {
           </div>
 
           {/* Service Sections */}
-          {footerSections.slice(1, 6).map((section) => (
+          {footerSections.slice(1).map((section) => (
             <div key={section.title} className="space-y-4">
               <div className="flex items-center space-x-2">
                 <section.icon className="w-5 h-5 text-cyan-400" />

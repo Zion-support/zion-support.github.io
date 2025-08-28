@@ -153,6 +153,12 @@ const API = lazy(() => import('./pages/API'));
 const DeveloperPortal = lazy(() => import('./pages/DeveloperPortal'));
 const ApiDemo = lazy(() => import('./components/ApiDemo'));
 
+// New industry and solution pages
+const EmergingTech = lazy(() => import('./pages/emerging-tech'));
+const ManufacturingSolutions = lazy(() => import('./pages/manufacturing-solutions'));
+const FinancialSolutions = lazy(() => import('./pages/financial-solutions'));
+const IndustrySolutions = lazy(() => import('./pages/industry-solutions'));
+
 // Additional pages
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
@@ -339,6 +345,12 @@ function App() {
                   <Route path="/ai-solutions" element={<AiSolutions />} />
                   <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
                   <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
+                  
+                  {/* New industry and solution routes */}
+                  <Route path="/emerging-tech" element={<EmergingTech />} />
+                  <Route path="/manufacturing-solutions" element={<ManufacturingSolutions />} />
+                  <Route path="/financial-solutions" element={<FinancialSolutions />} />
+                  <Route path="/industry-solutions" element={<IndustrySolutions />} />
                   
                   {/* Service Routes - only for existing pages */}
                   <Route path="/services/cloud-devops" element={<CloudDevOps />} />
