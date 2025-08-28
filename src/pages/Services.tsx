@@ -76,7 +76,8 @@ export default function Services() {
     { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
     { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
     { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
+    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' },
+    { id: 'AI & Transportation', name: 'AI & Transportation', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Transportation').length, icon: '🚗', color: 'from-blue-500 to-green-500' }
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
@@ -128,9 +129,9 @@ export default function Services() {
   return (
     <>
       <SEO 
-        title="Innovative Micro SAAS, IT & AI Services | Zion Tech Group"
-        description="Discover our comprehensive range of cutting-edge micro SAAS, IT, and AI services. From AI-powered business intelligence to quantum computing solutions."
-        keywords="micro SAAS, IT services, AI services, business intelligence, cybersecurity, cloud computing, quantum computing, blockchain, fintech"
+        title="85+ Innovative Micro SAAS, IT & AI Services | Zion Tech Group"
+        description="Discover our comprehensive portfolio of 85+ cutting-edge micro SAAS, IT, and AI services. From AI-powered business intelligence to quantum computing, neural interfaces, and space technology solutions."
+        keywords="micro SAAS, IT services, AI services, business intelligence, cybersecurity, cloud computing, quantum computing, blockchain, fintech, neural interfaces, space technology, synthetic biology, fusion energy"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -145,17 +146,25 @@ export default function Services() {
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Innovative Micro SAAS
+                  {COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length}+ Innovative
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  IT & AI Services
+                  Micro SAAS, IT & AI Services
                 </span>
               </h1>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-                Transform your business with our cutting-edge micro SAAS solutions, enterprise IT services, and AI-powered innovations. 
-                Delivering real results with proven ROI and enterprise-grade security.
+                Transform your business with our expanded portfolio of {COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length}+ cutting-edge micro SAAS solutions, enterprise IT services, and AI-powered innovations. 
+                From quantum computing to neural interfaces, space technology to synthetic biology - we deliver the future of technology with proven ROI and enterprise-grade security.
               </p>
+              
+              {/* Services Count Display */}
+              <div className="mb-8">
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full text-white font-semibold text-lg shadow-lg">
+                  <span className="mr-2">🚀</span>
+                  {COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length}+ Innovative Services Available
+                </div>
+              </div>
               
               {/* Contact Information */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
