@@ -296,7 +296,5 @@ export default function FinOpsAdvisor() {
       </section>
     </div>
   );
-};
-
-export default FinOpsAdvisor;
+}
 
