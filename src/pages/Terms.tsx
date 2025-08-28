@@ -23,7 +23,7 @@ import {
   Brain,
   Cpu
 } from 'lucide-react';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 
 const Terms: React.FC = () => {
   const currentYear = new Date().getFullYear();
