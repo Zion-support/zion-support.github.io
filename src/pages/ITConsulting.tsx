@@ -174,7 +174,7 @@ export default function ITConsulting() {
               >
                 <span>Explore Services</span>
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -189,7 +189,6 @@ export default function ITConsulting() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our IT Consulting?
@@ -332,7 +331,6 @@ export default function ITConsulting() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industries We Serve
@@ -362,7 +360,7 @@ export default function ITConsulting() {
                 <span className="text-white font-medium">{industry}</span>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

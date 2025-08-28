@@ -1,174 +1,177 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
   Cookie, 
-  Shield, 
+  CheckCircle, 
   Settings, 
   Eye, 
-  EyeOff, 
-  CheckCircle, 
-  XCircle,
-  Info,
-  AlertTriangle,
-  ExternalLink,
-  ChevronDown,
-  ChevronUp,
-  Lock,
-  Globe,
-  BarChart3,
-  Users
+  Globe, 
+  Info, 
+  Shield 
 } from 'lucide-react';
 
+interface CookiePreferences {
+  essential: boolean;
+  analytics: boolean;
+  marketing: boolean;
+  functional: boolean;
+}
+
+interface CookieType {
+  id: string;
+  name: string;
+  description: string;
+  color: string;
+  icon: any;
+  examples: string[];
+  alwaysActive: boolean;
+}
+
+interface CookieDetail {
+  name: string;
+  purpose: string;
+  duration: string;
+  provider: string;
+  type: 'essential' | 'analytics' | 'marketing' | 'functional';
+}
+
+const cookieTypes: CookieType[] = [
+  {
+    id: 'essential',
+    name: 'Essential Cookies',
+    description: 'Required for the website to function properly',
+    color: 'from-blue-500/20 to-cyan-500/20',
+    icon: Shield,
+    examples: ['Authentication', 'Security', 'Basic functionality'],
+    alwaysActive: true
+  },
+  {
+    id: 'analytics',
+    name: 'Analytics Cookies',
+    description: 'Help us understand how visitors interact with our website',
+    color: 'from-purple-500/20 to-pink-500/20',
+    icon: Eye,
+    examples: ['Page views', 'User behavior', 'Performance metrics'],
+    alwaysActive: false
+  },
+  {
+    id: 'marketing',
+    name: 'Marketing Cookies',
+    description: 'Used to deliver personalized advertisements',
+    color: 'from-orange-500/20 to-red-500/20',
+    icon: Cookie,
+    examples: ['Targeted ads', 'Social media integration', 'Campaign tracking'],
+    alwaysActive: false
+  },
+  {
+    id: 'functional',
+    name: 'Functional Cookies',
+    description: 'Enable enhanced functionality and personalization',
+    color: 'from-green-500/20 to-emerald-500/20',
+    icon: Settings,
+    examples: ['Language preferences', 'User settings', 'Enhanced features'],
+    alwaysActive: false
+  }
+];
+
+const cookieDetails: CookieDetail[] = [
+  {
+    name: 'session_id',
+    purpose: 'Maintains user session',
+    duration: 'Session',
+    provider: 'Zion Tech Group',
+    type: 'essential'
+  },
+  {
+    name: 'auth_token',
+    purpose: 'User authentication',
+    duration: '24 hours',
+    provider: 'Zion Tech Group',
+    type: 'essential'
+  },
+  {
+    name: 'analytics_id',
+    purpose: 'Website analytics',
+    duration: '2 years',
+    provider: 'Google Analytics',
+    type: 'analytics'
+  },
+  {
+    name: 'ad_preference',
+    purpose: 'Advertising preferences',
+    duration: '1 year',
+    provider: 'Google Ads',
+    type: 'marketing'
+  },
+  {
+    name: 'language',
+    purpose: 'Language preference',
+    duration: '1 year',
+    provider: 'Zion Tech Group',
+    type: 'functional'
+  }
+];
+
 export default function Cookies() {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
-  const [cookiePreferences, setCookiePreferences] = useState({
+  const [cookiePreferences, setCookiePreferences] = useState<CookiePreferences>({
     essential: true,
     analytics: false,
     marketing: false,
     functional: false
   });
 
-  const cookieTypes = [
-    {
-      id: 'essential',
-      name: 'Essential Cookies',
-      description: 'These cookies are necessary for the website to function and cannot be switched off.',
-      examples: [
-        'Authentication cookies',
-        'Security cookies',
-        'Session management',
-        'Load balancing'
-      ],
-      icon: Shield,
-      color: 'from-blue-500 to-cyan-500',
-      alwaysActive: true
-    },
-    {
-      id: 'analytics',
-      name: 'Analytics Cookies',
-      description: 'These cookies help us understand how visitors interact with our website.',
-      examples: [
-        'Page views and navigation',
-        'User behavior patterns',
-        'Performance metrics',
-        'Error tracking'
-      ],
-      icon: BarChart3,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'marketing',
-      name: 'Marketing Cookies',
-      description: 'These cookies are used to deliver personalized advertisements.',
-      examples: [
-        'Ad targeting',
-        'Campaign performance',
-        'User preferences',
-        'Conversion tracking'
-      ],
-      icon: Users,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      id: 'functional',
-      name: 'Functional Cookies',
-      description: 'These cookies enable enhanced functionality and personalization.',
-      examples: [
-        'Language preferences',
-        'Theme settings',
-        'Form data storage',
-        'Social media integration'
-      ],
-      icon: Settings,
-      color: 'from-green-500 to-emerald-500'
+  useEffect(() => {
+    // Load saved preferences from localStorage
+    const saved = localStorage.getItem('cookiePreferences');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        setCookiePreferences(parsed);
+      } catch (error) {
+        console.error('Error loading cookie preferences:', error);
+      }
     }
-  ];
+  }, []);
 
-  const cookieDetails = [
-    {
-      name: '_ga',
-      purpose: 'Google Analytics - Used to distinguish unique users',
-      duration: '2 years',
-      provider: 'Google LLC',
-      type: 'analytics'
-    },
-    {
-      name: '_gid',
-      purpose: 'Google Analytics - Used to distinguish users',
-      duration: '24 hours',
-      provider: 'Google LLC',
-      type: 'analytics'
-    },
-    {
-      name: '_gat',
-      purpose: 'Google Analytics - Used to throttle request rate',
-      duration: '1 minute',
-      provider: 'Google LLC',
-      type: 'analytics'
-    },
-    {
-      name: 'session_id',
-      purpose: 'Maintains user session state',
-      duration: 'Session',
-      provider: 'Zion Tech Group',
-      type: 'essential'
-    },
-    {
-      name: 'csrf_token',
-      purpose: 'Cross-site request forgery protection',
-      duration: 'Session',
-      provider: 'Zion Tech Group',
-      type: 'essential'
-    },
-    {
-      name: 'user_preferences',
-      purpose: 'Stores user interface preferences',
-      duration: '1 year',
-      provider: 'Zion Tech Group',
-      type: 'functional'
-    }
-  ];
-
-  const toggleSection = (sectionId: string) => {
-    setExpandedSection(expandedSection === sectionId ? null : sectionId);
-  };
-
-  const updateCookiePreference = (type: string, enabled: boolean) => {
-    if (type === 'essential') return; // Essential cookies cannot be disabled
-    
+  const updateCookiePreference = (type: string, value: boolean) => {
     setCookiePreferences(prev => ({
       ...prev,
-      [type]: enabled
+      [type]: value
     }));
   };
 
   const savePreferences = () => {
-    // In a real app, this would save preferences and update cookies
+    localStorage.setItem('cookiePreferences', JSON.stringify(cookiePreferences));
+    // Here you would typically send preferences to your backend
     console.log('Cookie preferences saved:', cookiePreferences);
-    // Show success message
-    alert('Cookie preferences saved successfully!');
   };
 
   const acceptAll = () => {
-    setCookiePreferences({
+    const allAccepted = {
       essential: true,
       analytics: true,
       marketing: true,
       functional: true
-    });
-    savePreferences();
+    };
+    setCookiePreferences(allAccepted);
+    localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted));
   };
 
   const rejectAll = () => {
-    setCookiePreferences({
-      essential: true,
+    const allRejected = {
+      essential: true, // Essential cookies cannot be rejected
       analytics: false,
       marketing: false,
       functional: false
-    });
-    savePreferences();
+    };
+    setCookiePreferences(allRejected);
+    localStorage.setItem('cookiePreferences', JSON.stringify(allRejected));
   };
+
+  useEffect(() => {
+    savePreferences();
+  }, [cookiePreferences]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -269,7 +272,7 @@ export default function Cookies() {
                 </button>
                 <button
                   onClick={rejectAll}
-                  className="px-8 py-3 bg-slate-700/50 text-gray-300 font-semibold rounded-lg hover:bg-slate-600/50 transition-all duration-200"
+                  className="px-8 py-3 bg-gradient-to-r from-red-400 to-pink-500 text-white font-semibold rounded-lg hover:from-red-500 hover:to-pink-600 transition-all duration-200 hover:scale-105"
                 >
                   Reject Non-Essential
                 </button>
@@ -282,58 +285,6 @@ export default function Cookies() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Cookie Types Explanation */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Types of Cookies We Use</h2>
-            <p className="text-xl text-gray-300">
-              Understanding the different categories of cookies and their purposes
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cookieTypes.map((type, index) => (
-              <motion.div
-                key={type.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 h-full">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${type.color} rounded-xl mb-6`}>
-                    {React.createElement(type.icon, { className: "w-8 h-8 text-white" })}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-4">{type.name}</h3>
-                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
-                    {type.description}
-                  </p>
-                  
-                  <div className="space-y-2">
-                    <h4 className="text-sm font-semibold text-white">Examples:</h4>
-                    <ul className="space-y-1">
-                      {type.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className="flex items-center text-gray-300 text-xs">
-                          <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                          {example}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -390,7 +341,10 @@ export default function Cookies() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Cookie Management */}
       <section className="py-20">
