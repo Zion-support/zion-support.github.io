@@ -55,10 +55,15 @@ export function AppHeader() {
     { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Personalized marketing campaigns & optimization', category: 'AI & ML' },
     { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML' },
     { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML' },
+<<<<<<< HEAD
+    { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment-ai', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
+=======
     { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
     { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
     { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analyzer', icon: FileText, description: 'Legal document analysis & compliance', category: 'AI & ML' },
     { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', icon: Heart, description: 'Medical image analysis & diagnostics', category: 'AI & ML' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7bb3
     
     // Cloud & DevOps
     { name: 'Cloud DevOps Platform', href: '/services/cloud-devops-platform', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps' },
@@ -122,6 +127,24 @@ export function AppHeader() {
   }, {} as Record<string, typeof services>);
 
   return (
+<<<<<<< HEAD
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+        : 'bg-transparent'
+    }`}>
+      {/* Futuristic Background Effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5 opacity-50"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
+=======
     <>
       <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
@@ -167,6 +190,7 @@ export function AppHeader() {
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300 futuristic-heading neon-text-cyan">
                     Zion Tech Group
                   </h1>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7bb3
                 </div>
                 <div className="absolute inset-0 w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
               </div>
@@ -189,8 +213,15 @@ export function AppHeader() {
                 <Link
                   key={item.name}
                   to={item.href}
+<<<<<<< HEAD
+                  className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-300 group ${
+                    item.current 
+                      ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20' 
+                      : 'text-zion-slate-light hover:text-white hover:bg-zion-slate/20'
+=======
                   className={`text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group futuristic-nav-item ${
                     item.featured ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30' : ''
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7bb3
                   }`}
                 >
                   {item.name}

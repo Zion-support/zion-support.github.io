@@ -480,6 +480,27 @@
   background: linear-gradient(45deg, var(--zion-blue), var(--zion-purple));
 }
 
+<<<<<<< HEAD
+/* Enhanced Focus States */
+.focus-neon:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.3);
+  border-color: var(--zion-cyan);
+}
+
+/* Enhanced Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 20px currentColor;
+=======
 /* High contrast focus styles */
 .high-contrast *:focus {
   outline: 3px solid #ffff00;
@@ -945,10 +966,65 @@
   opacity: 1;
   visibility: visible;
   transform: translateX(-50%) translateY(-8px);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7bb3
 }
 
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
+<<<<<<< HEAD
+  .futuristic-bg {
+    background: 
+      radial-gradient(circle at 50% 50%, rgba(34, 221, 210, 0.1) 0%, transparent 70%),
+      linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+  }
+  
+  .card-futuristic {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
+
+/* Enhanced Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .neon-glow,
+  .neon-pulse,
+  .hologram,
+  .quantum-float,
+  .cyber-grid,
+  .neon-border,
+  .data-stream {
+    animation: none;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  .glass-morphism {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(34, 221, 210, 0.2);
+  }
+  
+  .card-futuristic {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
+    border-color: rgba(34, 221, 210, 0.2);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .futuristic-bg,
+  .quantum-bg,
+  .cyber-bg {
+    background: white !important;
+  }
+  
+  .glass-morphism,
+  .glass-morphism-dark,
+  .card-futuristic {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+=======
   .futuristic-grid {
     background-size: 30px 30px;
   }
@@ -986,5 +1062,6 @@
   .neon-text {
     text-shadow: none;
     color: #000;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7bb3
   }
 }
