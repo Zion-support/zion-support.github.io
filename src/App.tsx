@@ -28,6 +28,10 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Developers = React.lazy(() => import('./pages/Developers'));
+const Demo = React.lazy(() => import('./pages/Demo'));
 
 // New pages
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));

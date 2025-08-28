@@ -250,9 +250,19 @@ const sidebarSections = [
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
   onClose: () => void;
+  contactInfo?: {
+    mobile: string;
+    email: string;
+  };
 }
 
-export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
+export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: EnhancedSidebar2025Props) {
+  const defaultContactInfo = {
+    mobile: '+1 (555) 123-4567',
+    email: 'contact@ziontechgroup.com'
+  };
+  
+  const finalContactInfo = contactInfo || defaultContactInfo;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const router = useLocation();
