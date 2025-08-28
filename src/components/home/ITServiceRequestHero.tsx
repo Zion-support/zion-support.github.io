@@ -73,68 +73,50 @@ export const ITServiceRequestHero: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float-delayed"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
-            Ready to Transform Your Business?
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-          >
-            Get in touch with our technology experts and discover how we can help you 
-            achieve your digital transformation goals with cutting-edge AI solutions.
-          </motion.p>
-        </div>
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="max-w-7xl mx-auto">
+        {/* Hero Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            IT Service Request
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Get expert IT support and solutions tailored to your business needs. 
+            Our team is ready to help you succeed.
+          </p>
+        </motion.div>
 
         {/* Contact Methods */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
         >
           {contactMethods.map((method, index) => (
             <motion.div
-              key={index}
+              key={method.title}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className="group"
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
             >
+              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${method.color} rounded-lg mb-6`}>
+                <method.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{method.title}</h3>
+              <p className="text-gray-300 mb-4">{method.description}</p>
               <a
                 href={method.href}
-                className="block bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 h-full transition-all duration-300 hover:bg-slate-700/50 hover:border-slate-600/50 hover:transform hover:scale-105"
+                className="inline-flex items-center px-6 py-3 bg-zion-cyan hover:bg-zion-blue text-white font-semibold rounded-lg transition-colors"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${method.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <method.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                  {method.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {method.description}
-                </p>
-                
-                <div className="text-cyan-400 font-semibold text-lg group-hover:text-cyan-300 transition-colors duration-300">
-                  {method.action}
-                </div>
+                {method.action}
+                <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </motion.div>
           ))}
@@ -143,96 +125,59 @@ export const ITServiceRequestHero: React.FC = () => {
         {/* Quick Actions */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-16"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
         >
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Quick Actions
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {quickActions.map((action, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="group"
-              >
+          {quickActions.map((action, index) => (
+            <motion.div
+              key={action.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+            >
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
+                  <action.icon className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-1">{action.title}</h3>
+                  <p className="text-gray-300 text-sm">{action.description}</p>
+                </div>
                 <a
                   href={action.href}
-                  className="block bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 rounded-xl p-6 transition-all duration-300 hover:bg-slate-700/30 hover:border-slate-600/30 hover:transform hover:scale-105"
+                  className="text-zion-cyan hover:text-zion-blue transition-colors"
                 >
-                  <div className="flex items-center mb-4">
-                    <action.icon className="w-6 h-6 text-cyan-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                      {action.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 text-sm">
-                    {action.description}
-                  </p>
+                  <ArrowRight className="w-5 h-5" />
                 </a>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-              className="text-center"
-            >
-              <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/30 rounded-xl p-6">
-                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* CTA Section */}
+        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Let's Build Something Amazing Together
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our team of experts is ready to help you navigate the digital landscape 
-              and implement solutions that drive real business value.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                Explore Services
-              </a>
-            </div>
-          </div>
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan/20 rounded-lg mb-4">
+                <stat.icon className="w-8 h-8 text-zion-cyan" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-300 text-sm">{stat.label}</div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
