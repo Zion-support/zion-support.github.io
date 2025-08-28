@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { additionalEnhancedServices } from '../data/additional-real-services'
@@ -310,14 +310,14 @@ export default function Services() {
 								{/* CTA Button */}
 								<div className="flex gap-2">
 									<Link
-										to={service.link}
+										href={service.link}
 										className="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
 									>
 										Learn More
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 									<Link
-										to="/contact"
+										href="/contact"
 										className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
 									>
 										Contact
@@ -416,7 +416,7 @@ export default function Services() {
 
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link
-								to="/contact"
+								href="/contact"
 								className="w-full sm:w-auto rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200"
 							>
 								Get in touch
