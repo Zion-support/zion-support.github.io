@@ -42,6 +42,10 @@ const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPa
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const APIDocumentation = React.lazy(() => import('./pages/APIDocumentation'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 
 // Service pages
 const CybersecurityServices = React.lazy(() => import('./pages/CybersecurityServices.tsx'));
@@ -164,11 +168,11 @@ function App() {
               <Route path="/case-studies" element={<About />} />
               
               {/* Resources Routes */}
-              <Route path="/docs" element={<About />} />
-              <Route path="/api" element={<About />} />
+              <Route path="/docs" element={<Documentation />} />
+              <Route path="/api" element={<APIDocumentation />} />
               <Route path="/training" element={<About />} />
-              <Route path="/webinars" element={<About />} />
-              <Route path="/white-papers" element={<About />} />
+              <Route path="/webinars" element={<Webinars />} />
+              <Route path="/white-papers" element={<WhitePapers />} />
               <Route path="/research" element={<About />} />
               
               {/* Industry Solutions Routes */}
