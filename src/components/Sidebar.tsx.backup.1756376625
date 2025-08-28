@@ -42,6 +42,92 @@ export const Sidebar: React.FC = () => {
 
   const navigation: SidebarItem[] = [
     {
+<<<<<<< HEAD
+      name: 'Home',
+      href: '/',
+      icon: Home
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      children: [
+        { name: 'AI Services', href: '/ai-services', icon: Brain },
+        { name: 'IT Services', href: '/it-services', icon: Cpu },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom },
+        { name: 'Green IT Solutions', href: '/services/green-it', icon: Globe },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: Gauge },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield },
+        { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart }
+      ]
+    },
+    {
+      name: '2026 Services',
+      href: '/services2026',
+      icon: Star,
+      children: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: BookOpen },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users },
+        { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Globe },
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: Target },
+        { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Atom }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target
+    },
+    {
+      name: 'Case Studies',
+      href: '/case-studies',
+      icon: BookOpen
+    },
+    {
+      name: 'Research & Development',
+      href: '/research-development',
+      icon: TrendingUp
+    },
+    {
+      name: 'Company',
+      href: '/about',
+      icon: Users,
+      children: [
+        { name: 'About Us', href: '/about', icon: Users },
+        { name: 'Team', href: '/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Users },
+        { name: 'Partners', href: '/partners', icon: Users }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/blog',
+      icon: BookOpen,
+      children: [
+        { name: 'Blog', href: '/blog', icon: BookOpen },
+        { name: 'News', href: '/news', icon: BookOpen },
+        { name: 'Events', href: '/events', icon: BookOpen },
+        { name: 'Webinars', href: '/webinars', icon: BookOpen },
+        { name: 'White Papers', href: '/white-papers', icon: BookOpen },
+        { name: 'Documentation', href: '/docs', icon: BookOpen }
+      ]
+    },
+    {
+      name: 'Support',
+      href: '/help',
+      icon: HelpCircle,
+      children: [
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'FAQ', href: '/faq', icon: HelpCircle },
+        { name: 'Contact', href: '/contact', icon: MessageCircle },
+        { name: 'Request Quote', href: '/request-quote', icon: DollarSign }
+=======
       title: 'Main Navigation',
       icon: Home,
       items: [
@@ -117,6 +203,7 @@ export const Sidebar: React.FC = () => {
         { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
         { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-47bc
       ]
     }
   ];

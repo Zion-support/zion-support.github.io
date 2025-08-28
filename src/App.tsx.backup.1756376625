@@ -81,10 +81,15 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
 // Service pages - only import existing ones
+<<<<<<< HEAD
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
+const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
+=======
 const Cloud = React.lazy(() => import('./pages/services/Cloud'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const Infrastructure = React.lazy(() => import('./pages/services/Infrastructure'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-47bc
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 
@@ -290,6 +295,82 @@ const NotFound = () => (
 function App() {
   return (
     <ErrorBoundary>
+<<<<<<< HEAD
+      <div className="min-h-screen bg-futuristic">
+        <AppHeader />
+        
+        <main className="flex-1">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/solutions" element={<SolutionsPage />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/ai-solutions" element={<AISolutions />} />
+              <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+              <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+              <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/micro-saas" element={<MicroSaaS />} />
+              <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
+              <Route path="/comprehensive-services" element={<ComprehensiveServicesOverview2027 />} />
+              
+              {/* Service Routes - only for existing pages */}
+              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+              <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+              <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+              <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />
+              <Route path="/services/mobile-feedback-surveys" element={<CustomerFeedbackSurveys />} />
+              <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
+              <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
+              <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              <Route path="/services/ai-seo-auditor" element={<AISEOAuditor />} />
+              <Route path="/services/customer-support-chatbot" element={<CustomerSupportChatbot />} />
+              <Route path="/services/landing-page-generator" element={<LandingPageGenerator />} />
+              <Route path="/services/price-intelligence-service" element={<PriceIntelligenceService />} />
+              <Route path="/services/developer-productivity-copilot" element={<DeveloperProductivityCopilot />} />
+              
+              {/* Catch all route */}
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </Suspense>
+        </main>
+        
+        <Footer />
+        <ChatAssistant />
+        <PerformanceOptimizer />
+      </div>
+=======
       <Router>
         <div className="min-h-screen bg-futuristic">
           <SEO />
@@ -332,6 +413,7 @@ function App() {
           <PerformanceOptimizer />
         </div>
       </Router>
+>>>>>>> origin/cursor/website-audit-and-enhancement-47bc
     </ErrorBoundary>
   );
 }
