@@ -37,10 +37,12 @@ const RevolutionaryServices2030 = React.lazy(() => import('./pages/Revolutionary
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
+const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
 const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -88,8 +90,10 @@ function App() {
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
+                <Route path="/services/showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
+                <Route path="/pricing-2025" element={<ComprehensivePricing2025 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
