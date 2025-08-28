@@ -94,7 +94,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
     }
   };
 
-const UltimateServicesShowcase2025 = () => {
+  return (
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header */}

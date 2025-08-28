@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
+import { PageLoadingSpinner } from './components/ui/ModernLoadingSpinner';
+import { EnhancedSEO } from './components/EnhancedSEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { FloatingActionButton } from './components/FloatingActionButton';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -40,9 +41,13 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 // Simple placeholder pages for missing ones
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
+    <EnhancedSEO 
+      data={{
+        title: "Careers - Zion Tech Group",
+        description: "Join our team of technology experts and help shape the future of AI-powered business solutions.",
+        keywords: ["Careers", "Jobs", "Employment", "Technology", "AI", "Zion Tech Group"],
+        canonicalUrl: "https://ziontechgroup.com/careers"
+      }}
     />
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Careers</h1>
@@ -53,9 +58,13 @@ const Careers = () => (
 
 const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Marketplace - Zion Tech Group"
-      description="Explore our marketplace of AI-powered technology solutions and services."
+    <EnhancedSEO 
+      data={{
+        title: "Marketplace - Zion Tech Group",
+        description: "Explore our marketplace of AI-powered technology solutions and services.",
+        keywords: ["Marketplace", "AI Solutions", "Technology Services", "Digital Transformation", "Zion Tech Group"],
+        canonicalUrl: "https://ziontechgroup.com/marketplace"
+      }}
     />
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
@@ -69,10 +78,26 @@ function App() {
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-futuristic">
+          {/* Enhanced SEO */}
+          <EnhancedSEO
+            data={{
+              title: "Zion Tech Group - AI-Powered Technology Solutions",
+              description: "Leading provider of AI-powered technology solutions, digital transformation, and innovative business solutions. Transform your business with cutting-edge technology.",
+              keywords: ["AI", "Technology", "Business Solutions", "Digital Transformation", "Zion Tech Group", "Machine Learning", "Cloud Computing", "Cybersecurity", "IT Consulting"],
+              ogImage: "/images/zion-tech-group-og.jpg",
+              ogUrl: "https://ziontechgroup.com",
+              canonicalUrl: "https://ziontechgroup.com",
+              language: "en",
+              alternateLanguages: {
+                "es": "https://ziontechgroup.com/es",
+                "pt": "https://ziontechgroup.com/pt"
+              }
+            }}
+          />
           <AppHeader />
           
           <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
+            <Suspense fallback={<PageLoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -108,6 +133,7 @@ function App() {
           <ChatAssistant />
           <PerformanceOptimizer />
           <AccessibilityEnhancer />
+          <FloatingActionButton />
         </div>
       </Router>
     </ErrorBoundary>
