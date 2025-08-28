@@ -361,7 +361,7 @@ export default function ITConsulting() {
                 <span className="text-white font-medium">{industry}</span>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 

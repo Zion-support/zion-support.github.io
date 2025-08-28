@@ -224,7 +224,7 @@ export default function AIAutonomousResearchAssistant() {
             </button>
           </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* Navigation Tabs */}
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">
