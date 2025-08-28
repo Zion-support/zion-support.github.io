@@ -19,6 +19,11 @@ import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
 import Services from "@/pages/Services";
+import Solutions from "@/pages/Solutions";
+import DevOpsCloud from "@/pages/services/DevOpsCloud";
+import Infrastructure from "@/pages/services/Infrastructure";
+import DataAnalytics from "@/pages/services/DataAnalytics";
+import AIBusinessIntelligence from "@/pages/services/ai-business-intelligence";
 import ComprehensiveServices from "@/pages/ComprehensiveServices";
 import AIServices from "@/pages/AIServices";
 import ITServices from "@/pages/ITServices";
@@ -31,11 +36,18 @@ const ContentRoutes = () => {
       <Route path="/about" element={<About />}/>
       <Route path="/contact" element={<Contact />}/>
       <Route path="/services" element={<Services />}/>
+      {/* Solutions overview */}
+      <Route path="/solutions" element={<Solutions />}/>
       <Route path="/comprehensive-services" element={<ComprehensiveServices />}/>
       {/* Dedicated Services Pages */}
       <Route path="/ai-services" element={<AIServices />}/>
       <Route path="/it-services" element={<ITServices />}/>
       <Route path="/micro-saas" element={<MicroSaaS />}/>
+      {/* Service detail routes */}
+      <Route path="/services/devops-cloud" element={<DevOpsCloud />}/>
+      <Route path="/services/it-infrastructure" element={<Infrastructure />}/>
+      <Route path="/services/data-analytics" element={<DataAnalytics />}/>
+      <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />}/>
       {/* Back-compat for CTA link */}
       <Route path="/services/micro-saas-solutions" element={<MicroSaaS />}/>
       <Route path="/privacy" element={<Privacy />}/>
