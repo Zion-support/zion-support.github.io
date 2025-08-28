@@ -15,6 +15,14 @@
   --zion-slate-light: #334155;
   --zion-cyan: #06b6d4;
   --zion-blue: #3b82f6;
+<<<<<<< HEAD
+  --zion-purple: #8b5cf6;
+  --zion-pink: #ec4899;
+  --zion-green: #10b981;
+  --zion-red: #ef4444;
+  --zion-orange: #f97316;
+  --zion-yellow: #eab308;
+=======
   --zion-blue-light: #60a5fa;
   --zion-blue-dark: #2563eb;
   --zion-cyan-50: #ecfeff;
@@ -192,6 +200,7 @@
   --zion-blue-800: #1e40af;
   --zion-blue-900: #1e3a8a;
   --zion-blue-950: #172554;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ae32
 }
 
 * {
@@ -463,6 +472,186 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
+<<<<<<< HEAD
+  background: var(--zion-cyan);
+}
+
+/* Focus Styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply bg-zion-slate text-white font-semibold py-2 px-4 rounded-lg hover:bg-zion-slate-light transition-all duration-300;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-cyan-400/40 transition-all duration-300;
+}
+
+.card-dark {
+  @apply bg-zion-slate border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300;
+}
+
+/* Input Styles */
+.input {
+  @apply bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:border-cyan-500 focus:outline-none transition-colors duration-300;
+}
+
+/* Link Styles */
+.link {
+  @apply text-cyan-300 hover:text-cyan-200 transition-colors duration-300;
+}
+
+/* Text Styles */
+.text-gradient {
+  @apply bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent;
+}
+
+/* Responsive Utilities */
+.container-responsive {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply py-20 px-4 sm:px-6 lg:px-8;
+}
+
+/* Grid Utilities */
+.grid-responsive {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.grid-responsive-2 {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+/* Spacing Utilities */
+.space-y-responsive > * + * {
+  @apply mt-8;
+}
+
+.space-y-responsive-lg > * + * {
+  @apply mt-12;
+}
+
+.space-y-responsive-xl > * + * {
+  @apply mt-16;
+}
+
+/* Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:transform hover:scale-105;
+}
+
+
+
+/* Animation Delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Custom Properties for Zion Theme */
+.zion-bg-primary {
+  background-color: var(--zion-slate);
+}
+
+.zion-bg-secondary {
+  background-color: var(--zion-slate-light);
+}
+
+.zion-bg-dark {
+  background-color: var(--zion-slate-dark);
+}
+
+.zion-text-primary {
+  color: var(--zion-cyan);
+}
+
+.zion-text-secondary {
+  color: var(--zion-blue);
+}
+
+.zion-text-accent {
+  color: var(--zion-purple);
+}
+
+.zion-border {
+  border-color: var(--zion-slate-light);
+}
+
+.zion-border-light {
+  border-color: var(--zion-slate);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .container-responsive {
+    @apply px-4;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4;
+  }
+  
+  .grid-responsive {
+    @apply grid-cols-1 gap-6;
+  }
+  
+  .grid-responsive-2 {
+    @apply grid-cols-1 gap-6;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container-responsive {
+    @apply px-6;
+  }
+  
+  .section-padding {
+    @apply py-18 px-6;
+  }
+  
+  .grid-responsive {
+    @apply grid-cols-2 gap-6;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container-responsive {
+    @apply px-8;
+  }
+  
+  .section-padding {
+    @apply py-20 px-8;
+  }
+  
+  .grid-responsive {
+    @apply grid-cols-3 gap-8;
+  }
+=======
   background: linear-gradient(var(--zion-cyan-light), var(--zion-purple-light));
 }
 
@@ -601,4 +790,5 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ae32
 }

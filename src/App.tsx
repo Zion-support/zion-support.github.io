@@ -186,7 +186,56 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
-export default function App() {
+// New AI Quantum Hybrid Platform
+const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+
+// 2029 Services Showcase
+const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
+
+// Additional pages
+const Marketplace = lazy(() => import('./pages/Marketplace'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const ITConsulting = lazy(() => import('./pages/ITConsulting'));
+const SpaceTech = lazy(() => import('./pages/SpaceTech'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
+
+// Additional service pages
+const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = lazy(() => import('./pages/services/ai-cybersecurity'));
+const AIHRPlatform = lazy(() => import('./pages/services/ai-hr-platform'));
+const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
+const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
+const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
+const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
+
+// Loading spinner component
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="text-center text-white">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mx-auto mb-4"></div>
+      <h2 className="text-2xl font-semibold">Loading...</h2>
+    </div>
+  </div>
+);
+
+// Error fallback component
+const ErrorFallback = ({ error, resetErrorBoundary }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 via-red-800 to-red-900">
+    <div className="text-center text-white">
+      <h1 className="text-6xl font-bold mb-4">Something went wrong</h1>
+      <p className="text-xl mb-8">{error.message}</p>
+      <button
+        onClick={resetErrorBoundary}
+        className="px-6 py-3 bg-white text-red-900 rounded-lg hover:bg-gray-100 transition-colors"
+      >
+        Try again
+      </button>
+    </div>
+  </div>
+);
+
+function App() {
   return (
     <Router>
       <HelmetProvider>
@@ -362,6 +411,9 @@ export default function App() {
                     <Route path="/services/ai-business-intelligence-analytics" element={<AIBusinessIntelligenceAnalytics />} />
                     <Route path="/services/ai-customer-experience-support" element={<AICustomerExperienceSupport />} />
                     <Route path="/services/ai-marketing-automation-personalization" element={<AIMarketingAutomationPersonalization />} />
+                    
+                    {/* New AI Quantum Hybrid Platform */}
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                     
                     {/* 2029 Services Showcase */}
                     <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
