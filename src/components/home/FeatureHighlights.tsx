@@ -1,19 +1,33 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  Brain,
-  Globe,
-  Shield,
-  Zap,
-  Users,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Clock,
-  Heart
+    Award,
+    Brain,
+    CheckCircle,
+    Globe,
+    Shield
 } from 'lucide-react';
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6
+    }
+  }
+};
 
 const highlights = [
   {
