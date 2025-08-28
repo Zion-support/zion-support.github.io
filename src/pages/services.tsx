@@ -53,6 +53,50 @@ const Services: React.FC = () => {
     {
       category: 'ai',
       icon: Brain,
+      title: "AI Business Intelligence Elite",
+      description: "Advanced AI-powered analytics platform with real-time insights, predictive analytics, and automated reporting.",
+      features: ["GPT-4 & Claude 3.5 Integration", "Real-time BI", "Predictive Analytics", "Enterprise Security"],
+      pricing: "$2,500 - $12,000/month",
+      color: "from-purple-500 to-pink-500",
+      featured: true,
+      href: "/services/ai-business-intelligence-elite"
+    },
+    {
+      category: 'security',
+      icon: Shield,
+      title: "AI Cybersecurity Elite",
+      description: "Military-grade AI-powered cybersecurity platform with real-time threat detection and automated response.",
+      features: ["AI Threat Detection", "Zero-Day Protection", "Automated Response", "Compliance Ready"],
+      pricing: "$3,500 - $18,000/month",
+      color: "from-red-500 to-orange-500",
+      featured: true,
+      href: "/services/ai-cybersecurity-elite"
+    },
+    {
+      category: 'quantum',
+      icon: Atom,
+      title: "Quantum Computing Elite",
+      description: "Access to cutting-edge quantum computing with AI-quantum hybrid systems for complex problem solving.",
+      features: ["1000+ Qubit Access", "AI-Quantum Hybrid", "Quantum-Safe Crypto", "Global Network"],
+      pricing: "$8,500 - $45,000/month",
+      color: "from-blue-500 to-cyan-500",
+      featured: true,
+      href: "/services/quantum-computing-elite"
+    },
+    {
+      category: 'micro-saas',
+      icon: Rocket,
+      title: "Micro-SaaS Platform Elite",
+      description: "Complete platform to launch and scale your micro-SaaS business with proven templates and automation.",
+      features: ["Rapid Launch", "Built-in Payments", "AI Automation", "Multi-tenant Architecture"],
+      pricing: "$2,500 - $12,000/month",
+      color: "from-green-500 to-emerald-500",
+      featured: true,
+      href: "/services/micro-saas-platform-elite"
+    },
+    {
+      category: 'ai',
+      icon: Brain,
       title: "AI Development & Strategy",
       description: "Custom AI models, machine learning solutions, and strategic AI roadmapping for your business.",
       features: ["Custom AI Models", "ML Strategy", "Data Analytics", "AI Integration"],
@@ -288,10 +332,23 @@ const Services: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                className={`bg-white/10 backdrop-blur-sm border-2 rounded-2xl p-8 transition-all duration-300 group hover:transform hover:scale-105 ${
+                  service.featured 
+                    ? 'border-purple-500/60 hover:border-purple-400/80 shadow-2xl shadow-purple-500/25' 
+                    : 'border-white/20 hover:bg-white/15 hover:border-cyan-400/40'
+                }`}
               >
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className="relative">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  {service.featured && (
+                    <div className="absolute -top-2 -right-2">
+                      <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-bold">
+                        ELITE
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
@@ -311,12 +368,21 @@ const Services: React.FC = () => {
                 
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.pricing}</div>
                 
-                <a
-                  href="/contact"
-                  className="inline-flex items-center text-cyan-300 hover:text-cyan-200 font-semibold group-hover:translate-x-1 transition-transform duration-200"
-                >
-                  Get Started <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                {service.href ? (
+                  <a
+                    href={service.href}
+                    className="inline-flex items-center text-cyan-300 hover:text-cyan-200 font-semibold group-hover:translate-x-1 transition-transform duration-200"
+                  >
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                ) : (
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center text-cyan-300 hover:text-cyan-200 font-semibold group-hover:translate-x-1 transition-transform duration-200"
+                  >
+                    Get Started <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>

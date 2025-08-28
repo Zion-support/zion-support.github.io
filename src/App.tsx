@@ -99,6 +99,12 @@ const HelpdeskPlatform = lazy(() => import('./pages/services/HelpdeskPlatform'))
 const DSRPortal = lazy(() => import('./pages/services/DSRPortal'));
 const SecurityHeadersCSP = lazy(() => import('./pages/services/SecurityHeadersCSP'));
 
+// Elite Services 2024
+const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
+const AICybersecurityElite = lazy(() => import('./pages/services/AICybersecurityElite'));
+const QuantumComputingElite = lazy(() => import('./pages/services/QuantumComputingElite'));
+const MicroSaaSPlatformElite = lazy(() => import('./pages/services/MicroSaaSPlatformElite'));
+
 // New AI-powered micro SAAS services
 const AIProjectManagement = lazy(() => import('./pages/services/AIProjectManagement'));
 const AICustomerSupportAutomation = lazy(() => import('./pages/services/AICustomerSupportAutomation'));
@@ -349,6 +355,12 @@ function App() {
                     <Route path="/services/helpdesk-platform" element={<HelpdeskPlatform />} />
                     <Route path="/services/dsr-portal" element={<DSRPortal />} />
                     <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+                    
+                    {/* Elite Services 2024 */}
+                    <Route path="/services/ai-business-intelligence-elite" element={<AIBusinessIntelligenceElite />} />
+                    <Route path="/services/ai-cybersecurity-elite" element={<AICybersecurityElite />} />
+                    <Route path="/services/quantum-computing-elite" element={<QuantumComputingElite />} />
+                    <Route path="/services/micro-saas-platform-elite" element={<MicroSaaSPlatformElite />} />
                     <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
                     <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />

@@ -77,6 +77,17 @@ interface FooterSection {
 
 const footerSections = [
   {
+    title: 'Contact Information',
+    icon: Phone,
+    links: [
+      { name: 'Phone: +1 (302) 464-0950', path: 'tel:+13024640950', icon: Phone },
+      { name: 'Email: kleber@ziontechgroup.com', path: 'mailto:kleber@ziontechgroup.com', icon: Mail },
+      { name: 'Address: 364 E Main St STE 1008', path: '#', icon: MapPin },
+      { name: 'Middletown, DE 19709', path: '#', icon: MapPin },
+      { name: 'Website: ziontechgroup.com', path: 'https://ziontechgroup.com', icon: Globe, external: true }
+    ]
+  },
+  {
     title: 'Company',
     icon: Globe,
     links: [
@@ -89,6 +100,16 @@ const footerSections = [
       { name: 'News', path: '/news', icon: Newspaper },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
       { name: 'Help Center', path: '/help', icon: HelpCircle }
+    ]
+  },
+  {
+    title: 'Elite Services 2024',
+    icon: Star,
+    links: [
+      { name: 'AI Business Intelligence Elite', path: '/services/ai-business-intelligence-elite', icon: Brain },
+      { name: 'AI Cybersecurity Elite', path: '/services/ai-cybersecurity-elite', icon: Shield },
+      { name: 'Quantum Computing Elite', path: '/services/quantum-computing-elite', icon: Atom },
+      { name: 'Micro-SaaS Platform Elite', path: '/services/micro-saas-platform-elite', icon: Rocket },
     ]
   },
   {

@@ -84,6 +84,10 @@ export function AppHeader() {
   ];
 
   const services = [
+    { name: 'AI Business Intelligence Elite', href: '/services/ai-business-intelligence-elite', icon: Brain, description: 'Advanced AI Analytics Platform' },
+    { name: 'AI Cybersecurity Elite', href: '/services/ai-cybersecurity-elite', icon: Shield, description: 'Military-Grade AI Security' },
+    { name: 'Quantum Computing Elite', href: '/services/quantum-computing-elite', icon: Atom, description: 'Next-Gen Quantum Solutions' },
+    { name: 'Micro-SaaS Platform Elite', href: '/services/micro-saas-platform-elite', icon: Rocket, description: 'Complete SaaS Platform' },
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
