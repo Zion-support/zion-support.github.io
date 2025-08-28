@@ -806,6 +806,82 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
+<<<<<<< HEAD
+  background: linear-gradient(135deg, #06b6d4, #2563eb);
+}
+
+/* Enhanced Selection */
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #ffffff;
+}
+
+/* Enhanced Focus States */
+.focus-futuristic:focus {
+  outline: none;
+  box-shadow: 
+    0 0 0 3px rgba(34, 211, 238, 0.1),
+    0 0 0 1px rgba(34, 211, 238, 0.5);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Enhanced Transitions */
+.transition-futuristic {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-futuristic-fast {
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-futuristic-slow {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Shadows */
+.shadow-futuristic {
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(34, 211, 238, 0.1);
+}
+
+.shadow-futuristic-hover:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(34, 211, 238, 0.2);
+}
+
+/* Enhanced Gradients */
+.gradient-futuristic-primary {
+  background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 50%, #8b5cf6 100%);
+}
+
+.gradient-futuristic-secondary {
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+}
+
+.gradient-futuristic-accent {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .card-futuristic {
+    backdrop-filter: blur(10px);
+  }
+  
+  .btn-futuristic:hover {
+    transform: none;
+  }
+  
+  .hover-quantum:hover {
+    transform: none;
+=======
   background: linear-gradient(var(--zion-cyan-light), var(--zion-purple-light));
 }
 
@@ -1195,11 +1271,31 @@ html {
   
   .btn-futuristic:hover {
     transform: translateY(-1px);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dc5
   }
 }
 
 /* Enhanced Accessibility */
 @media (prefers-reduced-motion: reduce) {
+<<<<<<< HEAD
+  .neon-glow,
+  .cyber-pulse,
+  .matrix-rain,
+  .hologram-flicker,
+  .energy-field,
+  .quantum-shift,
+  .neural-network {
+    animation: none;
+  }
+  
+  .btn-futuristic::before {
+    display: none;
+  }
+  
+  .loading-futuristic::after {
+    animation: none;
+  }
+=======
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -1464,4 +1560,5 @@ html {
   box-shadow: 
     0 10px 25px rgba(14, 165, 233, 0.3),
     0 0 20px rgba(14, 165, 233, 0.1);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dc5
 }

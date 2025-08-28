@@ -40,9 +40,15 @@ export default function AppHeader() {
   // Organized services by category with 2028 updates
   const services = [
     // Featured & New Services
+<<<<<<< HEAD
+    { name: 'Enhanced 2025 Services', href: '/enhanced-services-showcase-2025', icon: Star, description: 'Revolutionary AI & Innovation Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
+    { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Cutting-edge AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
+    { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Next-gen Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
+=======
     { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true },
     { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
     { name: '2029 Services Overview', href: '/innovative-services-showcase-2029', icon: Star, description: 'Future of AI & Emerging Technologies', category: 'Featured', featured: true },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dc5
     
     // AI & Machine Learning
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },

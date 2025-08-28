@@ -80,6 +80,13 @@ const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensiveP
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
 
+<<<<<<< HEAD
+// Service pages
+const AIServices = createLazyComponent(() => import('./pages/AIServices'));
+const ITServices = createLazyComponent(() => import('./pages/ITServices'));
+const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
+=======
 // New 2029 services showcase
 const InnovativeServicesShowcase2029 = React.lazy(() => import('./pages/InnovativeServicesShowcase2029'));
 
@@ -87,6 +94,7 @@ const InnovativeServicesShowcase2029 = React.lazy(() => import('./pages/Innovati
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dc5
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -347,10 +355,16 @@ function App() {
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
               
+<<<<<<< HEAD
+              {/* 2028 Services */}
+              <Route path="/ultimate-services-showcase-2028" element={<UltimateServicesShowcase2028 />} />
+              <Route path="/services-2028" element={<UltimateServicesShowcase2028 />} />
+=======
               {/* 2029 Services Showcase */}
               <Route path="/innovative-services-showcase-2029" element={<InnovativeServicesShowcase2029 />} />
               <Route path="/services-2029" element={<InnovativeServicesShowcase2029 />} />
               <Route path="/2029-services" element={<InnovativeServicesShowcase2029 />} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dc5
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -378,7 +392,12 @@ function App() {
             </Routes>
           </Suspense>
         </main>
+<<<<<<< HEAD
+        
+        <Footer />
+=======
         <EnhancedFooter />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4dc5
         <ChatAssistant />
         <PerformanceOptimizer />
         <AccessibilityEnhancer enabled={true} showControls={false} />
