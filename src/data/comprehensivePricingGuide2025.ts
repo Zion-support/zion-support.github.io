@@ -518,7 +518,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025 = {
       "Penetration testing",
       "Vulnerability assessments"
     ]
-=======
+
 
 export interface PricingTier {
   id: string;
@@ -1180,7 +1180,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
       channels: ["Email", "Phone", "Chat", "Video"],
       sla: "99.99% uptime"
     }
->>>>>>> 4aec4a3aa7515629666f58b76d9f80ed676b3c14
+>
   }
 };
 
