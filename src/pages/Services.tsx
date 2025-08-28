@@ -6,287 +6,203 @@ import {
   Cloud, 
   Shield, 
   Zap, 
-  Users, 
-  BarChart3, 
-  Globe, 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Network, 
-  Smartphone, 
-  FileText, 
-  Target, 
-  TrendingUp, 
-  Sparkles, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Heart, 
-  Lock, 
-  Eye, 
   Atom, 
-  Leaf, 
-  Gamepad2, 
-  Coins, 
-  Satellite, 
-  Activity, 
-  MessageCircle, 
-  Server, 
   ShoppingCart, 
-  Clock, 
-  Code, 
-  BookOpen, 
-  Truck, 
+  Star,
+  Rocket,
   Building,
-  DollarSign,
+  Heart,
+  Truck,
+  Network,
+  Eye,
+  Lock,
+  BarChart3,
+  MessageCircle,
+  Target,
+  TrendingUp,
+  Code,
+  Server,
+  Smartphone,
+  Database,
+  Clock,
+  BookOpen,
   Briefcase,
   Newspaper,
-  HelpCircle,
-  Video,
-  TestTube,
-  GraduationCap,
+  Satellite,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Cpu,
+  PenTool,
   GitFork,
-  ExternalLink,
-  ChevronDown,
-  Copyright,
-  MessageSquare
+  Users,
+  FileText,
+  HelpCircle,
+  DollarSign,
+  Mail,
+  Video,
+  GraduationCap,
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
-
-interface Service {
-  name: string;
-  description: string;
-  href: string;
-  icon: React.ComponentType<any>;
-  color: string;
-  features: string[];
-}
 
 interface ServiceCategory {
   title: string;
+  icon: any;
   description: string;
-  icon: React.ComponentType<any>;
   color: string;
-  services: Service[];
+  services: Array<{
+    name: string;
+    path: string;
+    description: string;
+    featured?: boolean;
+  }>;
 }
-
-const featuredServices = [
-  {
-    name: 'AI Solutions',
-    href: '/ai-services',
-    icon: Brain,
-    color: 'from-purple-500 to-pink-500'
-  },
-  {
-    name: 'Cloud & DevOps',
-    href: '/services/cloud-devops',
-    icon: Cloud,
-    color: 'from-blue-500 to-cyan-500'
-  },
-  {
-    name: 'Cybersecurity',
-    href: '/services/cybersecurity',
-    icon: Shield,
-    color: 'from-red-500 to-orange-500'
-  },
-  {
-    name: 'Micro SaaS',
-    href: '/micro-saas',
-    icon: Zap,
-    color: 'from-green-500 to-emerald-500'
-  }
-];
-
-const featuredCategories = [
-  {
-    title: 'AI-Powered Solutions',
-    desc: 'Cutting-edge artificial intelligence services',
-    href: '/ai-services'
-  },
-  {
-    title: 'Cloud Infrastructure',
-    desc: 'Scalable cloud solutions and DevOps',
-    href: '/services/cloud-devops'
-  },
-  {
-    title: 'Cybersecurity',
-    desc: 'Advanced security and compliance',
-    href: '/services/cybersecurity'
-  }
-];
 
 const serviceCategories: ServiceCategory[] = [
   {
     title: 'AI & Machine Learning',
-    description: 'Transform your business with cutting-edge AI solutions',
     icon: Brain,
-    color: 'from-purple-500 to-pink-500',
+    description: 'Advanced AI-powered solutions and automation',
+    color: 'from-zion-cyan to-zion-purple',
     services: [
-      {
-        name: 'AI Workflow Orchestrator',
-        description: 'Automate complex business processes with AI',
-        href: '/services/ai-workflow-orchestrator',
-        icon: TrendingUp,
-        color: 'from-purple-500 to-pink-500',
-        features: ['Process Automation', 'Intelligent Routing', 'Performance Analytics']
-      },
-      {
-        name: 'AI Data Governance Platform',
-        description: 'Ensure data quality and compliance',
-        href: '/services/ai-data-governance-platform',
-        icon: Shield,
-        color: 'from-blue-500 to-cyan-500',
-        features: ['Data Quality', 'Compliance Monitoring', 'Risk Assessment']
-      },
-      {
-        name: 'AI Customer Experience Analytics',
-        description: 'Understand customer behavior with AI insights',
-        href: '/services/ai-customer-experience-analytics',
-        icon: BarChart3,
-        color: 'from-green-500 to-emerald-500',
-        features: ['Behavior Analysis', 'Predictive Insights', 'Personalization']
-      }
+      { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', description: 'AI-powered workflow automation', featured: true },
+      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', description: 'AI-powered data governance', featured: true },
+      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', description: 'AI-powered customer insights' },
+      { name: 'AI Business Intelligence Analytics', path: '/services/ai-business-intelligence-analytics', description: 'Advanced analytics & ML insights' },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
+      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
+      { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' },
+      { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', description: 'AI-powered candidate evaluation' },
+      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', description: 'Automated content creation' },
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
+      { name: 'AI Project Management', path: '/services/ai-project-management', description: 'AI-driven project optimization' },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', description: 'Intelligent financial insights' },
+      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', description: 'AI-powered financial risk assessment' },
+      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', description: 'Automated code security analysis' },
+      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', description: 'AI-driven DevOps automation' },
+      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', description: 'Enhanced customer experience' },
+      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', description: 'Personalized marketing automation' },
+      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', description: 'Quantum-AI integration platform' },
+      { name: 'AI Quantum Financial Trading', path: '/services/ai-quantum-financial-trading', description: 'Quantum-AI trading platform' },
+      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', description: 'AI-powered supply chain automation' },
+      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', description: 'AI-powered threat detection' }
     ]
   },
   {
-    title: 'Cloud & Infrastructure',
-    description: 'Build scalable and resilient cloud solutions',
+    title: 'Cloud & DevOps',
     icon: Cloud,
+    description: 'Infrastructure, automation, and cloud solutions',
     color: 'from-blue-500 to-cyan-500',
     services: [
-      {
-        name: 'Cloud DevOps',
-        description: 'Streamline development and deployment',
-        href: '/services/cloud-devops',
-        icon: Zap,
-        color: 'from-blue-500 to-cyan-500',
-        features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring']
-      },
-      {
-        name: 'IT Infrastructure',
-        description: 'Modernize your technology foundation',
-        href: '/services/it-infrastructure',
-        icon: Server,
-        color: 'from-gray-500 to-slate-500',
-        features: ['Network Design', 'Hardware Optimization', 'Security']
-      },
-      {
-        name: 'Data Analytics',
-        description: 'Turn data into actionable insights',
-        href: '/services/data-analytics',
-        icon: BarChart3,
-        color: 'from-green-500 to-emerald-500',
-        features: ['Data Processing', 'Visualization', 'Machine Learning']
-      }
-    ]
-  },
-  {
-    title: 'Cybersecurity & Compliance',
-    description: 'Protect your business with advanced security solutions',
-    icon: Shield,
-    color: 'from-red-500 to-orange-500',
-    services: [
-      {
-        name: 'Zero Trust Network Access',
-        description: 'Secure access to your network resources',
-        href: '/services/zero-trust-network-access',
-        icon: Lock,
-        color: 'from-red-500 to-orange-500',
-        features: ['Identity Verification', 'Access Control', 'Threat Detection']
-      },
-      {
-        name: 'AI Compliance Assistant',
-        description: 'Automate compliance monitoring and reporting',
-        href: '/services/ai-compliance-assistant',
-        icon: CheckCircle,
-        color: 'from-green-500 to-emerald-500',
-        features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment']
-      },
-      {
-        name: 'Security Headers CSP',
-        description: 'Implement content security policies',
-        href: '/services/security-headers-csp',
-        icon: Shield,
-        color: 'from-blue-500 to-cyan-500',
-        features: ['Content Security', 'XSS Protection', 'Data Integrity']
-      }
+      { name: 'Cloud DevOps', path: '/services/cloud-devops', description: 'Infrastructure automation & scaling', featured: true },
+      { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
+      { name: 'FinOps Advisor', path: '/services/finops-advisor', description: 'Cloud cost optimization' },
+      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', description: 'Financial operations automation' },
+      { name: 'IT Consulting', path: '/it-consulting', description: 'Technology strategy & planning' },
+      { name: 'Cybersecurity Solutions', path: '/services/cybersecurity', description: 'Security & compliance services' },
+      { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence & insights' },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', description: 'End-to-end digital transformation' }
     ]
   },
   {
     title: 'Micro SaaS Solutions',
-    description: 'Specialized software solutions for specific business needs',
     icon: Zap,
+    description: 'Specialized software-as-a-service applications',
     color: 'from-green-500 to-emerald-500',
     services: [
-      {
-        name: 'AI Sales Copilot',
-        description: 'Enhance sales performance with AI assistance',
-        href: '/services/ai-sales-copilot',
-        icon: Users,
-        color: 'from-purple-500 to-pink-500',
-        features: ['Lead Scoring', 'Sales Automation', 'Performance Analytics']
-      },
-      {
-        name: 'Micro CRM',
-        description: 'Streamlined customer relationship management',
-        href: '/services/micro-crm',
-        icon: Users,
-        color: 'from-blue-500 to-cyan-500',
-        features: ['Contact Management', 'Sales Tracking', 'Customer Insights']
-      },
-      {
-        name: 'Website Analytics',
-        description: 'Comprehensive website performance insights',
-        href: '/services/website-analytics',
-        icon: BarChart3,
-        color: 'from-green-500 to-emerald-500',
-        features: ['Performance Metrics', 'User Behavior', 'Conversion Tracking']
-      }
+      { name: 'Micro CRM', path: '/services/micro-crm', description: 'Lightweight customer relationship management', featured: true },
+      { name: 'Website Analytics', path: '/services/website-analytics', description: 'Comprehensive website insights' },
+      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', description: 'Affiliate program management' },
+      { name: 'Mobile Survey', path: '/services/mobile-survey', description: 'Mobile-first survey platform' },
+      { name: 'Customer Feedback Surveys', path: '/services/customer-feedback-surveys', description: 'Customer insights & feedback' },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', description: 'Automated email campaigns' },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', description: 'Audio content transcription' },
+      { name: 'Returns Management', path: '/services/returns-management', description: 'Streamlined returns processing' }
+    ]
+  },
+  {
+    title: 'Emerging Technologies',
+    icon: Atom,
+    description: 'Cutting-edge technology solutions',
+    color: 'from-purple-500 to-pink-500',
+    services: [
+      { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Quantum computing solutions', featured: true },
+      { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', description: 'Edge computing for IoT' },
+      { name: 'Space Technology', path: '/services/space-tech', description: 'Space and aerospace solutions' },
+      { name: 'Digital Twin', path: '/services/digital-twin', description: 'Digital twin technology' },
+      { name: 'Blockchain Solutions', path: '/services/blockchain', description: 'Blockchain & Web3 solutions' },
+      { name: 'Green IT Solutions', path: '/services/green-it', description: 'Sustainable technology solutions' },
+      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', description: 'Modern security architecture' },
+      { name: 'Security Headers & CSP', path: '/services/security-headers-csp', description: 'Web security hardening' }
+    ]
+  },
+  {
+    title: 'Industry Solutions',
+    icon: Building,
+    description: 'Industry-specific technology solutions',
+    color: 'from-orange-500 to-red-500',
+    services: [
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Large-scale business solutions', featured: true },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare technology solutions' },
+      { name: 'Financial Solutions', path: '/financial-solutions', description: 'Financial technology solutions' },
+      { name: 'Manufacturing Solutions', path: '/manufacturing-solutions', description: 'Smart manufacturing technology' },
+      { name: 'Retail Solutions', path: '/retail-solutions', description: 'Retail technology solutions' },
+      { name: 'Education Solutions', path: '/education-solutions', description: 'Educational technology solutions' },
+      { name: 'Government Solutions', path: '/government-solutions', description: 'Public sector technology' },
+      { name: 'Non-Profit Solutions', path: '/nonprofit-solutions', description: 'Technology for social impact' }
+    ]
+  },
+  {
+    title: 'Support & Resources',
+    icon: HelpCircle,
+    description: 'Training, support, and educational resources',
+    color: 'from-indigo-500 to-purple-500',
+    services: [
+      { name: 'Training Programs', path: '/training', description: 'Professional training programs', featured: true },
+      { name: 'Support Center', path: '/support', description: 'Technical support and help' },
+      { name: 'Documentation', path: '/documentation', description: 'Technical documentation' },
+      { name: 'API Documentation', path: '/api', description: 'API reference and guides' },
+      { name: 'Developer Portal', path: '/developer-portal', description: 'Developer resources' },
+      { name: 'White Papers', path: '/white-papers', description: 'Technical documentation' },
+      { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
+      { name: 'Research & Development', path: '/research', description: 'Innovation and research' }
     ]
   }
+];
+
+const featuredServices = [
+  { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+  { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Micro CRM', href: '/services/micro-crm', icon: Zap, color: 'from-green-500 to-emerald-500' },
+  { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, color: 'from-purple-500 to-pink-500' }
+];
+
+const featuredCategories = [
+  { title: 'AI & Machine Learning', desc: 'Advanced AI solutions and automation', href: '/ai-services' },
+  { title: 'Cloud & Infrastructure', desc: 'Scalable cloud solutions', href: '/it-services' },
+  { title: 'Micro SaaS Platform', desc: 'Specialized SaaS applications', href: '/micro-saas' }
 ];
 
 export default function Services() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light"></div>
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        </div>
-
-        {/* Floating Particles */}
-        <div className="absolute inset-0">
-          {[...Array(15)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
-              animate={{
-                x: [0, 50, 0],
-                y: [0, -50, 0],
-                opacity: [0.1, 0.5, 0.1],
-              }}
-              transition={{
-                duration: 4 + i * 0.3,
-                repeat: Infinity,
-                delay: i * 0.2,
-                ease: "easeInOut"
-              }}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="relative max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+                <Zap className="w-10 h-10 text-white" />
+              </div>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
               Our Services
             </h1>
@@ -390,31 +306,30 @@ export default function Services() {
                       key={service.name}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+                      transition={{ duration: 0.4, delay: serviceIndex * 0.05 }}
                       viewport={{ once: true }}
-                      className="group"
                     >
                       <Link
-                        to={service.href}
-                        className="block bg-zion-slate/30 rounded-xl p-6 border border-zion-slate/50 hover:border-cyan-400/50 transition-all duration-300 hover:bg-zion-slate/50"
+                        to={service.path}
+                        className={`block p-6 rounded-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/10 ${
+                          service.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10' : 'bg-zion-slate/30'
+                        }`}
                       >
-                        <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                          <service.icon className="w-6 h-6 text-white" />
+                        <div className="flex items-start justify-between mb-3">
+                          <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                            {service.name}
+                          </h3>
+                          {service.featured && (
+                            <Star className="w-5 h-5 text-yellow-400" />
+                          )}
                         </div>
-                        <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                          {service.name}
-                        </h3>
-                        <p className="text-gray-400 mb-4 text-sm">
+                        <p className="text-gray-300 text-sm leading-relaxed">
                           {service.description}
                         </p>
-                        <ul className="space-y-2">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                          Learn More
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                        </div>
                       </Link>
                     </motion.div>
                   ))}
@@ -426,34 +341,33 @@ export default function Services() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-purple-dark to-zion-cyan">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-cyan-400/20 rounded-2xl p-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how our innovative solutions can help you achieve your goals and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-zion-purple-dark font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/comprehensive-services-showcase-2025"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-purple-dark transition-colors duration-300"
+                to="/pricing"
+                className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
               >
-                View All Services
-                <ChevronDown className="w-5 h-5 ml-2" />
+                View Pricing
               </Link>
             </div>
           </motion.div>
