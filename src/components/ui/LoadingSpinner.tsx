@@ -50,7 +50,7 @@ export function LoadingSpinner({
           transition={{ delay: 0.2 }}
         >
           <span className="text-slate-300 font-medium">{text}</span>
-        </motion.div>
+        </motion.p>
       )}
       
       <span className="sr-only">Loading...</span>
@@ -128,14 +128,14 @@ export function LoadingSkeleton({
     <div className={`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, i) => (
         <motion.div
-          key={index}
+          key={i}
           className="h-4 bg-gray-300 rounded animate-pulse"
           style={{
             width: `${Math.random() * 40 + 60}%`
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.1 }}
+          transition={{ delay: i * 0.1 }}
         />
       ))}
     </div>
