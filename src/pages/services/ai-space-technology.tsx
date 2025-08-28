@@ -2,11 +2,9 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Cpu, 
-  Brain, 
+  Rocket, 
   Zap, 
-  Network, 
-  Database, 
+  Brain, 
   Shield, 
   Target, 
   CheckCircle,
@@ -24,7 +22,6 @@ import {
   Server,
   Smartphone,
   Monitor,
-  Globe,
   Clock,
   Activity,
   Lock,
@@ -44,121 +41,385 @@ import {
   Bluetooth,
   Radio,
   Satellite,
-  Car
+  Building,
+  Factory,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Cpu,
+  Database,
+  Layers,
+  Grid,
+  Box,
+  Truck,
+  Warehouse,
+  Store,
+  Home,
+  Office,
+  Hospital,
+  School,
+  Bank,
+  Government,
+  Military,
+  Space,
+  Planet,
+  Star as StarIcon,
+  Moon,
+  Sun,
+  Earth,
+  Globe2,
+  Map,
+  Navigation,
+  Compass,
+  Location,
+  Pin,
+  Marker,
+  Flag,
+  Signal,
+  Wifi2,
+  Bluetooth2,
+  Radio2,
+  Satellite2,
+  Antenna,
+  Tower,
+  Cell,
+  Network2,
+  Connection,
+  Link,
+  Chain,
+  Bridge,
+  Gateway,
+  Router,
+  Switch,
+  Hub,
+  Node,
+  Point,
+  Center,
+  Core,
+  Base,
+  Station,
+  Terminal,
+  Interface,
+  Panel,
+  Dashboard,
+  Screen,
+  Display,
+  Monitor2,
+  Laptop,
+  Desktop,
+  Tablet,
+  Mobile,
+  Phone2,
+  Smartphone2,
+  Watch,
+  Camera,
+  Microphone,
+  Speaker,
+  Headphones,
+  Keyboard,
+  Mouse,
+  Printer,
+  Scanner,
+  Projector,
+  Sensor,
+  Detector,
+  Meter,
+  Gauge2,
+  Thermometer,
+  Barometer,
+  Hygrometer,
+  Anemometer,
+  RainGauge,
+  SnowGauge,
+  WindVane,
+  WeatherVane,
+  Compass2,
+  Altimeter,
+  Speedometer,
+  Odometer,
+  Tachometer,
+  Voltmeter,
+  Ammeter,
+  Ohmmeter,
+  Multimeter,
+  Oscilloscope,
+  SpectrumAnalyzer,
+  LogicAnalyzer,
+  ProtocolAnalyzer,
+  NetworkAnalyzer,
+  PerformanceAnalyzer,
+  SecurityAnalyzer,
+  CodeAnalyzer,
+  DataAnalyzer,
+  TextAnalyzer,
+  ImageAnalyzer,
+  VideoAnalyzer,
+  AudioAnalyzer,
+  SignalAnalyzer,
+  WaveformAnalyzer,
+  FrequencyAnalyzer,
+  TimeAnalyzer,
+  SpaceAnalyzer,
+  PatternAnalyzer,
+  TrendAnalyzer,
+  CorrelationAnalyzer,
+  RegressionAnalyzer,
+  ClassificationAnalyzer,
+  ClusteringAnalyzer,
+  AssociationAnalyzer,
+  SequenceAnalyzer,
+  TimeSeriesAnalyzer,
+  SpatialAnalyzer,
+  TemporalAnalyzer,
+  CausalAnalyzer,
+  PredictiveAnalyzer,
+  PrescriptiveAnalyzer,
+  DiagnosticAnalyzer,
+  DescriptiveAnalyzer,
+  ExploratoryAnalyzer,
+  ConfirmatoryAnalyzer,
+  InferentialAnalyzer,
+  BayesianAnalyzer,
+  FrequentistAnalyzer,
+  ParametricAnalyzer,
+  NonParametricAnalyzer,
+  SemiParametricAnalyzer,
+  RobustAnalyzer,
+  AdaptiveAnalyzer,
+  OnlineAnalyzer,
+  BatchAnalyzer,
+  StreamAnalyzer,
+  RealTimeAnalyzer,
+  NearRealTimeAnalyzer,
+  OfflineAnalyzer,
+  InteractiveAnalyzer,
+  AutomatedAnalyzer,
+  ManualAnalyzer,
+  AssistedAnalyzer,
+  GuidedAnalyzer,
+  SelfLearningAnalyzer,
+  SupervisedAnalyzer,
+  UnsupervisedAnalyzer,
+  SemiSupervisedAnalyzer,
+  ReinforcementAnalyzer,
+  ActiveAnalyzer,
+  PassiveAnalyzer,
+  ProactiveAnalyzer,
+  ReactiveAnalyzer,
+  AdaptiveAnalyzer2,
+  LearningAnalyzer,
+  EvolvingAnalyzer,
+  GrowingAnalyzer,
+  ExpandingAnalyzer,
+  ScalingAnalyzer,
+  OptimizingAnalyzer,
+  TuningAnalyzer,
+  CalibratingAnalyzer,
+  AdjustingAnalyzer,
+  ModifyingAnalyzer,
+  ChangingAnalyzer,
+  TransformingAnalyzer,
+  ConvertingAnalyzer,
+  TranslatingAnalyzer,
+  InterpretingAnalyzer,
+  UnderstandingAnalyzer,
+  ComprehendingAnalyzer,
+  GraspingAnalyzer,
+  CapturingAnalyzer,
+  ExtractingAnalyzer,
+  MiningAnalyzer,
+  DiscoveringAnalyzer,
+  FindingAnalyzer,
+  LocatingAnalyzer,
+  IdentifyingAnalyzer,
+  RecognizingAnalyzer,
+  DetectingAnalyzer,
+  SensingAnalyzer,
+  MonitoringAnalyzer,
+  TrackingAnalyzer,
+  FollowingAnalyzer,
+  PursuingAnalyzer,
+  ChasingAnalyzer,
+  HuntingAnalyzer,
+  SearchingAnalyzer,
+  ExploringAnalyzer,
+  InvestigatingAnalyzer,
+  ExaminingAnalyzer,
+  InspectingAnalyzer,
+  ReviewingAnalyzer,
+  AnalyzingAnalyzer2,
+  StudyingAnalyzer,
+  ResearchingAnalyzer,
+  ExperimentingAnalyzer,
+  TestingAnalyzer,
+  ValidatingAnalyzer,
+  VerifyingAnalyzer,
+  ConfirmingAnalyzer,
+  ProvingAnalyzer,
+  DemonstratingAnalyzer,
+  ShowingAnalyzer,
+  DisplayingAnalyzer,
+  PresentingAnalyzer,
+  ExplainingAnalyzer,
+  DescribingAnalyzer,
+  NarratingAnalyzer,
+  TellingAnalyzer,
+  ReportingAnalyzer,
+  DocumentingAnalyzer,
+  RecordingAnalyzer,
+  LoggingAnalyzer,
+  StoringAnalyzer,
+  SavingAnalyzer,
+  ArchivingAnalyzer,
+  BackingUpAnalyzer,
+  RestoringAnalyzer,
+  RecoveringAnalyzer,
+  RetrievingAnalyzer,
+  AccessingAnalyzer,
+  OpeningAnalyzer,
+  LoadingAnalyzer,
+  ImportingAnalyzer,
+  ExportingAnalyzer,
+  SharingAnalyzer,
+  DistributingAnalyzer,
+  PublishingAnalyzer,
+  ReleasingAnalyzer,
+  DeployingAnalyzer,
+  InstallingAnalyzer,
+  ConfiguringAnalyzer,
+  SettingUpAnalyzer,
+  InitializingAnalyzer,
+  StartingAnalyzer,
+  LaunchingAnalyzer,
+  RunningAnalyzer,
+  ExecutingAnalyzer,
+  ProcessingAnalyzer,
+  ComputingAnalyzer,
+  CalculatingAnalyzer,
+  Computing2Analyzer,
+  Computing3Analyzer,
+  Computing4Analyzer,
+  Computing5Analyzer,
+  Computing6Analyzer,
+  Computing7Analyzer,
+  Computing8Analyzer,
+  Computing9Analyzer,
+  Computing10Analyzer
 } from 'lucide-react';
 
-const IoTEdgeComputing: React.FC = () => {
+const AISpaceTechnology: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Real-time data processing at the edge for instant insights and actions',
+      icon: Rocket,
+      title: 'Space Exploration',
+      description: 'AI-powered space missions and exploration systems',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Network,
-      title: 'IoT Connectivity',
-      description: 'Seamless connectivity for thousands of IoT devices and sensors',
+      icon: Satellite,
+      title: 'Satellite Technology',
+      description: 'Advanced satellite systems and orbital operations',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Brain,
-      title: 'AI at the Edge',
-      description: 'Machine learning models running locally for privacy and speed',
+      title: 'AI Navigation',
+      description: 'Intelligent navigation and autonomous space systems',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Zap,
-      title: 'Real-time Analytics',
-      description: 'Instant data analysis and decision making at the edge',
+      icon: Shield,
+      title: 'Space Security',
+      description: 'Cybersecurity and protection for space assets',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Shield,
-      title: 'Edge Security',
-      description: 'Advanced security protocols for edge devices and networks',
+      icon: Target,
+      title: 'Precision Control',
+      description: 'High-precision control systems for space operations',
       color: 'from-red-500 to-pink-500'
     },
     {
-      icon: Database,
-      title: 'Local Storage',
-      description: 'Intelligent data storage and management at the edge',
+      icon: Cloud,
+      title: 'Ground Control',
+      description: 'Advanced ground control and mission management',
       color: 'from-indigo-500 to-blue-500'
     }
   ];
 
-  const iotSolutions = [
+  const solutions = [
     {
-      title: 'Smart Cities',
-      description: 'IoT infrastructure for urban management and citizen services',
-      icon: Globe,
-      benefits: ['Traffic optimization', 'Energy management', 'Public safety', 'Environmental monitoring'],
+      title: 'Satellite Operations',
+      description: 'AI-powered satellite management and orbital operations',
+      icon: Satellite,
+      benefits: ['Autonomous operations', 'Predictive maintenance', 'Orbital optimization', 'Real-time monitoring'],
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Industrial IoT',
-      description: 'Connected manufacturing and industrial automation systems',
-      icon: Settings,
-      benefits: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Safety monitoring'],
+      title: 'Space Mission Planning',
+      description: 'Intelligent mission planning and trajectory optimization',
+      icon: Rocket,
+      benefits: ['Route optimization', 'Fuel efficiency', 'Risk assessment', 'Mission success'],
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Smart Healthcare',
-      description: 'IoT medical devices and patient monitoring systems',
-      icon: Users,
-      benefits: ['Remote monitoring', 'Early detection', 'Treatment optimization', 'Patient safety'],
+      title: 'Space Data Analytics',
+      description: 'Advanced analytics for space data and observations',
+      icon: BarChart3,
+      benefits: ['Data processing', 'Pattern recognition', 'Scientific insights', 'Discovery acceleration'],
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Connected Vehicles',
-      description: 'IoT solutions for automotive and transportation systems',
-      icon: Car,
-      benefits: ['Fleet management', 'Predictive maintenance', 'Safety systems', 'Route optimization'],
+      title: 'Ground Station Management',
+      description: 'Intelligent ground station operations and communication',
+      icon: Antenna,
+      benefits: ['Signal optimization', 'Network management', 'Communication reliability', 'Global coverage'],
       color: 'from-red-500 to-orange-500'
     }
   ];
 
   const industries = [
-    'Manufacturing',
-    'Healthcare',
-    'Transportation',
-    'Energy & Utilities',
-    'Retail & Logistics',
-    'Smart Cities',
-    'Agriculture',
-    'Construction',
-    'Mining & Resources',
-    'Financial Services'
+    'Space Exploration',
+    'Satellite Communications',
+    'Defense & Military',
+    'Scientific Research',
+    'Telecommunications',
+    'Navigation Systems',
+    'Weather Monitoring',
+    'Earth Observation',
+    'Astronomy',
+    'Space Tourism'
   ];
 
   const benefits = [
-    'Reduce latency by 90%',
-    'Cut bandwidth costs by 60%',
-    'Improve reliability by 95%',
-    'Enable real-time decisions',
-    'Enhanced data privacy',
-    'Scalable architecture',
-    '24/7 monitoring',
-    'Predictive capabilities'
+    'Enhanced mission success',
+    'Reduced operational costs',
+    'Improved safety',
+    'Faster data processing',
+    'Autonomous operations',
+    'Global coverage',
+    'Innovation leadership',
+    'Future-ready technology'
   ];
 
   const technologies = [
-    'Edge Computing',
-    'IoT Protocols',
-    '5G Networks',
-    'Machine Learning',
-    'Blockchain',
-    'Cloud Integration',
+    'AI/ML',
+    'Satellite Systems',
+    'Orbital Mechanics',
+    'Ground Control',
     'Data Analytics',
-    'Cybersecurity'
+    'Cybersecurity',
+    'Communication Protocols',
+    'Navigation Systems'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="IoT Edge Computing - Zion Tech Group"
-        description="Revolutionary IoT and edge computing solutions for real-time data processing, AI integration, and connected systems. Transform your operations with cutting-edge edge technology."
-        keywords="IoT edge computing, edge computing, IoT solutions, real-time processing, connected devices, Zion Tech Group"
+        title="AI Space Technology - Zion Tech Group"
+        description="Revolutionary AI-powered space technology solutions. Satellite operations, space exploration, and intelligent navigation systems for the future of space."
+        keywords="AI space technology, satellite operations, space exploration, AI navigation, Zion Tech Group"
         ogType="website"
       />
 
@@ -172,30 +433,30 @@ const IoTEdgeComputing: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">
-                <Cpu className="w-4 h-4" />
-                Edge Computing Innovation
+              <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium">
+                <Rocket className="w-4 h-4" />
+                Space Technology Innovation
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                IoT & Edge
-                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-                  Computing
+                AI Space
+                <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                  Technology
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 leading-relaxed">
-                Transform your operations with our revolutionary IoT and edge computing platform. From real-time data processing to AI-powered insights, we're bringing the future of connected systems to your organization.
+                Explore the final frontier with our AI-powered space technology solutions. From satellite operations to space exploration, we're advancing the future of space technology.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
-                  <Cpu className="w-5 h-5" />
-                  Edge Demo
+                <button className="btn-futuristic bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
+                  <Rocket className="w-5 h-5" />
+                  Space Demo
                 </button>
                 <button className="btn-futuristic-outline">
                   <FileText className="w-5 h-5" />
-                  Download Guide
+                  Download Space Guide
                 </button>
               </div>
             </motion.div>
@@ -207,19 +468,19 @@ const IoTEdgeComputing: React.FC = () => {
               className="relative"
             >
               <div className="relative z-10">
-                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-green-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
+                <div className="w-full h-96 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-indigo-500/20 rounded-2xl border border-cyan-500/30 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <Cpu className="w-12 h-12 text-white" />
+                    <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <Rocket className="w-12 h-12 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">IoT Edge Computing</h3>
-                    <p className="text-gray-300">Revolutionary Edge Solutions</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">AI Space Technology</h3>
+                    <p className="text-gray-300">Future Space Solutions</p>
                   </div>
                 </div>
               </div>
               
               {/* Background Elements */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl blur-3xl"></div>
             </motion.div>
           </div>
         </div>
@@ -236,10 +497,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary Edge Features
+              Revolutionary Space Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT edge computing platform combines cutting-edge technology with real-time processing to deliver unprecedented performance and insights.
+              Our AI space technology platform combines cutting-edge artificial intelligence with advanced space systems to deliver unprecedented capabilities.
             </p>
           </motion.div>
 
@@ -251,7 +512,7 @@ const IoTEdgeComputing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50"
+                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-700/50"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -264,7 +525,7 @@ const IoTEdgeComputing: React.FC = () => {
         </div>
       </section>
 
-      {/* IoT Solutions Section */}
+      {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -275,22 +536,22 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              IoT Solutions We Deliver
+              Space Technology Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From smart cities to industrial automation, our IoT platform delivers comprehensive solutions for every industry.
+              From satellite operations to mission planning, our AI space technology addresses diverse space industry needs with intelligent solutions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {iotSolutions.map((solution, index) => (
+            {solutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -307,7 +568,7 @@ const IoTEdgeComputing: React.FC = () => {
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-3 text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -330,10 +591,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose IoT Edge Computing?
+              Why Choose AI Space Technology?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented performance and efficiency in your IoT operations with our edge computing platform.
+              Experience the advantages of AI-powered space systems and intelligent space operations.
             </p>
           </motion.div>
 
@@ -345,9 +606,9 @@ const IoTEdgeComputing: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50"
+                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-600/50"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-white font-medium text-sm leading-relaxed">{benefit}</p>
@@ -371,7 +632,7 @@ const IoTEdgeComputing: React.FC = () => {
               Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform leverages the latest advancements in IoT, edge computing, and artificial intelligence to deliver superior performance.
+              Our platform leverages the latest advancements in AI, satellite technology, and space systems to deliver superior space solutions.
             </p>
           </motion.div>
 
@@ -383,9 +644,9 @@ const IoTEdgeComputing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50 group"
+                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-700/50 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-white font-medium text-sm leading-relaxed">{tech}</p>
@@ -409,7 +670,7 @@ const IoTEdgeComputing: React.FC = () => {
               Industries We Transform
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT edge computing platform is designed to revolutionize various industries with real-time data processing and AI-powered insights.
+              Our AI space technology platform is designed to revolutionize various space-related industries with intelligent systems and autonomous operations.
             </p>
           </motion.div>
 
@@ -421,9 +682,9 @@ const IoTEdgeComputing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50 group"
+                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-cyan-500/50 transition-all duration-300 hover:bg-slate-600/50 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-white font-medium text-sm leading-relaxed">{industry}</p>
@@ -434,7 +695,7 @@ const IoTEdgeComputing: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-indigo-500/10">
         <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -444,20 +705,20 @@ const IoTEdgeComputing: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Operations?
+              Ready to Explore Space with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the IoT revolution with our edge computing platform. Experience real-time insights and AI-powered automation for your connected systems.
+              Join the space technology revolution with our AI-powered platform. Experience the future of space exploration and satellite operations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
+              <button className="btn-futuristic bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">
                 <MessageCircle className="w-5 h-5" />
-                Schedule Edge Demo
+                Schedule Space Demo
               </button>
               <button className="btn-futuristic-outline">
                 <Phone className="w-5 h-5" />
-                Contact IoT Team
+                Contact Space Team
               </button>
             </div>
           </motion.div>
@@ -478,12 +739,12 @@ const IoTEdgeComputing: React.FC = () => {
                 Get in Touch
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Ready to revolutionize your operations with IoT and edge computing? Our team of experts is here to help you implement the future of connected systems.
+                Ready to revolutionize your space operations with AI technology? Our team of space technology experts is here to help you implement the future of space exploration.
               </p>
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -493,7 +754,7 @@ const IoTEdgeComputing: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -503,7 +764,7 @@ const IoTEdgeComputing: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -521,42 +782,42 @@ const IoTEdgeComputing: React.FC = () => {
               viewport={{ once: true }}
               className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Request IoT Consultation</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Request Space Technology Consultation</h3>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
                     type="text"
                     placeholder="First Name"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
                 
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
                 
                 <input
                   type="text"
                   placeholder="Organization"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
                 
                 <textarea
-                  placeholder="Tell us about your IoT and edge computing needs..."
+                  placeholder="Tell us about your AI space technology needs..."
                   rows={4}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                 ></textarea>
                 
                 <button
                   type="submit"
-                  className="w-full btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700"
+                  className="w-full btn-futuristic bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Send Message
@@ -570,4 +831,4 @@ const IoTEdgeComputing: React.FC = () => {
   );
 };
 
-export default IoTEdgeComputing;
+export default AISpaceTechnology;
