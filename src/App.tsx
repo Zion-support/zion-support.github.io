@@ -40,6 +40,7 @@ const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Support = React.lazy(() => import('./pages/Support'));
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -142,6 +143,7 @@ function App() {
                 <Route path="/support" element={<Support />} />
                 <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
                 <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricingGuide2025 />} />
+                <Route path="/comprehensive-pricing-2025-new" element={<ComprehensivePricing2025 />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />

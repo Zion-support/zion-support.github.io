@@ -37,41 +37,50 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
-    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+            { name: 'Services', href: '/services', current: false, hasDropdown: true },
+        { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+        { name: 'Pricing', href: '/comprehensive-pricing-2025-new', current: false },
+        { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+        { name: 'About', href: '/about', current: false },
+        { name: 'Contact', href: '/contact', current: false },
   ];
 
   const services = [
     { 
       name: 'AI & Analytics', 
-      href: '/services', 
+      href: '/services?category=AI%20%26%20Analytics', 
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI & Legal Tech', 
-      href: '/services', 
-      icon: Scale, 
-      description: 'Document Analysis & Compliance',
-      featured: false,
-      color: 'from-blue-500 to-indigo-500'
+      name: 'AI & FinTech', 
+      href: '/services?category=AI%20%26%20FinTech', 
+      icon: DollarSign, 
+      description: 'Financial Technology & Trading',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
     },
     { 
       name: 'AI & Healthcare', 
-      href: '/services', 
+      href: '/services?category=AI%20%26%20Healthcare', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
+      name: 'AI & Legal Tech', 
+      href: '/services?category=AI%20%26%20Legal%20Tech', 
+      icon: Scale, 
+      description: 'Document Analysis & Compliance',
+      featured: false,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
       name: 'AI & Research', 
-      href: '/services', 
+      href: '/services?category=AI%20%26%20Research', 
       icon: Eye, 
       description: 'Scientific Research & Discovery',
       featured: false,
@@ -79,7 +88,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Green Tech', 
-      href: '/services', 
+      href: '/services?category=AI%20%26%20Green%20Tech', 
       icon: Leaf, 
       description: 'Sustainability Solutions',
       featured: false,
@@ -87,7 +96,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Metaverse', 
-      href: '/services', 
+      href: '/services?category=AI%20%26%20Metaverse', 
       icon: Globe, 
       description: 'Virtual Reality & Gaming',
       featured: true,
@@ -95,11 +104,35 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Blockchain', 
-      href: '/services', 
+      href: '/services?category=AI%20%26%20Blockchain', 
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
       featured: false,
       color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI & Logistics', 
+      href: '/services?category=AI%20%26%20Logistics', 
+      icon: Truck, 
+      description: 'Supply Chain & Optimization',
+      featured: false,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'AI & Education', 
+      href: '/services?category=AI%20%26%20Education', 
+      icon: BookOpen, 
+      description: 'Educational Technology',
+      featured: false,
+      color: 'from-purple-500 to-indigo-500'
+    },
+    { 
+      name: 'AI & Manufacturing', 
+      href: '/services?category=AI%20%26%20Manufacturing', 
+      icon: Factory, 
+      description: 'Industrial AI Solutions',
+      featured: false,
+      color: 'from-gray-500 to-slate-500'
     },
     { 
       name: 'AI & Edge Computing', 

@@ -57,6 +57,65 @@
   @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
 }
 
+/* Enhanced Responsive Utilities */
+.responsive-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6;
+}
+
+.responsive-text {
+  @apply text-base md:text-lg lg:text-xl;
+}
+
+.responsive-heading {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+}
+
+.responsive-padding {
+  @apply p-4 md:p-6 lg:p-8;
+}
+
+.responsive-margin {
+  @apply m-4 md:m-6 lg:m-8;
+}
+
+/* Mobile-First Navigation */
+.mobile-nav {
+  @apply fixed inset-0 z-50 bg-slate-900/95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out;
+}
+
+.mobile-nav.hidden {
+  @apply -translate-x-full;
+}
+
+.mobile-nav.visible {
+  @apply translate-x-0;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  .mobile-optimized {
+    @apply text-sm;
+  }
+  
+  .mobile-stack {
+    @apply flex-col space-y-4;
+  }
+  
+  .mobile-full {
+    @apply w-full;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobile-compact {
+    @apply p-3 text-sm;
+  }
+  
+  .mobile-center {
+    @apply text-center;
+  }
+}
+
 /* Enhanced Futuristic Animations */
 .animate-fade-in {
   animation: fadeIn 220ms ease-out both;
