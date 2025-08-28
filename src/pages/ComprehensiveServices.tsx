@@ -80,6 +80,55 @@ export default function ComprehensiveServices() {
     }
   };
 
+  const ServiceCard: React.FC<{ service: any; index: number }> = ({ service, index }) => (
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200"
+    >
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-xl font-semibold text-white">{service.name || service.title}</h3>
+        {service.isPopular && (
+          <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Popular</span>
+        )}
+      </div>
+      <p className="text-gray-300 mb-4">{service.description || service.desc}</p>
+      <div className="mb-4">
+        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+      </div>
+      <div className="mb-4">
+        <div className="flex items-center mb-2">
+          <div className="flex text-yellow-400">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className={`w-4 h-4 ${i < (service.rating || 4) ? "text-yellow-400" : "text-gray-600"}`} />
+            ))}
+          </div>
+          <span className="text-sm text-gray-400 ml-2">({service.reviews || 25} reviews)</span>
+        </div>
+      </div>
+      <div className="mb-4">
+        <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+        <div className="grid grid-cols-1 gap-1">
+          {(service.features || []).slice(0, 3).map((feature: string, idx: number) => (
+            <div key={idx} className="flex items-center text-sm text-gray-300">
+              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
+              {feature}
+            </div>
+          ))}
+        </div>
+      </div>
+      <Link
+        to={service.cta || '#'}
+        className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium"
+      >
+        Learn More
+        <ArrowRight className="w-4 h-4 ml-2" />
+      </Link>
+    </motion.div>
+  );
+
   const microSaaS = [
     {
       title: 'SOC 2 Evidence Collector',
@@ -351,7 +400,7 @@ export default function ComprehensiveServices() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
                 <a
-                  href={`mailto:${service.contactInfo?.email}?subject=Inquiry about ${service.title}`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
                   className="inline-flex items-center justify-center px-3 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
                   title="Contact Sales"
                 >
@@ -410,36 +459,37 @@ export default function ComprehensiveServices() {
               </a>
             </div>
           </motion.div>
-        </header>
+        </div>
+      </section>
 
-        {/* Sections */}
-        <Section
-          icon={<Sparkles className="h-6 w-6" />}
-          title="Micro SaaS Products"
-          description="Subscription software for security, legal, revenue, and operations with fast time-to-value."
-          items={microSaaS}
-          gradient="from-violet-900/60 to-indigo-900/40"
-        />
+    {/* Sections */}
+    <Section
+      icon={<Sparkles className="h-6 w-6" />}
+      title="Micro SaaS Products"
+      description="Subscription software for security, legal, revenue, and operations with fast time-to-value."
+      items={microSaaS}
+      gradient="from-violet-900/60 to-indigo-900/40"
+    />
 
-        <Section
-          icon={<Cloud className="h-6 w-6" />}
-          title="IT Services"
-          description="Cloud, platform, and security engagements by seasoned architects and SREs."
-          items={itServices}
-          gradient="from-sky-900/60 to-teal-900/40"
-        />
+    <Section
+      icon={<Cloud className="h-6 w-6" />}
+      title="IT Services"
+      description="Cloud, platform, and security engagements by seasoned architects and SREs."
+      items={itServices}
+      gradient="from-sky-900/60 to-teal-900/40"
+    />
 
-        <Section
-          icon={<Cpu className="h-6 w-6" />}
-          title="AI Solutions"
-          description="Applied AI with governance, privacy, and business outcomes at the core."
-          items={aiSolutions}
-          gradient="from-fuchsia-900/60 to-rose-900/40"
-        />
+    <Section
+      icon={<Cpu className="h-6 w-6" />}
+      title="AI Solutions"
+      description="Applied AI with governance, privacy, and business outcomes at the core."
+      items={aiSolutions}
+      gradient="from-fuchsia-900/60 to-rose-900/40"
+    />
 
         {/* Contact CTA */}
         <section className="py-16">
-          <div className="max-w-5xl mx-auto px-6">
+          <motion.div className="max-w-5xl mx-auto px-6">
             <div className="rounded-2xl border border-white/10 p-8 bg-white/5">
               <h2 className="text-2xl md:text-3xl font-bold mb-2">Talk to an expert</h2>
               <p className="text-white/80 mb-6">We will scope your needs and share a clear proposal with milestones and pricing.</p>
