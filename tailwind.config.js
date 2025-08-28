@@ -33,9 +33,15 @@ export default {
         'zion-purple': '#8c15e9',
         'zion-purple-dark': '#6b21a8',
         'zion-purple-light': '#a855f7',
+        'zion-cyan': '#22ddd2',
+        'zion-cyan-light': '#67e8e0',
+        'zion-slate': '#475569',
+        'zion-slate-dark': '#334155',
+        'zion-slate-light': '#94a3b8',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'orbitron': ['Orbitron', 'monospace'],
       },
       screens: {
         xs: "475px",
@@ -88,7 +94,6 @@ export default {
       fontSize: {
         "responsive-xs": ["0.75rem", { lineHeight: "1rem" }],
         "responsive-sm": ["0.875rem", { lineHeight: "1.25rem" }],
-        "responsive-base": ["1rem", { lineHeight: "1.5rem" }],
         "responsive-lg": ["1.125rem", { lineHeight: "1.75rem" }],
         "responsive-xl": ["1.25rem", { lineHeight: "1.75rem" }],
         "responsive-2xl": ["1.5rem", { lineHeight: "2rem" }],
@@ -101,16 +106,8 @@ export default {
         '9xl': '96rem',
       },
       minHeight: {
-        'screen-75': '75vh',
         'screen-90': '90vh',
-      },
-      backdropBlur: {
-        xs: '2px',
-      },
-      spacing: {
-        '18': '4.5rem',
-        '88': '22rem',
-        '128': '32rem',
+        'screen-95': '95vh',
       },
       zIndex: {
         '60': '60',
@@ -119,10 +116,34 @@ export default {
         '90': '90',
         '100': '100',
       },
-      transitionTimingFunction: {
-        'bounce-in': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-        'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
-      }
+      backdropBlur: {
+        'xs': '2px',
+      },
+      boxShadow: {
+        'neon': '0 0 20px rgba(34, 221, 210, 0.5)',
+        'neon-purple': '0 0 20px rgba(168, 85, 247, 0.5)',
+        'inner-glow': 'inset 0 0 20px rgba(34, 221, 210, 0.2)',
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
+      scale: {
+        '102': '1.02',
+        '103': '1.03',
+      },
+      rotate: {
+        '135': '135deg',
+        '225': '225deg',
+      },
+      skew: {
+        '12': '12deg',
+        '-12': '-12deg',
+      },
+      blur: {
+        '4xl': '72px',
+        '5xl': '96px',
+      },
     },
   },
   plugins: [],

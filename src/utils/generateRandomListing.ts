@@ -73,30 +73,37 @@ const sellerNames = [
 
 export function generateRandomListing(): MarketplaceItem {
   const randomIndex = Math.floor(Math.random() * sampleTitles.length);
-  const category = categories[Math.floor(Math.random() * categories.length)];
-  const price = priceRanges[Math.floor(Math.random() * priceRanges.length)];
-  const location = locations[Math.floor(Math.random() * locations.length)];
-  const sellerName = sellerNames[Math.floor(Math.random() * sellerNames.length)];
+  const categoryIndex = Math.floor(Math.random() * categories.length);
+  const priceIndex = Math.floor(Math.random() * priceRanges.length);
+  const locationIndex = Math.floor(Math.random() * locations.length);
+  const sellerNameIndex = Math.floor(Math.random() * sellerNames.length);
+  const imageIndex = Math.floor(Math.random() * sampleImages.length);
+  
+  const category = categories[categoryIndex];
+  const price = priceRanges[priceIndex];
+  const location = locations[locationIndex];
+  const sellerName = sellerNames[sellerNameIndex];
+  const image = sampleImages[imageIndex];
   
   return {
     id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-    title: sampleTitles[randomIndex],
-    category,
-    description: sampleDescriptions[randomIndex],
-    price,
+    title: sampleTitles[randomIndex] || 'Default Title',
+    category: category || 'products',
+    description: sampleDescriptions[randomIndex] || 'Default description',
+    price: price || '$1,000',
     rating: 4.0 + Math.random() * 1.0,
     reviews: Math.floor(Math.random() * 200) + 10,
     views: Math.floor(Math.random() * 5000) + 100,
     likes: Math.floor(Math.random() * 300) + 20,
-    image: sampleImages[Math.floor(Math.random() * sampleImages.length)],
-    tags: sampleTags[randomIndex],
+    image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    tags: sampleTags[randomIndex] || ['Technology', 'Solution'],
     featured: Math.random() > 0.7,
     seller: {
-      name: sellerName,
+      name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random() * 1.0,
       verified: Math.random() > 0.3
     },
-    location,
+    location: location || 'Remote',
     availability: Math.random() > 0.8 ? 'limited' : 'available',
     deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`,
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`

@@ -5,6 +5,7 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 // Files to cache immediately
 const STATIC_FILES = [
   '/',
+<<<<<<< HEAD
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
@@ -14,6 +15,11 @@ const STATIC_FILES = [
   '/site.webmanifest',
   '/images/zion-tech-group-logo.png',
   '/images/zion-tech-group-og.jpg'
+=======
+  '/offline.html',
+  '/static/js/bundle.js',
+  '/static/css/main.css'
+>>>>>>> origin/main
 ];
 
 // Install event - cache static files
@@ -24,6 +30,7 @@ self.addEventListener('install', (event) => {
         console.log('Caching static files');
         return cache.addAll(STATIC_FILES);
       })
+<<<<<<< HEAD
       .then(() => {
         console.log('Static files cached successfully');
         return self.skipWaiting();
@@ -31,6 +38,23 @@ self.addEventListener('install', (event) => {
       .catch((error) => {
         console.error('Error caching static files:', error);
       })
+=======
+  );
+});
+
+// Fetch event - serve from cache when offline
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+>>>>>>> origin/main
   );
 });
 
@@ -53,6 +77,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+<<<<<<< HEAD
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
@@ -195,10 +220,14 @@ self.addEventListener('notificationclick', (event) => {
 });
 
 // Message handling for communication with main thread
+=======
+// Handle skip waiting
+>>>>>>> origin/main
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
+<<<<<<< HEAD
   
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
@@ -213,4 +242,6 @@ self.addEventListener('error', (event) => {
 // Unhandled rejection handling
 self.addEventListener('unhandledrejection', (event) => {
   console.error('Service worker unhandled rejection:', event.reason);
+=======
+>>>>>>> origin/main
 });

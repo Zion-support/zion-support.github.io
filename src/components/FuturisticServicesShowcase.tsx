@@ -180,7 +180,7 @@ export default function FuturisticServicesShowcase() {
 								<div>
 									<div className="flex items-center gap-4 mb-6">
 										<div className={`p-4 rounded-2xl bg-gradient-to-r ${futuristicServices[currentService].color}`}>
-											<futuristicServices[currentService].icon className="w-8 h-8 text-white" />
+											{React.createElement(futuristicServices[currentService].icon, { className: "w-8 h-8 text-white" })}
 										</div>
 										<span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(futuristicServices[currentService].status)}`}>
 											{getStatusText(futuristicServices[currentService].status)}
@@ -226,7 +226,7 @@ export default function FuturisticServicesShowcase() {
 									<div className={`w-full h-80 rounded-2xl bg-gradient-to-br ${futuristicServices[currentService].color} relative overflow-hidden`}>
 										<div className="absolute inset-0 bg-black/20"></div>
 										<div className="absolute inset-0 flex items-center justify-center">
-											<futuristicServices[currentService].icon className="w-32 h-32 text-white/80" />
+											{React.createElement(futuristicServices[currentService].icon, { className: "w-32 h-32 text-white/80" })}
 										</div>
 										{/* Animated particles */}
 										<motion.div
@@ -268,7 +268,7 @@ export default function FuturisticServicesShowcase() {
 							>
 								<div className="flex items-center justify-between mb-4">
 									<div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
-										<service.icon className="w-6 h-6 text-white" />
+										{React.createElement(service.icon, { className: "w-6 h-6 text-white" })}
 									</div>
 									<span className={`px-2 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(service.status)}`}>
 										{getStatusText(service.status)}
