@@ -41,6 +41,14 @@ const Support = React.lazy(() => import('./pages/Support'));
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
+// Add missing imports for existing pages
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+const Services2026 = React.lazy(() => import('./pages/Services2026'));
+const Services2027 = React.lazy(() => import('./pages/Services2027'));
+const Services2028 = React.lazy(() => import('./pages/Services2028'));
+const UltimateInnovativeServices2026 = React.lazy(() => import('./pages/UltimateInnovativeServices2026'));
+const EnhancedComprehensiveServices2026 = React.lazy(() => import('./pages/EnhancedComprehensiveServices2026'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -135,6 +143,27 @@ function App() {
                 <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
                 <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricingGuide2025 />} />
                 
+                {/* Add missing routes for footer links */}
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                <Route path="/services2026" element={<Services2026 />} />
+                <Route path="/services2027" element={<Services2027 />} />
+                <Route path="/services2028" element={<Services2028 />} />
+                <Route path="/ultimate-innovative-services-2026" element={<UltimateInnovativeServices2026 />} />
+                <Route path="/enhanced-comprehensive-services-2026" element={<EnhancedComprehensiveServices2026 />} />
+                
+                {/* Business Solution Routes */}
+                <Route path="/services/micro-saas-solutions" element={<React.lazy(() => import('./pages/services/MicroSAASSolutions')) />} />
+                <Route path="/services/affiliate-tracking" element={<React.lazy(() => import('./pages/services/affiliate-tracking')) />} />
+                <Route path="/services/it-helpdesk" element={<React.lazy(() => import('./pages/services/ITHelpdesk')) />} />
+                <Route path="/services/green-it" element={<React.lazy(() => import('./pages/services/green-it')) />} />
+                <Route path="/talent" element={<React.lazy(() => import('./pages/Talent')) />} />
+                <Route path="/equipment" element={<React.lazy(() => import('./pages/Equipment')) />} />
+                
+                {/* Additional Resource Routes */}
+                <Route path="/api" element={<React.lazy(() => import('./pages/API')) />} />
+                <Route path="/developers" element={<React.lazy(() => import('./pages/DeveloperPortal')) />} />
+                <Route path="/accessibility" element={<React.lazy(() => import('./pages/Accessibility')) />} />
+                
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -144,6 +173,45 @@ function App() {
                 <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
                 <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                 <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                
+                {/* Additional Service Routes */}
+                <Route path="/services/dsr-portal" element={<React.lazy(() => import('./pages/services/GDPRDSARPortal')) />} />
+                <Route path="/services/ai-compliance-assistant" element={<React.lazy(() => import('./pages/services/ai-compliance-assistant')) />} />
+                <Route path="/services/ai-sales-copilot" element={<React.lazy(() => import('./pages/services/ai-sales-copilot')) />} />
+                <Route path="/services/ai-data-analytics" element={<React.lazy(() => import('./pages/services/ai-data-analytics')) />} />
+                <Route path="/services/finops-advisor" element={<React.lazy(() => import('./pages/services/finops-advisor')) />} />
+                <Route path="/services/cloud-finops-optimizer" element={<React.lazy(() => import('./pages/services/CloudFinOpsOptimizer')) />} />
+                <Route path="/services/digital-transformation" element={<React.lazy(() => import('./pages/services/Transformation')) />} />
+                <Route path="/services/it-consulting" element={<React.lazy(() => import('./pages/services/ITConsulting')) />} />
+                <Route path="/services/business-intelligence" element={<React.lazy(() => import('./pages/services/business-intelligence')) />} />
+                <Route path="/services/blockchain" element={<React.lazy(() => import('./pages/services/blockchain')) />} />
+                <Route path="/services/affiliate-tracking" element={<React.lazy(() => import('./pages/services/affiliate-tracking')) />} />
+                <Route path="/services/cybersecurity" element={<React.lazy(() => import('./pages/services/cybersecurity')) />} />
+                
+                {/* Core Service Routes */}
+                <Route path="/services/quantum-computing" element={<React.lazy(() => import('./pages/services/quantum-computing')) />} />
+                <Route path="/services/iot-edge-computing" element={<React.lazy(() => import('./pages/services/iot-edge-computing')) />} />
+                <Route path="/services/ai-content-creation" element={<React.lazy(() => import('./pages/services/ai-content-creation')) />} />
+                <Route path="/services/ai-hr-platform" element={<React.lazy(() => import('./pages/services/ai-hr-platform')) />} />
+                <Route path="/services/sustainable-technology" element={<React.lazy(() => import('./pages/services/sustainable-technology')) />} />
+                <Route path="/services/ai-predictive-maintenance" element={<React.lazy(() => import('./pages/services/ai-predictive-maintenance')) />} />
+                <Route path="/services/quantum-machine-learning" element={<React.lazy(() => import('./pages/services/quantum-machine-learning')) />} />
+                <Route path="/services/space-tech" element={<React.lazy(() => import('./pages/services/space-tech')) />} />
+                <Route path="/services/ai-content-generator" element={<React.lazy(() => import('./pages/services/ai-content-generator')) />} />
+                <Route path="/services/ai-customer-support" element={<React.lazy(() => import('./pages/services/ai-customer-support')) />} />
+                <Route path="/services/ai-cybersecurity" element={<React.lazy(() => import('./pages/services/ai-cybersecurity')) />} />
+                <Route path="/services/ai-marketing-automation" element={<React.lazy(() => import('./pages/services/ai-marketing-automation')) />} />
+                <Route path="/services/ai-project-management" element={<React.lazy(() => import('./pages/services/ai-project-management')) />} />
+                <Route path="/services/ai-workflow-automation" element={<React.lazy(() => import('./pages/services/ai-workflow-automation')) />} />
+                <Route path="/services/micro-crm" element={<React.lazy(() => import('./pages/services/micro-crm')) />} />
+                <Route path="/services/helpdesk" element={<React.lazy(() => import('./pages/services/HelpdeskPlatform')) />} />
+                <Route path="/services/ai-seo" element={<React.lazy(() => import('./pages/services/ai-powered-seo')) />} />
+                <Route path="/services/interview-assessment" element={<React.lazy(() => import('./pages/services/interview-assessment-ai')) />} />
+                <Route path="/services/ai-workflow-orchestrator" element={<React.lazy(() => import('./pages/services/ai-workflow-orchestrator')) />} />
+                <Route path="/services/incident-response-platform" element={<React.lazy(() => import('./pages/services/incident-response-platform')) />} />
+                <Route path="/services/security-headers-csp" element={<React.lazy(() => import('./pages/services/SecurityHeadersCSP')) />} />
+                <Route path="/services/zero-trust-network-access" element={<React.lazy(() => import('./pages/services/ZeroTrustNetworkAccess')) />} />
+                <Route path="/services/ai-autonomous-research-assistant" element={<React.lazy(() => import('./pages/services/ai-autonomous-research-assistant')) />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
