@@ -1,11 +1,63 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  Newspaper, 
+=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
+>>>>>>> origin/cursor/website-audit-and-enhancement-a274
   Calendar, 
   Clock, 
   User, 
   Tag, 
+<<<<<<< HEAD
+  Search, 
+  Filter, 
+  ArrowRight, 
+  ExternalLink, 
+  TrendingUp, 
+  Star, 
+  Eye, 
+  MessageCircle, 
+  Share2,
+  Brain,
+  Shield,
+  Cloud,
+  Atom,
+  Zap,
+  Rocket,
+  Globe,
+  Building,
+  Users,
+  Cpu,
+  Network,
+  Lock,
+  BarChart3,
+  ShoppingCart,
+  Heart,
+  Leaf,
+  Satellite,
+  Target,
+  Award,
+  CheckCircle,
+  Lightbulb,
+  Code,
+  Server,
+  Database,
+  Smartphone,
+  Truck,
+  GraduationCap,
+  BookOpen,
+  Video,
+  Image,
+  FileText,
+  Link,
+  ChevronDown,
+  ChevronRight
+} from 'lucide-react';
+=======
   ArrowRight, 
   Search, 
   Filter,
@@ -24,6 +76,7 @@ import {
   Database
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+>>>>>>> origin/cursor/website-audit-and-enhancement-a274
 
 interface NewsArticle {
   id: string;
@@ -31,11 +84,24 @@ interface NewsArticle {
   excerpt: string;
   content: string;
   author: string;
+<<<<<<< HEAD
+  publishDate: string;
+  readTime: string;
+=======
   date: string;
+>>>>>>> origin/cursor/website-audit-and-enhancement-a274
   category: string;
   tags: string[];
   image: string;
   featured: boolean;
+<<<<<<< HEAD
+  external?: boolean;
+  externalUrl?: string;
+  views: number;
+  likes: number;
+  comments: number;
+}
+=======
   readTime: number;
 }
 
@@ -507,6 +573,7 @@ const News: React.FC = () => {
     </div>
   );
 };
+>>>>>>> origin/cursor/website-audit-and-enhancement-a274
 
 const newsArticles: NewsArticle[] = [
   {
