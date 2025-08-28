@@ -398,53 +398,175 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>?
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>
               </h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                We deliver cutting-edge solutions with proven results, enterprise-grade security, and dedicated support.
+                We deliver cutting-edge AI solutions with proven ROI, enterprise-grade security, and world-class support.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <TrendingUp className="w-8 h-8" />,
+                  icon: Star,
                   title: "Proven ROI",
-                  description: "Our solutions deliver measurable business value with clear ROI metrics and performance tracking."
+                  description: "Our solutions deliver measurable results with an average ROI of 500%+ within 6-8 months."
                 },
                 {
-                  icon: <ShieldCheck className="w-8 h-8" />,
+                  icon: Shield,
                   title: "Enterprise Security",
-                  description: "Bank-level security protocols and compliance standards to protect your business data and operations."
+                  description: "Bank-level security with SOC 2 compliance, encryption, and zero-trust architecture."
                 },
                 {
-                  icon: <Users className="w-8 h-8" />,
+                  icon: Zap,
+                  title: "Rapid Implementation",
+                  description: "Get up and running in 4-8 weeks with our streamlined deployment process."
+                },
+                {
+                  icon: Users,
                   title: "Expert Support",
-                  description: "24/7 technical support from certified professionals with deep industry expertise."
+                  description: "24/7 technical support and dedicated success managers for your business."
                 },
                 {
-                  icon: <Rocket className="w-8 h-8" />,
+                  icon: Globe,
+                  title: "Global Reach",
+                  description: "Serving businesses worldwide with localized support and compliance."
+                },
+                {
+                  icon: Rocket,
                   title: "Innovation First",
-                  description: "Stay ahead with cutting-edge technologies and forward-thinking solutions that drive growth."
+                  description: "Always at the cutting edge with the latest AI and technology advancements."
                 }
-              ].map((benefit, index) => (
+              ].map((feature, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-600 hover:border-cyan-500/50 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
-                    {benefit.icon}
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-slate-300">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-slate-300">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* New Services Showcase */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Latest <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Innovations</span>
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Discover our newest AI-powered solutions designed to transform your business operations and drive growth.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "AI Supply Chain Optimization",
+                  description: "Intelligent logistics platform with AI-powered demand forecasting and inventory optimization.",
+                  price: "$8,999",
+                  category: "AI & Operations",
+                  features: ["Demand Forecasting", "Inventory Optimization", "Logistics Automation", "Cost Reduction"]
+                },
+                {
+                  title: "AI Financial Risk Management",
+                  description: "Advanced risk management with AI-powered credit scoring and fraud detection.",
+                  price: "$9,999",
+                  category: "AI & FinTech",
+                  features: ["Credit Scoring", "Fraud Detection", "Portfolio Optimization", "Risk Assessment"]
+                },
+                {
+                  title: "AI Customer Experience Platform",
+                  description: "Intelligent CX platform with sentiment analysis and personalized interactions.",
+                  price: "$6,999",
+                  category: "AI & Customer Support",
+                  features: ["Sentiment Analysis", "Journey Mapping", "Personalization", "Customer Analytics"]
+                },
+                {
+                  title: "AI Product Development",
+                  description: "Smart product development with market research and design optimization.",
+                  price: "$8,999",
+                  category: "AI & Development",
+                  features: ["Market Research", "Design Optimization", "Development Automation", "Innovation"]
+                },
+                {
+                  title: "AI Sales Intelligence",
+                  description: "Advanced sales platform with lead scoring and opportunity prediction.",
+                  price: "$5,999",
+                  category: "AI & Marketing",
+                  features: ["Lead Scoring", "Opportunity Prediction", "Sales Automation", "CRM Integration"]
+                },
+                {
+                  title: "AI Data Governance",
+                  description: "Intelligent data governance with quality management and compliance monitoring.",
+                  price: "$7,999",
+                  category: "AI & Business Intelligence",
+                  features: ["Data Quality", "Compliance Monitoring", "Privacy Protection", "Data Management"]
+                }
+              ].map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 group"
+                >
+                  <div className="mb-4">
+                    <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full border border-purple-500/30">
+                      {service.category}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  
+                  <p className="text-slate-300 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-purple-400">{service.price}</span>
+                  </div>
+                  
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        <span className="text-sm text-slate-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <a
+                      href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service. Please provide more details about pricing, implementation timeline, and features.`}
+                      className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-center py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105"
+                    >
+                      Learn More
+                    </a>
+                    <a
+                      href={`tel:+13024640950`}
+                      className="px-4 py-2 border border-slate-600 text-slate-300 rounded-lg hover:border-purple-500 hover:text-purple-400 transition-colors"
+                    >
+                      Call Now
+                    </a>
+                  </div>
                 </motion.div>
               ))}
             </div>
