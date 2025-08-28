@@ -104,22 +104,17 @@
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Zion Tech Group Desktop Experience"
+      "label": "Zion Tech Group Desktop View"
     },
     {
       "src": "/screenshots/mobile-390x844.png",
       "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile Experience"
+      "label": "Zion Tech Group Mobile View"
     }
   ],
-  "related_applications": [
-    {
-      "platform": "webapp",
-      "url": "https://ziontechgroup.com"
-    }
-  ],
+  "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400

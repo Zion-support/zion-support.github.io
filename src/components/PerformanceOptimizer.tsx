@@ -22,7 +22,11 @@ interface BundleAnalysis {
   optimizationScore: number;
 }
 
-export function PerformanceOptimizer() {
+interface Props {
+  enabled?: boolean;
+}
+
+export function PerformanceOptimizer({ enabled = true }: Props) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fps: 60,
     memory: 0,
@@ -47,6 +51,7 @@ export function PerformanceOptimizer() {
 
   // Enhanced performance monitoring with Core Web Vitals
   const measurePerformance = useCallback(() => {
+    if (!enabled) return;
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (performance as any).memory;
@@ -113,6 +118,7 @@ export function PerformanceOptimizer() {
 
   // Enhanced FPS monitoring with frame time analysis
   const measureFPS = useCallback(() => {
+    if (!enabled) return;
     let frameCount = 0;
     let lastTime = performance.now();
     let frameTimes: number[] = [];
@@ -151,6 +157,7 @@ export function PerformanceOptimizer() {
 
   // Battery monitoring with power saving suggestions
   const measureBattery = useCallback(async () => {
+    if (!enabled) return;
     if ('getBattery' in navigator) {
       try {
         const battery = await (navigator as any).getBattery();
@@ -170,6 +177,7 @@ export function PerformanceOptimizer() {
 
   // CPU monitoring with performance suggestions
   const measureCPU = useCallback(() => {
+    if (!enabled) return;
     if ('hardwareConcurrency' in navigator) {
       const cores = navigator.hardwareConcurrency;
       setMetrics(prev => ({ ...prev, cpu: cores }));
@@ -183,6 +191,7 @@ export function PerformanceOptimizer() {
 
   // Enhanced performance optimizations
   const applyOptimizations = useCallback(() => {
+    if (!enabled) return;
     const newOptimizations: string[] = [];
     
     // Memory optimization
@@ -263,7 +272,7 @@ export function PerformanceOptimizer() {
     }, 5000);
     
     return () => clearInterval(interval);
-  }, [isVisible, measurePerformance, analyzeBundle, measureFPS, measureBattery, measureCPU, applyOptimizations, applyOptimizations]);
+  }, [isVisible, measurePerformance, analyzeBundle, measureFPS, measureBattery, measureCPU, applyOptimizations, applyPerformanceOptimizations]);
 
   // Performance score calculation
   const performanceScore = useMemo(() => {

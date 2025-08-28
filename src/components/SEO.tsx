@@ -1,5 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { 
+  Search, 
+  TrendingUp, 
+  BarChart3, 
+  Globe, 
+  Smartphone, 
+  Zap,
+  CheckCircle,
+  AlertTriangle,
+  Info
+} from 'lucide-react';
 
 interface SEOProps {
   title?: string;
@@ -125,7 +137,6 @@ export function SEO({
     ]
   };
 
-  // Merge with provided structured data
   const finalStructuredData = structuredData || defaultStructuredData;
 
   // Enhanced meta tags
@@ -395,3 +406,5 @@ export function SEO({
     </Helmet>
   );
 }
+
+export default SEO;
