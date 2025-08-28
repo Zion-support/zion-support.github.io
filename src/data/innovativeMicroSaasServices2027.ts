@@ -1,609 +1,515 @@
-export interface InnovativeMicroSaasService2027 {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
-  aiCapabilities?: string[];
-  complianceFeatures?: string[];
-  scalabilityFeatures?: string[];
-}
+import { ProductListing } from "@/types/listings";
 
-export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027[] = [
-  // AI-Powered Business Solutions
+export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: ProductListing[] = [
+  // AI-Powered Content Creation & Management
   {
-    id: "ai-powered-customer-success-platform",
-    title: "AI-Powered Customer Success Platform",
-    description: "Intelligent customer success platform that uses AI to predict churn, automate onboarding, and optimize customer lifecycle management with personalized engagement strategies.",
-    category: "AI & Customer Success",
-    subcategory: "Customer Experience",
-    price: 2499,
+    id: "ai-content-creation-studio-pro",
+    title: "AI Content Creation Studio Pro",
+    description: "Advanced AI-powered content creation platform with multi-format support, brand voice consistency, and automated content optimization. Generates high-quality content 10x faster with 95% brand alignment.",
+    category: "AI & Content",
+    subcategory: "Content Creation",
+    price: 2999,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered churn prediction with 95% accuracy",
-      "Automated customer onboarding workflows",
-      "Personalized engagement recommendations",
-      "Real-time customer health scoring",
-      "Automated success playbook execution",
-      "Integration with 100+ CRM and support tools",
-      "Advanced analytics and reporting dashboard",
-      "Multi-channel communication automation",
-      "Customer journey mapping and optimization",
-      "Predictive analytics for upsell opportunities"
-    ],
-    benefits: [
-      "Reduce customer churn by 40%",
-      "Increase customer lifetime value by 60%",
-      "Automate 80% of routine customer success tasks",
-      "Improve customer satisfaction scores by 35%",
-      "Reduce time to value for new customers by 50%"
-    ],
-    useCases: [
-      "SaaS subscription management",
-      "Enterprise customer success",
-      "E-commerce customer retention",
-      "B2B relationship management",
-      "Subscription box services"
-    ],
-    targetAudience: [
-      "Customer Success Managers",
-      "Account Managers",
-      "Customer Experience Teams",
-      "Business Development Representatives",
-      "Product Managers"
-    ],
-    tags: ["AI", "Customer Success", "Automation", "Analytics", "CRM"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,499 - $7,999/month",
-    roi: "400-700%",
-    innovationLevel: "cutting-edge",
+    tags: ["Content Creation", "AI Writing", "Brand Voice", "Multi-format", "SEO Optimization"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-content-studio.jpg"],
+    createdAt: "2024-01-01T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 456,
+    featured: true,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 98,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com/ai-content-studio",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketSize: "$2.1 billion by 2027"
+    marketPrice: "$2,500-6,000",
+    competitors: ["Jasper", "Copy.ai", "Writesonic"],
+    roi: "600% within 3 months",
+    setupTime: "2-3 weeks",
+    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media APIs", "SEO Tools"]
   },
 
-  // Blockchain & DeFi Solutions
+  // AI-Powered Customer Support Automation
   {
-    id: "defi-yield-optimization-platform",
-    title: "DeFi Yield Optimization Platform",
-    description: "Advanced DeFi yield optimization platform that automatically finds and executes the best yield farming strategies across multiple blockchains with risk management and portfolio optimization.",
-    category: "Blockchain & DeFi",
-    subcategory: "Yield Optimization",
+    id: "ai-customer-support-automation-suite",
+    title: "AI Customer Support Automation Suite",
+    description: "Intelligent customer support platform with 24/7 automated responses, sentiment analysis, and seamless human handoff. Reduces support tickets by 70% and improves customer satisfaction by 85%.",
+    category: "AI & Customer Support",
+    subcategory: "Support Automation",
     price: 3999,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Multi-chain yield farming automation",
-      "AI-powered strategy optimization",
-      "Real-time risk assessment and management",
-      "Portfolio rebalancing automation",
-      "Gas fee optimization across networks",
-      "Integration with 50+ DeFi protocols",
-      "Advanced analytics and reporting",
-      "Mobile app with push notifications",
-      "API access for institutional clients",
-      "Compliance and regulatory reporting"
-    ],
-    benefits: [
-      "Increase yield returns by 200-400%",
-      "Reduce gas fees by 60%",
-      "Automate complex DeFi strategies",
-      "Minimize impermanent loss risks",
-      "Provide institutional-grade security"
-    ],
-    useCases: [
-      "Institutional DeFi investment",
-      "Retail yield farming",
-      "Portfolio management",
-      "Risk management",
-      "Regulatory compliance"
-    ],
-    targetAudience: [
-      "DeFi investors and traders",
-      "Institutional investors",
-      "Crypto hedge funds",
-      "Family offices",
-      "High-net-worth individuals"
-    ],
-    tags: ["DeFi", "Blockchain", "Yield Farming", "AI", "Risk Management"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,999 - $12,999/month",
-    roi: "500-1000%",
-    innovationLevel: "revolutionary",
+    tags: ["Customer Support", "Chatbot", "Sentiment Analysis", "24/7 Support", "Human Handoff"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-support-suite.jpg"],
+    createdAt: "2024-01-05T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 312,
+    featured: true,
+    location: "Global",
+    availability: "3-4 Weeks",
+    aiScore: 96,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com/ai-support-automation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketSize: "$15.8 billion by 2027"
+    marketPrice: "$3,000-8,000",
+    competitors: ["Intercom", "Zendesk", "Freshdesk"],
+    roi: "500% within 4 months",
+    setupTime: "3-4 weeks",
+    integrations: ["Slack", "Teams", "Zendesk", "Intercom", "CRM Systems", "Knowledge Base"]
   },
 
-  // Quantum Computing Applications
+  // AI-Powered HR & Recruitment Platform
   {
-    id: "quantum-supply-chain-optimization",
-    title: "Quantum Supply Chain Optimization Platform",
-    description: "Revolutionary supply chain optimization platform leveraging quantum computing to solve complex logistics problems, route optimization, and inventory management with unprecedented speed and accuracy.",
-    category: "Quantum Computing",
-    subcategory: "Supply Chain",
-    price: 15999,
+    id: "ai-hr-recruitment-platform",
+    title: "AI HR & Recruitment Platform",
+    description: "Comprehensive HR platform with AI-powered candidate screening, skill matching, and automated interview scheduling. Reduces hiring time by 60% and improves candidate quality by 80%.",
+    category: "AI & HR",
+    subcategory: "Recruitment Platform",
+    price: 4999,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum-powered route optimization",
-      "Real-time inventory management",
-      "Demand forecasting with quantum algorithms",
-      "Multi-modal transportation optimization",
-      "Sustainability and carbon footprint tracking",
-      "Integration with ERP and WMS systems",
-      "Advanced analytics and visualization",
-      "Mobile app for field operations",
-      "API access for enterprise systems",
-      "Custom quantum algorithm development"
-    ],
-    benefits: [
-      "Reduce logistics costs by 30-50%",
-      "Improve delivery times by 40%",
-      "Optimize inventory levels by 25%",
-      "Reduce carbon emissions by 35%",
-      "Handle complex multi-constraint problems"
-    ],
-    useCases: [
-      "Global logistics and shipping",
-      "E-commerce fulfillment",
-      "Manufacturing supply chains",
-      "Retail inventory management",
-      "Cold chain logistics"
-    ],
-    targetAudience: [
-      "Logistics companies",
-      "Manufacturing firms",
-      "Retail chains",
-      "E-commerce platforms",
-      "Supply chain consultants"
-    ],
-    tags: ["Quantum Computing", "Supply Chain", "Logistics", "Optimization", "AI"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$15,999 - $45,000/month",
-    roi: "800-1500%",
-    innovationLevel: "revolutionary",
+    tags: ["HR Management", "Recruitment", "AI Screening", "Skill Matching", "Interview Automation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-hr-platform.jpg"],
+    createdAt: "2024-01-10T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 234,
+    featured: true,
+    location: "Global",
+    availability: "4-5 Weeks",
+    aiScore: 97,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com/ai-hr-recruitment",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketSize: "$45.2 billion by 2027"
+    marketPrice: "$4,000-10,000",
+    competitors: ["Workday", "BambooHR", "Greenhouse"],
+    roi: "550% within 5 months",
+    setupTime: "4-5 weeks",
+    integrations: ["ATS Systems", "LinkedIn", "Job Boards", "Calendar Systems", "Email Platforms"]
   },
 
-  // AI-Powered Healthcare Solutions
+  // AI-Powered Legal Document Analysis
   {
-    id: "ai-medical-diagnosis-assistant",
-    title: "AI Medical Diagnosis Assistant",
-    description: "Advanced AI-powered medical diagnosis platform that assists healthcare professionals with accurate diagnosis, treatment recommendations, and patient monitoring using deep learning and medical imaging analysis.",
-    category: "AI & Healthcare",
-    subcategory: "Medical Diagnosis",
+    id: "ai-legal-document-analysis-platform",
+    title: "AI Legal Document Analysis Platform",
+    description: "Advanced legal tech platform with contract analysis, risk assessment, and compliance monitoring. Processes legal documents 50x faster with 98% accuracy in clause identification.",
+    category: "AI & Legal Tech",
+    subcategory: "Document Analysis",
+    price: 6999,
+    currency: "$",
+    tags: ["Legal Tech", "Contract Analysis", "Risk Assessment", "Compliance", "Document Processing"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-legal-platform.jpg"],
+    createdAt: "2024-01-15T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 189,
+    featured: true,
+    location: "Global",
+    availability: "5-6 Weeks",
+    aiScore: 98,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-legal-analysis",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$5,000-15,000",
+    competitors: ["DocuSign", "ContractPodAi", "Kira Systems"],
+    roi: "700% within 6 months",
+    setupTime: "5-6 weeks",
+    integrations: ["DocuSign", "Clio", "Practice Management Systems", "Document Storage", "Email"]
+  },
+
+  // AI-Powered Research & Discovery Platform
+  {
+    id: "ai-research-discovery-platform",
+    title: "AI Research & Discovery Platform",
+    description: "Intelligent research platform with automated literature review, hypothesis generation, and data synthesis. Accelerates research by 10x and identifies novel connections with 90% accuracy.",
+    category: "AI & Research",
+    subcategory: "Research Platform",
     price: 5999,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered medical image analysis",
-      "Symptom checker with 95% accuracy",
-      "Treatment recommendation engine",
-      "Patient monitoring and alerts",
-      "Integration with EHR systems",
-      "HIPAA and GDPR compliance",
-      "Multi-language support",
-      "Mobile app for healthcare providers",
-      "Advanced analytics and reporting",
-      "Custom model training for specific specialties"
-    ],
-    benefits: [
-      "Improve diagnosis accuracy by 30%",
-      "Reduce misdiagnosis rates by 40%",
-      "Speed up diagnosis time by 50%",
-      "Enhance patient outcomes",
-      "Reduce healthcare costs"
-    ],
-    useCases: [
-      "Radiology and imaging",
-      "Primary care diagnosis",
-      "Specialist consultations",
-      "Emergency medicine",
-      "Telemedicine platforms"
-    ],
-    targetAudience: [
-      "Hospitals and clinics",
-      "Radiologists",
-      "Primary care physicians",
-      "Specialists",
-      "Telemedicine companies"
-    ],
-    tags: ["AI", "Healthcare", "Medical Diagnosis", "Machine Learning", "Compliance"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,999 - $18,999/month",
-    roi: "600-1200%",
-    innovationLevel: "cutting-edge",
+    tags: ["Research Platform", "Literature Review", "Hypothesis Generation", "Data Synthesis", "Academic"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-research-platform.jpg"],
+    createdAt: "2024-01-20T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "4-5 Weeks",
+    aiScore: 97,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com/ai-research-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketSize: "$67.4 billion by 2027"
+    marketPrice: "$4,500-12,000",
+    competitors: ["ResearchGate", "Mendeley", "Zotero"],
+    roi: "600% within 5 months",
+    setupTime: "4-5 weeks",
+    integrations: ["PubMed", "Google Scholar", "Research Databases", "Citation Managers", "Academic APIs"]
   },
 
-  // Metaverse & AR/VR Solutions
+  // AI-Powered Green Technology Platform
   {
-    id: "metaverse-commerce-platform",
-    title: "Metaverse Commerce Platform",
-    description: "Comprehensive metaverse commerce platform enabling businesses to create virtual stores, host virtual events, and conduct immersive shopping experiences with AR/VR integration and blockchain-based digital assets.",
-    category: "Metaverse & AR/VR",
-    subcategory: "Virtual Commerce",
-    price: 7999,
+    id: "ai-green-technology-platform",
+    title: "AI Green Technology Platform",
+    description: "Sustainable technology platform with carbon footprint tracking, energy optimization, and environmental impact assessment. Reduces carbon emissions by 40% and energy costs by 35%.",
+    category: "AI & Green Tech",
+    subcategory: "Sustainability Platform",
+    price: 4499,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "3D virtual store builder",
-      "AR/VR shopping experiences",
-      "Blockchain-based digital assets",
-      "Virtual event hosting platform",
-      "AI-powered customer avatars",
-      "Multi-platform compatibility",
-      "Analytics and customer insights",
-      "Mobile and desktop access",
-      "API integration capabilities",
-      "Custom branding and theming"
-    ],
-    benefits: [
-      "Increase customer engagement by 300%",
-      "Reduce returns by 25%",
-      "Expand global reach without physical presence",
-      "Create immersive brand experiences",
-      "Generate new revenue streams"
-    ],
-    useCases: [
-      "E-commerce virtual stores",
-      "Virtual fashion shows",
-      "Virtual real estate tours",
-      "Virtual conferences and events",
-      "Virtual tourism experiences"
-    ],
-    targetAudience: [
-      "E-commerce businesses",
-      "Fashion and retail brands",
-      "Real estate companies",
-      "Event organizers",
-      "Tourism companies"
-    ],
-    tags: ["Metaverse", "AR/VR", "E-commerce", "Blockchain", "Virtual Reality"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "premium",
-    marketPrice: "$7,999 - $24,999/month",
-    roi: "400-800%",
-    innovationLevel: "cutting-edge",
+    tags: ["Green Tech", "Carbon Tracking", "Energy Optimization", "Sustainability", "Environmental Impact"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-green-tech.jpg"],
+    createdAt: "2024-01-25T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 123,
+    featured: true,
+    location: "Global",
+    availability: "3-4 Weeks",
+    aiScore: 95,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com/ai-green-tech",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketSize: "$74.4 billion by 2027"
+    marketPrice: "$3,500-9,000",
+    competitors: ["Watershed", "Normative", "Carbon Analytics"],
+    roi: "450% within 4 months",
+    setupTime: "3-4 weeks",
+    integrations: ["IoT Sensors", "Energy Management Systems", "Building Management", "Sustainability APIs"]
   },
 
-  // Autonomous Systems & Robotics
+  // AI-Powered Metaverse Development Platform
   {
-    id: "autonomous-fleet-management",
-    title: "Autonomous Fleet Management Platform",
-    description: "Next-generation autonomous fleet management platform that optimizes routes, monitors vehicle performance, and manages autonomous vehicle operations with AI-powered decision making and real-time analytics.",
-    category: "Autonomous Systems",
-    subcategory: "Fleet Management",
-    price: 12999,
+    id: "ai-metaverse-development-platform",
+    title: "AI Metaverse Development Platform",
+    description: "Comprehensive metaverse platform with AI-generated environments, virtual asset creation, and immersive experiences. Enables rapid metaverse development with 90% faster asset generation.",
+    category: "AI & Metaverse",
+    subcategory: "Development Platform",
+    price: 8999,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered route optimization",
-      "Real-time vehicle monitoring",
-      "Predictive maintenance alerts",
-      "Autonomous driving assistance",
-      "Fleet performance analytics",
-      "Integration with vehicle systems",
-      "Mobile app for drivers and managers",
-      "Advanced reporting and insights",
-      "API access for enterprise systems",
-      "Custom algorithm development"
-    ],
-    benefits: [
-      "Reduce fuel costs by 25-40%",
-      "Improve delivery efficiency by 35%",
-      "Reduce maintenance costs by 30%",
-      "Enhance driver safety",
-      "Optimize fleet utilization"
-    ],
-    useCases: [
-      "Delivery and logistics",
-      "Public transportation",
-      "Ride-sharing services",
-      "Construction and mining",
-      "Agricultural operations"
-    ],
-    targetAudience: [
-      "Logistics companies",
-      "Transportation firms",
-      "Municipalities",
-      "Construction companies",
-      "Agricultural businesses"
-    ],
-    tags: ["Autonomous Systems", "Fleet Management", "AI", "IoT", "Analytics"],
-    estimatedDelivery: "14-18 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$12,999 - $35,000/month",
-    roi: "600-1200%",
-    innovationLevel: "revolutionary",
+    tags: ["Metaverse", "Virtual Reality", "AI Generation", "3D Assets", "Immersive Experiences"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-metaverse.jpg"],
+    createdAt: "2024-02-01T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 98,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 96,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com/ai-metaverse",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketSize: "$28.9 billion by 2027"
+    marketPrice: "$7,000-20,000",
+    competitors: ["Unity", "Unreal Engine", "Roblox Studio"],
+    roi: "800% within 8 months",
+    setupTime: "6-8 weeks",
+    integrations: ["VR Headsets", "3D Modeling Tools", "Blockchain", "Payment Systems", "Social Platforms"]
   },
 
-  // Green Tech & Sustainability
+  // AI-Powered Space Technology Platform
   {
-    id: "carbon-tracking-optimization",
-    title: "Carbon Tracking & Optimization Platform",
-    description: "Comprehensive carbon tracking and optimization platform that helps businesses measure, reduce, and offset their carbon footprint with AI-powered insights and automated sustainability reporting.",
-    category: "Green Tech",
-    subcategory: "Sustainability",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time carbon footprint tracking",
-      "AI-powered emission reduction recommendations",
-      "Automated sustainability reporting",
-      "Carbon offset marketplace integration",
-      "ESG scoring and analytics",
-      "Integration with business systems",
-      "Mobile app for field monitoring",
-      "Advanced analytics and visualization",
-      "API access for enterprise systems",
-      "Custom sustainability metrics"
-    ],
-    benefits: [
-      "Reduce carbon emissions by 20-40%",
-      "Improve ESG scores by 30%",
-      "Automate sustainability reporting",
-      "Identify cost-saving opportunities",
-      "Enhance brand reputation"
-    ],
-    useCases: [
-      "Corporate sustainability",
-      "Manufacturing operations",
-      "Supply chain management",
-      "Real estate management",
-      "Transportation and logistics"
-    ],
-    targetAudience: [
-      "Large corporations",
-      "Manufacturing companies",
-      "Real estate firms",
-      "Transportation companies",
-      "Sustainability consultants"
-    ],
-    tags: ["Green Tech", "Sustainability", "Carbon Tracking", "ESG", "Analytics"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,999 - $11,999/month",
-    roi: "400-800%",
-    innovationLevel: "cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    marketSize: "$74.8 billion by 2027"
-  },
-
-  // Space Tech & Satellite Solutions
-  {
-    id: "satellite-data-analytics-platform",
-    title: "Satellite Data Analytics Platform",
-    description: "Advanced satellite data analytics platform that processes and analyzes satellite imagery for agriculture, environmental monitoring, urban planning, and disaster response with AI-powered insights.",
-    category: "Space Tech",
-    subcategory: "Satellite Analytics",
-    price: 9999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time satellite data processing",
-      "AI-powered image analysis",
-      "Multi-spectral data analysis",
-      "Change detection algorithms",
-      "Integration with GIS systems",
-      "Mobile app for field operations",
-      "Advanced analytics and reporting",
-      "API access for enterprise systems",
-      "Custom algorithm development",
-      "Historical data analysis"
-    ],
-    benefits: [
-      "Improve agricultural yields by 25%",
-      "Reduce environmental monitoring costs by 40%",
-      "Enable real-time disaster response",
-      "Optimize urban planning decisions",
-      "Enhance environmental compliance"
-    ],
-    useCases: [
-      "Precision agriculture",
-      "Environmental monitoring",
-      "Urban planning and development",
-      "Disaster response and recovery",
-      "Infrastructure monitoring"
-    ],
-    targetAudience: [
-      "Agricultural companies",
-      "Environmental agencies",
-      "Urban planning departments",
-      "Disaster response organizations",
-      "Infrastructure companies"
-    ],
-    tags: ["Space Tech", "Satellite Analytics", "AI", "GIS", "Environmental Monitoring"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$9,999 - $28,999/month",
-    roi: "500-1000%",
-    innovationLevel: "revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    marketSize: "$15.2 billion by 2027"
-  },
-
-  // FinTech & Digital Banking
-  {
-    id: "ai-powered-banking-platform",
-    title: "AI-Powered Digital Banking Platform",
-    description: "Next-generation digital banking platform that uses AI to provide personalized financial services, automated investment advice, and intelligent fraud detection with blockchain security.",
-    category: "FinTech",
-    subcategory: "Digital Banking",
-    price: 15999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered financial advice",
-      "Automated investment management",
-      "Real-time fraud detection",
-      "Personalized banking experience",
-      "Blockchain-based security",
-      "Multi-currency support",
-      "Mobile and web applications",
-      "API integration capabilities",
-      "Advanced analytics and reporting",
-      "Custom banking solutions"
-    ],
-    benefits: [
-      "Improve customer satisfaction by 45%",
-      "Reduce fraud losses by 80%",
-      "Increase operational efficiency by 35%",
-      "Provide personalized financial services",
-      "Enhance security and compliance"
-    ],
-    useCases: [
-      "Digital banking services",
-      "Investment management",
-      "Fraud detection and prevention",
-      "Personal finance management",
-      "Corporate banking solutions"
-    ],
-    targetAudience: [
-      "Banks and credit unions",
-      "FinTech startups",
-      "Investment firms",
-      "Insurance companies",
-      "Financial advisors"
-    ],
-    tags: ["FinTech", "Digital Banking", "AI", "Blockchain", "Security"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$15,999 - $45,000/month",
-    roi: "700-1400%",
-    innovationLevel: "revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    marketSize: "$123.7 billion by 2027"
-  },
-
-  // IoT & Smart Cities
-  {
-    id: "smart-city-management-platform",
-    title: "Smart City Management Platform",
-    description: "Comprehensive smart city management platform that integrates IoT sensors, AI analytics, and automation to optimize urban infrastructure, traffic management, and public services.",
-    category: "IoT & Smart Cities",
-    subcategory: "Urban Management",
+    id: "ai-space-technology-platform",
+    title: "AI Space Technology Platform",
+    description: "Advanced space tech platform with satellite operations, mission planning, and space data analytics. Optimizes satellite operations with 95% efficiency and reduces mission costs by 50%.",
+    category: "AI & Space Tech",
+    subcategory: "Space Operations",
     price: 19999,
     currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "IoT sensor integration and management",
-      "AI-powered traffic optimization",
-      "Smart energy management",
-      "Public safety monitoring",
-      "Environmental quality tracking",
-      "Integration with city systems",
-      "Real-time analytics dashboard",
-      "Mobile app for city officials",
-      "API access for developers",
-      "Custom city solutions"
-    ],
-    benefits: [
-      "Reduce traffic congestion by 30%",
-      "Lower energy consumption by 25%",
-      "Improve public safety response by 40%",
-      "Enhance citizen satisfaction",
-      "Optimize city operations"
-    ],
-    useCases: [
-      "Traffic management",
-      "Energy optimization",
-      "Public safety",
-      "Environmental monitoring",
-      "Infrastructure management"
-    ],
-    targetAudience: [
-      "City governments",
-      "Municipalities",
-      "Urban planners",
-      "Infrastructure companies",
-      "Technology providers"
-    ],
-    tags: ["IoT", "Smart Cities", "AI", "Urban Planning", "Infrastructure"],
-    estimatedDelivery: "20-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$19,999 - $55,000/month",
-    roi: "800-1600%",
-    innovationLevel: "revolutionary",
+    tags: ["Space Tech", "Satellite Operations", "Mission Planning", "Space Analytics", "AI Navigation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-space-tech.jpg"],
+    createdAt: "2024-02-05T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 67,
+    featured: true,
+    location: "Global",
+    availability: "10-12 Weeks",
+    aiScore: 99,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com/ai-space-tech",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketSize: "$67.2 billion by 2027"
+    marketPrice: "$15,000-40,000",
+    competitors: ["SpaceX", "Blue Origin", "Planet Labs"],
+    roi: "1000% within 12 months",
+    setupTime: "10-12 weeks",
+    integrations: ["Satellite APIs", "Ground Stations", "Mission Control", "Space Data Sources"]
+  },
+
+  // AI-Powered Operations & Supply Chain Platform
+  {
+    id: "ai-operations-supply-chain-platform",
+    title: "AI Operations & Supply Chain Platform",
+    description: "Intelligent operations platform with predictive supply chain management, inventory optimization, and demand forecasting. Reduces operational costs by 30% and improves efficiency by 45%.",
+    category: "AI & Operations",
+    subcategory: "Operations Platform",
+    price: 5499,
+    currency: "$",
+    tags: ["Operations", "Supply Chain", "Inventory Management", "Demand Forecasting", "Process Optimization"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-operations.jpg"],
+    createdAt: "2024-02-10T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 178,
+    featured: true,
+    location: "Global",
+    availability: "4-5 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-operations",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$4,000-12,000",
+    competitors: ["SAP", "Oracle", "Microsoft Dynamics"],
+    roi: "500% within 5 months",
+    setupTime: "4-5 weeks",
+    integrations: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "Analytics Platforms"]
+  },
+
+  // AI-Powered Development & QA Platform
+  {
+    id: "ai-development-qa-platform",
+    title: "AI Development & QA Platform",
+    description: "Intelligent development platform with automated code review, testing, and quality assurance. Reduces development time by 40% and improves code quality by 60%.",
+    category: "AI & Development",
+    subcategory: "Development Platform",
+    price: 3999,
+    currency: "$",
+    tags: ["Development", "Code Review", "Testing", "Quality Assurance", "Automation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-development.jpg"],
+    createdAt: "2024-02-15T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 234,
+    featured: true,
+    location: "Global",
+    availability: "3-4 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-development-qa",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$3,000-8,000",
+    competitors: ["GitHub Copilot", "CodeClimate", "SonarQube"],
+    roi: "450% within 4 months",
+    setupTime: "3-4 weeks",
+    integrations: ["Git", "CI/CD Pipelines", "IDEs", "Testing Frameworks", "Code Repositories"]
+  },
+
+  // AI-Powered Sales Intelligence Platform
+  {
+    id: "ai-sales-intelligence-platform",
+    title: "AI Sales Intelligence Platform",
+    description: "Advanced sales platform with lead scoring, opportunity prediction, and automated follow-up. Increases conversion rates by 55% and reduces sales cycle by 40%.",
+    category: "AI & Sales",
+    subcategory: "Sales Intelligence",
+    price: 3499,
+    currency: "$",
+    tags: ["Sales Intelligence", "Lead Scoring", "Opportunity Prediction", "Automated Follow-up", "CRM"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-sales.jpg"],
+    createdAt: "2024-02-20T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 189,
+    featured: true,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-sales-intelligence",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$2,500-7,000",
+    competitors: ["Salesforce Einstein", "HubSpot", "Pipedrive"],
+    roi: "500% within 3 months",
+    setupTime: "2-3 weeks",
+    integrations: ["Salesforce", "HubSpot", "Pipedrive", "Email Platforms", "Calendar Systems"]
+  },
+
+  // AI-Powered Financial Planning Platform
+  {
+    id: "ai-financial-planning-platform",
+    title: "AI Financial Planning Platform",
+    description: "Intelligent financial planning platform with automated budgeting, investment recommendations, and risk assessment. Improves financial outcomes by 35% and reduces planning time by 70%.",
+    category: "AI & FinTech",
+    subcategory: "Financial Planning",
+    price: 2499,
+    currency: "$",
+    tags: ["Financial Planning", "Budgeting", "Investment", "Risk Assessment", "Personal Finance"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-financial.jpg"],
+    createdAt: "2024-02-25T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 145,
+    featured: true,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-financial-planning",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$2,000-6,000",
+    competitors: ["Mint", "YNAB", "Personal Capital"],
+    roi: "400% within 3 months",
+    setupTime: "2-3 weeks",
+    integrations: ["Bank APIs", "Investment Platforms", "Tax Software", "Budgeting Apps"]
+  },
+
+  // AI-Powered Education & Learning Platform
+  {
+    id: "ai-education-learning-platform",
+    title: "AI Education & Learning Platform",
+    description: "Personalized learning platform with adaptive curriculum, progress tracking, and intelligent tutoring. Improves learning outcomes by 45% and reduces study time by 30%.",
+    category: "AI & Education",
+    subcategory: "Learning Platform",
+    price: 1999,
+    currency: "$",
+    tags: ["Education", "Learning", "Adaptive Curriculum", "Progress Tracking", "Tutoring"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-education.jpg"],
+    createdAt: "2024-03-01T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 267,
+    featured: true,
+    location: "Global",
+    availability: "2-3 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-education",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$1,500-5,000",
+    competitors: ["Coursera", "Udemy", "Khan Academy"],
+    roi: "350% within 3 months",
+    setupTime: "2-3 weeks",
+    integrations: ["LMS Systems", "Video Platforms", "Assessment Tools", "Student Information Systems"]
+  },
+
+  // AI-Powered Real Estate Platform
+  {
+    id: "ai-real-estate-platform",
+    title: "AI Real Estate Platform",
+    description: "Intelligent real estate platform with property valuation, market analysis, and investment recommendations. Improves investment decisions by 50% and reduces research time by 60%.",
+    category: "AI & Real Estate",
+    subcategory: "Real Estate Platform",
+    price: 3999,
+    currency: "$",
+    tags: ["Real Estate", "Property Valuation", "Market Analysis", "Investment", "AI Insights"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-real-estate.jpg"],
+    createdAt: "2024-03-05T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 123,
+    featured: true,
+    location: "Global",
+    availability: "3-4 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-real-estate",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$3,000-8,000",
+    competitors: ["Zillow", "Redfin", "Realtor.com"],
+    roi: "500% within 4 months",
+    setupTime: "3-4 weeks",
+    integrations: ["MLS Systems", "Property Databases", "Financial Calculators", "Market Data APIs"]
+  },
+
+  // AI-Powered Manufacturing Platform
+  {
+    id: "ai-manufacturing-platform",
+    title: "AI Manufacturing Platform",
+    description: "Intelligent manufacturing platform with predictive maintenance, quality control, and production optimization. Reduces downtime by 45% and improves efficiency by 40%.",
+    category: "AI & Manufacturing",
+    subcategory: "Manufacturing Platform",
+    price: 7999,
+    currency: "$",
+    tags: ["Manufacturing", "Predictive Maintenance", "Quality Control", "Production Optimization", "IoT"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-manufacturing.jpg"],
+    createdAt: "2024-03-10T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-manufacturing",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$6,000-18,000",
+    competitors: ["Siemens", "GE Digital", "PTC"],
+    roi: "600% within 8 months",
+    setupTime: "6-8 weeks",
+    integrations: ["MES Systems", "SCADA", "IoT Sensors", "ERP Systems", "Quality Management"]
+  },
+
+  // AI-Powered Logistics Platform
+  {
+    id: "ai-logistics-platform",
+    title: "AI Logistics Platform",
+    description: "Intelligent logistics platform with route optimization, demand forecasting, and supply chain visibility. Reduces logistics costs by 35% and improves delivery times by 25%.",
+    category: "AI & Logistics",
+    subcategory: "Logistics Platform",
+    price: 5499,
+    currency: "$",
+    tags: ["Logistics", "Route Optimization", "Demand Forecasting", "Supply Chain", "Transportation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-logistics.jpg"],
+    createdAt: "2024-03-15T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "4-5 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-logistics",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$4,000-12,000",
+    competitors: ["Flexport", "Freightos", "Convoy"],
+    roi: "500% within 5 months",
+    setupTime: "4-5 weeks",
+    integrations: ["TMS Systems", "GPS Tracking", "Fleet Management", "Warehouse Systems", "Shipping APIs"]
   }
 ];

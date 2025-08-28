@@ -150,6 +150,14 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500'
     },
     { 
+      name: 'Innovative Services 2027', 
+      href: '/innovative-services-2027', 
+      icon: Sparkles, 
+      description: 'Cutting-edge micro SAAS solutions',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
       name: 'AI & FinTech', 
       href: '/services', 
       icon: DollarSign, 
