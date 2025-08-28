@@ -30,6 +30,14 @@
   NETLIFY_SKIP_FRAMEWORK_PLUGINS = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
 
+<<<<<<< HEAD
+# Explicitly disable Next.js plugin and configure only Vite-compatible plugins
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+  inputs = {}
+
+# No Next.js plugin needed for Vite project
+=======
 # Fix MIME type issues
 [[headers]]
   for = "/js/*"
@@ -109,6 +117,7 @@
     Content-Type = "application/manifest+json"
 
 # Removed Next.js plugin since this is a Vite project
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
 
 # Redirects for SEO/legacy URLs
 [[redirects]]

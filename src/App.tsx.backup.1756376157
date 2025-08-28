@@ -9,7 +9,8 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import SEO from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ErrorBoundary } from './utils/errorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 
@@ -57,15 +58,12 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
-<<<<<<< HEAD
-=======
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SystemStatus = React.lazy(() => import('./pages/SystemStatus'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const WebsiteAnalyzer = React.lazy(() => import('./components/WebsiteAnalyzer'));
 const SitemapGenerator = React.lazy(() => import('./components/SitemapGenerator'));
 
->>>>>>> origin/cursor/website-audit-and-enhancement-ee27
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
@@ -85,6 +83,7 @@ const LoginPage = React.lazy(() => import('./pages/Login'));
 // New 2025 service imports
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
+const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
@@ -338,9 +337,6 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/team" element={<Team />} />
-<<<<<<< HEAD
-              <Route path="/help" element={<HelpCenter />} />
-=======
               <Route path="/news" element={<News />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/help-center" element={<HelpCenter />} />
@@ -363,7 +359,6 @@ function App() {
               {/* Additional Routes */}
               <Route path="/events" element={<Events />} />
               <Route path="/help" element={<Help />} />
->>>>>>> origin/cursor/website-audit-and-enhancement-ee27
               <Route path="/security" element={<Security />} />
               <Route path="/status" element={<Status />} />
               <Route path="/cookies" element={<Cookies />} />
@@ -478,6 +473,11 @@ function App() {
               <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
               <Route path="/pricing-2026" element={<ComprehensivePricing2026 />} />
               
+              {/* New 2028 service routes */}
+              <Route path="/ultimate-services-showcase-2028" element={<UltimateServicesShowcase2028 />} />
+              <Route path="/ultimate-services-2028" element={<UltimateServicesShowcase2028 />} />
+              <Route path="/services-2028" element={<UltimateServicesShowcase2028 />} />
+              
               {/* 2028 Pricing */}
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
@@ -519,9 +519,15 @@ function App() {
         </main>
         <EnhancedFooter />
         <ChatAssistant />
+<<<<<<< HEAD
         <PerformanceOptimizer enabled={true} showControls={true} autoOptimize={true} />
         <AccessibilityEnhancer enabled={true} showControls={true} />
         <MobileExperienceEnhancer enabled={true} showControls={true} autoOptimize={true} />
+=======
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer enabled={true} showControls={false} />
+        <PerformanceMonitor />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
       </div>
     </ErrorBoundary>
   );

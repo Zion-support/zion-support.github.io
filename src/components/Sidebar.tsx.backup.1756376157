@@ -36,6 +36,13 @@ import {
   ArrowRight,
   DollarSign,
   Workflow,
+<<<<<<< HEAD
+  Newspaper,
+  GraduationCap,
+  Video,
+  FileText,
+  Activity
+=======
   Satellite,
   Dna,
   Robot,
@@ -56,6 +63,7 @@ import {
   Calendar,
   Video,
   Newspaper
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -65,7 +73,11 @@ interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
+<<<<<<< HEAD
+  const [expandedSections, setExpandedSections] = useState<string[]>(['Main Navigation']);
+=======
   const [expandedSections, setExpandedSections] = useState<string[]>(['2028 Services', 'Featured Services']);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
@@ -116,7 +128,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       featured: true,
       items: [
         { name: '2027 Services Overview', href: '/services2027', icon: Star, featured: true },
+<<<<<<< HEAD
+        { name: '2028 Services Overview', href: '/innovative-services-showcase-2028', icon: Star, featured: true, new: true },
+=======
         { name: '2026 Services Overview', href: '/services2026', icon: Star, featured: true },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
         { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, featured: true },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield },
@@ -143,6 +159,29 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },
         { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Settings },
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow },
+<<<<<<< HEAD
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3 },
+        { name: 'AI HR Talent Platform', href: '/services/ai-hr-talent-platform', icon: Users },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+      ]
+    },
+    {
+      title: 'Emerging Technologies 2028',
+      items: [
+        { name: 'Space Technology & Satellites', href: '/services/space-technology-satellite-services-2028', icon: Satellite, new: true },
+        { name: 'Biotechnology & AI Drug Discovery', href: '/services/biotechnology-ai-drug-discovery-2028', icon: Dna, new: true },
+        { name: 'Nanotechnology Manufacturing', href: '/services/nanotechnology-manufacturing-platform-2028', icon: Microscope, new: true },
+        { name: 'Quantum Internet & Communications', href: '/services/quantum-internet-communications-2028', icon: Wifi, new: true },
+        { name: 'Brain-Computer Interface', href: '/services/brain-computer-interface-platform-2028', icon: Brain, new: true },
+        { name: 'Fusion Energy Management', href: '/services/fusion-energy-management-platform-2028', icon: Flame, new: true },
+        { name: 'Synthetic Biology Platform', href: '/services/synthetic-biology-platform-2028', icon: Dna, new: true },
+        { name: 'Quantum Sensing & Metrology', href: '/services/quantum-sensing-metrology-2028', icon: Atom, new: true },
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
+      icon: Cloud,
+=======
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', icon: FileText },
@@ -151,6 +190,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     },
     {
       title: 'Cloud & Infrastructure',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
       items: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Server },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Building },
@@ -158,19 +198,47 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3 },
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
+<<<<<<< HEAD
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
+        { name: 'IT Consulting', href: '/services/it-consulting', icon: Cpu },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
+        { name: 'Infrastructure Services', href: '/it-services/infrastructure', icon: Server },
+=======
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
         { name: 'IT Consulting', href: '/services/it-consulting', icon: Building },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
       ]
     },
     {
       title: 'Cybersecurity',
       icon: Shield,
       items: [
+<<<<<<< HEAD
+=======
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
+<<<<<<< HEAD
+        { name: 'Privacy & Compliance', href: '/privacy', icon: Shield },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: Shield },
+        { name: 'Incident Response Platform', href: '/services/incident-response-platform', icon: Shield },
+      ]
+    },
+    {
+      title: 'Data & Analytics',
+      items: [
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'Business Intelligence', href: '/services/business-intelligence', icon: TrendingUp },
+        { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3 },
+        { name: 'Performance Analytics', href: '/services/performance-analytics', icon: TrendingUp },
+        { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
+        { name: 'AI Analytics', href: '/services/ai-analytics', icon: BarChart3 },
+        { name: 'Analytics Dashboard', href: '/analytics', icon: BarChart3 },
+=======
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
       ]
     },
     {
@@ -180,8 +248,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
         { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
+<<<<<<< HEAD
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
+        { name: 'Space Technology', href: '/services/space-tech', icon: Rocket },
+        { name: 'Quantum Technology', href: '/quantum-technology', icon: Atom },
+        { name: 'Green IT Solutions', href: '/services/green-it', icon: Globe },
+=======
         { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Cpu },
         { name: 'Green IT Solutions', href: '/services/green-it', icon: Leaf },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
       ]
     },
     {
@@ -190,11 +267,38 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart },
         { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
+<<<<<<< HEAD
+        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle },
+=======
         { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
         { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
         { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle },
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
         { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },
+<<<<<<< HEAD
+        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle },
+        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
+        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: MessageCircle },
+      ]
+    },
+    {
+      title: 'Additional Services',
+      icon: Star,
+      items: [
+        { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'News', href: '/news', icon: Newspaper },
+        { name: 'FAQ', href: '/faq', icon: HelpCircle },
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Support', href: '/support', icon: MessageCircle },
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Documentation', href: '/documentation', icon: FileText },
+        { name: 'System Status', href: '/system-status', icon: Activity },
+=======
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle },
         { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart },
         { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail },
@@ -228,10 +332,21 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Case Studies', href: '/case-studies', icon: FileText },
         { name: 'White Papers', href: '/white-papers', icon: FileText },
         { name: 'Webinars', href: '/webinars', icon: Video },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
       ]
     }
   ];
 
+<<<<<<< HEAD
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
+  };
+
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
   return (
     <AnimatePresence>
       {isOpen && (
@@ -241,7 +356,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
+=======
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
             onClick={onClose}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           />
@@ -252,6 +370,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+<<<<<<< HEAD
+            className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-cyan-400/20 shadow-2xl z-50 overflow-y-auto"
+          >
+            {/* Header */}
+            <div className="p-6 border-b border-cyan-400/20">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                    <Zap className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    Zion Tech
+                  </span>
+                </div>
+                <button
+                  onClick={onClose}
+                  className="p-2 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-200"
+=======
             className="fixed left-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 shadow-2xl z-50 overflow-y-auto"
           >
             {/* Header */}
@@ -270,6 +406,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   onClick={onClose}
                   className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-slate-700/50 transition-colors"
                   aria-label="Close sidebar"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -290,6 +427,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <div className="p-4 space-y-6">
               {navigationSections.map((section) => (
                 <div key={section.title} className="space-y-3">
+<<<<<<< HEAD
+                  {/* Section Header */}
+                  <button
+                    onClick={() => toggleSection(section.title)}
+                    className="flex items-center justify-between w-full text-left group"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <section.icon className="w-5 h-5 text-cyan-400" />
+                      <span className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
+=======
                   <button
                     onClick={() => toggleSection(section.title)}
                     className="flex items-center justify-between w-full p-3 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-200 group"
@@ -307,6 +454,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                       <span className={`font-medium ${
                         section.featured ? 'text-yellow-400' : 'text-white'
                       }`}>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
                         {section.title}
                       </span>
                       {section.new && (
@@ -315,25 +463,60 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         </span>
                       )}
                     </div>
+<<<<<<< HEAD
+                    <ChevronRight 
+                      className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                        expandedSections.includes(section.title) ? 'rotate-90' : ''
+                      }`} 
+                    />
+                  </button>
+
+                  {/* Section Items */}
+=======
                     <ChevronRight className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                       expandedSections.includes(section.title) ? 'rotate-90' : ''
                     }`} />
                   </button>
 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
                   <AnimatePresence>
                     {expandedSections.includes(section.title) && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
+                        transition={{ duration: 0.2 }}
+                        className="ml-6 space-y-1"
+=======
                         transition={{ duration: 0.3 }}
                         className="ml-6 space-y-2"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
                       >
                         {section.items.map((item) => (
                           <Link
                             key={item.name}
                             to={item.href}
                             onClick={onClose}
+<<<<<<< HEAD
+                            className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
+                              isActive(item.href)
+                                ? 'bg-cyan-400/20 text-cyan-400 border border-cyan-400/30'
+                                : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10'
+                            }`}
+                          >
+                            <item.icon className={`w-4 h-4 ${
+                              isActive(item.href) ? 'text-cyan-400' : 'text-gray-500 group-hover:text-cyan-400'
+                            }`} />
+                            <span className="text-sm">{item.name}</span>
+                            {item.featured && <Sparkles className="w-3 h-3 text-yellow-400 ml-auto" />}
+                            {item.new && (
+                              <span className="px-2 py-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs rounded-full animate-pulse ml-auto">
+                                NEW
+                              </span>
+                            )}
+                            {isActive(item.href) && <ArrowRight className="w-3 h-3 text-cyan-400 ml-auto" />}
+=======
                             className={`flex items-center gap-3 p-3 rounded-lg transition-all duration-200 group ${
                               location.pathname === item.href
                                 ? 'bg-cyan-500/20 border border-cyan-500/30 text-cyan-400'
@@ -350,6 +533,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                                 NEW
                               </span>
                             )}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
                           </Link>
                         ))}
                       </motion.div>
@@ -360,6 +544,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Footer */}
+<<<<<<< HEAD
+            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-cyan-400/20 bg-zion-slate-dark/50 backdrop-blur-sm">
+              <div className="text-center text-sm text-gray-400">
+                <p>© 2024 Zion Tech Group</p>
+                <p className="text-xs mt-1">Innovation Hub</p>
+=======
             <div className="sticky bottom-0 bg-slate-800/50 backdrop-blur-xl border-t border-slate-700/50 p-4">
               <div className="space-y-3">
                 <Link
@@ -378,6 +568,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <DollarSign className="w-4 h-4" />
                   Request Quote
                 </Link>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5548
               </div>
             </div>
           </motion.div>

@@ -9,7 +9,8 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import SEO from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ErrorBoundary } from './utils/errorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 
@@ -82,6 +83,7 @@ const LoginPage = React.lazy(() => import('./pages/Login'));
 // New 2025 service imports
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
+const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
@@ -471,6 +473,11 @@ function App() {
               <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
               <Route path="/pricing-2026" element={<ComprehensivePricing2026 />} />
               
+              {/* New 2028 service routes */}
+              <Route path="/ultimate-services-showcase-2028" element={<UltimateServicesShowcase2028 />} />
+              <Route path="/ultimate-services-2028" element={<UltimateServicesShowcase2028 />} />
+              <Route path="/services-2028" element={<UltimateServicesShowcase2028 />} />
+              
               {/* 2028 Pricing */}
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
@@ -512,9 +519,9 @@ function App() {
         </main>
         <EnhancedFooter />
         <ChatAssistant />
-        <PerformanceOptimizer enabled={true} showControls={true} autoOptimize={true} />
-        <AccessibilityEnhancer enabled={true} showControls={true} />
-        <MobileExperienceEnhancer enabled={true} showControls={true} autoOptimize={true} />
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer enabled={true} showControls={false} />
+        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
   );
