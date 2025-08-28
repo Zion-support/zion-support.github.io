@@ -208,8 +208,6 @@ const sitemapSections: SitemapSection[] = [
   }
 ];
 
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fdeb
 export default function Sitemap() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
