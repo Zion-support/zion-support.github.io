@@ -4,10 +4,15 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔍 Starting daily quality checks automation...');
+console.log('🔍 Starting continuous quality checks automation...');
+
+// Get automation interval from environment variable (default: 3 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours
 
 async function runQualityChecks() {
   try {
+    console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
+    
     // Run linting
     console.log('🔍 Running ESLint...');
     try {
@@ -83,13 +88,42 @@ async function runQualityChecks() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Quality report saved to ${reportPath}`);
     
-    console.log('✅ Quality checks completed successfully');
+    console.log('✅ Continuous quality checks completed successfully');
     
   } catch (error) {
-    console.error('❌ Quality checks failed:', error.message);
-    process.exit(1);
+    console.error('❌ Continuous quality checks failed:', error.message);
+    // Don't exit, just log the error and continue
   }
 }
 
-// Run the quality checks
-runQualityChecks();
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial quality checks
+  await runQualityChecks();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runQualityChecks();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the continuous quality checks
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous quality checks:', error);
+  process.exit(1);
+});
