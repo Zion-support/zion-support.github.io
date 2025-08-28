@@ -88,6 +88,10 @@ const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
 
+<<<<<<< HEAD
+// New Innovative Services Showcase
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./components/InnovativeServicesShowcase2025'));
+=======
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
@@ -172,6 +176,7 @@ const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'))
 const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
 const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
 const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d810
 
 // Additional pages
 const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
@@ -312,6 +317,8 @@ function App() {
               <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
               <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
               
+<<<<<<< HEAD
+=======
               {/* Additional new innovative AI services */}
               <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
               <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
@@ -321,6 +328,7 @@ function App() {
               {/* Enhanced services showcase */}
               <Route path="/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
               
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d810
               {/* New 2025 service routes */}
               <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
               <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />

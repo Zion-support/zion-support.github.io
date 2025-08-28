@@ -549,6 +549,36 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
+<<<<<<< HEAD
+  background: rgba(6, 182, 212, 0.7);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}
+
+/* High contrast print */
+@media print and (prefers-contrast: high) {
+  * {
+    border: 1px solid black !important;
+  }
+}
+
+/* Reduced motion print */
+@media print and (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+=======
   background: linear-gradient(var(--zion-cyan-light), var(--zion-purple-light));
 }
 
@@ -901,5 +931,6 @@ html {
   
   .loading-futuristic::after {
     animation: none;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d810
   }
 }
