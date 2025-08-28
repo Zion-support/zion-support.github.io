@@ -88,6 +88,12 @@ const SolutionsPage = React.lazy(() => import('./pages/Solutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
 
+// Newly added routes used by header/footer/sidebar
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
@@ -312,10 +318,15 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/help" element={<HelpCenterPage />} />
+              <Route path="/support" element={<HelpCenterPage />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/pricing" element={<Pricing />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/services" element={<Services />} />
               <Route path="/solutions" element={<Solutions />} />
               <Route path="/ai-solutions" element={<AISolutions />} />

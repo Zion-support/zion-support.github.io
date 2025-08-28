@@ -142,6 +142,8 @@ export function Footer() {
     }
   ];
 
+<<<<<<< HEAD
+=======
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
@@ -149,6 +151,7 @@ export function Footer() {
     { name: "Sitemap", path: "/sitemap" }
   ];
 
+>>>>>>> origin/cursor/website-audit-and-enhancement-3fc6
   const socialLinks = [
     { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },

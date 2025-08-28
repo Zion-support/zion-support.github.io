@@ -30,6 +30,10 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Services', href: '/services', current: false },
+<<<<<<< HEAD
+    { name: 'Solutions', href: '/solutions', current: false },
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3fc6
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
@@ -37,7 +41,10 @@ export function AppHeader() {
     { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Partners', href: '/partners', current: false },
     { name: 'Blog', href: '/blog', current: false },
+<<<<<<< HEAD
+=======
     { name: 'Help Center', href: '/help', current: false },
+>>>>>>> origin/cursor/website-audit-and-enhancement-3fc6
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Careers', href: '/careers', current: false },
