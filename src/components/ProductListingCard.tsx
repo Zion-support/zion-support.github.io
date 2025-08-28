@@ -9,7 +9,7 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
-import Image from 'next/image'; // Import next/image
+// Regular img tag will be used instead of next/image
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -95,14 +95,11 @@ export function ProductListingCard({
         }}
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <Image
+          <img
             src={imageSrc}
             alt={listing.title}
-            layout="fill"
-            objectFit="cover"
+            className="w-full h-full object-cover"
             onError={handleImageError}
-            priority={false} // Assuming these are not LCP images
-            sizes={isGrid ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "192px"} // 192px is w-48
           />
           {listing.featured && (
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
