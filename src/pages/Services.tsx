@@ -76,7 +76,19 @@ export default function Services() {
     { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
     { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
     { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
+    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' },
+    { id: 'AI & Supply Chain', name: 'AI & Supply Chain', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Supply Chain').length, icon: '📦', color: 'from-orange-500 to-red-500' },
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Logistics').length, icon: '🚚', color: 'from-blue-500 to-green-500' },
+    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Manufacturing').length, icon: '🏭', color: 'from-gray-500 to-blue-500' },
+    { id: 'AI & Energy', name: 'AI & Energy', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Energy').length, icon: '⚡', color: 'from-yellow-500 to-orange-500' },
+    { id: 'AI & Real Estate', name: 'AI & Real Estate', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Real Estate').length, icon: '🏠', color: 'from-green-500 to-blue-500' },
+    { id: 'AI & Insurance', name: 'AI & Insurance', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Insurance').length, icon: '🛡️', color: 'from-blue-500 to-indigo-500' },
+    { id: 'AI & Media', name: 'AI & Media', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Media').length, icon: '📺', color: 'from-purple-500 to-pink-500' },
+    { id: 'AI & Gaming', name: 'AI & Gaming', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Gaming').length, icon: '🎮', color: 'from-green-500 to-purple-500' },
+    { id: 'AI & Events', name: 'AI & Events', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Events').length, icon: '🎪', color: 'from-pink-500 to-red-500' },
+    { id: 'AI & Talent Management', name: 'AI & Talent Management', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Talent Management').length, icon: '👨‍💼', color: 'from-indigo-500 to-blue-500' },
+    { id: 'AI & Compliance', name: 'AI & Compliance', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Compliance').length, icon: '📋', color: 'from-green-500 to-emerald-500' },
+    { id: 'AI & Innovation Management', name: 'AI & Innovation Management', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Innovation Management').length, icon: '💡', color: 'from-yellow-500 to-orange-500' }
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
