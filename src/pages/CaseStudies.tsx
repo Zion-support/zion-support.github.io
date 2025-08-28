@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
 import { 
   Target, 
   TrendingUp, 
@@ -26,152 +27,177 @@ import {
   BarChart3,
   Eye,
   Lock,
-  Cpu
+  Cpu,
+  Car
 } from 'lucide-react';
 
 export default function CaseStudies() {
   const caseStudies = [
     {
-      id: 'healthcare-ai',
-      title: 'Healthcare AI Implementation',
-      subtitle: '40% Improvement in Patient Outcomes',
-      industry: 'Healthcare',
-      company: 'Metro Health Systems',
-      challenge: 'Manual diagnostic processes were time-consuming and error-prone, leading to delayed treatments and inconsistent patient care.',
-      solution: 'Implemented AI-powered diagnostic tools with machine learning algorithms for early disease detection and treatment recommendations.',
-      results: [
-        '40% improvement in patient outcomes',
-        '60% reduction in diagnostic time',
-        '85% accuracy in early disease detection',
-        '30% cost savings in diagnostic procedures'
-      ],
-      technologies: ['AI Diagnostics', 'Machine Learning', 'Computer Vision', 'Predictive Analytics'],
-      icon: Heart,
-      color: 'from-red-500 to-pink-500',
-      featured: true,
-      duration: '6 months',
-      team: '8 developers',
-      roi: '300%'
-    },
-    {
-      id: 'financial-transformation',
-      title: 'Financial Services Digital Transformation',
-      subtitle: '1000x Performance Improvement',
-      industry: 'Financial Services',
-      company: 'Quantum Financial Group',
-      challenge: 'Legacy systems were unable to handle increasing transaction volumes, causing delays and customer dissatisfaction.',
-      solution: 'Complete digital transformation including cloud migration, AI-powered fraud detection, and real-time analytics.',
-      results: [
-        '1000x performance improvement',
-        '99.99% uptime achieved',
-        '50% reduction in fraud cases',
-        '200% increase in customer satisfaction'
-      ],
-      technologies: ['Cloud Migration', 'AI Fraud Detection', 'Real-time Analytics', 'Blockchain'],
-      icon: TrendingUp,
-      color: 'from-emerald-500 to-green-500',
-      featured: true,
-      duration: '12 months',
-      team: '15 developers',
-      roi: '500%'
-    },
-    {
-      id: 'manufacturing-iot',
-      title: 'Manufacturing IoT Success',
-      subtitle: 'Smart Factory Implementation',
+      id: 'techcorp-digital-transformation',
+      title: 'TechCorp Inc. - Digital Transformation Success',
+      subtitle: '50% Cost Reduction & 99.9% Uptime',
+      company: 'TechCorp Inc.',
       industry: 'Manufacturing',
-      company: 'Global Manufacturing Corp',
-      challenge: 'Traditional manufacturing processes lacked real-time monitoring and predictive maintenance capabilities.',
-      solution: 'Implemented IoT sensors, edge computing, and AI-powered predictive maintenance systems.',
+      challenge: 'Legacy systems causing 40% downtime and $2M annual losses',
+      solution: 'Implemented comprehensive AI-powered automation and cloud infrastructure',
       results: [
-        '25% reduction in downtime',
-        '35% improvement in efficiency',
-        '20% cost savings in maintenance',
-        'Real-time production monitoring'
+        '50% reduction in operational costs',
+        '99.9% system uptime achieved',
+        '3x faster decision making',
+        '40% improvement in productivity'
       ],
-      technologies: ['IoT Sensors', 'Edge Computing', 'Predictive Maintenance', 'AI Analytics'],
+      technologies: ['AI Automation', 'Cloud Migration', 'IoT Integration', 'Predictive Analytics'],
+      duration: '6 months',
+      teamSize: '15 engineers',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500',
       icon: Building,
-      color: 'from-gray-500 to-slate-500',
-      featured: false,
-      duration: '8 months',
-      team: '12 developers',
-      roi: '250%'
-    },
-    {
-      id: 'government-digital',
-      title: 'Government Digital Services',
-      subtitle: 'Citizen Service Automation',
-      industry: 'Government',
-      company: 'City of Innovation',
-      challenge: 'Citizen services were paper-based and required in-person visits, causing long wait times and inefficiency.',
-      solution: 'Digital transformation platform with AI-powered chatbots, automated workflows, and mobile applications.',
-      results: [
-        '80% reduction in wait times',
-        '90% of services now online',
-        '60% cost savings in operations',
-        '95% citizen satisfaction rate'
-      ],
-      technologies: ['AI Chatbots', 'Workflow Automation', 'Mobile Apps', 'Cloud Platform'],
-      icon: Shield,
-      color: 'from-indigo-500 to-purple-500',
-      featured: false,
-      duration: '10 months',
-      team: '20 developers',
       roi: '400%'
     },
     {
-      id: 'retail-ecommerce',
-      title: 'Retail E-commerce Optimization',
-      subtitle: 'AI-Powered Customer Experience',
-      industry: 'Retail & E-commerce',
-      company: 'TechStyle Retail',
-      challenge: 'Poor customer experience and low conversion rates due to lack of personalization and inefficient inventory management.',
-      solution: 'AI-powered recommendation engine, dynamic pricing, and intelligent inventory management system.',
+      id: 'healthplus-ai-revolution',
+      title: 'HealthPlus Systems - AI Healthcare Revolution',
+      subtitle: '30% Diagnostic Accuracy Improvement',
+      company: 'HealthPlus Systems',
+      industry: 'Healthcare',
+      challenge: 'Medical device failures and inefficient patient care processes',
+      solution: 'Developed AI-powered diagnostic tools and digital twin solutions',
       results: [
-        '45% increase in conversion rates',
-        '30% improvement in customer retention',
-        '25% reduction in inventory costs',
-        'Personalized shopping experience'
+        '30% improvement in diagnostic accuracy',
+        'Zero critical device failures',
+        '25% improvement in patient outcomes',
+        '40% reduction in patient wait times'
       ],
-      technologies: ['AI Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Customer Analytics'],
-      icon: Globe,
-      color: 'from-purple-500 to-pink-500',
-      featured: false,
-      duration: '7 months',
-      team: '10 developers',
+      technologies: ['AI Diagnostics', 'Digital Twins', 'IoT Monitoring', 'Machine Learning'],
+      duration: '8 months',
+      teamSize: '12 engineers',
+      featured: true,
+      color: 'from-red-500 to-pink-500',
+      icon: Heart,
       roi: '350%'
     },
     {
-      id: 'energy-sustainability',
-      title: 'Energy & Sustainability Solutions',
-      subtitle: 'Green Technology Implementation',
-      industry: 'Energy & Sustainability',
-      company: 'EcoPower Solutions',
-      challenge: 'Inefficient energy management and lack of renewable energy integration capabilities.',
-      solution: 'Smart grid technology with AI-powered energy optimization and renewable energy management systems.',
+      id: 'startupxyz-growth',
+      title: 'StartupXYZ - Rapid Growth Acceleration',
+      subtitle: '10x Faster Market Validation',
+      company: 'StartupXYZ',
+      industry: 'SaaS',
+      challenge: 'Need for rapid scaling and market validation',
+      solution: 'Implemented AI-powered analytics and automated growth tools',
       results: [
-        '40% reduction in energy consumption',
-        '60% increase in renewable energy usage',
-        '35% cost savings in operations',
-        'Real-time energy monitoring'
+        '10x faster market validation',
+        '3x increase in user engagement',
+        '50% reduction in customer acquisition costs',
+        'Secured Series A funding in 6 months'
       ],
-      technologies: ['Smart Grid', 'AI Optimization', 'Renewable Energy', 'IoT Monitoring'],
-      icon: Leaf,
-      color: 'from-green-500 to-teal-500',
+      technologies: ['AI Analytics', 'Growth Automation', 'Cloud Infrastructure', 'Data Analytics'],
+      duration: '4 months',
+      teamSize: '8 engineers',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500',
+      icon: Rocket,
+      roi: '500%'
+    },
+    {
+      id: 'smartcity-metro',
+      title: 'SmartCity Metro - Urban Infrastructure Optimization',
+      subtitle: '30% Traffic Reduction',
+      company: 'SmartCity Metro',
+      industry: 'Municipal',
+      challenge: 'Traffic congestion and inefficient public services',
+      solution: 'Created city-wide digital twin integrating all infrastructure systems',
+      results: [
+        '30% reduction in traffic congestion',
+        '20% improvement in transit efficiency',
+        '15% reduction in energy consumption',
+        'Improved citizen satisfaction by 40%'
+      ],
+      technologies: ['Digital Twins', 'IoT Sensors', 'AI Analytics', 'Smart Infrastructure'],
+      duration: '12 months',
+      teamSize: '20 engineers',
       featured: false,
-      duration: '9 months',
-      team: '14 developers',
+      color: 'from-green-500 to-emerald-500',
+      icon: Building,
+      roi: '250%'
+    },
+    {
+      id: 'fintech-risk-management',
+      title: 'FinTech Solutions - AI-Powered Risk Management',
+      subtitle: '80% Fraud Reduction',
+      company: 'FinTech Solutions',
+      industry: 'Financial Services',
+      challenge: 'High fraud rates and manual risk assessment processes',
+      solution: 'Implemented AI-powered fraud detection and automated risk assessment',
+      results: [
+        '80% reduction in fraud losses',
+        '90% faster risk assessment',
+        'Improved compliance by 95%',
+        '25% reduction in operational costs'
+      ],
+      technologies: ['AI Fraud Detection', 'Machine Learning', 'Blockchain', 'Automation'],
+      duration: '7 months',
+      teamSize: '10 engineers',
+      featured: false,
+      color: 'from-emerald-500 to-green-500',
+      icon: TrendingUp,
+      roi: '300%'
+    },
+    {
+      id: 'manufacturing-industry4',
+      title: 'ManufacturingCorp - Industry 4.0 Transformation',
+      subtitle: '60% Quality Improvement',
+      company: 'ManufacturingCorp',
+      industry: 'Manufacturing',
+      challenge: 'Outdated manufacturing processes and quality control issues',
+      solution: 'Implemented comprehensive Industry 4.0 solution with IoT and AI',
+      results: [
+        '60% improvement in product quality',
+        '45% reduction in production time',
+        '30% reduction in waste',
+        '25% increase in production capacity'
+      ],
+      technologies: ['IoT Sensors', 'AI Quality Control', 'Predictive Maintenance', 'Automation'],
+      duration: '10 months',
+      teamSize: '18 engineers',
+      featured: false,
+      color: 'from-orange-500 to-red-500',
+      icon: Building,
       roi: '280%'
     }
   ];
 
   const industries = [
+    { name: 'Manufacturing', icon: Building, count: 15, color: 'from-blue-500 to-cyan-500' },
     { name: 'Healthcare', icon: Heart, count: 12, color: 'from-red-500 to-pink-500' },
     { name: 'Financial Services', icon: TrendingUp, count: 8, color: 'from-emerald-500 to-green-500' },
-    { name: 'Manufacturing', icon: Building, count: 15, color: 'from-gray-500 to-slate-500' },
-    { name: 'Government', icon: Shield, count: 6, color: 'from-indigo-500 to-purple-500' },
-    { name: 'Retail & E-commerce', icon: Globe, count: 10, color: 'from-purple-500 to-pink-500' },
-    { name: 'Energy & Sustainability', icon: Leaf, count: 7, color: 'from-green-500 to-teal-500' }
+    { name: 'Automotive', icon: Car, count: 6, color: 'from-purple-500 to-indigo-500' },
+    { name: 'Smart Cities', icon: Building, count: 5, color: 'from-green-500 to-emerald-500' },
+    { name: 'Energy', icon: Zap, count: 4, color: 'from-orange-500 to-red-500' }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      company: 'TechCorp Inc.',
+      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI-powered automation alone saved us $2M annually.',
+      rating: 5
+    },
+    {
+      name: 'Dr. Emily Rodriguez',
+      role: 'Medical Director',
+      company: 'HealthPlus Systems',
+      content: 'The AI diagnostic tools have improved our accuracy by 30% and reduced patient wait times significantly.',
+      rating: 5
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Founder & CEO',
+      company: 'StartupXYZ',
+      content: 'Their startup solutions helped us validate our product 10x faster and secure our Series A funding.',
+      rating: 5
+    }
   ];
 
   const metrics = [
@@ -185,54 +211,63 @@ export default function CaseStudies() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Case Studies - Zion Tech Group"
-        description="Explore real-world success stories and case studies showcasing how our AI-powered technology solutions have transformed businesses across industries."
+        description="Explore real-world success stories from our clients across industries. See how our technology solutions have transformed businesses and delivered measurable results."
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10"></div>
+        <div className="container-responsive relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Success
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {' '}Stories
-              </span>
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent"> Stories</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Discover how our AI-powered technology solutions have transformed businesses 
-              across industries, delivering measurable results and driving innovation.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how our technology solutions have transformed businesses across industries, 
+              delivering measurable results and driving innovation.
             </p>
-            
-            {/* Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              {metrics.map((metric, index) => (
-                <motion.div
-                  key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <metric.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-2xl font-bold text-white mb-1">{metric.value}</div>
-                  <div className="text-sm text-gray-400">{metric.label}</div>
-                </motion.div>
-              ))}
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/request-quote"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+              >
+                Start Your Success Story
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
+              >
+                Schedule Consultation
+              </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      </section>
+
+      {/* Industry Overview */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industries We Transform
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From manufacturing to healthcare, we've successfully delivered solutions across diverse industries
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index) => (
+              <div key={index} className="text-center group">
+                <div className={`w-20 h-20 mx-auto mb-4 bg-gradient-to-br ${industry.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <industry.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="font-semibold text-white text-sm mb-1">{industry.name}</h3>
+                <p className="text-xs text-cyan-400">{industry.count} case studies</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -302,13 +337,13 @@ export default function CaseStudies() {
                       </div>
                     </div>
                     
-                    <a
-                      href={`/case-studies/${caseStudy.id}`}
+                    <Link
+                      to="/request-quote"
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
                     >
                       Read Full Case Study
                       <ArrowRight className="w-4 h-4" />
-                    </a>
+                    </Link>
                   </div>
                   
                   {/* Right Side - Results & Technologies */}
@@ -376,13 +411,13 @@ export default function CaseStudies() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
                 <p className="text-gray-400 text-sm mb-4">{industry.count} success stories</p>
-                <a
-                  href={`/case-studies?industry=${industry.name.toLowerCase()}`}
+                <Link
+                  to="/request-quote"
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                 >
                   View Stories
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -438,7 +473,7 @@ export default function CaseStudies() {
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">Team:</span>
-                      <span className="text-white">{caseStudy.team}</span>
+                      <span className="text-white">{caseStudy.teamSize}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-gray-400">ROI:</span>
@@ -456,16 +491,48 @@ export default function CaseStudies() {
                       </span>
                     ))}
                   </div>
-                  
-                  <a
-                    href={`/case-studies/${caseStudy.id}`}
-                    className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm"
-                  >
-                    Read Full Story
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
                 </div>
+
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Client Testimonials
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Hear directly from our clients about their transformation journey
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div className="border-t border-slate-700/50 pt-4">
+                  <p className="font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gray-400">{testimonial.role}</p>
+                  <p className="text-sm text-cyan-400">{testimonial.company}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -488,19 +555,19 @@ export default function CaseStudies() {
               and deliver measurable results like the success stories you've seen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/request-quote"
+              <Link
+                to="/request-quote"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
               >
                 Schedule Consultation
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

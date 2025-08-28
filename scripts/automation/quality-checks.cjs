@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path'; // Added missing import for path
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 console.log('🔍 Starting continuous quality checks automation...');
 
@@ -88,10 +88,10 @@ async function runQualityChecks() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Quality report saved to ${reportPath}`);
     
-    console.log('✅ Quality checks completed successfully');
+    console.log('✅ Continuous quality checks completed successfully');
     
   } catch (error) {
-    console.error('❌ Quality checks failed:', error.message);
+    console.error('❌ Continuous quality checks failed:', error.message);
     // Don't exit, just log the error and continue
   }
 }

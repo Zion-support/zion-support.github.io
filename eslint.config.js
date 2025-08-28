@@ -180,6 +180,8 @@ export default [
         Buffer: 'readonly',
         console: 'readonly',
         // File system globals
+        fs: 'readonly',
+        path: 'readonly',
         // Other common Node.js globals
         setTimeout: 'readonly',
         setInterval: 'readonly',

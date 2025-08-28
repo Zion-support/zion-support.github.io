@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, BookOpen, Key, Webhook, Play, Download, Github, Terminal, Database, Api, Zap, Shield, Users, Star } from 'lucide-react';
+import { Code, BookOpen, Key, Webhook, Play, Download, Github, Terminal, Database, FileText, Zap, Shield, Users, Star } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Developers() {
@@ -8,7 +8,7 @@ export default function Developers() {
 
   const tabs = [
     { id: 'overview', name: 'Overview', icon: BookOpen },
-    { id: 'api-docs', name: 'API Docs', icon: Api },
+    { id: 'api-docs', name: 'API Docs', icon: FileText },
     { id: 'sdks', name: 'SDKs & Libraries', icon: Code },
     { id: 'examples', name: 'Examples', icon: Play },
     { id: 'tools', name: 'Developer Tools', icon: Terminal }
