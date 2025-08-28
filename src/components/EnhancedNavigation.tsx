@@ -40,7 +40,10 @@ const navigationItems: NavigationItem[] = [
       { label: 'Cloud Solutions', href: '/services/cloud' },
       { label: 'Cybersecurity', href: '/services/cybersecurity' },
       { label: 'Digital Transformation', href: '/services/digital-transformation' },
-      { label: 'Consulting', href: '/services/consulting' }
+      { label: 'Consulting', href: '/services/consulting' },
+      { label: '2025 AI Services', href: '/comprehensive-services-showcase-2025' },
+      { label: '2025 IT Services', href: '/comprehensive-services-showcase-2025' },
+      { label: '2025 Micro SaaS', href: '/comprehensive-services-showcase-2025' }
     ]
   },
   { 
