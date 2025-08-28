@@ -7,8 +7,6 @@
   command = "corepack disable && npm i -g yarn@1.22.22 && yarn cache clean && yarn install --frozen-lockfile && yarn build"
   publish = "dist"
   # Force static site build (not Next.js)
-  functions = "netlify/functions"
-  edge_functions = "netlify/edge-functions"
   # Explicitly specify this is a static site, not a framework
   base = "."
 
