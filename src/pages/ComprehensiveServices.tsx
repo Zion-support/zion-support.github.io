@@ -1,49 +1,278 @@
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import {
-    ArrowRight, Cloud as CloudIcon,
-    Cpu, ExternalLink, Globe as GlobeIcon, Mail, MapPin, MessageSquare, Phone, Search, Sparkles, Star
-} from 'lucide-react';
 import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
+import { 
+  MessageSquare, 
+  GlobeIcon, 
+  Search, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Sparkles,
+  CloudIcon,
+  Cpu
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+// Service data structure
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  price: string;
+  rating: number;
+  features: string[];
+  link: string;
+}
+
+// Sample service data
+const microSaaS: Service[] = [
+  {
+    id: '1',
+    title: 'SOC2 Automation Platform',
+    description: 'Automate SOC2 compliance with AI-powered monitoring and reporting',
+    category: 'Security',
+    price: '$2,999/month',
+    rating: 4.8,
+    features: ['AI-powered monitoring', 'Automated reporting', 'Real-time alerts', 'Compliance dashboard'],
+    link: '/services/soc2-automation'
+  },
+  {
+    id: '2',
+    title: 'Kubernetes Management Suite',
+    description: 'Enterprise-grade Kubernetes management with advanced monitoring and automation',
+    category: 'DevOps',
+    price: '$1,999/month',
+    rating: 4.9,
+    features: ['Multi-cluster management', 'Auto-scaling', 'Security scanning', 'Cost optimization'],
+    link: '/services/kubernetes-management'
+  },
+  {
+    id: '3',
+    title: 'RAG Platform for Enterprises',
+    description: 'Build and deploy Retrieval-Augmented Generation applications at scale',
+    category: 'AI',
+    price: '$3,999/month',
+    rating: 4.7,
+    features: ['Vector database integration', 'Custom embeddings', 'API management', 'Analytics dashboard'],
+    link: '/services/rag-platform'
+  }
+];
+
+const itServices: Service[] = [
+  {
+    id: '4',
+    title: 'Cloud Architecture Consulting',
+    description: 'Expert guidance on cloud infrastructure design and optimization',
+    category: 'Consulting',
+    price: '$250/hour',
+    rating: 4.9,
+    features: ['Architecture review', 'Migration planning', 'Cost optimization', 'Security assessment'],
+    link: '/services/cloud-consulting'
+  },
+  {
+    id: '5',
+    title: 'Platform Engineering',
+    description: 'Build and maintain internal developer platforms for faster delivery',
+    category: 'Engineering',
+    price: '$5,000/month',
+    rating: 4.8,
+    features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring setup', 'Developer tools'],
+    link: '/services/platform-engineering'
+  },
+  {
+    id: '6',
+    title: 'Security Operations Center',
+    description: '24/7 security monitoring and incident response services',
+    category: 'Security',
+    price: '$8,000/month',
+    rating: 4.9,
+    features: ['Threat detection', 'Incident response', 'Vulnerability management', 'Compliance reporting'],
+    link: '/services/soc-services'
+  }
+];
+
+const aiSolutions: Service[] = [
+  {
+    id: '7',
+    title: 'AI Governance Platform',
+    description: 'Ensure responsible AI deployment with comprehensive governance tools',
+    category: 'AI',
+    price: '$4,999/month',
+    rating: 4.8,
+    features: ['Model monitoring', 'Bias detection', 'Explainability', 'Compliance tracking'],
+    link: '/services/ai-governance'
+  },
+  {
+    id: '8',
+    title: 'Privacy-Preserving AI',
+    description: 'Deploy AI solutions while maintaining data privacy and compliance',
+    category: 'AI',
+    price: '$6,999/month',
+    rating: 4.7,
+    features: ['Federated learning', 'Differential privacy', 'Secure computation', 'GDPR compliance'],
+    link: '/services/privacy-ai'
+  },
+  {
+    id: '9',
+    title: 'Business AI Integration',
+    description: 'Seamlessly integrate AI into existing business processes and workflows',
+    category: 'AI',
+    price: '$3,999/month',
+    rating: 4.9,
+    features: ['Process automation', 'Data integration', 'User training', 'Performance monitoring'],
+    link: '/services/business-ai'
+  }
+];
+
+// Section component
+const Section: React.FC<{
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  items: Service[];
+  gradient: string;
+}> = ({ icon, title, description, items, gradient }) => (
+  <section className={`py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r ${gradient}`}>
+    <div className="max-w-7xl mx-auto">
+      <motion.div 
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-6">
+          {icon}
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{title}</h2>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">{description}</p>
+      </motion.div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {items.map((item, index) => (
+          <motion.div
+            key={item.id}
+            className="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold text-white mb-4">{item.title}</h3>
+            <p className="text-gray-300 mb-6">{item.description}</p>
+            <div className="mb-6">
+              <span className="inline-block bg-white/10 text-white px-3 py-1 rounded-full text-sm mb-2">
+                {item.category}
+              </span>
+              <div className="flex items-center mb-2">
+                <span className="text-yellow-400 text-sm mr-2">★</span>
+                <span className="text-white text-sm">{item.rating}</span>
+              </div>
+              <div className="text-cyan-400 font-semibold text-lg">{item.price}</div>
+            </div>
+            <ul className="space-y-2 mb-6">
+              {item.features.map((feature, idx) => (
+                <li key={idx} className="flex items-center text-gray-300">
+                  <span className="text-cyan-400 mr-2">✓</span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+            <Link
+              to={item.link}
+              className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Learn More
+            </Link>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+// Service card component
+const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
+  <motion.div
+    className="bg-white/5 rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    viewport={{ once: true }}
+  >
+    <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+    <p className="text-gray-300 mb-6">{service.description}</p>
+    <div className="mb-6">
+      <span className="inline-block bg-white/10 text-white px-3 py-1 rounded-full text-sm mb-2">
+        {service.category}
+      </span>
+      <div className="flex items-center mb-2">
+        <span className="text-yellow-400 text-sm mr-2">★</span>
+        <span className="text-white text-sm">{service.rating}</span>
+      </div>
+      <div className="text-cyan-400 font-semibold text-lg">{service.price}</div>
+    </div>
+    <ul className="space-y-2 mb-6">
+      {service.features.map((feature, idx) => (
+        <li key={idx} className="flex items-center text-gray-300">
+          <span className="text-cyan-400 mr-2">✓</span>
+          {feature}
+        </li>
+      ))}
+    </ul>
+    <Link
+      to={service.link}
+      className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+    >
+      Learn More
+    </Link>
+  </motion.div>
+);
 
 export default function ComprehensiveServices() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('popular');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popular');
 
-  // Combine all services
-  const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
+  const allServices = [...microSaaS, ...itServices, ...aiSolutions];
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
 
-  // Filter services based on search and category
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase() === selectedCategory.toLowerCase();
-    return matchesSearch && matchesCategory;
-  });
-
-  // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
-      case 'price-high':
-        return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', ''));
-      case 'rating':
-        return b.rating - a.rating;
-      case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-      default:
-        return b.isPopular ? 1 : -1;
+  const filteredServices = useMemo(() => {
+    let filtered = allServices;
+    
+    if (searchTerm) {
+      filtered = filtered.filter(service =>
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchTerm.toLowerCase())
+      );
     }
-  });
+    
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
+    }
+    
+    return filtered;
+  }, [searchTerm, selectedCategory]);
 
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const sortedServices = useMemo(() => {
+    const sorted = [...filteredServices];
+    
+    switch (sortBy) {
+      case 'rating':
+        return sorted.sort((a, b) => b.rating - a.rating);
+      case 'price-low':
+        return sorted.sort((a, b) => parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')));
+      case 'price-high':
+        return sorted.sort((a, b) => parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')));
+      case 'newest':
+        return sorted.sort((a, b) => b.id.localeCompare(a.id));
+      default:
+        return sorted;
+    }
+  }, [filteredServices, sortBy]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -55,349 +284,8 @@ export default function ComprehensiveServices() {
     }
   };
 
-  const ServiceCard: React.FC<{ service: any; index: number }> = ({ service, index }) => (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200"
-    >
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-semibold text-white">{service.name || service.title}</h3>
-        {service.isPopular && (
-          <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Popular</span>
-        )}
-      </div>
-      <p className="text-gray-300 mb-4">{service.description || service.desc}</p>
-      <div className="mb-4">
-        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-      </div>
-      <div className="mb-4">
-        <div className="flex items-center mb-2">
-          <div className="flex text-yellow-400">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className={`w-4 h-4 ${i < (service.rating || 4) ? "text-yellow-400" : "text-gray-600"}`} />
-            ))}
-          </div>
-          <span className="text-sm text-gray-400 ml-2">({service.reviews || 25} reviews)</span>
-        </div>
-      </div>
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-        <div className="grid grid-cols-1 gap-1">
-          {(service.features || []).slice(0, 3).map((feature: string, idx: number) => (
-            <div key={idx} className="flex items-center text-sm text-gray-300">
-              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-              {feature}
-            </div>
-          ))}
-        </div>
-      </div>
-      <Link
-        to={service.cta || '#'}
-        className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium"
-      >
-        Learn More
-        <ArrowRight className="w-4 h-4 ml-2" />
-      </Link>
-    </motion.div>
-  );
-
-  const microSaaS = [
-    {
-      title: 'SOC 2 Evidence Collector',
-      desc: 'Automate evidence collection across AWS, GCP, Azure, Okta, and SaaS tools with time-stamped control mappings.',
-      price: '$499–$1,499/mo',
-      cta: 'https://ziontechgroup.com/services/soc2-compliance-automation',
-      features: ['Prebuilt integrations (AWS, GCP, Azure, Okta, GitHub)', 'Automated screenshots and policy snapshots', 'Continuous control monitoring', 'Auditor export packages']
-    },
-    {
-      title: 'Contract Risk Analyzer',
-      desc: 'AI parses vendor/customer contracts, flags risky clauses, and suggests redlines aligned to your playbook.',
-      price: '$299–$999/mo',
-      cta: 'https://ziontechgroup.com',
-      features: ['LLM clause classification', 'Deviation scoring vs. standards', 'One-click redline suggestions', 'Secure data handling']
-    },
-    {
-      title: 'Churn Predictor for SaaS',
-      desc: 'Connect Stripe, Mixpanel, and Intercom to predict churn and trigger save plays automatically.',
-      price: '$199–$799/mo',
-      cta: 'https://ziontechgroup.com',
-      features: ['Cohort churn models', 'Alerts to Slack/Email', 'Playbooks and A/B experiments', 'No-code connectors']
-    },
-    {
-      title: 'AI RFP Copilot',
-      desc: 'Auto-assemble tailored RFP responses from your knowledge base with confidence citations.',
-      price: '$249–$1,249/mo',
-      cta: 'https://ziontechgroup.com',
-      features: ['Semantic retrieval over KB', 'Tone/style controls', 'Compliance guardrails', 'Export to Word/PDF']
-    },
-    {
-      title: 'FinOps Cost Anomaly Detector',
-      desc: 'Continuously scans AWS, Azure, and GCP for cost spikes, identifies root causes, and opens auto-remediation tickets.',
-      price: '$299–$1,299/mo',
-      cta: 'https://ziontechgroup.com/comprehensive-pricing',
-      features: ['Real-time anomaly alerts', 'Service- and tag-level drilldowns', 'Forecast vs. actuals variance', 'Slack/Jira integrations']
-    },
-    {
-      title: 'Vendor Security Monitoring',
-      desc: 'Continuously monitors vendor attack surface, breach news, and policy compliance for third-party risk management.',
-      price: '$249–$999/mo',
-      cta: 'https://ziontechgroup.com/comprehensive-services',
-      features: ['Dark web/domain monitoring', 'Security questionnaire scoring', 'Policy mapping to SOC 2/ISO 27001', 'Executive risk reports']
-    },
-    {
-      title: 'Data Quality & Lineage Monitor',
-      desc: 'Automated data tests, schema drift detection, and lineage maps across Snowflake, BigQuery, and Redshift.',
-      price: '$399–$1,499/mo',
-      cta: 'https://ziontechgroup.com/comprehensive-pricing',
-      features: ['Column-level lineage', 'Freshness and completeness SLIs', 'dbt integration', 'Incident paging with ownership']
-    },
-    {
-      title: 'API Monetization Hub',
-      desc: 'Usage metering, subscription plans, rate limiting, and Stripe billing for your public/private APIs.',
-      price: '$199–$899/mo + 1% usage',
-      cta: 'https://ziontechgroup.com/comprehensive-services',
-      features: ['Per-endpoint metering', 'Self-serve developer portal', 'JWT/OAuth2 auth', 'Stripe/Chargebee integrations']
-    }
-  ];
-
-  const itServices = [
-    {
-      title: 'Cloud Migration Factory',
-      desc: 'Blueprint, migrate, and optimize workloads to AWS/Azure/GCP with cost governance.',
-      price: 'Projects from $15,000',
-      cta: 'https://ziontechgroup.com',
-      features: ['Landing zone setup', 'App discovery and TCO', 'Infra-as-Code (Terraform)', 'FinOps and tagging policies']
-    },
-    {
-      title: 'Managed Kubernetes (EKS/AKS/GKE)',
-      desc: 'Secure, observable clusters with GitOps, autoscaling, and SLO dashboards.',
-      price: '$3,500–$12,000/mo',
-      cta: 'https://ziontechgroup.com',
-      features: ['GitOps with ArgoCD', 'Service mesh (Istio/Linkerd)', 'Zero-trust policies', 'Golden paths for services']
-    },
-    {
-      title: 'Zero Trust & IAM Hardening',
-      desc: 'Design and implement zero trust network access and identity least-privilege.',
-      price: 'Engagements from $12,000',
-      cta: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
-      features: ['Okta/Azure AD architecture', 'Device posture and SSO', 'Policy-as-Code (OPA)', 'Continuous verification']
-    },
-    {
-      title: 'Observability & Resilience',
-      desc: 'Unified logs, metrics, traces with SLOs and chaos engineering runs.',
-      price: 'Projects from $9,000',
-      cta: 'https://ziontechgroup.com',
-      features: ['OpenTelemetry pipelines', 'SLO error budgets', 'Synthetic tests', 'Chaos experiments']
-    },
-    {
-      title: 'Microsoft 365 Security Hardening',
-      desc: 'Secure Microsoft 365 with baseline policies, Conditional Access, DLP, and identity governance.',
-      price: 'Packages from $7,500',
-      cta: 'https://ziontechgroup.com/contact',
-      features: ['Defender baseline policies', 'Conditional Access hardening', 'DLP and sensitivity labels', 'Admin RBAC and audit']
-    },
-    {
-      title: 'Modern Data Platform (Lakehouse)',
-      desc: 'Design and implement a scalable lakehouse on Databricks or Snowflake with medallion architecture.',
-      price: 'Projects from $25,000',
-      cta: 'https://ziontechgroup.com/comprehensive-services',
-      features: ['Ingestion with CDC', 'Bronze/Silver/Gold layers', 'Quality tests and lineage', 'Cost governance and caching']
-    },
-    {
-      title: 'SRE as a Service',
-      desc: 'Reliability engineering, SLOs, error budgets, incident response, and chaos drills for critical systems.',
-      price: '$6,000–$20,000/mo',
-      cta: 'https://ziontechgroup.com/comprehensive-pricing',
-      features: ['SLO design and dashboards', 'On-call runbooks', 'Game days and chaos testing', 'Postmortem program']
-    },
-    {
-      title: 'Network Observability & Zero Trust',
-      desc: 'eBPF-powered observability, microsegmentation, and ZTNA rollout across hybrid networks.',
-      price: 'Engagements from $18,000',
-      cta: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
-      features: ['eBPF flow visibility', 'Microsegmentation policy design', 'ZTNA rollout', 'Continuous verification']
-    }
-  ];
-
-  const aiSolutions = [
-    {
-      title: 'Private RAG Platform',
-      desc: 'Deploy secure Retrieval Augmented Generation with vector DBs and governance.',
-      price: '$1,999–$7,999/mo',
-      cta: 'https://ziontechgroup.com',
-      features: ['Multi-tenant isolation', 'PII redaction and masking', 'Eval harness and guardrails', 'Vendor-agnostic LLMs']
-    },
-    {
-      title: 'Vision AI Defect Detection',
-      desc: 'Edge and cloud pipelines to detect manufacturing defects and reduce scrap.',
-      price: 'POC from $8,000',
-      cta: 'https://ziontechgroup.com',
-      features: ['Edge inferencing', 'Active learning loops', 'MLOps with CI/CD', 'Audit trails and labeling']
-    },
-    {
-      title: 'AI Sales Copilot',
-      desc: 'Automate research, first-touch emails, call notes, and CRM hygiene with approvals.',
-      price: '$149–$699/user/mo',
-      cta: 'https://ziontechgroup.com',
-      features: ['Account research digests', 'Sequencing with human-in-the-loop', 'Meeting summaries to CRM', 'Compliance logging']
-    },
-    {
-      title: 'GenAI App Accelerator',
-      desc: 'From ideation to production with secure foundations, evals, and cost controls.',
-      price: 'Engagements from $20,000',
-      cta: 'https://ziontechgroup.com',
-      features: ['Prompt and function design', 'Eval suites and canaries', 'Safety filters and monitoring', 'Cost + latency SLO design']
-    },
-    {
-      title: 'Contact Center QA & Insights',
-      desc: 'Multilingual LLM scoring of calls/chats with auto-coaching, compliance checks, and CSAT prediction.',
-      price: '$1,499–$4,999/mo',
-      cta: 'https://ziontechgroup.com/comprehensive-pricing',
-      features: ['Auto QA rubrics', 'Redaction and PII controls', 'Supervisor dashboards', 'CRM sync (Salesforce/HubSpot)']
-    },
-    {
-      title: 'Intelligent Document Processing',
-      desc: 'High-accuracy extraction and validation for invoices, claims, KYC, and logistics documents.',
-      price: '$0.02–$0.08/page + platform fee',
-      cta: 'https://ziontechgroup.com/comprehensive-services',
-      features: ['Few-shot templates', 'Human-in-the-loop validation', 'Field-level confidence', 'Export to ERP/DB']
-    },
-    {
-      title: 'AI Code & Security Reviewer',
-      desc: 'Static + LLM hybrid reviews for security, performance, and style with auto-fix suggestions.',
-      price: '$299–$999/repo/mo',
-      cta: 'https://ziontechgroup.com/comprehensive-pricing',
-      features: ['OWASP/CWE checks', 'Performance anti-patterns', 'Org-wide policy gates', 'PR comments and autofix']
-    },
-    {
-      title: 'Managed MLOps Platform',
-      desc: 'End-to-end ML lifecycle with experiment tracking, model registry, deployment, and evaluations.',
-      price: '$2,499–$9,999/mo',
-      cta: 'https://ziontechgroup.com/comprehensive-services',
-      features: ['Feature store and lineage', 'Canary and shadow deploys', 'Live evals and guardrails', 'Cost and latency SLOs']
-    }
-  ];
-
-  const linkItem = (href: string, label = 'Learn more') => (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-zion-cyan hover:underline">
-      <span>{label}</span>
-      <ExternalLink className="ml-2 h-4 w-4" />
-    </a>
-  );
-
-  const ExternalLinkButton: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-cyan-400 hover:underline">
-      {children}
-      <ExternalLink className="ml-2 h-4 w-4" />
-    </a>
-  );
-
-  const Section: React.FC<{ icon: React.ReactNode; title: string; description: string; items: { title: string; desc: string; price: string; cta: string; features: string[]; }[]; gradient: string; }>
-    = ({ icon, title, description, items, gradient }) => (
-    <section className="py-14">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className={`rounded-2xl p-8 border border-white/10 bg-gradient-to-br ${gradient} text-white`}>
-          <div className="flex items-center mb-6">
-            <div className="mr-3">{icon}</div>
-            <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
-          </div>
-        </div>
-        {items.map((service, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-6 border border-white/10 mb-6">
-              <div className="flex items-center mb-4">
-                <h3 className="text-xl font-bold text-white mr-2">{service.title}</h3>
-                {service.isNew && (
-                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-                    New
-                  </div>
-                )}
-              </div>
-              <p className="text-gray-300 mb-2 font-medium">{service.tagline}</p>
-              <p className="text-gray-400 mb-4 text-sm">{service.desc}</p>
-              
-              <div className="mb-4">
-                <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                <span className="text-gray-400">{service.period}</span>
-                <p className="text-sm text-gray-500 mt-1">{service.marketPrice}</p>
-              </div>
-
-              <div className="mb-4">
-                <div className="flex items-center mb-2">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? "text-yellow-400" : "text-gray-600"}`} />
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-400 ml-2">({service.reviews} reviews)</span>
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                <div className="grid grid-cols-1 gap-1">
-                  {service.features.slice(0, 4).map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                <div className="grid grid-cols-1 gap-1">
-                  {service.benefits.slice(0, 3).map((benefit, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
-                      {benefit}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-4 p-3 bg-slate-700/30 rounded-lg">
-                <div className="text-xs text-gray-400 mb-1">Market Size: {service.marketSize}</div>
-                <div className="text-xs text-gray-400 mb-1">Growth Rate: {service.growthRate}</div>
-                <div className="text-xs text-gray-400">ROI: {service.roi}</div>
-              </div>
-
-              <div className="flex gap-2">
-                <Link
-                  to={service.cta}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-                <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
-                  className="inline-flex items-center justify-center px-3 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-                  title="Contact Sales"
-                >
-                  <Mail className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-  );
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Comprehensive Services - Zion Tech Group"
         description="Micro SaaS, IT services, and AI solutions with clear pricing, links, and rapid delivery."
@@ -408,7 +296,7 @@ export default function ComprehensiveServices() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
@@ -449,72 +337,30 @@ export default function ComprehensiveServices() {
         </div>
       </section>
 
-    {/* Sections */}
-    <Section
-      icon={<Sparkles className="h-6 w-6" />}
-      title="Micro SaaS Products"
-      description="Subscription software for security, legal, revenue, and operations with fast time-to-value."
-      items={microSaaS}
-      gradient="from-violet-900/60 to-indigo-900/40"
-    />
+      {/* Sections */}
+      <Section
+        icon={<Sparkles className="h-6 w-6" />}
+        title="Micro SaaS Products"
+        description="Subscription software for security, legal, revenue, and operations with fast time-to-value."
+        items={microSaaS}
+        gradient="from-violet-900/60 to-indigo-900/40"
+      />
 
-    <Section
-      icon={<CloudIcon className="h-6 w-6" />}
-      title="IT Services"
-      description="Cloud, platform, and security engagements by seasoned architects and SREs."
-      items={itServices}
-      gradient="from-sky-900/60 to-teal-900/40"
-    />
+      <Section
+        icon={<CloudIcon className="h-6 w-6" />}
+        title="IT Services"
+        description="Cloud, platform, and security engagements by seasoned architects and SREs."
+        items={itServices}
+        gradient="from-sky-900/60 to-teal-900/40"
+      />
 
-    <Section
-      icon={<Cpu className="h-6 w-6" />}
-      title="AI Solutions"
-      description="Applied AI with governance, privacy, and business outcomes at the core."
-      items={aiSolutions}
-      gradient="from-fuchsia-900/60 to-rose-900/40"
-    />
-
-        {/* Contact CTA */}
-        <section className="py-16">
-          <motion.div className="max-w-5xl mx-auto px-6">
-            <div className="rounded-2xl border border-white/10 p-8 bg-white/5">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">Talk to an expert</h2>
-              <p className="text-white/80 mb-6">We will scope your needs and share a clear proposal with milestones and pricing.</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <a href="tel:+13024640950" className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <Phone className="h-5 w-5 text-cyan-400 mr-3" />
-                </a>
-                <a href="mailto:kleber@ziontechgroup.com" className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <Mail className="h-5 w-5 text-cyan-400 mr-3" />
-                </a>
-                <div className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <MapPin className="h-5 w-5 text-cyan-400 mr-3" />
-                  <span className="text-white">Delaware, USA</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-              >
-                <MessageSquare className="w-5 h-5 mr-2" />
-                Get Started Today
-              </Link>
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold text-lg rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-              >
-                <GlobeIcon className="w-5 h-5 mr-2" />
-                Visit Our Website
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <Section
+        icon={<Cpu className="h-6 w-6" />}
+        title="AI Solutions"
+        description="Applied AI with governance, privacy, and business outcomes at the core."
+        items={aiSolutions}
+        gradient="from-fuchsia-900/60 to-rose-900/40"
+      />
 
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -639,6 +485,6 @@ export default function ComprehensiveServices() {
           </motion.div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
