@@ -11,7 +11,7 @@ import { Footer } from './components/Footer';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import ErrorBoundary from './components/ErrorBoundary';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { PWAUpdater } from './components/PWAUpdater';
