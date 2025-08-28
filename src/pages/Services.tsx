@@ -39,7 +39,8 @@ import {
   Phone,
   Mail as MailIcon,
   MapPin,
-  Infinity
+  Infinity,
+  Eye
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
@@ -135,56 +136,91 @@ export default function Services() {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="mb-8"
             >
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Innovative Micro SAAS
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Revolutionary
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                  IT & AI Services
-                </span>
+                <span className="text-white">Services 2030</span>
               </h1>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-                Transform your business with our cutting-edge micro SAAS solutions, enterprise IT services, and AI-powered innovations. 
-                Delivering real results with proven ROI and enterprise-grade security.
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                Discover our comprehensive portfolio of cutting-edge AI, quantum computing, and innovative technology solutions. 
+                Transform your business with the future of technology.
               </p>
               
-              {/* Contact Information */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
-                <div className="flex items-center gap-2">
-                  <Phone className="w-5 h-5 text-cyan-400" />
-                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                    +1 302 464 0950
-                  </a>
+              {/* Enhanced Services Showcase Link */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="mb-12"
+              >
+                <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div className="text-left">
+                      <h3 className="text-2xl font-bold text-white mb-2">🚀 Complete Services Portfolio</h3>
+                      <p className="text-gray-300 mb-4">
+                        Explore our full catalog of {COMPREHENSIVE_INNOVATIVE_SERVICES_2030.length}+ innovative services with detailed pricing, 
+                        features, and implementation guides.
+                      </p>
+                      <div className="flex flex-wrap gap-3">
+                        <div className="flex items-center space-x-2 bg-slate-800/50 px-3 py-1 rounded-full">
+                          <Star className="w-4 h-4 text-yellow-400" />
+                          <span className="text-white text-sm">Detailed Pricing</span>
+                        </div>
+                        <div className="flex items-center space-x-2 bg-slate-800/50 px-3 py-1 rounded-full">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          <span className="text-white text-sm">Feature Comparison</span>
+                        </div>
+                        <div className="flex items-center space-x-2 bg-slate-800/50 px-3 py-1 rounded-full">
+                          <TrendingUp className="w-4 h-4 text-cyan-400" />
+                          <span className="text-white text-sm">ROI Analysis</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <Link
+                        to="/services/showcase"
+                        className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-4 px-8 rounded-xl font-medium text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 flex items-center justify-center space-x-2 group"
+                      >
+                        <Eye className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                        <span>View Complete Portfolio</span>
+                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                      <Link
+                        to="/request-quote"
+                        className="bg-slate-700/50 text-white py-3 px-6 rounded-xl font-medium hover:bg-slate-600/50 transition-all duration-200 flex items-center justify-center space-x-2"
+                      >
+                        <MessageSquare className="w-4 h-4" />
+                        <span>Get Custom Quote</span>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <MailIcon className="w-5 h-5 text-cyan-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-cyan-400" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-              </div>
+              </motion.div>
               
-              {/* Enhanced Services Link */}
-              <div className="mt-8">
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <Link
                   to="/services/enhanced"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   View Enhanced Services Landing
+                </Link>
+                <Link
+                  to="/services/showcase"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  View Complete Services Portfolio
                 </Link>
               </div>
             </motion.div>

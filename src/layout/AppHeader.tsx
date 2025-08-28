@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake, Settings } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake, Settings, Play } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -99,69 +99,13 @@ export function AppHeader() {
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Edge Computing', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'AI & Space Tech', 
-      href: '/services', 
-      icon: Rocket, 
-      description: 'Satellite Operations & Missions',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
-      featured: true,
-      color: 'from-green-500 to-blue-500'
-    },
-    { 
-      name: 'Cloud Services', 
-      href: '/services', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'AI & FinTech', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'Financial Technology & Risk Management',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
+      color: 'from-yellow-500 to-orange-500'
     },
     { 
       name: 'AI & Operations', 
       href: '/services', 
       icon: Settings, 
-      description: 'Supply Chain & Process Optimization',
+      description: 'Process Automation & Optimization',
       featured: true,
       color: 'from-gray-500 to-slate-500'
     },
@@ -169,99 +113,143 @@ export function AppHeader() {
       name: 'AI & Development', 
       href: '/services', 
       icon: Code, 
-      description: 'Quality Assurance & Testing',
+      description: 'Software Development & Testing',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI & Education', 
+      href: '/services', 
+      icon: BookOpen, 
+      description: 'Learning & Training Solutions',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI & Entertainment', 
+      href: '/services', 
+      icon: Play, 
+      description: 'Media & Gaming Analytics',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI & Space Tech', 
+      href: '/services', 
+      icon: Rocket, 
+      description: 'Space Technology & Exploration',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Complete Portfolio', 
+      href: '/services/showcase', 
+      icon: Eye, 
+      description: 'View All Services',
       featured: true,
       color: 'from-cyan-500 to-blue-500'
     }
   ];
 
   const solutions = [
-    {
-      name: 'Enterprise Solutions',
-      href: '/solutions',
-      icon: Building2,
-      description: 'Large-scale business transformations',
-      featured: true
+    { 
+      name: 'Enterprise Solutions', 
+      href: '/solutions/enterprise', 
+      icon: Building2, 
+      description: 'Large-scale business solutions',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
     },
-    {
-      name: 'SMB Solutions',
-      href: '/solutions',
-      icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
+    { 
+      name: 'SMB Solutions', 
+      href: '/solutions/smb', 
+      icon: Building, 
+      description: 'Small & medium business solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
     },
-    {
-      name: 'Startup Solutions',
-      href: '/solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
+    { 
+      name: 'Startup Solutions', 
+      href: '/solutions/startup', 
+      icon: Rocket, 
+      description: 'Innovation & growth solutions',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
     },
-    {
-      name: 'Government Solutions',
-      href: '/solutions',
-      icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
+    { 
+      name: 'Government Solutions', 
+      href: '/solutions/government', 
+      icon: Shield, 
+      description: 'Public sector & compliance',
+      featured: true,
+      color: 'from-red-500 to-orange-500'
     },
-    {
-      name: 'Healthcare Solutions',
-      href: '/solutions',
-      icon: Heart,
-      description: 'Digital health transformation',
-      featured: true
+    { 
+      name: 'Healthcare Solutions', 
+      href: '/solutions/healthcare', 
+      icon: Heart, 
+      description: 'Medical & wellness technology',
+      featured: true,
+      color: 'from-pink-500 to-red-500'
     },
-    {
-      name: 'Financial Solutions',
-      href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
-      featured: true
+    { 
+      name: 'Financial Solutions', 
+      href: '/solutions/financial', 
+      icon: DollarSign, 
+      description: 'FinTech & banking solutions',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
     }
   ];
 
   const resources = [
-    {
-      name: 'Blog & Insights',
-      href: '/blog',
-      icon: BookOpen,
-      description: 'Latest industry trends and insights',
-      featured: true
+    { 
+      name: 'Documentation', 
+      href: '/docs', 
+      icon: FileText, 
+      description: 'Technical documentation & guides',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
     },
-    {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: Target,
-      description: 'Real-world success stories',
-      featured: true
+    { 
+      name: 'API Reference', 
+      href: '/api', 
+      icon: Code, 
+      description: 'API documentation & examples',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500'
     },
-    {
-      name: 'White Papers',
-      href: '/white-papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
-      featured: false
+    { 
+      name: 'Blog & Insights', 
+      href: '/blog', 
+      icon: BookOpen, 
+      description: 'Latest news & industry insights',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
     },
-    {
-      name: 'Webinars',
-      href: '/webinars',
-      icon: Users,
-      description: 'Expert-led learning sessions',
-      featured: false
+    { 
+      name: 'Case Studies', 
+      href: '/case-studies', 
+      icon: Target, 
+      description: 'Success stories & implementations',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
     },
-    {
-      name: 'Documentation',
-      href: '/docs',
-      icon: Code,
-      description: 'Technical guides and APIs',
-      featured: false
+    { 
+      name: 'Webinars', 
+      href: '/webinars', 
+      icon: Users, 
+      description: 'Live events & presentations',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
     },
-    {
-      name: 'FAQ & Support',
-      href: '/faq',
-      icon: HelpCircle,
-      description: 'Get help and answers',
-      featured: false
+    { 
+      name: 'Support Center', 
+      href: '/support', 
+      icon: HelpCircle, 
+      description: 'Help & troubleshooting',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
     }
   ];
 
