@@ -108,6 +108,10 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
+<<<<<<< HEAD
+// New AI Quantum Hybrid Platform
+const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+=======
 // Comprehensive improvements components
 const AdvancedAIServicesHub = lazy(() => import('./components/AdvancedAIServicesHub'));
 const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
@@ -123,6 +127,7 @@ const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecur
 const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4905
 
 // 2029 Services Showcase
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
@@ -338,6 +343,9 @@ function App() {
                     <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
                     <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
                     
+<<<<<<< HEAD
+                    {/* Enhanced services pages */}
+=======
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
@@ -349,6 +357,7 @@ function App() {
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} />
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4905
                     <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                     
                     {/* New Enhanced Services Routes */}

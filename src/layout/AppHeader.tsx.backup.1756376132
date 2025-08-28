@@ -30,12 +30,31 @@ export default function AppHeader() {
   // Enhanced services by category with better organization and working links
   const services = [
     // Featured & New Services
+<<<<<<< HEAD
+    { name: '2025 New Innovative Services', href: '/new-innovative-services-2025', icon: Star, description: 'Revolutionary AI & Micro SAAS Solutions', category: 'Featured', featured: true, color: 'from-zion-cyan to-zion-purple' },
+=======
     { name: '2025 Services Showcase', href: '/comprehensive-services-showcase-2025', icon: Star, description: 'Comprehensive Innovation & AI Solutions', category: 'Featured', featured: true, color: 'from-blue-500 to-indigo-500' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4905
     { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
     { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
     { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
     
     // AI & Machine Learning
+<<<<<<< HEAD
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3, description: 'AI-powered analytics & insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+    { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool, description: 'AI-powered content creation', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
+    { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: '24/7 AI research & insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'AI-powered workflow automation', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
+    { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+    { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
+    { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+    { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
+    { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: SearchIcon, description: 'Machine learning SEO optimization', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
+    { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+=======
     { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Quantum-AI integration for unprecedented power', category: 'AI & ML', color: 'from-purple-500 to-indigo-500' },
     { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'Self-directed AI research across domains', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
     { name: 'AI Autonomous Threat Intelligence', href: '/services/ai-autonomous-threat-intelligence', icon: Shield, description: 'AI-powered cybersecurity threat response', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
@@ -48,6 +67,7 @@ export default function AppHeader() {
     { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
     { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
     { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4905
     
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-zion-purple to-zion-cyan' },

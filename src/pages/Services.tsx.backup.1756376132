@@ -78,6 +78,9 @@ const Services: React.FC = () => {
       features: ["Multi-source analysis", "Automated reports", "Predictive insights"],
       link: "/services/ai-autonomous-research-assistant",
       icon: Brain,
+<<<<<<< HEAD
+      color: "from-zion-cyan to-zion-purple"
+=======
       description: 'Cutting-edge artificial intelligence solutions',
       color: 'from-blue-500 to-indigo-500',
       services: [
@@ -104,6 +107,7 @@ const Services: React.FC = () => {
         { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: BarChart3, description: 'Customer sentiment & behavior analytics' },
         { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'Real-time risk monitoring & optimization' },
       ]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4905
     },
     {
       title: "AI Workflow Orchestrator",

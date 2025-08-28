@@ -184,6 +184,22 @@ const HeroSection = React.memo(() => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
+<<<<<<< HEAD
+          <Link
+            to={heroSlides[currentSlide].ctaLink}
+            className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+          >
+            {heroSlides[currentSlide].cta}
+            <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200" />
+          </Link>
+          <Link
+            to="/contact"
+            className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-cyan-400/50 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+          >
+            Get Started Today
+            <ArrowUpRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+          </Link>
+=======
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">
             <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />
             <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
@@ -216,6 +232,7 @@ const HeroSection = React.memo(() => {
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4905
         </motion.div>
 
         {/* Slide indicators */}
