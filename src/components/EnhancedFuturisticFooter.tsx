@@ -92,13 +92,35 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Micro SaaS Solutions',
+      featured: true,
+      links: [
+        { name: 'AI Content Creation Studio Pro', href: '/services#ai-content-creation-studio-pro', featured: true },
+        { name: 'AI Customer Support Automation', href: '/services#ai-customer-support-automation-suite', featured: true },
+        { name: 'AI Marketing Automation Platform', href: '/services#ai-marketing-automation-platform', featured: true },
+        { name: 'DeFi Yield Optimization', href: '/services#defi-yield-optimization-platform', featured: true },
+        { name: 'NFT Marketplace Creator', href: '/services#nft-marketplace-creator', featured: true },
+        { name: 'Quantum Optimization Solver', href: '/services#quantum-optimization-solver', featured: true },
+        { name: 'IoT Device Management Hub', href: '/services#iot-device-management-hub', featured: true },
+        { name: 'AI Health Diagnostic Assistant', href: '/services#ai-health-diagnostic-assistant', featured: true },
+        { name: 'AI Financial Advisory Platform', href: '/services#ai-financial-advisory-platform', featured: true },
+        { name: 'AI Legal Document Analyzer', href: '/services#ai-legal-document-analyzer', featured: true }
+      ]
+    },
+    {
       title: 'AI & Technology Services',
       featured: true,
       links: [
-        { name: 'Innovative Micro SAAS 2025', href: '/innovative-micro-saas-services-2025', featured: true },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
-        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
-        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
+        { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
+        { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
+        { name: 'AI Marketing Automation', href: '/services#ai-marketing-automation-platform', featured: true },
+        { name: 'AI Content Creation', href: '/services#ai-content-creation-studio-pro', featured: true },
+        { name: 'AI Customer Support', href: '/services#ai-customer-support-automation-suite', featured: true },
+        { name: 'AI HR & Recruitment', href: '/services#ai-hr', featured: true },
+        { name: 'AI Research Assistant', href: '/services#ai-research-assistant-platform', featured: true },
+        { name: 'AI Financial Advisory', href: '/services#ai-financial-advisory-platform', featured: true },
+        { name: 'AI Threat Detection', href: '/services#ai-threat-detection-platform', featured: true },
         { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
         { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
         { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
