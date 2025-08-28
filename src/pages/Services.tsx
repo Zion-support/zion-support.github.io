@@ -189,6 +189,152 @@ export default function Services() {
               Discover our comprehensive range of AI, IT, and Micro SaaS solutions designed to transform your business and drive innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
+              {featuredServices.map((service, index) => (
+                <motion.div
+                  key={service.name}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Link
+                    to={service.href}
+                    className={`inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r ${service.color} text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg`}
+                  >
+                    <service.icon className="w-5 h-5 mr-2" />
+                    {service.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* AI Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                AI-Powered Solutions
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Leverage the power of artificial intelligence to automate processes, gain insights, and drive innovation across your organization
+            </p>
+          </motion.div>
+          
+          <div className="mt-8 text-center space-y-4">
+            <Link to="/comprehensive-services-showcase-2025" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 font-semibold">
+              <Sparkles className="w-5 h-5 mr-2" />
+              Explore Our Comprehensive Services Showcase 2025
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <div>
+              <Link to="/innovative-ai-services" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 font-semibold">
+                <TrendingUp className="w-5 h-5 ml-2" />
+                Discover Our Innovative AI Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredCategories.map((c) => (
+              <Link key={c.title} to={c.href} className="block bg-slate-900/60 border border-cyan-400/15 hover:border-cyan-400/40 rounded-2xl p-6 text-left">
+                <div className="text-xs uppercase tracking-wide text-cyan-300/70">Featured</div>
+                <div className="mt-2 text-xl font-semibold">{c.title}</div>
+                <div className="text-sm text-slate-300">{c.desc}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Categories */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-12">
+            {serviceCategories.map((category, categoryIndex) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 rounded-2xl p-8 border border-cyan-400/20"
+              >
+                <div className="flex items-center mb-8">
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center mr-6`}>
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold text-white mb-2">{category.title}</h2>
+                    <p className="text-gray-400 text-lg">{category.description}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.services.map((service, serviceIndex) => (
+                    <motion.div
+                      key={service.name}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: serviceIndex * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      <Link
+                        to={service.href}
+                        className="block group bg-zion-slate/50 rounded-xl p-6 border border-cyan-400/10 hover:border-cyan-400/30 transition-all duration-300 hover:bg-zion-slate/70"
+                      >
+                        <div className="flex items-start mb-4">
+                          <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                            <service.icon className="w-6 h-6 text-cyan-400" />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                              {service.name}
+                            </h3>
+                            <p className="text-gray-400 text-sm mt-1">{service.description}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                          <span className="text-sm font-medium">Learn More</span>
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-400/20"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our cutting-edge solutions can drive innovation and growth for your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> f532d9f18df2cd6f10cfe4751a99601c6e9de18e
               <Link
                 to="/contact"
                 className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300"
