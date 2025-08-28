@@ -66,7 +66,8 @@ import {
   City,
   CheckCircle,
   ArrowUpRight,
-  Play
+  Play,
+  MailIcon
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -91,83 +92,83 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: '2026 Services',
+      title: 'AI & Technology Services',
       featured: true,
       links: [
-        { name: '2026 Services Overview', href: '/services2026', featured: true },
-        { name: '2027 Services Overview', href: '/services2027', featured: true },
-        { name: 'AI Solutions Hub', href: '/ai-solutions', featured: true },
-        { name: 'Quantum Computing Solutions', href: '/quantum-computing', featured: true },
-        { name: 'Cybersecurity Platform', href: '/cybersecurity', featured: true },
-        { name: 'Cloud & DevOps Services', href: '/cloud-devops', featured: true },
-        { name: 'IoT & Edge Computing', href: '/iot-edge-computing', featured: true },
-        { name: 'Digital Twin Solutions', href: '/digital-twin', featured: true },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3', featured: true },
-        { name: 'Space Technology', href: '/space-tech', featured: true }
+        { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
+        { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
+        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
+        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
+        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
+        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
+        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
+        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true }
       ]
     },
     {
       title: 'Core Services',
-      featured: false,
+      featured: true,
       links: [
-        { name: 'AI & Analytics', href: '/services', featured: false },
-        { name: 'AI & Legal Tech', href: '/services', featured: false },
-        { name: 'AI & Healthcare', href: '/services', featured: false },
-        { name: 'AI & Research', href: '/services', featured: false },
-        { name: 'AI & Green Tech', href: '/services', featured: false },
-        { name: 'AI & Metaverse', href: '/services', featured: false },
-        { name: 'AI & Blockchain', href: '/services', featured: false },
-        { name: 'AI & Edge Computing', href: '/services', featured: false },
-        { name: 'Quantum Computing', href: '/services', featured: false },
-        { name: 'AI & Space Tech', href: '/services', featured: false }
+        { name: 'Cybersecurity Solutions', href: '/services#cybersecurity', featured: true },
+        { name: 'Cloud & DevOps', href: '/services#cloud-devops', featured: true },
+        { name: 'Data Analytics', href: '/services#data-analytics', featured: true },
+        { name: 'IT Infrastructure', href: '/services#it-infrastructure', featured: true },
+        { name: 'Digital Twin Solutions', href: '/services#digital-twin', featured: true },
+        { name: 'IoT & Edge Computing', href: '/services#iot-edge', featured: true },
+        { name: 'Blockchain & Web3', href: '/services#blockchain', featured: true },
+        { name: 'Quantum Computing', href: '/services#quantum-computing', featured: true },
+        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
+        { name: 'Enterprise Solutions', href: '/solutions', featured: true }
       ]
     },
     {
-      title: 'Solutions',
+      title: 'Industry Solutions',
       featured: false,
       links: [
-        { name: 'Enterprise Solutions', href: '/solutions', featured: false },
-        { name: 'SMB Solutions', href: '/solutions', featured: false },
-        { name: 'Startup Solutions', href: '/solutions', featured: false },
-        { name: 'Government Solutions', href: '/solutions', featured: false },
-        { name: 'Healthcare Solutions', href: '/solutions', featured: false },
-        { name: 'Financial Solutions', href: '/solutions', featured: false },
-        { name: 'Manufacturing Solutions', href: '/solutions', featured: false },
-        { name: 'Retail Solutions', href: '/solutions', featured: false },
-        { name: 'Education Solutions', href: '/solutions', featured: false },
-        { name: 'Transportation Solutions', href: '/solutions', featured: false }
+        { name: 'Healthcare Solutions', href: '/solutions#healthcare', featured: false },
+        { name: 'Financial Services', href: '/solutions#financial', featured: false },
+        { name: 'Legal Services', href: '/solutions#legal', featured: false },
+        { name: 'Research & Academia', href: '/solutions#research', featured: false },
+        { name: 'Manufacturing', href: '/solutions#manufacturing', featured: false },
+        { name: 'Retail & E-commerce', href: '/solutions#retail', featured: false },
+        { name: 'Government & Public Sector', href: '/solutions#government', featured: false },
+        { name: 'Energy & Sustainability', href: '/solutions#energy', featured: false },
+        { name: 'Space & Aerospace', href: '/solutions#space', featured: false },
+        { name: 'Education & Training', href: '/solutions#education', featured: false }
       ]
     },
     {
-      title: 'Resources',
+      title: 'Resources & Support',
       featured: false,
       links: [
+        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
-        { name: 'Case Studies', href: '/case-studies', featured: false },
-        { name: 'White Papers', href: '/white-papers', featured: false },
-        { name: 'Webinars', href: '/webinars', featured: false },
+        { name: 'FAQ & Help Center', href: '/faq', featured: false },
         { name: 'Documentation', href: '/docs', featured: false },
-        { name: 'FAQ & Support', href: '/faq', featured: false },
-        { name: 'API Reference', href: '/docs/api', featured: false },
-        { name: 'Developer Tools', href: '/developer-tools', featured: false },
+        { name: 'API Reference', href: '/api-docs', featured: false },
+        { name: 'Developer Portal', href: '/developers', featured: false },
         { name: 'Training & Certification', href: '/training', featured: false },
-        { name: 'Community Forum', href: '/community', featured: false }
+        { name: 'Community Forum', href: '/community', featured: false },
+        { name: 'Success Stories', href: '/case-studies', featured: false },
+        { name: 'White Papers', href: '/whitepapers', featured: false }
       ]
     },
     {
-      title: 'Company',
+      title: 'Company & Contact',
       featured: false,
       links: [
-        { name: 'About Us', href: '/about', featured: false },
-        { name: 'Our Team', href: '/team', featured: false },
+        { name: 'About Zion Tech Group', href: '/about', featured: false },
+        { name: 'Our Team', href: '/about#team', featured: false },
         { name: 'Careers', href: '/careers', featured: false },
-        { name: 'Partners', href: '/partners', featured: false },
-        { name: 'News & Events', href: '/news', featured: false },
-        { name: 'Press Kit', href: '/press', featured: false },
+        { name: 'Contact Us', href: '/contact', featured: true },
+        { name: 'Request Quote', href: '/request-quote', featured: true },
+        { name: 'Schedule Demo', href: '/schedule-demo', featured: false },
+        { name: 'Partnerships', href: '/partnerships', featured: false },
         { name: 'Investor Relations', href: '/investors', featured: false },
-        { name: 'Sustainability', href: '/sustainability', featured: false },
-        { name: 'Diversity & Inclusion', href: '/diversity', featured: false },
-        { name: 'Contact Us', href: '/contact', featured: false }
+        { name: 'Press & Media', href: '/press', featured: false },
+        { name: 'Legal & Privacy', href: '/legal', featured: false }
       ]
     }
   ];
@@ -356,6 +357,67 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             ))}
           </div>
         </div>
+
+        {/* Contact Information Footer */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  +1 302 464 0950
+                </a>
+                <p className="text-sm text-slate-400 mt-2">Available 24/7 for urgent support</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MailIcon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+                <p className="text-sm text-slate-400 mt-2">Response within 2 hours</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-slate-300">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
+                <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
+              </div>
+            </div>
+            
+            {/* Additional Contact Methods */}
+            <div className="mt-12 pt-8 border-t border-slate-700">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Emergency Support</h4>
+                  <p className="text-sm text-slate-500">Critical issues: +1 302 464 0950</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Business Hours</h4>
+                  <p className="text-sm text-slate-500">Mon-Fri: 9AM-6PM EST</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Response Time</h4>
+                  <p className="text-sm text-slate-500">Urgent: 1 hour, Normal: 4 hours</p>
+                </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-slate-400 mb-2">Global Support</h4>
+                  <p className="text-sm text-slate-500">24/7 availability worldwide</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* Bottom Footer */}

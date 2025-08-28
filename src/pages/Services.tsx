@@ -38,7 +38,8 @@ import {
   Award,
   Phone,
   Mail as MailIcon,
-  MapPin
+  MapPin,
+  Infinity
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
@@ -66,7 +67,14 @@ export default function Services() {
     { id: 'Sustainable Technology', name: 'Sustainable Technology', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
     { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
     { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Customer Support').length, icon: '💬', color: 'from-blue-500 to-purple-500' },
-    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' }
+    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-indigo-500 to-blue-500' },
+    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
+    { id: 'AI & Research', name: 'AI & Research', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-500 to-violet-500' },
+    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Green Tech').length, icon: '🌿', color: 'from-green-500 to-emerald-500' },
+    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
+    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Space Tech').length, icon: '🛸', color: 'from-indigo-500 to-purple-500' },
+    { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
+    { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' }
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
@@ -238,6 +246,28 @@ export default function Services() {
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+            {/* Service Category Anchors */}
+            <div className="hidden">
+              <div id="ai-business-intelligence"></div>
+              <div id="ai-healthcare"></div>
+              <div id="ai-legal-tech"></div>
+              <div id="ai-research"></div>
+              <div id="ai-green-tech"></div>
+              <div id="ai-metaverse"></div>
+              <div id="ai-space-tech"></div>
+              <div id="ai-fintech"></div>
+              <div id="ai-supply-chain"></div>
+              <div id="ai-qa"></div>
+              <div id="cybersecurity"></div>
+              <div id="cloud-devops"></div>
+              <div id="data-analytics"></div>
+              <div id="it-infrastructure"></div>
+              <div id="digital-twin"></div>
+              <div id="iot-edge"></div>
+              <div id="blockchain"></div>
+              <div id="quantum-computing"></div>
+            </div>
+
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -290,6 +320,10 @@ export default function Services() {
                         <span className="text-slate-400">Setup Time:</span>
                         <span className="text-slate-300">{service.availability}</span>
                       </div>
+                      <div className="flex items-center justify-between text-sm">
+                        <span className="text-slate-400">AI Score:</span>
+                        <span className="text-cyan-400 font-semibold">{service.aiScore}/100</span>
+                      </div>
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -305,19 +339,25 @@ export default function Services() {
 
                     <div className="flex gap-3">
                       <a
-                        href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service.`}
+                        href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service. Please provide more details about pricing, implementation timeline, and features.`}
                         className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-center py-2 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                       >
                         Get Started
                       </a>
                       <a
-                        href={service.contactInfo.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={`tel:+13024640950`}
                         className="px-4 py-2 border border-slate-600 text-slate-300 rounded-lg hover:border-cyan-500 hover:text-cyan-400 transition-colors"
                       >
-                        Learn More
+                        Call Now
                       </a>
+                    </div>
+                    
+                    {/* Quick Contact Info */}
+                    <div className="mt-4 pt-4 border-t border-slate-700">
+                      <div className="flex items-center justify-between text-xs text-slate-500">
+                        <span>📧 kleber@ziontechgroup.com</span>
+                        <span>📱 +1 302 464 0950</span>
+                      </div>
                     </div>
                   </motion.div>
                 ))}
@@ -398,6 +438,87 @@ export default function Services() {
           </div>
         </section>
 
+        {/* Competitive Advantages */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Competitive <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Advantages</span>
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Discover what sets us apart from the competition and why leading businesses choose Zion Tech Group.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Zap className="w-8 h-8" />,
+                  title: "Lightning Fast Implementation",
+                  description: "Get your solutions up and running in weeks, not months. Our streamlined processes ensure rapid deployment.",
+                  stats: "3-8 weeks average"
+                },
+                {
+                  icon: <Target className="w-8 h-8" />,
+                  title: "Precision AI Solutions",
+                  description: "Our AI models achieve 95%+ accuracy rates, delivering reliable results you can trust for critical business decisions.",
+                  stats: "95%+ accuracy"
+                },
+                {
+                  icon: <Globe2 className="w-8 h-8" />,
+                  title: "Global Reach, Local Support",
+                  description: "24/7 support available worldwide with local expertise and understanding of regional business requirements.",
+                  stats: "24/7 global support"
+                },
+                {
+                  icon: <Award className="w-8 h-8" />,
+                  title: "Industry Recognition",
+                  description: "Award-winning solutions recognized by leading technology publications and industry experts.",
+                  stats: "15+ industry awards"
+                },
+                {
+                  icon: <Heart className="w-8 h-8" />,
+                  title: "Customer Success Focus",
+                  description: "Dedicated success managers ensure your implementation exceeds expectations and delivers measurable results.",
+                  stats: "98% satisfaction rate"
+                },
+                {
+                  icon: <Infinity className="w-8 h-8" />,
+                  title: "Future-Proof Technology",
+                  description: "Built on cutting-edge frameworks and architectures that scale with your business growth and evolving needs.",
+                  stats: "99.9% uptime"
+                }
+              ].map((advantage, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
+                    {advantage.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">{advantage.title}</h3>
+                  <p className="text-slate-300 mb-4 text-center">{advantage.description}</p>
+                  <div className="text-center">
+                    <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 text-sm font-semibold rounded-full border border-purple-500/30">
+                      {advantage.stats}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -413,6 +534,25 @@ export default function Services() {
               <p className="text-xl text-slate-300 mb-8">
                 Join hundreds of businesses already leveraging our innovative solutions to drive growth and efficiency.
               </p>
+              
+              {/* Contact Methods */}
+              <div className="mb-8 p-6 bg-slate-800/50 rounded-xl border border-slate-600">
+                <h3 className="text-lg font-semibold text-white mb-4">Multiple Ways to Get Started</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                  <div className="flex items-center justify-center gap-2 text-slate-300">
+                    <Phone className="w-4 h-4 text-cyan-400" />
+                    <span>Call: +1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 text-slate-300">
+                    <MailIcon className="w-4 h-4 text-purple-400" />
+                    <span>Email: kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 text-slate-300">
+                    <MapPin className="w-4 h-4 text-green-400" />
+                    <span>Visit: Middletown DE</span>
+                  </div>
+                </div>
+              </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
@@ -435,6 +575,30 @@ export default function Services() {
                 >
                   Schedule Consultation
                 </Link>
+              </div>
+              
+              {/* Quick Contact Buttons */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-all duration-200"
+                >
+                  📞 Call Now
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry&body=Hi, I'm interested in your services. Please provide more information."
+                  className="inline-flex items-center px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200"
+                >
+                  📧 Email Us
+                </a>
+                <a
+                  href="https://ziontechgroup.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200"
+                >
+                  🌐 Visit Website
+                </a>
               </div>
             </motion.div>
           </div>
