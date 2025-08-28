@@ -57,12 +57,15 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
+<<<<<<< HEAD
+=======
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SystemStatus = React.lazy(() => import('./pages/SystemStatus'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const WebsiteAnalyzer = React.lazy(() => import('./components/WebsiteAnalyzer'));
 const SitemapGenerator = React.lazy(() => import('./components/SitemapGenerator'));
 
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee27
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
@@ -335,6 +338,9 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/team" element={<Team />} />
+<<<<<<< HEAD
+              <Route path="/help" element={<HelpCenter />} />
+=======
               <Route path="/news" element={<News />} />
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/help-center" element={<HelpCenter />} />
@@ -357,6 +363,7 @@ function App() {
               {/* Additional Routes */}
               <Route path="/events" element={<Events />} />
               <Route path="/help" element={<Help />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee27
               <Route path="/security" element={<Security />} />
               <Route path="/status" element={<Status />} />
               <Route path="/cookies" element={<Cookies />} />

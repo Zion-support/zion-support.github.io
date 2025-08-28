@@ -109,6 +109,10 @@ export function Footer() {
         { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
         { name: 'IT Services', path: '/it-services', icon: Building },
         { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
+<<<<<<< HEAD
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield }
+=======
         { name: 'All Services', path: '/services', icon: Zap }
       ]
     },
@@ -123,6 +127,7 @@ export function Footer() {
         { name: 'AI Solutions Hub', path: '/ai-solutions', icon: Brain },
         { name: 'Quantum Solutions', path: '/services/quantum-computing', icon: Cpu },
         { name: 'Emerging Tech', path: '/services/ai-content-creation', icon: PenTool }
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee27
       ]
     }
   ];
