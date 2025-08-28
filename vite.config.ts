@@ -51,6 +51,11 @@ export default defineConfig(({ command, mode }) => {
             'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
             'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
             'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
+            'animation-vendor': ['framer-motion'],
+            'icons-vendor': ['lucide-react'],
+            'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
+            'query-vendor': ['@tanstack/react-query'],
+            'i18n-vendor': ['i18next', 'i18next-browser-languagedetector', 'react-i18next'],
           },
           chunkFileNames: (chunkInfo) => {
             const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -76,6 +81,7 @@ export default defineConfig(({ command, mode }) => {
         },
       },
       brotliSize: true,
+      chunkSizeWarningLimit: 1000,
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'react-router-dom'],
