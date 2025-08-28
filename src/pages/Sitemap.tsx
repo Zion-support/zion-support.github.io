@@ -122,41 +122,35 @@ const sitemapSections: SitemapSection[] = [
     ]
   },
   {
-    title: 'Emerging Technologies',
-    icon: Atom,
-    description: 'Cutting-edge technology solutions',
+    title: 'Service Showcases',
+    icon: Star,
+    description: 'Year-based service overviews and innovations',
     routes: [
-      { path: '/emerging-tech', name: 'Emerging Technologies', description: 'Overview of emerging tech solutions', priority: 0.8, changefreq: 'weekly' },
-      { path: '/services/quantum-computing', name: 'Quantum Computing', description: 'Quantum computing solutions', priority: 0.7, changefreq: 'monthly' },
-      { path: '/services/iot-edge-computing', name: 'IoT Edge Computing', description: 'Edge computing for IoT', priority: 0.7, changefreq: 'monthly' },
-      { path: '/services/space-tech', name: 'Space Technology', description: 'Space and aerospace solutions', priority: 0.7, changefreq: 'monthly' }
+      { path: '/new-innovative-services-2025', name: '2025 New Innovative Services', description: 'Revolutionary AI & Micro SAAS Solutions', priority: 0.8, changefreq: 'weekly' },
+      { path: '/ultimate-services-showcase-2026', name: '2026 Services Overview', description: 'Revolutionary AI & Quantum Solutions', priority: 0.8, changefreq: 'weekly' },
+      { path: '/comprehensive-services-showcase-2027', name: '2027 Services Overview', description: 'Cutting-edge Innovation & Emerging Tech', priority: 0.8, changefreq: 'weekly' },
+      { path: '/zion-cutting-edge-services-2029', name: '2029 Cutting-Edge Services', description: 'Future-ready Technology Solutions', priority: 0.8, changefreq: 'weekly' }
     ]
   },
   {
-    title: 'Industry Solutions',
-    icon: Building,
-    description: 'Industry-specific technology solutions',
+    title: 'Solutions & Industries',
+    icon: Target,
+    description: 'Industry-specific solutions and use cases',
     routes: [
-      { path: '/industry-solutions', name: 'Industry Solutions', description: 'Overview of industry solutions', priority: 0.8, changefreq: 'weekly' },
-      { path: '/manufacturing-solutions', name: 'Manufacturing Solutions', description: 'Smart manufacturing technology', priority: 0.7, changefreq: 'monthly' },
-      { path: '/financial-solutions', name: 'Financial Solutions', description: 'Financial technology solutions', priority: 0.7, changefreq: 'monthly' },
+      { path: '/ai-solutions', name: 'AI Solutions Overview', description: 'Comprehensive AI solutions', priority: 0.8, changefreq: 'weekly' },
+      { path: '/solutions/enterprise', name: 'Enterprise Solutions', description: 'Large-scale business solutions', priority: 0.7, changefreq: 'monthly' },
       { path: '/solutions/healthcare', name: 'Healthcare Solutions', description: 'Healthcare technology solutions', priority: 0.7, changefreq: 'monthly' }
     ]
   },
   {
-    title: 'Company & Resources',
-    icon: Users,
-    description: 'Company information and resources',
+    title: 'Marketplace & Resources',
+    icon: ShoppingCart,
+    description: 'Digital marketplace and resource center',
     routes: [
-      { path: '/team', name: 'Team', description: 'Meet our team', priority: 0.6, changefreq: 'monthly' },
-      { path: '/leadership', name: 'Leadership', description: 'Company leadership', priority: 0.6, changefreq: 'monthly' },
-      { path: '/careers', name: 'Careers', description: 'Job opportunities', priority: 0.6, changefreq: 'monthly' },
-      { path: '/partners', name: 'Partners', description: 'Partnership information', priority: 0.6, changefreq: 'monthly' },
-      { path: '/blog', name: 'Blog', description: 'Latest news and insights', priority: 0.7, changefreq: 'weekly' },
-      { path: '/case-studies', name: 'Case Studies', description: 'Success stories', priority: 0.7, changefreq: 'monthly' },
-      { path: '/faq', name: 'FAQ', description: 'Frequently asked questions', priority: 0.5, changefreq: 'monthly' },
-      { path: '/help', name: 'Help Center', description: 'Support resources', priority: 0.6, changefreq: 'monthly' },
-      { path: '/pricing', name: 'Pricing', description: 'Service pricing information', priority: 0.7, changefreq: 'monthly' }
+      { path: '/marketplace', name: 'Marketplace', description: 'Service and product marketplace', priority: 0.8, changefreq: 'weekly' },
+      { path: '/pricing', name: 'Pricing Guide', description: 'Service pricing information', priority: 0.7, changefreq: 'monthly' },
+      { path: '/news', name: 'News & Updates', description: 'Company news and updates', priority: 0.6, changefreq: 'weekly' },
+      { path: '/help', name: 'Help Center', description: 'Support and documentation', priority: 0.6, changefreq: 'monthly' }
     ]
   }
 ];
@@ -165,186 +159,205 @@ export default function Sitemap() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  // Filter sections based on search and category
+  // Filter sections based on search term and category
   const filteredSections = useMemo(() => {
-    let sections = sitemapSections;
-    
-    if (selectedCategory !== 'all') {
-      sections = sections.filter(section => 
-        section.title.toLowerCase().includes(selectedCategory.toLowerCase())
-      );
-    }
-    
-    if (searchTerm) {
-      sections = sections.map(section => ({
-        ...section,
-        routes: section.routes.filter(route =>
+    return sitemapSections.filter(section => {
+      const matchesSearch = searchTerm === '' || 
+        section.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        section.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        section.routes.some(route => 
           route.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          route.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          route.path.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      })).filter(section => section.routes.length > 0);
-    }
-    
-    return sections;
+          route.description?.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      
+      const matchesCategory = selectedCategory === 'all' || 
+        section.title.toLowerCase().includes(selectedCategory.toLowerCase());
+      
+      return matchesSearch && matchesCategory;
+    });
   }, [searchTerm, selectedCategory]);
-
-  const categories = ['all', ...sitemapSections.map(section => section.title)];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <Map className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Sitemap
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Complete navigation guide to Zion Tech Group's website. Find all our services, 
-              solutions, and resources organized for easy discovery.
-            </p>
-          </motion.div>
-        </div>
-      </div>
+      <div className="container mx-auto px-4 py-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
+            <Map className="w-8 h-8 text-white" />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Site Navigation
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our comprehensive range of AI-powered services, IT solutions, and digital transformation offerings
+          </p>
+        </motion.div>
 
-      {/* Search and Filter Controls */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Search and Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6"
+          transition={{ delay: 0.2 }}
+          className="mb-12"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Search */}
+          <div className="max-w-4xl mx-auto space-y-6">
+            {/* Search Bar */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search pages, services, or descriptions..."
+                placeholder="Search for services, pages, or solutions..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-zion-cyan/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */}
-            <div className="relative">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+            <div className="flex flex-wrap gap-3 justify-center">
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                  selectedCategory === 'all'
+                    ? 'bg-zion-cyan text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
               >
-                {categories.map((category) => (
-                  <option key={category} value={category} className="bg-slate-700 text-white">
-                    {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
-              </select>
+                All Categories
+              </button>
+              {sitemapSections.map((section) => (
+                <button
+                  key={section.title}
+                  onClick={() => setSelectedCategory(section.title.toLowerCase())}
+                  className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                    selectedCategory === section.title.toLowerCase()
+                      ? 'bg-zion-cyan text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  {section.title}
+                </button>
+              ))}
             </div>
           </div>
         </motion.div>
-      </div>
 
-      {/* Sitemap Sections */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="space-y-8">
+        {/* Sitemap Sections */}
+        <div className="space-y-12">
           {filteredSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
-              className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6"
+              transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
+              className="bg-white/5 rounded-2xl border border-zion-cyan/20 p-8"
             >
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mr-4">
                   <section.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-white">{section.title}</h2>
-                  <p className="text-gray-300">{section.description}</p>
+                  <p className="text-gray-400">{section.description}</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {section.routes.map((route, routeIndex) => (
                   <motion.div
                     key={route.path}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: routeIndex * 0.05 }}
-                    className="group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: (sectionIndex * 0.1) + (routeIndex * 0.05) }}
+                    className="group p-4 bg-white/5 rounded-xl border border-zion-cyan/10 hover:border-zion-cyan/30 hover:bg-white/10 transition-all duration-300"
                   >
-                    <Link
-                      to={route.path}
-                      className="block p-4 bg-slate-700/30 border border-slate-600/30 rounded-lg hover:border-cyan-400/50 hover:bg-slate-700/50 transition-all duration-200"
-                    >
-                      <div className="flex items-start justify-between mb-2">
-                        <h3 className="font-semibold text-white group-hover:text-cyan-300 transition-colors duration-200">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1 min-w-0">
+                        <Link
+                          to={route.path}
+                          className="text-lg font-medium text-zion-cyan group-hover:text-white transition-colors duration-300 hover:underline"
+                        >
                           {route.name}
-                        </h3>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded">
-                            {route.priority}
+                        </Link>
+                        {route.description && (
+                          <p className="text-sm text-gray-400 mt-2 group-hover:text-gray-300 transition-colors duration-300">
+                            {route.description}
+                          </p>
+                        )}
+                        <div className="flex items-center space-x-4 mt-2 text-sm text-gray-500">
+                          <span className="flex items-center space-x-1">
+                            <TrendingUp className="w-4 h-4" />
+                            <span>Priority: {route.priority}</span>
                           </span>
-                          <span className="text-xs text-gray-400 bg-gray-400/10 px-2 py-1 rounded">
-                            {route.changefreq}
+                          <span className="flex items-center space-x-1">
+                            <Activity className="w-4 h-4" />
+                            <span>Update: {route.changefreq}</span>
                           </span>
                         </div>
                       </div>
-                      {route.description && (
-                        <p className="text-sm text-gray-400 mb-2">{route.description}</p>
-                      )}
-                      <div className="text-xs text-cyan-400 font-mono">{route.path}</div>
-                    </Link>
+                      <div className="ml-4 flex-shrink-0">
+                        <Link
+                          to={route.path}
+                          className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-zion-cyan hover:bg-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-cyan transition-colors"
+                        >
+                          Visit
+                        </Link>
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
-      </div>
 
-      {/* Call to Action */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* No Results */}
+        {filteredSections.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="text-center py-12"
+          >
+            <Search className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
+            <h3 className="text-lg font-medium text-white mb-2">
+              No pages found
+            </h3>
+            <p className="text-gray-400">
+              Try adjusting your search terms or category filter.
+            </p>
+          </motion.div>
+        )}
+
+        {/* Quick Navigation */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-8 text-center"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl border border-zion-cyan/20 p-8 text-center"
         >
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Can't Find What You're Looking For?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our team is here to help you navigate our services and find the perfect solution for your needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <h3 className="text-2xl font-bold text-white mb-4">Quick Navigation</h3>
+          <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/contact"
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
+              to="/"
+              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300"
             >
-              Contact Us
+              Go Home
             </Link>
             <Link
               to="/services"
-              className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+              className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20"
             >
               View All Services
+            </Link>
+            <Link
+              to="/contact"
+              className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20"
+            >
+              Contact Us
             </Link>
           </div>
         </motion.div>
