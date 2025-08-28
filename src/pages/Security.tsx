@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { SEO } from '../components/SEO';
+=======
+>>>>>>> origin/clean-merge-website-fixes
 import { 
   Shield, 
   Lock, 
@@ -84,6 +87,7 @@ export default function Security() {
     {
       icon: Network,
       title: 'Network Security',
+<<<<<<< HEAD
       description: 'Advanced network security with monitoring and controls',
       features: [
         'Network segmentation',
@@ -95,6 +99,13 @@ export default function Security() {
   ];
 
   const complianceFrameworks = [
+=======
+      description: 'Advanced firewall protection and intrusion prevention'
+    }
+  ];
+
+  const complianceStandards = [
+>>>>>>> origin/clean-merge-website-fixes
     {
       name: 'SOC 2 Type II',
       status: 'Certified',
@@ -145,6 +156,7 @@ export default function Security() {
         'Technical safeguards'
       ],
       icon: CheckCircle,
+<<<<<<< HEAD
       color: 'text-green-400'
     },
     {
@@ -182,6 +194,33 @@ export default function Security() {
       metric: '24/7',
       label: 'Monitoring',
       description: 'Continuous security monitoring'
+=======
+      title: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act'
+    }
+  ];
+
+  const securityServices = [
+    {
+      icon: Shield,
+      title: 'Threat Detection & Response',
+      description: 'AI-powered threat detection with automated response capabilities'
+    },
+    {
+      icon: Lock,
+      title: 'Identity & Access Management',
+      description: 'Comprehensive identity management and access control solutions'
+    },
+    {
+      icon: Server,
+      title: 'Infrastructure Security',
+      description: 'Secure cloud and on-premise infrastructure with regular audits'
+    },
+    {
+      icon: Network,
+      title: 'Network Security',
+      description: 'Advanced firewall, VPN, and intrusion prevention systems'
+>>>>>>> origin/clean-merge-website-fixes
     }
   ];
 
@@ -213,6 +252,7 @@ export default function Security() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Security & Compliance - Zion Tech Group"
@@ -238,11 +278,51 @@ export default function Security() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Your data security is our top priority. We maintain the highest standards of security 
               and compliance to protect your business and maintain your trust.
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate pt-20">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-5xl mx-auto"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6">
+                <Shield className="w-4 h-4 mr-2" />
+                Enterprise-Grade Security
+              </div>
+            </motion.div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              Your Security is Our{' '}
+              <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
+                Priority
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">
+              Comprehensive security solutions that protect your business from evolving cyber threats. 
+              Built with enterprise-grade technology and industry best practices.
+>>>>>>> origin/clean-merge-website-fixes
             </p>
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Security Metrics */}
       <section className="py-16">
         <div className="container mx-auto px-6">
@@ -278,12 +358,24 @@ export default function Security() {
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Security Features</h2>
             <p className="text-xl text-gray-300">
               Multi-layered security approach to protect your data and systems
+=======
+      {/* Security Features */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Multi-Layer Security Architecture
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our comprehensive security approach protects every layer of your digital infrastructure
+>>>>>>> origin/clean-merge-website-fixes
             </p>
-          </motion.div>
-
+          </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityFeatures.map((feature, index) => (
               <motion.div
+<<<<<<< HEAD
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -308,6 +400,18 @@ export default function Security() {
                       </li>
                     ))}
                   </ul>
+=======
+                key={index}
+                className="bg-zion-blue-dark/30 p-8 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group hover:bg-zion-blue-dark/50 backdrop-blur-sm"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-zion-cyan" />
+>>>>>>> origin/clean-merge-website-fixes
                 </div>
               </motion.div>
             ))}
@@ -315,6 +419,7 @@ export default function Security() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Compliance Frameworks */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -385,12 +490,42 @@ export default function Security() {
                     </div>
                   </motion.div>
                 )}
+=======
+      {/* Compliance Standards */}
+      <section className="py-20 bg-black/20 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Industry Compliance & Certifications
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              We maintain the highest standards of security compliance and certifications
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {complianceStandards.map((standard, index) => (
+              <motion.div
+                key={index}
+                className="bg-zion-blue-dark/30 p-6 rounded-xl border border-zion-cyan/20 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl mb-4">
+                  <standard.icon className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{standard.title}</h3>
+                <p className="text-sm text-zion-slate-light">{standard.description}</p>
+>>>>>>> origin/clean-merge-website-fixes
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Best Practices */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -555,9 +690,84 @@ export default function Security() {
                 Security Documentation
               </a>
             </div>
+=======
+      {/* Security Services */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Comprehensive Security Services
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              From threat detection to compliance management, we provide end-to-end security solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {securityServices.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-zion-blue-dark/30 p-8 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                    <p className="text-zion-slate-light">{service.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            Ready to Secure Your Business?
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-zion-slate-light mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            Get in touch with our security experts to discuss your specific security needs
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
+              Get Security Assessment
+            </button>
+>>>>>>> origin/clean-merge-website-fixes
           </motion.div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default Security;
+>>>>>>> origin/clean-merge-website-fixes

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Brain,
   Zap,
@@ -112,6 +113,49 @@ export default function ComprehensiveServicesShowcase2025() {
         description="Explore our comprehensive portfolio of advanced micro SAAS services, emerging technology solutions, and innovative AI-powered platforms. From quantum computing to edge AI, discover cutting-edge solutions for your business."
       />
       
+=======
+import { Sparkles, ArrowRight, CheckCircle, Phone, Mail, MapPin, TrendingUp, Play, Download, ExternalLink, Search } from 'lucide-react';
+import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced-2025-cutting-edge-services';
+import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from '../data/specialized-industry-solutions-2025';
+const ComprehensiveServicesShowcase2025 = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedIndustry, setSelectedIndustry] = useState('all');
+    const [searchTerm, setSearchTerm] = useState('');
+    const allServices = [...CUTTING_EDGE_SERVICES_2025, ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025];
+    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
+    // Filter services based on selection
+    const filteredServices = allServices.filter(service => {
+        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+        const matchesIndustry = selectedIndustry === 'all' ||
+            ('industry' in service ? service.industry === selectedIndustry : true);
+        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        return matchesCategory && matchesIndustry && matchesSearch;
+    });
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.5
+            }
+        }
+    };
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+>>>>>>> origin/clean-merge-website-fixes
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -148,8 +192,29 @@ export default function ComprehensiveServicesShowcase2025() {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
+=======
+      </section>
+      {/* Contact Information Banner */}
+      <div className="bg-gradient-to-r from-blue-800 to-purple-800 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-white">
+            <div className="flex items-center gap-4 mb-4 md:mb-0">
+              <Phone className="w-5 h-5 text-blue-300"/>
+              <span className="font-semibold">+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center gap-4 mb-4 md:mb-0">
+              <Mail className="w-5 h-5 text-blue-300"/>
+              <span className="font-semibold">kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center gap-4">
+              <MapPin className="w-5 h-5 text-blue-300"/>
+              <span className="font-semibold">364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+>>>>>>> origin/clean-merge-website-fixes
       </div>
-
       {/* Search and Filters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
@@ -195,6 +260,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 ))}
               </select>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -221,6 +287,26 @@ export default function ComprehensiveServicesShowcase2025() {
                 className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300 group"
               >
                 {/* Service Header */}
+=======
+            <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+              {categories.map(category => (<option key={category} value={category} className="bg-slate-800 text-white">
+                  {category === 'all' ? 'All Categories' : category}
+                </option>))}
+            </select>
+            <select value={selectedIndustry} onChange={(e) => setSelectedIndustry(e.target.value)} className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+              {industries.map(industry => (<option key={industry} value={industry} className="bg-slate-800 text-white">
+                  {industry === 'all' ? 'All Industries' : industry}
+                </option>))}
+            </select>
+          </div>
+        </div>
+      </section>
+        {/* Services Grid */}
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
+              {/* Service Header */}
+              <div className="mb-6">
+>>>>>>> origin/clean-merge-website-fixes
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <div className={`w-12 h-12 bg-gradient-to-r ${getInnovationColor(service.innovationLevel)} rounded-lg flex items-center justify-center`}>
@@ -231,6 +317,7 @@ export default function ComprehensiveServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 
                 {/* Market Info */}
                 {service.marketSize && (
@@ -248,6 +335,130 @@ export default function ComprehensiveServicesShowcase2025() {
                       <div className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
                         {service.estimatedDelivery}
+=======
+                {/* Industry Badge */}
+                {'industry' in service && (<div className="inline-block px-3 py-1 bg-purple-600/30 text-purple-200 text-sm rounded-full mb-3">
+                    {service.industry}
+                  </div>)}
+              </div>
+              {/* Features */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-yellow-400"/>
+                  Key Features
+                </h4>
+                <div className="space-y-2">
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (<div key={featureIndex} className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0"/>
+                      <span className="text-blue-100 text-sm">{feature}</span>
+                    </div>))}
+                  {service.features.length > 4 && (<span className="text-blue-300 text-sm">+{service.features.length - 4} more features</span>)}
+                </div>
+              </div>
+              {/* Benefits */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
+                  <TrendingUp className="w-4 h-4 text-green-400"/>
+                  Benefits
+                </h4>
+                <div className="space-y-2">
+                  {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (<div key={benefitIndex} className="flex items-start gap-2">
+                      <ArrowRight className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0"/>
+                      <span className="text-blue-100 text-sm">{benefit}</span>
+                    </div>))}
+                </div>
+              </div>
+              {/* Pricing & ROI */}
+              <div className="mb-6 p-4 bg-white/5 rounded-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-white font-semibold">Starting Price:</span>
+                  <span className="text-2xl font-bold text-green-400">
+                    {service.currency}{service.price.toLocaleString()}
+                    <span className="text-sm text-blue-200">/month</span>
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-blue-200 text-sm">Market Price:</span>
+                  <span className="text-blue-100 text-sm">{service.marketPrice}</span>
+                </div>
+                <div className="flex items-center justify-between mt-2">
+                  <span className="text-blue-200 text-sm">ROI:</span>
+                  <span className="text-yellow-400 text-sm font-semibold">{service.roi}</span>
+                </div>
+              </div>
+              {/* Technology & Compliance */}
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-white font-semibold text-sm">Technology Stack</h4>
+                  <h4 className="text-white font-semibold text-sm">Compliance</h4>
+                </div>
+                <div className="flex items-center justify-between">
+                  <div className="flex flex-wrap gap-1">
+                    {service.technology.slice(0, 3).map((tech, techIndex) => (<span key={techIndex} className="px-2 py-1 bg-slate-700/50 text-blue-200 text-xs rounded">
+                        {tech}
+                      </span>))}
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    {service.compliance.slice(0, 2).map((comp, compIndex) => (<span key={compIndex} className="px-2 py-1 bg-green-600/30 text-green-200 text-xs rounded">
+                        {comp}
+                      </span>))}
+                  </div>
+                </div>
+              </div>
+              {/* Action Buttons */}
+              <div className="flex gap-3">
+                <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-lg font-semibold text-sm flex items-center justify-center gap-2 hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                  <Play className="w-4 h-4"/>
+                  Request Demo
+                </motion.button>
+                <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="px-4 py-3 border border-blue-400 text-blue-400 rounded-lg font-semibold text-sm flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all duration-300">
+                  <ExternalLink className="w-4 h-4"/>
+                  Learn More
+                </motion.button>
+              </div>
+              {/* Contact Info */}
+              <div className="mt-4 pt-4 border-t border-white/20">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-blue-200">Contact:</span>
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-3 h-3 text-blue-300"/>
+                    <span className="text-blue-100">{service.contactInfo.phone}</span>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between text-sm mt-1">
+                  <span className="text-blue-200">Email:</span>
+                  <div className="flex items-center gap-2">
+                    <Mail className="w-3 h-3 text-blue-300"/>
+                    <span className="text-blue-100">{service.contactInfo.email}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>))}
+        </motion.div>
+        {/* Call to Action */}
+        {filteredServices.length === 0 && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16">
+            <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
+            <p className="text-blue-200 mb-6">Try adjusting your search criteria or browse all our services.</p>
+            <button onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('all');
+                setSelectedIndustry('all');
+            }} className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+              View All Services
+            </button>
+          </motion.div>)}
+      </div>
+                {/* Service Details */}
+                <div className="space-y-4 mb-6">
+                  {/* Category & Price */}
+                  <div className="flex items-center justify-between">
+                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
+                      {service.category}
+                    </span>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-white">
+                        {service.currency}{service.price}
+>>>>>>> origin/clean-merge-website-fixes
                       </div>
                     </div>
                     <div className="text-sm text-gray-400">
@@ -257,6 +468,7 @@ export default function ComprehensiveServicesShowcase2025() {
                       </div>
                     </div>
                   </div>
+<<<<<<< HEAD
                   
                   <div className="flex space-x-2">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
@@ -265,20 +477,115 @@ export default function ComprehensiveServicesShowcase2025() {
                     <button className="px-4 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-200">
                       <ExternalLink className="w-4 h-4" />
                     </button>
+=======
+                  {/* Rating & AI Score */}
+                  <div className="flex items-center justify-between text-sm">
+                    <div className="flex items-center gap-1">
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <span className="text-white">{service.rating}</span>
+                      <span className="text-gray-400">({service.reviewCount})</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Brain className="w-4 h-4 text-purple-400" />
+                      <span className="text-white">AI: {service.aiScore}</span>
+                    </div>
+                  </div>
+                  {/* Market Price */}
+                  <div className="text-center py-2 bg-gray-800/50 rounded-lg">
+                    <span className="text-xs text-gray-400">Market Price:</span>
+                    <div className="text-sm font-semibold text-cyan-400">
+                      {service.marketPrice}
+                    </div>
+                  </div>
+                </div>
+                {/* Features Preview */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                  <div className="grid grid-cols-2 gap-1">
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <div key={index} className="flex items-center gap-1 text-xs text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-green-400" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* Action Buttons */}
+                <div className="flex gap-2">
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="px-4 py-2 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                  >
+                    Contact
+                  </Link>
+                </div>
+                {/* Contact Info */}
+                <div className="mt-4 pt-4 border-t border-gray-700">
+                  <div className="flex items-center justify-between text-xs text-gray-400">
+                    <div className="flex items-center gap-1">
+                      <Mail className="w-3 h-3" />
+                      {service.contactEmail}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Globe className="w-3 h-3" />
+                      <a 
+                        href={service.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="hover:text-cyan-400 transition-colors duration-300"
+                      >
+                        Website
+                      </a>
+                    </div>
+>>>>>>> origin/clean-merge-website-fixes
                   </div>
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </section>
 
       {/* Contact Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+=======
+          </motion.div>
+          {/* No Results */}
+          {filteredServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+              <p className="text-gray-400 mb-6">
+                Try adjusting your search criteria or browse all categories
+              </p>
+              <button
+                onClick={() => {
+                  setSelectedCategory('all');
+                  setSearchQuery('');
+                }}
+                className="px-6 py-3 bg-cyan-500 text-white rounded-lg font-medium hover:bg-cyan-600 transition-colors duration-300"
+              >
+                View All Services
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+      {/* Contact CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 via-blue-900/50 to-purple-900/50">
+>>>>>>> origin/clean-merge-website-fixes
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-8">
             Our team of experts is ready to help you implement these innovative solutions
             and drive your business forward with cutting-edge technology.
@@ -337,3 +644,22 @@ export default function ComprehensiveServicesShowcase2025() {
     </div>
   );
 }
+=======
+          <p className="text-xl text-blue-100 mb-8">
+            Join hundreds of companies already leveraging our cutting-edge AI and IT solutions 
+            to drive innovation and achieve remarkable results.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300">
+              Schedule Consultation
+            </motion.button>
+            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300">
+              Download Case Studies
+            </motion.button>
+          </div>
+        </div>
+      </motion.section>
+    </div>);
+};
+export default ComprehensiveServicesShowcase2025;
+>>>>>>> origin/clean-merge-website-fixes

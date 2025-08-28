@@ -79,6 +79,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: true,
       links: [
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
+<<<<<<< HEAD
         { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations' },
         { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity' },
         { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio' },
@@ -105,6 +106,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Health Diagnostic Assistant', href: '/services#ai-health-diagnostic-assistant', featured: true },
         { name: 'AI Financial Advisory Platform', href: '/services#ai-financial-advisory-platform', featured: true },
         { name: 'AI Legal Document Analyzer', href: '/services#ai-legal-document-analyzer', featured: true }
+=======
+        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
+        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
+        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' },
+        { name: 'AI Sales Intelligence', href: '/revolutionary-services-2030#ai-sales-intelligence-2030' },
+        { name: 'AI Customer Support', href: '/revolutionary-services-2030#ai-customer-support-automation-2030' },
+        { name: 'AI Data Analytics & BI', href: '/revolutionary-services-2030#ai-data-analytics-bi-2030' },
+        { name: 'Cloud Infrastructure & DevOps', href: '/revolutionary-services-2030#cloud-infrastructure-devops-2030' },
+        { name: 'IoT Edge Computing', href: '/revolutionary-services-2030#iot-edge-computing-2030' },
+        { name: 'Digital Twin Platform', href: '/revolutionary-services-2030#digital-twin-platform-2030' },
+        { name: 'Blockchain Web3 Platform', href: '/revolutionary-services-2030#blockchain-web3-platform-2030' }
+>>>>>>> origin/clean-merge-website-fixes
       ]
     },
     {
@@ -114,6 +127,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
         { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
         { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
+<<<<<<< HEAD
         { name: 'AI Marketing Automation', href: '/services#ai-marketing-automation-platform', featured: true },
         { name: 'AI Content Creation', href: '/services#ai-content-creation-studio-pro', featured: true },
         { name: 'AI Customer Support', href: '/services#ai-customer-support-automation-suite', featured: true },
@@ -121,6 +135,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Research Assistant', href: '/services#ai-research-assistant-platform', featured: true },
         { name: 'AI Financial Advisory', href: '/services#ai-financial-advisory-platform', featured: true },
         { name: 'AI Threat Detection', href: '/services#ai-threat-detection-platform', featured: true },
+=======
+>>>>>>> origin/clean-merge-website-fixes
         { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
         { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
         { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
@@ -166,7 +182,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Resources & Support',
       featured: false,
       links: [
+<<<<<<< HEAD
         { name: 'Pricing Guide 2025', href: '/pricing-guide-2025', featured: true },
+=======
+>>>>>>> origin/clean-merge-website-fixes
         { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },

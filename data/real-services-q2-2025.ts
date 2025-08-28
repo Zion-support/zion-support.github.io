@@ -4,6 +4,7 @@ export interface RealServiceQ22025 {
   tagline: string;
   price: string;
   features: string[];
+  category?: string;
 }
 export const realServicesQ22025: RealServiceQ22025[] = [
   {
@@ -11,6 +12,19 @@ export const realServicesQ22025: RealServiceQ22025[] = [
     name: 'Q2 Service 1',
     tagline: 'Second quarter service offering',
     price: '$299',
+<<<<<<< HEAD
     features: ['Core features', 'Standard performance', 'Basic integration']
+=======
+    features: ['Core features', 'Standard performance', 'Basic integration'],
+    category: 'Q2 Services'
+  },
+  {
+    id: 'q2-service-2',
+    name: 'Q2 Service 2',
+    tagline: 'Advanced Q2 solutions',
+    price: '$499',
+    features: ['Advanced features', 'Enhanced performance', 'Full integration'],
+    category: 'Q2 Services'
+>>>>>>> origin/clean-merge-website-fixes
   }
 ];
