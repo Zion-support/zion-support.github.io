@@ -339,12 +339,19 @@ function App() {
             <Routes>
               {/* Core Routes */}
               <Route path="/" element={<Home />} />
+<<<<<<< HEAD
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+=======
               <Route path="/home2026" element={<Home2026 />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbf2
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/team" element={<Team />} />
