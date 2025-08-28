@@ -8,6 +8,7 @@
     "dev:backend": "cd server && npm run dev",
     "dev:hybrid": "concurrently \"npm run dev\" \"npm run dev:backend\"",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
+    "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build --mode production",
     "build:backend": "cd server && npm run build",
     "build:hybrid": "npm run build && npm run build:backend",
     "prebuild": "echo 'skip prebuild health-check'",
@@ -36,6 +37,12 @@
     "pm2:delete": "pm2 delete all",
     "pm2:save": "pm2 save",
     "pm2:startup": "pm2 startup"
+  },
+  "npmConfig": {
+    "optional": false,
+    "legacy-peer-deps": true,
+    "strict-ssl": false,
+    "prefer-offline": true
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -95,6 +102,7 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^15.5.2",
+    "@rollup/rollup-linux-x64-gnu": "^4.49.0",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
@@ -113,5 +121,13 @@
     "terser": "^5.43.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.19"
+  },
+  "overrides": {
+    "rollup": {
+      "@rollup/rollup-linux-x64-gnu": "^4.18.0"
+    }
+  },
+  "resolutions": {
+    "@rollup/rollup-darwin-x64": "@rollup/rollup-linux-x64-gnu"
   }
 }
