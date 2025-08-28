@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock } from 'lucide-react';
+import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock, Brain, Cloud, BarChart3, Users, Rocket, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 } from 'lucide-react';
 
 const ModernHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +17,58 @@ const ModernHeader: React.FC = () => {
   }, []);
 
   const serviceCategories = [
-    { name: 'AI Services', icon: Cpu, href: '/services/ai', description: 'Intelligent automation & AI solutions' },
-    { name: 'IT Solutions', icon: Shield, href: '/services/it', description: 'Comprehensive IT infrastructure' },
-    { name: 'SAAS Platforms', icon: Database, href: '/services/saas', description: 'Custom software solutions' },
-    { name: 'Development', icon: Globe, href: '/services/development', description: 'Web & mobile development' },
-    { name: 'Cloud & Security', icon: Lock, href: '/services/cloud-security', description: 'Secure cloud infrastructure' },
-    { name: 'Analytics', icon: Database, href: '/services/analytics', description: 'Data insights & reporting' }
+    { 
+      name: 'AI & Machine Learning', 
+      icon: Brain, 
+      href: '/services#ai',
+      description: 'Intelligent automation and AI solutions',
+      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']
+    },
+    { 
+      name: 'Cloud & DevOps', 
+      icon: Cloud, 
+      href: '/services#cloud',
+      description: 'Cloud infrastructure and DevOps automation',
+      services: ['Cloud Migration', 'Kubernetes', 'DevOps Automation', 'Infrastructure as Code']
+    },
+    { 
+      name: 'Cybersecurity', 
+      icon: Shield, 
+      href: '/services#cybersecurity',
+      description: 'Advanced security and compliance solutions',
+      services: ['Zero Trust', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening']
+    },
+    { 
+      name: 'Data & Analytics', 
+      icon: BarChart3, 
+      href: '/services#data',
+      description: 'Data platforms and business intelligence',
+      services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics']
+    },
+    { 
+      name: 'Enterprise Solutions', 
+      icon: Database, 
+      href: '/services#enterprise',
+      description: 'Enterprise-grade business solutions',
+      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']
+    },
+    { 
+      name: 'Emerging Technologies', 
+      icon: Rocket, 
+      href: '/services#emerging',
+      description: 'Quantum computing and blockchain',
+      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing']
+    }
+  ];
+
+  const mainNavigation = [
+    { name: 'Home', href: '/', hasDropdown: false },
+    { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', hasDropdown: false },
+    { name: 'About', href: '/about', hasDropdown: false },
+    { name: 'Case Studies', href: '/case-studies', hasDropdown: false },
+    { name: 'Blog', href: '/blog', hasDropdown: false },
+    { name: 'Contact', href: '/contact', hasDropdown: false }
   ];
 
   return (
@@ -60,77 +106,73 @@ const ModernHeader: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="nav-link">
-              Home
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="nav-link flex items-center space-x-1"
-                onMouseEnter={() => setActiveDropdown('services')}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <span>Services</span>
-                <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-              </button>
-              
-              <AnimatePresence>
-                {activeDropdown === 'services' && (
-                  <motion.div
-                    className="absolute top-full left-0 mt-2 w-96 bg-white/95 backdrop-blur-md border border-gray-200 rounded-2xl p-6 shadow-2xl"
-                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    onMouseEnter={() => setActiveDropdown('services')}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <div className="grid grid-cols-2 gap-4">
-                      {serviceCategories.map((category) => (
-                        <Link
-                          key={category.name}
-                          href={category.href}
-                          className="group p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 border border-transparent hover:border-gray-200"
+            {mainNavigation.map((item) => (
+              <div key={item.name} className="relative">
+                {item.hasDropdown ? (
+                  <div className="group">
+                    <button
+                      className="nav-link flex items-center space-x-1"
+                      onMouseEnter={() => setActiveDropdown('services')}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                    </button>
+                    
+                    <AnimatePresence>
+                      {activeDropdown === 'services' && (
+                        <motion.div
+                          className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-md border border-neon-blue/20 rounded-xl p-6 shadow-2xl"
+                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                          transition={{ duration: 0.2 }}
+                          onMouseEnter={() => setActiveDropdown('services')}
+                          onMouseLeave={() => setActiveDropdown(null)}
                         >
-                          <div className="flex items-start space-x-3">
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                              <category.icon className="w-5 h-5 text-blue-600" />
-                            </div>
-                            <div className="flex-1">
-                              <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                                {category.name}
-                              </h4>
-                              <p className="text-sm text-gray-600 mt-1">{category.description}</p>
-                            </div>
+                          <div className="grid grid-cols-2 gap-4">
+                            {serviceCategories.map((category) => (
+                              <Link
+                                key={category.name}
+                                href={category.href}
+                                className="group p-4 rounded-lg hover:bg-neon-blue/10 transition-all duration-200"
+                              >
+                                <div className="flex items-center space-x-3 mb-2">
+                                  <category.icon className="w-5 h-5 text-neon-blue group-hover:text-neon-purple transition-colors" />
+                                  <span className="text-white font-medium group-hover:text-neon-blue transition-colors">
+                                    {category.name}
+                                  </span>
+                                </div>
+                                <p className="text-xs text-gray-400 mb-2">{category.description}</p>
+                                <div className="space-y-1">
+                                  {category.services.slice(0, 2).map((service, index) => (
+                                    <div key={index} className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors">
+                                      • {service}
+                                    </div>
+                                  ))}
+                                </div>
+                              </Link>
+                            ))}
                           </div>
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="mt-6 pt-4 border-t border-gray-200">
-                      <Link
-                        href="/services"
-                        className="block text-center text-blue-600 hover:text-blue-700 transition-colors font-medium py-2 rounded-lg hover:bg-blue-50"
-                      >
-                        View All Services →
-                      </Link>
-                    </div>
-                  </motion.div>
+                          <div className="mt-6 pt-4 border-t border-neon-blue/20">
+                            <Link
+                              href="/services"
+                              className="block text-center text-neon-blue hover:text-neon-purple transition-colors font-medium"
+                            >
+                              View All Services →
+                            </Link>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link href={item.href} className="nav-link">
+                    {item.name}
+                  </Link>
                 )}
-              </AnimatePresence>
-            </div>
-
-            <Link href="/about" className="nav-link">
-              About
-            </Link>
-            
-            <Link href="/blog" className="nav-link">
-              Blog
-            </Link>
-            
-            <Link href="/contact" className="nav-link">
-              Contact
-            </Link>
+              </div>
+            ))}
           </nav>
 
           {/* CTA Button */}
@@ -167,24 +209,37 @@ const ModernHeader: React.FC = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="container mx-auto px-4 py-6 space-y-4">
-              <Link href="/" className="mobile-nav-link">
-                Home
-              </Link>
-              <Link href="/services" className="mobile-nav-link">
-                Services
-              </Link>
-              <Link href="/about" className="mobile-nav-link">
-                About
-              </Link>
-              <Link href="/blog" className="mobile-nav-link">
-                Blog
-              </Link>
-              <Link href="/contact" className="mobile-nav-link">
-                Contact
-              </Link>
+              {mainNavigation.map((item) => (
+                <Link 
+                  key={item.name} 
+                  href={item.href} 
+                  className="mobile-nav-link"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* Mobile Services Submenu */}
+              <div className="pt-4 border-t border-neon-blue/20">
+                <h4 className="text-sm font-semibold text-neon-blue mb-3">Service Categories</h4>
+                <div className="grid grid-cols-2 gap-2">
+                  {serviceCategories.map((category) => (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      className="text-xs text-gray-400 hover:text-neon-blue transition-colors p-2 rounded hover:bg-neon-blue/10"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
               <div className="pt-4">
-                <Link href="/contact">
-                  <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg">
+                <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
+                  <button className="w-full px-6 py-3 bg-gradient-to-r from-neon-blue to-neon-purple text-white font-semibold rounded-lg">
                     Get Started
                   </button>
                 </Link>
