@@ -15,7 +15,43 @@ import {
   Globe,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Users,
+  Building,
+  Rocket,
+  Star,
+  Target,
+  BarChart3,
+  Cpu,
+  Lock,
+  Heart,
+  ShoppingCart,
+  MessageCircle,
+  HelpCircle,
+  FileText,
+  Briefcase,
+  Newspaper,
+  TrendingUp,
+  Code,
+  Atom,
+  Network,
+  Eye,
+  Leaf,
+  Satellite,
+  Database,
+  Server,
+  Smartphone,
+  Gauge,
+  CheckCircle,
+  DollarSign,
+  Calendar,
+  BookOpen,
+  Truck,
+  ExternalLink
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -23,6 +59,7 @@ interface NavigationItem {
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
+  featured?: boolean;
 }
 
 interface EnhancedNavigationProps {
@@ -36,27 +73,61 @@ const navigationItems: NavigationItem[] = [
     label: 'Services', 
     href: '/services',
     children: [
-      { label: 'AI & Machine Learning', href: '/services/ai-ml' },
-      { label: 'Cloud Solutions', href: '/services/cloud' },
-      { label: 'Cybersecurity', href: '/services/cybersecurity' },
-      { label: 'Digital Transformation', href: '/services/digital-transformation' },
-      { label: 'Consulting', href: '/services/consulting' },
-      { label: '2025 AI Services', href: '/comprehensive-services-showcase-2025' },
-      { label: '2025 IT Services', href: '/comprehensive-services-showcase-2025' },
-      { label: '2025 Micro SaaS', href: '/comprehensive-services-showcase-2025' }
+      { label: 'AI & Machine Learning', href: '/services/ai-ml', icon: <Brain className="w-4 h-4" /> },
+      { label: 'Cloud & DevOps', href: '/services/cloud-devops', icon: <Cloud className="w-4 h-4" /> },
+      { label: 'Cybersecurity', href: '/services/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
+      { label: 'IT Infrastructure', href: '/services/it-infrastructure', icon: <Server className="w-4 h-4" /> },
+      { label: 'Digital Transformation', href: '/services/digital-transformation', icon: <Zap className="w-4 h-4" /> },
+      { label: 'Quantum Computing', href: '/services/quantum-computing', icon: <Atom className="w-4 h-4" /> },
+      { label: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: <Network className="w-4 h-4" /> },
+      { label: 'Micro SaaS Solutions', href: '/micro-saas', icon: <ShoppingCart className="w-4 h-4" /> },
+      { label: '2025 AI Services', href: '/comprehensive-services-showcase-2025', icon: <Star className="w-4 h-4" />, featured: true },
+      { label: 'Revolutionary 2030', href: '/revolutionary-services-2030', icon: <Rocket className="w-4 h-4" />, featured: true }
     ]
   },
   { 
     label: 'Solutions', 
     href: '/solutions',
     children: [
-      { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { label: 'SMB Solutions', href: '/solutions/smb' },
-      { label: 'Industry Specific', href: '/solutions/industry' }
+      { label: 'Enterprise Solutions', href: '/solutions/enterprise', icon: <Building className="w-4 h-4" /> },
+      { label: 'Healthcare Solutions', href: '/solutions/healthcare', icon: <Heart className="w-4 h-4" /> },
+      { label: 'SMB Solutions', href: '/solutions/smb', icon: <Users className="w-4 h-4" /> },
+      { label: 'Industry Specific', href: '/solutions/industry', icon: <Target className="w-4 h-4" /> }
+    ]
+  },
+  { 
+    label: 'AI Services', 
+    href: '/ai-services',
+    children: [
+      { label: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: <BarChart3 className="w-4 h-4" /> },
+      { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: <TrendingUp className="w-4 h-4" /> },
+      { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: <CheckCircle className="w-4 h-4" /> },
+      { label: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: <Users className="w-4 h-4" /> },
+      { label: 'AI Content Creation', href: '/services/ai-content-creation', icon: <FileText className="w-4 h-4" /> },
+      { label: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> }
+    ]
+  },
+  { 
+    label: 'IT Services', 
+    href: '/it-services',
+    children: [
+      { label: 'IT Consulting', href: '/it-consulting', icon: <Cpu className="w-4 h-4" /> },
+      { label: 'Cloud DevOps', href: '/services/cloud-devops', icon: <Cloud className="w-4 h-4" /> },
+      { label: 'IT Infrastructure', href: '/services/it-infrastructure', icon: <Server className="w-4 h-4" /> },
+      { label: 'IT Helpdesk', href: '/services/it-helpdesk', icon: <HelpCircle className="w-4 h-4" /> },
+      { label: 'FinOps Advisor', href: '/services/finops-advisor', icon: <DollarSign className="w-4 h-4" /> }
     ]
   },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Contact', href: '/contact' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Careers', href: '/careers' },
+  { label: 'Pricing', href: '/pricing' },
+  { label: 'Partners', href: '/partners' },
+  { label: 'Case Studies', href: '/case-studies' },
+  { label: 'News', href: '/news' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Help Center', href: '/help' }
 ];
 
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
@@ -180,10 +251,17 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                           <Link
                             key={child.href}
                             to={child.href}
-                            className="flex items-center space-x-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
+                            className={`flex items-center space-x-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200 ${
+                              child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-l-2 border-cyan-400' : ''
+                            }`}
                           >
                             {child.icon}
                             <span className="text-sm font-medium">{child.label}</span>
+                            {child.featured && (
+                              <span className="ml-auto text-xs bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-2 py-1 rounded-full">
+                                Featured
+                              </span>
+                            )}
                           </Link>
                         ))}
                       </motion.div>
@@ -306,9 +384,17 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                             <Link
                               key={child.href}
                               to={child.href}
-                              className="block text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200"
+                              className={`flex items-center space-x-3 text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200 ${
+                                child.featured ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-l-2 border-cyan-400' : ''
+                              }`}
                             >
-                              {child.label}
+                              {child.icon}
+                              <span>{child.label}</span>
+                              {child.featured && (
+                                <span className="ml-auto text-xs bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-2 py-1 rounded-full">
+                                  Featured
+                                </span>
+                              )}
                             </Link>
                           ))}
                         </motion.div>
