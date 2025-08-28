@@ -464,9 +464,17 @@ function App() {
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
               <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
               
+<<<<<<< HEAD
+              {/* New innovative services showcase and pricing guide routes */}
+              <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+              <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
+              <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+=======
               {/* 2028 Innovative Services Showcase */}
               <Route path="/innovative-services-2028" element={<InnovativeServicesShowcase2028 />} />
               <Route path="/services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0592
               
               {/* New 2026 service routes */}
               <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
