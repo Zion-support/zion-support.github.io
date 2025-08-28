@@ -1981,6 +1981,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     marketPrice: "$999 - $3,499/month"
   },
   {
+<<<<<<< HEAD
+    id: "cloud-finops-optimizer-smb",
+    title: "Cloud FinOps Optimizer (SMB)",
+    description: "Detects idle/overprovisioned resources, rightsizes workloads, enforces budgets and savings plans across AWS/Azure/GCP.",
+    category: "Cloud & DevOps",
+    price: 349,
+    marketPrice: "$349 - $1,499/month"
+=======
     id: "iot-transportation",
     title: "IoT Transportation Platform",
     description: "Smart transportation platform using IoT and AI for fleet management, traffic optimization, and logistics.",
@@ -2749,6 +2757,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     roi: "4-15x",
     innovationLevel: "Advanced",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e423
   }
 ];
 

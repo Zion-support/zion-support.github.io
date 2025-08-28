@@ -278,9 +278,13 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
+<<<<<<< HEAD
+        <div className="min-h-screen bg-futuristic">
+=======
         <div className="min-h-screen bg-futuristic relative">
           <FuturisticAnimatedBackground />
           <SEO />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e423
           <AppHeader />
           
           <main className="flex-1">
