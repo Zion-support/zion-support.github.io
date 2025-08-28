@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -15,6 +15,17 @@ const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
+const Solutions = React.lazy(() => import('./pages/solutions'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const CaseStudies = React.lazy(() => import('./pages/case-studies'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const News = React.lazy(() => import('./pages/News'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Events = React.lazy(() => import('./pages/Events'));
+const Help = React.lazy(() => import('./pages/Help'));
+const Docs = React.lazy(() => import('./pages/Docs'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
@@ -23,8 +34,6 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-
-// Remove imports for non-existent pages to avoid build errors
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -64,46 +73,59 @@ const Marketplace = () => (
 function App() {
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-futuristic">
-        <AppHeader />
-
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/cookies" element={<Cookies />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-
-              {/* Service Routes - only for existing pages */}
-              <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-              <Route path="/services/digital-twin" element={<DigitalTwin />} />
-              <Route path="/services/data-analytics" element={<DataAnalytics />} />
-              <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-
-              {/* Catch all route */}
-              <Route path="*" element={<Home />} />
-            </Routes>
-          </Suspense>
-        </main>
-
-        <Footer />
-        <ChatAssistant />
-        <PerformanceOptimizer />
-      </div>
+      <Router>
+        <div className="min-h-screen bg-futuristic">
+          <AppHeader />
+          
+          <main className="flex-1">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/cookies" element={<Cookies />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/ai-solutions" element={<AISolutions />} />
+                <Route path="/research-development" element={<ResearchDevelopment />} />
+                <Route path="/events" element={<Events />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/help" element={<Help />} />
+                <Route path="/docs" element={<Docs />} />
+                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                
+                {/* Service Routes - only for existing pages */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          <ChatAssistant />
+          <PerformanceOptimizer />
+        </div>
+      </Router>
     </ErrorBoundary>
   );
 }
