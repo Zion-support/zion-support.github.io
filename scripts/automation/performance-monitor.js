@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
-console.log('📊 Starting performance monitoring automation...');
+console.log('📊 Starting continuous performance monitoring automation...');
+
+// Get automation interval from environment variable (default: 2 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
 
 async function runPerformanceMonitor() {
   try {
@@ -12,12 +15,7 @@ async function runPerformanceMonitor() {
     
     // Build the project first
     console.log('🏗️ Building project for performance analysis...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' });
-      console.log('✅ Build completed');
-    } catch (error) {
-      console.log('⚠️  Build failed but continuing...');
-    }
+    execSync('npm run build', { stdio: 'inherit' });
     
     // Check bundle size
     console.log('📦 Analyzing bundle size...');
@@ -60,7 +58,6 @@ async function runPerformanceMonitor() {
     console.log('🔍 Checking for unused dependencies...');
     try {
       execSync('npx depcheck', { stdio: 'inherit' });
-      console.log('✅ Dependency check completed');
     } catch (error) {
       console.log('ℹ️  Dependency check not available');
     }
@@ -82,7 +79,7 @@ async function runPerformanceMonitor() {
     
   } catch (error) {
     console.error('❌ Performance monitoring failed:', error.message);
-    process.exit(1);
+    // Don't exit, just log the error and continue
   }
 }
 
@@ -141,6 +138,21 @@ function getDirectorySize(dir) {
   return totalSize;
 }
 
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial performance monitoring
+  await runPerformanceMonitor();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runPerformanceMonitor();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('🛑 Received SIGINT, shutting down gracefully...');
@@ -152,8 +164,8 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Run the performance monitoring once
-runPerformanceMonitor().catch(error => {
-  console.error('❌ Failed to run performance monitoring:', error);
+// Start the continuous performance monitoring
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous performance monitoring:', error);
   process.exit(1);
 });

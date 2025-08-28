@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
-console.log('🔗 Starting link integrity automation...');
+console.log('🔗 Starting continuous link integrity automation...');
+
+// Get automation interval from environment variable (default: 2 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
 
 async function runLinkIntegrity() {
   try {
@@ -12,19 +15,8 @@ async function runLinkIntegrity() {
     
     // Build the project first
     console.log('🏗️ Building project for link checking...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' });
-      console.log('✅ Build completed');
-    } catch (error) {
-      console.log('⚠️  Build failed but continuing...');
-    }
-    
-    // Check if dist folder exists
-    const distPath = path.join(process.cwd(), 'dist');
-    if (!fs.existsSync(distPath)) {
-      console.log('⚠️  Build verification failed: dist folder not found');
-      return;
-    }
+    execSync('npm run build', { stdio: 'inherit' });
+    console.log('✅ Build completed successfully');
     
     // Run linkinator for comprehensive link checking
     console.log('🔍 Running comprehensive link check...');
@@ -34,8 +26,7 @@ async function runLinkIntegrity() {
       
       // Parse and analyze link report
       if (fs.existsSync('link-report.json')) {
-        const linkReport = JSON.parse(fs.readFileSync('link-report.json', 'utf8'));
-        analyzeLinkReport(linkReport);
+        analyzeLinkReport(JSON.parse(fs.readFileSync('link-report.json', 'utf8')));
       }
     } catch (error) {
       console.log('⚠️  Linkinator failed but continuing...');
@@ -43,6 +34,7 @@ async function runLinkIntegrity() {
     
     // Check for broken internal links
     console.log('🔍 Checking for broken internal links...');
+    const distPath = path.join(process.cwd(), 'dist');
     const internalLinks = findInternalLinks(distPath);
     const brokenInternalLinks = [];
     
@@ -105,7 +97,7 @@ async function runLinkIntegrity() {
     
   } catch (error) {
     console.error('❌ Link integrity check failed:', error.message);
-    process.exit(1);
+    // Don't exit, just log the error and continue
   }
 }
 
@@ -258,3 +250,35 @@ function analyzeLinkReport(linkReport) {
     }
   }
 }
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous link integrity checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial link integrity check
+  await runLinkIntegrity();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runLinkIntegrity();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the continuous link integrity checker
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous link integrity checker:', error);
+  process.exit(1);
+});

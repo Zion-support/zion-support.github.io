@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
-console.log('🔒 Starting security audit automation...');
+console.log('🔒 Starting continuous security audit automation...');
+
+// Get automation interval from environment variable (default: 4 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
 
 async function runSecurityAudit() {
   try {
@@ -22,6 +25,7 @@ async function runSecurityAudit() {
         console.log('✅ Security issues auto-fixed');
       } catch (fixError) {
         console.log('❌ Could not auto-fix security issues');
+        // Don't exit, just log the error and continue
       }
     }
     
@@ -47,13 +51,12 @@ async function runSecurityAudit() {
     try {
       if (fs.existsSync('security-scan.js')) {
         execSync('node security-scan.js', { stdio: 'inherit' });
-        console.log('✅ Additional security scan completed');
       }
     } catch (error) {
       console.log('ℹ️  No additional security scan available');
     }
     
-    // Generate report
+    // Generate security report
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Security audit completed',
@@ -68,8 +71,23 @@ async function runSecurityAudit() {
     
   } catch (error) {
     console.error('❌ Security audit failed:', error.message);
-    process.exit(1);
+    // Don't exit, just log the error and continue
   }
+}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial security audit
+  await runSecurityAudit();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runSecurityAudit();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
 
 // Handle graceful shutdown
@@ -83,8 +101,8 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Run the security audit once
-runSecurityAudit().catch(error => {
-  console.error('❌ Failed to run security audit:', error);
+// Start the continuous security audit
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous security audit:', error);
   process.exit(1);
 });

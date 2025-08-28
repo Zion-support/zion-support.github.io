@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 console.log('🚀 Starting continuous improvement automation...');
+
+// Get automation interval from environment variable (default: 2 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
 
 async function runContinuousImprovement() {
   try {
@@ -72,8 +75,23 @@ async function runContinuousImprovement() {
     
   } catch (error) {
     console.error('❌ Continuous improvement failed:', error.message);
-    process.exit(1);
+    // Don't exit, just log the error and continue
   }
+}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous improvement with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial improvement
+  await runContinuousImprovement();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runContinuousImprovement();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous improvement running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
 
 // Handle graceful shutdown
@@ -87,8 +105,8 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Run the continuous improvement once
-runContinuousImprovement().catch(error => {
-  console.error('❌ Failed to run continuous improvement:', error);
+// Start the continuous improvement
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous improvement:', error);
   process.exit(1);
 });

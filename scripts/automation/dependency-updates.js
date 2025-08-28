@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
-console.log('📦 Starting dependency updates automation...');
+console.log('📦 Starting continuous dependency updates automation...');
+
+// Get automation interval from environment variable (default: 6 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours
 
 async function runDependencyUpdates() {
   try {
@@ -31,6 +34,7 @@ async function runDependencyUpdates() {
         console.log('✅ Security vulnerabilities fixed');
       } catch (fixError) {
         console.log('❌ Could not fix security vulnerabilities');
+        // Don't exit, just log the error and continue
       }
     }
     
@@ -71,12 +75,7 @@ async function runDependencyUpdates() {
     
     // Install dependencies
     console.log('📦 Installing updated dependencies...');
-    try {
-      execSync('npm install', { stdio: 'inherit' });
-      console.log('✅ Dependencies installed');
-    } catch (error) {
-      console.log('⚠️  Dependency installation failed');
-    }
+    execSync('npm install', { stdio: 'inherit' });
     
     // Run tests to ensure nothing broke
     console.log('🧪 Running tests after updates...');
@@ -85,15 +84,11 @@ async function runDependencyUpdates() {
       console.log('✅ Tests passed after updates');
     } catch (error) {
       console.log('❌ Tests failed after updates - rolling back...');
-      try {
-        execSync('npm install', { stdio: 'inherit' });
-        console.log('✅ Rollback completed');
-      } catch (rollbackError) {
-        console.log('⚠️  Rollback failed');
-      }
+      execSync('npm install', { stdio: 'inherit' });
+      // Don't exit, just log the error and continue
     }
     
-    // Generate report
+    // Generate dependency update report
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Dependency updates completed',
@@ -108,8 +103,23 @@ async function runDependencyUpdates() {
     
   } catch (error) {
     console.error('❌ Dependency updates failed:', error.message);
-    process.exit(1);
+    // Don't exit, just log the error and continue
   }
+}
+
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial dependency updates
+  await runDependencyUpdates();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runDependencyUpdates();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
 
 // Handle graceful shutdown
@@ -123,8 +133,8 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Run the dependency updates once
-runDependencyUpdates().catch(error => {
-  console.error('❌ Failed to run dependency updates:', error);
+// Start the continuous dependency updates
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous dependency updates:', error);
   process.exit(1);
 });

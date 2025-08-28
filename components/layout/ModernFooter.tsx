@@ -115,7 +115,7 @@ const ModernFooter: React.FC = () => {
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <social.icon className="w-5 h-5" />
+                    {React.createElement(social.icon, { className: "w-5 h-5" })}
                   </motion.a>
                 ))}
               </div>
@@ -131,7 +131,9 @@ const ModernFooter: React.FC = () => {
                       href={category.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors group"
                     >
-                      <category.icon className="w-4 w-4 text-neon-blue group-hover:text-neon-purple transition-colors" />
+                      {React.createElement(category.icon, { 
+                        className: "w-4 w-4 text-neon-blue group-hover:text-neon-purple transition-colors" 
+                      })}
                       <span>{category.name}</span>
                     </Link>
                   </li>

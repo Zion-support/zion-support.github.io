@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake, Settings } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
-import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -356,7 +355,7 @@ export function AppHeader() {
                                 >
                                   <div className="flex items-start gap-3">
                                     <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
-                                      <service.icon className="w-5 h-5 text-white" />
+                                      {React.createElement(service.icon, { className: "w-5 h-5 text-white" })}
                                     </div>
                                     <div className="flex-1">
                                       <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
@@ -406,7 +405,7 @@ export function AppHeader() {
                                 >
                                   <div className="flex items-start gap-3">
                                     <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
-                                      <solution.icon className="w-5 h-5 text-white" />
+                                      {React.createElement(solution.icon, { className: "w-5 h-5 text-white" })}
                                     </div>
                                     <div className="flex-1">
                                       <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
@@ -446,7 +445,7 @@ export function AppHeader() {
                                 >
                                   <div className="flex items-start gap-3">
                                     <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
-                                      <resource.icon className="w-5 h-5 text-white" />
+                                      {React.createElement(resource.icon, { className: "w-5 h-5 text-white" })}
                                     </div>
                                     <div className="flex-1">
                                       <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
