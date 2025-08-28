@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  MessageCircle, 
-  Calendar, 
-  Clock, 
-  MapPin,
-  CheckCircle,
+import {
   ArrowRight,
+  Calendar,
+  CheckCircle,
+  Clock,
+  Mail,
+  MessageCircle,
+  Phone,
   Star,
-  Users,
-  Award
+  Users
 } from 'lucide-react';
+import React, { useState } from 'react';
 
 export const ITServiceRequestHero: React.FC = () => {
   const [activeTab, setActiveTab] = useState('contact');
@@ -107,7 +105,7 @@ export const ITServiceRequestHero: React.FC = () => {
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${method.color} rounded-lg mb-6`}>
-                <method.icon className="w-8 h-8 text-white" />
+                {React.createElement(method.icon, { className: "w-8 h-8 text-white" })}
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{method.title}</h3>
               <p className="text-gray-300 mb-4">{method.description}</p>
@@ -139,7 +137,7 @@ export const ITServiceRequestHero: React.FC = () => {
             >
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center">
-                  <action.icon className="w-6 h-6 text-zion-cyan" />
+                  {React.createElement(action.icon, { className: "w-6 h-6 text-zion-cyan" })}
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-white mb-1">{action.title}</h3>
@@ -172,7 +170,7 @@ export const ITServiceRequestHero: React.FC = () => {
               className="text-center"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan/20 rounded-lg mb-4">
-                <stat.icon className="w-8 h-8 text-zion-cyan" />
+                {React.createElement(stat.icon, { className: "w-8 h-8 text-zion-cyan" })}
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300 text-sm">{stat.label}</div>
