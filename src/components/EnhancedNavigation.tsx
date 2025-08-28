@@ -56,7 +56,7 @@ const navigationItems: NavigationItem[] = [
     label: 'AI Services', 
     href: '/ai-services',
     children: [
-      { label: 'AI & Machine Learning', href: '/services/ai-ml' },
+      { label: 'AI & Machine Learning', href: '/services/ai-business-intelligence' },
       { label: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant' },
       { label: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
       { label: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite' },
@@ -71,7 +71,18 @@ const navigationItems: NavigationItem[] = [
       { label: 'AI Financial Analytics', href: '/services/ai-financial-analytics-platform' },
       { label: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },
       { label: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform' },
-      { label: '2025 AI Services', href: '/comprehensive-services-showcase-2025' }
+      { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+      { label: 'IT Infrastructure', href: '/services/it-infrastructure' },
+      { label: 'Cybersecurity', href: '/services/ai-compliance-assistant' },
+      { label: 'Digital Transformation', href: '/services/digital-transformation' },
+      { label: 'Quantum Computing', href: '/services/quantum-computing' },
+      { label: 'IoT & Edge Computing', href: '/services/iot-edge-computing' },
+      { label: 'Space Technology', href: '/space-tech' },
+      { label: '2025 AI Services', href: '/comprehensive-services-showcase-2025' },
+      { label: '2026 Services', href: '/ultimate-services-showcase-2026' },
+      { label: '2027 Services', href: '/comprehensive-services-showcase-2027' },
+      { label: '2029 Services', href: '/comprehensive-services-showcase-2029' },
+      { label: 'Revolutionary 2030', href: '/revolutionary-services-2030' }
     ]
   },
   { 
@@ -127,6 +138,19 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   { 
+    label: 'Company', 
+    href: '/about',
+    children: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Team', href: '/team' },
+      { label: 'Leadership', href: '/leadership' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Partners', href: '/partners' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'News', href: '/news' }
+    ]
+  },
+  { 
     label: 'Resources', 
     href: '/resources',
     children: [
@@ -137,7 +161,9 @@ const navigationItems: NavigationItem[] = [
       { label: 'White Papers', href: '/white-papers' },
       { label: 'Webinars', href: '/webinars' },
       { label: 'FAQ', href: '/faq' },
-      { label: 'Help Center', href: '/help' }
+      { label: 'Help Center', href: '/help' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Marketplace', href: '/marketplace' }
     ]
   },
   { 
@@ -151,7 +177,6 @@ const navigationItems: NavigationItem[] = [
       { label: 'Space Technology', href: '/space-tech' }
     ]
   },
-  { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' }
 ];
 

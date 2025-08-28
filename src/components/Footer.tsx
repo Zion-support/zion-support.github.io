@@ -92,7 +92,9 @@ const footerSections = [
       { name: 'Case Studies', path: '/case-studies', icon: FileText },
       { name: 'News', path: '/news', icon: Newspaper },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Help Center', path: '/help', icon: HelpCircle }
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'Team', path: '/team', icon: Users },
+      { name: 'Leadership', path: '/leadership', icon: Award }
     ]
   },
   {
@@ -130,6 +132,7 @@ const footerSections = [
       { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
       { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
       { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target },
+      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
       { name: 'New Innovative Services 2025', path: '/new-innovative-services-2025', icon: Sparkles }
     ]
   },
@@ -153,6 +156,28 @@ const footerSections = [
       { name: 'Micro SaaS Solutions', path: '/micro-saas', icon: Zap },
       { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
       { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Coins },
+      { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
+      { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
+    ]
+  },
+  {
+    title: 'Cybersecurity & Privacy',
+    icon: Shield,
+    links: [
+      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Lock },
+      { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Shield },
+      { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
+      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
+      { name: 'AI Compliance Copilot', path: '/services/ai-compliance-copilot', icon: CheckCircle }
+    ]
+  },
+  {
+    title: 'Emerging Technologies',
+    icon: Atom,
+    links: [
       { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
       { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity', icon: Shield },
       { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
