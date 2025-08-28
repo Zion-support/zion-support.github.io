@@ -273,81 +273,96 @@ export default function ComprehensiveServices() {
             <div className="mr-3">{icon}</div>
             <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
           </div>
-        )}
-        {service.isNew && (
-          <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-            New
-          </div>
-        )}
-      </div>
-      
-      <p className="text-gray-300 mb-2 font-medium">{service.tagline}</p>
-      <p className="text-gray-400 mb-4 text-sm">{service.description}</p>
-      
-      <div className="mb-4">
-        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-        <span className="text-gray-400">{service.period}</span>
-        <p className="text-sm text-gray-500 mt-1">{service.marketPrice}</p>
-      </div>
-
-      <div className="mb-4">
-        <div className="flex items-center mb-2">
-          <div className="flex text-yellow-400">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? "text-yellow-400" : "text-gray-600"}`} />
-            ))}
-          </div>
-          <span className="text-sm text-gray-400 ml-2">({service.reviews} reviews)</span>
         </div>
-      </div>
+        {items.map((service, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-6 border border-white/10 mb-6">
+              <div className="flex items-center mb-4">
+                <h3 className="text-xl font-bold text-white mr-2">{service.title}</h3>
+                {service.isNew && (
+                  <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                    New
+                  </div>
+                )}
+              </div>
+              <p className="text-gray-300 mb-2 font-medium">{service.tagline}</p>
+              <p className="text-gray-400 mb-4 text-sm">{service.desc}</p>
+              
+              <div className="mb-4">
+                <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                <span className="text-gray-400">{service.period}</span>
+                <p className="text-sm text-gray-500 mt-1">{service.marketPrice}</p>
+              </div>
 
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-        <div className="grid grid-cols-1 gap-1">
-          {service.features.slice(0, 4).map((feature, idx) => (
-            <div key={idx} className="flex items-center text-sm text-gray-300">
-              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
-              {feature}
+              <div className="mb-4">
+                <div className="flex items-center mb-2">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? "text-yellow-400" : "text-gray-600"}`} />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-400 ml-2">({service.reviews} reviews)</span>
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                <div className="grid grid-cols-1 gap-1">
+                  {service.features.slice(0, 4).map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                <div className="grid grid-cols-1 gap-1">
+                  {service.benefits.slice(0, 3).map((benefit, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
+                      {benefit}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-4 p-3 bg-slate-700/30 rounded-lg">
+                <div className="text-xs text-gray-400 mb-1">Market Size: {service.marketSize}</div>
+                <div className="text-xs text-gray-400 mb-1">Growth Rate: {service.growthRate}</div>
+                <div className="text-xs text-gray-400">ROI: {service.roi}</div>
+              </div>
+
+              <div className="flex gap-2">
+                <Link
+                  to={service.cta}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+                <a
+                  href={`mailto:${service.contactInfo?.email}?subject=Inquiry about ${service.title}`}
+                  className="inline-flex items-center justify-center px-3 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                  title="Contact Sales"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+              </div>
             </div>
-          ))}
-        </div>
+          </motion.div>
+        ))}
       </div>
-
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-        <div className="grid grid-cols-1 gap-1">
-          {service.benefits.slice(0, 3).map((benefit, idx) => (
-            <div key={idx} className="flex items-center text-sm text-gray-300">
-              <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
-              {benefit}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="mb-4 p-3 bg-slate-700/30 rounded-lg">
-        <div className="text-xs text-gray-400 mb-1">Market Size: {service.marketSize}</div>
-        <div className="text-xs text-gray-400 mb-1">Growth Rate: {service.growthRate}</div>
-        <div className="text-xs text-gray-400">ROI: {service.roi}</div>
-      </div>
-
-      <div className="flex gap-2">
-        <Link
-          to={service.link}
-          className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium"
-        >
-          Learn More
-          <ArrowRight className="w-4 h-4 ml-2" />
-        </Link>
-        <a
-          href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-          className="inline-flex items-center justify-center px-3 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-          title="Contact Sales"
-        >
-          <Mail className="w-4 h-4" />
-        </a>
-      </div>
-    </motion.div>
+    </section>
   );
 
   return (
@@ -394,7 +409,7 @@ export default function ComprehensiveServices() {
                 <MapPin className="h-4 w-4 mr-2" /> Visit
               </a>
             </div>
-          </div>
+          </motion.div>
         </header>
 
         {/* Sections */}
@@ -430,13 +445,13 @@ export default function ComprehensiveServices() {
               <p className="text-white/80 mb-6">We will scope your needs and share a clear proposal with milestones and pricing.</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <a href="tel:+13024640950" className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <Phone className="h-5 w-5 text-zion-cyan mr-3" /> {contact.phone}
+                  <Phone className="h-5 w-5 text-zion-cyan mr-3" /> {/* contact.phone is not defined */}
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <Mail className="h-5 w-5 text-zion-cyan mr-3" /> {contact.email}
+                  <Mail className="h-5 w-5 text-zion-cyan mr-3" /> {/* contact.email is not defined */}
                 </a>
                 <div className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <MapPin className="h-5 w-5 text-zion-cyan mr-3" /> {contact.address}
+                  <MapPin className="h-5 w-5 text-zion-cyan mr-3" /> {/* contact.address is not defined */}
                 </div>
               </div>
             </div>
@@ -586,6 +601,6 @@ export default function ComprehensiveServices() {
           </motion.div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
