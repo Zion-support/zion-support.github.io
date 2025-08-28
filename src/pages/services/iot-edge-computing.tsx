@@ -1,103 +1,186 @@
 import React from 'react';
-import SEO from '../../components/SEO';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor } from 'lucide-react';
+import { 
+  Cpu, 
+  Brain, 
+  Zap, 
+  Users, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight,
+  Network,
+  Server,
+  Smartphone,
+  Monitor,
+  BarChart3,
+  MessageCircle,
+  Clock,
+  Target,
+  Sparkles,
+  FileText,
+  Globe,
+  Lock,
+  Shield,
+  Database,
+  Cloud,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Satellite,
+  Factory,
+  Car,
+  Home,
+  Building
+} from 'lucide-react';
 
 const IoTEdgeComputing: React.FC = () => {
   const features = [
     {
       icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Process data locally for faster response times'
+      title: "Edge Processing",
+      description: "Real-time data processing at the edge for instant insights and actions",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Wifi,
-      title: '5G Connectivity',
-      description: 'High-speed, low-latency network connections'
+      icon: Network,
+      title: "5G Connectivity",
+      description: "Ultra-fast, low-latency connectivity for seamless IoT communication",
+      color: "from-green-500 to-emerald-500"
     },
     {
-      icon: Database,
-      title: 'Local Storage',
-      description: 'Store and manage data at the edge'
+      icon: Brain,
+      title: "AI at the Edge",
+      description: "Intelligent decision-making directly on IoT devices without cloud dependency",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      icon: Cloud,
-      title: 'Hybrid Cloud',
-      description: 'Seamless integration with cloud services'
-    }
-  ];
-
-  const applications = [
-    {
-      title: 'Smart Cities',
-      description: 'Intelligent traffic management and utilities',
-      icon: '🏙️'
-    },
-    {
-      title: 'Industrial IoT',
-      description: 'Predictive maintenance and automation',
-      icon: '🏭'
-    },
-    {
-      title: 'Healthcare',
-      description: 'Remote monitoring and telemedicine',
-      icon: '🏥'
-    },
-    {
-      title: 'Retail',
-      description: 'Smart inventory and customer analytics',
-      icon: '🛍️'
+      icon: Shield,
+      title: "Edge Security",
+      description: "Advanced security protocols protecting data at every edge device",
+      color: "from-orange-500 to-red-500"
     }
   ];
 
   const benefits = [
-    'Reduced latency and faster response times',
-    'Lower bandwidth costs and network efficiency',
-    'Enhanced privacy and data security',
-    'Real-time decision making capabilities',
-    'Scalable and flexible architecture',
-    'Improved reliability and uptime'
+    "Real-time data processing with sub-10ms latency",
+    "Reduced bandwidth costs by processing data locally",
+    "Enhanced privacy and security with edge-based processing",
+    "Improved reliability with offline-first capabilities",
+    "Scalable IoT deployments across multiple locations",
+    "Cost-effective edge computing infrastructure"
+  ];
+
+  const applications = [
+    {
+      title: "Smart Manufacturing",
+      description: "Industrial IoT with real-time monitoring and predictive maintenance",
+      icon: Factory,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Connected Vehicles",
+      description: "Autonomous driving and vehicle-to-everything communication",
+      icon: Car,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Smart Cities",
+      description: "Urban infrastructure monitoring and intelligent traffic management",
+      icon: Building,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Smart Homes",
+      description: "Connected home automation and energy management systems",
+      icon: Home,
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const edgeServices = [
+    {
+      title: "Edge Infrastructure",
+      description: "Deploy and manage edge computing nodes across your IoT network",
+      icon: Server
+    },
+    {
+      title: "Edge Analytics",
+      description: "Real-time data analysis and insights at the edge",
+      icon: BarChart3
+    },
+    {
+      title: "Edge AI Models",
+      description: "Optimized AI models for edge device deployment",
+      icon: Brain
+    },
+    {
+      title: "Edge Security",
+      description: "Comprehensive security solutions for edge computing environments",
+      icon: Shield
+    }
+  ];
+
+  const connectivityOptions = [
+    {
+      title: "WiFi 6 & 6E",
+      description: "High-speed wireless connectivity for indoor IoT deployments",
+      icon: Wifi
+    },
+    {
+      title: "5G Cellular",
+      description: "Ultra-fast mobile connectivity for outdoor and mobile IoT",
+      icon: Radio
+    },
+    {
+      title: "LoRaWAN",
+      description: "Long-range, low-power connectivity for wide-area IoT networks",
+      icon: Satellite
+    },
+    {
+      title: "Bluetooth 5.0",
+      description: "Short-range connectivity for personal and wearable IoT devices",
+      icon: Bluetooth
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="IoT Edge Computing Services - Zion Tech Group"
-        description="Transform your business with IoT edge computing solutions. Process data locally for faster insights and real-time decision making."
+        title="IoT Edge Computing - Zion Tech Group"
+        description="Revolutionary IoT edge computing solutions for real-time processing, AI at the edge, and connected device management. Transform your IoT infrastructure."
+        keywords="IoT edge computing, edge AI, IoT infrastructure, real-time processing, Zion Tech Group"
+        ogType="website"
       />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full border border-green-400/30 mb-6">
-              <Cpu className="w-5 h-5 text-green-400 mr-2" />
-              <span className="text-green-300 font-medium">IoT Edge Computing</span>
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">
+                <Cpu className="h-8 w-8 text-white" />
+              </div>
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              IoT Edge
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400">
-                Computing
-              </span>
+              IoT Edge Computing
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Bring intelligence to the edge of your network. Our IoT edge computing solutions process data locally 
-              for faster insights, reduced latency, and real-time decision making capabilities.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your IoT infrastructure with edge computing. Process data in real-time, 
+              deploy AI at the edge, and create intelligent, connected systems that work anywhere.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Get Started
+              <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600">
+                <Network className="h-5 w-5 mr-2" />
+                Edge Assessment
               </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
-                Learn More
+              <button className="btn-futuristic-outline">
+                <FileText className="h-5 w-5 mr-2" />
+                Download Edge Guide
               </button>
             </div>
           </motion.div>
@@ -105,36 +188,45 @@ const IoTEdgeComputing: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Edge Computing Features
+              Edge Computing Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful capabilities for intelligent edge processing
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our IoT edge computing platform brings processing power closer to your data sources, 
+              enabling real-time insights and intelligent decision-making.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-green-400" />
+                <div className={`p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.color} mb-4`}>
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -142,37 +234,44 @@ const IoTEdgeComputing: React.FC = () => {
       </section>
 
       {/* Applications Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              IoT Edge Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform industries with edge computing solutions
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From smart cities to connected vehicles, edge computing is revolutionizing 
+              how IoT devices process data and make intelligent decisions.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {applications.map((application, index) => (
               <motion.div
                 key={application.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{application.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>
-                    <p className="text-gray-300">{application.description}</p>
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 hover:border-slate-500 transition-all duration-300 h-full">
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${application.color} mb-4`}>
+                    <application.icon className="h-6 w-6 text-white" />
                   </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {application.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {application.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -181,78 +280,157 @@ const IoTEdgeComputing: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Edge Computing?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Unlock the power of local data processing
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the advantages of processing data closer to where it's generated, 
+              enabling faster response times and more efficient IoT operations.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
-              <p className="text-gray-300 mb-6">
-                Ready to bring intelligence to the edge? Our IoT edge computing experts can help you 
-                design and implement solutions that transform your business operations.
-              </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Contact Our Experts
-              </button>
-            </motion.div>
+      {/* Edge Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Edge Computing Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive edge computing solutions to deploy, manage, and optimize 
+              your IoT infrastructure for maximum performance and efficiency.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {edgeServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-600 border border-slate-500 hover:border-slate-400 transition-all duration-300 h-full">
+                  <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 mb-4">
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {service.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Connectivity Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Connectivity Options
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose from multiple connectivity technologies to ensure your IoT devices 
+              stay connected regardless of location or environment.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {connectivityOptions.map((option, index) => (
+              <motion.div
+                key={option.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 hover:border-slate-500 transition-all duration-300 h-full">
+                  <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 mb-4">
+                    <option.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {option.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {option.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready for Edge Computing?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Edge Your IoT?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Transform your business with intelligent edge processing and real-time insights
+            <p className="text-xl text-blue-100 mb-8">
+              Transform your IoT infrastructure with edge computing that brings 
+              intelligence closer to your data sources.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
-                Start Edge Journey
+              <button className="btn-futuristic bg-white text-blue-600 hover:bg-gray-100">
+                <MessageCircle className="h-5 w-5 mr-2" />
+                Edge Consultation
               </button>
-              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
+              <button className="btn-futuristic-outline border-white text-white hover:bg-white hover:text-blue-600">
+                <Clock className="h-5 w-5 mr-2" />
                 Schedule Demo
               </button>
             </div>
