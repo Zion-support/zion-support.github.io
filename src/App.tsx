@@ -121,6 +121,8 @@ const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecur
 const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
+const AIBusinessProcessOptimization = lazy(() => import('./pages/services/AIBusinessProcessOptimization'));
+const AICustomerSuccessPlatform = lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
@@ -368,7 +370,9 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+<Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+<Route path="/services/ai-business-process-optimization" element={<AIBusinessProcessOptimization />} />
+<Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
                     
                     {/* Additional Service Routes */}
                     <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
