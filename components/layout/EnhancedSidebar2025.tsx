@@ -301,7 +301,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: En
     };
   }, [isOpen]);
 
-  const isActive = (href: string) => router.pathname === href;
+
 
   return (
     <>
@@ -355,11 +355,11 @@ export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: En
           <div className="space-y-3">
             <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
               <Phone className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-gray-300">{contactInfo.mobile}</span>
+              <span className="text-sm text-gray-300">{finalContactInfo.mobile}</span>
             </div>
             <div className="flex items-center gap-3 p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">
               <Mail className="w-4 h-4 text-cyan-400" />
-              <span className="text-sm text-gray-300">{contactInfo.email}</span>
+              <span className="text-sm text-gray-300">{finalContactInfo.email}</span>
             </div>
           </div>
         </div>

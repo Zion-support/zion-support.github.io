@@ -12,7 +12,7 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/about'));
-const Contact = React.lazy(() => import('./pages/contact'));
+const EnhancedContact = React.lazy(() => import('./pages/EnhancedContact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
@@ -28,10 +28,6 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
-const Community = React.lazy(() => import('./pages/Community'));
-const Developers = React.lazy(() => import('./pages/Developers'));
-const Demo = React.lazy(() => import('./pages/Demo'));
 
 // New pages
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
