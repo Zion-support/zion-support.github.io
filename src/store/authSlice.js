@@ -6,7 +6,7 @@ export const loginUser = createAsyncThunk(
   async (credentials, { rejectWithValue }) => {
     try {
       // Simulate API call
-      const response = await new Promise((resolve) => {
+      const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (credentials.email && credentials.password) {
             resolve({
@@ -41,7 +41,7 @@ export const signupUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       // Simulate API call
-      const response = await new Promise((resolve) => {
+      const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (userData.email && userData.password && userData.name) {
             resolve({
