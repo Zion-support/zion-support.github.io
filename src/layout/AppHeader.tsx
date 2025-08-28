@@ -79,6 +79,8 @@ export function AppHeader() {
     { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Quantum-AI integration platform', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
     { name: 'AI Quantum Financial Trading', href: '/services/ai-quantum-financial-trading', icon: BarChart3, description: 'Quantum-AI trading platform', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
     { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain', icon: Truck, description: 'AI-powered supply chain automation', category: 'AI & ML', color: 'from-blue-500 to-green-500' },
+    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'AI-powered supply chain optimization', category: 'AI & ML', color: 'from-green-500 to-blue-500' },
+    { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: 'AI-powered autonomous research', category: 'AI & ML', color: 'from-blue-500 to-purple-500' },
     { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield, description: 'AI-powered threat detection', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
     
     // Cloud & DevOps

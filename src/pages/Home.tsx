@@ -295,6 +295,30 @@ export default function Home() {
       features: ["Sentiment Analysis", "Customer Journey Mapping", "Predictive Analytics", "Personalization Engine"]
     },
     {
+      icon: Brain,
+      title: "AI Autonomous Research Assistant",
+      description: "AI-powered autonomous research that discovers, analyzes, and synthesizes information across multiple sources",
+      color: "from-blue-500 to-purple-500",
+      href: "/services/ai-autonomous-research-assistant",
+      features: ["Autonomous Research", "Multi-Source Analysis", "Intelligent Summarization", "Real-time Updates"]
+    },
+    {
+      icon: Truck,
+      title: "AI Supply Chain Optimization",
+      description: "Transform your supply chain with AI that predicts demand, optimizes inventory, and reduces costs",
+      color: "from-green-500 to-blue-500",
+      href: "/services/ai-supply-chain-optimization",
+      features: ["AI-Powered Forecasting", "Real-time Visibility", "Intelligent Routing", "Risk Management"]
+    },
+    {
+      icon: PenTool,
+      title: "AI Content Marketing Suite",
+      description: "AI-powered content creation, optimization, and distribution for maximum engagement",
+      color: "from-purple-500 to-pink-500",
+      href: "/services/ai-content-marketing-suite",
+      features: ["AI Content Generation", "Audience Intelligence", "SEO Optimization", "Performance Analytics"]
+    },
+    {
       icon: Shield,
       title: "AI Financial Risk Management",
       description: "Intelligent financial risk assessment with AI-driven predictive analytics",

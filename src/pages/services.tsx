@@ -154,6 +154,50 @@ const Services: React.FC = () => {
           </div>
         </div>
 
+        {/* New: Innovative AI-Powered Micro SAAS Services */}
+        <div className="mt-24 text-left">
+          <h2 className="text-4xl font-bold mb-4">Innovative AI-Powered Micro SAAS Services</h2>
+          <p className="text-gray-300 mb-10 max-w-4xl">Cutting-edge AI solutions that deliver immediate value and measurable ROI for your business.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Autonomous Research Assistant</h3>
+              <p className="text-gray-300 mb-4">AI that independently conducts research across multiple sources and synthesizes findings.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $1,999/month</p>
+              <a href="/services/ai-autonomous-research-assistant" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Supply Chain Optimization</h3>
+              <p className="text-gray-300 mb-4">Transform your supply chain with AI that predicts demand and optimizes operations.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$499 - $2,999/month</p>
+              <a href="/services/ai-supply-chain-optimization" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Content Marketing Suite</h3>
+              <p className="text-gray-300 mb-4">AI-powered content creation, optimization, and distribution for maximum engagement.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$199 - $1,499/month</p>
+              <a href="/services/ai-content-marketing-suite" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Workflow Orchestrator</h3>
+              <p className="text-gray-300 mb-4">AI-powered workflow automation that streamlines your business processes.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$399 - $2,499/month</p>
+              <a href="/services/ai-workflow-orchestrator" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Customer Experience Analytics</h3>
+              <p className="text-gray-300 mb-4">Transform customer insights with AI-powered analytics and predictive modeling.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$599 - $3,999/month</p>
+              <a href="/services/ai-customer-experience-analytics" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Financial Risk Management</h3>
+              <p className="text-gray-300 mb-4">Intelligent financial risk assessment with AI-driven predictive analytics.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$799 - $4,999/month</p>
+              <a href="/services/ai-financial-risk-management" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+          </div>
+        </div>
+
         {/* CTA and Contact */}
         <div className="mt-24 text-left">
           <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
