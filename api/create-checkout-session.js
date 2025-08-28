@@ -41,7 +41,7 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ sessionId: session.id });
   } catch (err) {
-    console.error('Create checkout session error:', err);
+    // Error logged by withErrorLogging wrapper
     res.statusCode = 500;
     res.json({ error: err.message });
   }
