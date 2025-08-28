@@ -39,15 +39,17 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing-guide-2030', current: false },
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
+    { name: 'Request Quote', href: '/request-quote', current: false },
   ];
 
   const services = [
     { 
       name: 'AI & Analytics', 
-      href: '/services', 
+      href: '/services#ai-business-intelligence', 
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
@@ -55,7 +57,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Legal Tech', 
-      href: '/services', 
+      href: '/services#ai-legal-tech', 
       icon: Scale, 
       description: 'Document Analysis & Compliance',
       featured: true,
@@ -63,7 +65,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Healthcare', 
-      href: '/services', 
+      href: '/services#ai-healthcare', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
@@ -71,7 +73,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Research', 
-      href: '/services', 
+      href: '/services#ai-research', 
       icon: Eye, 
       description: 'Scientific Research & Discovery',
       featured: true,
@@ -79,7 +81,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Green Tech', 
-      href: '/services', 
+      href: '/services#ai-green-tech', 
       icon: Leaf, 
       description: 'Sustainability Solutions',
       featured: true,
@@ -87,7 +89,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Metaverse', 
-      href: '/services', 
+      href: '/services#ai-metaverse', 
       icon: Globe, 
       description: 'Virtual Reality & Gaming',
       featured: true,
@@ -95,7 +97,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Blockchain', 
-      href: '/services', 
+      href: '/services#blockchain-web3', 
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
       featured: true,
