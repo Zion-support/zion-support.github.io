@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake, Settings } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -58,7 +58,7 @@ export function AppHeader() {
       href: '/services', 
       icon: Scale, 
       description: 'Document Analysis & Compliance',
-      featured: false,
+      featured: true,
       color: 'from-blue-500 to-indigo-500'
     },
     { 
@@ -74,7 +74,7 @@ export function AppHeader() {
       href: '/services', 
       icon: Eye, 
       description: 'Scientific Research & Discovery',
-      featured: false,
+      featured: true,
       color: 'from-purple-500 to-violet-500'
     },
     { 
@@ -82,7 +82,7 @@ export function AppHeader() {
       href: '/services', 
       icon: Leaf, 
       description: 'Sustainability Solutions',
-      featured: false,
+      featured: true,
       color: 'from-green-500 to-emerald-500'
     },
     { 
@@ -98,7 +98,7 @@ export function AppHeader() {
       href: '/services', 
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
-      featured: false,
+      featured: true,
       color: 'from-green-500 to-emerald-500'
     },
     { 
@@ -106,7 +106,7 @@ export function AppHeader() {
       href: '/services', 
       icon: Cpu, 
       description: 'IoT & Real-time Processing',
-      featured: false,
+      featured: true,
       color: 'from-blue-500 to-cyan-500'
     },
     { 
@@ -122,7 +122,7 @@ export function AppHeader() {
       href: '/services', 
       icon: Rocket, 
       description: 'Satellite Operations & Missions',
-      featured: false,
+      featured: true,
       color: 'from-indigo-500 to-purple-500'
     },
     { 
@@ -149,6 +149,30 @@ export function AppHeader() {
       featured: true,
       color: 'from-orange-500 to-red-500'
     },
+    { 
+      name: 'AI & FinTech', 
+      href: '/services', 
+      icon: DollarSign, 
+      description: 'Financial Technology & Risk Management',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI & Operations', 
+      href: '/services', 
+      icon: Settings, 
+      description: 'Supply Chain & Process Optimization',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'AI & Development', 
+      href: '/services', 
+      icon: Code, 
+      description: 'Quality Assurance & Testing',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    }
   ];
 
   const solutions = [
