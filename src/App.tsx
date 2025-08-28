@@ -9,9 +9,11 @@ import { Footer } from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { EnhancedSEO } from './components/EnhancedSEO';
+import { ModernUIEnhancer } from './components/ModernUIEnhancer';
+import { BundleAnalyzer } from './components/BundleAnalyzer';
 import { ServiceWorker } from './components/ServiceWorker';
 import { FloatingActionButton } from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
@@ -200,6 +202,12 @@ function App() {
           
           {/* Enhanced Accessibility */}
           <EnhancedAccessibilityEnhancer enabled={true} />
+          
+          {/* Modern UI Enhancer */}
+          <ModernUIEnhancer enabled={true} />
+          
+          {/* Bundle Analyzer */}
+          <BundleAnalyzer enabled={true} showUI={false} />
           
           {/* Mobile Experience Enhancer */}
           <MobileExperienceEnhancer enabled={true} />
