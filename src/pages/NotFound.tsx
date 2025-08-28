@@ -266,7 +266,7 @@ export default function NotFound() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Back Button */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
