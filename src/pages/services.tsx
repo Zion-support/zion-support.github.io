@@ -199,6 +199,99 @@ const Services: React.FC = () => {
     }
   ];
 
+  const innovativeAIServices = [
+    {
+      title: "AI Autonomous Research Assistant",
+      description: "AI-powered autonomous research that discovers, analyzes, and synthesizes information across multiple sources.",
+      features: [
+        "Autonomous Research",
+        "Multi-Source Analysis",
+        "Intelligent Summarization",
+        "Real-time Updates"
+      ],
+      pricing: "$299 - $1,999/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-autonomous-research-assistant",
+      icon: Brain,
+      color: "from-blue-500 to-purple-500"
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Transform your supply chain with AI that predicts demand, optimizes inventory, and reduces costs.",
+      features: [
+        "AI-Powered Forecasting",
+        "Real-time Visibility",
+        "Intelligent Routing",
+        "Risk Management"
+      ],
+      pricing: "$499 - $2,999/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-supply-chain-optimization",
+      icon: Network,
+      color: "from-green-500 to-blue-500"
+    },
+    {
+      title: "AI Content Marketing Suite",
+      description: "AI-powered content creation, optimization, and distribution for maximum engagement.",
+      features: [
+        "AI Content Generation",
+        "Audience Intelligence",
+        "SEO Optimization",
+        "Performance Analytics"
+      ],
+      pricing: "$199 - $1,499/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-content-marketing-suite",
+      icon: FileText,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "AI Workflow Orchestrator",
+      description: "Intelligent workflow automation that learns from your processes and optimizes them continuously.",
+      features: [
+        "Process Learning",
+        "Automated Optimization",
+        "Integration Hub",
+        "Performance Analytics"
+      ],
+      pricing: "$399 - $1,999/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-workflow-orchestrator",
+      icon: GitFork,
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      title: "AI Customer Experience Analytics",
+      description: "Deep insights into customer behavior with predictive analytics and personalized recommendations.",
+      features: [
+        "Behavioral Analysis",
+        "Predictive Insights",
+        "Personalization Engine",
+        "ROI Tracking"
+      ],
+      pricing: "$349 - $1,799/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-customer-experience-analytics",
+      icon: BarChart3,
+      color: "from-teal-500 to-cyan-500"
+    },
+    {
+      title: "AI Financial Risk Management",
+      description: "Intelligent financial risk assessment with AI-driven predictive analytics.",
+      features: [
+        "Risk Assessment",
+        "Predictive Analytics",
+        "Compliance Monitoring",
+        "Real-time Alerts"
+      ],
+      pricing: "$599 - $2,999/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-financial-risk-management",
+      icon: Shield,
+      color: "from-red-500 to-orange-500"
+    }
+  ];
+
   const filteredServices = activeCategory === 'all' 
     ? coreServices 
     : coreServices.filter(service => service.category === activeCategory);
@@ -379,11 +472,68 @@ const Services: React.FC = () => {
           </div>
         </motion.div>
 
+        {/* Innovative AI-Powered Services */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="mb-24"
+        >
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Innovative AI-Powered Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Cutting-edge AI solutions that transform business operations with intelligent automation, predictive analytics, and autonomous decision-making.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {innovativeAIServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+              >
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-white mb-3">Key Capabilities:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.pricing}</div>
+                
+                <a
+                  href={service.ctaLink}
+                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                >
+                  {service.cta} <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-2xl p-12">
