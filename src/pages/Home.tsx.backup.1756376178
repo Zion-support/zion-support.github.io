@@ -1,7 +1,11 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { CheckCircle, Zap, Shield, Globe, Users, TrendingUp, Star, ArrowRight, Brain, Cloud, Lock, Rocket } from 'lucide-react';
+=======
 import { CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, BarChart3, Target, Lightbulb, Database, Network, Eye, Globe2, Smartphone, Monitor, Server, Atom, Car, Scale, Leaf, Factory, Building, Clock, Phone, Mail, TrendingUp } from 'lucide-react';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-514d
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -39,6 +43,20 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+<<<<<<< HEAD
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="relative">
+          <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full"></div>
+          <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg">
+            ZION
+          </div>
+          <div className="mt-4 text-center">
+            <div className="text-cyan-400 text-sm animate-pulse">Loading amazing experiences...</div>
+          </div>
+=======
   const stats = [
     {
       value: "500+",
@@ -266,6 +284,7 @@ export default function Home() {
         </div>
         <div className="absolute bottom-40 left-20 animate-float">
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-514d
         </div>
         <div className="absolute top-1/2 left-1/4 animate-quantum-pulse">
           <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-40 neon-glow"></div>
@@ -289,6 +308,72 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
         
+<<<<<<< HEAD
+        {/* Quick Access */}
+        <QuickAccess />
+        
+        {/* Feature Highlights */}
+        <FeatureHighlights />
+        
+        {/* AI Services Showcase */}
+        <AIServicesShowcase />
+        
+        {/* Tech Solutions Section */}
+        <TechSolutionsSection />
+        
+        {/* Services Showcase */}
+        <ServicesShowcase />
+        
+        {/* Categories Section */}
+        <CategoriesSection />
+        
+        {/* Benefits Section */}
+        <BenefitsSection />
+        
+        {/* How It Works */}
+        <HowItWorksSection />
+        
+        {/* Case Studies */}
+        <CaseStudiesSection />
+        
+        {/* Team Expertise */}
+        <TeamExpertiseSection />
+        
+        {/* Global Presence */}
+        <GlobalPresenceSection />
+        
+        {/* Innovation Research */}
+        <InnovationResearchSection />
+        
+        {/* Client Success Stories */}
+        <ClientSuccessStoriesSection />
+        
+        {/* Technology Stack */}
+        <TechnologyStackSection />
+        
+        {/* Security & Compliance */}
+        <SecurityComplianceSection />
+        
+        {/* Feature CTAs */}
+        <FeatureCTAs />
+        
+        {/* Pricing Section */}
+        <PricingSection />
+        
+        {/* Featured Listings */}
+        <FeaturedListingsSection />
+        
+        {/* Newsletter */}
+        <NewsletterSection />
+        
+        {/* IT Service Request Hero */}
+        <ITServiceRequestHero />
+        
+        {/* Floating CTA */}
+        <FloatingCTA />
+      </main>
+    </>
+=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -684,6 +769,7 @@ export default function Home() {
       
       <FloatingCTA />
     </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-514d
   );
 };
 
