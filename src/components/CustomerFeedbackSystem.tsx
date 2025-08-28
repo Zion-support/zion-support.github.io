@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
-  MessageCircle, 
-  ThumbsUp, 
-  ThumbsDown, 
-  Send, 
+import {
+  Star,
+  MessageCircle,
+  ThumbsUp,
+  ThumbsDown,
+  Send,
   Heart,
   Award,
   TrendingUp,
@@ -189,7 +189,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(f => 
+      filtered = filtered.filter(f =>
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -407,7 +407,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           >
             <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
               <h3 className="text-lg font-semibold text-white mb-4">Share Your Experience</h3>
-              
+
               <div className="space-y-4">
                 {/* Rating */}
                 <div>
@@ -508,7 +508,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
                   {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
@@ -571,7 +571,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                   <span className="text-sm">Share</span>
                 </button>
               </div>
-              
+
               <button className="text-zinc-400 hover:text-red-400 transition-colors">
                 <Flag className="w-4 h-4" />
               </button>

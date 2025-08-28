@@ -1,15 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  Contrast, 
-  ZoomIn, 
-  ZoomOut, 
-  RotateCcw,
+import {
+  Volume2,
+  VolumeX,
+  Eye,
+  EyeOff,
+  Keyboard,
+  MousePointer,
   Accessibility,
   Settings,
   X,
@@ -434,20 +431,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                 </ul>
               </div>
 
-              {/* Status Indicators */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                <div className="flex items-center space-x-2 p-3 bg-slate-800/50 rounded-lg">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-gray-300">Focus Management</span>
-                </div>
-                <div className="flex items-center space-x-2 p-3 bg-slate-800/50 rounded-lg">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-gray-300">Keyboard Navigation</span>
-                </div>
-                <div className="flex items-center space-x-2 p-3 bg-slate-800/50 rounded-lg">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-gray-300">Screen Reader Ready</span>
-                </div>
+              {/* Help Text */}
+              <div className="mt-6 p-4 bg-zion-cyan/10 border border-zion-cyan/20 rounded-lg">
+                <p className="text-sm text-zion-cyan">
+                  These accessibility features help make our website more usable for everyone.
+                  Changes are automatically saved and will persist across your visits.
+                </p>
               </div>
             </motion.div>
           </motion.div>

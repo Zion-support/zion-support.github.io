@@ -1,5 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {
+  Star,
+  Quote,
+  TrendingUp,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Heart
+} from 'lucide-react';
 
 const successStories = [
   {
@@ -69,8 +79,9 @@ export function ClientSuccessStoriesSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Real results from real clients. Discover how we've transformed businesses across industries.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Real results from real clients. Discover how we've helped businesses
+            across industries achieve remarkable transformations and measurable success.
           </p>
         </motion.div>
 
@@ -193,9 +204,24 @@ export function ClientSuccessStoriesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to be our next success story?</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Write Your Success Story?
+            </h3>
+            <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have transformed their
+              businesses with our innovative technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-medium transition-colors duration-200">
+                View All Case Studies
+                <Award className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

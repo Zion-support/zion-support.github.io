@@ -11,14 +11,14 @@ export const FooterNewsletter: React.FC = () => {
     if (!email.trim()) return;
 
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       setIsSubmitted(true);
       setEmail('');
-      
+
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
@@ -36,7 +36,7 @@ export const FooterNewsletter: React.FC = () => {
             <Mail className="w-6 h-6 text-white" />
           </div>
         </div>
-        
+
         <h3 className="text-xl font-bold text-white mb-2">
           Stay Updated
         </h3>

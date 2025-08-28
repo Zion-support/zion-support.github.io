@@ -3,7 +3,7 @@ import SEO from '@/components/SEO';
 const EnhancedServices = () => {
   return (
     <>
-      <SEO 
+      <SEO
         title="Enhanced Services - Zion Tech Group"
         description="Advanced technology services with enhanced features and capabilities for modern businesses."
         keywords="enhanced services, advanced technology, modern solutions, business technology"

@@ -1,7 +1,31 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import {
+  Code,
+  Search,
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Brain,
+  Cloud,
+  Shield,
+  Sparkles,
+  Zap,
+  Globe,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Clock,
+  User,
+  Star,
+  Terminal,
+  Key,
+  Database,
+  Lock
+} from 'lucide-react';
 
 const API: React.FC = () => {
   const endpoints = [
@@ -54,14 +78,61 @@ const API: React.FC = () => {
     }
   ];
 
-  const sdks = [
-    { name: 'JavaScript/Node.js', icon: '🔷' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'Java', icon: '☕' },
-    { name: 'C#', icon: '🔷' },
-    { name: 'Go', icon: '🐹' },
-    { name: 'PHP', icon: '🐘' }
-  ];
+url = "https://api.ziontechgroup.com/v1/ai/text/analyze"
+headers = {"Authorization": "Bearer YOUR_API_KEY"}
+
+response = requests.post(url, json={
+    "text": "Your text here",
+    "analysis_type": "sentiment"
+})
+
+print(response.json())`,
+    category: 'AI & ML'
+  },
+  {
+    title: 'Cloud Resource Management',
+    language: 'JavaScript',
+    description: 'Example of managing cloud resources through our infrastructure API.',
+    code: `const axios = require('axios');
+
+const api = axios.create({
+    baseURL: 'https://api.ziontechgroup.com/v1/cloud',
+    headers: {'Authorization': 'Bearer YOUR_API_KEY'}
+});
+
+const createInstance = async () => {
+    const response = await api.post('/instances', {
+        type: 'compute',
+        size: 'medium',
+        region: 'us-east-1'
+    });
+    return response.data;
+};`,
+    category: 'Cloud & DevOps'
+  },
+  {
+    title: 'Security Threat Detection',
+    language: 'Python',
+    description: 'Implement real-time threat detection using our security API.',
+    code: `import requests
+
+def check_threat(ip_address):
+    url = "https://api.ziontechgroup.com/v1/security/threat-check"
+    headers = {"Authorization": "Bearer YOUR_API_KEY"}
+
+    response = requests.post(url, json={
+        "ip": ip_address,
+        "check_type": "comprehensive"
+    })
+
+    return response.json()`,
+    category: 'Security'
+  }
+];
+
+export default function API() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -71,8 +142,11 @@ const API: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -90,10 +164,9 @@ const API: React.FC = () => {
                 API Reference
               </span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Integrate with Zion Tech Group services using our comprehensive RESTful APIs. 
-              Build powerful applications with our developer tools and SDKs.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+              Integrate Zion Tech Group's cutting-edge services into your applications
+              with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -251,8 +324,9 @@ const API: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of developers building with our APIs
+            <p className="text-xl text-white/90 mb-8">
+              Get API access, explore our documentation, and start integrating
+              Zion Tech Group services into your applications today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">

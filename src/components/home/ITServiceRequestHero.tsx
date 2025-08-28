@@ -11,22 +11,32 @@ export function ITServiceRequestHero() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Need IT Services?
-              <span className="block text-blue-400">We've Got You Covered</span>
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              From infrastructure setup to cybersecurity solutions, our expert team delivers 
-              comprehensive IT services that keep your business running smoothly and securely.
+      <motion.div
+        className="container mx-auto px-4 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left content */}
+          <motion.div variants={itemVariants} className="text-white">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-zion-cyan/20 rounded-lg">
+                <Zap className="w-6 h-6 text-zion-cyan" />
+              </div>
+              <span className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">
+                Global IT Services
+              </span>
+            </div>
+
+            <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
+              24/7 Global IT Onsite Services
+            </GradientHeading>
+
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
+              Get professional IT technicians anywhere in the world, anytime you need them.
+              From emergency repairs to scheduled maintenance, we're there when you need us most.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -51,16 +61,16 @@ export function ITServiceRequestHero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+              <Button
+                onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Request Quote
-              </Link>
-              
-              <Link
-                to="/it-services"
-                className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-bold text-lg rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300 hover:scale-105"
+                Request Service Now
+                <MapPin className="w-5 h-5 ml-2" />
+              </Button>
+              <Button
+                variant="outline"
+                className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
               >
                 Learn More
               </Link>

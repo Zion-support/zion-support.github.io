@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Rocket, 
-  Target, 
-  Star, 
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Rocket,
+  Zap,
+  Cpu,
+  Heart,
+  Globe,
+  Shield,
+  Lock,
+  TrendingUp,
+  Star,
   CheckCircle,
   ArrowRight,
   ChevronDown,
@@ -47,91 +51,50 @@ import {
 } from 'lucide-react';
 import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
 
-// Futuristic animated background component
-const FuturisticBackground = () => (
-  <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-    {/* Animated grid with neon effect */}
-    <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:60px_60px] animate-pulse"></div>
-    
-    {/* Enhanced floating particles with neon glow */}
-    <div className="absolute inset-0">
-      {[...Array(40)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/50"
-          animate={{
-            x: [0, 200, 0],
-            y: [0, -200, 0],
-            opacity: [0.3, 1, 0.3],
-            scale: [0.5, 1.8, 0.5],
-          }}
-          transition={{
-            duration: 5 + i * 0.2,
-            repeat: Infinity,
-            delay: i * 0.1,
-            ease: "easeInOut"
-          }}
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-        />
-      ))}
-    </div>
-    
-    {/* Enhanced gradient orbs with neon glow */}
-    <motion.div 
-      className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"
-      animate={{
-        scale: [1, 1.3, 1],
-        opacity: [0.2, 0.5, 0.2],
-      }}
-      transition={{
-        duration: 8,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }}
-    />
-    
-    <motion.div 
-      className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
-      animate={{
-        scale: [1, 1.2, 1],
-        opacity: [0.2, 0.4, 0.2],
-      }}
-      transition={{
-        duration: 10,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }}
-    />
-    
-    {/* Matrix rain effect */}
-    <div className="absolute inset-0 overflow-hidden">
-      {[...Array(20)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute text-cyan-400 text-xs font-mono opacity-30"
-          animate={{
-            y: ["-100vh", "100vh"],
-          }}
-          transition={{
-            duration: 15 + i * 0.5,
-            repeat: Infinity,
-            delay: i * 0.3,
-            ease: "linear"
-          }}
-          style={{
-            left: `${(i * 5) % 100}%`,
-            animationDelay: `${i * 0.5}s`
-          }}
-        >
-          {Math.random().toString(36).substring(7)}
-        </motion.div>
-      ))}
-    </div>
-  </div>
-);
+export default function RevolutionaryServices2030() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
+
+  const categories = [
+    { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },
+    { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },
+    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },
+    { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },
+    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' }
+  ];
+
+  const sortOptions = [
+    { id: 'featured', name: 'Featured' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'innovation', name: 'Innovation Level' },
+    { id: 'market-size', name: 'Market Size' }
+  ];
+
+  // Combine all revolutionary services
+  const allServices = [
+    ...REVOLUTIONARY_SERVICES_2030,
+    ...EMERGING_TECH_SERVICES_2030
+  ];
+
+  // Filter and sort services
+  const filteredServices = allServices.filter(service => {
+    const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+    const priceMatch = selectedPriceRange === 'all' ||
+      (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) ||
+      (selectedPriceRange === 'mid-range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) ||
+      (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
+
+    return categoryMatch && priceMatch;
+  });
 
 // Service Card Component
 const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itService' | 'aiService' }) => {
@@ -341,12 +304,15 @@ export default function RevolutionaryServices2030() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-      <FuturisticBackground />
-      
-      {/* Header Section */}
-      <div className="relative z-10 pt-20 pb-16">
-        <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+        title="Revolutionary Services 2030 - Zion Tech Group"
+        description="Discover our revolutionary AI, blockchain, cybersecurity, and emerging technology services that will transform your business in 2030 and beyond."
+      />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -365,10 +331,9 @@ export default function RevolutionaryServices2030() {
               <br />
               <span className="text-white">Starts Here</span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the cutting-edge of innovation with our revolutionary micro SAAS, IT infrastructure, and AI services. 
-              Built for the future, delivering results today.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Experience the future of technology with our groundbreaking AI, blockchain, cybersecurity, and emerging technology services.
+              Transform your business with solutions that were once science fiction.
             </p>
 
             {/* Stats */}
@@ -455,10 +420,114 @@ export default function RevolutionaryServices2030() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {getFilteredServices().map((item, index) => (
-              <ServiceCard key={`${item.type}-${item.service.id}`} service={item.service} type={item.type} />
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence>
+              {sortedServices.map((service, index) => {
+                const IconComponent = getServiceIcon(service.category);
+                const colorClass = getServiceColor(service.category);
+
+                return (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-zion-cyan"
+                  >
+                    {/* Service Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className={`p-3 rounded-lg bg-gradient-to-r ${colorClass}`}>
+                        <IconComponent className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        {service.featured && (
+                          <span className="px-2 py-1 bg-zion-orange text-white text-xs rounded-full">Featured</span>
+                        )}
+                        {service.trending && (
+                          <span className="px-2 py-1 bg-zion-purple text-white text-xs rounded-full">Trending</span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Service Title */}
+                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+
+                    {/* Service Description */}
+                    <p className="text-gray-400 mb-4 line-clamp-3">{service.description}</p>
+
+                    {/* Service Details */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center text-sm text-gray-300">
+                        <DollarSign className="mr-2 h-4 w-4 text-zion-green" />
+                        <span className="font-medium">${service.pricing.monthly.toLocaleString()}/month</span>
+                        <span className="text-gray-500 ml-2">({service.pricing.marketPrice})</span>
+                      </div>
+
+                      <div className="flex items-center text-sm text-gray-300">
+                        <BarChart3 className="mr-2 h-4 w-4 text-zion-blue" />
+                        <span>Market: {service.marketSize}</span>
+                      </div>
+
+                      <div className="flex items-center text-sm text-gray-300">
+                        <Star className="mr-2 h-4 w-4 text-zion-yellow" />
+                        <span>{service.rating}/5 ({service.reviewCount} reviews)</span>
+                      </div>
+
+                      <div className="flex items-center text-sm text-gray-300">
+                        <Gauge className="mr-2 h-4 w-4 text-zion-purple" />
+                        <span>Innovation: {service.innovationLevel}</span>
+                      </div>
+                    </div>
+
+                    {/* Service Features */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                      <div className="space-y-1">
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-gray-400">
+                            <CheckCircle className="mr-2 h-3 w-3 text-zion-green" />
+                            {feature}
+                          </div>
+                        ))}
+                        {service.features.length > 3 && (
+                          <div className="text-sm text-gray-500">
+                            +{service.features.length - 3} more features
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Service Actions */}
+                    <div className="flex flex-col space-y-3">
+                      <Link
+                        to={`/services/${service.id}`}
+                        className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 px-4 rounded-lg font-medium hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+                      >
+                        Learn More
+                      </Link>
+
+                      <div className="flex space-x-2">
+                        <Link
+                          to="/contact"
+                          className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
+                        >
+                          <Phone className="inline mr-1 h-3 w-3" />
+                          Contact
+                        </Link>
+                        <Link
+                          to={service.website}
+                          className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
+                        >
+                          <Globe className="inline mr-1 h-3 w-3" />
+                          Website
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
           </div>
         </div>
       </div>
@@ -478,7 +547,26 @@ export default function RevolutionaryServices2030() {
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Don't wait for the future to arrive. Partner with Zion Tech Group and lead the transformation of your industry.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="text-center">
+                <Phone className="h-8 w-8 text-zion-cyan mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </div>
+              <div className="text-center">
+                <Mail className="h-8 w-8 text-zion-purple mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="text-center">
+                <MapPin className="h-8 w-8 text-zion-orange mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"

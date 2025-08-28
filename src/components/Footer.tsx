@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import {
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
   ArrowUp,
   Globe,
   Shield,
@@ -116,13 +117,38 @@ export function Footer() {
       title: 'Resources & Support',
       icon: HelpCircle,
       links: [
-        { name: 'Innovative Services 2028', path: '/innovative-services-showcase-2028', icon: Sparkles },
-        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
-        { name: 'Ultimate Services 2026', path: '/ultimate-services-showcase-2026', icon: Rocket },
-        { name: 'Services 2026', path: '/services2026', icon: Target },
-        { name: 'New Services 2025', path: '/new-services-showcase-2025', icon: TrendingUp },
-        { name: 'Ultimate Services 2025', path: '/ultimate-services-showcase-2025', icon: Award },
-        { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe }
+        { name: 'Enterprise Solutions', path: '/solutions', icon: Building },
+        { name: 'SMB Solutions', path: '/solutions', icon: Target },
+        { name: 'Startup Solutions', path: '/solutions', icon: Rocket },
+        { name: 'Government Solutions', path: '/solutions', icon: Shield },
+        { name: 'Healthcare Solutions', path: '/solutions', icon: Heart },
+        { name: 'Financial Solutions', path: '/solutions', icon: DollarSign }
+      ]
+    },
+    {
+      title: 'Resources',
+      icon: FileText,
+      links: [
+        { name: 'Blog', path: '/blog', icon: FileText },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'Webinars', path: '/webinars', icon: Video },
+        { name: 'Research & Development', path: '/research-development', icon: TestTube },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Request a Quote', path: '/request-quote', icon: FileText },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe },
+        { name: 'Insights', path: '/blog', icon: TrendingUp }
+      ]
+    },
+    {
+      title: 'Support',
+      icon: Shield,
+      links: [
+        { name: 'Contact Us', path: '/contact', icon: Phone },
+        { name: 'Dashboard', path: '/dashboard', icon: Activity },
+        { name: 'Login', path: '/login', icon: HelpCircle },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: HelpCircle }
       ]
     }
   ];
@@ -146,7 +172,7 @@ export function Footer() {
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
-      
+
       <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
@@ -164,7 +190,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-zion-slate-light mb-6 max-w-md">
-              Leading the way in AI, quantum computing, and space technology solutions. 
+              Leading the way in AI, quantum computing, and space technology solutions.
               Empowering businesses with cutting-edge innovations for tomorrow's challenges.
             </p>
             {/* Contact Info */}

@@ -494,4 +494,65 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   }
 ];
 
-export default EMERGING_TECH_SERVICES_2030;
+// Utility functions for service management
+export const getEmergingTechServicesByCategory = (category: string): EmergingTechService2030[] => {
+  return EMERGING_TECH_SERVICES_2030.filter(service => service.category === category);
+};
+
+export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number): EmergingTechService2030[] => {
+  return EMERGING_TECH_SERVICES_2030.filter(service =>
+    service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
+  );
+};
+
+export const getEmergingTechFeaturedServices = (limit: number = 10): EmergingTechService2030[] => {
+  return EMERGING_TECH_SERVICES_2030
+    .filter(service => service.featured)
+    .slice(0, limit);
+};
+
+export const getEmergingTechTrendingServices = (limit: number = 10): EmergingTechService2030[] => {
+  return EMERGING_TECH_SERVICES_2030
+    .filter(service => service.trending)
+    .slice(0, limit);
+};
+
+export const searchEmergingTechServices = (query: string): EmergingTechService2030[] => {
+  const lowercaseQuery = query.toLowerCase();
+  return EMERGING_TECH_SERVICES_2030.filter(service =>
+    service.title.toLowerCase().includes(lowercaseQuery) ||
+    service.description.toLowerCase().includes(lowercaseQuery) ||
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+  );
+};
+
+export const getEmergingTechServicesByInnovationLevel = (level: string): EmergingTechService2030[] => {
+  return EMERGING_TECH_SERVICES_2030.filter(service => service.innovationLevel === level);
+};
+
+export const getEmergingTechServicesByTechnology = (technology: string): EmergingTechService2030[] => {
+  const lowercaseTech = technology.toLowerCase();
+  return EMERGING_TECH_SERVICES_2030.filter(service =>
+    service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
+  );
+};
+
+export const getEmergingTechServicesStats = () => {
+  const totalServices = EMERGING_TECH_SERVICES_2030.length;
+  const totalRevenue = EMERGING_TECH_SERVICES_2030.reduce((sum, service) => sum + service.pricing.monthly, 0);
+  const averageRating = EMERGING_TECH_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / totalServices;
+  const featuredCount = EMERGING_TECH_SERVICES_2030.filter(service => service.featured).length;
+  const trendingCount = EMERGING_TECH_SERVICES_2030.filter(service => service.trending).length;
+
+  return {
+    totalServices,
+    totalRevenue,
+    averageRating: Math.round(averageRating * 100) / 100,
+    featuredCount,
+    trendingCount,
+    categories: [...new Set(EMERGING_TECH_SERVICES_2030.map(service => service.category))],
+    subcategories: [...new Set(EMERGING_TECH_SERVICES_2030.map(service => service.subcategory))]
+  };
+};
+
+export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;

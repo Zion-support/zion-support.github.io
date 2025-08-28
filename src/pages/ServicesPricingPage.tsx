@@ -3,17 +3,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { 
-  Check, 
-  X, 
-  Star, 
-  Zap, 
-  Shield, 
-  Globe, 
-  TrendingUp, 
-  Users, 
-  Building, 
-  Smartphone, 
+import {
+  Check,
+  X,
+  Star,
+  Zap,
+  Shield,
+  Globe,
+  TrendingUp,
+  Users,
+  Building,
+  Smartphone,
   ShoppingCart,
   Heart,
   GraduationCap,
@@ -48,8 +48,8 @@ const pricingFeatures = [
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
-  const filteredServices = selectedCategory === 'all' 
-    ? EXPANDED_SERVICES 
+  const filteredServices = selectedCategory === 'all'
+    ? EXPANDED_SERVICES
     : servicesByCategory[selectedCategory] || [];
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
@@ -143,7 +143,7 @@ export default function ServicesPricingPage() {
                       </div>
                     ))}
                   </div>
-                  <Button 
+                  <Button
                     className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
                     onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
                   >
@@ -179,8 +179,8 @@ export default function ServicesPricingPage() {
                             {getCategoryIcon(service.category)}
                           </div>
                           <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
-                            {service.price && service.price <= 4999 ? 'Starter' : 
-                             service.price && service.price <= 9999 ? 'Professional' : 
+                            {service.price && service.price <= 4999 ? 'Starter' :
+                             service.price && service.price <= 9999 ? 'Professional' :
                              service.price && service.price <= 25000 ? 'Enterprise' : 'Custom'}
                           </Badge>
                         </div>
@@ -238,15 +238,15 @@ export default function ServicesPricingPage() {
                         </div>
                         {/* Action Buttons */}
                         <div className="flex gap-2">
-                          <Button 
+                          <Button
                             className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
                             onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`, '_blank')}
                           >
                             <Mail className="h-4 w-4 mr-2" />
                             Get Quote
                           </Button>
-                          <Button 
-                            variant="outline" 
+                          <Button
+                            variant="outline"
                             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                             onClick={() => window.open('https://ziontechgroup.com', '_blank')}
                           >
@@ -287,7 +287,7 @@ export default function ServicesPricingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  All our services include implementation, training, documentation, and 24/7 support. 
+                  All our services include implementation, training, documentation, and 24/7 support.
                   Custom integrations and additional features can be added based on your requirements.
                 </p>
               </CardContent>
@@ -298,7 +298,7 @@ export default function ServicesPricingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  Yes, we provide custom pricing for enterprise solutions and specialized requirements. 
+                  Yes, we provide custom pricing for enterprise solutions and specialized requirements.
                   Contact us for a personalized quote tailored to your business needs.
                 </p>
               </CardContent>
@@ -309,7 +309,7 @@ export default function ServicesPricingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  We offer flexible payment terms including upfront payment, milestone-based payments, 
+                  We offer flexible payment terms including upfront payment, milestone-based payments,
                   and monthly/annual subscription options for ongoing services.
                 </p>
               </CardContent>
@@ -320,7 +320,7 @@ export default function ServicesPricingPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan-light">
-                  We offer a satisfaction guarantee. If you're not completely satisfied with our services 
+                  We offer a satisfaction guarantee. If you're not completely satisfied with our services
                   within the first 30 days, we'll work to make it right or provide a refund.
                 </p>
               </CardContent>
@@ -334,7 +334,7 @@ export default function ServicesPricingPage() {
             Let's discuss your project requirements and find the perfect solution for your business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan-light"
               onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}
@@ -342,7 +342,7 @@ export default function ServicesPricingPage() {
               <Mail className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white/10"

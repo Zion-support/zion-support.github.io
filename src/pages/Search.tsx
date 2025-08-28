@@ -138,15 +138,15 @@ export default function Search() {
     setLoading(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 500));
-    
+
     // Filter results based on search query and category
     let filteredResults = mockResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      
+
       const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
-      
+
       return matchesQuery && matchesCategory;
     });
 
@@ -211,7 +211,7 @@ export default function Search() {
           <h1 className="text-4xl font-bold text-white text-center mb-8">
             Search Zion Tech Group
           </h1>
-          
+
           {/* Search Form */}
           <form onSubmit={handleSearch} className="max-w-4xl mx-auto">
             <div className="relative">

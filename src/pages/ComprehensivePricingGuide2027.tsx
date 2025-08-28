@@ -1,25 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Check, 
-  X, 
-  Star, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  Globe,
-  Sparkles,
-  Bot,
+import { Link } from 'react-router-dom';
+import {
+  CheckCircle,
+  Star,
+  Zap,
   Shield,
   TrendingUp,
-  Users,
-  MessageSquare,
+  Brain,
   Server,
-  Workflow,
-  Database,
-  Network,
-  Rocket,
-  Zap,
+  Globe,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  DollarSign,
+  CreditCard,
+  Wallet,
+  Coins,
+  PiggyBank,
+  Calculator,
+  BarChart3,
   Target,
   Award,
   Brain,
@@ -104,8 +106,8 @@ export default function ComprehensivePricingGuide2027() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      <SEO
         title="Comprehensive Pricing Guide 2027 - Zion Tech Group"
         description="Explore our comprehensive pricing guide for all AI-powered services, IT solutions, and micro SAAS tools. Find the perfect solution for your business needs and budget."
       />
@@ -119,8 +121,27 @@ export default function ComprehensivePricingGuide2027() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white mb-6">
-              <DollarSign className="w-4 h-4 mr-2" /> 2027 Pricing Guide
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Comprehensive Pricing Guide
+              <span className="block text-zion-cyan">2027 Edition</span>
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+              Transparent pricing for all our innovative solutions. Choose the perfect plan that fits your business needs and budget.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="bg-zion-blue-dark/30 rounded-lg px-6 py-3 border border-zion-blue-light/20">
+                <div className="text-2xl font-bold text-zion-cyan">${getAveragePrice(MICRO_SAAS_SERVICES)}</div>
+                <div className="text-zion-slate-light text-sm">Average Monthly Price</div>
+              </div>
+              <div className="bg-zion-purple/30 rounded-lg px-6 py-3 border border-zion-purple/20">
+                <div className="text-2xl font-bold text-zion-purple">${getTotalValue(MICRO_SAAS_SERVICES).toLocaleString()}+</div>
+                <div className="text-zion-slate-light text-sm">Total Market Value</div>
+              </div>
+              <div className="bg-zion-cyan/30 rounded-lg px-6 py-3 border border-zion-cyan/20">
+                <div className="text-2xl font-bold text-zion-cyan">{MICRO_SAAS_SERVICES.length}</div>
+                <div className="text-zion-slate-light text-sm">Services Available</div>
+              </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Comprehensive Pricing
@@ -153,10 +174,244 @@ export default function ComprehensivePricingGuide2027() {
       {/* Pricing Tiers Overview */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Pricing Tiers Overview
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center space-y-2">
+              <Phone className="w-6 h-6 text-zion-cyan" />
+              <span className="text-white font-semibold">+1 302 464 0950</span>
+              <span className="text-zion-slate-light text-sm">Mobile</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <Mail className="w-6 h-6 text-zion-cyan" />
+              <span className="text-white font-semibold">kleber@ziontechgroup.com</span>
+              <span className="text-zion-slate-light text-sm">Email</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2">
+              <MapPin className="w-6 h-6 text-zion-cyan" />
+              <span className="text-white font-semibold">364 E Main St STE 1008</span>
+              <span className="text-zion-slate-light text-sm">Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Tiers */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Flexible Pricing Plans
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Choose from our standard pricing tiers or get a custom quote for enterprise solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative rounded-2xl p-8 ${
+                  tier.popular
+                    ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple'
+                    : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2">
+                      Most Popular
+                    </Badge>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-zion-slate-light mb-6">{tier.description}</p>
+
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-zion-cyan">${tier.price}</span>
+                    <span className="text-zion-slate-light">/month</span>
+                  </div>
+
+                  <Button
+                    asChild
+                    className={`w-full bg-gradient-to-r ${tier.color} text-white hover:opacity-90`}
+                  >
+                    <Link to="/contact">
+                      Get Started
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+                  </Button>
+                </div>
+
+                <div className="space-y-4">
+                  <h4 className="font-semibold text-white mb-4">What's Included:</h4>
+                  {tier.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <span className="text-zion-slate-light">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories Pricing */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Service-Specific Pricing
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Explore detailed pricing for each service category with transparent cost breakdowns
+            </p>
+          </div>
+
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <Button
+              variant={selectedCategory === 'all' ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory('all')}
+              className={selectedCategory === 'all' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
+            >
+              <Globe className="w-4 h-4 mr-2" />
+              All Categories
+            </Button>
+            {serviceCategories.map((category) => (
+              <Button
+                key={category.name}
+                variant={selectedCategory === category.name ? 'default' : 'outline'}
+                onClick={() => setSelectedCategory(category.name)}
+                className={selectedCategory === category.name ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
+              >
+                {category.icon}
+                <span className="ml-2">{category.name}</span>
+              </Button>
+            ))}
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-zion-blue-dark/30 to-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:scale-[1.02]"
+              >
+                {service.featured && (
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
+                    Featured
+                  </div>
+                )}
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-zion-slate-light text-sm mb-4">{service.description}</p>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <Badge variant="outline" className="text-zion-cyan border-zion-cyan/30">
+                      {service.category}
+                    </Badge>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <span className="text-white text-sm">{service.rating}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="bg-zion-slate-dark/30 rounded-lg p-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-zion-slate-light text-sm">Starting Price:</span>
+                      <span className="text-2xl font-bold text-zion-cyan">
+                        {service.currency}{service.price}
+                      </span>
+                    </div>
+                    <div className="text-zion-slate-light text-sm">
+                      per {service.pricingModel}
+                    </div>
+                  </div>
+
+                  <div className="bg-zion-purple/20 rounded-lg p-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-zion-slate-light text-sm">Market Price:</span>
+                      <span className="text-zion-purple font-semibold">{service.marketPrice}</span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-white text-sm">Key Benefits:</h4>
+                    {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="flex items-start space-x-2">
+                        <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
+                        <span className="text-zion-slate-light text-sm">{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="pt-4 border-t border-zion-blue-light/20">
+                    <div className="flex items-center justify-between">
+                      <Link
+                        to={service.website}
+                        className="inline-flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                      >
+                        <span className="text-sm font-medium">Learn More</span>
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+
+                      <Link
+                        to={`mailto:${service.contactEmail}?subject=Pricing Inquiry for ${service.title}`}
+                        className="inline-flex items-center space-x-2 text-zion-purple hover:text-zion-purple-light transition-colors"
+                      >
+                        <span className="text-sm font-medium">Get Quote</span>
+                        <Mail className="w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {filteredServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
+              <Button
+                onClick={() => {
+                  setSelectedCategory('all');
+                  setSelectedPricing('all');
+                }}
+                className="bg-zion-cyan hover:bg-zion-cyan-light"
+              >
+                View All Services
+              </Button>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Value Proposition */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our competitive pricing combined with exceptional value and support
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
                 tier: 'Starter', 
@@ -254,129 +509,20 @@ export default function ComprehensivePricingGuide2027() {
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
             Detailed Services Pricing
           </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-              <thead>
-                <tr className="border-b border-white/10">
-                  <th className="p-4 text-left text-white font-semibold">Service</th>
-                  <th className="p-4 text-left text-white font-semibold">Category</th>
-                  <th className="p-4 text-left text-white font-semibold">Price</th>
-                  <th className="p-4 text-left text-white font-semibold">Tier</th>
-                  <th className="p-4 text-left text-white font-semibold">ROI</th>
-                  <th className="p-4 text-left text-white font-semibold">Delivery</th>
-                  <th className="p-4 text-left text-white font-semibold">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredServices.map((service, index) => {
-                  const CategoryIcon = getCategoryIcon(service.category);
-                  const categoryColor = getCategoryColor(service.category);
-                  const pricingTier = getPricingTier(service.price);
-                  const TierIcon = pricingTier.icon;
-                  const innovationBadge = getInnovationBadge(service.innovationLevel);
-                  const BadgeIcon = innovationBadge.icon;
-                  
-                  return (
-                    <motion.tr
-                      key={service.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.05 }}
-                      className="border-b border-white/5 hover:bg-white/5 transition-colors duration-200"
-                    >
-                      <td className="p-4">
-                        <div className="flex items-start space-x-3">
-                          <div className={`p-2 rounded-lg bg-gradient-to-r ${categoryColor}`}>
-                            <CategoryIcon className="w-5 h-5 text-white" />
-                          </div>
-                          <div>
-                            <h4 className="text-white font-semibold mb-1">{service.title}</h4>
-                            <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium text-white ${innovationBadge.color}`}>
-                              <BadgeIcon className="w-3 h-3 mr-1" />
-                              {innovationBadge.text}
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td className="p-4">
-                        <span className="text-zion-slate-light text-sm">{service.category}</span>
-                      </td>
-                      <td className="p-4">
-                        <div className="text-right">
-                          <div className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                            {service.currency}{service.price.toLocaleString()}
-                          </div>
-                          <div className="text-sm text-zion-slate-light">
-                            per {service.pricingModel}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="p-4">
-                        <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${pricingTier.color}`}>
-                          <TierIcon className="w-3 h-3 mr-1" />
-                          {pricingTier.tier}
-                        </div>
-                      </td>
-                      <td className="p-4">
-                        <div className="text-green-400 font-semibold">{service.roi}</div>
-                      </td>
-                      <td className="p-4">
-                        <div className="text-zion-slate-light text-sm">{service.estimatedDelivery}</div>
-                      </td>
-                      <td className="p-4">
-                        <div className="flex flex-col space-y-2">
-                          <a
-                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
-                            className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded text-xs text-center hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
-                          >
-                            Get Quote
-                          </a>
-                          <a
-                            href={`tel:${service.contactInfo.phone}`}
-                            className="px-3 py-1 border border-purple-500/50 text-purple-400 rounded text-xs text-center hover:bg-purple-500/10 transition-all duration-300"
-                          >
-                            Call Now
-                          </a>
-                        </div>
-                      </td>
-                    </motion.tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+          <p className="text-xl text-zion-slate-light mb-8">
+            Contact us today for a personalized consultation and custom pricing quote tailored to your specific needs.
+          </p>
 
-      {/* Special Offers Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Special Offers & Discounts
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Crown className="w-6 h-6 mr-2 text-purple-400" />
-                2027 Launch Special
-              </h3>
-              <p className="text-zion-slate-light mb-6">
-                Get 25% off your first 3 months when you sign up for any of our premium AI services. 
-                Limited time offer for early adopters and innovators.
-              </p>
-              <div className="text-3xl font-bold text-purple-400 mb-4">25% OFF</div>
-              <a
-                href="mailto:kleber@ziontechgroup.com?subject=2027 Launch Special - 25% Discount"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-semibold"
-              >
-                Claim Your Discount
-                <ArrowRight className="w-5 h-5 ml-2" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan-light hover:to-zion-blue-light">
+              <Link to="/contact">
+                Request Custom Quote
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
+              <a href="tel:+13024640950">
+                Call Now: +1 302 464 0950
               </a>
             </motion.div>
 

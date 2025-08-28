@@ -69,8 +69,9 @@ export function PricingSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Transparent Pricing
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Choose the perfect plan for your business needs. All plans include our core features with no hidden fees.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Flexible pricing options designed to scale with your business.
+            Start small and grow with us.
           </p>
         </motion.div>
 

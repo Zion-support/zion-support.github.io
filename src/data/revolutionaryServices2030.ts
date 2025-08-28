@@ -1170,3 +1170,61 @@ export const allRevolutionaryServices2030 = {
   itServices: revolutionaryITServices2030,
   aiServices: revolutionaryAIServices2030
 };
+
+export const getRevolutionaryServicesByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryService2030[] => {
+  return REVOLUTIONARY_SERVICES_2030.filter(service =>
+    service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
+  );
+};
+
+export const getRevolutionaryFeaturedServices = (limit: number = 10): RevolutionaryService2030[] => {
+  return REVOLUTIONARY_SERVICES_2030
+    .filter(service => service.featured)
+    .slice(0, limit);
+};
+
+export const getRevolutionaryTrendingServices = (limit: number = 10): RevolutionaryService2030[] => {
+  return REVOLUTIONARY_SERVICES_2030
+    .filter(service => service.trending)
+    .slice(0, limit);
+};
+
+export const searchRevolutionaryServices = (query: string): RevolutionaryService2030[] => {
+  const lowercaseQuery = query.toLowerCase();
+  return REVOLUTIONARY_SERVICES_2030.filter(service =>
+    service.title.toLowerCase().includes(lowercaseQuery) ||
+    service.description.toLowerCase().includes(lowercaseQuery) ||
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+  );
+};
+
+export const getRevolutionaryServicesByInnovationLevel = (level: string): RevolutionaryService2030[] => {
+  return REVOLUTIONARY_SERVICES_2030.filter(service => service.innovationLevel === level);
+};
+
+export const getRevolutionaryServicesByTechnology = (technology: string): RevolutionaryService2030[] => {
+  const lowercaseTech = technology.toLowerCase();
+  return REVOLUTIONARY_SERVICES_2030.filter(service =>
+    service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
+  );
+};
+
+export const getRevolutionaryServicesStats = () => {
+  const totalServices = REVOLUTIONARY_SERVICES_2030.length;
+  const totalRevenue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.pricing.monthly, 0);
+  const averageRating = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / totalServices;
+  const featuredCount = REVOLUTIONARY_SERVICES_2030.filter(service => service.featured).length;
+  const trendingCount = REVOLUTIONARY_SERVICES_2030.filter(service => service.trending).length;
+
+  return {
+    totalServices,
+    totalRevenue,
+    averageRating: Math.round(averageRating * 100) / 100,
+    featuredCount,
+    trendingCount,
+    categories: [...new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.category))],
+    subcategories: [...new Set(REVOLUTIONARY_SERVICES_2030.map(service => service.subcategory))]
+  };
+};
+
+export const ALL_REVOLUTIONARY_SERVICES_2030 = REVOLUTIONARY_SERVICES_2030;

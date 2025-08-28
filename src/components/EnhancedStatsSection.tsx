@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Users, 
-  Globe, 
-  TrendingUp, 
-  Star, 
-  Zap, 
+import {
+  Users,
+  Globe,
+  TrendingUp,
+  Star,
+  Zap,
   Shield,
   Award,
   Rocket
@@ -180,7 +180,7 @@ export default function EnhancedStatsSection() {
             >
               <motion.div
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
-                whileHover={{ 
+                whileHover={{
                   y: -10,
                   scale: 1.02,
                   borderColor: `rgba(34, 221, 210, 0.5)`
@@ -189,11 +189,11 @@ export default function EnhancedStatsSection() {
               >
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
+
                 {/* Icon */}
                 <motion.div
                   className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
-                  whileHover={{ 
+                  whileHover={{
                     rotate: 360,
                     scale: 1.1
                   }}
@@ -260,14 +260,14 @@ export default function EnhancedStatsSection() {
             >
               <Award className="w-10 h-10 text-white" />
             </motion.div>
-            
+
             <h3 className="text-3xl font-bold text-white mb-4">
               Industry Recognition & Awards
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Consistently recognized as a leader in innovation, receiving prestigious awards for our groundbreaking technology solutions and exceptional client service.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-zion-cyan mb-2">15+</div>

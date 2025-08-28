@@ -178,98 +178,37 @@ const FAQ: React.FC = () => {
       tags: ['response time', 'support tiers', 'priority support', 'dedicated engineers']
     }
   ];
-
-  // Update category counts
-  categories.forEach(category => {
-    if (category.id === 'all') {
-      category.count = faqItems.length;
-    } else {
-      category.count = faqItems.filter(item => item.category === category.id).length;
-    }
-  });
-
-  const filteredItems = faqItems.filter(item => {
-    const matchesSearch = item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const toggleItem = (itemId: string) => {
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(itemId)) {
-      newExpanded.delete(itemId);
-    } else {
-      newExpanded.add(itemId);
-    }
-    setExpandedItems(newExpanded);
-  };
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'ai': return <Brain className="w-4 h-4" />;
-      case 'quantum': return <Atom className="w-4 h-4" />;
-      case 'cloud': return <Cloud className="w-4 h-4" />;
-      case 'security': return <Shield className="w-4 h-4" />;
-      case 'services': return <Zap className="w-4 h-4" />;
-      case 'pricing': return <DollarSign className="w-4 h-4" />;
-      case 'support': return <MessageCircle className="w-4 h-4" />;
-      case 'general': return <Globe className="w-4 h-4" />;
-      default: return <HelpCircle className="w-4 h-4" />;
-    }
-  };
-
-  const filteredCategories = faqCategories.map(category => ({
-    ...category,
-    items: category.items.filter(item => {
-      const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          item.answer.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    })
-  })).filter(category => category.items.length > 0);
-
-  const allCategories = [
-    { value: 'all', label: 'All Categories', icon: <Globe className="w-4 h-4" /> },
-    { value: 'general', label: 'General', icon: <Globe className="w-4 h-4" /> },
-    { value: 'ai', label: 'AI & ML', icon: <Brain className="w-4 h-4" /> },
-    { value: 'cloud', label: 'Cloud', icon: <Cloud className="w-4 h-4" /> },
-    { value: 'security', label: 'Security', icon: <Shield className="w-4 h-4" /> },
-    { value: 'saas', label: 'Micro SaaS', icon: <ShoppingCart className="w-4 h-4" /> },
-    { value: 'pricing', label: 'Pricing', icon: <DollarSign className="w-4 h-4" /> },
-    { value: 'support', label: 'Support', icon: <Users className="w-4 h-4" /> }
-  ];
-
+  const allQuestions = faqCategories.flatMap(category =>
+    category.questions.map(q => ({ ...q, category: category.title }))
+  );
+  const filteredQuestions = allQuestions.filter(item =>
+    item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.category.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const filteredCategories = faqCategories.filter(category =>
+    category.questions.some(q =>
+      q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
-        title="Frequently Asked Questions - Zion Tech Group"
-        description="Find answers to common questions about Zion Tech Group's AI services, quantum computing, cybersecurity, and technology solutions."
-        keywords="FAQ, Zion Tech Group, AI services, quantum computing, cybersecurity, support, questions"
-      />
-      
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Frequently Asked
-              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Questions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find answers to common questions about our services, technologies, and how we can help 
-              transform your business with cutting-edge AI and quantum computing solutions.
-            </p>
-          </motion.div>
-
+    <div className="min-h-screen bg-slate-900 text-white py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium mb-6">
+            <HelpCircle className="w-4 h-4 mr-2"/>
+            FAQ
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Frequently Asked
+            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> Questions</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Find answers to common questions about Zion Tech Group's AI marketplace,
+            services, and platform features.
+          </p>
           {/* Search Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

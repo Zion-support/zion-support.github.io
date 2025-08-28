@@ -224,10 +224,10 @@ export default function ApiPlayground() {
   const filteredApis = apis.filter(api => {
     const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          api.description.toLowerCase().includes(searchQuery.toLowerCase());
-    
+
     const matchesCategory = activeCategory === 'all' || api.category === category.id;
     const matchesMethod = activeMethod === 'all' || api.method === method.id;
-    
+
     return matchesSearch && matchesCategory && matchesMethod;
   });
 
@@ -257,9 +257,9 @@ export default function ApiPlayground() {
 
   const handleTestApi = async () => {
     if (!selectedApi) return;
-    
+
     setIsLoading(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
@@ -273,7 +273,7 @@ export default function ApiPlayground() {
 
   const downloadResponse = () => {
     if (!responseData) return;
-    
+
     const blob = new Blob([responseData], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');

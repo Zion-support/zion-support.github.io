@@ -1,6 +1,3 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -118,10 +115,10 @@ export default function Webinars() {
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
     const matchesType = filterType === 'all' || webinar.type === filterType;
-    
+
     return matchesSearch && matchesCategory && matchesType;
   });
 
@@ -139,7 +136,7 @@ export default function Webinars() {
     const webinarDate = new Date(dateString);
     const diffTime = webinarDate.getTime() - now.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    
+
     if (diffDays < 0) return 'Past';
     if (diffDays === 0) return 'Today';
     if (diffDays < 7) return `${diffDays} days`;
@@ -166,13 +163,13 @@ export default function Webinars() {
               Stay Informed and Inspired
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Subscribe to our webinar series and never miss an opportunity to learn 
-              from industry experts and technology leaders. Get notified about upcoming 
+              Subscribe to our webinar series and never miss an opportunity to learn
+              from industry experts and technology leaders. Get notified about upcoming
               sessions and access to exclusive content.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
+              <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

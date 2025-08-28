@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  MessageCircle, 
-  Clock, 
-  MessageCircle, 
-  Send, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  MessageSquare,
+  Send,
   CheckCircle,
   Globe,
-  Building,
   Users,
-  Zap,
-  Brain,
-  Cloud,
-  Shield
+  Award,
+  Star,
+  ArrowRight,
+  Calendar,
+  Video,
+  FileText
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
@@ -141,8 +140,8 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+    <>
+      <SEO
         title="Contact Us - Zion Tech Group"
         description="Get in touch with Zion Tech Group. We're here to help you transform your business with cutting-edge AI, quantum computing, and technology solutions."
       />
@@ -169,32 +168,176 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Form & Info Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-              
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
+        <div className="relative z-10">
+          {/* Hero Section */}
+          <motion.section
+            className="py-20 text-center"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Get in <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-500 bg-clip-text text-transparent">Touch</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Ready to transform your business? Let's discuss how our innovative solutions can drive your success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href={`tel:${contactInfo.phone}`}
+                  className="btn-futuristic inline-flex items-center px-8 py-4 font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
                 >
-                  <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-gray-300">We'll get back to you within 24 hours.</p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <Phone className="mr-2 w-5 h-5" />
+                  Call Now
+                </a>
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="btn-neon inline-flex items-center px-8 py-4 font-semibold rounded-lg transition-all duration-300"
+                >
+                  <Mail className="mr-2 w-5 h-5" />
+                  Send Email
+                </a>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Contact Methods */}
+          <motion.section
+            className="py-20"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div className="text-center mb-16" variants={itemVariants}>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Choose Your <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Contact Method</span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                  Multiple ways to reach us - choose what works best for you
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                {contactMethods.map((method, index) => (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="card-futuristic text-center p-8 hover-lift"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                  >
+                    <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}>
+                      <method.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">{method.title}</h3>
+                    <p className="text-gray-300 mb-6">{method.description}</p>
+                    <a
+                      href={method.href}
+                      className={`btn-futuristic inline-flex items-center px-6 py-3 font-semibold rounded-lg transition-all duration-300`}
+                    >
+                      {method.action}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </a>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          </motion.section>
+
+          {/* Contact Form */}
+          <motion.section
+            className="py-20"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div className="text-center mb-16" variants={itemVariants}>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Send Us a <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">Message</span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                  Fill out the form below and we'll get back to you within 2 hours
+                </p>
+              </motion.div>
+
+              <motion.div variants={itemVariants}>
+                <div className="card-futuristic p-8">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                          placeholder="Enter your full name"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                          placeholder="Enter your email address"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                          Company
+                        </label>
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          value={formData.company}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                          placeholder="Enter your company name"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                          placeholder="Enter your phone number"
+                        />
+                      </div>
+                    </div>
+
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
@@ -359,33 +502,138 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Quick Actions */}
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Quick Actions</h3>
-                <div className="space-y-4">
-                  {quickActions.map((action, index) => (
-                    <motion.a
-                      key={action.title}
-                      href={action.link}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      whileHover={{ scale: 1.02 }}
-                      className="block p-4 bg-slate-800/30 rounded-lg border border-slate-700/30 hover:border-cyan-400/30 transition-all duration-300 group"
-                    >
-                      <div className="flex items-center space-x-4">
-                        <div className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
-                          <action.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
-                            {action.title}
-                          </h4>
-                          <p className="text-gray-300 text-sm">{action.description}</p>
-                        </div>
-                      </div>
-                    </motion.a>
-                  ))}
+          {/* Contact Information */}
+          <motion.section
+            className="py-20"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <motion.div className="text-center mb-16" variants={itemVariants}>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Contact <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">Information</span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                  Get in touch with us through any of these channels
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                {stats.map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    className="text-center group"
+                    whileHover={{ y: -8, scale: 1.05 }}
+                  >
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 neon-glow">
+                      <Star className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                    <div className="text-sm text-gray-300">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              <motion.div
+                className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <motion.div variants={itemVariants} className="card-futuristic p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Company Details</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <MapPin className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">{contactInfo.address}</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Phone className="w-5 h-5 text-cyan-400" />
+                      <a href={`tel:${contactInfo.phone}`} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                        {contactInfo.phone}
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Mail className="w-5 h-5 text-cyan-400" />
+                      <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                        {contactInfo.email}
+                      </a>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Globe className="w-5 h-5 text-cyan-400" />
+                      <a href={contactInfo.website} className="text-gray-300 hover:text-cyan-400 transition-colors">
+                        {contactInfo.website}
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+
+                <motion.div variants={itemVariants} className="card-futuristic p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Business Hours</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <Clock className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">{contactInfo.hours}</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <MessageSquare className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">Response time: {contactInfo.responseTime}</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Users className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">Expert team available</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Award className="w-5 h-5 text-cyan-400" />
+                      <span className="text-gray-300">Certified professionals</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+          </motion.section>
+
+          {/* CTA Section */}
+          <motion.section
+            className="py-20"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+              <motion.div variants={itemVariants}>
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Ready to Start Your <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Project</span>?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Let's discuss how our innovative solutions can transform your business and drive growth
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href={`tel:${contactInfo.phone}`}
+                    className="btn-futuristic inline-flex items-center px-8 py-4 font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                  >
+                    <Phone className="mr-2 w-5 h-5" />
+                    Call Now
+                  </a>
+                  <a
+                    href={`mailto:${contactInfo.email}`}
+                    className="btn-neon inline-flex items-center px-8 py-4 font-semibold rounded-lg transition-all duration-300"
+                  >
+                    <Mail className="mr-2 w-5 h-5" />
+                    Send Email
+                  </a>
                 </div>
               </div>
             </motion.div>

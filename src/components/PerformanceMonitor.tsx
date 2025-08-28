@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
-  Download, 
-  Globe, 
-  HardDrive, 
-  Network, 
-  RefreshCw, 
-  Settings, 
-  Shield, 
-  Zap 
+import {
+  Activity,
+  Zap,
+  Clock,
+  TrendingUp,
+  AlertTriangle,
+  CheckCircle,
+  X,
+  Info,
+  BarChart3,
+  Gauge,
+  Monitor
 } from 'lucide-react';
 import resourceMonitor from '../utils/resourceMonitor';
 import mimeTypeFallback from '../utils/mimeTypeFallback';
@@ -40,9 +39,21 @@ const PerformanceMonitor: React.FC = () => {
   const [isMonitoring, setIsMonitoring] = useState(false);
 
   useEffect(() => {
-    // Start monitoring when component mounts
-    if (!isMonitoring) {
-      startMonitoring();
+    // Initial metrics
+    updateMetrics();
+    // Set up performance observer for Core Web Vitals
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint' ||
+              entry.entryType === 'first-input-delay' ||
+              entry.entryType === 'layout-shift') {
+            updateMetrics();
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      return () => observer.disconnect();
     }
 
     // Collect initial metrics
@@ -310,22 +321,140 @@ const PerformanceMonitor: React.FC = () => {
                   )}
                 </button>
               </div>
-
-              {/* Resource Errors */}
-              {resourceErrors.length > 0 && (
-                <div className="space-y-2">
-                  <h4 className="text-sm font-medium text-gray-300">Recent Errors</h4>
-                  <div className="max-h-32 overflow-y-auto space-y-2">
-                    {resourceErrors.slice(-5).map((error, index) => (
-                      <div key={index} className="p-2 bg-red-500/10 border border-red-500/20 rounded text-xs">
-                        <div className="text-red-400 font-medium">{error.type}</div>
-                        <div className="text-red-300 truncate">{error.url}</div>
-                        <div className="text-red-400">{error.error}</div>
-                      </div>
-                    ))}
+              {/* Core Web Vitals */}
+              <div className="space-y-4 mb-6">
+                <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                  <Zap size={20} className="text-zion-purple" />
+                  Core Web Vitals
+                </h3>
+                {/* FCP */}
+                <div className="p-3 bg-zion-slate-light/10 rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-zion-slate-light">First Contentful Paint</span>
+                    <span className={`text-sm font-semibold ${scores.fcp?.color || 'text-gray-400'}`}>
+                      {scores.fcp?.grade || 'N/A'}
+                    </span>
+                  </div>
+                  <div className="text-lg font-bold text-white">
+                    {formatMetric(metrics.fcp)}
+                  </div>
+                  <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
+                    <div
+                      className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.fcp)}`}
+                      style={{ width: `${scores.fcp?.score || 0}%` }}
+                    />
                   </div>
                 </div>
-              )}
+                {/* LCP */}
+                <div className="p-3 bg-zion-slate-light/10 rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-zion-slate-light">Largest Contentful Paint</span>
+                    <span className={`text-sm font-semibold ${scores.lcp?.color || 'text-gray-400'}`}>
+                      {scores.lcp?.grade || 'N/A'}
+                    </span>
+                  </div>
+                  <div className="text-lg font-bold text-white">
+                    {formatMetric(metrics.lcp)}
+                  </div>
+                  <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
+                    <div
+                      className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.lcp)}`}
+                      style={{ width: `${scores.lcp?.score || 0}%` }}
+                    />
+                  </div>
+                </div>
+                {/* FID */}
+                <div className="p-3 bg-zion-slate-light/10 rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-zion-slate-light">First Input Delay</span>
+                    <span className={`text-sm font-semibold ${scores.fid?.color || 'text-gray-400'}`}>
+                      {scores.fid?.grade || 'N/A'}
+                    </span>
+                  </div>
+                  <div className="text-lg font-bold text-white">
+                    {formatMetric(metrics.fid)}
+                  </div>
+                  <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
+                    <div
+                      className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.fid)}`}
+                      style={{ width: `${scores.fid?.score || 0}%` }}
+                    />
+                  </div>
+                </div>
+                {/* CLS */}
+                <div className="p-3 bg-zion-slate-light/10 rounded-lg">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-zion-slate-light">Cumulative Layout Shift</span>
+                    <span className={`text-sm font-semibold ${scores.cls?.color || 'text-gray-400'}`}>
+                      {scores.cls?.grade || 'N/A'}
+                    </span>
+                  </div>
+                  <div className="text-lg font-bold text-white">
+                    {formatMetric(metrics.cls, '')}
+                  </div>
+                  <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
+                    <div
+                      className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.cls)}`}
+                      style={{ width: `${scores.cls?.score || 0}%` }}
+                    />
+                  </div>
+                </div>
+              </div>
+              {/* Additional Metrics */}
+              <div className="space-y-4 mb-6">
+                <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                  <BarChart3 size={20} className="text-zion-purple" />
+                  Additional Metrics
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="p-3 bg-zion-slate-light/10 rounded-lg text-center">
+                    <div className="text-sm text-zion-slate-light mb-1">TTFB</div>
+                    <div className="text-lg font-bold text-white">
+                      {formatMetric(metrics.ttfb)}
+                    </div>
+                  </div>
+                  <div className="p-3 bg-zion-slate-light/10 rounded-lg text-center">
+                    <div className="text-sm text-zion-slate-light mb-1">DOM Load</div>
+                    <div className="text-lg font-bold text-white">
+                      {formatMetric(metrics.domLoad)}
+                    </div>
+                  </div>
+                  <div className="p-3 bg-zion-slate-light/10 rounded-lg text-center">
+                    <div className="text-sm text-zion-slate-light mb-1">Window Load</div>
+                    <div className="text-lg font-bold text-white">
+                      {formatMetric(metrics.windowLoad)}
+                    </div>
+                  </div>
+                  <div className="p-3 bg-zion-slate-light/10 rounded-lg text-center">
+                    <div className="text-sm text-zion-slate-light mb-1">Overall Score</div>
+                    <div className="text-lg font-bold text-white">
+                      {Math.round(Object.values(scores).reduce((acc, score) => acc + score.score, 0) / 4)}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Performance Tips */}
+              <div className="p-4 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">
+                <h4 className="font-semibold text-zion-purple mb-2 flex items-center gap-2">
+                  <Info size={16} />
+                  Performance Tips
+                </h4>
+                <ul className="text-sm text-zion-slate-light space-y-1">
+                  <li>• Optimize images and use WebP format</li>
+                  <li>• Minimize JavaScript bundle size</li>
+                  <li>• Use CDN for static assets</li>
+                  <li>• Enable compression and caching</li>
+                  <li>• Monitor Core Web Vitals regularly</li>
+                </ul>
+              </div>
+              {/* Refresh Button */}
+              <button
+                onClick={updateMetrics}
+                className="w-full mt-6 p-3 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors flex items-center justify-center gap-2"
+              >
+                <RefreshCw size={16} />
+                Refresh Metrics
+              </button>
             </div>
           </motion.div>
         )}

@@ -605,56 +605,22 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
     integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
   }
 ];
-
-// Pricing Analysis and Market Insights
-export const PRICING_ANALYSIS_2027 = {
-  marketOverview: {
-    totalServices: COMPREHENSIVE_PRICING_GUIDE_2027.length,
-    averagePrice: "$8,247",
-    priceRange: "$1,999 - $15,999",
-    marketSize: "$2.1T by 2027",
-    growthRate: "23.4% CAGR"
-  },
-  pricingTiers: {
-    entry: {
-      range: "$1,999 - $3,999",
-      services: ["AI SEO", "Content Marketing", "Project Management"],
-      targetMarket: "Small Businesses & Startups"
-    },
-    mid: {
-      range: "$4,000 - $7,999",
-      services: ["AI Code Review", "Customer Support", "Financial Analytics"],
-      targetMarket: "Medium Enterprises"
-    },
-    enterprise: {
-      range: "$8,000 - $15,999",
-      services: ["Quantum Computing", "Cloud Migration", "Cybersecurity"],
-      targetMarket: "Large Enterprises & Fortune 500"
-    }
-  },
-  roiAnalysis: {
-    averageROI: "425%",
-    paybackPeriod: "6-12 months",
-    costSavings: "40-80% vs traditional solutions",
-    productivityGains: "300-500% improvement"
-  },
-  competitiveAdvantages: {
-    aiScore: "95+ average AI capability score",
-    innovation: "Cutting-edge emerging technologies",
-    integration: "Seamless third-party integrations",
-    support: "24/7 expert technical support",
-    customization: "Tailored enterprise solutions"
-  }
-};
-
-// Contact Information for All Services
-export const CONTACT_INFORMATION = {
-  company: "Zion Tech Group",
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709",
-  availability: "24/7 Global Support",
-  responseTime: "< 2 hours",
-  consultation: "Free initial consultation available"
+export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
+export const getComprehensivePricingGuide2027ByCategory = (category: string) =>
+  comprehensivePricingGuide2027.filter(item => item.category === category);
+export const getComprehensivePricingGuide2027ById = (id: string) =>
+  comprehensivePricingGuide2027.find(item => item.id === id);
+export const pricingCategories2027 = [
+  'Metaverse Solutions',
+  'Web3 Solutions',
+  'Sustainable Tech',
+  'NeuroTech Solutions',
+  'Fusion Energy Solutions'
+];
+export const pricingSubcategories2027 = {
+  'Metaverse Solutions': ['E-commerce', 'Gaming', 'Social', 'Education'],
+  'Web3 Solutions': ['DeFi', 'NFTs', 'Blockchain', 'Cryptocurrency'],
+  'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
+  'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
+  'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design', 'Simulation']
 };

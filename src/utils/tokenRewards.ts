@@ -1,10 +1,6 @@
 import { apiClient } from '@/services/api';
 
-export async function earnTokensForAction(
-  userId: string,
-  action: string,
-  amount: number
-): Promise<void> {
+export async function rewardOnboarding(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
     body: JSON.stringify({ userId, action, amount })

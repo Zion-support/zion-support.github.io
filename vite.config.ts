@@ -18,7 +18,7 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
+    target: 'es2022',
     minify: 'terser',
     terserOptions: {
       compress: {

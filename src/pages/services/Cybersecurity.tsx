@@ -1,14 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Zap, 
-  Award,
-  Users, 
+import {
+  Shield,
+  Lock,
+  Eye,
+  Zap,
+  Target,
+  Users,
   CheckCircle,
   ArrowRight,
   Play,
@@ -142,7 +141,7 @@ export default function CybersecurityServices() {
               </span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with enterprise-grade cybersecurity solutions. From threat detection 
+              Protect your business with enterprise-grade cybersecurity solutions. From threat detection
               to compliance management, we secure your digital assets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

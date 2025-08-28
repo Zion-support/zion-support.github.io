@@ -1,14 +1,28 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Shield, 
-  Brain, 
-  Globe, 
+import {
+  Brain,
   Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Play,
+  BarChart3,
+  Cpu,
+  Eye,
+  MessageSquare,
+  Database,
+  Network,
+  Rocket,
+  Target,
+  Award,
+  Clock,
+  Star,
+  Search,
+  Filter,
   DollarSign,
   Clock,
   Users,
@@ -42,21 +56,27 @@ export default function ComprehensiveServicesShowcase2025() {
     { value: 'premium', label: 'Over $15,000/month' }
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
-    let matchesPrice = true;
-    if (selectedPriceRange === 'low') matchesPrice = service.price < 1000;
-    else if (selectedPriceRange === 'medium') matchesPrice = service.price >= 1000 && service.price < 5000;
-    else if (selectedPriceRange === 'high') matchesPrice = service.price >= 5000 && service.price < 15000;
-    else if (selectedPriceRange === 'premium') matchesPrice = service.price >= 15000;
-    
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+  const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025
+    .filter(service =>
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    )
+    .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
+    .sort((a, b) => {
+      switch (sortBy) {
+        case 'innovation':
+          return getInnovationScore(b.innovationLevel) - getInnovationScore(a.innovationLevel);
+        case 'price':
+          return a.price - b.price;
+        case 'roi':
+          return parseFloat(b.roi.split('%')[0]) - parseFloat(a.roi.split('%')[0]);
+        case 'rating':
+          return b.rating - a.rating;
+        default:
+          return 0;
+      }
+    });
 
   const getPriceRange = (price: number) => {
     if (price < 1000) return 'low';
@@ -98,9 +118,9 @@ export default function ComprehensiveServicesShowcase2025() {
                 Showcase 2025
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover our cutting-edge portfolio of advanced micro SAAS services, emerging technology solutions, 
-              and innovative AI-powered platforms designed to transform your business operations.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Discover our cutting-edge micro SAAS, IT, and AI services that are revolutionizing industries.
+              Each service is designed with real-world applications, proven ROI, and market-leading innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center space-x-2 text-white">
@@ -170,100 +190,31 @@ export default function ComprehensiveServicesShowcase2025() {
       </div>
 
       {/* Services Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold text-white mb-2">
-            {filteredServices.length} Services Found
-          </h2>
-          <p className="text-gray-300">
-            Discover innovative solutions tailored to your business needs
-          </p>
-        </div>
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              {filteredServices.length} Innovative Services Available
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Each service is designed with real-world applications, proven ROI, and market-leading innovation.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              {/* Service Header */}
-              <div className="mb-4">
-                <div className="flex items-start justify-between mb-3">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriceRangeColor(getPriceRange(service.price))}`}>
-                    {getPriceRange(getPriceRange(service.price)) === 'low' && 'Budget'}
-                    {getPriceRange(getPriceRange(service.price)) === 'medium' && 'Professional'}
-                    {getPriceRange(getPriceRange(service.price)) === 'high' && 'Enterprise'}
-                    {getPriceRange(getPriceRange(service.price)) === 'premium' && 'Premium'}
-                  </span>
-                  <span className="text-sm text-gray-400">{service.category}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-              </div>
-
-              {/* Price and ROI */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="text-2xl font-bold text-white">
-                  ${service.price.toLocaleString()}
-                  <span className="text-sm text-gray-400 font-normal">/month</span>
-                </div>
-                <div className="text-right">
-                  <div className="text-green-400 font-semibold">{service.roi}</div>
-                  <div className="text-xs text-gray-400">ROI</div>
-                </div>
-              </div>
-
-              {/* Features */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features</h4>
-                <div className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </div>
-                  ))}
-                  {service.features.length > 3 && (
-                    <div className="text-xs text-gray-400 mt-1">
-                      +{service.features.length - 3} more features
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Benefits */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Benefits</h4>
-                <div className="space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, idx) => (
-                    <div key={idx} className="text-sm text-gray-300">
-                      • {benefit}
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Tags */}
-              <div className="mb-4">
-                <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0, 4).map((tag, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Technical Specs */}
-              {service.technicalSpecs && (
-                <div className="mb-4 p-3 bg-white/5 rounded-lg">
-                  <h4 className="text-sm font-semibold text-white mb-2">Technical Highlights</h4>
-                  <div className="grid grid-cols-2 gap-2 text-xs text-gray-300">
-                    <div>
-                      <span className="text-gray-400">Uptime:</span> {service.technicalSpecs.uptime}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300 group"
+              >
+                {/* Service Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${getInnovationColor(service.innovationLevel)} rounded-lg flex items-center justify-center`}>
+                      {React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
                     </div>
                     <div>
                       <span className="text-gray-400">APIs:</span> {service.technicalSpecs.apiEndpoints}
@@ -311,35 +262,16 @@ export default function ComprehensiveServicesShowcase2025() {
           ))}
         </div>
 
-        {filteredServices.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-            <button
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedPriceRange('all');
-              }}
-              className="text-blue-400 hover:text-blue-300 underline"
-            >
-              Clear all filters
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions 
-              and drive innovation across your organization.
-            </p>
-          </div>
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Our team of experts is ready to help you implement these innovative solutions
+            and drive your business forward with cutting-edge technology.
+          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
@@ -349,15 +281,23 @@ export default function ComprehensiveServicesShowcase2025() {
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Website</h3>
+              <p className="text-gray-300">Explore our full range of services</p>
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                ziontechgroup.com
+              </a>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-green-400" />
@@ -367,15 +307,18 @@ export default function ComprehensiveServicesShowcase2025() {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://ziontechgroup.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+              href="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Visit Our Website
-              <ExternalLink className="w-5 h-5 ml-2" />
+              Start Your Journey
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+            >
+              Call Now
             </a>
           </div>
         </div>

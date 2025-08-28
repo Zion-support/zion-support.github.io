@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  Search,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  Clock,
   FileText,
   Video,
   Download,
@@ -203,11 +203,11 @@ export default function Help() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Help & Support - Zion Tech Group"
         description="Get help and support for all Zion Tech Group services. Find documentation, tutorials, and contact our support team."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
@@ -223,10 +223,10 @@ export default function Help() {
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Help You?</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers to your questions, learn about our services, and get the support you need 
+              Find answers to your questions, learn about our services, and get the support you need
               to succeed with Zion Tech Group.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">

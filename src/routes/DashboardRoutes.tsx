@@ -28,53 +28,53 @@ const DashboardRoutes = () => {
   return (
     <Routes>
       {/* Dashboard Routes */}
-      <Route 
-        path="/dashboard" 
+      <Route
+        path="/dashboard"
         element={
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/client-dashboard" 
+      <Route
+        path="/client-dashboard"
         element={
           <ProtectedRoute>
             <ClientDashboard />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/talent-dashboard" 
+      <Route
+        path="/talent-dashboard"
         element={
           <ProtectedRoute>
             <TalentDashboard />
           </ProtectedRoute>
         }
       />
-      <Route 
-        path="/creator-dashboard" 
+      <Route
+        path="/creator-dashboard"
         element={
           <ProtectedRoute>
             <CreatorDashboard />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/analytics" 
+      <Route
+        path="/analytics"
         element={
           <ProtectedRoute>
             <Analytics />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/project/:id/milestones" 
+      <Route
+        path="/project/:id/milestones"
         element={
           <ProtectedRoute>
             <ProjectMilestones />
           </ProtectedRoute>
-        } 
+        }
       />
       <Route
         path="/project/:id"
@@ -98,47 +98,47 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <div>Messages Page</div>
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/inbox" 
+      <Route
+        path="/inbox"
         element={
           <ProtectedRoute>
             <div>Inbox Page</div>
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/payments" 
+      <Route
+        path="/payments"
         element={
           <ProtectedRoute>
             <Payments />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/interviews" 
+      <Route
+        path="/interviews"
         element={
           <ProtectedRoute>
             <Interviews />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/notifications" 
+      <Route
+        path="/notifications"
         element={
           <ProtectedRoute>
             <Notifications />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/applications/track" 
+      <Route
+        path="/applications/track"
         element={
           <ProtectedRoute>
             <ApplicationStatusTracker />
           </ProtectedRoute>
-        } 
+        }
       />
       <Route
         path="/hiring-tracker"
@@ -162,15 +162,15 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <PortfolioBuilder />
           </ProtectedRoute>
-        } 
+        }
       />
-      <Route 
-        path="/referrals" 
+      <Route
+        path="/referrals"
         element={
           <ProtectedRoute>
             <div>Referrals Page</div>
           </ProtectedRoute>
-        } 
+        }
       />
       <Route
         path="/developers"
@@ -210,7 +210,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <DeveloperPortal />
           </ProtectedRoute>
-        } 
+        }
       />
       <Route
         path="/contract-builder"
@@ -218,7 +218,7 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-        } 
+        }
       />
     </Routes>
   );

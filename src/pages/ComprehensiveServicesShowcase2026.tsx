@@ -1,13 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cpu, 
+import {
+  Search,
+  Filter,
+  Star,
+  Zap,
+  Brain,
+  Shield,
+  Cpu,
   Network,
   Phone,
   Mail,
@@ -19,8 +19,8 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-import SEO from '../components/SEO';
-import { 
+import { SEO } from '../components/SEO';
+import {
   revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,
   revolutionaryAIServices2026,
@@ -36,7 +36,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     let filtered = ALL_REVOLUTIONARY_SERVICES_2026;
     if (searchTerm) {
       const lowerQuery = searchTerm.toLowerCase();
-      filtered = filtered.filter(service => 
+      filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(lowerQuery) ||
         service.description.toLowerCase().includes(lowerQuery) ||
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
@@ -72,7 +72,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   };
   return (
     <>
-      <SEO 
+      <SEO
         title="Revolutionary Services 2026 - Zion Tech Group"
         description="Discover Zion Tech Group's revolutionary 2026 micro SAAS, IT infrastructure, and AI services. Quantum computing, edge AI, autonomous agents, and more."
         keywords="quantum computing, edge AI, autonomous AI, blockchain, micro SAAS, IT services, AI services, 2026, Zion Tech Group"
@@ -82,7 +82,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         <section className="relative overflow-hidden py-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -93,16 +93,16 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 2026
               </span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
             >
-              Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services. 
+              Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.
               Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -306,7 +306,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         {/* Contact CTA Section */}
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -316,7 +316,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-                Join the future with Zion Tech Group's revolutionary 2026 services. 
+                Join the future with Zion Tech Group's revolutionary 2026 services.
                 Get in touch to discuss how we can help you achieve quantum advantage and AI supremacy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
   Instagram,
   Youtube,
   Github,
@@ -166,11 +166,55 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl blur opacity-75"></div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </h3>
-                <p className="text-sm text-gray-400">Innovation • Intelligence • Impact</p>
+
+              <p className="text-slate-300 mb-6 leading-relaxed">
+                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions.
+                Transform your business with our innovative technology platforms.
+              </p>
+
+              {/* Contact Info */}
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
+                  <Phone className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <a href="tel:+13024640950" className="hover:underline">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-blue-300 transition-colors">
+                  <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-start space-x-3 text-slate-300">
+                  <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span>
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-green-300 transition-colors">
+                  <Globe className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    ziontechgroup.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-slate-800/50 border border-slate-700/50 rounded-lg flex items-center justify-center text-slate-400 transition-all duration-200 hover:border-cyan-400/50 hover:bg-cyan-400/10 ${social.color}`}
+                    aria-label={social.name}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
               </div>
             </div>
             
@@ -179,13 +223,32 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               and digital transformation services. Transforming businesses with cutting-edge technology.
             </p>
 
-            {/* Contact Information */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200">
-                <Phone className="w-4 h-4 text-blue-400" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-blue-400 transition-colors duration-200">
-                  {contactInfo.phone}
-                </a>
+            {/* Footer Sections */}
+            {footerSections.map((section, index) => (
+              <div key={section.title} className="lg:col-span-1">
+                <h4 className={`font-semibold mb-4 flex items-center gap-2 ${
+                  section.featured ? 'text-cyan-300 text-lg' : 'text-white'
+                }`}>
+                  {section.featured && <Star className="w-4 h-4 text-yellow-400" />}
+                  {section.title}
+                </h4>
+                <ul className="space-y-3">
+                  {section.links.map((link) => (
+                    <li key={link.name}>
+                      <Link
+                        to={link.href}
+                        className={`text-sm transition-colors duration-200 ${
+                          link.featured
+                            ? 'text-cyan-300 hover:text-cyan-200 font-medium'
+                            : 'text-slate-400 hover:text-white'
+                        }`}
+                      >
+                        {link.name}
+                        {link.featured && <span className="ml-1 text-yellow-400">★</span>}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200">
                 <Mail className="w-4 h-4 text-blue-400" />
@@ -309,12 +372,85 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center"
               >
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </motion.button>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Stay Ahead with Zion Tech Group
+                </h3>
+                <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+                  Get the latest insights on AI, Quantum Computing, and emerging technologies.
+                  Be the first to know about our revolutionary new services.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                  />
+                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
+                    Subscribe
+                  </button>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>
+
+        {/* Bottom Footer */}
+        <div className="border-t border-slate-800/50">
+          <div className="container mx-auto px-4 py-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-slate-400 text-sm">
+                © {currentYear} Zion Tech Group. All rights reserved.
+                Revolutionizing technology, one innovation at a time.
+              </div>
+
+              <div className="flex items-center space-x-6 text-sm text-slate-400">
+                <Link to="/privacy" className="hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+                <Link to="/cookies" className="hover:text-white transition-colors">
+                  Cookie Policy
+                </Link>
+                <Link to="/sitemap" className="hover:text-white transition-colors">
+                  Sitemap
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute text-cyan-400/10"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 4}s`
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.1, 0.3, 0.1],
+              rotate: [0, 360]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] &&
+              React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 20 })
+            }
+          </motion.div>
+        ))}
       </div>
     </footer>
   );

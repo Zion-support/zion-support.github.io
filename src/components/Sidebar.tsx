@@ -1,40 +1,69 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronRight, 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Server, 
-  BarChart3, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  Settings, 
-  Star,
-  Atom,
-  Network,
-  Eye,
-  PenTool,
+import {
+  X,
+  Home,
+  Briefcase,
+  Users,
+  Phone,
+  Mail,
+  MapPin,
   Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Shield,
+  Handshake,
+  ChevronDown,
+  ChevronRight,
+  Brain,
   Cpu,
-  Lock,
-  TrendingUp,
+  Database,
+  Network,
+  Code,
+  Palette,
+  Target,
   Rocket,
+  Eye,
+  DollarSign,
+  ShoppingCart,
+  Clock,
+  Cloud,
+  Search,
+  Building,
+  Zap,
   Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  Sun,
-  Moon,
-  Infinity,
-  ArrowRight,
-  Target
+  Lightbulb,
+  TrendingUp,
+  BarChart3,
+  Lock,
+  AlertTriangle,
+  Server,
+  CheckCircle,
+  Truck,
+  Car,
+  TestTube,
+  PenTool,
+  Building2,
+  Atom,
+  FileText,
+  Quote,
+  Newspaper,
+  Calendar,
+  Video,
+  HelpCircle,
+  LifeBuoy,
+  Store,
+  PieChart,
+  Share2,
+  Monitor,
+  Smartphone,
+  Github,
+  Youtube,
+  GraduationCap,
+  Activity,
+  DollarSign as DollarSignIcon
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -46,11 +75,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['2028 Services', 'Featured Services']);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
+  // Close sidebar when location changes
+  React.useEffect(() => {
+    onClose();
+  }, [location.pathname, onClose]);
+
+  const toggleSection = (sectionTitle: string) => {
+    setExpandedSections(prev =>
+      prev.includes(sectionTitle)
+        ? prev.filter(title => title !== sectionTitle)
+        : [...prev, sectionTitle]
     );
   };
 
@@ -295,9 +329,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         </span>
                       )}
                     </div>
-                    <ChevronRight className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                      expandedSections.includes(section.title) ? 'rotate-90' : ''
-                    }`} />
+                    <ChevronDown
+                      className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                        expandedSections.includes(section.title) ? 'rotate-180' : ''
+                      }`}
+                    />
                   </button>
 
                   <AnimatePresence>
@@ -340,24 +376,40 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Footer */}
-            <div className="sticky bottom-0 bg-slate-800/50 backdrop-blur-xl border-t border-slate-700/50 p-4">
-              <div className="space-y-3">
-                <Link
-                  to="/contact"
-                  onClick={onClose}
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Contact Us
-                </Link>
-                <Link
-                  to="/request-quote"
-                  onClick={onClose}
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hover:bg-slate-600/50 transition-all duration-200 font-medium"
-                >
-                  <DollarSign className="w-4 h-4" />
-                  Request Quote
-                </Link>
+            <div className="p-6 border-t border-gray-200 dark:border-gray-700">
+              <div className="space-y-4">
+                <div className="text-sm text-gray-500 dark:text-gray-400">
+                  <p>© 2025 Zion Tech Group</p>
+                  <p>Innovating the future</p>
+                </div>
+
+                {/* Social Links */}
+                <div className="flex space-x-3">
+                  <a
+                    href="https://linkedin.com/company/ziontechgroup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-blue-100 hover:text-blue-600 transition-colors"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://twitter.com/ziontechgroup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-blue-100 hover:text-blue-400 transition-colors"
+                  >
+                    <Twitter className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://github.com/ziontechgroup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 hover:text-gray-800 transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

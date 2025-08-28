@@ -8,14 +8,12 @@ interface LoaderProps {
   fullScreen?: boolean;
   showLogo?: boolean;
 }
-
-export const PerformanceOptimizedLoader = memo<LoaderProps>(({ 
-  size = 'md', 
-  color = 'primary', 
+export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
+  size = 'md',
+  color = 'primary',
   text,
-  fullScreen = false,
-  showLogo = false
-}: LoaderProps) => {
+  fullScreen = false
+}: LoaderProps) {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',
@@ -38,10 +36,10 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
         <motion.div
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-zion-cyan border-t-transparent rounded-full`}
           animate={{ rotate: 360 }}
-          transition={{ 
-            duration: 1, 
-            repeat: Infinity, 
-            ease: "linear" 
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            ease: "linear"
           }}
         />
         {/* Logo text */}
@@ -52,7 +50,7 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
         )}
         {/* Loading text */}
         <div className="mt-4 text-center">
-          <motion.div 
+          <motion.div
             className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
@@ -67,12 +65,12 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
 
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
-export function SkeletonLoader({ 
-  className = "", 
+export function SkeletonLoader({
+  className = "",
   lines = 3,
   height = "h-4"
-}: { 
-  className?: string; 
+}: {
+  className?: string;
   lines?: number;
   height?: string;
 }) {
@@ -116,12 +114,12 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
   );
 }
 // Grid skeleton loader
-export function GridSkeleton({ 
-  columns = 3, 
+export function GridSkeleton({
+  columns = 3,
   rows = 2,
-  className = "" 
-}: { 
-  columns?: number; 
+  className = ""
+}: {
+  columns?: number;
   rows?: number;
   className?: string;
 }) {

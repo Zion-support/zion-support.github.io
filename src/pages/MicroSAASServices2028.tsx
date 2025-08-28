@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
+import {
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
   Globe,
   ArrowRight,
   CheckCircle,
@@ -514,7 +514,7 @@ const MicroSAASServices2028: React.FC = () => {
 
   const filteredServices = microSAASServices2028
     .filter(service => {
-      const matchesCategory = selectedCategory === 'all' || 
+      const matchesCategory = selectedCategory === 'all' ||
         service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase());
@@ -540,7 +540,7 @@ const MicroSAASServices2028: React.FC = () => {
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -548,7 +548,7 @@ const MicroSAASServices2028: React.FC = () => {
           >
             Micro SAAS Services 2028
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -556,7 +556,7 @@ const MicroSAASServices2028: React.FC = () => {
           >
             Powerful, affordable, and intelligent micro SAAS solutions designed to transform your business operations
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -722,7 +722,7 @@ const MicroSAASServices2028: React.FC = () => {
       {/* Contact Section */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -730,7 +730,7 @@ const MicroSAASServices2028: React.FC = () => {
           >
             Ready to Get Started?
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -738,7 +738,7 @@ const MicroSAASServices2028: React.FC = () => {
           >
             Contact our team to discuss how our micro SAAS services can transform your business operations
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

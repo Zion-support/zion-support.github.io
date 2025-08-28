@@ -192,3 +192,44 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-25T09:15:00.000Z"
   }
 ];
+export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
+  return MICRO_SAAS_SERVICES.find(service => service.id === id);
+};
+export const MICRO_SAAS_CATEGORIES = [
+  'AI Business Solutions',
+  'IT Infrastructure',
+  'Data Analytics',
+  'AI Development',
+  'FinTech',
+  'HealthTech',
+  'E-commerce',
+  'EdTech'
+];
+export const PRICING_TIERS = [
+  {
+    name: 'Starter',
+    price: 29,
+    features: ['Basic features', 'Email support', '1 user']
+  },
+  {
+    name: 'Professional',
+    price: 99,
+    features: ['Advanced features', 'Priority support', 'Up to 10 users']
+  },
+  {
+    name: 'Enterprise',
+    price: 299,
+    features: ['Custom features', '24/7 support', 'Unlimited users']
+  }
+];
+export const CONTACT_INFO = {
+  email: 'kleber@ziontechgroup.com',
+  phone: '+1 (555) 123-4567',
+  address: '123 Tech Street, Innovation City, IC 12345'
+};
+export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
+  return MICRO_SAAS_SERVICES.filter(service => service.category === category);
+};
+export const getMicroSaasCategories = (): string[] => {
+  return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
+};

@@ -1,22 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  FileText, 
-  Video, 
-  Users, 
-  Settings, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  ShoppingCart, 
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search,
+  HelpCircle,
+  MessageCircle,
+  Phone,
+  Mail,
+  BookOpen,
+  Video,
+  FileText,
+  ChevronDown,
+  ChevronRight,
   Star,
   ChevronDown,
   ChevronRight,
@@ -317,16 +312,19 @@ export function HelpCenter() {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const toggleSection = (sectionId: string) => {
-    setExpandedSections(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(sectionId)) {
-        newSet.delete(sectionId);
-      } else {
-        newSet.add(sectionId);
-      }
-      return newSet;
-    });
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    if (query.trim() === '') {
+      setFilteredFAQs(faqData);
+      return;
+    }
+
+    const filtered = faqData.filter(faq =>
+      faq.question.toLowerCase().includes(query.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(query.toLowerCase()) ||
+      faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
+    );
+    setFilteredFAQs(filtered);
   };
 
   const filteredFAQ = selectedCategory === 'All' 
@@ -336,40 +334,144 @@ export function HelpCenter() {
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header */}
-      <div className="bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Help Center
-            </h1>
-            <p className="text-xl text-cyan-300 max-w-3xl mx-auto">
-              Find answers, tutorials, and resources to help you succeed with Zion Tech Group services
-            </p>
-          </motion.div>
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
+      <div className="container-responsive">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-4xl font-bold text-white mb-4">Help Center</h1>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Find answers to your questions, learn how to use our services, and get the support you need to succeed with Zion Tech Group.
+          </p>
+        </motion.div>
 
-          {/* Search Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-2xl mx-auto mt-8"
-          >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search for help articles, tutorials, or FAQs..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-zion-slate-dark/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-              />
+        {/* Search Bar */}
+        <motion.div
+          className="max-w-2xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search for help articles, FAQs, or guides..."
+              value={searchQuery}
+              onChange={(e) => handleSearch(e.target.value)}
+              className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg"
+            />
+            <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6" />
+          </div>
+        </motion.div>
+
+        {/* Help Categories */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {helpCategories.map((category, index) => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+              >
+                <Link
+                  to={category.path}
+                  className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold text-lg mb-2 text-center">{category.title}</h3>
+                  <p className="text-zion-slate-light text-sm mb-4 text-center">{category.description}</p>
+                  <div className="flex items-center justify-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
+                    <span className="text-sm font-medium">{category.articleCount} articles</span>
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Support Options */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index) => (
+              <motion.div
+                key={option.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.1 }}
+              >
+                <Link
+                  to={option.path}
+                  className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 text-center group"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <option.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold text-lg mb-2">{option.title}</h3>
+                  <p className="text-zion-slate-light text-sm mb-4">{option.description}</p>
+                  <div className="inline-flex items-center bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg text-sm font-medium group-hover:from-zion-cyan-dark group-hover:to-zion-purple-dark transition-all duration-300">
+                    {option.action}
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* FAQ Section */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <button
+                onClick={() => setSelectedCategory('all')}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === 'all'
+                    ? 'bg-zion-cyan text-white'
+                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
+                }`}
+              >
+                All Categories
+              </button>
+              {helpCategories.map(category => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-zion-cyan text-white'
+                      : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
+                  }`}
+                >
+                  {category.title}
+                </button>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -495,98 +597,9 @@ export function HelpCenter() {
             </motion.div>
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Quick Actions */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6"
-            >
-              <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
-              <div className="space-y-3">
-                <Link
-                  to="/contact"
-                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>Contact Support</span>
-                </Link>
-                <Link
-                  to="/faq"
-                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
-                >
-                  <HelpCircle className="w-5 h-5" />
-                  <span>View FAQ</span>
-                </Link>
-                <Link
-                  to="/sitemap"
-                  className="flex items-center space-x-3 p-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
-                >
-                  <FileText className="w-5 h-5" />
-                  <span>Site Map</span>
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* FAQ Categories */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6"
-            >
-              <h3 className="text-lg font-semibold text-white mb-4">FAQ Categories</h3>
-              <div className="space-y-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`w-full text-left px-3 py-2 rounded-lg transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-cyan-500/20 text-cyan-300'
-                        : 'text-gray-400 hover:text-white hover:bg-zion-slate-dark/30'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6"
-            >
-              <h3 className="text-lg font-semibold text-white mb-4">Need More Help?</h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MessageCircle className="w-4 h-4 text-cyan-400" />
-                  <span>Live Chat Available</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <span>support@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Clock className="w-4 h-4 text-cyan-400" />
-                  <span>24/7 Support</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* FAQ Section */}
+        {/* Contact Support */}
         <motion.div
+          className="text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
