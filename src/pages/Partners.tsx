@@ -34,16 +34,17 @@ import {
   Award as AwardIcon,
   TrendingUp as TrendingUpIcon
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Partners() {
   const partnershipTypes = [
     {
       title: 'Technology Partners',
       description: 'Integrate with leading technology platforms and tools',
-      icon: Code,
+      icon: Cpu,
       color: 'from-blue-500 to-cyan-500',
       benefits: [
-        'API access and documentation',
+        'Access to cutting-edge technologies',
         'Joint go-to-market strategies',
         'Technical integration support',
         'Co-marketing opportunities'
@@ -52,68 +53,123 @@ export default function Partners() {
     },
     {
       title: 'Solution Partners',
-      description: 'Deliver comprehensive solutions to enterprise clients',
-      icon: Building2,
-      color: 'from-purple-500 to-pink-500',
+      description: 'Collaborate on comprehensive business solutions',
+      icon: Target,
+      color: 'from-green-500 to-emerald-500',
       benefits: [
-        'White-label solutions',
-        'Revenue sharing programs',
-        'Sales and marketing support',
+        'Joint solution development',
+        'Shared revenue opportunities',
+        'Market expansion support',
         'Training and certification'
       ],
       examples: ['System Integrators', 'Consulting Firms', 'VARs', 'MSPs']
     },
     {
       title: 'Channel Partners',
-      description: 'Expand market reach through strategic partnerships',
-      icon: Users2,
-      color: 'from-green-500 to-emerald-500',
+      description: 'Resell and distribute our solutions',
+      icon: Building,
+      color: 'from-purple-500 to-pink-500',
       benefits: [
-        'Exclusive territory rights',
-        'Marketing development funds',
-        'Lead generation support',
-        'Competitive pricing'
+        'Competitive pricing and margins',
+        'Sales and technical training',
+        'Marketing materials and support',
+        'Dedicated partner success manager'
       ],
       examples: ['Resellers', 'Distributors', 'Agents', 'Brokers']
     },
     {
       title: 'Strategic Partners',
-      description: 'Long-term strategic alliances for mutual growth',
-      icon: Handshake,
+      description: 'Long-term strategic alliances and joint ventures',
+      icon: Star,
       color: 'from-orange-500 to-red-500',
       benefits: [
-        'Joint product development',
+        'Exclusive partnership agreements',
+        'Joint investment opportunities',
         'Shared intellectual property',
-        'Strategic investments',
         'Board-level collaboration'
       ],
       examples: ['Research Institutions', 'Universities', 'Government', 'Industry Leaders']
     }
   ];
 
+  const currentPartners = [
+    {
+      name: 'Microsoft',
+      logo: '/partners/microsoft.svg',
+      type: 'Technology Partner',
+      description: 'Strategic partnership for Azure cloud solutions and enterprise software integration',
+      year: '2020',
+      achievements: ['Azure Gold Partner', 'Microsoft 365 Expert', 'Dynamics 365 Partner']
+    },
+    {
+      name: 'AWS',
+      logo: '/partners/aws.svg',
+      type: 'Technology Partner',
+      description: 'Advanced consulting partner specializing in cloud migration and optimization',
+      year: '2019',
+      achievements: ['AWS Advanced Consulting Partner', 'Migration Competency', 'Well-Architected Partner']
+    },
+    {
+      name: 'Google Cloud',
+      logo: '/partners/google-cloud.svg',
+      type: 'Technology Partner',
+      description: 'Partner for AI/ML solutions and data analytics on Google Cloud Platform',
+      year: '2021',
+      achievements: ['Google Cloud Partner', 'AI/ML Specialization', 'Data Analytics Partner']
+    },
+    {
+      name: 'Salesforce',
+      logo: '/partners/salesforce.svg',
+      type: 'Solution Partner',
+      description: 'Consulting partner for CRM implementation and custom development',
+      year: '2018',
+      achievements: ['Salesforce Consulting Partner', 'Platform Developer', 'Sales Cloud Expert']
+    },
+    {
+      name: 'Oracle',
+      logo: '/partners/oracle.svg',
+      type: 'Technology Partner',
+      description: 'Partner for database solutions and enterprise applications',
+      year: '2020',
+      achievements: ['Oracle Gold Partner', 'Database Specialization', 'Cloud Infrastructure Partner']
+    },
+    {
+      name: 'IBM',
+      logo: '/partners/ibm.svg',
+      type: 'Strategic Partner',
+      description: 'Strategic alliance for AI solutions and enterprise consulting',
+      year: '2019',
+      achievements: ['IBM Business Partner', 'AI Solutions Partner', 'Watson Platform Expert']
+    }
+  ];
+
   const partnerBenefits = [
     {
       title: 'Revenue Growth',
-      description: 'Access new markets and customer segments',
-      icon: TrendingUpIcon,
+      description: 'Access new markets and revenue streams through our partnership network',
+      icon: TrendingUp,
+      color: 'from-green-500 to-emerald-500',
       metric: '40%'
     },
     {
       title: 'Market Expansion',
       description: 'Enter new geographic regions and industries',
       icon: Globe,
+      color: 'from-purple-500 to-pink-500',
       metric: '15+'
     },
     {
       title: 'Technology Access',
       description: 'Leverage cutting-edge AI and cloud solutions',
       icon: Brain,
+      color: 'from-blue-500 to-cyan-500',
       metric: '100+'
     },
     {
       title: 'Support & Training',
       description: 'Comprehensive partner enablement programs',
       icon: Users,
+      color: 'from-orange-500 to-red-500',
       metric: '24/7'
     }
   ];
@@ -218,44 +274,42 @@ export default function Partners() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Partners - Zion Tech Group"
-        description="Join our partner ecosystem and grow your business with our AI-powered technology solutions. Explore partnership opportunities and success stories."
+        description="Join our partner ecosystem and grow your business with Zion Tech Group's innovative technology solutions and strategic partnerships."
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="container-responsive">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-              Partner
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                {' '}Ecosystem
-              </span>
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <div className="container-responsive relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full">
+                <Handshake className="w-16 h-16 text-indigo-400" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Partner With
+              <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"> Zion Tech Group</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join our growing network of technology partners, solution providers, and strategic 
-              allies. Together, we're transforming industries and driving innovation worldwide.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join our growing ecosystem of technology partners, solution providers, and strategic allies. 
+              Together, we can deliver innovative solutions that transform businesses and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#become-partner"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
               >
                 Become a Partner
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
               >
-                Partner Support
-              </a>
+                Partner Inquiry
+              </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
         
         {/* Background Elements */}
@@ -533,19 +587,19 @@ export default function Partners() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Apply Now
                   <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
-                <a
-                  href="/contact"
+                </Link>
+                <Link
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
                 >
                   Schedule Consultation
-                </a>
+                </Link>
               </div>
             </motion.div>
           </div>
