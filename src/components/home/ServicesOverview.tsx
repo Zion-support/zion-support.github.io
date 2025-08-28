@@ -1,7 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Sparkles } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Service {
   category: string;
@@ -59,7 +59,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
               {/* Service icon with enhanced styling */}
               <div className={`relative w-20 h-20 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl group-hover:shadow-zion-cyan/30`}>
-                <service.icon className="w-10 h-10 text-white" aria-hidden="true" />
+                {React.createElement(service.icon, { className: "w-10 h-10 text-white", "aria-hidden": "true" })}
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
               </div>

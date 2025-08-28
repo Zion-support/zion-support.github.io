@@ -1,88 +1,26 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Globe, 
-  Lock, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Monitor,
-  Server,
-  Code,
-  Palette,
-  Target,
-  Rocket,
-  Star,
+import {
+  Award,
+  Brain,
   CheckCircle,
-  ArrowRight,
-  Phone,
+  Clock,
+  Cloud,
+  ExternalLink,
   Mail,
   MapPin,
-  ExternalLink,
+  Phone,
+  Rocket,
   Search,
-  Clock,
-  DollarSign,
-  Award,
-  Lightbulb,
-  BarChart,
-  PieChart,
-  Activity,
-  Eye,
-  Heart,
-  MessageCircle,
-  Settings,
-  Wifi,
-  HardDrive,
-  Layers,
-  GitBranch,
-  Zap as ZapIcon,
+  Server,
+  Shield,
   Sparkles,
-  Infinity,
-  ShieldCheck,
-  Globe2,
-  Smartphone as SmartphoneIcon,
-  Monitor as MonitorIcon,
-  Server as ServerIcon,
-  Code as CodeIcon,
-  Palette as PaletteIcon,
-  Target as TargetIcon,
-  Rocket as RocketIcon,
-  Star as StarIcon,
-  CheckCircle as CheckCircleIcon,
-  ArrowRight as ArrowRightIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon,
-  ExternalLink as ExternalLinkIcon,
-  Search as SearchIcon,
-  Clock as ClockIcon,
-  DollarSign as DollarSignIcon,
-  Award as AwardIcon,
-  Lightbulb as LightbulbIcon,
-  BarChart as BarChartIcon,
-  PieChart as PieChartIcon,
-  Activity as ActivityIcon,
-  Eye as EyeIcon,
-  Heart as HeartIcon,
-  MessageCircle as MessageCircleIcon,
-  Settings as SettingsIcon,
-  Wifi as WifiIcon,
-  HardDrive as HardDriveIcon,
-  Layers as LayersIcon,
-  GitBranch as GitBranchIcon
+  TrendingUp
 } from 'lucide-react';
+import React, { useState } from 'react';
 import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
 import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
 import { comprehensivePricingGuide2028 } from '../data/comprehensivePricingGuide2028';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
 
 const ComprehensiveServicesLanding2028: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -243,7 +181,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                     : 'bg-white/10 text-gray-300 hover:bg-white/20'
                 }`}
               >
-                <category.icon className="w-5 h-5" />
+                {React.createElement(category.icon, { className: "w-5 h-5" })}
                 <span className="font-medium">{category.name}</span>
                 <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                   {category.services.length}
@@ -467,7 +405,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                 className="text-center"
               >
                 <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
-                  <feature.icon className="w-10 h-10 text-white" />
+                  {React.createElement(feature.icon, { className: "w-10 h-10 text-white" })}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 console.log('🔗 Starting continuous link checker automation...');
 
@@ -73,10 +73,8 @@ async function checkLinks() {
       });
     }
     
-    if (hasIssues) {
-      console.log('⚠️  Link check completed with issues found');
-    } else {
-      console.log('✅ Link check completed successfully - no issues found');
+    if (!hasIssues) {
+      console.log('✅ No broken references found');
     }
     
     // Generate report

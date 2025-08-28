@@ -160,7 +160,7 @@ export function FeatureCTAs() {
                 className="group bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300`}>
-                  <item.icon className="w-8 h-8 text-white"/>
+                  {React.createElement(item.icon, { className: "w-8 h-8 text-white" })}
                 </div>
                 
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">

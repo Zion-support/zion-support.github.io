@@ -33,12 +33,8 @@ module.exports = {
       env: {
         NODE_ENV: 'production'
       }
-    }
-  ],
+    },
 
-  // Automation processes to replace Netlify functions and GitHub Actions
-  // All automations run autonomously and continuously with intelligent intervals
-  automation: [
     // Continuous link checker - runs every 30 minutes
     {
       name: 'link-checker',
