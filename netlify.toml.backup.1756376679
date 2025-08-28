@@ -3,8 +3,13 @@
 # No Next.js plugins or configurations are needed
 
 [build]
+<<<<<<< HEAD
+  # Use npm for dependency management and Vite builds to dist/
+  command = "npm ci && npm run build"
+=======
   # Use `yarn install` for deterministic installs, Vite builds to dist/
   command = "corepack disable && npm i -g yarn@1.22.22 && yarn cache clean && yarn install --frozen-lockfile && yarn build"
+>>>>>>> origin/cursor/build-with-yarn-dependency-error-25bd
   publish = "dist"
   # Force static site build (not Next.js)
   functions = "netlify/functions"
