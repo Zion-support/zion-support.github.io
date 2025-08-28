@@ -1,11 +1,46 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { DollarSign, Check, Star, Zap, Shield, Users, Building, Rocket, ArrowRight, Calendar, Clock, Target, Award, Globe, Cpu, Database, Server, Lock } from 'lucide-react';
+import { 
+  Check, 
+  Star, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Users, 
+  ArrowRight,
+  Crown,
+  Sparkles,
+  Flame,
+  Infinity,
+  Target,
+  Award,
+  Code,
+  Server,
+  Database,
+  Network,
+  Lock,
+  Globe,
+  Rocket,
+  Heart,
+  Scale,
+  Leaf,
+  TrendingUp,
+  DollarSign,
+  Calendar,
+  Clock,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Building
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Pricing() {
-  const [billingCycle, setBillingCycle] = useState('monthly');
-  const [selectedPlan, setSelectedPlan] = useState('professional');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
+  const [selectedPlan, setSelectedPlan] = useState<string>('pro');
 
   const pricingPlans = [
     {
@@ -157,6 +192,29 @@ export default function Pricing() {
 
   const savings = billingCycle === 'annual' ? 0.17 : 0; // 17% savings for annual
 
+  const benefits = [
+    {
+      title: 'Transparent Pricing',
+      description: 'No hidden fees or surprise charges',
+      icon: Shield
+    },
+    {
+      title: 'Flexible Plans',
+      description: 'Scale up or down as your business grows',
+      icon: TrendingUp
+    },
+    {
+      title: 'Custom Solutions',
+      description: 'Tailored packages for unique requirements',
+      icon: Target
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock assistance when you need it',
+      icon: Users
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -209,6 +267,12 @@ export default function Pricing() {
             </div>
           </div>
         </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
       </section>
 
       {/* Pricing Plans */}
@@ -225,12 +289,16 @@ export default function Pricing() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative p-8 rounded-2xl transition-all duration-300 hover:scale-105 ${
+              <motion.div
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative p-8 rounded-2xl border transition-all duration-300 hover:scale-105 ${
                   plan.popular
-                    ? 'bg-slate-800 border-2 border-indigo-500 shadow-2xl shadow-indigo-500/20'
-                    : 'bg-slate-800/50 border border-slate-700/50'
+                    ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-slate-700/50 ring-2 ring-cyan-400/20'
+                    : 'border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50'
                 }`}
               >
                 {plan.popular && (
@@ -288,7 +356,7 @@ export default function Pricing() {
                 >
                   {plan.cta}
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -443,32 +511,130 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Why Choose Our Pricing?
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              We believe in fair, transparent pricing that provides real value to your business.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
       <section className="py-20">
         <div className="container-responsive">
-          <div className="bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Get answers to common questions about our pricing and services.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {[
+              {
+                question: 'Can I change my plan at any time?',
+                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
+              },
+              {
+                question: 'Do you offer custom pricing for enterprise clients?',
+                answer: 'Absolutely! We work with enterprise clients to create custom pricing plans that meet their specific needs and requirements.'
+              },
+              {
+                question: 'What payment methods do you accept?',
+                answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.'
+              },
+              {
+                question: 'Is there a setup fee?',
+                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time setup costs depending on complexity.'
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 rounded-xl border border-slate-700/50 bg-slate-800/30"
+              >
+                <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
+                <p className="text-gray-400">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Contact our team to discuss your specific needs and get a personalized quote. 
-              We'll help you choose the right solution for your business.
+              Choose the perfect plan for your business or contact us for a custom solution. 
+              Our team is here to help you make the right choice.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/request-quote"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                Get Custom Quote
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
+                Get Your Quote
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
               >
-                Schedule Consultation
-              </Link>
+                Talk to Sales
+              </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

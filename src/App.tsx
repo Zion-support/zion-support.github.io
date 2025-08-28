@@ -89,15 +89,15 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
-                                       <Route path="/faq" element={<FAQ />} />
-                       <Route path="/docs" element={<Documentation />} /> {/* Added */}
-                       <Route path="/careers" element={<Careers />} />
-                                              <Route path="/privacy" element={<Privacy />} />
-                       <Route path="/terms" element={<Terms />} />
-                       <Route path="/cookies" element={<Cookies />} />
-                                              <Route path="/partners" element={<Partners />} /> {/* Added */}
-                       <Route path="/pricing" element={<Pricing />} /> {/* Added */}
-                       <Route path="/services" element={<Services />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/docs" element={<Documentation />} /> {/* Added */}
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/cookies" element={<Cookies />} />
+                <Route path="/partners" element={<Partners />} /> {/* Added */}
+                <Route path="/pricing" element={<Pricing />} /> {/* Added */}
+                <Route path="/services" element={<Services />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
@@ -111,20 +111,19 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
-                
+
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                
+
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>
           </main>
-          
           <Footer />
           <ChatAssistant />
           <PerformanceOptimizer />

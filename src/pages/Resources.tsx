@@ -1,6 +1,58 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
-import { BookOpen, Target, FileText, Users, Code, HelpCircle, ArrowRight, Calendar, Download, Play, ExternalLink, Star, Clock, User, Tag } from 'lucide-react';
+import { 
+  BookOpen, 
+  Target, 
+  FileText, 
+  Users, 
+  Code, 
+  HelpCircle, 
+  ArrowRight, 
+  Calendar, 
+  Download, 
+  Play, 
+  ExternalLink, 
+  Star, 
+  Clock, 
+  User, 
+  Tag,
+  TrendingUp,
+  Brain,
+  Shield,
+  Search,
+  Filter,
+  Bookmark,
+  Share2,
+  Eye,
+  Heart,
+  MessageCircle,
+  Zap,
+  Globe,
+  Rocket,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Award,
+  BarChart3,
+  Leaf,
+  Building,
+  Cloud,
+  Server,
+  Target as TargetIcon,
+  Users as UsersIcon,
+  Code as CodeIcon,
+  HelpCircle as HelpCircleIcon,
+  Calendar as CalendarIcon,
+  Download as DownloadIcon,
+  Play as PlayIcon,
+  ExternalLink as ExternalLinkIcon,
+  Star as StarIcon,
+  Clock as ClockIcon,
+  User as UserIcon,
+  Tag as TagIcon
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Resources() {
@@ -101,94 +153,131 @@ export default function Resources() {
       color: 'from-orange-500 to-red-500',
       items: [
         {
-          title: 'AI Implementation Strategies for SMBs',
-          excerpt: 'Learn practical approaches to implementing AI solutions in small and medium businesses.',
-          host: 'Dr. Emily Johnson',
-          date: '2024-02-15',
+          title: 'AI Strategy Implementation',
+          excerpt: 'Step-by-step guide to implementing AI strategies in your organization.',
+          presenter: 'Dr. Sarah Chen',
+          date: '2024-01-25',
           duration: '60 minutes',
-          tags: ['AI', 'SMB', 'Implementation']
+          tags: ['AI Strategy', 'Implementation', 'Leadership']
         },
         {
-          title: 'Future of Cloud Computing and DevOps',
-          excerpt: 'Explore emerging trends in cloud infrastructure and development operations.',
-          host: 'Cloud Architecture Team',
-          date: '2024-02-20',
-          duration: '90 minutes',
-          tags: ['Cloud', 'DevOps', 'Infrastructure']
+          title: 'Cloud Migration Best Practices',
+          excerpt: 'Learn the essential steps for successful cloud migration projects.',
+          presenter: 'Mike Rodriguez',
+          date: '2024-01-30',
+          duration: '45 minutes',
+          tags: ['Cloud Migration', 'Best Practices', 'Infrastructure']
         }
       ]
     },
     {
       name: 'Documentation',
       icon: Code,
-      description: 'Technical guides and APIs',
+      description: 'Technical guides and API references',
       featured: false,
       color: 'from-indigo-500 to-purple-500',
       items: [
         {
-          title: 'API Reference Guide',
-          excerpt: 'Complete API documentation for all Zion Tech Group services and platforms.',
-          version: 'v2.1.0',
+          title: 'API Integration Guide',
+          excerpt: 'Complete guide to integrating with our AI services and platforms.',
+          version: 'v2.1',
           lastUpdated: '2024-01-20',
-          tags: ['API', 'Documentation', 'Technical']
+          tags: ['API', 'Integration', 'Technical']
         },
         {
-          title: 'Integration Best Practices',
-          excerpt: 'Guidelines for integrating our services with your existing systems and workflows.',
-          version: 'v1.5.0',
-          lastUpdated: '2024-01-15',
-          tags: ['Integration', 'Best Practices', 'Technical']
+          title: 'SDK Documentation',
+          excerpt: 'Comprehensive documentation for our software development kits.',
+          version: 'v1.5',
+          lastUpdated: '2024-01-18',
+          tags: ['SDK', 'Development', 'Technical']
         }
       ]
     },
     {
-      name: 'FAQ & Support',
+      name: 'Support & Help',
       icon: HelpCircle,
-      description: 'Get help and answers',
+      description: 'Get help when you need it',
       featured: false,
-      color: 'from-gray-500 to-slate-500',
+      color: 'from-yellow-500 to-orange-500',
       items: [
         {
-          title: 'Getting Started Guide',
-          excerpt: 'Step-by-step guide to get up and running with our services quickly.',
-          category: 'Onboarding',
-          tags: ['Getting Started', 'Onboarding', 'Guide']
+          title: 'Knowledge Base',
+          excerpt: 'Searchable database of common questions and solutions.',
+          articles: '500+ articles',
+          lastUpdated: '2024-01-22',
+          tags: ['Support', 'Help', 'Knowledge Base']
         },
         {
-          title: 'Common Issues & Solutions',
-          excerpt: 'Troubleshooting guide for frequently encountered problems and their solutions.',
-          category: 'Troubleshooting',
-          tags: ['Troubleshooting', 'Support', 'Solutions']
+          title: 'Contact Support Team',
+          excerpt: 'Get in touch with our expert support team for personalized assistance.',
+          responseTime: '< 2 hours',
+          availability: '24/7',
+          tags: ['Support', 'Contact', 'Help']
         }
       ]
     }
   ];
 
+  const featuredResources = [
+    {
+      title: 'Pricing Guide 2030',
+      description: 'Comprehensive pricing for all our AI and technology services',
+      href: '/pricing-guide-2030',
+      type: 'Guide',
+      featured: true,
+      icon: TrendingUp
+    },
+    {
+      title: 'AI Services Overview',
+      description: 'Complete guide to our AI-powered technology solutions',
+      href: '/services',
+      type: 'Overview',
+      featured: true,
+      icon: Brain
+    },
+    {
+      title: 'Security & Compliance',
+      description: 'Enterprise security standards and compliance frameworks',
+      href: '/security',
+      type: 'Framework',
+      featured: true,
+      icon: Shield
+    }
+  ];
+
   const upcomingEvents = [
     {
-      title: 'AI Strategy Workshop',
-      date: '2024-02-25',
+      title: 'AI Technology Summit 2024',
+      date: 'December 15, 2024',
       time: '10:00 AM EST',
-      description: 'Interactive workshop on developing AI strategies for your organization.',
-      type: 'Workshop',
-      spots: '25 remaining'
+      type: 'Virtual Event',
+      href: '/events/ai-summit-2024'
     },
     {
-      title: 'Cybersecurity Roundtable',
-      date: '2024-03-01',
+      title: 'Cybersecurity Workshop',
+      date: 'December 20, 2024',
       time: '2:00 PM EST',
-      description: 'Expert discussion on emerging cybersecurity threats and defense strategies.',
-      type: 'Roundtable',
-      spots: '50 remaining'
+      type: 'Workshop',
+      href: '/events/cybersecurity-workshop'
     },
     {
-      title: 'Digital Transformation Summit',
-      date: '2024-03-15',
-      time: '9:00 AM EST',
-      description: 'Annual summit bringing together industry leaders to discuss digital transformation trends.',
-      type: 'Summit',
-      spots: '100 remaining'
+      title: 'Cloud Migration Webinar',
+      date: 'January 10, 2025',
+      time: '11:00 AM EST',
+      type: 'Webinar',
+      href: '/events/cloud-migration-webinar'
     }
+  ];
+
+  const quickLinks = [
+    { name: 'Documentation', href: '/docs', type: 'Resource' },
+    { name: 'FAQ', href: '/faq', type: 'Support' },
+    { name: 'Case Studies', href: '/case-studies', type: 'Resource' },
+    { name: 'White Papers', href: '/white-papers', type: 'Resource' },
+    { name: 'Webinars', href: '/webinars', type: 'Resource' },
+    { name: 'Blog', href: '/blog', type: 'Resource' },
+    { name: 'Contact Support Team', href: '/contact', type: 'Support' },
+    { name: 'Knowledge Base', href: '/knowledge-base', type: 'Resource' }
   ];
 
   return (
@@ -203,148 +292,270 @@ export default function Resources() {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10"></div>
         <div className="container-responsive relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full">
+                <BookOpen className="w-16 h-16 text-purple-400" />
+              </div>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Knowledge
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent"> Resources</span>
+              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-orange-500 bg-clip-text text-transparent"> Hub</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Access our comprehensive library of insights, case studies, technical guides, and learning resources 
-              to accelerate your technology journey and stay ahead of industry trends.
+              Access our comprehensive library of resources, insights, and tools to accelerate your 
+              technology journey and stay ahead of the curve.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/blog"
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-              >
-                Explore Resources
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
-              >
-                Request Custom Content
-              </Link>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search resources, articles, guides..."
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50"
+                />
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                  Search
+                </button>
+              </div>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              {[
+                { label: 'Resources', value: '500+', icon: BookOpen },
+                { label: 'Case Studies', value: '50+', icon: Target },
+                { label: 'White Papers', value: '25+', icon: FileText },
+                { label: 'Webinars', value: '100+', icon: Users }
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <stat.icon className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+        </div>
       </section>
 
-      {/* Resources Grid */}
+      {/* Featured Resources */}
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Resource Library
+              Featured Resources
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From industry insights to technical documentation, find everything you need to succeed with 
-              modern technology solutions.
+              Start with these essential resources to get the most value from our platform
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredResources.map((resource, index) => (
+              <motion.div
+                key={resource.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+                  <resource.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                  {resource.title}
+                </h3>
+                <p className="text-gray-300 mb-6">{resource.description}</p>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-purple-400 font-medium">{resource.type}</span>
+                  <Link
+                    to={resource.href}
+                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors"
+                  >
+                    View Resource
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resource Categories */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Browse by Category
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our resources organized by topic and type to find exactly what you need
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resources.map((resource, index) => (
-              <div
-                key={resource.name}
-                className={`group relative p-8 rounded-2xl transition-all duration-300 hover:scale-105 ${
-                  resource.featured 
-                    ? 'bg-gradient-to-br from-slate-800 to-slate-700 ring-2 ring-purple-400/50' 
-                    : 'bg-slate-800/50 hover:bg-slate-800'
-                }`}
+            {resources.map((category, index) => (
+              <motion.div
+                key={category.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 hover:border-purple-500/50"
               >
-                {resource.featured && (
-                  <div className="absolute -top-3 -right-3">
-                    <div className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                      <Star className="w-4 h-4" />
+                {category.featured && (
+                  <div className="absolute -top-3 left-6">
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium">
                       Featured
                     </div>
                   </div>
                 )}
                 
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${resource.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <resource.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-6`}>
+                  <category.icon className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-3">{resource.name}</h3>
-                <p className="text-gray-300 mb-6">{resource.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                  {category.name}
+                </h3>
+                <p className="text-gray-300 mb-6">{category.description}</p>
                 
-                <div className="space-y-4 mb-6">
-                  {resource.items.slice(0, 2).map((item, idx) => (
-                    <div key={idx} className="border-l-2 border-slate-600 pl-4">
-                      <h4 className="font-semibold text-white text-sm mb-1">{item.title}</h4>
-                      <p className="text-xs text-gray-400 mb-2">{item.excerpt}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {item.tags?.slice(0, 2).map((tag, tagIdx) => (
-                          <span key={tagIdx} className="text-xs bg-slate-700 text-gray-300 px-2 py-1 rounded">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
+                <div className="space-y-3 mb-6">
+                  {category.items.slice(0, 2).map((item, idx) => (
+                    <div key={idx} className="p-3 rounded-lg bg-slate-700/50 hover:bg-slate-700 transition-colors">
+                      <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>
+                      <p className="text-xs text-gray-400">{item.excerpt}</p>
                     </div>
                   ))}
                 </div>
-
+                
                 <Link
-                  to={resource.name === 'Blog & Insights' ? '/blog' : 
-                      resource.name === 'Case Studies' ? '/case-studies' : 
-                      resource.name === 'White Papers' ? '/white-papers' :
-                      resource.name === 'Webinars' ? '/webinars' :
-                      resource.name === 'Documentation' ? '/docs' : '/faq'}
+                  to={`/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors"
                 >
-                  View All {resource.name}
+                  View All {category.name}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Upcoming Events
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join our live events, workshops, and webinars to learn from industry experts and network with peers.
+              Join our live events and webinars to learn from industry experts
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {upcomingEvents.map((event, index) => (
-              <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
-                <div className="flex items-center justify-between mb-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    event.type === 'Workshop' ? 'bg-blue-500/20 text-blue-400' :
-                    event.type === 'Roundtable' ? 'bg-green-500/20 text-green-400' :
-                    'bg-purple-500/20 text-purple-400'
-                  }`}>
-                    {event.type}
-                  </span>
-                  <span className="text-sm text-gray-400">{event.spots}</span>
+              <motion.div
+                key={event.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
+                  <Calendar className="w-8 h-8 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-3">{event.title}</h3>
-                <p className="text-gray-300 mb-4">{event.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
+                  {event.title}
+                </h3>
                 
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center gap-2 text-gray-300">
                     <Calendar className="w-4 h-4" />
-                    {event.date}
+                    <span className="text-sm">{event.date}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <div className="flex items-center gap-2 text-gray-300">
                     <Clock className="w-4 h-4" />
-                    {event.time}
+                    <span className="text-sm">{event.time}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-300">
+                    <Tag className="w-4 h-4" />
+                    <span className="text-sm">{event.type}</span>
                   </div>
                 </div>
-
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
+                
+                <Link
+                  to={event.href}
+                  className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-medium transition-colors"
+                >
                   Register Now
-                </button>
-              </div>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Quick Access
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Find what you need quickly with these direct links to our most popular resources
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {quickLinks.map((link, index) => (
+              <motion.div
+                key={link.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Link
+                  to={link.href}
+                  className="block p-6 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 hover:border-purple-500/50 text-center group"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-300">
+                    {link.type === 'Resource' && <BookOpen className="w-6 h-6 text-purple-400" />}
+                    {link.type === 'Support' && <HelpCircle className="w-6 h-6 text-pink-400" />}
+                  </div>
+                  <h3 className="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">
+                    {link.name}
+                  </h3>
+                  <p className="text-xs text-gray-400 mt-1">{link.type}</p>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -353,59 +564,72 @@ export default function Resources() {
       {/* Newsletter Signup */}
       <section className="py-20">
         <div className="container-responsive">
-          <div className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10 rounded-3xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Updated with Latest Insights
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Subscribe to our newsletter and get the latest industry insights, case studies, and technology updates 
-              delivered directly to your inbox.
-            </p>
-            <div className="max-w-md mx-auto">
-              <div className="flex gap-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Stay Updated
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Get the latest resources, insights, and updates delivered directly to your inbox. 
+                Never miss out on valuable content that can help your business grow.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="flex-1 px-6 py-4 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50"
                 />
-                <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300">
+                <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
                   Subscribe
                 </button>
               </div>
-              <p className="text-sm text-gray-400 mt-3">
-                No spam, unsubscribe at any time. We respect your privacy.
+              
+              <p className="text-sm text-gray-400 mt-4">
+                By subscribing, you agree to our privacy policy and terms of service.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Need Specific Resources?
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Need Help Finding Resources?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Can't find what you're looking for? Our team can create custom content, case studies, 
-              or technical documentation tailored to your specific needs.
+              Our team is here to help you find the right resources for your specific needs. 
+              Get personalized recommendations and expert guidance.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
-                Request Custom Content
+                Contact Our Team
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                to="/faq"
-                className="px-8 py-4 border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
+                to="/docs"
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
               >
-                Browse FAQ
+                Browse Documentation
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
