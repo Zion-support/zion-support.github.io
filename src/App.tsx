@@ -158,6 +158,10 @@ const AIContentGenerator = React.lazy(() => import('./pages/services/ai-content-
 const AICustomerSupport = React.lazy(() => import('./pages/services/ai-customer-support'));
 const Cybersecurity = React.lazy(() => import('./pages/services/cybersecurity'));
 
+// Revolutionary 2029 Services Showcase
+const RevolutionaryServicesShowcase2029 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2029'));
+const ComprehensivePricingGuide2029 = React.lazy(() => import('./pages/ComprehensivePricingGuide2029'));
+
 // Additional new innovative AI services
 const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
@@ -489,6 +493,12 @@ function App() {
               <Route path="/services-2029" element={<InnovativeServicesShowcase2029 />} />
               <Route path="/comprehensive-pricing-2029" element={<ComprehensivePricing2029 />} />
               <Route path="/pricing-2029" element={<ComprehensivePricing2029 />} />
+              
+              {/* Revolutionary 2029 Services Showcase */}
+              <Route path="/revolutionary-services-2029" element={<RevolutionaryServicesShowcase2029 />} />
+              <Route path="/revolutionary-2029" element={<RevolutionaryServicesShowcase2029 />} />
+              <Route path="/comprehensive-pricing-2029" element={<ComprehensivePricingGuide2029 />} />
+              <Route path="/pricing-2029" element={<ComprehensivePricingGuide2029 />} />
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
