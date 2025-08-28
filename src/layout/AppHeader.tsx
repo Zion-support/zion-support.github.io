@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, MessageSquare, Truck, RefreshCw, GraduationCap, Play } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -45,32 +45,72 @@ export function AppHeader() {
 
   const services = [
     { 
-      name: 'AI & Analytics', 
-      href: '/services', 
+      name: 'AI & Business Intelligence', 
+      href: '/services#ai-business-intelligence', 
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
       color: 'from-purple-500 to-cyan-500'
     },
     { 
-      name: 'AI & Legal Tech', 
-      href: '/services', 
-      icon: Scale, 
-      description: 'Document Analysis & Compliance',
+      name: 'AI & Content Creation', 
+      href: '/services#ai-content', 
+      icon: FileText, 
+      description: 'AI Writing & Content Generation',
       featured: true,
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI & Customer Support', 
+      href: '/services#ai-customer-support', 
+      icon: MessageSquare, 
+      description: 'Automated Support & Chatbots',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI & HR & Recruitment', 
+      href: '/services#ai-hr', 
+      icon: Users, 
+      description: 'AI-Powered HR Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI & Financial Operations', 
+      href: '/services#fintech', 
+      icon: DollarSign, 
+      description: 'Financial Technology & Automation',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI & Supply Chain', 
+      href: '/services#ai-operations', 
+      icon: Truck, 
+      description: 'Supply Chain Optimization',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
     },
     { 
       name: 'AI & Healthcare', 
-      href: '/services', 
+      href: '/services#ai-healthcare', 
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
       color: 'from-red-500 to-pink-500'
     },
     { 
+      name: 'AI & Legal Tech', 
+      href: '/services#ai-legal-tech', 
+      icon: Scale, 
+      description: 'Legal Technology & Compliance',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
       name: 'AI & Research', 
-      href: '/services', 
+      href: '/services#ai-research', 
       icon: Eye, 
       description: 'Scientific Research & Discovery',
       featured: true,
@@ -78,7 +118,7 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Green Tech', 
-      href: '/services', 
+      href: '/services#ai-green-tech', 
       icon: Leaf, 
       description: 'Sustainability Solutions',
       featured: true,
@@ -86,55 +126,79 @@ export function AppHeader() {
     },
     { 
       name: 'AI & Metaverse', 
-      href: '/services', 
+      href: '/services#ai-metaverse', 
       icon: Globe, 
       description: 'Virtual Reality & Gaming',
       featured: true,
       color: 'from-purple-500 to-indigo-500'
     },
     { 
-      name: 'AI & Blockchain', 
-      href: '/services', 
-      icon: Lock, 
-      description: 'DeFi & Smart Contracts',
-      featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Edge Computing', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
       name: 'AI & Space Tech', 
-      href: '/services', 
+      href: '/services#ai-space-tech', 
       icon: Rocket, 
       description: 'Satellite Operations & Missions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
     },
     { 
+      name: 'AI & Blockchain & Web3', 
+      href: '/services#blockchain-web3', 
+      icon: Lock, 
+      description: 'DeFi & Smart Contracts',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'AI & Edge Computing', 
+      href: '/services#iot-edge-computing', 
+      icon: Cpu, 
+      description: 'IoT & Real-time Processing',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'AI & Digital Twin', 
+      href: '/services#digital-twin', 
+      icon: RefreshCw, 
+      description: 'Digital Twin & Simulation',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI & Education', 
+      href: '/services#ai-education', 
+      icon: GraduationCap, 
+      description: 'Personalized Learning & AI Tutoring',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI & Entertainment', 
+      href: '/services#ai-entertainment', 
+      icon: Play, 
+      description: 'Content Recommendation & Interactive Storytelling',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'AI & Development', 
+      href: '/services#ai-development', 
+      icon: Code, 
+      description: 'AI Code Generation & Testing',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
       name: 'Cybersecurity', 
-      href: '/services', 
+      href: '/services#cybersecurity', 
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
       color: 'from-green-500 to-blue-500'
     },
     { 
-      name: 'Cloud Services', 
-      href: '/services', 
+      name: 'Cloud & DevOps', 
+      href: '/services#cloud-devops', 
       icon: Cloud, 
       description: 'DevOps & Infrastructure',
       featured: true,
@@ -147,30 +211,6 @@ export function AppHeader() {
       description: 'AI automations with transparent pricing',
       featured: true,
       color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'AI & FinTech', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'Financial Technology & Risk Management',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
-    },
-    { 
-      name: 'AI & Operations', 
-      href: '/services', 
-      icon: Settings, 
-      description: 'Supply Chain & Process Optimization',
-      featured: true,
-      color: 'from-gray-500 to-slate-500'
-    },
-    { 
-      name: 'AI & Development', 
-      href: '/services', 
-      icon: Code, 
-      description: 'Quality Assurance & Testing',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
     }
   ];
 

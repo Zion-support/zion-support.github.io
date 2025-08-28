@@ -96,79 +96,79 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: true,
       links: [
         { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
+        { name: 'AI Content Creation Studio', href: '/services#ai-content', featured: true },
+        { name: 'AI Customer Support Automation', href: '/services#ai-customer-support', featured: true },
+        { name: 'AI HR & Recruitment Platform', href: '/services#ai-hr', featured: true },
+        { name: 'AI Financial Operations', href: '/services#fintech', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services#ai-operations', featured: true },
         { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
         { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
-        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
-        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
-        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
-        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
-        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
-        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
-        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true }
+        { name: 'AI Research & Development', href: '/services#ai-research', featured: true },
+        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true }
       ]
     },
     {
-      title: 'Core Services',
+      title: 'Emerging Technologies',
       featured: true,
       links: [
+        { name: 'AI Metaverse Development', href: '/services#ai-metaverse', featured: true },
+        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
+        { name: 'AI Blockchain & Web3', href: '/services#blockchain-web3', featured: true },
+        { name: 'AI Edge Computing', href: '/services#iot-edge-computing', featured: true },
+        { name: 'AI Digital Twin Platform', href: '/services#digital-twin', featured: true },
+        { name: 'AI Education Platform', href: '/services#ai-education', featured: true },
+        { name: 'AI Entertainment Platform', href: '/services#ai-entertainment', featured: true },
+        { name: 'AI Development & Testing', href: '/services#ai-development', featured: true },
         { name: 'Cybersecurity Solutions', href: '/services#cybersecurity', featured: true },
-        { name: 'Cloud & DevOps', href: '/services#cloud-devops', featured: true },
-        { name: 'Data Analytics', href: '/services#data-analytics', featured: true },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure', featured: true },
-        { name: 'Digital Twin Solutions', href: '/services#digital-twin', featured: true },
-        { name: 'IoT & Edge Computing', href: '/services#iot-edge', featured: true },
-        { name: 'Blockchain & Web3', href: '/services#blockchain', featured: true },
-        { name: 'Quantum Computing', href: '/services#quantum-computing', featured: true },
-        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
-        { name: 'Enterprise Solutions', href: '/solutions', featured: true }
+        { name: 'Cloud & DevOps Services', href: '/services#cloud-devops', featured: true }
       ]
     },
     {
-      title: 'Industry Solutions',
-      featured: false,
+      title: 'Micro SaaS Products',
+      featured: true,
       links: [
-        { name: 'Healthcare Solutions', href: '/solutions#healthcare', featured: false },
-        { name: 'Financial Services', href: '/solutions#financial', featured: false },
-        { name: 'Legal Services', href: '/solutions#legal', featured: false },
-        { name: 'Research & Academia', href: '/solutions#research', featured: false },
-        { name: 'Manufacturing', href: '/solutions#manufacturing', featured: false },
-        { name: 'Retail & E-commerce', href: '/solutions#retail', featured: false },
-        { name: 'Government & Public Sector', href: '/solutions#government', featured: false },
-        { name: 'Energy & Sustainability', href: '/solutions#energy', featured: false },
-        { name: 'Space & Aerospace', href: '/solutions#space', featured: false },
-        { name: 'Education & Training', href: '/solutions#education', featured: false }
+        { name: 'AI Marketing Automation', href: '/services/micro-saas#ai-marketing', featured: true },
+        { name: 'AI SEO Optimization', href: '/services/micro-saas#ai-seo', featured: true },
+        { name: 'AI Project Management', href: '/services/micro-saas#ai-project-management', featured: true },
+        { name: 'AI Workflow Automation', href: '/services/micro-saas#ai-workflow', featured: true },
+        { name: 'AI Customer Support Tools', href: '/services/micro-saas#ai-support', featured: true },
+        { name: 'AI Content Generation', href: '/services/micro-saas#ai-content', featured: true },
+        { name: 'AI Analytics Dashboard', href: '/services/micro-saas#ai-analytics', featured: true },
+        { name: 'AI HR Management Tools', href: '/services/micro-saas#ai-hr', featured: true },
+        { name: 'AI Financial Tools', href: '/services/micro-saas#ai-financial', featured: true },
+        { name: 'AI Legal Tech Tools', href: '/services/micro-saas#ai-legal', featured: true }
       ]
     },
     {
-      title: 'Resources & Support',
+      title: 'Resources & Insights',
       featured: false,
       links: [
-        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
-        { name: 'Blog & Insights', href: '/blog', featured: false },
-        { name: 'FAQ & Help Center', href: '/faq', featured: false },
+        { name: 'Blog & Insights', href: '/blog', featured: true },
+        { name: 'Case Studies', href: '/case-studies', featured: true },
+        { name: 'White Papers', href: '/white-papers', featured: false },
+        { name: 'Webinars', href: '/webinars', featured: false },
         { name: 'Documentation', href: '/docs', featured: false },
-        { name: 'API Reference', href: '/api-docs', featured: false },
-        { name: 'Developer Portal', href: '/developers', featured: false },
-        { name: 'Training & Certification', href: '/training', featured: false },
-        { name: 'Community Forum', href: '/community', featured: false },
-        { name: 'Success Stories', href: '/case-studies', featured: false },
-        { name: 'White Papers', href: '/whitepapers', featured: false }
+        { name: 'FAQ & Support', href: '/faq', featured: false },
+        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Pricing Guide 2027', href: '/pricing-guide-2027', featured: true },
+        { name: 'Request Quote', href: '/request-quote', featured: true },
+        { name: 'Contact Sales', href: '/contact', featured: true }
       ]
     },
     {
-      title: 'Company & Contact',
+      title: 'Company & Legal',
       featured: false,
       links: [
-        { name: 'About Zion Tech Group', href: '/about', featured: false },
+        { name: 'About Us', href: '/about', featured: true },
         { name: 'Our Team', href: '/about#team', featured: false },
         { name: 'Careers', href: '/careers', featured: false },
-        { name: 'Contact Us', href: '/contact', featured: true },
-        { name: 'Request Quote', href: '/request-quote', featured: true },
-        { name: 'Schedule Demo', href: '/schedule-demo', featured: false },
-        { name: 'Partnerships', href: '/partnerships', featured: false },
-        { name: 'Investor Relations', href: '/investors', featured: false },
-        { name: 'Press & Media', href: '/press', featured: false },
-        { name: 'Legal & Privacy', href: '/legal', featured: false }
+        { name: 'Partners', href: '/partners', featured: true },
+        { name: 'Privacy Policy', href: '/privacy', featured: true },
+        { name: 'Terms of Service', href: '/terms', featured: true },
+        { name: 'Cookie Policy', href: '/cookies', featured: true },
+        { name: 'GDPR Compliance', href: '/privacy#gdpr', featured: false },
+        { name: 'Security', href: '/security', featured: true },
+        { name: 'Sitemap', href: '/sitemap', featured: false }
       ]
     }
   ];

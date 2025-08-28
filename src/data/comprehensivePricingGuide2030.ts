@@ -953,6 +953,1145 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-hr"
     }
+  },
+
+  {
+    id: "ai-content-creation-studio-2030",
+    title: "AI Content Creation Studio 2030",
+    description: "Next-generation AI content creation platform with multi-modal generation, brand voice consistency, and real-time collaboration.",
+    category: "AI & Content",
+    pricing: [
+      {
+        name: "Starter",
+        price: 2999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Multi-modal content generation",
+          "Basic brand voice training",
+          "5 user collaboration seats",
+          "Standard templates library",
+          "Email support",
+          "Basic analytics"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 5999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Starter",
+          "Advanced brand voice customization",
+          "15 user collaboration seats",
+          "Custom template creation",
+          "Priority support",
+          "Advanced analytics & reporting",
+          "API access",
+          "Multi-language support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 9999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited user seats",
+          "Custom AI model training",
+          "White-label options",
+          "Dedicated account manager",
+          "Custom integrations",
+          "Advanced security features",
+          "SLA guarantees"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $2,500-5,000. Our solution provides 98% brand alignment vs. industry standard of 75-80%.",
+    roi: "400% within 4 months through increased content production and engagement.",
+    setupTime: "3-5 weeks with AI training and brand voice customization.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-content-studio"
+    }
+  },
+
+  {
+    id: "ai-customer-support-automation-2030",
+    title: "AI Customer Support Automation 2030",
+    description: "Intelligent customer support platform with sentiment analysis, multilingual support, and predictive issue resolution.",
+    category: "AI & Customer Support",
+    pricing: [
+      {
+        name: "Basic",
+        price: 3999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "AI chatbot with basic responses",
+          "Email support automation",
+          "5 support agent seats",
+          "Basic knowledge base",
+          "Email support",
+          "Standard reporting"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 6999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced sentiment analysis",
+          "15 support agent seats",
+          "Multilingual support (5 languages)",
+          "Predictive issue resolution",
+          "Priority support",
+          "Advanced analytics",
+          "API integrations"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 12999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited support agent seats",
+          "Custom AI model training",
+          "Advanced multilingual support",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $3,500-7,000. Our solution handles 85% of inquiries automatically vs. industry standard of 60-70%.",
+    roi: "550% within 6 months through reduced support costs and improved customer satisfaction.",
+    setupTime: "4-6 weeks with AI training and support workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-support-automation"
+    }
+  },
+
+  {
+    id: "ai-hr-recruitment-platform-2030",
+    title: "AI HR & Recruitment Platform 2030",
+    description: "Comprehensive HR platform with AI-powered candidate screening, skill assessment, and cultural fit analysis.",
+    category: "AI & HR",
+    pricing: [
+      {
+        name: "Starter",
+        price: 5999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "AI candidate screening",
+          "Basic skill assessment",
+          "5 recruiter seats",
+          "Standard job posting templates",
+          "Email support",
+          "Basic reporting"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 9999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Starter",
+          "Advanced skill assessment",
+          "15 recruiter seats",
+          "Cultural fit analysis",
+          "Advanced candidate matching",
+          "Priority support",
+          "Advanced analytics",
+          "ATS integrations"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 17999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited recruiter seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated account manager",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $5,000-10,000. Our solution reduces hiring time by 60% vs. industry standard of 30-40%.",
+    roi: "600% within 8 months through improved hiring efficiency and reduced turnover.",
+    setupTime: "5-7 weeks with AI training and HR workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-hr-platform"
+    }
+  },
+
+  {
+    id: "ai-financial-operations-platform-2030",
+    title: "AI Financial Operations Platform 2030",
+    description: "Intelligent financial operations platform with automated bookkeeping, expense management, and financial forecasting.",
+    category: "FinTech",
+    pricing: [
+      {
+        name: "Basic",
+        price: 7999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "AI-powered bookkeeping",
+          "Basic expense management",
+          "5 user seats",
+          "Standard financial reports",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 12999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced expense management",
+          "15 user seats",
+          "Financial forecasting",
+          "Advanced reporting",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-currency support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 22999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited user seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $6,500-12,000. Our solution reduces financial errors by 90% vs. industry standard of 70-80%.",
+    roi: "700% within 7 months through improved financial accuracy and operational efficiency.",
+    setupTime: "6-8 weeks with AI training and financial workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-financial-platform"
+    }
+  },
+
+  {
+    id: "ai-supply-chain-optimization-2030",
+    title: "AI Supply Chain Optimization 2030",
+    description: "Intelligent supply chain platform with demand forecasting, inventory optimization, and logistics automation.",
+    category: "AI & Operations",
+    pricing: [
+      {
+        name: "Starter",
+        price: 8999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic demand forecasting",
+          "Inventory optimization",
+          "5 user seats",
+          "Standard reporting",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 14999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Starter",
+          "Advanced demand forecasting",
+          "15 user seats",
+          "Logistics automation",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-warehouse support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 24999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited user seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $7,500-15,000. Our solution reduces supply chain costs by 35% vs. industry standard of 20-25%.",
+    roi: "650% within 9 months through improved supply chain efficiency and cost reduction.",
+    setupTime: "7-9 weeks with AI training and supply chain workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-supply-chain"
+    }
+  },
+
+  {
+    id: "ai-healthcare-diagnostics-platform-2030",
+    title: "AI Healthcare Diagnostics Platform 2030",
+    description: "Advanced healthcare diagnostics platform with medical image analysis, symptom assessment, and treatment recommendations.",
+    category: "AI & Healthcare",
+    pricing: [
+      {
+        name: "Basic",
+        price: 12999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic medical image analysis",
+          "Symptom assessment",
+          "5 healthcare provider seats",
+          "Standard diagnostic reports",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 19999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced medical image analysis",
+          "15 healthcare provider seats",
+          "Treatment recommendations",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-modality support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 34999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited healthcare provider seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "FDA compliance support"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $10,000-20,000. Our solution achieves 96% diagnostic accuracy vs. industry standard of 85-90%.",
+    roi: "800% within 12 months through improved diagnostic accuracy and patient outcomes.",
+    setupTime: "8-10 weeks with AI training and FDA compliance setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-healthcare-diagnostics"
+    }
+  },
+
+  {
+    id: "ai-legal-tech-platform-2030",
+    title: "AI Legal Tech Platform 2030",
+    description: "Comprehensive legal technology platform with contract analysis, legal research automation, and compliance monitoring.",
+    category: "AI & Legal Tech",
+    pricing: [
+      {
+        name: "Basic",
+        price: 9999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic contract analysis",
+          "Legal research automation",
+          "5 legal professional seats",
+          "Standard compliance monitoring",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 15999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced contract analysis",
+          "15 legal professional seats",
+          "Advanced compliance monitoring",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-jurisdiction support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 27999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited legal professional seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $8,000-16,000. Our solution reduces legal review time by 80% vs. industry standard of 50-60%.",
+    roi: "750% within 8 months through improved legal efficiency and reduced costs.",
+    setupTime: "6-8 weeks with AI training and legal workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-legal-tech"
+    }
+  },
+
+  {
+    id: "ai-research-development-platform-2030",
+    title: "AI Research & Development Platform 2030",
+    description: "Intelligent R&D platform with automated literature review, hypothesis generation, and experimental design optimization.",
+    category: "AI & Research",
+    pricing: [
+      {
+        name: "Basic",
+        price: 14999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic literature review automation",
+          "Hypothesis generation",
+          "5 researcher seats",
+          "Standard experimental design",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 22999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced literature review",
+          "15 researcher seats",
+          "Advanced experimental design",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-disciplinary support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 39999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited researcher seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $12,000-25,000. Our solution accelerates research by 300% vs. industry standard of 100-150%.",
+    roi: "900% within 15 months through accelerated research and improved outcomes.",
+    setupTime: "10-12 weeks with AI training and research workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-research-platform"
+    }
+  },
+
+  {
+    id: "ai-green-technology-platform-2030",
+    title: "AI Green Technology Platform 2030",
+    description: "Sustainable technology platform with energy optimization, carbon footprint tracking, and environmental impact assessment.",
+    category: "AI & Green Tech",
+    pricing: [
+      {
+        name: "Basic",
+        price: 7999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic energy optimization",
+          "Carbon footprint tracking",
+          "5 user seats",
+          "Standard environmental reports",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 12999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced energy optimization",
+          "15 user seats",
+          "Environmental impact assessment",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-site support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 22999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited user seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $6,500-13,000. Our solution reduces energy costs by 40% vs. industry standard of 25-30%.",
+    roi: "600% within 8 months through energy cost reduction and sustainability compliance.",
+    setupTime: "5-7 weeks with AI training and sustainability workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-green-tech"
+    }
+  },
+
+  {
+    id: "ai-metaverse-development-platform-2030",
+    title: "AI Metaverse Development Platform 2030",
+    description: "Next-generation metaverse development platform with AI-powered 3D modeling, virtual environment creation, and immersive experience design.",
+    category: "AI & Metaverse",
+    pricing: [
+      {
+        name: "Basic",
+        price: 11999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic 3D modeling tools",
+          "Virtual environment creation",
+          "5 developer seats",
+          "Standard immersive experiences",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 18999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced 3D modeling",
+          "15 developer seats",
+          "Advanced immersive experiences",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-platform support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 32999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited developer seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $10,000-20,000. Our solution reduces development time by 70% vs. industry standard of 40-50%.",
+    roi: "800% within 10 months through accelerated development and increased user engagement.",
+    setupTime: "8-10 weeks with AI training and metaverse development setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-metaverse-platform"
+    }
+  },
+
+  {
+    id: "ai-space-technology-platform-2030",
+    title: "AI Space Technology Platform 2030",
+    description: "Advanced space technology platform with satellite operations automation, mission planning optimization, and space data analytics.",
+    category: "AI & Space Tech",
+    pricing: [
+      {
+        name: "Basic",
+        price: 19999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic satellite operations",
+          "Mission planning tools",
+          "5 operator seats",
+          "Standard space analytics",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 29999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced satellite operations",
+          "15 operator seats",
+          "Advanced mission planning",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-satellite support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 49999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited operator seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $15,000-30,000. Our solution improves mission success rates by 85% vs. industry standard of 70-75%.",
+    roi: "1000% within 18 months through improved mission success and operational efficiency.",
+    setupTime: "12-16 weeks with AI training and space industry compliance setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-space-tech"
+    }
+  },
+
+  {
+    id: "ai-blockchain-web3-platform-2030",
+    title: "AI Blockchain & Web3 Platform 2030",
+    description: "Intelligent blockchain platform with AI-powered smart contract optimization, DeFi analytics, and Web3 application development.",
+    category: "Blockchain & Web3",
+    pricing: [
+      {
+        name: "Basic",
+        price: 9999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic smart contract optimization",
+          "DeFi analytics",
+          "5 developer seats",
+          "Standard Web3 tools",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 15999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced smart contract optimization",
+          "15 developer seats",
+          "Advanced DeFi analytics",
+          "Advanced Web3 tools",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-chain support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 27999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited developer seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $8,000-16,000. Our solution reduces gas fees by 60% vs. industry standard of 20-30%.",
+    roi: "700% within 8 months through improved blockchain efficiency and reduced costs.",
+    setupTime: "6-8 weeks with AI training and blockchain development setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-blockchain-platform"
+    }
+  },
+
+  {
+    id: "ai-edge-computing-platform-2030",
+    title: "AI Edge Computing Platform 2030",
+    description: "Advanced edge computing platform with AI-powered data processing, real-time analytics, and IoT device management.",
+    category: "IoT & Edge Computing",
+    pricing: [
+      {
+        name: "Basic",
+        price: 8999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic edge data processing",
+          "Real-time analytics",
+          "5 IoT device connections",
+          "Standard device management",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 14999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced edge data processing",
+          "25 IoT device connections",
+          "Advanced device management",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-location support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 24999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited IoT device connections",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $7,500-15,000. Our solution reduces latency by 80% vs. industry standard of 40-50%.",
+    roi: "650% within 9 months through improved edge computing efficiency and reduced cloud costs.",
+    setupTime: "7-9 weeks with AI training and edge computing setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-edge-computing"
+    }
+  },
+
+  {
+    id: "ai-digital-twin-platform-2030",
+    title: "AI Digital Twin Platform 2030",
+    description: "Intelligent digital twin platform with real-time monitoring, predictive maintenance, and simulation capabilities.",
+    category: "Digital Twin",
+    pricing: [
+      {
+        name: "Basic",
+        price: 12999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic real-time monitoring",
+          "Predictive maintenance",
+          "5 digital twin models",
+          "Standard simulation tools",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 19999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced real-time monitoring",
+          "15 digital twin models",
+          "Advanced simulation tools",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-asset support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 34999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited digital twin models",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $10,000-20,000. Our solution reduces maintenance costs by 45% vs. industry standard of 25-30%.",
+    roi: "750% within 10 months through improved operational efficiency and reduced maintenance costs.",
+    setupTime: "8-10 weeks with AI training and digital twin setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-digital-twin"
+    }
+  },
+
+  {
+    id: "ai-education-platform-2030",
+    title: "AI Education Platform 2030",
+    description: "Intelligent education platform with personalized learning paths, adaptive assessments, and AI-powered tutoring.",
+    category: "AI & Education",
+    pricing: [
+      {
+        name: "Basic",
+        price: 6999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic personalized learning",
+          "Adaptive assessments",
+          "5 student seats",
+          "Standard AI tutoring",
+          "Email support",
+          "Basic analytics"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 11999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced personalized learning",
+          "25 student seats",
+          "Advanced AI tutoring",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-subject support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 19999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited student seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $6,000-12,000. Our solution improves learning outcomes by 65% vs. industry standard of 30-40%.",
+    roi: "600% within 8 months through improved learning outcomes and increased student retention.",
+    setupTime: "5-7 weeks with AI training and education workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-education-platform"
+    }
+  },
+
+  {
+    id: "ai-entertainment-platform-2030",
+    title: "AI Entertainment Platform 2030",
+    description: "Next-generation entertainment platform with AI-powered content recommendation, personalized experiences, and interactive storytelling.",
+    category: "AI & Entertainment",
+    pricing: [
+      {
+        name: "Basic",
+        price: 7999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic content recommendation",
+          "Personalized experiences",
+          "5 user seats",
+          "Standard interactive storytelling",
+          "Email support",
+          "Basic analytics"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 12999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced content recommendation",
+          "25 user seats",
+          "Advanced interactive storytelling",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-content support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 22999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited user seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $6,500-13,000. Our solution increases user engagement by 75% vs. industry standard of 40-50%.",
+    roi: "650% within 9 months through increased user engagement and content monetization.",
+    setupTime: "6-8 weeks with AI training and entertainment platform setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-entertainment-platform"
+    }
+  },
+
+  {
+    id: "ai-development-testing-platform-2030",
+    title: "AI Development & Testing Platform 2030",
+    description: "Intelligent development platform with AI-powered code generation, automated testing, and quality assurance.",
+    category: "AI & Development",
+    pricing: [
+      {
+        name: "Basic",
+        price: 8999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic AI code generation",
+          "Automated testing",
+          "5 developer seats",
+          "Standard quality assurance",
+          "Email support",
+          "Basic integrations"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 14999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced AI code generation",
+          "15 developer seats",
+          "Advanced quality assurance",
+          "Advanced analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Multi-language support"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 24999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Unlimited developer seats",
+          "Custom AI model training",
+          "Advanced predictive analytics",
+          "Custom integrations",
+          "Dedicated support team",
+          "SLA guarantees",
+          "White-label options"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $7,500-15,000. Our solution reduces development time by 50% vs. industry standard of 25-30%.",
+    roi: "700% within 8 months through improved development efficiency and code quality.",
+    setupTime: "6-8 weeks with AI training and development workflow setup.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-development-platform"
+    }
   }
 ];
 
