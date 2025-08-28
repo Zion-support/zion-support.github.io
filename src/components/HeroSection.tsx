@@ -142,7 +142,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
                   className="text-center"
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${features[currentFeature].color} mb-4`}>
-                    <features[currentFeature].icon className="w-8 h-8 text-white" />
+                    {React.createElement(features[currentFeature].icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {features[currentFeature].title}
@@ -195,7 +195,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
                 className="text-center group"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 mb-3 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-300">
-                  <stat.icon className="w-6 h-6 text-blue-400" />
+                  {React.createElement(stat.icon, { className: "w-6 h-6 text-blue-400" })}
                 </div>
                 <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>

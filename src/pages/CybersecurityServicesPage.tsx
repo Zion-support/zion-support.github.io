@@ -27,11 +27,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-// Filter cybersecurity services
-const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
-  service.category.includes('Cybersecurity') ||
-  service.category.includes('Security') ||
-  service.category.includes('Zero Trust')
+import {
   AlertTriangle,
   CheckCircle,
   Star,
@@ -53,6 +49,8 @@ const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service =>
 } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { TrustedBySection } from '@/components/TrustedBySection';
+
+// Filter cybersecurity services
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
 );
@@ -1425,11 +1423,5 @@ const CybersecurityServicesPage = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default CybersecurityServicesPage;
-}
-      </CardContent>
-    </Card>
   );
 }
