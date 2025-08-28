@@ -3,6 +3,25 @@ import { motion } from 'framer-motion';
 import { 
   Newspaper, 
   Calendar, 
+<<<<<<< HEAD
+  User, 
+  Tag, 
+  ArrowRight, 
+  Search, 
+  Filter, 
+  Clock,
+  TrendingUp,
+  Star,
+  Eye,
+  Share2,
+  Bookmark,
+  ExternalLink
+} from 'lucide-react';
+
+export default function News() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+=======
   Clock, 
   User, 
   Tag, 
@@ -518,6 +537,7 @@ export function News() {
     </div>
   );
 }
+>>>>>>> origin/cursor/website-audit-and-enhancement-15b2
 
   const categories = [
     { id: 'all', name: 'All News', count: 0 },

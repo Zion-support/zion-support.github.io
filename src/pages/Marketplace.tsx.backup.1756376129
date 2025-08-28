@@ -1,3 +1,104 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  ShoppingCart, 
+  Star, 
+  Zap, 
+  Shield, 
+  Target, 
+  ArrowRight,
+  CheckCircle,
+  Globe,
+  Lock,
+  Activity,
+  BarChart3,
+  Settings,
+  Bell,
+  Download,
+  Upload,
+  RefreshCw,
+  Monitor,
+  Smartphone,
+  Server,
+  Chip,
+  Wifi,
+  Satellite,
+  Radar,
+  Camera,
+  Video,
+  FileText,
+  Calendar,
+  Tag,
+  TrendingUp,
+  PieChart,
+  LineChart,
+  Scatter,
+  Layers,
+  Cube,
+  Box,
+  Package,
+  Truck,
+  Building,
+  Factory,
+  Warehouse,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Database,
+  Cloud,
+  Eye,
+  Brain,
+  Network,
+  Rocket,
+  Search,
+  Filter,
+  Grid,
+  List
+} from 'lucide-react';
+
+export default function Marketplace() {
+  const categories = [
+    {
+      name: "AI Services",
+      icon: Brain,
+      count: 25,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      name: "IT Solutions",
+      icon: Cpu,
+      count: 18,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Cloud Services",
+      icon: Cloud,
+      count: 12,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      name: "Security Tools",
+      icon: Shield,
+      count: 15,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      name: "Analytics",
+      icon: BarChart3,
+      count: 20,
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      name: "IoT Solutions",
+      icon: Wifi,
+      count: 14,
+      color: "from-indigo-500 to-blue-500"
+    }
+  ];
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -566,6 +667,7 @@ export function Marketplace() {
     </div>
   );
 }
+>>>>>>> origin/cursor/website-audit-and-enhancement-15b2
 
   const featuredProducts = [
     {
