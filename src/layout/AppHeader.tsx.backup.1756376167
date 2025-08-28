@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Activity } from 'lucide-react';
+=======
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Calendar } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-0b34
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
@@ -36,10 +40,17 @@ export function AppHeader() {
 
   // Organized services by category - only include existing pages
   const services = [
+<<<<<<< HEAD
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation', featured: true },
+    { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security', featured: true },
+    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Quantum Solutions', featured: true },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+=======
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Quantum Solutions' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-0b34
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart Devices & Networks' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
@@ -81,8 +92,14 @@ export function AppHeader() {
     { name: 'Partners', href: '/partners', icon: Users },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
+<<<<<<< HEAD
+    { name: 'Support', href: '/support', icon: MessageCircle },
+    { name: 'Documentation', href: '/documentation', icon: BookOpen },
+    { name: 'Status', href: '/status', icon: Activity },
+=======
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Help Center', href: '/help', icon: MessageCircle },
+>>>>>>> origin/cursor/website-audit-and-enhancement-0b34
   ];
 
   // Group services by category for better organization
