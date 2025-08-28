@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
@@ -45,6 +45,10 @@ const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedService
 const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
 const InnovativeServicesOverview = React.lazy(() => import('./pages/InnovativeServicesOverview'));
+
+// Zion 2026 pages (lazy)
+const Zion2026ServicesShowcase = React.lazy(() => import('./pages/Zion2026ServicesShowcase'));
+const Zion2026Pricing = React.lazy(() => import('./pages/Zion2026Pricing'));
 
 // New innovative services
 const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-legal-document-analysis'));
@@ -114,6 +118,10 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+
+                {/* Zion 2026 Services */}
+                <Route path="/zion-2026-services" element={<Zion2026ServicesShowcase />} />
+                <Route path="/zion-2026-pricing" element={<Zion2026Pricing />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
