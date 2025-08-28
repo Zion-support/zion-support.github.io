@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Factory } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -50,7 +50,13 @@ export function AppHeader() {
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
-      color: 'from-purple-500 to-cyan-500'
+      color: 'from-purple-500 to-cyan-500',
+      subcategories: [
+        { name: 'Business Intelligence', href: '/services#ai-business-intelligence' },
+        { name: 'Data Analytics', href: '/services#data-analytics' },
+        { name: 'Predictive Analytics', href: '/services#ai-business-intelligence' },
+        { name: 'Machine Learning', href: '/services#ai-business-intelligence' }
+      ]
     },
     { 
       name: 'AI & Legal Tech', 
@@ -58,7 +64,13 @@ export function AppHeader() {
       icon: Scale, 
       description: 'Document Analysis & Compliance',
       featured: true,
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-blue-500 to-indigo-500',
+      subcategories: [
+        { name: 'Contract Analysis', href: '/services#ai-legal-tech' },
+        { name: 'Legal Research', href: '/services#ai-legal-tech' },
+        { name: 'Compliance Monitoring', href: '/services#ai-legal-tech' },
+        { name: 'Document Processing', href: '/services#ai-legal-tech' }
+      ]
     },
     { 
       name: 'AI & Healthcare', 
@@ -66,7 +78,13 @@ export function AppHeader() {
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500',
+      subcategories: [
+        { name: 'Medical Diagnostics', href: '/services#ai-healthcare' },
+        { name: 'Patient Analytics', href: '/services#ai-healthcare' },
+        { name: 'Drug Discovery', href: '/services#ai-healthcare' },
+        { name: 'Health Monitoring', href: '/services#ai-healthcare' }
+      ]
     },
     { 
       name: 'AI & Research', 
@@ -74,7 +92,13 @@ export function AppHeader() {
       icon: Eye, 
       description: 'Scientific Research & Discovery',
       featured: true,
-      color: 'from-purple-500 to-violet-500'
+      color: 'from-purple-500 to-violet-500',
+      subcategories: [
+        { name: 'Literature Review', href: '/services#ai-research' },
+        { name: 'Hypothesis Generation', href: '/services#ai-research' },
+        { name: 'Data Analysis', href: '/services#ai-research' },
+        { name: 'Research Automation', href: '/services#ai-research' }
+      ]
     },
     { 
       name: 'AI & Green Tech', 
@@ -82,7 +106,13 @@ export function AppHeader() {
       icon: Leaf, 
       description: 'Sustainability Solutions',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
+      subcategories: [
+        { name: 'Energy Optimization', href: '/services#ai-green-tech' },
+        { name: 'Carbon Tracking', href: '/services#ai-green-tech' },
+        { name: 'Environmental Monitoring', href: '/services#ai-green-tech' },
+        { name: 'Sustainable Operations', href: '/services#ai-green-tech' }
+      ]
     },
     { 
       name: 'AI & Metaverse', 
@@ -90,7 +120,13 @@ export function AppHeader() {
       icon: Globe, 
       description: 'Virtual Reality & Gaming',
       featured: true,
-      color: 'from-purple-500 to-indigo-500'
+      color: 'from-purple-500 to-indigo-500',
+      subcategories: [
+        { name: '3D Modeling', href: '/services#ai-metaverse' },
+        { name: 'Virtual Reality', href: '/services#ai-metaverse' },
+        { name: 'Gaming Experiences', href: '/services#ai-metaverse' },
+        { name: 'Digital Worlds', href: '/services#ai-metaverse' }
+      ]
     },
     { 
       name: 'AI & Blockchain', 
@@ -98,79 +134,83 @@ export function AppHeader() {
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Edge Computing', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-yellow-500 to-orange-500',
+      subcategories: [
+        { name: 'DeFi Protocols', href: '/services#blockchain' },
+        { name: 'Smart Contracts', href: '/services#blockchain' },
+        { name: 'NFT Marketplaces', href: '/services#blockchain' },
+        { name: 'Web3 Solutions', href: '/services#blockchain' }
+      ]
     },
     { 
       name: 'AI & Space Tech', 
       href: '/services', 
       icon: Rocket, 
-      description: 'Satellite Operations & Missions',
+      description: 'Space Operations & Satellites',
       featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
-      featured: true,
-      color: 'from-green-500 to-blue-500'
-    },
-    { 
-      name: 'Cloud Services', 
-      href: '/services', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'AI & FinTech', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'Financial Technology & Risk Management',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
+      color: 'from-indigo-500 to-purple-500',
+      subcategories: [
+        { name: 'Satellite Management', href: '/services#ai-space-tech' },
+        { name: 'Space Debris Tracking', href: '/services#ai-space-tech' },
+        { name: 'Orbital Optimization', href: '/services#ai-space-tech' },
+        { name: 'Space Exploration', href: '/services#ai-space-tech' }
+      ]
     },
     { 
       name: 'AI & Operations', 
       href: '/services', 
       icon: Settings, 
-      description: 'Supply Chain & Process Optimization',
+      description: 'Business Process Automation',
       featured: true,
-      color: 'from-gray-500 to-slate-500'
+      color: 'from-gray-500 to-slate-500',
+      subcategories: [
+        { name: 'Supply Chain', href: '/services#ai-supply-chain' },
+        { name: 'Quality Assurance', href: '/services#ai-qa' },
+        { name: 'Process Optimization', href: '/services#ai-operations' },
+        { name: 'Workflow Automation', href: '/services#ai-operations' }
+      ]
     },
     { 
       name: 'AI & Development', 
       href: '/services', 
       icon: Code, 
-      description: 'Quality Assurance & Testing',
+      description: 'Code Generation & Testing',
       featured: true,
-      color: 'from-cyan-500 to-blue-500'
+      color: 'from-cyan-500 to-blue-500',
+      subcategories: [
+        { name: 'Code Generation', href: '/services#ai-development' },
+        { name: 'Automated Testing', href: '/services#ai-development' },
+        { name: 'Debugging', href: '/services#ai-development' },
+        { name: 'Development Tools', href: '/services#ai-development' }
+      ]
+    },
+    { 
+      name: 'AI & Education', 
+      href: '/services', 
+      icon: BookOpen, 
+      description: 'Learning & Training Platforms',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500',
+      subcategories: [
+        { name: 'Personalized Learning', href: '/services#ai-education' },
+        { name: 'Intelligent Tutoring', href: '/services#ai-education' },
+        { name: 'Performance Analytics', href: '/services#ai-education' },
+        { name: 'Adaptive Curriculum', href: '/services#ai-education' }
+      ]
+    },
+    { 
+      name: 'AI & Entertainment', 
+      href: '/services', 
+      icon: Star, 
+      description: 'Content Creation & Gaming',
+      featured: true,
+      color: 'from-purple-500 to-pink-500',
+      subcategories: [
+        { name: 'Content Generation', href: '/services#ai-entertainment' },
+        { name: 'Dynamic Storytelling', href: '/services#ai-entertainment' },
+        { name: 'Gaming Experiences', href: '/services#ai-entertainment' },
+        { name: 'Personalization', href: '/services#ai-entertainment' }
+      ]
     }
   ];
 
@@ -179,88 +219,116 @@ export function AppHeader() {
       name: 'Enterprise Solutions',
       href: '/solutions',
       icon: Building2,
-      description: 'Large-scale business transformations',
-      featured: true
+      description: 'Large-scale business solutions',
+      featured: true,
+      color: 'from-blue-600 to-indigo-600',
+      subcategories: [
+        { name: 'Digital Transformation', href: '/solutions#digital-transformation' },
+        { name: 'Enterprise AI', href: '/solutions#enterprise-ai' },
+        { name: 'Cloud Migration', href: '/solutions#cloud-migration' },
+        { name: 'Legacy Modernization', href: '/solutions#legacy-modernization' }
+      ]
     },
     {
       name: 'SMB Solutions',
       href: '/solutions',
       icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
+      description: 'Small & medium business solutions',
+      featured: true,
+      color: 'from-green-600 to-emerald-600',
+      subcategories: [
+        { name: 'Growth Acceleration', href: '/solutions#growth-acceleration' },
+        { name: 'Cost Optimization', href: '/solutions#cost-optimization' },
+        { name: 'Digital Presence', href: '/solutions#digital-presence' },
+        { name: 'Process Automation', href: '/solutions#process-automation' }
+      ]
     },
     {
       name: 'Startup Solutions',
       href: '/solutions',
       icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
+      description: 'Innovation & growth for startups',
+      featured: true,
+      color: 'from-purple-600 to-pink-600',
+      subcategories: [
+        { name: 'MVP Development', href: '/solutions#mvp-development' },
+        { name: 'AI Integration', href: '/solutions#ai-integration' },
+        { name: 'Market Validation', href: '/solutions#market-validation' },
+        { name: 'Scale Preparation', href: '/solutions#scale-preparation' }
+      ]
     },
     {
-      name: 'Government Solutions',
+      name: 'Industry Solutions',
       href: '/solutions',
-      icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
-    },
-    {
-      name: 'Healthcare Solutions',
-      href: '/solutions',
-      icon: Heart,
-      description: 'Digital health transformation',
-      featured: true
-    },
-    {
-      name: 'Financial Solutions',
-      href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
-      featured: true
+      icon: Factory,
+      description: 'Sector-specific solutions',
+      featured: true,
+      color: 'from-orange-600 to-red-600',
+      subcategories: [
+        { name: 'Manufacturing', href: '/solutions#manufacturing' },
+        { name: 'Healthcare', href: '/solutions#healthcare' },
+        { name: 'Finance', href: '/solutions#finance' },
+        { name: 'Retail', href: '/solutions#retail' }
+      ]
     }
   ];
 
   const resources = [
     {
+      name: 'Documentation',
+      href: '/docs',
+      icon: FileText,
+      description: 'Technical documentation & guides',
+      featured: true,
+      color: 'from-gray-600 to-slate-600',
+      subcategories: [
+        { name: 'API Documentation', href: '/docs#api' },
+        { name: 'Integration Guides', href: '/docs#integration' },
+        { name: 'Best Practices', href: '/docs#best-practices' },
+        { name: 'Tutorials', href: '/docs#tutorials' }
+      ]
+    },
+    {
       name: 'Blog & Insights',
       href: '/blog',
       icon: BookOpen,
-      description: 'Latest industry trends and insights',
-      featured: true
+      description: 'Industry insights & updates',
+      featured: true,
+      color: 'from-blue-600 to-cyan-600',
+      subcategories: [
+        { name: 'AI Trends', href: '/blog#ai-trends' },
+        { name: 'Technology News', href: '/blog#tech-news' },
+        { name: 'Case Studies', href: '/blog#case-studies' },
+        { name: 'Expert Opinions', href: '/blog#expert-opinions' }
+      ]
     },
     {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: Target,
-      description: 'Real-world success stories',
-      featured: true
-    },
-    {
-      name: 'White Papers',
-      href: '/white-papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
-      featured: false
-    },
-    {
-      name: 'Webinars',
-      href: '/webinars',
-      icon: Users,
-      description: 'Expert-led learning sessions',
-      featured: false
-    },
-    {
-      name: 'Documentation',
-      href: '/docs',
-      icon: Code,
-      description: 'Technical guides and APIs',
-      featured: false
-    },
-    {
-      name: 'FAQ & Support',
-      href: '/faq',
+      name: 'Support Center',
+      href: '/support',
       icon: HelpCircle,
-      description: 'Get help and answers',
-      featured: false
+      description: 'Help & technical support',
+      featured: true,
+      color: 'from-green-600 to-teal-600',
+      subcategories: [
+        { name: 'Knowledge Base', href: '/support#knowledge-base' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Contact Support', href: '/contact' },
+        { name: 'Community Forum', href: '/support#community' }
+      ]
+    },
+    {
+      name: 'Pricing & Plans',
+      href: '/pricing',
+      icon: DollarSign,
+      description: 'Transparent pricing information',
+      featured: true,
+      color: 'from-yellow-600 to-orange-600',
+      subcategories: [
+        { name: 'Service Plans', href: '/pricing#service-plans' },
+        { name: 'Custom Solutions', href: '/pricing#custom-solutions' },
+        { name: 'ROI Calculator', href: '/pricing#roi-calculator' },
+        { name: 'Request Quote', href: '/request-quote' }
+      ]
     }
   ];
 

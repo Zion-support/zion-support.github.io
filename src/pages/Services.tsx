@@ -337,6 +337,18 @@ export default function Services() {
                         <span className="text-slate-400">AI Score:</span>
                         <span className="text-cyan-400 font-semibold">{service.aiScore}/100</span>
                       </div>
+                      {service.competitors && (
+                        <div className="flex items-center justify-between text-sm">
+                          <span className="text-slate-400">Competitors:</span>
+                          <span className="text-slate-300 text-xs">{service.competitors.slice(0, 2).join(', ')}</span>
+                        </div>
+                      )}
+                      {service.integrations && (
+                        <div className="flex items-center justify-between text-sm">
+                          <span className="text-slate-400">Integrations:</span>
+                          <span className="text-slate-300 text-xs">{service.integrations.slice(0, 2).join(', ')}</span>
+                        </div>
+                      )}
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
