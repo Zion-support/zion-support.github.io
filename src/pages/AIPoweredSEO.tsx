@@ -2,18 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Users, 
-  Cpu, 
-  Zap, 
-  Shield, 
+  Search, 
+  TrendingUp, 
   Target, 
+  BarChart3, 
+  Zap, 
   ArrowRight,
   CheckCircle,
   Star,
   Globe,
   Lock,
   Activity,
-  BarChart3,
   Settings,
   Bell,
   Download,
@@ -31,7 +30,6 @@ import {
   FileText,
   Calendar,
   Tag,
-  TrendingUp,
   PieChart,
   LineChart,
   Scatter,
@@ -52,79 +50,80 @@ import {
   Eye,
   Brain,
   Network,
-  Rocket
+  Rocket,
+  Shield
 } from 'lucide-react';
 
-export default function ITConsulting() {
+export default function AIPoweredSEO() {
   const features = [
     {
-      icon: Users,
-      title: "Expert Team",
-      description: "Experienced IT professionals with deep industry knowledge",
+      icon: Search,
+      title: "AI Keyword Research",
+      description: "Intelligent keyword discovery and analysis using machine learning",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Cpu,
-      title: "Technology Strategy",
-      description: "Comprehensive technology roadmaps and planning",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation solutions",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Cybersecurity and regulatory compliance expertise",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      icon: Target,
-      title: "Performance Optimization",
-      description: "System optimization and performance tuning",
+      icon: TrendingUp,
+      title: "Content Optimization",
+      description: "AI-powered content analysis and optimization recommendations",
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: Cloud,
-      title: "Cloud Migration",
-      description: "Seamless cloud adoption and migration strategies",
+      icon: Target,
+      title: "Ranking Predictions",
+      description: "Predictive analytics for search engine ranking improvements",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Analytics",
+      description: "Comprehensive SEO performance tracking and insights",
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      icon: Zap,
+      title: "Automated Optimization",
+      description: "AI-driven SEO improvements and technical optimizations",
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      icon: Globe,
+      title: "Global SEO",
+      description: "Multi-language and international SEO optimization",
       color: "from-indigo-500 to-blue-500"
     }
   ];
 
   const services = [
     {
-      title: "Technology Assessment",
-      description: "Comprehensive evaluation of current IT infrastructure and systems",
-      icon: Eye,
-      benefits: ["Infrastructure review", "Technology audit", "Gap analysis"]
+      title: "Technical SEO Audit",
+      description: "Comprehensive website technical analysis and optimization",
+      icon: Settings,
+      benefits: ["Site speed optimization", "Mobile responsiveness", "Technical issues", "Schema markup"]
     },
     {
-      title: "Strategic Planning",
-      description: "Long-term technology roadmaps aligned with business goals",
+      title: "Content Strategy",
+      description: "AI-powered content planning and optimization",
+      icon: FileText,
+      benefits: ["Keyword research", "Content planning", "SEO optimization", "Performance tracking"]
+    },
+    {
+      title: "Local SEO",
+      description: "Location-based search optimization and management",
       icon: Target,
-      benefits: ["Technology strategy", "Implementation roadmap", "ROI analysis"]
+      benefits: ["Google My Business", "Local citations", "Review management", "Local keywords"]
     },
     {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation consulting and implementation",
-      icon: Rocket,
-      benefits: ["Process optimization", "Technology adoption", "Change management"]
-    },
-    {
-      title: "Security & Compliance",
-      description: "Cybersecurity assessment and regulatory compliance consulting",
-      icon: Shield,
-      benefits: ["Security audit", "Compliance review", "Risk assessment"]
+      title: "E-commerce SEO",
+      description: "Product page optimization and search visibility",
+      icon: ShoppingCart,
+      benefits: ["Product optimization", "Category pages", "Internal linking", "Conversion tracking"]
     }
   ];
 
-  const industries = [
-    "Healthcare", "Finance", "Manufacturing", "Retail", "Education", 
-    "Government", "Technology", "Energy", "Transportation", "Media"
+  const technologies = [
+    "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Big Data Analysis", 
+    "AI Algorithms", "Search Engine APIs", "Web Crawling", "Data Mining", "Sentiment Analysis", "Competitive Intelligence"
   ];
 
   return (
@@ -139,11 +138,11 @@ export default function ITConsulting() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              IT Consulting Services
+              AI-Powered SEO Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with expert IT consulting from Zion Tech Group. 
-              We help organizations navigate complex technology challenges and achieve digital excellence.
+              Transform your search engine visibility with cutting-edge AI technology. 
+              Our intelligent SEO solutions deliver measurable results and sustainable growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -176,11 +175,11 @@ export default function ITConsulting() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Consulting?
+              AI SEO Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our expert consultants bring decades of experience and deep industry knowledge to help you 
-              make informed technology decisions and achieve your business objectives.
+              Our AI-powered SEO platform combines machine learning with industry expertise 
+              to deliver unprecedented search engine optimization results.
             </p>
           </motion.div>
 
@@ -216,10 +215,10 @@ export default function ITConsulting() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Consulting Services
+              Our SEO Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT consulting services designed to address your unique business challenges and opportunities.
+              Comprehensive SEO solutions designed to improve your search rankings and drive organic traffic.
             </p>
           </motion.div>
 
@@ -254,7 +253,7 @@ export default function ITConsulting() {
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -265,16 +264,15 @@ export default function ITConsulting() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industries We Serve
+              AI Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IT consulting expertise spans across diverse industries, helping organizations 
-              leverage technology for competitive advantage and operational excellence.
+              Built with cutting-edge AI technologies for maximum SEO performance and results.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {industries.map((industry, index) => (
+            {technologies.map((tech, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -283,7 +281,7 @@ export default function ITConsulting() {
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-xl p-4 text-center hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
               >
-                <span className="text-white font-medium">{industry}</span>
+                <span className="text-white font-medium">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -300,11 +298,11 @@ export default function ITConsulting() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your IT Strategy?
+              Ready to Dominate Search Rankings?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Partner with Zion Tech Group's expert IT consultants to navigate complex technology challenges, 
-              optimize your IT infrastructure, and achieve digital transformation success.
+              Join the AI SEO revolution with Zion Tech Group. Our intelligent optimization solutions 
+              are designed to boost your search visibility and drive sustainable organic growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
