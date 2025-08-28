@@ -42,8 +42,7 @@ import {
   Info,
   Phone,
   Mail,
-  MapPin,
-  Users
+  MapPin
 } from 'lucide-react';
 
 interface SidebarItem {

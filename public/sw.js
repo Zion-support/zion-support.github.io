@@ -1,9 +1,6 @@
 // Service Worker for Zion Tech Group
-<<<<<<< HEAD
-=======
 // Provides offline support, caching, and performance improvements
 
->>>>>>> origin/feat/services-site-improvements
 const CACHE_NAME = 'zion-tech-group-v3.0.0';
 const STATIC_CACHE_NAME = 'zion-static-v3.0.0';
 const DYNAMIC_CACHE_NAME = 'zion-dynamic-v3.0.0';
@@ -21,19 +18,6 @@ self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   
   event.waitUntil(
-<<<<<<< HEAD
-    caches.open(STATIC_CACHE)
-      .then(cache => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
-      })
-      .then(() => {
-        console.log('Static files cached successfully');
-        return self.skipWaiting();
-      })
-      .catch(error => {
-        console.error('Failed to cache static files:', error);
-=======
     caches.open(STATIC_CACHE_NAME)
       .then((cache) => {
         console.log('Caching static files');
@@ -41,7 +25,6 @@ self.addEventListener('install', (event) => {
       })
       .catch((error) => {
         console.error('Error caching static files:', error);
->>>>>>> origin/feat/services-site-improvements
       })
   );
   
@@ -54,23 +37,6 @@ self.addEventListener('activate', (event) => {
   console.log('Service Worker activating...');
   
   event.waitUntil(
-<<<<<<< HEAD
-    caches.keys()
-      .then(cacheNames => {
-        return Promise.all(
-          cacheNames.map(cacheName => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-      .then(() => {
-        console.log('Service Worker activated');
-        return self.clients.claim();
-      })
-=======
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
@@ -83,18 +49,13 @@ self.addEventListener('activate', (event) => {
         })
       );
     })
->>>>>>> origin/feat/services-site-improvements
   );
   
   // Claim all clients
   self.clients.claim();
 });
 
-<<<<<<< HEAD
-// Fetch event - serve from cache when possible
-=======
 // Fetch event - serve from cache or network
->>>>>>> origin/feat/services-site-improvements
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -110,26 +71,6 @@ self.addEventListener('fetch', (event) => {
   }
   
   // Handle different types of requests
-<<<<<<< HEAD
-  if (isStaticAsset(request)) {
-    // Static assets - cache first strategy
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-  } else if (isAPIRequest(request)) {
-    // API requests - network first strategy
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
-  } else if (isHTMLRequest(request)) {
-    // HTML requests - network first strategy
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
-  } else {
-    // Default - cache first strategy
-    event.respondWith(cacheFirst(request, DYNAMIC_CACHE));
-  }
-});
-
-// Cache first strategy
-async function cacheFirst(request, cacheName) {
-  try {
-=======
   if (url.pathname.startsWith('/api/')) {
     // API requests - network first, then cache
     event.respondWith(handleApiRequest(request));
@@ -157,32 +98,11 @@ async function handleApiRequest(request) {
     return networkResponse;
   } catch (error) {
     // Fallback to cache
->>>>>>> origin/feat/services-site-improvements
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
     
-<<<<<<< HEAD
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Cache first strategy failed:', error);
-    return new Response('Network error', { status: 503 });
-  }
-}
-
-// Network first strategy
-async function networkFirst(request, cacheName) {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
-=======
     // Return offline response
     return new Response(
       JSON.stringify({ error: 'Network error, please try again later' }),
@@ -217,14 +137,10 @@ async function handleStaticRequest(request) {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
       const cache = await caches.open(DYNAMIC_CACHE_NAME);
->>>>>>> origin/feat/services-site-improvements
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
   } catch (error) {
-<<<<<<< HEAD
-    console.log('Network failed, trying cache:', error);
-=======
     // Return offline response
     return new Response('Offline', { status: 503 });
   }
@@ -245,47 +161,16 @@ async function handlePageRequest(request) {
     return networkResponse;
   } catch (error) {
     // Fallback to cache
->>>>>>> origin/feat/services-site-improvements
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
     
-<<<<<<< HEAD
-    // Return offline page for HTML requests
-    if (isHTMLRequest(request)) {
-      return caches.match('/offline.html');
-    }
-    
-    return new Response('Network error', { status: 503 });
-  }
-}
-
-// Check if request is for a static asset
-function isStaticAsset(request) {
-  const url = new URL(request.url);
-  return url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/);
-}
-
-// Check if request is for an API
-function isAPIRequest(request) {
-  const url = new URL(request.url);
-  return url.pathname.startsWith('/api/') || url.pathname.startsWith('/graphql');
-}
-
-// Check if request is for HTML
-function isHTMLRequest(request) {
-  const url = new URL(request.url);
-  return url.pathname.endsWith('.html') || url.pathname === '/' || !url.pathname.includes('.');
-}
-
-=======
     // Return offline page
     return caches.match('/offline.html') || new Response('Offline', { status: 503 });
   }
 }
 
->>>>>>> origin/feat/services-site-improvements
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   console.log('Background sync triggered:', event.tag);
@@ -295,89 +180,7 @@ self.addEventListener('sync', (event) => {
   }
 });
 
-<<<<<<< HEAD
 // Background sync implementation
-async function doBackgroundSync() {
-  try {
-    // Get stored offline actions
-    const offlineActions = await getOfflineActions();
-    
-    for (const action of offlineActions) {
-      try {
-        await processOfflineAction(action);
-        await removeOfflineAction(action.id);
-      } catch (error) {
-        console.error('Failed to process offline action:', error);
-      }
-    }
-  } catch (error) {
-    console.error('Background sync failed:', error);
-  }
-}
-
-// Get stored offline actions
-async function getOfflineActions() {
-  try {
-    const db = await openIndexedDB();
-    const transaction = db.transaction(['offlineActions'], 'readonly');
-    const store = transaction.objectStore('offlineActions');
-    return await store.getAll();
-  } catch (error) {
-    console.error('Failed to get offline actions:', error);
-    return [];
-  }
-}
-
-// Process offline action
-async function processOfflineAction(action) {
-  const { method, url, body, headers } = action;
-  
-  const requestInit = {
-    method,
-    headers: new Headers(headers),
-    body: body ? JSON.parse(body) : undefined
-  };
-  
-  const response = await fetch(url, requestInit);
-  
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-  }
-  
-  return response;
-}
-
-// Remove processed offline action
-async function removeOfflineAction(id) {
-  try {
-    const db = await openIndexedDB();
-    const transaction = db.transaction(['offlineActions'], 'readwrite');
-    const store = transaction.objectStore('offlineActions');
-    await store.delete(id);
-  } catch (error) {
-    console.error('Failed to remove offline action:', error);
-  }
-}
-
-// Open IndexedDB
-function openIndexedDB() {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open('ZionTechGroupDB', 1);
-    
-    request.onerror = () => reject(request.error);
-    request.onsuccess = () => resolve(request.result);
-    
-    request.onupgradeneeded = (event) => {
-      const db = event.target.result;
-      
-      // Create offline actions store
-      if (!db.objectStoreNames.contains('offlineActions')) {
-        const store = db.createObjectStore('offlineActions', { keyPath: 'id', autoIncrement: true });
-        store.createIndex('timestamp', 'timestamp', { unique: false });
-      }
-    };
-  });
-=======
 async function doBackgroundSync() {
   try {
     // Get all clients
@@ -393,41 +196,10 @@ async function doBackgroundSync() {
   } catch (error) {
     console.error('Background sync failed:', error);
   }
->>>>>>> origin/feat/services-site-improvements
 }
 
 // Push notification handling
 self.addEventListener('push', (event) => {
-<<<<<<< HEAD
-  if (event.data) {
-    const data = event.data.json();
-    const options = {
-      body: data.body,
-      icon: '/logo.png',
-      badge: '/badge.png',
-      vibrate: [100, 50, 100],
-      data: {
-        url: data.url
-      },
-      actions: [
-        {
-          action: 'view',
-          title: 'View',
-          icon: '/view-icon.png'
-        },
-        {
-          action: 'dismiss',
-          title: 'Dismiss',
-          icon: '/dismiss-icon.png'
-        }
-      ]
-    };
-    
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
-=======
   const options = {
     body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
     icon: '/images/zion-tech-group-logo.png',
@@ -454,7 +226,6 @@ self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
->>>>>>> origin/feat/services-site-improvements
 });
 
 // Notification click handling
@@ -465,11 +236,7 @@ self.addEventListener('notificationclick', (event) => {
   
   if (event.action === 'view') {
     event.waitUntil(
-<<<<<<< HEAD
-      clients.openWindow(event.notification.data.url)
-=======
-      clients.openWindow('/')
->>>>>>> origin/feat/services-site-improvements
+      self.clients.openWindow('/')
     );
   }
 });
@@ -484,14 +251,13 @@ self.addEventListener('message', (event) => {
   
   if (event.data && event.data.type === 'CACHE_URLS') {
     event.waitUntil(
-      caches.open(DYNAMIC_CACHE)
+      caches.open(DYNAMIC_CACHE_NAME)
         .then(cache => {
           return cache.addAll(event.data.urls);
         })
     );
   }
 });
-<<<<<<< HEAD
 
 // Periodic background sync (if supported)
 if ('periodicSync' in self.registration) {
@@ -512,7 +278,7 @@ async function updateContent() {
       
       if (updates.hasUpdates) {
         // Update cached content
-        const cache = await caches.open(DYNAMIC_CACHE);
+        const cache = await caches.open(DYNAMIC_CACHE_NAME);
         for (const url of updates.urls) {
           try {
             const response = await fetch(url);
@@ -546,5 +312,3 @@ self.addEventListener('unhandledrejection', (event) => {
 });
 
 console.log('Zion Tech Group Service Worker loaded successfully');
-=======
->>>>>>> origin/feat/services-site-improvements

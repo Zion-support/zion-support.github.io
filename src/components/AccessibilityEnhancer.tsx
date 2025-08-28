@@ -11,7 +11,8 @@ import {
   Settings,
   X,
   CheckCircle,
-  AlertTriangle
+  AlertTriangle,
+  Info
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -149,6 +150,68 @@ export function AccessibilityEnhancer({
       setNotifications(prev => prev.filter(n => n !== 'Settings reset to default'));
     }, 3000);
   };
+
+  // Scan for accessibility issues
+  const scanForIssues = useCallback(() => {
+    setIsScanning(true);
+    const foundIssues: AccessibilityIssue[] = [];
+    
+    // Simulate scanning for accessibility issues
+    setTimeout(() => {
+      // Check for missing alt text on images
+      const images = document.querySelectorAll('img');
+      images.forEach((img, index) => {
+        if (!img.alt) {
+          foundIssues.push({
+            id: `img-${index}`,
+            type: 'error',
+            element: `Image ${index + 1}`,
+            description: 'Missing alt text for accessibility'
+          });
+        }
+      });
+
+      // Check for proper heading structure
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      let prevLevel = 0;
+      headings.forEach((heading, index) => {
+        const level = parseInt(heading.tagName.charAt(1));
+        if (level > prevLevel + 1) {
+          foundIssues.push({
+            id: `heading-${index}`,
+            type: 'warning',
+            element: heading.tagName,
+            description: 'Heading level skipped - should follow proper hierarchy'
+          });
+        }
+        prevLevel = level;
+      });
+
+      // Check for sufficient color contrast (simplified)
+      const textElements = document.querySelectorAll('p, span, div');
+      if (textElements.length > 0) {
+        foundIssues.push({
+          id: 'contrast-check',
+          type: 'info',
+          element: 'Text elements',
+          description: 'Consider checking color contrast ratios for better accessibility'
+        });
+      }
+
+      setIssues(foundIssues);
+      setIsScanning(false);
+      
+      if (foundIssues.length > 0) {
+        setNotifications(prev => [...prev, `Found ${foundIssues.length} accessibility issues`]);
+      } else {
+        setNotifications(prev => [...prev, 'No accessibility issues found']);
+      }
+      
+      setTimeout(() => {
+        setNotifications(prev => prev.filter(n => !n.includes('accessibility issues')));
+      }, 3000);
+    }, 1500);
+  }, []);
 
   // Quick accessibility actions
   const quickActions = [

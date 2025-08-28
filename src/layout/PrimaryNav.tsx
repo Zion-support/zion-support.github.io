@@ -18,8 +18,6 @@ import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import { ModeToggle } from '@/components/ModeToggle';
-
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();

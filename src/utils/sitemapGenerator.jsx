@@ -1,5 +1,4 @@
 export class SitemapGenerator {
-    config;
     constructor(config) {
         this.config = {
             outputPath: './public/sitemap.xml',

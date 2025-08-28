@@ -28,8 +28,7 @@ export class ErrorBoundary extends Component<Props, State> {
     
     this.setState({
       error,
-      errorInfo,
-      errorId
+      errorInfo
     });
 
     // Call the onError callback if provided

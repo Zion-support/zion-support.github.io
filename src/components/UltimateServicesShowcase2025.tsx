@@ -347,6 +347,7 @@ const UltimateServicesShowcase2025 = () => {
                 </button>
               </div>
             </div>
+          </motion.div>
 
           {/* Category Filter */}
           <motion.div

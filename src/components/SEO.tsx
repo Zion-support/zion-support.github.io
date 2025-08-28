@@ -21,7 +21,8 @@ export function SEO({
   url, 
   type = 'website',
   noindex = false,
-  structuredData 
+  structuredData,
+  children 
 }: SEOProps) {
   const siteName = 'Zion Tech Group';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
@@ -56,6 +57,8 @@ export function SEO({
       "category": "Technology Services"
     }
   };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
     <Helmet>
@@ -99,52 +102,21 @@ export function SEO({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(finalStructuredData)}
       </script>
       
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://images.unsplash.com" />
-      
-      {/* DNS Prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+      {children}
     </Helmet>
   );
 }
 
-// Specialized SEO components for different page types
 export function HomePageSEO() {
-  return (
-    <SEO
-      title="AI-Powered Business Solutions & Quantum Computing | Zion Tech Group"
-      description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity."
-      keywords="AI business solutions, quantum computing, autonomous operations, digital transformation, IT services, cybersecurity, machine learning, neural networks"
-      ogType="website"
-      structuredData={{
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Zion Tech Group - AI-Powered Business Solutions",
-        "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
-        "url": "https://ziontechgroup.com",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "AI-powered business solutions and quantum computing services"
-        }
-      }}
-    />
-  );
-}
-
-export function ServicesPageSEO() {
   return (
     <SEO
       title="AI Services, Quantum Computing & IT Solutions | Zion Tech Group"
       description="Comprehensive range of AI services, quantum computing solutions, and enterprise IT services. From autonomous business operations to advanced cybersecurity and cloud infrastructure."
       keywords="AI services, quantum computing services, IT infrastructure, cybersecurity services, cloud computing, business automation, machine learning services"
-      ogType="website"
+      type="website"
       structuredData={{
         "@context": "https://schema.org",
         "@type": "Service",
@@ -166,7 +138,7 @@ export function ContactPageSEO() {
       title="Contact Zion Tech Group | Get in Touch for AI & Quantum Solutions"
       description="Contact Zion Tech Group for AI-powered business solutions, quantum computing services, and IT consulting. Get expert advice on digital transformation and technology implementation."
       keywords="contact Zion Tech Group, AI consulting, quantum computing consulting, IT consulting, digital transformation consulting"
-      ogType="website"
+      type="website"
       structuredData={{
         "@context": "https://schema.org",
         "@type": "ContactPage",
@@ -206,10 +178,9 @@ export function BlogPostSEO({
     <SEO
       title={title}
       description={description}
-      author={author}
-      canonical={`https://ziontechgroup.com/blog/${slug}`}
-      ogType="article"
-      ogImage={image}
+      image={image}
+      url={`https://ziontechgroup.com/blog/${slug}`}
+      type="article"
       structuredData={{
         "@context": "https://schema.org",
         "@type": "BlogPosting",

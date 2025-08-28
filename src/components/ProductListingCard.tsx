@@ -9,7 +9,7 @@ import { FavoriteButton } from "@/components/FavoriteButton";
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
-; // Import next/image
+// Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing;
@@ -200,6 +200,6 @@ export function ProductListingCard({
       </div>
     </div>
   );
-};
+}
 
 export default React.memo(ProductListingCard);

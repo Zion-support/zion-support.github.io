@@ -1,6 +1,8 @@
 export class ContentQualityAnalyzer {
     static instance;
-    analyzedPages = new Map();
+    constructor() {
+        this.analyzedPages = new Map();
+    }
     static getInstance() {
         if (!ContentQualityAnalyzer.instance) {
             ContentQualityAnalyzer.instance = new ContentQualityAnalyzer();
