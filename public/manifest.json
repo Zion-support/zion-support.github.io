@@ -1,5 +1,5 @@
 {
-  "name": "Zion Tech Group",
+  "name": "Zion Tech Group - AI & Technology Solutions",
   "short_name": "Zion Tech",
   "description": "Leading AI & Technology Solutions Provider specializing in artificial intelligence, quantum computing, and digital transformation",
   "start_url": "/",
@@ -60,6 +60,22 @@
       "purpose": "any"
     }
   ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-1280x720.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Desktop View"
+    },
+    {
+      "src": "/screenshots/mobile-390x844.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile View"
+    }
+  ],
   "shortcuts": [
     {
       "name": "Services",
@@ -98,23 +114,12 @@
       ]
     }
   ],
-  "screenshots": [
+  "related_applications": [
     {
-      "src": "/screenshots/desktop-1280x720.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Desktop View"
-    },
-    {
-      "src": "/screenshots/mobile-390x844.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile View"
+      "platform": "web",
+      "url": "https://ziontechgroup.com"
     }
   ],
-  "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
@@ -122,6 +127,7 @@
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
+  "handle_links": "preferred",
   "protocol_handlers": [
     {
       "protocol": "web+zion",
