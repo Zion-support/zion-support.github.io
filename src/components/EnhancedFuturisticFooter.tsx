@@ -154,7 +154,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Training & Certification', href: '/training', featured: false },
         { name: 'Community Forum', href: '/community', featured: false },
         { name: 'Success Stories', href: '/case-studies', featured: false },
-        { name: 'White Papers', href: '/whitepapers', featured: false }
+        { name: 'White Papers', href: '/white-papers', featured: false }
       ]
     },
     {
@@ -166,8 +166,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Careers', href: '/careers', featured: false },
         { name: 'Contact Us', href: '/contact', featured: true },
         { name: 'Request Quote', href: '/request-quote', featured: true },
-        { name: 'Schedule Demo', href: '/schedule-demo', featured: false },
-        { name: 'Partnerships', href: '/partnerships', featured: false },
+        { name: 'Schedule Demo', href: '/demo', featured: false },
+        { name: 'Partnerships', href: '/partners', featured: false },
         { name: 'Investor Relations', href: '/investors', featured: false },
         { name: 'Press & Media', href: '/press', featured: false },
         { name: 'Legal & Privacy', href: '/legal', featured: false }
