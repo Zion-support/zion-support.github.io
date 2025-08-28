@@ -37,12 +37,9 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
-    { name: 'Case Studies', href: '/case-studies', current: false },
-    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Resources', href: '/resources', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Careers', href: '/careers', current: false },
   ];
 
   const services = [
@@ -135,7 +132,7 @@ export function AppHeader() {
                             className="flex items-center p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105"
                           >
                             <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
-                              <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                              <service.icon className="w-5 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                             </div>
                             <div className="ml-4 flex-1">
                               <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
@@ -162,6 +159,18 @@ export function AppHeader() {
                     </div>
                   </div>
                 )}
+              </div>
+
+              {/* Resources Dropdown */}
+              <div className="relative">
+                <button
+                  onMouseEnter={() => setServicesDropdownOpen(false)}
+                  className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
+                >
+                  Resources
+                  <ChevronDown className="w-4 h-4 ml-1 transition-transform duration-200" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                </button>
               </div>
             </nav>
 

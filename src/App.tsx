@@ -34,6 +34,10 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Sitemap = React.lazy(() => import('./pages/sitemap'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Support = React.lazy(() => import('./pages/Support'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -42,6 +46,9 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-healthcare-platform'));
+const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/ai-autonomous-research-assistant'));
+const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/ai-quantum-hybrid-platform'));
 
 // Enhanced placeholder pages with better UX
 const Careers = () => (
@@ -119,6 +126,10 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/support" element={<Support />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -126,6 +137,9 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
