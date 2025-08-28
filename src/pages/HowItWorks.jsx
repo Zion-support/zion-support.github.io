@@ -152,7 +152,7 @@ export default function HowItWorks() {
                   <CardHeader>
                     <div className="flex justify-center mb-4">
                       <div className="bg-zion-blue inline-flex p-3 rounded-full">
-                        <step.icon className={`h-8 w-8 ${step.color}`}/>
+                        {React.createElement(step.icon, { className: `h-8 w-8 ${step.color}` })}
                       </div>
                     </div>
                     <CardTitle className="text-white text-lg">{step.title}</CardTitle>
@@ -174,7 +174,7 @@ export default function HowItWorks() {
                   <CardHeader>
                     <div className="flex justify-center mb-4">
                       <div className="bg-zion-blue inline-flex p-3 rounded-full">
-                        <step.icon className={`h-8 w-8 ${step.color}`}/>
+                        {React.createElement(step.icon, { className: `h-8 w-8 ${step.color}` })}
                       </div>
                     </div>
                     <CardTitle className="text-white text-lg">{step.title}</CardTitle>
@@ -195,7 +195,7 @@ export default function HowItWorks() {
               {platformFeatures.map((feature, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <feature.icon className={`h-6 w-6 ${feature.color}`}/>
+                      {React.createElement(feature.icon, { className: `h-6 w-6 ${feature.color}` })}
                       <CardTitle className="text-white">{feature.title}</CardTitle>
                     </div>
                   </CardHeader>
@@ -215,14 +215,14 @@ export default function HowItWorks() {
               {benefits.map((section, index) => (<Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-4">
-                      <section.icon className="h-6 w-6 text-zion-cyan"/>
+                      {React.createElement(section.icon, { className: "h-6 w-6 text-zion-cyan" })}
                       <CardTitle className="text-white text-xl">{section.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2">
                       {section.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0"/>
+                          {React.createElement(CheckCircle, { className: "h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0" })}
                           <span className="text-zion-slate-light">{benefit}</span>
                         </li>))}
                     </ul>

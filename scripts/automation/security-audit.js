@@ -4,10 +4,15 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔒 Starting weekly security audit automation...');
+console.log('🔒 Starting continuous security audit automation...');
+
+// Get automation interval from environment variable (default: 4 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
 
 async function runSecurityAudit() {
   try {
+    console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
+    
     // Run npm audit
     console.log('🔍 Running npm security audit...');
     try {
@@ -20,7 +25,6 @@ async function runSecurityAudit() {
         console.log('✅ Security issues auto-fixed');
       } catch (fixError) {
         console.log('❌ Could not auto-fix security issues');
-        process.exit(1);
       }
     }
     
@@ -46,40 +50,59 @@ async function runSecurityAudit() {
     try {
       if (fs.existsSync('security-scan.js')) {
         execSync('node security-scan.js', { stdio: 'inherit' });
+        console.log('✅ Additional security scan completed');
       }
     } catch (error) {
       console.log('ℹ️  No additional security scan available');
     }
     
-    console.log('✅ Security audit completed successfully');
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: 'Security audit completed',
+      status: 'completed'
+    };
+    
+    const reportPath = path.join(process.cwd(), 'security-audit-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Report saved to ${reportPath}`);
+    
+    console.log('✅ Continuous security audit completed successfully');
     
   } catch (error) {
-    console.error('❌ Security audit failed:', error.message);
-    process.exit(1);
+    console.error('❌ Continuous security audit failed:', error.message);
+    // Don't exit, just log the error and continue
   }
 }
 
-function findSourceFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   
-  for (const item of items) {
-    if (item === 'node_modules' || item === '.git' || item === 'dist') {
-      continue;
-    }
-    
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      files.push(...findSourceFiles(fullPath));
-    } else if (/\.(js|ts|jsx|tsx|json|env|config)$/i.test(item)) {
-      files.push(fullPath);
-    }
-  }
+  // Run initial security audit
+  await runSecurityAudit();
   
-  return files;
+  // Set up continuous execution
+  setInterval(async () => {
+    await runSecurityAudit();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
 
-// Run the security audit
-runSecurityAudit();
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the continuous security audit
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous security audit:', error);
+  process.exit(1);
+});

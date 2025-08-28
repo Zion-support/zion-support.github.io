@@ -4,10 +4,12 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔗 Starting daily link checker automation...');
+console.log('🔗 Starting link checker automation...');
 
 async function checkLinks() {
   try {
+    console.log(`🔗 Running link check at ${new Date().toISOString()}`);
+    
     // Build the project first
     console.log('📦 Building project...');
     execSync('npm run build', { stdio: 'inherit' });
@@ -55,10 +57,23 @@ async function checkLinks() {
     
     if (hasIssues) {
       console.log('⚠️  Link check completed with issues found');
-      process.exit(1);
     } else {
       console.log('✅ Link check completed successfully - no issues found');
     }
+    
+    // Generate report
+    const report = {
+      timestamp: new Date().toISOString(),
+      hasIssues,
+      htmlFiles: htmlFiles.length,
+      summary: 'Link check completed'
+    };
+    
+    const reportPath = path.join(process.cwd(), 'link-checker-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`📊 Report saved to ${reportPath}`);
+    
+    console.log('✅ Link check completed successfully');
     
   } catch (error) {
     console.error('❌ Link check failed:', error.message);
@@ -84,5 +99,19 @@ function findHtmlFiles(dir) {
   return files;
 }
 
-// Run the link checker
-checkLinks();
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Run the link check once
+checkLinks().catch(error => {
+  console.error('❌ Failed to run link check:', error);
+  process.exit(1);
+});

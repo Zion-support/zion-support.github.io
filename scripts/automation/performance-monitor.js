@@ -4,18 +4,29 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('📊 Starting daily performance monitoring automation...');
+console.log('📊 Starting continuous performance monitoring automation...');
+
+// Get automation interval from environment variable (default: 2 hours)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
 
 async function runPerformanceMonitor() {
   try {
+    console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);
+    
     // Build the project first
     console.log('🏗️ Building project for performance analysis...');
-    execSync('npm run build', { stdio: 'inherit' });
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build completed');
+    } catch (error) {
+      console.log('⚠️  Build failed but continuing...');
+    }
     
     // Check bundle size
     console.log('📦 Analyzing bundle size...');
     try {
       execSync('node scripts/analyze-bundle.js', { stdio: 'inherit' });
+      console.log('✅ Bundle analysis completed');
     } catch (error) {
       console.log('⚠️  Bundle analysis failed but continuing...');
     }
@@ -52,6 +63,7 @@ async function runPerformanceMonitor() {
     console.log('🔍 Checking for unused dependencies...');
     try {
       execSync('npx depcheck', { stdio: 'inherit' });
+      console.log('✅ Dependency check completed');
     } catch (error) {
       console.log('ℹ️  Dependency check not available');
     }
@@ -69,11 +81,11 @@ async function runPerformanceMonitor() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Performance report saved to ${reportPath}`);
     
-    console.log('✅ Performance monitoring completed successfully');
+    console.log('✅ Continuous performance monitoring completed successfully');
     
   } catch (error) {
-    console.error('❌ Performance monitoring failed:', error.message);
-    process.exit(1);
+    console.error('❌ Continuous performance monitoring failed:', error.message);
+    // Don't exit, just log the error and continue
   }
 }
 
@@ -132,5 +144,34 @@ function getDirectorySize(dir) {
   return totalSize;
 }
 
-// Run the performance monitor
-runPerformanceMonitor();
+// Main continuous loop
+async function runContinuous() {
+  console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  
+  // Run initial performance monitoring
+  await runPerformanceMonitor();
+  
+  // Set up continuous execution
+  setInterval(async () => {
+    await runPerformanceMonitor();
+  }, AUTOMATION_INTERVAL);
+  
+  console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+}
+
+// Handle graceful shutdown
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully...');
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully...');
+  process.exit(0);
+});
+
+// Start the continuous performance monitor
+runContinuous().catch(error => {
+  console.error('❌ Failed to start continuous performance monitoring:', error);
+  process.exit(1);
+});

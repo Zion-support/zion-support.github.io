@@ -36,7 +36,7 @@ module.exports = {
     }
   ],
 
-  // Automation processes to replace Netlify functions and GitHub Actions
+  // Automation processes
   automation: [
     // Daily link checker
     {
@@ -46,8 +46,10 @@ module.exports = {
       autorestart: false,
       cron_restart: '0 2 * * *', // Daily at 2 AM
       watch: false,
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours
       }
     },
 
@@ -59,8 +61,10 @@ module.exports = {
       autorestart: false,
       cron_restart: '0 2 * * 1', // Weekly on Monday at 2 AM
       watch: false,
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days
       }
     },
 
@@ -72,12 +76,14 @@ module.exports = {
       autorestart: false,
       cron_restart: '0 6 * * *', // Daily at 6 AM
       watch: false,
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours
       }
     },
 
-    // Weekly security audit
+    // Security audit
     {
       name: 'security-audit',
       script: './scripts/automation/security-audit.js',
@@ -85,12 +91,14 @@ module.exports = {
       autorestart: false,
       cron_restart: '0 8 * * 0', // Weekly on Sunday at 8 AM
       watch: false,
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days
       }
     },
 
-    // Weekly dependency updates
+    // Dependency updates
     {
       name: 'dependency-updates',
       script: './scripts/automation/dependency-updates.js',
@@ -98,12 +106,14 @@ module.exports = {
       autorestart: false,
       cron_restart: '0 10 * * 2', // Weekly on Tuesday at 10 AM
       watch: false,
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days
       }
     },
 
-    // Daily performance monitoring
+    // Performance monitoring
     {
       name: 'performance-monitor',
       script: './scripts/automation/performance-monitor.js',
@@ -111,12 +121,14 @@ module.exports = {
       autorestart: false,
       cron_restart: '0 12 * * *', // Daily at 12 PM
       watch: false,
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours
       }
     },
 
-    // Daily quality checks
+    // Quality checks
     {
       name: 'quality-checks',
       script: './scripts/automation/quality-checks.js',
@@ -124,12 +136,14 @@ module.exports = {
       autorestart: false,
       cron_restart: '0 14 * * *', // Daily at 2 PM
       watch: false,
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours
       }
     },
 
-    // Daily link integrity checker
+    // Link integrity checker
     {
       name: 'link-integrity',
       script: './scripts/automation/link-integrity.js',
@@ -137,34 +151,10 @@ module.exports = {
       autorestart: false,
       cron_restart: '0 16 * * *', // Daily at 4 PM
       watch: false,
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production'
-      }
-    },
-
-    // Front maximizer (replaces front-maximizer Netlify function)
-    {
-      name: 'front-maximizer',
-      script: './scripts/automation/front-maximizer.js',
-      instances: 1,
-      autorestart: false,
-      cron_restart: '0 18 * * *', // Daily at 6 PM
-      watch: false,
-      env: {
-        NODE_ENV: 'production'
-      }
-    },
-
-    // Sitemap runner (replaces sitemap_runner Netlify function)
-    {
-      name: 'sitemap-runner',
-      script: './scripts/automation/sitemap-runner.js',
-      instances: 1,
-      autorestart: false,
-      cron_restart: '0 20 * * *', // Daily at 8 PM
-      watch: false,
-      env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours
       }
     }
   ]

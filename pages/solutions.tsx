@@ -168,7 +168,7 @@ export default function Solutions() {
 						{successMetrics.map((metric) => (
 							<div key={metric.label} className="text-center">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-4">
-									<metric.icon className="h-8 w-8 text-blue-600" />
+									{React.createElement(metric.icon, { className: "h-8 w-8 text-blue-600" })}
 								</div>
 								<div className="text-3xl font-bold text-gray-900 mb-2">{metric.number}</div>
 								<div className="text-gray-600">{metric.label}</div>
@@ -191,7 +191,7 @@ export default function Solutions() {
 						{industrySolutions.map((solution) => (
 							<div key={solution.title} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group">
 								<div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-									<solution.icon className="w-8 h-8 text-white" />
+									{React.createElement(solution.icon, { className: "w-8 h-8 text-white" })}
 								</div>
 								<h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
 								<p className="text-gray-600 mb-4">{solution.description}</p>
@@ -228,7 +228,7 @@ export default function Solutions() {
 						{technologySolutions.map((solution) => (
 							<div key={solution.title} className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-200">
 								<div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-									<solution.icon className="w-8 h-8 text-white" />
+									{React.createElement(solution.icon, { className: "w-8 h-8 text-white" })}
 								</div>
 								<h3 className="text-xl font-semibold text-gray-900 mb-3">{solution.title}</h3>
 								<p className="text-gray-600 mb-4">{solution.description}</p>
@@ -265,7 +265,7 @@ export default function Solutions() {
 						{useCaseSolutions.map((solution) => (
 							<div key={solution.title} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 group">
 								<div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-									<solution.icon className="w-6 h-6 text-blue-600" />
+									{React.createElement(solution.icon, { className: "w-6 h-6 text-blue-600" })}
 								</div>
 								<h3 className="text-lg font-semibold text-gray-900 mb-2">{solution.title}</h3>
 								<p className="text-gray-600 mb-4 text-sm">{solution.description}</p>

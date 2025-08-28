@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import {
-    Award,
-    Brain,
-    CheckCircle,
-    Globe,
-    Shield,
-    Users
+  Award,
+  Brain,
+  CheckCircle,
+  Globe,
+  Shield,
+  Users
 } from 'lucide-react';
+import React from 'react';
 
 // Animation variants
 const containerVariants = {
@@ -179,7 +180,9 @@ export function FeatureHighlights() {
                 <div className="relative z-10">
                   {/* Icon */}
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <highlight.icon className="w-8 h-8 text-white" />
+                    {React.createElement(highlight.icon, { 
+                      className: "w-8 h-8 text-white" 
+                    })}
                   </div>
 
                   {/* Content */}
@@ -270,7 +273,9 @@ export function FeatureHighlights() {
                 className="text-center"
               >
                 <div className={`inline-flex p-4 rounded-full bg-white/5 mb-4`}>
-                  <achievement.icon className={`w-8 h-8 ${achievement.color}`} />
+                  {React.createElement(achievement.icon, { 
+                    className: `w-8 h-8 ${achievement.color}` 
+                  })}
                 </div>
                 <div className={`text-3xl font-bold ${achievement.color} mb-2`}>
                   {achievement.number}
