@@ -7,7 +7,7 @@ import tsparser from '@typescript-eslint/parser';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.jsx'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
@@ -167,10 +167,97 @@ export default [
     },
   },
   {
-    files: ['**/*.js', 'fix-*.js', '**/fix_*.js'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: 'script',
+      sourceType: 'module',
+      parser: tsparser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearTimeout: 'readonly',
+        clearInterval: 'readonly',
+        requestAnimationFrame: 'readonly',
+        cancelAnimationFrame: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        URLSearchParams: 'readonly',
+        Blob: 'readonly',
+        CustomEvent: 'readonly',
+        Intl: 'readonly',
+        performance: 'readonly',
+        caches: 'readonly',
+        Notification: 'readonly',
+        ServiceWorker: 'readonly',
+        ServiceWorkerRegistration: 'readonly',
+        PushSubscription: 'readonly',
+        NotificationPermission: 'readonly',
+        // Additional browser globals
+        IntersectionObserver: 'readonly',
+        requestIdleCallback: 'readonly',
+        HTMLElement: 'readonly',
+        // Node.js globals
+        process: 'readonly',
+        global: 'readonly',
+        // Testing globals
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        // Deno globals
+        Deno: 'readonly',
+        // React globals
+        React: 'readonly',
+        // TypeScript globals
+        HTMLDivElement: 'readonly',
+        MouseEvent: 'readonly',
+        Node: 'readonly',
+        RequestInit: 'readonly',
+        Response: 'readonly',
+        Headers: 'readonly',
+        HTMLElement: 'readonly',
+      },
+    },
+    plugins: {
+      react,
+      'react-hooks': reactHooks,
+      '@typescript-eslint': tseslint,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      'no-unused-vars': 'off',
+      'no-console': 'warn',
+      'no-undef': 'off', // TypeScript handles this
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+         files: ['**/*.js', 'fix-*.js', '**/fix_*.js', 'fix*.js'],
+     languageOptions: {
+       ecmaVersion: 2021,
+       sourceType: 'module',
       globals: {
         // Node.js globals
         require: 'readonly',
