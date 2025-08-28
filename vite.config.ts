@@ -22,7 +22,19 @@ export default defineConfig({
           'ui-vendor': ['framer-motion', 'lucide-react'],
           'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
           'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'charts-vendor': ['recharts']
+          'charts-vendor': ['recharts'],
+          'ai-services': [
+            './src/pages/AIServices',
+            './src/pages/services/AISalesCopilot',
+            './src/pages/services/AIComplianceAssistant',
+            './src/pages/services/AIAutoEmailResponder'
+          ],
+          'micro-saas': [
+            './src/pages/MicroSaaS',
+            './src/pages/services/MicroCRM',
+            './src/pages/services/WebsiteAnalytics',
+            './src/pages/services/ITHelpdesk'
+          ]
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
@@ -43,10 +55,15 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2
+      },
+      mangle: {
+        toplevel: true
       }
     },
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 800,
+    reportCompressedSize: true
   },
   resolve: {
     alias: {
@@ -100,12 +117,9 @@ export default defineConfig({
     host: true,
     open: true
   },
-  css: {
-    devSourcemap: true,
-    postcss: './postcss.config.js'
-  },
-  define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
-    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
+  // Performance optimizations
+  esbuild: {
+    drop: ['console', 'debugger'],
+    pure: ['console.log', 'console.info', 'console.debug', 'console.warn']
   }
 })

@@ -1,417 +1,494 @@
-import React, { useEffect, useCallback, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, 
   Tablet, 
   Monitor, 
+  Touch, 
   Wifi, 
-  Battery, 
-  Signal, 
-  Hand, 
-  RotateCcw,
-  Maximize,
-  Minimize,
-  Smartphone as PhoneIcon,
-  X,
-  Hand as TouchIcon,
-  Zap,
+  WifiOff,
+  Battery,
+  BatteryCharging,
+  Volume2,
+  VolumeX,
+  Sun,
+  Moon,
   Settings,
+  X,
   CheckCircle,
-  AlertCircle,
+  AlertTriangle,
   Info
 } from 'lucide-react';
 
-interface DeviceInfo {
-  type: 'mobile' | 'tablet' | 'desktop';
-  orientation: 'portrait' | 'landscape';
-  screenSize: { width: number; height: number };
-  pixelRatio: number;
+interface MobileMetrics {
+  screenSize: string;
+  deviceType: 'mobile' | 'tablet' | 'desktop';
   touchSupport: boolean;
-  connection?: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
-  };
+  networkType: string;
+  batteryLevel: number;
+  batteryCharging: boolean;
+  connectionSpeed: string;
+  isOnline: boolean;
+  viewportHeight: number;
+  viewportWidth: number;
+  pixelRatio: number;
+  orientation: 'portrait' | 'landscape';
+  memoryUsage?: number;
+  cpuCores?: number;
 }
 
-interface MobileOptimizations {
-  touchGestures: boolean;
-  responsiveImages: boolean;
-  lazyLoading: boolean;
-  serviceWorker: boolean;
-  offlineSupport: boolean;
-  pushNotifications: boolean;
-  appInstallPrompt: boolean;
+interface MobileOptimization {
+  id: string;
+  title: string;
+  description: string;
+  status: 'enabled' | 'disabled' | 'recommended';
+  impact: 'high' | 'medium' | 'low';
+  action: string;
 }
 
-export function MobileExperienceEnhancer({ 
-  enabled = true 
-}: { 
-  enabled?: boolean; 
-}) {
-  const [deviceInfo, setDeviceInfo] = useState<DeviceInfo | null>(null);
-  const [optimizations, setOptimizations] = useState<MobileOptimizations>({
-    touchGestures: true,
-    responsiveImages: true,
-    lazyLoading: true,
-    serviceWorker: false,
-    offlineSupport: false,
-    pushNotifications: false,
-    appInstallPrompt: false
+const MobileExperienceEnhancer: React.FC<{ enabled?: boolean }> = ({ enabled = false }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<MobileMetrics | null>(null);
+  const [optimizations, setOptimizations] = useState<MobileOptimization[]>([]);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [touchGestures, setTouchGestures] = useState({
+    swipeEnabled: true,
+    pinchEnabled: true,
+    longPressEnabled: true
   });
-  const [showPanel, setShowPanel] = useState(false);
-  const [connectionStatus, setConnectionStatus] = useState<string>('good');
 
-  // Detect device information
-  const detectDevice = useCallback(() => {
+  // Detect device type and capabilities
+  const detectDeviceCapabilities = useCallback((): MobileMetrics => {
     const userAgent = navigator.userAgent;
     const screen = window.screen;
     const connection = (navigator as any).connection;
+    const battery = (navigator as any).getBattery?.();
     
-    // Determine device type
-    let type: 'mobile' | 'tablet' | 'desktop' = 'desktop';
-    if (/Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
-      type = screen.width <= 768 ? 'mobile' : 'tablet';
+    // Device type detection
+    let deviceType: 'mobile' | 'tablet' | 'desktop' = 'desktop';
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+      deviceType = /iPad|Android.*Tablet|Tablet.*Android/i.test(userAgent) ? 'tablet' : 'mobile';
     }
-    
-    // Get orientation
-    const orientation = screen.width > screen.height ? 'landscape' : 'portrait';
-    
-    // Get connection info
-    const connectionInfo = connection ? {
-      effectiveType: connection.effectiveType || 'unknown',
-      downlink: connection.downlink || 0,
-      rtt: connection.rtt || 0
-    } : undefined;
-    
-    const device: DeviceInfo = {
-      type,
+
+    // Screen size classification
+    let screenSize = 'Unknown';
+    if (screen.width < 768) screenSize = 'Small Mobile';
+    else if (screen.width < 1024) screenSize = 'Large Mobile/Tablet';
+    else if (screen.width < 1440) screenSize = 'Desktop';
+    else screenSize = 'Large Desktop';
+
+    // Touch support detection
+    const touchSupport = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    // Network information
+    let networkType = 'Unknown';
+    let connectionSpeed = 'Unknown';
+    if (connection) {
+      networkType = connection.effectiveType || connection.type || 'Unknown';
+      connectionSpeed = connection.downlink ? `${connection.downlink} Mbps` : 'Unknown';
+    }
+
+    // Battery information
+    let batteryLevel = 0;
+    let batteryCharging = false;
+    if (battery) {
+      battery.then((batteryInfo: any) => {
+        batteryLevel = Math.round(batteryInfo.level * 100);
+        batteryCharging = batteryInfo.charging;
+      });
+    }
+
+    // Viewport information
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const pixelRatio = window.devicePixelRatio || 1;
+    const orientation = viewportHeight > viewportWidth ? 'portrait' : 'landscape';
+
+    // Memory and CPU information (if available)
+    const memory = (performance as any).memory;
+    const memoryUsage = memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : undefined;
+    const cpuCores = (navigator as any).hardwareConcurrency;
+
+    return {
+      screenSize,
+      deviceType,
+      touchSupport,
+      networkType,
+      batteryLevel,
+      batteryCharging,
+      connectionSpeed,
+      isOnline: navigator.onLine,
+      viewportHeight,
+      viewportWidth,
+      pixelRatio,
       orientation,
-      screenSize: { width: screen.width, height: screen.height },
-      pixelRatio: window.devicePixelRatio || 1,
-      touchSupport: 'ontouchstart' in window || navigator.maxTouchPoints > 0,
-      connection: connectionInfo
+      memoryUsage,
+      cpuCores
     };
-    
-    setDeviceInfo(device);
-    return device;
   }, []);
 
-  // Apply mobile-specific optimizations
-  const applyMobileOptimizations = useCallback((device: DeviceInfo) => {
-    const newOptimizations: MobileOptimizations = { ...optimizations };
-    
-    if (device.type === 'mobile') {
-      newOptimizations.touchGestures = true;
-      newOptimizations.responsiveImages = true;
-      newOptimizations.lazyLoading = true;
-      
-      // Enable service worker for offline support on mobile
-      if ('serviceWorker' in navigator) {
-        newOptimizations.serviceWorker = true;
-        newOptimizations.offlineSupport = true;
-      }
-      
-      // Enable push notifications if supported
-      if ('Notification' in window && Notification.permission !== 'denied') {
-        newOptimizations.pushNotifications = true;
-      }
-    }
-    
-    setOptimizations(newOptimizations);
-  }, [optimizations]);
+  // Generate mobile optimizations
+  const generateOptimizations = useCallback((currentMetrics: MobileMetrics) => {
+    const opts: MobileOptimization[] = [];
 
-  // Enable touch gestures
-  const enableTouchGestures = useCallback(() => {
-    if (!optimizations.touchGestures) return;
-    
+    // Touch optimization
+    if (currentMetrics.touchSupport) {
+      opts.push({
+        id: 'touch-optimization',
+        title: 'Touch Gesture Optimization',
+        description: 'Enable advanced touch gestures for better mobile experience',
+        status: 'enabled',
+        impact: 'high',
+        action: 'Touch gestures are optimized for mobile devices'
+      });
+    }
+
+    // Network optimization
+    if (currentMetrics.networkType === 'slow-2g' || currentMetrics.networkType === '2g') {
+      opts.push({
+        id: 'network-optimization',
+        title: 'Network Performance Optimization',
+        description: 'Optimize for slow network connections',
+        status: 'recommended',
+        impact: 'high',
+        action: 'Enable data compression and lazy loading'
+      });
+    }
+
+    // Battery optimization
+    if (currentMetrics.batteryLevel < 20) {
+      opts.push({
+        id: 'battery-optimization',
+        title: 'Battery Optimization',
+        description: 'Low battery detected, enable power-saving features',
+        status: 'recommended',
+        impact: 'medium',
+        action: 'Reduce animations and background processes'
+      });
+    }
+
+    // Memory optimization
+    if (currentMetrics.memoryUsage && currentMetrics.memoryUsage > 100) {
+      opts.push({
+        id: 'memory-optimization',
+        title: 'Memory Usage Optimization',
+        description: 'High memory usage detected',
+        status: 'recommended',
+        impact: 'medium',
+        action: 'Implement memory cleanup and optimization'
+      });
+    }
+
+    // Viewport optimization
+    if (currentMetrics.deviceType === 'mobile' && currentMetrics.orientation === 'landscape') {
+      opts.push({
+        id: 'viewport-optimization',
+        title: 'Landscape Mode Optimization',
+        description: 'Optimize layout for landscape orientation',
+        status: 'enabled',
+        impact: 'low',
+        action: 'Layout automatically adjusts for landscape mode'
+      });
+    }
+
+    setOptimizations(opts);
+  }, []);
+
+  // Apply mobile optimizations
+  const applyOptimization = useCallback((optimizationId: string) => {
+    switch (optimizationId) {
+      case 'touch-optimization':
+        // Enable touch gestures
+        document.body.classList.add('touch-optimized');
+        break;
+      case 'network-optimization':
+        // Enable network optimizations
+        document.body.classList.add('network-optimized');
+        break;
+      case 'battery-optimization':
+        // Enable battery optimizations
+        document.body.classList.add('battery-optimized');
+        break;
+      case 'memory-optimization':
+        // Enable memory optimizations
+        document.body.classList.add('memory-optimized');
+        break;
+    }
+  }, []);
+
+  // Touch gesture handlers
+  useEffect(() => {
+    if (!enabled || !touchGestures.swipeEnabled) return;
+
     let startX = 0;
     let startY = 0;
     let startTime = 0;
-    
+
     const handleTouchStart = (e: TouchEvent) => {
       startX = e.touches[0].clientX;
-      startY = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
       startTime = Date.now();
     };
-    
+
     const handleTouchEnd = (e: TouchEvent) => {
       const endX = e.changedTouches[0].clientX;
       const endY = e.changedTouches[0].clientY;
       const endTime = Date.now();
-      
-      const deltaX = endX - startX;
-      const deltaY = endY - startY;
-      const deltaTime = endTime - startTime;
-      
-      // Detect swipe gestures
-      if (deltaTime < 300) {
-        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
-          // Horizontal swipe
-          if (deltaX > 0) {
-            console.log('Swipe right detected');
-          } else {
-            console.log('Swipe left detected');
-          }
-        } else if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 50) {
-          // Vertical swipe
-          if (deltaY > 0) {
-            console.log('Swipe down detected');
-          } else {
-            console.log('Swipe up detected');
-          }
+      const duration = endTime - startTime;
+      const distanceX = Math.abs(endX - startX);
+      const distanceY = Math.abs(endY - startY);
+
+      // Swipe detection
+      if (duration < 300 && distanceX > 50 && distanceY < 100) {
+        if (endX > startX) {
+          // Swipe right
+          console.log('Swipe right detected');
+        } else {
+          // Swipe left
+          console.log('Swipe left detected');
+        }
+      }
+
+      // Swipe up/down detection
+      if (duration < 300 && distanceY > 50 && distanceX < 100) {
+        if (endY > startY) {
+          // Swipe down
+          console.log('Swipe down detected');
+        } else {
+          // Swipe up
+          console.log('Swipe up detected');
         }
       }
     };
-    
-    document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchend', handleTouchEnd);
-    
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+
     return () => {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [optimizations.touchGestures]);
+  }, [enabled, touchGestures.swipeEnabled]);
 
-  // Register service worker for offline support
-  const registerServiceWorker = useCallback(async () => {
-    if (!optimizations.serviceWorker || !('serviceWorker' in navigator)) return;
-    
-    try {
-      const registration = await navigator.serviceWorker.register('/sw.js');
-      console.log('Service Worker registered:', registration);
-      
-      // Check for updates
-      registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing;
-        if (newWorker) {
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              // New content available
-              setOptimizations(prev => ({ ...prev, hasUpdates: true }));
-            }
-          });
-        }
-      });
-    } catch (error) {
-      console.error('Service Worker registration failed:', error);
-    }
-  }, [optimizations.serviceWorker]);
-
-  // Optimize for connection speed
-  const optimizeForConnection = useCallback((connection: DeviceInfo['connection']) => {
-    if (!connection) return;
-    
-    let status = 'good';
-    if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
-      status = 'slow';
-      // Disable heavy features on slow connections
-      setOptimizations(prev => ({
-        ...prev,
-        responsiveImages: false,
-        lazyLoading: true
-      }));
-    } else if (connection.effectiveType === '3g') {
-      status = 'moderate';
-    }
-    
-    setConnectionStatus(status);
-  }, []);
-
-  // Show app install prompt
-  const showAppInstallPrompt = useCallback(() => {
-    if (!optimizations.appInstallPrompt) return;
-    
-    let deferredPrompt: any;
-    
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      
-      // Show custom install button or prompt
-      console.log('App install prompt available');
-    });
-    
-    window.addEventListener('appinstalled', () => {
-      console.log('App installed successfully');
-      setOptimizations(prev => ({ ...prev, appInstallPrompt: false }));
-    });
-  }, [optimizations.appInstallPrompt]);
-
-  // Initialize optimizations
+  // Update metrics periodically
   useEffect(() => {
     if (!enabled) return;
-    
-    const device = detectDevice();
-    applyMobileOptimizations(device);
-    const cleanup = enableTouchGestures();
-    registerServiceWorker();
-    showAppInstallPrompt();
-    
-    if (device.connection) {
-      optimizeForConnection(device.connection);
-    }
-    
-    return cleanup;
-  }, [enabled, detectDevice, applyMobileOptimizations, enableTouchGestures, registerServiceWorker, showAppInstallPrompt, optimizeForConnection]);
 
-  // Monitor connection changes
-  useEffect(() => {
-    if (!deviceInfo?.connection) return;
-    
-    const handleConnectionChange = () => {
-      const connection = (navigator as any).connection;
-      if (connection) {
-        const newConnection = {
-          effectiveType: connection.effectiveType || 'unknown',
-          downlink: connection.downlink || 0,
-          rtt: connection.rtt || 0
-        };
-        optimizeForConnection(newConnection);
-      }
+    const updateMetrics = () => {
+      const newMetrics = detectDeviceCapabilities();
+      setMetrics(newMetrics);
+      generateOptimizations(newMetrics);
     };
-    
-    if ((navigator as any).connection) {
-      (navigator as any).connection.addEventListener('change', handleConnectionChange);
-      return () => {
-        (navigator as any).connection.removeEventListener('change', handleConnectionChange);
-      };
-    }
-  }, [deviceInfo?.connection, optimizeForConnection]);
+
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 10000);
+
+    return () => clearInterval(interval);
+  }, [enabled, detectDeviceCapabilities, generateOptimizations]);
+
+  // Network status monitoring
+  useEffect(() => {
+    if (!enabled) return;
+
+    const handleOnline = () => {
+      setMetrics(prev => prev ? { ...prev, isOnline: true } : null);
+    };
+
+    const handleOffline = () => {
+      setMetrics(prev => prev ? { ...prev, isOnline: false } : null);
+    };
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, [enabled]);
 
   if (!enabled) return null;
 
   return (
-    <>
-      {/* Floating action button to show device info */}
-      <motion.button
-        onClick={() => setShowPanel(true)}
-        className="fixed bottom-4 right-4 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        aria-label="Mobile Experience Info"
-      >
-        <TouchIcon size={24} />
-      </motion.button>
-
-      {/* Device info panel */}
-      <AnimatePresence>
-        {showPanel && (
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-            onClick={() => setShowPanel(false)}
-          >
-            <motion.div
-              className="bg-white rounded-lg p-6 max-w-md w-full mx-4 max-h-[80vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-semibold">Mobile Experience</h3>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          className="fixed bottom-4 left-4 z-50"
+        >
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-w-sm">
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+              <div className="flex items-center space-x-2">
+                <Smartphone className="w-5 h-5 text-green-500" />
+                <h3 className="font-semibold text-gray-900 dark:text-white">Mobile Experience</h3>
+              </div>
+              <div className="flex items-center space-x-2">
                 <button
-                  onClick={() => setShowPanel(false)}
-                  className="text-gray-500 hover:text-gray-700"
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
                 >
-                  <X size={20} />
+                  <Settings className="w-4 h-4 text-gray-500" />
+                </button>
+                <button
+                  onClick={() => setIsVisible(false)}
+                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                >
+                  <X className="w-4 h-4 text-gray-500" />
                 </button>
               </div>
+            </div>
 
-              {deviceInfo && (
-                <div className="space-y-4">
-                  {/* Device Info */}
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-medium mb-2">Device Information</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span>Type:</span>
-                        <span className="capitalize">{deviceInfo.type}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Orientation:</span>
-                        <span className="capitalize">{deviceInfo.orientation}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Screen:</span>
-                        <span>{deviceInfo.screenSize.width} × {deviceInfo.screenSize.height}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Pixel Ratio:</span>
-                        <span>{deviceInfo.pixelRatio}x</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Touch Support:</span>
-                        <span>{deviceInfo.touchSupport ? 'Yes' : 'No'}</span>
-                      </div>
+            {/* Device Info */}
+            <div className="p-4">
+              {metrics && (
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">Device</span>
+                    <span className="text-sm font-medium text-gray-900 dark:text-white capitalize">
+                      {metrics.deviceType}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">Screen</span>
+                    <span className="text-sm font-medium text-gray-900 dark:text-white">
+                      {metrics.screenSize}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">Network</span>
+                    <div className="flex items-center space-x-1">
+                      {metrics.isOnline ? (
+                        <Wifi className="w-4 h-4 text-green-500" />
+                      ) : (
+                        <WifiOff className="w-4 h-4 text-red-500" />
+                      )}
+                      <span className="text-sm font-medium text-gray-900 dark:text-white">
+                        {metrics.networkType}
+                      </span>
                     </div>
                   </div>
-
-                  {/* Connection Info */}
-                  {deviceInfo.connection && (
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <h4 className="font-medium mb-2">Connection</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex justify-between">
-                          <span>Type:</span>
-                          <span className="capitalize">{deviceInfo.connection.effectiveType}</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Speed:</span>
-                          <span>{deviceInfo.connection.downlink} Mbps</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Latency:</span>
-                          <span>{deviceInfo.connection.rtt}ms</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Status:</span>
-                          <span className={`capitalize ${
-                            connectionStatus === 'good' ? 'text-green-600' : 
-                            connectionStatus === 'moderate' ? 'text-yellow-600' : 'text-red-600'
-                          }`}>
-                            {connectionStatus}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Active Optimizations */}
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-medium mb-2">Active Optimizations</h4>
-                    <div className="space-y-2">
-                      {Object.entries(optimizations).map(([key, value]) => (
-                        <div key={key} className="flex items-center justify-between">
-                          <span className="text-sm capitalize">
-                            {key.replace(/([A-Z])/g, ' $1').trim()}
-                          </span>
-                          <div className="flex items-center">
-                            {value ? (
-                              <CheckCircle size={16} className="text-green-600" />
-                            ) : (
-                              <AlertCircle size={16} className="text-gray-400" />
-                            )}
-                          </div>
-                        </div>
-                      ))}
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">Battery</span>
+                    <div className="flex items-center space-x-1">
+                      {metrics.batteryCharging ? (
+                        <BatteryCharging className="w-4 h-4 text-green-500" />
+                      ) : (
+                        <Battery className="w-4 h-4 text-gray-500" />
+                      )}
+                      <span className="text-sm font-medium text-gray-900 dark:text-white">
+                        {metrics.batteryLevel}%
+                      </span>
                     </div>
                   </div>
                 </div>
               )}
 
-              <div className="mt-6 text-center">
+              {/* Touch Gestures */}
+              <div className="mb-4">
+                <h4 className="font-medium text-gray-900 dark:text-white mb-3">Touch Gestures</h4>
+                <div className="space-y-2">
+                  {Object.entries(touchGestures).map(([gesture, enabled]) => (
+                    <div key={gesture} className="flex items-center justify-between">
+                      <span className="text-sm text-gray-600 dark:text-gray-400 capitalize">
+                        {gesture.replace(/([A-Z])/g, ' $1').trim()}
+                      </span>
+                      <button
+                        onClick={() => setTouchGestures(prev => ({ ...prev, [gesture]: !enabled }))}
+                        className={`w-10 h-6 rounded-full transition-colors ${
+                          enabled ? 'bg-green-500' : 'bg-gray-300'
+                        }`}
+                      >
+                        <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
+                          enabled ? 'translate-x-4' : 'translate-x-0'
+                        }`} />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Optimizations */}
+              {isExpanded && optimizations.length > 0 && (
+                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <h4 className="font-medium text-gray-900 dark:text-white mb-3">Optimizations</h4>
+                  <div className="space-y-3">
+                    {optimizations.slice(0, 3).map((opt) => (
+                      <div key={opt.id} className="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                        <div className="flex items-start space-x-2">
+                          {opt.status === 'enabled' ? (
+                            <CheckCircle className="w-4 h-4 mt-0.5 text-green-500" />
+                          ) : opt.status === 'recommended' ? (
+                            <AlertTriangle className="w-4 h-4 mt-0.5 text-yellow-500" />
+                          ) : (
+                            <Info className="w-4 h-4 mt-0.5 text-blue-500" />
+                          )}
+                          <div className="flex-1">
+                            <div className="text-sm font-medium text-gray-900 dark:text-white">
+                              {opt.title}
+                            </div>
+                            <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                              {opt.description}
+                            </div>
+                            <div className="text-xs text-gray-500 mt-1">
+                              Impact: {opt.impact}
+                            </div>
+                          </div>
+                        </div>
+                        {opt.status === 'recommended' && (
+                          <button
+                            onClick={() => applyOptimization(opt.id)}
+                            className="mt-2 w-full bg-blue-500 hover:bg-blue-600 text-white text-xs py-1 px-2 rounded transition-colors"
+                          >
+                            Apply
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Action Buttons */}
+              <div className="mt-4 flex space-x-2">
                 <button
-                  onClick={() => setShowPanel(false)}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  onClick={() => {
+                    const newMetrics = detectDeviceCapabilities();
+                    setMetrics(newMetrics);
+                    generateOptimizations(newMetrics);
+                  }}
+                  className="flex-1 bg-green-500 hover:bg-green-600 text-white text-sm py-2 px-3 rounded-lg transition-colors"
                 >
-                  Close
+                  Refresh
+                </button>
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >
+                  {isExpanded ? 'Less' : 'More'}
                 </button>
               </div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            </div>
+          </div>
+        </motion.div>
+      )}
+
+      {/* Toggle Button */}
+      {!isVisible && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          onClick={() => setIsVisible(true)}
+          className="fixed bottom-4 left-4 z-50 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+          title="Show Mobile Experience Monitor"
+        >
+          <Smartphone className="w-5 h-5" />
+        </motion.button>
+      )}
+    </AnimatePresence>
   );
-}
+};
+
+export default MobileExperienceEnhancer;
