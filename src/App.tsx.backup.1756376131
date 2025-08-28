@@ -114,6 +114,9 @@ const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHyb
 // 2029 Services Showcase
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
 
+<<<<<<< HEAD
+// Additional pages
+=======
 // Additional missing imports
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
@@ -149,6 +152,7 @@ const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics'));
 const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
 const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
 const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-06ce
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
@@ -328,6 +332,9 @@ function App() {
                     {/* Enhanced services pages */}
                     <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                     
+<<<<<<< HEAD
+                    {/* Service pages */}
+=======
                     {/* New Enhanced Services Routes */}
                     <Route path="/comprehensive-services-showcase-2025-enhanced" element={<ComprehensiveServicesShowcase2025Enhanced />} />
                     <Route path="/comprehensive-pricing-showcase-2025" element={<ComprehensivePricingShowcase2025 />} />
@@ -348,6 +355,7 @@ function App() {
                     <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                     <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-06ce
                     <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
