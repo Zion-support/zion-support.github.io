@@ -68,6 +68,141 @@ const Services: React.FC = () => {
     { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-zion-purple to-zion-cyan' }
   ];
 
+  // Enhanced service card component
+  const ServiceCard = ({ service }: { service: InnovativeMicroSaasService }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -5 }}
+      className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden"
+    >
+      <div className="p-6">
+        {/* Header */}
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex-1">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+              {service.title}
+            </h3>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+              {service.description}
+            </p>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="flex items-center text-yellow-400">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'fill-current' : 'fill-none'}`}
+                />
+              ))}
+            </div>
+            <span className="text-sm text-gray-500 dark:text-gray-400">
+              ({service.reviews})
+            </span>
+          </div>
+        </div>
+
+        {/* Category and Price */}
+        <div className="flex items-center justify-between mb-4">
+          <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-medium rounded-full">
+            {service.category}
+          </span>
+          <div className="text-right">
+            <div className="text-2xl font-bold text-gray-900 dark:text-white">
+              {service.currency}{service.price.toLocaleString()}
+            </div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              per {service.pricingModel}
+            </div>
+          </div>
+        </div>
+
+        {/* Key Features */}
+        <div className="mb-4">
+          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Key Features</h4>
+          <div className="grid grid-cols-1 gap-1">
+            {service.features.slice(0, 3).map((feature, idx) => (
+              <div key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                <span>{feature}</span>
+              </div>
+            ))}
+            {service.features.length > 3 && (
+              <div className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+                +{service.features.length - 3} more features
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Benefits */}
+        <div className="mb-4">
+          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Key Benefits</h4>
+          <div className="space-y-1">
+            {service.benefits.slice(0, 2).map((benefit, idx) => (
+              <div key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                <TrendingUp className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                <span>{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Technical Specs */}
+        {service.technicalSpecs && (
+          <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Technical Details</h4>
+            <div className="grid grid-cols-2 gap-2 text-xs text-gray-600 dark:text-gray-300">
+              <div>
+                <span className="font-medium">Uptime:</span> {service.technicalSpecs.uptime}
+              </div>
+              <div>
+                <span className="font-medium">API Endpoints:</span> {service.technicalSpecs.apiEndpoints}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ROI and Market Info */}
+        <div className="flex items-center justify-between mb-4 text-sm">
+          <div>
+            <span className="text-gray-500 dark:text-gray-400">ROI:</span>
+            <span className="ml-1 font-semibold text-green-600 dark:text-green-400">{service.roi}</span>
+          </div>
+          <div>
+            <span className="text-gray-500 dark:text-gray-400">Delivery:</span>
+            <span className="ml-1 font-semibold text-blue-600 dark:text-blue-400">{service.estimatedDelivery}</span>
+          </div>
+        </div>
+
+        {/* Contact and Actions */}
+        <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+          <div className="flex items-center justify-between">
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              <div>Contact: {service.contactInfo.phone}</div>
+              <div>{service.contactInfo.email}</div>
+            </div>
+            <div className="flex space-x-2">
+              <Link
+                to="/request-quote"
+                className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Quote
+              </Link>
+              <Link
+                to="/contact"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+
   const filteredServices = allServices.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -166,6 +301,92 @@ const Services: React.FC = () => {
                 View Pricing
               </Link>
             </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Services Overview Section */}
+      <div className="container-responsive py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Comprehensive Service Categories
+          </h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Our services span across multiple cutting-edge technology domains, each designed to solve specific business challenges and drive innovation.
+          </p>
+        </motion.div>
+
+        {/* Service Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {categories.slice(0, 6).map((category, index) => (
+            <motion.div
+              key={category.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-cyan-400/50 transition-all duration-300"
+            >
+              <div className="text-4xl mb-4">{category.icon}</div>
+              <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
+              <p className="text-gray-400 mb-4">{category.count} services available</p>
+              <button
+                onClick={() => setActiveCategory(category.id)}
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              >
+                Explore Services
+              </button>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center bg-slate-800/30 rounded-xl p-6 border border-slate-700/50"
+          >
+            <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
+            <div className="text-gray-400">Total Services</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-center bg-slate-800/30 rounded-xl p-6 border border-slate-700/50"
+          >
+            <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>
+            <div className="text-gray-400">Technology Categories</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center bg-slate-800/30 rounded-xl p-6 border border-slate-700/50"
+          >
+            <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+            <div className="text-gray-400">Uptime Guarantee</div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-center bg-slate-800/30 rounded-xl p-6 border border-slate-700/50"
+          >
+            <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+            <div className="text-gray-400">Support Available</div>
           </motion.div>
         </div>
       </div>
@@ -384,6 +605,29 @@ const Services: React.FC = () => {
             >
               Talk to Our Experts
             </Link>
+          </div>
+          
+          {/* Contact Information */}
+          <div className="mt-12 pt-8 border-t border-cyan-400/30">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-300">
+              <div>
+                <div className="font-semibold text-white mb-2">Phone</div>
+                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div>
+                <div className="font-semibold text-white mb-2">Email</div>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div>
+                <div className="font-semibold text-white mb-2">Address</div>
+                <div>364 E Main St STE 1008</div>
+                <div>Middletown DE 19709</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

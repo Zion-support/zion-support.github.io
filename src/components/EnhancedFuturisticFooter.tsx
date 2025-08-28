@@ -98,59 +98,75 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: '2027 Services Overview', href: '/services2027', featured: true },
         { name: 'AI Solutions Hub', href: '/ai-solutions', featured: true },
         { name: 'Quantum Computing Solutions', href: '/quantum-computing', featured: true },
-        { name: 'Cybersecurity Platform', href: '/cybersecurity', featured: true },
-        { name: 'Cloud & DevOps Services', href: '/cloud-devops', featured: true },
-        { name: 'IoT & Edge Computing', href: '/iot-edge-computing', featured: true },
-        { name: 'Digital Twin Solutions', href: '/digital-twin', featured: true },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3', featured: true },
-        { name: 'Space Technology', href: '/space-tech', featured: true }
+        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', featured: true },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
+        { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', featured: true },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', featured: true }
       ]
     },
     {
-      title: 'Core Services',
+      title: 'AI & Technology',
       featured: false,
       links: [
-        { name: 'AI & Analytics', href: '/services', featured: false },
-        { name: 'AI & Legal Tech', href: '/services', featured: false },
-        { name: 'AI & Healthcare', href: '/services', featured: false },
-        { name: 'AI & Research', href: '/services', featured: false },
-        { name: 'AI & Green Tech', href: '/services', featured: false },
-        { name: 'AI & Metaverse', href: '/services', featured: false },
-        { name: 'AI & Blockchain', href: '/services', featured: false },
-        { name: 'AI & Edge Computing', href: '/services', featured: false },
-        { name: 'Quantum Computing', href: '/services', featured: false },
-        { name: 'AI & Space Tech', href: '/services', featured: false }
+        { name: 'AI Business Intelligence', href: '/services', featured: false },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: false },
+        { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: false },
+        { name: 'AI Legal Tech', href: '/services', featured: false },
+        { name: 'AI Content Creation', href: '/services', featured: false },
+        { name: 'AI Marketing Automation', href: '/services', featured: false },
+        { name: 'AI Project Management', href: '/services', featured: false },
+        { name: 'AI Customer Support', href: '/services', featured: false },
+        { name: 'AI Workflow Automation', href: '/services', featured: false },
+        { name: 'AI Predictive Analytics', href: '/services', featured: false }
       ]
     },
     {
-      title: 'Solutions',
+      title: 'Emerging Technologies',
+      featured: false,
+      links: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: false },
+        { name: 'Quantum AI Trading', href: '/services', featured: false },
+        { name: 'Space Technology', href: '/services/space-tech', featured: false },
+        { name: 'Metaverse Development', href: '/services', featured: false },
+        { name: 'Blockchain Analytics', href: '/services', featured: false },
+        { name: 'Edge Computing', href: '/services', featured: false },
+        { name: 'IoT Solutions', href: '/services/iot-edge-computing', featured: false },
+        { name: 'Digital Twin', href: '/services/digital-twin', featured: false },
+        { name: 'Green Technology', href: '/services/green-it', featured: false },
+        { name: 'Sustainable Tech', href: '/services/sustainable-technology', featured: false }
+      ]
+    },
+    {
+      title: 'Business Solutions',
       featured: false,
       links: [
         { name: 'Enterprise Solutions', href: '/solutions', featured: false },
-        { name: 'SMB Solutions', href: '/solutions', featured: false },
         { name: 'Startup Solutions', href: '/solutions', featured: false },
         { name: 'Government Solutions', href: '/solutions', featured: false },
         { name: 'Healthcare Solutions', href: '/solutions', featured: false },
-        { name: 'Financial Solutions', href: '/solutions', featured: false },
-        { name: 'Manufacturing Solutions', href: '/solutions', featured: false },
-        { name: 'Retail Solutions', href: '/solutions', featured: false },
-        { name: 'Education Solutions', href: '/solutions', featured: false },
-        { name: 'Transportation Solutions', href: '/solutions', featured: false }
+        { name: 'Financial Services', href: '/solutions', featured: false },
+        { name: 'Manufacturing', href: '/solutions', featured: false },
+        { name: 'Retail & E-commerce', href: '/solutions', featured: false },
+        { name: 'Education & Training', href: '/solutions', featured: false },
+        { name: 'Real Estate', href: '/solutions', featured: false },
+        { name: 'Transportation & Logistics', href: '/solutions', featured: false }
       ]
     },
     {
-      title: 'Resources',
+      title: 'Resources & Support',
       featured: false,
       links: [
-        { name: 'Blog & Insights', href: '/blog', featured: false },
+        { name: 'Learning Center', href: '/resources', featured: false },
+        { name: 'Developer Resources', href: '/resources', featured: false },
+        { name: 'Industry Insights', href: '/resources', featured: false },
         { name: 'Case Studies', href: '/case-studies', featured: false },
         { name: 'White Papers', href: '/white-papers', featured: false },
         { name: 'Webinars', href: '/webinars', featured: false },
-        { name: 'Documentation', href: '/docs', featured: false },
-        { name: 'FAQ & Support', href: '/faq', featured: false },
-        { name: 'API Reference', href: '/docs/api', featured: false },
-        { name: 'Developer Tools', href: '/developer-tools', featured: false },
-        { name: 'Training & Certification', href: '/training', featured: false },
+        { name: 'Blog & News', href: '/blog', featured: false },
+        { name: 'Help Center', href: '/help', featured: false },
+        { name: 'Support Portal', href: '/support', featured: false },
         { name: 'Community Forum', href: '/community', featured: false }
       ]
     },
@@ -176,15 +192,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
+    hours: 'Mon-Fri: 9:00 AM - 6:00 PM EST',
+    emergency: '24/7 Support Available'
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-400' },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-blue-400' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-600' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
   ];
 
@@ -320,8 +338,110 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </div>
         </div>
 
-        {/* Quick Actions Section */}
+        {/* Contact Information Section */}
         <div className="mt-16 pt-12 border-t border-slate-700/50">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            {/* Contact Details */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <MessageCircle className="w-6 h-6 text-cyan-400 mr-3" />
+                Contact Information
+              </h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <Phone className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-white font-medium">Phone</p>
+                    <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <Mail className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-white font-medium">Email</p>
+                    <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      {contactInfo.email}
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-white font-medium">Address</p>
+                    <p className="text-gray-300">{contactInfo.address}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <Globe className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-white font-medium">Website</p>
+                    <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      {contactInfo.website.replace('https://', '')}
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 pt-6 border-t border-slate-700/50">
+                <h4 className="text-white font-semibold mb-3">Business Hours</h4>
+                <p className="text-gray-300 text-sm">{contactInfo.hours}</p>
+                <p className="text-cyan-400 text-sm font-medium mt-1">{contactInfo.emergency}</p>
+              </div>
+            </div>
+
+            {/* Quick Actions */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <Zap className="w-6 h-6 text-cyan-400 mr-3" />
+                Quick Actions
+              </h3>
+              
+              <div className="space-y-3">
+                <Link to="/request-quote" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-center py-3 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium">
+                  Request Quote
+                </Link>
+                <Link to="/contact" className="block w-full bg-slate-700 text-white text-center py-3 px-4 rounded-lg hover:bg-slate-600 transition-all duration-200 font-medium">
+                  Schedule Demo
+                </Link>
+                <Link to="/services" className="block w-full bg-slate-700 text-white text-center py-3 px-4 rounded-lg hover:bg-slate-600 transition-all duration-200 font-medium">
+                  View Services
+                </Link>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <Users className="w-6 h-6 text-cyan-400 mr-3" />
+                Connect With Us
+              </h3>
+              
+              <div className="grid grid-cols-2 gap-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex items-center space-x-2 p-3 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 transition-all duration-200 ${social.color}`}
+                  >
+                    <social.icon className="w-4 h-4" />
+                    <span className="text-sm font-medium text-gray-300">{social.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Quick Actions Section */}
+        <div className="pt-12 border-t border-slate-700/50">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
             <p className="text-gray-400 max-w-2xl mx-auto">

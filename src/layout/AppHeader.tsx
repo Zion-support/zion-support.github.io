@@ -51,7 +51,12 @@ export function AppHeader() {
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
-      color: 'from-purple-500 to-cyan-500'
+      color: 'from-purple-500 to-cyan-500',
+      subservices: [
+        { name: 'AI Business Intelligence', href: '/services', description: 'Advanced analytics platform' },
+        { name: 'Data Analytics Solutions', href: '/services', description: 'Real-time data insights' },
+        { name: 'Predictive Analytics', href: '/services', description: 'Future trend forecasting' }
+      ]
     },
     { 
       name: 'AI & Legal Tech', 
@@ -59,7 +64,12 @@ export function AppHeader() {
       icon: Scale, 
       description: 'Document Analysis & Compliance',
       featured: false,
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-blue-500 to-indigo-500',
+      subservices: [
+        { name: 'Legal Document Analyzer', href: '/services', description: 'Contract risk assessment' },
+        { name: 'Compliance Monitoring', href: '/services', description: 'Regulatory compliance' },
+        { name: 'Legal Research AI', href: '/services', description: 'Automated legal research' }
+      ]
     },
     { 
       name: 'AI & Healthcare', 
@@ -67,7 +77,12 @@ export function AppHeader() {
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500',
+      subservices: [
+        { name: 'Healthcare Diagnostic AI', href: '/services', description: 'Medical image analysis' },
+        { name: 'Patient Care Platform', href: '/services', description: 'Healthcare management' },
+        { name: 'Medical Research AI', href: '/services', description: 'Clinical decision support' }
+      ]
     },
     { 
       name: 'AI & Research', 
@@ -75,7 +90,12 @@ export function AppHeader() {
       icon: Eye, 
       description: 'Scientific Research & Discovery',
       featured: false,
-      color: 'from-purple-500 to-violet-500'
+      color: 'from-purple-500 to-violet-500',
+      subservices: [
+        { name: 'Research Automation', href: '/services', description: 'Scientific process automation' },
+        { name: 'Literature Review AI', href: '/services', description: 'Automated research analysis' },
+        { name: 'Experimental Design', href: '/services', description: 'AI-powered research planning' }
+      ]
     },
     { 
       name: 'AI & Green Tech', 
@@ -83,7 +103,12 @@ export function AppHeader() {
       icon: Leaf, 
       description: 'Sustainability Solutions',
       featured: false,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
+      subservices: [
+        { name: 'Sustainability Management', href: '/services', description: 'ESG compliance platform' },
+        { name: 'Carbon Footprint Tracking', href: '/services', description: 'Environmental impact analysis' },
+        { name: 'Green Energy Optimization', href: '/services', description: 'Renewable energy management' }
+      ]
     },
     { 
       name: 'AI & Metaverse', 
@@ -91,7 +116,12 @@ export function AppHeader() {
       icon: Globe, 
       description: 'Virtual Reality & Gaming',
       featured: true,
-      color: 'from-purple-500 to-indigo-500'
+      color: 'from-purple-500 to-indigo-500',
+      subservices: [
+        { name: 'Metaverse Development', href: '/services', description: 'Virtual world creation' },
+        { name: 'VR/AR Solutions', href: '/services', description: 'Immersive experiences' },
+        { name: 'Virtual Events Platform', href: '/services', description: 'Digital event hosting' }
+      ]
     },
     { 
       name: 'AI & Blockchain', 
@@ -99,31 +129,64 @@ export function AppHeader() {
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
       featured: false,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
+      subservices: [
+        { name: 'Blockchain Analytics', href: '/services', description: 'Crypto transaction analysis' },
+        { name: 'DeFi Security', href: '/services', description: 'Decentralized finance protection' },
+        { name: 'Smart Contract AI', href: '/services', description: 'Intelligent contract automation' }
+      ]
     },
     { 
       name: 'AI & Edge Computing', 
       href: '/services', 
       icon: Cpu, 
-      description: 'IoT & Real-time Processing',
+      description: 'Edge AI & IoT Solutions',
       featured: false,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
+      subservices: [
+        { name: 'Edge AI Platform', href: '/services', description: 'Distributed AI processing' },
+        { name: 'IoT Optimization', href: '/services', description: 'Smart device management' },
+        { name: 'Real-time Analytics', href: '/services', description: 'Low-latency data processing' }
+      ]
     },
     { 
       name: 'Quantum Computing', 
       href: '/services', 
       icon: Atom, 
-      description: 'Quantum AI & Optimization',
+      description: 'Quantum AI & Algorithms',
       featured: true,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
+      subservices: [
+        { name: 'Quantum AI Trading', href: '/services', description: 'Financial market optimization' },
+        { name: 'Quantum Machine Learning', href: '/services', description: 'Advanced AI algorithms' },
+        { name: 'Quantum Security', href: '/services', description: 'Unbreakable encryption' }
+      ]
     },
     { 
       name: 'AI & Space Tech', 
       href: '/services', 
       icon: Rocket, 
-      description: 'Satellite Operations & Missions',
+      description: 'Space Exploration & Satellites',
       featured: false,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-indigo-500 to-purple-500',
+      subservices: [
+        { name: 'Space Technology Platform', href: '/services', description: 'Satellite management' },
+        { name: 'Mission Planning AI', href: '/services', description: 'Space mission optimization' },
+        { name: 'Earth Observation', href: '/services', description: 'Satellite data analysis' }
+      ]
+    },
+    { 
+      name: 'AI & Content', 
+      href: '/services', 
+      icon: FileText, 
+      description: 'Content Creation & Marketing',
+      featured: false,
+      color: 'from-orange-500 to-red-500',
+      subservices: [
+        { name: 'Content Creation Studio', href: '/services', description: 'AI-powered content generation' },
+        { name: 'Marketing Automation', href: '/services', description: 'Intelligent marketing campaigns' },
+        { name: 'SEO Optimization', href: '/services', description: 'Search engine optimization' }
+      ]
     },
     { 
       name: 'Cybersecurity', 
@@ -131,24 +194,26 @@ export function AppHeader() {
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
-      color: 'from-green-500 to-blue-500'
+      color: 'from-green-500 to-blue-500',
+      subservices: [
+        { name: 'AI Cybersecurity Platform', href: '/services', description: 'Threat detection & response' },
+        { name: 'Zero Trust Security', href: '/services', description: 'Advanced security architecture' },
+        { name: 'Incident Response AI', href: '/services', description: 'Automated security management' }
+      ]
     },
     { 
-      name: 'Cloud Services', 
+      name: 'AI & HR', 
       href: '/services', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
+      icon: Users, 
+      description: 'Human Resources & Recruitment',
+      featured: false,
+      color: 'from-purple-500 to-cyan-500',
+      subservices: [
+        { name: 'AI HR Platform', href: '/services', description: 'Intelligent HR management' },
+        { name: 'Recruitment AI', href: '/services', description: 'Smart candidate screening' },
+        { name: 'Performance Analytics', href: '/services', description: 'Employee performance insights' }
+      ]
+    }
   ];
 
   const solutions = [
@@ -156,88 +221,108 @@ export function AppHeader() {
       name: 'Enterprise Solutions',
       href: '/solutions',
       icon: Building2,
-      description: 'Large-scale business transformations',
-      featured: true
-    },
-    {
-      name: 'SMB Solutions',
-      href: '/solutions',
-      icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
+      description: 'Large-scale business solutions',
+      featured: true,
+      color: 'from-blue-600 to-indigo-600',
+      subsolutions: [
+        { name: 'Digital Transformation', href: '/solutions', description: 'Business modernization' },
+        { name: 'Cloud Infrastructure', href: '/solutions', description: 'Scalable cloud solutions' },
+        { name: 'Enterprise AI', href: '/solutions', description: 'AI-powered business processes' }
+      ]
     },
     {
       name: 'Startup Solutions',
       href: '/solutions',
       icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
+      description: 'Growth-focused startup solutions',
+      featured: false,
+      color: 'from-green-600 to-emerald-600',
+      subsolutions: [
+        { name: 'MVP Development', href: '/solutions', description: 'Rapid prototype development' },
+        { name: 'Growth Hacking', href: '/solutions', description: 'Accelerated growth strategies' },
+        { name: 'Funding Preparation', href: '/solutions', description: 'Investment readiness' }
+      ]
     },
     {
       name: 'Government Solutions',
       href: '/solutions',
-      icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
+      icon: Building,
+      description: 'Public sector technology solutions',
+      featured: false,
+      color: 'from-gray-600 to-slate-600',
+      subsolutions: [
+        { name: 'Digital Government', href: '/solutions', description: 'Government modernization' },
+        { name: 'Smart Cities', href: '/solutions', description: 'Urban technology solutions' },
+        { name: 'Public Safety AI', href: '/solutions', description: 'AI-powered public safety' }
+      ]
     },
     {
       name: 'Healthcare Solutions',
       href: '/solutions',
       icon: Heart,
-      description: 'Digital health transformation',
-      featured: true
-    },
-    {
-      name: 'Financial Solutions',
-      href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
-      featured: true
+      description: 'Healthcare technology solutions',
+      featured: true,
+      color: 'from-red-600 to-pink-600',
+      subsolutions: [
+        { name: 'Telemedicine Platform', href: '/solutions', description: 'Remote healthcare delivery' },
+        { name: 'Medical AI', href: '/solutions', description: 'AI-powered medical diagnostics' },
+        { name: 'Healthcare Analytics', href: '/solutions', description: 'Patient data insights' }
+      ]
     }
   ];
 
   const resources = [
     {
-      name: 'Blog & Insights',
-      href: '/blog',
+      name: 'Learning Center',
+      href: '/resources',
       icon: BookOpen,
-      description: 'Latest industry trends and insights',
-      featured: true
+      description: 'Educational resources and guides',
+      featured: true,
+      color: 'from-blue-600 to-cyan-600',
+      subresources: [
+        { name: 'AI Tutorials', href: '/resources', description: 'Learn AI fundamentals' },
+        { name: 'Case Studies', href: '/resources', description: 'Real-world implementations' },
+        { name: 'Best Practices', href: '/resources', description: 'Industry best practices' }
+      ]
     },
     {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: Target,
-      description: 'Real-world success stories',
-      featured: true
-    },
-    {
-      name: 'White Papers',
-      href: '/white-papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
-      featured: false
-    },
-    {
-      name: 'Webinars',
-      href: '/webinars',
-      icon: Users,
-      description: 'Expert-led learning sessions',
-      featured: false
-    },
-    {
-      name: 'Documentation',
-      href: '/docs',
+      name: 'Developer Resources',
+      href: '/resources',
       icon: Code,
-      description: 'Technical guides and APIs',
-      featured: false
+      description: 'Technical documentation and APIs',
+      featured: false,
+      color: 'from-green-600 to-emerald-600',
+      subresources: [
+        { name: 'API Documentation', href: '/resources', description: 'Technical API guides' },
+        { name: 'SDKs & Libraries', href: '/resources', description: 'Development tools' },
+        { name: 'Code Examples', href: '/resources', description: 'Sample code and demos' }
+      ]
     },
     {
-      name: 'FAQ & Support',
-      href: '/faq',
-      icon: HelpCircle,
-      description: 'Get help and answers',
-      featured: false
+      name: 'Industry Insights',
+      href: '/resources',
+      icon: TrendingUp,
+      description: 'Market trends and analysis',
+      featured: false,
+      color: 'from-purple-600 to-violet-600',
+      subresources: [
+        { name: 'Market Reports', href: '/resources', description: 'Industry analysis' },
+        { name: 'Trend Analysis', href: '/resources', description: 'Technology trends' },
+        { name: 'Expert Interviews', href: '/resources', description: 'Industry expert insights' }
+      ]
+    },
+    {
+      name: 'Support & Community',
+      href: '/resources',
+      icon: MessageCircle,
+      description: 'Help and community support',
+      featured: false,
+      color: 'from-orange-600 to-red-600',
+      subresources: [
+        { name: 'Help Center', href: '/help', description: 'Support documentation' },
+        { name: 'Community Forum', href: '/community', description: 'User community' },
+        { name: 'Contact Support', href: '/contact', description: 'Get help from experts' }
+      ]
     }
   ];
 
@@ -256,6 +341,171 @@ export function AppHeader() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
+
+  const renderServicesDropdown = () => (
+    <div className="absolute top-full left-0 w-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-50">
+      <div className="bg-white dark:bg-gray-900 shadow-2xl rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8">
+          {/* Featured Services */}
+          <div className="lg:col-span-1">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
+              <Star className="w-5 h-5 text-yellow-500 mr-2" />
+              Featured Services
+            </h3>
+            <div className="space-y-4">
+              {services.filter(s => s.featured).map((service) => (
+                <Link
+                  key={service.name}
+                  to={service.href}
+                  className="group flex items-start p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                >
+                  <div className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mr-4`}>
+                    <service.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                      {service.name}
+                    </p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{service.description}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* All Services Grid */}
+          <div className="lg:col-span-2">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">All Services</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {services.map((service) => (
+                <div key={service.name} className="group">
+                  <Link
+                    to={service.href}
+                    className="block p-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200"
+                  >
+                    <div className="flex items-center mb-3">
+                      <div className={`flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mr-3`}>
+                        <service.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <h4 className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                        {service.name}
+                      </h4>
+                    </div>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{service.description}</p>
+                    
+                    {/* Subservices */}
+                    {service.subservices && (
+                      <div className="space-y-2">
+                        {service.subservices.slice(0, 2).map((subservice, idx) => (
+                          <div key={idx} className="flex items-center text-xs text-gray-400 dark:text-gray-500">
+                            <div className="w-1 h-1 bg-gray-300 dark:bg-gray-600 rounded-full mr-2"></div>
+                            <span>{subservice.name}</span>
+                          </div>
+                        ))}
+                        {service.subservices.length > 2 && (
+                          <div className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                            +{service.subservices.length - 2} more services
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderSolutionsDropdown = () => (
+    <div className="absolute top-full left-0 w-screen max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-50">
+      <div className="bg-white dark:bg-gray-900 shadow-2xl rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="p-8">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Solutions by Industry</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {solutions.map((solution) => (
+              <div key={solution.name} className="group">
+                <Link
+                  to={solution.href}
+                  className="block p-6 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 border border-gray-100 dark:border-gray-700"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-r ${solution.color} flex items-center justify-center mr-4`}>
+                      <solution.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                        {solution.name}
+                      </h4>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{solution.description}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Subsolutions */}
+                  {solution.subsolutions && (
+                    <div className="space-y-2">
+                      {solution.subsolutions.map((subsolution, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                          <ArrowRight className="w-4 h-4 mr-2 text-blue-500" />
+                          <span>{subsolution.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderResourcesDropdown = () => (
+    <div className="absolute top-full left-0 w-screen max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-50">
+      <div className="bg-white dark:bg-gray-900 shadow-2xl rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div className="p-8">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Resources & Support</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {resources.map((resource) => (
+              <div key={resource.name} className="group">
+                <Link
+                  to={resource.href}
+                  className="block p-6 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200 border border-gray-100 dark:border-gray-700"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-r ${resource.color} flex items-center justify-center mr-4`}>
+                      <resource.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                        {resource.name}
+                      </h4>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{resource.description}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Subresources */}
+                  {resource.subresources && (
+                    <div className="space-y-2">
+                      {resource.subresources.map((subresource, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                          <ArrowRight className="w-4 h-4 mr-2 text-blue-500" />
+                          <span>{subresource.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -318,39 +568,79 @@ export function AppHeader() {
 
                       {/* Services Dropdown */}
                       {item.name === 'Services' && servicesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-6">
-                            <div className="grid grid-cols-2 gap-6">
-                              {services.map((service) => (
-                                <Link
-                                  key={service.name}
-                                  to={service.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    service.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setServicesDropdownOpen(false)}
-                                >
-                                  <div className="flex items-start gap-3">
-                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${service.color}`}>
-                                      <service.icon className="w-5 h-5 text-white" />
+                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                              {/* Featured Services */}
+                              <div className="lg:col-span-1">
+                                <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                                  <Star className="w-5 h-5 text-yellow-400 mr-2" />
+                                  Featured Services
+                                </h3>
+                                <div className="space-y-3">
+                                  {services.filter(s => s.featured).map((service) => (
+                                    <Link
+                                      key={service.name}
+                                      to={service.href}
+                                      className="group flex items-start p-3 rounded-xl hover:bg-slate-700/50 transition-all duration-200"
+                                      onClick={() => setServicesDropdownOpen(false)}
+                                    >
+                                      <div className={`flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mr-3`}>
+                                        <service.icon className="w-4 h-4 text-white" />
+                                      </div>
+                                      <div className="flex-1 min-w-0">
+                                        <p className="text-sm font-medium text-white group-hover:text-cyan-400">
+                                          {service.name}
+                                        </p>
+                                        <p className="text-xs text-gray-400">{service.description}</p>
+                                      </div>
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+
+                              {/* All Services Grid */}
+                              <div className="lg:col-span-2">
+                                <h3 className="text-lg font-semibold text-white mb-4">All Services</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                  {services.map((service) => (
+                                    <div key={service.name} className="group">
+                                      <Link
+                                        to={service.href}
+                                        className="block p-3 rounded-xl hover:bg-slate-700/50 transition-all duration-200"
+                                        onClick={() => setServicesDropdownOpen(false)}
+                                      >
+                                        <div className="flex items-center mb-2">
+                                          <div className={`flex-shrink-0 w-6 h-6 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mr-2`}>
+                                            <service.icon className="w-3 h-3 text-white" />
+                                          </div>
+                                          <h4 className="text-sm font-medium text-white group-hover:text-cyan-400">
+                                            {service.name}
+                                          </h4>
+                                        </div>
+                                        <p className="text-xs text-gray-400 mb-2">{service.description}</p>
+                                        
+                                        {/* Subservices */}
+                                        {service.subservices && (
+                                          <div className="space-y-1">
+                                            {service.subservices.slice(0, 2).map((subservice, idx) => (
+                                              <div key={idx} className="flex items-center text-xs text-gray-500">
+                                                <div className="w-1 h-1 bg-gray-500 rounded-full mr-2"></div>
+                                                <span>{subservice.name}</span>
+                                              </div>
+                                            ))}
+                                            {service.subservices.length > 2 && (
+                                              <div className="text-xs text-cyan-400 font-medium">
+                                                +{service.subservices.length - 2} more
+                                              </div>
+                                            )}
+                                          </div>
+                                        )}
+                                      </Link>
                                     </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {service.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {service.description}
-                                      </p>
-                                      {service.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
+                                  ))}
+                                </div>
+                              </div>
                             </div>
                             <div className="mt-6 pt-6 border-t border-slate-700/50">
                               <Link
@@ -368,38 +658,52 @@ export function AppHeader() {
 
                       {/* Solutions Dropdown */}
                       {item.name === 'Solutions' && solutionsDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-0 mt-2 w-[700px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
+                            <h3 className="text-lg font-semibold text-white mb-4">Solutions by Industry</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                               {solutions.map((solution) => (
-                                <Link
-                                  key={solution.name}
-                                  to={solution.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    solution.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setSolutionsDropdownOpen(false)}
-                                >
-                                  <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
-                                      <solution.icon className="w-5 h-5 text-white" />
+                                <div key={solution.name} className="group">
+                                  <Link
+                                    to={solution.href}
+                                    className={`block p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 border border-slate-600/50 ${
+                                      solution.featured ? 'ring-2 ring-cyan-400/50' : ''
+                                    }`}
+                                    onClick={() => setSolutionsDropdownOpen(false)}
+                                  >
+                                    <div className="flex items-start gap-3 mb-3">
+                                      <div className={`p-2 rounded-lg bg-gradient-to-br ${solution.color}`}>
+                                        <solution.icon className="w-5 h-5 text-white" />
+                                      </div>
+                                      <div className="flex-1">
+                                        <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                          {solution.name}
+                                        </h3>
+                                        <p className="text-sm text-gray-400 mt-1">
+                                          {solution.description}
+                                        </p>
+                                        {solution.featured && (
+                                          <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
+                                            <Star className="w-3 h-3" />
+                                            Featured
+                                          </span>
+                                        )}
+                                      </div>
                                     </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {solution.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {solution.description}
-                                      </p>
-                                      {solution.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </Link>
+                                    
+                                    {/* Subsolutions */}
+                                    {solution.subsolutions && (
+                                      <div className="space-y-2">
+                                        {solution.subsolutions.map((subsolution, idx) => (
+                                          <div key={idx} className="flex items-center text-sm text-gray-400">
+                                            <ArrowRight className="w-4 h-4 mr-2 text-cyan-500" />
+                                            <span>{subsolution.name}</span>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </Link>
+                                </div>
                               ))}
                             </div>
                           </div>
@@ -408,38 +712,52 @@ export function AppHeader() {
 
                       {/* Resources Dropdown */}
                       {item.name === 'Resources' && resourcesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[600px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-0 mt-2 w-[700px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-6">
-                            <div className="grid grid-cols-2 gap-4">
+                            <h3 className="text-lg font-semibold text-white mb-4">Resources & Support</h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                               {resources.map((resource) => (
-                                <Link
-                                  key={resource.name}
-                                  to={resource.href}
-                                  className={`group p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 ${
-                                    resource.featured ? 'ring-2 ring-cyan-400/50' : ''
-                                  }`}
-                                  onClick={() => setResourcesDropdownOpen(false)}
-                                >
-                                  <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
-                                      <resource.icon className="w-5 h-5 text-white" />
+                                <div key={resource.name} className="group">
+                                  <Link
+                                    to={resource.href}
+                                    className={`block p-4 rounded-xl transition-all duration-300 hover:bg-slate-700/50 border border-slate-600/50 ${
+                                      resource.featured ? 'ring-2 ring-cyan-400/50' : ''
+                                    }`}
+                                    onClick={() => setResourcesDropdownOpen(false)}
+                                  >
+                                    <div className="flex items-start gap-3 mb-3">
+                                      <div className={`p-2 rounded-lg bg-gradient-to-br ${resource.color}`}>
+                                        <resource.icon className="w-5 h-5 text-white" />
+                                      </div>
+                                      <div className="flex-1">
+                                        <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                                          {resource.name}
+                                        </h3>
+                                        <p className="text-sm text-gray-400 mt-1">
+                                          {resource.description}
+                                        </p>
+                                        {resource.featured && (
+                                          <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
+                                            <Star className="w-3 h-3" />
+                                            Featured
+                                          </span>
+                                        )}
+                                      </div>
                                     </div>
-                                    <div className="flex-1">
-                                      <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                        {resource.name}
-                                      </h3>
-                                      <p className="text-sm text-gray-400 mt-1">
-                                        {resource.description}
-                                      </p>
-                                      {resource.featured && (
-                                        <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
-                                          <Star className="w-3 h-3" />
-                                          Featured
-                                        </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </Link>
+                                    
+                                    {/* Subresources */}
+                                    {resource.subresources && (
+                                      <div className="space-y-2">
+                                        {resource.subresources.map((subresource, idx) => (
+                                          <div key={idx} className="flex items-center text-sm text-gray-400">
+                                            <ArrowRight className="w-4 h-4 mr-2 text-cyan-500" />
+                                            <span>{subresource.name}</span>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </Link>
+                                </div>
                               ))}
                             </div>
                           </div>
