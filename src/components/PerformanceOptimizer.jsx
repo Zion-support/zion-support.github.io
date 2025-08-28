@@ -32,8 +32,8 @@ export const PerformanceOptimizer = ({ children }) => {
         };
 
         // Use requestIdleCallback for non-critical optimization
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(optimizeImages);
+        if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+            (window as any).requestIdleCallback(optimizeImages);
         } else {
             setTimeout(optimizeImages, 100);
         }

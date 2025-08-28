@@ -26,9 +26,7 @@ const Header: React.FC = () => {
     setActiveDropdown(null);
   };
 
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -51,49 +49,9 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isActive = (path: string) => router.pathname === path;
 
-  const renderDropdown = (items: NavigationItem[], isOpen: boolean, onToggle: () => void) => (
-    <div className="relative">
-      <button
-        onClick={onToggle}
-        className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-colors ${
-          isOpen
-            ? 'bg-white/10 text-white'
-            : 'text-gray-300 hover:text-white hover:bg-white/10'
-        }`}
-      >
-        <span>Services</span>
-        <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-      </button>
-      
-      {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
-          <div className="p-4">
-            <div className="grid grid-cols-1 gap-2">
-              {items.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
-                  onClick={() => {
-                    setIsServicesDropdownOpen(false);
-                    setIsCompanyDropdownOpen(false);
-                    setIsResourcesDropdownOpen(false);
-                  }}
-                >
-                  {item.icon && <item.icon className="h-5 w-5" />}
-                  <div>
-                    <div className="font-medium">{item.name}</div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+
+
 
   return (
     <header className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
