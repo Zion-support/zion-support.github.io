@@ -1,14 +1,42 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Video, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import { 
+  Calendar, 
+  Clock, 
+  Users, 
+  Video, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  CheckCircle,
+  Star,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Globe,
+  ArrowRight,
+  Play,
+  CalendarDays,
+  Clock3,
+  User,
+  Building,
+  MessageSquare,
+  PhoneCall,
+  Mail as MailIcon,
+  ExternalLink
+} from 'lucide-react';
 
 export default function ScheduleDemo() {
+  const [selectedService, setSelectedService] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
-  const [selectedService, setSelectedService] = useState('');
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     company: '',
     phone: '',
@@ -16,80 +44,305 @@ export default function ScheduleDemo() {
     message: ''
   });
 
-  const timeSlots = [
-    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM'
+  const demoServices = [
+    {
+      id: 'ai-platform',
+      name: 'AI Platform Demo',
+      description: 'Experience our comprehensive AI platform with real-time demonstrations',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      duration: '45 min',
+      features: ['AI Model Training', 'Real-time Analytics', 'Custom Workflows', 'Integration Examples'],
+      popular: true
+    },
+    {
+      id: 'cybersecurity',
+      name: 'Cybersecurity Solutions',
+      description: 'See our advanced security platform in action with threat simulation',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      duration: '60 min',
+      features: ['Threat Detection', 'Incident Response', 'Compliance Dashboard', 'Security Analytics'],
+      popular: false
+    },
+    {
+      id: 'cloud-infrastructure',
+      name: 'Cloud Infrastructure',
+      description: 'Explore our cloud-native solutions and DevOps automation',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      duration: '50 min',
+      features: ['Multi-cloud Management', 'DevOps Automation', 'Cost Optimization', 'Performance Monitoring'],
+      popular: true
+    },
+    {
+      id: 'quantum-computing',
+      name: 'Quantum Computing',
+      description: 'Discover quantum algorithms and quantum-classical hybrid solutions',
+      icon: Cpu,
+      color: 'from-indigo-500 to-purple-500',
+      duration: '75 min',
+      features: ['Quantum Algorithms', 'Hybrid Solutions', 'Performance Benchmarks', 'Use Case Examples'],
+      popular: false
+    },
+    {
+      id: 'data-analytics',
+      name: 'Data Analytics Platform',
+      description: 'Visualize and analyze your data with our advanced analytics tools',
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500',
+      duration: '40 min',
+      features: ['Real-time Dashboards', 'Predictive Analytics', 'Data Visualization', 'Custom Reports'],
+      popular: false
+    },
+    {
+      id: 'custom-solution',
+      name: 'Custom Solution Demo',
+      description: 'Tailored demonstration based on your specific business needs',
+      icon: Zap,
+      color: 'from-yellow-500 to-orange-500',
+      duration: '60 min',
+      features: ['Custom Workflows', 'Integration Planning', 'ROI Analysis', 'Implementation Roadmap'],
+      popular: false
+    }
   ];
 
-  const services = [
-    'AI Business Intelligence',
-    'AI Healthcare Diagnostics',
-    'AI Legal Tech Platform',
-    'Cybersecurity Solutions',
-    'Cloud & DevOps',
-    'Data Analytics',
-    'Digital Twin Solutions',
-    'IoT & Edge Computing',
-    'Blockchain & Web3',
-    'Quantum Computing',
-    'Micro SaaS Products'
+  const availableTimes = [
+    '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
+    '1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM',
+    '4:00 PM', '4:30 PM', '5:00 PM'
+  ];
+
+  const demoBenefits = [
+    {
+      title: 'Personalized Experience',
+      description: 'Tailored demonstrations based on your business needs and use cases',
+      icon: User,
+      color: 'text-blue-400'
+    },
+    {
+      title: 'Expert Guidance',
+      description: 'Learn from our certified professionals with deep industry expertise',
+      icon: Star,
+      color: 'text-yellow-400'
+    },
+    {
+      title: 'Interactive Sessions',
+      description: 'Ask questions and explore features in real-time during the demo',
+      icon: MessageSquare,
+      color: 'text-green-400'
+    },
+    {
+      title: 'Follow-up Support',
+      description: 'Comprehensive follow-up materials and next steps after your demo',
+      icon: CheckCircle,
+      color: 'text-cyan-400'
+    }
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Demo request submitted:', { selectedDate, selectedTime, selectedService, formData });
+    console.log('Demo request submitted:', {
+      service: selectedService,
+      date: selectedDate,
+      time: selectedTime,
+      ...formData
+    });
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Schedule Demo - Zion Tech Group"
-        description="Book a personalized demonstration of our AI-powered technology solutions. See our services in action and discover how we can transform your business."
+        description="Schedule a personalized demo of our AI, cybersecurity, cloud, and quantum computing solutions. Experience our technology firsthand with expert guidance."
       />
       
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="relative py-20 overflow-hidden">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Schedule Your Demo
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience our cutting-edge AI solutions firsthand. Book a personalized demonstration 
-              and discover how Zion Tech Group can transform your business operations.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Experience our cutting-edge technology solutions firsthand. Book a personalized 
+              demonstration with our experts and discover how Zion Tech Group can transform your business.
             </p>
+            
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-400">500+</div>
+                <div className="text-sm text-gray-400">Demos Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400">98%</div>
+                <div className="text-sm text-gray-400">Satisfaction Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400">24/7</div>
+                <div className="text-sm text-gray-400">Availability</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400">45min</div>
+                <div className="text-sm text-gray-400">Average Duration</div>
+              </div>
+            </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Demo Form Section */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
-        >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Form */}
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Book Your Demo</h2>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Demo Services */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white text-center mb-4">Choose Your Demo</h2>
+            <p className="text-gray-300 text-center max-w-2xl mx-auto">
+              Select from our range of specialized demonstrations or request a custom solution demo
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {demoServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${
+                  selectedService === service.id ? 'ring-2 ring-cyan-400/50' : ''
+                }`}
+                onClick={() => setSelectedService(service.id)}
+              >
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`p-3 rounded-xl bg-gradient-to-br ${service.color}`}>
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    {service.popular && (
+                      <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
+                        Popular
+                      </span>
+                    )}
+                  </div>
+
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
+                    <Clock className="w-4 h-4" />
+                    {service.duration}
+                  </div>
+
+                  <div className="space-y-2 mb-4">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className={`w-full py-2 px-4 rounded-lg text-center font-medium transition-all duration-300 ${
+                    selectedService === service.id
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50'
+                  }`}>
+                    {selectedService === service.id ? 'Selected' : 'Select Demo'}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Benefits */}
+      <section className="py-16 bg-slate-800/20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-3xl font-bold text-white text-center mb-4">Why Schedule a Demo?</h2>
+            <p className="text-gray-300 text-center max-w-2xl mx-auto">
+              Get the most out of your demo experience with our comprehensive approach
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {demoBenefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className={`p-4 rounded-xl bg-slate-700/30 mx-auto mb-4 w-16 h-16 flex items-center justify-center`}>
+                  <benefit.icon className={`w-8 h-8 ${benefit.color}`} />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Scheduling Form */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <h2 className="text-3xl font-bold text-white text-center mb-4">Schedule Your Demo</h2>
+              <p className="text-gray-300 text-center max-w-2xl mx-auto">
+                Fill out the form below to schedule your personalized demonstration
+              </p>
+            </motion.div>
+
+            <motion.form
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              onSubmit={handleSubmit}
+              className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 {/* Date and Time Selection */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Preferred Date
@@ -98,11 +351,10 @@ export default function ScheduleDemo() {
                       type="date"
                       value={selectedDate}
                       onChange={(e) => setSelectedDate(e.target.value)}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       required
                     />
                   </div>
-                  
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Preferred Time
@@ -110,11 +362,11 @@ export default function ScheduleDemo() {
                     <select
                       value={selectedTime}
                       onChange={(e) => setSelectedTime(e.target.value)}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       required
                     >
-                      <option value="">Select time</option>
-                      {timeSlots.map(time => (
+                      <option value="">Select a time</option>
+                      {availableTimes.map(time => (
                         <option key={time} value={time}>{time}</option>
                       ))}
                     </select>
@@ -124,85 +376,94 @@ export default function ScheduleDemo() {
                 {/* Service Selection */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Service of Interest
+                    Demo Service
                   </label>
                   <select
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     required
                   >
-                    <option value="">Select service</option>
-                    {services.map(service => (
-                      <option key={service} value={service}>{service}</option>
+                    <option value="">Select a service</option>
+                    {demoServices.map(service => (
+                      <option key={service.id} value={service.id}>{service.name}</option>
                     ))}
                   </select>
                 </div>
+              </div>
 
-                {/* Contact Information */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Enter your full name"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Enter your email"
-                      required
-                    />
-                  </div>
+              {/* Personal Information */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    First Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
+                  />
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Enter company name"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Enter phone number"
-                    />
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Last Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
+                  />
                 </div>
+              </div>
 
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Company *
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Number of Attendees
@@ -211,106 +472,97 @@ export default function ScheduleDemo() {
                     name="attendees"
                     value={formData.attendees}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                       <option key={num} value={num}>{num} {num === 1 ? 'person' : 'people'}</option>
                     ))}
                   </select>
                 </div>
+              </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Additional Message
-                  </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows={4}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Tell us about your specific needs or questions..."
-                  />
-                </div>
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Additional Information
+                </label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  rows={4}
+                  placeholder="Tell us about your specific needs, questions, or any special requirements for the demo..."
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
 
+              <div className="text-center">
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2 mx-auto"
                 >
+                  <Calendar className="w-5 h-5" />
                   Schedule Demo
-                  <ArrowRight className="w-5 h-5" />
                 </button>
-              </form>
-            </div>
-
-            {/* Info Panel */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-4">What to Expect</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-medium text-white">Personalized Demo</h4>
-                      <p className="text-gray-400 text-sm">Tailored to your specific business needs and use cases</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-medium text-white">Live Q&A</h4>
-                      <p className="text-gray-400 text-sm">Direct interaction with our technical experts</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-medium text-white">ROI Discussion</h4>
-                      <p className="text-gray-400 text-sm">Understand the business impact and return on investment</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-medium text-white">Next Steps</h4>
-                      <p className="text-gray-400 text-sm">Clear roadmap for implementation and success</p>
-                    </div>
-                  </div>
-                </div>
               </div>
-
-              <div className="bg-white/5 rounded-lg p-6">
-                <h4 className="font-semibold text-white mb-4">Demo Duration</h4>
-                <div className="flex items-center gap-2 text-gray-300">
-                  <Clock className="w-5 h-5" />
-                  <span>45-60 minutes</span>
-                </div>
-              </div>
-
-              <div className="bg-white/5 rounded-lg p-6">
-                <h4 className="font-semibold text-white mb-4">Contact Information</h4>
-                <div className="space-y-3 text-gray-300">
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    <span>+1 302 464 0950</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Mail className="w-4 h-4" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </motion.form>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-8">Need Immediate Assistance?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="p-4 bg-slate-700/30 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center">
+                  <Phone className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                <p className="text-gray-300 mb-3">Speak with our experts directly</p>
+                <a
+                  href="tel:+13024640950"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                >
+                  +1 (302) 464-0950
+                </a>
+              </div>
+
+              <div className="text-center">
+                <div className="p-4 bg-slate-700/30 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center">
+                  <Mail className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                <p className="text-gray-300 mb-3">Send us your questions</p>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                >
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+
+              <div className="text-center">
+                <div className="p-4 bg-slate-700/30 rounded-xl mx-auto mb-4 w-16 h-16 flex items-center justify-center">
+                  <MessageCircle className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
+                <p className="text-gray-300 mb-3">Get instant answers</p>
+                <button className="text-green-400 hover:text-green-300 transition-colors font-medium">
+                  Start Chat
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
