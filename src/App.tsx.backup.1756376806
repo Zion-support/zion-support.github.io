@@ -4,8 +4,15 @@ import { AppHeader } from './layout/AppHeader';
 import { MainSidebar } from './components/layout/MainSidebar';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
+<<<<<<< HEAD
+import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { LoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { SEO } from './components/SEO';
+import FuturisticAnimatedBackground from './components/FuturisticAnimatedBackground';
+=======
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import EnhancedSEO from './components/EnhancedSEO';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ba31
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
@@ -275,12 +282,19 @@ const NotFound = () => (
 function App() {
   return (
     <ErrorBoundary>
+<<<<<<< HEAD
+      <Router>
+        <div className="min-h-screen bg-futuristic relative">
+          <FuturisticAnimatedBackground />
+          <SEO />
+=======
       <div className="min-h-screen bg-futuristic">
           <EnhancedSEO 
             title="Zion Tech Group - Technology Solutions" 
             description="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." 
             canonical="https://ziontechgroup.com/" 
           />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ba31
           <AppHeader />
           
           <main className="flex-1">

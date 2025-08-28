@@ -108,8 +108,13 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
+<<<<<<< HEAD
+    "typescript": "^5.6.3",
+    "vite": "^5.4.19"
+=======
     "typescript": "^5.4.5",
     "vite": "^5.4.19",
     "vite-plugin-compression": "^0.5.1"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ba31
   }
 }
