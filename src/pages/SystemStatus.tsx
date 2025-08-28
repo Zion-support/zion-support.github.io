@@ -248,8 +248,8 @@ export default function SystemStatus() {
               </div>
               <p className="text-gray-400">Updates every 30s</p>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Service Status Grid */}

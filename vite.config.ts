@@ -1,7 +1,6 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
-import compress from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -10,8 +9,6 @@ export default defineConfig(({ command, mode }) => {
   return {
     plugins: [
       react(),
-      compress({ algorithm: 'brotliCompress', ext: '.br', deleteOriginFile: false }),
-      compress({ algorithm: 'gzip', ext: '.gz', deleteOriginFile: false })
     ],
     resolve: {
       alias: {
@@ -36,7 +33,6 @@ export default defineConfig(({ command, mode }) => {
         polyfill: true,
       },
       assetsInlineLimit: 4096,
-      // cleaned invalid output/external block (handled below in rollupOptions)
       terserOptions: {
         compress: {
           drop_console: true,
@@ -73,11 +69,9 @@ export default defineConfig(({ command, mode }) => {
             return `assets/[name]-[hash][extname]`;
           },
         },
-        external: [],
         onwarn(warning, warn) {
           // Suppress warnings about missing optional dependencies
           if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
-          if (warning.message.includes('@rollup/rollup-linux-x64-gnu')) return;
           warn(warning);
         },
       },
@@ -85,7 +79,6 @@ export default defineConfig(({ command, mode }) => {
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'react-router-dom'],
-      exclude: ['@rollup/rollup-linux-x64-gnu'],
       ...(isProduction && {
         force: true,
         esbuildOptions: {
