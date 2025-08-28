@@ -56,12 +56,17 @@ import {
   ChevronDown,
   Copyright,
   PenTool,
+<<<<<<< HEAD
+  Gauge,
+  Search
+=======
   MessageSquare,
   Calendar,
   Search,
   Share2,
   Lightbulb,
   Workflow
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -103,6 +108,74 @@ const footerSections = [
     title: 'AI & Machine Learning',
     icon: Brain,
     links: [
+<<<<<<< HEAD
+      { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
+      { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Truck },
+      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+      { name: 'AI Autonomous Code Reviewer', path: '/services/ai-autonomous-code-reviewer', icon: Code },
+      { name: 'AI-Powered SEO Optimizer', path: '/services/ai-powered-seo-optimizer', icon: Search },
+      { name: 'AI Interview Assessment Platform', path: '/services/ai-interview-assessment-platform', icon: Users },
+      { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: TrendingUp },
+      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
+      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+      { name: 'AI-Powered SEO', path: '/services/ai-seo', icon: TrendingUp },
+      { name: 'AI Customer Support', path: '/services/ai-customer-support-automation', icon: MessageCircle },
+      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI Legal Document Automation', path: '/services/ai-legal-document-automation', icon: FileText },
+      { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Heart },
+      { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: TrendingUp },
+      { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', icon: PenTool },
+      { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity', icon: Shield },
+      { name: 'AI HR Platform', path: '/services/ai-hr-platform', icon: Users },
+      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: Activity },
+      { name: 'AI Content Creation', path: '/services/ai-content-creation', icon: PenTool }
+    ]
+  },
+  {
+    title: 'Advanced Technology',
+    icon: Cpu,
+    links: [
+      { name: 'Cloud Infrastructure & DevOps', path: '/services/cloud-infrastructure-devops', icon: Cloud },
+      { name: 'Cybersecurity & Compliance', path: '/services/cybersecurity-compliance', icon: Shield },
+      { name: 'Quantum Computing Services', path: '/services/quantum-computing-services', icon: Atom },
+      { name: 'Blockchain & Web3 Solutions', path: '/services/blockchain-web3-solutions', icon: Cpu },
+      { name: 'IoT & Edge Computing Services', path: '/services/iot-edge-computing-services', icon: Network },
+      { name: 'Digital Twin Solutions', path: '/services/digital-twin-solutions', icon: Eye },
+      { name: 'Space Technology Solutions', path: '/services/space-technology-solutions', icon: Satellite },
+      { name: 'Green IT Solutions', path: '/services/green-it-solutions', icon: Leaf },
+      { name: 'Zero Trust Network Architecture', path: '/services/zero-trust-network-architecture', icon: Lock },
+      { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
+      { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
+      { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+      { name: 'IT Services', path: '/it-services', icon: Building },
+      { name: 'Micro SaaS Solutions', path: '/micro-saas', icon: Zap },
+      { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+      { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Coins },
+      { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
+      { name: 'AI Business Intelligence Platform', path: '/services/ai-business-intelligence-platform', icon: BarChart3 },
+      { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+      { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 },
+      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
+    ]
+  },
+  {
+    title: 'Cybersecurity & Privacy',
+    icon: Shield,
+    links: [
+      { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Lock },
+      { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
+      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle },
+      { name: 'AI Autonomous Forensics', path: '/ai-autonomous-forensics', icon: Shield },
+      { name: 'AI Autonomous Threat Intelligence', path: '/ai-autonomous-threat-intelligence', icon: Eye },
+      { name: 'AI Autonomous Mobile Security', path: '/ai-autonomous-mobile-security', icon: Smartphone }
+=======
       { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
       { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: PenTool },
       { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
@@ -148,6 +221,7 @@ const footerSections = [
       { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
       { name: 'Data Platform Modernization', path: '/services/data-platform-modernization', icon: Database },
       { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Cpu }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
     ]
   },
   {
@@ -159,6 +233,62 @@ const footerSections = [
       { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
       { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
       { name: 'Space Technology', path: '/space-tech', icon: Satellite },
+<<<<<<< HEAD
+      { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', icon: Atom },
+      { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
+      { name: 'AI Autonomous Scientific Researcher', path: '/ai-autonomous-scientific-researcher', icon: TestTube },
+      { name: 'AI Autonomous Governance', path: '/ai-autonomous-governance', icon: Building }
+    ]
+  },
+  {
+    title: 'Core Services',
+    icon: Zap,
+    links: [
+      { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+      { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
+      { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+      { name: 'IT Services', path: '/it-services', icon: Building },
+      { name: 'Micro SaaS Solutions', path: '/micro-saas', icon: Zap },
+      { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+      { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Coins },
+      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: DollarSign },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
+      { name: 'AI Auto Email Responder', path: '/services/ai-auto-email-responder', icon: Mail },
+      { name: 'Customer Feedback Surveys', path: '/services/customer-feedback-surveys', icon: MessageCircle },
+      { name: 'AI Compliance Copilot', path: '/services/ai-compliance-copilot', icon: Shield },
+      { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText },
+      { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+      { name: 'Returns Management', path: '/services/returns-management', icon: Truck },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video },
+      { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
+      { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
+      { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
+      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
+      { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video },
+      { name: 'Returns Management', path: '/services/returns-management', icon: Truck },
+      { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: PenTool },
+      { name: 'Customer Feedback Surveys', path: '/services/customer-feedback-surveys', icon: MessageCircle },
+      { name: 'AI Auto Email Responder', path: '/services/ai-auto-email-responder', icon: Mail }
+    ]
+  },
+  {
+    title: 'Support & Resources',
+    icon: HelpCircle,
+    links: [
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Contact Support', path: '/contact', icon: MessageCircle },
+      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+      { name: 'Sitemap', path: '/sitemap', icon: FileText },
+      { name: 'Dashboard', path: '/dashboard', icon: Gauge },
+      { name: 'Login', path: '/login', icon: Lock },
+      { name: 'Search', path: '/search', icon: Search }
+=======
       { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
       { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
       { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
@@ -179,11 +309,41 @@ const footerSections = [
       { name: 'Webinars', path: '/webinars', icon: Video },
       { name: 'Research & Development', path: '/research-development', icon: TestTube },
       { name: 'Innovation Lab', path: '/innovation-lab', icon: Sparkles }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
     ]
   }
 ];
 
+<<<<<<< HEAD
+const contactInfo = [
+  { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
+];
+
+const socialLinks = [
+  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', external: true },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', external: true },
+  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', external: true },
+  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', external: true },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', external: true }
+];
+
+export function Footer() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+=======
 const Footer: React.FC = () => {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -305,6 +465,19 @@ const Footer: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
+    <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
+      {/* Enhanced Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light opacity-10">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                            radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)`,
+            backgroundSize: '100% 100%',
+            animation: 'pulse 20s ease-in-out infinite alternate'
+=======
     <footer className="bg-zion-slate-dark border-t border-zion-cyan/20 relative overflow-hidden">
       {/* Enhanced Animated Background */}
       <div className="absolute inset-0">
@@ -319,10 +492,59 @@ const Footer: React.FC = () => {
             duration: 6,
             repeat: Infinity,
             ease: "easeInOut"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
           }}
         />
       </div>
 
+<<<<<<< HEAD
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-8 mb-12">
+          {/* Company Section - Takes 2 columns on larger screens */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h3>
+                <p className="text-sm text-gray-400">Innovation Hub</p>
+              </div>
+            </div>
+            
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Empowering businesses with cutting-edge AI, cloud infrastructure, and emerging technologies. 
+              We transform ideas into innovative solutions that drive growth and success.
+            </p>
+
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Service Sections */}
+          {footerSections.slice(1).map((section) => (
+            <div key={section.title} className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <section.icon className="w-5 h-5 text-zion-cyan" />
+                <h3 className="text-lg font-semibold text-zion-cyan">{section.title}</h3>
+              </div>
+=======
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
@@ -341,14 +563,22 @@ const Footer: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white">{section.title}</h3>
               </div>
               
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.path}
+<<<<<<< HEAD
+                      onClick={() => handleLinkClick(link)}
+                      className="flex items-center space-x-2 text-gray-300 hover:text-zion-cyan transition-colors duration-200 group"
+                    >
+                      <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
+=======
                       className="flex items-center space-x-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 group"
                     >
                       <link.icon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
                       <span className="text-sm">{link.name}</span>
                     </Link>
                   </li>
@@ -358,6 +588,72 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
+        {/* Contact Information */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="border-t border-zion-slate pt-8 mb-8"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {contactInfo.map((contact, index) => (
+              <motion.div
+                key={contact.text}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 + index * 0.1 }}
+                className="flex items-center space-x-3"
+              >
+                <contact.icon className="w-5 h-5 text-zion-cyan" />
+                <a
+                  href={contact.href}
+                  className="text-gray-300 hover:text-zion-cyan transition-colors duration-200"
+                >
+                  {contact.text}
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Social Links and Bottom Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="border-t border-zion-slate pt-8"
+        >
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Social Links */}
+            <div className="flex space-x-6">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.7 + index * 0.1 }}
+                  className="text-gray-400 hover:text-zion-cyan transition-colors duration-200 group"
+                >
+                  <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+                </motion.a>
+              ))}
+            </div>
+
+            {/* Copyright */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="text-gray-400 text-sm flex items-center space-x-2"
+            >
+              <Copyright className="w-4 h-4" />
+              <span>© 2024 Zion Tech Group. All rights reserved.</span>
+            </motion.div>
+=======
         {/* Enhanced Contact & Social Section */}
         <div className="border-t border-zion-cyan/20 pt-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -537,11 +833,27 @@ const Footer: React.FC = () => {
               <Heart className="w-4 h-4 text-red-400 animate-pulse" />
               <span className="text-sm text-zion-slate-light">by Zion Tech Group</span>
             </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
           </div>
         </motion.div>
       </div>
 
       {/* Scroll to Top Button */}
+<<<<<<< HEAD
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 w-12 h-12 bg-zion-cyan text-white rounded-full shadow-lg hover:bg-zion-cyan-dark transition-colors duration-200 z-50 flex items-center justify-center"
+          >
+            <ArrowUp className="w-6 h-6" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+=======
       <motion.button
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-200 hover:scale-110 z-50"
@@ -553,6 +865,7 @@ const Footer: React.FC = () => {
       >
         <ArrowUp className="w-5 h-5" />
       </motion.button>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
     </footer>
   );
 };

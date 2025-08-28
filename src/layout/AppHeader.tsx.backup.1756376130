@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, Activity, FileText, Leaf } from 'lucide-react';
+=======
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, MessageSquare, Calendar, Search as SearchIcon, Share2, Lightbulb } from 'lucide-react';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
@@ -36,6 +40,20 @@ export default function AppHeader() {
     { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
     
     // AI & Machine Learning
+<<<<<<< HEAD
+    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'AI-powered workflow automation', category: 'AI & ML', color: 'from-cyan-500 to-blue-500' },
+    { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-green-500 to-blue-500' },
+    { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-pink-500 to-purple-500' },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
+    { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML', color: 'from-orange-500 to-red-500' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool, description: 'Automated content creation', category: 'AI & ML', color: 'from-green-500 to-teal-500' },
+    { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+=======
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3, description: 'AI-powered analytics & insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
     { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool, description: 'AI-powered content creation', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
     { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain, description: '24/7 AI research & insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
@@ -49,6 +67,7 @@ export default function AppHeader() {
     { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
     { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
     { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
     
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-zion-purple to-zion-cyan' },
@@ -315,6 +334,106 @@ export default function AppHeader() {
           </div>
         </div>
 
+<<<<<<< HEAD
+        <div className="relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-4">
+              {/* Logo */}
+              <div className="flex items-center">
+                <Link to="/" className="flex items-center space-x-2 group">
+                  <div className="relative">
+                    <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white font-bold text-xl">Z</span>
+                    </div>
+                    <div className="absolute -inset-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl blur opacity-25 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="hidden sm:block">
+                    <h1 className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                      Zion Tech Group
+                    </h1>
+                    <p className="text-xs text-zion-slate-light">Innovation & Excellence</p>
+                  </div>
+                </Link>
+              </div>
+
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex items-center space-x-8">
+                {navigation.slice(0, 6).map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="relative group px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan transition-colors duration-300"
+                  >
+                    {item.name}
+                    {item.featured && (
+                      <span className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full animate-pulse"></span>
+                    )}
+                    <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  </Link>
+                ))}
+
+                {/* Services Dropdown */}
+                <div className="relative group">
+                  <button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan transition-colors duration-300">
+                    <span>Services</span>
+                    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                  </button>
+                  
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 gap-4">
+                        {services.slice(0, 4).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="group flex items-start space-x-3 p-3 rounded-xl hover:bg-zion-slate-light/20 transition-all duration-300"
+                          >
+                            <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                              <service.icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-sm font-medium text-white group-hover:text-zion-cyan transition-colors duration-300">
+                                {service.name}
+                              </p>
+                              <p className="text-xs text-zion-slate-light mt-1">
+                                {service.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                        <div className="pt-2">
+                          <Link
+                            to="/services"
+                            className="block w-full text-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300"
+                          >
+                            View All Services
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Contact */}
+                <Link
+                  to="/contact"
+                  className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300"
+                >
+                  Get Started
+                </Link>
+              </nav>
+
+              {/* Mobile menu button */}
+              <div className="lg:hidden">
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="p-2 text-white hover:text-zion-cyan transition-colors duration-300"
+                >
+                  {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </button>
+              </div>
+            </div>
+=======
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {mainNavigation.map((item) => (
@@ -498,10 +617,45 @@ export default function AppHeader() {
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-xl border-t border-zion-cyan/20"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block px-3 py-2 text-base font-medium text-white hover:text-zion-cyan transition-colors duration-300"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                
+                {/* Mobile Services */}
+                <div className="space-y-2">
+                  <p className="px-3 py-2 text-sm font-medium text-zion-slate-light">Services</p>
+                  {services.slice(0, 8).map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block px-6 py-2 text-sm text-white hover:text-zion-cyan transition-colors duration-300"
+                    >
+                      {service.name}
+=======
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -542,6 +696,7 @@ export default function AppHeader() {
                         <h4 className="text-white text-sm font-medium">{service.name}</h4>
                         <p className="text-xs text-zion-slate-light">{service.description}</p>
                       </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
                     </Link>
                   ))}
                   <Link
@@ -552,6 +707,24 @@ export default function AppHeader() {
                     View All Services →
                   </Link>
                 </div>
+<<<<<<< HEAD
+
+                <div className="pt-4">
+                  <Link
+                    to="/contact"
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full text-center px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300"
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+    </>
+=======
                 <div className="mt-4 pt-4 border-t border-cyan-400/20">
                   <Link
                     to="/services"
@@ -576,5 +749,6 @@ export default function AppHeader() {
         />
       )}
     </header>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8e64
   );
 }
