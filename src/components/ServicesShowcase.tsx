@@ -15,170 +15,158 @@ import {
   BookOpen, 
   DollarSign,
   Gauge,
-  HelpCircle
+  HelpCircle,
+  Code,
+  Rocket,
+  Atom,
+  ArrowRight
 } from 'lucide-react';
 
 export function ServicesShowcase() {
   const services = [
     {
       icon: Brain,
-      title: "AI & Analytics",
+      title: "AI & Business Intelligence",
       description: "Machine Learning & Data Science solutions",
-      href: "/services/ai-business-intelligence",
-      category: "AI",
-      color: "from-purple-500 to-pink-600"
+      href: "/services/comprehensive-2025",
+      category: "AI & Analytics",
+      color: "from-purple-500 to-pink-600",
+      featured: true
     },
     {
       icon: Cloud,
       title: "Cloud & DevOps",
       description: "Infrastructure & Automation",
-      href: "/services/cloud-devops",
+      href: "/services/comprehensive-2025",
       category: "Infrastructure",
-      color: "from-blue-500 to-cyan-600"
+      color: "from-blue-500 to-cyan-600",
+      featured: true
     },
     {
       icon: Shield,
       title: "Cybersecurity",
       description: "AI-Powered Security solutions",
-      href: "/services",
+      href: "/services/comprehensive-2025",
       category: "Security",
-      color: "from-red-500 to-orange-600"
+      color: "from-red-500 to-orange-600",
+      featured: true
     },
     {
       icon: Cpu,
-      title: "IoT & Edge",
+      title: "IoT & Edge Computing",
       description: "Smart Devices & Networks",
-      href: "/services",
+      href: "/services/comprehensive-2025",
       category: "IoT",
-      color: "from-green-500 to-emerald-600"
+      color: "from-green-500 to-emerald-600",
+      featured: true
     },
     {
       icon: Lock,
-      title: "Blockchain",
+      title: "Blockchain & Web3",
       description: "DeFi & Smart Contracts",
-      href: "/services",
+      href: "/services/comprehensive-2025",
       category: "Blockchain",
-      color: "from-yellow-500 to-orange-600"
+      color: "from-yellow-500 to-orange-600",
+      featured: true
     },
     {
       icon: Users,
-      title: "Healthcare Tech",
-      description: "AI Medicine & Diagnostics",
-      href: "/services",
+      title: "AI Healthcare",
+      description: "Medical AI & Diagnostics",
+      href: "/services/comprehensive-2025",
       category: "Healthcare",
-      color: "from-pink-500 to-rose-600"
+      color: "from-pink-500 to-rose-600",
+      featured: true
     },
     {
       icon: Globe,
-      title: "Sustainability",
-      description: "Green IT Solutions",
-      href: "/services",
-      category: "Green IT",
-      color: "from-emerald-500 to-teal-600"
+      title: "Sustainable Technology",
+      description: "Green IT & Environmental Solutions",
+      href: "/services/comprehensive-2025",
+      category: "Green Tech",
+      color: "from-emerald-500 to-teal-600",
+      featured: true
     },
     {
       icon: ShoppingCart,
-      title: "Micro SaaS",
+      title: "Micro SaaS Products",
       description: "Productized SaaS for niches",
-      href: "/services/micro-saas-solutions",
+      href: "/services/micro-saas",
       category: "SaaS",
-      color: "from-indigo-500 to-purple-600"
+      color: "from-indigo-500 to-purple-600",
+      featured: true
     },
     {
       icon: MessageCircle,
-      title: "AI Auto Email",
-      description: "Faster replies, CRM logging",
-      href: "/services/ai-auto-email-responder",
-      category: "Automation",
-      color: "from-cyan-500 to-blue-600"
+      title: "AI Customer Support",
+      description: "Intelligent customer service automation",
+      href: "/services/comprehensive-2025",
+      category: "Customer Support",
+      color: "from-cyan-500 to-blue-600",
+      featured: true
     },
     {
       icon: Users,
-      title: "Mobile Surveys",
-      description: "NPS/CSAT with AI insights",
-      href: "/services/mobile-survey",
-      category: "Analytics",
-      color: "from-teal-500 to-green-600"
-    },
-    {
-      icon: Shield,
-      title: "Compliance Copilot",
-      description: "SOC2/ISO evidence automation",
-      href: "/services/ai-compliance-copilot",
-      category: "Compliance",
-      color: "from-orange-500 to-red-600"
+      title: "AI HR Solutions",
+      description: "Talent acquisition & management",
+      href: "/services/comprehensive-2025",
+      category: "HR Tech",
+      color: "from-indigo-500 to-blue-600",
+      featured: true
     },
     {
       icon: BookOpen,
-      title: "LLM Content Studio",
-      description: "On-brand AI content",
-      href: "/services/llm-content-studio",
-      category: "Content",
-      color: "from-violet-500 to-purple-600"
+      title: "AI Education",
+      description: "Personalized learning & analytics",
+      href: "/services/comprehensive-2025",
+      category: "Education",
+      color: "from-blue-500 to-indigo-600",
+      featured: true
     },
     {
       icon: DollarSign,
-      title: "FinOps Advisor",
-      description: "Cloud cost optimization",
-      href: "/services/finops-advisor",
-      category: "Finance",
-      color: "from-emerald-500 to-green-600"
-    },
-    {
-      icon: ShoppingCart,
-      title: "Returns Management",
-      description: "E-commerce RMA automation",
-      href: "/services/returns-management",
-      category: "E-commerce",
-      color: "from-rose-500 to-pink-600"
-    },
-    {
-      icon: MessageCircle,
-      title: "Email Sequencer",
-      description: "Automated follow-ups",
-      href: "/services/email-sequencer",
-      category: "Marketing",
-      color: "from-blue-500 to-indigo-600"
-    },
-    {
-      icon: BookOpen,
-      title: "Podcast Transcription",
-      description: "Transcripts & show notes",
-      href: "/services/podcast-transcription",
-      category: "Media",
-      color: "from-purple-500 to-violet-600"
-    },
-    {
-      icon: Users,
-      title: "Micro CRM",
-      description: "Local business CRM",
-      href: "/services/micro-crm",
-      category: "CRM",
-      color: "from-cyan-500 to-teal-600"
+      title: "FinTech Solutions",
+      description: "Financial risk management & analytics",
+      href: "/services/comprehensive-2025",
+      category: "FinTech",
+      color: "from-emerald-500 to-green-600",
+      featured: true
     },
     {
       icon: Gauge,
-      title: "Website Analytics",
-      description: "Privacy-first SMB analytics",
-      href: "/services/website-analytics",
-      category: "Analytics",
-      color: "from-blue-500 to-cyan-600"
+      title: "AI Operations",
+      description: "Process optimization & automation",
+      href: "/services/comprehensive-2025",
+      category: "Operations",
+      color: "from-gray-500 to-slate-600",
+      featured: true
     },
     {
-      icon: HelpCircle,
-      title: "IT Helpdesk",
-      description: "Tickets, SLAs, portals",
-      href: "/services/it-helpdesk",
-      category: "Support",
-      color: "from-orange-500 to-yellow-600"
+      icon: Code,
+      title: "AI Development",
+      description: "Code generation & DevOps automation",
+      href: "/services/comprehensive-2025",
+      category: "Development",
+      color: "from-cyan-500 to-blue-600",
+      featured: true
     },
     {
-      icon: ShoppingCart,
-      title: "Affiliate Tracking",
-      description: "Partner revenue platform",
-      href: "/services/affiliate-tracking",
-      category: "Marketing",
-      color: "from-green-500 to-emerald-600"
+      icon: Rocket,
+      title: "Space Technology",
+      description: "Satellite management & space operations",
+      href: "/services/comprehensive-2025",
+      category: "Space Tech",
+      color: "from-purple-500 to-pink-600",
+      featured: true
+    },
+    {
+      icon: Atom,
+      title: "Quantum Computing",
+      description: "Quantum algorithms & machine learning",
+      href: "/services/comprehensive-2025",
+      category: "Quantum Tech",
+      color: "from-indigo-500 to-purple-600",
+      featured: true
     }
   ];
 
@@ -301,6 +289,32 @@ export function ServicesShowcase() {
               </Link>
             </div>
           </div>
+        </motion.div>
+      </div>
+      
+      {/* CTA Section */}
+      <div className="text-center py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            Explore Our Complete Service Portfolio
+          </h3>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Discover hundreds of AI-powered solutions designed to transform every aspect of your business. 
+            From cutting-edge quantum computing to sustainable technology, we have the expertise to drive your success.
+          </p>
+          <Link
+            to="/services/comprehensive-2025"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+          >
+            <Globe className="w-5 h-5 mr-2" />
+            View All Services
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </motion.div>
       </div>
     </section>

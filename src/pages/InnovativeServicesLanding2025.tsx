@@ -1,155 +1,113 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
+  CheckCircle, 
+  ArrowRight, 
   Star, 
-  Rocket, 
-  Brain, 
-  Cloud, 
+  Users, 
   Shield, 
-  Zap, 
-  Atom, 
-  Cpu, 
-  Network, 
-  Database,
   TrendingUp,
-  Users,
-  Target,
-  Globe,
-  Code,
+  Brain,
+  Cloud,
+  Cpu,
   Lock,
-  Eye,
-  Heart,
-  ShoppingCart,
-  MessageCircle,
-  BarChart3,
-  HelpCircle,
-  FileText,
-  Truck,
-  Mail,
-  Smartphone,
-  DollarSign,
-  CheckCircle,
-  ArrowRight,
-  Sparkles,
-  Award,
-  GitFork,
-  Server,
-  Building,
-  Leaf,
-  Satellite,
-  Gamepad2,
-  Coins,
-  GraduationCap,
-  Activity,
-  Briefcase,
-  Newspaper,
-  BookOpen,
-  ExternalLink
+  Zap,
+  Globe
 } from 'lucide-react';
 
+const featuredServices = [
+  {
+    name: 'AI-Powered Analytics',
+    description: 'Advanced machine learning algorithms for predictive insights and data-driven decision making.',
+    category: 'Artificial Intelligence',
+    color: 'from-blue-500 to-purple-600',
+    icon: Brain,
+    features: ['Real-time processing', 'Predictive modeling', 'Natural language queries'],
+    href: '/services/ai-analytics'
+  },
+  {
+    name: 'Cloud Infrastructure',
+    description: 'Scalable cloud solutions with enterprise-grade security and performance optimization.',
+    category: 'Cloud Computing',
+    color: 'from-green-500 to-blue-600',
+    icon: Cloud,
+    features: ['Auto-scaling', 'Multi-region deployment', 'Cost optimization'],
+    href: '/services/cloud-infrastructure'
+  },
+  {
+    name: 'Cybersecurity Suite',
+    description: 'Comprehensive security solutions protecting your digital assets from evolving threats.',
+    category: 'Security',
+    color: 'from-red-500 to-orange-600',
+    icon: Lock,
+    features: ['Threat detection', 'Incident response', 'Compliance management'],
+    href: '/services/cybersecurity'
+  },
+  {
+    name: 'IoT Platform',
+    description: 'End-to-end IoT solutions for connected devices and smart infrastructure.',
+    category: 'Internet of Things',
+    color: 'from-purple-500 to-pink-600',
+    icon: Zap,
+    features: ['Device management', 'Data analytics', 'Edge computing'],
+    href: '/services/iot-platform'
+  },
+  {
+    name: 'Quantum Computing',
+    description: 'Next-generation computing solutions leveraging quantum mechanics for complex problem solving.',
+    category: 'Emerging Tech',
+    color: 'from-indigo-500 to-cyan-600',
+    icon: Cpu,
+    features: ['Quantum algorithms', 'Hybrid systems', 'Research partnerships'],
+    href: '/services/quantum-computing'
+  },
+  {
+    name: 'Global Solutions',
+    description: 'Worldwide technology services with local expertise and global reach.',
+    category: 'International',
+    color: 'from-yellow-500 to-green-600',
+    icon: Globe,
+    features: ['Multi-language support', 'Local compliance', '24/7 availability'],
+    href: '/services/global-solutions'
+  }
+];
+
+const serviceCategories = [
+  {
+    name: 'Artificial Intelligence',
+    description: 'Machine learning, deep learning, and AI-powered automation solutions.',
+    services: 12,
+    color: 'from-blue-500 to-purple-600',
+    icon: Brain,
+    href: '/services/ai'
+  },
+  {
+    name: 'Cloud & DevOps',
+    description: 'Cloud infrastructure, containerization, and continuous delivery solutions.',
+    services: 8,
+    color: 'from-green-500 to-blue-600',
+    icon: Cloud,
+    href: '/services/cloud-devops'
+  },
+  {
+    name: 'Cybersecurity',
+    description: 'Comprehensive security solutions for modern digital threats.',
+    services: 10,
+    color: 'from-red-500 to-orange-600',
+    icon: Lock,
+    href: '/services/cybersecurity'
+  },
+  {
+    name: 'Emerging Technologies',
+    description: 'Cutting-edge solutions in quantum computing, blockchain, and more.',
+    services: 6,
+    color: 'from-purple-500 to-pink-600',
+    icon: Zap,
+    href: '/services/emerging-tech'
+  }
+];
+
 export default function InnovativeServicesLanding2025() {
-  const featuredServices = [
-    {
-      name: 'AI Workflow Orchestrator',
-      description: 'Intelligent process automation and workflow management',
-      icon: Brain,
-      category: 'AI & Machine Learning',
-      features: ['Process Automation', 'Workflow Optimization', 'AI Decision Making', 'Integration Hub'],
-      href: '/services/ai-workflow-orchestrator',
-      color: 'from-blue-500 to-purple-600'
-    },
-    {
-      name: 'Cloud DevOps Platform',
-      description: 'Streamlined development and operations',
-      icon: Cloud,
-      category: 'Cloud & Infrastructure',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automation'],
-      href: '/services/cloud-devops',
-      color: 'from-green-500 to-blue-600'
-    },
-    {
-      name: 'AI Cybersecurity Platform',
-      description: 'AI-powered threat detection and response',
-      icon: Shield,
-      category: 'Cybersecurity',
-      features: ['Threat Detection', 'Automated Response', 'Risk Assessment', 'Compliance'],
-      href: '/services/ai-cybersecurity-platform',
-      color: 'from-red-500 to-orange-600'
-    },
-    {
-      name: 'Quantum Computing Solutions',
-      description: 'Next-generation quantum computing services',
-      icon: Atom,
-      category: 'Emerging Technologies',
-      features: ['Quantum Algorithms', 'Optimization', 'Simulation', 'Research'],
-      href: '/services/quantum-computing',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      name: 'Micro CRM Platform',
-      description: 'Customer relationship management for small businesses',
-      icon: ShoppingCart,
-      category: 'Micro SaaS Solutions',
-      features: ['Contact Management', 'Sales Tracking', 'Customer Insights', 'Automation'],
-      href: '/services/micro-crm',
-      color: 'from-indigo-500 to-purple-600'
-    },
-    {
-      name: 'FinOps Advisor',
-      description: 'Cloud cost optimization and management',
-      icon: DollarSign,
-      category: 'Cloud & Infrastructure',
-      features: ['Cost Analysis', 'Resource Optimization', 'Budget Management', 'ROI Tracking'],
-      href: '/services/finops-advisor',
-      color: 'from-emerald-500 to-teal-600'
-    }
-  ];
-
-  const serviceCategories = [
-    {
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      description: 'Cutting-edge artificial intelligence and machine learning solutions',
-      services: ['AI Workflow Orchestrator', 'AI Data Governance', 'AI Customer Analytics', 'AI Project Management'],
-      color: 'from-blue-500 to-purple-600'
-    },
-    {
-      name: 'Cloud & Infrastructure',
-      icon: Cloud,
-      description: 'Scalable cloud solutions and infrastructure management',
-      services: ['Cloud DevOps', 'FinOps Advisor', 'IT Infrastructure', 'Microservices Architecture'],
-      color: 'from-green-500 to-blue-600'
-    },
-    {
-      name: 'Cybersecurity',
-      icon: Shield,
-      description: 'Advanced security solutions for modern threats',
-      services: ['AI Cybersecurity Platform', 'Zero Trust Network', 'Security Headers & CSP', 'Compliance Assistant'],
-      color: 'from-red-500 to-orange-600'
-    },
-    {
-      name: 'Emerging Technologies',
-      icon: Atom,
-      description: 'Next-generation technology solutions',
-      services: ['Quantum Computing', 'IoT Edge Computing', 'Digital Twin', 'Space Technology'],
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      name: 'Micro SaaS Solutions',
-      icon: ShoppingCart,
-      description: 'Productized SaaS solutions for specific niches',
-      services: ['Micro CRM', 'Website Analytics', 'Helpdesk Platform', 'Email Sequencer'],
-      color: 'from-indigo-500 to-purple-600'
-    },
-    {
-      name: 'Digital Transformation',
-      icon: Zap,
-      description: 'End-to-end digital transformation services',
-      services: ['Strategy Consulting', 'Process Optimization', 'Technology Implementation', 'Change Management'],
-      color: 'from-yellow-500 to-orange-600'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -159,7 +117,6 @@ export default function InnovativeServicesLanding2025() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -238,55 +195,12 @@ export default function InnovativeServicesLanding2025() {
                 </a>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions. 
-              Get in touch today to start your digital transformation journey.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a
-                href={`tel:${contactInfo.mobile}`}
-                className="flex items-center justify-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                {contactInfo.mobile}
-              </a>
-              <a
-                href={`mailto:${contactInfo.email}`}
-                className="flex items-center justify-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                {contactInfo.email}
-              </a>
-            </div>
-            <div className="text-blue-100">
-              <p className="flex items-center justify-center gap-2 mb-2">
-                <MapPin className="w-5 h-5" />
-                {contactInfo.address}
-              </p>
-              <p className="flex items-center justify-center gap-2">
-                <Globe className="w-5 h-5" />
-                <a href={contactInfo.website} className="hover:underline">
-                  {contactInfo.website}
-                </a>
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Service Categories */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -295,38 +209,31 @@ export default function InnovativeServicesLanding2025() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Service Categories
+              Explore Our Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive range of services organized by category to find exactly what you need.
+              Comprehensive solutions across all major technology domains to meet your business needs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group"
               >
                 <div className="flex items-center mb-6">
-                  <div className={`p-3 bg-gradient-to-r ${category.color} rounded-lg mr-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <category.icon className="w-6 h-6 text-white" />
+                  <div className={`p-4 bg-gradient-to-r ${category.color} rounded-2xl mr-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <category.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{category.name}</h3>
-                </div>
-                
-                <p className="text-gray-300 text-sm mb-6">{category.description}</p>
-                
-                <div className="space-y-2 mb-6">
-                  {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="flex items-center text-sm">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                      <span className="text-gray-300">{service}</span>
-                    </div>
-                  ))}
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.name}</h3>
+                    <p className="text-gray-300 mb-2">{category.description}</p>
+                    <span className="text-blue-400 font-medium">{category.services} services available</span>
+                  </div>
                 </div>
                 
                 <button className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -423,6 +330,4 @@ export default function InnovativeServicesLanding2025() {
       </section>
     </div>
   );
-};
-
-export default InnovativeServicesLanding2025;
+}
