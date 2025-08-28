@@ -25,6 +25,13 @@ interface AccessibilitySettings {
   letterSpacing: number;
 }
 
+interface AccessibilityIssue {
+  id: string;
+  type: 'error' | 'warning' | 'info';
+  element: string;
+  description: string;
+}
+
 interface AccessibilityEnhancerProps {
   enabled?: boolean;
   showSettings?: boolean;
@@ -276,7 +283,7 @@ export function AccessibilityEnhancer({
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-        {isExpanded && (
+        {isExpanded ? (
           <motion.div
             initial={{ opacity: 0, x: -100, scale: 0.9 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
