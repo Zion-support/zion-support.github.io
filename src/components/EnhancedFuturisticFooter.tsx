@@ -95,6 +95,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'AI & Technology Services',
       featured: true,
       links: [
+        { name: '2025 Services Showcase', href: '/services/showcase-2025', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
         { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
