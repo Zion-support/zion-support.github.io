@@ -197,7 +197,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
                   <p className="text-slate-400 text-sm">Future Technology Solutions</p>
                 </div>
-              </div>
+              </motion.div>
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
                 We help businesses innovate and thrive in the digital age.
@@ -245,7 +245,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </p>
 
             {/* Footer Sections */}
-            {footerSections.map((section, index) => (
+            {footerSections.map((section) => (
               <div key={section.title}>
                 <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mr-3"></div>
@@ -265,7 +265,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -403,7 +403,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </footer>
   );

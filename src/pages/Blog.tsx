@@ -14,9 +14,12 @@ import {
   Code,
   Shield,
   Cloud,
-  Brain
+  Brain,
+  BookOpen,
+  Rocket,
+  ShoppingCart,
+  BarChart3
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 interface BlogPost {
   id: string;
@@ -233,12 +236,11 @@ const blogPosts: BlogPost[] = [
 ];
 
 export default function Blog() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const categories = [
+  const categoriesList = [
     { id: 'all', name: 'All Posts', icon: TrendingUp },
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain },
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
@@ -328,12 +330,12 @@ export default function Blog() {
   const featuredPost = blogPosts.find(post => post.featured);
 
   const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
+    const category = categories.find(cat => cat.name === categoryId);
     return category ? category.icon : BookOpen;
   };
 
   const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
+    const category = categories.find(cat => cat.name === categoryId);
     return category ? category.name : 'Uncategorized';
   };
 
@@ -383,7 +385,7 @@ export default function Blog() {
 
             {/* Category Filters */}
             <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
+              {categoriesList.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -431,7 +433,7 @@ export default function Blog() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      {new Date(featuredPost.date).toLocaleDateString()}
+                      {new Date(featuredPost.publishDate).toLocaleDateString()}
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4" />
@@ -439,7 +441,7 @@ export default function Blog() {
                     </div>
                     
                     <Link
-                      to={`/blog/${post.id}`}
+                      to={`/blog/${featuredPost.id}`}
                       className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 font-medium"
                     >
                       <span>Read More</span>
@@ -491,7 +493,7 @@ export default function Blog() {
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              {selectedCategory === 'all' ? 'All Articles' : `${categories.find(c => c.id === selectedCategory)?.name}`}
+              {selectedCategory === 'all' ? 'All Articles' : `${categories.find(c => c.name === selectedCategory)?.name}`}
             </h2>
             <p className="text-gray-300">
               {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+import { resolve } from 'path'
 import compress from 'vite-plugin-compression'
 
 // https://vite.dev/config/
@@ -70,7 +70,6 @@ export default defineConfig({
         },
       },
     },
-    cssCodeSplit: true,
     brotliSize: true,
   },
   server: {
