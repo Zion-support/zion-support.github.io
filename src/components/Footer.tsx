@@ -88,7 +88,9 @@ const footerSections = [
       { name: 'Case Studies', path: '/case-studies', icon: FileText },
       { name: 'News', path: '/news', icon: Newspaper },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Help Center', path: '/help', icon: HelpCircle }
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'Team', path: '/team', icon: Users },
+      { name: 'Leadership', path: '/leadership', icon: Award }
     ]
   },
   {
@@ -99,11 +101,7 @@ const footerSections = [
       { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
       { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
       { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
-      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
-      { name: 'AI Business Intelligence Analytics', path: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
+      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
       { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
@@ -112,9 +110,7 @@ const footerSections = [
       { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
-      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
-      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
-      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
+      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target }
     ]
   },
   {
@@ -138,7 +134,7 @@ const footerSections = [
       { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Shield },
       { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
       { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
-      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle }
+      { name: 'AI Compliance Copilot', path: '/services/ai-compliance-copilot', icon: CheckCircle }
     ]
   },
   {

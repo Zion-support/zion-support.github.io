@@ -36,14 +36,20 @@ const navigationItems: NavigationItem[] = [
     label: 'Services', 
     href: '/services',
     children: [
-      { label: 'AI & Machine Learning', href: '/services/ai-ml' },
-      { label: 'Cloud Solutions', href: '/services/cloud' },
-      { label: 'Cybersecurity', href: '/services/cybersecurity' },
+      { label: 'AI & Machine Learning', href: '/services/ai-business-intelligence' },
+      { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+      { label: 'IT Infrastructure', href: '/services/it-infrastructure' },
+      { label: 'Cybersecurity', href: '/services/ai-compliance-assistant' },
       { label: 'Digital Transformation', href: '/services/digital-transformation' },
-      { label: 'Consulting', href: '/services/consulting' },
-      { label: '2025 AI Services', href: '/comprehensive-services-showcase-2025' },
-      { label: '2025 IT Services', href: '/comprehensive-services-showcase-2025' },
-      { label: '2025 Micro SaaS', href: '/comprehensive-services-showcase-2025' }
+      { label: 'Quantum Computing', href: '/services/quantum-computing' },
+      { label: 'IoT & Edge Computing', href: '/services/iot-edge-computing' },
+      { label: 'Space Technology', href: '/space-tech' },
+      { label: 'Micro SaaS Solutions', href: '/micro-saas' },
+      { label: '2025 AI Services', href: '/new-innovative-services-2025' },
+      { label: '2026 Services', href: '/ultimate-services-showcase-2026' },
+      { label: '2027 Services', href: '/comprehensive-services-showcase-2027' },
+      { label: '2029 Services', href: '/comprehensive-services-showcase-2029' },
+      { label: 'Revolutionary 2030', href: '/revolutionary-services-2030' }
     ]
   },
   { 
@@ -51,11 +57,34 @@ const navigationItems: NavigationItem[] = [
     href: '/solutions',
     children: [
       { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { label: 'SMB Solutions', href: '/solutions/smb' },
-      { label: 'Industry Specific', href: '/solutions/industry' }
+      { label: 'Healthcare Solutions', href: '/solutions/healthcare' },
+      { label: 'AI Solutions', href: '/ai-solutions' }
     ]
   },
-  { label: 'About', href: '/about' },
+  { 
+    label: 'Company', 
+    href: '/about',
+    children: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Team', href: '/team' },
+      { label: 'Leadership', href: '/leadership' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Partners', href: '/partners' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'News', href: '/news' }
+    ]
+  },
+  { 
+    label: 'Resources', 
+    href: '/blog',
+    children: [
+      { label: 'Blog', href: '/blog' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'Help Center', href: '/help' },
+      { label: 'Pricing', href: '/pricing' },
+      { label: 'Marketplace', href: '/marketplace' }
+    ]
+  },
   { label: 'Contact', href: '/contact' }
 ];
 

@@ -1,36 +1,41 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
-Disallow: /_next/
 Disallow: /server/
 Disallow: /temp_working/
 Disallow: /broken_files_backup/
-Disallow: /scripts/
 Disallow: /automation/
+Disallow: /scripts/
+Disallow: /hooks/
+Disallow: /utils/
+Disallow: /types/
+Disallow: /lib/
+Disallow: /context/
+Disallow: /hoc/
+Disallow: /mobile/
+Disallow: /stories/
+Disallow: /__tests__/
+Disallow: /tests/
+Disallow: /tests.disabled/
+Disallow: /components.disabled/
+Disallow: /src.broken/
+Disallow: /styles_backup/
+Disallow: /zion-os.disabled/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
-Allow: /ai-services
-Allow: /it-services
-Allow: /micro-saas
-Allow: /solutions/
-Allow: /case-studies
-Allow: /help-center
-Allow: /faq
-Allow: /pricing
-Allow: /marketplace
+Allow: /sitemap
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /site.webmanifest
+
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl delay (optional)
 Crawl-delay: 1
