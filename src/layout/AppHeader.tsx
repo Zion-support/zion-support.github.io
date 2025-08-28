@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake, Settings } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake, Settings, RefreshCw } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -51,7 +51,13 @@ export function AppHeader() {
       icon: Brain, 
       description: 'Machine Learning & Data Science',
       featured: true,
-      color: 'from-purple-500 to-cyan-500'
+      color: 'from-purple-500 to-cyan-500',
+      subcategories: [
+        { name: 'Business Intelligence', href: '/services#ai-business-intelligence' },
+        { name: 'Predictive Analytics', href: '/services#ai-predictive-analytics' },
+        { name: 'Data Visualization', href: '/services#ai-data-visualization' },
+        { name: 'Market Research', href: '/services#ai-research' }
+      ]
     },
     { 
       name: 'AI & Legal Tech', 
@@ -59,7 +65,13 @@ export function AppHeader() {
       icon: Scale, 
       description: 'Document Analysis & Compliance',
       featured: true,
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-blue-500 to-indigo-500',
+      subcategories: [
+        { name: 'Contract Analysis', href: '/services#ai-legal-tech' },
+        { name: 'Legal Research', href: '/services#ai-legal-research' },
+        { name: 'Compliance Monitoring', href: '/services#ai-compliance' },
+        { name: 'Document Review', href: '/services#ai-document-review' }
+      ]
     },
     { 
       name: 'AI & Healthcare', 
@@ -67,7 +79,13 @@ export function AppHeader() {
       icon: Heart, 
       description: 'Medical AI & Diagnostics',
       featured: true,
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500',
+      subcategories: [
+        { name: 'Diagnostic Assistance', href: '/services#ai-healthcare' },
+        { name: 'Patient Monitoring', href: '/services#ai-patient-monitoring' },
+        { name: 'Treatment Optimization', href: '/services#ai-treatment' },
+        { name: 'Medical Imaging', href: '/services#ai-medical-imaging' }
+      ]
     },
     { 
       name: 'AI & Research', 
@@ -75,7 +93,13 @@ export function AppHeader() {
       icon: Eye, 
       description: 'Scientific Research & Discovery',
       featured: true,
-      color: 'from-purple-500 to-violet-500'
+      color: 'from-purple-500 to-violet-500',
+      subcategories: [
+        { name: 'Autonomous Research', href: '/services#ai-autonomous-research' },
+        { name: 'Market Analysis', href: '/services#ai-market-analysis' },
+        { name: 'Trend Forecasting', href: '/services#ai-trend-forecasting' },
+        { name: 'Competitive Intelligence', href: '/services#ai-competitive-intelligence' }
+      ]
     },
     { 
       name: 'AI & Green Tech', 
@@ -83,7 +107,13 @@ export function AppHeader() {
       icon: Leaf, 
       description: 'Sustainability Solutions',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
+      subcategories: [
+        { name: 'Energy Optimization', href: '/services#ai-green-tech' },
+        { name: 'Carbon Tracking', href: '/services#ai-carbon-tracking' },
+        { name: 'Environmental Monitoring', href: '/services#ai-environmental' },
+        { name: 'Sustainability Analytics', href: '/services#ai-sustainability' }
+      ]
     },
     { 
       name: 'AI & Metaverse', 
@@ -91,7 +121,13 @@ export function AppHeader() {
       icon: Globe, 
       description: 'Virtual Reality & Gaming',
       featured: true,
-      color: 'from-purple-500 to-indigo-500'
+      color: 'from-purple-500 to-indigo-500',
+      subcategories: [
+        { name: '3D Development', href: '/services#ai-metaverse' },
+        { name: 'Virtual World Building', href: '/services#ai-virtual-worlds' },
+        { name: 'Immersive Experiences', href: '/services#ai-immersive' },
+        { name: 'Content Generation', href: '/services#ai-content-gen' }
+      ]
     },
     { 
       name: 'AI & Blockchain', 
@@ -99,79 +135,139 @@ export function AppHeader() {
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Edge Computing', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-yellow-500 to-orange-500',
+      subcategories: [
+        { name: 'Smart Contracts', href: '/services#ai-blockchain' },
+        { name: 'DeFi Solutions', href: '/services#ai-defi' },
+        { name: 'NFT Marketplace', href: '/services#ai-nft' },
+        { name: 'Web3 Development', href: '/services#ai-web3' }
+      ]
     },
     { 
       name: 'AI & Space Tech', 
       href: '/services', 
       icon: Rocket, 
-      description: 'Satellite Operations & Missions',
+      description: 'Satellite & Space Operations',
       featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
-      featured: true,
-      color: 'from-green-500 to-blue-500'
-    },
-    { 
-      name: 'Cloud Services', 
-      href: '/services', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'AI & FinTech', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'Financial Technology & Risk Management',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
+      color: 'from-indigo-500 to-purple-500',
+      subcategories: [
+        { name: 'Satellite Operations', href: '/services#ai-space-tech' },
+        { name: 'Space Debris Tracking', href: '/services#ai-space-debris' },
+        { name: 'Orbital Mechanics', href: '/services#ai-orbital' },
+        { name: 'Mission Control', href: '/services#ai-mission-control' }
+      ]
     },
     { 
       name: 'AI & Operations', 
       href: '/services', 
       icon: Settings, 
-      description: 'Supply Chain & Process Optimization',
+      description: 'Business Process Automation',
       featured: true,
-      color: 'from-gray-500 to-slate-500'
+      color: 'from-gray-500 to-slate-500',
+      subcategories: [
+        { name: 'Supply Chain Optimization', href: '/services#ai-supply-chain' },
+        { name: 'Quality Assurance', href: '/services#ai-quality-assurance' },
+        { name: 'Process Automation', href: '/services#ai-process-automation' },
+        { name: 'Workflow Optimization', href: '/services#ai-workflow' }
+      ]
     },
     { 
       name: 'AI & Development', 
       href: '/services', 
       icon: Code, 
-      description: 'Quality Assurance & Testing',
+      description: 'Software Development & DevOps',
       featured: true,
-      color: 'from-cyan-500 to-blue-500'
+      color: 'from-cyan-500 to-blue-500',
+      subcategories: [
+        { name: 'Code Generation', href: '/services#ai-development' },
+        { name: 'Automated Testing', href: '/services#ai-testing' },
+        { name: 'Deployment Optimization', href: '/services#ai-deployment' },
+        { name: 'DevOps Automation', href: '/services#ai-devops' }
+      ]
+    },
+    { 
+      name: 'Quantum Computing', 
+      href: '/services', 
+      icon: Atom, 
+      description: 'Quantum Solutions & AI',
+      featured: true,
+      color: 'from-violet-500 to-purple-500',
+      subcategories: [
+        { name: 'Quantum AI Trading', href: '/services#quantum-ai-trading' },
+        { name: 'Quantum Machine Learning', href: '/services#quantum-ml' },
+        { name: 'Quantum Cryptography', href: '/services#quantum-crypto' },
+        { name: 'Quantum Simulation', href: '/services#quantum-simulation' }
+      ]
+    },
+    { 
+      name: 'Cybersecurity', 
+      href: '/services', 
+      icon: Shield, 
+      description: 'Advanced Security Solutions',
+      featured: true,
+      color: 'from-red-500 to-orange-500',
+      subcategories: [
+        { name: 'Zero Trust Security', href: '/services#zero-trust' },
+        { name: 'Threat Detection', href: '/services#threat-detection' },
+        { name: 'Incident Response', href: '/services#incident-response' },
+        { name: 'Security Headers', href: '/services#security-headers' }
+      ]
+    },
+    { 
+      name: 'Cloud & DevOps', 
+      href: '/services', 
+      icon: Cloud, 
+      description: 'Infrastructure & Automation',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500',
+      subcategories: [
+        { name: 'Cloud Infrastructure', href: '/services#cloud-infrastructure' },
+        { name: 'DevOps Automation', href: '/services#devops-automation' },
+        { name: 'Container Orchestration', href: '/services#container-orchestration' },
+        { name: 'Infrastructure as Code', href: '/services#infrastructure-code' }
+      ]
+    },
+    { 
+      name: 'IoT & Edge', 
+      href: '/services', 
+      icon: Cpu, 
+      description: 'Internet of Things & Edge Computing',
+      featured: true,
+      color: 'from-teal-500 to-cyan-500',
+      subcategories: [
+        { name: 'IoT Platform', href: '/services#iot-platform' },
+        { name: 'Edge Computing', href: '/services#edge-computing' },
+        { name: 'Device Management', href: '/services#device-management' },
+        { name: 'Real-time Processing', href: '/services#real-time-processing' }
+      ]
+    },
+    { 
+      name: 'Digital Twin', 
+      href: '/services', 
+      icon: RefreshCw, 
+      description: 'Virtual Simulation & Monitoring',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500',
+      subcategories: [
+        { name: '3D Visualization', href: '/services#digital-twin' },
+        { name: 'Predictive Maintenance', href: '/services#predictive-maintenance' },
+        { name: 'Real-time Monitoring', href: '/services#real-time-monitoring' },
+        { name: 'Virtual Simulation', href: '/services#virtual-simulation' }
+      ]
+    },
+    { 
+      name: 'FinTech', 
+      href: '/services', 
+      icon: DollarSign, 
+      description: 'Financial Technology & AI',
+      featured: true,
+      color: 'from-emerald-500 to-green-500',
+      subcategories: [
+        { name: 'AI Trading', href: '/services#ai-fintech' },
+        { name: 'Risk Assessment', href: '/services#risk-assessment' },
+        { name: 'Fraud Detection', href: '/services#fraud-detection' },
+        { name: 'Financial Analytics', href: '/services#financial-analytics' }
+      ]
     }
   ];
 
@@ -342,9 +438,9 @@ export function AppHeader() {
 
                       {/* Services Dropdown */}
                       {item.name === 'Services' && servicesDropdownOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
+                        <div className="absolute top-full left-0 mt-2 w-[900px] bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden">
                           <div className="p-6">
-                            <div className="grid grid-cols-2 gap-6">
+                            <div className="grid grid-cols-3 gap-6">
                               {services.map((service) => (
                                 <Link
                                   key={service.name}
@@ -365,6 +461,23 @@ export function AppHeader() {
                                       <p className="text-sm text-gray-400 mt-1">
                                         {service.description}
                                       </p>
+                                      
+                                      {/* Subcategories */}
+                                      {service.subcategories && (
+                                        <div className="mt-3 space-y-1">
+                                          {service.subcategories.slice(0, 3).map((sub, index) => (
+                                            <div key={index} className="text-xs text-slate-500 group-hover:text-slate-300 transition-colors">
+                                              • {sub.name}
+                                            </div>
+                                          ))}
+                                          {service.subcategories.length > 3 && (
+                                            <div className="text-xs text-cyan-400">
+                                              +{service.subcategories.length - 3} more
+                                            </div>
+                                          )}
+                                        </div>
+                                      )}
+                                      
                                       {service.featured && (
                                         <span className="inline-flex items-center gap-1 mt-2 text-xs text-cyan-400">
                                           <Star className="w-3 h-3" />
@@ -376,15 +489,34 @@ export function AppHeader() {
                                 </Link>
                               ))}
                             </div>
+                            
+                            {/* Quick Actions */}
                             <div className="mt-6 pt-6 border-t border-slate-700/50">
-                              <Link
-                                to="/services"
-                                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
-                                onClick={() => setServicesDropdownOpen(false)}
-                              >
-                                View All Services
-                                <ArrowRight className="w-4 h-4" />
-                              </Link>
+                              <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
+                                <div className="flex items-center gap-4 text-sm text-slate-400">
+                                  <span>Need help choosing?</span>
+                                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                                    Call +1 302 464 0950
+                                  </a>
+                                </div>
+                                <div className="flex gap-3">
+                                  <Link
+                                    to="/services"
+                                    className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                  >
+                                    View All Services
+                                    <ArrowRight className="w-4 h-4" />
+                                  </Link>
+                                  <Link
+                                    to="/request-quote"
+                                    className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
+                                    onClick={() => setServicesDropdownOpen(false)}
+                                  >
+                                    Get Quote
+                                  </Link>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
