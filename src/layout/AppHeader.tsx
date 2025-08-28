@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -221,7 +221,7 @@ export function AppHeader() {
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Careers', href: '/careers', icon: Users },
-    { name: 'Partners', href: '/partners', icon: Handshake },
+    { name: 'Partners', href: '/partners', icon: HeartHandshake },
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: BookOpen },
   ];
