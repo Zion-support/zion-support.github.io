@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
 import { ArrowRight, Play, Star, Zap, Shield, Users, TrendingUp, Rocket } from 'lucide-react';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58cf
 
 export function HeroSection() {
   return (
@@ -57,6 +60,30 @@ export function HeroSection() {
           </Link>
         </motion.div>
 
+<<<<<<< HEAD
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+        >
+          <div className="text-center">
+            <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
+            <div className="text-gray-400 text-sm">Projects Delivered</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
+            <div className="text-gray-400 text-sm">Expert Team</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="text-gray-400 text-sm">Uptime</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+            <div className="text-gray-400 text-sm">Support</div>
+          </div>
+=======
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -154,6 +181,7 @@ export function HeroSection() {
               </motion.div>
             </div>
           </motion.div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-58cf
         </motion.div>
       </div>
 

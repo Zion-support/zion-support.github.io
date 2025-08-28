@@ -27,9 +27,10 @@ export default function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
-    { name: '2029 Services', href: '/revolutionary-services-2029', current: false, featured: true, icon: Crown },
-    { name: '2027 Services', href: '/services2027', current: false, featured: true, icon: Fire },
-    { name: '2026 Services', href: '/services2026', current: false, featured: true, icon: Lightning },
+    { name: '2025 Services', href: '/comprehensive-services-showcase-2025', current: false, featured: true },
+    { name: '2026 Services', href: '/services2026', current: false, featured: true },
+    { name: '2027 Services', href: '/services2027', current: false, featured: true },
+    { name: '2030 Services', href: '/revolutionary-services-2030', current: false, featured: true, revolutionary: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Blog', href: '/blog', current: false },
@@ -39,9 +40,9 @@ export default function AppHeader() {
   // Organized services by category with enhanced descriptions
   const services = [
     // Featured & New Services
-    { name: '2029 Revolutionary Services', href: '/revolutionary-services-2029', icon: Crown, description: 'Cutting-edge AI & Quantum Solutions', category: 'Featured', featured: true, badge: 'NEW' },
-    { name: '2027 Services Overview', href: '/services2027', icon: Fire, description: 'Advanced Innovation & Emerging Tech', category: 'Featured', featured: true, badge: 'HOT' },
-    { name: '2026 Services Overview', href: '/services2026', icon: Lightning, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, badge: 'POPULAR' },
+    { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
+    { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
+    { name: '2030 Revolutionary Services', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future of Technology - Revolutionary Solutions', category: 'Featured', featured: true, revolutionary: true, color: 'from-red-500 to-pink-500' },
     
     // AI & Machine Learning
     { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', icon: Brain, description: '24/7 autonomous business management', category: 'AI & ML', featured: true },
@@ -394,10 +395,10 @@ export default function AppHeader() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
