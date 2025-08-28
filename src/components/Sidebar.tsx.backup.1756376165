@@ -1,42 +1,5 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ChevronRight, 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Server, 
-  BarChart3, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  Settings, 
-  Star,
-  Atom,
-  Network,
-  Eye,
-  PenTool,
-  Globe,
-  Cpu,
-  Lock,
-  TrendingUp,
-  Rocket,
-  Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  Sun,
-  Moon,
-  Infinity,
-  ArrowRight,
-  Target
-=======
 import {
   X,
   Home,
@@ -101,39 +64,25 @@ import {
   GraduationCap,
   Activity,
   DollarSign as DollarSignIcon
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
 } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['2028 Services', 'Featured Services']);
-
-<<<<<<< HEAD
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-=======
   // Close sidebar when location changes
   React.useEffect(() => {
     onClose();
   }, [location.pathname, onClose]);
-
   const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev =>
       prev.includes(sectionTitle)
         ? prev.filter(title => title !== sectionTitle)
         : [...prev, sectionTitle]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
     );
   };
-
   const navigationSections = [
     {
       title: 'Main Navigation',
@@ -291,7 +240,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     }
   ];
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -305,7 +253,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           />
-
           {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
@@ -334,7 +281,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              
               {/* Quick Search */}
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -345,7 +291,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 />
               </div>
             </div>
-
             {/* Navigation Content */}
             <div className="p-4 space-y-6">
               {navigationSections.map((section) => (
@@ -375,19 +320,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         </span>
                       )}
                     </div>
-<<<<<<< HEAD
-                    <ChevronRight className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-                      expandedSections.includes(section.title) ? 'rotate-90' : ''
-                    }`} />
-=======
                     <ChevronDown
                       className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
                         expandedSections.includes(section.title) ? 'rotate-180' : ''
                       }`}
                     />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
                   </button>
-
                   <AnimatePresence>
                     {expandedSections.includes(section.title) && (
                       <motion.div
@@ -426,35 +364,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </div>
               ))}
             </div>
-
             {/* Footer */}
-<<<<<<< HEAD
-            <div className="sticky bottom-0 bg-slate-800/50 backdrop-blur-xl border-t border-slate-700/50 p-4">
-              <div className="space-y-3">
-                <Link
-                  to="/contact"
-                  onClick={onClose}
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Contact Us
-                </Link>
-                <Link
-                  to="/request-quote"
-                  onClick={onClose}
-                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hover:bg-slate-600/50 transition-all duration-200 font-medium"
-                >
-                  <DollarSign className="w-4 h-4" />
-                  Request Quote
-                </Link>
-=======
             <div className="p-6 border-t border-gray-200 dark:border-gray-700">
               <div className="space-y-4">
                 <div className="text-sm text-gray-500 dark:text-gray-400">
                   <p>© 2025 Zion Tech Group</p>
                   <p>Innovating the future</p>
                 </div>
-
                 {/* Social Links */}
                 <div className="flex space-x-3">
                   <a
@@ -482,7 +398,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <Github className="w-4 h-4" />
                   </a>
                 </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
               </div>
             </div>
           </motion.div>

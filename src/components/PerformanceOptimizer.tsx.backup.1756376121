@@ -1,170 +1,3 @@
-<<<<<<< HEAD
-import React, { useEffect, useCallback, useRef } from 'react';
-import { motion } from 'framer-motion';
-
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-}
-
-interface PerformanceOptimizerProps {
-  enabled: boolean;
-}
-
-export function PerformanceOptimizer({ enabled }: PerformanceOptimizerProps) {
-  const metricsRef = useRef<PerformanceMetrics>({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0,
-    ttfb: 0
-  });
-
-  const observerRef = useRef<PerformanceObserver | null>(null);
-
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
-    if (!enabled) return;
-
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.svg'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-      link.href = resource;
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-  }, [enabled]);
-
-  // Optimize images with lazy loading and responsive images
-  const optimizeImages = useCallback(() => {
-    if (!enabled) return;
-
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-  }, [enabled]);
-
-  // Monitor Core Web Vitals
-  const monitorCoreWebVitals = useCallback(() => {
-    if (!enabled || !('PerformanceObserver' in window)) return;
-
-    try {
-      // First Contentful Paint
-      observerRef.current = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
-            metricsRef.current.fcp = entry.startTime;
-            console.log('FCP:', entry.startTime);
-          }
-        });
-      });
-      observerRef.current.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          metricsRef.current.lcp = lastEntry.startTime;
-          console.log('LCP:', lastEntry.startTime);
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          metricsRef.current.fid = entry.processingStart - entry.startTime;
-          console.log('FID:', metricsRef.current.fid);
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        metricsRef.current.cls = clsValue;
-        console.log('CLS:', clsValue);
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
-    }
-  }, [enabled]);
-
-  // Optimize bundle loading
-  const optimizeBundleLoading = useCallback(() => {
-    if (!enabled) return;
-
-    // Add resource hints for better loading
-    const resourceHints = [
-      { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: '//cdn.jsdelivr.net' },
-      { rel: 'preconnect', href: '//fonts.googleapis.com' },
-      { rel: 'preconnect', href: '//cdn.jsdelivr.net' }
-    ];
-
-    resourceHints.forEach(hint => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      document.head.appendChild(link);
-    });
-  }, [enabled]);
-
-  // Memory usage optimization
-  const optimizeMemoryUsage = useCallback(() => {
-    if (!enabled) return;
-
-    // Clean up event listeners and observers
-    const cleanup = () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-
-    // Monitor memory usage
-    if ('memory' in performance) {
-      const memoryInfo = (performance as any).memory;
-      console.log('Memory Usage:', {
-        used: Math.round(memoryInfo.usedJSHeapSize / 1048576) + ' MB',
-        total: Math.round(memoryInfo.totalJSHeapSize / 1048576) + ' MB',
-        limit: Math.round(memoryInfo.jsHeapSizeLimit / 1048576) + ' MB'
-      });
-    }
-
-    return cleanup;
-  }, [enabled]);
-=======
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -181,7 +14,6 @@ import {
   RefreshCw,
   AlertTriangle
 } from 'lucide-react';
-
 interface PerformanceMetrics {
   loadTime: number;
   bundleSize: number;
@@ -190,7 +22,6 @@ interface PerformanceMetrics {
   networkLatency: number;
   fps: number;
 }
-
 interface PerformanceSettings {
   enableLazyLoading: boolean;
   enableCodeSplitting: boolean;
@@ -199,7 +30,6 @@ interface PerformanceSettings {
   enableCompression: boolean;
   enableMonitoring: boolean;
 }
-
 export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -209,7 +39,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
     networkLatency: 0,
     fps: 60
   });
-
   const [settings, setSettings] = useState<PerformanceSettings>({
     enableLazyLoading: true,
     enableCodeSplitting: true,
@@ -218,53 +47,41 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
     enableCompression: true,
     enableMonitoring: true
   });
-
   const [isOpen, setIsOpen] = useState(false);
   const [showMetrics, setShowMetrics] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
-
   // Performance monitoring
   const measurePerformance = useCallback(() => {
     if (!settings.enableMonitoring) return;
-
     // Measure page load time
     const loadTime = performance.now();
-    
     // Measure memory usage (if available)
     let memoryUsage = 0;
     if ('memory' in performance) {
       const memory = (performance as any).memory;
       memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
     }
-
     // Measure bundle size (approximate)
     const bundleSize = document.querySelectorAll('script[src]').length * 50; // Rough estimate
-
     // Measure FPS
     let fps = 60;
     let frameCount = 0;
     let lastTime = performance.now();
-    
     const measureFPS = () => {
       frameCount++;
       const currentTime = performance.now();
-      
       if (currentTime - lastTime >= 1000) {
         fps = frameCount;
         frameCount = 0;
         lastTime = currentTime;
       }
-      
       requestAnimationFrame(measureFPS);
     };
-
     if (settings.enableMonitoring) {
       requestAnimationFrame(measureFPS);
     }
-
     // Network latency simulation
     const networkLatency = Math.random() * 100 + 20; // 20-120ms
-
     setMetrics({
       loadTime,
       bundleSize,
@@ -273,22 +90,17 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
       networkLatency,
       fps
     });
-
     // Check for performance issues
     const newAlerts: string[] = [];
     if (loadTime > 3000) newAlerts.push('Page load time is slow (>3s)');
     if (memoryUsage > 100) newAlerts.push('High memory usage detected');
     if (fps < 30) newAlerts.push('Low FPS detected');
     if (networkLatency > 100) newAlerts.push('High network latency');
-
     setAlerts(newAlerts);
   }, [settings.enableMonitoring]);
-
   // Apply performance optimizations
   const applyOptimizations = useCallback(() => {
     if (!enabled) return;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5dca
-
     // Lazy loading for images
     if (settings.enableImageOptimization) {
       const images = document.querySelectorAll('img[data-src]');
@@ -302,10 +114,8 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
           }
         });
       });
-
       images.forEach(img => imageObserver.observe(img));
     }
-
     // Preload critical resources
     if (settings.enableCaching) {
       const criticalResources = [
@@ -313,7 +123,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
         '/images/hero-bg.jpg',
         '/css/critical.css'
       ];
-
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -324,67 +133,25 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
         document.head.appendChild(link);
       });
     }
-
     // Service worker for caching
     if (settings.enableCaching && 'serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js').catch(console.error);
     }
   }, [enabled, settings]);
-
   // Performance monitoring interval
   useEffect(() => {
-<<<<<<< HEAD
-    if (!enabled) return;
-
-    preloadCriticalResources();
-    optimizeImages();
-    monitorCoreWebVitals();
-    optimizeBundleLoading();
-    
-    const cleanup = optimizeMemoryUsage();
-
-    // Cleanup on unmount
-    return () => {
-      cleanup?.();
-    };
-  }, [enabled, preloadCriticalResources, optimizeImages, monitorCoreWebVitals, optimizeBundleLoading, optimizeMemoryUsage]);
-
-  // Performance metrics display (for development)
-  if (!enabled || process.env.NODE_ENV === 'production') {
-    return null;
-  }
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50 backdrop-blur-sm"
-    >
-      <h3 className="font-semibold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metricsRef.current.fcp.toFixed(0)}ms</div>
-        <div>LCP: {metricsRef.current.lcp.toFixed(0)}ms</div>
-        <div>FID: {metricsRef.current.fid.toFixed(0)}ms</div>
-        <div>CLS: {metricsRef.current.cls.toFixed(3)}</div>
-      </div>
-    </motion.div>
-=======
     if (!enabled || !settings.enableMonitoring) return;
-
     const interval = setInterval(measurePerformance, 5000);
     return () => clearInterval(interval);
   }, [enabled, settings.enableMonitoring, measurePerformance]);
-
   // Apply optimizations on mount
   useEffect(() => {
     applyOptimizations();
   }, [applyOptimizations]);
-
   // Save settings to localStorage
   useEffect(() => {
     localStorage.setItem('zion-performance-settings', JSON.stringify(settings));
   }, [settings]);
-
   // Load saved settings
   useEffect(() => {
     const saved = localStorage.getItem('zion-performance-settings');
@@ -397,30 +164,23 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
       }
     }
   }, []);
-
   const toggleSetting = (key: keyof PerformanceSettings) => {
     setSettings(prev => ({ ...prev, [key]: !prev[key] }));
   };
-
   const getPerformanceScore = useMemo(() => {
     let score = 100;
-    
     if (metrics.loadTime > 3000) score -= 20;
     if (metrics.memoryUsage > 100) score -= 15;
     if (metrics.fps < 30) score -= 25;
     if (metrics.networkLatency > 100) score -= 10;
-    
     return Math.max(0, score);
   }, [metrics]);
-
   const getPerformanceColor = useMemo(() => {
     if (getPerformanceScore >= 80) return 'text-green-400';
     if (getPerformanceScore >= 60) return 'text-yellow-400';
     return 'text-red-400';
   }, [getPerformanceScore]);
-
   if (!enabled) return null;
-
   return (
     <>
       {/* Floating Performance Button */}
@@ -433,7 +193,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
       >
         <Zap className="w-6 h-6" />
       </motion.button>
-
       {/* Performance Panel */}
       <AnimatePresence>
         {isOpen && (
@@ -464,7 +223,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                   <X className="w-5 h-5" />
                 </button>
               </div>
-
               {/* Performance Score */}
               <div className="mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-400/20 rounded-xl">
                 <div className="flex items-center justify-between">
@@ -488,7 +246,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                   </div>
                 </div>
               </div>
-
               {/* Metrics Toggle */}
               <div className="mb-6">
                 <button
@@ -499,7 +256,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                   <span>{showMetrics ? 'Hide' : 'Show'} Performance Metrics</span>
                 </button>
               </div>
-
               {/* Performance Metrics */}
               <AnimatePresence>
                 {showMetrics && (
@@ -518,7 +274,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                         {metrics.loadTime.toFixed(0)}ms
                       </div>
                     </div>
-
                     <div className="p-3 bg-white/5 rounded-lg">
                       <div className="flex items-center space-x-2 mb-2">
                         <Memory className="w-4 h-4 text-blue-400" />
@@ -528,7 +283,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                         {metrics.memoryUsage.toFixed(1)}MB
                       </div>
                     </div>
-
                     <div className="p-3 bg-white/5 rounded-lg">
                       <div className="flex items-center space-x-2 mb-2">
                         <Cpu className="w-4 h-4 text-purple-400" />
@@ -538,7 +292,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                         {metrics.cpuUsage.toFixed(1)}%
                       </div>
                     </div>
-
                     <div className="p-3 bg-white/5 rounded-lg">
                       <div className="flex items-center space-x-2 mb-2">
                         <Network className="w-4 h-4 text-cyan-400" />
@@ -548,7 +301,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                         {metrics.networkLatency.toFixed(0)}ms
                       </div>
                     </div>
-
                     <div className="p-3 bg-white/5 rounded-lg">
                       <div className="flex items-center space-x-2 mb-2">
                         <TrendingUp className="w-4 h-4 text-yellow-400" />
@@ -558,7 +310,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                         {metrics.fps}
                       </div>
                     </div>
-
                     <div className="p-3 bg-white/5 rounded-lg">
                       <div className="flex items-center space-x-2 mb-2">
                         <Battery className="w-4 h-4 text-red-400" />
@@ -571,7 +322,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                   </motion.div>
                 )}
               </AnimatePresence>
-
               {/* Performance Alerts */}
               {alerts.length > 0 && (
                 <div className="mb-6 p-4 bg-red-500/10 border border-red-400/20 rounded-xl">
@@ -589,11 +339,9 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                   </ul>
                 </div>
               )}
-
               {/* Optimization Settings */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white mb-4">Optimization Settings</h3>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
                     <div>
@@ -613,7 +361,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                       />
                     </button>
                   </div>
-
                   <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
                     <div>
                       <div className="text-white font-medium">Code Splitting</div>
@@ -632,7 +379,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                       />
                     </button>
                   </div>
-
                   <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
                     <div>
                       <div className="text-white font-medium">Image Optimization</div>
@@ -651,7 +397,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                       />
                     </button>
                   </div>
-
                   <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
                     <div>
                       <div className="text-white font-medium">Caching</div>
@@ -672,7 +417,6 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
                   </div>
                 </div>
               </div>
-
               {/* Actions */}
               <div className="mt-6 pt-6 border-t border-purple-400/20 flex justify-between">
                 <button
@@ -694,6 +438,5 @@ export function PerformanceOptimizer({ enabled = true }: { enabled?: boolean }) 
         )}
       </AnimatePresence>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5dca
   );
 }

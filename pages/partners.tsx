@@ -1,15 +1,4 @@
 import { motion } from 'framer-motion'
-<<<<<<< HEAD
-import {
-    Award,
-    Brain,
-    Cloud,
-    Database,
-    Handshake,
-    Rocket,
-    Shield,
-    Zap
-=======
 import { 
   Shield, 
   Cloud, 
@@ -22,15 +11,12 @@ import {
   Database,
   Lock,
   Rocket
->>>>>>> pr-9553
 } from 'lucide-react'
 import Head from 'next/head'
 import React from 'react'
-
 export default function Partners() {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
-  
   const partnerCategories = [
     {
       icon: Cloud,
@@ -77,7 +63,6 @@ export default function Partners() {
       ]
     }
   ]
-
   const benefits = [
     {
       icon: Zap,
@@ -100,7 +85,6 @@ export default function Partners() {
       description: 'Solutions validated by our trusted partner ecosystem.'
     }
   ]
-
   const partnershipLevels = [
     {
       name: 'Platinum',
@@ -121,7 +105,6 @@ export default function Partners() {
       color: 'from-gray-400 to-gray-600'
     }
   ]
-
   return (
     <>
       <Head>
@@ -133,7 +116,6 @@ export default function Partners() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/partners/" />
       </Head>
-      
       <main className="min-h-screen bg-white text-gray-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white py-20">
@@ -188,7 +170,6 @@ export default function Partners() {
                 that combine the best technologies and expertise in the industry.
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -225,7 +206,6 @@ export default function Partners() {
                 to provide comprehensive solutions for our clients.
               </p>
             </motion.div>
-            
             <div className="space-y-12">
               {partnerCategories.map((category, categoryIndex) => (
                 <motion.div
@@ -245,7 +225,6 @@ export default function Partners() {
                       <p className="text-gray-600">{category.description}</p>
                     </div>
                   </div>
-                  
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {category.partners.map((partner, partnerIndex) => (
                       <motion.div
@@ -274,7 +253,6 @@ export default function Partners() {
             </div>
           </div>
         </section>
-
         {/* Partnership Levels */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -291,7 +269,6 @@ export default function Partners() {
                 collaboration needs and business objectives.
               </p>
             </motion.div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {partnershipLevels.map((level, index) => (
                 <motion.div
@@ -307,7 +284,6 @@ export default function Partners() {
                       <h3 className="text-2xl font-bold mb-2">{level.name}</h3>
                       <p className="text-white/90">{level.description}</p>
                     </div>
-                    
                     <ul className="space-y-3 mb-8">
                       {level.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center gap-3">

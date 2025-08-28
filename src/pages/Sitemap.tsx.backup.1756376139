@@ -49,26 +49,19 @@ import {
   Award,
   ChevronRight
 } from 'lucide-react';
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-=======
 import SEO from '../components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 interface SitemapSection {
   title: string;
   icon: React.ComponentType<any>;
   description: string;
   links: SitemapLink[];
 }
-
 interface SitemapLink {
   name: string;
   path: string;
   description?: string;
   featured?: boolean;
 }
-
 const Sitemap: React.FC = () => {
   const sitemapSections: SitemapSection[] = [
     {
@@ -236,7 +229,6 @@ const Sitemap: React.FC = () => {
       ]
     }
   ];
-
   const quickLinks = [
     { name: 'Get Started', path: '/contact', icon: ArrowRight, featured: true },
     { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
@@ -245,7 +237,6 @@ const Sitemap: React.FC = () => {
     { name: 'Partner Program', path: '/partners', icon: Users },
     { name: 'Developer Hub', path: '/developer', icon: Code }
   ];
-
 export function Sitemap() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -254,7 +245,6 @@ export function Sitemap() {
         description="Complete sitemap of Zion Tech Group's website. Find all our services, solutions, and resources organized by category."
         keywords="sitemap, Zion Tech Group, website structure, services, solutions, navigation"
       />
-      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
@@ -275,7 +265,6 @@ export function Sitemap() {
               solutions, and resources Zion Tech Group has to offer.
             </p>
           </motion.div>
-
           {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -309,7 +298,6 @@ export function Sitemap() {
             </div>
           </motion.div>
         </div>
-
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
@@ -317,7 +305,6 @@ export function Sitemap() {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         </div>
       </div>
-
       {/* Sitemap Sections */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -340,7 +327,6 @@ export function Sitemap() {
                     <p className="text-gray-400 text-sm">{section.description}</p>
                   </div>
                 </div>
-
                 <div className="space-y-3">
                   {section.links.map((link, linkIndex) => (
                     <Link
@@ -374,7 +360,6 @@ export function Sitemap() {
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -392,7 +377,6 @@ export function Sitemap() {
               Can't find what you're looking for? Our team is here to help you navigate 
               our services and find the right solution for your needs.
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center space-x-3 text-gray-300">
                 <Phone className="w-5 h-5 text-cyan-400" />
@@ -407,7 +391,6 @@ export function Sitemap() {
                 <span>Middletown, DE</span>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -429,5 +412,4 @@ export function Sitemap() {
     </div>
   );
 };
-
 export default Sitemap;

@@ -19,13 +19,8 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-<<<<<<< HEAD
-import SEO from '../components/SEO';
-import { 
-=======
 import { SEO } from '../components/SEO';
 import {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,
   revolutionaryAIServices2026,

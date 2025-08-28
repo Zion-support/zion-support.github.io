@@ -243,9 +243,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
-<<<<<<< HEAD
-    popular: true,
-=======
     capabilities: [
       'Production optimization',
       'Predictive maintenance',
@@ -440,7 +437,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/retail-ai-optimization-platform',
     marketPosition: 'Leading retail AI optimization platform. Our advantage: Comprehensive AI-powered retail optimization with personalized customer experiences.',
-    targetAudience: 'Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers',
+    targetAudience: ['Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Retail AI & Customer Experience',
@@ -485,7 +482,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Mobile app access'
     ],
     popular: false,
->>>>>>> origin/clean-merge-website-fixes
     icon: '🚚',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
@@ -505,19 +501,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     growthRate: '22.5% annual growth',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Advanced logistics AI platform with comprehensive optimization and tracking capabilities.',
-    launchDate: '2024-05-01',
-    customers: 38,
-    rating: 4.6,
-    reviews: 32
-=======
     implementationDetails: 'Advanced logistics AI platform with comprehensive logistics optimization and real-time tracking capabilities.',
     launchDate: '2024-08-25',
     customers: 28,
     rating: 4.7,
     reviews: 58
->>>>>>> origin/clean-merge-website-fixes
   }
 ];
 export const INDUSTRY_SOLUTION_CATEGORIES = [

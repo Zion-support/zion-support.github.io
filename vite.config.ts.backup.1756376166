@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -18,11 +17,7 @@ export default defineConfig({
     },
   },
   build: {
-<<<<<<< HEAD
-    target: 'esnext',
-=======
     target: 'es2022',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
     minify: 'terser',
     terserOptions: {
       compress: {

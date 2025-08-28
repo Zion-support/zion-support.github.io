@@ -1,20 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  Activity, 
-  AlertTriangle, 
-  CheckCircle, 
-  Clock, 
-  Download, 
-  Globe, 
-  HardDrive, 
-  Network, 
-  RefreshCw, 
-  Settings, 
-  Shield, 
-  Zap 
-=======
 import {
   Activity,
   Zap,
@@ -27,11 +12,9 @@ import {
   BarChart3,
   Gauge,
   Monitor
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
 } from 'lucide-react';
 import resourceMonitor from '../utils/resourceMonitor';
 import mimeTypeFallback from '../utils/mimeTypeFallback';
-
 interface PerformanceMetrics {
   loadTime: number;
   resourceCount: number;
@@ -40,7 +23,6 @@ interface PerformanceMetrics {
   cacheHitRate: number;
   networkLatency: number;
 }
-
 const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -53,13 +35,7 @@ const PerformanceMonitor: React.FC = () => {
   });
   const [resourceErrors, setResourceErrors] = useState<any[]>([]);
   const [isMonitoring, setIsMonitoring] = useState(false);
-
   useEffect(() => {
-<<<<<<< HEAD
-    // Start monitoring when component mounts
-    if (!isMonitoring) {
-      startMonitoring();
-=======
     // Initial metrics
     updateMetrics();
     // Set up performance observer for Core Web Vitals
@@ -75,15 +51,11 @@ const PerformanceMonitor: React.FC = () => {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
       return () => observer.disconnect();
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
     }
-
     // Collect initial metrics
     collectMetrics();
-
     // Set up periodic metric collection
     const interval = setInterval(collectMetrics, 5000);
-
     return () => {
       clearInterval(interval);
       if (isMonitoring) {
@@ -91,49 +63,40 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
   }, []);
-
   const startMonitoring = () => {
     resourceMonitor.start();
     setIsMonitoring(true);
     console.log('🚀 Performance monitoring started');
   };
-
   const stopMonitoring = () => {
     resourceMonitor.stop();
     setIsMonitoring(false);
     console.log('🛑 Performance monitoring stopped');
   };
-
   const collectMetrics = async () => {
     try {
       // Performance timing
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-
       // Resource count
       const resources = performance.getEntriesByType('resource');
       const resourceCount = resources.length;
-
       // Error count
       const errors = resourceMonitor.getErrors();
       const errorCount = errors.length;
-
       // MIME type issues
       const mimeTypeIssues = errors.filter(e => 
         e.error.includes('MIME') || e.error.includes('content-type')
       ).length;
-
       // Cache hit rate (simplified)
       const cacheHitRate = resources.filter(r => 
         (r as PerformanceResourceTiming).transferSize === 0
       ).length / resourceCount * 100;
-
       // Network latency
       const networkLatency = resources.reduce((acc, r) => {
         const resource = r as PerformanceResourceTiming;
         return acc + (resource.responseStart - resource.requestStart);
       }, 0) / resourceCount;
-
       setMetrics({
         loadTime,
         resourceCount,
@@ -142,18 +105,14 @@ const PerformanceMonitor: React.FC = () => {
         cacheHitRate: isNaN(cacheHitRate) ? 0 : cacheHitRate,
         networkLatency: isNaN(networkLatency) ? 0 : networkLatency
       });
-
       setResourceErrors(errors);
-
     } catch (error) {
       console.error('Error collecting metrics:', error);
     }
   };
-
   const refreshMetrics = () => {
     collectMetrics();
   };
-
   const fixMimeTypeIssues = async () => {
     try {
       await mimeTypeFallback.preloadCriticalResources();
@@ -162,19 +121,16 @@ const PerformanceMonitor: React.FC = () => {
       console.error('Error fixing MIME type issues:', error);
     }
   };
-
   const getStatusColor = (value: number, threshold: number) => {
     if (value <= threshold) return 'text-green-400';
     if (value <= threshold * 1.5) return 'text-yellow-400';
     return 'text-red-400';
   };
-
   const getStatusIcon = (value: number, threshold: number) => {
     if (value <= threshold) return <CheckCircle className="w-5 h-5 text-green-400" />;
     if (value <= threshold * 1.5) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
     return <AlertTriangle className="w-5 h-5 text-red-400" />;
   };
-
   return (
     <>
       {/* Floating Toggle Button */}
@@ -187,7 +143,6 @@ const PerformanceMonitor: React.FC = () => {
       >
         <Activity className="w-6 h-6" />
       </motion.button>
-
       {/* Performance Dashboard */}
       <AnimatePresence>
         {isVisible && (
@@ -222,7 +177,6 @@ const PerformanceMonitor: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Content */}
             <div className="p-4 space-y-4 max-h-[calc(80vh-80px)] overflow-y-auto">
               {/* Monitoring Status */}
@@ -235,7 +189,6 @@ const PerformanceMonitor: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               {/* Key Metrics */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="p-3 bg-white/5 rounded-lg border border-white/10">
@@ -247,7 +200,6 @@ const PerformanceMonitor: React.FC = () => {
                     {metrics.loadTime.toFixed(0)}ms
                   </div>
                 </div>
-
                 <div className="p-3 bg-white/5 rounded-lg border border-white/10">
                   <div className="flex items-center space-x-2 mb-2">
                     <HardDrive className="w-4 h-4 text-green-400" />
@@ -257,7 +209,6 @@ const PerformanceMonitor: React.FC = () => {
                     {metrics.resourceCount}
                   </div>
                 </div>
-
                 <div className="p-3 bg-white/5 rounded-lg border border-white/10">
                   <div className="flex items-center space-x-2 mb-2">
                     <AlertTriangle className="w-4 h-4 text-red-400" />
@@ -267,7 +218,6 @@ const PerformanceMonitor: React.FC = () => {
                     {metrics.errorCount}
                   </div>
                 </div>
-
                 <div className="p-3 bg-white/5 rounded-lg border border-white/10">
                   <div className="flex items-center space-x-2 mb-2">
                     <Shield className="w-4 h-4 text-yellow-400" />
@@ -278,7 +228,6 @@ const PerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Performance Indicators */}
               <div className="space-y-3">
                 <div className="p-3 bg-white/5 rounded-lg border border-white/10">
@@ -299,7 +248,6 @@ const PerformanceMonitor: React.FC = () => {
                     {metrics.cacheHitRate.toFixed(1)}%
                   </div>
                 </div>
-
                 <div className="p-3 bg-white/5 rounded-lg border border-white/10">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-gray-300">Network Latency</span>
@@ -310,7 +258,6 @@ const PerformanceMonitor: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               {/* Actions */}
               <div className="space-y-2">
                 <button
@@ -321,7 +268,6 @@ const PerformanceMonitor: React.FC = () => {
                   <Settings className="w-4 h-4" />
                   <span>Fix MIME Type Issues</span>
                 </button>
-
                 <button
                   onClick={isMonitoring ? stopMonitoring : startMonitoring}
                   className={`w-full py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2 ${
@@ -343,24 +289,6 @@ const PerformanceMonitor: React.FC = () => {
                   )}
                 </button>
               </div>
-<<<<<<< HEAD
-
-              {/* Resource Errors */}
-              {resourceErrors.length > 0 && (
-                <div className="space-y-2">
-                  <h4 className="text-sm font-medium text-gray-300">Recent Errors</h4>
-                  <div className="max-h-32 overflow-y-auto space-y-2">
-                    {resourceErrors.slice(-5).map((error, index) => (
-                      <div key={index} className="p-2 bg-red-500/10 border border-red-500/20 rounded text-xs">
-                        <div className="text-red-400 font-medium">{error.type}</div>
-                        <div className="text-red-300 truncate">{error.url}</div>
-                        <div className="text-red-400">{error.error}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-=======
               {/* Core Web Vitals */}
               <div className="space-y-4 mb-6">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
@@ -495,11 +423,9 @@ const PerformanceMonitor: React.FC = () => {
                 <RefreshCw size={16} />
                 Refresh Metrics
               </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
             </div>
           </motion.div>
         )}
-
         {/* Quick Stats */}
         <div className="p-4 bg-slate-800/50">
           <div className="grid grid-cols-3 gap-4 text-center">
@@ -527,5 +453,4 @@ const PerformanceMonitor: React.FC = () => {
     </motion.div>
   );
 };
-
 export default PerformanceMonitor;

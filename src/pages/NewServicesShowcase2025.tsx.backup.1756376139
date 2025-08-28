@@ -19,11 +19,7 @@ import {
   ExternalLink,
   ArrowRight
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import SEO from '@/components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 export default function NewServicesShowcase2025() {
   const serviceCategories = [
     {
@@ -120,14 +116,12 @@ export default function NewServicesShowcase2025() {
       ]
     }
   ];
-
   const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -170,7 +164,6 @@ export default function NewServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Services Showcase */}
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="space-y-20">
@@ -191,7 +184,6 @@ export default function NewServicesShowcase2025() {
                   Revolutionary solutions that leverage cutting-edge technology to solve complex business challenges
                 </p>
               </div>
-
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
@@ -212,19 +204,16 @@ export default function NewServicesShowcase2025() {
                         <span className="text-sm text-gray-400">4.8+</span>
                       </div>
                     </div>
-
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-400 mb-4 text-sm">
                       {service.description}
                     </p>
-
                     <div className="mb-4">
                       <div className="text-3xl font-bold text-white mb-1">{service.price}</div>
                       <div className="text-sm text-gray-500">per month</div>
                     </div>
-
                     <div className="mb-4">
                       <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                       <div className="space-y-1">
@@ -236,12 +225,10 @@ export default function NewServicesShowcase2025() {
                         ))}
                       </div>
                     </div>
-
                     <div className="mb-6">
                       <div className="text-sm text-gray-400 mb-1">Expected ROI:</div>
                       <div className="text-lg font-semibold text-green-400">{service.roi}</div>
                     </div>
-
                     <div className="flex space-x-2">
                       <a
                         href={`tel:${contactInfo.phone}`}
@@ -266,7 +253,6 @@ export default function NewServicesShowcase2025() {
           ))}
         </div>
       </section>
-
       {/* Market Analysis Section */}
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
@@ -282,7 +268,6 @@ export default function NewServicesShowcase2025() {
               Our services deliver exceptional value with proven ROI and competitive market positioning
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { label: "Average ROI", value: "425%", description: "Within 6-18 months" },
@@ -306,7 +291,6 @@ export default function NewServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -320,7 +304,6 @@ export default function NewServicesShowcase2025() {
             <p className="text-xl text-gray-400 mb-8">
               Get in touch with our team of experts to discuss how our innovative services can drive your business forward
             </p>
-
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white/5 border border-white/10 rounded-lg p-6">
                 <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
@@ -338,7 +321,6 @@ export default function NewServicesShowcase2025() {
                 <div className="text-gray-400">{contactInfo.website}</div>
               </div>
             </div>
-
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href={`tel:${contactInfo.phone}`}
@@ -356,7 +338,6 @@ export default function NewServicesShowcase2025() {
                 Request Demo
               </a>
             </div>
-
             <div className="mt-8 text-sm text-gray-500">
               <p>Address: {contactInfo.address}</p>
               <p className="mt-2">Available 24/7 for global support and consultation</p>

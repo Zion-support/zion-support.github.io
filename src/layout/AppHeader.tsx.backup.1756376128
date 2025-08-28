@@ -6,37 +6,21 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
 import { EnhancedSearch } from '../components/EnhancedSearch';
-
 export default function AppHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const { user, logout } = useAuth();
-
-<<<<<<< HEAD
-  const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false },
-    { name: 'AI Services', href: '/ai-services', current: false },
-    { name: 'IT Services', href: '/it-services', current: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
-=======
   // Main navigation items - using enhanced navigation structure
   const mainNavigation = enhancedNavigation;
-
   // Enhanced services by category with better organization and working links
   const services = [
     // Featured & New Services
@@ -44,7 +28,6 @@ export default function AppHeader() {
     { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
     { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
     { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
-    
     // AI & Machine Learning
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'AI-powered workflow automation', category: 'AI & ML', color: 'from-zion-cyan to-zion-purple' },
     { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-zion-purple to-zion-cyan' },
@@ -58,42 +41,34 @@ export default function AppHeader() {
     { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
     { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
     { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
-    
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps', color: 'from-gray-500 to-slate-500' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'Cloud & DevOps', color: 'from-green-500 to-emerald-500' },
     { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3, description: 'Financial operations automation', category: 'Cloud & DevOps', color: 'from-blue-500 to-indigo-500' },
-    
     // Cybersecurity
     { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced AI-powered security', category: 'Cybersecurity', color: 'from-red-500 to-orange-500' },
     { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock, description: 'Web security hardening', category: 'Cybersecurity', color: 'from-red-500 to-pink-500' },
     { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA compliance', category: 'Cybersecurity', color: 'from-purple-500 to-indigo-500' },
     { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock, description: 'Modern security architecture', category: 'Cybersecurity', color: 'from-red-500 to-orange-500' },
-    
     // Digital Transformation
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation', color: 'from-cyan-500 to-blue-500' },
     { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Strategic technology consulting', category: 'Digital Transformation', color: 'from-yellow-500 to-orange-500' },
     { name: 'IT Consulting', href: '/it-consulting', icon: Cpu, description: 'Technology strategy & planning', category: 'Digital Transformation', color: 'from-gray-500 to-slate-500' },
-    
     // Emerging Technologies
     { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Next-gen computational power', category: 'Emerging Tech', color: 'from-indigo-500 to-purple-500' },
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network, description: 'Smart device networks', category: 'Emerging Tech', color: 'from-blue-500 to-cyan-500' },
     { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Quantum-AI integration', category: 'Emerging Tech', color: 'from-indigo-500 to-purple-500' },
     { name: 'Space Technology', href: '/space-tech', icon: Satellite, description: 'Space-based solutions', category: 'Emerging Tech', color: 'from-blue-500 to-indigo-500' },
-    
     // Data & Analytics
     { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics', color: 'from-blue-500 to-indigo-500' },
     { name: 'Business Intelligence', href: '/services/ai-business-intelligence', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics', color: 'from-green-500 to-teal-500' },
-    
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
->>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
   ];
-
   // Quick links for easy access
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
@@ -109,7 +84,6 @@ export default function AppHeader() {
     { name: 'News', href: '/news', icon: Newspaper },
     { name: 'Careers', href: '/careers', icon: Briefcase },
   ];
-
   // Services organized by categories for dropdown navigation
   const servicesCategories = [
     {
@@ -215,7 +189,6 @@ export default function AppHeader() {
       ]
     }
   ];
-
   // Enhanced navigation structure
   const enhancedNavigation = [
     { name: 'Home', href: '/', current: true },
@@ -239,13 +212,11 @@ export default function AppHeader() {
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Careers', href: '/careers', current: false },
   ];
-
   // Enhanced futuristic background component
   const FuturisticBackground = () => (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
       {/* Enhanced floating particles with neon glow */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
@@ -271,7 +242,6 @@ export default function AppHeader() {
           />
         ))}
       </div>
-      
       {/* Enhanced gradient orbs with neon glow */}
       <motion.div 
         className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-2xl"
@@ -300,7 +270,6 @@ export default function AppHeader() {
       />
     </div>
   );
-
   return (
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
@@ -317,7 +286,6 @@ export default function AppHeader() {
             <div className="absolute top-40 right-40 w-12 h-12 border border-zion-cyan/20 rounded-full animate-pulse delay-3000 float-fast"></div>
           </div>
         </div>
-
         <div className="relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
@@ -338,7 +306,6 @@ export default function AppHeader() {
                   </div>
                 </Link>
               </div>
-
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-8">
                 {navigation.slice(0, 6).map((item) => (
@@ -354,14 +321,12 @@ export default function AppHeader() {
                     <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                   </Link>
                 ))}
-
                 {/* Services Dropdown */}
                 <div className="relative group">
                   <button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan transition-colors duration-300">
                     <span>Services</span>
                     <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                   </button>
-                  
                   <div className="absolute top-full left-0 mt-2 w-96 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                     <div className="p-6">
                       <div className="grid grid-cols-1 gap-4">
@@ -396,7 +361,6 @@ export default function AppHeader() {
                     </div>
                   </div>
                 </div>
-
                 {/* Contact */}
                 <Link
                   to="/contact"
@@ -405,7 +369,6 @@ export default function AppHeader() {
                   Get Started
                 </Link>
               </nav>
-
               {/* Mobile menu button */}
               <div className="lg:hidden">
                 <button
@@ -418,7 +381,6 @@ export default function AppHeader() {
             </div>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
@@ -439,7 +401,6 @@ export default function AppHeader() {
                     {item.name}
                   </Link>
                 ))}
-                
                 {/* Mobile Services */}
                 <div className="space-y-2">
                   <p className="px-3 py-2 text-sm font-medium text-zion-slate-light">Services</p>
@@ -461,7 +422,6 @@ export default function AppHeader() {
                     View All Services →
                   </Link>
                 </div>
-
                 <div className="pt-4">
                   <Link
                     to="/contact"

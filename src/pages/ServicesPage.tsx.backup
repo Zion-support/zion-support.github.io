@@ -30,19 +30,7 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon,
-<<<<<<< HEAD
-  Atom,
-  Blockchain,
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck
-=======
   Heart
->>>>>>> cursor/website-audit-and-enhancement-1eed
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
@@ -50,43 +38,14 @@ import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSol
 import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
 import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
-
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-<<<<<<< HEAD
-    { id: 'ai-automation', name: 'AI & Automation', icon: Cpu, color: 'from-zion-purple to-zion-red' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Atom, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Blockchain, color: 'from-zion-purple to-zion-blue' },
-    { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Heart, color: 'from-zion-pink to-zion-purple' },
-    { id: 'legal-tech', name: 'Legal Tech', icon: Scale, color: 'from-zion-orange to-zion-purple' },
-    { id: 'financial-ai', name: 'Financial AI', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
-    { id: 'manufacturing-ai', name: 'Manufacturing AI', icon: Factory, color: 'from-zion-blue to-zion-purple' },
-    { id: 'space-tech', name: 'Space Technology', icon: Satellite, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'neuromorphic-computing', name: 'Neuromorphic Computing', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Heart, color: 'from-zion-pink to-zion-green' },
-    { id: 'advanced-robotics', name: 'Advanced Robotics', icon: Cpu, color: 'from-zion-blue to-zion-red' },
-    { id: 'advanced-materials', name: 'Advanced Materials', icon: Factory, color: 'from-zion-green to-zion-blue' },
-    { id: 'advanced-energy', name: 'Advanced Energy', icon: Zap, color: 'from-zion-yellow to-zion-orange' },
-    { id: 'advanced-transportation', name: 'Advanced Transportation', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
-    { id: 'advanced-communication', name: 'Advanced Communication', icon: Globe, color: 'from-zion-cyan to-zion-blue' },
-    { id: 'advanced-manufacturing', name: 'Advanced Manufacturing', icon: Factory, color: 'from-zion-orange to-zion-blue' },
-    { id: 'advanced-gaming', name: 'Advanced Gaming', icon: Code, color: 'from-zion-purple to-zion-pink' },
-    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Brain, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'extended-reality', name: 'Extended Reality', icon: Code, color: 'from-zion-orange to-zion-purple' },
-    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'federated-learning', name: 'Federated Learning', icon: Brain, color: 'from-zion-purple to-zion-blue' },
-    { id: 'sustainable-tech', name: 'Sustainable Technology', icon: Globe, color: 'from-zion-green to-zion-blue' },
-=======
     { id: 'ai-finance', name: 'AI & Finance', icon: TrendingUp, color: 'from-zion-purple to-zion-blue' },
     { id: 'ai-legal', name: 'AI & Legal', icon: Shield, color: 'from-zion-blue to-zion-cyan' },
     { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-cyan to-zion-green' },
@@ -96,7 +55,6 @@ export default function ServicesPage() {
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
     { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
->>>>>>> cursor/website-audit-and-enhancement-1eed
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
@@ -111,14 +69,12 @@ export default function ServicesPage() {
     { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
     { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
   ];
-
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
     { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
     { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
     { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
   ];
-
   const sortOptions = [
     { id: 'featured', name: 'Featured' },
     { id: 'price-low', name: 'Price: Low to High' },
@@ -127,7 +83,6 @@ export default function ServicesPage() {
     { id: 'popular', name: 'Most Popular' },
     { id: 'innovation', name: 'Innovation Level' }
   ];
-
   // Combine all services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
@@ -136,29 +91,20 @@ export default function ServicesPage() {
     ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
     ...IOT_EDGE_COMPUTING_SERVICES_2025
   ];
-
   // Filter and sort services
-<<<<<<< HEAD
-  const filteredServices = ALL_INNOVATIVE_SERVICES.filter(service => {
-=======
   const filteredServices = allServices.filter(service => {
->>>>>>> cursor/add-new-services-2025
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
     const matchesCategory = selectedCategory === 'all' || 
                            service.category.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
                            service.subcategory.toLowerCase().includes(selectedCategory.replace('-', ' '));
-    
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'budget' && service.price <= 1000) ||
                         (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 5000);
-    
     return matchesSearch && matchesCategory && matchesPrice;
   });
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -175,17 +121,14 @@ export default function ServicesPage() {
         return 0;
     }
   });
-
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.icon : Zap;
   };
-
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
-
   // Get category statistics
   const getCategoryStats = () => {
     const stats: { [key: string]: number } = {};
@@ -195,9 +138,7 @@ export default function ServicesPage() {
     });
     return stats;
   };
-
   const categoryStats = getCategoryStats();
-
   return (
     <>
       <SEO 
@@ -206,7 +147,6 @@ export default function ServicesPage() {
         canonical="/services"
         url="https://ziontechgroup.com/services"
       />
-      
       {/* Hero Section */}
       <section className="bg-futuristic min-h-[60vh] flex items-center relative overflow-hidden">
         {/* Animated background elements */}
@@ -216,7 +156,6 @@ export default function ServicesPage() {
           <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000"></div>
           <div className="absolute top-1/3 right-1/3 w-16 h-16 border border-zion-green rounded-full animate-pulse delay-3000"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
@@ -233,7 +172,6 @@ export default function ServicesPage() {
               Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing, 
               blockchain applications to healthcare AI, discover the future of business technology with our comprehensive micro SAAS platform.
             </p>
-            
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
@@ -247,7 +185,6 @@ export default function ServicesPage() {
                 />
               </div>
             </div>
-
             {/* Quick Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <motion.div 
@@ -256,11 +193,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{ALL_INNOVATIVE_SERVICES.length}+</div>
-=======
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
->>>>>>> cursor/add-new-services-2025
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -269,11 +202,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-zion-purple mb-2">32+</div>
-=======
                 <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length - 1}</div>
->>>>>>> cursor/website-audit-and-enhancement-1eed
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 
@@ -298,7 +227,6 @@ export default function ServicesPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Filters and Categories */}
       <section className="py-12 bg-zion-slate-dark/50">
         <div className="container-responsive">
@@ -329,7 +257,6 @@ export default function ServicesPage() {
               </button>
             ))}
           </motion.div>
-
           {/* Advanced Filters */}
           <motion.div 
             className="flex flex-col md:flex-row gap-4 items-center justify-between"
@@ -351,7 +278,6 @@ export default function ServicesPage() {
                   ))}
                 </select>
               </div>
-
               {/* Sort Options */}
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-zion-cyan" />
@@ -366,18 +292,12 @@ export default function ServicesPage() {
                 </select>
               </div>
             </div>
-
             <div className="text-zion-slate-light">
-<<<<<<< HEAD
-              Showing {sortedServices.length} of {ALL_INNOVATIVE_SERVICES.length} services
-=======
               Showing {sortedServices.length} of {allServices.length} services
->>>>>>> cursor/add-new-services-2025
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container-responsive">
@@ -410,16 +330,13 @@ export default function ServicesPage() {
                           <div className="text-sm text-zion-slate-light">per month</div>
                         </div>
                       </div>
-                      
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                         {service.title}
                       </h3>
-                      
                       <p className="text-zion-slate-light leading-relaxed">
                         {service.description}
                       </p>
                     </div>
-
                     {/* Service Details */}
                     <div className="space-y-4 mb-6">
                       {/* Category & Innovation Level */}
@@ -435,7 +352,6 @@ export default function ServicesPage() {
                           {service.innovationLevel}
                         </span>
                       </div>
-
                       {/* ROI & Market Price */}
                       <div className="flex items-center justify-between text-sm">
                         <div className="flex items-center gap-1 text-zion-green">
@@ -446,7 +362,6 @@ export default function ServicesPage() {
                           Market: {service.marketPrice}
                         </div>
                       </div>
-
                       {/* Key Features */}
                       <div className="space-y-2">
                         <h4 className="text-sm font-semibold text-white">Key Features:</h4>
@@ -460,7 +375,6 @@ export default function ServicesPage() {
                         </div>
                       </div>
                     </div>
-
                     {/* Service Actions */}
                     <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
@@ -473,7 +387,6 @@ export default function ServicesPage() {
                           <span>{service.supportLevel}</span>
                         </div>
                       </div>
-                      
                       <Link
                         to={`/services/${service.id}`}
                         className="btn-futuristic px-4 py-2 text-sm"
@@ -512,7 +425,6 @@ export default function ServicesPage() {
           </AnimatePresence>
         </div>
       </section>
-
       {/* Service Categories Overview */}
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
         <div className="container-responsive">
@@ -529,7 +441,6 @@ export default function ServicesPage() {
               Explore our complete range of innovative technology solutions across multiple domains
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Micro SAAS Services */}
             <motion.div
@@ -542,20 +453,16 @@ export default function ServicesPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Rocket className="w-10 h-10 text-white" />
               </div>
-              
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                 Micro SAAS Services
               </h3>
-              
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} innovative micro SAAS solutions for modern businesses
               </p>
-              
               <div className="text-zion-cyan font-bold mb-4">
                 Starting from $99/month
               </div>
             </motion.div>
-
             {/* Advanced Enterprise Solutions */}
             <motion.div
               className="card-futuristic text-center group"
@@ -567,20 +474,16 @@ export default function ServicesPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-zion-purple to-zion-red rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Server className="w-10 h-10 text-white" />
               </div>
-              
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-purple transition-colors">
                 Enterprise Solutions
               </h3>
-              
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {ADVANCED_ENTERPRISE_SOLUTIONS_2025.length} advanced enterprise-grade solutions for large organizations
               </p>
-              
               <div className="text-zion-purple font-bold mb-4">
                 Starting from $5,000/month
               </div>
             </motion.div>
-
             {/* Next-Gen AI Services */}
             <motion.div
               className="card-futuristic text-center group"
@@ -592,20 +495,16 @@ export default function ServicesPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-zion-green to-zion-cyan rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Brain className="w-10 h-10 text-white" />
               </div>
-              
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-green transition-colors">
                 Next-Gen AI Services
               </h3>
-              
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {NEXT_GEN_AI_SERVICES_2025.length} cutting-edge AI and machine learning solutions
               </p>
-              
               <div className="text-zion-green font-bold mb-4">
                 Starting from $2,500/month
               </div>
             </motion.div>
-
             {/* Specialized Industry Solutions */}
             <motion.div
               className="card-futuristic text-center group"
@@ -617,20 +516,16 @@ export default function ServicesPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-zion-orange to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Globe className="w-10 h-10 text-white" />
               </div>
-              
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-orange transition-colors">
                 Industry Solutions
               </h3>
-              
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {SPECIALIZED_INDUSTRY_SOLUTIONS_2025.length} specialized solutions for healthcare, finance, manufacturing, and retail
               </p>
-              
               <div className="text-zion-orange font-bold mb-4">
                 Starting from $3,000/month
               </div>
             </motion.div>
-
             {/* IoT & Edge Computing */}
             <motion.div
               className="card-futuristic text-center group"
@@ -642,20 +537,16 @@ export default function ServicesPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Cpu className="w-10 h-10 text-white" />
               </div>
-              
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-blue transition-colors">
                 IoT & Edge Computing
               </h3>
-              
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {IOT_EDGE_COMPUTING_SERVICES_2025.length} IoT platforms and edge computing solutions for smart infrastructure
               </p>
-              
               <div className="text-zion-blue font-bold mb-4">
                 Starting from $1,500/month
               </div>
             </motion.div>
-
             {/* Specialized Services */}
             <motion.div
               className="card-futuristic text-center group"
@@ -667,15 +558,12 @@ export default function ServicesPage() {
               <div className="w-20 h-20 bg-gradient-to-r from-zion-pink to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-white" />
               </div>
-              
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-pink transition-colors">
                 Specialized Services
               </h3>
-              
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {SPECIALIZED_SERVICES.length} specialized technology solutions for unique business needs
               </p>
-              
               <div className="text-zion-pink font-bold mb-4">
                 Starting from $2,000/month
               </div>
@@ -683,7 +571,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* Specialized Services Section */}
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
         <div className="container-responsive">
@@ -700,7 +587,6 @@ export default function ServicesPage() {
               Discover our specialized technology solutions designed for specific industries and use cases
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SPECIALIZED_SERVICES.map((service, index) => (
               <motion.div
@@ -714,19 +600,15 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Rocket className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {service.title}
                 </h3>
-                
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                   {service.description}
                 </p>
-                
                 <div className="text-zion-cyan font-bold mb-4">
                   {service.marketPrice}
                 </div>
-                
                 <Link
                   to={`/services/${service.id}`}
                   className="btn-neon w-full"
@@ -738,7 +620,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive text-center">
@@ -754,7 +635,6 @@ export default function ServicesPage() {
               Get in touch with our technology experts to discuss your specific needs and discover 
               how our innovative solutions can drive your business forward.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -763,7 +643,6 @@ export default function ServicesPage() {
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
-              
               <a
                 href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg"
@@ -772,7 +651,6 @@ export default function ServicesPage() {
                 Call Now: +1 302 464 0950
               </a>
             </div>
-            
             <div className="mt-8 text-zion-slate-light">
               <p className="mb-2">📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>📧 <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>

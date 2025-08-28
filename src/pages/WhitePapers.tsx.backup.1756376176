@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/website-audit-and-enhancement-954a
-
 import React, { useState } from 'react';
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
 import SEO from '@/components/SEO';
-
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [sortBy, setSortBy] = useState('newest');
-
   const categories = [
     { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
@@ -21,14 +14,12 @@ export default function WhitePapers() {
     { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },
     { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 6 }
   ];
-
   const sortOptions = [
     { value: 'newest', label: 'Newest First' },
     { value: 'popular', label: 'Most Popular' },
     { value: 'alphabetical', label: 'Alphabetical' },
     { value: 'downloads', label: 'Most Downloaded' }
   ];
-
   const whitePapers = [
     {
       id: 1,
@@ -159,7 +150,6 @@ export default function WhitePapers() {
       language: 'English'
     }
   ];
-
   const featuredInsights = [
     {
       title: 'AI Adoption Trends 2025',
@@ -180,29 +170,23 @@ export default function WhitePapers() {
       link: '/insights/cloud-success-stories'
     }
   ];
-
   const getCategoryCount = (categoryId: string) => {
     if (categoryId === 'all') {
       return whitePapers.length;
     }
     return whitePapers.filter(paper => paper.category === categoryId).length;
   };
-
   // Update counts
   categories.forEach(cat => {
     cat.count = getCategoryCount(cat.id);
   });
-
   const filteredPapers = whitePapers.filter(paper => {
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
     const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
-
     return matchesSearch && matchesCategory;
   });
-
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -210,7 +194,6 @@ export default function WhitePapers() {
       day: 'numeric'
     });
   };
-
   const formatDownloads = (downloads: number) => {
     if (downloads >= 1000000) {
       return (downloads / 1000000).toFixed(1) + 'M';
@@ -219,7 +202,6 @@ export default function WhitePapers() {
     }
     return downloads.toString();
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -238,7 +220,6 @@ export default function WhitePapers() {
           </p>
         </div>
       </div>
-
       {/* Search and Filters */}
       <div className="py-12">
         <div className="container mx-auto px-4">
@@ -254,7 +235,6 @@ export default function WhitePapers() {
                 className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
-
             {/* Categories and Sort */}
             <div className="flex flex-col lg:flex-row gap-6 mb-8">
               {/* Categories */}
@@ -277,7 +257,6 @@ export default function WhitePapers() {
                   </button>
                 ))}
               </div>
-
               {/* Sort Options */}
               <div className="flex items-center gap-2">
                 <span className="text-zion-slate-light">Sort by:</span>
@@ -297,7 +276,6 @@ export default function WhitePapers() {
           </div>
         </div>
       </div>
-
       {/* Featured Insights */}
       <div className="py-12 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -325,14 +303,12 @@ export default function WhitePapers() {
           </div>
         </div>
       </div>
-
       {/* White Papers Grid */}
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             White Papers Library
           </h2>
-
           {filteredPapers.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredPapers.map((paper) => (
@@ -358,10 +334,8 @@ export default function WhitePapers() {
                       {formatDate(paper.publishDate)}
                     </div>
                   </div>
-
                   <h3 className="text-xl font-semibold text-white mb-3">{paper.title}</h3>
                   <p className="text-zion-slate-light mb-4">{paper.description}</p>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {paper.tags.map((tag, index) => (
                       <span
@@ -372,7 +346,6 @@ export default function WhitePapers() {
                       </span>
                     ))}
                   </div>
-
                   <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
@@ -389,7 +362,6 @@ export default function WhitePapers() {
                       {paper.rating}
                     </div>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
@@ -401,7 +373,6 @@ export default function WhitePapers() {
                         {paper.fileSize}
                       </div>
                     </div>
-
                     <button className="bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2">
                       <Download className="w-4 h-4" />
                       Download
@@ -421,7 +392,6 @@ export default function WhitePapers() {
           )}
         </div>
       </div>
-
       {/* Subscribe to Updates */}
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">

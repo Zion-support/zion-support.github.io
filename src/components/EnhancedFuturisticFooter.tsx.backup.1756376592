@@ -75,77 +75,10 @@ import {
   Car,
   Atom
 } from 'lucide-react';
-
 export const EnhancedFuturisticFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   const footerSections = [
     {
-<<<<<<< HEAD
-      title: 'Core Services',
-      links: [
-        { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket },
-        { name: 'Data Analytics', href: '/services/data-analytics', icon: Database },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server },
-        { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield },
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Cpu },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom }
-      ]
-    },
-    {
-      title: 'AI Solutions',
-      links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: Mail },
-        { name: 'AI SEO Optimizer', href: '/services/ai-seo', icon: TrendingUp },
-        { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Target },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: Lightbulb },
-        { name: 'AI Healthcare Diagnostics', href: '/services/ai-powered-healthcare-diagnostics', icon: Heart }
-      ]
-    },
-    {
-      title: 'Micro SaaS',
-      links: [
-        { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
-        { name: 'Website Analytics', href: '/services/website-analytics', icon: TrendingUp },
-        { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: Monitor },
-        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: Target },
-        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: Globe },
-        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail },
-        { name: 'Returns Management', href: '/services/returns-management', icon: CheckCircle }
-      ]
-    },
-    {
-      title: 'Enterprise Tools',
-      icon: Zap,
-      links: [
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
-        { name: 'Customer Success Platform', href: '/services/ai-powered-customer-success', icon: Users },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: Monitor },
-        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Eye },
-        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
-        { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain', icon: Network },
-        { name: 'Metaverse Commerce', href: '/services/metaverse-commerce-platform', icon: Globe2 },
-        { name: 'Quantum Trading Platform', href: '/services/quantum-ai-trading-platform', icon: TrendingUp }
-      ]
-    },
-    {
-      title: 'Emerging Tech',
-      links: [
-        { name: 'Space Technology', href: '/services/space-tech-optimization-platform', icon: Planet },
-        { name: 'Autonomous Vehicles', href: '/services/autonomous-vehicle-fleet-management', icon: Car },
-        { name: 'Quantum Cybersecurity', href: '/services/quantum-cybersecurity-platform', icon: Shield },
-        { name: 'AI Legal Assistant', href: '/services/ai-powered-legal-assistant', icon: Scale },
-        { name: 'Green IT Solutions', href: '/services/green-it', icon: Leaf },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
-        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions', icon: Factory },
-        { name: 'Smart City Platform', href: '/services/iot-smart-city', icon: Building }
-=======
       title: 'Explore',
       links: [
         { name: 'Services', href: '/services' },
@@ -161,18 +94,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' },
         { name: 'Blog', href: '/blog' }
->>>>>>> origin/cursor/website-audit-and-enhancement-70fc
       ]
     }
   ];
-
-<<<<<<< HEAD
-  const companyInfo = [
-=======
   const quickLinks = [
     { name: 'Services', href: '/services' },
     { name: 'Pricing', href: '/pricing' },
->>>>>>> origin/cursor/website-audit-and-enhancement-70fc
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
@@ -180,36 +107,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'News & Events', href: '/news' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-<<<<<<< HEAD
-    { name: 'Press Kit', href: '/press' }
-  ];
-
-  const supportResources = [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Community Forum', href: '/community' },
-    { name: 'Training & Webinars', href: '/training' },
-    { name: 'Status Page', href: '/status' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
-  ];
-
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR Compliance', href: '/gdpr' },
-    { name: 'Data Processing Agreement', href: '/dpa' },
-    { name: 'Service Level Agreement', href: '/sla' },
-    { name: 'Acceptable Use Policy', href: '/aup' },
-    { name: 'Security Policy', href: '/security-policy' }
-=======
     { name: 'Careers', href: '/careers' },
     { name: 'Marketplace', href: '/marketplace' }
->>>>>>> origin/cursor/website-audit-and-enhancement-70fc
   ];
-
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-300' },
@@ -218,14 +118,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-300' }
   ];
-
   const stats = [
     { value: '500+', label: 'Projects Delivered', icon: CheckCircle },
     { value: '50+', label: 'AI Solutions', icon: Brain },
     { value: '24/7', label: 'Support Available', icon: Clock },
     { value: '99.9%', label: 'Uptime Guarantee', icon: Award }
   ];
-
   return (
     <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}
@@ -241,7 +139,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>
         </div>
       </div>
-
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container-responsive py-16">
@@ -272,7 +169,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-
           {/* Main Footer Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
             {/* Company Info */}
@@ -317,7 +213,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 </div>
               </div>
             </div>
-
               {/* Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -334,12 +229,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 ))}
               </div>
             </div>
-            
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               and digital transformation services. Transforming businesses with cutting-edge technology.
             </p>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <div key={section.title}>
@@ -364,7 +257,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </motion.div>
             ))}
           </div>
-
           {/* Additional Links Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company */}
@@ -383,7 +275,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 ))}
               </ul>
             </div>
-
             {/* Support */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
@@ -400,7 +291,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 ))}
               </ul>
             </div>
-
             {/* Legal */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Legal</h4>
@@ -417,7 +307,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 ))}
               </ul>
             </div>
-
             {/* Social & Newsletter */}
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
@@ -449,7 +338,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-slate-800/50">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -473,7 +361,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Footer */}
         <div className="border-t border-slate-800/50">
           <div className="container mx-auto px-4 py-8">
@@ -482,7 +369,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 © {currentYear} Zion Tech Group. All rights reserved.
                 Revolutionizing technology, one innovation at a time.
               </div>
-
               <div className="flex items-center space-x-6 text-sm text-slate-400">
                 <Link to="/privacy" className="hover:text-white transition-colors">
                   Privacy Policy

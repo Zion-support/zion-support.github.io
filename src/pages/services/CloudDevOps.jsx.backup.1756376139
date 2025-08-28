@@ -1,13 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Cloud, Zap, Database, Server, GitFork, Cpu, Globe, Shield } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-=======
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 const CloudDevOps = () => {
   const cloudServices = [
     {
@@ -35,7 +29,6 @@ const CloudDevOps = () => {
       features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
     }
   ];
-
   const platforms = [
     {
       name: "AWS",
@@ -58,14 +51,12 @@ const CloudDevOps = () => {
       icon: "🌐"
     }
   ];
-
   const devOpsTools = [
     { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
     { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
     { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -74,7 +65,6 @@ const CloudDevOps = () => {
         keywords="cloud migration, DevOps, AWS, Azure, GCP, infrastructure as code, CI/CD"
         canonical="https://ziontechgroup.com/services/cloud-devops"
       />
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -93,7 +83,6 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-
       {/* Services Overview */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -119,7 +108,6 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-
       {/* Cloud Platforms */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -135,7 +123,6 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-
       {/* DevOps Tools */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -157,7 +144,6 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -184,5 +170,4 @@ const CloudDevOps = () => {
     </div>
   );
 };
-
 export default CloudDevOps;

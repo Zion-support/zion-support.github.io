@@ -1,14 +1,8 @@
 User-agent: *
 Allow: /
-<<<<<<< HEAD
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
-=======
-
 # Sitemap location
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
-
 # Allow all crawlers
 Allow: /about
 Allow: /services
@@ -18,8 +12,6 @@ Allow: /careers
 Allow: /faq
 Allow: /privacy
 Allow: /terms
-
->>>>>>> origin/clean-merge-website-fixes
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/

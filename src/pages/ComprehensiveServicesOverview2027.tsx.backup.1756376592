@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -111,7 +110,6 @@ import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
   {
@@ -166,14 +164,12 @@ const MICRO_SAAS_SERVICES = [
     images: ['/images/analytics.jpg']
   }
 ];
-
 const categories = [
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
 ];
-
 const pricingModels = [
   { id: 'all', name: 'All Pricing' },
   { id: 'monthly', name: 'Monthly' },
@@ -181,7 +177,6 @@ const pricingModels = [
   { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
-
 export default function ComprehensiveServicesOverview2027() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
@@ -190,7 +185,6 @@ export default function ComprehensiveServicesOverview2027() {
   const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedService, setExpandedService] = useState<string | null>(null);
-
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
@@ -224,7 +218,6 @@ export default function ComprehensiveServicesOverview2027() {
     });
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -298,10 +291,6 @@ export default function ComprehensiveServicesOverview2027() {
       </div>
     </motion.div>
   );
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-70fc
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -333,7 +322,6 @@ export default function ComprehensiveServicesOverview2027() {
             Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
           </motion.p>
         </div>
-
         {/* Filters and Controls */}
         <div className="mb-12 space-y-6">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">

@@ -59,13 +59,11 @@ import {
   ArrowUpRight,
   Sparkles as SparklesIcon
 } from 'lucide-react';
-
 // Import new components
 import ThemeToggle from '../components/ThemeToggle';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import { EnhancedSEO } from '../components/EnhancedSEO';
-
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() => 
@@ -77,12 +75,10 @@ const FuturisticBackground = React.memo(() => {
       duration: 5 + i * 0.3
     })), []
   );
-
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-      
       {/* Optimized floating particles */}
       {particles.map((particle) => (
         <motion.div
@@ -109,11 +105,9 @@ const FuturisticBackground = React.memo(() => {
     </div>
   );
 });
-
 // Optimized hero section component
 const HeroSection = React.memo(() => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
   const heroSlides = [
     {
       title: "Future-Ready Technology Solutions",
@@ -134,19 +128,13 @@ const HeroSection = React.memo(() => {
       ctaLink: "/contact"
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [heroSlides.length]);
-
   return (
-<<<<<<< HEAD
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <FuturisticBackground />
-=======
     <>
       {/* Enhanced SEO Component */}
       <EnhancedSEO 
@@ -158,8 +146,6 @@ const HeroSection = React.memo(() => {
         tags={['technology', 'AI', 'cloud', 'cybersecurity', 'digital transformation']}
         structuredData={seoData.structuredData}
       />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-73ec
-      
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <AnimatePresence mode="wait">
           <motion.div
@@ -182,7 +168,6 @@ const HeroSection = React.memo(() => {
             </p>
           </motion.div>
         </AnimatePresence>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -204,7 +189,6 @@ const HeroSection = React.memo(() => {
             <ArrowUpRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
           </Link>
         </motion.div>
-
         {/* Slide indicators */}
         <div className="flex justify-center space-x-2">
           {heroSlides.map((_, index) => (
@@ -220,7 +204,6 @@ const HeroSection = React.memo(() => {
             />
           ))}
         </div>
-
         {/* Enhanced Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -253,7 +236,6 @@ const HeroSection = React.memo(() => {
     </section>
   );
 });
-
 // Optimized features section component
 const FeaturesSection = React.memo(() => {
   const features = [
@@ -294,7 +276,6 @@ const FeaturesSection = React.memo(() => {
       color: "from-indigo-500 to-purple-500"
     }
   ];
-
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white/5" aria-labelledby="features-heading">
       <div className="max-w-7xl mx-auto">
@@ -312,7 +293,6 @@ const FeaturesSection = React.memo(() => {
             We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
@@ -335,7 +315,6 @@ const FeaturesSection = React.memo(() => {
     </section>
   );
 });
-
 // Optimized innovative AI services showcase component
 const InnovativeAIServicesSection = React.memo(() => {
   const aiServices = [
@@ -388,7 +367,6 @@ const InnovativeAIServicesSection = React.memo(() => {
       features: ["Risk Assessment", "Predictive Analytics", "Compliance Monitoring", "Real-time Alerts"]
     }
   ];
-
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900/50 via-blue-900/30 to-indigo-900/50" aria-labelledby="ai-services-heading">
       <div className="max-w-7xl mx-auto">
@@ -408,7 +386,6 @@ const InnovativeAIServicesSection = React.memo(() => {
             Cutting-edge AI solutions that transform business operations with intelligent automation, predictive analytics, and autonomous decision-making.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {aiServices.map((service, index) => (
             <motion.div
@@ -424,7 +401,6 @@ const InnovativeAIServicesSection = React.memo(() => {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
               <p className="text-gray-300 mb-4">{service.description}</p>
-              
               <div className="mb-4">
                 <h4 className="font-semibold text-white mb-2 text-sm">Key Capabilities:</h4>
                 <ul className="space-y-1">
@@ -436,7 +412,6 @@ const InnovativeAIServicesSection = React.memo(() => {
                   ))}
                 </ul>
               </div>
-              
               <Link
                 to={service.href}
                 className="inline-flex items-center text-cyan-300 hover:text-cyan-200 font-semibold text-sm group-hover:translate-x-1 transition-transform duration-200"
@@ -450,7 +425,6 @@ const InnovativeAIServicesSection = React.memo(() => {
     </section>
   );
 });
-
 // Optimized CTA section component
 const CTASection = React.memo(() => {
   return (
@@ -489,7 +463,6 @@ const CTASection = React.memo(() => {
     </section>
   );
 });
-
 const Home: React.FC = () => {
   return (
     <>
@@ -498,7 +471,6 @@ const Home: React.FC = () => {
         description="Transform your business with cutting-edge AI, cloud computing, and cybersecurity solutions. We deliver innovation that drives growth and secures your digital future."
         keywords="AI solutions, cloud computing, cybersecurity, digital transformation, technology consulting"
       />
-      
       <HeroSection />
       <FeaturesSection />
       <InnovativeAIServicesSection />
@@ -506,5 +478,4 @@ const Home: React.FC = () => {
     </>
   );
 };
-
 export default Home;

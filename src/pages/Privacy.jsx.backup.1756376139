@@ -1,13 +1,7 @@
 import { Header } from "@/components/header/Header";
-<<<<<<< HEAD
-import Footer from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-=======
 import { Footer } from "@/components/Footer";
 import SEO from "@/components/SEO";
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
 import { GradientHeading } from "@/components/ui/GradientHeading";
-
 export default function Privacy() {
     return (
       <>

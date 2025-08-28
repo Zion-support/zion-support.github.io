@@ -33,15 +33,12 @@ import {
   TrendingUp
 } from 'lucide-react';
 import SEO from '../components/SEO';
-
 export default function ComprehensiveServices() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('popular');
-
   // Combine all services
   const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
-
   // Filter services based on search and category
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -50,7 +47,6 @@ export default function ComprehensiveServices() {
     const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase() === selectedCategory.toLowerCase();
     return matchesSearch && matchesCategory;
   });
-
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -66,10 +62,8 @@ export default function ComprehensiveServices() {
         return b.isPopular ? 1 : -1;
     }
   });
-
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,28 +73,6 @@ export default function ComprehensiveServices() {
       }
     }
   };
-
-<<<<<<< HEAD
-  const ServiceCard = ({ service, index }: { service: any; index: number }) => (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
-    >
-      <div className="flex items-center mb-4">
-        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-          <span className="text-2xl">{service.icon}</span>
-        </div>
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-          <p className="text-sm text-cyan-400">{service.category}</p>
-        </div>
-        {service.isPopular && (
-          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium">
-            Popular
-=======
   const microSaaS = [
     {
       title: 'SOC 2 Evidence Collector',
@@ -159,7 +131,6 @@ export default function ComprehensiveServices() {
       features: ['Per-endpoint metering', 'Self-serve developer portal', 'JWT/OAuth2 auth', 'Stripe/Chargebee integrations']
     }
   ];
-
   const itServices = [
     {
       title: 'Cloud Migration Factory',
@@ -218,7 +189,6 @@ export default function ComprehensiveServices() {
       features: ['eBPF flow visibility', 'Microsegmentation policy design', 'ZTNA rollout', 'Continuous verification']
     }
   ];
-
   const aiSolutions = [
     {
       title: 'Private RAG Platform',
@@ -277,14 +247,12 @@ export default function ComprehensiveServices() {
       features: ['Feature store and lineage', 'Canary and shadow deploys', 'Live evals and guardrails', 'Cost and latency SLOs']
     }
   ];
-
   const linkItem = (href: string, label = 'Learn more') => (
     <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-zion-cyan hover:underline">
       <span>{label}</span>
       <ExternalLink className="ml-2 h-4 w-4" />
     </a>
   );
-
   const Section: React.FC<{ icon: React.ReactNode; title: string; description: string; items: { title: string; desc: string; price: string; cta: string; features: string[]; }[]; gradient: string; }>
     = ({ icon, title, description, items, gradient }) => (
     <section className="py-14">
@@ -293,7 +261,6 @@ export default function ComprehensiveServices() {
           <div className="flex items-center mb-6">
             <div className="mr-3">{icon}</div>
             <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
           </div>
         )}
         {service.isNew && (
@@ -302,16 +269,13 @@ export default function ComprehensiveServices() {
           </div>
         )}
       </div>
-      
       <p className="text-gray-300 mb-2 font-medium">{service.tagline}</p>
       <p className="text-gray-400 mb-4 text-sm">{service.description}</p>
-      
       <div className="mb-4">
         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
         <span className="text-gray-400">{service.period}</span>
         <p className="text-sm text-gray-500 mt-1">{service.marketPrice}</p>
       </div>
-
       <div className="mb-4">
         <div className="flex items-center mb-2">
           <div className="flex text-yellow-400">
@@ -322,7 +286,6 @@ export default function ComprehensiveServices() {
           <span className="text-sm text-gray-400 ml-2">({service.reviews} reviews)</span>
         </div>
       </div>
-
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
         <div className="grid grid-cols-1 gap-1">
@@ -334,7 +297,6 @@ export default function ComprehensiveServices() {
           ))}
         </div>
       </div>
-
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
         <div className="grid grid-cols-1 gap-1">
@@ -346,13 +308,11 @@ export default function ComprehensiveServices() {
           ))}
         </div>
       </div>
-
       <div className="mb-4 p-3 bg-slate-700/30 rounded-lg">
         <div className="text-xs text-gray-400 mb-1">Market Size: {service.marketSize}</div>
         <div className="text-xs text-gray-400 mb-1">Growth Rate: {service.growthRate}</div>
         <div className="text-xs text-gray-400">ROI: {service.roi}</div>
       </div>
-
       <div className="flex gap-2">
         <Link
           to={service.link}
@@ -371,23 +331,14 @@ export default function ComprehensiveServices() {
       </div>
     </motion.div>
   );
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Comprehensive Services - Zion Tech Group" 
-        description="Discover our complete portfolio of cutting-edge AI, IT, and emerging technology services. From quantum computing to space technology, we deliver innovative solutions for the future."
-=======
     <>
       <SEO
         title="Comprehensive Services - Zion Tech Group"
         description="Micro SaaS, IT services, and AI solutions with clear pricing, links, and rapid delivery."
         keywords="micro saas, it services, ai solutions, soc2 automation, kubernetes, rag platform"
         canonical="https://ziontechgroup.com/comprehensive-services"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
       />
-      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
@@ -412,28 +363,6 @@ export default function ComprehensiveServices() {
               Leading the future with revolutionary AI, quantum computing, space technology, and emerging tech solutions. 
               Transform your business with our cutting-edge micro SAAS, IT infrastructure, and AI innovation services.
             </p>
-<<<<<<< HEAD
-            
-            {/* Contact Information */}
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto mb-8">
-              <h3 className="text-lg font-semibold text-white mb-4">Contact Zion Tech Group</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                <div className="flex items-center text-gray-300">
-                  <Phone className="w-4 h-4 mr-2 text-cyan-400" />
-                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <Mail className="w-4 h-4 mr-2 text-cyan-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <MapPin className="w-4 h-4 mr-2 text-cyan-400" />
-                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-=======
             <div className="mt-6 flex items-center justify-center gap-3">
               <a href="tel:+13024640950" className="inline-flex items-center bg-zion-cyan text-black font-semibold px-4 py-2 rounded-md">
                 <Phone className="h-4 w-4 mr-2" /> Call Us
@@ -447,7 +376,6 @@ export default function ComprehensiveServices() {
             </div>
           </div>
         </header>
-
         {/* Sections */}
         <Section
           icon={<Sparkles className="h-6 w-6" />}
@@ -456,7 +384,6 @@ export default function ComprehensiveServices() {
           items={microSaaS}
           gradient="from-violet-900/60 to-indigo-900/40"
         />
-
         <Section
           icon={<Cloud className="h-6 w-6" />}
           title="IT Services"
@@ -464,7 +391,6 @@ export default function ComprehensiveServices() {
           items={itServices}
           gradient="from-sky-900/60 to-teal-900/40"
         />
-
         <Section
           icon={<Cpu className="h-6 w-6" />}
           title="AI Solutions"
@@ -472,7 +398,6 @@ export default function ComprehensiveServices() {
           items={aiSolutions}
           gradient="from-fuchsia-900/60 to-rose-900/40"
         />
-
         {/* Contact CTA */}
         <section className="py-16">
           <div className="max-w-5xl mx-auto px-6">
@@ -488,11 +413,9 @@ export default function ComprehensiveServices() {
                 </a>
                 <div className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
                   <MapPin className="h-5 w-5 text-zion-cyan mr-3" /> {contact.address}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
                 </div>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -514,7 +437,6 @@ export default function ComprehensiveServices() {
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -531,7 +453,6 @@ export default function ComprehensiveServices() {
                 />
               </div>
             </div>
-            
             <div className="flex gap-4">
               <select
                 value={selectedCategory}
@@ -544,7 +465,6 @@ export default function ComprehensiveServices() {
                   </option>
                 ))}
               </select>
-              
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -560,7 +480,6 @@ export default function ComprehensiveServices() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -580,7 +499,6 @@ export default function ComprehensiveServices() {
               Discover our comprehensive portfolio of cutting-edge technology solutions designed to transform industries and drive innovation
             </p>
           </motion.div>
-          
           {sortedServices.length > 0 ? (
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -602,7 +520,6 @@ export default function ComprehensiveServices() {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">

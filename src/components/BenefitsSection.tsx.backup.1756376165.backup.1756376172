@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
-<<<<<<< HEAD
-import { GradientHeading } from './ui/GradientHeading';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
-
 interface Benefit {
   title: string;
   description: string;
@@ -15,7 +10,6 @@ interface Benefit {
   stats: string;
   features: string[];
 }
-
 const benefits: Benefit[] = [
   {
     title: "AI-Powered Matchmaking",
@@ -74,15 +68,8 @@ const benefits: Benefit[] = [
     ]
   }
 ];
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -93,32 +80,24 @@ export function BenefitsSection() {
       }
     }
   };
-<<<<<<< HEAD
-=======
-
   const statsVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
-
   const stats = [
     { value: "500+", label: "Projects Delivered", icon: <Rocket className="w-6 h-6" /> },
     { value: "50+", label: "Expert Team Members", icon: <Users className="w-6 h-6" /> },
     { value: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> },
     { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
   ];
-
   const statsVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background pattern */}
@@ -128,7 +107,6 @@ export function BenefitsSection() {
           backgroundSize: '40px 40px'
         }} />
       </div>
-
       {/* Floating decorative elements */}
       <div className="absolute inset-0">
         <motion.div
@@ -147,7 +125,6 @@ export function BenefitsSection() {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-20"
@@ -156,18 +133,13 @@ export function BenefitsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-<<<<<<< HEAD
-          <GradientHeading className="mb-4" customGradient="">
-=======
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
             Why Choose Zion?
           </h2>
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value
           </p>
         </motion.div>
-
         {/* Stats section */}
         <motion.div
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
@@ -190,7 +162,6 @@ export function BenefitsSection() {
             </motion.div>
           ))}
         </motion.div>
-
         <motion.div
           className="relative"
           variants={containerVariants}
@@ -202,7 +173,6 @@ export function BenefitsSection() {
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
             <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue opacity-20 blur-sm"></div>
           </div>
-
           {/* Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {benefits.map((benefit, index) => (
@@ -220,7 +190,6 @@ export function BenefitsSection() {
                 <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full transform -translate-x-1/2 -translate-y-1/2 hidden lg:block">
                   <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full animate-ping opacity-75"></div>
                 </div>
-
                 <motion.div
                   className="relative p-8 rounded-2xl bg-gradient-to-br from-zion-slate-dark/80 to-zion-blue-dark/80 backdrop-blur-sm border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group-hover:scale-105"
                   whileHover={{ y: -10 }}
@@ -231,7 +200,6 @@ export function BenefitsSection() {
                       {benefit.icon}
                     </div>
                   </div>
-
                   {/* Content */}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                     {benefit.title}
@@ -239,12 +207,10 @@ export function BenefitsSection() {
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {benefit.description}
                   </p>
-
                   {/* Stats */}
                   <div className="inline-block px-4 py-2 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-lg mb-6">
                     <span className="text-zion-cyan font-semibold">{benefit.stats}</span>
                   </div>
-
                   {/* Features */}
                   <ul className="space-y-3">
                     {benefit.features.map((feature, featureIndex) => (
@@ -254,7 +220,6 @@ export function BenefitsSection() {
                       </li>
                     ))}
                   </ul>
-
                   {/* Hover effect overlay */}
                   <AnimatePresence>
                     {hoveredIndex === index && (
@@ -272,70 +237,7 @@ export function BenefitsSection() {
             ))}
           </div>
         </motion.div>
-<<<<<<< HEAD
-
-        {/* Stats Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-r from-slate-700 to-slate-600 rounded-3xl p-12 border border-slate-500"
-        >
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Our Impact in Numbers</h3>
-            <p className="text-gray-300 text-lg">Real results that speak for themselves</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center group"
-              >
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {React.createElement(stat.icon, { className: "w-10 h-10 text-white" })}
-                </div>
-                <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                <div className="text-gray-300 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join hundreds of satisfied clients who have already experienced the Zion Tech Group difference
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
-                Get Started Today
-              </button>
-              <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                Schedule a Demo
-              </button>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
 }
-
-export default BenefitsSection
-=======
-      </div>
-    </section>
-  );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d

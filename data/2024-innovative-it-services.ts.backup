@@ -8,20 +8,8 @@ export interface InnovativeITService2024 {
   rating: number;
   customers: string;
 }
-
 export const innovativeITServices2024: InnovativeITService2024[] = [
   {
-<<<<<<< HEAD
-    id: 'cloud-automation-2024',
-    name: 'Cloud Automation Platform 2024',
-    tagline: 'Automate your cloud infrastructure',
-    price: '$199',
-    variant: 'cloud',
-    features: ['Infrastructure automation', 'Cost optimization', 'Security compliance'],
-    rating: 4.7,
-    customers: '300+'
-<<<<<<< HEAD
-=======
 =======
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
@@ -72,22 +60,9 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: 950,
     rating: 4.8,
     reviews: 520
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
-
   // Zero Trust Network Architecture
   {
-<<<<<<< HEAD
-    id: 'api-gateway-2024',
-    name: 'API Gateway 2024',
-    tagline: 'Manage and secure your APIs',
-    price: '$149',
-    variant: 'api',
-    features: ['API management', 'Rate limiting', 'Authentication'],
-    rating: 4.6,
-    customers: '400+'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
     id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Never trust, always verify - secure by design',
@@ -138,7 +113,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.9,
     reviews: 380
   },
-
   // Edge Computing Orchestration
   {
     id: 'edge-computing-orchestration',
@@ -191,7 +165,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.7,
     reviews: 420
   },
-
   // AI-Powered IT Operations Center
   {
     id: 'ai-powered-it-operations-center',
@@ -244,7 +217,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.8,
     reviews: 480
   },
-
   // Quantum-Secure Database Platform
   {
     id: 'quantum-secure-database-platform',
@@ -297,7 +269,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.9,
     reviews: 280
   },
-
   // AI-Powered API Management
   {
     id: 'ai-powered-api-management',
@@ -350,7 +321,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.7,
     reviews: 620
   },
-
   // Intelligent Cloud Cost Optimization
   {
     id: 'intelligent-cloud-cost-optimization',
@@ -403,7 +373,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     rating: 4.8,
     reviews: 950
   },
-
   // AI-Powered Network Security
   {
     id: 'ai-powered-network-security',
@@ -455,6 +424,5 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: 720,
     rating: 4.8,
     reviews: 410
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

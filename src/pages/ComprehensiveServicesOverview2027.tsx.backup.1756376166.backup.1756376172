@@ -1,78 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  Brain, 
-  Shield, 
-  TrendingUp, 
-  Zap, 
-  Globe, 
-  Users, 
-  BarChart3, 
-  Lock, 
-  Eye, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Clock, 
-  DollarSign, 
-  Target, 
-  Lightbulb, 
-  Award, 
-  ShieldCheck, 
-  Server, 
-  Smartphone, 
-  Monitor, 
-  Wifi, 
-  Beaker, 
-  Syringe, 
-  Stethoscope, 
-  Heart, 
-  Ear, 
-  Hand, 
-  Footprints, 
-  Bone, 
-  Tooth, 
-  Pill, 
-  Thermometer, 
-  Scale, 
-  Calculator, 
-  PieChart, 
-  TrendingDown, 
-  Minus, 
-  Plus, 
-  Equal, 
-  Divide, 
-  Percent, 
-  Euro, 
-  Bitcoin, 
-  CreditCard, 
-  Wallet, 
-  Banknote, 
-  Coins, 
-  PiggyBank, 
-  Key, 
-  Fingerprint, 
-  QrCode, 
-  Barcode, 
-  Scan, 
-  Camera, 
-  VideoOff, 
-  Mic, 
-  MicOff, 
-  Volume2, 
-  VolumeX, 
-  Play, 
-  Pause, 
-  Rewind, 
-  FastForward, 
-  Shuffle, 
-  Repeat, 
-  Repeat1, 
-  PlayCircle, 
-=======
 import {
   Brain,
   Shield,
@@ -160,7 +88,6 @@ import {
   SkipBack2,
   SkipForward2,
   PlayCircle,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   PauseCircle,
   Mail,
   Phone,
@@ -183,7 +110,6 @@ import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
 import SEO from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
   {
@@ -238,14 +164,12 @@ const MICRO_SAAS_SERVICES = [
     images: ['/images/analytics.jpg']
   }
 ];
-
 const categories = [
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
 ];
-
 const pricingModels = [
   { id: 'all', name: 'All Pricing' },
   { id: 'monthly', name: 'Monthly' },
@@ -253,7 +177,6 @@ const pricingModels = [
   { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
-
 export default function ComprehensiveServicesOverview2027() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
@@ -262,7 +185,6 @@ export default function ComprehensiveServicesOverview2027() {
   const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedService, setExpandedService] = useState<string | null>(null);
-
   useEffect(() => {
     let filtered = MICRO_SAAS_SERVICES;
     if (selectedCategory !== 'all') {
@@ -296,7 +218,6 @@ export default function ComprehensiveServicesOverview2027() {
     });
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -370,16 +291,7 @@ export default function ComprehensiveServicesOverview2027() {
       </div>
     </motion.div>
   );
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
         title="Comprehensive Services Overview 2027 - Zion Tech Group"
@@ -392,7 +304,6 @@ export default function ComprehensiveServicesOverview2027() {
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
@@ -411,7 +322,6 @@ export default function ComprehensiveServicesOverview2027() {
             Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
           </motion.p>
         </div>
-
         {/* Filters and Controls */}
         <div className="mb-12 space-y-6">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
@@ -456,22 +366,6 @@ export default function ComprehensiveServicesOverview2027() {
               </select>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className="flex flex-wrap gap-4">
-            {categories.map((category) => (
-              <Button
-                key={category.id}
-                variant={selectedCategory === category.id ? 'default' : 'outline'}
-                onClick={() => setSelectedCategory(category.id)}
-                className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
-              >
-                {category.icon}
-                <span className="ml-2">{category.name}</span>
-                <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
-                  {category.count}
-                </Badge>
-              </Button>
-=======
         </div>
       </section>
       {/* Services Section */}
@@ -559,7 +453,6 @@ export default function ComprehensiveServicesOverview2027() {
           }`}>
             {filteredServices.map((service) => (
               <ServiceCard key={service.id} service={service} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
             ))}
           </div>
           <div className="flex flex-wrap gap-4">

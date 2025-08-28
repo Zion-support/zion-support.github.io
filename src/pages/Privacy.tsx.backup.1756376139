@@ -15,14 +15,9 @@ import {
   CheckCircle,
   AlertTriangle
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import SEO from '../components/SEO';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 const Privacy: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -31,7 +26,6 @@ const Privacy: React.FC = () => {
         keywords="privacy policy, data protection, GDPR, CCPA, personal information, Zion Tech Group"
         canonicalUrl="https://ziontechgroup.com/privacy"
       />
-      
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
@@ -55,7 +49,6 @@ const Privacy: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Content Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +66,6 @@ const Privacy: React.FC = () => {
               </h2>
               <p className="text-gray-300">This Privacy Policy was last updated on {currentYear}.</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +101,6 @@ const Privacy: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -152,7 +143,6 @@ const Privacy: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -188,7 +178,6 @@ const Privacy: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -224,7 +213,6 @@ const Privacy: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -267,7 +255,6 @@ const Privacy: React.FC = () => {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -303,5 +290,4 @@ const Privacy: React.FC = () => {
     </div>
   );
 };
-
 export default Privacy;

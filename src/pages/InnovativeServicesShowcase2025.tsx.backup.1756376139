@@ -40,18 +40,11 @@ import {
   DollarSign,
   Percent
 } from 'lucide-react';
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { REAL_INNOVATIVE_SERVICES_2025 } from '../data/realInnovativeServices2025';
-=======
 import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4b87
-
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('all');
-
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500' },
     { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, color: 'from-blue-500 to-cyan-500' },
@@ -65,27 +58,21 @@ export default function InnovativeServicesShowcase2025() {
     { id: 'IT & Networking', name: 'IT & Networking', icon: Network, color: 'from-violet-500 to-purple-500' },
     { id: 'IT & Consulting', name: 'IT & Consulting', icon: Rocket, color: 'from-pink-500 to-rose-500' }
   ];
-
   const filteredServices = REAL_INNOVATIVE_SERVICES_2025.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
     return matchesSearch && matchesCategory;
   });
-
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Sparkles;
   };
-
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-purple-500 to-pink-500';
   };
-
   const getInnovationBadge = (level: string) => {
     switch (level.toLowerCase()) {
       case 'advanced':
@@ -98,14 +85,12 @@ export default function InnovativeServicesShowcase2025() {
         return { text: 'Innovative', color: 'bg-gradient-to-r from-orange-500 to-red-500', icon: Sparkles };
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Innovative Services Showcase 2025 - Zion Tech Group"
         description="Explore our cutting-edge AI-powered services, advanced cybersecurity solutions, and innovative technology services designed to revolutionize your business operations."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-cyan/20"></div>
@@ -145,7 +130,6 @@ export default function InnovativeServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -174,7 +158,6 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-12 px-6">
         <div className="max-w-7xl mx-auto">
@@ -193,7 +176,6 @@ export default function InnovativeServicesShowcase2025() {
                   />
                 </div>
               </div>
-              
               {/* Category Filter */}
               <div className="lg:w-80">
                 <select
@@ -212,7 +194,6 @@ export default function InnovativeServicesShowcase2025() {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
@@ -222,7 +203,6 @@ export default function InnovativeServicesShowcase2025() {
               const categoryColor = getCategoryColor(service.category);
               const innovationBadge = getInnovationBadge(service.innovationLevel);
               const BadgeIcon = innovationBadge.icon;
-              
               return (
                 <motion.div
                   key={service.id}
@@ -246,7 +226,6 @@ export default function InnovativeServicesShowcase2025() {
                       </div>
                     </div>
                   </div>
-
                   {/* Service Header */}
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`p-3 rounded-lg bg-gradient-to-r ${categoryColor}`}>
@@ -258,7 +237,6 @@ export default function InnovativeServicesShowcase2025() {
                       </span>
                     </div>
                   </div>
-
                   {/* Service Title & Description */}
                   <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2 group-hover:text-purple-300 transition-colors">
                     {service.title}
@@ -266,7 +244,6 @@ export default function InnovativeServicesShowcase2025() {
                   <p className="text-zion-slate-light mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2 flex items-center">
@@ -287,7 +264,6 @@ export default function InnovativeServicesShowcase2025() {
                       )}
                     </div>
                   </div>
-
                   {/* Benefits */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2 flex items-center">
@@ -303,7 +279,6 @@ export default function InnovativeServicesShowcase2025() {
                       ))}
                     </div>
                   </div>
-
                   {/* ROI & Market Info */}
                   <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                     <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-2 border border-green-500/30">
@@ -321,7 +296,6 @@ export default function InnovativeServicesShowcase2025() {
                       <div className="text-blue-400 font-semibold">{service.marketPrice}</div>
                     </div>
                   </div>
-
                   {/* Technical Specs */}
                   {service.technicalSpecs && (
                     <div className="mb-4 p-3 bg-white/5 rounded-lg border border-white/10">
@@ -341,7 +315,6 @@ export default function InnovativeServicesShowcase2025() {
                       </div>
                     </div>
                   )}
-
                   {/* Action Buttons */}
                   <div className="flex flex-col space-y-2">
                     <a
@@ -357,7 +330,6 @@ export default function InnovativeServicesShowcase2025() {
                       Call Now
                     </a>
                   </div>
-
                   {/* Contact Info */}
                   <div className="mt-4 pt-4 border-t border-white/10 text-xs text-zion-slate-light">
                     <div className="flex items-center justify-between">
@@ -375,7 +347,6 @@ export default function InnovativeServicesShowcase2025() {
               );
             })}
           </div>
-
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
               <div className="text-zion-slate-light text-lg mb-4">
@@ -394,7 +365,6 @@ export default function InnovativeServicesShowcase2025() {
           )}
         </div>
       </section>
-
       {/* Contact CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">

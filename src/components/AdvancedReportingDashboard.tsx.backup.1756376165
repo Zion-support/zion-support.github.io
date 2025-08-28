@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Download, 
-  Share2, 
-=======
 import {
   BarChart3,
   PieChart,
@@ -15,7 +8,6 @@ import {
   Share2,
   Filter,
   Calendar,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   Users,
   DollarSign,
   Activity,
@@ -30,7 +22,6 @@ import {
   Server,
   X
 } from 'lucide-react';
-
 interface ReportData {
   id: string;
   title: string;
@@ -47,7 +38,6 @@ interface ReportData {
   downloads: number;
   rating: number;
 }
-
 interface ReportMetrics {
   totalReports: number;
   activeReports: number;
@@ -57,13 +47,11 @@ interface ReportMetrics {
   topCategories: Array<{ name: string; count: number; percentage: number }>;
   recentActivity: Array<{ action: string; timestamp: string; user: string }>;
 }
-
 interface AdvancedReportingDashboardProps {
   showMetrics?: boolean;
   showFilters?: boolean;
   maxReports?: number;
 }
-
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
   showMetrics = true,
   showFilters = true,
@@ -82,7 +70,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   const [showReportDetails, setShowReportDetails] = useState(false);
   const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 'title'>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
-
   // Sample report data
   useEffect(() => {
     const sampleReports: ReportData[] = [
@@ -197,27 +184,21 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         rating: 4.6
       }
     ];
-
     setReports(sampleReports);
     setFilteredReports(sampleReports);
   }, []);
-
   // Filter and sort reports
   useEffect(() => {
     let filtered = reports;
-
     if (selectedType !== 'all') {
       filtered = filtered.filter(r => r.type === selectedType);
     }
-
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(r => r.category === selectedCategory);
     }
-
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(r => r.status === selectedStatus);
     }
-
     if (searchQuery) {
       filtered = filtered.filter(r =>
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -225,11 +206,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       );
     }
-
     // Sort reports
     filtered.sort((a, b) => {
       let aValue: any, bValue: any;
-
       switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
@@ -256,17 +235,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           aValue = 0;
           bValue = 0;
       }
-
       if (sortOrder === 'asc') {
         return aValue > bValue ? 1 : -1;
       } else {
         return aValue < bValue ? 1 : -1;
       }
     });
-
     setFilteredReports(filtered.slice(0, maxReports));
   }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
-
   // Calculate report metrics
   const reportMetrics = {
     totalReports: reports.length,
@@ -279,7 +255,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
       }, {} as Record<string, number>);
-
       return Object.entries(catCounts)
         .map(([name, count]) => ({
           name,
@@ -296,7 +271,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       { action: 'Report updated', timestamp: '2 hours ago', user: 'Sarah Wilson' }
     ]
   };
-
   // Get type icon and color
   const getTypeDisplay = (type: string) => {
     const types = {
@@ -309,7 +283,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     };
     return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' };
   };
-
   // Get priority color
   const getPriorityColor = (priority: string) => {
     switch (priority) {
@@ -320,7 +293,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       default: return 'text-zinc-400 bg-zinc-400/20';
     }
   };
-
   // Get status color
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -330,7 +302,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       default: return 'text-zinc-400 bg-zinc-400/20';
     }
   };
-
   // Handle report actions
   const handleReportAction = (reportId: string, action: 'view' | 'download' | 'share' | 'print') => {
     const report = reports.find(r => r.id === reportId);
@@ -355,13 +326,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       }
     }
   };
-
   // Export report data
   const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
     console.log(`Exporting ${report.title} as ${format}`);
     // In a real implementation, this would generate and download the file
   };
-
   return (
     <div className="w-full max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -370,7 +339,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <h1 className="text-4xl font-bold text-white mb-2">Advanced Reporting Dashboard</h1>
           <p className="text-zinc-400 text-lg">Comprehensive reporting and analytics for data-driven decision making</p>
         </div>
-
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
@@ -393,7 +361,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
               </button>
             ))}
           </div>
-
           {/* Create Report Button */}
           <button
             onClick={() => setShowReportDetails(true)}
@@ -404,7 +371,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </button>
         </div>
       </div>
-
       {/* Metrics Section */}
       {showMetrics && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -416,7 +382,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             <div className="text-3xl font-bold text-white mb-2">{reportMetrics.totalReports}</div>
             <div className="text-zinc-400">Total Reports</div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -426,7 +391,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             <div className="text-3xl font-bold text-green-400 mb-2">{reportMetrics.totalViews.toLocaleString()}</div>
             <div className="text-zinc-400">Total Views</div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -436,7 +400,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             <div className="text-3xl font-bold text-blue-400 mb-2">{reportMetrics.totalDownloads.toLocaleString()}</div>
             <div className="text-zinc-400">Total Downloads</div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -448,7 +411,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </motion.div>
         </div>
       )}
-
       {/* Additional Metrics */}
       {showMetrics && (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
@@ -478,7 +440,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
               ))}
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -498,7 +459,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
               ))}
             </div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -520,7 +480,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </motion.div>
         </div>
       )}
-
       {/* Filters and Search */}
       {showFilters && (
         <div className="flex flex-wrap items-center gap-4 mb-6">
@@ -538,7 +497,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             <option value="customer">Customer</option>
             <option value="technical">Technical</option>
           </select>
-
           {/* Category Filter */}
           <select
             value={selectedCategory}
@@ -552,7 +510,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             <option value="Operational Reports">Operational Reports</option>
             <option value="Customer Reports">Customer Reports</option>
           </select>
-
           {/* Status Filter */}
           <select
             value={selectedStatus}
@@ -564,7 +521,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             <option value="archived">Archived</option>
             <option value="draft">Draft</option>
           </select>
-
           {/* Sort Options */}
           <select
             value={sortBy}
@@ -577,7 +533,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             <option value="priority">Sort by Priority</option>
             <option value="title">Sort by Title</option>
           </select>
-
           {/* Sort Order */}
           <button
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
@@ -585,7 +540,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           >
             {sortOrder === 'asc' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </button>
-
           {/* Search */}
           <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4" />
@@ -599,7 +553,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </div>
         </div>
       )}
-
       {/* Reports Display */}
       <div className="space-y-6">
         {filteredReports.map((report, index) => (
@@ -622,7 +575,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                     <p className="text-zinc-400 text-sm">{report.description}</p>
                   </div>
                 </div>
-
                 <div className="flex flex-wrap items-center gap-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeDisplay(report.type).color}`}>
                     {report.type.charAt(0).toUpperCase() + report.type.slice(1)}
@@ -638,7 +590,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   </span>
                 </div>
               </div>
-
               <div className="flex items-center gap-2 ml-4">
                 <button
                   onClick={() => handleReportAction(report.id, 'view')}
@@ -660,30 +611,25 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                 </button>
               </div>
             </div>
-
             {/* Report Details */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Author</div>
                 <div className="text-white font-medium">{report.author}</div>
               </div>
-
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Last Updated</div>
                 <div className="text-white font-medium">{new Date(report.lastUpdated).toLocaleDateString()}</div>
               </div>
-
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Views</div>
                 <div className="text-white font-medium">{report.views.toLocaleString()}</div>
               </div>
-
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Downloads</div>
                 <div className="text-white font-medium">{report.downloads.toLocaleString()}</div>
               </div>
             </div>
-
             {/* Key Metrics Preview */}
             <div className="mb-4">
               <h4 className="text-sm font-medium text-zinc-300 mb-3">Key Metrics</h4>
@@ -695,7 +641,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                 ))}
               </div>
             </div>
-
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               {report.tags.map((tag) => (
@@ -707,7 +652,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                 </span>
               ))}
             </div>
-
             {/* Report Actions */}
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">
               <div className="flex items-center gap-4">
@@ -720,7 +664,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   <span>Updated {new Date(report.lastUpdated).toLocaleDateString()}</span>
                 </div>
               </div>
-
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => exportReport(report, 'pdf')}
@@ -745,7 +688,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </motion.div>
         ))}
       </div>
-
       {/* No Results */}
       {filteredReports.length === 0 && (
         <motion.div
@@ -766,7 +708,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </button>
         </motion.div>
       )}
-
       {/* Report Details Modal */}
       <AnimatePresence>
         {showReportDetails && selectedReport && (
@@ -793,13 +734,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   <X className="w-6 h-6" />
                 </button>
               </div>
-
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Description</h3>
                   <p className="text-zinc-300">{selectedReport.description}</p>
                 </div>
-
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-3">Key Metrics</h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -810,7 +749,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                     ))}
                   </div>
                 </div>
-
                 <div className="flex gap-3">
                   <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                     Download Report

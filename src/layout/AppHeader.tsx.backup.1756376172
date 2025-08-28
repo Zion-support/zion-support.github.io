@@ -1,19 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Star, Target, TrendingUp, Award, Code, Truck, Building } from 'lucide-react';
-=======
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building } from 'lucide-react';
->>>>>>> b853260fd825552ae78a5c6124dfc100e849b8d4
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b26c
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
 import { EnhancedSearch } from '../components/EnhancedSearch';
-
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -22,51 +13,34 @@ export function AppHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const { user, logout } = useAuth();
-
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
-<<<<<<< HEAD
-    { name: 'Solutions', href: '/solutions', current: false },
-=======
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
-<<<<<<< HEAD
-    { name: 'Products', href: '/products', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
-=======
->>>>>>> b853260fd825552ae78a5c6124dfc100e849b8d4
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'Partners', href: '/partners', current: false },
     { name: 'Research', href: '/research-development', current: false },
     { name: 'Events', href: '/events', current: false },
     { name: 'News', href: '/news', current: false },
-<<<<<<< HEAD
-=======
     { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Partners', href: '/partners', current: false },
->>>>>>> b853260fd825552ae78a5c6124dfc100e849b8d4
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Help', href: '/help', current: false },
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b26c
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
-
   // Organized services by category - only include existing pages
   const services = [
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
@@ -107,7 +81,6 @@ export function AppHeader() {
     { name: 'AI Financial Trading', href: '/services/ai-financial-trading', icon: TrendingUp, description: 'AI trading algorithms' },
     { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Smart logistics optimization' },
   ];
-
   // Quick links for easy access
   const quickLinks = [
     { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
@@ -121,13 +94,11 @@ export function AppHeader() {
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Help Center', href: '/help', icon: MessageCircle },
   ];
-
   const featuredServices = [
     { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
     { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
   ];
-
   return (
     <>
       <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -153,7 +124,6 @@ export function AppHeader() {
                 </div>
               </Link>
             </div>
-
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8" aria-label="Primary">
               {navigation.map((item) => (
@@ -172,7 +142,6 @@ export function AppHeader() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               ))}
-
               {/* Services Dropdown */}
               <div className="relative" aria-haspopup="true" aria-expanded={servicesDropdownOpen}>
                 <button
@@ -186,7 +155,6 @@ export function AppHeader() {
                   <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
                 </button>
-
                 {servicesDropdownOpen && (
                   <div
                     id="services-menu"
@@ -222,7 +190,6 @@ export function AppHeader() {
                           ))}
                         </div>
                       </div>
-
                       {/* All Services by Category */}
                       <div className="grid grid-cols-2 gap-4">
                         {services.slice(0, 20).map((service) => (
@@ -246,7 +213,6 @@ export function AppHeader() {
                           </Link>
                         ))}
                       </div>
-
                       <div className="mt-6 pt-4 border-t border-slate-700/50">
                         <div className="flex gap-3">
                           <Link
@@ -268,7 +234,6 @@ export function AppHeader() {
                 )}
               </AnimatePresence>
             </div>
-
             {/* Other Navigation Items */}
             {navigation.slice(0, 6).map((item) => (
               <Link
@@ -286,7 +251,6 @@ export function AppHeader() {
               </Link>
             ))}
           </nav>
-
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             {/* Search */}
@@ -307,12 +271,10 @@ export function AppHeader() {
                 )}
               </div>
             </form>
-
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
               {/* Theme Toggle */}
               <ThemeToggle />
-
               {/* Search */}
               <form onSubmit={handleSearch} className="hidden md:block relative">
                 <div className="relative">
@@ -331,7 +293,6 @@ export function AppHeader() {
                   )}
                 </div>
               </form>
-
             {/* User Menu */}
             <div className="hidden md:flex items-center space-x-2">
               <button className="p-2 text-gray-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-200">
@@ -341,7 +302,6 @@ export function AppHeader() {
                 <User className="w-5 h-5" />
               </button>
             </div>
-
             {/* CTA Button */}
             <Link
               to="/contact"
@@ -349,7 +309,6 @@ export function AppHeader() {
             >
               Get Started
             </Link>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -360,7 +319,6 @@ export function AppHeader() {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
@@ -383,7 +341,6 @@ export function AppHeader() {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50"
                 />
               </form>
-
               {/* Mobile Navigation */}
               <nav className="space-y-4">
                 {navigation.map((item) => (
@@ -406,7 +363,6 @@ export function AppHeader() {
                   </Link>
                 ))}
               </nav>
-
               {/* Mobile Quick Links */}
               <div className="pt-4 border-t border-slate-700/50">
                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Quick Links</h3>
@@ -427,7 +383,6 @@ export function AppHeader() {
                       <span className="text-sm text-gray-300">{link.name}</span>
                     </Link>
                   ))}
-
                   {/* Mobile Services Section */}
                   <div className="pt-4 border-t border-slate-700/50">
                     <h3 className="px-4 text-sm font-semibold text-cyan-300 mb-3">Featured Services</h3>
@@ -447,7 +402,6 @@ export function AppHeader() {
                   </div>
                 </nav>
               </div>
-
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-slate-700/50">
                 <Link
@@ -465,7 +419,6 @@ export function AppHeader() {
     </header>
   );
 }
-
 // Robot icon component for autonomous AI agents
 const Robot = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">

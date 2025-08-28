@@ -35,7 +35,6 @@ export interface EmergingTechService2030 {
   complianceFeatures?: string[];
   scalabilityFeatures?: string[];
 }
-
 export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   // Space Technology Solutions
   {
@@ -93,7 +92,6 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     },
     marketSize: "$45.8 billion by 2030"
   },
-
   // Biotechnology & AI Integration
   {
     id: "biotech-ai-integration-platform",
@@ -150,7 +148,6 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     },
     marketSize: "$38.7 billion by 2030"
   },
-
   // Advanced Robotics & Automation
   {
     id: "advanced-robotics-automation-platform",
@@ -207,7 +204,6 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     },
     marketSize: "$32.4 billion by 2030"
   },
-
   // Neuromorphic Computing Platform
   {
     id: "neuromorphic-computing-platform",
@@ -264,7 +260,6 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     },
     marketSize: "$28.9 billion by 2030"
   },
-
   // Advanced Materials & Nanotechnology
   {
     id: "advanced-materials-nanotech-platform",
@@ -321,7 +316,6 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     },
     marketSize: "$35.6 billion by 2030"
   },
-
   // Quantum Internet & Communication
   {
     id: "quantum-internet-communication-platform",
@@ -378,7 +372,6 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     },
     marketSize: "$42.3 billion by 2030"
   },
-
   // Advanced Energy & Sustainability
   {
     id: "advanced-energy-sustainability-platform",
@@ -435,7 +428,6 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     },
     marketSize: "$29.8 billion by 2030"
   },
-
   // Advanced AI Ethics & Governance
   {
     id: "ai-ethics-governance-platform",
@@ -493,33 +485,25 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     marketSize: "$18.7 billion by 2030"
   }
 ];
-
-<<<<<<< HEAD
-export default EMERGING_TECH_SERVICES_2030;
-=======
 // Utility functions for service management
 export const getEmergingTechServicesByCategory = (category: string): EmergingTechService2030[] => {
   return EMERGING_TECH_SERVICES_2030.filter(service => service.category === category);
 };
-
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number): EmergingTechService2030[] => {
   return EMERGING_TECH_SERVICES_2030.filter(service =>
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
   );
 };
-
 export const getEmergingTechFeaturedServices = (limit: number = 10): EmergingTechService2030[] => {
   return EMERGING_TECH_SERVICES_2030
     .filter(service => service.featured)
     .slice(0, limit);
 };
-
 export const getEmergingTechTrendingServices = (limit: number = 10): EmergingTechService2030[] => {
   return EMERGING_TECH_SERVICES_2030
     .filter(service => service.trending)
     .slice(0, limit);
 };
-
 export const searchEmergingTechServices = (query: string): EmergingTechService2030[] => {
   const lowercaseQuery = query.toLowerCase();
   return EMERGING_TECH_SERVICES_2030.filter(service =>
@@ -528,25 +512,21 @@ export const searchEmergingTechServices = (query: string): EmergingTechService20
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   );
 };
-
 export const getEmergingTechServicesByInnovationLevel = (level: string): EmergingTechService2030[] => {
   return EMERGING_TECH_SERVICES_2030.filter(service => service.innovationLevel === level);
 };
-
 export const getEmergingTechServicesByTechnology = (technology: string): EmergingTechService2030[] => {
   const lowercaseTech = technology.toLowerCase();
   return EMERGING_TECH_SERVICES_2030.filter(service =>
     service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
   );
 };
-
 export const getEmergingTechServicesStats = () => {
   const totalServices = EMERGING_TECH_SERVICES_2030.length;
   const totalRevenue = EMERGING_TECH_SERVICES_2030.reduce((sum, service) => sum + service.pricing.monthly, 0);
   const averageRating = EMERGING_TECH_SERVICES_2030.reduce((sum, service) => sum + service.rating, 0) / totalServices;
   const featuredCount = EMERGING_TECH_SERVICES_2030.filter(service => service.featured).length;
   const trendingCount = EMERGING_TECH_SERVICES_2030.filter(service => service.trending).length;
-
   return {
     totalServices,
     totalRevenue,
@@ -557,6 +537,4 @@ export const getEmergingTechServicesStats = () => {
     subcategories: [...new Set(EMERGING_TECH_SERVICES_2030.map(service => service.subcategory))]
   };
 };
-
 export const ALL_EMERGING_TECH_SERVICES_2030 = EMERGING_TECH_SERVICES_2030;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d

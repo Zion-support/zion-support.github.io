@@ -51,11 +51,9 @@ import {
   ShieldCheck,
   X
 } from 'lucide-react';
-
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
 import { comprehensiveServices } from '../data/comprehensiveServices';
-
 interface Service {
   id: string;
   name: string;
@@ -83,25 +81,16 @@ interface Service {
     address: string;
   };
 }
-
 const ComprehensiveServicesShowcase2027: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
-<<<<<<< HEAD
-    
-    // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
-    ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
-=======
-
     // Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
       services.push({
         id: service.id,
         name: service.name,
@@ -126,7 +115,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         contactInfo: service.contactInfo
       });
     });
-
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
       services.push({
@@ -153,15 +141,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         contactInfo: service.contactInfo
       });
     });
-
     return services;
   }, []);
-
   const categories = useMemo(() => {
     const cats = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
     return cats.sort();
   }, [allServices]);
-
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -170,7 +155,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
-
     // Sort services
     switch (sortBy) {
       case 'name':
@@ -186,10 +170,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
         break;
     }
-
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]);
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Artificial Intelligence':
@@ -216,7 +198,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         return <Lightbulb className="w-6 h-6" />;
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status.toLowerCase()) {
       case 'live':
@@ -231,7 +212,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         return 'bg-gray-100 text-gray-800';
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
@@ -272,7 +252,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Search and Filters */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
@@ -290,7 +269,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 />
               </div>
             </div>
-
             {/* Category Filter */}
             <div className="flex-shrink-0">
               <select
@@ -303,7 +281,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 ))}
               </select>
             </div>
-
             {/* Sort */}
             <div className="flex-shrink-0">
               <select
@@ -320,7 +297,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -352,10 +328,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     <span className="text-xs text-gray-400">({service.reviewCount})</span>
                   </div>
                 </div>
-
                 {/* Description */}
                 <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-
                 {/* Pricing */}
                 <div className="mb-4">
                   <div className="flex items-center gap-2 mb-2">
@@ -370,7 +344,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     Market price: {service.marketPrice}
                   </div>
                 </div>
-
                 {/* Features Preview */}
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
@@ -389,7 +362,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     )}
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-2">
                   <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
@@ -403,7 +375,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             ))}
           </AnimatePresence>
         </div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -417,7 +388,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </motion.div>
         )}
       </div>
-
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -453,13 +423,11 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     <X className="w-6 h-6 text-gray-400" />
                   </button>
                 </div>
-
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   {/* Left Column */}
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Description</h3>
                     <p className="text-gray-300 mb-6">{selectedService.description}</p>
-
                     <h3 className="text-xl font-semibold text-white mb-4">Features</h3>
                     <ul className="space-y-2 mb-6">
                       {selectedService.features.map((feature, idx) => (
@@ -469,7 +437,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-
                     <h3 className="text-xl font-semibold text-white mb-4">Benefits</h3>
                     <ul className="space-y-2 mb-6">
                       {selectedService.benefits.map((benefit, idx) => (
@@ -480,7 +447,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-
                   {/* Right Column */}
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-4">Pricing Plans</h3>
@@ -494,7 +460,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         </div>
                         <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>
                       </div>
-
                       <div className="bg-white/10 rounded-lg p-4">
                         <div className="flex justify-between items-center mb-2">
                           <span className="font-medium text-white">Professional</span>
@@ -504,7 +469,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         </div>
                         <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>
                       </div>
-
                       <div className="bg-white/10 rounded-lg p-4">
                         <div className="flex justify-between items-center mb-2">
                           <span className="font-medium text-white">Enterprise</span>
@@ -515,7 +479,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         <span className="text-sm text-gray-400">/{selectedService.pricing.billingCycle}</span>
                       </div>
                     </div>
-
                     <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4 mb-6">
                       <h4 className="text-white font-semibold mb-2">Market Information</h4>
                       <div className="space-y-2 text-sm">
@@ -533,7 +496,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     {selectedService.contactInfo && (
                       <div className="bg-white/10 rounded-lg p-4">
                         <h4 className="text-white font-semibold mb-3">Contact Information</h4>
@@ -555,7 +517,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                     )}
                   </div>
                 </div>
-
                 {/* Action Buttons */}
                 <div className="flex gap-4 mt-8 pt-6 border-t border-white/20">
                   <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
@@ -573,7 +534,6 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Contact Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20 text-center">
@@ -608,5 +568,4 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     </div>
   );
 };
-
 export default ComprehensiveServicesShowcase2027;
