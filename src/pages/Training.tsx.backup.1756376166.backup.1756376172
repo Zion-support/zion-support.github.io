@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '@/components/SEO';
+
+export default function Training() {
+	return (
+		<div className="min-h-screen bg-slate-900 text-white py-16">
+			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />
+			<div className="container mx-auto px-4 max-w-4xl">
+				<h1 className="text-4xl font-bold mb-4">Training</h1>
+				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>
+			</div>
+		</div>
+	);
+}
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
 
 import React, { useState } from 'react';
 import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';

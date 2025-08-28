@@ -140,8 +140,13 @@ export default function SupportRequests() {
   };
 
   return (
+<<<<<<< HEAD
+    <>
+      <SEO 
+=======
 
       <SEO
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />
@@ -347,6 +352,10 @@ export default function SupportRequests() {
           </TabsContent>
         </Tabs>
       </div>
+<<<<<<< HEAD
+    </>
+=======
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   );
 }

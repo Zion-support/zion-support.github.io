@@ -191,6 +191,9 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T09:15:00.000Z"
   }
+<<<<<<< HEAD
+];
+=======
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
@@ -233,3 +236,4 @@ export const getMicroSaasServicesByCategory = (category: string): MicroSaasServi
 export const getMicroSaasCategories = (): string[] => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
 };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d

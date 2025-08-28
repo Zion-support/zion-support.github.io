@@ -1,6 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  Shield, 
+  Lock, 
+  Eye, 
+  Zap, 
+  Award,
+  Users, 
+=======
 import {
   Shield,
   Lock,
@@ -8,6 +18,7 @@ import {
   Zap,
   Target,
   Users,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
   CheckCircle,
   ArrowRight,
   Play,

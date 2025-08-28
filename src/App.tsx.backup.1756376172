@@ -55,6 +55,14 @@ const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 
+<<<<<<< HEAD
+// Additional missing service pages
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/ai-workflow-automation'));
+const GreenIT = React.lazy(() => import('./pages/services/green-it'));
+const QuantumComputingSolutions = React.lazy(() => import('./pages/services/quantum-computing-solutions'));
+
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b26c
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
@@ -361,7 +369,12 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services2026" element={<Services2026 />} />
+<<<<<<< HEAD
+              <Route path="/services2027" element={<Services2027 />} />
+              <Route path="/services2028" element={<Services2028 />} />
+=======
               <Route path="/products" element={<Products />} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b26c
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
@@ -377,7 +390,11 @@ function App() {
               <Route path="/support" element={<Support />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/research-development" element={<ResearchDevelopment />} />
+<<<<<<< HEAD
+
+=======
               
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b26c
               {/* Service Routes - only for existing pages */}
               <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />

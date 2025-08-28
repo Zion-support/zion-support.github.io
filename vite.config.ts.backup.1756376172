@@ -20,6 +20,8 @@ export default defineConfig({
   build: {
     target: 'es2022',
     minify: 'terser',
+<<<<<<< HEAD
+=======
     sourcemap: process.env.NODE_ENV !== 'production' ? 'hidden' : false,
     reportCompressedSize: false,
     outDir: 'dist',
@@ -75,6 +77,7 @@ export default defineConfig({
       },
       external: [],
     },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b26c
     terserOptions: {
       compress: {
         drop_console: true,

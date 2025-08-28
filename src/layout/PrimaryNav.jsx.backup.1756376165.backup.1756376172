@@ -124,6 +124,11 @@ export function PrimaryNav() {
                     {t('auth.signup')}
                   </Link>
                 </>)}
+<<<<<<< HEAD
+              {isLoggedIn && <UserMenu />}
+            </div>
+          
+=======
             </Link>
             <LanguageSelector />
             <ModeToggle />
@@ -138,6 +143,7 @@ export function PrimaryNav() {
             {isLoggedIn && <UserMenu />}
           </div>
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c82d
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
