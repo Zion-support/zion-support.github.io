@@ -118,7 +118,7 @@ Please provide any additional context about what you were doing when this error 
         }
     }
 
-    toggleStackTrace = () => {
+    toggleStackTrace() {
         this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
     }
 
