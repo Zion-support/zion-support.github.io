@@ -30,7 +30,19 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Services', href: '/services', current: false },
+<<<<<<< HEAD
+    { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Partners', href: '/partners', current: false },
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'News', href: '/news', current: false },
+    { name: 'Events', href: '/events', current: false },
+=======
+    { name: 'Pricing', href: '/pricing', current: false },
+>>>>>>> origin/cursor/website-audit-and-enhancement-3725
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Help Center', href: '/help', current: false },
     { name: 'About', href: '/about', current: false },
@@ -290,6 +302,10 @@ export function AppHeader() {
                 </button>
               </div>
 
+<<<<<<< HEAD
+              {/* Theme Toggle */}
+              <ThemeToggle />
+=======
               {/* CTA Button */}
               <Link
                 to="/request-quote"
@@ -297,6 +313,7 @@ export function AppHeader() {
               >
                 Request Quote
               </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3725
 
               {/* Mobile menu button */}
               <button
