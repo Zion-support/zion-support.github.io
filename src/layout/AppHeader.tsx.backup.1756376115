@@ -1,4 +1,77 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Search, 
+  User, 
+  Bell, 
+  ChevronDown,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  TrendingUp,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  PanelLeft,
+  Sparkles,
+  Target,
+  Award,
+  Lightbulb,
+  Layers,
+  Building,
+  Truck,
+  Scale,
+  BookOpen,
+  DollarSign,
+  Cpu as CpuIcon,
+  Shield as ShieldIcon,
+  Brain as BrainIcon,
+  Rocket as RocketIcon,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Youtube,
+  Instagram,
+  Github,
+  HelpCircle,
+  ShoppingCart,
+  Star,
+  Briefcase,
+  Tag,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Clock as ClockIcon,
+  Atom,
+  Workflow,
+  Gauge,
+  PenTool,
+  Home,
+  Calendar,
+  Newspaper
+} from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+=======
 import { EnhancedNavigation } from '../components/EnhancedNavigation';
 import { 
   Brain, 
@@ -33,6 +106,7 @@ import {
   Lock, 
   BookOpen
 } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-8bef
 
 export default function AppHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +126,64 @@ export default function AppHeader() {
   const { user, logout } = useAuth();
 
   const navigation = [
+<<<<<<< HEAD
+    { name: 'Home', href: '/', current: true, icon: Home, description: 'Welcome to Zion Tech Group' },
+    { name: 'Services', href: '/services', current: false, icon: Rocket, description: 'Explore our services' },
+    { name: 'Innovative 2025', href: '/innovative-services-landing-2025', current: false, featured: true, icon: Sparkles, description: 'Latest innovations' },
+    { name: '2029 Services', href: '/innovative-services-2029', current: false, featured: true, icon: Star, description: '2029 innovations' },
+    { name: 'All Services 2029', href: '/comprehensive-services-2029', current: false, featured: true, icon: Star, description: 'Complete 2029 services' },
+    { name: '2026 Services', href: '/services2026', current: false, featured: true, icon: Star, description: 'Future services' },
+    { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2027', current: false, icon: DollarSign, description: 'Comprehensive pricing' },
+    { name: 'Revolutionary 2030', href: '/revolutionary-services-2030', current: false, featured: true, icon: Rocket, description: 'Future vision' },
+    { name: 'AI Services', href: '/ai-services', current: false, icon: Brain, description: 'AI solutions' },
+    { name: 'IT Services', href: '/it-services', current: false, icon: Cpu, description: 'IT infrastructure' },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false, icon: Zap, description: 'Micro SaaS solutions' },
+    { name: 'Solutions', href: '/solutions', current: false, icon: Target, description: 'Business solutions' },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false, icon: Brain, description: 'AI-powered solutions' },
+    { name: 'Case Studies', href: '/case-studies', current: false, icon: FileText, description: 'Success stories' },
+    { name: 'Research', href: '/research-development', current: false, icon: Lightbulb, description: 'R&D initiatives' },
+    { name: 'Events', href: '/events', current: false, icon: Calendar, description: 'Upcoming events' },
+    { name: 'News', href: '/news', current: false, icon: Newspaper, description: 'Latest news' },
+    { name: 'Pricing', href: '/pricing', current: false, icon: DollarSign, description: 'Service pricing' },
+    { name: 'Partners', href: '/partners', current: false, icon: Users, description: 'Our partners' },
+    { name: 'Blog', href: '/blog', current: false, icon: BookOpen, description: 'Insights & updates' },
+    { name: 'Help', href: '/help', current: false, icon: HelpCircle, description: 'Support center' },
+    { name: 'About', href: '/about', current: false, icon: Users, description: 'Learn about our company' },
+    { name: 'Contact', href: '/contact', current: false, icon: Phone, description: 'Get in touch with us' },
+    { name: 'Careers', href: '/careers', current: false, icon: Briefcase, description: 'Join our team' }
+  ];
+
+  const services = [
+    { name: 'AI Business Intelligence Elite', href: '/services/ai-business-intelligence-elite', icon: Brain, description: 'Advanced AI Analytics Platform' },
+    { name: 'AI Cybersecurity Elite', href: '/services/ai-cybersecurity-elite', icon: Shield, description: 'Military-Grade AI Security' },
+    { name: 'Quantum Computing Elite', href: '/services/quantum-computing-elite', icon: Atom, description: 'Next-Gen Quantum Solutions' },
+    { name: 'Micro-SaaS Platform Elite', href: '/services/micro-saas-platform-elite', icon: Rocket, description: 'Complete SaaS Platform' },
+    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation' },
+    { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'AI Autonomous Code Reviewer', href: '/services/ai-autonomous-code-reviewer', icon: Brain, description: 'Intelligent code review automation' },
+    { name: 'AI-Powered SEO Optimizer', href: '/services/ai-powered-seo-optimizer', icon: Search, description: 'AI-driven SEO optimization' },
+    { name: 'AI Interview Assessment Platform', href: '/services/ai-interview-assessment-platform', icon: Users, description: 'Intelligent candidate evaluation' },
+    { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Shield, description: 'Advanced network security' },
+    { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield, description: 'AI-powered threat detection' },
+    { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform', icon: BarChart3, description: 'AI-powered analytics' },
+    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent process automation' },
+    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Quantum Solutions' },
+    { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IoT & Edge', href: '/services/it-infrastructure', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business Intelligence & Insights' },
+    { name: 'Healthcare Tech', href: '/services/ai-compliance-assistant', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability', href: '/services/green-it', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'Micro SaaS', href: '/services/ai-compliance-assistant', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
+    { name: 'Mobile Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
+    { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
+=======
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
     { name: 'AI Services', href: '/ai-services', current: false },
@@ -67,10 +199,36 @@ export default function AppHeader() {
     { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise IT Solutions' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-8bef
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Local business CRM' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Privacy-first SMB analytics' },
     { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'Tickets, SLAs, portals' },
+<<<<<<< HEAD
+    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: ShoppingCart, description: 'Partner revenue platform' },
+    { name: 'AI SEO Optimizer', href: '/services/ai-seo', icon: Search, description: 'Semantic SEO & content briefs' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'Structured interviews & scoring' },
+    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Tickets, KB, chat & AI' },
+    { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA request workflow' },
+    { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield, description: 'HSTS/CSP automation' },
+    { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Target, description: 'Intelligent project management' },
+    { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'AI-powered content creation' },
+    { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: '24/7 intelligent support' },
+    { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3, description: 'Predictive business intelligence' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Smart marketing optimization' }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
+  ];
+
+  const featuredServices = [
+    { name: '2029 Services', href: '/innovative-services-2029', icon: Star, description: 'Cutting-edge AI, Cybersecurity & Micro SaaS', category: 'Featured', featured: true },
+    { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
+=======
     { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'SOC2/ISO evidence automation' },
     { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'AI-powered sales assistance' },
     { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock, description: 'Advanced network security' },
@@ -96,6 +254,7 @@ export default function AppHeader() {
 
   const featuredServices = [
     { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation', category: 'AI & Automation', featured: true },
+>>>>>>> origin/cursor/website-audit-and-enhancement-8bef
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation', category: 'Cloud & Infrastructure', featured: true },
   ];
