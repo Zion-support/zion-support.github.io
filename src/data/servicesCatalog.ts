@@ -157,6 +157,58 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Monitor Models',
 				href: 'https://ziontechgroup.com/services'
 			}
+			,
+			{
+				id: 'gdpr-dsar-portal',
+				title: 'GDPR DSAR Portal',
+				description: 'Secure intake, verification, and fulfillment of Data Subject Access Requests with audit trails.',
+				category: 'Micro SaaS',
+				price: '$129',
+				billing: 'month',
+				features: [
+					'Identity verification',
+					'Data discovery connectors',
+					'Audit logs and exports',
+					'Self-service portal and SLA tracking',
+					'Webhook automation'
+				],
+				ctaLabel: 'Launch Portal',
+				href: 'https://ziontechgroup.com/services/gdpr-dsar-portal'
+			},
+			{
+				id: 'email-deliverability-monitor-saas',
+				title: 'Email Deliverability Monitor',
+				description: 'Inbox placement checks, DMARC/SPF/DKIM validation, and reputation alerts for marketing and transactional mail.',
+				category: 'Micro SaaS',
+				price: '$39',
+				billing: 'month',
+				features: [
+					'DMARC/SPF/DKIM verification',
+					'Inbox placement and blocklist tracking',
+					'Recommendations and weekly reports',
+					'Integrations: SES, SendGrid, Mailgun',
+					'Alerts to Slack/Email'
+				],
+				ctaLabel: 'Improve Inbox Rate',
+				href: 'https://ziontechgroup.com/services/email-deliverability-monitor'
+			},
+			{
+				id: 'pdf-render-api-saas',
+				title: 'PDF Render API',
+				description: 'Reliable HTML-to-PDF at scale with templates, assets, and async callbacks.',
+				category: 'Micro SaaS',
+				price: '$29',
+				billing: 'month',
+				features: [
+					'Chromium renderer with fonts',
+					'Async rendering and webhooks',
+					'Templates and asset hosting',
+					'Storage destinations (S3/GCS/Azure)',
+					'Usage analytics and quotas'
+				],
+				ctaLabel: 'Generate PDFs',
+				href: 'https://ziontechgroup.com/services/pdf-render-api'
+			}
 		]
 	},
 	{
@@ -336,6 +388,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Creative Access',
 				href: 'https://ziontechgroup.com/contact'
 			}
+			,
+			{
+				id: 'synthetic-data-generator',
+				title: 'Synthetic Data Generator',
+				description: 'Privacy-safe synthetic data for analytics, testing, and ML with differential privacy.',
+				category: 'AI Solutions',
+				price: '$119',
+				billing: 'month',
+				features: [
+					'DP and PII masking',
+					'Tabular/time-series/text modes',
+					'Utility and drift reports',
+					'SDKs and REST API',
+					'Warehouse integrations'
+				],
+				ctaLabel: 'Generate Data',
+				href: 'https://ziontechgroup.com/services/synthetic-data-generator'
+			},
+			{
+				id: 'ai-meeting-notes-agent',
+				title: 'AI Meeting Notes Agent',
+				description: 'Transcribes meetings, extracts action items, and syncs summaries to CRM/PM tools.',
+				category: 'AI Solutions',
+				price: '$69',
+				billing: 'month',
+				features: [
+					'Accurate transcripts',
+					'Action items and owners',
+					'CRM/PM sync',
+					'Security and auditability',
+					'Multi-platform support'
+				],
+				ctaLabel: 'Start Recording',
+				href: 'https://ziontechgroup.com/services/ai-meeting-notes-agent'
+			}
 		]
 	},
 	{
@@ -427,6 +514,41 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Cut Cloud Costs',
 				href: 'https://ziontechgroup.com/services'
+			}
+			,
+			{
+				id: 'managed-kubernetes-sre',
+				title: 'Managed Kubernetes SRE',
+				description: 'Hands-on SRE for clusters: upgrades, security baselines, autoscaling, and incident response.',
+				category: 'IT Services',
+				price: '$2,500',
+				billing: 'month',
+				features: [
+					'24/7 on-call rotation',
+					'Golden paths and GitOps',
+					'SLOs and error budgets',
+					'DR and backup testing',
+					'Cost and performance tuning'
+				],
+				ctaLabel: 'Stabilize Clusters',
+				href: 'https://ziontechgroup.com/services/managed-kubernetes-sre'
+			},
+			{
+				id: 'zero-trust-rollout-coaching',
+				title: 'Zero Trust Rollout Coaching',
+				description: 'Architect and guide a pragmatic Zero Trust deployment with measurable milestones and runbooks.',
+				category: 'IT Services',
+				price: '$4,000',
+				billing: 'project',
+				features: [
+					'Current-state assessment',
+					'Policy and identity baselines',
+					'ZTN, SWG, CASB patterns',
+					'Pilot-to-prod plan',
+					'Executive reporting'
+				],
+				ctaLabel: 'Plan Zero Trust',
+				href: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching'
 			}
 		]
 	},
@@ -652,6 +774,24 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Harden Resilience',
 				href: 'https://ziontechgroup.com/services'
+			}
+			,
+			{
+				id: 'data-contracts-platform',
+				title: 'Data Contracts Platform',
+				description: 'Define and enforce data contracts across services with schema checks, drift alerts, and lineage.',
+				category: 'Cloud & DevOps',
+				price: '$149',
+				billing: 'month',
+				features: [
+					'Contract registry and versioning',
+					'CI gates and PR annotations',
+					'Drift detection and alerts',
+					'Lineage and impact analysis',
+					'Connectors for CI/CD and warehouses'
+				],
+				ctaLabel: 'Enforce Contracts',
+				href: 'https://ziontechgroup.com/services/data-contracts-platform'
 			}
 		]
 	},
