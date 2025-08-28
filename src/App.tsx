@@ -18,7 +18,7 @@ import { PWAUpdater } from './components/PWAUpdater';
 import { ThemeToggle } from './components/ThemeToggle';
 import { ToastContainer } from './components/ui/Toast';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import MobileExperienceEnhancer from './components/MobileExperienceEnhancer';
 import { EnhancedSEO } from './components/EnhancedSEO';
 import { ServiceWorker } from './components/ServiceWorker';
 import { FloatingActionButton } from './components/FloatingActionButton';

@@ -4,7 +4,6 @@ import {
   Smartphone, 
   Tablet, 
   Monitor, 
-  Touch, 
   RotateCcw, 
   Wifi, 
   Battery, 
@@ -17,7 +16,6 @@ import {
   Smartphone as PhoneIcon,
   Wifi as WifiIcon,
   Battery as BatteryIcon,
-  Touch as TouchIcon,
   RotateCcw as RotateIcon,
   Zap as ZapIcon,
   Settings as SettingsIcon,
@@ -29,7 +27,8 @@ import {
   Sun,
   Maximize,
   Minimize,
-  Smartphone as MobileIcon
+  Smartphone as MobileIcon,
+  Hand
 } from 'lucide-react';
 
 interface MobileMetrics {
@@ -476,15 +475,15 @@ const MobileExperienceEnhancer: React.FC<{ enabled?: boolean }> = ({ enabled = t
                           </div>
                         </div>
 
-                        <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <Touch className="w-4 h-4 text-purple-500" />
-                            <span className="text-sm text-gray-600 dark:text-gray-400">Memory</span>
-                          </div>
-                          <div className="text-lg font-bold text-gray-900 dark:text-white">
-                            {metrics.memoryUsage.toFixed(0)}%
-                          </div>
-                        </div>
+                                                 <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                           <div className="flex items-center space-x-2 mb-2">
+                             <Hand className="w-4 h-4 text-purple-500" />
+                             <span className="text-sm text-gray-600 dark:text-gray-400">Memory</span>
+                           </div>
+                           <div className="text-lg font-bold text-gray-900 dark:text-white">
+                             {metrics.memoryUsage.toFixed(0)}%
+                           </div>
+                         </div>
                       </div>
                     </div>
 
@@ -522,7 +521,7 @@ const MobileExperienceEnhancer: React.FC<{ enabled?: boolean }> = ({ enabled = t
                             onChange={(e) => setSettings(prev => ({ ...prev, touchOptimization: e.target.checked }))}
                             className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
                           />
-                          <Touch className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                          <Hand className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Touch Optimization</span>
                         </label>
 
@@ -533,7 +532,7 @@ const MobileExperienceEnhancer: React.FC<{ enabled?: boolean }> = ({ enabled = t
                             onChange={(e) => setSettings(prev => ({ ...prev, gestureSupport: e.target.checked }))}
                             className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
                           />
-                          <Touch className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                          <Hand className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Gesture Support</span>
                         </label>
 
