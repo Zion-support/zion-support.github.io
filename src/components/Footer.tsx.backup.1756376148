@@ -18,6 +18,20 @@ import {
   Zap,
   Brain,
   Cloud,
+<<<<<<< HEAD
+  Lock,
+  Eye,
+  Atom,
+  Network,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  ExternalLink,
+  MessageCircle,
+  Server,
+  ShoppingCart
+=======
   Building,
   Users,
   FileText,
@@ -56,6 +70,7 @@ import {
   Bot,
   Workflow,
   Truck
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -128,11 +143,20 @@ export function Footer() {
       links: [
         { name: 'Enhanced 2025 Services', path: '/enhanced-services-showcase-2025', icon: Star, featured: true },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+<<<<<<< HEAD
+        { name: 'AI Legal Automation', path: '/services/ai-legal-document-automation', icon: Shield },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics-platform', icon: Heart },
+        { name: 'AI Financial Trading', path: '/services/ai-financial-trading-platform', icon: DollarSign },
+        { name: 'AI Content Creation', path: '/services/ai-content-creation-suite', icon: FileText },
+        { name: 'AI Supply Chain', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
+        { name: 'AI Project Management', path: '/services/ai-project-management-platform', icon: Target }
+=======
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
         { name: 'AI Customer Support', path: '/services/ai-customer-support', icon: MessageCircle },
         { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield }
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
       ]
     },
     {
@@ -142,6 +166,13 @@ export function Footer() {
         { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom, featured: true },
         { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
+<<<<<<< HEAD
+        { name: 'Space Technology', path: '/services/space-tech', icon: Satellite },
+        { name: 'Digital Twin Services', path: '/services/digital-twin-services', icon: Eye },
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
+        { name: 'Green IT Solutions', path: '/services/green-it', icon: Leaf },
+        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock }
+=======
         { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
@@ -149,12 +180,23 @@ export function Footer() {
         { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: ShieldCheck },
         { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Lock },
         { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Heart }
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
       ]
     },
     {
       title: 'Business Solutions',
       icon: Building,
       links: [
+<<<<<<< HEAD
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
+        { name: 'Data Analytics Services', path: '/services/data-analytics-services', icon: BarChart3 },
+        { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+        { name: 'IT Consulting', path: '/services/it-consulting', icon: Cpu },
+        { name: 'Micro SaaS Solutions', path: '/services/micro-saas-solutions', icon: ShoppingCart },
+        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+        { name: 'Training & Support', path: '/training', icon: GraduationCap }
+=======
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
@@ -197,10 +239,13 @@ export function Footer() {
         { name: 'Case Studies', path: '/case-studies', icon: Award },
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Support', path: '/support', icon: MessageCircle }
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
       ]
     }
   ];
 
+<<<<<<< HEAD
+=======
   const quickLinks = [
     { name: 'Request Quote', path: '/request-quote', icon: MessageCircle },
     { name: 'Pricing', path: '/pricing', icon: DollarSign },
@@ -210,6 +255,7 @@ export function Footer() {
     { name: 'Partners', path: '/partners', icon: Users }
   ];
 
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
@@ -218,6 +264,13 @@ export function Footer() {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
   ];
 
+<<<<<<< HEAD
+  const quickActions = [
+    { name: 'Request Quote', path: '/request-quote', icon: MessageCircle, primary: true },
+    { name: 'Schedule Demo', path: '/contact', icon: Video, primary: false },
+    { name: 'Support Portal', path: '/support', icon: HelpCircle, primary: false },
+    { name: 'Documentation', path: '/docs', icon: FileText, primary: false }
+=======
   const contactInfo = [
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
@@ -231,6 +284,7 @@ export function Footer() {
     { name: "Cookie Policy", path: "/cookies" },
     { name: "Sitemap", path: "/sitemap" },
     { name: "Accessibility", path: "/accessibility" }
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
   ];
 
   return (
@@ -272,6 +326,8 @@ export function Footer() {
               Leading the future of technology with cutting-edge AI solutions, quantum computing, 
               and innovative micro SAAS services. Transforming businesses through digital innovation.
             </p>
+<<<<<<< HEAD
+=======
             {/* Contact Info */}
             <div className="space-y-3">
               {contactInfo.map((contact) => (
@@ -286,6 +342,7 @@ export function Footer() {
               ))}
             </div>
           </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
 
             {/* Contact Info */}
             <div className="space-y-4 mb-6">
@@ -414,6 +471,27 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
+<<<<<<< HEAD
+              <Link to="/privacy" className="hover:text-cyan-400 transition-colors duration-300">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="hover:text-cyan-400 transition-colors duration-300">
+                Terms of Service
+              </Link>
+              <Link to="/accessibility" className="hover:text-cyan-400 transition-colors duration-300">
+                Accessibility
+              </Link>
+            </div>
+            
+            <div className="flex items-center space-x-4">
+              <span className="text-sm text-gray-400">Powered by</span>
+              <div className="flex items-center space-x-2">
+                <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                  <Zap className="w-3 h-3 text-white" />
+                </div>
+                <span className="text-sm font-medium text-white">Zion Tech</span>
+              </div>
+=======
               <div className="flex space-x-4">
                 {legal.map((item) => (
                   <Link
@@ -441,6 +519,7 @@ export function Footer() {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
             </div>
           </div>
         </div>

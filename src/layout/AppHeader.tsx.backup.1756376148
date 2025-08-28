@@ -37,11 +37,31 @@ export default function AppHeader() {
     { name: 'Careers', href: '/careers', current: false },
   ];
 
+<<<<<<< HEAD
+  // Organized services by category with 2028 updates
+=======
   // Organized services by category with proper routing
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
   const services = [
     // Featured & New Services
     { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true },
     { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
+<<<<<<< HEAD
+    { name: '2029 Services Overview', href: '/innovative-services-showcase-2029', icon: Star, description: 'Future of AI & Emerging Technologies', category: 'Featured', featured: true },
+    
+    // AI & Machine Learning
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
+    { name: 'AI Legal Automation', href: '/services/ai-legal-document-automation', icon: Shield, description: 'Legal document automation', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform', icon: Heart, description: 'Healthcare data analytics', category: 'AI & ML', color: 'from-red-500 to-pink-500' },
+    { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform', icon: DollarSign, description: 'Algorithmic trading platform', category: 'AI & ML', color: 'from-green-500 to-teal-500' },
+    { name: 'AI Content Creation', href: '/services/ai-content-creation-suite', icon: PenTool, description: 'Automated content generation', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain optimization', category: 'AI & ML', color: 'from-orange-500 to-red-500' },
+    { name: 'AI Project Management', href: '/services/ai-project-management-platform', icon: Target, description: 'Intelligent project management', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Automated support system', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics-platform', icon: BarChart3, description: 'Financial intelligence platform', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation-platform', icon: TrendingUp, description: 'Marketing campaign optimization', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: BookOpen, description: 'Autonomous research platform', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
+=======
     { name: '2025 Services Overview', href: '/comprehensive-services-showcase-2025', icon: Star, description: 'Comprehensive AI & Digital Solutions', category: 'Featured', featured: true },
     
     // AI & Machine Learning
@@ -54,6 +74,7 @@ export default function AppHeader() {
     { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: 'Intelligent support automation', category: 'AI & ML' },
     { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML' },
     { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: TrendingUp, description: 'Intelligent marketing workflows', category: 'AI & ML' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
     
     // Blockchain & Web3 2028
     { name: 'Blockchain & Web3 Platform', href: '/services/blockchain-web3-platform-2028', icon: Lock, description: 'Enterprise blockchain solutions', category: 'Blockchain & Web3', neon: true },
@@ -100,6 +121,15 @@ export default function AppHeader() {
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'Cloud & DevOps' },
     { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3, description: 'Financial operations automation', category: 'Cloud & DevOps' },
+<<<<<<< HEAD
+    { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Intelligent email automation', category: 'AI & ML' },
+    { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle, description: 'Mobile survey solutions', category: 'AI & ML' },
+    { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'Advanced compliance automation', category: 'AI & ML' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: PenTool, description: 'AI content creation studio', category: 'AI & ML' },
+    { name: 'Returns Management', href: '/services/returns-management', icon: Truck, description: 'Efficient returns processing', category: 'Business Solutions' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated email sequences', category: 'Business Solutions' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle, description: 'AI-powered transcription', category: 'AI & ML' },
+=======
     
     // Cybersecurity
     { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced security solutions', category: 'Cybersecurity' },
@@ -125,6 +155,7 @@ export default function AppHeader() {
     
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Comprehensive web analytics', category: 'Analytics' },
     { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'IT support management', category: 'IT Services' },
@@ -133,6 +164,10 @@ export default function AppHeader() {
     { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: Search, description: 'Machine learning SEO optimization', category: 'AI & ML' },
     { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'AI-powered candidate evaluation', category: 'AI & ML' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS' },
+<<<<<<< HEAD
+    { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA compliance', category: 'Cybersecurity' },
+    { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock, description: 'Web security hardening', category: 'Cybersecurity' },
+=======
     { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated email workflows', category: 'Micro SaaS' },
     { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle, description: 'Audio content processing', category: 'Micro SaaS' },
     
@@ -141,10 +176,21 @@ export default function AppHeader() {
     { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, description: 'Large-scale enterprise solutions', category: 'Industry Solutions' },
     { name: 'Financial Solutions', href: '/solutions/financial', icon: DollarSign, description: 'Financial technology services', category: 'Industry Solutions' },
     { name: 'Government Solutions', href: '/solutions/government', icon: Building, description: 'Public sector technology', category: 'Industry Solutions' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
   ];
 
   // Quick links for easy access
   const quickLinks = [
+<<<<<<< HEAD
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, neon: true },
+    { name: 'Blog', href: '/blog', icon: BookOpen, neon: true },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, neon: true },
+    { name: 'Partners', href: '/partners', icon: Users, neon: true },
+    { name: 'Careers', href: '/careers', icon: Star, neon: true },
+    { name: 'Documentation', href: '/docs', icon: BookOpen, neon: true },
+    { name: 'Support', href: '/support', icon: HelpCircle, neon: true },
+    { name: 'Status', href: '/status', icon: Gauge, neon: true },
+=======
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
@@ -153,6 +199,7 @@ export default function AppHeader() {
     { name: 'Help Center', href: '/help', icon: HelpCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Case Studies', href: '/case-studies', icon: Award },
+>>>>>>> origin/cursor/website-audit-and-enhancement-b2bc
   ];
 
   return (
