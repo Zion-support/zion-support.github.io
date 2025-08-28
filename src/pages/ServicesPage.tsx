@@ -30,70 +30,30 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon,
-<<<<<<< HEAD
-  Sparkles,
-  Target,
-  Award,
-  Lightbulb,
-  BarChart3,
-  Layers,
-  Cpu as CpuIcon,
-  Shield as ShieldIcon,
-  Brain as BrainIcon,
-  Rocket as RocketIcon,
-  Truck,
-  Scale,
-  Building
-=======
   Heart
->>>>>>> origin/clean-merge-website-fixes
 } from 'lucide-react';
 import SEO from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-<<<<<<< HEAD
-import { EXPANDED_MICRO_SAAS_SERVICES_2025 } from "@/data/expandedMicroSaasServices2025";
-import { SPECIALIZED_SERVICES_2025 } from "@/data/specializedServices2025";
-
-=======
 import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSolutions2025";
 import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
 import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
->>>>>>> origin/clean-merge-website-fixes
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState('all');
-
-  // Combine all services
-  const allServices = [
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...EXPANDED_MICRO_SAAS_SERVICES_2025,
-    ...SPECIALIZED_SERVICES_2025
-  ];
-
-=======
->>>>>>> origin/clean-merge-website-fixes
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-<<<<<<< HEAD
-=======
     { id: 'ai-finance', name: 'AI & Finance', icon: TrendingUp, color: 'from-zion-purple to-zion-blue' },
     { id: 'ai-legal', name: 'AI & Legal', icon: Shield, color: 'from-zion-blue to-zion-cyan' },
     { id: 'ai-healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-zion-cyan to-zion-green' },
->>>>>>> origin/clean-merge-website-fixes
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
     { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-<<<<<<< HEAD
-=======
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
->>>>>>> origin/clean-merge-website-fixes
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
@@ -119,29 +79,6 @@ export default function ServicesPage() {
     { id: 'newest', name: 'Newest' },
     { id: 'popular', name: 'Most Popular' }
   ];
-<<<<<<< HEAD
-
-  const tabs = [
-    { id: 'all', name: 'All Services', count: allServices.length },
-    { id: 'micro-saas', name: 'Micro SAAS', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length },
-    { id: 'expanded', name: 'Expanded Services', count: EXPANDED_MICRO_SAAS_SERVICES_2025.length },
-    { id: 'specialized', name: 'Specialized', count: SPECIALIZED_SERVICES_2025.length }
-  ];
-
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-
-    const matchesCategory = selectedCategory === 'all' ||
-                           service.category.toLowerCase().includes(selectedCategory);
-
-    const matchesPrice = selectedPriceRange === 'all' ||
-                        (selectedPriceRange === 'budget' && service.price <= 1000) ||
-                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
-                        (selectedPriceRange === 'enterprise' && service.price > 5000);
-
-=======
   // Combine all services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
@@ -162,7 +99,6 @@ export default function ServicesPage() {
                         (selectedPriceRange === 'budget' && service.price <= 1000) ||
                         (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
                         (selectedPriceRange === 'enterprise' && service.price > 5000);
->>>>>>> origin/clean-merge-website-fixes
     return matchesSearch && matchesCategory && matchesPrice;
   });
   // Sort services
@@ -186,20 +122,6 @@ export default function ServicesPage() {
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
-<<<<<<< HEAD
-
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
-      case 'Cutting-edge':
-        return 'bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30';
-      case 'Advanced':
-        return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30';
-      default:
-        return 'bg-zion-blue/20 text-zion-blue border-zion-blue/30';
-    }
-  };
-
-=======
   // Get category statistics
   const getCategoryStats = () => {
     const stats: { [key: string]: number } = {};
@@ -210,7 +132,6 @@ export default function ServicesPage() {
     return stats;
   };
   const categoryStats = getCategoryStats();
->>>>>>> origin/clean-merge-website-fixes
   return (
     <>
       <SEO
@@ -219,10 +140,6 @@ export default function ServicesPage() {
         canonical="/services"
         url="https://ziontechgroup.com/services"
       />
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-merge-website-fixes
       {/* Hero Section */}
       <section className="bg-futuristic min-h-[70vh] flex items-center relative overflow-hidden">
         {/* Enhanced animated background elements */}
@@ -232,13 +149,6 @@ export default function ServicesPage() {
           <div className="absolute top-1/2 left-1/2 w-24 h-24 border border-zion-blue rounded-full animate-pulse delay-2000 float-slow"></div>
           <div className="absolute top-40 right-40 w-16 h-16 border border-zion-cyan rounded-full animate-pulse delay-3000 float-fast"></div>
         </div>
-<<<<<<< HEAD
-
-        {/* Neon grid background */}
-        <div className="absolute inset-0 bg-neon-grid opacity-5"></div>
-
-=======
->>>>>>> origin/clean-merge-website-fixes
         <div className="container-responsive relative z-10">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -267,10 +177,6 @@ export default function ServicesPage() {
               Transform your business with cutting-edge technology solutions. From AI-powered analytics to quantum computing,
               discover the future of business technology with our comprehensive micro SAAS platform.
             </p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-merge-website-fixes
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative group">
@@ -293,11 +199,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
-=======
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
->>>>>>> origin/clean-merge-website-fixes
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div
@@ -306,11 +208,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-<<<<<<< HEAD
-                <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}+</div>
-=======
                 <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length - 1}</div>
->>>>>>> origin/clean-merge-website-fixes
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div
@@ -326,37 +224,6 @@ export default function ServicesPage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-
-      {/* Service Tabs */}
-      <section className="py-8 bg-zion-slate-dark/50 border-b border-zion-cyan/20">
-        <div className="container-responsive">
-          <motion.div 
-            className="flex flex-wrap gap-2 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
-                  activeTab === tab.id
-                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
-                    : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white'
-                }`}
-              >
-                {tab.name}
-                <span className="px-2 py-1 bg-white/20 rounded-full text-xs">{tab.count}</span>
-              </button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-=======
->>>>>>> origin/clean-merge-website-fixes
       {/* Filters and Categories */}
       <section className="py-12 bg-zion-slate-dark/50">
         <div className="container-responsive">
@@ -418,11 +285,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <div className="text-zion-slate-light">
-<<<<<<< HEAD
-              Showing {sortedServices.length} of {currentServices.length} services
-=======
               Showing {sortedServices.length} of {allServices.length} services
->>>>>>> origin/clean-merge-website-fixes
             </div>
           </motion.div>
         </div>
@@ -462,17 +325,9 @@ export default function ServicesPage() {
                           <div className="text-sm text-zion-slate-light">per month</div>
                         </div>
                       </div>
-<<<<<<< HEAD
-
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                         {service.title}
                       </h3>
-
-=======
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                        {service.title}
-                      </h3>
->>>>>>> origin/clean-merge-website-fixes
                       <p className="text-zion-slate-light leading-relaxed">
                         {service.description}
                       </p>
@@ -530,10 +385,6 @@ export default function ServicesPage() {
                           <span>{service.supportLevel}</span>
                         </div>
                       </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-merge-website-fixes
                       <Link
                         to={`/services/${service.id}`}
                         className="btn-cyber px-4 py-2 text-sm"
@@ -572,9 +423,6 @@ export default function ServicesPage() {
           </AnimatePresence>
         </div>
       </section>
-<<<<<<< HEAD
-
-=======
       {/* Service Categories Overview */}
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
         <div className="container-responsive">
@@ -721,7 +569,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
->>>>>>> origin/clean-merge-website-fixes
       {/* Specialized Services Section */}
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
         <div className="container-responsive">
@@ -751,21 +598,6 @@ export default function ServicesPage() {
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Rocket className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
-
-                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                  {service.title}
-                </h3>
-
-                <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-
-                <div className="text-zion-cyan font-bold mb-4">
-                  {service.marketPrice}
-                </div>
-
-=======
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {service.title}
                 </h3>
@@ -775,7 +607,6 @@ export default function ServicesPage() {
                 <div className="text-zion-cyan font-bold mb-4">
                   {service.marketPrice}
                 </div>
->>>>>>> origin/clean-merge-website-fixes
                 <Link
                   to={`/services/${service.id}`}
                   className="btn-neon w-full"
@@ -786,15 +617,10 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-
-        <div className="container-responsive text-center relative z-10">
-=======
       </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive text-center">
->>>>>>> origin/clean-merge-website-fixes
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -807,10 +633,6 @@ export default function ServicesPage() {
               Get in touch with our technology experts to discuss your specific needs and discover
               how our innovative solutions can drive your business forward.
             </p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-merge-website-fixes
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -819,10 +641,6 @@ export default function ServicesPage() {
                 <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                 Get Free Consultation
               </Link>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-merge-website-fixes
               <a
                 href="tel:+13024640950"
                 className="btn-neon px-8 py-4 text-lg group"
@@ -831,10 +649,6 @@ export default function ServicesPage() {
                 Call Now: +1 302 464 0950
               </a>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-merge-website-fixes
             <div className="mt-8 text-zion-slate-light">
               <p className="mb-2">📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>📧 <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>

@@ -2,9 +2,6 @@
 
 import { execSync } from 'child_process';
 import fs from 'fs';
-<<<<<<< HEAD
-import path from 'path'; // Added missing import for path
-=======
 import path from 'path';
 import { fileURLToPath } from 'url';
 

@@ -3,8 +3,6 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);

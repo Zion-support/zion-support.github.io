@@ -1,16 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Globe,
-  Database,
-  Smartphone,
-=======
 import { 
   Brain, 
   Cloud, 
@@ -19,7 +9,6 @@ import {
   Globe, 
   Database, 
   Smartphone, 
->>>>>>> origin/clean-merge-website-fixes
   Rocket,
   Cpu,
   Network,
@@ -77,29 +66,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
       case 'price-high':
         filtered = [...filtered].sort((a, b) => b.price - a.price);
         break;
-<<<<<<< HEAD
-      case 'roi':
-        filtered = [...filtered].sort((a, b) => {
-          const aRoi = parseInt(a.roi.split('%')[0]);
-          const bRoi = parseInt(b.roi.split('%')[0]);
-          return bRoi - aRoi;
-        });
-        break;
-      case 'delivery':
-        filtered = [...filtered].sort((a, b) => {
-          const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]);
-          const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]);
-          return aWeeks - bWeeks;
-        });
-        break;
-      default: // innovation
-        filtered = [...filtered].sort((a, b) => {
-          const innovationOrder = ['Revolutionary', 'Breakthrough', 'Advanced'];
-          const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]);
-          const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
-          return aIndex - bIndex;
-        });
-=======
       case 'innovation':
         filtered = [...filtered].sort((a, b) => {
           const innovationLevels = { 'Revolutionary': 4, 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Emerging': 0 };
@@ -115,7 +81,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
         break;
       default:
         break;
->>>>>>> origin/clean-merge-website-fixes
     }
 
     return filtered;
@@ -125,16 +90,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
     switch (category) {
       case 'AI & Automation': return <Brain className="w-6 h-6" />;
       case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
-<<<<<<< HEAD
-      case 'Blockchain & Web3': return <Globe className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'IoT & Edge Computing': return <Network className="w-6 h-6" />;
-      case 'Metaverse & AR/VR': return <Smartphone className="w-6 h-6" />;
-      case 'Robotics & Automation': return <Rocket className="w-6 h-6" />;
-      case 'Biotechnology': return <Database className="w-6 h-6" />;
-      case 'Space Technology': return <Zap className="w-6 h-6" />;
-      case 'Green Technology': return <BarChart3 className="w-6 h-6" />;
-=======
       case 'Blockchain': return <Network className="w-6 h-6" />;
       case 'Cybersecurity': return <Shield className="w-6 h-6" />;
       case 'IoT & Edge Computing': return <Smartphone className="w-6 h-6" />;
@@ -142,24 +97,10 @@ export default function UltimateInnovativeServicesShowcase2025() {
       case 'Robotics & Automation': return <Rocket className="w-6 h-6" />;
       case 'Biotechnology': return <Database className="w-6 h-6" />;
       case 'Space Technology': return <Zap className="w-6 h-6" />;
->>>>>>> origin/clean-merge-website-fixes
       default: return <Star className="w-6 h-6" />;
     }
   };
 
-<<<<<<< HEAD
-  const getInnovationBadge = (level: string) => {
-    const type = level.split(' - ')[0];
-    switch (type) {
-      case 'Revolutionary':
-        return <span className="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">🚀 Revolutionary</span>;
-      case 'Breakthrough':
-        return <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">💡 Breakthrough</span>;
-      case 'Advanced':
-        return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>;
-      default:
-        return <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>;
-=======
   const getInnovationColor = (level: string) => {
     switch (level) {
       case 'Revolutionary': return 'text-red-500 bg-red-50 border-red-200';
@@ -168,54 +109,12 @@ export default function UltimateInnovativeServicesShowcase2025() {
       case 'Advanced': return 'text-green-500 bg-green-50 border-green-200';
       case 'Emerging': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
       default: return 'text-gray-500 bg-gray-50 border-gray-200';
->>>>>>> origin/clean-merge-website-fixes
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header */}
-<<<<<<< HEAD
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
-            >
-              Ultimate Innovative Services 2025
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
-            >
-              Discover the future of technology with our revolutionary micro SAAS services.
-              From AI and quantum computing to space technology and biotechnology.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-              className="mt-6 flex flex-wrap justify-center gap-4"
-            >
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span>10 Revolutionary Services</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <TrendingUp className="w-5 h-5 text-blue-500" />
-                <span>300-1000% ROI</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <Award className="w-5 h-5 text-yellow-500" />
-                <span>Global Innovation Leader</span>
-              </div>
-            </motion.div>
-          </div>
-=======
       <div className="bg-white shadow-lg border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <motion.div
@@ -231,24 +130,15 @@ export default function UltimateInnovativeServicesShowcase2025() {
               Discover the most cutting-edge, revolutionary micro SAAS services that will transform your business and give you a competitive advantage in the future.
             </p>
           </motion.div>
->>>>>>> origin/clean-merge-website-fixes
         </div>
       </div>
 
       {/* Filters and Search */}
-<<<<<<< HEAD
-      <div className="bg-white shadow-sm border-b sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col lg:flex-row gap-4 items-center">
-            {/* Search */}
-            <div className="relative flex-1 max-w-md">
-=======
       <div className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Search */}
             <div className="relative">
->>>>>>> origin/clean-merge-website-fixes
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -260,46 +150,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
             </div>
 
             {/* Category Filter */}
-<<<<<<< HEAD
-            <div className="flex gap-2">
-              <select
-                value={selectedCategory}
-                onChange={(e) => {
-                  setSelectedCategory(e.target.value);
-                  setSelectedSubcategory('all');
-                }}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="all">All Categories</option>
-                {SERVICE_CATEGORIES.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-              </select>
-
-              <select
-                value={selectedSubcategory}
-                onChange={(e) => setSelectedSubcategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="all">All Subcategories</option>
-                {selectedCategory !== 'all' && SERVICE_SUBCATEGORIES[selectedCategory as keyof typeof SERVICE_SUBCATEGORIES]?.map(subcategory => (
-                  <option key={subcategory} value={subcategory}>{subcategory}</option>
-                ))}
-              </select>
-
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="innovation">Sort by Innovation</option>
-                <option value="roi">Sort by ROI</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="delivery">Fastest Delivery</option>
-              </select>
-            </div>
-=======
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
@@ -334,61 +184,18 @@ export default function UltimateInnovativeServicesShowcase2025() {
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
             </select>
->>>>>>> origin/clean-merge-website-fixes
           </div>
         </div>
       </div>
 
       {/* Services Grid */}
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
->>>>>>> origin/clean-merge-website-fixes
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-            >
-              {/* Service Header */}
-              <div className="p-6 border-b border-gray-100">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
-                      {getCategoryIcon(service.category)}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 line-clamp-2">
-                        {service.title}
-                      </h3>
-                      <p className="text-sm text-gray-500">{service.category}</p>
-                    </div>
-                  </div>
-                  {getInnovationBadge(service.innovationLevel)}
-                </div>
-
-                <p className="text-gray-600 text-sm line-clamp-3 mb-4">
-                  {service.description}
-                </p>
-
-                {/* Price and ROI */}
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-blue-600">
-                    ${service.price.toLocaleString()}
-                    <span className="text-sm font-normal text-gray-500">/month</span>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm text-gray-500">ROI</div>
-                    <div className="text-lg font-semibold text-green-600">{service.roi}</div>
-                  </div>
-                </div>
-=======
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
@@ -408,25 +215,10 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
->>>>>>> origin/clean-merge-website-fixes
               </div>
 
               {/* Service Details */}
               <div className="p-6">
-<<<<<<< HEAD
-                {/* Key Features */}
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>
-                  <div className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                        <span className="line-clamp-1">{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 3 && (
-                      <div className="text-sm text-blue-600 font-medium">
-=======
                 {/* Pricing */}
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -459,7 +251,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     ))}
                     {service.features.length > 3 && (
                       <div className="text-xs text-blue-600 font-medium">
->>>>>>> origin/clean-merge-website-fixes
                         +{service.features.length - 3} more features
                       </div>
                     )}
@@ -468,21 +259,12 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
                 {/* Benefits */}
                 <div className="mb-4">
-<<<<<<< HEAD
-                  <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Benefits</h4>
-                  <div className="space-y-1">
-                    {service.benefits.slice(0, 2).map((benefit, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                        <TrendingUp className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                        <span className="line-clamp-1">{benefit}</span>
-=======
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Benefits</h4>
                   <div className="space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <Award className="w-4 h-4 text-yellow-500" />
                         <span className="text-xs text-gray-600">{benefit}</span>
->>>>>>> origin/clean-merge-website-fixes
                       </div>
                     ))}
                   </div>
@@ -490,16 +272,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
                 {/* Technical Specs */}
                 {service.technicalSpecs && (
-<<<<<<< HEAD
-                  <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Technical Specs</h4>
-                    <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
-                      <div>
-                        <span className="font-medium">Uptime:</span> {service.technicalSpecs.uptime}
-                      </div>
-                      <div>
-                        <span className="font-medium">APIs:</span> {service.technicalSpecs.apiEndpoints}
-=======
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-700 mb-2">Technical Specs</h4>
                     <div className="grid grid-cols-2 gap-2 text-xs">
@@ -510,48 +282,11 @@ export default function UltimateInnovativeServicesShowcase2025() {
                       <div>
                         <span className="text-gray-500">Uptime:</span>
                         <span className="font-medium ml-1">{service.technicalSpecs.uptime}</span>
->>>>>>> origin/clean-merge-website-fixes
                       </div>
                     </div>
                   </div>
                 )}
 
-<<<<<<< HEAD
-                {/* Delivery and Support */}
-                <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    <span>{service.estimatedDelivery}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Users className="w-4 h-4" />
-                    <span>{service.supportLevel.split(' ')[0]}</span>
-                  </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex gap-2">
-                  <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
-                    <Phone className="w-4 h-4" />
-                    Contact Sales
-                  </button>
-                  <button className="px-4 py-2 border border-gray-300 hover:border-gray-400 rounded-lg transition-colors">
-                    <ExternalLink className="w-4 h-4" />
-                  </button>
-                </div>
-
-                {/* Contact Info */}
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <div className="flex items-center gap-1">
-                      <Mail className="w-3 h-3" />
-                      <span>{service.contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Phone className="w-3 h-3" />
-                      <span>{service.contactInfo.phone}</span>
-                    </div>
-=======
                 {/* Contact Info */}
                 <div className="border-t border-gray-100 pt-4">
                   <div className="flex items-center justify-between">
@@ -572,7 +307,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                       Get Started
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
->>>>>>> origin/clean-merge-website-fixes
                   </div>
                 </div>
               </div>
@@ -582,19 +316,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
         {/* No Results */}
         {filteredServices.length === 0 && (
-<<<<<<< HEAD
-          <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">
-              <Search className="w-16 h-16 mx-auto" />
-            </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No services found</h3>
-            <p className="text-gray-500">Try adjusting your search criteria or filters.</p>
-          </div>
-        )}
-      </div>
-
-      {/* Contact Section */}
-=======
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -618,7 +339,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
       </div>
 
       {/* Contact CTA */}
->>>>>>> origin/clean-merge-website-fixes
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
@@ -626,31 +346,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-              Join the future of technology with our revolutionary services.
-              Get in touch to discuss how we can help you achieve unprecedented growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={`tel:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.phone}`}
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call Now
-              </a>
-              <a
-                href={`mailto:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.email}`}
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
-              >
-                <Mail className="w-5 h-5" />
-                Email Us
-              </a>
-            </div>
-            <div className="mt-8 text-blue-100">
-              <p className="text-lg font-medium mb-2">Zion Tech Group</p>
-              <p className="text-sm">364 E Main St STE 1008, Middletown DE 19709</p>
-              <p className="text-sm">https://ziontechgroup.com</p>
-=======
               Contact our team of experts to discuss how these innovative services can revolutionize your operations and give you a competitive edge.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -675,7 +370,6 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 Schedule a Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
->>>>>>> origin/clean-merge-website-fixes
             </div>
           </div>
         </div>

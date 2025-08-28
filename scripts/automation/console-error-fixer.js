@@ -3,8 +3,6 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -20,13 +18,6 @@ async function runConsoleErrorFixer() {
   try {
     console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
     
-<<<<<<< HEAD
-    // Scan for errors
-    const errors = await scanForErrors();
-    
-    if (errors.length === 0) {
-      console.log('✅ No console errors found');
-=======
     // Build the project first
     console.log('🏗️ Building project for console error detection...');
     try {

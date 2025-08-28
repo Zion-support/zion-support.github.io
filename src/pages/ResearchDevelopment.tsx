@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -16,7 +14,6 @@ import {
   Target,
   BarChart3
 } from 'lucide-react';
->>>>>>> origin/clean-merge-website-fixes
 
 export default function ResearchDevelopment() {
   const researchAreas = [
@@ -140,13 +137,6 @@ export default function ResearchDevelopment() {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
-      <div className="max-w-2xl text-center">
-        <h1 className="text-4xl font-bold mb-4">Research & Development</h1>
-        <p className="text-slate-300">Discover our R&D initiatives across AI, quantum computing, and emerging tech.</p>
-      </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate pt-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -382,7 +372,6 @@ export default function ResearchDevelopment() {
           </motion.div>
         </div>
       </section>
->>>>>>> origin/clean-merge-website-fixes
     </div>
   );
 }

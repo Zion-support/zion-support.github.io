@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-import { Cloud, Code, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Docker, Kubernetes } from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -24,7 +19,6 @@ import {
   Clock,
   Award
 } from 'lucide-react';
->>>>>>> origin/clean-merge-website-fixes
 
 export default function CloudDevOps() {
   const services = [
@@ -189,17 +183,6 @@ export default function CloudDevOps() {
       ]
     },
     {
-<<<<<<< HEAD
-      company: 'StartupXYZ',
-      industry: 'SaaS',
-      challenge: 'Need for rapid scaling and cost optimization',
-      solution: 'Multi-cloud strategy with infrastructure as code and monitoring',
-      results: [
-        '10x faster scaling capability',
-        '50% cost optimization',
-        'Improved developer productivity'
-      ]
-=======
       icon: Cpu,
       title: "Container Orchestration",
       description: "Manage containerized applications at scale with Kubernetes",
@@ -257,82 +240,10 @@ export default function CloudDevOps() {
       icon: Shield,
       title: "Enhanced Security",
       description: "Built-in security controls and compliance automation"
->>>>>>> origin/clean-merge-website-fixes
     }
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Cloud DevOps Services - Zion Tech Group"
-        description="Transform your infrastructure with our comprehensive Cloud DevOps services including cloud migration, automation, containerization, and security solutions."
-      />
-      
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10"></div>
-        <div className="container-responsive relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Cloud
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-green-500 bg-clip-text text-transparent"> DevOps</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Accelerate your digital transformation with modern cloud infrastructure, intelligent automation, 
-              and DevOps best practices that drive efficiency and innovation.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/request-quote"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
-              >
-                Get Cloud Assessment
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Cloud DevOps Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From cloud migration to continuous deployment, we provide end-to-end solutions that 
-              modernize your infrastructure and accelerate your development cycles.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={service.name}
-                className="group p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50"
-              >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                
-                <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-cyan-400">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-=======
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate pt-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -426,65 +337,17 @@ export default function CloudDevOps() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2" />
->>>>>>> origin/clean-merge-website-fixes
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-
-                <div className="space-y-3 mb-6">
-                  <h4 className="font-semibold text-green-400">Key Benefits:</h4>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <Zap className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <Link
-                  to="/request-quote"
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-=======
               </motion.div>
->>>>>>> origin/clean-merge-website-fixes
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Technology Stack */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Technology Stack
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies and tools to deliver robust, scalable, and secure solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 mx-auto mb-4 bg-slate-700/50 rounded-xl flex items-center justify-center group-hover:bg-slate-700 transition-colors duration-300">
-                  <tech.icon className="w-10 h-10 text-blue-400" />
-                </div>
-                <h3 className="font-semibold text-white text-sm mb-1">{tech.name}</h3>
-                <p className="text-xs text-gray-400">{tech.category}</p>
-              </div>
-=======
       {/* Cloud Platforms */}
       <section className="py-20 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-6">
@@ -531,108 +394,11 @@ export default function CloudDevOps() {
                   </div>
                 </div>
               </motion.div>
->>>>>>> origin/clean-merge-website-fixes
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Case Studies */}
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Success Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how we've transformed organizations with our Cloud DevOps solutions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div key={index} className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{study.company}</h3>
-                  <p className="text-sm text-blue-400 mb-1">{study.industry}</p>
-                </div>
-                
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <h4 className="font-semibold text-cyan-400 mb-2">Challenge:</h4>
-                    <p className="text-sm text-gray-300">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-green-400 mb-2">Solution:</h4>
-                    <p className="text-sm text-gray-300">{study.solution}</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-white mb-3">Results:</h4>
-                  <ul className="space-y-2">
-                    {study.results.map((result, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        {result}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container-responsive">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Our Cloud DevOps Process
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A proven methodology that ensures successful cloud transformation and DevOps implementation
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              {
-                step: '01',
-                title: 'Assessment & Planning',
-                description: 'Evaluate current infrastructure and plan migration strategy',
-                icon: BarChart3
-              },
-              {
-                step: '02',
-                title: 'Design & Architecture',
-                description: 'Design scalable cloud architecture and DevOps workflows',
-                icon: Code
-              },
-              {
-                step: '03',
-                title: 'Implementation',
-                description: 'Execute migration and implement automation tools',
-                icon: Zap
-              },
-              {
-                step: '04',
-                title: 'Optimization',
-                description: 'Monitor performance and continuously optimize',
-                icon: RefreshCw
-              }
-            ].map((phase, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
-                  {phase.step}
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
-                <p className="text-gray-300">{phase.description}</p>
-              </div>
-=======
       {/* DevOps Tools */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -701,40 +467,12 @@ export default function CloudDevOps() {
                   </div>
                 </div>
               </motion.div>
->>>>>>> origin/clean-merge-website-fixes
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20">
-        <div className="container-responsive">
-          <div className="bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10 rounded-3xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our Cloud DevOps solutions can modernize your infrastructure, 
-              accelerate your development cycles, and drive operational excellence.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/request-quote"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
-              >
-                Schedule Free Consultation
-              </Link>
-            </div>
-          </div>
-=======
       <section className="py-20 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.h2 
@@ -769,15 +507,10 @@ export default function CloudDevOps() {
               Schedule Consultation
             </button>
           </motion.div>
->>>>>>> origin/clean-merge-website-fixes
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default CloudDevOps;
->>>>>>> origin/clean-merge-website-fixes

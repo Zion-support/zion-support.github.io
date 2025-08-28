@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 
 interface Particle {
@@ -12,7 +10,6 @@ interface Particle {
   opacity: number;
   color: string;
 }
->>>>>>> origin/clean-merge-website-fixes
 
 interface FuturisticAnimatedBackgroundProps {
   variant?: 'default' | 'minimal' | 'intense';
@@ -40,32 +37,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-<<<<<<< HEAD
-    // Add enhanced grid background
-    const gridCanvas = document.createElement('canvas');
-    const gridCtx = gridCanvas.getContext('2d');
-    if (gridCtx) {
-      gridCanvas.width = canvas.width;
-      gridCanvas.height = canvas.height;
-      
-      // Draw enhanced grid
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
-      gridCtx.lineWidth = 1;
-      
-      for (let x = 0; x < gridCanvas.width; x += 40) {
-        gridCtx.beginPath();
-        gridCtx.moveTo(x, 0);
-        gridCtx.lineTo(x, gridCanvas.height);
-        gridCtx.stroke();
-      }
-      
-      for (let y = 0; y < gridCanvas.height; y += 40) {
-        gridCtx.beginPath();
-        gridCtx.moveTo(0, y);
-        gridCtx.lineTo(gridCanvas.width, y);
-        gridCtx.stroke();
-      }
-=======
     // Initialize particles based on intensity
     const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 150 : 300;
     const particles: Particle[] = [];
@@ -80,7 +51,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         opacity: Math.random() * 0.8 + 0.2,
         color: ['#22ddd2', '#8c15e9', '#2e73ea'][Math.floor(Math.random() * 3)]
       });
->>>>>>> origin/clean-merge-website-fixes
     }
 
     // Animation variables
@@ -126,72 +96,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-<<<<<<< HEAD
-      // Create new particles
-      if (particles.length < 100) {
-        createParticle();
-      }
-
-      // Update and draw particles
-      for (let i = particles.length - 1; i >= 0; i--) {
-        const particle = particles[i];
-        
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life += 1;
-
-        // Remove dead particles
-        if (particle.life > particle.maxLife) {
-          particles.splice(i, 1);
-          continue;
-        }
-
-        // Draw particle with glow effect
-        const alpha = 1 - (particle.life / particle.maxLife);
-        const size = particle.size * (1 - alpha * 0.5);
-
-        // Outer glow
-        ctx.shadowColor = particle.color;
-        ctx.shadowBlur = 20;
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = alpha * 0.3;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, size * 3, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Inner particle
-        ctx.shadowBlur = 10;
-        ctx.globalAlpha = alpha;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      // Draw grid pattern
-      ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)';
-      ctx.lineWidth = 1;
-      ctx.globalAlpha = 0.3;
-      
-      const gridSize = 50;
-      const offsetX = (time * 10) % gridSize;
-      const offsetY = (time * 5) % gridSize;
-
-      // Vertical lines
-      for (let x = offsetX; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
-      // Horizontal lines
-      for (let y = offsetY; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-=======
       // Draw grid only for default and intense variants
       if (variant !== 'minimal') {
         ctx.strokeStyle = 'rgba(34, 221, 210, 0.1)';
@@ -211,7 +115,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
           ctx.lineTo(canvas.width, y);
           ctx.stroke();
         }
->>>>>>> origin/clean-merge-website-fixes
       }
 
       // Draw floating geometric shapes
@@ -264,9 +167,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         ctx.stroke();
       }
 
-<<<<<<< HEAD
-      animationId = requestAnimationFrame(animate);
-=======
         // Draw connections for intense variant
         if (intensity === 'high') {
           particles.forEach((otherParticle, otherIndex) => {
@@ -290,36 +190,19 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       });
 
       animationRef.current = requestAnimationFrame(animate);
->>>>>>> origin/clean-merge-website-fixes
     };
 
     animate();
 
     return () => {
-<<<<<<< HEAD
-      window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationId);
-=======
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', resizeCanvas);
->>>>>>> origin/clean-merge-website-fixes
     };
   }, [variant, intensity]);
 
   return (
-<<<<<<< HEAD
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03), transparent 60%)' }}
-    />
-  );
-};
-
-export default FuturisticAnimatedBackground;
-=======
     <div className="fixed inset-0 pointer-events-none z-0">
       <canvas
         ref={canvasRef}
@@ -363,4 +246,3 @@ export default FuturisticAnimatedBackground;
     </div>
   );
 };
->>>>>>> origin/clean-merge-website-fixes

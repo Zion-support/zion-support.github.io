@@ -1,43 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import NewsletterSection from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
-import { FloatingCTA } from "@/components/FloatingCTA";
-import { ServicesShowcase } from "@/components/ServicesShowcase";
-
-export default function Home() {
-  return (
-    <>
-      <SEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions"
-        description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
-        canonical="/"
-        url="https://ziontechgroup.com"
-      />
-      
-      <HeroSection />
-      <QuickAccess />
-      <FeatureCTAs />
-      <FeatureHighlights />
-      <CategoriesSection />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <ServicesShowcase />
-      <NewsletterSection />
-      <ITServiceRequestHero />
-      <FloatingCTA />
-    </>
-=======
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -475,6 +436,5 @@ export default function Home() {
         </div>
       </section>
     </div>
->>>>>>> origin/clean-merge-website-fixes
   );
 }
