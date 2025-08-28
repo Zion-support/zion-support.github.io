@@ -264,69 +264,7 @@ export function Footer() {
 
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
-    {
-      title: 'Company',
-      icon: Globe,
-      links: [
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Contact', path: '/contact', icon: Phone },
-        { name: 'Sitemap', path: '/sitemap', icon: Globe },
-        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
-        { name: 'Terms of Service', path: '/terms', icon: FileText }
-      ]
-    },
-    {
-      title: 'AI & Research Services',
-      icon: Brain,
-      links: [
-        { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
-        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
-        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
-        { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
-        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
-      ]
-    },
-    {
-      title: 'Advanced Technology',
-      icon: Cpu,
-      links: [
-        { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
-        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
-        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
-        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
-        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
-        { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Shield }
-      ]
-    },
-    {
-      title: 'Core Services',
-      icon: Zap,
-      links: [
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
-        { name: 'Micro SaaS Solutions', path: '/services/micro-saas-solutions', icon: Zap },
-        { name: 'All Services', path: '/services', icon: Zap }
-      ]
-    },
-    {
-      title: 'Innovation Hub',
-      icon: Sparkles,
-      links: [
-        { name: 'AI Solutions Hub', path: '/ai-solutions', icon: Brain },
-        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
-        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
-        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
-        { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
-        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network }
-      ]
-    }
-  ];
+
 
   const legal = [
     { name: "Privacy Policy", path: "/privacy" },
@@ -368,78 +306,7 @@ export function Footer() {
     }
   ];
 
-  const footerSections = [
-    {
-      title: 'Company',
-      icon: Globe,
-      links: [
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Partners', path: '/partners', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Solutions', path: '/solutions', icon: Target },
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
-        { name: 'Blog', path: '/blog', icon: Newspaper },
-        { name: 'Contact', path: '/contact', icon: Phone }
-      ]
-    },
-    {
-      title: 'AI & Research Services',
-      icon: Brain,
-      links: [
-        { name: 'Comprehensive Services Showcase 2025', path: '/comprehensive-services-showcase-2025', icon: Sparkles },
-        { name: 'AI Business Intelligence Platform', path: '/services/ai-business-intelligence-platform', icon: BarChart3 },
-        { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', icon: FileText },
-        { name: 'AI Customer Support Platform', path: '/services/ai-customer-support-platform', icon: MessageSquare },
-        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Cybersecurity Suite', path: '/services/ai-cybersecurity-suite', icon: Shield },
-        { name: 'AI Data Analytics & BI', path: '/services/ai-data-analytics-bi', icon: BarChart3 },
-        { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain }
-      ]
-    },
-    {
-      title: 'Advanced Technology',
-      icon: Cpu,
-      links: [
-        { name: 'Cloud Infrastructure & DevOps', path: '/services/cloud-infrastructure-devops', icon: Cloud },
-        { name: 'Cybersecurity & Compliance', path: '/services/cybersecurity-compliance', icon: Shield },
-        { name: 'Quantum Computing Services', path: '/services/quantum-computing-services', icon: Atom },
-        { name: 'Blockchain & Web3 Solutions', path: '/services/blockchain-web3-solutions', icon: Cpu },
-        { name: 'IoT & Edge Computing Services', path: '/services/iot-edge-computing-services', icon: Network },
-        { name: 'Digital Twin Solutions', path: '/services/digital-twin-solutions', icon: Eye },
-        { name: 'Space Technology Solutions', path: '/services/space-technology-solutions', icon: Satellite },
-        { name: 'Green IT Solutions', path: '/services/green-it-solutions', icon: Leaf },
-        { name: 'Zero Trust Network Architecture', path: '/services/zero-trust-network-architecture', icon: Lock }
-      ]
-    },
-    {
-      title: 'Core Services',
-      icon: Zap,
-      links: [
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
-        { name: 'IT Services', path: '/it-services', icon: Building },
-        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Zap },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Coins }
-      ]
-    },
-    {
-      title: 'Emerging Tech',
-      icon: Rocket,
-      links: [
-        { name: 'Metaverse Development', path: '/services/metaverse-development', icon: Gamepad2 },
-        { name: 'AI Content Creation', path: '/services/ai-content-creation', icon: FileText },
-        { name: 'AI HR Platform', path: '/services/ai-hr-platform', icon: Users },
-        { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
-        { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: Activity },
-        { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', icon: Atom },
-        { name: 'Edge Computing', path: '/services/edge-computing', icon: Network },
-        { name: 'Green Computing', path: '/services/green-computing', icon: Leaf }
-      ]
-    }
-  ];
+
 
   const contactInfo = [
     {
