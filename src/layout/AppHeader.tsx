@@ -44,6 +44,7 @@ export function AppHeader() {
   ];
 
   const services = [
+    // AI & Analytics Services
     { 
       name: 'AI & Analytics', 
       href: '/services', 
@@ -51,6 +52,14 @@ export function AppHeader() {
       description: 'Machine Learning & Data Science',
       featured: true,
       color: 'from-purple-500 to-cyan-500'
+    },
+    { 
+      name: 'AI & Business Intelligence', 
+      href: '/services', 
+      icon: BarChart3, 
+      description: 'Predictive Analytics & Insights',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
     },
     { 
       name: 'AI & Legal Tech', 
@@ -109,12 +118,94 @@ export function AppHeader() {
       color: 'from-blue-500 to-cyan-500'
     },
     { 
+      name: 'AI & Customer Support', 
+      href: '/services', 
+      icon: MessageSquare, 
+      description: 'Intelligent Support & Chatbots',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI & HR', 
+      href: '/services', 
+      icon: Users, 
+      description: 'Talent Management & Recruitment',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'AI & Content', 
+      href: '/services', 
+      icon: FileText, 
+      description: 'Content Creation & Generation',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI & Marketing', 
+      href: '/services', 
+      icon: TrendingUp, 
+      description: 'Marketing Automation & Analytics',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI & Project Management', 
+      href: '/services', 
+      icon: Target, 
+      description: 'Intelligent Project Coordination',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'AI & Workflow Automation', 
+      href: '/services', 
+      icon: Zap, 
+      description: 'Process Automation & Optimization',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    
+    // Advanced Technology Services
+    { 
       name: 'Quantum Computing', 
       href: '/services', 
       icon: Atom, 
       description: 'Quantum AI & Optimization',
       featured: true,
       color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Quantum AI Trading', 
+      href: '/services', 
+      icon: DollarSign, 
+      description: 'Quantum-Powered Financial Trading',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'Neural Interface', 
+      href: '/services', 
+      icon: Brain, 
+      description: 'Brain-Computer Interface',
+      featured: true,
+      color: 'from-pink-500 to-purple-500'
+    },
+    { 
+      name: 'Holographic Workspace', 
+      href: '/services', 
+      icon: Globe, 
+      description: '3D Collaboration & Visualization',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'BioDigital Twin', 
+      href: '/services', 
+      icon: Heart, 
+      description: 'Health Monitoring & Predictive Medicine',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
     },
     { 
       name: 'AI & Space Tech', 
@@ -125,12 +216,30 @@ export function AppHeader() {
       color: 'from-indigo-500 to-purple-500'
     },
     { 
+      name: 'Space Debris Tracking', 
+      href: '/services', 
+      icon: Rocket, 
+      description: 'Satellite Safety & Collision Avoidance',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    
+    // Infrastructure & Security Services
+    { 
       name: 'Cybersecurity', 
       href: '/services', 
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
       color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'AI Ethics Guardian', 
+      href: '/services', 
+      icon: ShieldCheck, 
+      description: 'Ethical AI & Governance',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
     },
     { 
       name: 'Cloud Services', 
@@ -140,6 +249,24 @@ export function AppHeader() {
       featured: true,
       color: 'from-blue-500 to-cyan-500'
     },
+    { 
+      name: 'IT Infrastructure', 
+      href: '/services', 
+      icon: Network, 
+      description: 'Enterprise Infrastructure Solutions',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'Digital Twin', 
+      href: '/services', 
+      icon: Cpu, 
+      description: 'Virtual Replication & Simulation',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    
+    // Business Solutions
     { 
       name: 'Micro SaaS Products', 
       href: '/services/micro-saas', 
@@ -171,6 +298,14 @@ export function AppHeader() {
       description: 'Quality Assurance & Testing',
       featured: true,
       color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Data Analytics', 
+      href: '/services', 
+      icon: BarChart3, 
+      description: 'Advanced Analytics & Insights',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
     }
   ];
 

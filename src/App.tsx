@@ -70,6 +70,8 @@ const Marketplace = () => (
   </div>
 );
 
+const Partners = React.lazy(() => import('./pages/Partners'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -87,6 +89,7 @@ function App() {
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/careers" element={<Careers />} />
+                <Route path="/partners" element={<Partners />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
