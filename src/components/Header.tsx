@@ -18,13 +18,19 @@ import {
   FileText,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Search,
+  Bell,
+  User,
+  Settings
 } from 'lucide-react';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -65,67 +71,80 @@ export function Header() {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for:', searchQuery);
+    }
+  };
+
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
-        ? 'bg-black/95 backdrop-blur-md border-b border-white/10 shadow-2xl' 
+        ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
         : 'bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 backdrop-blur-sm'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Enhanced Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:from-blue-600 group-hover:to-cyan-600 transition-all duration-300">
-              <Rocket className="w-6 h-6 text-white" />
+            <motion.div 
+              className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:from-cyan-400 group-hover:via-blue-400 group-hover:to-purple-500 transition-all duration-300 shadow-lg shadow-cyan-500/25 group-hover:shadow-xl group-hover:shadow-cyan-500/40"
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Rocket className="w-7 h-7 text-white" />
+            </motion.div>
+            <div className="flex flex-col">
+              <span className="text-white text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </span>
+              <span className="text-cyan-400 text-xs font-medium">Innovation • Technology • Future</span>
             </div>
-            <span className="text-white text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Enhanced Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">
               <button
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
-                className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200 py-2"
+                className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-all duration-200 py-2 px-3 rounded-lg hover:bg-white/5"
               >
-                <span>Services</span>
+                <span className="font-medium">Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                    className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-4"
+                    className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 p-6"
                   >
-                    <div className="grid grid-cols-1 gap-4">
-                      {services.map((category, index) => (
-                        <div key={index}>
-                          <h3 className="text-sm font-semibold text-cyan-400 mb-2 px-2">
-                            {category.category}
+                    <div className="grid grid-cols-1 gap-6">
+                      {services.map((section, idx) => (
+                        <div key={idx}>
+                          <h3 className="text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3 flex items-center">
+                            {section.icon}
+                            <span className="ml-2">{section.category}</span>
                           </h3>
-                          <div className="space-y-1">
-                            {category.items.map((service, serviceIndex) => (
+                          <div className="space-y-2">
+                            {section.items.map((item, itemIdx) => (
                               <Link
-                                key={serviceIndex}
-                                to={service.path}
-                                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
-                                onClick={() => setIsServicesOpen(false)}
+                                key={itemIdx}
+                                to={item.path}
+                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-200 group"
                               >
-                                <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
-                                  {service.icon}
+                                <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
+                                  {item.icon}
                                 </div>
-                                <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
-                                  {service.name}
+                                <span className="text-white group-hover:text-cyan-100 transition-colors duration-200">
+                                  {item.name}
                                 </span>
                               </Link>
                             ))}
@@ -138,168 +157,193 @@ export function Header() {
               </AnimatePresence>
             </div>
 
-            <Link 
-              to="/solutions" 
-              className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                isActive('/solutions') ? 'text-cyan-400' : ''
-              }`}
-            >
-              Solutions
-            </Link>
-            
+            {/* Enhanced Navigation Links */}
             <Link 
               to="/about" 
-              className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                isActive('/about') ? 'text-cyan-400' : ''
+              className={`text-white hover:text-cyan-400 transition-all duration-200 py-2 px-3 rounded-lg hover:bg-white/5 font-medium ${
+                isActive('/about') ? 'text-cyan-400 bg-cyan-500/10' : ''
               }`}
             >
               About
             </Link>
-            
             <Link 
-              to="/blog" 
-              className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                isActive('/blog') ? 'text-cyan-400' : ''
+              to="/solutions" 
+              className={`text-white hover:text-cyan-400 transition-all duration-200 py-2 px-3 rounded-lg hover:bg-white/5 font-medium ${
+                isActive('/solutions') ? 'text-cyan-400 bg-cyan-500/10' : ''
               }`}
             >
-              Blog
+              Solutions
             </Link>
-            
             <Link 
               to="/contact" 
-              className={`text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                isActive('/contact') ? 'text-cyan-400' : ''
+              className={`text-white hover:text-cyan-400 transition-all duration-200 py-2 px-3 rounded-lg hover:bg-white/5 font-medium ${
+                isActive('/contact') ? 'text-cyan-400 bg-cyan-500/10' : ''
               }`}
             >
               Contact
             </Link>
-
-            {/* CTA Button */}
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Get Started
-            </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <button
+          {/* Enhanced Right Side Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setShowSearch(!showSearch)}
+              className="p-2 text-white hover:text-cyan-400 transition-colors duration-200 rounded-lg hover:bg-white/5"
+            >
+              <Search className="w-5 h-5" />
+            </motion.button>
+
+            {/* Notifications */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-2 text-white hover:text-cyan-400 transition-colors duration-200 rounded-lg hover:bg-white/5 relative"
+            >
+              <Bell className="w-5 h-5" />
+              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+            </motion.button>
+
+            {/* User Menu */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-2 text-white hover:text-cyan-400 transition-colors duration-200 rounded-lg hover:bg-white/5"
+            >
+              <User className="w-5 h-5" />
+            </motion.button>
+
+            {/* CTA Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-2 rounded-xl font-medium transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
+            >
+              Get Started
+            </motion.button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
+            className="lg:hidden p-2 text-white hover:text-cyan-400 transition-colors duration-200 rounded-lg hover:bg-white/5"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          </motion.button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Enhanced Search Bar */}
         <AnimatePresence>
-          {isOpen && (
+          {showSearch && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-white/10"
+              className="py-4"
             >
-              <div className="py-4 space-y-4">
-                {/* Services Section */}
-                <div>
-                  <button
-                    onClick={() => setIsServicesOpen(!isServicesOpen)}
-                    className="flex items-center justify-between w-full text-left text-white hover:text-cyan-400 transition-colors duration-200 py-2"
-                  >
-                    <span>Services</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  
-                  <AnimatePresence>
-                    {isServicesOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="ml-4 mt-2 space-y-2"
-                      >
-                        {services.map((category, index) => (
-                          <div key={index}>
-                            <h4 className="text-sm font-semibold text-cyan-400 mb-1">
-                              {category.category}
-                            </h4>
-                            <div className="space-y-1">
-                              {category.items.map((service, serviceIndex) => (
-                                <Link
-                                  key={serviceIndex}
-                                  to={service.path}
-                                  className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-1"
-                                  onClick={() => setIsOpen(false)}
-                                >
-                                  {service.icon}
-                                  <span className="text-sm">{service.name}</span>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-
-                <Link 
-                  to="/solutions" 
-                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                    isActive('/solutions') ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsOpen(false)}
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services, solutions, or resources..."
+                  className="w-full bg-white/10 border border-cyan-500/30 rounded-xl px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+                />
+                <button
+                  type="submit"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
                 >
-                  Solutions
-                </Link>
-                
-                <Link 
-                  to="/about" 
-                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                    isActive('/about') ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  About
-                </Link>
-                
-                <Link 
-                  to="/blog" 
-                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                    isActive('/blog') ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Blog
-                </Link>
-                
-                <Link 
-                  to="/contact" 
-                  className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
-                    isActive('/contact') ? 'text-cyan-400' : ''
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Contact
-                </Link>
-
-                {/* Mobile CTA */}
-                <Link 
-                  to="/contact" 
-                  className="block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
+                  <Search className="w-5 h-5" />
+                </button>
+              </form>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
+
+      {/* Enhanced Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {/* Mobile Search */}
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full bg-white/10 border border-cyan-500/30 rounded-xl px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                />
+                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />
+              </div>
+
+              {/* Mobile Navigation Links */}
+              <div className="space-y-2">
+                <Link
+                  to="/about"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-white hover:text-cyan-400 py-3 px-4 rounded-lg hover:bg-white/5 transition-all duration-200"
+                >
+                  About
+                </Link>
+                <Link
+                  to="/solutions"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-white hover:text-cyan-400 py-3 px-4 rounded-lg hover:bg-white/5 transition-all duration-200"
+                >
+                  Solutions
+                </Link>
+                <Link
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-white hover:text-cyan-400 py-3 px-4 rounded-lg hover:bg-white/5 transition-all duration-200"
+                >
+                  Contact
+                </Link>
+              </div>
+
+              {/* Mobile Services */}
+              <div className="border-t border-white/10 pt-4">
+                <h3 className="text-cyan-400 font-semibold text-sm uppercase tracking-wider mb-3">Services</h3>
+                <div className="space-y-2">
+                  {services.flatMap(section => section.items).slice(0, 6).map((item, idx) => (
+                    <Link
+                      key={idx}
+                      to={item.path}
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-200"
+                    >
+                      <div className="text-cyan-400">{item.icon}</div>
+                      <span className="text-white">{item.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className="pt-4">
+                <Link
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-6 py-3 rounded-xl font-medium text-center transition-all duration-300 shadow-lg shadow-cyan-500/25"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
