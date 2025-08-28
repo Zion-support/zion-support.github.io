@@ -2,13 +2,28 @@
 // Provides offline support, caching, and performance improvements
 
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
+<<<<<<< HEAD
+const STATIC_CACHE_NAME = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1.0.0';
+=======
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
 
 // Files to cache immediately
 const STATIC_FILES = [
   '/',
   '/index.html',
+<<<<<<< HEAD
+  '/static/js/main.bundle.js',
+  '/static/css/main.css',
+  '/manifest.json',
+  '/favicon.ico',
+  '/images/zion-logo.png',
+  '/images/hero-ai-solutions.jpg',
+  '/images/hero-quantum.jpg',
+  '/images/hero-autonomous.jpg'
+=======
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
@@ -18,6 +33,7 @@ const STATIC_FILES = [
   '/apple-touch-icon.png',
   '/images/zion-tech-group-logo.png',
   '/images/zion-tech-group-og.jpg'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
 ];
 
 // Install event - cache static files
@@ -25,7 +41,11 @@ self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   
   event.waitUntil(
+<<<<<<< HEAD
+    caches.open(STATIC_CACHE_NAME)
+=======
     caches.open(STATIC_CACHE)
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
       .then((cache) => {
         console.log('Caching static files');
         return cache.addAll(STATIC_FILES);
@@ -35,7 +55,11 @@ self.addEventListener('install', (event) => {
         return self.skipWaiting();
       })
       .catch((error) => {
+<<<<<<< HEAD
+        console.error('Failed to cache static files:', error);
+=======
         console.error('Error caching static files:', error);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
       })
   );
 });
@@ -49,7 +73,13 @@ self.addEventListener('activate', (event) => {
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
+<<<<<<< HEAD
+            if (cacheName !== STATIC_CACHE_NAME && 
+                cacheName !== DYNAMIC_CACHE_NAME && 
+                cacheName !== CACHE_NAME) {
+=======
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
               console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
@@ -60,10 +90,20 @@ self.addEventListener('activate', (event) => {
         console.log('Service Worker activated successfully');
         return self.clients.claim();
       })
+<<<<<<< HEAD
+      .catch((error) => {
+        console.error('Failed to activate service worker:', error);
+      })
+  );
+});
+
+// Fetch event - handle requests
+=======
   );
 });
 
 // Fetch event - serve from cache or network
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -73,7 +113,11 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+<<<<<<< HEAD
+  // Skip chrome-extension and other non-http requests
+=======
   // Skip non-HTTP(S) requests
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
   if (!url.protocol.startsWith('http')) {
     return;
   }
@@ -81,6 +125,23 @@ self.addEventListener('fetch', (event) => {
   // Handle different types of requests
   if (isStaticAsset(request)) {
     // Static assets - cache first strategy
+<<<<<<< HEAD
+    event.respondWith(cacheFirst(request, STATIC_CACHE_NAME));
+  } else if (isAPIRequest(request)) {
+    // API requests - network first strategy
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE_NAME));
+  } else if (isHTMLRequest(request)) {
+    // HTML requests - network first strategy
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE_NAME));
+  } else {
+    // Default - cache first strategy
+    event.respondWith(cacheFirst(request, DYNAMIC_CACHE_NAME));
+  }
+});
+
+// Cache first strategy
+async function cacheFirst(request, cacheName) {
+=======
     event.respondWith(cacheFirst(request));
   } else if (isAPIRequest(request)) {
     // API requests - network first strategy
@@ -96,6 +157,7 @@ self.addEventListener('fetch', (event) => {
 
 // Cache first strategy for static assets
 async function cacheFirst(request) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
   try {
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
@@ -104,7 +166,11 @@ async function cacheFirst(request) {
     
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
+<<<<<<< HEAD
+      const cache = await caches.open(cacheName);
+=======
       const cache = await caches.open(DYNAMIC_CACHE);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
@@ -114,18 +180,33 @@ async function cacheFirst(request) {
   }
 }
 
+<<<<<<< HEAD
+// Network first strategy
+async function networkFirst(request, cacheName) {
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open(cacheName);
+=======
 // Network first strategy for dynamic content
 async function networkFirst(request) {
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
       const cache = await caches.open(DYNAMIC_CACHE);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
   } catch (error) {
+<<<<<<< HEAD
+    console.error('Network first strategy failed:', error);
+    
+    // Try to serve from cache
+=======
     console.log('Network failed, trying cache:', error);
     
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
@@ -140,6 +221,22 @@ async function networkFirst(request) {
   }
 }
 
+<<<<<<< HEAD
+// Check if request is for a static asset
+function isStaticAsset(request) {
+  const url = new URL(request.url);
+  return url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$/);
+}
+
+// Check if request is for an API endpoint
+function isAPIRequest(request) {
+  const url = new URL(request.url);
+  return url.pathname.startsWith('/api/') ||
+         url.hostname === 'api.ziontechgroup.com';
+}
+
+// Check if request is for HTML
+=======
 // Helper functions to determine request types
 function isStaticAsset(request) {
   const url = new URL(request.url);
@@ -156,6 +253,7 @@ function isAPIRequest(request) {
   return url.pathname.startsWith('/api/') || url.pathname.startsWith('/services/');
 }
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
 function isHTMLRequest(request) {
   const url = new URL(request.url);
   return url.pathname.endsWith('.html') || 
@@ -168,6 +266,26 @@ self.addEventListener('sync', (event) => {
   console.log('Background sync triggered:', event.tag);
   
   if (event.tag === 'background-sync') {
+<<<<<<< HEAD
+    event.waitUntil(performBackgroundSync());
+  }
+});
+
+// Background sync implementation
+async function doBackgroundSync() {
+  try {
+    // Get pending actions from IndexedDB
+    const pendingActions = await getPendingActions();
+    
+    for (const action of pendingActions) {
+      try {
+        await processPendingAction(action);
+        await removePendingAction(action.id);
+      } catch (error) {
+        console.error('Failed to process pending action:', error);
+      }
+    }
+=======
     event.waitUntil(doBackgroundSync());
   }
 });
@@ -184,11 +302,31 @@ async function doBackgroundSync() {
     }
     
     console.log('Background sync completed');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
   } catch (error) {
     console.error('Background sync failed:', error);
   }
 }
 
+<<<<<<< HEAD
+// Get pending actions from IndexedDB
+async function getPendingActions() {
+  // This would typically use IndexedDB
+  // For now, return empty array
+  return [];
+}
+
+// Process a pending action
+async function processPendingAction(action) {
+  // Implementation depends on your app's needs
+  console.log('Processing pending action:', action);
+}
+
+// Remove a processed action
+async function removePendingAction(actionId) {
+  // Implementation depends on your app's needs
+  console.log('Removing processed action:', actionId);
+=======
 // Get offline data from IndexedDB
 async function getOfflineData() {
   // Implementation would depend on your data storage strategy
@@ -199,6 +337,7 @@ async function getOfflineData() {
 async function syncOfflineData(data) {
   // Implementation would depend on your API structure
   console.log('Syncing offline data:', data);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
 }
 
 // Push notification handling
@@ -206,9 +345,15 @@ self.addEventListener('push', (event) => {
   console.log('Push notification received:', event);
   
   const options = {
+<<<<<<< HEAD
+    body: event.data ? event.data.text() : 'New update from Zion Tech Group',
+    icon: '/images/zion-logo.png',
+    badge: '/images/zion-badge.png',
+=======
     body: event.data ? event.data.text() : 'New update available!',
     icon: '/images/zion-tech-group-logo.png',
     badge: '/images/zion-tech-group-logo.png',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -217,17 +362,30 @@ self.addEventListener('push', (event) => {
     actions: [
       {
         action: 'explore',
+<<<<<<< HEAD
+        title: 'Explore',
+        icon: '/images/explore-icon.png'
+=======
         title: 'View Details',
         icon: '/images/zion-tech-group-logo.png'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
       },
       {
         action: 'close',
         title: 'Close',
+<<<<<<< HEAD
+        icon: '/images/close-icon.png'
+      }
+    ]
+  };
+
+=======
         icon: '/images/zion-tech-group-logo.png'
       }
     ]
   };
   
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
@@ -238,15 +396,33 @@ self.addEventListener('notificationclick', (event) => {
   console.log('Notification clicked:', event);
   
   event.notification.close();
+<<<<<<< HEAD
+
+=======
   
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
   if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+<<<<<<< HEAD
+  } else if (event.action === 'close') {
+    // Just close the notification
+  } else {
+    // Default action - open the app
     event.waitUntil(
       clients.openWindow('/')
     );
   }
 });
 
+// Message handling from main thread
+=======
+  }
+});
+
 // Message handling for communication with main thread
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
 self.addEventListener('message', (event) => {
   console.log('Message received in service worker:', event.data);
   
@@ -259,6 +435,65 @@ self.addEventListener('message', (event) => {
   }
 });
 
+<<<<<<< HEAD
+// Periodic background sync (if supported)
+if ('periodicSync' in self.registration) {
+  self.addEventListener('periodicsync', (event) => {
+    if (event.tag === 'content-update') {
+      event.waitUntil(updateContent());
+    }
+  });
+}
+
+// Update content in background
+async function updateContent() {
+  try {
+    // Check for content updates
+    const response = await fetch('/api/content/check-updates');
+    if (response.ok) {
+      const updates = await response.json();
+      if (updates.hasUpdates) {
+        // Notify clients about updates
+        const clients = await self.clients.matchAll();
+        clients.forEach(client => {
+          client.postMessage({
+            type: 'CONTENT_UPDATE_AVAILABLE',
+            data: updates
+          });
+        });
+      }
+    }
+  } catch (error) {
+    console.error('Content update check failed:', error);
+  }
+}
+
+// Cache warming for critical resources
+async function warmCache() {
+  try {
+    const cache = await caches.open(STATIC_CACHE_NAME);
+    
+    // Pre-cache critical resources
+    const criticalResources = [
+      '/manifest.json',
+      '/images/zion-logo.png'
+    ];
+    
+    for (const resource of criticalResources) {
+      try {
+        await cache.add(resource);
+      } catch (error) {
+        console.warn('Failed to pre-cache resource:', resource, error);
+      }
+    }
+  } catch (error) {
+    console.error('Cache warming failed:', error);
+  }
+}
+
+// Initialize cache warming
+warmCache();
+=======
 // Error handling
 self.addEventListener('error', (event) => {
   console.error('Service Worker error:', event.error);
@@ -291,3 +526,4 @@ self.addEventListener('fetch', (event) => {
 });
 
 console.log('Zion Tech Group Service Worker loaded successfully');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd

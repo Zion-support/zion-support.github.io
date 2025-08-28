@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <title>Zion Tech Group - Offline</title>
+    <meta name="description" content="You're currently offline. Zion Tech Group provides cutting-edge AI and quantum solutions.">
+=======
     <title>Offline - Zion Tech Group</title>
     <meta name="description" content="You're currently offline. Check your connection and try again.">
     <meta name="robots" content="noindex, nofollow">
@@ -26,17 +30,25 @@
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.json">
     
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+<<<<<<< HEAD
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+=======
             font-family: 'Orbitron', 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 =======
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
             color: #ffffff;
             min-height: 100vh;
@@ -45,6 +57,92 @@
             justify-content: center;
             padding: 20px;
         }
+<<<<<<< HEAD
+
+        /* Animated background */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: grid-move 20s linear infinite;
+        }
+
+        @keyframes grid-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .floating-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #22ddd2;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .particle:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+        .particle:nth-child(3) {
+            top: 80%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+
+        .particle:nth-child(4) {
+            top: 30%;
+            left: 70%;
+            animation-delay: 3s;
+        }
+
+        .particle:nth-child(5) {
+            top: 70%;
+            left: 60%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
+            50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+        }
+
+        /* Main content */
+        .offline-container {
+            max-width: 600px;
+=======
             text-align: center;
             max-width: 600px;
             z-index: 1;
@@ -492,41 +590,122 @@
                 font-size: 1.125rem;
             }
             
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
             .offline-actions {
                 flex-direction: column;
             }
+<<<<<<< HEAD
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .offline-container {
+                border-width: 3px;
+                border-color: #22ddd2;
+            }
+
+            .btn {
+                border-width: 2px;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .grid,
+            .particle,
+            .offline-icon,
+            .offline-icon::before {
+                animation: none;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+=======
             
             .btn {
                 width: 100%;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
             }
         }
     </style>
 </head>
 <body>
+<<<<<<< HEAD
+=======
     <div class="offline-container">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
         <div class="offline-icon">
             📡
         </div>
         
         <h1 class="offline-title">You're Offline</h1>
+<<<<<<< HEAD
+        
+        <p class="offline-message">
+            It looks like you've lost your internet connection. Don't worry - we've cached some content 
+            so you can still explore what we have available offline.
+=======
         <p class="offline-subtitle">Don't worry, we're still here to help!</p>
         <p class="offline-description">
             It looks like you've lost your internet connection. While you're offline, 
             you can still access previously cached content and some basic features.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
         </p>
         
         <div class="offline-actions">
             <button class="btn btn-primary" onclick="retryConnection()">
+<<<<<<< HEAD
+                Try Again
+=======
                 <span class="spinner" id="retrySpinner" style="display: none;"></span>
                 Try Again
             </button>
             <button class="btn btn-secondary" onclick="goHome()">
                 Go to Homepage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
             </button>
             <a href="/" class="btn btn-secondary">
                 Go Home
             </a>
         </div>
+<<<<<<< HEAD
+
+        <div class="offline-features">
+            <h3>What's Available Offline</h3>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <h4>🏠 Home Page</h4>
+                    <p>Access our main content and navigation</p>
+                </li>
+                <li class="feature-item">
+                    <h4>📱 Service Overview</h4>
+                    <p>Learn about our AI and technology services</p>
+                </li>
+                <li class="feature-item">
+                    <h4>📞 Contact Info</h4>
+                    <p>Find ways to reach our team</p>
+                </li>
+                <li class="feature-item">
+                    <h4>💾 Cached Content</h4>
+                    <p>Previously viewed pages and resources</p>
+                </li>
+            </ul>
+=======
     <!-- Animated Background -->
     <div class="background">
         <div class="grid"></div>
@@ -648,31 +827,55 @@
                 networkStatus.style.color = '#22ddd2';
                 
                 // Redirect to homepage after a short delay
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
                 setTimeout(() => {
                     window.location.href = '/';
                 }, 2000);
             } else {
+<<<<<<< HEAD
+                statusText.textContent = 'Offline';
+                statusElement.style.background = 'rgba(239, 68, 68, 0.9)';
+                statusElement.classList.add('pulse');
+=======
                 networkStatus.innerHTML = `
                     <strong>Network Status:</strong> Offline
                     <div class="retry-indicator">
                         We'll automatically retry when your connection is restored
                     </div>
                 `;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
             }
         }
 
         // Retry connection
         function retryConnection() {
+<<<<<<< HEAD
+            const btn = event.target;
+            btn.textContent = 'Checking...';
+            btn.disabled = true;
+=======
             const spinner = document.getElementById('retrySpinner');
             const button = spinner.parentElement;
             
             spinner.style.display = 'inline-block';
             button.disabled = true;
             button.textContent = 'Checking Connection...';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
             
             // Simulate connection check
             setTimeout(() => {
                 if (navigator.onLine) {
+<<<<<<< HEAD
+                    btn.textContent = 'Connected!';
+                    btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 1000);
+                } else {
+                    btn.textContent = 'Try Again';
+                    btn.disabled = false;
+                    alert('Still offline. Please check your internet connection.');
+=======
                     window.location.reload();
                 } else {
                     spinner.style.display = 'none';
@@ -687,10 +890,27 @@
                             Please check your internet connection and try again
                         </div>
                     `;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
                 }
             }, 2000);
         }
 
+<<<<<<< HEAD
+        // Event listeners
+        window.addEventListener('online', updateConnectionStatus);
+        window.addEventListener('offline', updateConnectionStatus);
+        
+        // Initial status check
+        updateConnectionStatus();
+
+        // Service Worker registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('Service Worker registered:', registration);
+                })
+                .catch(error => {
+=======
         // Connection checking functionality
         function checkConnection() {
             const statusDot = document.getElementById('statusDot');
@@ -867,9 +1087,40 @@
                 })
                 .catch((registrationError) => {
                     console.log('SW registration failed: ', registrationError);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
                 });
             });
         }
+<<<<<<< HEAD
+
+        function handleConnectionRestored() {
+            const statusDot = document.getElementById('statusDot');
+            const statusText = document.getElementById('statusText');
+            
+            statusDot.className = 'status-dot online';
+            statusText.textContent = 'Connection restored! Refreshing...';
+            
+            announceToScreenReader('Connection restored. Refreshing page.');
+            
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
+        }
+
+        function handleConnectionFailed() {
+            const statusDot = document.getElementById('statusDot');
+            const statusText = document.getElementById('statusText');
+            
+            statusDot.className = 'status-dot';
+            statusText.textContent = 'Connection test failed. Please check your network.';
+            
+            announceToScreenReader('Connection test failed. Please check your network connection.');
+        }
+
+        // Replace the simple checkConnection with enhanced version
+        window.checkConnection = enhancedCheckConnection;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
     </script>
 </body>
 </html>

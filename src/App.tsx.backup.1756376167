@@ -6,8 +6,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { ChatAssistant } from './components/ChatAssistant';
+<<<<<<< HEAD
+import { LoadingSpinner } from './components/ui/loading-spinner';
+import SEO from './components/SEO';
+=======
 import { FullScreenLoader } from './components/ui/LoadingSpinner.tsx';
 import { SEO } from './components/SEO';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
@@ -290,9 +295,15 @@ function App() {
     >
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
+<<<<<<< HEAD
+
+        <main className="flex-1">
+          <Suspense fallback={<LoadingSpinner />}>
+=======
         
         <main className="flex-1 relative z-10">
           <Suspense fallback={<FullScreenLoader />}>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4acd
             <Routes>
               {/* Core Routes */}
               <Route path="/" element={<Home />} />

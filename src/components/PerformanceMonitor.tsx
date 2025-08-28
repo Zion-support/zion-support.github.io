@@ -1,490 +1,276 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Activity,
-  Zap,
-  Clock,
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle,
-  X,
-  Info,
-  BarChart3,
-  Gauge,
-  Monitor
-} from 'lucide-react';
-import resourceMonitor from '../utils/resourceMonitor';
-import mimeTypeFallback from '../utils/mimeTypeFallback';
+import { Activity, Zap, Clock, HardDrive, Wifi, AlertTriangle, CheckCircle, X, ChevronDown } from 'lucide-react';
 
 interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  bundleSize: number;
   loadTime: number;
-  resourceCount: number;
-  errorCount: number;
-  mimeTypeIssues: number;
-  cacheHitRate: number;
-  networkLatency: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  enabled?: boolean;
+  autoRefresh?: boolean;
+  refreshInterval?: number;
+  showDetails?: boolean;
+}
+
+export function PerformanceMonitor({ 
+  enabled = true, 
+  autoRefresh = true, 
+  refreshInterval = 30000,
+  showDetails = false 
+}: PerformanceMonitorProps) {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    resourceCount: 0,
-    errorCount: 0,
-    mimeTypeIssues: 0,
-    cacheHitRate: 0,
-    networkLatency: 0
-  });
-  const [resourceErrors, setResourceErrors] = useState<any[]>([]);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [alerts, setAlerts] = useState<string[]>([]);
 
-  useEffect(() => {
-    // Initial metrics
-    updateMetrics();
-    // Set up performance observer for Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint' ||
-              entry.entryType === 'first-input-delay' ||
-              entry.entryType === 'layout-shift') {
-            updateMetrics();
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
-      return () => observer.disconnect();
-    }
+  const calculateMetrics = useCallback(() => {
+    if (!window.performance) return null;
 
-    // Collect initial metrics
-    collectMetrics();
-
-    // Set up periodic metric collection
-    const interval = setInterval(collectMetrics, 5000);
-
-    return () => {
-      clearInterval(interval);
-      if (isMonitoring) {
-        stopMonitoring();
-      }
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType('paint');
+    
+    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+    const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
+    const fid = 0; // First Input Delay - would need to be measured during user interaction
+    const cls = 0; // Cumulative Layout Shift - would need to be measured over time
+    
+    const ttfb = navigation.responseStart - navigation.requestStart;
+    const loadTime = navigation.loadEventEnd - navigation.navigationStart;
+    
+    // Estimate bundle size (this is a rough approximation)
+    const bundleSize = performance.memory?.usedJSHeapSize || 0;
+    
+    return {
+      fcp,
+      lcp,
+      fid,
+      cls,
+      ttfb,
+      bundleSize,
+      loadTime
     };
   }, []);
 
-  const startMonitoring = () => {
-    resourceMonitor.start();
-    setIsMonitoring(true);
-    console.log('🚀 Performance monitoring started');
-  };
+  const getPerformanceScore = useCallback((metrics: PerformanceMetrics) => {
+    let score = 100;
+    
+    if (metrics.fcp > 1800) score -= 20;
+    if (metrics.lcp > 2500) score -= 20;
+    if (metrics.ttfb > 600) score -= 15;
+    if (metrics.loadTime > 3000) score -= 15;
+    
+    return Math.max(0, score);
+  }, []);
 
-  const stopMonitoring = () => {
-    resourceMonitor.stop();
-    setIsMonitoring(false);
-    console.log('🛑 Performance monitoring stopped');
-  };
-
-  const collectMetrics = async () => {
-    try {
-      // Performance timing
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
-
-      // Resource count
-      const resources = performance.getEntriesByType('resource');
-      const resourceCount = resources.length;
-
-      // Error count
-      const errors = resourceMonitor.getErrors();
-      const errorCount = errors.length;
-
-      // MIME type issues
-      const mimeTypeIssues = errors.filter(e => 
-        e.error.includes('MIME') || e.error.includes('content-type')
-      ).length;
-
-      // Cache hit rate (simplified)
-      const cacheHitRate = resources.filter(r => 
-        (r as PerformanceResourceTiming).transferSize === 0
-      ).length / resourceCount * 100;
-
-      // Network latency
-      const networkLatency = resources.reduce((acc, r) => {
-        const resource = r as PerformanceResourceTiming;
-        return acc + (resource.responseStart - resource.requestStart);
-      }, 0) / resourceCount;
-
-      setMetrics({
-        loadTime,
-        resourceCount,
-        errorCount,
-        mimeTypeIssues,
-        cacheHitRate: isNaN(cacheHitRate) ? 0 : cacheHitRate,
-        networkLatency: isNaN(networkLatency) ? 0 : networkLatency
-      });
-
-      setResourceErrors(errors);
-
-    } catch (error) {
-      console.error('Error collecting metrics:', error);
-    }
-  };
-
-  const refreshMetrics = () => {
-    collectMetrics();
-  };
-
-  const fixMimeTypeIssues = async () => {
-    try {
-      await mimeTypeFallback.preloadCriticalResources();
-      collectMetrics();
-    } catch (error) {
-      console.error('Error fixing MIME type issues:', error);
-    }
-  };
-
-  const getStatusColor = (value: number, threshold: number) => {
-    if (value <= threshold) return 'text-green-400';
-    if (value <= threshold * 1.5) return 'text-yellow-400';
+  const getPerformanceColor = useCallback((score: number) => {
+    if (score >= 90) return 'text-green-400';
+    if (score >= 70) return 'text-yellow-400';
     return 'text-red-400';
-  };
+  }, []);
 
-  const getStatusIcon = (value: number, threshold: number) => {
-    if (value <= threshold) return <CheckCircle className="w-5 h-5 text-green-400" />;
-    if (value <= threshold * 1.5) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
-    return <AlertTriangle className="w-5 h-5 text-red-400" />;
-  };
+  const getPerformanceStatus = useCallback((score: number) => {
+    if (score >= 90) return 'Excellent';
+    if (score >= 70) return 'Good';
+    if (score >= 50) return 'Needs Improvement';
+    return 'Poor';
+  }, []);
+
+  const checkPerformanceIssues = useCallback((metrics: PerformanceMetrics) => {
+    const newAlerts: string[] = [];
+    
+    if (metrics.fcp > 1800) {
+      newAlerts.push('First Contentful Paint is slow (>1.8s)');
+    }
+    if (metrics.lcp > 2500) {
+      newAlerts.push('Largest Contentful Paint is slow (>2.5s)');
+    }
+    if (metrics.ttfb > 600) {
+      newAlerts.push('Time to First Byte is slow (>600ms)');
+    }
+    if (metrics.loadTime > 3000) {
+      newAlerts.push('Page load time is slow (>3s)');
+    }
+    
+    setAlerts(newAlerts);
+  }, []);
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    const updateMetrics = () => {
+      const newMetrics = calculateMetrics();
+      if (newMetrics) {
+        setMetrics(newMetrics);
+        checkPerformanceIssues(newMetrics);
+      }
+    };
+
+    // Initial calculation
+    updateMetrics();
+
+    // Set up auto-refresh
+    if (autoRefresh) {
+      const interval = setInterval(updateMetrics, refreshInterval);
+      return () => clearInterval(interval);
+    }
+  }, [enabled, autoRefresh, refreshInterval, calculateMetrics, checkPerformanceIssues]);
+
+  useEffect(() => {
+    // Show monitor after page load
+    const timer = setTimeout(() => setIsVisible(true), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!enabled || !isVisible) return null;
+
+  const score = metrics ? getPerformanceScore(metrics) : 0;
+  const status = getPerformanceStatus(score);
+  const statusColor = getPerformanceColor(score);
 
   return (
-    <>
-      {/* Floating Toggle Button */}
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200"
-        title="Performance Monitor"
-      >
-        <Activity className="w-6 h-6" />
-      </motion.button>
-
-      {/* Performance Dashboard */}
+    <div className="fixed bottom-4 right-4 z-50">
       <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, x: 300, scale: 0.9 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 300, scale: 0.9 }}
-            className="fixed bottom-24 right-6 z-40 w-96 max-h-[80vh] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden"
-          >
-            {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600/80 to-purple-600/80 p-4 text-white">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <Zap className="w-5 h-5" />
-                  <h3 className="font-semibold">Performance Monitor</h3>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={refreshMetrics}
-                    className="p-1 hover:bg-white/20 rounded transition-colors"
-                    title="Refresh Metrics"
-                  >
-                    <RefreshCw className="w-4 h-4" />
-                  </button>
-                  <button
-                    onClick={() => setIsVisible(false)}
-                    className="p-1 hover:bg-white/20 rounded transition-colors"
-                    title="Close"
-                  >
-                    ×
-                  </button>
-                </div>
-              </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 20, scale: 0.9 }}
+          className="bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
+        >
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b border-cyan-400/20">
+            <div className="flex items-center space-x-2">
+              <Activity className="w-5 h-5 text-cyan-400" />
+              <span className="text-sm font-semibold text-white">Performance</span>
             </div>
-
-            {/* Content */}
-            <div className="p-4 space-y-4 max-h-[calc(80vh-80px)] overflow-y-auto">
-              {/* Monitoring Status */}
-              <div className="flex items-center justify-between p-3 bg-white/5 rounded-lg border border-white/10">
-                <span className="text-sm text-gray-300">Monitoring Status</span>
-                <div className="flex items-center space-x-2">
-                  <div className={`w-2 h-2 rounded-full ${isMonitoring ? 'bg-green-400' : 'bg-red-400'}`} />
-                  <span className="text-sm text-gray-300">
-                    {isMonitoring ? 'Active' : 'Inactive'}
-                  </span>
-                </div>
-              </div>
-
-              {/* Key Metrics */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Clock className="w-4 h-4 text-blue-400" />
-                    <span className="text-xs text-gray-400">Load Time</span>
-                  </div>
-                  <div className="text-lg font-semibold text-white">
-                    {metrics.loadTime.toFixed(0)}ms
-                  </div>
-                </div>
-
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <HardDrive className="w-4 h-4 text-green-400" />
-                    <span className="text-xs text-gray-400">Resources</span>
-                  </div>
-                  <div className="text-lg font-semibold text-white">
-                    {metrics.resourceCount}
-                  </div>
-                </div>
-
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <AlertTriangle className="w-4 h-4 text-red-400" />
-                    <span className="text-xs text-gray-400">Errors</span>
-                  </div>
-                  <div className="text-lg font-semibold text-white">
-                    {metrics.errorCount}
-                  </div>
-                </div>
-
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <Shield className="w-4 h-4 text-yellow-400" />
-                    <span className="text-xs text-gray-400">MIME Issues</span>
-                  </div>
-                  <div className="text-lg font-semibold text-white">
-                    {metrics.mimeTypeIssues}
-                  </div>
-                </div>
-              </div>
-
-              {/* Performance Indicators */}
-              <div className="space-y-3">
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-300">Cache Hit Rate</span>
-                    {getStatusIcon(100 - metrics.cacheHitRate, 20)}
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full transition-all duration-300 ${
-                        metrics.cacheHitRate >= 80 ? 'bg-green-500' : 
-                        metrics.cacheHitRate >= 60 ? 'bg-yellow-500' : 'bg-red-500'
-                      }`}
-                      style={{ width: `${metrics.cacheHitRate}%` }}
-                    />
-                  </div>
-                  <div className="text-right text-xs text-gray-400 mt-1">
-                    {metrics.cacheHitRate.toFixed(1)}%
-                  </div>
-                </div>
-
-                <div className="p-3 bg-white/5 rounded-lg border border-white/10">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-300">Network Latency</span>
-                    {getStatusIcon(metrics.networkLatency, 100)}
-                  </div>
-                  <div className={`text-lg font-semibold ${getStatusColor(metrics.networkLatency, 100)}`}>
-                    {metrics.networkLatency.toFixed(0)}ms
-                  </div>
-                </div>
-              </div>
-
-              {/* Actions */}
-              <div className="space-y-2">
-                <button
-                  onClick={fixMimeTypeIssues}
-                  disabled={metrics.mimeTypeIssues === 0}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-                >
-                  <Settings className="w-4 h-4" />
-                  <span>Fix MIME Type Issues</span>
-                </button>
-
-                <button
-                  onClick={isMonitoring ? stopMonitoring : startMonitoring}
-                  className={`w-full py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2 ${
-                    isMonitoring 
-                      ? 'bg-red-600 hover:bg-red-700 text-white' 
-                      : 'bg-green-600 hover:bg-green-700 text-white'
-                  }`}
-                >
-                  {isMonitoring ? (
-                    <>
-                      <AlertTriangle className="w-4 h-4" />
-                      <span>Stop Monitoring</span>
-                    </>
-                  ) : (
-                    <>
-                      <Activity className="w-4 h-4" />
-                      <span>Start Monitoring</span>
-                    </>
-                  )}
-                </button>
-              </div>
-              {/* Core Web Vitals */}
-              <div className="space-y-4 mb-6">
-                <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Zap size={20} className="text-zion-purple" />
-                  Core Web Vitals
-                </h3>
-                {/* FCP */}
-                <div className="p-3 bg-zion-slate-light/10 rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-zion-slate-light">First Contentful Paint</span>
-                    <span className={`text-sm font-semibold ${scores.fcp?.color || 'text-gray-400'}`}>
-                      {scores.fcp?.grade || 'N/A'}
-                    </span>
-                  </div>
-                  <div className="text-lg font-bold text-white">
-                    {formatMetric(metrics.fcp)}
-                  </div>
-                  <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
-                    <div
-                      className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.fcp)}`}
-                      style={{ width: `${scores.fcp?.score || 0}%` }}
-                    />
-                  </div>
-                </div>
-                {/* LCP */}
-                <div className="p-3 bg-zion-slate-light/10 rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-zion-slate-light">Largest Contentful Paint</span>
-                    <span className={`text-sm font-semibold ${scores.lcp?.color || 'text-gray-400'}`}>
-                      {scores.lcp?.grade || 'N/A'}
-                    </span>
-                  </div>
-                  <div className="text-lg font-bold text-white">
-                    {formatMetric(metrics.lcp)}
-                  </div>
-                  <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
-                    <div
-                      className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.lcp)}`}
-                      style={{ width: `${scores.lcp?.score || 0}%` }}
-                    />
-                  </div>
-                </div>
-                {/* FID */}
-                <div className="p-3 bg-zion-slate-light/10 rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-zion-slate-light">First Input Delay</span>
-                    <span className={`text-sm font-semibold ${scores.fid?.color || 'text-gray-400'}`}>
-                      {scores.fid?.grade || 'N/A'}
-                    </span>
-                  </div>
-                  <div className="text-lg font-bold text-white">
-                    {formatMetric(metrics.fid)}
-                  </div>
-                  <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
-                    <div
-                      className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.fid)}`}
-                      style={{ width: `${scores.fid?.score || 0}%` }}
-                    />
-                  </div>
-                </div>
-                {/* CLS */}
-                <div className="p-3 bg-zion-slate-light/10 rounded-lg">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-zion-slate-light">Cumulative Layout Shift</span>
-                    <span className={`text-sm font-semibold ${scores.cls?.color || 'text-gray-400'}`}>
-                      {scores.cls?.grade || 'N/A'}
-                    </span>
-                  </div>
-                  <div className="text-lg font-bold text-white">
-                    {formatMetric(metrics.cls, '')}
-                  </div>
-                  <div className="w-full bg-zion-slate-light/20 rounded-full h-2 mt-2">
-                    <div
-                      className={`h-2 rounded-full transition-all duration-300 ${getMetricColor(scores.cls)}`}
-                      style={{ width: `${scores.cls?.score || 0}%` }}
-                    />
-                  </div>
-                </div>
-              </div>
-              {/* Additional Metrics */}
-              <div className="space-y-4 mb-6">
-                <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <BarChart3 size={20} className="text-zion-purple" />
-                  Additional Metrics
-                </h3>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="p-3 bg-zion-slate-light/10 rounded-lg text-center">
-                    <div className="text-sm text-zion-slate-light mb-1">TTFB</div>
-                    <div className="text-lg font-bold text-white">
-                      {formatMetric(metrics.ttfb)}
-                    </div>
-                  </div>
-                  <div className="p-3 bg-zion-slate-light/10 rounded-lg text-center">
-                    <div className="text-sm text-zion-slate-light mb-1">DOM Load</div>
-                    <div className="text-lg font-bold text-white">
-                      {formatMetric(metrics.domLoad)}
-                    </div>
-                  </div>
-                  <div className="p-3 bg-zion-slate-light/10 rounded-lg text-center">
-                    <div className="text-sm text-zion-slate-light mb-1">Window Load</div>
-                    <div className="text-lg font-bold text-white">
-                      {formatMetric(metrics.windowLoad)}
-                    </div>
-                  </div>
-                  <div className="p-3 bg-zion-slate-light/10 rounded-lg text-center">
-                    <div className="text-sm text-zion-slate-light mb-1">Overall Score</div>
-                    <div className="text-lg font-bold text-white">
-                      {Math.round(Object.values(scores).reduce((acc, score) => acc + score.score, 0) / 4)}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Performance Tips */}
-              <div className="p-4 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">
-                <h4 className="font-semibold text-zion-purple mb-2 flex items-center gap-2">
-                  <Info size={16} />
-                  Performance Tips
-                </h4>
-                <ul className="text-sm text-zion-slate-light space-y-1">
-                  <li>• Optimize images and use WebP format</li>
-                  <li>• Minimize JavaScript bundle size</li>
-                  <li>• Use CDN for static assets</li>
-                  <li>• Enable compression and caching</li>
-                  <li>• Monitor Core Web Vitals regularly</li>
-                </ul>
-              </div>
-              {/* Refresh Button */}
+            <div className="flex items-center space-x-2">
               <button
-                onClick={updateMetrics}
-                className="w-full mt-6 p-3 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors flex items-center justify-center gap-2"
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="p-1 hover:bg-cyan-400/20 rounded-lg transition-colors"
               >
-                <RefreshCw size={16} />
-                Refresh Metrics
+                <motion.div
+                  animate={{ rotate: isExpanded ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ChevronDown className="w-4 h-4 text-cyan-400" />
+                </motion.div>
+              </button>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="p-1 hover:bg-red-400/20 rounded-lg transition-colors"
+              >
+                <X className="w-4 h-4 text-red-400" />
               </button>
             </div>
-          </motion.div>
-        )}
+          </div>
 
-        {/* Quick Stats */}
-        <div className="p-4 bg-slate-800/50">
-          <div className="grid grid-cols-3 gap-4 text-center">
-            <div>
-              <div className="text-2xl font-bold text-cyan-400">
-                {metrics.lcp ? Math.round(metrics.lcp) : '--'}
-              </div>
-              <div className="text-xs text-slate-400">LCP (ms)</div>
+          {/* Score Display */}
+          <div className="p-4">
+            <div className="flex items-center justify-between mb-3">
+              <span className="text-xs text-gray-400">Performance Score</span>
+              <span className={`text-sm font-bold ${statusColor}`}>{score}/100</span>
             </div>
-            <div>
-              <div className="text-2xl font-bold text-blue-400">
-                {metrics.fid ? Math.round(metrics.fid) : '--'}
-              </div>
-              <div className="text-xs text-slate-400">FID (ms)</div>
+            <div className="w-full bg-slate-800 rounded-full h-2 mb-2">
+              <motion.div
+                className={`h-2 rounded-full ${
+                  score >= 90 ? 'bg-green-400' : 
+                  score >= 70 ? 'bg-yellow-400' : 'bg-red-400'
+                }`}
+                initial={{ width: 0 }}
+                animate={{ width: `${score}%` }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              />
             </div>
-            <div>
-              <div className="text-2xl font-bold text-purple-400">
-                {metrics.cls ? metrics.cls.toFixed(3) : '--'}
-              </div>
-              <div className="text-xs text-slate-400">CLS</div>
+            <div className="text-center">
+              <span className={`text-xs font-medium ${statusColor}`}>{status}</span>
             </div>
           </div>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
 
-export default PerformanceMonitor;
+          {/* Expanded Details */}
+          <AnimatePresence>
+            {isExpanded && metrics && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="border-t border-cyan-400/20"
+              >
+                <div className="p-4 space-y-3">
+                  {/* Core Web Vitals */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
+                      <Clock className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
+                      <div className="text-xs text-gray-400">FCP</div>
+                      <div className="text-sm font-medium text-white">
+                        {metrics.fcp.toFixed(0)}ms
+                      </div>
+                    </div>
+                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
+                      <Zap className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
+                      <div className="text-xs text-gray-400">LCP</div>
+                      <div className="text-sm font-medium text-white">
+                        {metrics.lcp.toFixed(0)}ms
+                      </div>
+                    </div>
+                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
+                      <Wifi className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
+                      <div className="text-xs text-gray-400">TTFB</div>
+                      <div className="text-sm font-medium text-white">
+                        {metrics.ttfb.toFixed(0)}ms
+                      </div>
+                    </div>
+                    <div className="text-center p-2 bg-slate-800/50 rounded-lg">
+                      <HardDrive className="w-4 h-4 text-cyan-400 mx-auto mb-1" />
+                      <div className="text-xs text-gray-400">Load</div>
+                      <div className="text-sm font-medium text-white">
+                        {(metrics.loadTime / 1000).toFixed(1)}s
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Alerts */}
+                  {alerts.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2 text-yellow-400">
+                        <AlertTriangle className="w-4 h-4" />
+                        <span className="text-xs font-medium">Performance Issues</span>
+                      </div>
+                      <div className="space-y-1">
+                        {alerts.map((alert, index) => (
+                          <div key={index} className="text-xs text-gray-300 bg-yellow-400/10 p-2 rounded">
+                            {alert}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Refresh Button */}
+                  <button
+                    onClick={() => {
+                      const newMetrics = calculateMetrics();
+                      if (newMetrics) {
+                        setMetrics(newMetrics);
+                        checkPerformanceIssues(newMetrics);
+                      }
+                    }}
+                    className="w-full py-2 px-3 bg-cyan-400/20 hover:bg-cyan-400/30 text-cyan-400 text-xs font-medium rounded-lg transition-colors"
+                  >
+                    Refresh Metrics
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
