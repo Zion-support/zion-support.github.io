@@ -124,7 +124,7 @@ const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTradin
 const AIContentCreationSuite = lazy(() => import('./pages/services/AIContentCreationSuite'));
 
 // Comprehensive services showcase
-const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/UltimateServicesShowcase2025'));
 
 // Innovative services showcase
 const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
