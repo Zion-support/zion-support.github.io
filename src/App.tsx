@@ -37,12 +37,10 @@ const RevolutionaryServices2030 = React.lazy(() => import('./pages/Revolutionary
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
-const ComprehensivePricing2025 = React.lazy(() => import('./pages/ComprehensivePricing2025.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
 const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx'));
-const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -52,32 +50,9 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
 
-// Simple placeholder pages for missing ones
-const Careers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
-    </div>
-  </div>
-);
-
-const Marketplace = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Marketplace - Zion Tech Group"
-      description="Explore our marketplace of AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
-      <p className="text-xl text-gray-300">Explore our solutions</p>
-    </div>
-  </div>
-);
+// Import real pages
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 
 function App() {
   return (
@@ -113,10 +88,9 @@ function App() {
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
-                <Route path="/services/showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                <Route path="/comprehensive-services-showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
-                <Route path="/pricing-2025" element={<ComprehensivePricing2025 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
