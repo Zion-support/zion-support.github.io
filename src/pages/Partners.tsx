@@ -29,7 +29,11 @@ export default function Partners() {
         { name: 'Microsoft', logo: 'M', tier: 'Platinum', category: 'Cloud & AI' },
         { name: 'AWS', logo: 'AWS', tier: 'Platinum', category: 'Cloud Infrastructure' },
         { name: 'Google Cloud', logo: 'GC', tier: 'Gold', category: 'AI & ML' },
-        { name: 'IBM', logo: 'IBM', tier: 'Gold', category: 'Enterprise Solutions' }
+        { name: 'IBM', logo: 'IBM', tier: 'Gold', category: 'Enterprise Solutions' },
+        { name: 'OpenAI', logo: 'O', tier: 'Gold', category: 'AI Research' },
+        { name: 'Anthropic', logo: 'A', tier: 'Silver', category: 'AI Safety' },
+        { name: 'NVIDIA', logo: 'N', tier: 'Gold', category: 'AI Hardware' },
+        { name: 'Intel', logo: 'I', tier: 'Silver', category: 'AI Processors' }
       ]
     },
     {
@@ -49,6 +53,17 @@ export default function Partners() {
       partners: [
         { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
         { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' }
+      ]
+    },
+    {
+      title: 'AI Research Partners',
+      description: 'Leading AI research institutions and specialized AI companies',
+      icon: Brain,
+      partners: [
+        { name: 'MIT AI Lab', logo: 'MIT', tier: 'Platinum', category: 'AI Research' },
+        { name: 'Stanford AI', logo: 'S', tier: 'Platinum', category: 'AI Research' },
+        { name: 'DeepMind', logo: 'D', tier: 'Gold', category: 'AI Research' },
+        { name: 'Meta AI', logo: 'M', tier: 'Gold', category: 'AI Research' }
       ]
     }
   ];
