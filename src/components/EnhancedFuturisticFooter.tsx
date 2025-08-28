@@ -105,23 +105,33 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
         { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
         { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
-        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true }
+        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true },
+        { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations-platform', featured: true },
+        { name: 'Quantum AI Cybersecurity', href: '/services/quantum-ai-cybersecurity-platform', featured: true },
+        { name: 'AI Content Creation Studio', href: '/services/ai-content-creation-studio', featured: true },
+        { name: 'AI Sales Intelligence', href: '/services/ai-sales-intelligence-platform', featured: true },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
+        { name: 'AI Data Analytics & BI', href: '/services/ai-data-analytics-bi', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics-platform', featured: true },
+        { name: 'AI Education Platform', href: '/services/ai-education-platform', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services/ai-metaverse-platform', featured: true },
+        { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', featured: true }
       ]
     },
     {
       title: 'Core Services',
       featured: true,
       links: [
-        { name: 'Cybersecurity Solutions', href: '/services#cybersecurity', featured: true },
-        { name: 'Cloud & DevOps', href: '/services#cloud-devops', featured: true },
-        { name: 'Data Analytics', href: '/services#data-analytics', featured: true },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure', featured: true },
-        { name: 'Digital Twin Solutions', href: '/services#digital-twin', featured: true },
-        { name: 'IoT & Edge Computing', href: '/services#iot-edge', featured: true },
-        { name: 'Blockchain & Web3', href: '/services#blockchain', featured: true },
-        { name: 'Quantum Computing', href: '/services#quantum-computing', featured: true },
-        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
-        { name: 'Enterprise Solutions', href: '/solutions', featured: true }
+        { name: 'Cloud Infrastructure & DevOps', href: '/services/cloud-infrastructure-devops', featured: true },
+        { name: 'IoT Edge Computing Platform', href: '/services/iot-edge-computing-platform', featured: true },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin-platform', featured: true },
+        { name: 'Blockchain Web3 Platform', href: '/services/blockchain-web3-platform', featured: true },
+        { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: true },
+        { name: 'AI Legal Tech Platform', href: '/services/ai-legal-tech-platform', featured: true },
+        { name: 'AI Green Technology', href: '/services/ai-green-technology-platform', featured: true },
+        { name: 'AI Development Platform', href: '/services/ai-development-platform', featured: true },
+        { name: 'AI Entertainment Platform', href: '/services/ai-entertainment-platform', featured: true },
+        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true }
       ]
     },
     {
