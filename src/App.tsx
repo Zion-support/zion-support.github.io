@@ -39,7 +39,15 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
 
+// Solution pages
+const HealthcareSolutions = React.lazy(() => import('./pages/solutions/HealthcareSolutions'));
+const FinancialSolutions = React.lazy(() => import('./pages/solutions/FinancialSolutions'));
+const ManufacturingSolutions = React.lazy(() => import('./pages/solutions/ManufacturingSolutions'));
+
 // Simple placeholder pages for missing ones
+const Partners = React.lazy(() => import('./pages/Partners'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
@@ -95,6 +103,8 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -102,6 +112,11 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Solution Routes */}
+                <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
