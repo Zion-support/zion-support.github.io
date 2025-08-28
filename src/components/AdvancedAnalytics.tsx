@@ -1,19 +1,18 @@
-import { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
 import { 
   BarChart3, 
   Users, 
   Eye, 
   MousePointer, 
+  TrendingUp, 
   Clock, 
+  Globe, 
+  Device,
   X,
-  Activity,
-  Zap,
-  Target,
-  Award,
-  Monitor,
-  Smartphone,
-  Tablet
+  Settings,
+  Download,
+  Share2
 } from 'lucide-react';
 
 interface AnalyticsData {
@@ -23,20 +22,22 @@ interface AnalyticsData {
   bounceRate: number;
   conversionRate: number;
   topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
-  referrers: Array<{ source: string; count: number }>;
-  timeOnPage: number;
-  scrollDepth: number;
-  clickEvents: number;
-  formSubmissions: number;
+  userDevices: Array<{ device: string; percentage: number }>;
+  userLocations: Array<{ country: string; percentage: number }>;
+  userBehavior: Array<{ action: string; count: number }>;
 }
 
-interface Props {
-  enabled?: boolean;
+interface AdvancedAnalyticsProps {
+  enabled: boolean;
+  showMetrics?: boolean;
+  trackingId?: string;
 }
 
-export function AdvancedAnalytics({ enabled = true }: Props): JSX.Element | null {
-  const [isVisible, setIsVisible] = useState(false);
+export function AdvancedAnalytics({ 
+  enabled, 
+  showMetrics = false,
+  trackingId = 'default'
+}: AdvancedAnalyticsProps) {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     pageViews: 0,
     uniqueVisitors: 0,
@@ -44,369 +45,560 @@ export function AdvancedAnalytics({ enabled = true }: Props): JSX.Element | null
     bounceRate: 0,
     conversionRate: 0,
     topPages: [],
-    userAgents: [],
-    referrers: [],
-    timeOnPage: 0,
-    scrollDepth: 0,
-    clickEvents: 0,
-    formSubmissions: 0
+    userDevices: [],
+    userLocations: [],
+    userBehavior: []
   });
-  const [sessionStart, setSessionStart] = useState<number>(Date.now());
   const [isTracking, setIsTracking] = useState(false);
+  const [sessionStart, setSessionStart] = useState<Date>(new Date());
+  const [userInteractions, setUserInteractions] = useState<Array<{
+    type: string;
+    timestamp: Date;
+    details: any;
+  }>>([]);
 
-  // Initialize analytics tracking
-  const initializeTracking = useCallback(() => {
-    if (!enabled) return () => {};
+  useEffect(() => {
+    if (!enabled) return;
 
-    setIsTracking(true);
-    setSessionStart(Date.now());
-
-    // Track page view
-    const trackPageView = () => {
-      setAnalyticsData(prev => ({
-        ...prev,
-        pageViews: prev.pageViews + 1
-      }));
-    };
-
-    // Track scroll depth
-    const trackScrollDepth = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
-      
-      setAnalyticsData(prev => ({
-        ...prev,
-        scrollDepth: Math.max(prev.scrollDepth, scrollPercent)
-      }));
-    };
-
-    // Track time on page
-    const trackTimeOnPage = () => {
-      const timeSpent = Math.round((Date.now() - sessionStart) / 1000);
-      setAnalyticsData(prev => ({
-        ...prev,
-        timeOnPage: timeSpent
-      }));
-    };
-
-    // Track click events
-    const trackClickEvents = () => {
-      setAnalyticsData(prev => ({
-        ...prev,
-        clickEvents: prev.clickEvents + 1
-      }));
-    };
-
-    // Track form submissions
-    const trackFormSubmissions = (e: Event) => {
-      if (e.target instanceof HTMLFormElement) {
-        setAnalyticsData(prev => ({
-          ...prev,
-          formSubmissions: prev.formSubmissions + 1
-        }));
-      }
-    };
-
-    // Track user agent
-    const trackUserAgent = () => {
-      const userAgent = navigator.userAgent;
-      let device = 'Desktop';
-      
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
-        device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
-      }
-      
-      setAnalyticsData(prev => {
-        const existingDevice = prev.userAgents.find(d => d.device === device);
-        if (existingDevice) {
-          existingDevice.count++;
-        } else {
-          prev.userAgents.push({ device, count: 1 });
-        }
-        return { ...prev };
-      });
-    };
-
-    // Track referrer
-    const trackReferrer = () => {
-      if (document.referrer) {
-        const referrer = new URL(document.referrer);
-        const source = referrer.hostname;
-        
-        setAnalyticsData(prev => {
-          const existingSource = prev.referrers.find(r => r.source === source);
-          if (existingSource) {
-            existingSource.count++;
-          } else {
-            prev.referrers.push({ source, count: 1 });
-          }
-          return { ...prev };
-        });
-      }
-    };
-
-    // Initialize tracking
-    trackPageView();
-    trackUserAgent();
-    trackReferrer();
-
-    // Add event listeners
-    window.addEventListener('scroll', trackScrollDepth, { passive: true });
-    document.addEventListener('click', trackClickEvents);
-    document.addEventListener('submit', trackFormSubmissions);
+    // Initialize analytics
+    initializeAnalytics();
     
-    // Update time on page every second
-    const timeInterval = setInterval(trackTimeOnPage, 1000);
+    // Start session tracking
+    startSessionTracking();
+    
+    // Set up event listeners
+    setupEventListeners();
+    
+    // Load existing data
+    loadAnalyticsData();
+    
+    // Cleanup on unmount
+    return () => {
+      cleanupAnalytics();
+    };
+  }, [enabled]);
+
+  const initializeAnalytics = () => {
+    // Generate or retrieve user ID
+    let userId = localStorage.getItem('zion_analytics_user_id');
+    if (!userId) {
+      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      localStorage.setItem('zion_analytics_user_id', userId);
+    }
+
+    // Set up session ID
+    const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    sessionStorage.setItem('zion_analytics_session_id', sessionId);
+
+    // Initialize analytics data
+    const initialData: AnalyticsData = {
+      pageViews: 1, // Current page view
+      uniqueVisitors: 1,
+      sessionDuration: 0,
+      bounceRate: 0,
+      conversionRate: 0,
+      topPages: [{ path: window.location.pathname, views: 1 }],
+      userDevices: [
+        { device: getDeviceType(), percentage: 100 }
+      ],
+      userLocations: [
+        { country: 'Unknown', percentage: 100 }
+      ],
+      userBehavior: []
+    };
+
+    setAnalyticsData(initialData);
+    setIsTracking(true);
+  };
+
+  const startSessionTracking = () => {
+    const startTime = new Date();
+    setSessionStart(startTime);
+
+    // Track session duration
+    const interval = setInterval(() => {
+      const duration = Math.floor((Date.now() - startTime.getTime()) / 1000);
+      setAnalyticsData(prev => ({
+        ...prev,
+        sessionDuration: duration
+      }));
+    }, 1000);
+
+    // Store interval for cleanup
+    sessionStorage.setItem('zion_analytics_interval', interval.toString());
 
     // Track page visibility changes
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Page is hidden, pause tracking
-        setIsTracking(false);
-      } else {
-        // Page is visible, resume tracking
-        setIsTracking(true);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+  };
+
+  const setupEventListeners = () => {
+    // Track clicks
+    document.addEventListener('click', handleClick);
+    
+    // Track scroll
+    document.addEventListener('scroll', handleScroll);
+    
+    // Track form submissions
+    document.addEventListener('submit', handleFormSubmit);
+    
+    // Track page unload
+    window.addEventListener('beforeunload', handlePageUnload);
+    
+    // Track route changes (for SPA)
+    window.addEventListener('popstate', handleRouteChange);
+    
+    // Track performance metrics
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            trackPerformanceMetrics(entry as PerformanceNavigationTiming);
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+    }
+  };
+
+  const handleVisibilityChange = () => {
+    if (document.hidden) {
+      // Page hidden - pause tracking
+      setIsTracking(false);
+    } else {
+      // Page visible - resume tracking
+      setIsTracking(true);
+    }
+  };
+
+  const handleClick = (event: Event) => {
+    if (!isTracking) return;
+
+    const target = event.target as HTMLElement;
+    const clickData = {
+      type: 'click',
+      timestamp: new Date(),
+      details: {
+        element: target.tagName.toLowerCase(),
+        text: target.textContent?.substring(0, 50) || '',
+        className: target.className || '',
+        id: target.id || '',
+        path: window.location.pathname
       }
     };
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
+    trackUserInteraction(clickData);
+  };
 
-    // Cleanup function
-    return () => {
-      window.removeEventListener('scroll', trackScrollDepth);
-      document.removeEventListener('click', trackClickEvents);
-      document.removeEventListener('submit', trackFormSubmissions);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      clearInterval(timeInterval);
+  const handleScroll = (event: Event) => {
+    if (!isTracking) return;
+
+    const scrollData = {
+      type: 'scroll',
+      timestamp: new Date(),
+      details: {
+        scrollY: window.scrollY,
+        scrollX: window.scrollX,
+        path: window.location.pathname
+      }
     };
-  }, [enabled, sessionStart]);
 
-  // Initialize tracking on mount
-  useEffect(() => {
-    const cleanup = initializeTracking();
-    return cleanup;
-  }, [initializeTracking]);
+    trackUserInteraction(scrollData);
+  };
 
-  // Calculate session duration
-  useEffect(() => {
-    if (isTracking) {
-      const interval = setInterval(() => {
-        const duration = Math.round((Date.now() - sessionStart) / 1000);
-        setAnalyticsData(prev => ({
-          ...prev,
-          sessionDuration: duration
-        }));
-      }, 1000);
+  const handleFormSubmit = (event: Event) => {
+    if (!isTracking) return;
 
-      return () => clearInterval(interval);
-    }
-  }, [isTracking, sessionStart]);
+    const form = event.target as HTMLFormElement;
+    const formData = {
+      type: 'form_submit',
+      timestamp: new Date(),
+      details: {
+        formId: form.id || '',
+        formAction: form.action || '',
+        formMethod: form.method || '',
+        path: window.location.pathname
+      }
+    };
 
-  // Simulate some analytics data for demonstration
-  useEffect(() => {
-    if (enabled) {
-      // Simulate top pages
-      setAnalyticsData(prev => ({
+    trackUserInteraction(formData);
+  };
+
+  const handlePageUnload = () => {
+    // Save analytics data before page unload
+    saveAnalyticsData();
+    
+    // Track session end
+    const sessionDuration = Math.floor((Date.now() - sessionStart.getTime()) / 1000);
+    trackEvent('session_end', { duration: sessionDuration });
+  };
+
+  const handleRouteChange = () => {
+    // Track page view for SPA route changes
+    trackPageView();
+  };
+
+  const trackUserInteraction = (interaction: any) => {
+    setUserInteractions(prev => [...prev, interaction]);
+    
+    // Update user behavior analytics
+    setAnalyticsData(prev => {
+      const behavior = [...prev.userBehavior];
+      const existingIndex = behavior.findIndex(b => b.action === interaction.type);
+      
+      if (existingIndex >= 0) {
+        behavior[existingIndex].count++;
+      } else {
+        behavior.push({ action: interaction.type, count: 1 });
+      }
+      
+      return { ...prev, userBehavior: behavior };
+    });
+  };
+
+  const trackPageView = () => {
+    const currentPath = window.location.pathname;
+    
+    setAnalyticsData(prev => {
+      const topPages = [...prev.topPages];
+      const existingPageIndex = topPages.findIndex(page => page.path === currentPath);
+      
+      if (existingPageIndex >= 0) {
+        topPages[existingPageIndex].views++;
+      } else {
+        topPages.push({ path: currentPath, views: 1 });
+      }
+      
+      return {
         ...prev,
-        topPages: [
-          { path: '/', views: 1250 },
-          { path: '/services', views: 890 },
-          { path: '/about', views: 456 },
-          { path: '/contact', views: 234 },
-          { path: '/blog', views: 189 }
-        ],
-        bounceRate: 35.2,
-        conversionRate: 8.7
-      }));
+        pageViews: prev.pageViews + 1,
+        topPages: topPages.sort((a, b) => b.views - a.views).slice(0, 10)
+      };
+    });
+  };
+
+  const trackEvent = (eventName: string, eventData: any) => {
+    const event = {
+      type: 'custom_event',
+      timestamp: new Date(),
+      details: {
+        eventName,
+        eventData,
+        path: window.location.pathname
+      }
+    };
+
+    trackUserInteraction(event);
+  };
+
+  const trackPerformanceMetrics = (navigationEntry: PerformanceNavigationTiming) => {
+    const performanceData = {
+      type: 'performance',
+      timestamp: new Date(),
+      details: {
+        loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+        domContentLoaded: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+        firstByte: navigationEntry.responseStart - navigationEntry.requestStart,
+        path: window.location.pathname
+      }
+    };
+
+    trackUserInteraction(performanceData);
+  };
+
+  const getDeviceType = (): string => {
+    const userAgent = navigator.userAgent;
+    if (/Android/i.test(userAgent)) return 'Android';
+    if (/iPhone|iPad|iPod/i.test(userAgent)) return 'iOS';
+    if (/Windows/i.test(userAgent)) return 'Windows';
+    if (/Mac/i.test(userAgent)) return 'Mac';
+    if (/Linux/i.test(userAgent)) return 'Linux';
+    return 'Unknown';
+  };
+
+  const loadAnalyticsData = () => {
+    // Load from localStorage
+    const savedData = localStorage.getItem('zion_analytics_data');
+    if (savedData) {
+      try {
+        const parsed = JSON.parse(savedData);
+        setAnalyticsData(prev => ({ ...prev, ...parsed }));
+      } catch (error) {
+        console.error('Failed to load analytics data:', error);
+      }
     }
-  }, [enabled]);
+  };
+
+  const saveAnalyticsData = () => {
+    try {
+      localStorage.setItem('zion_analytics_data', JSON.stringify(analyticsData));
+    } catch (error) {
+      console.error('Failed to save analytics data:', error);
+    }
+  };
+
+  const cleanupAnalytics = () => {
+    // Clear intervals
+    const intervalId = sessionStorage.getItem('zion_analytics_interval');
+    if (intervalId) {
+      clearInterval(parseInt(intervalId));
+    }
+    
+    // Remove event listeners
+    document.removeEventListener('click', handleClick);
+    document.removeEventListener('scroll', handleScroll);
+    document.removeEventListener('submit', handleFormSubmit);
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
+    window.removeEventListener('beforeunload', handlePageUnload);
+    window.removeEventListener('popstate', handleRouteChange);
+  };
+
+  const exportAnalyticsData = () => {
+    const data = {
+      timestamp: new Date().toISOString(),
+      trackingId,
+      analyticsData,
+      userInteractions: userInteractions.slice(-100), // Last 100 interactions
+      sessionInfo: {
+        start: sessionStart,
+        duration: analyticsData.sessionDuration,
+        isTracking
+      }
+    };
+
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `analytics-data-${Date.now()}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const shareAnalyticsData = async () => {
+    const summary = `Analytics Summary:
+Page Views: ${analyticsData.pageViews}
+Unique Visitors: ${analyticsData.uniqueVisitors}
+Session Duration: ${Math.floor(analyticsData.sessionDuration / 60)}m ${analyticsData.sessionDuration % 60}s
+Bounce Rate: ${analyticsData.bounceRate.toFixed(1)}%
+Conversion Rate: ${analyticsData.conversionRate.toFixed(1)}%`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Analytics Summary',
+          text: summary,
+          url: window.location.href
+        });
+      } catch (error) {
+        console.error('Share failed:', error);
+      }
+    } else {
+      // Fallback to clipboard
+      await navigator.clipboard.writeText(summary);
+      alert('Analytics summary copied to clipboard!');
+    }
+  };
+
+  const resetAnalytics = () => {
+    const initialData: AnalyticsData = {
+      pageViews: 0,
+      uniqueVisitors: 0,
+      sessionDuration: 0,
+      bounceRate: 0,
+      conversionRate: 0,
+      topPages: [],
+      userDevices: [],
+      userLocations: [],
+      userBehavior: []
+    };
+    
+    setAnalyticsData(initialData);
+    setUserInteractions([]);
+    localStorage.removeItem('zion_analytics_data');
+  };
 
   if (!enabled) return null;
 
-  if (!isVisible) {
+  if (!showMetrics) {
     return (
-      <motion.button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-44 right-4 z-50 p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        title="Analytics Dashboard"
-        aria-label="Open analytics dashboard"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="fixed bottom-4 left-4 z-50"
       >
-        <BarChart3 className="w-6 h-6 text-white" />
-      </motion.button>
+        <button
+          onClick={() => window.location.reload()}
+          className="bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+          title="Analytics Dashboard"
+        >
+          <BarChart3 className="w-6 h-6" />
+        </button>
+      </motion.div>
     );
   }
 
   return (
-    <AnimatePresence>
+    <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
       <motion.div
-        initial={{ opacity: 0, x: 300 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 300 }}
-        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[90vh] overflow-y-auto"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
       >
-        <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-            <BarChart3 className="w-6 h-6 text-indigo-500" />
-            Analytics Dashboard
-          </h3>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-gray-600 transition-colors p-1"
-            aria-label="Close analytics dashboard"
-          >
-            <X className="w-5 h-5" />
-          </button>
+        {/* Header */}
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-3">
+              <BarChart3 className="w-8 h-8" />
+              <div>
+                <h1 className="text-2xl font-bold">Analytics Dashboard</h1>
+                <p className="text-purple-100">Real-time user behavior & performance tracking</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <span className={`px-3 py-1 rounded-full text-sm ${
+                isTracking ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+              }`}>
+                {isTracking ? 'Tracking' : 'Paused'}
+              </span>
+              <button
+                onClick={() => window.location.reload()}
+                className="text-white hover:text-purple-200 transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div className="space-y-6">
-          {/* Real-time Metrics */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Activity className="w-4 h-4 text-green-500" />
-              Real-time Metrics
-            </h4>
-            
-            <div className="grid grid-cols-2 gap-3">
-              <div className="p-3 bg-green-50 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Eye className="w-4 h-4 text-green-500" />
-                  <span className="text-xs text-green-600">Page Views</span>
+        {/* Content */}
+        <div className="p-6 space-y-6">
+          {/* Key Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <div className="flex items-center space-x-3">
+                <Eye className="w-6 h-6 text-blue-600" />
+                <div>
+                  <div className="text-2xl font-bold text-blue-900">{analyticsData.pageViews}</div>
+                  <div className="text-sm text-blue-600">Page Views</div>
                 </div>
-                <span className="text-lg font-bold text-green-700">{analyticsData.pageViews}</span>
-              </div>
-              
-              <div className="p-3 bg-blue-50 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Users className="w-4 h-4 text-blue-500" />
-                  <span className="text-xs text-blue-600">Unique Visitors</span>
-                </div>
-                <span className="text-lg font-bold text-blue-700">{analyticsData.uniqueVisitors || 1}</span>
-              </div>
-              
-              <div className="p-3 bg-purple-50 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Clock className="w-4 h-4 text-purple-500" />
-                  <span className="text-xs text-purple-600">Session Duration</span>
-                </div>
-                <span className="text-lg font-bold text-purple-700">{Math.floor(analyticsData.sessionDuration / 60)}m {analyticsData.sessionDuration % 60}s</span>
-              </div>
-              
-              <div className="p-3 bg-orange-50 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <MousePointer className="w-4 h-4 text-orange-500" />
-                  <span className="text-xs text-orange-600">Clicks</span>
-                </div>
-                <span className="text-lg font-bold text-orange-700">{analyticsData.clickEvents}</span>
               </div>
             </div>
-          </div>
 
-          {/* Performance Metrics */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Zap className="w-4 h-4 text-yellow-500" />
-              Performance Metrics
-            </h4>
-            
-            <div className="space-y-3">
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <span className="text-sm text-gray-700">Scroll Depth</span>
-                <span className="text-sm font-medium text-gray-800">{analyticsData.scrollDepth}%</span>
-              </div>
-              
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <span className="text-sm text-gray-700">Time on Page</span>
-                <span className="text-sm font-medium text-gray-800">{Math.floor(analyticsData.timeOnPage / 60)}m {analyticsData.timeOnPage % 60}s</span>
-              </div>
-              
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <span className="text-sm text-gray-700">Form Submissions</span>
-                <span className="text-sm font-medium text-gray-800">{analyticsData.formSubmissions}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Conversion Metrics */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Target className="w-4 h-4 text-red-500" />
-              Conversion Metrics
-            </h4>
-            
-            <div className="grid grid-cols-2 gap-3">
-              <div className="p-3 bg-red-50 rounded-lg">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-red-700">{analyticsData.bounceRate}%</div>
-                  <div className="text-xs text-red-600">Bounce Rate</div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+              <div className="flex items-center space-x-3">
+                <Users className="w-6 h-6 text-green-600" />
+                <div>
+                  <div className="text-2xl font-bold text-green-900">{analyticsData.uniqueVisitors}</div>
+                  <div className="text-sm text-green-600">Unique Visitors</div>
                 </div>
               </div>
-              
-              <div className="p-3 bg-green-50 rounded-lg">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-green-700">{analyticsData.conversionRate}%</div>
-                  <div className="text-xs text-green-600">Conversion Rate</div>
+            </div>
+
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <div className="flex items-center space-x-3">
+                <Clock className="w-6 h-6 text-yellow-600" />
+                <div>
+                  <div className="text-2xl font-bold text-yellow-900">
+                    {Math.floor(analyticsData.sessionDuration / 60)}m {analyticsData.sessionDuration % 60}s
+                  </div>
+                  <div className="text-sm text-yellow-600">Session Duration</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+              <div className="flex items-center space-x-3">
+                <TrendingUp className="w-6 h-6 text-red-600" />
+                <div>
+                  <div className="text-2xl font-bold text-red-900">{analyticsData.bounceRate.toFixed(1)}%</div>
+                  <div className="text-sm text-red-600">Bounce Rate</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+              <div className="flex items-center space-x-3">
+                <MousePointer className="w-6 h-6 text-purple-600" />
+                <div>
+                  <div className="text-2xl font-bold text-purple-900">{analyticsData.conversionRate.toFixed(1)}%</div>
+                  <div className="text-sm text-purple-600">Conversion Rate</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Top Pages */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Award className="w-4 h-4 text-blue-500" />
-              Top Pages
-            </h4>
-            
-            <div className="space-y-2">
-              {analyticsData.topPages.slice(0, 3).map((page, index) => (
-                <div key={page.path} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium text-gray-500">#{index + 1}</span>
-                    <span className="text-sm text-gray-700">{page.path}</span>
-                  </div>
-                  <span className="text-sm font-medium text-gray-800">{page.views}</span>
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold text-gray-900">Top Pages</h2>
+            <div className="bg-gray-50 rounded-lg p-4">
+              {analyticsData.topPages.length === 0 ? (
+                <p className="text-gray-500 text-center">No page views yet</p>
+              ) : (
+                <div className="space-y-2">
+                  {analyticsData.topPages.map((page, index) => (
+                    <div key={index} className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700">{page.path}</span>
+                      <span className="text-sm font-medium text-gray-900">{page.views} views</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
-          {/* Device Distribution */}
-          <div>
-            <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Monitor className="w-4 h-4 text-purple-500" />
-              Device Distribution
-            </h4>
-            
-            <div className="space-y-2">
-              {analyticsData.userAgents.map((device, index) => (
-                <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded-lg">
-                  <div className="flex items-center gap-2">
-                    {device.device === 'Mobile' && <Smartphone className="w-4 h-4 text-blue-500" />}
-                    {device.device === 'Tablet' && <Tablet className="w-4 h-4 text-green-500" />}
-                    {device.device === 'Desktop' && <Monitor className="w-4 h-4 text-purple-500" />}
-                    <span className="text-sm text-gray-700">{device.device}</span>
-                  </div>
-                  <span className="text-sm font-medium text-gray-800">{device.count}</span>
+          {/* User Behavior */}
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold text-gray-900">User Behavior</h2>
+            <div className="bg-gray-50 rounded-lg p-4">
+              {analyticsData.userBehavior.length === 0 ? (
+                <p className="text-gray-500 text-center">No user interactions yet</p>
+              ) : (
+                <div className="space-y-2">
+                  {analyticsData.userBehavior.map((behavior, index) => (
+                    <div key={index} className="flex items-center justify-between">
+                      <span className="text-sm text-gray-700">{behavior.action}</span>
+                      <span className="text-sm font-medium text-gray-900">{behavior.count}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
-          {/* Session Status */}
-          <div className="pt-4 border-t border-gray-200">
-            <div className="flex items-center justify-between">
-              <span className="text-sm font-medium text-gray-700">Session Status</span>
-              <div className="flex items-center gap-2">
-                <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                <span className="text-xs text-gray-600">{isTracking ? 'Active' : 'Paused'}</span>
-              </div>
+          {/* Actions */}
+          <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+            <div className="flex space-x-3">
+              <button
+                onClick={exportAnalyticsData}
+                className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+              >
+                <Download className="w-4 h-4" />
+                <span>Export Data</span>
+              </button>
+              
+              <button
+                onClick={shareAnalyticsData}
+                className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                <Share2 className="w-4 h-4" />
+                <span>Share Summary</span>
+              </button>
+              
+              <button
+                onClick={resetAnalytics}
+                className="flex items-center space-x-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+              >
+                <Settings className="w-4 h-4" />
+                <span>Reset Data</span>
+              </button>
+            </div>
+            
+            <div className="text-sm text-gray-500">
+              Tracking ID: {trackingId}
             </div>
           </div>
         </div>
       </motion.div>
-    </AnimatePresence>
+    </div>
   );
 }

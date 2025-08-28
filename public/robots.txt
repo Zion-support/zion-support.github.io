@@ -1,53 +1,103 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://ziontechgroup.com/sitemap.xml
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /server/
-Disallow: /temp_working/
-Disallow: /broken_files_backup/
-Disallow: /scripts/
-Disallow: /automation/
+Disallow: /static/
+Disallow: /temp/
+Disallow: /backup/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /tests/
+Disallow: /stories/
+Disallow: /components.disabled/
+Disallow: /styles_backup/
+Disallow: /zion-os.disabled/
 
-# Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
-Allow: /ai-services
-Allow: /it-services
-Allow: /micro-saas
-Allow: /solutions/
-Allow: /case-studies
-Allow: /help-center
-Allow: /faq
-Allow: /pricing
-Allow: /marketplace
+# Disallow development and build files
+Disallow: /*.js.map
+Disallow: /*.css.map
+Disallow: /*.ts.map
+Disallow: /tsconfig.tsbuildinfo
+Disallow: /package*.json
+Disallow: /yarn.lock*
+Disallow: /vite.config*
+Disallow: /tailwind.config*
+Disallow: /postcss.config*
+Disallow: /eslint.config*
+Disallow: /.eslintrc*
+Disallow: /.prettierrc*
+Disallow: /.babelrc*
+Disallow: /webpack.config*
+Disallow: /rollup.config*
+Disallow: /jest.config*
+Disallow: /vitest.config*
+Disallow: /cypress.config*
+Disallow: /playwright.config*
 
-# Crawl delay (optional)
+# Disallow temporary and backup files
+Disallow: /*.backup.*
+Disallow: /*.cleanup-backup.*
+Disallow: /*.tar
+Disallow: /*.zip
+Disallow: /*.gz
+Disallow: /*.rar
+
+# Disallow specific file types
+Disallow: /*.log
+Disallow: /*.tmp
+Disallow: /*.temp
+Disallow: /*.cache
+Disallow: /*.bak
+Disallow: /*.old
+Disallow: /*.orig
+
+# Allow important pages and assets
+Allow: /images/
+Allow: /fonts/
+Allow: /favicon.ico
+Allow: /logo*.png
+Allow: /manifest.json
+Allow: /sw.js
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Crawl delay (optional - be respectful to servers)
 Crawl-delay: 1
 
-# Additional directives for specific bots
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-# Block archive.org (optional)
-User-agent: ia_archiver
-Disallow: /
+# Host
+Host: https://ziontechgroup.com
