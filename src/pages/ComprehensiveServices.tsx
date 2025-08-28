@@ -4,7 +4,7 @@ import {
     ArrowRight, Cloud as CloudIcon,
     Cpu, ExternalLink, Globe as GlobeIcon, Mail, MapPin, MessageSquare, Phone, Search, Sparkles, Star
 } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
 import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
@@ -406,38 +406,43 @@ export default function ComprehensiveServices() {
       />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
-              Cutting-Edge Technology Solutions
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Zion Tech Group
+                Comprehensive
               </span>
               <br />
-              <span className="text-white">Comprehensive Services</span>
+              <span className="text-white">Services</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Leading the future with revolutionary AI, quantum computing, space technology, and emerging tech solutions. 
-              Transform your business with our cutting-edge micro SAAS, IT infrastructure, and AI innovation services.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Discover our complete portfolio of cutting-edge technology solutions designed to transform industries and drive innovation
             </p>
-            <div className="mt-6 flex items-center justify-center gap-3">
-              <a href="tel:+13024640950" className="inline-flex items-center bg-zion-cyan text-black font-semibold px-4 py-2 rounded-md">
-                <Phone className="h-4 w-4 mr-2" /> Call Us
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center border border-white/20 px-4 py-2 rounded-md">
-                <Mail className="h-4 w-4 mr-2" /> Email
-              </a>
-              <a href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" target="_blank" rel="noopener noreferrer" className="inline-flex items-center border border-white/20 px-4 py-2 rounded-md">
-                <MapPin className="h-4 w-4 mr-2" /> Visit
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-lg rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              >
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Get Started Today
+              </Link>
+              <a
+                href="https://ziontechgroup.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold text-lg rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                <GlobeIcon className="w-5 h-5 mr-2" />
+                Visit Our Website
               </a>
             </div>
           </motion.div>
