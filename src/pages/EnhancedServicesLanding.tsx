@@ -88,17 +88,15 @@ import {
   Award as AwardIcon,
   Phone as PhoneIcon,
   MapPin as MapPinIcon,
-  Infinity as InfinityIcon,
-  ChevronDown,
-  ChevronUp
+  Infinity as InfinityIcon
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
 
-export default function ComprehensivePricingGuide2027() {
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+export default function EnhancedServicesLanding() {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState([0, 50000]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
 
   // Get unique categories from services
   const categories = [
@@ -131,8 +129,26 @@ export default function ComprehensivePricingGuide2027() {
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
-    return matchesCategory && matchesPrice;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'rating':
+        return b.rating - a.rating;
+      case 'price':
+        return a.price - b.price;
+      case 'reviews':
+        return b.reviewCount - a.reviewCount;
+      case 'name':
+        return a.title.localeCompare(b.title);
+      default:
+        return 0;
+    }
   });
 
   const getCategoryIcon = (category: string) => {
@@ -165,15 +181,11 @@ export default function ComprehensivePricingGuide2027() {
     return iconMap[category] || <Sparkles className="w-6 h-6" />;
   };
 
-  const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Comprehensive AI Services Pricing Guide 2027 - Zion Tech Group"
-        description="Complete pricing guide for our AI-powered micro SAAS services, IT solutions, and innovative technology services. Get transparent pricing and ROI information."
+        title="Enhanced AI Services & Solutions - Zion Tech Group"
+        description="Discover our comprehensive suite of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
       />
       
       {/* Hero Section */}
@@ -186,14 +198,14 @@ export default function ComprehensivePricingGuide2027() {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                2027 Pricing Guide
+                AI-Powered
               </span>
               <br />
-              <span className="text-white">AI-Powered Services</span>
+              <span className="text-white">Micro SAAS Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transparent pricing for our comprehensive suite of AI-powered micro SAAS solutions. 
-              Every service includes detailed ROI projections, setup timelines, and competitive analysis.
+              Transform your business with our comprehensive suite of intelligent, innovative, and diversified AI services. 
+              From business intelligence to quantum computing, we deliver cutting-edge solutions that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -201,14 +213,14 @@ export default function ComprehensivePricingGuide2027() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Get Custom Quote
+                Get Started Today
               </Link>
               <Link
-                to="/services/enhanced"
+                to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
-                View All Services
+                <DollarSign className="w-5 h-5 mr-2" />
+                Request Custom Quote
               </Link>
             </div>
           </motion.div>
@@ -238,7 +250,7 @@ export default function ComprehensivePricingGuide2027() {
         </div>
       </section>
 
-      {/* Pricing Overview */}
+      {/* Services Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -248,237 +260,198 @@ export default function ComprehensivePricingGuide2027() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transparent Pricing Structure
+              Comprehensive AI Services Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our pricing is designed to provide maximum value while ensuring accessibility for businesses of all sizes. 
-              Every service includes comprehensive implementation, training, and ongoing support.
+              Our cutting-edge AI solutions span across industries and use cases, delivering measurable business value 
+              and competitive advantages to organizations worldwide.
             </p>
           </motion.div>
 
-          {/* Pricing Tiers */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {[
-              {
-                name: "Starter Solutions",
-                price: "$3,000 - $7,000",
-                description: "Perfect for small businesses and startups",
-                features: ["Basic AI Integration", "Standard Support", "3-Month Implementation", "Training Included"],
-                color: "from-green-500 to-emerald-600"
-              },
-              {
-                name: "Professional Solutions",
-                price: "$7,000 - $15,000",
-                description: "Ideal for growing businesses and enterprises",
-                features: ["Advanced AI Features", "Priority Support", "6-Month Implementation", "Custom Training", "Integration Support"],
-                color: "from-blue-500 to-cyan-600"
-              },
-              {
-                name: "Enterprise Solutions",
-                price: "$15,000 - $50,000+",
-                description: "For large organizations with complex needs",
-                features: ["Full AI Suite", "24/7 Dedicated Support", "12-Month Implementation", "Custom Development", "White-label Options"],
-                color: "from-purple-500 to-pink-600"
-              }
-            ].map((tier, index) => (
+          {/* Service Categories Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+            {categories.slice(1).map((category, index) => (
               <motion.div
-                key={index}
+                key={category.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className={`bg-gradient-to-br ${tier.color} p-8 rounded-xl text-white`}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`bg-gradient-to-br ${category.color} p-6 rounded-xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300`}
+                onClick={() => setActiveCategory(category.id)}
               >
-                <h3 className="text-2xl font-bold mb-2">{tier.name}</h3>
-                <div className="text-3xl font-bold mb-2">{tier.price}</div>
-                <p className="text-lg mb-6 opacity-90">{tier.description}</p>
-                <ul className="space-y-3">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <div className="text-3xl mb-3">{category.icon}</div>
+                <h3 className="text-lg font-semibold mb-2">{category.name}</h3>
+                <p className="text-sm opacity-90">{category.count} Services</p>
               </motion.div>
             ))}
           </div>
 
-          {/* Filters */}
-          <div className="flex flex-col lg:flex-row gap-6 mb-8">
-            <div className="flex-1">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
-              <select
-                value={activeCategory}
-                onChange={(e) => setActiveCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              >
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-                    {category.name} ({category.count})
-                  </option>
-                ))}
-              </select>
+          {/* Search and Filter */}
+          <div className="flex flex-col md:flex-row gap-4 mb-8">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              />
             </div>
-            <div className="flex-1">
-              <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
-              <div className="flex items-center space-x-4">
-                <input
-                  type="range"
-                  min="0"
-                  max="50000"
-                  value={priceRange[1]}
-                  onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                  className="flex-1"
-                />
-                <span className="text-white font-medium">${priceRange[0].toLocaleString()} - ${priceRange[1].toLocaleString()}</span>
-              </div>
-            </div>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            >
+              <option value="rating">Sort by Rating</option>
+              <option value="price">Sort by Price</option>
+              <option value="reviews">Sort by Reviews</option>
+              <option value="name">Sort by Name</option>
+            </select>
           </div>
 
-          {/* Services Pricing Grid */}
-          <div className="space-y-6">
-            {filteredServices.map((service, index) => (
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden"
+                className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 transform hover:scale-105"
               >
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center space-x-4">
-                      {getCategoryIcon(service.category)}
-                      <div>
-                        <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                        <span className="inline-block px-2 py-1 text-xs font-medium bg-cyan-900 text-cyan-300 rounded-full">
-                          {service.category}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-3xl font-bold text-white">${service.price.toLocaleString()}</div>
-                      <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    {getCategoryIcon(service.category)}
+                    <div>
+                      <span className="inline-block px-2 py-1 text-xs font-medium bg-cyan-900 text-cyan-300 rounded-full">
+                        {service.category}
+                      </span>
                     </div>
                   </div>
-
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
-                    <div className="text-center p-3 bg-slate-700 rounded-lg">
-                      <div className="text-2xl font-bold text-cyan-400">{service.aiScore}%</div>
-                      <div className="text-xs text-gray-400">AI Score</div>
-                    </div>
-                    <div className="text-center p-3 bg-slate-700 rounded-lg">
-                      <div className="text-2xl font-bold text-green-400">{service.rating}</div>
-                      <div className="text-xs text-gray-400">Rating</div>
-                    </div>
-                    <div className="text-center p-3 bg-slate-700 rounded-lg">
-                      <div className="text-2xl font-bold text-orange-400">{service.setupTime}</div>
-                      <div className="text-xs text-gray-400">Setup Time</div>
-                    </div>
-                    <div className="text-center p-3 bg-slate-700 rounded-lg">
-                      <div className="text-2xl font-bold text-purple-400">{service.roi}</div>
-                      <div className="text-xs text-gray-400">ROI</div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <button
-                      onClick={() => toggleServiceExpansion(service.id)}
-                      className="inline-flex items-center px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-                    >
-                      {expandedService === service.id ? (
-                        <>
-                          <ChevronUp className="w-4 h-4 mr-2" />
-                          Hide Details
-                        </>
-                      ) : (
-                        <>
-                          <ChevronDown className="w-4 h-4 mr-2" />
-                          View Details
-                        </>
-                      )}
-                    </button>
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                    >
-                      Get Quote
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
+                  <div className="flex items-center space-x-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white font-medium">{service.rating}</span>
+                    <span className="text-gray-400 text-sm">({service.reviewCount})</span>
                   </div>
                 </div>
 
-                {/* Expanded Details */}
-                <AnimatePresence>
-                  {expandedService === service.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="border-t border-slate-700 bg-slate-900"
-                    >
-                      <div className="p-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                          <div>
-                            <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                            <div className="space-y-2">
-                              {service.tags.map((tag, tagIndex) => (
-                                <div key={tagIndex} className="flex items-center">
-                                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                                  <span className="text-gray-300">{tag}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                          <div>
-                            <h4 className="text-lg font-semibold text-white mb-3">Integrations</h4>
-                            <div className="space-y-2">
-                              {service.integrations.slice(0, 6).map((integration, integrationIndex) => (
-                                <div key={integrationIndex} className="flex items-center">
-                                  <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
-                                  <span className="text-gray-300">{integration}</span>
-                                </div>
-                              ))}
-                              {service.integrations.length > 6 && (
-                                <div className="text-gray-400 text-sm">
-                                  +{service.integrations.length - 6} more integrations
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="mt-6 p-4 bg-slate-800 rounded-lg">
-                          <h4 className="text-lg font-semibold text-white mb-3">Competitive Analysis</h4>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                              <h5 className="text-sm font-medium text-gray-400 mb-2">Competitors</h5>
-                              <div className="space-y-1">
-                                {service.competitors.map((competitor, competitorIndex) => (
-                                  <div key={competitorIndex} className="text-gray-300 text-sm">
-                                    • {competitor}
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                            <div>
-                              <h5 className="text-sm font-medium text-gray-400 mb-2">Our Advantage</h5>
-                              <div className="text-gray-300 text-sm">
-                                • {service.aiScore}% AI-powered accuracy<br />
-                                • {service.roI} ROI guarantee<br />
-                                • {service.setupTime} rapid deployment<br />
-                                • 24/7 expert support
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">Price:</span>
+                    <span className="text-white font-bold text-lg">${service.price.toLocaleString()}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">Market Price:</span>
+                    <span className="text-cyan-400 font-medium">{service.marketPrice}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">ROI:</span>
+                    <span className="text-green-400 font-medium">{service.roi}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">Setup Time:</span>
+                    <span className="text-orange-400 font-medium">{service.setupTime}</span>
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="text-sm font-medium text-gray-400 mb-2">Key Features:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.slice(0, 4).map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 py-1 text-xs bg-slate-700 text-gray-300 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                    <span className="text-sm text-gray-400">AI Score: {service.aiScore}%</span>
+                  </div>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Zion Tech Group */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge AI technology with deep industry expertise to deliver solutions that transform businesses 
+              and drive measurable results.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: <Brain className="w-12 h-12 text-cyan-400" />,
+                title: "AI-First Approach",
+                description: "Every solution is built with AI at its core, ensuring maximum intelligence and automation capabilities."
+              },
+              {
+                icon: <Award className="w-12 h-12 text-cyan-400" />,
+                title: "Proven Results",
+                description: "Our solutions deliver measurable ROI with documented success stories across industries."
+              },
+              {
+                icon: <Globe className="w-12 h-12 text-cyan-400" />,
+                title: "Global Expertise",
+                description: "Serving clients worldwide with localized solutions and 24/7 support capabilities."
+              },
+              {
+                icon: <Zap className="w-12 h-12 text-cyan-400" />,
+                title: "Rapid Deployment",
+                description: "Quick implementation with minimal disruption to your existing operations."
+              },
+              {
+                icon: <Shield className="w-12 h-12 text-cyan-400" />,
+                title: "Enterprise Security",
+                description: "Bank-grade security and compliance with industry standards and regulations."
+              },
+              {
+                icon: <Users className="w-12 h-12 text-cyan-400" />,
+                title: "Expert Team",
+                description: "Experienced professionals with deep expertise in AI, cloud, and enterprise solutions."
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                className="text-center p-6"
+              >
+                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -486,7 +459,7 @@ export default function ComprehensivePricingGuide2027() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -494,11 +467,11 @@ export default function ComprehensivePricingGuide2027() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact us today for a personalized consultation and custom quote tailored to your specific business needs. 
-              Our experts are ready to help you choose the perfect AI solution.
+              Join hundreds of organizations that have already transformed their operations with our AI-powered solutions. 
+              Get started today and experience the future of business technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -513,7 +486,7 @@ export default function ComprehensivePricingGuide2027() {
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 <DollarSign className="w-5 h-5 mr-2" />
-                Request Custom Quote
+                Get Custom Quote
               </Link>
             </div>
           </motion.div>
