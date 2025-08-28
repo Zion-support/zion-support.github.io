@@ -336,7 +336,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-sm text-gray-300">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>

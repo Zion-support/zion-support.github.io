@@ -2,347 +2,326 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   PenTool, 
-  TrendingUp, 
   Target, 
-  Users, 
-  BarChart3, 
+  TrendingUp, 
+  Shield, 
   Zap, 
+  Users, 
+  CheckCircle, 
+  ArrowRight, 
   Globe, 
-  Shield,
-  CheckCircle,
-  ArrowRight,
-  Star,
+  Database, 
+  BarChart3,
   Clock,
-  Database,
-  FileText,
+  DollarSign,
+  Star,
   Lightbulb,
+  Building,
+  FileText,
+  MessageCircle,
+  Search,
+  Eye,
+  GitFork,
+  Phone,
+  Mail,
+  MapPin,
+  Cpu,
+  Brain,
+  Cloud,
+  Lock,
+  Activity,
+  PieChart,
+  Gauge,
+  Settings,
+  RefreshCw,
+  Calendar,
   Award,
   Rocket,
-  Sparkles,
-  Search,
-  Share2,
-  Monitor,
-  Palette,
-  Camera,
+  Play,
+  BookOpen,
+  Newspaper,
   Video,
   Mic,
-  Edit3,
-  Eye,
-  Heart,
-  MessageCircle
+  Image,
+  Share2,
+  BarChart3,
+  Target as TargetIcon,
+  Palette,
+  Sparkles
 } from 'lucide-react';
 
-const AIContentMarketingSuite = () => {
+const AIContentMarketingSuite: React.FC = () => {
   const features = [
     {
-      icon: <PenTool className="w-6 h-6" />,
-      title: "AI Content Creation",
-      description: "Generate high-quality, engaging content across multiple formats with advanced AI writing assistance."
+      icon: Brain,
+      title: "AI Content Generation",
+      description: "Create high-quality, engaging content in seconds with advanced language models"
     },
     {
-      icon: <Target className="w-6 h-6" />,
+      icon: Target,
       title: "Audience Intelligence",
-      description: "Deep insights into your target audience with AI-powered persona analysis and behavior prediction."
+      description: "Deep insights into your target audience's preferences, behaviors, and content consumption patterns"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Performance Optimization",
-      description: "AI-driven content optimization that improves engagement, conversions, and SEO performance."
+      icon: Search,
+      title: "SEO Optimization",
+      description: "AI-powered keyword research, content optimization, and SERP analysis for maximum visibility"
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Multi-Channel Distribution",
-      description: "Automated content distribution across social media, email, blogs, and other marketing channels."
+      icon: Analytics,
+      title: "Performance Analytics",
+      description: "Comprehensive metrics and insights to measure content performance and ROI"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive content performance metrics with AI-powered insights and recommendations."
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
+      icon: Zap,
       title: "Automated Workflows",
-      description: "Streamline content creation, approval, and publishing with intelligent automation."
+      description: "Streamline content creation, publishing, and distribution with intelligent automation"
+    },
+    {
+      icon: Shield,
+      title: "Brand Consistency",
+      description: "Maintain consistent brand voice and messaging across all content channels"
     }
   ];
 
-  const pricingPlans = [
+  const useCases = [
     {
-      name: "Creator",
-      price: "$79",
+      icon: FileText,
+      title: "Blog & Articles",
+      description: "Generate engaging blog posts, articles, and long-form content that ranks and converts"
+    },
+    {
+      icon: Share2,
+      title: "Social Media",
+      description: "Create compelling social media posts, captions, and campaigns for all platforms"
+    },
+    {
+      icon: Video,
+      title: "Video Content",
+      description: "Generate video scripts, descriptions, and marketing copy for multimedia campaigns"
+    },
+    {
+      icon: Mail,
+      title: "Email Marketing",
+      description: "Craft personalized email campaigns, subject lines, and content that drives engagement"
+    }
+  ];
+
+  const pricing = [
+    {
+      name: "Starter",
+      price: "$199",
       period: "/month",
-      description: "Perfect for individual content creators and small businesses",
+      description: "Perfect for small businesses and content creators starting their AI marketing journey",
       features: [
-        "Up to 50 AI-generated articles/month",
-        "Basic audience insights",
-        "Social media scheduling",
+        "Up to 50 content pieces/month",
+        "Basic AI content generation",
+        "SEO optimization tools",
         "Email support",
-        "Standard analytics"
+        "Standard analytics",
+        "Basic templates"
       ],
+      cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$599",
       period: "/month",
       description: "Ideal for growing businesses and marketing teams",
       features: [
-        "Up to 200 AI-generated articles/month",
-        "Advanced AI algorithms",
-        "Multi-channel distribution",
+        "Up to 200 content pieces/month",
+        "Advanced AI models",
+        "Custom brand voice training",
         "Priority support",
         "Advanced analytics",
-        "Custom content templates"
+        "API access",
+        "Team collaboration",
+        "Custom workflows"
       ],
+      cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$1,499",
       period: "/month",
-      description: "For large organizations with extensive content needs",
+      description: "For large organizations with complex content marketing needs",
       features: [
-        "Unlimited AI content generation",
+        "Unlimited content generation",
         "Custom AI model training",
-        "Full platform access",
-        "Dedicated support team",
-        "Advanced reporting & insights",
-        "API access",
-        "Custom integrations"
+        "White-label solutions",
+        "Dedicated support",
+        "Advanced automation",
+        "Custom integrations",
+        "SLA guarantees",
+        "On-premise options"
       ],
+      cta: "Contact Sales",
       popular: false
-    }
-  ];
-
-  const contentTypes = [
-    {
-      title: "Blog Posts & Articles",
-      description: "SEO-optimized, engaging content that ranks well and drives traffic to your website.",
-      icon: <FileText className="w-8 h-8 text-blue-500" />
-    },
-    {
-      title: "Social Media Content",
-      description: "Platform-specific content that maximizes engagement across all social networks.",
-      icon: <Share2 className="w-8 h-8 text-green-500" />
-    },
-    {
-      title: "Email Marketing",
-      description: "Personalized email campaigns that convert subscribers into loyal customers.",
-      icon: <Mail className="w-8 h-8 text-yellow-500" />
-    },
-    {
-      title: "Video & Multimedia",
-      description: "AI-generated video scripts, podcast outlines, and multimedia content strategies.",
-      icon: <Video className="w-8 h-8 text-purple-500" />
     }
   ];
 
   const benefits = [
     {
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
-      title: "Content ROI",
-      value: "300%+",
-      description: "Increase content marketing ROI with AI-optimized strategies"
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-blue-500" />,
+      icon: Clock,
       title: "Time Savings",
-      value: "70%",
-      description: "Reduce content creation time with AI automation"
+      value: "80%",
+      description: "Reduce content creation time from hours to minutes with AI automation"
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
+      icon: TrendingUp,
       title: "Engagement Boost",
-      value: "150%",
-      description: "Improve audience engagement and interaction rates"
+      value: "3x",
+      description: "Increase audience engagement and interaction with AI-optimized content"
     },
     {
-      icon: <Target className="w-8 h-8 text-cyan-500" />,
-      title: "Conversion Rate",
-      value: "45%",
-      description: "Higher conversion rates from optimized content"
+      icon: Search,
+      title: "SEO Performance",
+      value: "2.5x",
+      description: "Improve search rankings and organic traffic with AI-powered optimization"
+    },
+    {
+      icon: DollarSign,
+      title: "ROI Improvement",
+      value: "40%",
+      description: "Higher conversion rates and better marketing ROI with targeted content"
     }
   ];
 
-  const aiCapabilities = [
+  const contentTypes = [
     {
-      title: "Natural Language Generation",
-      description: "Create human-like content that resonates with your audience and maintains brand voice consistency.",
-      icon: <PenTool className="w-12 h-12 text-blue-500" />
+      icon: FileText,
+      title: "Blog Posts",
+      description: "SEO-optimized articles, how-to guides, and thought leadership content"
     },
     {
-      title: "Content Optimization",
-      description: "AI-powered suggestions for headlines, keywords, and content structure to maximize performance.",
-      icon: <Search className="w-12 h-12 text-green-500" />
+      icon: Social,
+      title: "Social Media",
+      description: "Platform-specific content for Facebook, Instagram, LinkedIn, Twitter, and TikTok"
     },
     {
-      title: "Audience Analysis",
-      description: "Deep insights into audience preferences, behavior patterns, and content consumption habits.",
-      icon: <Users className="w-12 h-12 text-purple-500" />
+      icon: Video,
+      title: "Video Scripts",
+      description: "YouTube descriptions, video titles, and marketing copy for multimedia campaigns"
     },
     {
-      title: "Performance Prediction",
-      description: "Predict content performance before publishing and optimize for maximum impact.",
-      icon: <BarChart3 className="w-12 h-12 text-yellow-500" />
+      icon: Email,
+      title: "Email Campaigns",
+      description: "Newsletters, promotional emails, and drip campaign sequences"
+    },
+    {
+      icon: Search,
+      title: "SEO Content",
+      description: "Keyword-optimized content, meta descriptions, and SERP-focused copy"
+    },
+    {
+      icon: Target,
+      title: "Landing Pages",
+      description: "High-converting landing page copy and call-to-action optimization"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden py-24 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+            className="text-center text-white mb-16"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-300 text-sm font-medium mb-6">
               <PenTool className="w-4 h-4 mr-2" />
               AI-Powered Content Marketing
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Content Marketing
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
-                {" "}Suite
-              </span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+              AI Content Marketing Suite
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your content marketing with AI that creates, optimizes, and distributes engaging content across all channels. 
-              Boost engagement, drive conversions, and scale your content strategy effortlessly.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your content marketing with AI that generates, optimizes, and distributes engaging content that converts your audience into customers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="#demo"
+                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
               >
                 Watch Demo
-              </motion.button>
+                <Play className="ml-2 w-5 h-5" />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Key Metrics */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16"
+          >
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">80%</div>
+              <div className="text-gray-400">Time Saved</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-400 mb-2">3x</div>
+              <div className="text-gray-400">Engagement Boost</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-orange-400 mb-2">2.5x</div>
+              <div className="text-gray-400">SEO Performance</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
+              <div className="text-gray-400">ROI Improvement</div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-4 bg-white/5">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Proven Results for Content Marketers
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Measurable Marketing Impact
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See how AI-powered content marketing delivers measurable improvements across all key metrics.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI content marketing suite delivers quantifiable results that directly impact your marketing performance and business growth.
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl p-8 border border-purple-400/20 text-center"
               >
-                <div className="flex justify-center mb-4">
-                  {benefit.icon}
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-purple-400 mb-2">{benefit.value}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AI Capabilities Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides cutting-edge technology to revolutionize your content marketing strategy.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {aiCapabilities.map((capability, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-purple-500/30 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  {capability.icon}
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white mb-3">{capability.title}</h3>
-                    <p className="text-gray-300 text-lg">{capability.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Content Types Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Create Any Type of Content
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From blog posts to social media content, our AI suite handles all your content creation needs.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {contentTypes.map((contentType, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-purple-500/30 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  {contentType.icon}
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white mb-3">{contentType.title}</h3>
-                    <p className="text-gray-300 text-lg">{contentType.description}</p>
-                  </div>
-                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -350,35 +329,37 @@ const AIContentMarketingSuite = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Complete Content Marketing Platform
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Advanced AI Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to create, optimize, and distribute content that drives results.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI doesn't just write content—it understands your audience, optimizes for search, and drives real business results.
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-purple-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white mb-4">
-                  {feature.icon}
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -386,39 +367,119 @@ const AIContentMarketingSuite = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* Content Types Section */}
+      <section className="py-24 px-4 bg-white/5">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your Content Marketing Plan
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Content for Every Channel
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your content marketing needs and budget.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Generate optimized content for all your marketing channels with AI that understands platform-specific best practices.
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {contentTypes.map((contentType, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl p-8 border border-purple-400/20"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                  <contentType.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{contentType.title}</h3>
+                <p className="text-gray-300">{contentType.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-24 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Industry Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Tailored content marketing solutions for your specific industry and business model.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-xl p-8 border border-purple-400/20"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 text-lg">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-24 px-4 bg-white/5">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your content marketing needs. All plans include a 14-day free trial.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent' 
-                    : 'border-slate-700/50'
-                }`}
+                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' 
+                    : 'border-white/10'
+                } hover:border-purple-400/30 transition-all duration-300 hover:transform hover:scale-105`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -427,68 +488,85 @@ const AIContentMarketingSuite = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-4">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+
+                <a
+                  href={plan.name === "Enterprise" ? "https://ziontechgroup.com/contact" : "https://ziontechgroup.com/contact"}
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                   }`}
                 >
-                  Get Started
-                </motion.button>
+                  {plan.cta}
+                </a>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Contact Section */}
+      <section className="py-24 px-4">
+        <div className="container mx-auto max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-12"
+            viewport={{ once: true }}
+            className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Content Marketing?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of marketers who are already using AI to create better content, reach more audiences, and drive real business results.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of marketers who have revolutionized their content strategy with AI-powered tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
               >
-                Contact Sales
-              </motion.button>
+                Schedule Demo
+                <MessageCircle className="ml-2 w-5 h-5" />
+              </a>
+            </div>
+
+            {/* Contact Information */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              <div className="flex items-center justify-center">
+                <Phone className="w-6 h-6 text-purple-400 mr-3" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Mail className="w-6 h-6 text-purple-400 mr-3" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <MapPin className="w-6 h-6 text-purple-400 mr-3" />
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -496,12 +574,5 @@ const AIContentMarketingSuite = () => {
     </div>
   );
 };
-
-// Add missing icon component
-const Mail = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-  </svg>
-);
 
 export default AIContentMarketingSuite;

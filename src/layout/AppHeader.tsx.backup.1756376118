@@ -62,6 +62,28 @@ export default function AppHeader() {
   ];
 
   const services = [
+<<<<<<< HEAD
+    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise IT Solutions' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Local business CRM' },
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Privacy-first SMB analytics' },
+    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'Tickets, SLAs, portals' },
+    { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'SOC2/ISO evidence automation' },
+    { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'AI-powered sales assistance' },
+    { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock, description: 'Advanced network security' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Simulation & Monitoring' },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom, description: 'Quantum Solutions' },
+    { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'Intelligent project management' },
+    { name: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite', icon: FileText, description: 'AI-powered content creation' },
+    { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: '24/7 intelligent support' },
+    { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Predictive business intelligence' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Smart marketing optimization' },
+=======
     // Featured & New Services
     { name: '2025 New Innovative Services', href: '/new-innovative-services-2025', icon: Star, description: 'Revolutionary AI & Micro SAAS Solutions', category: 'Featured', featured: true, color: 'from-zion-cyan to-zion-purple' },
     { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
@@ -139,6 +161,7 @@ export default function AppHeader() {
     { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
     { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'AI-powered financial risk assessment', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
     { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code, description: 'Automated code security analysis', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+>>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements-e824
   ];
 
   const quickLinks = [

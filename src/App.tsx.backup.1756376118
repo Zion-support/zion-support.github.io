@@ -152,9 +152,6 @@ const AIHRPlatform = lazy(() => import('./pages/services/ai-hr-platform'));
 const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
 const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
-<<<<<<< HEAD
-const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
-=======
 
 // Additional missing components
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
@@ -172,7 +169,6 @@ const FinancialSolutions = lazy(() => import('./pages/financial-solutions'));
 const IndustrySolutions = lazy(() => import('./pages/industry-solutions'));
 
 // Additional pages
->>>>>>> origin/cursor/website-audit-and-enhancement-e877
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
@@ -456,6 +452,12 @@ export default function App() {
                   <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                   <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                   <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+<<<<<<< HEAD
+                  <Route path="/services/AIAutonomousCodeReviewer" element={<AIAutonomousCodeReviewer />} />
+=======
+                  <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                  <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+>>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements-e824
                   
                   {/* Service Showcase Pages */}
                   <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
