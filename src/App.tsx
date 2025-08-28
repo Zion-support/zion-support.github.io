@@ -34,6 +34,7 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
+const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -42,6 +43,7 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+const ITServices = React.lazy(() => import('./pages/ITServices'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -98,6 +100,7 @@ function App() {
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
@@ -111,6 +114,7 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/it-services" element={<ITServices />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

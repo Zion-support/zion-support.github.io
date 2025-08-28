@@ -75,6 +75,23 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+      title: 'Innovative Services 2025',
+      featured: true,
+      links: [
+        { name: 'Innovative Services 2025', href: '/innovative-services-2025', featured: true },
+        { name: 'AI Content Studio Pro', href: '/innovative-services-2025#ai-content-studio-pro' },
+        { name: 'Smart Support Hub', href: '/innovative-services-2025#smart-support-hub' },
+        { name: 'Talent AI Hub', href: '/innovative-services-2025#talent-ai-hub' },
+        { name: 'Marketing AI Orchestrator', href: '/innovative-services-2025#marketing-ai-orchestrator' },
+        { name: 'Project AI Manager', href: '/innovative-services-2025#project-ai-manager' },
+        { name: 'Finance AI Analytics', href: '/innovative-services-2025#finance-ai-analytics' },
+        { name: 'Health AI Diagnostics', href: '/innovative-services-2025#health-ai-diagnostics' },
+        { name: 'Legal AI Assistant', href: '/innovative-services-2025#legal-ai-assistant' },
+        { name: 'Research AI Companion', href: '/innovative-services-2025#research-ai-companion' },
+        { name: 'Edu AI Platform', href: '/innovative-services-2025#edu-ai-platform' }
+      ]
+    },
+    {
       title: 'Revolutionary 2030',
       featured: true,
       links: [
@@ -89,6 +106,20 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'IoT Edge Computing', href: '/revolutionary-services-2030#iot-edge-computing-2030' },
         { name: 'Digital Twin Platform', href: '/revolutionary-services-2030#digital-twin-platform-2030' },
         { name: 'Blockchain Web3 Platform', href: '/revolutionary-services-2030#blockchain-web3-platform-2030' }
+      ]
+    },
+    {
+      title: 'IT & Technology Services',
+      featured: true,
+      links: [
+        { name: 'IT Services', href: '/it-services', featured: true },
+        { name: 'Cloud Infrastructure', href: '/it-services#cloud-infrastructure', featured: true },
+        { name: 'Cybersecurity Suite', href: '/it-services#cybersecurity-suite', featured: true },
+        { name: 'Data Analytics Platform', href: '/it-services#data-analytics-platform', featured: true },
+        { name: 'Network Infrastructure', href: '/it-services#network-infrastructure', featured: true },
+        { name: 'Mobile App Development', href: '/it-services#mobile-app-development', featured: true },
+        { name: 'AI Integration', href: '/it-services#ai-integration', featured: true },
+        { name: 'Blockchain Development', href: '/it-services#blockchain-development', featured: true }
       ]
     },
     {
