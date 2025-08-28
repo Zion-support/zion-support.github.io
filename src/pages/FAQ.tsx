@@ -1,435 +1,396 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain } from 'lucide-react';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
+import { 
+  Search, 
+  ChevronDown, 
+  ChevronUp,
+  MessageCircle,
+  Phone,
+  Mail,
+  Clock,
+  HelpCircle,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Users,
+  Globe
+} from 'lucide-react';
 
-interface FAQItem {
-  question: string;
-  answer: string;
-  category: string;
-  tags: string[];
-  featured?: boolean;
-}
-
-const FAQ: React.FC = () => {
+export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set([0]));
 
-  const categories = [
-    { id: 'all', name: 'All Questions', icon: HelpCircle, count: 0, color: 'from-cyan-500 to-blue-500' },
-    { id: 'general', name: 'General', icon: Globe, count: 0, color: 'from-blue-500 to-indigo-500' },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 0, color: 'from-purple-500 to-pink-500' },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0, color: 'from-indigo-500 to-purple-500' },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 0, color: 'from-cyan-500 to-blue-500' },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0, color: 'from-red-500 to-orange-500' },
-    { id: 'services', name: 'Our Services', icon: Zap, count: 0, color: 'from-yellow-500 to-orange-500' },
-    { id: 'pricing', name: 'Pricing & Billing', icon: DollarSign, count: 0, color: 'from-green-500 to-emerald-500' },
-    { id: 'support', name: 'Support & Contact', icon: MessageCircle, count: 0, color: 'from-blue-500 to-cyan-500' }
-  ];
+  const toggleItem = (index: number) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedItems(newExpanded);
+  };
 
-  const faqItems: FAQItem[] = [
-    // General Questions
+  const faqCategories = [
     {
-      id: '1',
-      question: 'What is Zion Tech Group?',
-      answer: 'Zion Tech Group is a leading technology company specializing in artificial intelligence, quantum computing, cybersecurity, and emerging technologies. We provide innovative solutions to help businesses transform and thrive in the digital age through cutting-edge AI services, cloud solutions, and strategic technology consulting.',
-      category: 'general',
-      tags: ['company', 'overview', 'mission'],
-      featured: true
+      title: 'General Questions',
+      icon: HelpCircle,
+      questions: [
+        {
+          question: "What is Zion Tech Group?",
+          answer: "Zion Tech Group is a forward-thinking technology company specializing in AI-powered business solutions, cloud infrastructure, and digital transformation services. We help businesses leverage cutting-edge technology to drive growth and innovation."
+        },
+        {
+          question: "Where is Zion Tech Group located?",
+          answer: "Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We serve clients globally and can work remotely with teams anywhere in the world."
+        },
+        {
+          question: "What industries do you serve?",
+          answer: "We work with businesses across all industries including healthcare, finance, manufacturing, retail, technology, and more. Our AI and technology solutions are adaptable to any sector."
+        },
+        {
+          question: "How long has Zion Tech Group been in business?",
+          answer: "Zion Tech Group has been delivering innovative technology solutions for over 15 years, helping hundreds of businesses transform their operations and achieve their digital goals."
+        }
+      ]
     },
     {
-      id: '2',
-      question: 'Where is Zion Tech Group located?',
-      answer: 'Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We serve clients globally and have a distributed team of experts working remotely across different time zones to provide 24/7 support and services.',
-      category: 'general',
-      tags: ['location', 'contact', 'address']
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      questions: [
+        {
+          question: "What AI services do you offer?",
+          answer: "We offer comprehensive AI services including custom AI model development, machine learning implementation, AI-powered automation, natural language processing, computer vision, and AI consulting for business transformation."
+        },
+        {
+          question: "How quickly can you implement AI solutions?",
+          answer: "Implementation timelines vary based on complexity. Simple AI integrations can be completed in 2-4 weeks, while complex custom AI systems may take 8-16 weeks. We'll provide a detailed timeline during our initial consultation."
+        },
+        {
+          question: "Do you provide training for AI systems?",
+          answer: "Yes, we provide comprehensive training for your team on all AI systems we implement. This includes user training, technical documentation, and ongoing support to ensure successful adoption."
+        },
+        {
+          question: "Can you work with existing AI systems?",
+          answer: "Absolutely! We can integrate with, enhance, or replace existing AI systems. We'll assess your current setup and recommend the best approach for your business needs."
+        }
+      ]
     },
     {
-      id: '3',
-      question: 'How can I contact Zion Tech Group?',
-      answer: 'You can reach us through multiple channels: Phone: +1 302 464 0950, Email: kleber@ziontechgroup.com, or through our contact form on the website. We typically respond within 24 hours during business days.',
-      category: 'general',
-      tags: ['contact', 'phone', 'email', 'support']
-    },
-
-    // AI & Machine Learning
-    {
-      id: '4',
-      question: 'What AI services does Zion Tech Group offer?',
-      answer: 'We offer comprehensive AI services including AI strategy consulting, custom machine learning model development, AI-powered applications (chatbots, predictive analytics, computer vision), AI infrastructure and MLOps, and industry-specific AI solutions for healthcare, finance, manufacturing, and retail.',
-      category: 'ai',
-      tags: ['AI services', 'machine learning', 'consulting', 'applications'],
-      featured: true
-    },
-    {
-      id: '5',
-      question: 'How does AI improve business operations?',
-      answer: 'AI can significantly improve business operations through automation, predictive analytics, enhanced decision-making, improved customer experiences, and operational efficiency. Our AI solutions typically deliver 20-40% improvement in operational efficiency and 15-30% reduction in costs.',
-      category: 'ai',
-      tags: ['business operations', 'automation', 'efficiency', 'ROI']
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
+      questions: [
+        {
+          question: "What cloud platforms do you support?",
+          answer: "We work with all major cloud platforms including AWS, Azure, Google Cloud, and hybrid cloud solutions. We'll recommend the best platform based on your specific requirements and budget."
+        },
+        {
+          question: "How do you ensure cloud security?",
+          answer: "We implement enterprise-grade security measures including encryption, access controls, monitoring, and compliance frameworks. We follow security best practices and can help you meet industry-specific compliance requirements."
+        },
+        {
+          question: "Can you help migrate from on-premise to cloud?",
+          answer: "Yes, cloud migration is one of our core services. We handle the entire process from assessment and planning to execution and optimization, ensuring minimal downtime and maximum efficiency."
+        },
+        {
+          question: "What is your approach to DevOps?",
+          answer: "We implement modern DevOps practices including CI/CD pipelines, infrastructure as code, automated testing, and monitoring. This ensures faster deployments, better quality, and improved reliability."
+        }
+      ]
     },
     {
-      id: '6',
-      question: 'What industries do you serve with AI solutions?',
-      answer: 'We serve multiple industries including healthcare (medical imaging, drug discovery), finance (fraud detection, algorithmic trading), manufacturing (predictive maintenance, quality control), retail (customer segmentation, demand forecasting), and many others. Our AI solutions are tailored to industry-specific challenges and requirements.',
-      category: 'ai',
-      tags: ['industries', 'healthcare', 'finance', 'manufacturing', 'retail']
-    },
-
-    // Quantum Computing
-    {
-      id: '7',
-      question: 'What is quantum computing and how can it benefit my business?',
-      answer: 'Quantum computing is a revolutionary technology that uses quantum mechanical phenomena to process information. It can solve complex problems that are currently impossible for classical computers, including optimization problems, cryptography, drug discovery, and financial modeling. We help businesses understand and prepare for quantum advantage.',
-      category: 'quantum',
-      tags: ['quantum computing', 'optimization', 'cryptography', 'drug discovery'],
-      featured: true
-    },
-    {
-      id: '8',
-      question: 'Is quantum computing ready for business use?',
-      answer: 'While quantum computing is still in development, we offer quantum-ready solutions and hybrid quantum-classical approaches that provide immediate business value. We help businesses prepare for quantum advantage and develop quantum-resistant security strategies.',
-      category: 'quantum',
-      tags: ['quantum readiness', 'hybrid solutions', 'security', 'preparation']
-    },
-
-    // Cloud & DevOps
-    {
-      id: '9',
-      question: 'What cloud and DevOps services do you provide?',
-      answer: 'Our cloud and DevOps services include cloud infrastructure design and migration, CI/CD pipeline automation, container orchestration with Kubernetes, infrastructure as code, monitoring and observability, and FinOps optimization to reduce cloud costs by up to 40%.',
-      category: 'cloud',
-      tags: ['cloud infrastructure', 'DevOps', 'CI/CD', 'Kubernetes', 'FinOps'],
-      featured: true
+      title: 'Security & Compliance',
+      icon: Shield,
+      questions: [
+        {
+          question: "What security certifications do you have?",
+          answer: "Our team holds various security certifications and we follow industry best practices. We can help you achieve compliance with SOC2, ISO 27001, HIPAA, GDPR, and other relevant standards."
+        },
+        {
+          question: "How do you protect client data?",
+          answer: "We implement multiple layers of security including encryption, access controls, regular security audits, and secure development practices. Client data security is our top priority."
+        },
+        {
+          question: "Do you provide security audits?",
+          answer: "Yes, we offer comprehensive security audits including vulnerability assessments, penetration testing, compliance reviews, and security recommendations for improvement."
+        },
+        {
+          question: "What happens if there's a security incident?",
+          answer: "We have incident response procedures in place and will work with you immediately to contain, investigate, and resolve any security issues. We also provide post-incident analysis and recommendations."
+        }
+      ]
     },
     {
-      id: '10',
-      question: 'How can you help reduce our cloud costs?',
-      answer: 'We use AI-powered FinOps strategies to analyze your cloud usage, identify optimization opportunities, implement cost controls, and provide ongoing monitoring. Our clients typically see 30-40% reduction in cloud costs while improving performance and reliability.',
-      category: 'cloud',
-      tags: ['cost optimization', 'FinOps', 'cloud efficiency', 'savings']
-    },
-
-    // Cybersecurity
-    {
-      id: '11',
-      question: 'What cybersecurity solutions do you offer?',
-      answer: 'Our cybersecurity portfolio includes AI-powered threat detection and response, quantum-resistant cryptography, zero-trust network architecture, security headers and CSP implementation, DSR privacy portal for GDPR/CCPA compliance, and comprehensive security assessments and penetration testing.',
-      category: 'security',
-      tags: ['cybersecurity', 'threat detection', 'compliance', 'privacy', 'zero-trust'],
-      featured: true
-    },
-    {
-      id: '12',
-      question: 'How do you ensure data privacy and compliance?',
-      answer: 'We implement industry-leading privacy and security measures including end-to-end encryption, regular security audits, compliance with GDPR, CCPA, HIPAA, and other regulations, transparent data handling practices, and regular staff training on data protection.',
-      category: 'security',
-      tags: ['data privacy', 'compliance', 'GDPR', 'CCPA', 'encryption']
-    },
-
-    // Services
-    {
-      id: '13',
-      question: 'What is your Micro SaaS platform?',
-      answer: 'Our Micro SaaS platform provides affordable, powerful software solutions designed specifically for small businesses. These include micro CRM systems, helpdesk platforms, project management tools, and other business applications that deliver enterprise-level functionality at small business prices.',
-      category: 'services',
-      tags: ['Micro SaaS', 'small business', 'software solutions', 'affordable'],
-      featured: true
+      title: 'Pricing & Billing',
+      icon: Zap,
+      questions: [
+        {
+          question: "How do you price your services?",
+          answer: "We offer flexible pricing models including subscription plans, project-based pricing, and custom enterprise solutions. Pricing depends on the scope, complexity, and duration of the project."
+        },
+        {
+          question: "Do you offer free consultations?",
+          answer: "Yes, we provide free initial consultations to understand your needs and discuss potential solutions. This helps us provide accurate estimates and recommendations."
+        },
+        {
+          question: "What payment terms do you offer?",
+          answer: "We offer flexible payment terms including upfront payments, milestone-based payments, and monthly billing for ongoing services. We can work with you to find the best payment structure."
+        },
+        {
+          question: "Do you offer discounts for long-term contracts?",
+          answer: "Yes, we offer volume discounts and special pricing for long-term partnerships. Contact us to discuss custom pricing for your specific needs."
+        }
+      ]
     },
     {
-      id: '14',
-      question: 'Do you provide digital transformation consulting?',
-      answer: 'Yes, we offer comprehensive digital transformation consulting including technology strategy, change management, process optimization, and implementation support. We help businesses navigate digital transformation with minimal disruption and maximum ROI.',
-      category: 'services',
-      tags: ['digital transformation', 'consulting', 'strategy', 'change management']
-    },
-
-    // Pricing & Billing
-    {
-      id: '15',
-      question: 'How do you price your services?',
-      answer: 'Our pricing varies by service type and complexity. We offer flexible engagement models including project-based pricing, retainer agreements, and subscription models for ongoing services. We provide detailed proposals with transparent pricing and ROI projections.',
-      category: 'pricing',
-      tags: ['pricing', 'billing', 'engagement models', 'ROI'],
-      featured: true
-    },
-    {
-      id: '16',
-      question: 'Do you offer payment plans or financing?',
-      answer: 'Yes, we offer flexible payment options including milestone-based payments, monthly installments for larger projects, and financing options for enterprise clients. We work with clients to find payment solutions that fit their budget and cash flow requirements.',
-      category: 'pricing',
-      tags: ['payment plans', 'financing', 'flexible options', 'budget']
-    },
-
-    // Support & Contact
-    {
-      id: '17',
-      question: 'What support do you provide after project completion?',
-      answer: 'We provide comprehensive post-project support including training, documentation, ongoing maintenance, and technical support. Our support packages ensure your solutions continue to deliver value and can be upgraded as your business grows.',
-      category: 'support',
-      tags: ['post-project support', 'training', 'maintenance', 'technical support']
-    },
-    {
-      id: '18',
-      question: 'How quickly do you respond to support requests?',
-      answer: 'We provide different support tiers with response times ranging from 1 hour for critical issues to 24 hours for general inquiries. Premium support clients receive priority response and dedicated support engineers.',
-      category: 'support',
-      tags: ['response time', 'support tiers', 'priority support', 'dedicated engineers']
+      title: 'Support & Maintenance',
+      icon: Users,
+      questions: [
+        {
+          question: "What support do you provide after implementation?",
+          answer: "We provide comprehensive post-implementation support including technical support, maintenance, updates, and ongoing optimization. Support levels vary by service tier."
+        },
+        {
+          question: "What are your response times for support?",
+          answer: "Response times depend on your support tier. Standard support responds within 24 hours, priority support within 4 hours, and enterprise support within 2 hours during business hours."
+        },
+        {
+          question: "Do you provide 24/7 support?",
+          answer: "24/7 support is available for enterprise clients and as an add-on service. We also provide emergency support for critical issues outside of business hours."
+        },
+        {
+          question: "How do you handle system updates and maintenance?",
+          answer: "We handle all system updates, security patches, and maintenance automatically. We schedule maintenance during low-traffic periods and provide advance notice for any planned downtime."
+        }
+      ]
     }
   ];
-  const allQuestions = faqCategories.flatMap(category =>
+
+  const allQuestions = faqCategories.flatMap(category => 
     category.questions.map(q => ({ ...q, category: category.title }))
   );
-  const filteredQuestions = allQuestions.filter(item =>
-    item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.category.toLowerCase().includes(searchTerm.toLowerCase())
+
+  const filteredQuestions = allQuestions.filter(q =>
+    q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    q.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    q.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  const filteredCategories = faqCategories.filter(category =>
-    category.questions.some(q =>
-      q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  );
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: 'Call Us',
+      value: '+1 302 464 0950',
+      link: 'tel:+13024640950'
+    },
+    {
+      icon: Mail,
+      title: 'Email Us',
+      value: 'kleber@ziontechgroup.com',
+      link: 'mailto:kleber@ziontechgroup.com'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Mon-Fri: 9:00 AM - 6:00 PM EST'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-slate-900 text-white py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium mb-6">
-            <HelpCircle className="w-4 h-4 mr-2"/>
-            FAQ
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Frequently Asked
-            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> Questions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Find answers to common questions about Zion Tech Group's AI marketplace,
-            services, and platform features.
-          </p>
-          {/* Search Bar */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="FAQ - Zion Tech Group"
+        description="Find answers to frequently asked questions about Zion Tech Group's AI, cloud, and technology services."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Frequently Asked <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Questions</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Find answers to common questions about our services, pricing, and how we can help 
+              transform your business with cutting-edge technology.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="max-w-2xl mx-auto"
           >
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search for answers..."
+                placeholder="Search for questions or topics..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300 text-lg"
+                className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg"
               />
             </div>
+            {searchQuery && (
+              <p className="text-center text-gray-400 mt-4">
+                Found {filteredQuestions.length} question{filteredQuestions.length !== 1 ? 's' : ''} matching "{searchQuery}"
+              </p>
+            )}
           </motion.div>
-        </div>
-
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
         </div>
       </section>
 
-      {/* Category Filters */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Browse by Category
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Find answers organized by topic and service area
-            </p>
-          </motion.div>
+      {/* FAQ Categories */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          {faqCategories.map((category, categoryIndex) => {
+            const categoryQuestions = searchQuery 
+              ? category.questions.filter(q => 
+                  q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                  q.answer.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+              : category.questions;
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {categories.map((category) => (
-              <motion.button
-                key={category.id}
+            if (categoryQuestions.length === 0) return null;
+
+            return (
+              <motion.div
+                key={category.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`p-6 rounded-2xl transition-all duration-300 text-center group ${
-                  selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40'
-                    : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 hover:border-cyan-400/40'
-                }`}
+                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                className="mb-16"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <category.icon className="w-6 h-6 text-white" />
+                <div className="flex items-center mb-8">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-lg mr-4">
+                    <category.icon className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-white">{category.title}</h2>
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-2">{category.name}</h3>
-                <p className="text-xs text-gray-400">{category.count} questions</p>
-              </motion.button>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* FAQ Items */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {filteredItems.length === 0 ? (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-20"
-            >
-              <div className="text-6xl text-gray-400 mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No questions found</h3>
-              <p className="text-gray-400 mb-6">Try adjusting your search terms or category filter</p>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                }}
-                className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
-              >
-                Clear Filters
-              </button>
-            </motion.div>
-          ) : (
-            <div className="space-y-4">
-              {filteredItems.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden hover:border-cyan-400/40 transition-all duration-300"
-                >
-                  <button
-                    onClick={() => toggleItem(item.id)}
-                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 p-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30">
-                        {getCategoryIcon(item.category)}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                          {item.question}
-                        </h3>
-                        <div className="flex flex-wrap gap-2">
-                          {item.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                          {item.featured && (
-                            <span className="px-2 py-1 bg-yellow-500/10 text-yellow-400 text-xs rounded-full border border-yellow-400/20">
-                              <Star className="w-3 h-3 inline mr-1" />
-                              Featured
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex-shrink-0 ml-4">
-                      {expandedItems.has(item.id) ? (
-                        <ChevronUp className="w-5 h-5 text-cyan-400" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-400" />
-                      )}
-                    </div>
-                  </button>
+                <div className="space-y-4">
+                  {categoryQuestions.map((item, questionIndex) => {
+                    const globalIndex = faqCategories
+                      .slice(0, categoryIndex)
+                      .reduce((acc, cat) => acc + cat.questions.length, 0) + questionIndex;
+                    const isExpanded = expandedItems.has(globalIndex);
 
-                  <AnimatePresence>
-                    {expandedItems.has(item.id) && (
+                    return (
                       <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
+                        key={questionIndex}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: (categoryIndex * 0.1) + (questionIndex * 0.05) }}
+                        className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300"
                       >
-                        <div className="px-6 pb-6">
-                          <div className="pt-4 border-t border-cyan-400/20">
-                            <p className="text-gray-300 leading-relaxed mb-4">
+                        <button
+                          onClick={() => toggleItem(globalIndex)}
+                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors duration-200 rounded-xl"
+                        >
+                          <h3 className="text-lg font-semibold text-white pr-4">
+                            {item.question}
+                          </h3>
+                          {isExpanded ? (
+                            <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                          ) : (
+                            <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                          )}
+                        </button>
+                        
+                        {isExpanded && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="px-6 pb-4"
+                          >
+                            <p className="text-gray-300 leading-relaxed">
                               {item.answer}
                             </p>
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-4 text-sm text-gray-400">
-                                <span className="flex items-center">
-                                  <Clock className="w-4 h-4 mr-1" />
-                                  {item.category}
-                                </span>
-                              </div>
-                              <div className="flex items-center space-x-2">
-                                {item.tags.slice(0, 2).map((tag, tagIndex) => (
-                                  <span
-                                    key={tagIndex}
-                                    className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20"
-                                  >
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                          </motion.div>
+                        )}
                       </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </div>
-          )}
+                    );
+                  })}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
 
-      {/* Still Have Questions CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
+      {/* Contact Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12 text-center"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Still Have Questions?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Can't find the answer you're looking for? Our team is here to help. 
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Can't find what you're looking for? Our team is here to help. 
               Get in touch with us for personalized assistance.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {contactInfo.map((info, index) => (
+              <motion.div
+                key={info.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
               >
-                <Phone className="mr-2 h-5 w-5" />
-                Call Us
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </a>
-            </div>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-xl mb-4">
+                  <info.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
+                {info.link ? (
+                  <a
+                    href={info.link}
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+                  >
+                    {info.value}
+                  </a>
+                ) : (
+                  <p className="text-gray-300">{info.value}</p>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-center mt-12"
+          >
+            <a
+              href="/contact"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Contact Our Team
+            </a>
           </motion.div>
         </div>
       </section>

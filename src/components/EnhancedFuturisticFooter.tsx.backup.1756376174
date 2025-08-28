@@ -151,10 +151,38 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     {
       title: 'Company',
       links: [
+<<<<<<< HEAD
+        { name: 'About Us', href: '/about' },
+        { name: 'Team', href: '/team' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'News', href: '/news' },
+        { name: 'Events', href: '/events' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Sitemap', href: '/sitemap' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Pricing', href: '/pricing' },
+        { name: 'Security', href: '/security' },
+        { name: 'Status', href: '/status' },
+        { name: 'Cookies', href: '/cookies' },
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Support', href: '/support' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Developer Portal', href: '/developers' }
+=======
         { name: 'About', href: '/about' },
         { name: 'Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-18b4
       ]
     },
     {
@@ -171,6 +199,20 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   const quickLinks = [
+<<<<<<< HEAD
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'Case Studies', href: '/case-studies', icon: Activity },
+    { name: 'Research & Development', href: '/research-development', icon: Rocket },
+    { name: 'Events', href: '/events', icon: Calendar },
+    { name: 'News', href: '/news', icon: Newspaper },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Careers', href: '/careers', icon: Briefcase },
+    { name: 'Help Center', href: '/help', icon: HelpCircle },
+    { name: 'Documentation', href: '/documentation', icon: BookOpen },
+    { name: 'Status', href: '/status', icon: Activity }
+=======
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'AI Services', href: '/ai-services' },
@@ -186,6 +228,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Privacy', href: '/privacy' },
     { name: 'Terms', href: '/terms' },
     { name: 'Sitemap', href: '/sitemap' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-18b4
   ];
 
   const socialLinks = [
@@ -223,6 +266,15 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <Zap className="w-7 h-7 text-white" />
+=======
         <div className="py-16">
           {/* Top Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-7 gap-8 mb-12">
@@ -240,6 +292,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     ZION
                   </div>
                   <div className="text-sm text-zion-cyan font-medium">TECH GROUP</div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-18b4
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl blur opacity-75"></div>
               </div>
@@ -327,6 +380,24 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
+              <div className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <Mail className="w-4 h-4 text-blue-400" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-blue-400 transition-colors duration-200">
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPin className="w-4 h-4 text-blue-400" />
+                <span>{contactInfo.address}</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200">
+                <Globe className="w-4 h-4 text-blue-400" />
+                <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-200">
+                  {contactInfo.website}
+                </a>
+              </div>
+=======
             ))}
           </div>
 
@@ -344,6 +415,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   {link.name}
                 </Link>
               ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-18b4
             </div>
           </div>
 

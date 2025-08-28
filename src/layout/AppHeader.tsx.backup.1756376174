@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, Edit3 } from 'lucide-react';
+=======
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Calendar } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-18b4
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
@@ -34,6 +38,14 @@ export function AppHeader() {
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
+<<<<<<< HEAD
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'Partners', href: '/partners', current: false },
+    { name: 'Research', href: '/research-development', current: false },
+    { name: 'Events', href: '/events', current: false },
+    { name: 'News', href: '/news', current: false },
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-18b4
     { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Partners', href: '/partners', current: false },
     { name: 'Blog', href: '/blog', current: false },
@@ -85,6 +97,24 @@ export function AppHeader() {
 
   // Quick links for easy access
   const quickLinks = [
+<<<<<<< HEAD
+    { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+    { name: 'Research', href: '/research-development', icon: Brain },
+    { name: 'Events', href: '/events', icon: Calendar },
+    { name: 'News', href: '/news', icon: Globe },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Help Center', href: '/help', icon: MessageCircle },
+  ];
+
+  const featuredServices = [
+    { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
+    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
+=======
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Talent', href: '/talent', icon: Users },
     { name: 'Equipment', href: '/equipment', icon: Cpu },
@@ -95,6 +125,7 @@ export function AppHeader() {
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Status', href: '/status', icon: Gauge },
     { name: 'Sitemap', href: '/sitemap', icon: Globe },
+>>>>>>> origin/cursor/website-audit-and-enhancement-18b4
   ];
 
   return (

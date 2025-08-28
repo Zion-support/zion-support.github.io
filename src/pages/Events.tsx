@@ -1,670 +1,620 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
 import { 
   Calendar, 
   Clock, 
   MapPin, 
   Users, 
-  ArrowRight,
+  Tag, 
+  Search, 
   Filter,
-  Search,
-  Star,
+  ArrowRight,
+  ExternalLink,
   Video,
   Globe,
-  Building,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Code,
-  Network,
-  Atom,
-  TrendingUp,
   Zap,
-  Heart,
-  MessageCircle,
-  ExternalLink,
-  BookOpen,
   Award,
-  Briefcase,
-  GraduationCap,
-  DollarSign,
-  BarChart3,
-  Eye,
-  Share2,
-  Tag,
-  CheckCircle,
-  XCircle,
-  Play,
-  Pause
+  BookOpen,
+  ChevronDown,
+  ChevronUp,
+  Star,
+  Mail
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
 
 export default function Events() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedStatus, setSelectedStatus] = useState('all');
-  const [viewMode, setViewMode] = useState<'upcoming' | 'past'>('upcoming');
+  const [expandedEvent, setExpandedEvent] = useState<string | null>(null);
 
-  const categories = [
-    { id: 'all', name: 'All Events', icon: Calendar, count: 24 },
-    { id: 'conferences', name: 'Conferences', icon: Building, count: 8 },
-    { id: 'webinars', name: 'Webinars', icon: Video, count: 12 },
-    { id: 'workshops', name: 'Workshops', icon: Code, count: 6 },
-    { id: 'networking', name: 'Networking', icon: Users, count: 4 },
-    { id: 'awards', name: 'Awards & Recognition', icon: Award, count: 2 }
+  const eventCategories = [
+    { id: 'all', name: 'All Events', count: 18 },
+    { id: 'conference', name: 'Conferences', count: 6 },
+    { id: 'workshop', name: 'Workshops', count: 8 },
+    { id: 'webinar', name: 'Webinars', count: 4 },
+    { id: 'networking', name: 'Networking', count: 3 },
+    { id: 'training', name: 'Training', count: 5 }
   ];
 
-  const events = [
+  const upcomingEvents = [
     {
-      id: 1,
-      title: "Zion Tech Summit 2025: AI & Quantum Computing",
-      description: "Join us for our flagship technology summit featuring cutting-edge AI innovations, quantum computing breakthroughs, and networking opportunities with industry leaders.",
-      longDescription: "The Zion Tech Summit 2025 is our premier annual event that brings together technology leaders, innovators, and industry experts to explore the future of AI and quantum computing. This year's summit will feature keynote presentations, interactive workshops, live demonstrations, and networking sessions.",
-      date: "2025-03-15",
-      time: "09:00 AM - 06:00 PM EST",
-      location: "New York Marriott Marquis, New York, NY",
+      id: 'event-001',
+      title: 'AI Innovation Summit 2024',
+      description: 'Join industry leaders and experts for a comprehensive exploration of the latest developments in artificial intelligence and machine learning.',
+      longDescription: 'The AI Innovation Summit 2024 brings together thought leaders, researchers, and practitioners from around the world to discuss the future of artificial intelligence. This three-day conference will feature keynote presentations, technical sessions, hands-on workshops, and networking opportunities. Topics include generative AI, responsible AI development, AI in healthcare, autonomous systems, and the future of work.',
+      category: 'conference',
+      startDate: new Date('2024-03-15T09:00:00'),
+      endDate: new Date('2024-03-17T17:00:00'),
+      location: 'San Francisco Convention Center',
+      address: '123 Main Street, San Francisco, CA 94102',
       virtual: false,
-      category: "conferences",
-      status: "upcoming",
       capacity: 500,
       registered: 342,
-      price: "$299",
-      earlyBirdPrice: "$199",
-      earlyBirdDeadline: "2025-02-15",
+      price: '$899',
+      earlyBirdPrice: '$699',
+      earlyBirdDeadline: new Date('2024-02-15'),
       featured: true,
-      image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&h=400",
+      image: '/images/events/ai-summit-2024.jpg',
+      tags: ['AI', 'Machine Learning', 'Innovation', 'Networking'],
       speakers: [
-        { name: "Kleber", role: "CEO & Founder, Zion Tech Group", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100" },
-        { name: "Dr. Sarah Chen", role: "CTO & Head of AI Research", image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&h=100" },
-        { name: "Alex Rodriguez", role: "VP of Engineering", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100" }
+        { name: 'Dr. Sarah Johnson', role: 'CEO, Zion Tech Group', topic: 'The Future of AI in Business' },
+        { name: 'Prof. Michael Chen', role: 'Stanford University', topic: 'Advances in Deep Learning' },
+        { name: 'Lisa Wang', role: 'Google AI', topic: 'Responsible AI Development' }
       ],
       agenda: [
-        { time: "09:00 AM", session: "Registration & Welcome Coffee" },
-        { time: "09:30 AM", session: "Opening Keynote: The Future of AI" },
-        { time: "10:30 AM", session: "Quantum Computing Breakthroughs" },
-        { time: "11:30 AM", session: "Networking Break" },
-        { time: "12:00 PM", session: "Lunch & Networking" },
-        { time: "01:30 PM", session: "AI in Healthcare Panel" },
-        { time: "02:30 PM", session: "Cybersecurity & AI" },
-        { time: "03:30 PM", session: "Afternoon Break" },
-        { time: "04:00 PM", session: "Startup Showcase" },
-        { time: "05:00 PM", session: "Closing Remarks & Networking" }
-      ],
-      tags: ["AI", "Quantum Computing", "Technology", "Networking", "Innovation"]
+        { time: '9:00 AM', session: 'Opening Keynote', speaker: 'Dr. Sarah Johnson' },
+        { time: '10:30 AM', session: 'Technical Sessions', speaker: 'Various Speakers' },
+        { time: '12:00 PM', session: 'Lunch & Networking', speaker: 'All Attendees' },
+        { time: '2:00 PM', session: 'Workshops', speaker: 'Expert Facilitators' },
+        { time: '5:00 PM', session: 'Closing & Networking', speaker: 'All Attendees' }
+      ]
     },
     {
-      id: 2,
-      title: "AI-Powered Cybersecurity Webinar Series",
-      description: "Learn about the latest AI-driven security solutions and how they're protecting businesses from evolving cyber threats.",
-      longDescription: "This comprehensive webinar series covers the intersection of artificial intelligence and cybersecurity, exploring how AI is revolutionizing threat detection, response, and prevention. Each session includes practical demonstrations and real-world case studies.",
-      date: "2025-02-20",
-      time: "02:00 PM - 04:00 PM EST",
-      location: "Virtual Event",
+      id: 'event-002',
+      title: 'Cybersecurity Workshop Series',
+      description: 'Comprehensive cybersecurity training covering threat detection, incident response, and security best practices.',
+      longDescription: 'This intensive workshop series provides hands-on training in cybersecurity fundamentals and advanced techniques. Participants will learn about threat modeling, penetration testing, security architecture, and incident response. The series includes practical exercises, real-world case studies, and certification preparation.',
+      category: 'workshop',
+      startDate: new Date('2024-02-20T10:00:00'),
+      endDate: new Date('2024-02-22T16:00:00'),
+      location: 'Zion Tech Group HQ',
+      address: '123 Tech Street, Wilmington, DE 19801',
       virtual: true,
-      category: "webinars",
-      status: "upcoming",
-      capacity: 200,
-      registered: 156,
-      price: "Free",
-      earlyBirdPrice: null,
-      earlyBirdDeadline: null,
-      featured: false,
-      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=400",
+      capacity: 100,
+      registered: 78,
+      price: '$599',
+      earlyBirdPrice: '$499',
+      earlyBirdDeadline: new Date('2024-01-20'),
+      featured: true,
+      image: '/images/events/cybersecurity-workshop.jpg',
+      tags: ['Cybersecurity', 'Training', 'Workshop', 'Security'],
       speakers: [
-        { name: "Zion Security Team", role: "Cybersecurity Experts", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100" }
+        { name: 'James Wilson', role: 'Chief Security Officer', topic: 'Threat Detection & Response' },
+        { name: 'Dr. Emily Rodriguez', role: 'Security Researcher', topic: 'Advanced Penetration Testing' }
       ],
       agenda: [
-        { time: "02:00 PM", session: "Introduction to AI in Cybersecurity" },
-        { time: "02:30 PM", session: "Threat Detection with Machine Learning" },
-        { time: "03:00 PM", session: "AI-Powered Incident Response" },
-        { time: "03:30 PM", session: "Q&A and Discussion" }
-      ],
-      tags: ["Cybersecurity", "AI", "Webinar", "Security", "Machine Learning"]
-    },
-    {
-      id: 3,
-      title: "Quantum Computing Workshop for Developers",
-      description: "Hands-on workshop introducing quantum computing concepts and practical applications for software developers.",
-      longDescription: "This intensive workshop is designed for software developers who want to understand and work with quantum computing. Participants will learn quantum algorithms, quantum programming languages, and real-world applications through hands-on exercises.",
-      date: "2025-02-10",
-      time: "10:00 AM - 05:00 PM EST",
-      location: "Zion Tech Group HQ, Middletown, DE",
-      virtual: false,
-      category: "workshops",
-      status: "upcoming",
-      capacity: 50,
-      registered: 48,
-      price: "$199",
-      earlyBirdPrice: "$149",
-      earlyBirdDeadline: "2025-01-20",
-      featured: false,
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=400",
-      speakers: [
-        { name: "Dr. Sarah Chen", role: "CTO & Head of AI Research", image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&h=100" }
-      ],
-      agenda: [
-        { time: "10:00 AM", session: "Quantum Computing Fundamentals" },
-        { time: "11:00 AM", session: "Quantum Algorithms" },
-        { time: "12:00 PM", session: "Lunch Break" },
-        { time: "01:00 PM", session: "Quantum Programming Languages" },
-        { time: "02:00 PM", session: "Hands-on Exercises" },
-        { time: "03:00 PM", session: "Real-world Applications" },
-        { time: "04:00 PM", session: "Q&A and Networking" }
-      ],
-      tags: ["Quantum Computing", "Workshop", "Development", "Programming", "AI"]
-    },
-    {
-      id: 4,
-      title: "Tech Innovation Awards 2025",
-      description: "Celebrating excellence in technology innovation and recognizing outstanding achievements in the industry.",
-      longDescription: "The Tech Innovation Awards 2025 celebrates the most innovative companies, products, and individuals in the technology industry. Join us for an evening of recognition, networking, and celebration of technological achievements.",
-      date: "2025-01-25",
-      time: "06:00 PM - 10:00 PM EST",
-      location: "The Ritz-Carlton, Washington, DC",
-      virtual: false,
-      category: "awards",
-      status: "past",
-      capacity: 300,
-      registered: 300,
-      price: "$150",
-      earlyBirdPrice: null,
-      earlyBirdDeadline: null,
-      featured: false,
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=400",
-      speakers: [
-        { name: "Industry Leaders", role: "Various", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100" }
-      ],
-      agenda: [
-        { time: "06:00 PM", session: "Cocktail Reception" },
-        { time: "07:00 PM", session: "Welcome & Opening Remarks" },
-        { time: "07:30 PM", session: "Awards Ceremony" },
-        { time: "09:00 PM", session: "Networking & Celebration" }
-      ],
-      tags: ["Awards", "Innovation", "Recognition", "Networking", "Technology"]
-    },
-    {
-      id: 5,
-      title: "AI in Healthcare Symposium",
-      description: "Exploring the transformative impact of artificial intelligence on healthcare delivery and patient outcomes.",
-      longDescription: "This symposium brings together healthcare professionals, AI researchers, and technology experts to discuss how artificial intelligence is revolutionizing healthcare. Topics include diagnostic AI, treatment optimization, and ethical considerations.",
-      date: "2025-01-15",
-      time: "09:00 AM - 05:00 PM EST",
-      location: "Johns Hopkins University, Baltimore, MD",
-      virtual: true,
-      category: "conferences",
-      status: "past",
-      capacity: 400,
-      registered: 400,
-      price: "$199",
-      earlyBirdPrice: null,
-      earlyBirdDeadline: null,
-      featured: false,
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=400",
-      speakers: [
-        { name: "Healthcare AI Experts", role: "Various", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100" }
-      ],
-      agenda: [
-        { time: "09:00 AM", session: "AI in Medical Imaging" },
-        { time: "10:00 AM", session: "Predictive Analytics in Healthcare" },
-        { time: "11:00 AM", session: "AI Ethics in Medicine" },
-        { time: "12:00 PM", session: "Lunch Break" },
-        { time: "01:00 PM", session: "Case Studies & Demonstrations" },
-        { time: "02:00 PM", session: "Panel Discussion" },
-        { time: "03:00 PM", session: "Future of AI in Healthcare" },
-        { time: "04:00 PM", session: "Networking & Q&A" }
-      ],
-      tags: ["Healthcare", "AI", "Medical", "Symposium", "Innovation"]
+        { time: '10:00 AM', session: 'Security Fundamentals', speaker: 'James Wilson' },
+        { time: '12:00 PM', session: 'Lunch Break', speaker: 'All Participants' },
+        { time: '1:00 PM', session: 'Hands-on Exercises', speaker: 'Security Team' },
+        { time: '4:00 PM', session: 'Q&A & Discussion', speaker: 'All Participants' }
+      ]
     }
   ];
 
-  const filteredEvents = events.filter(event => {
-    const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         event.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
-    const matchesStatus = selectedStatus === 'all' || event.status === selectedStatus;
-    
-    return matchesSearch && matchesCategory && matchesStatus;
+  const regularEvents = [
+    {
+      id: 'event-003',
+      title: 'Cloud Computing Webinar',
+      description: 'Learn about the latest trends in cloud computing and how to optimize your infrastructure.',
+      category: 'webinar',
+      startDate: new Date('2024-02-10T14:00:00'),
+      endDate: new Date('2024-02-10T15:30:00'),
+      location: 'Virtual Event',
+      address: 'Online',
+      virtual: true,
+      capacity: 200,
+      registered: 156,
+      price: 'Free',
+      earlyBirdPrice: null,
+      earlyBirdDeadline: null,
+      featured: false,
+      image: '/images/events/cloud-computing-webinar.jpg',
+      tags: ['Cloud Computing', 'Webinar', 'Technology'],
+      speakers: [
+        { name: 'David Thompson', role: 'Cloud Architect', topic: 'Cloud Optimization Strategies' }
+      ],
+      agenda: [
+        { time: '2:00 PM', session: 'Introduction', speaker: 'David Thompson' },
+        { time: '2:15 PM', session: 'Cloud Trends', speaker: 'David Thompson' },
+        { time: '2:45 PM', session: 'Optimization Tips', speaker: 'David Thompson' },
+        { time: '3:15 PM', session: 'Q&A', speaker: 'David Thompson' }
+      ]
+    },
+    {
+      id: 'event-004',
+      title: 'Data Science Bootcamp',
+      description: 'Intensive 5-day bootcamp covering data analysis, visualization, and machine learning fundamentals.',
+      category: 'training',
+      startDate: new Date('2024-02-26T09:00:00'),
+      endDate: new Date('2024-03-01T17:00:00'),
+      location: 'Zion Tech Group Training Center',
+      address: '456 Innovation Drive, Wilmington, DE 19801',
+      virtual: false,
+      capacity: 50,
+      registered: 42,
+      price: '$1,299',
+      earlyBirdPrice: '$1,099',
+      earlyBirdDeadline: new Date('2024-01-26'),
+      featured: false,
+      image: '/images/events/data-science-bootcamp.jpg',
+      tags: ['Data Science', 'Training', 'Machine Learning', 'Analytics'],
+      speakers: [
+        { name: 'Dr. Robert Kim', role: 'Data Science Director', topic: 'Data Analysis Fundamentals' },
+        { name: 'Jennifer Martinez', role: 'Senior Data Scientist', topic: 'Machine Learning Applications' }
+      ],
+      agenda: [
+        { time: '9:00 AM', session: 'Data Fundamentals', speaker: 'Dr. Robert Kim' },
+        { time: '12:00 PM', session: 'Lunch Break', speaker: 'All Participants' },
+        { time: '1:00 PM', session: 'Practical Exercises', speaker: 'Training Team' },
+        { time: '5:00 PM', session: 'Daily Wrap-up', speaker: 'All Participants' }
+      ]
+    },
+    {
+      id: 'event-005',
+      title: 'Tech Networking Mixer',
+      description: 'Connect with fellow tech professionals, entrepreneurs, and industry leaders in a relaxed networking environment.',
+      category: 'networking',
+      startDate: new Date('2024-02-15T18:00:00'),
+      endDate: new Date('2024-02-15T21:00:00'),
+      location: 'Innovation Hub',
+      address: '789 Tech Boulevard, Wilmington, DE 19801',
+      virtual: false,
+      capacity: 150,
+      registered: 98,
+      price: '$25',
+      earlyBirdPrice: null,
+      earlyBirdDeadline: null,
+      featured: false,
+      image: '/images/events/tech-networking.jpg',
+      tags: ['Networking', 'Professional Development', 'Community'],
+      speakers: [],
+      agenda: [
+        { time: '6:00 PM', session: 'Registration & Welcome', speaker: 'Event Team' },
+        { time: '6:30 PM', session: 'Networking & Mingling', speaker: 'All Attendees' },
+        { time: '7:30 PM', session: 'Lightning Talks', speaker: 'Guest Speakers' },
+        { time: '8:30 PM', session: 'Continued Networking', speaker: 'All Attendees' }
+      ]
+    },
+    {
+      id: 'event-006',
+      title: 'DevOps Best Practices Workshop',
+      description: 'Learn modern DevOps practices, CI/CD pipelines, and infrastructure automation techniques.',
+      category: 'workshop',
+      startDate: new Date('2024-03-05T10:00:00'),
+      endDate: new Date('2024-03-05T16:00:00'),
+      location: 'Virtual Event',
+      address: 'Online',
+      virtual: true,
+      capacity: 75,
+      registered: 61,
+      price: '$399',
+      earlyBirdPrice: '$349',
+      earlyBirdDeadline: new Date('2024-02-05'),
+      featured: false,
+      image: '/images/events/devops-workshop.jpg',
+      tags: ['DevOps', 'CI/CD', 'Automation', 'Workshop'],
+      speakers: [
+        { name: 'Alex Johnson', role: 'DevOps Engineer', topic: 'CI/CD Pipeline Design' },
+        { name: 'Maria Garcia', role: 'Infrastructure Specialist', topic: 'Infrastructure as Code' }
+      ],
+      agenda: [
+        { time: '10:00 AM', session: 'DevOps Fundamentals', speaker: 'Alex Johnson' },
+        { time: '12:00 PM', session: 'Lunch Break', speaker: 'All Participants' },
+        { time: '1:00 PM', session: 'Hands-on Labs', speaker: 'DevOps Team' },
+        { time: '4:00 PM', session: 'Best Practices Discussion', speaker: 'All Participants' }
+      ]
+    }
+  ];
+
+  const toggleEventExpansion = (eventId: string) => {
+    setExpandedEvent(expandedEvent === eventId ? null : eventId);
+  };
+
+  const allEvents = [...upcomingEvents, ...regularEvents];
+  const filteredEvents = allEvents.filter(event => {
+    if (selectedCategory !== 'all' && event.category !== selectedCategory) return false;
+    if (searchQuery) {
+      return event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+             event.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+             event.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    }
+    return true;
   });
 
-  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
-  const pastEvents = filteredEvents.filter(event => event.status === 'past');
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'conference': return 'bg-blue-500/20 text-blue-400';
+      case 'workshop': return 'bg-green-500/20 text-green-400';
+      case 'webinar': return 'bg-purple-500/20 text-purple-400';
+      case 'networking': return 'bg-orange-500/20 text-orange-400';
+      case 'training': return 'bg-cyan-500/20 text-cyan-400';
+      default: return 'bg-gray-500/20 text-gray-400';
+    }
+  };
 
-  const displayEvents = viewMode === 'upcoming' ? upcomingEvents : pastEvents;
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'conference': return Users;
+      case 'workshop': return BookOpen;
+      case 'webinar': return Video;
+      case 'networking': return Globe;
+      case 'training': return Zap;
+      default: return Calendar;
+    }
+  };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      weekday: 'long', 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const formatTime = (date: Date) => {
+    return date.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
     });
   };
 
   const isEarlyBird = (event: any) => {
-    if (!event.earlyBirdDeadline) return false;
-    const deadline = new Date(event.earlyBirdDeadline);
-    const now = new Date();
-    return now < deadline;
+    return event.earlyBirdPrice && new Date() < event.earlyBirdDeadline;
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Events - Zion Tech Group"
-        description="Join us at our upcoming events, webinars, and workshops. Discover the latest in AI, quantum computing, and technology innovation."
+        description="Join Zion Tech Group at upcoming conferences, workshops, webinars, and networking events."
       />
       
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h1 
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            Upcoming <span className="text-zion-cyan">Events</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-          >
-            Join us for conferences, webinars, workshops, and networking events 
-            that showcase the latest in technology innovation.
-          </motion.p>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
+              <Calendar className="w-10 h-10 text-green-400" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Upcoming <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Events</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Join us at conferences, workshops, webinars, and networking events. 
+              Connect with industry leaders and expand your knowledge.
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Search and Filters */}
-      <section className="py-8 bg-zion-slate-dark border-b border-zion-slate-light/20">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search */}
-            <div className="relative w-full lg:w-96">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-              <input
-                type="text"
-                placeholder="Search events..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
-              />
-            </div>
+      <section className="py-12">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-6">
+              {/* Search */}
+              <div className="flex-1">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    placeholder="Search events..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                  />
+                </div>
+              </div>
 
-            {/* Filters */}
-            <div className="flex flex-wrap gap-4">
               {/* Category Filter */}
-              <div className="flex items-center gap-2">
-                <Filter className="w-5 h-5 text-zion-cyan" />
+              <div className="lg:w-64">
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                 >
-                  {categories.map((category) => (
+                  {eventCategories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
                   ))}
                 </select>
               </div>
-
-              {/* Status Filter */}
-              <div className="flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-zion-cyan" />
-                <select
-                  value={selectedStatus}
-                  onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
-                >
-                  <option value="all">All Events</option>
-                  <option value="upcoming">Upcoming</option>
-                  <option value="past">Past Events</option>
-                </select>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* View Mode Toggle */}
-      <section className="py-6 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center">
-            <div className="bg-zion-slate-light/10 rounded-lg p-1 border border-zion-slate-light/20">
-              <button
-                onClick={() => setViewMode('upcoming')}
-                className={`px-6 py-2 rounded-md transition-all duration-200 ${
-                  viewMode === 'upcoming'
-                    ? 'bg-zion-cyan text-white'
-                    : 'text-zion-slate-light hover:text-white'
-                }`}
-              >
-                Upcoming Events ({upcomingEvents.length})
-              </button>
-              <button
-                onClick={() => setViewMode('past')}
-                className={`px-6 py-2 rounded-md transition-all duration-200 ${
-                  viewMode === 'past'
-                    ? 'bg-zion-cyan text-white'
-                    : 'text-zion-slate-light hover:text-white'
-                }`}
-              >
-                Past Events ({pastEvents.length})
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Event */}
-      {viewMode === 'upcoming' && upcomingEvents.find(e => e.featured) && (
-        <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-6xl mx-auto"
-            >
-              <div className="text-center mb-8">
-                <span className="inline-flex items-center px-4 py-2 bg-zion-cyan text-white text-sm font-medium rounded-full mb-4">
-                  <Star className="w-4 h-4 mr-2" />
-                  Featured Event
-                </span>
-                <h2 className="text-3xl font-bold text-white mb-4">Don't Miss Out</h2>
-              </div>
-              
-              {(() => {
-                const featuredEvent = upcomingEvents.find(e => e.featured);
-                if (!featuredEvent) return null;
-                
-                return (
-                  <div className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                      <div className="relative">
-                        <img 
-                          src={featuredEvent.image} 
-                          alt={featuredEvent.title}
-                          className="w-full h-full object-cover min-h-[300px]"
-                        />
-                        <div className="absolute top-4 left-4">
-                          <span className="inline-flex items-center px-3 py-1 bg-zion-cyan text-white text-xs font-medium rounded-full">
-                            {featuredEvent.category.charAt(0).toUpperCase() + featuredEvent.category.slice(1)}
-                          </span>
-                        </div>
-                        {featuredEvent.virtual && (
-                          <div className="absolute top-4 right-4">
-                            <span className="inline-flex items-center px-3 py-1 bg-purple-500 text-white text-xs font-medium rounded-full">
-                              <Globe className="w-3 h-3 mr-1" />
-                              Virtual
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                      
-                      <div className="p-8 flex flex-col justify-center">
-                        <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-4">
-                          <span className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            {formatDate(featuredEvent.date)}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            {featuredEvent.time}
-                          </span>
-                        </div>
-                        
-                        <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
-                          {featuredEvent.title}
-                        </h3>
-                        
-                        <p className="text-zion-slate-light mb-6 leading-relaxed">
-                          {featuredEvent.description}
-                        </p>
-                        
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className="flex items-center gap-2">
-                            <MapPin className="w-4 h-4 text-zion-cyan" />
-                            <span className="text-zion-slate-light text-sm">
-                              {featuredEvent.virtual ? 'Virtual Event' : featuredEvent.location}
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Users className="w-4 h-4 text-zion-cyan" />
-                            <span className="text-zion-slate-light text-sm">
-                              {featuredEvent.registered}/{featuredEvent.capacity} registered
-                            </span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center justify-between mb-6">
-                          <div className="text-2xl font-bold text-white">
-                            {isEarlyBird(featuredEvent) && featuredEvent.earlyBirdPrice ? (
-                              <div>
-                                <span className="text-zion-cyan">{featuredEvent.earlyBirdPrice}</span>
-                                <span className="text-zion-slate-light text-lg line-through ml-2">{featuredEvent.price}</span>
-                              </div>
-                            ) : (
-                              featuredEvent.price
-                            )}
-                          </div>
-                          
-                          {isEarlyBird(featuredEvent) && featuredEvent.earlyBirdDeadline && (
-                            <div className="text-right">
-                              <div className="text-zion-cyan text-sm font-medium">Early Bird Ends</div>
-                              <div className="text-zion-slate-light text-sm">
-                                {formatDate(featuredEvent.earlyBirdDeadline)}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                        
-                        <div className="flex flex-wrap gap-2 mb-6">
-                          {featuredEvent.tags.map((tag) => (
-                            <span key={tag} className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        
-                        <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105">
-                          Register Now
-                          <ArrowRight className="w-5 h-5 ml-2" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })()}
-            </motion.div>
-          </div>
-        </section>
-      )}
-
-      {/* Events Grid */}
-      <section className="py-16 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <motion.h2 
+      {/* Featured Events */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-white text-center mb-12"
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
           >
-            {viewMode === 'upcoming' ? 'Upcoming Events' : 'Past Events'}
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {displayEvents.map((event, index) => (
-              <motion.article
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Events</h2>
+            <p className="text-xl text-gray-300">Major conferences and workshops you won't want to miss</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <motion.div
                 key={event.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue/10 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105 group"
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
               >
-                <div className="relative">
-                  <img 
-                    src={event.image} 
-                    alt={event.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center px-3 py-1 bg-zion-cyan text-white text-xs font-medium rounded-full">
-                      {event.category.charAt(0).toUpperCase() + event.category.slice(1)}
-                    </span>
-                  </div>
-                  {event.virtual && (
-                    <div className="absolute top-4 right-4">
-                      <span className="inline-flex items-center px-3 py-1 bg-purple-500 text-white text-xs font-medium rounded-full">
-                        <Globe className="w-3 h-3 mr-1" />
-                        Virtual
-                      </span>
-                    </div>
-                  )}
-                  {event.featured && (
-                    <div className="absolute bottom-4 left-4">
-                      <span className="inline-flex items-center px-3 py-1 bg-yellow-500 text-white text-xs font-medium rounded-full">
-                        <Star className="w-3 h-3 mr-1" />
-                        Featured
-                      </span>
-                    </div>
-                  )}
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-3">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {formatDate(event.date)}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {event.time}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover:text-zion-cyan transition-colors duration-200">
-                    {event.title}
-                  </h3>
-                  
-                  <p className="text-zion-slate-light mb-4 leading-relaxed">
-                    {event.description}
-                  </p>
-                  
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-zion-cyan" />
-                      <span className="text-zion-slate-light text-sm">
-                        {event.virtual ? 'Virtual Event' : event.location}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="w-4 h-4 text-zion-cyan" />
-                      <span className="text-zion-slate-light text-sm">
-                        {event.registered}/{event.capacity}
-                      </span>
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+                  <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl mb-4">
+                        <Calendar className="w-8 h-8 text-green-400" />
+                      </div>
+                      <p className="text-gray-400 text-sm">Event Image</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-lg font-bold text-white">
-                      {isEarlyBird(event) && event.earlyBirdPrice ? (
-                        <div>
-                          <span className="text-zion-cyan">{event.earlyBirdPrice}</span>
-                          <span className="text-zion-slate-light text-sm line-through ml-2">{event.price}</span>
-                        </div>
-                      ) : (
-                        event.price
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(event.category)}`}>
+                        {eventCategories.find(c => c.id === event.category)?.name}
+                      </span>
+                      {event.featured && (
+                        <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-400">
+                          Featured
+                        </span>
                       )}
                     </div>
                     
-                    {event.status === 'upcoming' && (
-                      <div className="flex items-center gap-2">
-                        {event.registered >= event.capacity ? (
-                          <span className="inline-flex items-center px-3 py-1 bg-red-500 text-white text-xs font-medium rounded-full">
-                            <XCircle className="w-3 h-3 mr-1" />
-                            Sold Out
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center px-3 py-1 bg-green-500 text-white text-xs font-medium rounded-full">
-                            <CheckCircle className="w-3 h-3 mr-1" />
-                            Available
-                          </span>
-                        )}
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">
+                      {event.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                      {event.description}
+                    </p>
+                    
+                    <div className="space-y-3 mb-4">
+                      <div className="flex items-center gap-3 text-sm text-gray-400">
+                        <Calendar className="w-4 h-4" />
+                        {formatDate(event.startDate)}
                       </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-400">
+                        <Clock className="w-4 h-4" />
+                        {formatTime(event.startDate)} - {formatTime(event.endDate)}
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-400">
+                        <MapPin className="w-4 h-4" />
+                        {event.virtual ? 'Virtual Event' : event.location}
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-400">
+                        <Users className="w-4 h-4" />
+                        {event.registered}/{event.capacity} registered
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex flex-wrap gap-2">
+                        {event.tags.slice(0, 3).map((tag, tagIndex) => (
+                          <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <button
+                        onClick={() => toggleEventExpansion(event.id)}
+                        className="text-green-400 hover:text-green-300 transition-colors duration-200"
+                      >
+                        {expandedEvent === event.id ? (
+                          <ChevronUp className="w-5 h-5" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5" />
+                        )}
+                      </button>
+                    </div>
+                    
+                    {expandedEvent === event.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="mt-4 pt-4 border-t border-slate-600/50"
+                      >
+                        <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                          {event.longDescription}
+                        </p>
+                        
+                        <div className="mb-4">
+                          <h4 className="text-sm font-semibold text-white mb-2">Speakers:</h4>
+                          <div className="space-y-2">
+                            {event.speakers.map((speaker, speakerIndex) => (
+                              <div key={speakerIndex} className="text-gray-300 text-sm">
+                                <span className="font-medium">{speaker.name}</span> - {speaker.role}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="mb-4">
+                          <h4 className="text-sm font-semibold text-white mb-2">Agenda:</h4>
+                          <div className="space-y-1">
+                            {event.agenda.map((item, itemIndex) => (
+                              <div key={itemIndex} className="text-gray-300 text-sm">
+                                <span className="font-medium">{item.time}</span> - {item.session}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="text-lg font-bold text-white">
+                            {isEarlyBird(event) ? event.earlyBirdPrice : event.price}
+                            {isEarlyBird(event) && (
+                              <span className="text-sm text-yellow-400 ml-2">Early Bird!</span>
+                            )}
+                          </div>
+                          <button className="px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                            Register Now
+                          </button>
+                        </div>
+                      </motion.div>
                     )}
                   </div>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {event.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  {event.status === 'upcoming' ? (
-                    <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 group-hover:scale-105">
-                      {event.registered >= event.capacity ? 'Join Waitlist' : 'Register Now'}
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
-                  ) : (
-                    <button className="w-full inline-flex items-center justify-center px-4 py-2 border border-zion-cyan text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 group-hover:scale-105">
-                      View Details
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
-                  )}
                 </div>
-              </motion.article>
+              </motion.div>
             ))}
           </div>
-          
-          {displayEvents.length === 0 && (
-            <div className="text-center py-16">
-              <Calendar className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No events found</h3>
-              <p className="text-zion-slate-light">Try adjusting your search or filter criteria.</p>
-            </div>
-          )}
+        </div>
+      </section>
+
+      {/* All Events */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">All Events</h2>
+            <p className="text-xl text-gray-300">
+              Browse our complete calendar of upcoming events
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredEvents.map((event, index) => (
+              <motion.div
+                key={event.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+                  <div className="aspect-video bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl mb-3">
+                        <Calendar className="w-6 h-6 text-green-400" />
+                      </div>
+                      <p className="text-gray-400 text-xs">Event Image</p>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(event.category)}`}>
+                        {eventCategories.find(c => c.id === event.category)?.name}
+                      </span>
+                      {event.virtual && (
+                        <span className="px-2 py-1 rounded-full text-xs font-medium bg-purple-500/20 text-purple-400">
+                          Virtual
+                        </span>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">
+                      {event.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                      {event.description}
+                    </p>
+                    
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-400">
+                        <Calendar className="w-4 h-4" />
+                        {formatDate(event.startDate)}
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-400">
+                        <MapPin className="w-4 h-4" />
+                        {event.virtual ? 'Virtual Event' : event.location}
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-gray-400">
+                        <Users className="w-4 h-4" />
+                        {event.registered}/{event.capacity}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-1">
+                        {event.tags.slice(0, 2).map((tag, tagIndex) => (
+                          <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="text-right">
+                        <div className="text-lg font-bold text-white">
+                          {isEarlyBird(event) ? event.earlyBirdPrice : event.price}
+                        </div>
+                        {isEarlyBird(event) && (
+                          <div className="text-xs text-yellow-400">Early Bird!</div>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <button className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl mx-auto"
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Host Your Event With Us
             </h2>
-            <p className="text-zion-slate-light mb-8">
-              Interested in hosting a technology event, workshop, or conference? 
-              Let's discuss how we can help bring your vision to life.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Looking to host a tech event, conference, or workshop? 
+              We provide world-class facilities and support for your events.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Get in Touch
-              </a>
+                <Calendar className="w-5 h-5 mr-2" />
+                Host an Event
+              </Link>
               <a
-                href="/partners"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                href="mailto:events@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200"
               >
-                <Users className="w-5 h-5 mr-2" />
-                Partnership Opportunities
+                <Mail className="w-5 h-5 mr-2" />
+                Contact Events Team
               </a>
             </div>
           </motion.div>
