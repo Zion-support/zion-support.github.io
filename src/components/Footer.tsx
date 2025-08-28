@@ -96,25 +96,16 @@ const footerSections = [
     icon: Brain,
     links: [
       { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: TrendingUp },
-      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
-      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
-      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
-      { name: 'AI Business Intelligence Analytics', path: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
+      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
       { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
       { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', icon: Users },
-      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+      { name: 'AI Content Creation Suite', path: '/services/ai-content-creation-suite', icon: FileText },
       { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
-      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
-      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
-      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
+      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target }
     ]
   },
   {
@@ -173,10 +164,10 @@ const footerSections = [
     title: 'Featured Services',
     icon: Star,
     links: [
-      { name: '2025 New Innovative Services', path: '/new-innovative-services-2025', icon: Star },
-      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', icon: Star },
-      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', icon: Star },
-      { name: '2029 Services Showcase', path: '/comprehensive-services-showcase-2029', icon: Star },
+      { name: 'New Innovative Services 2025', path: '/new-innovative-services-2025', icon: Star },
+      { name: 'Ultimate Services Showcase 2026', path: '/ultimate-services-showcase-2026', icon: Star },
+      { name: 'Comprehensive Services Showcase 2027', path: '/comprehensive-services-showcase-2027', icon: Star },
+      { name: 'Comprehensive Services Showcase 2029', path: '/comprehensive-services-showcase-2029', icon: Star },
       { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', icon: Rocket }
     ]
   }
