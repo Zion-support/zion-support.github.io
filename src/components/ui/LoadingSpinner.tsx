@@ -1,168 +1,296 @@
-import React from 'react';
-import { Loader2, Zap, Brain, Shield, Cloud } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, Zap, Brain, Shield, Cloud, Rocket } from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'default' | 'futuristic' | 'ai' | 'security' | 'cloud';
-  text?: string;
+  variant?: 'default' | 'zion' | 'futuristic' | 'minimal';
   showProgress?: boolean;
   progress?: number;
+  message?: string;
+  showIcon?: boolean;
+  fullScreen?: boolean;
   className?: string;
 }
 
-const iconMap = {
-  default: Loader2,
-  futuristic: Zap,
-  ai: Brain,
-  security: Shield,
-  cloud: Cloud
-};
-
-const sizeMap = {
+const sizeClasses = {
   sm: 'w-4 h-4',
   md: 'w-6 h-6',
   lg: 'w-8 h-8',
   xl: 'w-12 h-12'
 };
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+const iconClasses = {
+  sm: 'w-3 h-3',
+  md: 'w-4 h-4',
+  lg: 'w-6 h-6',
+  xl: 'w-8 h-8'
+};
+
+const zionIcons = [Brain, Shield, Cloud, Rocket, Zap];
+
+export function LoadingSpinner({
   size = 'md',
   variant = 'default',
-  text,
   showProgress = false,
   progress = 0,
+  message = 'Loading...',
+  showIcon = true,
+  fullScreen = false,
   className = ''
-}) => {
-  const Icon = iconMap[variant];
-  const sizeClass = sizeMap[size];
+}: LoadingSpinnerProps) {
+  const [currentIconIndex, setCurrentIconIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
-  return (
-    <div className={`flex flex-col items-center justify-center p-8 ${className}`}>
-      {/* Main Spinner */}
-      <div className="relative mb-4">
-        {/* Background Ring */}
-        <div className={`${sizeClass} rounded-full border-2 border-slate-700/30`} />
-        
-        {/* Animated Ring */}
-        <div 
-          className={`${sizeClass} rounded-full border-2 border-transparent border-t-cyan-500 absolute top-0 left-0 animate-spin`}
-          style={{ animationDuration: '1s' }}
-        />
-        
-        {/* Icon */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Icon 
-            className={`${size === 'xl' ? 'w-6 h-6' : size === 'lg' ? 'w-4 h-4' : 'w-3 h-3'} text-cyan-400 animate-pulse`} 
+  // Rotate through Zion icons for futuristic variant
+  useEffect(() => {
+    if (variant === 'futuristic') {
+      const interval = setInterval(() => {
+        setCurrentIconIndex((prev) => (prev + 1) % zionIcons.length);
+      }, 800);
+      return () => clearInterval(interval);
+    }
+  }, [variant]);
+
+  // Auto-hide after progress completes
+  useEffect(() => {
+    if (showProgress && progress >= 100) {
+      const timer = setTimeout(() => setIsVisible(false), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [showProgress, progress]);
+
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'zion':
+        return (
+          <div className="relative">
+            <div className={`${sizeClasses[size]} border-2 border-zion-cyan/20 rounded-full`}>
+              <motion.div
+                className={`${sizeClasses[size]} border-2 border-zion-cyan border-t-transparent rounded-full absolute inset-0`}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+              />
+            </div>
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              <div className={`${iconClasses[size]} text-zion-cyan`}>
+                <Brain />
+              </div>
+            </motion.div>
+          </div>
+        );
+
+      case 'futuristic':
+        const CurrentIcon = zionIcons[currentIconIndex];
+        return (
+          <div className="relative">
+            <motion.div
+              className={`${sizeClasses[size]} bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-neon rounded-full flex items-center justify-center`}
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [0, 180, 360]
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity, 
+                ease: 'easeInOut' 
+              }}
+            >
+              <CurrentIcon className={`${iconClasses[size]} text-white`} />
+            </motion.div>
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-zion-cyan/30"
+              animate={{ 
+                scale: [1, 1.5, 1],
+                opacity: [1, 0, 1]
+              }}
+              transition={{ 
+                duration: 1.5, 
+                repeat: Infinity, 
+                ease: 'easeOut' 
+              }}
+            />
+          </div>
+        );
+
+      case 'minimal':
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} border-2 border-zion-cyan/30 border-t-zion-cyan rounded-full`}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
+          />
+        );
+
+      default:
+        return (
+          <motion.div
+            className={`${sizeClasses[size]} border-2 border-zion-cyan/20 border-t-zion-cyan rounded-full`}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+          />
+        );
+    }
+  };
+
+  const renderProgress = () => {
+    if (!showProgress) return null;
+
+    return (
+      <div className="mt-4 w-full max-w-xs">
+        <div className="flex justify-between text-sm text-zion-cyan mb-2">
+          <span>Loading...</span>
+          <span>{Math.round(progress)}%</span>
+        </div>
+        <div className="w-full bg-slate-700 rounded-full h-2">
+          <motion.div
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
           />
         </div>
       </div>
+    );
+  };
 
-      {/* Loading Text */}
-      {text && (
-        <div className="text-center mb-4">
-          <p className="text-slate-300 font-medium text-lg">{text}</p>
-          <div className="flex items-center justify-center mt-2 space-x-1">
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-          </div>
-        </div>
-      )}
+  const renderMessage = () => {
+    if (!message) return null;
 
-      {/* Progress Bar */}
-      {showProgress && (
-        <div className="w-64 bg-slate-700 rounded-full h-2 mb-4">
-          <div 
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300 ease-out"
-            style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-          />
-        </div>
-      )}
+    return (
+      <motion.p
+        className="mt-4 text-zion-cyan text-sm font-medium text-center max-w-xs"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        {message}
+      </motion.p>
+    );
+  };
 
-      {/* Progress Percentage */}
-      {showProgress && (
-        <p className="text-slate-400 text-sm font-mono">
-          {Math.round(progress)}%
-        </p>
-      )}
-
-      {/* Futuristic Loading Animation */}
-      {variant === 'futuristic' && (
-        <div className="mt-4">
-          <div className="flex space-x-1">
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={i}
-                className="w-1 h-4 bg-gradient-to-t from-cyan-400 to-blue-500 rounded-full animate-pulse"
-                style={{ 
-                  animationDelay: `${i * 100}ms`,
-                  animationDuration: '1.5s'
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* AI Loading Animation */}
-      {variant === 'ai' && (
-        <div className="mt-4">
-          <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-ping" />
-            <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full animate-ping" style={{ animationDelay: '200ms' }} />
-            <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-ping" style={{ animationDelay: '400ms' }} />
-          </div>
-        </div>
-      )}
-
-      {/* Security Loading Animation */}
-      {variant === 'security' && (
-        <div className="mt-4">
-          <div className="relative">
-            <div className="w-8 h-8 border-2 border-green-500 rounded-full animate-spin" style={{ animationDuration: '2s' }} />
-            <div className="absolute inset-0 w-8 h-8 border-2 border-green-400 rounded-full animate-ping opacity-75" />
-          </div>
-        </div>
-      )}
-
-      {/* Cloud Loading Animation */}
-      {variant === 'cloud' && (
-        <div className="mt-4">
-          <div className="flex items-center space-x-1">
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-            <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '100ms' }} />
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '200ms' }} />
-          </div>
-        </div>
-      )}
+  const content = (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      {showIcon && renderSpinner()}
+      {renderProgress()}
+      {renderMessage()}
     </div>
   );
-};
 
-// Full Screen Loading Spinner
-export const FullScreenLoadingSpinner: React.FC<Omit<LoadingSpinnerProps, 'className'>> = (props) => (
-  <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center z-50">
-    <LoadingSpinner {...props} />
-  </div>
-);
+  if (fullScreen) {
+    return (
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-slate-900/95 backdrop-blur-sm flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {content}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    );
+  }
 
-// Inline Loading Spinner
-export const InlineLoadingSpinner: React.FC<Omit<LoadingSpinnerProps, 'className'> & { inline?: boolean }> = ({ inline = true, ...props }) => (
-  <div className={`${inline ? 'inline-flex' : 'flex'} items-center justify-center`}>
-    <LoadingSpinner {...props} />
-  </div>
-);
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.2 }}
+        >
+          {content}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
 
-// Skeleton Loading Component
-export const SkeletonLoader: React.FC<{ className?: string; lines?: number }> = ({ className = '', lines = 3 }) => (
-  <div className={`animate-pulse ${className}`}>
-    {[...Array(lines)].map((_, i) => (
-      <div
-        key={i}
-        className={`h-4 bg-slate-700 rounded mb-3 ${
-          i === lines - 1 ? 'w-3/4' : 'w-full'
-        }`}
+// Specialized loading components for different contexts
+export function PageLoadingSpinner() {
+  return (
+    <LoadingSpinner
+      size="xl"
+      variant="futuristic"
+      message="Preparing your experience..."
+      fullScreen
+    />
+  );
+}
+
+export function ComponentLoadingSpinner() {
+  return (
+    <LoadingSpinner
+      size="lg"
+      variant="zion"
+      message="Loading component..."
+    />
+  );
+}
+
+export function DataLoadingSpinner() {
+  return (
+    <LoadingSpinner
+      size="md"
+      variant="minimal"
+      message="Fetching data..."
+      showProgress
+    />
+  );
+}
+
+export function FormLoadingSpinner() {
+  return (
+    <LoadingSpinner
+      size="sm"
+      variant="default"
+      message="Processing..."
+    />
+  );
+}
+
+// Loading states for different sections
+export function HeroLoadingSpinner() {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center">
+      <LoadingSpinner
+        size="xl"
+        variant="futuristic"
+        message="Loading amazing content..."
       />
-    ))}
-  </div>
-);
+    </div>
+  );
+}
+
+export function ServicesLoadingSpinner() {
+  return (
+    <div className="py-20 flex items-center justify-center">
+      <LoadingSpinner
+        size="lg"
+        variant="zion"
+        message="Loading our services..."
+      />
+    </div>
+  );
+}
+
+export function BlogLoadingSpinner() {
+  return (
+    <div className="py-16 flex items-center justify-center">
+      <LoadingSpinner
+        size="md"
+        variant="minimal"
+        message="Loading articles..."
+      />
+    </div>
+  );
+}

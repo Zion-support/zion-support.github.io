@@ -7,18 +7,14 @@ import {
   Bot, 
   User, 
   Sparkles, 
-  Loader2,
-  Mic,
+  Loader2, 
+  Mic, 
   MicOff,
-  Volume2,
-  VolumeX,
   Settings,
   HelpCircle,
   Zap,
   Brain,
-  Shield,
-  Cloud,
-  Rocket
+  Shield
 } from 'lucide-react';
 
 interface Message {
@@ -27,195 +23,254 @@ interface Message {
   content: string;
   timestamp: Date;
   isLoading?: boolean;
-  error?: string;
 }
 
 interface ChatAssistantProps {
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'dark' | 'light' | 'auto';
-  maxHeight?: string;
-  welcomeMessage?: string;
+  theme?: 'zion' | 'dark' | 'light';
+  showWelcomeMessage?: boolean;
+  autoOpen?: boolean;
 }
 
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({
+export function ChatAssistant({
   position = 'bottom-right',
-  theme = 'dark',
-  maxHeight = '600px',
-  welcomeMessage = "Hello! I'm Zion, your AI assistant. How can I help you today?"
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      type: 'assistant',
-      content: welcomeMessage,
-      timestamp: new Date(),
-    }
-  ]);
-  const [inputValue, setIsInputValue] = useState('');
+  theme = 'zion',
+  showWelcomeMessage = true,
+  autoOpen = false
+}: ChatAssistantProps) {
+  const [isOpen, setIsOpen] = useState(autoOpen);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isListening, setIsListening] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [chatHistory, setChatHistory] = useState<Message[]>([]);
   const [isMinimized, setIsMinimized] = useState(false);
-
+  
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<any>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
+
+  // Initialize with welcome message
+  useEffect(() => {
+    if (showWelcomeMessage && messages.length === 0) {
+      const welcomeMessage: Message = {
+        id: 'welcome',
+        type: 'assistant',
+        content: `Hello! I'm Zion AI, your intelligent assistant. I can help you with:
+        
+• Information about our AI solutions and IT services
+• Technical support and guidance
+• Business consultation and strategy
+• Product recommendations
+• General inquiries
+
+How can I assist you today?`,
+        timestamp: new Date()
+      };
+      setMessages([welcomeMessage]);
+    }
+  }, [showWelcomeMessage, messages.length]);
 
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Initialize speech recognition
+  // Focus input when chat opens
   useEffect(() => {
-    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = 'en-US';
+    if (isOpen && inputRef.current) {
+      setTimeout(() => inputRef.current?.focus(), 300);
+    }
+  }, [isOpen]);
 
-      recognitionRef.current.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setIsInputValue(transcript);
-        setIsListening(false);
-      };
+  // Save chat history to localStorage
+  useEffect(() => {
+    if (messages.length > 0) {
+      localStorage.setItem('zion-chat-history', JSON.stringify(messages));
+    }
+  }, [messages]);
 
-      recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
-        setIsListening(false);
-      };
+  // Load chat history from localStorage
+  useEffect(() => {
+    const savedHistory = localStorage.getItem('zion-chat-history');
+    if (savedHistory) {
+      try {
+        const parsed = JSON.parse(savedHistory);
+        setChatHistory(parsed);
+      } catch (error) {
+        console.warn('Failed to load chat history:', error);
+      }
     }
   }, []);
 
-  // Handle speech recognition
-  const toggleListening = useCallback(() => {
-    if (!recognitionRef.current) {
-      alert('Speech recognition is not supported in your browser');
-      return;
-    }
+  const generateResponse = useCallback(async (userMessage: string): Promise<string> => {
+    // Simulate AI response generation
+    setIsTyping(true);
+    
+    // Simulate processing time
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    
+    // Generate contextual responses based on user input
+    const lowerMessage = userMessage.toLowerCase();
+    let response = '';
+    
+    if (lowerMessage.includes('ai') || lowerMessage.includes('artificial intelligence')) {
+      response = `Our AI solutions are designed to transform your business operations. We offer:
 
-    if (isListening) {
-      recognitionRef.current.stop();
-      setIsListening(false);
+🤖 **Machine Learning Solutions**
+• Predictive analytics and forecasting
+• Natural language processing
+• Computer vision and image recognition
+• Recommendation engines
+
+🧠 **AI-Powered Business Intelligence**
+• Automated data analysis
+• Intelligent reporting and dashboards
+• Process automation
+• Customer behavior insights
+
+Would you like me to elaborate on any specific AI service?`;
+    } else if (lowerMessage.includes('service') || lowerMessage.includes('help')) {
+      response = `I'd be happy to help! Here are the main areas I can assist with:
+
+🔧 **IT Services**
+• Cloud infrastructure and DevOps
+• Cybersecurity and compliance
+• Digital transformation
+• IT consulting and strategy
+
+💼 **Business Solutions**
+• Process optimization
+• Data analytics and insights
+• Customer experience enhancement
+• Performance monitoring
+
+What specific area would you like to explore?`;
+    } else if (lowerMessage.includes('contact') || lowerMessage.includes('support')) {
+      response = `Here's how you can reach our team:
+
+📞 **Phone**: +1 (555) 123-4567
+📧 **Email**: info@ziontechgroup.com
+🌐 **Website**: ziontechgroup.com
+💬 **Live Chat**: Available on our website
+
+Our support team is available Monday-Friday, 9 AM - 6 PM EST. For urgent technical issues, we offer 24/7 emergency support.
+
+Would you like me to help you with something specific, or would you prefer to speak with a human representative?`;
+    } else if (lowerMessage.includes('pricing') || lowerMessage.includes('cost')) {
+      response = `Our pricing structure is designed to be flexible and scalable:
+
+💰 **Flexible Plans**
+• **Starter**: $99/month - Basic AI tools and support
+• **Professional**: $299/month - Advanced features + priority support
+• **Enterprise**: Custom pricing - Full suite + dedicated team
+
+🎯 **Pay-as-you-grow options available**
+• No long-term contracts
+• Scale up or down as needed
+• Custom enterprise solutions
+
+Would you like me to connect you with our sales team for a personalized quote?`;
     } else {
-      recognitionRef.current.start();
-      setIsListening(true);
+      response = `Thank you for your message! I'm here to help you with any questions about Zion Tech Group's services.
+
+Some popular topics I can help with:
+• AI and machine learning solutions
+• IT infrastructure and cloud services
+• Cybersecurity and compliance
+• Digital transformation strategies
+• Pricing and packages
+
+What would you like to know more about?`;
     }
-  }, [isListening]);
+    
+    setIsTyping(false);
+    return response;
+  }, []);
 
-  // Toggle mute
-  const toggleMute = useCallback(() => {
-    setIsMuted(!isMuted);
-  }, [isMuted]);
-
-  // Send message
-  const sendMessage = useCallback(async (content: string) => {
-    if (!content.trim()) return;
+  const handleSendMessage = useCallback(async () => {
+    if (!inputValue.trim() || isTyping) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
       type: 'user',
-      content: content.trim(),
-      timestamp: new Date(),
+      content: inputValue.trim(),
+      timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
-    setIsInputValue('');
-    setIsTyping(true);
+    setInputValue('');
 
-    // Simulate AI response (replace with actual AI API call)
-    try {
-      const response = await generateAIResponse(content);
-      
-      const assistantMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        type: 'assistant',
-        content: response,
-        timestamp: new Date(),
-      };
-
-      setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      const errorMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        type: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.',
-        timestamp: new Date(),
-        error: 'Failed to generate response',
-      };
-
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
-      setIsTyping(false);
-    }
-  }, []);
-
-  // Generate AI response (simulated)
-  const generateAIResponse = async (userInput: string): Promise<string> => {
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-
-    const responses = [
-      "That's a great question! Let me help you with that.",
-      "I understand your inquiry. Here's what I can tell you about that topic.",
-      "Based on your question, I'd recommend exploring our services in that area.",
-      "That's an interesting point. Let me provide you with some insights.",
-      "I'm here to help! Let me guide you through this.",
-    ];
-
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+    // Generate AI response
+    const response = await generateResponse(userMessage);
     
-    // Add some context-aware responses
-    if (userInput.toLowerCase().includes('ai') || userInput.toLowerCase().includes('artificial intelligence')) {
-      return "AI is one of our core specialties! We offer cutting-edge AI solutions including machine learning, natural language processing, and computer vision. Would you like to learn more about our AI services?";
-    }
-    
-    if (userInput.toLowerCase().includes('cloud') || userInput.toLowerCase().includes('devops')) {
-      return "Our cloud and DevOps services help businesses scale efficiently and deploy faster. We specialize in AWS, Azure, and Google Cloud solutions. Should I connect you with our cloud experts?";
-    }
-    
-    if (userInput.toLowerCase().includes('security') || userInput.toLowerCase().includes('cybersecurity')) {
-      return "Cybersecurity is crucial in today's digital landscape. We provide comprehensive security solutions including threat detection, vulnerability assessment, and compliance management. Would you like a security consultation?";
-    }
+    const assistantMessage: Message = {
+      id: (Date.now() + 1).toString(),
+      type: 'assistant',
+      content: response,
+      timestamp: new Date()
+    };
 
-    return randomResponse;
+    setMessages(prev => [...prev, assistantMessage]);
+  }, [inputValue, isTyping, generateResponse]);
+
+  const handleKeyPress = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
+    }
+  }, [handleSendMessage]);
+
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      setIsMinimized(false);
+    }
   };
 
-  // Handle form submission
-  const handleSubmit = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    sendMessage(inputValue);
-  }, [inputValue, sendMessage]);
+  const toggleMinimize = () => {
+    setIsMinimized(!isMinimized);
+  };
 
-  // Quick action buttons
-  const quickActions = [
-    { text: 'AI Services', icon: Brain, action: () => sendMessage('Tell me about your AI services') },
-    { text: 'Cloud Solutions', icon: Cloud, action: () => sendMessage('What cloud solutions do you offer?') },
-    { text: 'Security', icon: Shield, action: () => sendMessage('Tell me about your security services') },
-    { text: 'Innovation', icon: Rocket, action: () => sendMessage('What makes Zion Tech Group innovative?') },
-  ];
+  const clearChat = () => {
+    setMessages([]);
+    setChatHistory([]);
+    localStorage.removeItem('zion-chat-history');
+  };
 
-  // Position classes
+  const startVoiceInput = () => {
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      setIsListening(true);
+      // Implement speech recognition logic here
+      setTimeout(() => setIsListening(false), 3000);
+    } else {
+      alert('Speech recognition is not supported in your browser.');
+    }
+  };
+
   const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4',
+    'bottom-right': 'bottom-6 right-6',
+    'bottom-left': 'bottom-6 left-6',
+    'top-right': 'top-6 right-6',
+    'top-left': 'top-6 left-6'
+  };
+
+  const themeClasses = {
+    zion: 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-zion-cyan',
+    dark: 'bg-slate-900 border-slate-700',
+    light: 'bg-white border-gray-300'
   };
 
   return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
+    <>
       {/* Chat Toggle Button */}
       <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
+        onClick={toggleChat}
+        className={`fixed ${positionClasses[position]} z-50 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/80 hover:to-zion-purple/80 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300/50"
+        title="Chat with Zion AI"
         aria-label="Open chat assistant"
       >
         <MessageCircle className="w-6 h-6" />
@@ -228,52 +283,46 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className={`absolute bottom-16 right-0 w-96 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl overflow-hidden ${isMinimized ? 'h-16' : ''}`}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            className={`fixed ${positionClasses[position]} z-40 w-96 max-h-[600px] ${themeClasses[theme]} border rounded-xl shadow-2xl backdrop-blur-sm`}
+            style={{ transform: `translateY(${isMinimized ? 'calc(100% - 60px)' : '0'})` }}
           >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-slate-800 to-slate-700 border-b border-slate-600/50">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                  <Bot className="w-4 h-4 text-white" />
+            {/* Chat Header */}
+            <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
+                  <Bot className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white">Zion AI Assistant</h3>
-                  <p className="text-xs text-slate-400">Powered by AI</p>
+                  <h3 className="text-white font-semibold">Zion AI Assistant</h3>
+                  <p className="text-xs text-zion-cyan">Powered by AI</p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-2">
+              <div className="flex items-center space-x-2">
                 <button
-                  onClick={() => setIsMinimized(!isMinimized)}
+                  onClick={toggleMinimize}
                   className="p-1 text-slate-400 hover:text-white transition-colors"
-                  aria-label={isMinimized ? 'Expand chat' : 'Minimize chat'}
+                  title={isMinimized ? 'Expand' : 'Minimize'}
                 >
-                  {isMinimized ? '□' : '−'}
+                  <X className={`w-4 h-4 transition-transform ${isMinimized ? 'rotate-45' : ''}`} />
                 </button>
                 <button
-                  onClick={() => setShowSettings(!showSettings)}
+                  onClick={toggleChat}
                   className="p-1 text-slate-400 hover:text-white transition-colors"
-                  aria-label="Settings"
-                >
-                  <Settings className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-1 text-slate-400 hover:text-white transition-colors"
-                  aria-label="Close chat"
+                  title="Close chat"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
+            {/* Chat Messages */}
             {!isMinimized && (
               <>
-                {/* Messages */}
                 <div 
-                  className="flex-1 overflow-y-auto p-4 space-y-4"
-                  style={{ maxHeight: maxHeight }}
+                  ref={chatContainerRef}
+                  className="flex-1 overflow-y-auto max-h-96 p-4 space-y-4"
                 >
                   {messages.map((message) => (
                     <motion.div
@@ -282,142 +331,115 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       animate={{ opacity: 1, y: 0 }}
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
-                      <div
-                        className={`max-w-[80%] p-3 rounded-2xl ${
-                          message.type === 'user'
-                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                            : 'bg-slate-700/50 text-slate-200 border border-slate-600/50'
-                        }`}
-                      >
-                        <div className="flex items-start gap-2">
-                          {message.type === 'assistant' && (
-                            <Bot className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                          )}
-                          <div className="flex-1">
-                            <p className="text-sm leading-relaxed">{message.content}</p>
-                            {message.error && (
-                              <p className="text-xs text-red-400 mt-1">{message.error}</p>
-                            )}
+                      <div className={`max-w-[80%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
+                        <div className={`p-3 rounded-lg ${
+                          message.type === 'user' 
+                            ? 'bg-zion-cyan text-white' 
+                            : 'bg-slate-700/50 text-slate-200'
+                        }`}>
+                          <div className="whitespace-pre-wrap text-sm">{message.content}</div>
+                          <div className="text-xs opacity-70 mt-2">
+                            {message.timestamp.toLocaleTimeString()}
                           </div>
-                          {message.type === 'user' && (
-                            <User className="w-4 h-4 text-white/80 mt-0.5 flex-shrink-0" />
-                          )}
                         </div>
-                        <p className="text-xs opacity-70 mt-2">
-                          {message.timestamp.toLocaleTimeString()}
-                        </p>
+                      </div>
+                      
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center mx-2 ${
+                        message.type === 'user' 
+                          ? 'bg-zion-cyan order-1' 
+                          : 'bg-zion-purple order-2'
+                      }`}>
+                        {message.type === 'user' ? (
+                          <User className="w-4 h-4 text-white" />
+                        ) : (
+                          <Bot className="w-4 h-4 text-white" />
+                        )}
                       </div>
                     </motion.div>
                   ))}
-
-                  {/* Typing indicator */}
+                  
                   {isTyping && (
                     <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
                       className="flex justify-start"
                     >
-                      <div className="bg-slate-700/50 text-slate-200 border border-slate-600/50 rounded-2xl p-3">
-                        <div className="flex items-center gap-2">
-                          <Bot className="w-4 h-4 text-cyan-400" />
-                          <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                          </div>
+                      <div className="w-8 h-8 bg-zion-purple rounded-full flex items-center justify-center mx-2">
+                        <Bot className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="bg-slate-700/50 text-slate-200 p-3 rounded-lg">
+                        <div className="flex items-center space-x-2">
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span className="text-sm">AI is thinking...</span>
                         </div>
                       </div>
                     </motion.div>
                   )}
-
+                  
                   <div ref={messagesEndRef} />
                 </div>
 
-                {/* Quick Actions */}
-                {messages.length === 1 && (
-                  <div className="px-4 pb-4">
-                    <p className="text-xs text-slate-400 mb-3">Quick actions:</p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {quickActions.map((action, index) => (
-                        <motion.button
-                          key={action.text}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.1 }}
-                          onClick={action.action}
-                          className="flex items-center gap-2 p-2 bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 text-xs rounded-lg transition-colors border border-slate-600/50"
-                        >
-                          <action.icon className="w-3 h-3" />
-                          {action.text}
-                        </motion.button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Input Form */}
-                <form onSubmit={handleSubmit} className="p-4 border-t border-slate-600/50">
-                  <div className="flex items-center gap-2">
-                    <div className="flex-1 relative">
-                      <input
-                        ref={inputRef}
-                        type="text"
-                        value={inputValue}
-                        onChange={(e) => setIsInputValue(e.target.value)}
-                        placeholder="Type your message..."
-                        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500"
-                        disabled={isTyping}
-                      />
-                      {inputValue && (
-                        <button
-                          type="button"
-                          onClick={() => setIsInputValue('')}
-                          className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white"
-                        >
-                          <X className="w-4 h-4" />
-                        </button>
-                      )}
-                    </div>
+                {/* Chat Input */}
+                <div className="p-4 border-t border-slate-700/50">
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={startVoiceInput}
+                      className={`p-2 rounded-lg transition-colors ${
+                        isListening 
+                          ? 'bg-red-500 text-white' 
+                          : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                      }`}
+                      title="Voice input"
+                    >
+                      {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
+                    </button>
                     
-                    <div className="flex items-center gap-1">
-                      <button
-                        type="button"
-                        onClick={toggleListening}
-                        className={`p-2 rounded-lg transition-colors ${
-                          isListening
-                            ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30'
-                            : 'bg-slate-700/50 text-slate-400 hover:bg-slate-600/50'
-                        }`}
-                        disabled={isTyping}
-                        aria-label={isListening ? 'Stop listening' : 'Start voice input'}
-                      >
-                        {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                      </button>
-                      
-                      <button
-                        type="button"
-                        onClick={toggleMute}
-                        className={`p-2 rounded-lg transition-colors ${
-                          isMuted
-                            ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30'
-                            : 'bg-slate-700/50 text-slate-400 hover:bg-slate-600/50'
-                        }`}
-                        aria-label={isMuted ? 'Unmute' : 'Mute'}
-                      >
-                        {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                      </button>
-                    </div>
+                    <input
+                      ref={inputRef}
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      placeholder="Type your message..."
+                      className="flex-1 bg-slate-700 text-white placeholder-slate-400 px-3 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                      disabled={isTyping}
+                    />
                     
                     <button
-                      type="submit"
+                      onClick={handleSendMessage}
                       disabled={!inputValue.trim() || isTyping}
-                      className="p-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-                      aria-label="Send message"
+                      className="p-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-slate-600 text-white rounded-lg transition-colors disabled:cursor-not-allowed"
+                      title="Send message"
                     >
                       <Send className="w-4 h-4" />
                     </button>
                   </div>
-                </form>
+                  
+                  {/* Quick Actions */}
+                  <div className="flex items-center justify-between mt-3">
+                    <div className="flex items-center space-x-2">
+                      <button
+                        onClick={() => setShowSettings(!showSettings)}
+                        className="p-1 text-slate-400 hover:text-white transition-colors"
+                        title="Settings"
+                      >
+                        <Settings className="w-4 h-4" />
+                      </button>
+                      <button
+                        onClick={clearChat}
+                        className="p-1 text-slate-400 hover:text-white transition-colors"
+                        title="Clear chat"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
+                    </div>
+                    
+                    <div className="flex items-center space-x-1 text-xs text-slate-400">
+                      <Sparkles className="w-3 h-3" />
+                      <span>Powered by AI</span>
+                    </div>
+                  </div>
+                </div>
               </>
             )}
           </motion.div>
@@ -428,65 +450,42 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       <AnimatePresence>
         {showSettings && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl p-4"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className={`fixed ${positionClasses[position]} z-30 w-80 bg-slate-800 border border-slate-700 rounded-lg shadow-xl p-4`}
+            style={{ transform: `translateY(${isMinimized ? 'calc(100% - 60px)' : '0'}) translateY(-120px)` }}
           >
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="font-semibold text-white">Chat Settings</h3>
-              <button
-                onClick={() => setShowSettings(false)}
-                className="text-slate-400 hover:text-white"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-            
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Theme
-                </label>
-                <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white">
-                  <option value="dark">Dark</option>
-                  <option value="light">Light</option>
-                  <option value="auto">Auto</option>
-                </select>
+            <h4 className="text-white font-semibold mb-3">Chat Settings</h4>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-center justify-between">
+                <span className="text-slate-300">Auto-open on page load</span>
+                <input
+                  type="checkbox"
+                  checked={autoOpen}
+                  className="w-4 h-4 text-zion-cyan bg-slate-700 border-slate-600 rounded focus:ring-zion-cyan"
+                />
               </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Position
-                </label>
-                <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white">
-                  <option value="bottom-right">Bottom Right</option>
-                  <option value="bottom-left">Bottom Left</option>
-                  <option value="top-right">Top Right</option>
-                  <option value="top-left">Top Left</option>
-                </select>
+              <div className="flex items-center justify-between">
+                <span className="text-slate-300">Show welcome message</span>
+                <input
+                  type="checkbox"
+                  checked={showWelcomeMessage}
+                  className="w-4 h-4 text-zion-cyan bg-slate-700 border-slate-600 rounded focus:ring-zion-cyan"
+                />
               </div>
-              
-              <div className="pt-4 border-t border-slate-600/50">
-                <button
-                  onClick={() => {
-                    setMessages([{
-                      id: '1',
-                      type: 'assistant',
-                      content: welcomeMessage,
-                      timestamp: new Date(),
-                    }]);
-                    setShowSettings(false);
-                  }}
-                  className="w-full px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-lg transition-colors"
-                >
-                  Clear Chat History
-                </button>
+              <div className="flex items-center justify-between">
+                <span className="text-slate-300">Voice input</span>
+                <input
+                  type="checkbox"
+                  checked={true}
+                  className="w-4 h-4 text-zion-cyan bg-slate-700 border-slate-600 rounded focus:ring-zion-cyan"
+                />
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
-};
+}
