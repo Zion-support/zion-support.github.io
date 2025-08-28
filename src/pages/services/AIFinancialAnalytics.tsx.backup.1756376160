@@ -1,214 +1,514 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
+  BarChart3, 
+  TrendingUp, 
+<<<<<<< HEAD
+  DollarSign, 
+  Shield, 
+  Zap, 
+  Clock, 
+  CheckCircle,
+  Brain,
+  Workflow,
+  Target,
+  PieChart,
+  LineChart,
+  AlertTriangle,
+  Star,
+  ArrowRight,
+  Play,
+  Cpu,
+  Globe,
+  Users,
+  Lock
+=======
   Brain, 
   Zap, 
   Shield, 
   Globe, 
   Users, 
-  Clock,
+  DollarSign,
+  PieChart,
+  LineChart,
+  Activity,
+  Target,
   CheckCircle,
   Star,
   ArrowRight,
+  Eye,
+  Lock,
+  Cloud,
+  Smartphone,
+  Monitor,
   Play,
   Phone,
   Mail,
   MapPin,
-  Headphones,
-  Smartphone,
-  Monitor,
-  TrendingUp,
-  BarChart3,
-  Target,
-  Settings,
-  Database,
-  Cloud,
-  AlertCircle,
+  Calculator,
+  AlertTriangle,
   FileText,
   Calendar,
-  UserCheck
+  UserCheck,
+  TrendingDown,
+  Percent,
+  Clock
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-const AICustomerSupportAutomation = () => {
+const AIFinancialAnalytics = () => {
   const features = [
     {
-      icon: Bot,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand context, handle complex queries, and provide accurate responses 24/7 with 95%+ accuracy"
-    },
-    {
       icon: Brain,
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands customer intent, sentiment, and provides personalized responses in multiple languages"
-    },
-    {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support with instant responses, reducing wait times from hours to seconds"
+<<<<<<< HEAD
+      title: "AI-Powered Financial Forecasting",
+      description: "Machine learning models predict cash flow, revenue, and market trends with 95% accuracy",
+      price: "$79/month"
+=======
+      title: "AI-Powered Forecasting",
+      description: "Advanced machine learning algorithms that predict market trends, revenue patterns, and financial outcomes with 95%+ accuracy"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
     },
     {
       icon: BarChart3,
-      title: "Smart Ticket Routing",
-      description: "AI-powered ticket classification and routing to the right agents based on complexity, urgency, and expertise"
+      title: "Real-time Financial Dashboards",
+<<<<<<< HEAD
+      description: "Live financial metrics and KPIs with intelligent alerts and recommendations",
+      price: "$49/month"
     },
     {
       icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into support metrics, customer satisfaction, and agent performance with actionable recommendations"
+      title: "Predictive Risk Analysis",
+      description: "AI identifies potential financial risks and suggests mitigation strategies",
+      price: "$89/month"
+    },
+    {
+      icon: Workflow,
+      title: "Automated Financial Reporting",
+      description: "Generate comprehensive financial reports automatically with AI insights",
+      price: "$59/month"
+    },
+    {
+      icon: Target,
+      title: "Smart Budget Optimization",
+      description: "AI-driven recommendations for budget allocation and cost optimization",
+      price: "$69/month"
     },
     {
       icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security with data encryption, GDPR compliance, and role-based access control for sensitive customer information"
+      title: "Compliance & Audit Support",
+      description: "Automated compliance checking and audit trail generation",
+      price: "$99/month"
+=======
+      description: "Live financial metrics, KPIs, and performance indicators with instant updates from multiple data sources"
+    },
+    {
+      icon: TrendingUp,
+      title: "Risk Assessment & Management",
+      description: "Intelligent risk scoring, portfolio analysis, and automated alerts for potential financial threats and opportunities"
+    },
+    {
+      icon: Zap,
+      title: "Automated Financial Reporting",
+      description: "AI-generated financial reports, compliance documentation, and regulatory filings that adapt to your business needs"
+    },
+    {
+      icon: Shield,
+      title: "Enterprise Security & Compliance",
+      description: "Bank-grade security with SOC 2, GDPR, and financial industry compliance for sensitive financial data"
+    },
+    {
+      icon: Globe,
+      title: "Multi-currency & Global Support",
+      description: "Handle international transactions, multi-currency accounting, and global financial regulations seamlessly"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+<<<<<<< HEAD
+      price: "$79",
       period: "/month",
       description: "Perfect for small businesses and startups",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI chatbot",
-        "5 agent licenses",
+        "Basic financial forecasting",
+        "Standard dashboards",
+        "Monthly reports",
+        "Email support"
+=======
+      price: "$399",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: [
+        "Up to 10 financial accounts",
+        "Basic AI forecasting",
+        "5 user licenses",
+        "Standard reports",
         "Email support",
         "Basic integrations",
-        "Standard templates",
-        "Basic analytics"
+        "Monthly analytics"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+<<<<<<< HEAD
+      price: "$199",
       period: "/month",
-      description: "Ideal for growing businesses and teams",
+      description: "Ideal for growing businesses and financial teams",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI with NLP",
-        "25 agent licenses",
+        "All Starter features",
+        "Advanced analytics",
+        "Risk analysis",
+        "Priority support",
+        "Custom integrations"
+=======
+      price: "$999",
+      period: "/month",
+      description: "Ideal for growing businesses and financial teams",
+      features: [
+        "Up to 50 financial accounts",
+        "Advanced AI analytics",
+        "25 user licenses",
+        "Custom dashboards",
         "Priority support",
         "API access",
-        "Custom integrations",
-        "Advanced analytics",
-        "Multi-language support",
-        "White-label options"
+        "Advanced integrations",
+        "Real-time analytics",
+        "Risk management"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+<<<<<<< HEAD
+      price: "$499",
       period: "/month",
-      description: "For large organizations with high support volumes",
+      description: "For large organizations with complex financial needs",
       features: [
-        "Unlimited conversations",
+        "All Professional features",
         "Custom AI models",
-        "Unlimited agents",
+        "Advanced security",
+        "Dedicated support",
+        "White-label options"
+=======
+      price: "$2,999",
+      period: "/month",
+      description: "For large organizations with complex financial needs",
+      features: [
+        "Unlimited accounts",
+        "Custom AI models",
+        "Unlimited users",
+        "Advanced security",
         "Dedicated support",
         "Custom development",
-        "Advanced security",
         "On-premise options",
         "SLA guarantees",
-        "Custom training"
+        "Regulatory compliance"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
       ],
       popular: false
     }
   ];
 
-  const useCases = [
-    {
-      title: "E-commerce Support",
-      description: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents",
-      icon: ShoppingCart
-    },
-    {
-      title: "SaaS Customer Success",
-      description: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption",
-      icon: Monitor
-    },
-    {
-      title: "Financial Services",
-      description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance",
-      icon: DollarSign
-    },
-    {
-      title: "Healthcare Support",
-      description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance",
-      icon: Heart
-    }
-  ];
-
+<<<<<<< HEAD
   const benefits = [
     {
-      icon: Clock,
-      title: "Faster Response",
-      value: "90%",
-      description: "Reduce response times from hours to seconds"
-    },
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      value: "60-80%",
-      description: "Lower support costs while improving quality"
-    },
-    {
-      icon: Users,
-      title: "Customer Satisfaction",
-      value: "40%",
-      description: "Improve CSAT scores with instant support"
-    },
-    {
       icon: TrendingUp,
-      title: "Efficiency Gain",
-      value: "3x",
-      description: "Handle more support requests with fewer agents"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Adams",
-      role: "Customer Success Director",
-      company: "TechFlow Solutions",
-      content: "Our AI support automation has transformed customer experience. Response times dropped from 4 hours to under 2 minutes.",
-      rating: 5
+      title: "30% Better Financial Decisions",
+      description: "AI-powered insights lead to more informed financial strategies"
     },
     {
-      name: "Marcus Chen",
-      role: "Operations Manager",
-      company: "E-commerce Plus",
-      content: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues.",
-      rating: 5
+      icon: Clock,
+      title: "80% Faster Analysis",
+      description: "Automate complex financial calculations and reporting"
     },
     {
-      name: "Sarah Williams",
-      role: "VP of Support",
-      company: "CloudTech Inc",
-      content: "Customer satisfaction increased by 35% while reducing support costs by 65%. Game-changing technology.",
-      rating: 5
+      icon: Target,
+      title: "95% Forecast Accuracy",
+      description: "Machine learning models improve prediction accuracy over time"
+    },
+    {
+      icon: Shield,
+      title: "100% Compliance",
+      description: "Automated compliance checking ensures regulatory adherence"
     }
-  ];
-
-  const integrations = [
-    { name: "Slack", icon: MessageCircle, description: "Seamless team communication" },
-    { name: "Zendesk", icon: Headphones, description: "Ticket management integration" },
-    { name: "Salesforce", icon: Users, description: "CRM synchronization" },
-    { name: "Intercom", icon: Bot, description: "Live chat integration" },
-    { name: "HubSpot", icon: BarChart3, description: "Marketing automation" },
-    { name: "Microsoft Teams", icon: Monitor, description: "Team collaboration" }
   ];
 
   return (
     <>
       <SEO 
-        title="AI-Powered Customer Support Automation - Zion Tech Group"
-        description="Transform customer support with AI automation. 24/7 availability, instant responses, and 60-80% cost reduction. Start from $199/month."
+        title="AI Financial Analytics - Zion Tech Group"
+        description="Revolutionary AI-powered financial analytics platform that provides predictive insights, automated reporting, and intelligent risk analysis for better financial decision-making."
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20 px-4">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
+          <div className="container mx-auto max-w-7xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-400 text-sm font-medium mb-6">
+                <BarChart3 className="w-4 h-4 mr-2" />
+                AI Financial Analytics
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
+                  AI Financial Analytics
+                </span>
+                <br />
+                <span className="text-white">That Predicts the Future</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your financial decision-making with AI that analyzes patterns, predicts trends, and provides 
+                actionable insights. Make smarter financial decisions with confidence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  <Play className="w-5 h-5 mr-2" />
+                  Start Free Trial
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
+                >
+                  Watch Demo
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-7xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Transform Your Financial Intelligence
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See measurable improvements in financial decision-making, risk management, and operational efficiency
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="container mx-auto max-w-7xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                AI-Powered Features That Revolutionize Finance
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI doesn't just analyze numbers—it understands patterns, predicts trends, and provides actionable insights
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <div className="text-green-400 font-semibold">{feature.price}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-7xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Choose Your AI Financial Analytics Plan
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Start with our free trial and scale as you grow. All plans include our core AI features.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                    plan.popular 
+                      ? 'border-green-400 shadow-lg shadow-green-400/20' 
+                      : 'border-slate-700/50'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center mb-2">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+=======
+  const useCases = [
+    {
+      title: "Investment Portfolio Management",
+      description: "AI-powered portfolio optimization, risk assessment, and performance tracking for investment professionals",
+      icon: TrendingUp
+    },
+    {
+      title: "Business Financial Planning",
+      description: "Budget forecasting, cash flow analysis, and financial planning with predictive AI insights",
+      icon: Calculator
+    },
+    {
+      title: "Risk Management & Compliance",
+      description: "Automated risk assessment, regulatory compliance monitoring, and audit trail management",
+      icon: Shield
+    },
+    {
+      title: "Trading & Market Analysis",
+      description: "Real-time market data analysis, trading signals, and algorithmic trading recommendations",
+      icon: Activity
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: "Better Returns",
+      value: "15-25%",
+      description: "Improve investment returns with AI insights"
+    },
+    {
+      icon: Clock,
+      title: "Faster Analysis",
+      value: "90%",
+      description: "Reduce analysis time from hours to minutes"
+    },
+    {
+      icon: DollarSign,
+      title: "Cost Reduction",
+      value: "30-50%",
+      description: "Lower operational costs and improve efficiency"
+    },
+    {
+      icon: Target,
+      title: "Risk Reduction",
+      value: "40-60%",
+      description: "Better risk management and compliance"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Robert Chen",
+      role: "CFO",
+      company: "TechGrowth Capital",
+      content: "The AI financial analytics have transformed our decision-making process. We've improved returns by 22% while reducing risk exposure.",
+      rating: 5
+    },
+    {
+      name: "Sarah Williams",
+      role: "Portfolio Manager",
+      company: "Global Investments Ltd",
+      content: "Real-time AI insights help us make better trading decisions. The risk assessment tools are incredibly accurate.",
+      rating: 5
+    },
+    {
+      name: "Michael Rodriguez",
+      role: "Financial Controller",
+      company: "InnovateCorp",
+      content: "Automated reporting saves us 20+ hours per week. The compliance features ensure we never miss regulatory deadlines.",
+      rating: 5
+    }
+  ];
+
+  const integrations = [
+    { name: "QuickBooks", icon: Calculator, description: "Accounting software integration" },
+    { name: "Salesforce", icon: Users, description: "CRM and sales data sync" },
+    { name: "Bloomberg", icon: TrendingUp, description: "Market data feeds" },
+    { name: "Excel", icon: FileText, description: "Spreadsheet automation" },
+    { name: "Tableau", icon: BarChart3, description: "Data visualization" },
+    { name: "Power BI", icon: Monitor, description: "Business intelligence" }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+      <SEO 
+        title="AI-Powered Financial Analytics - Zion Tech Group"
+        description="Transform financial decision-making with AI analytics. Real-time insights, predictive forecasting, and risk management. Start from $399/month."
       />
       
       {/* Hero Section */}
@@ -221,21 +521,21 @@ const AICustomerSupportAutomation = () => {
             className="text-center relative z-10"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
-              <Bot className="w-4 h-4 mr-2 text-cyan-400" />
-              AI-Powered Support Automation
+              <Brain className="w-4 h-4 mr-2 text-cyan-400" />
+              AI-Powered Financial Analytics
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Customer Support
+                Financial Analytics
               </span>
               <br />
-              <span className="text-white">Automation</span>
+              <span className="text-white">Powered by AI</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your customer support with AI automation that provides 24/7 availability, 
-              instant responses, and reduces support costs by 60-80% while improving customer satisfaction.
+              Transform your financial decision-making with AI-powered analytics that provide real-time insights, 
+              predictive forecasting, and intelligent risk management for better returns and compliance.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -280,7 +580,7 @@ const AICustomerSupportAutomation = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the measurable impact AI automation can have on your customer support
+              See the measurable impact AI analytics can have on your financial performance
             </p>
           </motion.div>
           
@@ -324,7 +624,7 @@ const AICustomerSupportAutomation = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your customer support
+              Everything you need to transform your financial analysis with AI
             </p>
           </motion.div>
           
@@ -371,7 +671,7 @@ const AICustomerSupportAutomation = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how different industries are transforming customer support with AI automation
+              See how different industries are transforming financial analysis with AI
             </p>
           </motion.div>
           
@@ -418,7 +718,7 @@ const AICustomerSupportAutomation = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your existing tools and workflows for maximum efficiency
+              Connect with your existing financial tools and workflows
             </p>
           </motion.div>
           
@@ -465,7 +765,7 @@ const AICustomerSupportAutomation = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your support volume and business needs. All plans include a 14-day free trial.
+              Choose the plan that fits your financial analysis needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
           
@@ -505,10 +805,67 @@ const AICustomerSupportAutomation = () => {
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
+
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
+                        : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-white'
+                    }`}
+                  >
+                    Get Started
+                  </motion.button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="container mx-auto max-w-4xl text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Financial Intelligence?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of businesses already using AI to make smarter financial decisions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
+                >
+                  Contact Sales
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+=======
                   
                   <a
                     href="https://ziontechgroup.com/contact"
@@ -583,10 +940,10 @@ const AICustomerSupportAutomation = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Financial Analysis?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join leading companies that are already reducing costs and improving customer satisfaction with AI-powered support automation.
+              Join leading companies that are already improving returns and reducing risk with AI-powered financial analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -636,64 +993,11 @@ const AICustomerSupportAutomation = () => {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
-          <div className="container mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Customer Support?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using AI to provide exceptional customer experiences
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
-                  Contact Sales
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
   );
 };
 
-// Add missing icon components
-const ShoppingCart = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-  </svg>
-);
-
-const DollarSign = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-  </svg>
-);
-
-const Heart = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-  </svg>
-);
-
-export default AICustomerSupportAutomation;
+export default AIFinancialAnalytics;

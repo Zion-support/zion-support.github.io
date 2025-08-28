@@ -137,6 +137,7 @@ const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectM
 const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const AIBusinessIntelligenceDashboard = React.lazy(() => import('./pages/services/AIBusinessIntelligenceDashboard'));
 const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
 
 // Comprehensive improvements components
@@ -445,6 +446,8 @@ function App() {
               <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
               <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
               <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              <Route path="/services/ai-business-intelligence-dashboard" element={<AIBusinessIntelligenceDashboard />} />
+              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
               <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
               
               {/* New innovative AI services */}

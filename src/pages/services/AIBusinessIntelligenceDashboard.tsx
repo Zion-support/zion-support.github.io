@@ -1,121 +1,114 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
+  BarChart3, 
+  TrendingUp, 
   Brain, 
   Zap, 
   Shield, 
   Globe, 
   Users, 
-  Clock,
+  Database,
+  PieChart,
+  LineChart,
+  Activity,
+  Target,
   CheckCircle,
   Star,
   ArrowRight,
+  Eye,
+  Lock,
+  Cloud,
+  Smartphone,
+  Monitor,
   Play,
   Phone,
   Mail,
-  MapPin,
-  Headphones,
-  Smartphone,
-  Monitor,
-  TrendingUp,
-  BarChart3,
-  Target,
-  Settings,
-  Database,
-  Cloud,
-  AlertCircle,
-  FileText,
-  Calendar,
-  UserCheck
+  MapPin
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-const AICustomerSupportAutomation = () => {
+const AIBusinessIntelligenceDashboard = () => {
   const features = [
     {
-      icon: Bot,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand context, handle complex queries, and provide accurate responses 24/7 with 95%+ accuracy"
-    },
-    {
       icon: Brain,
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands customer intent, sentiment, and provides personalized responses in multiple languages"
-    },
-    {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support with instant responses, reducing wait times from hours to seconds"
+      title: "AI-Powered Insights",
+      description: "Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data"
     },
     {
       icon: BarChart3,
-      title: "Smart Ticket Routing",
-      description: "AI-powered ticket classification and routing to the right agents based on complexity, urgency, and expertise"
+      title: "Real-time Analytics",
+      description: "Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs"
     },
     {
       icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into support metrics, customer satisfaction, and agent performance with actionable recommendations"
+      title: "Predictive Analytics",
+      description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
+    },
+    {
+      icon: Zap,
+      title: "Automated Reporting",
+      description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
     },
     {
       icon: Shield,
       title: "Enterprise Security",
-      description: "Bank-grade security with data encryption, GDPR compliance, and role-based access control for sensitive customer information"
+      description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
+    },
+    {
+      icon: Globe,
+      title: "Multi-platform Access",
+      description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
       description: "Perfect for small businesses and startups",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI chatbot",
-        "5 agent licenses",
+        "Up to 5 data sources",
+        "Basic AI insights",
+        "5 user licenses",
+        "Standard reports",
         "Email support",
-        "Basic integrations",
-        "Standard templates",
-        "Basic analytics"
+        "Basic integrations"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$799",
       period: "/month",
       description: "Ideal for growing businesses and teams",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI with NLP",
-        "25 agent licenses",
+        "Up to 20 data sources",
+        "Advanced AI analytics",
+        "25 user licenses",
+        "Custom dashboards",
         "Priority support",
         "API access",
-        "Custom integrations",
-        "Advanced analytics",
-        "Multi-language support",
+        "Advanced integrations",
         "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$2,499",
       period: "/month",
-      description: "For large organizations with high support volumes",
+      description: "For large organizations with complex needs",
       features: [
-        "Unlimited conversations",
+        "Unlimited data sources",
         "Custom AI models",
-        "Unlimited agents",
+        "Unlimited users",
+        "Advanced security",
         "Dedicated support",
         "Custom development",
-        "Advanced security",
         "On-premise options",
-        "SLA guarantees",
-        "Custom training"
+        "SLA guarantees"
       ],
       popular: false
     }
@@ -123,92 +116,56 @@ const AICustomerSupportAutomation = () => {
 
   const useCases = [
     {
-      title: "E-commerce Support",
-      description: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents",
-      icon: ShoppingCart
+      title: "Sales Performance Analytics",
+      description: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights",
+      icon: TrendingUp
     },
     {
-      title: "SaaS Customer Success",
-      description: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption",
-      icon: Monitor
+      title: "Customer Behavior Analysis",
+      description: "Understand customer patterns, churn prediction, and lifetime value optimization",
+      icon: Users
     },
     {
-      title: "Financial Services",
-      description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance",
-      icon: DollarSign
+      title: "Financial Performance Tracking",
+      description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts",
+      icon: BarChart3
     },
     {
-      title: "Healthcare Support",
-      description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance",
-      icon: Heart
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: Clock,
-      title: "Faster Response",
-      value: "90%",
-      description: "Reduce response times from hours to seconds"
-    },
-    {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      value: "60-80%",
-      description: "Lower support costs while improving quality"
-    },
-    {
-      icon: Users,
-      title: "Customer Satisfaction",
-      value: "40%",
-      description: "Improve CSAT scores with instant support"
-    },
-    {
-      icon: TrendingUp,
-      title: "Efficiency Gain",
-      value: "3x",
-      description: "Handle more support requests with fewer agents"
+      title: "Operational Efficiency",
+      description: "Identify bottlenecks, optimize processes, and improve productivity across teams",
+      icon: Activity
     }
   ];
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      role: "Customer Success Director",
+      name: "Sarah Johnson",
+      role: "VP of Operations",
       company: "TechFlow Solutions",
-      content: "Our AI support automation has transformed customer experience. Response times dropped from 4 hours to under 2 minutes.",
+      content: "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",
       rating: 5
     },
     {
-      name: "Marcus Chen",
-      role: "Operations Manager",
-      company: "E-commerce Plus",
-      content: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues.",
+      name: "Michael Chen",
+      role: "Data Scientist",
+      company: "InnovateCorp",
+      content: "The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.",
       rating: 5
     },
     {
-      name: "Sarah Williams",
-      role: "VP of Support",
-      company: "CloudTech Inc",
-      content: "Customer satisfaction increased by 35% while reducing support costs by 65%. Game-changing technology.",
+      name: "Emily Rodriguez",
+      role: "CEO",
+      company: "StartupXYZ",
+      content: "This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.",
       rating: 5
     }
   ];
 
-  const integrations = [
-    { name: "Slack", icon: MessageCircle, description: "Seamless team communication" },
-    { name: "Zendesk", icon: Headphones, description: "Ticket management integration" },
-    { name: "Salesforce", icon: Users, description: "CRM synchronization" },
-    { name: "Intercom", icon: Bot, description: "Live chat integration" },
-    { name: "HubSpot", icon: BarChart3, description: "Marketing automation" },
-    { name: "Microsoft Teams", icon: Monitor, description: "Team collaboration" }
-  ];
-
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
-        title="AI-Powered Customer Support Automation - Zion Tech Group"
-        description="Transform customer support with AI automation. 24/7 availability, instant responses, and 60-80% cost reduction. Start from $199/month."
+        title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
+        description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."
       />
       
       {/* Hero Section */}
@@ -221,21 +178,21 @@ const AICustomerSupportAutomation = () => {
             className="text-center relative z-10"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
-              <Bot className="w-4 h-4 mr-2 text-cyan-400" />
-              AI-Powered Support Automation
+              <Brain className="w-4 h-4 mr-2 text-cyan-400" />
+              AI-Powered Business Intelligence
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Customer Support
+                AI Business Intelligence
               </span>
               <br />
-              <span className="text-white">Automation</span>
+              <span className="text-white">Dashboard</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your customer support with AI automation that provides 24/7 availability, 
-              instant responses, and reduces support costs by 60-80% while improving customer satisfaction.
+              Transform your business data into actionable insights with our AI-powered business intelligence platform. 
+              Get real-time analytics, predictive insights, and automated reporting that drives growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -264,52 +221,8 @@ const AICustomerSupportAutomation = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Proven Results
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the measurable impact AI automation can have on your customer support
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group text-center"
-              >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <benefit.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">{benefit.value}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -324,7 +237,7 @@ const AICustomerSupportAutomation = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your customer support
+              Everything you need to transform your business data into actionable intelligence
             </p>
           </motion.div>
           
@@ -356,7 +269,7 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center mb-16"
@@ -371,7 +284,7 @@ const AICustomerSupportAutomation = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how different industries are transforming customer support with AI automation
+              See how businesses are using our AI BI platform to drive growth and efficiency
             </p>
           </motion.div>
           
@@ -402,53 +315,6 @@ const AICustomerSupportAutomation = () => {
         </div>
       </section>
 
-      {/* Integrations Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                Seamless Integrations
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your existing tools and workflows for maximum efficiency
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <integration.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
-                    {integration.name}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {integration.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
@@ -465,7 +331,7 @@ const AICustomerSupportAutomation = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your support volume and business needs. All plans include a 14-day free trial.
+              Choose the plan that fits your business needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
           
@@ -583,10 +449,10 @@ const AICustomerSupportAutomation = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join leading companies that are already reducing costs and improving customer satisfaction with AI-powered support automation.
+              Join thousands of businesses that are already using AI-powered insights to drive growth and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -636,64 +502,10 @@ const AICustomerSupportAutomation = () => {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
-          <div className="container mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Customer Support?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using AI to provide exceptional customer experiences
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
-                  Contact Sales
-                </motion.button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 
-// Add missing icon components
-const ShoppingCart = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-  </svg>
-);
-
-const DollarSign = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-  </svg>
-);
-
-const Heart = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-  </svg>
-);
-
-export default AICustomerSupportAutomation;
+export default AIBusinessIntelligenceDashboard;

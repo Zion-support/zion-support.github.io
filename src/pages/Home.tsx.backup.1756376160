@@ -250,6 +250,66 @@ export default function Home() {
   // Memoized featured services for better performance
   const featuredServices = useMemo(() => [
     {
+<<<<<<< HEAD
+      title: "AI Autonomous Business Operations",
+      description: "Next-generation autonomous business operations platform that uses advanced AI to automate complex business processes and make intelligent decisions in real-time. Transform your business with 24/7 autonomous operations, AI decision making, and process optimization.",
+      icon: Rocket,
+      path: "/services/ai-autonomous-research-assistant",
+      rating: 4.9,
+      reviewCount: 127,
+      highlights: ["24/7 Autonomous Operations", "AI Decision Making", "Process Optimization", "Real-time Analytics", "Cost Reduction by 60%"],
+      price: "From $2,500/month"
+    },
+    {
+      title: "Quantum Financial Trading Platform",
+      description: "Revolutionary trading platform that leverages quantum computing for ultra-fast market analysis, risk assessment, and algorithmic trading. Gain quantum advantage with 1000x faster processing and 40% improved trading accuracy.",
+      icon: Cpu,
+      path: "/services/quantum-financial-trading-platform",
+      rating: 4.8,
+      reviewCount: 89,
+      highlights: ["Quantum Processing", "40% Trading Accuracy", "60% Risk Reduction", "Ultra-fast Execution", "Portfolio Optimization"],
+      price: "From $8,999/month"
+    },
+    {
+      title: "AI-Powered Healthcare Analytics",
+      description: "Advanced healthcare analytics platform that uses AI to analyze patient data, predict outcomes, and optimize treatment plans. Improve patient outcomes by 45% and reduce readmission rates by 30%.",
+      icon: Shield,
+      path: "/services/ai-powered-healthcare-analytics-platform",
+      rating: 4.9,
+      reviewCount: 156,
+      highlights: ["45% Better Outcomes", "30% Fewer Readmissions", "AI Treatment Plans", "Real-time Monitoring", "HIPAA Compliant"],
+      price: "From $3,299/month"
+    },
+    {
+      title: "AI Autonomous Supply Chain",
+      description: "Intelligent supply chain platform that autonomously optimizes logistics, inventory, and demand forecasting. Reduce inventory costs by 30%, improve delivery times by 40%, and optimize routes by 25%.",
+      icon: Workflow,
+      path: "/services/ai-autonomous-supply-chain-optimization",
+      rating: 4.7,
+      reviewCount: 98,
+      highlights: ["30% Cost Reduction", "40% Faster Delivery", "25% Route Optimization", "AI Forecasting", "Sustainability Metrics"],
+      price: "From $2,499/month"
+    },
+    {
+      title: "AI Content Marketing Suite",
+      description: "Comprehensive content marketing platform that automates content creation, distribution, and performance optimization. Increase engagement by 60%, reduce creation time by 70%, and improve SEO by 45%.",
+      icon: Brain,
+      path: "/services/ai-content-marketing-automation-suite",
+      rating: 4.6,
+      reviewCount: 134,
+      highlights: ["60% More Engagement", "70% Time Savings", "45% SEO Improvement", "Multi-channel", "ROI Tracking"],
+      price: "From $1,599/month"
+    },
+    {
+      title: "Quantum Machine Learning",
+      description: "Revolutionary platform that combines quantum computing with machine learning for solving complex computational problems. Solve problems 1000x faster with breakthrough computational power.",
+      icon: Zap,
+      path: "/services/quantum-machine-learning-platform",
+      rating: 4.9,
+      reviewCount: 67,
+      highlights: ["1000x Faster Processing", "60% Accuracy Improvement", "Quantum Algorithms", "Research Ready", "Future-proof Tech"],
+      price: "From $6,999/month"
+=======
       title: "AI Business Intelligence Dashboard",
       description: "Transform your business data into actionable insights with AI-powered analytics, predictive insights, and automated reporting that drives growth.",
       icon: BarChart3,
@@ -278,6 +338,7 @@ export default function Home() {
       reviewCount: 189,
       highlights: ["24/7 Availability", "Instant Responses", "Smart Routing", "Cost Reduction"],
       price: "From $199/month"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1e87
     }
   ], []);
 
