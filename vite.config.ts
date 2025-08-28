@@ -24,7 +24,7 @@ export default defineConfig({
   },
   build: {
     target: 'es2018',
-    minify: 'esbuild',
+    minify: 'terser',
     sourcemap: false,
     outDir: 'dist',
     cssCodeSplit: true,
