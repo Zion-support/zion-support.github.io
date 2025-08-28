@@ -2,163 +2,123 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Cpu, 
-  Brain, 
-  Zap, 
-  Network, 
-  Database, 
-  Shield, 
-  Target, 
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  BarChart3,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Award,
-  Lightbulb,
-  Sparkles,
-  Server,
-  Smartphone,
-  Monitor,
-  Globe,
-  Clock,
-  Activity,
-  Lock,
-  Key,
-  Bug,
-  Virus,
-  Fire,
-  FileText,
-  Cloud,
-  Users,
-  Settings,
-  Gauge,
-  BarChart,
-  PieChart,
-  LineChart,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Satellite,
-  Car
+  Building, Users, Target, CheckCircle, TrendingUp, MessageCircle, 
+  Phone, Mail, MapPin, Shield, Zap, Globe, Database, Network,
+  Cloud, Cpu, Layers, FileText, Settings, Activity, Star
 } from 'lucide-react';
 
-const IoTEdgeComputing: React.FC = () => {
+const EnterpriseSolutions: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Real-time data processing at the edge for instant insights and actions',
+      icon: Building,
+      title: 'Enterprise Architecture',
+      description: 'Scalable enterprise-grade architecture design',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Network,
-      title: 'IoT Connectivity',
-      description: 'Seamless connectivity for thousands of IoT devices and sensors',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Brain,
-      title: 'AI at the Edge',
-      description: 'Machine learning models running locally for privacy and speed',
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Advanced collaboration and communication tools',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Zap,
-      title: 'Real-time Analytics',
-      description: 'Instant data analysis and decision making at the edge',
+      icon: Target,
+      title: 'Strategic Planning',
+      description: 'Comprehensive strategic planning and execution',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: Shield,
-      title: 'Edge Security',
-      description: 'Advanced security protocols for edge devices and networks',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Database,
-      title: 'Local Storage',
-      description: 'Intelligent data storage and management at the edge',
-      color: 'from-indigo-500 to-blue-500'
-    }
-  ];
-
-  const iotSolutions = [
-    {
-      title: 'Smart Cities',
-      description: 'IoT infrastructure for urban management and citizen services',
-      icon: Globe,
-      benefits: ['Traffic optimization', 'Energy management', 'Public safety', 'Environmental monitoring'],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Industrial IoT',
-      description: 'Connected manufacturing and industrial automation systems',
-      icon: Settings,
-      benefits: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Safety monitoring'],
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security and compliance solutions',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Smart Healthcare',
-      description: 'IoT medical devices and patient monitoring systems',
-      icon: Users,
-      benefits: ['Remote monitoring', 'Early detection', 'Treatment optimization', 'Patient safety'],
+      icon: Cloud,
+      title: 'Cloud Integration',
+      description: 'Seamless cloud integration and management',
+      color: 'from-indigo-500 to-blue-500'
+    },
+    {
+      icon: Database,
+      title: 'Data Management',
+      description: 'Advanced data management and analytics',
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const solutions = [
+    {
+      title: 'Digital Transformation',
+      description: 'End-to-end digital transformation solutions',
+      icon: Zap,
+      benefits: ['Process automation', 'Technology modernization', 'Change management', 'ROI optimization'],
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Enterprise Integration',
+      description: 'Seamless system integration and connectivity',
+      icon: Network,
+      benefits: ['API management', 'Data synchronization', 'Workflow automation', 'Real-time connectivity'],
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Connected Vehicles',
-      description: 'IoT solutions for automotive and transportation systems',
-      icon: Car,
-      benefits: ['Fleet management', 'Predictive maintenance', 'Safety systems', 'Route optimization'],
+      title: 'Business Intelligence',
+      description: 'Advanced analytics and business intelligence',
+      icon: TrendingUp,
+      benefits: ['Data visualization', 'Predictive analytics', 'Performance monitoring', 'Strategic insights'],
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Comprehensive security and risk management',
+      icon: Shield,
+      benefits: ['Threat protection', 'Compliance management', 'Risk assessment', 'Incident response'],
       color: 'from-red-500 to-orange-500'
     }
   ];
 
   const industries = [
-    'Manufacturing',
+    'Financial Services',
     'Healthcare',
+    'Manufacturing',
+    'Retail',
+    'Technology',
+    'Energy',
     'Transportation',
-    'Energy & Utilities',
-    'Retail & Logistics',
-    'Smart Cities',
-    'Agriculture',
-    'Construction',
-    'Mining & Resources',
-    'Financial Services'
+    'Government',
+    'Education',
+    'Telecommunications'
   ];
 
   const benefits = [
-    'Reduce latency by 90%',
-    'Cut bandwidth costs by 60%',
-    'Improve reliability by 95%',
-    'Enable real-time decisions',
-    'Enhanced data privacy',
-    'Scalable architecture',
-    '24/7 monitoring',
-    'Predictive capabilities'
+    'Increased efficiency',
+    'Cost reduction',
+    'Improved scalability',
+    'Enhanced security',
+    'Better compliance',
+    'Faster time-to-market',
+    'Competitive advantage',
+    'Future-ready solutions'
   ];
 
   const technologies = [
-    'Edge Computing',
-    'IoT Protocols',
-    '5G Networks',
-    'Machine Learning',
-    'Blockchain',
-    'Cloud Integration',
-    'Data Analytics',
-    'Cybersecurity'
+    'Microsoft Azure',
+    'AWS',
+    'Google Cloud',
+    'Salesforce',
+    'Oracle',
+    'SAP',
+    'IBM',
+    'VMware'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="IoT Edge Computing - Zion Tech Group"
-        description="Revolutionary IoT and edge computing solutions for real-time data processing, AI integration, and connected systems. Transform your operations with cutting-edge edge technology."
-        keywords="IoT edge computing, edge computing, IoT solutions, real-time processing, connected devices, Zion Tech Group"
+        title="Enterprise Solutions - Zion Tech Group"
+        description="Comprehensive enterprise solutions for large organizations. Digital transformation, system integration, business intelligence, and enterprise security."
+        keywords="enterprise solutions, digital transformation, business intelligence, enterprise security, Zion Tech Group"
         ogType="website"
       />
 
@@ -173,29 +133,29 @@ const IoTEdgeComputing: React.FC = () => {
               className="space-y-8"
             >
               <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">
-                <Cpu className="w-4 h-4" />
-                Edge Computing Innovation
+                <Building className="w-4 h-4" />
+                Enterprise Excellence
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                IoT & Edge
-                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-                  Computing
+                Enterprise
+                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Solutions
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 leading-relaxed">
-                Transform your operations with our revolutionary IoT and edge computing platform. From real-time data processing to AI-powered insights, we're bringing the future of connected systems to your organization.
+                Transform your enterprise with our comprehensive solutions designed for large organizations. Drive innovation, efficiency, and growth at scale.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
-                  <Cpu className="w-5 h-5" />
-                  Edge Demo
+                  <Building className="w-5 h-5" />
+                  Enterprise Assessment
                 </button>
                 <button className="btn-futuristic-outline">
                   <FileText className="w-5 h-5" />
-                  Download Guide
+                  Download Enterprise Guide
                 </button>
               </div>
             </motion.div>
@@ -207,18 +167,17 @@ const IoTEdgeComputing: React.FC = () => {
               className="relative"
             >
               <div className="relative z-10">
-                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-green-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
+                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <Cpu className="w-12 h-12 text-white" />
+                      <Building className="w-12 h-12 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">IoT Edge Computing</h3>
-                    <p className="text-gray-300">Revolutionary Edge Solutions</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Enterprise Solutions</h3>
+                    <p className="text-gray-300">Scale for Success</p>
                   </div>
                 </div>
               </div>
               
-              {/* Background Elements */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-3xl"></div>
             </motion.div>
           </div>
@@ -236,10 +195,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary Edge Features
+              Enterprise-Grade Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT edge computing platform combines cutting-edge technology with real-time processing to deliver unprecedented performance and insights.
+              Our enterprise solutions provide the capabilities and scalability needed for large organizations to thrive in the digital age.
             </p>
           </motion.div>
 
@@ -264,7 +223,7 @@ const IoTEdgeComputing: React.FC = () => {
         </div>
       </section>
 
-      {/* IoT Solutions Section */}
+      {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -275,15 +234,15 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              IoT Solutions We Deliver
+              Enterprise Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From smart cities to industrial automation, our IoT platform delivers comprehensive solutions for every industry.
+              From digital transformation to enterprise security, our solutions address the complex challenges faced by large organizations.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {iotSolutions.map((solution, index) => (
+            {solutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -330,10 +289,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose IoT Edge Computing?
+              Why Choose Enterprise Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented performance and efficiency in your IoT operations with our edge computing platform.
+              Experience the advantages of enterprise-grade solutions designed for scale, security, and performance.
             </p>
           </motion.div>
 
@@ -368,10 +327,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Cutting-Edge Technologies
+              Enterprise Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform leverages the latest advancements in IoT, edge computing, and artificial intelligence to deliver superior performance.
+              Our solutions leverage industry-leading enterprise technologies to deliver superior performance and reliability.
             </p>
           </motion.div>
 
@@ -406,10 +365,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Industries We Transform
+              Industries We Serve
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT edge computing platform is designed to revolutionize various industries with real-time data processing and AI-powered insights.
+              Our enterprise solutions are designed to meet the unique needs of various industries and business types.
             </p>
           </motion.div>
 
@@ -434,7 +393,7 @@ const IoTEdgeComputing: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10">
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10">
         <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -444,20 +403,20 @@ const IoTEdgeComputing: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Operations?
+              Ready to Transform Your Enterprise?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the IoT revolution with our edge computing platform. Experience real-time insights and AI-powered automation for your connected systems.
+              Scale your organization with our comprehensive enterprise solutions. Drive innovation and growth at enterprise scale.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
                 <MessageCircle className="w-5 h-5" />
-                Schedule Edge Demo
+                Schedule Enterprise Review
               </button>
               <button className="btn-futuristic-outline">
                 <Phone className="w-5 h-5" />
-                Contact IoT Team
+                Contact Enterprise Team
               </button>
             </div>
           </motion.div>
@@ -478,7 +437,7 @@ const IoTEdgeComputing: React.FC = () => {
                 Get in Touch
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Ready to revolutionize your operations with IoT and edge computing? Our team of experts is here to help you implement the future of connected systems.
+                Ready to transform your enterprise? Our team of enterprise experts is here to help you scale and succeed.
               </p>
               
               <div className="space-y-6">
@@ -521,7 +480,7 @@ const IoTEdgeComputing: React.FC = () => {
               viewport={{ once: true }}
               className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Request IoT Consultation</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Request Enterprise Consultation</h3>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
@@ -549,7 +508,7 @@ const IoTEdgeComputing: React.FC = () => {
                 />
                 
                 <textarea
-                  placeholder="Tell us about your IoT and edge computing needs..."
+                  placeholder="Tell us about your enterprise needs..."
                   rows={4}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                 ></textarea>
@@ -570,4 +529,4 @@ const IoTEdgeComputing: React.FC = () => {
   );
 };
 
-export default IoTEdgeComputing;
+export default EnterpriseSolutions;
