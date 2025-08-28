@@ -42,6 +42,9 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const EnhancedPricing = React.lazy(() => import('./pages/EnhancedPricing'));
+const EnhancedContact = React.lazy(() => import('./pages/EnhancedContact'));
 
 // Enhanced placeholder pages with better UX
 const Careers = () => (
@@ -115,6 +118,9 @@ function App() {
                 <Route path="/help" element={<Help />} />
                 <Route path="/docs" element={<Docs />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/enhanced-services" element={<EnhancedServices />} />
+                <Route path="/enhanced-pricing" element={<EnhancedPricing />} />
+                <Route path="/enhanced-contact" element={<EnhancedContact />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
