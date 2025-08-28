@@ -34,7 +34,6 @@ import {
   List,
   Star
 } from 'lucide-react';
-
 // Mock data for services (replace with actual imports when available)
 const ALL_SERVICES = [
   {
@@ -153,6 +152,7 @@ export default function ComprehensiveServicesOverview() {
         service.description.toLowerCase().includes(lowerQuery) ||
         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery)))
       );
+    }
     }
 
     // Category filter

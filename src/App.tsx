@@ -22,17 +22,18 @@ const Solutions = React.lazy(() => import('./pages/Solutions'));
 const Resources = React.lazy(() => import('./pages/Resources'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
-const Developers = React.lazy(() => import('./pages/Developers'));
-const Training = React.lazy(() => import('./pages/Training'));
-const Community = React.lazy(() => import('./pages/Community'));
-const Support = React.lazy(() => import('./pages/Support'));
-const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
-const InvestorRelations = React.lazy(() => import('./pages/InvestorRelations'));
-const Press = React.lazy(() => import('./pages/Press'));
-const Legal = React.lazy(() => import('./pages/Legal'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
 
 // Additional pages from enhancement branch
 const Careers = React.lazy(() => import('./pages/Careers'));
@@ -53,6 +54,15 @@ const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPa
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const APIDocumentation = React.lazy(() => import('./pages/APIDocumentation'));
+const Developers = React.lazy(() => import('./pages/Developers'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Support = React.lazy(() => import('./pages/Support'));
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
+const InvestorRelations = React.lazy(() => import('./pages/InvestorRelations'));
+const Press = React.lazy(() => import('./pages/Press'));
+const Legal = React.lazy(() => import('./pages/Legal'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -67,8 +77,6 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
-
-
 
 function App() {
   return (
@@ -102,13 +110,13 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
                 <Route path="/partners" element={<Partners />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/docs" element={<Documentation />} />
+                <Route path="/webinars" element={<Webinars />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
-                <Route path="/white-papers" element={<WhitePapers />} />
-                <Route path="/webinars" element={<Webinars />} />
-                <Route path="/docs" element={<Documentation />} />
                 <Route path="/api-docs" element={<APIDocumentation />} />
                 <Route path="/developers" element={<Developers />} />
                 <Route path="/training" element={<Training />} />
@@ -131,10 +139,9 @@ function App() {
                 <Route path="/enhanced-services" element={<EnhancedServices />} />
                 <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
                 <Route path="/enhanced-services-2025" element={<EnhancedServicesPage />} />
-                <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                <Route path="/comprehensive-services-2025" element={<EnhancedServicesShowcase2025 />} />
                 <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServicesShowcase2030 />} />
                 
                 {/* Service Routes - only for existing pages */}
