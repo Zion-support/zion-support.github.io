@@ -98,27 +98,27 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
         { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
-        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
-        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
-        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
-        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
-        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
-        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
-        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true }
+        { name: 'AI Research & Discovery', href: '/services/ai-autonomous-research-assistant', featured: true },
+        { name: 'AI Green Technology', href: '/services/green-it', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services/ai-quantum-hybrid-platform', featured: true },
+        { name: 'AI Space Technology', href: '/services/space-tech', featured: true },
+        { name: 'AI FinTech Platform', href: '/services/quantum-ai-trading-platform', featured: true },
+        { name: 'AI Supply Chain', href: '/services/ai-workflow-automation', featured: true },
+        { name: 'AI Quality Assurance', href: '/services/ai-project-management', featured: true }
       ]
     },
     {
       title: 'Core Services',
       featured: true,
       links: [
-        { name: 'Cybersecurity Solutions', href: '/services#cybersecurity', featured: true },
-        { name: 'Cloud & DevOps', href: '/services#cloud-devops', featured: true },
-        { name: 'Data Analytics', href: '/services#data-analytics', featured: true },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure', featured: true },
-        { name: 'Digital Twin Solutions', href: '/services#digital-twin', featured: true },
-        { name: 'IoT & Edge Computing', href: '/services#iot-edge', featured: true },
-        { name: 'Blockchain & Web3', href: '/services#blockchain', featured: true },
-        { name: 'Quantum Computing', href: '/services#quantum-computing', featured: true },
+        { name: 'Cybersecurity Solutions', href: '/services/cybersecurity', featured: true },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', featured: true },
+        { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
+        { name: 'Digital Twin Solutions', href: '/services/digital-twin', featured: true },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', featured: true },
+        { name: 'Blockchain & Web3', href: '/services/blockchain', featured: true },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
         { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
         { name: 'Enterprise Solutions', href: '/solutions', featured: true }
       ]
@@ -192,10 +192,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
     { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
-    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play, featured: false },
     { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
     { name: 'Join Community', href: '/community', icon: Users, featured: false },
-    { name: 'Partner Program', href: '/partners', icon: Users, featured: false }
+    { name: 'Partner Program', href: '/partnerships', icon: Users, featured: false }
   ];
 
   const scrollToTop = () => {

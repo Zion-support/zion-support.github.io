@@ -74,7 +74,7 @@ const Sitemap: React.FC = () => {
       links: [
         { name: 'Home', path: '/', description: 'Main landing page', featured: true },
         { name: 'About Us', path: '/about', description: 'Company information and mission', featured: true },
-        { name: 'Our Team', path: '/team', description: 'Meet our leadership and experts', featured: true },
+        { name: 'Our Team', path: '/about#team', description: 'Meet our leadership and experts', featured: true },
         { name: 'Contact', path: '/contact', description: 'Get in touch with us', featured: true },
         { name: 'News', path: '/news', description: 'Latest updates and announcements', featured: true },
         { name: 'Blog', path: '/blog', description: 'Industry insights and articles' },
@@ -93,8 +93,8 @@ const Sitemap: React.FC = () => {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
         { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
-        { name: 'AI-Powered SEO', path: '/services/ai-seo', description: 'Machine learning SEO optimization' },
-        { name: 'Interview Assessment AI', path: '/services/interview-assessment', description: 'AI-powered candidate evaluation' },
+        { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' },
+        { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', description: 'AI-powered candidate evaluation' },
         { name: 'AI Content Generator', path: '/services/ai-content-generator', description: 'Automated content creation' },
         { name: 'AI Customer Support', path: '/services/ai-customer-support', description: 'Intelligent support automation' },
         { name: 'AI Autonomous Research', path: '/services/ai-autonomous-research-assistant', description: 'Automated research capabilities' },
@@ -111,9 +111,9 @@ const Sitemap: React.FC = () => {
         { name: 'Quantum Computing Services', path: '/services/quantum-computing', description: 'Quantum computing solutions', featured: true },
         { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', description: 'AI and quantum computing integration' },
         { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', description: 'Quantum-enhanced ML algorithms' },
-        { name: 'Quantum Financial Trading', path: '/services/quantum-financial-trading', description: 'Quantum algorithms for finance' },
-        { name: 'Quantum Neural Networks', path: '/services/quantum-neural-network-platform', description: 'Quantum neural network solutions' },
-        { name: 'Quantum Edge Computing', path: '/services/quantum-edge-computing-platform', description: 'Edge computing with quantum capabilities' }
+        { name: 'Quantum Financial Trading', path: '/services/quantum-ai-trading-platform', description: 'Quantum algorithms for finance' },
+        { name: 'Quantum Neural Networks', path: '/services/quantum-computing-elite', description: 'Quantum neural network solutions' },
+        { name: 'Quantum Edge Computing', path: '/services/quantum-computing-solutions', description: 'Edge computing with quantum capabilities' }
       ]
     },
     {
@@ -125,9 +125,9 @@ const Sitemap: React.FC = () => {
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
         { name: 'FinOps Advisor', path: '/services/finops-advisor', description: 'Cloud cost optimization' },
         { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', description: 'Financial operations automation' },
-        { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transitions' },
-        { name: 'Container Orchestration', path: '/services/kubernetes', description: 'Kubernetes and container management' },
-        { name: 'Infrastructure as Code', path: '/services/infrastructure-as-code', description: 'Automated infrastructure deployment' }
+        { name: 'Cloud Migration', path: '/services/cloud', description: 'Seamless cloud transitions' },
+        { name: 'Container Orchestration', path: '/services/infrastructure', description: 'Infrastructure management' },
+        { name: 'Infrastructure as Code', path: '/services/transformation', description: 'Automated infrastructure deployment' }
       ]
     },
     {
@@ -136,13 +136,13 @@ const Sitemap: React.FC = () => {
       description: 'Advanced security and compliance solutions',
       links: [
         { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Comprehensive security solutions', featured: true },
-        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', description: 'AI-powered threat detection' },
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity', description: 'AI-powered threat detection' },
         { name: 'Security Headers & CSP', path: '/services/security-headers-csp', description: 'Web security hardening' },
         { name: 'DSR Privacy Portal', path: '/services/dsr-portal', description: 'GDPR/CCPA compliance portal' },
         { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', description: 'Zero trust security architecture' },
-        { name: 'Threat Intelligence', path: '/services/ai-autonomous-threat-intelligence', description: 'AI-powered threat analysis' },
-        { name: 'Mobile Security', path: '/services/ai-autonomous-mobile-security', description: 'Mobile device security' },
-        { name: 'Forensics & Investigation', path: '/services/ai-autonomous-forensics', description: 'Digital forensics with AI' }
+        { name: 'Threat Intelligence', path: '/services/incident-response-platform', description: 'AI-powered threat analysis' },
+        { name: 'Mobile Security', path: '/services/ai-autonomous-research-assistant', description: 'Mobile device security' },
+        { name: 'Forensics & Investigation', path: '/services/ai-autonomous-research-assistant', description: 'Digital forensics with AI' }
       ]
     },
     {
@@ -153,10 +153,10 @@ const Sitemap: React.FC = () => {
         { name: 'Digital Transformation', path: '/services/digital-transformation', description: 'Strategic transformation consulting', featured: true },
         { name: 'IT Consulting', path: '/services/it-consulting', description: 'Technology strategy and planning' },
         { name: 'Digital Twin', path: '/services/digital-twin', description: 'Virtual system replicas' },
-        { name: 'Business Intelligence', path: '/services/business-intelligence', description: 'Performance metrics and reporting' },
+        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Performance metrics and reporting' },
         { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence and insights' },
-        { name: 'Process Optimization', path: '/services/process-optimization', description: 'Workflow and process improvement' },
-        { name: 'Change Management', path: '/services/change-management', description: 'Organizational change support' }
+        { name: 'Process Optimization', path: '/services/ai-workflow-automation', description: 'Workflow and process improvement' },
+        { name: 'Change Management', path: '/services/transformation', description: 'Organizational change support' }
       ]
     },
     {
@@ -164,12 +164,12 @@ const Sitemap: React.FC = () => {
       icon: Zap,
       description: 'Affordable software solutions for small businesses',
       links: [
-        { name: 'Micro SaaS Platform', path: '/micro-saas', description: 'Micro SaaS solutions overview', featured: true },
+        { name: 'Micro SaaS Platform', path: '/services/micro-saas', description: 'Micro SaaS solutions overview', featured: true },
         { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management' },
-        { name: 'Helpdesk Platform', path: '/services/helpdesk', description: 'Customer support system' },
-        { name: 'Project Management', path: '/services/project-management', description: 'Project tracking and collaboration' },
-        { name: 'Inventory Management', path: '/services/inventory-management', description: 'Stock and inventory tracking' },
-        { name: 'Accounting Software', path: '/services/accounting-software', description: 'Financial management tools' },
+        { name: 'Helpdesk Platform', path: '/services/helpdesk-platform', description: 'Customer support system' },
+        { name: 'Project Management', path: '/services/ai-project-management', description: 'Project tracking and collaboration' },
+        { name: 'Inventory Management', path: '/services/ai-workflow-automation', description: 'Stock and inventory tracking' },
+        { name: 'Accounting Software', path: '/services/finops-advisor', description: 'Financial management tools' },
         { name: 'HR Platform', path: '/services/ai-hr-platform', description: 'Human resources management' }
       ]
     },
@@ -181,10 +181,10 @@ const Sitemap: React.FC = () => {
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', description: 'Smart device networks', featured: true },
         { name: 'Blockchain Solutions', path: '/services/blockchain', description: 'Distributed ledger technology' },
         { name: 'Space Technology', path: '/services/space-tech', description: 'Space and satellite solutions' },
-        { name: 'Metaverse Development', path: '/services/metaverse-development', description: 'Virtual world creation' },
+        { name: 'Metaverse Development', path: '/services/ai-quantum-hybrid-platform', description: 'Virtual world creation' },
         { name: 'Sustainable Technology', path: '/services/sustainable-technology', description: 'Green technology solutions' },
-        { name: 'Green Computing', path: '/services/green-computing', description: 'Energy-efficient computing' },
-        { name: '5G Solutions', path: '/services/5g-solutions', description: 'Next-generation network infrastructure' }
+        { name: 'Green Computing', path: '/services/green-it', description: 'Energy-efficient computing' },
+        { name: '5G Solutions', path: '/services/5g-enterprise-solutions', description: 'Next-generation network infrastructure' }
       ]
     },
     {

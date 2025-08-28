@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
-import SEO from '@/components/SEO';
+import { SEO } from '@/components/SEO';
 import { Link as RouterLink } from 'react-router-dom';
 
 export default function Blockchain() {
@@ -173,7 +173,7 @@ export default function Blockchain() {
         <div className="absolute bottom-20 right-10 animate-pulse delay-1000">
           <div className="w-40 h-40 bg-red-500/20 rounded-full blur-3xl" />
         </div>
-      </div>
+      </section>
 
       <div className="relative z-10">
         {/* Hero Section */}
