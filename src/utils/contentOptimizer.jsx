@@ -1,8 +1,8 @@
 export class ContentOptimizer {
-    static MIN_WORD_COUNT = 300;
-    static MIN_HEADING_COUNT = 2;
-    static MIN_IMAGE_COUNT = 1;
-    static MIN_LINK_COUNT = 3;
+    static get MIN_WORD_COUNT() { return 300; }
+    static get MIN_HEADING_COUNT() { return 2; }
+    static get MIN_IMAGE_COUNT() { return 1; }
+    static get MIN_LINK_COUNT() { return 3; }
     static analyzeContent(content, page) {
         const wordCount = this.countWords(content);
         const headingCount = this.countHeadings(content);
