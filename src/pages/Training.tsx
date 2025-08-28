@@ -52,6 +52,60 @@ export default function Training() {
   const trainingPrograms = [
     {
       id: 1,
+      title: 'AI Autonomous Research Assistant Implementation',
+      description: 'Comprehensive training on implementing and managing AI Autonomous Research Assistant systems for enterprise research and intelligence.',
+      category: 'ai-ml',
+      level: 'intermediate',
+      format: 'hybrid',
+      duration: '10 weeks',
+      hours: 60,
+      price: 3999,
+      location: 'Online + San Francisco',
+      startDate: '2025-02-15',
+      instructor: 'Dr. Sarah Chen',
+      rating: 4.9,
+      students: 89,
+      featured: true,
+      certification: 'AI Autonomous Research Specialist',
+      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Research Automation'],
+      modules: [
+        'AI Autonomous Research Fundamentals',
+        'System Architecture and Design',
+        'Data Source Integration',
+        'Research Workflow Automation',
+        'Quality Assurance and Validation'
+      ],
+      skills: ['AI Research', 'System Architecture', 'Data Integration', 'Workflow Automation', 'Quality Assurance']
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization Specialist',
+      description: 'Advanced training on implementing AI-powered supply chain optimization solutions for cost reduction and efficiency improvement.',
+      category: 'ai-ml',
+      level: 'advanced',
+      format: 'hybrid',
+      duration: '12 weeks',
+      hours: 80,
+      price: 4499,
+      location: 'Online + Chicago',
+      startDate: '2025-02-20',
+      instructor: 'Michael Rodriguez',
+      rating: 4.8,
+      students: 67,
+      featured: true,
+      certification: 'AI Supply Chain Optimization Expert',
+      tags: ['Supply Chain', 'AI Optimization', 'Cost Reduction', 'Predictive Analytics'],
+      modules: [
+        'Supply Chain AI Fundamentals',
+        'Demand Forecasting and Planning',
+        'Inventory Optimization Algorithms',
+        'Route Optimization and Logistics',
+        'Performance Measurement and ROI'
+      ],
+      skills: ['Supply Chain Management', 'AI Optimization', 'Predictive Analytics', 'Logistics', 'Performance Analysis']
+    },
+    {
+      id: 3,
       title: 'AI Fundamentals for Business Leaders',
       description: 'Essential AI concepts and strategies for business leaders to drive digital transformation and innovation.',
       category: 'ai-ml',
@@ -78,7 +132,7 @@ export default function Training() {
       skills: ['AI Strategy', 'Business Analysis', 'Change Management', 'Data Literacy']
     },
     {
-      id: 2,
+      id: 8,
       title: 'Advanced Cybersecurity Architecture',
       description: 'Comprehensive training on designing and implementing enterprise-grade security architectures.',
       category: 'security',
