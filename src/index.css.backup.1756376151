@@ -864,6 +864,35 @@ html {
   animation: gradient-shift 3s ease infinite;
 }
 
+<<<<<<< HEAD
+.futuristic-border::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: var(--bg-color, #0f172a);
+  border-radius: inherit;
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    rgba(34, 221, 210, 0.1),
+    rgba(139, 92, 246, 0.1),
+    rgba(16, 185, 129, 0.1),
+    rgba(34, 221, 210, 0.1)
+  );
+  background-size: 400% 400%;
+  animation: holographic-shift 4s ease infinite;
+}
+
+/* Quantum particle effect */
+.quantum-particles {
+  position: relative;
+}
+
+.quantum-particles::after {
+=======
 /* High contrast focus styles */
 .high-contrast *:focus {
   outline: 3px solid #ffff00;
@@ -1016,11 +1045,83 @@ html {
 }
 
 .card-futuristic::before {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3196
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+<<<<<<< HEAD
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(34, 221, 210, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);
+  animation: quantum-float 8s ease-in-out infinite;
+}
+
+/* Keyframe animations for futuristic effects */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+@keyframes quantum-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% { 
+    transform: translateY(-20px) rotate(90deg);
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-40px) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% { 
+    transform: translateY(-20px) rotate(270deg);
+    opacity: 0.6;
+  }
+}
+
+/* Enhanced responsive design */
+@media (max-width: 768px) {
+  .neon-glow {
+    box-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      0 0 9px currentColor;
+  }
+  
+  .futuristic-border {
+    background-size: 150% 150%;
+  }
+  
+  .quantum-particles::after {
+    animation-duration: 6s;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .neon-glow,
+  .futuristic-border,
+  .holographic,
+  .quantum-particles::after {
+    animation: none;
+  }
+  
+  .neon-glow {
+    box-shadow: 0 0 2px currentColor;
+=======
   height: 2px;
   background: linear-gradient(90deg, var(--zion-cyan), var(--zion-purple), var(--zion-green));
   transform: scaleX(0);
@@ -1530,5 +1631,6 @@ video {
     background: white !important;
     border: 1px solid #ccc !important;
     box-shadow: none !important;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3196
   }
 }

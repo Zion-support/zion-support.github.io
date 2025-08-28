@@ -116,284 +116,299 @@ export default function AppHeader() {
     { name: 'Careers', href: '/careers', icon: Star },
   ];
 
+  const featuredServices = [
+    { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
+    { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions', category: 'Featured', featured: true },
+    { name: 'IT Services', href: '/it-services', icon: Server, description: 'Enterprise IT solutions', category: 'Featured', featured: true },
+  ];
+
+  // Group services by category for better organization
+  const servicesByCategory = services.reduce((acc, service) => {
+    if (!acc[service.category]) {
+      acc[service.category] = [];
+    }
+    acc[service.category].push(service);
+    return acc;
+  }, {} as Record<string, typeof services>);
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
+        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-neon' 
         : 'bg-transparent'
     }`}>
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
-        {scrolled && (
-          <div className="absolute inset-0">
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.3, 0.8, 0.3],
-                }}
-                transition={{
-                  duration: Math.random() * 3 + 2,
-                  repeat: Infinity,
-                  delay: Math.random() * 2,
-                }}
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                }}
-              />
-            ))}
-          </div>
-        )}
+      {/* Futuristic Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-green-500/5"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-50"></div>
       </div>
 
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-3 group">
-                <div className="relative">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
-                  </div>
-                  <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-2 group">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center shadow-neon group-hover:shadow-neon-purple transition-all duration-300">
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
-                <div className="hidden sm:block">
-                  <div className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </div>
-                  <div className="text-xs text-gray-400">Innovation • Technology • Future</div>
-                </div>
-              </Link>
-            </div>
+                <div className="absolute inset-0 w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg opacity-20 animate-pulse"></div>
+              </div>
+              <div className="hidden sm:block">
+                <h1 className="text-xl lg:text-2xl font-orbitron font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+                  ZION TECH GROUP
+                </h1>
+                <p className="text-xs text-cyan-400/70 font-rajdhani">Innovating Tomorrow</p>
+              </div>
+            </Link>
+          </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative">
-                  {item.featured ? (
-                    <Link
-                      to={item.href}
-                      className="flex items-center space-x-2 px-4 py-2 rounded-xl text-white hover:text-purple-400 transition-colors duration-300 group"
-                    >
-                      {item.icon && <item.icon className="w-4 h-4" />}
-                      <span className="font-medium">{item.name}</span>
-                      {item.badge && (
-                        <span className="px-2 py-1 text-xs font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
-                    </Link>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className="px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
-                    >
-                      {item.name}
-                    </Link>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {/* Main Navigation */}
+            <div className="flex items-center space-x-6">
+              {navigation.slice(0, 3).map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 group ${
+                    item.current
+                      ? 'text-cyan-400 neon-text'
+                      : 'text-gray-300 hover:text-cyan-400 hover:neon-text'
+                  }`}
+                >
+                  {item.name}
+                  {item.featured && (
+                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></span>
                   )}
                 </div>
               ))}
+            </div>
 
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                  className="flex items-center space-x-2 px-4 py-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
-                </button>
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                className="flex items-center space-x-1 px-4 py-2 text-sm font-medium text-gray-300 hover:text-cyan-400 transition-all duration-300 group"
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full"></span>
+              </button>
 
-                <AnimatePresence>
-                  {servicesDropdownOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden"
-                    >
-                      <div className="p-4">
-                        <div className="grid grid-cols-1 gap-2 max-h-96 overflow-y-auto">
-                          {services.map((service) => (
-                            <Link
-                              key={service.name}
-                              to={service.href}
-                              className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/10 transition-all duration-300 group"
-                              onClick={() => setServicesDropdownOpen(false)}
-                            >
-                              <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
-                                service.featured 
-                                  ? 'bg-gradient-to-r from-purple-600 to-pink-600' 
-                                  : 'bg-white/10'
-                              }`}>
-                                <service.icon className="w-4 h-4 text-white" />
+              <AnimatePresence>
+                {servicesDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/10 overflow-hidden"
+                  >
+                    <div className="p-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        {services.slice(0, 12).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="group p-3 rounded-lg hover:bg-slate-800/50 transition-all duration-300 border border-transparent hover:border-cyan-500/30"
+                          >
+                            <div className="flex items-start space-x-3">
+                              <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-500/40 group-hover:to-blue-500/40 transition-all duration-300">
+                                <service.icon className="w-4 h-4 text-cyan-400" />
                               </div>
                               <div className="flex-1 min-w-0">
-                                <div className="flex items-center space-x-2">
-                                  <span className="font-medium text-white group-hover:text-purple-400 transition-colors duration-300">
-                                    {service.name}
-                                  </span>
-                                  {service.badge && (
-                                    <span className="px-2 py-1 text-xs font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full">
-                                      {service.badge}
-                                    </span>
-                                  )}
-                                </div>
-                                <p className="text-sm text-gray-400 mt-1">{service.description}</p>
-                                <div className="text-xs text-gray-500 mt-1">{service.category}</div>
+                                <p className="text-sm font-medium text-gray-200 group-hover:text-cyan-400 transition-colors duration-300">
+                                  {service.name}
+                                </p>
+                                <p className="text-xs text-gray-400 mt-1">
+                                  {service.description}
+                                </p>
                               </div>
-                            </Link>
-                          ))}
-                        </div>
+                            </div>
+                          </Link>
+                        ))}
                       </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </nav>
+                      <div className="mt-4 pt-4 border-t border-cyan-500/20">
+                        <Link
+                          to="/services"
+                          className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                        >
+                          View All Services
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
-            {/* Right Side Actions */}
+            {/* Quick Links */}
             <div className="flex items-center space-x-4">
-              {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                  <input
-                    type="text"
-                    placeholder="Search services..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-64 pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
-                  />
-                </div>
+              {quickLinks.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-300 hover:text-cyan-400 transition-all duration-300 group"
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span className="hidden xl:block">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+          </nav>
+
+          {/* Right Side Actions */}
+          <div className="flex items-center space-x-4">
+            {/* Search */}
+            <div className="hidden md:block relative">
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services..."
+                  className="w-64 px-4 py-2 pl-10 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <button
+                  type="submit"
+                  disabled={isSearching}
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                >
+                  {isSearching ? (
+                    <div className="loading-futuristic w-4 h-4"></div>
+                  ) : (
+                    <ArrowRight className="w-4 h-4" />
+                  )}
+                </button>
               </form>
-
-              {/* Theme Toggle */}
-              <ThemeToggle />
-
-              {/* Notifications */}
-              <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
-                <Bell className="w-5 h-5" />
-              </button>
-
-              {/* User Menu */}
-              <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300">
-                <User className="w-5 h-5" />
-              </button>
-
-              {/* Mobile Menu Button */}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300"
-              >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
             </div>
 
             {/* Theme Toggle */}
             <ThemeToggle />
 
+            {/* User Menu */}
+            <div className="hidden md:flex items-center space-x-2">
+              <button className="p-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                <Bell className="w-5 h-5" />
+              </button>
+              <button className="p-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                <User className="w-5 h-5" />
+              </button>
+            </div>
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-slate-800/50 transition-all duration-300"
+              className="lg:hidden p-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-white/10"
-            >
-              <div className="px-4 py-6 space-y-4">
-                {/* Mobile Search */}
-                <form onSubmit={handleSearch}>
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-                    <input
-                      type="text"
-                      placeholder="Search services..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
-                  </div>
-                </form>
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-slate-900/95 backdrop-blur-xl border-t border-cyan-500/20"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {/* Mobile Search */}
+              <form onSubmit={handleSearch} className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search services..."
+                  className="w-full px-4 py-3 pl-10 bg-slate-800/50 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <button
+                  type="submit"
+                  disabled={isSearching}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                >
+                  {isSearching ? (
+                    <div className="loading-futuristic w-5 h-5"></div>
+                  ) : (
+                    <ArrowRight className="w-5 h-5" />
+                  )}
+                </button>
+              </form>
 
-                {/* Mobile Navigation */}
+              {/* Mobile Navigation */}
+              <nav className="space-y-2">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
+                      item.current
+                        ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/20'
+                        : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span>{item.name}</span>
+                      {item.featured && (
+                        <span className="w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></span>
+                      )}
+                    </div>
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Mobile Services */}
+              <div className="border-t border-cyan-500/20 pt-4">
+                <h3 className="px-4 text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">
+                  Featured Services
+                </h3>
                 <div className="space-y-2">
-                  {navigation.map((item) => (
+                  {featuredServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-300"
+                    >
+                      <service.icon className="w-5 h-5 text-cyan-400" />
+                      <div>
+                        <p className="font-medium">{service.name}</p>
+                        <p className="text-sm text-gray-400">{service.description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Quick Links */}
+              <div className="border-t border-cyan-500/20 pt-4">
+                <div className="grid grid-cols-2 gap-2">
+                  {quickLinks.map((item) => (
                     <Link
                       key={item.name}
                       to={item.href}
                       className="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
                       onClick={() => setMobileMenuOpen(false)}
+                      className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-300"
                     >
-                      {item.icon && <item.icon className="w-5 h-5" />}
-                      <span className="font-medium">{item.name}</span>
-                      {item.badge && (
-                        <span className="ml-auto px-2 py-1 text-xs font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
+                      <item.icon className="w-5 h-5" />
+                      <span>{item.name}</span>
                     </Link>
                   ))}
-                </div>
-
-                {/* Mobile Services */}
-                <div className="border-t border-white/10 pt-4">
-                  <div className="text-sm font-medium text-gray-400 mb-3 px-4">Popular Services</div>
-                  <div className="space-y-2">
-                    {services.filter(s => s.featured).slice(0, 6).map((service) => (
-                      <Link
-                        key={service.name}
-                        to={service.href}
-                        className="flex items-center space-x-3 px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center">
-                          <service.icon className="w-4 h-4 text-white" />
-                        </div>
-                        <div>
-                          <div className="font-medium text-white">{service.name}</div>
-                          <div className="text-sm text-gray-400">{service.description}</div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Quick Links */}
-                <div className="border-t border-white/10 pt-4">
-                  <div className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {quickLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        to={link.href}
-                        className="flex items-center space-x-2 px-4 py-3 rounded-xl text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        <link.icon className="w-4 h-4" />
-                        <span className="text-sm">{link.name}</span>
-                      </Link>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
