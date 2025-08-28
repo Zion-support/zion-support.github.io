@@ -634,7 +634,7 @@ export default function CybersecurityServicesPage() {
             </div>
           )}
         </div>
-      </div>
+      </section>
       {/* Security Statistics */}
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
@@ -1283,6 +1283,7 @@ export default function CybersecurityServicesPage() {
           </div>
         </div>
       </div>
-    </>
+      <TrustedBySection />
+    </div>
   );
 }

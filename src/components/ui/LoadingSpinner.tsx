@@ -1,137 +1,169 @@
 import React from 'react';
-import { Loader2, Zap, Brain, Shield, Cloud } from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'default' | 'futuristic' | 'ai' | 'security' | 'cloud';
+  color?: 'primary' | 'secondary' | 'white' | 'custom';
+  customColor?: string;
   text?: string;
-  showProgress?: boolean;
-  progress?: number;
+  showText?: boolean;
+  variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple';
   className?: string;
+  ariaLabel?: string;
 }
-
-const iconMap = {
-  default: Loader2,
-  futuristic: Zap,
-  ai: Brain,
-  security: Shield,
-  cloud: Cloud
-};
-
-const sizeMap = {
-  sm: 'w-4 h-4',
-  md: 'w-6 h-6',
-  lg: 'w-8 h-8',
-  xl: 'w-12 h-12'
-};
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-  variant = 'default',
-  text,
-  showProgress = false,
-  progress = 0,
-  className = ''
+  color = 'primary',
+  customColor,
+  text = 'Loading...',
+  showText = false,
+  variant = 'spinner',
+  className = '',
+  ariaLabel
 }) => {
-  const Icon = iconMap[variant];
-  const sizeClass = sizeMap[size];
+  // Size classes
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  // Color classes
+  const colorClasses = {
+    primary: 'text-cyan-400',
+    secondary: 'text-purple-400',
+    white: 'text-white',
+    custom: ''
+  };
+
+  // Get the actual color value
+  const getColorValue = () => {
+    if (color === 'custom' && customColor) {
+      return customColor;
+    }
+    return '';
+  };
+
+  // Spinner variants
+  const renderSpinner = () => {
+    const baseClasses = `${sizeClasses[size]} ${color === 'custom' ? '' : colorClasses[color]} animate-spin`;
+    const customStyle = color === 'custom' ? { color: customColor } : {};
+
+    switch (variant) {
+      case 'dots':
+        return (
+          <div className={`${baseClasses} flex space-x-1 justify-center items-center`} style={customStyle}>
+            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+          </div>
+        );
+
+      case 'pulse':
+        return (
+          <div className={`${baseClasses} bg-current rounded-full animate-pulse`} style={customStyle}></div>
+        );
+
+      case 'bars':
+        return (
+          <div className={`${sizeClasses[size]} flex space-x-1 justify-center items-center`} style={customStyle}>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '0ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '150ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '300ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '450ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+          </div>
+        );
+
+      case 'ripple':
+        return (
+          <div className={`${sizeClasses[size]} relative`}>
+            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-75"></div>
+            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-50" style={{ animationDelay: '150ms' }}></div>
+            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-25" style={{ animationDelay: '300ms' }}></div>
+          </div>
+        );
+
+      case 'spinner':
+      default:
+        return (
+          <svg 
+            className={baseClasses} 
+            style={customStyle}
+            viewBox="0 0 24 24" 
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle 
+              className="opacity-25" 
+              cx="12" 
+              cy="12" 
+              r="10" 
+              stroke="currentColor" 
+              strokeWidth="4"
+            />
+            <path 
+              className="opacity-75" 
+              fill="currentColor" 
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            />
+          </svg>
+        );
+    }
+  };
+
+  // Text size classes
+  const textSizeClasses = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base',
+    xl: 'text-lg'
+  };
+
+  // Accessibility
+  const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`;
+  const isSpinning = variant === 'spinner' || variant === 'ripple';
 
   return (
-    <div className={`flex flex-col items-center justify-center p-8 ${className}`}>
-      {/* Main Spinner */}
-      <div className="relative mb-4">
-        {/* Background Ring */}
-        <div className={`${sizeClass} rounded-full border-2 border-slate-700/30`} />
+    <div 
+      className={`flex flex-col items-center justify-center space-y-2 ${className}`}
+      role="status"
+      aria-label={defaultAriaLabel}
+      aria-live="polite"
+    >
+      {/* Loading animation */}
+      <div 
+        className="relative"
+        style={color === 'custom' ? { color: customColor } : {}}
+      >
+        {renderSpinner()}
         
-        {/* Animated Ring */}
-        <div 
-          className={`${sizeClass} rounded-full border-2 border-transparent border-t-cyan-500 absolute top-0 left-0 animate-spin`}
-          style={{ animationDuration: '1s' }}
-        />
-        
-        {/* Icon */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Icon 
-            className={`${size === 'xl' ? 'w-6 h-6' : size === 'lg' ? 'w-4 h-4' : 'w-3 h-3'} text-cyan-400 animate-pulse`} 
-          />
-        </div>
+        {/* Screen reader text */}
+        <span className="sr-only">
+          {text}
+        </span>
       </div>
 
-      {/* Loading Text */}
-      {text && (
-        <div className="text-center mb-4">
-          <p className="text-slate-300 font-medium text-lg">{text}</p>
-          <div className="flex items-center justify-center mt-2 space-x-1">
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-          </div>
+      {/* Optional text */}
+      {showText && (
+        <div 
+          className={`${textSizeClasses[size]} text-center font-medium`}
+          style={color === 'custom' ? { color: customColor } : {}}
+        >
+          <span className={color === 'custom' ? '' : colorClasses[color]}>
+            {text}
+          </span>
         </div>
       )}
 
-      {/* Progress Bar */}
-      {showProgress && (
-        <div className="w-64 bg-slate-700 rounded-full h-2 mb-4">
-          <div 
-            className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full transition-all duration-300 ease-out"
-            style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-          />
-        </div>
-      )}
-
-      {/* Progress Percentage */}
-      {showProgress && (
-        <p className="text-slate-400 text-sm font-mono">
-          {Math.round(progress)}%
-        </p>
-      )}
-
-      {/* Futuristic Loading Animation */}
-      {variant === 'futuristic' && (
-        <div className="mt-4">
-          <div className="flex space-x-1">
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={i}
-                className="w-1 h-4 bg-gradient-to-t from-cyan-400 to-blue-500 rounded-full animate-pulse"
-                style={{ 
-                  animationDelay: `${i * 100}ms`,
-                  animationDuration: '1.5s'
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* AI Loading Animation */}
-      {variant === 'ai' && (
-        <div className="mt-4">
-          <div className="flex items-center space-x-2">
-            <div className="w-3 h-3 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-ping" />
-            <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full animate-ping" style={{ animationDelay: '200ms' }} />
-            <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-ping" style={{ animationDelay: '400ms' }} />
-          </div>
-        </div>
-      )}
-
-      {/* Security Loading Animation */}
-      {variant === 'security' && (
-        <div className="mt-4">
-          <div className="relative">
-            <div className="w-8 h-8 border-2 border-green-500 rounded-full animate-spin" style={{ animationDuration: '2s' }} />
-            <div className="absolute inset-0 w-8 h-8 border-2 border-green-400 rounded-full animate-ping opacity-75" />
-          </div>
-        </div>
-      )}
-
-      {/* Cloud Loading Animation */}
-      {variant === 'cloud' && (
-        <div className="mt-4">
-          <div className="flex items-center space-x-1">
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-            <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '100ms' }} />
-            <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '200ms' }} />
+      {/* Progress indicator for long operations */}
+      {variant === 'spinner' && (
+        <div className="w-full max-w-xs">
+          <div className="bg-slate-700 rounded-full h-1">
+            <div 
+              className="bg-gradient-to-r from-cyan-400 to-purple-400 h-1 rounded-full animate-pulse"
+              style={{ width: '60%' }}
+            ></div>
           </div>
         </div>
       )}
@@ -139,30 +171,123 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 };
 
-// Full Screen Loading Spinner
-export const FullScreenLoadingSpinner: React.FC<Omit<LoadingSpinnerProps, 'className'>> = (props) => (
-  <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center z-50">
-    <LoadingSpinner {...props} />
+// Specialized loading components for common use cases
+export const PageLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading page...' }) => (
+  <div className="min-h-screen bg-futuristic flex items-center justify-center">
+    <LoadingSpinner 
+      size="xl" 
+      variant="spinner" 
+      text={text} 
+      showText={true}
+      className="text-center"
+    />
   </div>
 );
 
-// Inline Loading Spinner
-export const InlineLoadingSpinner: React.FC<Omit<LoadingSpinnerProps, 'className'> & { inline?: boolean }> = ({ inline = true, ...props }) => (
-  <div className={`${inline ? 'inline-flex' : 'flex'} items-center justify-center`}>
-    <LoadingSpinner {...props} />
+export const ButtonLoadingSpinner: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'sm' }) => (
+  <LoadingSpinner 
+    size={size} 
+    variant="spinner" 
+    color="white"
+    className="inline-flex"
+  />
+);
+
+export const InlineLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
+  <LoadingSpinner 
+    size="sm" 
+    variant="dots" 
+    text={text} 
+    showText={true}
+    className="inline-flex items-center space-x-2"
+  />
+);
+
+export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading amazing content...' }) => (
+  <div className="fixed inset-0 bg-futuristic/95 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="text-center">
+      <LoadingSpinner 
+        size="xl" 
+        variant="spinner" 
+        text={text} 
+        showText={true}
+        className="mb-4"
+      />
+      <div className="text-sm text-gray-400">
+        Powered by Zion Tech Group
+      </div>
+    </div>
   </div>
 );
 
-// Skeleton Loading Component
-export const SkeletonLoader: React.FC<{ className?: string; lines?: number }> = ({ className = '', lines = 3 }) => (
+// Loading overlay for components
+export const LoadingOverlay: React.FC<{ 
+  isLoading: boolean; 
+  children: React.ReactNode;
+  text?: string;
+  overlay?: boolean;
+}> = ({ isLoading, children, text = 'Loading...', overlay = true }) => {
+  if (!isLoading) return <>{children}</>;
+
+  if (overlay) {
+    return (
+      <div className="relative">
+        {children}
+        <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center">
+          <LoadingSpinner 
+            size="lg" 
+            variant="spinner" 
+            text={text} 
+            showText={true}
+            color="white"
+          />
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center justify-center p-8">
+      <LoadingSpinner 
+        size="lg" 
+        variant="spinner" 
+        text={text} 
+        showText={true}
+      />
+    </div>
+  );
+};
+
+// Skeleton loading component
+export const Skeleton: React.FC<{ 
+  className?: string;
+  lines?: number;
+  height?: string;
+}> = ({ className = '', lines = 1, height = 'h-4' }) => (
   <div className={`animate-pulse ${className}`}>
-    {[...Array(lines)].map((_, i) => (
-      <div
-        key={i}
-        className={`h-4 bg-slate-700 rounded mb-3 ${
-          i === lines - 1 ? 'w-3/4' : 'w-full'
-        }`}
+    {Array.from({ length: lines }).map((_, index) => (
+      <div 
+        key={index}
+        className={`${height} bg-slate-700 rounded mb-2 ${index === lines - 1 ? 'w-3/4' : 'w-full'}`}
       />
     ))}
+  </div>
+);
+
+// Card skeleton
+export const CardSkeleton: React.FC<{ className?: string }> = ({ className = '' }) => (
+  <div className={`bg-slate-800/50 rounded-lg p-6 ${className}`}>
+    <div className="flex items-center space-x-4 mb-4">
+      <div className="w-12 h-12 bg-slate-700 rounded-full animate-pulse"></div>
+      <div className="flex-1">
+        <div className="h-4 bg-slate-700 rounded w-3/4 mb-2 animate-pulse"></div>
+        <div className="h-3 bg-slate-700 rounded w-1/2 animate-pulse"></div>
+      </div>
+    </div>
+    <div className="space-y-2">
+      <div className="h-3 bg-slate-700 rounded animate-pulse"></div>
+      <div className="h-3 bg-slate-700 rounded w-5/6 animate-pulse"></div>
+      <div className="h-3 bg-slate-700 rounded w-4/6 animate-pulse"></div>
+    </div>
   </div>
 );
