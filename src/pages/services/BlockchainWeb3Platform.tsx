@@ -2,163 +2,124 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Cpu, 
-  Brain, 
-  Zap, 
-  Network, 
-  Database, 
-  Shield, 
-  Target, 
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  BarChart3,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Award,
-  Lightbulb,
-  Sparkles,
-  Server,
-  Smartphone,
-  Monitor,
-  Globe,
-  Clock,
-  Activity,
-  Lock,
-  Key,
-  Bug,
-  Virus,
-  Fire,
-  FileText,
-  Cloud,
-  Users,
-  Settings,
-  Gauge,
-  BarChart,
-  PieChart,
-  LineChart,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Satellite,
-  Car
+  Link, Brain, Zap, Target, CheckCircle, ArrowRight, TrendingUp,
+  MessageCircle, Phone, Mail, MapPin, Star, Award, Lightbulb,
+  Settings, Search, Users, Cloud, Cpu, Database, Layers, FileText,
+  Shield, Key, Lock, Activity, Network, Globe, Wallet, Code, Image
 } from 'lucide-react';
 
-const IoTEdgeComputing: React.FC = () => {
+const BlockchainWeb3Platform: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Real-time data processing at the edge for instant insights and actions',
+      icon: Link,
+      title: 'Blockchain Technology',
+      description: 'Advanced blockchain infrastructure solutions',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Network,
-      title: 'IoT Connectivity',
-      description: 'Seamless connectivity for thousands of IoT devices and sensors',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
       icon: Brain,
-      title: 'AI at the Edge',
-      description: 'Machine learning models running locally for privacy and speed',
+      title: 'Web3 Innovation',
+      description: 'Intelligent Web3 and DeFi solutions',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: Zap,
-      title: 'Real-time Analytics',
-      description: 'Instant data analysis and decision making at the edge',
+      title: 'Smart Contracts',
+      description: 'Automated smart contract development',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Shield,
-      title: 'Edge Security',
-      description: 'Advanced security protocols for edge devices and networks',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Database,
-      title: 'Local Storage',
-      description: 'Intelligent data storage and management at the edge',
-      color: 'from-indigo-500 to-blue-500'
-    }
-  ];
-
-  const iotSolutions = [
-    {
-      title: 'Smart Cities',
-      description: 'IoT infrastructure for urban management and citizen services',
-      icon: Globe,
-      benefits: ['Traffic optimization', 'Energy management', 'Public safety', 'Environmental monitoring'],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Industrial IoT',
-      description: 'Connected manufacturing and industrial automation systems',
-      icon: Settings,
-      benefits: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Safety monitoring'],
+      icon: Target,
+      title: 'DeFi Platform',
+      description: 'Decentralized finance solutions',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Smart Healthcare',
-      description: 'IoT medical devices and patient monitoring systems',
-      icon: Users,
-      benefits: ['Remote monitoring', 'Early detection', 'Treatment optimization', 'Patient safety'],
+      icon: Shield,
+      title: 'Security First',
+      description: 'Enterprise-grade blockchain security',
+      color: 'from-indigo-500 to-blue-500'
+    },
+    {
+      icon: Network,
+      title: 'Interoperability',
+      description: 'Cross-chain and multi-network support',
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const solutions = [
+    {
+      title: 'Smart Contract Development',
+      description: 'Intelligent smart contract creation and deployment',
+      icon: Code,
+      benefits: ['Automated execution', 'Transparent operations', 'Cost efficiency', 'Trustless systems'],
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'DeFi Platform',
+      description: 'Decentralized finance and trading solutions',
+      icon: TrendingUp,
+      benefits: ['Yield farming', 'Liquidity pools', 'Trading automation', 'Financial inclusion'],
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Connected Vehicles',
-      description: 'IoT solutions for automotive and transportation systems',
-      icon: Car,
-      benefits: ['Fleet management', 'Predictive maintenance', 'Safety systems', 'Route optimization'],
+      title: 'NFT Marketplace',
+      description: 'Digital asset creation and trading platform',
+      icon: Image,
+      benefits: ['Digital ownership', 'Creator monetization', 'Asset trading', 'Community building'],
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Blockchain Infrastructure',
+      description: 'Scalable blockchain network solutions',
+      icon: Network,
+      benefits: ['High performance', 'Scalability', 'Security', 'Interoperability'],
       color: 'from-red-500 to-orange-500'
     }
   ];
 
   const industries = [
-    'Manufacturing',
+    'Finance',
+    'Gaming',
+    'Art & Entertainment',
+    'Real Estate',
     'Healthcare',
-    'Transportation',
-    'Energy & Utilities',
-    'Retail & Logistics',
-    'Smart Cities',
-    'Agriculture',
-    'Construction',
-    'Mining & Resources',
-    'Financial Services'
+    'Supply Chain',
+    'Education',
+    'Government',
+    'Energy',
+    'Insurance'
   ];
 
   const benefits = [
-    'Reduce latency by 90%',
-    'Cut bandwidth costs by 60%',
-    'Improve reliability by 95%',
-    'Enable real-time decisions',
-    'Enhanced data privacy',
-    'Scalable architecture',
-    '24/7 monitoring',
-    'Predictive capabilities'
+    'Transparent operations',
+    'Reduce costs by 60%',
+    'Improve security by 90%',
+    'Automated processes',
+    'Global accessibility',
+    'Trustless systems',
+    'Innovation leadership',
+    'Competitive advantage'
   ];
 
   const technologies = [
-    'Edge Computing',
-    'IoT Protocols',
-    '5G Networks',
-    'Machine Learning',
-    'Blockchain',
-    'Cloud Integration',
-    'Data Analytics',
-    'Cybersecurity'
+    'Ethereum',
+    'Polygon',
+    'Solana',
+    'Smart Contracts',
+    'Web3.js',
+    'Solidity',
+    'IPFS',
+    'MetaMask'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="IoT Edge Computing - Zion Tech Group"
-        description="Revolutionary IoT and edge computing solutions for real-time data processing, AI integration, and connected systems. Transform your operations with cutting-edge edge technology."
-        keywords="IoT edge computing, edge computing, IoT solutions, real-time processing, connected devices, Zion Tech Group"
+        title="Blockchain Web3 Platform - Zion Tech Group"
+        description="Revolutionary blockchain and Web3 platform solutions. Smart contracts, DeFi, NFTs, and decentralized applications for the future of digital innovation."
+        keywords="blockchain web3 platform, smart contracts, DeFi, NFTs, decentralized applications, Zion Tech Group"
         ogType="website"
       />
 
@@ -173,29 +134,29 @@ const IoTEdgeComputing: React.FC = () => {
               className="space-y-8"
             >
               <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">
-                <Cpu className="w-4 h-4" />
-                Edge Computing Innovation
+                <Link className="w-4 h-4" />
+                Web3 Innovation
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                IoT & Edge
-                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-                  Computing
+                Blockchain
+                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  Web3 Platform
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 leading-relaxed">
-                Transform your operations with our revolutionary IoT and edge computing platform. From real-time data processing to AI-powered insights, we're bringing the future of connected systems to your organization.
+                Transform your business with our revolutionary blockchain and Web3 platform. From smart contracts to DeFi, experience the future of decentralized innovation.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
-                  <Cpu className="w-5 h-5" />
-                  Edge Demo
+                  <Link className="w-5 h-5" />
+                  Web3 Demo
                 </button>
                 <button className="btn-futuristic-outline">
                   <FileText className="w-5 h-5" />
-                  Download Guide
+                  Download Web3 Guide
                 </button>
               </div>
             </motion.div>
@@ -207,18 +168,17 @@ const IoTEdgeComputing: React.FC = () => {
               className="relative"
             >
               <div className="relative z-10">
-                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-green-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
+                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-purple-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <Cpu className="w-12 h-12 text-white" />
+                      <Link className="w-12 h-12 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">IoT Edge Computing</h3>
-                    <p className="text-gray-300">Revolutionary Edge Solutions</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">Blockchain Web3 Platform</h3>
+                    <p className="text-gray-300">Decentralized Innovation</p>
                   </div>
                 </div>
               </div>
               
-              {/* Background Elements */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-3xl"></div>
             </motion.div>
           </div>
@@ -236,10 +196,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary Edge Features
+              Revolutionary Web3 Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT edge computing platform combines cutting-edge technology with real-time processing to deliver unprecedented performance and insights.
+              Our blockchain Web3 platform combines cutting-edge blockchain technology with advanced Web3 innovation to deliver unprecedented decentralized capabilities.
             </p>
           </motion.div>
 
@@ -264,7 +224,7 @@ const IoTEdgeComputing: React.FC = () => {
         </div>
       </section>
 
-      {/* IoT Solutions Section */}
+      {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -275,15 +235,15 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              IoT Solutions We Deliver
+              Web3 Platform Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From smart cities to industrial automation, our IoT platform delivers comprehensive solutions for every industry.
+              From smart contracts to DeFi platforms, our Web3 platform addresses diverse blockchain needs with intelligent decentralized solutions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {iotSolutions.map((solution, index) => (
+            {solutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -330,10 +290,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose IoT Edge Computing?
+              Why Choose Blockchain Web3 Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented performance and efficiency in your IoT operations with our edge computing platform.
+              Experience the advantages of blockchain technology and intelligent Web3 innovation.
             </p>
           </motion.div>
 
@@ -371,7 +331,7 @@ const IoTEdgeComputing: React.FC = () => {
               Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform leverages the latest advancements in IoT, edge computing, and artificial intelligence to deliver superior performance.
+              Our platform leverages the latest advancements in blockchain, Web3, and decentralized technology to deliver superior solutions.
             </p>
           </motion.div>
 
@@ -409,7 +369,7 @@ const IoTEdgeComputing: React.FC = () => {
               Industries We Transform
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT edge computing platform is designed to revolutionize various industries with real-time data processing and AI-powered insights.
+              Our blockchain Web3 platform is designed to revolutionize various industries with intelligent decentralized solutions.
             </p>
           </motion.div>
 
@@ -434,7 +394,7 @@ const IoTEdgeComputing: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10">
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10">
         <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -444,20 +404,20 @@ const IoTEdgeComputing: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Operations?
+              Ready for Web3 Innovation?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the IoT revolution with our edge computing platform. Experience real-time insights and AI-powered automation for your connected systems.
+              Join the blockchain revolution with our Web3-powered platform. Experience the future of decentralized innovation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
                 <MessageCircle className="w-5 h-5" />
-                Schedule Edge Demo
+                Schedule Web3 Demo
               </button>
               <button className="btn-futuristic-outline">
                 <Phone className="w-5 h-5" />
-                Contact IoT Team
+                Contact Web3 Team
               </button>
             </div>
           </motion.div>
@@ -478,7 +438,7 @@ const IoTEdgeComputing: React.FC = () => {
                 Get in Touch
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Ready to revolutionize your operations with IoT and edge computing? Our team of experts is here to help you implement the future of connected systems.
+                Ready to revolutionize your business with blockchain Web3 technology? Our team of Web3 experts is here to help you implement the future of decentralized innovation.
               </p>
               
               <div className="space-y-6">
@@ -521,7 +481,7 @@ const IoTEdgeComputing: React.FC = () => {
               viewport={{ once: true }}
               className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Request IoT Consultation</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Request Web3 Consultation</h3>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
@@ -549,7 +509,7 @@ const IoTEdgeComputing: React.FC = () => {
                 />
                 
                 <textarea
-                  placeholder="Tell us about your IoT and edge computing needs..."
+                  placeholder="Tell us about your Web3 needs..."
                   rows={4}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                 ></textarea>
@@ -570,4 +530,4 @@ const IoTEdgeComputing: React.FC = () => {
   );
 };
 
-export default IoTEdgeComputing;
+export default BlockchainWeb3Platform;

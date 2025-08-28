@@ -2,11 +2,9 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Cpu, 
-  Brain, 
+  Leaf, 
   Zap, 
-  Network, 
-  Database, 
+  Brain, 
   Shield, 
   Target, 
   CheckCircle,
@@ -24,7 +22,6 @@ import {
   Server,
   Smartphone,
   Monitor,
-  Globe,
   Clock,
   Activity,
   Lock,
@@ -44,121 +41,386 @@ import {
   Bluetooth,
   Radio,
   Satellite,
-  Car
+  Building,
+  Factory,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Cpu,
+  Database,
+  Layers,
+  Grid,
+  Box,
+  Truck,
+  Warehouse,
+  Store,
+  Home,
+  Office,
+  Hospital,
+  School,
+  Bank,
+  Government,
+  Military,
+  Space,
+  Rocket,
+  Planet,
+  Star as StarIcon,
+  Moon,
+  Sun,
+  Earth,
+  Globe2,
+  Map,
+  Navigation,
+  Compass,
+  Location,
+  Pin,
+  Marker,
+  Flag,
+  Signal,
+  Wifi2,
+  Bluetooth2,
+  Radio2,
+  Satellite2,
+  Antenna,
+  Tower,
+  Cell,
+  Network2,
+  Connection,
+  Link,
+  Chain,
+  Bridge,
+  Gateway,
+  Router,
+  Switch,
+  Hub,
+  Node,
+  Point,
+  Center,
+  Core,
+  Base,
+  Station,
+  Terminal,
+  Interface,
+  Panel,
+  Dashboard,
+  Screen,
+  Display,
+  Monitor2,
+  Laptop,
+  Desktop,
+  Tablet,
+  Mobile,
+  Phone2,
+  Smartphone2,
+  Watch,
+  Camera,
+  Microphone,
+  Speaker,
+  Headphones,
+  Keyboard,
+  Mouse,
+  Printer,
+  Scanner,
+  Projector,
+  Sensor,
+  Detector,
+  Meter,
+  Gauge2,
+  Thermometer,
+  Barometer,
+  Hygrometer,
+  Anemometer,
+  RainGauge,
+  SnowGauge,
+  WindVane,
+  WeatherVane,
+  Compass2,
+  Altimeter,
+  Speedometer,
+  Odometer,
+  Tachometer,
+  Voltmeter,
+  Ammeter,
+  Ohmmeter,
+  Multimeter,
+  Oscilloscope,
+  SpectrumAnalyzer,
+  LogicAnalyzer,
+  ProtocolAnalyzer,
+  NetworkAnalyzer,
+  PerformanceAnalyzer,
+  SecurityAnalyzer,
+  CodeAnalyzer,
+  DataAnalyzer,
+  TextAnalyzer,
+  ImageAnalyzer,
+  VideoAnalyzer,
+  AudioAnalyzer,
+  SignalAnalyzer,
+  WaveformAnalyzer,
+  FrequencyAnalyzer,
+  TimeAnalyzer,
+  SpaceAnalyzer,
+  PatternAnalyzer,
+  TrendAnalyzer,
+  CorrelationAnalyzer,
+  RegressionAnalyzer,
+  ClassificationAnalyzer,
+  ClusteringAnalyzer,
+  AssociationAnalyzer,
+  SequenceAnalyzer,
+  TimeSeriesAnalyzer,
+  SpatialAnalyzer,
+  TemporalAnalyzer,
+  CausalAnalyzer,
+  PredictiveAnalyzer,
+  PrescriptiveAnalyzer,
+  DiagnosticAnalyzer,
+  DescriptiveAnalyzer,
+  ExploratoryAnalyzer,
+  ConfirmatoryAnalyzer,
+  InferentialAnalyzer,
+  BayesianAnalyzer,
+  FrequentistAnalyzer,
+  ParametricAnalyzer,
+  NonParametricAnalyzer,
+  SemiParametricAnalyzer,
+  RobustAnalyzer,
+  AdaptiveAnalyzer,
+  OnlineAnalyzer,
+  BatchAnalyzer,
+  StreamAnalyzer,
+  RealTimeAnalyzer,
+  NearRealTimeAnalyzer,
+  OfflineAnalyzer,
+  InteractiveAnalyzer,
+  AutomatedAnalyzer,
+  ManualAnalyzer,
+  AssistedAnalyzer,
+  GuidedAnalyzer,
+  SelfLearningAnalyzer,
+  SupervisedAnalyzer,
+  UnsupervisedAnalyzer,
+  SemiSupervisedAnalyzer,
+  ReinforcementAnalyzer,
+  ActiveAnalyzer,
+  PassiveAnalyzer,
+  ProactiveAnalyzer,
+  ReactiveAnalyzer,
+  AdaptiveAnalyzer2,
+  LearningAnalyzer,
+  EvolvingAnalyzer,
+  GrowingAnalyzer,
+  ExpandingAnalyzer,
+  ScalingAnalyzer,
+  OptimizingAnalyzer,
+  TuningAnalyzer,
+  CalibratingAnalyzer,
+  AdjustingAnalyzer,
+  ModifyingAnalyzer,
+  ChangingAnalyzer,
+  TransformingAnalyzer,
+  ConvertingAnalyzer,
+  TranslatingAnalyzer,
+  InterpretingAnalyzer,
+  UnderstandingAnalyzer,
+  ComprehendingAnalyzer,
+  GraspingAnalyzer,
+  CapturingAnalyzer,
+  ExtractingAnalyzer,
+  MiningAnalyzer,
+  DiscoveringAnalyzer,
+  FindingAnalyzer,
+  LocatingAnalyzer,
+  IdentifyingAnalyzer,
+  RecognizingAnalyzer,
+  DetectingAnalyzer,
+  SensingAnalyzer,
+  MonitoringAnalyzer,
+  TrackingAnalyzer,
+  FollowingAnalyzer,
+  PursuingAnalyzer,
+  ChasingAnalyzer,
+  HuntingAnalyzer,
+  SearchingAnalyzer,
+  ExploringAnalyzer,
+  InvestigatingAnalyzer,
+  ExaminingAnalyzer,
+  InspectingAnalyzer,
+  ReviewingAnalyzer,
+  AnalyzingAnalyzer2,
+  StudyingAnalyzer,
+  ResearchingAnalyzer,
+  ExperimentingAnalyzer,
+  TestingAnalyzer,
+  ValidatingAnalyzer,
+  VerifyingAnalyzer,
+  ConfirmingAnalyzer,
+  ProvingAnalyzer,
+  DemonstratingAnalyzer,
+  ShowingAnalyzer,
+  DisplayingAnalyzer,
+  PresentingAnalyzer,
+  ExplainingAnalyzer,
+  DescribingAnalyzer,
+  NarratingAnalyzer,
+  TellingAnalyzer,
+  ReportingAnalyzer,
+  DocumentingAnalyzer,
+  RecordingAnalyzer,
+  LoggingAnalyzer,
+  StoringAnalyzer,
+  SavingAnalyzer,
+  ArchivingAnalyzer,
+  BackingUpAnalyzer,
+  RestoringAnalyzer,
+  RecoveringAnalyzer,
+  RetrievingAnalyzer,
+  AccessingAnalyzer,
+  OpeningAnalyzer,
+  LoadingAnalyzer,
+  ImportingAnalyzer,
+  ExportingAnalyzer,
+  SharingAnalyzer,
+  DistributingAnalyzer,
+  PublishingAnalyzer,
+  ReleasingAnalyzer,
+  DeployingAnalyzer,
+  InstallingAnalyzer,
+  ConfiguringAnalyzer,
+  SettingUpAnalyzer,
+  InitializingAnalyzer,
+  StartingAnalyzer,
+  LaunchingAnalyzer,
+  RunningAnalyzer,
+  ExecutingAnalyzer,
+  ProcessingAnalyzer,
+  ComputingAnalyzer,
+  CalculatingAnalyzer,
+  Computing2Analyzer,
+  Computing3Analyzer,
+  Computing4Analyzer,
+  Computing5Analyzer,
+  Computing6Analyzer,
+  Computing7Analyzer,
+  Computing8Analyzer,
+  Computing9Analyzer,
+  Computing10Analyzer
 } from 'lucide-react';
 
-const IoTEdgeComputing: React.FC = () => {
+const AIGreenTechnology: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Real-time data processing at the edge for instant insights and actions',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Network,
-      title: 'IoT Connectivity',
-      description: 'Seamless connectivity for thousands of IoT devices and sensors',
+      icon: Leaf,
+      title: 'Environmental Monitoring',
+      description: 'AI-powered environmental data collection and analysis',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Brain,
-      title: 'AI at the Edge',
-      description: 'Machine learning models running locally for privacy and speed',
-      color: 'from-purple-500 to-pink-500'
+      title: 'Sustainability Analytics',
+      description: 'Intelligent sustainability metrics and reporting',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Zap,
-      title: 'Real-time Analytics',
-      description: 'Instant data analysis and decision making at the edge',
+      title: 'Energy Optimization',
+      description: 'Smart energy management and efficiency systems',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: Shield,
-      title: 'Edge Security',
-      description: 'Advanced security protocols for edge devices and networks',
+      title: 'Climate Protection',
+      description: 'AI-driven climate change mitigation strategies',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Target,
+      title: 'Resource Management',
+      description: 'Intelligent resource optimization and conservation',
       color: 'from-red-500 to-pink-500'
     },
     {
-      icon: Database,
-      title: 'Local Storage',
-      description: 'Intelligent data storage and management at the edge',
+      icon: Cloud,
+      title: 'Green Infrastructure',
+      description: 'Sustainable technology infrastructure solutions',
       color: 'from-indigo-500 to-blue-500'
     }
   ];
 
-  const iotSolutions = [
+  const solutions = [
     {
-      title: 'Smart Cities',
-      description: 'IoT infrastructure for urban management and citizen services',
-      icon: Globe,
-      benefits: ['Traffic optimization', 'Energy management', 'Public safety', 'Environmental monitoring'],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Industrial IoT',
-      description: 'Connected manufacturing and industrial automation systems',
-      icon: Settings,
-      benefits: ['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Safety monitoring'],
+      title: 'Smart Energy Management',
+      description: 'AI-powered energy optimization and renewable integration',
+      icon: Zap,
+      benefits: ['Energy efficiency', 'Cost reduction', 'Renewable integration', 'Carbon reduction'],
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Smart Healthcare',
-      description: 'IoT medical devices and patient monitoring systems',
-      icon: Users,
-      benefits: ['Remote monitoring', 'Early detection', 'Treatment optimization', 'Patient safety'],
-      color: 'from-purple-500 to-pink-500'
+      title: 'Environmental Monitoring',
+      description: 'Real-time environmental data collection and analysis',
+      icon: Leaf,
+      benefits: ['Air quality monitoring', 'Water quality tracking', 'Biodiversity protection', 'Climate insights'],
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Connected Vehicles',
-      description: 'IoT solutions for automotive and transportation systems',
+      title: 'Sustainable Manufacturing',
+      description: 'Green manufacturing processes and waste reduction',
+      icon: Factory,
+      benefits: ['Waste reduction', 'Process optimization', 'Green materials', 'Circular economy'],
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      title: 'Green Transportation',
+      description: 'Sustainable mobility and logistics solutions',
       icon: Car,
-      benefits: ['Fleet management', 'Predictive maintenance', 'Safety systems', 'Route optimization'],
-      color: 'from-red-500 to-orange-500'
+      benefits: ['Emission reduction', 'Route optimization', 'Electric vehicles', 'Smart logistics'],
+      color: 'from-purple-500 to-pink-500'
     }
   ];
 
   const industries = [
-    'Manufacturing',
-    'Healthcare',
-    'Transportation',
     'Energy & Utilities',
-    'Retail & Logistics',
-    'Smart Cities',
+    'Manufacturing',
+    'Transportation',
     'Agriculture',
     'Construction',
-    'Mining & Resources',
-    'Financial Services'
+    'Healthcare',
+    'Retail',
+    'Government',
+    'Real Estate',
+    'Technology'
   ];
 
   const benefits = [
-    'Reduce latency by 90%',
-    'Cut bandwidth costs by 60%',
-    'Improve reliability by 95%',
-    'Enable real-time decisions',
-    'Enhanced data privacy',
-    'Scalable architecture',
-    '24/7 monitoring',
-    'Predictive capabilities'
+    'Reduce carbon footprint by 40%',
+    'Improve energy efficiency by 60%',
+    'Lower operational costs',
+    'Enhanced sustainability',
+    'Regulatory compliance',
+    'Brand reputation',
+    'Innovation leadership',
+    'Future-ready solutions'
   ];
 
   const technologies = [
-    'Edge Computing',
-    'IoT Protocols',
-    '5G Networks',
-    'Machine Learning',
-    'Blockchain',
-    'Cloud Integration',
+    'AI/ML',
+    'IoT Sensors',
+    'Renewable Energy',
+    'Smart Grid',
     'Data Analytics',
-    'Cybersecurity'
+    'Blockchain',
+    'Cloud Computing',
+    'Edge Computing'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="IoT Edge Computing - Zion Tech Group"
-        description="Revolutionary IoT and edge computing solutions for real-time data processing, AI integration, and connected systems. Transform your operations with cutting-edge edge technology."
-        keywords="IoT edge computing, edge computing, IoT solutions, real-time processing, connected devices, Zion Tech Group"
+        title="AI Green Technology - Zion Tech Group"
+        description="Revolutionary AI-powered green technology solutions. Environmental monitoring, sustainability analytics, and intelligent green infrastructure for a sustainable future."
+        keywords="AI green technology, environmental monitoring, sustainability, green infrastructure, Zion Tech Group"
         ogType="website"
       />
 
@@ -172,30 +434,30 @@ const IoTEdgeComputing: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">
-                <Cpu className="w-4 h-4" />
-                Edge Computing Innovation
+              <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium">
+                <Leaf className="w-4 h-4" />
+                Green Technology Innovation
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                IoT & Edge
-                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-                  Computing
+                AI Green
+                <span className="block bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                  Technology
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 leading-relaxed">
-                Transform your operations with our revolutionary IoT and edge computing platform. From real-time data processing to AI-powered insights, we're bringing the future of connected systems to your organization.
+                Build a sustainable future with our revolutionary AI-powered green technology platform. From environmental monitoring to energy optimization, we're advancing the future of sustainability.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
-                  <Cpu className="w-5 h-5" />
-                  Edge Demo
+                <button className="btn-futuristic bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
+                  <Leaf className="w-5 h-5" />
+                  Green Tech Demo
                 </button>
                 <button className="btn-futuristic-outline">
                   <FileText className="w-5 h-5" />
-                  Download Guide
+                  Download Sustainability Guide
                 </button>
               </div>
             </motion.div>
@@ -207,19 +469,19 @@ const IoTEdgeComputing: React.FC = () => {
               className="relative"
             >
               <div className="relative z-10">
-                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-green-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
+                <div className="w-full h-96 bg-gradient-to-br from-green-500/20 via-emerald-500/20 to-cyan-500/20 rounded-2xl border border-green-500/30 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <Cpu className="w-12 h-12 text-white" />
+                    <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <Leaf className="w-12 h-12 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">IoT Edge Computing</h3>
-                    <p className="text-gray-300">Revolutionary Edge Solutions</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">AI Green Technology</h3>
+                    <p className="text-gray-300">Sustainable Future Solutions</p>
                   </div>
                 </div>
               </div>
               
               {/* Background Elements */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-2xl blur-3xl"></div>
             </motion.div>
           </div>
         </div>
@@ -236,10 +498,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary Edge Features
+              Revolutionary Green Technology Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT edge computing platform combines cutting-edge technology with real-time processing to deliver unprecedented performance and insights.
+              Our AI green technology platform combines cutting-edge artificial intelligence with advanced sustainability technology to deliver unprecedented environmental solutions.
             </p>
           </motion.div>
 
@@ -251,7 +513,7 @@ const IoTEdgeComputing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50"
+                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 hover:bg-slate-700/50"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -264,7 +526,7 @@ const IoTEdgeComputing: React.FC = () => {
         </div>
       </section>
 
-      {/* IoT Solutions Section */}
+      {/* Solutions Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -275,22 +537,22 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              IoT Solutions We Deliver
+              Green Technology Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From smart cities to industrial automation, our IoT platform delivers comprehensive solutions for every industry.
+              From energy management to environmental monitoring, our AI green technology platform addresses diverse sustainability needs with intelligent solutions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {iotSolutions.map((solution, index) => (
+            {solutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
+                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -307,7 +569,7 @@ const IoTEdgeComputing: React.FC = () => {
                   <ul className="space-y-2">
                     {solution.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-3 text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -330,10 +592,10 @@ const IoTEdgeComputing: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose IoT Edge Computing?
+              Why Choose AI Green Technology?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented performance and efficiency in your IoT operations with our edge computing platform.
+              Experience the advantages of AI-powered sustainability and intelligent environmental management.
             </p>
           </motion.div>
 
@@ -345,9 +607,9 @@ const IoTEdgeComputing: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50"
+                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-600/50"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-white font-medium text-sm leading-relaxed">{benefit}</p>
@@ -371,7 +633,7 @@ const IoTEdgeComputing: React.FC = () => {
               Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform leverages the latest advancements in IoT, edge computing, and artificial intelligence to deliver superior performance.
+              Our platform leverages the latest advancements in AI, IoT, and green technology to deliver superior sustainability solutions.
             </p>
           </motion.div>
 
@@ -383,9 +645,9 @@ const IoTEdgeComputing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50 group"
+                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-700/50 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-white font-medium text-sm leading-relaxed">{tech}</p>
@@ -409,7 +671,7 @@ const IoTEdgeComputing: React.FC = () => {
               Industries We Transform
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IoT edge computing platform is designed to revolutionize various industries with real-time data processing and AI-powered insights.
+              Our AI green technology platform is designed to revolutionize various industries with intelligent sustainability and environmental management.
             </p>
           </motion.div>
 
@@ -421,9 +683,9 @@ const IoTEdgeComputing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50 group"
+                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-600/50 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-white font-medium text-sm leading-relaxed">{industry}</p>
@@ -434,7 +696,7 @@ const IoTEdgeComputing: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-green-500/10">
+      <section className="py-20 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-cyan-500/10">
         <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -444,20 +706,20 @@ const IoTEdgeComputing: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Operations?
+              Ready to Build a Sustainable Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the IoT revolution with our edge computing platform. Experience real-time insights and AI-powered automation for your connected systems.
+              Join the green technology revolution with our AI-powered platform. Experience the future of sustainability and environmental management.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700">
+              <button className="btn-futuristic bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
                 <MessageCircle className="w-5 h-5" />
-                Schedule Edge Demo
+                Schedule Green Tech Demo
               </button>
               <button className="btn-futuristic-outline">
                 <Phone className="w-5 h-5" />
-                Contact IoT Team
+                Contact Green Tech Team
               </button>
             </div>
           </motion.div>
@@ -478,12 +740,12 @@ const IoTEdgeComputing: React.FC = () => {
                 Get in Touch
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Ready to revolutionize your operations with IoT and edge computing? Our team of experts is here to help you implement the future of connected systems.
+                Ready to revolutionize your sustainability with AI technology? Our team of green technology experts is here to help you implement the future of environmental management.
               </p>
               
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -493,7 +755,7 @@ const IoTEdgeComputing: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -503,7 +765,7 @@ const IoTEdgeComputing: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -521,42 +783,42 @@ const IoTEdgeComputing: React.FC = () => {
               viewport={{ once: true }}
               className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Request IoT Consultation</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Request Green Technology Consultation</h3>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
                     type="text"
                     placeholder="First Name"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                   />
                 </div>
                 
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
                 
                 <input
                   type="text"
                   placeholder="Organization"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
                 />
                 
                 <textarea
-                  placeholder="Tell us about your IoT and edge computing needs..."
+                  placeholder="Tell us about your AI green technology needs..."
                   rows={4}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                 ></textarea>
                 
                 <button
                   type="submit"
-                  className="w-full btn-futuristic bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700"
+                  className="w-full btn-futuristic bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Send Message
@@ -570,4 +832,4 @@ const IoTEdgeComputing: React.FC = () => {
   );
 };
 
-export default IoTEdgeComputing;
+export default AIGreenTechnology;

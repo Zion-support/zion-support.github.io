@@ -2410,7 +2410,6 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2030: ProductListing[] = [
     roi: "400% within 4 months",
     setupTime: "2-4 weeks",
     integrations: ["GitHub", "GitLab", "Bitbucket", "VS Code", "IntelliJ", "Eclipse", "Docker", "Kubernetes"]
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-30b1
   }
 ];
 
