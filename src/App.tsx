@@ -432,6 +432,8 @@ function App() {
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
               <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
+              <Route path="/advanced-services-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              <Route path="/emerging-tech-services-2025" element={<InnovativeServicesShowcase2025 />} />
               
               {/* New 2026 service routes */}
               <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
