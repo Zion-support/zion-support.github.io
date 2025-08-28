@@ -52,6 +52,16 @@ const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics').then(m
 const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure').then(module => ({ default: module.default })));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence').then(module => ({ default: module.default })));
 const MicroSaaSProducts = lazy(() => import('./pages/services/MicroSaaSProducts').then(module => ({ default: module.default })));
+// Additional pages from remote
+const Legal = lazy(() => import('./pages/Legal').then(module => ({ default: module.default })));
+const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServicesShowcase2027').then(module => ({ default: module.default })));
+const ComprehensiveServicesLanding2027 = lazy(() => import('./pages/ComprehensiveServicesLanding2027').then(module => ({ default: module.default })));
+const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029').then(module => ({ default: module.default })));
+const ScheduleDemo = lazy(() => import('./pages/ScheduleDemo').then(module => ({ default: module.default })));
+const Community = lazy(() => import('./pages/Community').then(module => ({ default: module.default })));
+const Developers = lazy(() => import('./pages/Developers').then(module => ({ default: module.default })));
+const Demo = lazy(() => import('./pages/Demo').then(module => ({ default: module.default })));
+const EnhancedContact = lazy(() => import('./pages/Contact').then(module => ({ default: module.default })));
 
 // Enhanced placeholder pages with better SEO and accessibility
 const Careers = () => (
@@ -139,14 +149,22 @@ function App() {
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
+                <Route path="/services/comprehensive-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
-
                 {/* Service Routes with enhanced error handling */}
+                
+                {/* Additional Routes */}
+                <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
+                <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/developers" element={<Developers />} />
+                <Route path="/demo" element={<Demo />} />
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
