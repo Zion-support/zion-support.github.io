@@ -475,7 +475,6 @@ export function HelpCenter() {
             </div>
           </div>
         </motion.div>
-        </div>
       </div>
 
       {/* Main Content */}
@@ -600,11 +599,10 @@ export function HelpCenter() {
 
         {/* Contact Support */}
         <motion.div
-          className="text-center"
+          className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="mt-16"
         >
           <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
           
