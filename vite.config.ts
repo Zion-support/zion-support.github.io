@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import { defineConfig } from 'vite'
 import compress from 'vite-plugin-compression'
 
 // https://vite.dev/config/
@@ -69,8 +69,19 @@ export default defineConfig({
           return `assets/[name]-[hash][extname]`;
         },
       },
+      external: [],
+      onwarn(warning, warn) {
+        // Suppress warnings about missing optional dependencies
+        if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
+        if (warning.message.includes('@rollup/rollup-linux-x64-gnu')) return;
+        warn(warning);
+      },
     },
     brotliSize: true,
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+    exclude: ['@rollup/rollup-linux-x64-gnu'],
   },
   server: {
     port: 3000,
