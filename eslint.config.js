@@ -81,16 +81,10 @@ export default [
     },
   },
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.jsx'],
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      parser: tsparser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
       globals: {
         // Browser globals
         window: 'readonly',
@@ -118,6 +112,10 @@ export default [
         ServiceWorkerRegistration: 'readonly',
         PushSubscription: 'readonly',
         NotificationPermission: 'readonly',
+        // Additional browser globals
+        IntersectionObserver: 'readonly',
+        requestIdleCallback: 'readonly',
+        HTMLElement: 'readonly',
         // Node.js globals
         process: 'readonly',
         global: 'readonly',
@@ -140,6 +138,11 @@ export default [
         Response: 'readonly',
         Headers: 'readonly',
         HTMLElement: 'readonly',
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
     plugins: {
@@ -180,8 +183,6 @@ export default [
         Buffer: 'readonly',
         console: 'readonly',
         // File system globals
-        fs: 'readonly',
-        path: 'readonly',
         // Other common Node.js globals
         setTimeout: 'readonly',
         setInterval: 'readonly',

@@ -62,7 +62,7 @@ const popularCategories = [
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <motion.div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
         title="Page Not Found - Zion Tech Group"
         description="The page you're looking for doesn't exist. Explore our services or contact our support team for assistance."
@@ -250,6 +250,6 @@ export default function NotFound() {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }

@@ -2,11 +2,15 @@
 
 import { execSync } from 'child_process';
 import fs from 'fs';
+<<<<<<< HEAD
+import path from 'path'; // Added missing import for path
+=======
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+>>>>>>> 28afe268fef21da5bdddfedf2675a8e48c015fbd
 
 console.log('🔍 Starting continuous quality checks automation...');
 
