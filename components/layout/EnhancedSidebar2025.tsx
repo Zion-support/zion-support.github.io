@@ -26,19 +26,7 @@ import {
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-interface SidebarItem {
-  name: string;
-  href: string;
-  icon: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  color?: string;
-  isNew?: boolean;
-  isHot?: boolean;
-  isPremium?: boolean;
-  category?: string;
-}
+
 
 const sidebarSections = [
   {
@@ -279,14 +267,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     setExpandedSections(newExpanded);
   };
 
-  const filteredServices = sidebarSections.flatMap(section =>
-    section.items.flatMap(item =>
-      item.subItems?.filter(child =>
-        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase())
-      ) || []
-    )
-  );
+
 
   const toggleItem = (itemName: string) => {
     const newExpanded = new Set(expandedItems);
