@@ -97,7 +97,17 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+<<<<<<< HEAD
+const AI = React.lazy(() => import('./pages/services/AI'));
+const Cloud = React.lazy(() => import('./pages/services/Cloud'));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
+const Infrastructure = React.lazy(() => import('./pages/services/Infrastructure'));
+const Transformation = React.lazy(() => import('./pages/services/Transformation'));
+const QuantumTechnology = React.lazy(() => import('./pages/services/QuantumTechnology'));
+const SpaceTechnology = React.lazy(() => import('./pages/services/SpaceTech'));
+=======
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-e397
 
 // Additional innovative services
 const AIBlockchainIntegration = React.lazy(() => import('./pages/services/AIBlockchainIntegration'));
@@ -295,6 +305,67 @@ function App() {
         <Sidebar />
         <AppHeader />
         
+<<<<<<< HEAD
+        <div className="flex">
+          <MainSidebar />
+          
+          <main className="flex-1 lg:ml-80">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/partners" element={<Partners />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/cookies" element={<Cookies />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/documentation" element={<Documentation />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/research-development" element={<ResearchDevelopment />} />
+                <Route path="/accessibility" element={<Accessibility />} />
+                <Route path="/status" element={<Status />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/marketplace" element={<Marketplace />} />
+                
+                {/* Service Routes - only for existing pages */}
+                <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                <Route path="/services/digital-twin" element={<DigitalTwin />} />
+                <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                <Route path="/services/ai" element={<AI />} />
+                <Route path="/services/cloud" element={<Cloud />} />
+                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                <Route path="/services/infrastructure" element={<Infrastructure />} />
+                <Route path="/services/transformation" element={<Transformation />} />
+                <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
+                <Route path="/services/space-technology" element={<SpaceTechnology />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
+          <ChatAssistant />
+          <PerformanceOptimizer />
+        </div>
+=======
         <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
@@ -332,6 +403,7 @@ function App() {
             </Routes>
           </Suspense>
         </main>
+>>>>>>> origin/cursor/website-audit-and-enhancement-e397
         
         <EnhancedFuturisticFooter />
         <ChatAssistant />

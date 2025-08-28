@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, BarChart3 } from 'lucide-react';
+=======
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/cursor/website-audit-and-enhancement-e397
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
@@ -48,11 +52,23 @@ export function AppHeader() {
 
   // Organized services by category - only include existing pages
   const services = [
+<<<<<<< HEAD
+    { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Blockchain', href: '/services/blockchain', icon: Lock, description: 'DeFi & Smart Contracts' },
+    { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+=======
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'DevOps & Infrastructure' },
     { name: 'Data Analytics', href: '/services/data-analytics', icon: TrendingUp, description: 'BI & Insights' },
     { name: 'AI Solutions', href: '/ai-solutions', icon: Brain, description: 'ML, NLP, Vision' },
     { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap, description: 'Process modernization' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Building, description: 'Networks & Platforms' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-e397
   ];
 
   // Quick links for easy access

@@ -1,4 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+import SEO from '@/components/SEO';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Shield,
+  Cloud,
+=======
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 
@@ -38,6 +46,7 @@ import {
   Users,
   Database,
   Lock,
+>>>>>>> origin/cursor/website-audit-and-enhancement-e397
   TrendingUp,
   Zap,
   Globe,
