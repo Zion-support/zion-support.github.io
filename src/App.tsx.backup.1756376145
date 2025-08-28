@@ -10,8 +10,15 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import SEO from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+<<<<<<< HEAD
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import MobileExperienceEnhancer from './components/MobileExperienceEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import FloatingActionButton from './components/FloatingActionButton';
+=======
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-904b
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -379,8 +386,15 @@ function App() {
         <Footer />
         <ChatAssistant />
         <PerformanceOptimizer />
+<<<<<<< HEAD
+        <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
+        <MobileExperienceEnhancer enabled={true} />
+        <PerformanceMonitor enabled={true} showMetrics={true} />
+        <FloatingActionButton />
+=======
         <AccessibilityEnhancer enabled={true} showControls={false} />
         <MobileExperienceEnhancer enabled={true} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-904b
       </div>
     </ErrorBoundary>
   );

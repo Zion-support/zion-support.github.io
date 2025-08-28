@@ -39,6 +39,11 @@ import {
   Zap as ZapIcon,
   Loader2
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+import UltimateServicesShowcase2025 from '../components/UltimateServicesShowcase2025';
+import { TestimonialsSection } from '../components/TestimonialsSection';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-904b
 
 // Enhanced loading component with better UX and accessibility
 const EnhancedLoadingSpinner = () => (
@@ -1111,6 +1116,7 @@ const Home = () => {
         {/* Ultimate Services Showcase */}
         <UltimateServicesShowcase2025 />
         
+<<<<<<< HEAD
         {/* Comprehensive Services Showcase Section */}
         <section className="py-20 bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900 relative overflow-hidden">
           <div className="absolute inset-0">
@@ -1131,15 +1137,9 @@ const Home = () => {
               <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
                 Explore our comprehensive collection of 40+ AI-powered, quantum computing, blockchain, and emerging technology solutions designed to transform your business
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-wrap justify-center gap-4 mb-12" role="list" aria-label="Service highlights">
-                <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3" role="listitem">
-                  <span className="text-zion-cyan font-semibold">🚀 100+ Services</span>
-=======
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="bg-zion-cyan/20 border border-zion-cyan/30 rounded-full px-6 py-3">
                   <span className="text-zion-cyan font-semibold">🚀 40+ Services</span>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6ac1
                 </div>
                 <div className="bg-zion-purple/20 border border-zion-purple/30 rounded-full px-6 py-3" role="listitem">
                   <span className="text-zion-purple font-semibold">⚡ Cutting-edge Tech</span>
@@ -1207,8 +1207,6 @@ const Home = () => {
           </div>
         </section>
         
-<<<<<<< HEAD
-=======
         {/* Contact Information & Get Started Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-slate-800 via-zion-slate-700 to-zion-slate-800 relative">
           <div className="max-w-7xl mx-auto">
@@ -1368,8 +1366,11 @@ const Home = () => {
         
         {/* Interactive Testimonials Section */}
         <InteractiveTestimonials />
+=======
+        {/* Testimonials Section */}
+        <TestimonialsSection />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-904b
         
->>>>>>> origin/cursor/expand-services-and-deploy-updates-6ac1
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative" aria-label="Why Choose Zion Tech Group">
           <div className="max-w-7xl mx-auto">
