@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 } from 'lucide-react'
 
 import { additionalEnhancedServices } from '../data/additional-real-services'
+import { enhancedServices2025 } from '../data/enhanced-services-2025'
 
 export default function Services() {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -12,16 +13,19 @@ export default function Services() {
 	const title = 'Services — Zion Tech Group'
 	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
 
+	// Combine all services
+	const allServices = [...additionalEnhancedServices, ...enhancedServices2025]
+
 	// Get unique categories
-	const categories = ['all', ...new Set(additionalEnhancedServices.map(service => service.category))]
+	const categories = ['all', ...new Set(allServices.map(service => service.category))]
 
 	// Filter and sort services
-	const filteredServices = additionalEnhancedServices
+	const filteredServices = allServices
 		.filter(service => 
 			(selectedCategory === 'all' || service.category === selectedCategory) &&
 			(service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
 			 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			 service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
+			 (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase())))
 		)
 		.sort((a, b) => {
 			switch (sortBy) {
@@ -171,12 +175,21 @@ export default function Services() {
 								</ul>
 								<div className="text-gray-500 mt-1">SMB: $300–$10,000/mo</div>
 							</div>
+							<div>
+								<div className="font-medium text-gray-800 mb-1">Quantum & Emerging Tech</div>
+								<ul className="text-blue-700 list-disc list-inside">
+									<li><a className="underline" href="https://aws.amazon.com/braket/pricing/" target="_blank" rel="noreferrer">aws.amazon.com/braket/pricing</a></li>
+									<li><a className="underline" href="https://azure.microsoft.com/pricing/details/quantum/" target="_blank" rel="noreferrer">azure.microsoft.com/quantum/pricing</a></li>
+									<li><a className="underline" href="https://quantum-computing.ibm.com/pricing" target="_blank" rel="noreferrer">quantum-computing.ibm.com/pricing</a></li>
+								</ul>
+								<div className="text-gray-500 mt-1">Enterprise: $500–$5,000/mo+</div>
+							</div>
 						</div>
 					</div>
 					{/* Results Count */}
 					<div className="mb-8">
 						<p className="text-gray-600">
-							Showing {filteredServices.length} of {additionalEnhancedServices.length} services
+							Showing {filteredServices.length} of {allServices.length} services
 						</p>
 					</div>
 
