@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake, Settings } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Phone, Mail, MapPin, Star, Award, Target, TrendingUp, Lightbulb, Atom, Leaf, Eye, Scale, Building2, Car, Home, Factory, City, ArrowRight, FileText, DollarSign, Handshake, Settings, Sparkles, Video } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -99,77 +99,45 @@ export function AppHeader() {
       icon: Lock, 
       description: 'DeFi & Smart Contracts',
       featured: true,
-      color: 'from-green-500 to-emerald-500'
-    },
-    { 
-      name: 'AI & Edge Computing', 
-      href: '/services', 
-      icon: Cpu, 
-      description: 'IoT & Real-time Processing',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Quantum Computing', 
-      href: '/services', 
-      icon: Atom, 
-      description: 'Quantum AI & Optimization',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'AI & Space Tech', 
-      href: '/services', 
-      icon: Rocket, 
-      description: 'Satellite Operations & Missions',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'Cybersecurity', 
-      href: '/services', 
-      icon: Shield, 
-      description: 'AI-Powered Security',
-      featured: true,
-      color: 'from-green-500 to-blue-500'
-    },
-    { 
-      name: 'Cloud Services', 
-      href: '/services', 
-      icon: Cloud, 
-      description: 'DevOps & Infrastructure',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    { 
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: ShoppingCart, 
-      description: 'AI automations with transparent pricing',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'AI & FinTech', 
-      href: '/services', 
-      icon: DollarSign, 
-      description: 'Financial Technology & Risk Management',
-      featured: true,
-      color: 'from-emerald-500 to-green-500'
+      color: 'from-yellow-500 to-orange-500'
     },
     { 
       name: 'AI & Operations', 
       href: '/services', 
       icon: Settings, 
-      description: 'Supply Chain & Process Optimization',
+      description: 'Manufacturing & Supply Chain',
       featured: true,
       color: 'from-gray-500 to-slate-500'
+    },
+    { 
+      name: 'AI & FinTech', 
+      href: '/services', 
+      icon: DollarSign, 
+      description: 'Financial Services & Risk',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI & Education', 
+      href: '/services', 
+      icon: BookOpen, 
+      description: 'Learning & Training',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI & Entertainment', 
+      href: '/services', 
+      icon: Sparkles, 
+      description: 'Media & Gaming',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
     },
     { 
       name: 'AI & Development', 
       href: '/services', 
       icon: Code, 
-      description: 'Quality Assurance & Testing',
+      description: 'Software & DevOps',
       featured: true,
       color: 'from-cyan-500 to-blue-500'
     }
@@ -178,90 +146,102 @@ export function AppHeader() {
   const solutions = [
     {
       name: 'Enterprise Solutions',
-      href: '/solutions',
+      href: '/solutions/enterprise',
       icon: Building2,
-      description: 'Large-scale business transformations',
-      featured: true
+      description: 'Large-scale business solutions',
+      featured: true,
+      color: 'from-blue-600 to-indigo-600'
     },
     {
       name: 'SMB Solutions',
-      href: '/solutions',
+      href: '/solutions/smb',
       icon: Building,
-      description: 'Small to medium business growth',
-      featured: false
+      description: 'Small & medium business',
+      featured: true,
+      color: 'from-green-600 to-emerald-600'
     },
     {
       name: 'Startup Solutions',
-      href: '/solutions',
+      href: '/solutions/startup',
       icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
+      description: 'Innovation & growth',
+      featured: true,
+      color: 'from-purple-600 to-pink-600'
     },
     {
       name: 'Government Solutions',
-      href: '/solutions',
+      href: '/solutions/government',
       icon: Shield,
-      description: 'Public sector innovation',
-      featured: false
+      description: 'Public sector & compliance',
+      featured: true,
+      color: 'from-red-600 to-orange-600'
     },
     {
       name: 'Healthcare Solutions',
-      href: '/solutions',
+      href: '/solutions/healthcare',
       icon: Heart,
-      description: 'Digital health transformation',
-      featured: true
+      description: 'Medical & wellness',
+      featured: true,
+      color: 'from-pink-600 to-red-600'
     },
     {
       name: 'Financial Solutions',
-      href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
-      featured: true
+      href: '/solutions/financial',
+      icon: DollarSign,
+      description: 'Banking & fintech',
+      featured: true,
+      color: 'from-emerald-600 to-green-600'
     }
   ];
 
   const resources = [
     {
-      name: 'Blog & Insights',
-      href: '/blog',
-      icon: BookOpen,
-      description: 'Latest industry trends and insights',
-      featured: true
+      name: 'Documentation',
+      href: '/docs',
+      icon: FileText,
+      description: 'Technical guides & APIs',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       name: 'Case Studies',
       href: '/case-studies',
       icon: Target,
-      description: 'Real-world success stories',
-      featured: true
+      description: 'Success stories & results',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      name: 'White Papers',
-      href: '/white-papers',
-      icon: FileText,
-      description: 'In-depth research and analysis',
-      featured: false
+      name: 'Blog & Insights',
+      href: '/blog',
+      icon: BookOpen,
+      description: 'Industry trends & analysis',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
     },
     {
       name: 'Webinars',
       href: '/webinars',
-      icon: Users,
-      description: 'Expert-led learning sessions',
-      featured: false
+      icon: Video,
+      description: 'Live sessions & training',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
     },
     {
-      name: 'Documentation',
-      href: '/docs',
-      icon: Code,
-      description: 'Technical guides and APIs',
-      featured: false
-    },
-    {
-      name: 'FAQ & Support',
-      href: '/faq',
+      name: 'Support Center',
+      href: '/support',
       icon: HelpCircle,
-      description: 'Get help and answers',
-      featured: false
+      description: 'Help & troubleshooting',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
+    },
+    {
+      name: 'Community',
+      href: '/community',
+      icon: Users,
+      description: 'Developer community',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
@@ -405,7 +385,7 @@ export function AppHeader() {
                                   onClick={() => setSolutionsDropdownOpen(false)}
                                 >
                                   <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500">
+                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${solution.color}`}>
                                       <solution.icon className="w-5 h-5 text-white" />
                                     </div>
                                     <div className="flex-1">
@@ -445,7 +425,7 @@ export function AppHeader() {
                                   onClick={() => setResourcesDropdownOpen(false)}
                                 >
                                   <div className="flex items-start gap-3">
-                                    <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500">
+                                    <div className={`p-2 rounded-lg bg-gradient-to-br ${resource.color}`}>
                                       <resource.icon className="w-5 h-5 text-white" />
                                     </div>
                                     <div className="flex-1">
