@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, TrendingUp, Gauge, Cpu, Memory, Wifi, Battery, Activity } from 'lucide-react';
+import { Zap, TrendingUp, Gauge, Cpu, HardDrive, Wifi, Battery, Activity } from 'lucide-react';
 
 interface PerformanceMetrics {
   fps: number;
@@ -10,7 +10,11 @@ interface PerformanceMetrics {
   battery: number;
 }
 
-export function PerformanceOptimizer() {
+interface Props {
+  enabled?: boolean;
+}
+
+export function PerformanceOptimizer({ enabled = true }: Props) {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fps: 60,
     memory: 0,
@@ -23,6 +27,7 @@ export function PerformanceOptimizer() {
 
   // Performance monitoring
   const measurePerformance = useCallback(() => {
+    if (!enabled) return;
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (performance as any).memory;
@@ -37,6 +42,7 @@ export function PerformanceOptimizer() {
 
   // FPS monitoring
   const measureFPS = useCallback(() => {
+    if (!enabled) return;
     let frameCount = 0;
     let lastTime = performance.now();
     
@@ -59,6 +65,7 @@ export function PerformanceOptimizer() {
 
   // Battery monitoring
   const measureBattery = useCallback(async () => {
+    if (!enabled) return;
     if ('getBattery' in navigator) {
       try {
         const battery = await (navigator as any).getBattery();
@@ -71,6 +78,7 @@ export function PerformanceOptimizer() {
 
   // CPU monitoring
   const measureCPU = useCallback(() => {
+    if (!enabled) return;
     if ('hardwareConcurrency' in navigator) {
       const cores = navigator.hardwareConcurrency;
       setMetrics(prev => ({ ...prev, cpu: cores }));
@@ -79,6 +87,7 @@ export function PerformanceOptimizer() {
 
   // Performance optimizations
   const applyOptimizations = useCallback(() => {
+    if (!enabled) return;
     const newOptimizations: string[] = [];
     
     // Image optimization
@@ -100,6 +109,8 @@ export function PerformanceOptimizer() {
   }, [metrics]);
 
   useEffect(() => {
+    if (!enabled) return;
+    
     measurePerformance();
     measureFPS();
     measureBattery();
@@ -107,11 +118,12 @@ export function PerformanceOptimizer() {
     
     const interval = setInterval(measurePerformance, 5000);
     return () => clearInterval(interval);
-  }, [measurePerformance, measureFPS, measureBattery, measureCPU]);
+  }, [enabled, measurePerformance, measureFPS, measureBattery, measureCPU]);
 
   useEffect(() => {
+    if (!enabled) return;
     applyOptimizations();
-  }, [applyOptimizations]);
+  }, [enabled, applyOptimizations]);
 
   // Auto-hide after 5 seconds
   useEffect(() => {
@@ -119,6 +131,8 @@ export function PerformanceOptimizer() {
     return () => clearTimeout(timer);
   }, []);
 
+  if (!enabled) return null;
+  
   if (!isVisible) {
     return (
       <motion.button
@@ -169,7 +183,7 @@ export function PerformanceOptimizer() {
           {/* Memory */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Memory className="w-4 h-4 text-blue-500" />
+                              <HardDrive className="w-4 h-4 text-blue-500" />
               <span className="text-sm text-gray-600">Memory</span>
             </div>
             <span className={`font-mono text-sm ${metrics.memory < 50 ? 'text-green-600' : metrics.memory < 100 ? 'text-yellow-600' : 'text-red-600'}`}>

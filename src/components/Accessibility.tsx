@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Accessibility, 
+  Accessibility as AccessibilityIcon, 
   Type, 
   Eye, 
   Volume2, 
@@ -140,7 +140,7 @@ export function Accessibility() {
         aria-label="Accessibility Settings"
         title="Accessibility Settings"
       >
-        <Accessibility className="w-6 h-6" />
+        <AccessibilityIcon className="w-6 h-6" />
       </button>
 
       {/* Accessibility Panel */}
@@ -157,8 +157,8 @@ export function Accessibility() {
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <Accessibility className="w-5 h-5 text-cyan-400" />
-                  Accessibility
+                            <AccessibilityIcon className="w-5 h-5 text-cyan-400" />
+          Accessibility
                 </h2>
                 <button
                   onClick={() => setIsOpen(false)}

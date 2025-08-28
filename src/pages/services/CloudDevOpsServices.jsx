@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
 const CloudDevOpsServices = () => {
     const cloudServices = [
         {
@@ -18,7 +18,7 @@ const CloudDevOpsServices = () => {
         {
             title: "DevOps Implementation",
             description: "Streamline development and operations with modern DevOps practices and tools.",
-            icon: GitBranch,
+            icon: GitFork,
             features: [
                 "CI/CD Pipeline Setup",
                 "Infrastructure as Code",
