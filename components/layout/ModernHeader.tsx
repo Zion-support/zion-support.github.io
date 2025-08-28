@@ -138,7 +138,9 @@ const ModernHeader: React.FC = () => {
                                 className="group p-4 rounded-lg hover:bg-neon-blue/10 transition-all duration-200"
                               >
                                 <div className="flex items-center space-x-3 mb-2">
-                                  <category.icon className="w-5 h-5 text-neon-blue group-hover:text-neon-purple transition-colors" />
+                                  {React.createElement(category.icon, { 
+                                    className: "w-5 h-5 text-neon-blue group-hover:text-neon-purple transition-colors" 
+                                  })}
                                   <span className="text-white font-medium group-hover:text-neon-blue transition-colors">
                                     {category.name}
                                   </span>

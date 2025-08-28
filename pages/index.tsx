@@ -1,6 +1,6 @@
-import React from 'react'
+import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap } from 'lucide-react'
 import Link from 'next/link'
-import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock } from 'lucide-react'
+import React from 'react'
 
 
 export default function Index() {
@@ -105,7 +105,7 @@ export default function Index() {
 						{stats.map((stat) => (
 							<div key={stat.label} className="text-center">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-4">
-									<stat.icon className="h-8 w-8 text-blue-600" />
+									{React.createElement(stat.icon, { className: "h-8 w-8 text-blue-600" })}
 								</div>
 								<div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
 								<div className="text-gray-600">{stat.label}</div>
@@ -128,7 +128,7 @@ export default function Index() {
 						{features.map((feature) => (
 							<div key={feature.title} className="text-center group">
 								<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-									<feature.icon className="h-8 w-8 text-white" />
+									{React.createElement(feature.icon, { className: "h-8 w-8 text-white" })}
 								</div>
 								<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
 								<p className="text-gray-600 mb-6">{feature.description}</p>

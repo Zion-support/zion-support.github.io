@@ -1,14 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
-  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+    Atom,
+    Award,
+    BarChart3,
+    BookOpen,
+    Brain,
+    ChevronDown,
+    ChevronRight,
+    Eye,
+    Globe,
+    Heart,
+    HelpCircle,
+    Home,
+    Mail,
+    Phone,
+    Rocket,
+    Settings,
+    Shield,
+    Sparkles,
+    Target,
+    Users,
+    X,
+    Zap
 } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarItem {
   name: string;
@@ -251,6 +267,7 @@ interface EnhancedSidebar2025Props {
 export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const router = useLocation();
 
   const toggleSection = (sectionTitle: string) => {
     const newExpanded = new Set(expandedSections);
@@ -360,7 +377,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
         <div className="p-6 space-y-6">
           {/* Home Link */}
           <Link
-            href="/"
+            to="/"
             onClick={onClose}
             className="flex items-center gap-3 p-3 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 hover:from-cyan-500/30 hover:to-purple-600/30 rounded-lg border border-cyan-500/30 transition-all duration-300 group"
           >
@@ -377,7 +394,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               >
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>
-                    <section.icon className="w-4 h-4 text-white" />
+                    {React.createElement(section.icon, { className: "w-4 h-4 text-white" })}
                   </div>
                   <span className="text-white font-semibold">{section.title}</span>
                 </div>
@@ -404,7 +421,9 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                           className="w-full flex items-center justify-between p-2 hover:bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"
                         >
                           <div className="flex items-center gap-3">
-                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                            {React.createElement(item.icon, { 
+                              className: "w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" 
+                            })}
                             <div>
                               <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">
                                 {item.name}
@@ -435,7 +454,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                                 {item.subItems.map((subItem, subIndex) => (
                                   <Link
                                     key={subIndex}
-                                    href={subItem.href}
+                                    to={subItem.href}
                                     onClick={onClose}
                                     className="flex items-center gap-2 p-2 hover:bg-gray-800/20 rounded-lg transition-all duration-300 group"
                                   >
@@ -480,7 +499,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                 Get in touch to discuss your revolutionary technology needs.
               </p>
               <Link
-                href="/contact"
+                to="/contact"
                 onClick={onClose}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               >

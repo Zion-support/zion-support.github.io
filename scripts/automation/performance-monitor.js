@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 console.log('📊 Starting continuous performance monitoring automation...');
 
@@ -15,12 +15,7 @@ async function runPerformanceMonitor() {
     
     // Build the project first
     console.log('🏗️ Building project for performance analysis...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' });
-      console.log('✅ Build completed');
-    } catch (error) {
-      console.log('⚠️  Build failed but continuing...');
-    }
+    execSync('npm run build', { stdio: 'inherit' });
     
     // Check bundle size
     console.log('📦 Analyzing bundle size...');
@@ -63,7 +58,6 @@ async function runPerformanceMonitor() {
     console.log('🔍 Checking for unused dependencies...');
     try {
       execSync('npx depcheck', { stdio: 'inherit' });
-      console.log('✅ Dependency check completed');
     } catch (error) {
       console.log('ℹ️  Dependency check not available');
     }
@@ -81,10 +75,10 @@ async function runPerformanceMonitor() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Performance report saved to ${reportPath}`);
     
-    console.log('✅ Continuous performance monitoring completed successfully');
+    console.log('✅ Performance monitoring completed successfully');
     
   } catch (error) {
-    console.error('❌ Continuous performance monitoring failed:', error.message);
+    console.error('❌ Performance monitoring failed:', error.message);
     // Don't exit, just log the error and continue
   }
 }
@@ -170,7 +164,7 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Start the continuous performance monitor
+// Start the continuous performance monitoring
 runContinuous().catch(error => {
   console.error('❌ Failed to start continuous performance monitoring:', error);
   process.exit(1);

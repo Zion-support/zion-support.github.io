@@ -1,28 +1,22 @@
-import React from 'react';
-import Link from 'next/link';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp, 
-  Globe, 
-  Heart,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Users,
-  Building,
-  FileText,
-  HelpCircle,
-  Lock,
-  Award
+import {
+	ArrowUp,
+	Award,
+	Cloud,
+	Facebook,
+	Github,
+	Globe,
+	Heart,
+	Instagram,
+	Linkedin,
+	Mail,
+	MapPin,
+	Phone,
+	Shield,
+	Twitter,
+	Zap
 } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
 
 const footerNavigation = {
 	services: {
@@ -187,7 +181,7 @@ const EnhancedFooter: React.FC = () => {
 								className="flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group"
 							>
 								<div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-									<link.icon className="w-5 h-5 text-white" />
+									{React.createElement(link.icon, { className: "w-5 h-5 text-white" })}
 								</div>
 								<div>
 									<div className="text-white font-medium group-hover:text-zion-cyan transition-colors">

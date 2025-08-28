@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path'); // Added missing import for path
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 console.log('📦 Starting continuous dependency updates automation...');
 
@@ -34,6 +34,7 @@ async function runDependencyUpdates() {
         console.log('✅ Security vulnerabilities fixed');
       } catch (fixError) {
         console.log('❌ Could not fix security vulnerabilities');
+        // Don't exit, just log the error and continue
       }
     }
     
@@ -74,12 +75,7 @@ async function runDependencyUpdates() {
     
     // Install dependencies
     console.log('📦 Installing updated dependencies...');
-    try {
-      execSync('npm install', { stdio: 'inherit' });
-      console.log('✅ Dependencies installed');
-    } catch (error) {
-      console.log('⚠️  Dependency installation failed');
-    }
+    execSync('npm install', { stdio: 'inherit' });
     
     // Run tests to ensure nothing broke
     console.log('🧪 Running tests after updates...');
@@ -88,15 +84,11 @@ async function runDependencyUpdates() {
       console.log('✅ Tests passed after updates');
     } catch (error) {
       console.log('❌ Tests failed after updates - rolling back...');
-      try {
-        execSync('npm install', { stdio: 'inherit' });
-        console.log('✅ Rollback completed');
-      } catch (rollbackError) {
-        console.log('⚠️  Rollback failed');
-      }
+      execSync('npm install', { stdio: 'inherit' });
+      // Don't exit, just log the error and continue
     }
     
-    // Generate report
+    // Generate dependency update report
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Dependency updates completed',
@@ -107,10 +99,10 @@ async function runDependencyUpdates() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
     
-    console.log('✅ Continuous dependency updates completed successfully');
+    console.log('✅ Dependency updates completed successfully');
     
   } catch (error) {
-    console.error('❌ Continuous dependency updates failed:', error.message);
+    console.error('❌ Dependency updates failed:', error.message);
     // Don't exit, just log the error and continue
   }
 }

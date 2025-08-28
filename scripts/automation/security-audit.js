@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 console.log('🔒 Starting continuous security audit automation...');
 
@@ -25,6 +25,7 @@ async function runSecurityAudit() {
         console.log('✅ Security issues auto-fixed');
       } catch (fixError) {
         console.log('❌ Could not auto-fix security issues');
+        // Don't exit, just log the error and continue
       }
     }
     
@@ -50,13 +51,12 @@ async function runSecurityAudit() {
     try {
       if (fs.existsSync('security-scan.js')) {
         execSync('node security-scan.js', { stdio: 'inherit' });
-        console.log('✅ Additional security scan completed');
       }
     } catch (error) {
       console.log('ℹ️  No additional security scan available');
     }
     
-    // Generate report
+    // Generate security report
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Security audit completed',
@@ -67,10 +67,10 @@ async function runSecurityAudit() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
     
-    console.log('✅ Continuous security audit completed successfully');
+    console.log('✅ Security audit completed successfully');
     
   } catch (error) {
-    console.error('❌ Continuous security audit failed:', error.message);
+    console.error('❌ Security audit failed:', error.message);
     // Don't exit, just log the error and continue
   }
 }

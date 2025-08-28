@@ -1,71 +1,38 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { 
-  Home, 
-  Briefcase, 
-  Users, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Shield, 
-  Handshake, 
-  ChevronDown, 
-  ChevronRight, 
-  Brain, 
-  Cpu, 
-  Database, 
-  Network, 
-  Code, 
-  Palette, 
-  Target, 
-  Rocket, 
-  Eye, 
-  DollarSign, 
-  ShoppingCart, 
-  Clock, 
-  Cloud, 
-  Search, 
-  Building, 
-  Zap, 
-  Heart, 
-  Lightbulb, 
-  TrendingUp, 
-  BarChart3, 
-  Lock, 
-  AlertTriangle, 
-  Server, 
-  CheckCircle, 
-  Truck, 
-  Car, 
-  TestTube, 
-  PenTool, 
-  Building2, 
-  Atom, 
-  FileText, 
-  Quote, 
-  Newspaper, 
-  Calendar, 
-  Video, 
-  HelpCircle, 
-  LifeBuoy, 
-  Store, 
-  PieChart, 
-  Share2, 
-  Monitor, 
-  Smartphone,
-  Settings,
-  User,
-  Bell,
+import {
+  BarChart3,
   BookOpen,
-  Award,
-  Leaf,
-  Sun,
-  Wind
+  Brain,
+  Briefcase,
+  Building,
+  Building2,
+  CheckCircle,
+  ChevronDown,
+  ChevronRight,
+  Cloud,
+  Code,
+  Database,
+  DollarSign,
+  FileText,
+  Heart,
+  HelpCircle,
+  Home,
+  Linkedin,
+  Mail,
+  MapPin,
+  Newspaper,
+  Phone,
+  Quote,
+  Rocket,
+  Search,
+  Shield,
+  Store,
+  Target,
+  Twitter,
+  Users,
+  Zap
 } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -73,7 +40,7 @@ interface SidebarProps {
 }
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const router = useRouter();
+  const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
@@ -84,7 +51,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: string) => location.pathname === path;
 
   const navigation = {
     main: [
@@ -92,8 +59,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'About', href: '/about', icon: Building },
       { name: 'Services', href: '/services', icon: Briefcase },
       { name: 'Solutions', href: '/solutions', icon: Target },
-      { name: 'Partners', href: '/partners', icon: Handshake },
-      { name: 'Careers', href: '/careers', icon: Users },
+      { name: 'Partners', href: '/partners', icon: Users },
+      { name: 'Careers', href: '/careers', icon: Briefcase },
       { name: 'Blog', href: '/blog', icon: Newspaper },
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
@@ -124,7 +91,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     company: [
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
-      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
+      { name: 'Partners', href: '/partners', icon: Users, description: 'Strategic partnerships' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
       { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
@@ -169,7 +136,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {items.map((item) => (
             <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
                 isActive(item.href)
@@ -240,12 +207,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               {quickActions.map((action) => (
                 <Link
                   key={action.name}
-                  href={action.href}
+                  to={action.href}
                   onClick={onClose}
                   className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-200 group"
                 >
                   <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
-                    <action.icon className="w-4 h-4 text-white" />
+                    {React.createElement(action.icon, { className: "w-4 h-4 text-white" })}
                   </div>
                   <span className="text-xs text-white text-center">{action.name}</span>
                 </Link>
@@ -258,7 +225,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {navigation.main.map((item) => (
               <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 onClick={onClose}
                 className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
                   isActive(item.href)
@@ -266,7 +233,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     : 'text-gray-300 hover:text-white hover:bg-white/5'
                 }`}
               >
-                <item.icon className="w-4 h-4 flex-shrink-0" />
+                {React.createElement(item.icon, { className: "w-4 h-4 flex-shrink-0" })}
                 <span className="font-medium">{item.name}</span>
               </Link>
             ))}
