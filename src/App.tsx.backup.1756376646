@@ -169,11 +169,25 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
+<<<<<<< HEAD
+const AIAutoEmailResponder = React.lazy(() => import('./pages/services/AIAutoEmailResponder'));
+const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/CustomerFeedbackSurveys'));
+const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
+const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
+const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
+// Newly added services
+const AISEOAuditor = React.lazy(() => import('./pages/services/AISEOAuditor'));
+const CustomerSupportChatbot = React.lazy(() => import('./pages/services/CustomerSupportChatbot'));
+const LandingPageGenerator = React.lazy(() => import('./pages/services/LandingPageGenerator'));
+const PriceIntelligenceService = React.lazy(() => import('./pages/services/PriceIntelligenceService'));
+const DeveloperProductivityCopilot = React.lazy(() => import('./pages/services/DeveloperProductivityCopilot'));
+=======
 const AIPoweredEmailResponder = React.lazy(() => import('./pages/services/AIPoweredEmailResponder'));
 const MobileFirstSurveyTool = React.lazy(() => import('./pages/services/MobileFirstSurveyTool'));
 const RemoteMeetingSummarizer = React.lazy(() => import('./pages/services/RemoteMeetingSummarizer'));
 const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'));
 const DeveloperAPITester = React.lazy(() => import('./pages/services/DeveloperAPITester'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da36
 
 // Additional new service imports
 const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
@@ -314,6 +328,8 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<Infrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+<<<<<<< HEAD
+=======
                 <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                 <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
                 <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
@@ -322,6 +338,7 @@ function App() {
                 <Route path="/services/meeting-summarizer" element={<RemoteMeetingSummarizer />} />
                 <Route path="/services/ai-seo-optimizer" element={<AISEOOptimizer />} />
                 <Route path="/services/developer-api-tester" element={<DeveloperAPITester />} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da36
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

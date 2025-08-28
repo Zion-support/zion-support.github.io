@@ -46,6 +46,10 @@ export function AppHeader() {
 
   // Organized services by category - only include existing pages
   const services = [
+<<<<<<< HEAD
+    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+=======
     { name: 'AI Email Responder', href: '/services/ai-email-responder', icon: Brain, description: 'On-brand AI replies with HITL and analytics' },
     { name: 'Mobile Surveys', href: '/services/mobile-first-surveys', icon: Users, description: 'High-converting responsive surveys' },
     { name: 'Meeting Summarizer', href: '/services/meeting-summarizer', icon: MessageCircle, description: 'Auto minutes, action items, sync to Slack' },
@@ -53,6 +57,7 @@ export function AppHeader() {
     { name: 'Developer API Tester', href: '/services/developer-api-tester', icon: Code, description: 'Mock servers and contract tests' },
     { name: 'AI & Analytics', href: '/services', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'Quantum Computing', href: '/services', icon: Rocket, description: 'Quantum AI & Optimization' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da36
     { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'IoT & Edge', href: '/services', icon: Cpu, description: 'Smart Devices & Networks' },

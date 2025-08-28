@@ -80,6 +80,29 @@ export const EnhancedSidebar: React.FC = () => {
       title: "Service Areas",
       icon: Zap,
       items: [
+<<<<<<< HEAD
+        { name: "AI & Machine Learning", href: "/services/ai", icon: Brain },
+        { name: "Micro SAAS Solutions", href: "/services/micro-saas", icon: Cloud },
+        { name: "IT Infrastructure", href: "/services/infrastructure", icon: Server },
+        { name: "Emerging Technologies", href: "/services", icon: Rocket },
+        { name: "Cybersecurity", href: "/services/cybersecurity", icon: Shield },
+        { name: "Cloud Solutions", href: "/services/cloud", icon: Cloud },
+        { name: "DevOps & Automation", href: "/services/cloud-devops", icon: Code },
+        { name: "Data Management", href: "/services/data-analytics", icon: Database }
+      ]
+    },
+    {
+      title: "Solutions",
+      icon: Target,
+      items: [
+        { name: "Quantum Technology", href: "/services/quantum-technology", icon: Atom },
+        { name: "Blockchain & Web3", href: "/services/blockchain", icon: Link },
+        { name: "Edge Computing", href: "/services/iot-edge", icon: Network },
+        { name: "IoT Solutions", href: "/services/iot-services", icon: Wifi },
+        { name: "Healthcare AI", href: "/solutions/healthcare", icon: HeartPulse },
+        { name: "Financial AI", href: "/solutions/financial", icon: DollarSign },
+        { name: "Green Technology", href: "/services/green-it", icon: Leaf }
+=======
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu },
         { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp },
@@ -90,6 +113,7 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar },
         { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
         { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da36
       ]
     },
     {
