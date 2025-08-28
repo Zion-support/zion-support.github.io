@@ -25,6 +25,36 @@ import {
   Sun,
   Moon,
   Infinity,
+<<<<<<< HEAD
+  Cloud,
+  Cpu,
+  Users,
+  Workflow,
+  Atom,
+  BarChart3,
+  MessageCircle,
+  HelpCircle,
+  DollarSign,
+  Gauge,
+  ShoppingCart,
+  BookOpen,
+  Activity,
+  Settings,
+  Network,
+  Server,
+  Smartphone,
+  Tablet,
+  Laptop,
+  Globe2,
+  Wifi,
+  Bluetooth,
+  Radio,
+  Target,
+  Search,
+  Calendar,
+  Newspaper,
+  Briefcase
+=======
   Alpha,
   Beta,
   Gamma,
@@ -52,6 +82,7 @@ import {
   DollarSign,
   MessageCircle,
   HelpCircle
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -59,8 +90,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+<<<<<<< HEAD
+      title: 'Featured Services',
+      featured: true,
+=======
       title: 'Core Services',
       icon: Rocket,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
       links: [
         { name: '2026 Services Overview', href: '/services2026', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
@@ -111,8 +147,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+<<<<<<< HEAD
+      title: 'Micro SaaS Solutions',
+=======
       title: 'Business Solutions',
       icon: Shield,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
       links: [
         { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
         { name: 'Website Analytics', href: '/services/website-analytics', icon: Gauge },
@@ -123,8 +163,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+<<<<<<< HEAD
+      title: 'Micro SaaS',
+=======
       title: 'Enterprise Tools',
       icon: Zap,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
       links: [
         { name: 'Micro SaaS Overview', href: '/micro-saas' },
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
@@ -154,10 +198,50 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Equipment', href: '/equipment' },
         { name: 'Services', href: '/marketplace/services' }
       ]
+<<<<<<< HEAD
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About', href: '/about' },
+        { name: 'Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Contact', href: '/contact' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'News', href: '/news' },
+        { name: 'Events', href: '/events' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'Status', href: '/status' }
+      ]
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
     }
   ];
 
   const quickLinks = [
+<<<<<<< HEAD
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Request Quote', href: '/request-quote' },
+    { name: 'Help', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Green IT', href: '/green-it' },
+    { name: 'Privacy', href: '/privacy' },
+    { name: 'Terms', href: '/terms' },
+    { name: 'Sitemap', href: '/sitemap' }
+=======
     { name: 'Home', href: '/', icon: Star },
     { name: 'Services', href: '/services', icon: Rocket },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
@@ -166,6 +250,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Privacy', href: '/privacy', icon: Shield },
     { name: 'Terms', href: '/terms', icon: Shield },
     { name: 'Sitemap', href: '/sitemap.xml', icon: Globe }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
   ];
 
   const socialLinks = [
@@ -185,6 +270,25 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
+    <footer className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 border-t border-slate-700/50 overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-indigo-600/5 animate-pulse"></div>
+        <motion.div 
+          className="absolute top-20 left-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+          transition={{ duration: 4, repeat: Infinity }}
+        />
+        <motion.div 
+          className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.6, 0.3, 0.6] }}
+          transition={{ duration: 4, repeat: Infinity, delay: 2 }}
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+=======
     <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -197,6 +301,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       <div className="absolute inset-0 bg-cyber-grid opacity-20"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
         {/* Main Footer Content */}
         <div className="py-16">
           {/* Top Section */}
@@ -221,6 +326,44 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   </div>
                   <div className="text-sm text-cyan-400 font-medium">TECH GROUP</div>
                 </div>
+<<<<<<< HEAD
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-500 rounded-xl blur opacity-75"></div>
+              </div>
+
+              <p className="text-slate-300 mb-6 leading-relaxed">
+                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions.
+                Transform your business with our innovative technology platforms.
+              </p>
+
+              {/* Contact Info */}
+              <div className="space-y-4 mb-6">
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">
+                  <Phone className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <a href="tel:+13024640950" className="hover:underline">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-blue-300 transition-colors">
+                  <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-start space-x-3 text-slate-300">
+                  <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                  <span>
+                    364 E Main St STE 1008<br />
+                    Middletown DE 19709
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-300 hover:text-green-300 transition-colors">
+                  <Globe className="w-5 h-5 text-green-400 flex-shrink-0" />
+                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    ziontechgroup.com
+                  </a>
+                </div>
+              </div>
+=======
               </motion.div>
               
               <motion.p 
@@ -264,6 +407,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 </div>
               </motion.div>
             </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
 
               {/* Social Links */}
               <div className="flex space-x-4">
@@ -289,6 +433,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
+<<<<<<< HEAD
+              <div key={section.title} className="lg:col-span-1">
+                <h4 className={`font-semibold mb-4 flex items-center gap-2 ${
+                  section.featured ? 'text-cyan-300 text-lg' : 'text-white'
+                }`}>
+                  {section.featured && <Star className="w-4 h-4 text-yellow-400" />}
+                  {section.title}
+                </h4>
+                <ul className="space-y-3">
+=======
               <motion.div 
                 key={section.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -302,11 +456,20 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   <h3 className="text-cyan-400 font-semibold text-lg">{section.title}</h3>
                 </div>
                 <ul className="space-y-2">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
                   {section.links.map((link) => (
                     <li key={link.name}>
                       <Link
                         to={link.href}
+<<<<<<< HEAD
+                        className={`text-sm transition-colors duration-200 ${
+                          link.featured
+                            ? 'text-cyan-300 hover:text-cyan-200 font-medium'
+                            : 'text-slate-400 hover:text-white'
+                        }`}
+=======
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm hover:translate-x-1 transform transition-transform duration-200 flex items-center group"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
                       >
                         {link.name}
                         {link.featured && <span className="ml-1 text-yellow-400">★</span>}
@@ -319,6 +482,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </div>
 
           {/* Quick Links Section */}
+<<<<<<< HEAD
+          <div className="border-t border-zion-cyan/20 pt-8 mb-8">
+            <h3 className="text-zion-cyan font-semibold mb-4 text-lg">Quick Links</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+=======
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -330,6 +498,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               Quick Links
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -344,6 +513,91 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </div>
           </motion.div>
 
+<<<<<<< HEAD
+          {/* Service Sections */}
+          {footerSections.map((section, index) => (
+            <div key={index} className="space-y-4">
+              <h4 className="text-lg font-semibold text-white flex items-center">
+                {section.title}
+                {section.featured && (
+                  <Star className="w-4 h-4 text-yellow-400 ml-2" />
+                )}
+              </h4>
+              <ul className="space-y-3">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <Link
+                      to={link.href}
+                      className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200 group"
+                    >
+                      <link.icon className="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" />
+                      <span className="text-sm">{link.name}</span>
+                      {link.featured && (
+                        <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-400 to-orange-500 text-black">
+                          Featured
+                        </span>
+                      )}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Quick Links Section */}
+        <div className="border-t border-slate-700/50 pt-8 mb-8">
+          <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {quickLinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.href}
+                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors duration-200 group"
+              >
+                <link.icon className="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" />
+                <span className="text-sm">{link.name}</span>
+              </Link>
+            ))}
+          </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-slate-700/50 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            {/* Copyright */}
+            <div className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-2 text-gray-400 ${social.color} transition-colors duration-200 hover:scale-110`}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex items-center space-x-6 text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
+                Cookie Policy
+              </Link>
+=======
           {/* Social Links & Newsletter */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -399,10 +653,48 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   </motion.button>
                 </div>
               </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
             </div>
           </motion.div>
         </div>
 
+<<<<<<< HEAD
+        {/* Newsletter Signup */}
+        <div className="mt-12 p-6 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-xl">
+          <div className="text-center">
+            <h4 className="text-xl font-semibold text-white mb-2">Stay Updated</h4>
+            <p className="text-gray-300 mb-4">Get the latest insights on AI, cybersecurity, and technology trends.</p>
+            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50"
+              />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Stay Ahead with Zion Tech Group
+                </h3>
+                <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+                  Get the latest insights on AI, Quantum Computing, and emerging technologies.
+                  Be the first to know about our revolutionary new services.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                  />
+                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
+                    Subscribe
+                  </button>
+                </div>
+              </motion.div>
+=======
         {/* Bottom Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -427,6 +719,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               <Link to="/sitemap.xml" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
                 Sitemap
               </Link>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
             </div>
           </div>
         </div>
@@ -459,6 +752,36 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         </motion.div>
       </div>
 
+<<<<<<< HEAD
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute text-cyan-400/10"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${3 + Math.random() * 4}s`
+            }}
+            animate={{
+              y: [0, -20, 0],
+              opacity: [0.1, 0.3, 0.1],
+              rotate: [0, 360]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] &&
+              React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 20 })
+            }
+          </motion.div>
+        ))}
+=======
       {/* Enhanced Floating Elements */}
       <div className="absolute top-10 left-10 opacity-20 floating-element">
         <Brain className="w-8 h-8 text-cyan-400 animate-bounce" />
@@ -477,6 +800,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </div>
       <div className="absolute top-1/3 right-1/4 opacity-20 floating-element">
         <Sparkles className="w-6 h-6 text-purple-400 animate-bounce delay-700" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3963
       </div>
     </footer>
   );
