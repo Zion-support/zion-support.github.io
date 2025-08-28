@@ -264,7 +264,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 </div>
                 <div className="flex items-start space-x-3 text-slate-300">
                   <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <span>Delaware, United States</span>
+                  <a
+                    href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    364 E Main St STE 1008, Middletown, DE 19709
+                  </a>
                 </div>
               </div>
 

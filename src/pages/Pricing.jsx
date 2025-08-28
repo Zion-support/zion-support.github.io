@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import { SEO } from '../components/SEO';
 
 const Pricing = () => {
   const pricingTiers = [
@@ -58,49 +58,16 @@ const Pricing = () => {
         "AI Meeting Assistant (Unlimited)",
         "AI Translation (100+ languages)",
         "24/7 Support",
-        "Custom Integrations",
-        "API Access (10000 calls/month)",
-        "Advanced Security Features"
-      ],
-      popular: false,
-      cta: "Start Free Trial",
-      link: "/signup?plan=business"
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored solutions for large organizations with specific requirements",
-      features: [
-        "Everything in Business",
-        "Unlimited AI Content Generation",
-        "Custom AI Model Training",
-        "Zero Trust Security Suite",
-        "Edge Computing Solutions",
-        "AI Market Research Platform",
-        "AI Legal Document Review",
-        "AI Financial Advisor",
-        "AI Healthcare Assistant",
-        "Dedicated Account Manager",
-        "Custom Development",
-        "On-Premise Deployment",
-        "SLA Guarantees",
-        "Compliance Certifications"
       ],
       popular: false,
       cta: "Contact Sales",
-      link: "/contact"
+      link: "/request-quote?plan=business"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Pricing - Zion Tech Group | AI & Technology Solutions"
-        description="Choose the perfect plan for your AI and technology needs. Flexible pricing options for individuals, teams, and enterprises."
-        keywords="pricing, AI services, technology solutions, subscription plans, enterprise pricing"
-        canonical="https://ziontechgroup.com/pricing"
-      />
+    <div className="min-h-screen bg-slate-950 text-white">
+      <SEO title="Pricing - Zion Tech Group" description="Transparent pricing for AI, Micro SaaS, and IT solutions." />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">

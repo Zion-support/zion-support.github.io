@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -225,110 +226,118 @@ export function AppHeader() {
         </div>
 
         {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-slate-800/95 border-t border-slate-700/50 backdrop-blur-xl animate-slide-up">
-            <div className="container-responsive py-6">
-              {/* Mobile search */}
-              <form onSubmit={handleSearch} className="mb-6">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search services..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
-                  />
-                  <button
-                    type="submit"
-                    disabled={isSearching}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-cyan p-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    {isSearching ? (
-                      <ZionLoadingSpinner size="sm" />
-                    ) : (
-                      <Search className="h-5 w-5" />
-                    )}
-                  </button>
-                </div>
-              </form>
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="lg:hidden bg-slate-800/95 border-t border-slate-700/50 backdrop-blur-xl"
+            >
+              <div className="container-responsive py-6">
+                {/* Mobile search */}
+                <form onSubmit={handleSearch} className="mb-6">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <input
+                      type="text"
+                      placeholder="Search services..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+                    />
+                    <button
+                      type="submit"
+                      disabled={isSearching}
+                      className="absolute right-2 top-1/2 transform -translate-y-1/2 text-zion-cyan p-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSearching ? (
+                        <ZionLoadingSpinner size="sm" />
+                      ) : (
+                        <Search className="h-5 w-5" />
+                      )}
+                    </button>
+                  </div>
+                </form>
 
-              {/* Mobile navigation */}
-              <nav className="space-y-4">
-                {navigation.map((item) => (
+                {/* Mobile navigation */}
+                <nav className="space-y-4">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block text-slate-300 hover:text-cyan-400 py-2 text-base font-medium transition-colors duration-200"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </nav>
+
+                {/* Mobile services */}
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
+                  <h3 className="text-slate-400 text-sm font-medium mb-4">Services</h3>
+                  <div className="grid grid-cols-1 gap-3">
+                    {services.slice(0, 6).map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
+                      >
+                        <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                          <service.icon className="w-4 h-4 text-cyan-400" />
+                        </div>
+                        <div className="ml-3">
+                          <div className="text-white font-medium text-sm">{service.name}</div>
+                          <div className="text-gray-400 text-xs">{service.description}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                   <Link
-                    key={item.name}
-                    to={item.href}
+                    to="/services"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-slate-300 hover:text-cyan-400 py-2 text-base font-medium transition-colors duration-200"
+                    className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors mt-4 py-2 px-4 rounded-lg hover:bg-cyan-400/10"
                   >
-                    {item.name}
+                    View All Services →
                   </Link>
-                ))}
-              </nav>
-
-              {/* Mobile services */}
-              <div className="mt-6 pt-6 border-t border-slate-700/50">
-                <h3 className="text-slate-400 text-sm font-medium mb-4">Services</h3>
-                <div className="grid grid-cols-1 gap-3">
-                  {services.slice(0, 6).map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
-                    >
-                      <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
-                        <service.icon className="w-4 h-4 text-cyan-400" />
-                      </div>
-                      <div className="ml-3">
-                        <div className="text-white font-medium text-sm">{service.name}</div>
-                        <div className="text-gray-400 text-xs">{service.description}</div>
-                      </div>
-                    </Link>
-                  ))}
                 </div>
-                <Link
-                  to="/services"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors mt-4 py-2 px-4 rounded-lg hover:bg-cyan-400/10"
-                >
-                  View All Services →
-                </Link>
-              </div>
 
-              {/* Mobile quick links */}
-              <div className="mt-6 pt-6 border-t border-slate-700/50">
-                <h3 className="text-slate-400 text-sm font-medium mb-4">Quick Links</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {quickLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
-                    >
-                      <link.icon className="w-4 h-4 text-cyan-400 mr-2" />
-                      <span className="text-white text-sm">{link.name}</span>
-                    </Link>
-                  ))}
+                {/* Mobile quick links */}
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
+                  <h3 className="text-slate-400 text-sm font-medium mb-4">Quick Links</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200"
+                      >
+                        <link.icon className="w-4 h-4 text-cyan-400 mr-2" />
+                        <span className="text-white text-sm">{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile CTA */}
+                <div className="mt-6 pt-6 border-t border-slate-700/50">
+                  <Link
+                    to="/contact"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block w-full text-center py-3 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
+                  >
+                    Get Started
+                  </Link>
                 </div>
               </div>
-
-              {/* Mobile CTA */}
-              <div className="mt-6 pt-6 border-t border-slate-700/50">
-                <Link
-                  to="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block w-full text-center py-3 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+    </>
   );
 }
