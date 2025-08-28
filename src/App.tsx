@@ -194,6 +194,16 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
+// Missing page imports for broken links
+const Products = lazy(() => import('./pages/Products'));
+const Cart = lazy(() => import('./pages/Cart'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const RequestQuote = lazy(() => import('./pages/RequestQuote'));
+const Support = lazy(() => import('./pages/Support'));
+const Categories = lazy(() => import('./pages/Categories'));
+const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+
 function App() {
   return (
     <HelmetProvider>
@@ -396,6 +406,16 @@ function App() {
                     <Route path="/it-consulting" element={<ITConsulting />} />
                     <Route path="/space-tech" element={<SpaceTech />} />
                     <Route path="/sitemap" element={<Sitemap />} />
+                    
+                    {/* Missing routes for broken links */}
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/request-quote" element={<RequestQuote />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/categories" element={<Categories />} />
+                    <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                     
                     {/* 404 Page */}
                     <Route 
