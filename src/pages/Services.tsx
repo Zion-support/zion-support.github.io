@@ -177,14 +177,21 @@ export default function Services() {
                 </div>
               </div>
               
-              {/* Enhanced Services Link */}
-              <div className="mt-8">
+              {/* Enhanced Services Links */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/services/enhanced"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
                   View Enhanced Services Landing
+                </Link>
+                <Link
+                  to="/services/comprehensive-2031"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Globe className="w-5 h-5 mr-2" />
+                  Explore All Services 2031
                 </Link>
               </div>
             </motion.div>
