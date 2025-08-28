@@ -79,6 +79,7 @@
     "tailwind-merge": "^2.0.0",
     "use-callback-ref": "^1.3.3",
     "use-sidecar": "^1.1.3",
+    "vite-plugin-compression": "^0.5.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {

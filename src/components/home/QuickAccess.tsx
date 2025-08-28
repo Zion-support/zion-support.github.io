@@ -246,6 +246,4 @@ export function QuickAccess() {
       </div>
     </section>
   );
-};
-
-export { QuickAccess };
+}
