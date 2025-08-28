@@ -33,9 +33,11 @@ const Legal = React.lazy(() => import('./pages/Legal'));
 
 // New pages
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding'));
@@ -125,6 +127,9 @@ function App() {
                 
                 {/* New Routes */}
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/developers" element={<Developers />} />

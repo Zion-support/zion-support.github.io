@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import Input from "@/components/ui/Input";
+import { Input } from "@/components/ui/Input";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react";
