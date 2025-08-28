@@ -24,6 +24,7 @@ export default defineConfig(({ command, mode }) => {
         '@styles': path.resolve(__dirname, './src/styles'),
         '@assets': path.resolve(__dirname, './src/assets'),
       },
+      dedupe: ['date-fns'],
     },
     build: {
       target: 'es2018',
