@@ -219,6 +219,33 @@ const values: Value[] = [
   }
 ];
 
+const aiCapabilities = [
+  {
+    icon: Brain,
+    title: 'AI Autonomous Research',
+    description: 'Revolutionary AI that discovers, analyzes, and synthesizes information across multiple sources autonomously.',
+    color: 'from-blue-500 to-purple-500'
+  },
+  {
+    icon: Truck,
+    title: 'AI Supply Chain Optimization',
+    description: 'Transform your supply chain with AI that predicts demand, optimizes inventory, and reduces costs.',
+    color: 'from-green-500 to-blue-500'
+  },
+  {
+    icon: PenTool,
+    title: 'AI Content Marketing Suite',
+    description: 'AI-powered content creation, optimization, and distribution for maximum engagement and ROI.',
+    color: 'from-purple-500 to-pink-500'
+  },
+  {
+    icon: TrendingUp,
+    title: 'AI Workflow Orchestrator',
+    description: 'Intelligent process automation that streamlines operations and boosts productivity.',
+    color: 'from-orange-500 to-red-500'
+  }
+];
+
 export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
