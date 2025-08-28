@@ -54,6 +54,66 @@ export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
+      title: 'AI Autonomous Research Assistant for Pharmaceutical Research',
+      company: 'PharmaResearch Labs',
+      industry: 'healthcare',
+      service: 'ai',
+      challenge: 'PharmaResearch needed to analyze thousands of research papers, clinical trials, and drug interactions to accelerate drug discovery.',
+      solution: 'Implemented our AI Autonomous Research Assistant that automatically discovers, analyzes, and synthesizes information across multiple research sources.',
+      results: [
+        '10x faster research discovery',
+        '95% accuracy in information synthesis',
+        'Real-time updates on new research',
+        '40% reduction in research time'
+      ],
+      duration: '4 months',
+      teamSize: '6 AI researchers',
+      technologies: ['AI Research', 'Natural Language Processing', 'Machine Learning', 'Research APIs', 'Cloud Computing'],
+      featured: true,
+      image: '/api/placeholder/600/400'
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization for Global Manufacturing',
+      company: 'Global Manufacturing Corp.',
+      industry: 'manufacturing',
+      service: 'ai',
+      challenge: 'Global Manufacturing needed to optimize their complex supply chain across 25 countries while reducing costs and improving efficiency.',
+      solution: 'Deployed our AI Supply Chain Optimization platform that predicts demand, optimizes inventory, and provides real-time visibility.',
+      results: [
+        '30% reduction in inventory costs',
+        '25% improvement in delivery times',
+        'Real-time supply chain visibility',
+        '$15M annual cost savings'
+      ],
+      duration: '8 months',
+      teamSize: '10 supply chain experts',
+      technologies: ['AI Supply Chain', 'Predictive Analytics', 'Machine Learning', 'IoT Sensors', 'Cloud Platform'],
+      featured: true,
+      image: '/api/placeholder/600/400'
+    },
+    {
+      id: 3,
+      title: 'AI Content Marketing Suite for E-commerce Brand',
+      company: 'ShopSmart Retail',
+      industry: 'retail',
+      service: 'ai',
+      challenge: 'ShopSmart needed to create personalized content at scale to engage customers and drive sales across multiple channels.',
+      solution: 'Implemented our AI Content Marketing Suite that automatically generates, optimizes, and distributes personalized content.',
+      results: [
+        '300% increase in content production',
+        '45% improvement in engagement rates',
+        'Personalized content for 1M+ customers',
+        '60% reduction in marketing costs'
+      ],
+      duration: '5 months',
+      teamSize: '8 marketing specialists',
+      technologies: ['AI Content Generation', 'Natural Language Processing', 'Marketing Automation', 'Personalization Engine', 'Analytics'],
+      featured: true,
+      image: '/api/placeholder/600/400'
+    },
+    {
+      id: 4,
       title: 'AI-Powered Healthcare Analytics Platform',
       company: 'MedTech Solutions Inc.',
       industry: 'healthcare',
@@ -69,11 +129,11 @@ export default function CaseStudies() {
       duration: '6 months',
       teamSize: '8 developers',
       technologies: ['AI/ML', 'Python', 'TensorFlow', 'AWS', 'Healthcare APIs'],
-      featured: true,
+      featured: false,
       image: '/api/placeholder/600/400'
     },
     {
-      id: 2,
+      id: 5,
       title: 'Quantum Computing for Financial Risk Modeling',
       company: 'Global Finance Corp.',
       industry: 'finance',
@@ -89,7 +149,7 @@ export default function CaseStudies() {
       duration: '12 months',
       teamSize: '12 researchers',
       technologies: ['Quantum Computing', 'Qiskit', 'Python', 'IBM Quantum', 'Risk Models'],
-      featured: true,
+      featured: false,
       image: '/api/placeholder/600/400'
     },
     {
