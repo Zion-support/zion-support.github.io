@@ -199,7 +199,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 Input.displayName = 'Input';
 
 export { Input };
-
 // Default export for backward compatibility
 export default Input;
 
