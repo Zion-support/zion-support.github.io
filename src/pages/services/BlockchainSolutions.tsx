@@ -1,19 +1,18 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Cpu, 
-  Brain, 
+  Link, 
+  Shield, 
   Zap, 
   CheckCircle,
   Star,
   TrendingUp,
   Award,
-  Globe,
   Lock,
   Database,
+  Cpu,
   Network,
-  BarChart3,
   FileText,
   MessageCircle,
   Phone,
@@ -33,114 +32,175 @@ import {
   ShieldCheck,
   Wifi,
   Smartphone,
-  Cloud,
   Activity,
   Clock,
   BarChart,
-  PieChart
+  PieChart,
+  GitBranch,
+  Code,
+  Package,
+  Play,
+  Settings,
+  Monitor,
+  Rocket,
+  Globe,
+  Factory,
+  Car,
+  Heart,
+  LineChart,
+  Scatter,
+  Layers,
+  Bitcoin,
+  Ethereum,
+  Smartphone as Mobile,
+  Cloud,
+  LockKeyhole,
+  FileCheck,
+  Scale,
+  Building2,
+  Car as Vehicle,
+  HeartPulse,
+  ShoppingCart,
+  CreditCard,
+  Truck,
+  Plane,
+  Ship
 } from 'lucide-react';
 
-export default function IoTEdgeComputing() {
+export default function BlockchainSolutions() {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Real-time data processing at the edge for instant decision making',
+      icon: Shield,
+      title: 'Smart Contracts',
+      description: 'Automated, self-executing contracts with blockchain security',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Wifi,
-      title: 'IoT Connectivity',
-      description: 'Seamless connection of devices across multiple protocols and networks',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Brain,
-      title: 'AI at the Edge',
-      description: 'Machine learning models running locally for privacy and speed',
+      icon: Database,
+      title: 'Distributed Ledger',
+      description: 'Immutable, transparent record-keeping across networks',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Zap,
-      title: 'Real-Time Analytics',
-      description: 'Instant insights and monitoring with minimal latency',
+      icon: Lock,
+      title: 'Cryptographic Security',
+      description: 'Advanced encryption and digital signature verification',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Network,
+      title: 'Decentralized Networks',
+      description: 'Peer-to-peer systems without central authority',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: ShieldCheck,
-      title: 'Edge Security',
-      description: 'Advanced security protocols for distributed IoT networks',
+      icon: Zap,
+      title: 'Instant Settlements',
+      description: 'Real-time transactions and immediate confirmations',
       color: 'from-red-500 to-pink-500'
     },
     {
-      icon: Cloud,
-      title: 'Hybrid Cloud',
-      description: 'Seamless integration between edge devices and cloud infrastructure',
+      icon: Globe,
+      title: 'Cross-Border Solutions',
+      description: 'Global transactions without traditional banking delays',
       color: 'from-indigo-500 to-blue-500'
     }
   ];
 
   const benefits = [
-    'Reduce latency by 90% with edge processing',
-    'Lower bandwidth costs by 70%',
-    'Improve data privacy and security',
-    'Enable real-time decision making',
-    'Scale IoT deployments efficiently',
-    'Reduce cloud dependency and costs'
+    'Eliminate intermediaries and reduce transaction costs by 90%',
+    'Ensure data integrity with immutable blockchain records',
+    'Enable 24/7 automated operations with smart contracts',
+    'Provide transparent, auditable transaction history',
+    'Reduce fraud and increase trust in digital transactions',
+    'Enable new business models and revenue streams'
   ];
 
   const useCases = [
     {
-      title: 'Smart Cities',
-      description: 'Intelligent urban infrastructure with real-time monitoring',
-      icon: Building
+      title: 'Financial Services',
+      description: 'Cryptocurrency, DeFi, and cross-border payments',
+      icon: CreditCard
     },
     {
-      title: 'Industrial IoT',
-      description: 'Predictive maintenance and process optimization',
-      icon: Factory
+      title: 'Supply Chain',
+      description: 'Transparent tracking and verification of goods',
+      icon: Truck
     },
     {
-      title: 'Connected Vehicles',
-      description: 'Autonomous driving and traffic management',
-      icon: Car
+      title: 'Healthcare',
+      description: 'Secure patient records and medical data sharing',
+      icon: HeartPulse
     },
     {
-      title: 'Healthcare IoT',
-      description: 'Remote patient monitoring and medical device management',
-      icon: Heart
+      title: 'Real Estate',
+      description: 'Property tokenization and smart contract automation',
+      icon: Building2
     }
   ];
 
-  const edgeCapabilities = [
+  const blockchainCapabilities = [
     {
-      name: 'Real-Time Processing',
-      description: 'Instant data analysis and decision making at the edge',
-      examples: ['Stream processing', 'Event detection', 'Instant alerts']
+      name: 'Smart Contract Development',
+      description: 'Custom smart contracts for business automation',
+      examples: ['Ethereum', 'Solana', 'Polygon', 'Custom chains']
     },
     {
-      name: 'Local AI Models',
-      description: 'Machine learning algorithms running on edge devices',
-      examples: ['Image recognition', 'Predictive analytics', 'Anomaly detection']
+      name: 'DeFi Solutions',
+      description: 'Decentralized finance applications and protocols',
+      examples: ['Lending platforms', 'DEX exchanges', 'Yield farming']
     },
     {
-      name: 'Data Filtering',
-      description: 'Intelligent data selection and preprocessing',
-      examples: ['Noise reduction', 'Data compression', 'Quality filtering']
+      name: 'NFT Development',
+      description: 'Non-fungible token creation and marketplace',
+      examples: ['Digital art', 'Gaming assets', 'Collectibles']
     },
     {
-      name: 'Edge Analytics',
-      description: 'Advanced analytics and insights generation',
-      examples: ['Trend analysis', 'Pattern recognition', 'Performance metrics']
+      name: 'Enterprise Blockchain',
+      description: 'Private and consortium blockchain networks',
+      examples: ['Hyperledger', 'Corda', 'Quorum', 'Custom solutions']
+    }
+  ];
+
+  const industries = [
+    {
+      name: 'Finance & Banking',
+      icon: CreditCard,
+      description: 'Cryptocurrency, payments, and DeFi solutions'
+    },
+    {
+      name: 'Supply Chain',
+      icon: Truck,
+      description: 'Transparent tracking and verification systems'
+    },
+    {
+      name: 'Healthcare',
+      icon: HeartPulse,
+      description: 'Secure medical records and data sharing'
+    },
+    {
+      name: 'Real Estate',
+      icon: Building2,
+      description: 'Property tokenization and smart contracts'
+    },
+    {
+      name: 'Gaming',
+      icon: Play,
+      description: 'NFT assets and blockchain gaming platforms'
+    },
+    {
+      name: 'Energy',
+      icon: Zap,
+      description: 'Renewable energy trading and carbon credits'
     }
   ];
 
   return (
     <>
       <SEO 
-        title="IoT Edge Computing - Zion Tech Group"
-        description="Revolutionary IoT edge computing platform with real-time processing, AI at the edge, and seamless device connectivity. Transform your IoT infrastructure with cutting-edge edge technology."
-        keywords="IoT edge computing, edge processing, IoT connectivity, edge AI, real-time analytics, smart devices, edge security"
+        title="Blockchain Solutions - Zion Tech Group"
+        description="Revolutionary blockchain solutions including smart contracts, DeFi, NFTs, and enterprise blockchain. Transform your business with decentralized technology."
+        keywords="blockchain, smart contracts, DeFi, NFTs, cryptocurrency, distributed ledger, decentralized finance, enterprise blockchain"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -153,29 +213,29 @@ export default function IoTEdgeComputing() {
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
-                <Cpu className="w-4 h-4" />
-                Edge Innovation
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
+                <Link className="w-4 h-4" />
+                Blockchain Innovation
               </div>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                IoT
-                <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-                  Edge Computing
+                Blockchain
+                <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Solutions
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your IoT infrastructure with our revolutionary edge computing platform. 
-                Real-time processing, AI at the edge, and seamless connectivity that brings 
-                intelligence closer to your data sources.
+                Transform your business with revolutionary blockchain technology. 
+                Smart contracts, DeFi solutions, NFTs, and enterprise blockchain 
+                that create trust, transparency, and new business opportunities.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-green-500/25"
                 >
                   Get Started
                 </motion.button>
@@ -192,8 +252,8 @@ export default function IoTEdgeComputing() {
           
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
           </div>
         </section>
 
@@ -208,11 +268,11 @@ export default function IoTEdgeComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Revolutionary Edge Computing Features
+                Revolutionary Blockchain Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our IoT edge platform combines cutting-edge technology with practical 
-                applications to deliver unprecedented performance and efficiency.
+                Our blockchain solutions combine cutting-edge technology with practical 
+                applications to deliver unprecedented security, transparency, and efficiency.
               </p>
             </motion.div>
             
@@ -224,13 +284,13 @@ export default function IoTEdgeComputing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 hover:bg-slate-800/70"
+                  className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/30 transition-all duration-300 hover:bg-slate-800/70"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
                     {feature.title}
                   </h3>
                   
@@ -254,13 +314,13 @@ export default function IoTEdgeComputing() {
                 viewport={{ once: true }}
               >
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                  Transform Your IoT Infrastructure
+                  Transform Your Business with Blockchain
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our IoT edge computing platform delivers measurable improvements in 
-                  performance, efficiency, and cost while enabling real-time decision 
-                  making and advanced analytics.
+                  Our blockchain solutions deliver measurable improvements in cost reduction, 
+                  operational efficiency, and trust while enabling new business models 
+                  and revenue streams.
                 </p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -287,32 +347,32 @@ export default function IoTEdgeComputing() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl p-8 border border-blue-500/30">
+                <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-3xl p-8 border border-green-500/30">
                   <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <TrendingUp className="w-10 h-10 text-white" />
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Edge Performance
+                      Blockchain Impact
                     </h3>
                     
                     <div className="grid grid-cols-2 gap-6">
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-blue-400 mb-2">90%</div>
-                        <div className="text-sm text-gray-400">Latency Reduction</div>
+                        <div className="text-3xl font-bold text-green-400 mb-2">90%</div>
+                        <div className="text-sm text-gray-400">Cost Reduction</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                        <div className="text-sm text-gray-400">Bandwidth Savings</div>
-                      </div>
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-indigo-400 mb-2">24/7</div>
-                        <div className="text-sm text-gray-400">Real-Time Processing</div>
+                        <div className="text-3xl font-bold text-blue-400 mb-2">24/7</div>
+                        <div className="text-sm text-gray-400">Automation</div>
                       </div>
                       <div className="text-center">
                         <div className="text-3xl font-bold text-purple-400 mb-2">100%</div>
-                        <div className="text-sm text-gray-400">Edge Security</div>
+                        <div className="text-sm text-gray-400">Transparency</div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-cyan-400 mb-2">0</div>
+                        <div className="text-sm text-gray-400">Fraud Risk</div>
                       </div>
                     </div>
                   </div>
@@ -322,7 +382,7 @@ export default function IoTEdgeComputing() {
           </div>
         </section>
 
-        {/* Edge Capabilities Section */}
+        {/* Blockchain Capabilities Section */}
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
@@ -333,25 +393,25 @@ export default function IoTEdgeComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Edge Computing Capabilities
+                Blockchain Capabilities
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our platform provides comprehensive edge computing capabilities that 
-                bring intelligence and processing power closer to your data sources.
+                Our platform provides comprehensive blockchain development and 
+                integration services for various use cases and industries.
               </p>
             </motion.div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {edgeCapabilities.map((capability, index) => (
+              {blockchainCapabilities.map((capability, index) => (
                 <motion.div
                   key={capability.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 group"
+                  className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/30 transition-all duration-300 group"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
                     {capability.name}
                   </h3>
                   
@@ -362,7 +422,7 @@ export default function IoTEdgeComputing() {
                   <div className="space-y-2">
                     {capability.examples.map((example, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
-                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                         {example}
                       </div>
                     ))}
@@ -373,7 +433,7 @@ export default function IoTEdgeComputing() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Industries Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div
@@ -384,11 +444,60 @@ export default function IoTEdgeComputing() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                IoT Edge Computing Use Cases
+                Industries We Transform
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our edge platform adapts to various industries and applications, 
-                providing tailored solutions for different IoT environments.
+                Our blockchain solutions are designed to revolutionize 
+                various industries with innovative applications and use cases.
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={industry.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/30 transition-all duration-300 group"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <industry.icon className="w-6 h-6 text-white" />
+                    </div>
+                    
+                    <div className="flex-1">
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
+                        {industry.name}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed">
+                        {industry.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Blockchain Use Cases
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Our blockchain platform adapts to various business needs and industries, 
+                providing tailored solutions for different requirements.
               </p>
             </motion.div>
             
@@ -400,15 +509,15 @@ export default function IoTEdgeComputing() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 group"
+                  className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/30 transition-all duration-300 group"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <useCase.icon className="w-6 h-6 text-white" />
                     </div>
                     
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
                         {useCase.title}
                       </h3>
                       <p className="text-gray-400 leading-relaxed">
@@ -423,7 +532,7 @@ export default function IoTEdgeComputing() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
+        <section className="py-20 bg-gradient-to-r from-green-500/10 to-blue-500/10">
           <div className="container-responsive">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -433,19 +542,19 @@ export default function IoTEdgeComputing() {
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your IoT Infrastructure?
+                Ready to Embrace Blockchain?
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join leading organizations that are already using our IoT edge computing 
-                platform to revolutionize their connected device infrastructure.
+                Join leading organizations that are already using our blockchain 
+                solutions to create trust, transparency, and new business opportunities.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-green-500/25"
                 >
                   Start Today
                 </motion.button>
