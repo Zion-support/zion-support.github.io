@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Star, Zap, Shield, Globe, Code, Users, TrendingUp, CheckCircle, ExternalLink, Mail, Phone, MapPin } from 'lucide-react';
+import { MICRO_SAAS_SERVICES, getMicroSaasServicesByCategory } from '@/data/microSaasServices';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+const categories = [
+    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"/>, count: MICRO_SAAS_SERVICES.length },
+    { id: 'AI Services', name: 'AI Services', icon: <Zap className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('AI Services').length },
+    { id: 'IT Services', name: 'IT Services', icon: <Code className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('IT Services').length },
+    { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5"/>, count: getMicroSaasServicesByCategory('Business Solutions').length }
+];
+const pricingModels = [
+    { id: 'all', name: 'All Pricing' },
+    { id: 'monthly', name: 'Monthly' },
+    { id: 'yearly', name: 'Yearly' },
+    { id: 'one-time', name: 'One-time' },
+    { id: 'usage-based', name: 'Usage-based' }
+];
+export default function MicroSaasServicesPage() {
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedPricing, setSelectedPricing] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
+    const [sortBy, setSortBy] = useState('rating');
+    useEffect(() => {
+        let filtered = MICRO_SAAS_SERVICES;
+        // Filter by category
+        if (selectedCategory !== 'all') {
+            filtered = filtered.filter(service => service.category === selectedCategory);
+        }
+        // Filter by pricing model
+        if (selectedPricing !== 'all') {
+            filtered = filtered.filter(service => service.pricingModel === selectedPricing);
+=======
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
@@ -623,6 +661,7 @@ export default function MicroSAASServicesPage() {
     React.useEffect(() => {
         if (selectedCategory === "All Services") {
             setFilteredServices(microSAASServices);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-505f
         }
         // Filter by search query
         if (searchQuery.trim()) {
