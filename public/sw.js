@@ -74,13 +74,10 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache or network
+// Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
-
-  // Debug logging
-  console.log('SW fetch:', request.method, url.href);
 
   // Skip non-GET requests
   if (request.method !== 'GET') {
@@ -97,155 +94,87 @@ self.addEventListener('fetch', (event) => {
         // For images, return a placeholder or skip caching
         if (request.destination === 'image') {
           console.log('Skipping failed external image:', url.href);
-          return new Response('', { status: 204 }); // No content
+          return new Response('', { status: 404 });
         }
-        return new Response('External resource not available', { 
-          status: 503,
-          headers: { 'Content-Type': 'text/plain' }
-        });
+        // For other external requests, return a basic error response
+        return new Response('External resource unavailable', { status: 503 });
       })
     );
     return;
   }
 
-  // Handle different types of requests
-  if (isStaticFile(request)) {
-    event.respondWith(serveStaticFile(request));
-  } else if (isAPIRequest(request)) {
-    event.respondWith(serveAPIRequest(request));
-  } else {
-    event.respondWith(servePage(request));
-  }
-});
+  // Handle internal requests
+  event.respondWith(
+    caches.match(request)
+      .then((response) => {
+        // Return cached response if available
+        if (response) {
+          return response;
+        }
 
-// Check if request is for a static file
-function isStaticFile(request) {
-  const url = new URL(request.url);
-  return (
-    url.pathname.startsWith('/js/') ||
-    url.pathname.startsWith('/css/') ||
-    url.pathname.startsWith('/images/') ||
-    url.pathname.startsWith('/assets/') ||
-    url.pathname.startsWith('/src/') ||
-    url.endsWith('.js') ||
-    url.endsWith('.ts') ||
-    url.endsWith('.tsx') ||
-    url.endsWith('.css') ||
-    url.pathname.endsWith('.png') ||
-    url.pathname.endsWith('.jpg') ||
-    url.pathname.endsWith('.jpeg') ||
-    url.pathname.endsWith('.gif') ||
-    url.pathname.endsWith('.svg') ||
-    url.pathname.endsWith('.woff') ||
-    url.pathname.endsWith('.woff2') ||
-    url.pathname.endsWith('.ico') ||
-    url.pathname.endsWith('.webp')
+        // Clone the request for potential caching
+        const fetchRequest = request.clone();
+
+        return fetch(fetchRequest)
+          .then((response) => {
+            // Check if we received a valid response
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            // Clone the response for caching
+            const responseToCache = response.clone();
+
+            // Cache the response in dynamic cache
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              })
+              .catch((error) => {
+                console.warn('Failed to cache response:', error);
+              });
+
+            return response;
+          })
+          .catch((error) => {
+            console.warn('Fetch failed, serving offline page:', error);
+            
+            // For navigation requests, serve offline page
+            if (request.mode === 'navigate') {
+              return caches.match('/offline.html');
+            }
+
+            // For other requests, return a basic offline response
+            return new Response('Offline - Resource unavailable', {
+              status: 503,
+              statusText: 'Service Unavailable',
+              headers: new Headers({
+                'Content-Type': 'text/plain'
+              })
+            });
+          });
+      })
   );
-}
-
-// Check if request is for an API
-function isAPIRequest(request) {
-  const url = new URL(request.url);
-  return url.pathname.startsWith('/api/') || url.pathname.startsWith('/services/');
-}
-
-// Serve static files from cache
-async function serveStaticFile(request) {
-  try {
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(STATIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Error serving static file:', error);
-    return new Response('Static file not available', { status: 404 });
-  }
-}
-
-// Serve API requests with network-first strategy
-async function serveAPIRequest(request) {
-  try {
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Network error for API request:', error);
-    
-    // Try to serve from cache as fallback
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    return new Response('API not available offline', { status: 503 });
-  }
-}
-
-// Serve pages with cache-first strategy
-async function servePage(request) {
-  try {
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Error serving page:', error);
-    
-    // Return offline page
-    if (request.destination === 'document') {
-      return caches.match('/offline.html');
-    }
-    
-    return new Response('Page not available offline', { status: 503 });
-  }
-}
+});
 
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
+    event.waitUntil(
+      // Handle background sync tasks
+      console.log('Background sync triggered:', event.tag)
+    );
   }
 });
-
-// Handle background sync
-async function doBackgroundSync() {
-  try {
-    // Process any pending offline actions
-    console.log('Processing background sync');
-    
-    // You can implement offline action processing here
-    // For example, syncing form submissions, API calls, etc.
-    
-  } catch (error) {
-    console.error('Background sync failed:', error);
-  }
-}
 
 // Push notification handling
 self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
     const options = {
-      body: data.body,
-      icon: '/images/zion-logo.png',
-      badge: '/images/zion-logo.png',
+      body: data.body || 'New notification from Zion Tech Group',
+      icon: '/favicon.ico',
+      badge: '/favicon.ico',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
@@ -254,24 +183,24 @@ self.addEventListener('push', (event) => {
       actions: [
         {
           action: 'explore',
-          title: 'Explore',
-          icon: '/images/zion-logo.png'
+          title: 'View',
+          icon: '/favicon.ico'
         },
         {
           action: 'close',
           title: 'Close',
-          icon: '/images/zion-logo.png'
+          icon: '/favicon.ico'
         }
       ]
     };
 
     event.waitUntil(
-      self.registration.showNotification(data.title, options)
+      self.registration.showNotification(data.title || 'Zion Tech Group', options)
     );
   }
 });
 
-// Handle notification clicks
+// Notification click handling
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
 
@@ -282,14 +211,10 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Handle message events from main thread
+// Message handling for communication with main thread
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
-  }
-  
-  if (event.data && event.data.type === 'CACHE_UPDATE') {
-    event.waitUntil(updateCache());
   }
   
   if (event.data && event.data.type === 'GET_VERSION') {
@@ -297,51 +222,12 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Check for updates every hour
-setInterval(async () => {
-  try {
-    const registration = await self.registration;
-    if (registration) {
-      await registration.update();
-    }
-  } catch (error) {
-    console.log('Service worker update check failed:', error);
-  }
-}, 60 * 60 * 1000); // Check every hour
+// Error handling
+self.addEventListener('error', (event) => {
+  console.error('Service Worker error:', event.error);
+});
 
-// Update cache with new files
-async function updateCache() {
-  try {
-    const cache = await caches.open(STATIC_CACHE);
-    const results = await Promise.allSettled(
-      STATIC_FILES.map(url => 
-        cache.add(url).catch(error => {
-          console.warn(`Failed to update cache for ${url}:`, error);
-          return null;
-        })
-      )
-    );
-    const successful = results.filter(r => r.status === 'fulfilled').length;
-    const failed = results.filter(r => r.status === 'rejected').length;
-    console.log(`Cache updated: ${successful} successful, ${failed} failed`);
-  } catch (error) {
-    console.error('Cache update failed:', error);
-  }
-}
-
-// Periodic cache cleanup
-setInterval(async () => {
-  try {
-    const cache = await caches.open(DYNAMIC_CACHE);
-    const keys = await cache.keys();
-    
-    // Remove old entries (keep last 100)
-    if (keys.length > 100) {
-      const oldKeys = keys.slice(0, keys.length - 100);
-      await Promise.all(oldKeys.map(key => cache.delete(key)));
-      console.log('Cleaned up old cache entries');
-    }
-  } catch (error) {
-    console.error('Cache cleanup failed:', error);
-  }
-}, 24 * 60 * 60 * 1000); // Run once per day
+// Unhandled rejection handling
+self.addEventListener('unhandledrejection', (event) => {
+  console.error('Service Worker unhandled rejection:', event.reason);
+});

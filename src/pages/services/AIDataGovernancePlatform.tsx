@@ -1,103 +1,103 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Truck, Globe, TrendingUp, CheckCircle, Clock, Sparkles, BarChart3, Target, Zap, Shield, Users, ArrowRight, Package, Route, Factory } from 'lucide-react';
+import { Shield, Database, Lock, Eye, CheckCircle, Clock, TrendingUp, Sparkles, Users, BarChart3, Globe, ArrowRight, FileText, Search, AlertTriangle } from 'lucide-react';
 
-const AISupplyChainOptimization: React.FC = () => {
+const AIDataGovernancePlatform: React.FC = () => {
   const features = [
     {
-      icon: Truck,
-      title: 'Intelligent Route Optimization',
-      description: 'AI optimizes delivery routes for maximum efficiency and cost savings'
+      icon: Shield,
+      title: 'Intelligent Data Classification',
+      description: 'AI automatically identifies and classifies sensitive data across your organization'
     },
     {
-      icon: Globe,
-      title: 'Global Supply Chain Visibility',
-      description: 'Real-time tracking across all suppliers and distribution channels'
+      icon: Lock,
+      title: 'Advanced Access Control',
+      description: 'Dynamic permission management with AI-powered risk assessment'
     },
     {
-      icon: TrendingUp,
-      title: 'Predictive Demand Forecasting',
-      description: 'AI predicts demand patterns to optimize inventory levels'
+      icon: Eye,
+      title: 'Real-time Monitoring',
+      description: 'Continuous surveillance of data access and usage patterns'
     },
     {
-      icon: Target,
-      title: 'Smart Inventory Management',
-      description: 'Automated inventory optimization and reorder point management'
+      icon: Database,
+      title: 'Data Lineage Tracking',
+      description: 'Complete audit trail of data movement and transformations'
     }
   ];
 
-  const optimizationAreas = [
+  const complianceFrameworks = [
     {
-      title: 'Procurement Optimization',
-      description: 'AI-powered supplier selection and negotiation strategies',
-      icon: '🛒'
+      title: 'GDPR Compliance',
+      description: 'Automated data subject rights management and consent tracking',
+      icon: '🇪🇺'
     },
     {
-      title: 'Warehouse Management',
-      description: 'Intelligent storage optimization and picking strategies',
-      icon: '🏭'
+      title: 'CCPA Compliance',
+      description: 'California Consumer Privacy Act automation and reporting',
+      icon: '🇺🇸'
     },
     {
-      title: 'Transportation Planning',
-      description: 'Multi-modal route optimization and carrier selection',
-      icon: '🚚'
+      title: 'SOC 2 Type II',
+      description: 'Security controls and compliance monitoring automation',
+      icon: '🔒'
     },
     {
-      title: 'Risk Management',
-      description: 'Predictive risk assessment and mitigation strategies',
-      icon: '⚠️'
+      title: 'HIPAA Compliance',
+      description: 'Healthcare data protection and privacy controls',
+      icon: '🏥'
     }
   ];
 
   const benefits = [
-    'Reduce supply chain costs by 25-40%',
-    'Improve delivery performance by 60%',
-    'Reduce inventory carrying costs by 30%',
-    'Increase supplier performance by 45%',
-    'Minimize supply chain disruptions',
-    'Optimize working capital utilization'
+    'Reduce compliance costs by 70%',
+    'Automate 90% of data governance tasks',
+    'Real-time compliance monitoring and alerts',
+    'Eliminate manual data classification errors',
+    'Improve data security posture by 85%',
+    'Streamline audit preparation and reporting'
   ];
 
   const pricing = [
     {
       plan: 'Starter',
-      price: 599,
+      price: 399,
       period: 'month',
       features: [
-        'Up to 5 locations',
-        'Basic route optimization',
+        'Up to 1TB data management',
+        'Basic AI classification',
+        'GDPR & CCPA compliance',
         'Standard reporting',
         'Email support',
-        'Basic analytics',
-        'Mobile app access'
+        'Basic audit trails'
       ]
     },
     {
       plan: 'Professional',
-      price: 1199,
+      price: 799,
       period: 'month',
       features: [
-        'Up to 25 locations',
-        'Advanced AI optimization',
-        'Custom dashboards',
-        'Priority support',
+        'Up to 10TB data management',
+        'Advanced AI classification',
+        'Full compliance framework support',
         'Advanced analytics',
-        'API access',
-        'Multi-warehouse support'
+        'Priority support',
+        'Custom workflows',
+        'API access'
       ]
     },
     {
       plan: 'Enterprise',
-      price: 2499,
+      price: 1599,
       period: 'month',
       features: [
-        'Unlimited locations',
+        'Unlimited data management',
         'Custom AI models',
         'White-label solutions',
         'Dedicated support team',
         'Custom integrations',
-        'Advanced security',
+        'Advanced security features',
         'On-premise deployment'
       ]
     }
@@ -106,8 +106,8 @@ const AISupplyChainOptimization: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization - Zion Tech Group"
-        description="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and gain real-time visibility across your entire supply network."
+        title="AI Data Governance Platform - Zion Tech Group"
+        description="Transform your data governance with AI-powered compliance automation. Ensure data privacy, security, and regulatory compliance across your organization."
       />
       
       {/* Hero Section */}
@@ -119,28 +119,28 @@ const AISupplyChainOptimization: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
-              <Truck className="w-5 h-5 text-orange-400 mr-2" />
-              <span className="text-orange-300 font-medium">AI Supply Chain Optimization</span>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
+              <Shield className="w-5 h-5 text-green-400 mr-2" />
+              <span className="text-green-300 font-medium">AI Data Governance Platform</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-400">
-                Optimization
+              AI Data Governance
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400">
+                Platform
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, 
-              and gain real-time visibility across your entire supply network.
+              Transform your data governance with AI-powered compliance automation. 
+              Ensure data privacy, security, and regulatory compliance across your entire organization.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
-                Start Optimizing
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
+                Start Governing
               </button>
-              <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
                 Schedule Demo
               </button>
             </div>
@@ -158,10 +158,10 @@ const AISupplyChainOptimization: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Optimization Features
+              Intelligent Governance Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powered by advanced AI to transform your supply chain operations
+              Powered by advanced AI to ensure comprehensive data protection and compliance
             </p>
           </motion.div>
 
@@ -172,9 +172,9 @@ const AISupplyChainOptimization: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 text-center"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -185,7 +185,7 @@ const AISupplyChainOptimization: React.FC = () => {
         </div>
       </section>
 
-      {/* Optimization Areas Section */}
+      {/* Compliance Frameworks Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -195,27 +195,27 @@ const AISupplyChainOptimization: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Optimization Coverage
+              Comprehensive Compliance Support
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Optimize every aspect of your supply chain operations
+              Automated compliance with major regulatory frameworks worldwide
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {optimizationAreas.map((area, index) => (
+            {complianceFrameworks.map((framework, index) => (
               <motion.div
-                key={area.title}
+                key={framework.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{area.icon}</div>
+                  <div className="text-4xl">{framework.icon}</div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
-                    <p className="text-gray-300">{area.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{framework.title}</h3>
+                    <p className="text-gray-300">{framework.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -234,10 +234,10 @@ const AISupplyChainOptimization: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI Supply Chain Optimization?
+              Why Choose AI Data Governance Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your supply chain with intelligent optimization
+              Transform your data governance with intelligent automation
             </p>
           </motion.div>
 
@@ -263,15 +263,15 @@ const AISupplyChainOptimization: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8"
+              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-8"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to transform your supply chain? Our AI optimization experts can help you 
-                set up intelligent supply chain management and optimization.
+                Ready to transform your data governance? Our AI compliance experts can help you 
+                set up automated governance and ensure regulatory compliance.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
-                Start Supply Chain Optimization
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
+                Start Data Governance
               </button>
             </motion.div>
           </div>
@@ -291,7 +291,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your supply chain needs
+              Choose the plan that fits your compliance needs
             </p>
           </motion.div>
 
@@ -304,7 +304,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
                   plan.plan === 'Professional' 
-                    ? 'border-orange-400/50 bg-gradient-to-br from-orange-500/10 to-red-500/10' 
+                    ? 'border-green-400/50 bg-gradient-to-br from-green-500/10 to-emerald-500/10' 
                     : 'border-slate-700/50'
                 }`}
               >
@@ -325,7 +325,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 </ul>
                 <button className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 ${
                   plan.plan === 'Professional'
-                    ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-400 hover:to-red-500 shadow-lg shadow-orange-500/20'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-400 hover:to-emerald-500 shadow-lg shadow-green-500/20'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   Get Started
@@ -345,16 +345,16 @@ const AISupplyChainOptimization: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Optimize Your Supply Chain?
+              Ready to Govern Your Data?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your supply chain with AI-powered optimization
+              Transform your data governance with AI-powered compliance automation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
                 Contact Sales
               </button>
             </div>
@@ -384,7 +384,7 @@ const AISupplyChainOptimization: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-                <a href="https://ziontechgroup.com" className="text-orange-400 hover:text-orange-300">
+                <a href="https://ziontechgroup.com" className="text-green-400 hover:text-green-300">
                   ziontechgroup.com
                 </a>
               </div>
@@ -396,4 +396,4 @@ const AISupplyChainOptimization: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimization;
+export default AIDataGovernancePlatform;

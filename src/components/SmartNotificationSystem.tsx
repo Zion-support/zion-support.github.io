@@ -1,293 +1,425 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bell, X, CheckCircle, AlertTriangle, Info, Zap, Star, TrendingUp } from 'lucide-react';
+import { 
+  Bell, 
+  X, 
+  CheckCircle, 
+  AlertCircle, 
+  Info, 
+  XCircle,
+  Settings,
+  Volume2,
+  VolumeX,
+  Clock,
+  Star,
+  MessageSquare,
+  Zap,
+  TrendingUp,
+  Award
+} from 'lucide-react';
 
 interface Notification {
   id: string;
-  type: 'success' | 'warning' | 'info' | 'performance';
+  type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
   title: string;
   message: string;
-  icon: React.ComponentType<any>;
-  color: string;
-  bgColor: string;
-  priority: 'low' | 'medium' | 'high';
   timestamp: Date;
   read: boolean;
   action?: {
     label: string;
     onClick: () => void;
   };
+  priority: 'low' | 'medium' | 'high';
+  category: string;
+  expiresAt?: Date;
 }
 
-interface NotificationSettings {
-  enabled: boolean;
-  showPerformance: boolean;
-  showTips: boolean;
-  showUpdates: boolean;
-  soundEnabled: boolean;
-  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+interface Props {
+  enabled?: boolean;
 }
 
-export const SmartNotificationSystem: React.FC<{ enabled?: boolean }> = ({ enabled = true }) => {
+export function SmartNotificationSystem({ enabled = true }: Props) {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [isVisible, setIsVisible] = useState(false);
-  const [showNotifications, setShowNotifications] = useState(false);
-  const [settings, setSettings] = useState<NotificationSettings>({
-    enabled: true,
-    showPerformance: true,
-    showTips: true,
-    showUpdates: true,
-    soundEnabled: false,
-    position: 'top-right'
-  });
+  const [isMuted, setIsMuted] = useState(false);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [showSettings, setShowSettings] = useState(false);
 
-  // Generate smart notifications based on user behavior and system status
-  const generateSmartNotifications = useCallback(() => {
-    if (!enabled || !settings.enabled) return;
-
-    const newNotifications: Notification[] = [];
-
-    // Performance notifications
-    if (settings.showPerformance) {
-      const performanceScore = Math.floor(Math.random() * 20) + 80;
-      if (performanceScore > 90) {
-        newNotifications.push({
-          id: `perf-${Date.now()}`,
-          type: 'performance',
-          title: 'Excellent Performance!',
-          message: `Your app is running at ${performanceScore}% efficiency. Great job!`,
-          icon: Zap,
-          color: 'text-green-400',
-          bgColor: 'bg-green-500/20',
-          priority: 'medium',
-          timestamp: new Date(),
-          read: false
-        });
-      } else if (performanceScore < 80) {
-        newNotifications.push({
-          id: `perf-${Date.now()}`,
-          type: 'warning',
-          title: 'Performance Alert',
-          message: `Performance has dropped to ${performanceScore}%. Consider optimization.`,
-          icon: AlertTriangle,
-          color: 'text-orange-400',
-          bgColor: 'bg-orange-500/20',
-          priority: 'high',
-          timestamp: new Date(),
-          read: false,
-          action: {
-            label: 'Optimize Now',
-            onClick: () => {
-              // Trigger performance optimization
-              console.log('Performance optimization triggered');
-            }
-          }
-        });
-      }
-    }
-
-    // Tips and suggestions
-    if (settings.showTips && Math.random() > 0.7) {
-      const tips = [
-        {
-          title: 'Pro Tip',
-          message: 'Use keyboard shortcuts (Ctrl+K) for faster navigation',
-          icon: Star
-        },
-        {
-          title: 'Did You Know?',
-          message: 'You can customize your dashboard layout by dragging and dropping widgets',
-          icon: Info
-        },
-        {
-          title: 'New Feature',
-          message: 'Try our new AI-powered search for better results',
-          icon: TrendingUp
+  // Generate sample notifications
+  const generateSampleNotifications = useCallback(() => {
+    const sampleNotifications: Notification[] = [
+      {
+        id: '1',
+        type: 'success',
+        title: 'Welcome to Zion Tech Group!',
+        message: 'Your account has been successfully created. Explore our AI-powered solutions.',
+        timestamp: new Date(Date.now() - 1000 * 60 * 5), // 5 minutes ago
+        read: false,
+        priority: 'high',
+        category: 'onboarding',
+        action: {
+          label: 'Get Started',
+          onClick: () => console.log('Get Started clicked')
         }
-      ];
-
-      const randomTip = tips[Math.floor(Math.random() * tips.length)];
-      newNotifications.push({
-        id: `tip-${Date.now()}`,
+      },
+      {
+        id: '2',
+        type: 'achievement',
+        title: 'Performance Milestone Reached!',
+        message: 'Your website performance score has improved to 95%. Great job!',
+        timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
+        read: false,
+        priority: 'medium',
+        category: 'performance',
+        action: {
+          label: 'View Details',
+          onClick: () => console.log('View Details clicked')
+        }
+      },
+      {
+        id: '3',
         type: 'info',
-        title: randomTip.title,
-        message: randomTip.message,
-        icon: randomTip.icon,
-        color: 'text-blue-400',
-        bgColor: 'bg-blue-500/20',
+        title: 'New Feature Available',
+        message: 'Try our new AI-powered content generator. Create engaging content in seconds.',
+        timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
+        read: true,
         priority: 'low',
-        timestamp: new Date(),
-        read: false
-      });
-    }
+        category: 'features'
+      },
+      {
+        id: '4',
+        type: 'warning',
+        title: 'Security Update Required',
+        message: 'Please update your password to maintain account security.',
+        timestamp: new Date(Date.now() - 1000 * 60 * 60), // 1 hour ago
+        read: false,
+        priority: 'high',
+        category: 'security',
+        action: {
+          label: 'Update Now',
+          onClick: () => console.log('Update Now clicked')
+        }
+      }
+    ];
 
-    // Add new notifications
-    setNotifications(prev => [...newNotifications, ...prev].slice(0, 10));
-  }, [enabled, settings]);
+    setNotifications(sampleNotifications);
+    setUnreadCount(sampleNotifications.filter(n => !n.read).length);
+  }, []);
+
+  // Initialize with sample notifications
+  useEffect(() => {
+    if (enabled) {
+      generateSampleNotifications();
+    }
+  }, [enabled, generateSampleNotifications]);
+
+  // Auto-expire notifications
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setNotifications(prev => {
+        const now = new Date();
+        const filtered = prev.filter(notification => {
+          if (notification.expiresAt && notification.expiresAt < now) {
+            return false;
+          }
+          return true;
+        });
+        
+        if (filtered.length !== prev.length) {
+          setUnreadCount(filtered.filter(n => !n.read).length);
+        }
+        
+        return filtered;
+      });
+    }, 60000); // Check every minute
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Mark notification as read
   const markAsRead = useCallback((id: string) => {
-    setNotifications(prev => 
-      prev.map(notification => 
-        notification.id === id 
-          ? { ...notification, read: true }
-          : notification
-      )
-    );
+    setNotifications(prev => {
+      const updated = prev.map(n => 
+        n.id === id ? { ...n, read: true } : n
+      );
+      setUnreadCount(updated.filter(n => !n.read).length);
+      return updated;
+    });
+  }, []);
+
+  // Mark all as read
+  const markAllAsRead = useCallback(() => {
+    setNotifications(prev => {
+      const updated = prev.map(n => ({ ...n, read: true }));
+      setUnreadCount(0);
+      return updated;
+    });
   }, []);
 
   // Remove notification
   const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
+    setNotifications(prev => {
+      const filtered = prev.filter(n => n.id !== id);
+      setUnreadCount(filtered.filter(n => !n.read).length);
+      return filtered;
+    });
   }, []);
 
   // Clear all notifications
-  const clearAll = useCallback(() => {
+  const clearAllNotifications = useCallback(() => {
     setNotifications([]);
+    setUnreadCount(0);
   }, []);
 
-  // Get unread count
-  const unreadCount = notifications.filter(n => !n.read).length;
+  // Toggle mute
+  const toggleMute = useCallback(() => {
+    setIsMuted(!isMuted);
+  }, [isMuted]);
 
-  useEffect(() => {
-    if (!enabled) return;
-
-    // Show notification bell after a delay
-    const showTimer = setTimeout(() => setIsVisible(true), 3000);
-
-    // Generate notifications periodically
-    const notificationInterval = setInterval(generateSmartNotifications, 15000);
-
-    // Generate initial notifications
-    setTimeout(generateSmartNotifications, 5000);
-
-    return () => {
-      clearTimeout(showTimer);
-      clearInterval(notificationInterval);
-    };
-  }, [enabled, generateSmartNotifications]);
-
-  if (!enabled || !isVisible) return null;
-
-  const positionClasses = {
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4',
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4'
+  // Get notification icon
+  const getNotificationIcon = (type: Notification['type']) => {
+    switch (type) {
+      case 'success':
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
+      case 'error':
+        return <XCircle className="w-5 h-5 text-red-500" />;
+      case 'warning':
+        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
+      case 'info':
+        return <Info className="w-5 h-5 text-blue-500" />;
+      case 'achievement':
+        return <Award className="w-5 h-5 text-purple-500" />;
+      default:
+        return <Info className="w-5 h-5 text-gray-500" />;
+    }
   };
 
-  return (
-    <div className={`fixed ${positionClasses[settings.position]} z-50`}>
-      {/* Notification Bell */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="relative"
+  // Get priority color
+  const getPriorityColor = (priority: Notification['priority']) => {
+    switch (priority) {
+      case 'high':
+        return 'border-l-red-500';
+      case 'medium':
+        return 'border-l-yellow-500';
+      case 'low':
+        return 'border-l-blue-500';
+      default:
+        return 'border-l-gray-500';
+    }
+  };
+
+  // Format timestamp
+  const formatTimestamp = (timestamp: Date) => {
+    const now = new Date();
+    const diff = now.getTime() - timestamp.getTime();
+    const minutes = Math.floor(diff / (1000 * 60));
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    if (minutes < 1) return 'Just now';
+    if (minutes < 60) return `${minutes}m ago`;
+    if (hours < 24) return `${hours}h ago`;
+    return `${days}d ago`;
+  };
+
+  if (!enabled) return null;
+
+  if (!isVisible) {
+    return (
+      <motion.button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-56 right-4 z-50 p-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 relative"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Notifications"
+        aria-label="Open notifications"
       >
-        <button
-          onClick={() => setShowNotifications(!showNotifications)}
-          className="relative w-12 h-12 bg-zion-slate-dark/95 backdrop-blur-md border border-zion-slate-light/30 rounded-full shadow-2xl flex items-center justify-center text-white hover:bg-zion-slate/80 transition-all duration-300 hover:scale-110"
-        >
-          <Bell className="w-6 h-6" />
-          {unreadCount > 0 && (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-xs font-bold"
-            >
-              {unreadCount > 9 ? '9+' : unreadCount}
-            </motion.div>
-          )}
-        </button>
-      </motion.div>
-
-      {/* Notifications Panel */}
-      <AnimatePresence>
-        {showNotifications && (
+        <Bell className="w-6 h-6 text-white" />
+        {unreadCount > 0 && (
           <motion.div
-            initial={{ opacity: 0, y: -20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -20, scale: 0.95 }}
-            className="absolute top-16 right-0 w-80 bg-zion-slate-dark/95 backdrop-blur-md border border-zion-slate-light/30 rounded-2xl shadow-2xl overflow-hidden"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-zion-slate-light/20">
-              <h3 className="text-white font-semibold">Notifications</h3>
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={clearAll}
-                  className="text-xs text-zion-slate-light hover:text-white transition-colors"
-                >
-                  Clear All
-                </button>
-                <button
-                  onClick={() => setShowNotifications(false)}
-                  className="text-zion-slate-light hover:text-white transition-colors"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
-            {/* Notifications List */}
-            <div className="max-h-96 overflow-y-auto">
-              {notifications.length === 0 ? (
-                <div className="p-6 text-center text-zion-slate-light">
-                  <Bell className="w-8 h-8 mx-auto mb-2 opacity-50" />
-                  <p>No notifications yet</p>
-                </div>
-              ) : (
-                <div className="p-2 space-y-2">
-                  {notifications.map((notification) => (
-                    <motion.div
-                      key={notification.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      className={`p-3 rounded-lg border border-zion-slate-light/20 ${notification.bgColor} ${
-                        notification.read ? 'opacity-60' : ''
-                      }`}
-                    >
-                      <div className="flex items-start space-x-3">
-                        <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${notification.bgColor}`}>
-                          <notification.icon className={`w-4 h-4 ${notification.color}`} />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between">
-                            <h4 className="text-sm font-semibold text-white">{notification.title}</h4>
-                            <button
-                              onClick={() => removeNotification(notification.id)}
-                              className="text-zion-slate-light hover:text-white transition-colors"
-                            >
-                              <X className="w-3 h-3" />
-                            </button>
-                          </div>
-                          <p className="text-xs text-zion-slate-light mt-1">{notification.message}</p>
-                          <div className="flex items-center justify-between mt-2">
-                            <span className="text-xs text-zion-slate-light">
-                              {notification.timestamp.toLocaleTimeString()}
-                            </span>
-                            {notification.action && (
-                              <button
-                                onClick={() => {
-                                  notification.action?.onClick();
-                                  markAsRead(notification.id);
-                                }}
-                                className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
-                              >
-                                {notification.action.label}
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              )}
-            </div>
+            {unreadCount > 9 ? '9+' : unreadCount}
           </motion.div>
         )}
-      </AnimatePresence>
-    </div>
+      </motion.button>
+    );
+  }
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, x: 300 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 300 }}
+        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 max-h-[90vh] overflow-hidden"
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+          <div className="flex items-center gap-2">
+            <Bell className="w-5 h-5 text-pink-500" />
+            <h3 className="text-lg font-semibold text-gray-800">Notifications</h3>
+            {unreadCount > 0 && (
+              <span className="px-2 py-1 bg-pink-100 text-pink-600 text-xs rounded-full font-medium">
+                {unreadCount} new
+              </span>
+            )}
+          </div>
+          
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleMute}
+              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              title={isMuted ? 'Unmute notifications' : 'Mute notifications'}
+            >
+              {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+            </button>
+            
+            <button
+              onClick={() => setShowSettings(!showSettings)}
+              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              title="Notification settings"
+            >
+              <Settings className="w-4 h-4" />
+            </button>
+            
+            <button
+              onClick={() => setIsVisible(false)}
+              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              aria-label="Close notifications"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* Settings Panel */}
+        <AnimatePresence>
+          {showSettings && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="border-b border-gray-200 p-4 bg-gray-50"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-700">Mark all as read</span>
+                  <button
+                    onClick={markAllAsRead}
+                    className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors"
+                  >
+                    Mark All
+                  </button>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-700">Clear all notifications</span>
+                  <button
+                    onClick={clearAllNotifications}
+                    className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors"
+                  >
+                    Clear All
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Notifications List */}
+        <div className="max-h-96 overflow-y-auto">
+          {notifications.length === 0 ? (
+            <div className="p-8 text-center">
+              <Bell className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+              <p className="text-gray-500">No notifications yet</p>
+              <p className="text-sm text-gray-400">We'll notify you when something important happens</p>
+            </div>
+          ) : (
+            <div className="divide-y divide-gray-100">
+              {notifications.map((notification) => (
+                <motion.div
+                  key={notification.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  className={`p-4 hover:bg-gray-50 transition-colors cursor-pointer border-l-4 ${getPriorityColor(notification.priority)} ${
+                    !notification.read ? 'bg-blue-50/50' : ''
+                  }`}
+                  onClick={() => markAsRead(notification.id)}
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 mt-0.5">
+                      {getNotificationIcon(notification.type)}
+                    </div>
+                    
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <p className={`text-sm font-medium ${!notification.read ? 'text-gray-900' : 'text-gray-700'}`}>
+                            {notification.title}
+                          </p>
+                          <p className="text-sm text-gray-600 mt-1">
+                            {notification.message}
+                          </p>
+                          
+                          {notification.action && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                notification.action!.onClick();
+                              }}
+                              className="mt-2 text-xs text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                            >
+                              {notification.action.label} →
+                            </button>
+                          )}
+                        </div>
+                        
+                        <div className="flex items-center gap-2 ml-3">
+                          <span className="text-xs text-gray-400">
+                            {formatTimestamp(notification.timestamp)}
+                          </span>
+                          
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              removeNotification(notification.id);
+                            }}
+                            className="p-1 text-gray-400 hover:text-red-500 transition-colors"
+                            title="Remove notification"
+                          >
+                            <X className="w-3 h-3" />
+                          </button>
+                        </div>
+                      </div>
+                      
+                      {/* Category badge */}
+                      <div className="mt-2">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                          {notification.category}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        {notifications.length > 0 && (
+          <div className="p-3 border-t border-gray-200 bg-gray-50">
+            <div className="flex items-center justify-between text-xs text-gray-500">
+              <span>{notifications.length} notification{notifications.length !== 1 ? 's' : ''}</span>
+              <span>{unreadCount} unread</span>
+            </div>
+          </div>
+        )}
+      </motion.div>
+    </AnimatePresence>
   );
-};
+}

@@ -1,72 +1,72 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Truck, Globe, TrendingUp, CheckCircle, Clock, Sparkles, BarChart3, Target, Zap, Shield, Users, ArrowRight, Package, Route, Factory } from 'lucide-react';
+import { Shield, TrendingUp, AlertTriangle, CheckCircle, Clock, Sparkles, BarChart3, Target, Zap, DollarSign, Users, ArrowRight, Calculator, Graph, Lock } from 'lucide-react';
 
-const AISupplyChainOptimization: React.FC = () => {
+const AIFinancialRiskManagement: React.FC = () => {
   const features = [
     {
-      icon: Truck,
-      title: 'Intelligent Route Optimization',
-      description: 'AI optimizes delivery routes for maximum efficiency and cost savings'
-    },
-    {
-      icon: Globe,
-      title: 'Global Supply Chain Visibility',
-      description: 'Real-time tracking across all suppliers and distribution channels'
+      icon: Shield,
+      title: 'Real-time Risk Monitoring',
+      description: 'AI continuously monitors financial risks across your portfolio'
     },
     {
       icon: TrendingUp,
-      title: 'Predictive Demand Forecasting',
-      description: 'AI predicts demand patterns to optimize inventory levels'
+      title: 'Predictive Risk Analytics',
+      description: 'Forecast potential risks before they materialize'
+    },
+    {
+      icon: AlertTriangle,
+      title: 'Intelligent Risk Alerts',
+      description: 'Smart notifications for critical risk threshold breaches'
     },
     {
       icon: Target,
-      title: 'Smart Inventory Management',
-      description: 'Automated inventory optimization and reorder point management'
+      title: 'Portfolio Optimization',
+      description: 'AI-driven portfolio rebalancing for risk-adjusted returns'
     }
   ];
 
-  const optimizationAreas = [
+  const riskTypes = [
     {
-      title: 'Procurement Optimization',
-      description: 'AI-powered supplier selection and negotiation strategies',
-      icon: '🛒'
+      title: 'Market Risk',
+      description: 'Monitor volatility, correlation, and market factor exposures',
+      icon: '📈'
     },
     {
-      title: 'Warehouse Management',
-      description: 'Intelligent storage optimization and picking strategies',
-      icon: '🏭'
+      title: 'Credit Risk',
+      description: 'Assess counterparty default probabilities and credit spreads',
+      icon: '💳'
     },
     {
-      title: 'Transportation Planning',
-      description: 'Multi-modal route optimization and carrier selection',
-      icon: '🚚'
+      title: 'Liquidity Risk',
+      description: 'Track funding gaps and market liquidity constraints',
+      icon: '💧'
     },
     {
-      title: 'Risk Management',
-      description: 'Predictive risk assessment and mitigation strategies',
-      icon: '⚠️'
+      title: 'Operational Risk',
+      description: 'Identify process failures and control weaknesses',
+      icon: '⚙️'
     }
   ];
 
   const benefits = [
-    'Reduce supply chain costs by 25-40%',
-    'Improve delivery performance by 60%',
-    'Reduce inventory carrying costs by 30%',
-    'Increase supplier performance by 45%',
-    'Minimize supply chain disruptions',
-    'Optimize working capital utilization'
+    'Reduce portfolio volatility by 30-40%',
+    'Improve risk-adjusted returns by 25%',
+    'Early warning system for market disruptions',
+    'Automated compliance monitoring and reporting',
+    'Real-time portfolio stress testing',
+    'Enhanced decision-making with AI insights'
   ];
 
   const pricing = [
     {
       plan: 'Starter',
-      price: 599,
+      price: 799,
       period: 'month',
       features: [
-        'Up to 5 locations',
-        'Basic route optimization',
+        'Up to $10M portfolio value',
+        'Basic risk monitoring',
         'Standard reporting',
         'Email support',
         'Basic analytics',
@@ -75,25 +75,25 @@ const AISupplyChainOptimization: React.FC = () => {
     },
     {
       plan: 'Professional',
-      price: 1199,
+      price: 1599,
       period: 'month',
       features: [
-        'Up to 25 locations',
-        'Advanced AI optimization',
+        'Up to $100M portfolio value',
+        'Advanced AI risk analytics',
         'Custom dashboards',
         'Priority support',
         'Advanced analytics',
         'API access',
-        'Multi-warehouse support'
+        'Multi-asset support'
       ]
     },
     {
       plan: 'Enterprise',
-      price: 2499,
+      price: 2999,
       period: 'month',
       features: [
-        'Unlimited locations',
-        'Custom AI models',
+        'Unlimited portfolio value',
+        'Custom AI risk models',
         'White-label solutions',
         'Dedicated support team',
         'Custom integrations',
@@ -106,8 +106,8 @@ const AISupplyChainOptimization: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization - Zion Tech Group"
-        description="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and gain real-time visibility across your entire supply network."
+        title="AI Financial Risk Management - Zion Tech Group"
+        description="Transform financial risk management with AI-powered analytics. Monitor risks in real-time, predict market disruptions, and optimize portfolio performance."
       />
       
       {/* Hero Section */}
@@ -119,28 +119,28 @@ const AISupplyChainOptimization: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
-              <Truck className="w-5 h-5 text-orange-400 mr-2" />
-              <span className="text-orange-300 font-medium">AI Supply Chain Optimization</span>
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full border border-emerald-400/30 mb-6">
+              <Shield className="w-5 h-5 text-emerald-400 mr-2" />
+              <span className="text-emerald-300 font-medium">AI Financial Risk Management</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-400">
-                Optimization
+              AI Financial Risk
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400">
+                Management
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, 
-              and gain real-time visibility across your entire supply network.
+              Transform financial risk management with AI-powered analytics. Monitor risks in real-time, 
+              predict market disruptions, and optimize portfolio performance with intelligent insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
-                Start Optimizing
+              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-teal-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20">
+                Start Managing Risk
               </button>
-              <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-emerald-400/30 text-emerald-300 font-semibold rounded-lg hover:bg-emerald-400/10 transition-all duration-200">
                 Schedule Demo
               </button>
             </div>
@@ -158,10 +158,10 @@ const AISupplyChainOptimization: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Optimization Features
+              Intelligent Risk Management Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powered by advanced AI to transform your supply chain operations
+              Powered by advanced AI to protect and optimize your financial assets
             </p>
           </motion.div>
 
@@ -172,9 +172,9 @@ const AISupplyChainOptimization: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 text-center"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/30 transition-all duration-200 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -185,7 +185,7 @@ const AISupplyChainOptimization: React.FC = () => {
         </div>
       </section>
 
-      {/* Optimization Areas Section */}
+      {/* Risk Types Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -195,27 +195,27 @@ const AISupplyChainOptimization: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Optimization Coverage
+              Comprehensive Risk Coverage
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Optimize every aspect of your supply chain operations
+              Monitor and manage all types of financial risks
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {optimizationAreas.map((area, index) => (
+            {riskTypes.map((risk, index) => (
               <motion.div
-                key={area.title}
+                key={risk.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-400/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{area.icon}</div>
+                  <div className="text-4xl">{risk.icon}</div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
-                    <p className="text-gray-300">{area.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{risk.title}</h3>
+                    <p className="text-gray-300">{risk.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -234,10 +234,10 @@ const AISupplyChainOptimization: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI Supply Chain Optimization?
+              Why Choose AI Financial Risk Management?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your supply chain with intelligent optimization
+              Transform risk management with intelligent analytics
             </p>
           </motion.div>
 
@@ -263,15 +263,15 @@ const AISupplyChainOptimization: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8"
+              className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-8"
             >
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
-                Ready to transform your supply chain? Our AI optimization experts can help you 
-                set up intelligent supply chain management and optimization.
+                Ready to transform risk management? Our AI risk experts can help you 
+                set up intelligent risk monitoring and portfolio optimization.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
-                Start Supply Chain Optimization
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-teal-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20">
+                Start Risk Management
               </button>
             </motion.div>
           </div>
@@ -291,7 +291,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your supply chain needs
+              Choose the plan that fits your risk management needs
             </p>
           </motion.div>
 
@@ -304,7 +304,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${
                   plan.plan === 'Professional' 
-                    ? 'border-orange-400/50 bg-gradient-to-br from-orange-500/10 to-red-500/10' 
+                    ? 'border-emerald-400/50 bg-gradient-to-br from-emerald-500/10 to-teal-500/10' 
                     : 'border-slate-700/50'
                 }`}
               >
@@ -325,7 +325,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 </ul>
                 <button className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 ${
                   plan.plan === 'Professional'
-                    ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-400 hover:to-red-500 shadow-lg shadow-orange-500/20'
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-400 hover:to-teal-500 shadow-lg shadow-emerald-500/20'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   Get Started
@@ -345,16 +345,16 @@ const AISupplyChainOptimization: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Optimize Your Supply Chain?
+              Ready to Manage Financial Risk?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your supply chain with AI-powered optimization
+              Transform risk management with AI-powered analytics
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
+              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-teal-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-emerald-500/20">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
+              <button className="px-8 py-4 border border-emerald-400/30 text-emerald-300 font-semibold rounded-lg hover:bg-emerald-400/10 transition-all duration-200">
                 Contact Sales
               </button>
             </div>
@@ -384,7 +384,7 @@ const AISupplyChainOptimization: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-                <a href="https://ziontechgroup.com" className="text-orange-400 hover:text-orange-300">
+                <a href="https://ziontechgroup.com" className="text-emerald-400 hover:text-emerald-300">
                   ziontechgroup.com
                 </a>
               </div>
@@ -396,4 +396,4 @@ const AISupplyChainOptimization: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimization;
+export default AIFinancialRiskManagement;
