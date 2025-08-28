@@ -4,7 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
+<<<<<<< HEAD
+import { Sidebar } from './components/Sidebar';
+=======
 import { MainSidebar } from './components/layout/MainSidebar';
+>>>>>>> origin/cursor/website-audit-and-enhancement-954a
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
@@ -54,12 +58,15 @@ const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
+<<<<<<< HEAD
+=======
 
 // New service page imports
 const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
 const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
 const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
 const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-954a
 
 // Additional simple pages
 const Events = React.lazy(() => import('./pages/Events'));
@@ -69,6 +76,10 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
+<<<<<<< HEAD
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-954a
 const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
@@ -321,12 +332,19 @@ function App() {
         <Sidebar />
         <AppHeader />
         
+<<<<<<< HEAD
+        <main className="flex-1 relative z-10 lg:ml-80">
+          <Suspense fallback={<AppLoadingSpinner />}>
+            <Routes>
+              {/* Core Routes */}
+=======
         <div className="flex">
           <MainSidebar />
           
           <main className="flex-1 lg:ml-80">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
+>>>>>>> origin/cursor/website-audit-and-enhancement-954a
               <Route path="/" element={<Home />} />
               <Route path="/home2026" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -444,19 +462,57 @@ function App() {
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               
+<<<<<<< HEAD
+              {/* Missing service routes from header navigation */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/green-it" element={<GreenIT />} />
+              <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
+              
+              {/* 2026 Services routes */}
+=======
               {/* New service routes for missing pages */}
+>>>>>>> origin/cursor/website-audit-and-enhancement-954a
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
               <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
               <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
               <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+<<<<<<< HEAD
+              <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+              <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
+              <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+              <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+              
+              {/* Showcase Pages */}
+              <Route path="/innovative-ai-services" element={<InnovativeAIServicesShowcase />} />
+              <Route path="/innovative-services-2026" element={<InnovativeServicesShowcase2026 />} />
+              
+              {/* New Innovative Services */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+              <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
+              <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+              
+              {/* Additional Innovative Services */}
+              <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+              <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+              
+              {/* Showcase Pages */}
+              <Route path="/new-innovative-services" element={<NewInnovativeServicesShowcase />} />
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-954a
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
         </main>
+<<<<<<< HEAD
+
+=======
         </div>
         
+>>>>>>> origin/cursor/website-audit-and-enhancement-954a
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />

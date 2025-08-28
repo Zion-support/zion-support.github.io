@@ -1,6 +1,11 @@
+<<<<<<< HEAD:src/pages/Solutions.tsx.backup.1756376139
+import React from 'react';
+import SEO from '@/components/SEO';
+=======
 =======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/website-audit-and-enhancement-954a:src/pages/solutions.tsx
 import { Link } from 'react-router-dom';
 import {
   Brain,
