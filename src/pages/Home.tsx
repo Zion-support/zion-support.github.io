@@ -43,7 +43,7 @@ import {
   TrendingUp 
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
+import { EnhancedHeroSection as HeroSection } from "@/components/EnhancedHeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
 // Lazy load heavy components
