@@ -33,7 +33,6 @@ export default defineConfig(({ command, mode }) => {
         polyfill: true,
       },
       assetsInlineLimit: 4096,
-      // cleaned invalid output/external block (handled below in rollupOptions)
       terserOptions: {
         compress: {
           drop_console: true,
@@ -70,11 +69,9 @@ export default defineConfig(({ command, mode }) => {
             return `assets/[name]-[hash][extname]`;
           },
         },
-        external: [],
         onwarn(warning, warn) {
           // Suppress warnings about missing optional dependencies
           if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return;
-          if (warning.message.includes('@rollup/rollup-linux-x64-gnu')) return;
           warn(warning);
         },
       },
@@ -82,7 +79,6 @@ export default defineConfig(({ command, mode }) => {
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'react-router-dom'],
-      exclude: ['@rollup/rollup-linux-x64-gnu'],
       ...(isProduction && {
         force: true,
         esbuildOptions: {

@@ -50,6 +50,17 @@ const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure').
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence').then(module => ({ default: module.default })));
 const MicroSaaSProducts = lazy(() => import('./pages/services/MicroSaaSProducts').then(module => ({ default: module.default })));
 
+// Additional pages from remote
+const Legal = lazy(() => import('./pages/Legal').then(module => ({ default: module.default })));
+const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServicesShowcase2027').then(module => ({ default: module.default })));
+const ComprehensiveServicesLanding2027 = lazy(() => import('./pages/ComprehensiveServicesLanding2027').then(module => ({ default: module.default })));
+const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029').then(module => ({ default: module.default })));
+const ScheduleDemo = lazy(() => import('./pages/ScheduleDemo').then(module => ({ default: module.default })));
+const Community = lazy(() => import('./pages/Community').then(module => ({ default: module.default })));
+const Developers = lazy(() => import('./pages/Developers').then(module => ({ default: module.default })));
+const Demo = lazy(() => import('./pages/Demo').then(module => ({ default: module.default })));
+const EnhancedContact = lazy(() => import('./pages/Contact').then(module => ({ default: module.default })));
+
 // Enhanced placeholder pages with better SEO and accessibility
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -100,6 +111,19 @@ const EnhancedLoadingSpinner = () => (
   </div>
 );
 
+const Partners = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO 
+      title="Partners - Zion Tech Group"
+      description="Partner with us to deliver cutting-edge technology solutions."
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Partners</h1>
+      <p className="text-xl text-gray-300">Partner with us</p>
+    </div>
+  </div>
+);
+
 function App() {
   return (
     <ErrorBoundary enableErrorReporting={true} showErrorDetails={process.env.NODE_ENV === 'development'}>
@@ -112,7 +136,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<EnhancedContact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/faq" element={<FAQ />} />
@@ -134,14 +158,22 @@ function App() {
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
+                <Route path="/services/comprehensive-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
-
                 {/* Service Routes with enhanced error handling */}
+                
+                {/* Additional Routes */}
+                <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
+                <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/developers" element={<Developers />} />
+                <Route path="/demo" element={<Demo />} />
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
