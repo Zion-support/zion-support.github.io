@@ -229,28 +229,28 @@ export function AppHeader() {
     },
     {
       name: 'Case Studies',
-      href: '/case-studies',
+      href: '/resources',
       icon: Target,
       description: 'Real-world success stories',
       featured: true
     },
     {
       name: 'White Papers',
-      href: '/white-papers',
+      href: '/resources',
       icon: FileText,
       description: 'In-depth research and analysis',
       featured: false
     },
     {
       name: 'Webinars',
-      href: '/webinars',
+      href: '/resources',
       icon: Users,
       description: 'Expert-led learning sessions',
       featured: false
     },
     {
       name: 'Documentation',
-      href: '/docs',
+      href: '/resources',
       icon: Code,
       description: 'Technical guides and APIs',
       featured: false
