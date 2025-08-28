@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import Footer from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -19,12 +19,12 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Lazy-loaded pages for better performance
-const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.Home })));
-const About = lazy(() => import('./pages/About').then(module => ({ default: module.About })));
-const Services = lazy(() => import('./pages/Services').then(module => ({ default: module.Services })));
-const Contact = lazy(() => import('./pages/Contact').then(module => ({ default: module.Contact })));
-const Blog = lazy(() => import('./pages/Blog').then(module => ({ default: module.Blog })));
-const Careers = lazy(() => import('./pages/Careers').then(module => ({ default: module.Careers })));
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Careers = lazy(() => import('./pages/Careers'));
 
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
