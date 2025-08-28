@@ -61,7 +61,8 @@ export default function ComprehensiveImprovements2025() {
     {
       category: 'AI & Machine Learning Services',
       icon: Brain,
-      color: 'from-zion-cyan to-zion-purple',
+      color: 'from-purple-500 to-pink-500',
+      title: 'AI-Powered Solutions',
       items: [
         'AI Workflow Orchestrator - Intelligent workflow automation',
         'AI Data Governance Platform - Comprehensive data compliance',
@@ -90,6 +91,7 @@ export default function ComprehensiveImprovements2025() {
       category: 'Cloud & DevOps Solutions',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
+      title: 'Infrastructure Excellence',
       items: [
         'Cloud DevOps - Infrastructure automation & scaling',
         'IT Infrastructure - Enterprise infrastructure solutions',
@@ -101,6 +103,7 @@ export default function ComprehensiveImprovements2025() {
       category: 'Cybersecurity & Privacy',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
+      title: 'Security First',
       items: [
         'AI Cybersecurity Platform - Advanced AI-powered security',
         'Security Headers & CSP - Web security hardening',
@@ -112,6 +115,7 @@ export default function ComprehensiveImprovements2025() {
       category: 'Digital Transformation',
       icon: Zap,
       color: 'from-yellow-500 to-orange-500',
+      title: 'Future-Ready Solutions',
       items: [
         'Digital Twin - Virtual system replicas',
         'Digital Transformation - Strategic technology consulting',
@@ -122,6 +126,7 @@ export default function ComprehensiveImprovements2025() {
       category: 'Emerging Technologies',
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
+      title: 'Next-Gen Innovation',
       items: [
         'Quantum Computing - Next-gen computational power',
         'IoT Edge Computing - Smart device networks',
@@ -152,273 +157,322 @@ export default function ComprehensiveImprovements2025() {
     },
     {
       title: 'Accessibility Enhanced',
-      description: 'WCAG compliant with enhanced user experience',
+      description: 'WCAG 2.1 AA compliant with advanced assistive technologies',
       icon: Eye,
       color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'SEO Optimized',
+      description: 'Advanced SEO with structured data and performance metrics',
+      icon: Search,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      title: 'Analytics Driven',
+      description: 'Comprehensive analytics and performance monitoring',
+      icon: BarChart3,
+      color: 'from-blue-500 to-cyan-500'
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  const benefits = [
+    {
+      title: 'Enhanced User Experience',
+      description: 'Intuitive navigation, smooth animations, and responsive design',
+      icon: Users,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Improved Performance',
+      description: 'Faster loading times, optimized assets, and efficient rendering',
+      icon: Zap,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      title: 'Better Accessibility',
+      description: 'Inclusive design for users with diverse abilities',
+      icon: Eye,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Advanced Analytics',
+      description: 'Comprehensive insights into user behavior and performance',
+      icon: BarChart3,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'SEO Excellence',
+      description: 'Optimized for search engines and improved discoverability',
+      icon: Search,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      title: 'Security Enhanced',
+      description: 'Advanced security measures and privacy protection',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500'
+    }
+  ];
 
   return (
-    <EnhancedSEOManager
-      seoData={{
-        title: 'Comprehensive Improvements 2025 | Zion Tech Group',
-        description: 'Discover our comprehensive suite of improvements including AI services, performance analytics, SEO optimization, and modern UI/UX enhancements.',
-        keywords: ['AI services', 'performance analytics', 'SEO optimization', 'UI/UX', 'security features', 'integrations'],
-        ogType: 'website',
-        canonicalUrl: 'https://ziontechgroup.com/comprehensive-improvements-2025'
-      }}
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-          
-          <div className="relative max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-medium mb-6">
-                <Star className="w-4 h-4 mr-2" />
-                2025 Comprehensive Improvements
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-white to-zion-purple bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionary AI-powered micro SAAS solutions, cutting-edge IT services, and innovative technology solutions
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/new-innovative-services-2025"
-                  className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-                >
-                  Explore New Services
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-zion-cyan text-zion-cyan font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <EnhancedSEOManager 
+        title="Comprehensive Improvements 2025 - Zion Tech Group"
+        description="Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today."
+        keywords={['platform improvements', 'AI services', 'technology enhancements', 'digital transformation', 'Zion Tech Group']}
+      />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20"></div>
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
+              <Rocket className="w-4 h-4 mr-2" />
+              Revolutionary Platform Enhancements
+            </div>
+            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
+              Comprehensive
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                {' '}Improvements
+              </span>
+              {' '}2025
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Experience the future of business technology with our revolutionary platform enhancements. 
+              From advanced AI services to cutting-edge performance analytics, discover how Zion Tech Group 
+              is transforming the digital landscape.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/ai-services-hub"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center"
+              >
+                <Brain className="w-5 h-5 mr-2" />
+                Explore AI Services Hub
+              </Link>
+              <Link
+                to="/performance-analytics"
+                className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
+              >
+                <BarChart3 className="w-5 h-5 mr-2 inline" />
+                View Performance Analytics
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Improvements Overview */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                What We've Improved
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the comprehensive enhancements we've made to revolutionize your digital experience
-              </p>
-            </motion.div>
+      {/* Improvements Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Platform Enhancements
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the cutting-edge improvements that make our platform the most advanced 
+              business technology solution available today.
+            </p>
+          </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative group"
-                >
-                  <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300 transform group-hover:scale-105`}>
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
-                      <feature.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {improvements.map((improvement, index) => (
+              <motion.div
+                key={improvement.category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
+              >
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${improvement.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <improvement.icon className="w-8 h-8 text-white" />
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+                </div>
 
-        {/* Service Categories */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Enhanced Service Portfolio
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive suite of AI-powered solutions and innovative services
-              </p>
-            </motion.div>
-
-            <div className="space-y-8">
-              {improvements.map((category, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="relative"
-                >
-                  <div className={`p-8 rounded-2xl bg-gradient-to-r ${category.color} bg-opacity-10 border border-opacity-20 backdrop-blur-sm`}>
-                    <div className="flex items-center mb-6">
-                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
-                        <category.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-white">{category.category}</h3>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {category.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5 mr-3 flex-shrink-0" />
-                          <span className="text-gray-300">{item}</span>
-                        </div>
-                      ))}
-                    </div>
+                {/* Content */}
+                <div className="mb-6">
+                  <div className="inline-block px-3 py-1 bg-purple-600/20 text-purple-400 text-xs font-medium rounded-full mb-3">
+                    {improvement.category}
                   </div>
-                </motion.div>
-              ))}
-            </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+                    {improvement.title}
+                  </h3>
+                  <ul className="space-y-2">
+                    {improvement.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Contact us to learn more about our enhanced services and how we can help transform your business
-              </p>
-            </motion.div>
+      {/* Features Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform enhancements deliver cutting-edge features that set new standards 
+              for business technology solutions.
+            </p>
+          </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple bg-opacity-10 border border-opacity-20 backdrop-blur-sm"
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
-                <PhoneCall className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                <p className="text-gray-300">{contactInfo.phone}</p>
-              </motion.div>
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
 
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Platform Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the tangible benefits of our comprehensive platform improvements 
+              that drive business success and user satisfaction.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
+                key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 rounded-xl bg-gradient-to-br from-zion-purple to-zion-cyan bg-opacity-10 border border-opacity-20 backdrop-blur-sm"
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
-                <MailIcon className="w-12 h-12 text-zion-purple mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Email</h3>
-                <p className="text-gray-300">{contactInfo.email}</p>
-              </motion.div>
+                {/* Icon */}
+                <div className="mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center p-6 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple bg-opacity-10 border border-opacity-20 backdrop-blur-sm"
-              >
-                <MapPinIcon className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Address</h3>
-                <p className="text-gray-300">{contactInfo.address}</p>
-              </motion.div>
-            </div>
+                {/* Content */}
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses already leveraging our revolutionary platform 
+              enhancements to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center"
               >
-                Contact Us Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <Phone className="w-5 h-5 mr-2" />
+                Get Started Today
               </Link>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Footer CTA */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Experience the Future of Technology
-              </h3>
-              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses already leveraging our enhanced AI-powered solutions and futuristic design
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/services"
-                  className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold hover:from-zion-purple hover:to-zion-cyan transition-all duration-300"
-                >
-                  View All Services
-                </Link>
-                
-                <Link
-                  to="/about"
-                  className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-zion-cyan text-zion-cyan font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </EnhancedSEOManager>
+              <Link
+                to="/services"
+                className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
+              >
+                <ArrowRight className="w-5 h-5 mr-2 inline" />
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
 }
