@@ -2,129 +2,111 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Users, 
-  Cpu, 
+  BarChart3, 
+  TrendingUp, 
+  Database, 
+  Brain, 
   Zap, 
   Shield, 
-  Target, 
+  Cloud, 
+  Users, 
+  Target,
   ArrowRight,
   CheckCircle,
   Star,
   Globe,
+  Cpu,
   Lock,
+  Eye,
   Activity,
-  BarChart3,
-  Settings,
-  Bell,
-  Download,
-  Upload,
-  RefreshCw,
-  Monitor,
-  Smartphone,
-  Server,
-  Chip,
-  Wifi,
-  Satellite,
-  Radar,
-  Camera,
-  Video,
-  FileText,
-  Calendar,
-  Tag,
-  TrendingUp,
   PieChart,
   LineChart,
   Scatter,
-  Layers,
-  Cube,
-  Box,
-  Package,
-  Truck,
-  Building,
-  Factory,
-  Warehouse,
-  Home,
-  Car,
-  Plane,
-  Ship,
-  Database,
-  Cloud,
-  Eye,
-  Brain,
-  Network,
-  Rocket
+  Calendar,
+  Clock,
+  Filter,
+  Search,
+  Download,
+  Upload,
+  RefreshCw,
+  Settings,
+  Bell,
+  AlertCircle,
+  CheckCircle2,
+  XCircle,
+  Info
 } from 'lucide-react';
 
-export default function ITConsulting() {
+export default function DataAnalytics() {
   const features = [
     {
-      icon: Users,
-      title: "Expert Team",
-      description: "Experienced IT professionals with deep industry knowledge",
+      icon: BarChart3,
+      title: "Advanced Analytics",
+      description: "Comprehensive business intelligence and data visualization tools",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Cpu,
-      title: "Technology Strategy",
-      description: "Comprehensive technology roadmaps and planning",
+      icon: Brain,
+      title: "AI-Powered Insights",
+      description: "Machine learning algorithms for predictive analytics and pattern recognition",
       color: "from-purple-500 to-pink-500"
     },
     {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation solutions",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Cybersecurity and regulatory compliance expertise",
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      icon: Target,
-      title: "Performance Optimization",
-      description: "System optimization and performance tuning",
+      icon: TrendingUp,
+      title: "Real-time Monitoring",
+      description: "Live dashboards and instant alerts for critical business metrics",
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: Cloud,
-      title: "Cloud Migration",
-      description: "Seamless cloud adoption and migration strategies",
-      color: "from-indigo-500 to-blue-500"
-    }
-  ];
-
-  const services = [
-    {
-      title: "Technology Assessment",
-      description: "Comprehensive evaluation of current IT infrastructure and systems",
-      icon: Eye,
-      benefits: ["Infrastructure review", "Technology audit", "Gap analysis"]
-    },
-    {
-      title: "Strategic Planning",
-      description: "Long-term technology roadmaps aligned with business goals",
-      icon: Target,
-      benefits: ["Technology strategy", "Implementation roadmap", "ROI analysis"]
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation consulting and implementation",
-      icon: Rocket,
-      benefits: ["Process optimization", "Technology adoption", "Change management"]
-    },
-    {
-      title: "Security & Compliance",
-      description: "Cybersecurity assessment and regulatory compliance consulting",
       icon: Shield,
-      benefits: ["Security audit", "Compliance review", "Risk assessment"]
+      title: "Data Security",
+      description: "Enterprise-grade security and compliance for sensitive data",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Integration",
+      description: "Seamless integration with major cloud platforms and data warehouses",
+      color: "from-indigo-500 to-blue-500"
+    },
+    {
+      icon: Users,
+      title: "Collaborative Analytics",
+      description: "Team-based data exploration and shared insights",
+      color: "from-yellow-500 to-orange-500"
     }
   ];
 
-  const industries = [
-    "Healthcare", "Finance", "Manufacturing", "Retail", "Education", 
-    "Government", "Technology", "Energy", "Transportation", "Media"
+  const useCases = [
+    {
+      title: "Business Intelligence",
+      description: "Transform raw data into actionable insights for strategic decision-making",
+      icon: Target,
+      benefits: ["Performance tracking", "KPI monitoring", "Trend analysis"]
+    },
+    {
+      title: "Customer Analytics",
+      description: "Understand customer behavior and preferences for improved engagement",
+      icon: Users,
+      benefits: ["Customer segmentation", "Behavioral analysis", "Churn prediction"]
+    },
+    {
+      title: "Financial Analytics",
+      description: "Monitor financial performance and identify optimization opportunities",
+      icon: TrendingUp,
+      benefits: ["Revenue analysis", "Cost optimization", "Risk assessment"]
+    },
+    {
+      title: "Operational Analytics",
+      description: "Optimize business processes and improve operational efficiency",
+      icon: Activity,
+      benefits: ["Process optimization", "Resource allocation", "Performance monitoring"]
+    }
+  ];
+
+  const technologies = [
+    "Python & R", "Apache Spark", "TensorFlow", "Power BI", "Tableau", 
+    "AWS Redshift", "Google BigQuery", "Snowflake", "Apache Kafka", "Elasticsearch"
   ];
 
   return (
@@ -139,23 +121,23 @@ export default function ITConsulting() {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              IT Consulting Services
+              Data Analytics
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with expert IT consulting from Zion Tech Group. 
-              We help organizations navigate complex technology challenges and achieve digital excellence.
+              Transform your business with cutting-edge data analytics solutions. 
+              Unlock insights, drive decisions, and accelerate growth with our comprehensive analytics platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center space-x-2"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-blue-400/50 flex items-center space-x-2"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
                 <ArrowRight className="w-5 h-5" />
@@ -176,11 +158,10 @@ export default function ITConsulting() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Consulting?
+              Powerful Analytics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our expert consultants bring decades of experience and deep industry knowledge to help you 
-              make informed technology decisions and achieve your business objectives.
+              Our comprehensive data analytics platform provides everything you need to turn data into actionable insights.
             </p>
           </motion.div>
 
@@ -192,7 +173,7 @@ export default function ITConsulting() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -205,7 +186,7 @@ export default function ITConsulting() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -216,34 +197,34 @@ export default function ITConsulting() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Consulting Services
+              Analytics Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT consulting services designed to address your unique business challenges and opportunities.
+              Discover how our data analytics solutions can transform your business across different domains.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mr-4">
-                    <service.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mr-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
+                  <h3 className="text-2xl font-semibold text-white">{useCase.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-6">{service.description}</p>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
                 <ul className="space-y-2">
-                  {service.benefits.map((benefit, benefitIndex) => (
+                  {useCase.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -254,7 +235,7 @@ export default function ITConsulting() {
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -265,25 +246,24 @@ export default function ITConsulting() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industries We Serve
+              Cutting-Edge Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IT consulting expertise spans across diverse industries, helping organizations 
-              leverage technology for competitive advantage and operational excellence.
+              Built with the latest technologies and frameworks for maximum performance and scalability.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {industries.map((industry, index) => (
+            {technologies.map((tech, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-xl p-4 text-center hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 text-center hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300"
               >
-                <span className="text-white font-medium">{industry}</span>
+                <span className="text-white font-medium">{tech}</span>
               </motion.div>
             ))}
           </div>
@@ -300,23 +280,23 @@ export default function ITConsulting() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your IT Strategy?
+              Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Partner with Zion Tech Group's expert IT consultants to navigate complex technology challenges, 
-              optimize your IT infrastructure, and achieve digital transformation success.
+              Join the data-driven revolution with Zion Tech Group. Our analytics solutions are designed to drive growth, 
+              efficiency, and competitive advantage for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center space-x-2"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
               >
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-blue-400/50 flex items-center space-x-2"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2"
               >
                 <span>Explore Services</span>
                 <ArrowRight className="w-5 h-5" />

@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import Footer from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -29,13 +29,11 @@ import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/about'));
-const Services = lazy(() => import('./pages/services'));
-const Contact = lazy(() => import('./pages/contact'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Careers = lazy(() => import('./pages/Careers'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const Team = lazy(() => import('./pages/Team'));
 
 // Additional missing page imports
 const Dashboard = lazy(() => import('./pages/Dashboard'));
@@ -199,6 +197,16 @@ const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBu
 const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustomerExperienceSupport'));
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
+
+// Missing page imports for broken links
+const Products = lazy(() => import('./pages/Products'));
+const Cart = lazy(() => import('./pages/Cart'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const RequestQuote = lazy(() => import('./pages/RequestQuote'));
+const Support = lazy(() => import('./pages/Support'));
+const Categories = lazy(() => import('./pages/Categories'));
+const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 
 function App() {
   return (
@@ -365,7 +373,7 @@ function App() {
                     <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
                     <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
-                    <Route path="/services/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+                    <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
                     <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
                     <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
                     <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
@@ -408,6 +416,16 @@ function App() {
                     <Route path="/it-consulting" element={<ITConsulting />} />
                     <Route path="/space-tech" element={<SpaceTech />} />
                     <Route path="/sitemap" element={<Sitemap />} />
+                    
+                    {/* Missing routes for broken links */}
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/request-quote" element={<RequestQuote />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/categories" element={<Categories />} />
+                    <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                     
                     {/* 404 Page */}
                     <Route 

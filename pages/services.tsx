@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 } from 'lucide-react'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
 
 import { additionalEnhancedServices } from '../data/additional-real-services'
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
@@ -9,6 +9,8 @@ export default function Services() {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('all')
 	const [sortBy, setSortBy] = useState('popularity')
+	const [currentPage, setCurrentPage] = useState(1)
+	const [itemsPerPage] = useState(12) // Show 12 services per page
 
 	const title = 'Services — Zion Tech Group'
 	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
@@ -42,6 +44,35 @@ export default function Services() {
 			}
 		})
 
+	// Pagination logic
+	const totalPages = Math.ceil(filteredServices.length / itemsPerPage)
+	const startIndex = (currentPage - 1) * itemsPerPage
+	const endIndex = startIndex + itemsPerPage
+	const currentServices = filteredServices.slice(startIndex, endIndex)
+
+	// Reset to first page when filters change
+	React.useEffect(() => {
+		setCurrentPage(1)
+	}, [searchTerm, selectedCategory, sortBy])
+
+	// Pagination controls
+	const goToPage = (page: number) => {
+		setCurrentPage(page)
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
+
+	const goToNextPage = () => {
+		if (currentPage < totalPages) {
+			goToPage(currentPage + 1)
+		}
+	}
+
+	const goToPreviousPage = () => {
+		if (currentPage > 1) {
+			goToPage(currentPage - 1)
+		}
+	}
+
 	return (
 		<>
 			{/* Hero Section */}
@@ -74,27 +105,27 @@ export default function Services() {
 
 			{/* Search and Filter Section */}
 			<section className="bg-white py-12 border-b border-gray-200">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
 						{/* Search */}
-						<div className="relative flex-1 max-w-md">
+						<div className="relative flex-1 max-w-md w-full">
 							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
 							<input
 								type="text"
 								placeholder="Search services..."
 								value={searchTerm}
 								onChange={(e) => setSearchTerm(e.target.value)}
-								className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+								className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
 							/>
 						</div>
 
 						{/* Category Filter */}
-						<div className="flex items-center gap-2">
+						<div className="flex items-center gap-2 w-full sm:w-auto">
 							<Filter className="h-4 w-4 text-gray-400" />
 							<select
 								value={selectedCategory}
 								onChange={(e) => setSelectedCategory(e.target.value)}
-								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
 							>
 								{categories.map(category => (
 									<option key={category} value={category}>
@@ -105,12 +136,12 @@ export default function Services() {
 						</div>
 
 						{/* Sort */}
-						<div className="flex items-center gap-2">
+						<div className="flex items-center gap-2 w-full sm:w-auto">
 							<Clock className="h-4 w-4 text-gray-400" />
 							<select
 								value={sortBy}
 								onChange={(e) => setSortBy(e.target.value)}
-								className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+								className="px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
 							>
 								<option value="popularity">Most Popular</option>
 								<option value="price">Price: Low to High</option>
@@ -123,13 +154,13 @@ export default function Services() {
 			</section>
 
 			{/* Services Grid */}
-			<section className="py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+			<section className="py-16 sm:py-20 lg:py-24">
+				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					{/* Market References */}
-					<div className="mb-12 rounded-2xl border border-gray-200 bg-white p-6">
+					<div className="mb-12 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 						<h3 className="text-lg font-semibold text-gray-900 mb-3">Average Market Prices</h3>
 						<p className="text-sm text-gray-600 mb-4">Representative ranges for popular categories with public references:</p>
-						<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
 							<div>
 								<div className="font-medium text-gray-800 mb-1">AI Platforms</div>
 								<ul className="text-blue-700 list-disc list-inside">
@@ -186,16 +217,18 @@ export default function Services() {
 							</div>
 						</div>
 					</div>
+					
 					{/* Results Count */}
 					<div className="mb-8">
 						<p className="text-gray-600">
-							Showing {filteredServices.length} of {allServices.length} services
+							Showing {startIndex + 1}-{Math.min(endIndex, filteredServices.length)} of {filteredServices.length} services
+							{totalPages > 1 && ` (Page ${currentPage} of ${totalPages})`}
 						</p>
 					</div>
 
 					{/* Services Grid */}
-					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-						{filteredServices.map((service) => (
+					<div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+						{currentServices.map((service) => (
 							<div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 								{/* Popular Badge */}
 								{service.popular && (
@@ -304,12 +337,41 @@ export default function Services() {
 							<p className="text-gray-600">Try adjusting your search terms or filters.</p>
 						</div>
 					)}
+
+					{/* Pagination */}
+					{totalPages > 1 && (
+						<div className="mt-12 flex items-center justify-center gap-2">
+							<button
+								onClick={goToPreviousPage}
+								disabled={currentPage === 1}
+								className="p-2 rounded-full text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+							>
+								<ChevronLeft className="h-5 w-5" />
+							</button>
+							{Array.from({ length: totalPages }, (_, i) => (
+								<button
+									key={i + 1}
+									onClick={() => goToPage(i + 1)}
+									className={`p-2 rounded-full text-gray-600 hover:bg-gray-100 transition-all duration-200 ${currentPage === i + 1 ? 'bg-blue-600 text-white' : ''}`}
+								>
+									{i + 1}
+								</button>
+							))}
+							<button
+								onClick={goToNextPage}
+								disabled={currentPage === totalPages}
+								className="p-2 rounded-full text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+							>
+								<ChevronRight className="h-5 w-5" />
+							</button>
+						</div>
+					)}
 				</div>
 			</section>
 
 			{/* Contact Information */}
-			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
-				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 sm:py-20 lg:py-24">
+				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
 							Ready to get started?
@@ -352,17 +414,17 @@ export default function Services() {
 							</div>
 						</div>
 
-						<div className="mt-10 flex items-center justify-center gap-x-6">
+						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link
 								to="/contact"
-								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
+								className="w-full sm:w-auto rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200"
 							>
 								Get in touch
 								<ArrowRight className="ml-2 h-4 w-4 inline" />
 							</Link>
 							<a
 								href="tel:+13024640950"
-								className="rounded-md border border-white px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-colors"
+								className="w-full sm:w-auto rounded-md border border-white px-6 py-3 text-sm font-semibold text-white hover:bg-white hover:text-blue-600 transition-all duration-200"
 							>
 								Call Now
 							</a>
