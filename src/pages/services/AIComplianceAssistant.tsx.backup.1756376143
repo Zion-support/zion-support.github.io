@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+import React from 'react'
+import SEO from '@/components/SEO'
+
+const AIComplianceAssistant = () => {
+  const features = [
+    {
+      icon: Shield,
+      title: 'Automated Compliance Monitoring',
+      description: 'Real-time monitoring of regulatory requirements with automated alerts and notifications'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Policy Management',
+      description: 'Centralized policy creation, distribution, and tracking across your organization'
+    },
+    {
+      icon: FileText,
+      title: 'Document Automation',
+      description: 'AI-powered document generation and management for compliance requirements'
+    },
+    {
+      icon: AlertTriangle,
+      title: 'Risk Assessment',
+      description: 'Automated risk identification and assessment with mitigation recommendations'
+    },
+    {
+      icon: Users,
+      title: 'Training Management',
+      description: 'Automated compliance training scheduling and completion tracking'
+    },
+    {
+      icon: Clock,
+      title: 'Audit Preparation',
+      description: 'Streamlined audit preparation with automated documentation and reporting'
+=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
@@ -55,10 +91,41 @@ export default function AIComplianceAssistant() {
       icon: Globe,
       title: "Multi-Jurisdiction Support",
       description: "Comprehensive coverage of global regulations including GDPR, CCPA, SOX, and more."
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
+    'Reduce compliance violations by 90%',
+    'Automate 80% of compliance tasks',
+    'Cut audit preparation time by 70%',
+    'Ensure 100% regulatory adherence',
+    'Streamline policy management',
+    'Enhance risk mitigation strategies'
+  ];
+
+  const complianceFrameworks = [
+    {
+      name: 'GDPR',
+      description: 'General Data Protection Regulation compliance',
+      icon: Globe
+    },
+    {
+      name: 'CCPA',
+      description: 'California Consumer Privacy Act compliance',
+      icon: Building
+    },
+    {
+      name: 'SOX',
+      description: 'Sarbanes-Oxley Act compliance',
+      icon: DollarSign
+    },
+    {
+      name: 'HIPAA',
+      description: 'Healthcare data protection standards',
+      icon: Shield
+=======
     "Reduce compliance costs by 40-60% through automation",
     "Improve compliance accuracy by 95% with AI validation",
     "Reduce audit preparation time by 70%",
@@ -120,11 +187,18 @@ export default function AIComplianceAssistant() {
     {
       industry: "Technology",
       description: "Data privacy, security compliance, and international regulatory adherence"
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
       <SEO 
         title="AI Compliance Assistant - Zion Tech Group"
         description="Automate regulatory compliance with AI-powered monitoring, risk assessment, and governance solutions. Stay compliant with global regulations."
@@ -134,10 +208,39 @@ export default function AIComplianceAssistant() {
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              AI-Powered Compliance Management
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Compliance
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Assistant</span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Simplify regulatory compliance with AI-powered automation that ensures your organization 
+              stays ahead of changing requirements and maintains full regulatory adherence.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 flex items-center justify-center">
+                <Play className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200 flex items-center justify-center">
+                <Settings className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </button>
+=======
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
@@ -172,32 +275,59 @@ export default function AIComplianceAssistant() {
               >
                 Schedule Demo
               </motion.button>
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
+<<<<<<< HEAD
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Compliance Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI-powered platform provides end-to-end compliance management capabilities 
+              to ensure your organization meets all regulatory requirements.
+=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Comprehensive Compliance Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Compliance Assistant provides end-to-end compliance management with 
               intelligent automation, real-time monitoring, and comprehensive reporting.
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
+<<<<<<< HEAD
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+=======
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -208,6 +338,7 @@ export default function AIComplianceAssistant() {
                   <feature.icon className="w-6 h-6 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -216,25 +347,66 @@ export default function AIComplianceAssistant() {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
       <section className="py-20">
         <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Compliance Management
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience measurable improvements in compliance efficiency, risk reduction, and regulatory adherence.
+=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Measurable Compliance Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your compliance operations with quantifiable improvements in efficiency, 
               accuracy, and risk management.
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
+<<<<<<< HEAD
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {benefits.slice(3).map((benefit, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-start space-x-3"
+                >
+                  <CheckCircle className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </motion.div>
+              ))}
+=======
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -276,20 +448,52 @@ export default function AIComplianceAssistant() {
                   <span className="text-gray-300">Proven compliance track record</span>
                 </div>
               </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Compliance Frameworks Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
       {/* Regulations Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Regulatory Framework Support
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform automatically ensures compliance with major regulatory frameworks, 
+              keeping you ahead of changing requirements.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {complianceFrameworks.map((framework, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-emerald-500/30 transition-all duration-200"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <framework.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{framework.name}</h3>
+                <p className="text-gray-300 text-sm">{framework.description}</p>
+=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Global Regulatory Coverage
             </h2>
@@ -355,6 +559,7 @@ export default function AIComplianceAssistant() {
                   <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
                 </div>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
               </motion.div>
             ))}
           </div>
@@ -362,12 +567,35 @@ export default function AIComplianceAssistant() {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-500/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
       <section className="py-20">
         <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Simplify Compliance Today
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join organizations worldwide that trust our AI Compliance Assistant to maintain 
+              regulatory adherence and reduce compliance risks.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">
+                Contact Sales
+              </button>
+=======
             className="bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10 p-12 rounded-2xl border border-green-400/20 text-center"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -392,11 +620,18 @@ export default function AIComplianceAssistant() {
               >
                 Contact Sales
               </motion.button>
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
+};
+
+export default AIComplianceAssistant;
+=======
 }
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de7
 
