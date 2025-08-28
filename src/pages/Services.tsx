@@ -38,9 +38,22 @@ import {
   Car,
   Home,
   Factory,
-  City
+  City,
+  Package,
+  Smile,
+  Megaphone,
+  Wrench,
+  Link,
+  Cloud,
+  Settings,
+  Briefcase,
+  Plug,
+  Smartphone
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2025 } from '../data/comprehensiveInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import { COMPREHENSIVE_IT_SERVICES_2025 } from '../data/comprehensiveITServices2025';
 
 const Services: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -48,7 +61,12 @@ const Services: React.FC = () => {
   const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...COMPREHENSIVE_INNOVATIVE_SERVICES_2025,
+    ...EMERGING_TECH_SERVICES_2025,
+    ...COMPREHENSIVE_IT_SERVICES_2025
+  ];
 
   // Enhanced categories with new services
   const categories = [
@@ -65,7 +83,25 @@ const Services: React.FC = () => {
     { id: 'AI & Space Tech', name: 'AI & Space Tech', count: allServices.filter(s => s.category === 'AI & Space Tech').length, icon: '🚀', color: 'from-zion-indigo to-zion-purple' },
     { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-zion-orange to-zion-red' },
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-zion-purple to-zion-cyan' }
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-zion-purple to-zion-cyan' },
+    { id: 'AI & Financial Services', name: 'AI & Financial Services', count: allServices.filter(s => s.category === 'AI & Financial Services').length, icon: '💰', color: 'from-zion-green to-zion-emerald' },
+    { id: 'AI & Supply Chain', name: 'AI & Supply Chain', count: allServices.filter(s => s.category === 'AI & Supply Chain').length, icon: '📦', color: 'from-zion-blue to-zion-cyan' },
+    { id: 'AI & Customer Experience', name: 'AI & Customer Experience', count: allServices.filter(s => s.category === 'AI & Customer Experience').length, icon: '😊', color: 'from-zion-purple to-zion-pink' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢', color: 'from-zion-orange to-zion-red' },
+    { id: 'AI & Sales', name: 'AI & Sales', count: allServices.filter(s => s.category === 'AI & Sales').length, icon: '📈', color: 'from-zion-green to-zion-blue' },
+    { id: 'AI & Product Development', name: 'AI & Product Development', count: allServices.filter(s => s.category === 'AI & Product Development').length, icon: '🔧', color: 'from-zion-blue to-zion-indigo' },
+    { id: 'Blockchain & DeFi', name: 'Blockchain & DeFi', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length, icon: '🔗', color: 'from-zion-green to-zion-emerald' },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' },
+    { id: 'Space Technology', name: 'Space Technology', count: allServices.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-zion-indigo to-zion-purple' },
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍', color: 'from-zion-purple to-zion-indigo' },
+    { id: 'Green Technology', name: 'Green Technology', count: allServices.filter(s => s.category === 'Green Technology').length, icon: '🌱', color: 'from-zion-green to-zion-emerald' },
+    { id: 'Cloud Services', name: 'Cloud Services', count: allServices.filter(s => s.category === 'Cloud Services').length, icon: '☁️', color: 'from-zion-blue to-zion-cyan' },
+    { id: 'DevOps', name: 'DevOps', count: allServices.filter(s => s.category === 'DevOps').length, icon: '⚙️', color: 'from-zion-purple to-zion-cyan' },
+    { id: 'Data Services', name: 'Data Services', count: allServices.filter(s => s.category === 'Data Services').length, icon: '📊', color: 'from-zion-blue to-zion-indigo' },
+    { id: 'Consulting', name: 'Consulting', count: allServices.filter(s => s.category === 'Consulting').length, icon: '💼', color: 'from-zion-orange to-zion-red' },
+    { id: 'Integration', name: 'Integration', count: allServices.filter(s => s.category === 'Integration').length, icon: '🔌', color: 'from-zion-green to-zion-blue' },
+    { id: 'Mobile Development', name: 'Mobile Development', count: allServices.filter(s => s.category === 'Mobile Development').length, icon: '📱', color: 'from-zion-purple to-zion-cyan' },
+    { id: 'Web Development', name: 'Web Development', count: allServices.filter(s => s.category === 'Web Development').length, icon: '🌐', color: 'from-zion-blue to-zion-indigo' }
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -129,6 +165,24 @@ const Services: React.FC = () => {
       case 'AI & Content': return <Code className="w-5 h-5" />;
       case 'Cybersecurity': return <Shield className="w-5 h-5" />;
       case 'AI & HR': return <Users className="w-5 h-5" />;
+      case 'AI & Financial Services': return <DollarSign className="w-5 h-5" />;
+      case 'AI & Supply Chain': return <Package className="w-5 h-5" />;
+      case 'AI & Customer Experience': return <Smile className="w-5 h-5" />;
+      case 'AI & Marketing': return <Megaphone className="w-5 h-5" />;
+      case 'AI & Sales': return <TrendingUp className="w-5 h-5" />;
+      case 'AI & Product Development': return <Wrench className="w-5 h-5" />;
+      case 'Blockchain & DeFi': return <Link className="w-5 h-5" />;
+      case 'Edge Computing': return <Cpu className="w-5 h-5" />;
+      case 'Space Technology': return <Rocket className="w-5 h-5" />;
+      case 'Metaverse': return <Globe className="w-5 h-5" />;
+      case 'Green Technology': return <Leaf className="w-5 h-5" />;
+      case 'Cloud Services': return <Cloud className="w-5 h-5" />;
+      case 'DevOps': return <Settings className="w-5 h-5" />;
+      case 'Data Services': return <BarChart3 className="w-5 h-5" />;
+      case 'Consulting': return <Briefcase className="w-5 h-5" />;
+      case 'Integration': return <Plug className="w-5 h-5" />;
+      case 'Mobile Development': return <Smartphone className="w-5 h-5" />;
+      case 'Web Development': return <Globe className="w-5 h-5" />;
       default: return <Brain className="w-5 h-5" />;
     }
   };
@@ -160,7 +214,7 @@ const Services: React.FC = () => {
                 Get Started Today
               </Link>
               <Link
-                to="/enhanced-pricing"
+                to="/comprehensive-pricing"
                 className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 View Pricing

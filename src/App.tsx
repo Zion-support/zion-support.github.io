@@ -23,6 +23,7 @@ const Blog = lazy(() => import('./pages/Blog'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
+const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing'));
 
 // Enhanced Header Component
 const EnhancedHeader: React.FC = () => {
@@ -276,6 +277,7 @@ const App: React.FC = () => {
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/comprehensive-pricing" element={<ComprehensivePricing />} />
                 <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>
