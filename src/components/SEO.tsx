@@ -1,6 +1,5 @@
-import React, { useEffect, useMemo } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
   title?: string;
@@ -17,7 +16,9 @@ interface SEOProps {
   structuredData?: Record<string, any>;
   noindex?: boolean;
   nofollow?: boolean;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  structuredData?: object;
+  twitterHandle?: string;
+  facebookAppId?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -35,120 +36,32 @@ export const SEO: React.FC<SEOProps> = ({
   structuredData,
   noindex = false,
   nofollow = false,
-  twitterCard = 'summary_large_image'
-}) => {
+  structuredData,
+  twitterHandle = '@ziontechgroup',
+  facebookAppId
+}: SEOProps) {
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
-  const twitterHandle = '@ziontechgroup';
-
-  // Generate comprehensive meta tags
-  const metaTags = useMemo(() => {
-    const tags = [
-      // Basic meta tags
-      { name: 'description', content: description },
-      { name: 'keywords', content: keywords },
-      { name: 'author', content: author },
-      { name: 'robots', content: `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}` },
-      
-      // Open Graph tags
-      { property: 'og:title', content: title },
-      { property: 'og:description', content: description },
-      { property: 'og:type', content: type },
-      { property: 'og:url', content: canonicalUrl || siteUrl },
-      { property: 'og:image', content: ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}` },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '630' },
-      { property: 'og:site_name', content: siteName },
-      { property: 'og:locale', content: 'en_US' },
-      
-      // Twitter Card tags
-      { name: 'twitter:card', content: twitterCard },
-      { name: 'twitter:site', content: twitterHandle },
-      { name: 'twitter:creator', content: twitterHandle },
-      { name: 'twitter:title', content: title },
-      { name: 'twitter:description', content: description },
-      { name: 'twitter:image', content: ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}` },
-      
-      // Additional Open Graph tags for articles
-      ...(type === 'article' && publishedTime ? [{ property: 'og:published_time', content: publishedTime }] : []),
-      ...(type === 'article' && modifiedTime ? [{ property: 'og:modified_time', content: modifiedTime }] : []),
-      ...(type === 'article' && section ? [{ property: 'og:section', content: section }] : []),
-      ...(type === 'article' && tags.length > 0 ? tags.map(tag => ({ property: 'og:tag', content: tag })) : []),
-      
-      // Viewport and mobile optimization
-      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-      { name: 'theme-color', content: '#06b6d4' },
-      { name: 'msapplication-TileColor', content: '#06b6d4' },
-      
-      // Security headers
-      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
-      { 'http-equiv': 'X-Content-Type-Options', content: 'nosniff' },
-      { 'http-equiv': 'X-Frame-Options', content: 'DENY' },
-      { 'http-equiv': 'X-XSS-Protection', content: '1; mode=block' },
-      
-      // Performance optimization
-      { name: 'format-detection', content: 'telephone=no' },
-      { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-      { name: 'apple-mobile-web-app-title', content: siteName }
-    ];
-
-    return tags.filter(tag => tag.content); // Remove empty tags
-  }, [title, description, keywords, author, ogImage, canonicalUrl, type, publishedTime, modifiedTime, section, tags, noindex, nofollow, twitterCard]);
-
-  // Generate structured data (JSON-LD)
-  const generateStructuredData = useMemo(() => {
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': type === 'article' ? 'Article' : 'Organization',
-      name: siteName,
-      url: siteUrl,
-      logo: `${siteUrl}/logo.png`,
-      description: 'Leading AI & Technology Solutions Provider',
-      sameAs: [
-        'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup',
-        'https://github.com/ziontechgroup'
-      ],
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-0123',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      },
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        addressCountry: 'US'
-      }
-    };
-
-    if (type === 'article') {
-      return {
-        ...baseStructuredData,
-        '@type': 'Article',
-        headline: title,
-        description: description,
-        author: {
-          '@type': 'Person',
-          name: author
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: siteName,
-          logo: {
-            '@type': 'ImageObject',
-            url: `${siteUrl}/logo.png`
-          }
-        },
-        ...(publishedTime && { datePublished: publishedTime }),
-        ...(modifiedTime && { dateModified: modifiedTime }),
-        ...(section && { articleSection: section }),
-        ...(tags.length > 0 && { keywords: tags.join(', ') })
-      };
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullCanonical = canonical || `${siteUrl}${window.location.pathname}`;
+  
+  // Default structured data for organization
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": siteUrl,
+    "logo": `${siteUrl}/images/zion-logo.png`,
+    "description": "The premier marketplace for AI and tech talent, services, and equipment",
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "contact@ziontechgroup.com"
     }
 
     if (type === 'service') {
@@ -291,121 +204,58 @@ export const SEO: React.FC<SEOProps> = ({
     return null;
   };
 
-  // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {
-    const pathSegments = location.pathname.split('/').filter(Boolean);
-    const breadcrumbItems = [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://ziontechgroup.com'
-      }
-    ];
-
-    pathSegments.forEach((segment, index) => {
-      const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-      const item = `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`;
-      
-      breadcrumbItems.push({
-        '@type': 'ListItem',
-        position: index + 2,
-        name,
-        item
-      });
-    });
-
-    const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbItems
-    };
-
-    return JSON.stringify(breadcrumbData);
-  };
-
-  useEffect(() => {
-    // Update page title for better UX
-    document.title = title;
-    
-    // Add meta description to head if not present
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-
-    // Add keywords meta tag
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute('content', keywords);
-
-    // Add canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (!canonicalLink) {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonicalLink);
-    }
-    canonicalLink.setAttribute('href', currentUrl);
-
-    // Add hreflang for internationalization
-    const hreflangLinks = [
-      { lang: 'en', href: currentUrl },
-      { lang: 'en-US', href: currentUrl },
-      { lang: 'x-default', href: currentUrl }
-    ];
-
-    hreflangLinks.forEach(({ lang, href }) => {
-      let hreflangLink = document.querySelector(`link[hreflang="${lang}"]`);
-      if (!hreflangLink) {
-        hreflangLink = document.createElement('link');
-        hreflangLink.setAttribute('hreflang', lang);
-        document.head.appendChild(hreflangLink);
-      }
-      hreflangLink.setAttribute('href', href);
-    });
-  }, [title, description, keywords, currentUrl]);
+  // Merge custom structured data with default
+  const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
     <Helmet>
-      {/* Basic meta tags */}
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <link rel="canonical" href={canonicalUrl || siteUrl} />
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="author" content={author || siteName} />
       
-      {/* Meta tags */}
-      {metaTags.map((tag, index) => (
-        <meta key={index} {...tag} />
+      {/* Robots */}
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={fullCanonical} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image.startsWith('http') ? image : `${siteUrl}${image}`} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:url" content={fullCanonical} />
+      {author && <meta property="og:author" content={author} />}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags && tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
       ))}
       
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={twitterHandle} />
+      <meta name="twitter:creator" content={twitterHandle} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image.startsWith('http') ? image : `${siteUrl}${image}`} />
       
-      {/* Favicon and app icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      {/* Facebook */}
+      {facebookAppId && <meta property="fb:app_id" content={facebookAppId} />}
       
-      {/* Additional Open Graph tags for better social sharing */}
-      {type === 'article' && (
-        <>
-          <meta property="article:author" content={author} />
-          <meta property="article:publisher" content={siteName} />
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
     </Helmet>
   );
 };
