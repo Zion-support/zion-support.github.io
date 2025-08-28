@@ -1,3 +1,119 @@
+<<<<<<< HEAD
+// Service Worker Registration Utility
+export class ServiceWorkerManager {
+  private static instance: ServiceWorkerManager;
+  private swRegistration: ServiceWorkerRegistration | null = null;
+  private isSupported: boolean;
+
+  private constructor() {
+    this.isSupported = 'serviceWorker' in navigator;
+  }
+
+  static getInstance(): ServiceWorkerManager {
+    if (!ServiceWorkerManager.instance) {
+      ServiceWorkerManager.instance = new ServiceWorkerManager();
+    }
+    return ServiceWorkerManager.instance;
+  }
+
+  async register(): Promise<ServiceWorkerRegistration | null> {
+    if (!this.isSupported) {
+      console.log('Service Worker not supported');
+      return null;
+    }
+
+    try {
+      // Check if service worker is already registered
+      const existingRegistration = await navigator.serviceWorker.getRegistration();
+      if (existingRegistration) {
+        console.log('Service Worker already registered');
+        this.swRegistration = existingRegistration;
+        return existingRegistration;
+      }
+
+      // Register new service worker with better error handling
+      const registration = await navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+        updateViaCache: 'none'
+      });
+
+      console.log('Service Worker registered successfully:', registration);
+      this.swRegistration = registration;
+
+      // Wait for service worker to be ready before setting up handlers
+      await navigator.serviceWorker.ready;
+
+      // Handle updates
+      this.handleUpdates(registration);
+
+      // Handle messages
+      this.handleMessages();
+
+      return registration;
+    } catch (error) {
+      console.error('Service Worker registration failed:', error);
+      return null;
+    }
+  }
+
+  private handleUpdates(registration: ServiceWorkerRegistration) {
+    try {
+      // Check for updates
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            try {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New version available
+                this.showUpdateNotification();
+              }
+            } catch (error) {
+              console.error('Error handling worker state change:', error);
+            }
+          });
+        }
+      });
+
+      // Handle controller change
+      let refreshing = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        try {
+          if (!refreshing) {
+            refreshing = true;
+            window.location.reload();
+          }
+        } catch (error) {
+          console.error('Error handling controller change:', error);
+        }
+      });
+    } catch (error) {
+      console.error('Error setting up update handlers:', error);
+    }
+  }
+
+  private handleMessages() {
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      try {
+        console.log('Message from Service Worker:', event.data);
+        
+        switch (event.data.type) {
+          case 'CACHE_UPDATED':
+            console.log('Cache updated:', event.data.payload);
+            break;
+          case 'OFFLINE_READY':
+            console.log('App is ready for offline use');
+            break;
+          case 'ERROR':
+            console.error('Service Worker error:', event.data.payload);
+            break;
+          default:
+            console.log('Unknown message type:', event.data.type);
+        }
+      } catch (error) {
+        console.error('Error handling service worker message:', error);
+      }
+=======
 // Enhanced Service Worker for Zion Tech Group
 // Provides offline support, caching strategies, and performance optimizations
 
@@ -358,6 +474,7 @@ export function registerServiceWorker(): void {
         .catch(registrationError => {
           console.log('SW registration failed: ', registrationError);
         });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
     });
   }
 
@@ -578,6 +695,19 @@ export function registerServiceWorker(): void {
   }
 }
 
+<<<<<<< HEAD
+// Export singleton instance
+export const serviceWorkerManager = ServiceWorkerManager.getInstance();
+
+// Convenience functions
+export const registerServiceWorker = () => serviceWorkerManager.register();
+export const unregisterServiceWorker = () => serviceWorkerManager.unregister();
+export const clearCaches = () => serviceWorkerManager.clearCaches();
+export const getCacheSize = () => serviceWorkerManager.getCacheSize();
+export const requestBackgroundSync = (tag: string) => serviceWorkerManager.requestBackgroundSync(tag);
+export const requestNotificationPermission = () => serviceWorkerManager.requestNotificationPermission();
+export const subscribeToPushNotifications = () => serviceWorkerManager.subscribeToPushNotifications();
+=======
 // Unregister service worker
 export function unregisterServiceWorker(): void {
   if ('serviceWorker' in navigator) {
@@ -586,3 +716,4 @@ export function unregisterServiceWorker(): void {
     });
   }
 }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f

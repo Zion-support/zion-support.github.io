@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+/* Accessibility Styles */
+
+/* High Contrast Mode */
+.high-contrast {
+  --text-primary: #ffffff !important;
+  --text-secondary: #e5e7eb !important;
+  --bg-primary: #000000 !important;
+  --bg-secondary: #1f2937 !important;
+  --accent-color: #ffff00 !important;
+  --border-color: #ffffff !important;
+}
+
+.high-contrast * {
+  color: var(--text-primary) !important;
+  background-color: var(--bg-primary) !important;
+=======
 /* Enhanced Accessibility Styles */
 :root {
   --text-primary: #1f2937;
@@ -22,11 +39,47 @@
 }
 
 .high-contrast * {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
   border-color: var(--border-color) !important;
 }
 
 /* Large Text Mode */
 .large-text {
+<<<<<<< HEAD
+  font-size: 18px !important;
+}
+
+.large-text h1 { font-size: 2.5rem !important; }
+.large-text h2 { font-size: 2rem !important; }
+.large-text h3 { font-size: 1.5rem !important; }
+.large-text p { font-size: 1.125rem !important; }
+
+/* Reduced Motion */
+.reduced-motion * {
+  animation-duration: 0.1s !important;
+  transition-duration: 0.1s !important;
+  scroll-behavior: auto !important;
+}
+
+/* Focus Indicators */
+.focus-visible {
+  outline: 3px solid #22ddd2 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(34, 221, 210, 0.3) !important;
+}
+
+/* Color Blind Mode */
+.color-blind-mode {
+  --primary-color: #0000ff !important;
+  --secondary-color: #ff0000 !important;
+  --success-color: #00ff00 !important;
+  --warning-color: #ffff00 !important;
+  --error-color: #ff00ff !important;
+}
+
+/* Screen Reader Only */
+.sr-only {
+=======
   font-size: 18px;
   line-height: 1.6;
 }
@@ -287,6 +340,7 @@
 }
 
 .visually-hidden {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -298,6 +352,38 @@
   border: 0 !important;
 }
 
+<<<<<<< HEAD
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #22ddd2;
+  color: #000;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Touch Target Optimization */
+@media (max-width: 768px) {
+  button, a, [role="button"], [role="link"] {
+    min-height: 48px !important;
+    min-width: 48px !important;
+  }
+}
+
+/* High DPI Display */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-optimized {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+=======
 /* Focus Management */
 .focus-trap {
   outline: none;
@@ -344,5 +430,6 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
   }
 }

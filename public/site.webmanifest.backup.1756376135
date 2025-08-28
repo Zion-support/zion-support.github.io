@@ -1,9 +1,15 @@
 {
   "name": "Zion Tech Group - AI & Technology Solutions",
   "short_name": "Zion Tech",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "description": "Leading provider of AI-powered business solutions, quantum computing, and autonomous business operations",
+=======
   "description": "Leading provider of AI-powered business solutions, quantum computing, and cutting-edge technology services",
+>>>>>>> origin/main
 =======
   "description": "Leading the future of technology with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -14,6 +20,17 @@
   "categories": ["business", "productivity", "technology", "education"],
   "icons": [
     {
+<<<<<<< HEAD
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+=======
       "src": "/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
@@ -60,15 +77,26 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
     }
   ],
   "shortcuts": [
     {
+<<<<<<< HEAD
+      "name": "AI Services",
+<<<<<<< HEAD
+      "short_name": "AI",
+=======
       "short_name": "AI Services",
+>>>>>>> origin/main
       "description": "Explore our AI-powered solutions",
       "url": "/ai-services",
       "icons": [
         {
+<<<<<<< HEAD
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+=======
           "src": "/images/ai-services-icon.png",
 =======
       "name": "Services",
@@ -78,11 +106,16 @@
       "icons": [
         {
           "src": "/icons/services-icon-96x96.png",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
           "sizes": "96x96"
+>>>>>>> origin/main
         }
       ]
     },
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       "name": "Quantum Solutions",
       "short_name": "Quantum",
       "description": "Discover quantum computing solutions",
@@ -95,20 +128,38 @@
       ]
     },
     {
+>>>>>>> origin/main
       "name": "Contact Us",
 =======
       "name": "Contact",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
       "short_name": "Contact",
       "description": "Get in touch with us",
       "url": "/contact",
       "icons": [
         {
+<<<<<<< HEAD
+<<<<<<< HEAD
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+=======
           "src": "/icons/contact-icon-96x96.png",
           "sizes": "96x96"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
         }
       ]
     },
     {
+<<<<<<< HEAD
+      "name": "Request Quote",
+      "short_name": "Quote",
+      "description": "Request a custom quote",
+      "url": "/request-quote",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+=======
           "src": "/images/contact-icon.png",
 =======
       "name": "About",
@@ -130,16 +181,34 @@
       "icons": [
         {
           "src": "/icons/ai-icon-96x96.png",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
           "sizes": "96x96"
+>>>>>>> origin/main
         }
       ]
     }
   ],
   "screenshots": [
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Homepage on desktop"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homepage on mobile"
+=======
       "src": "/images/screenshot-desktop.png",
 =======
       "src": "/screenshots/desktop-home.png",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-c80f
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
@@ -171,6 +240,7 @@
     {
       "platform": "webapp",
       "url": "https://ziontechgroup.com"
+>>>>>>> origin/main
     }
   ],
   "prefer_related_applications": false,
