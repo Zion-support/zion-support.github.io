@@ -338,8 +338,15 @@ function App() {
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
               
+<<<<<<< HEAD
+              {/* 2029 Services Showcase */}
+              <Route path="/innovative-services-showcase-2029" element={<InnovativeServicesShowcase2029 />} />
+              <Route path="/services-2029" element={<InnovativeServicesShowcase2029 />} />
+              <Route path="/2029-services" element={<InnovativeServicesShowcase2029 />} />
+=======
               {/* 2029 Revolutionary Services */}
               <Route path="/revolutionary-services-2029" element={<RevolutionaryServices2029 />} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5851
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
