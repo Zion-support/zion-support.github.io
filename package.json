@@ -4,15 +4,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
+    "dev": "vite",
     "dev:backend": "cd server && npm run dev",
     "dev:hybrid": "concurrently \"npm run dev\" \"npm run dev:backend\"",
-    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
-    "build:netlify": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build --mode production",
+    "build": "vite build",
+    "build:netlify": "vite build --mode production",
     "build:backend": "cd server && npm run build",
     "build:hybrid": "npm run build && npm run build:backend",
     "prebuild": "echo 'skip prebuild health-check'",
-    "export": "rm -rf dist && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
+    "export": "rm -rf dist && vite build",
     "start": "vite preview",
     "start:backend": "cd server && npm start",
     "start:hybrid": "cd server && npm start",
@@ -37,17 +37,6 @@
     "pm2:delete": "pm2 delete all",
     "pm2:save": "pm2 save",
     "pm2:startup": "pm2 startup"
-  },
-  "npmConfig": {
-    "optional": false,
-    "platform": "linux",
-    "arch": "x64",
-    "target_platform": "linux",
-    "target_arch": "x64",
-    "legacy-peer-deps": true,
-    "strict-ssl": false,
-    "build-from-source": false,
-    "prefer-offline": true
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
