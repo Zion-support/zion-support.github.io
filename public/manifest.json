@@ -1,59 +1,119 @@
 {
-  "name": "Zion Tech Group",
+  "name": "Zion Tech Group - AI-Powered Business Solutions",
   "short_name": "Zion Tech",
-  "description": "Leading AI & Technology Solutions Provider specializing in artificial intelligence, quantum computing, and digital transformation",
+  "description": "Leading provider of AI-powered business solutions, quantum computing, and innovative IT services for digital transformation.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#3B82F6",
+  "background_color": "#0f172a",
+  "theme_color": "#06b6d4",
   "orientation": "portrait-primary",
   "scope": "/",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
+  "lang": "en-US",
+  "categories": ["business", "productivity", "technology", "utilities"],
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32 48x48",
-      "type": "image/x-icon",
-      "purpose": "any"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our technology services",
-      "url": "/services"
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "name": "Contact",
-      "short_name": "Contact",
-      "description": "Get in touch with us",
-      "url": "/contact"
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "name": "About",
-      "short_name": "About",
-      "description": "Learn about Zion Tech Group",
-      "url": "/about"
+      "src": "/images/zion-tech-group-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/zion-tech-group-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "screenshots": [
     {
-      "src": "/og-image.svg",
-      "sizes": "1200x630",
-      "type": "image/svg+xml",
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
       "form_factor": "wide",
-      "label": "Zion Tech Group"
+      "label": "Zion Tech Group Desktop Experience"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile Experience"
     }
   ],
-  "related_applications": [],
+  "shortcuts": [
+    {
+      "name": "AI Solutions",
+      "short_name": "AI",
+      "description": "Explore our AI-powered business solutions",
+      "url": "/ai-solutions",
+      "icons": [
+        {
+          "src": "/images/ai-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our comprehensive service offerings",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/images/services-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/images/contact-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Request Quote",
+      "short_name": "Quote",
+      "description": "Request a custom quote for your project",
+      "url": "/request-quote",
+      "icons": [
+        {
+          "src": "/images/quote-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://ziontechgroup.com"
+    }
+  ],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
@@ -61,20 +121,22 @@
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/?protocol=%s"
-    }
-  ],
+  "handle_links": "preferred",
+  "capture_links": "new-client",
   "file_handlers": [
     {
-      "action": "/file-handler",
+      "action": "/upload",
       "accept": {
         "text/*": [".txt", ".md", ".json"],
         "application/pdf": [".pdf"],
         "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
       }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/protocol-handler?url=%s"
     }
   ],
   "share_target": {
@@ -93,24 +155,18 @@
       ]
     }
   },
-  "handle_links": "preferred",
-  "capture_links": "existing-client-navigate",
   "permissions": [
     "notifications",
     "background-sync",
-    "periodic-background-sync"
+    "storage"
   ],
-  "background": {
-    "service_worker": "/sw.js",
-    "type": "module"
-  },
   "features": [
     "Cross Platform",
     "fast",
     "simple",
     "AI-Powered",
     "Quantum Computing",
-    "Digital Transformation"
+    "Business Solutions"
   ],
   "developer": {
     "name": "Zion Tech Group",

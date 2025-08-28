@@ -3,138 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Offline - Zion Tech Group</title>
-    <meta name="description" content="You're currently offline. Check your internet connection and try again.">
+    <meta name="description" content="You're currently offline. Zion Tech Group - AI-Powered Business Solutions">
     <meta name="robots" content="noindex, nofollow">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#22ddd2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Zion Tech Group">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
 =======
     <title>Zion Tech Group - Offline</title>
-    <meta name="description" content="You're currently offline. Zion Tech Group provides cutting-edge AI and quantum solutions.">
->>>>>>> origin/main
+    <meta name="description" content="You're currently offline. Check your internet connection and try again.">
+    <meta name="theme-color" content="#2e73ea">
+    <link rel="icon" href="/favicon.ico">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-<<<<<<< HEAD
-            color: white;
+            background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%);
+            color: #ffffff;
 =======
-            color: #f8fafc;
->>>>>>> origin/main
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
         }
-
-        .offline-container {
-<<<<<<< HEAD
-            text-align: center;
-            max-width: 500px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.3); opacity: 0; }
         }
 
-        .offline-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 30px;
-            background: linear-gradient(135deg, #ef4444, #dc2626);
+        .offline-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #22ddd2, #8c15e9);
 =======
-            max-width: 600px;
+
+        .offline-container {
+            max-width: 500px;
             text-align: center;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 48px 32px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
 
         .offline-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 32px;
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
->>>>>>> origin/main
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-<<<<<<< HEAD
-            font-size: 40px;
-=======
-            font-size: 48px;
->>>>>>> origin/main
+            font-size: 80px;
+            margin-bottom: 20px;
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-<<<<<<< HEAD
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-=======
             0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.8; }
->>>>>>> origin/main
+            50% { transform: scale(1.1); opacity: 0.8; }
         }
 
         h1 {
             font-size: 2.5rem;
-<<<<<<< HEAD
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #60a5fa, #3b82f6);
-=======
             font-weight: 700;
             margin-bottom: 16px;
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
->>>>>>> origin/main
+            background: linear-gradient(135deg, #22ddd2, #2e73ea);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .subtitle {
-<<<<<<< HEAD
+        .offline-subtitle {
             font-size: 1.2rem;
-            color: #cbd5e1;
-            margin-bottom: 30px;
+            color: #94a3b8;
+            margin-bottom: 40px;
             line-height: 1.6;
         }
 
-        .status {
-            background: rgba(239, 68, 68, 0.2);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 30px;
-            color: #fca5a5;
+        .offline-message {
+            background: rgba(34, 221, 210, 0.1);
+            border: 1px solid rgba(34, 221, 210, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
         }
 
-        .actions {
+        .offline-message h3 {
+            color: #22ddd2;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .offline-message p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .offline-actions {
             display: flex;
-            gap: 15px;
+            gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 24px;
+            padding: 16px 32px;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: linear-gradient(135deg, #0ea5e9, #3b82f6);
 =======
-            font-size: 1.25rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #22ddd2, #8c15e9);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #f8fafc;
+=======
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+=======
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .offline-features {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .offline-features h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #0ea5e9;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-item h4 {
+            color: #0ea5e9;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
             color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .connection-status {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+=======
+            box-shadow: 0 10px 25px rgba(34, 221, 210, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #22ddd2;
+            border: 2px solid rgba(34, 221, 210, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(34, 221, 210, 0.1);
+            border-color: #22ddd2;
+        }
+
+        .connection-status {
+            margin-top: 30px;
+            padding: 16px;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 12px;
+            border: 1px solid rgba(34, 221, 210, 0.2);
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #ef4444;
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+
+        .status-dot.online {
+            background: #10b981;
+            animation: none;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .offline-container {
+                padding: 40px 20px;
+                margin: 20px;
+            }
+
+            .offline-title {
+                font-size: 2rem;
+            }
+
+            .offline-message {
+                font-size: 1rem;
+            }
+
+=======
+            .offline-subtitle {
+                font-size: 1rem;
+            }
+
+=======
+        
+        .offline-container {
+            max-width: 600px;
+            text-align: center;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(34, 221, 210, 0.2);
+            border-radius: 24px;
+            padding: 48px 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .offline-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 32px;
+            background: linear-gradient(135deg, #22ddd2, #0ea5e9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+        
+        .offline-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #22ddd2, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .offline-subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .offline-description {
+            color: #cbd5e1;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        
+        .offline-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .btn {
+            padding: 16px 32px;
+=======
+        .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
             margin-bottom: 32px;
             line-height: 1.6;
         }
@@ -143,14 +363,13 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 12px 24px;
-            background: rgba(239, 68, 68, 0.1);
+            background: rgba(239, 68, 68, 0.2);
             border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 12px;
-            color: #fca5a5;
-            font-size: 0.875rem;
-            font-weight: 500;
+            border-radius: 50px;
+            padding: 8px 16px;
             margin-bottom: 32px;
+            font-size: 0.9rem;
+            color: #fca5a5;
         }
 
         .status-dot {
@@ -165,411 +384,302 @@
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0.3; }
         }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+        .features-list {
+            text-align: left;
             margin: 32px 0;
-        }
-
-        .feature {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
             padding: 24px;
-            text-align: center;
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        .feature:hover {
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(6, 182, 212, 0.3);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
+        .features-list h3 {
+            color: #0891b2;
             margin-bottom: 16px;
-            display: block;
-        }
-
-        .feature-title {
             font-size: 1.125rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #06b6d4;
         }
-
-        .feature-description {
-            font-size: 0.875rem;
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features-list li {
+            padding: 8px 0;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .features-list li::before {
+            content: "✓";
+            color: #10b981;
+        }
+        .offline-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #22ddd2;
+        }
+        .offline-message {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
             color: #94a3b8;
-            line-height: 1.5;
         }
-
-        .actions {
-            margin-top: 32px;
+        .action-buttons {
             display: flex;
             flex-direction: column;
             gap: 16px;
-            align-items: center;
+            margin-bottom: 32px;
         }
 
         .btn {
-            padding: 16px 32px;
-            border: none;
-            border-radius: 12px;
->>>>>>> origin/main
+            padding: 12px 24px;
+            border-radius: 8px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            border: none;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-block;
         }
 
         .btn-primary {
-<<<<<<< HEAD
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-=======
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
->>>>>>> origin/main
+            background: linear-gradient(135deg, #22ddd2, #2e73ea);
             color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-<<<<<<< HEAD
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
-=======
-            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
->>>>>>> origin/main
+            box-shadow: 0 10px 25px rgba(34, 221, 210, 0.3);
         }
 
         .btn-secondary {
             background: rgba(255, 255, 255, 0.1);
-<<<<<<< HEAD
-            color: white;
-=======
-            color: #f8fafc;
->>>>>>> origin/main
+            color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .btn-secondary:hover {
-<<<<<<< HEAD
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
-
-        .tips {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        .tips h3 {
-            color: #60a5fa;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .tips ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .tips li {
-            padding: 8px 0;
-            color: #cbd5e1;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .tips li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .connection-status {
-            margin-top: 20px;
-            padding: 10px;
+        .retry-button {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            margin-top: 16px;
+            padding: 12px 24px;
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
             transition: all 0.3s ease;
+            border: none;
         }
-
-        .connection-status.online {
-            background: rgba(16, 185, 129, 0.2);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            color: #6ee7b7;
+        .retry-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(34, 221, 210, 0.3);
         }
-
-        .connection-status.offline {
-            background: rgba(239, 68, 68, 0.2);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #fca5a5;
-        }
-
-        @media (max-width: 600px) {
-            .offline-container {
-                padding: 30px 20px;
-=======
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .connection-info {
+        .contact-info {
             margin-top: 32px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            font-size: 0.875rem;
+            font-size: 0.9rem;
             color: #94a3b8;
         }
-
-        .connection-info h3 {
-            color: #06b6d4;
-            margin-bottom: 12px;
-            font-size: 1rem;
+        .contact-info h3 {
+            color: #0891b2;
+            margin-bottom: 16px;
+            font-size: 1.125rem;
         }
-
-        .connection-info ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .connection-info li {
-            padding: 4px 0;
+        .contact-links {
             display: flex;
-            align-items: center;
-            gap: 8px;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
-
-        .connection-info li::before {
-            content: "•";
-            color: #06b6d4;
-            font-weight: bold;
+        .contact-link {
+            color: #0ea5e9;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
-
-        @media (max-width: 768px) {
-            .offline-container {
-                padding: 32px 20px;
->>>>>>> origin/main
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-<<<<<<< HEAD
-=======
-            .features {
-                grid-template-columns: 1fr;
-            }
-
->>>>>>> origin/main
-            .actions {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
+        .contact-link:hover {
+            background: rgba(14, 165, 233, 0.1);
+            border-color: rgba(14, 165, 233, 0.3);
+        }
+        .footer {
+            margin-top: 48px;
+            padding: 24px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        .footer a {
+            color: #0ea5e9;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="offline-container">
-<<<<<<< HEAD
-        <div class="offline-icon">
-            📡
-        </div>
-        
+        <div class="offline-icon">📡</div>
         <h1>You're Offline</h1>
-        <p class="subtitle">
-            It looks like you've lost your internet connection. 
-            Don't worry - we're here to help you get back online.
-        </p>
-
-        <div class="status">
-            <strong>Status:</strong> No internet connection detected
-        </div>
-
-        <div class="actions">
-            <button class="btn btn-primary" onclick="window.location.reload()">
-                🔄 Try Again
-            </button>
-            <button class="btn btn-secondary" onclick="checkConnection()">
-                📡 Check Connection
-            </button>
-        </div>
-
-        <div class="tips">
-            <h3>💡 Quick Tips:</h3>
-            <ul>
-                <li>Check your Wi-Fi connection</li>
-                <li>Try switching to mobile data</li>
-                <li>Restart your router</li>
-                <li>Check if other websites work</li>
-            </ul>
-        </div>
-
-        <div id="connectionStatus" class="connection-status offline">
-            Checking connection status...
-=======
-        <div class="offline-icon">🌐</div>
+        <p class="subtitle">Don't worry! You can still access some features while offline.</p>
         
-        <h1>You're Offline</h1>
-        <p class="subtitle">
-            Don't worry! Zion Tech Group is still here to help. Some features may be limited while you're offline.
-        </p>
-
         <div class="status-indicator">
             <div class="status-dot"></div>
-            <span>No Internet Connection</span>
+            <span>Connection Status: Offline</span>
         </div>
 
-        <div class="features">
-            <div class="feature">
-                <span class="feature-icon">🤖</span>
-                <div class="feature-title">AI Solutions</div>
-                <div class="feature-description">
-                    Explore our AI-powered business solutions and automation tools
-                </div>
-            </div>
-            
-            <div class="feature">
-                <span class="feature-icon">⚛️</span>
-                <div class="feature-title">Quantum Computing</div>
-                <div class="feature-description">
-                    Next-generation computational power for complex problem solving
-                </div>
-            </div>
-            
-            <div class="feature">
-                <span class="feature-icon">☁️</span>
-                <div class="feature-title">Cloud Services</div>
-                <div class="feature-description">
-                    Scalable cloud infrastructure and DevOps automation
-                </div>
-            </div>
-        </div>
-
-        <div class="actions">
-            <button class="btn btn-primary" onclick="window.location.reload()">
-                🔄 Try Again
-            </button>
-            
-            <a href="/" class="btn btn-secondary">
-                🏠 Go Home
-            </a>
-        </div>
-
-        <div class="connection-info">
-            <h3>Connection Troubleshooting</h3>
+        <div class="features-list">
+            <h3>Available Offline Features:</h3>
             <ul>
-                <li>Check your internet connection</li>
-                <li>Try refreshing the page</li>
-                <li>Check if Zion Tech Group is accessible</li>
-                <li>Clear your browser cache</li>
-                <li>Try a different network</li>
+                <li>View cached pages</li>
+                <li>Access saved content</li>
+                <li>Use basic navigation</li>
+                <li>View contact information</li>
             </ul>
->>>>>>> origin/main
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn btn-primary" onclick="window.location.reload()">
+                Try Again
+            </button>
+            <a href="/" class="btn btn-secondary">Go Home</a>
+        </div>
+
+        <div class="contact-info">
+            <h3>Need Help?</h3>
+            <div class="contact-links">
+                <a href="mailto:support@ziontechgroup.com" class="contact-link">Email Support</a>
+                <a href="tel:+1-800-ZION-TECH" class="contact-link">Call Us</a>
+                <a href="https://ziontechgroup.com" class="contact-link">Visit Website</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+            <p>This page is available offline for your convenience.</p>
         </div>
     </div>
 
     <script>
-<<<<<<< HEAD
+
+        <div class="tips">
+            <h3>💡 Troubleshooting Tips</h3>
+            <ul>
+                <li>Check your Wi-Fi connection</li>
+                <li>Try switching between Wi-Fi and mobile data</li>
+                <li>Restart your router or modem</li>
+                <li>Check if other websites are working</li>
+                <li>Try refreshing the page</li>
+            </ul>
+        </div>
+
+        <div class="network-status" id="networkStatus">
+            Checking network status...
+        </div>
+    </div>
+
+    <script>
+        // Check network status
         function checkConnection() {
-            const statusElement = document.getElementById('connectionStatus');
+            const statusElement = document.getElementById('networkStatus');
             
             if (navigator.onLine) {
-                statusElement.textContent = '✅ You\'re back online! Refreshing...';
-                statusElement.className = 'connection-status online';
+                statusElement.innerHTML = '✅ You\'re back online! Refreshing...';
+                statusElement.style.background = 'rgba(34, 221, 210, 0.1)';
+                statusElement.style.border = '1px solid rgba(34, 221, 210, 0.3)';
+                statusElement.style.color = '#22ddd2';
+                
                 setTimeout(() => {
                     window.location.reload();
                 }, 2000);
             } else {
-                statusElement.textContent = '❌ Still offline. Please check your connection.';
-                statusElement.className = 'connection-status offline';
+                statusElement.innerHTML = '❌ Still offline. Please check your connection.';
+                statusElement.style.background = 'rgba(239, 68, 68, 0.1)';
+                statusElement.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+                statusElement.style.color = '#fca5a5';
             }
         }
 
         // Listen for online/offline events
         window.addEventListener('online', () => {
-            const statusElement = document.getElementById('connectionStatus');
-            statusElement.textContent = '✅ You\'re back online! Refreshing...';
-            statusElement.className = 'connection-status online';
+            const statusElement = document.getElementById('networkStatus');
+            statusElement.innerHTML = '✅ Connection restored! Refreshing...';
+            statusElement.style.background = 'rgba(34, 221, 210, 0.1)';
+            statusElement.style.border = '1px solid rgba(34, 221, 210, 0.3)';
+            statusElement.style.color = '#22ddd2';
+            
             setTimeout(() => {
                 window.location.reload();
             }, 2000);
         });
 
         window.addEventListener('offline', () => {
-            const statusElement = document.getElementById('connectionStatus');
-            statusElement.textContent = '❌ Connection lost. You\'re offline.';
-            statusElement.className = 'connection-status offline';
+        // Go to homepage (will work if cached)
+        function goHome() {
+            window.location.href = '/';
+        }
+
+        // Listen for network changes
+        window.addEventListener('online', updateNetworkStatus);
+        window.addEventListener('offline', updateNetworkStatus);
+        
+        // Check initial status
+        updateNetworkStatus();
+        
+        // Auto-retry every 30 seconds
+        setInterval(() => {
+            if (navigator.onLine) {
+                window.location.reload();
+            }
+        }, 30000);
+        
+        // Service Worker registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('SW registered: ', registration);
+                })
+                .catch((registrationError) => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+=======
+            const statusElement = document.getElementById('networkStatus');
+            statusElement.innerHTML = '❌ Connection lost. Please check your internet.';
+            statusElement.style.background = 'rgba(239, 68, 68, 0.1)';
+            statusElement.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+            statusElement.style.color = '#fca5a5';
         });
 
-        // Check connection status periodically
+        // Auto-check connection every 5 seconds
         setInterval(checkConnection, 5000);
 
         // Initial check
         checkConnection();
 =======
         // Check connection status
-        function checkConnection() {
+        function updateConnectionStatus() {
             if (navigator.onLine) {
                 window.location.reload();
             }
         }
 
-        // Listen for connection changes
-        window.addEventListener('online', checkConnection);
-        
-        // Check every 5 seconds
-        setInterval(checkConnection, 5000);
+        // Listen for online/offline events
+        window.addEventListener('online', updateConnectionStatus);
+        window.addEventListener('offline', updateConnectionStatus);
 
-        // Add some interactivity
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate features on scroll
-            const features = document.querySelectorAll('.feature');
-            features.forEach((feature, index) => {
-                feature.style.animationDelay = `${index * 0.1}s`;
-                feature.style.animation = 'fadeInUp 0.6s ease forwards';
-            });
-
-            // Add CSS animation
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes fadeInUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(20px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-                
-                .feature {
-                    opacity: 0;
-                }
-            `;
-            document.head.appendChild(style);
-        });
->>>>>>> origin/main
+        // Check status every 30 seconds
+        setInterval(updateConnectionStatus, 30000);
     </script>
 </body>
 </html>

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MobileSidebarToggle } from './MobileSidebarToggle';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
+import {
+  Menu,
+  X,
+  Search,
+  User,
+  Bell,
   ChevronDown,
   Brain,
   Shield,
@@ -272,14 +272,14 @@ export const FuturisticNavigation: React.FC = () => {
   return (
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        scrolled 
-          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+        scrolled
+          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10'
           : 'bg-transparent'
       }`}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Enhanced Logo */}
-            <motion.div 
+            <motion.div
               className="flex items-center"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -339,8 +339,8 @@ export const FuturisticNavigation: React.FC = () => {
                     transition={{ duration: 0.5, delay: (index + 2) * 0.1 }}
                     onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
-                      activeDropdown === category.name 
-                        ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20' 
+                      activeDropdown === category.name
+                        ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20'
                         : 'hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10'
                     }`}
                   >

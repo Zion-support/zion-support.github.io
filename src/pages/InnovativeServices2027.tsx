@@ -33,7 +33,7 @@ import {
   Phone
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Customer Success': Brain,

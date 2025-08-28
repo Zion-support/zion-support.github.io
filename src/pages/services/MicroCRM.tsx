@@ -1,265 +1,37 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Activity,
-  BarChart3,
-  TrendingUp,
-  Shield,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target2,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt,
-  Cloud,
-  Zap2,
-  Gauge,
-  BarChart4,
-  TrendingUp2,
-  Lightbulb,
-  Briefcase,
-  Strategy,
-  Brain,
-  Compass,
-  RefreshCw,
-  TrendingUp3,
-  Layers,
-  Workflow,
-  Scale,
-  Award,
-  Lock,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Sensor,
-  Chip,
-  Circuit,
-  Orbit,
-  Planet,
-  Star,
-  Telescope,
-  Antenna,
-  Signal,
-  Navigation,
-  Earth,
-  Moon,
-  Sun,
-  Binary,
-  Network,
-  Database2,
-  Lock2,
-  Key2,
-  Fingerprint2,
-  Eye,
-  Brain2,
-  Cpu2,
-  Memory,
-  HardDrive,
-  Server2,
-  Phone,
-  Mail,
-  Calendar,
-  MessageSquare,
-  UserPlus,
-  UserCheck,
-  UserX,
-  UserMinus,
-  UserEdit,
-  UserSearch,
-  UserList,
-  UserSettings,
-  UserCog,
-  UserShield,
-  UserStar,
-  UserHeart,
-  UserCheck2,
-  UserX2,
-  UserMinus2,
-  UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  UserList2,
-  UserSettings2,
-  UserCog2,
-  UserShield2,
-  UserStar2,
-  UserHeart2
-} from 'lucide-react';
-
-const MicroCRM = () => {
-  const features = [
-    {
-      icon: Users,
-      title: 'Contact Management',
-      description: 'Comprehensive contact database with detailed customer profiles'
-    },
-    {
-      icon: Target,
-      title: 'Lead Tracking',
-      description: 'Track leads from initial contact to conversion'
-    },
-    {
-      icon: Activity,
-      title: 'Sales Pipeline',
-      description: 'Visual sales pipeline with customizable stages'
-    },
-    {
-      icon: BarChart3,
-      title: 'Analytics & Reporting',
-      description: 'Real-time insights into sales performance and trends'
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security for customer data protection'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud-Based',
-      description: 'Access your CRM from anywhere with cloud synchronization'
-    }
-  ];
-
-  const benefits = [
-    'Increase sales productivity by 40%',
-    'Improve customer retention by 60%',
-    'Reduce lead response time by 80%',
-    'Streamline sales processes',
-    'Enhance customer relationships',
-    'Boost team collaboration'
-  ];
-
-  const services = [
-    {
-      icon: Phone,
-      title: 'Communication Tools',
-      description: 'Integrated calling, email, and messaging capabilities'
-    },
-    {
-      icon: Calendar,
-      title: 'Task Management',
-      description: 'Schedule follow-ups and track important activities'
-    },
-    {
-      icon: MessageSquare,
-      title: 'Customer Support',
-      description: 'Track customer issues and support requests'
-    },
-    {
-      icon: UserPlus,
-      title: 'Lead Generation',
-      description: 'Tools for capturing and nurturing new leads'
-    }
-  ];
-
-  const useCases = [
-    {
-      industry: 'Small Business',
-      description: 'Affordable CRM for growing companies'
-    },
-    {
-      industry: 'Sales Teams',
-      description: 'Streamline sales processes and tracking'
-    },
-    {
-      industry: 'Real Estate',
-      description: 'Manage property listings and client relationships'
-    },
-    {
-      industry: 'Consulting',
-      description: 'Track client projects and communications'
-    }
-  ];
+import SEO from '@/components/SEO';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
-              <Users className="w-4 h-4 mr-2" />
-              Customer Relationship Management
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Micro
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent"> CRM</span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Streamline your customer relationships with our lightweight, 
-              powerful CRM solution designed for growing businesses.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful CRM Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Micro CRM provides essential tools for managing customer 
-              relationships and growing your business.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
+    <div className="min-h-screen bg-futuristic text-white">
+      <SEO
+        title="Micro CRM for Local Businesses"
+        description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs."
+      />
+      <section className="container-responsive section-padding">
+        <h1 className="heading-responsive text-gradient">Micro CRM</h1>
+        <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
+          Essential CRM without bloat. Track customers, appointments, jobs, and invoices with
+          SMS reminders, online payments, and review requests to grow word‑of‑mouth.
+        </p>
+        <div className="grid-futuristic mt-10">
+          <div className="card-futuristic">
+            <h2 className="text-xl font-semibold mb-2">Highlights</h2>
+            <ul className="list-disc pl-5 space-y-2 text-zion-slate-light">
+              <li>Contacts, pipelines, and tasks in one view</li>
+              <li>SMS/email appointment reminders and confirmations</li>
+              <li>Invoices and online payments with Stripe</li>
+              <li>Automated Google review requests after service</li>
+              <li>Mobile‑first with offline mode</li>
+            </ul>
+          </div>
+          <div className="card-futuristic">
+            <h2 className="text-xl font-semibold mb-2">Pricing</h2>
+            <ul className="list-disc pl-5 space-y-2 text-zion-slate-light">
+              <li>Solo: $19/mo</li>
+              <li>Team: $79/mo up to 10 users</li>
+              <li>Business: $199/mo with custom fields and roles</li>
+            </ul>
+            <a href="/request-quote" className="btn-futuristic mt-4 inline-block">Get started</a>
           </div>
         </div>
       </section>

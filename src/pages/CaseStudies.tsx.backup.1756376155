@@ -1,0 +1,1304 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+<<<<<<< HEAD
+  FileText, 
+  TrendingUp, 
+  Users, 
+  Building, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  ShoppingCart, 
+  Star, 
+  Clock, 
+  DollarSign, 
+  Target, 
+  CheckCircle, 
+  ArrowRight, 
+  Search, 
+  Filter, 
+  Globe, 
+  Award, 
+  Zap, 
+  Rocket, 
+  Heart, 
+  Cpu, 
+  Atom, 
+  Network, 
+  Eye, 
+  BarChart3, 
+  Lock, 
+  Leaf, 
+  Satellite, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  Calendar,
+  MapPin,
+  Industry,
+  ChartBar,
+  Lightbulb,
+  Code,
+  Server,
+  Database,
+  Smartphone,
+  Truck,
+  GraduationCap,
+  BookOpen,
+  Video,
+  Image,
+  Link,
+  ChevronDown,
+  ChevronRight,
+  ExternalLink
+} from 'lucide-react';
+
+interface CaseStudy {
+  id: string;
+  title: string;
+  excerpt: string;
+  description: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  metrics: {
+    revenueIncrease?: string;
+    costReduction?: string;
+    efficiencyGain?: string;
+    timeSaved?: string;
+    accuracyImprovement?: string;
+  };
+  technologies: string[];
+  duration: string;
+  teamSize: string;
+  category: string;
+  featured: boolean;
+  image: string;
+  tags: string[];
+  author: string;
+  publishDate: string;
+  readTime: string;
+}
+
+const caseStudies: CaseStudy[] = [
+  {
+    id: '1',
+    title: 'AI-Powered Business Intelligence Drives 35% Revenue Growth for Fortune 500 Retailer',
+    excerpt: 'How a major retail chain leveraged our AI Business Intelligence Suite to optimize operations and increase revenue by 35% in just 12 months.',
+    description: 'A Fortune 500 retail chain was struggling with fragmented data across multiple systems, leading to poor decision-making and missed opportunities. They needed a unified view of their business operations and predictive insights to drive growth.',
+    client: 'Global Retail Corporation',
+    industry: 'Retail & E-commerce',
+    challenge: 'Fragmented data across multiple systems, poor decision-making, missed revenue opportunities, lack of predictive insights',
+    solution: 'Implemented Zion Tech Group\'s AI Business Intelligence Suite with advanced analytics, machine learning algorithms, and real-time dashboards',
+    results: [
+      '35% increase in overall revenue within 12 months',
+      '40% improvement in inventory management efficiency',
+      '25% reduction in operational costs',
+      '60% faster decision-making process',
+      'Predictive analytics prevented $2M in potential losses'
+    ],
+    metrics: {
+      revenueIncrease: '35%',
+      costReduction: '25%',
+      efficiencyGain: '40%',
+      timeSaved: '60%',
+      accuracyImprovement: '85%'
+    },
+    technologies: ['AI/ML', 'Business Intelligence', 'Predictive Analytics', 'Real-time Dashboards', 'Data Integration'],
+    duration: '12 months',
+    teamSize: '8 people',
+    category: 'AI & Analytics',
+    featured: true,
+    image: '/images/case-studies/retail-ai-bi.jpg',
+    tags: ['AI Business Intelligence', 'Retail', 'Revenue Growth', 'Predictive Analytics'],
+    author: 'Dr. Sarah Chen',
+    publishDate: '2024-01-15',
+    readTime: '8 min read'
+  },
+  {
+    id: '2',
+    title: 'Quantum Computing Optimization Reduces Manufacturing Costs by 40%',
+    excerpt: 'A manufacturing company achieved significant cost savings and efficiency improvements through our quantum computing optimization solutions.',
+    description: 'A leading manufacturing company was facing complex optimization challenges in their production scheduling and supply chain management. Traditional computing methods were too slow to find optimal solutions.',
+    client: 'Advanced Manufacturing Inc.',
+    industry: 'Manufacturing',
+    challenge: 'Complex production scheduling optimization, slow traditional computing methods, inefficient supply chain management, high operational costs',
+    solution: 'Deployed Zion Tech Group\'s Quantum Computing Optimization Platform with custom algorithms for manufacturing operations',
+    results: [
+      '40% reduction in manufacturing costs',
+      '50% improvement in production efficiency',
+      '30% faster supply chain optimization',
+      '25% reduction in waste and defects',
+      'Quantum advantage demonstrated in real-world applications'
+    ],
+    metrics: {
+      costReduction: '40%',
+      efficiencyGain: '50%',
+      timeSaved: '30%'
+    },
+    technologies: ['Quantum Computing', 'Optimization Algorithms', 'Supply Chain Management', 'Production Scheduling'],
+    duration: '18 months',
+    teamSize: '12 people',
+    category: 'Quantum Computing',
+    featured: true,
+    image: '/images/case-studies/quantum-manufacturing.jpg',
+    tags: ['Quantum Computing', 'Manufacturing', 'Cost Reduction', 'Optimization'],
+    author: 'Dr. Alex Thompson',
+    publishDate: '2024-01-12',
+    readTime: '10 min read'
+  },
+  {
+    id: '3',
+    title: 'AI Cybersecurity Platform Prevents 99.9% of Advanced Threats',
+    excerpt: 'Financial services company achieves unprecedented security levels with our AI-powered cybersecurity platform.',
+    description: 'A major financial services company was experiencing sophisticated cyber attacks that traditional security tools couldn\'t detect. They needed advanced threat detection and response capabilities.',
+    client: 'Global Financial Services',
+    industry: 'Financial Services',
+    challenge: 'Sophisticated cyber attacks, traditional security tools ineffective, compliance requirements, real-time threat detection needed',
+    solution: 'Implemented Zion Tech Group\'s AI Cybersecurity Platform with machine learning threat detection and automated response systems',
+    results: [
+      '99.9% threat detection and prevention rate',
+      '90% reduction in false positives',
+      'Real-time threat response in under 30 seconds',
+      'Achieved SOC2 Type II compliance',
+      'Zero successful breaches in 18 months'
+    ],
+    metrics: {
+      accuracyImprovement: '99.9%',
+      efficiencyGain: '90%',
+      timeSaved: '99%'
+    },
+    technologies: ['AI/ML', 'Cybersecurity', 'Threat Detection', 'Automated Response', 'Compliance'],
+    duration: '9 months',
+    teamSize: '15 people',
+    category: 'Cybersecurity',
+    featured: false,
+    image: '/images/case-studies/ai-cybersecurity.jpg',
+    tags: ['AI Cybersecurity', 'Financial Services', 'Threat Detection', 'Compliance'],
+    author: 'Jennifer Kim',
+    publishDate: '2024-01-10',
+    readTime: '7 min read'
+  },
+  {
+    id: '4',
+    title: 'Cloud Migration and DevOps Transformation Saves $2M Annually',
+    excerpt: 'Healthcare organization modernizes infrastructure and achieves significant cost savings through cloud migration and DevOps transformation.',
+    description: 'A healthcare organization was struggling with legacy infrastructure, high maintenance costs, and slow deployment cycles. They needed to modernize their technology stack and improve operational efficiency.',
+    client: 'Regional Healthcare System',
+    industry: 'Healthcare',
+    challenge: 'Legacy infrastructure, high maintenance costs, slow deployment cycles, compliance requirements, scalability issues',
+    solution: 'Executed comprehensive cloud migration strategy with DevOps transformation and automated deployment pipelines',
+    results: [
+      '$2M annual cost savings',
+      '80% reduction in deployment time',
+      '99.9% uptime achieved',
+      'Improved compliance and security posture',
+      'Scalable infrastructure for future growth'
+    ],
+    metrics: {
+      costReduction: '$2M annually',
+      efficiencyGain: '80%',
+      timeSaved: '80%'
+    },
+    technologies: ['Cloud Migration', 'DevOps', 'Automation', 'Infrastructure as Code', 'Healthcare IT'],
+    duration: '15 months',
+    teamSize: '20 people',
+    category: 'Cloud & DevOps',
+    featured: false,
+    image: '/images/case-studies/cloud-healthcare.jpg',
+    tags: ['Cloud Migration', 'DevOps', 'Healthcare', 'Cost Savings'],
+    author: 'Michael Rodriguez',
+    publishDate: '2024-01-08',
+    readTime: '9 min read'
+  },
+  {
+    id: '5',
+    title: 'Micro SaaS Platform Generates $500K Revenue in First Year',
+    excerpt: 'Startup company successfully launches and scales their business using our Micro SaaS platform and development services.',
+    description: 'A startup company had a great idea for a specialized software solution but lacked the technical expertise and infrastructure to build and launch it quickly. They needed a complete solution to get to market fast.',
+    client: 'InnovationTech Startup',
+    industry: 'Technology Startup',
+    challenge: 'Lack of technical expertise, infrastructure costs, time to market pressure, limited resources',
+    solution: 'Leveraged Zion Tech Group\'s Micro SaaS Platform with custom development services and go-to-market support',
+    results: [
+      '$500K revenue in first year',
+      'Launched product in 6 months instead of 18 months',
+      '500+ paying customers acquired',
+      'Scalable infrastructure for growth',
+      'Successful Series A funding round'
+    ],
+    metrics: {
+      revenueIncrease: '$500K',
+      timeSaved: '67%',
+      efficiencyGain: '300%'
+    },
+    technologies: ['Micro SaaS', 'Custom Development', 'Cloud Infrastructure', 'Go-to-Market Strategy'],
+    duration: '6 months',
+    teamSize: '6 people',
+    category: 'Micro SaaS',
+    featured: false,
+    image: '/images/case-studies/micro-saas-startup.jpg',
+    tags: ['Micro SaaS', 'Startup', 'Revenue Generation', 'Rapid Development'],
+    author: 'David Park',
+    publishDate: '2024-01-05',
+    readTime: '6 min read'
+  },
+  {
+    id: '6',
+    title: 'AI Content Marketing Suite Increases Lead Generation by 200%',
+    excerpt: 'B2B company achieves dramatic improvements in lead generation and content marketing efficiency through AI-powered automation.',
+    description: 'A B2B company was struggling with content creation, lead generation, and marketing automation. Their manual processes were time-consuming and produced inconsistent results.',
+    client: 'B2B Solutions Corp.',
+    industry: 'B2B Services',
+    challenge: 'Manual content creation, inconsistent lead generation, time-consuming marketing processes, poor ROI tracking',
+    solution: 'Implemented Zion Tech Group\'s AI Content Marketing Suite with automated content generation and lead scoring',
+    results: [
+      '200% increase in lead generation',
+      '80% reduction in content creation time',
+      '150% improvement in content engagement',
+      'Automated lead scoring and nurturing',
+      'Measurable ROI on marketing spend'
+    ],
+    metrics: {
+      revenueIncrease: '200%',
+      timeSaved: '80%',
+      efficiencyGain: '150%'
+    },
+    technologies: ['AI Content Generation', 'Marketing Automation', 'Lead Scoring', 'Content Analytics'],
+    duration: '8 months',
+    teamSize: '10 people',
+    category: 'AI Marketing',
+    featured: false,
+    image: '/images/case-studies/ai-content-marketing.jpg',
+    tags: ['AI Content Marketing', 'Lead Generation', 'B2B', 'Marketing Automation'],
+    author: 'Lisa Wang',
+    publishDate: '2024-01-03',
+    readTime: '7 min read'
+  }
+];
+
+const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Micro SaaS', 'AI Marketing'];
+const industries = ['All', 'Retail & E-commerce', 'Manufacturing', 'Financial Services', 'Healthcare', 'Technology Startup', 'B2B Services'];
+
+export function CaseStudies() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedIndustry, setSelectedIndustry] = useState('All');
+  const [sortBy, setSortBy] = useState<'date' | 'impact' | 'relevance'>('impact');
+
+  const filteredCaseStudies = caseStudies.filter(study => {
+    const matchesSearch = study.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         study.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         study.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'All' || study.category === selectedCategory;
+    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
+    
+    return matchesSearch && matchesCategory && matchesIndustry;
+  });
+
+  const sortedCaseStudies = [...filteredCaseStudies].sort((a, b) => {
+    switch (sortBy) {
+      case 'date':
+        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+      case 'impact':
+        return b.featured ? 1 : -1;
+      case 'relevance':
+        return a.results.length - b.results.length;
+      default:
+        return 0;
+    }
+  });
+
+  const featuredCaseStudies = sortedCaseStudies.filter(study => study.featured);
+  const regularCaseStudies = sortedCaseStudies.filter(study => !study.featured);
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Header */}
+      <div className="bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Success Stories & Case Studies
+            </h1>
+            <p className="text-xl text-cyan-300 max-w-3xl mx-auto">
+              Discover how organizations across industries are achieving remarkable results with Zion Tech Group solutions.
+            </p>
+          </motion.div>
+
+          {/* Search and Filters */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-6xl mx-auto mt-8"
+          >
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+              <div className="lg:col-span-2">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search case studies..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 bg-zion-slate-dark/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+              </div>
+              
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-zion-slate-dark/50 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+              
+              <select
+                value={selectedIndustry}
+                onChange={(e) => setSelectedIndustry(e.target.value)}
+                className="px-4 py-3 bg-zion-slate-dark/50 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              >
+                {industries.map(industry => (
+                  <option key={industry} value={industry}>{industry}</option>
+                ))}
+              </select>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Featured Case Studies */}
+        {featuredCaseStudies.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mb-16"
+          >
+            <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
+              <Star className="w-6 h-6 text-yellow-400 mr-2" />
+              Featured Success Stories
+            </h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredCaseStudies.map((study, index) => (
+                <motion.div
+                  key={study.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden hover:border-cyan-400/40 transition-all duration-300"
+                >
+                  <div className="h-48 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                    <FileText className="w-16 h-16 text-cyan-400" />
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
+                      <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs font-medium">
+                        Featured
+                      </span>
+                      <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-medium">
+                        {study.category}
+                      </span>
+                      <span className="flex items-center">
+                        <Building className="w-4 h-4 mr-1" />
+                        {study.industry}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-300 transition-colors">
+                      {study.title}
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-4">{study.excerpt}</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      {study.metrics.revenueIncrease && (
+                        <div className="text-center p-3 bg-green-500/20 rounded-lg">
+                          <div className="text-green-400 font-bold text-lg">{study.metrics.revenueIncrease}</div>
+                          <div className="text-green-300 text-xs">Revenue Increase</div>
+                        </div>
+                      )}
+                      {study.metrics.costReduction && (
+                        <div className="text-center p-3 bg-blue-500/20 rounded-lg">
+                          <div className="text-blue-400 font-bold text-lg">{study.metrics.costReduction}</div>
+                          <div className="text-blue-300 text-xs">Cost Reduction</div>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-400">
+                      <span className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {study.duration}
+                      </span>
+                      <span className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {study.teamSize}
+                      </span>
+                      <span className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {formatDate(study.publishDate)}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Regular Case Studies */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl font-bold text-white">All Case Studies</h2>
+            
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as 'date' | 'impact' | 'relevance')}
+              className="px-4 py-2 bg-zion-slate-dark/50 border border-cyan-400/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            >
+              <option value="impact">Sort by Impact</option>
+              <option value="date">Sort by Date</option>
+              <option value="relevance">Sort by Relevance</option>
+            </select>
+          </div>
+          
+          {regularCaseStudies.length === 0 ? (
+            <div className="text-center py-12">
+              <FileText className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No case studies found</h3>
+              <p className="text-gray-400 mb-4">
+                Try adjusting your search terms or browse all categories
+              </p>
+              <button
+                onClick={() => {
+                  setSearchQuery('');
+                  setSelectedCategory('All');
+                  setSelectedIndustry('All');
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Clear Filters
+              </button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {regularCaseStudies.map((study, index) => (
+                <motion.div
+                  key={study.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                  className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden hover:border-cyan-400/40 transition-all duration-300"
+                >
+                  <div className="h-40 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                    <FileText className="w-12 h-12 text-cyan-400" />
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
+                      <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-medium">
+                        {study.category}
+                      </span>
+                      <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-medium">
+                        {study.industry}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-300 transition-colors">
+                      {study.title}
+                    </h3>
+                    
+                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">{study.excerpt}</p>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-white text-sm font-medium mb-2">Key Results:</h4>
+                      <ul className="space-y-1">
+                        {study.results.slice(0, 2).map((result, idx) => (
+                          <li key={idx} className="text-xs text-gray-300 flex items-start">
+                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                            {result}
+                          </li>
+                        ))}
+                        {study.results.length > 2 && (
+                          <li className="text-xs text-cyan-400">
+                            +{study.results.length - 2} more results
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-400">
+                      <span className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {study.duration}
+                      </span>
+                      <span className="flex items-center">
+                        <Users className="w-4 h-4 mr-1" />
+                        {study.teamSize}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Create Your Success Story?</h3>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Let's discuss how Zion Tech Group can help your organization achieve similar results. Our team is ready to understand your challenges and propose tailored solutions.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-semibold text-lg"
+=======
+  TrendingUp, 
+  DollarSign, 
+  Clock, 
+  Users, 
+  ArrowRight,
+  Filter,
+  Search,
+  Star,
+  Award,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Server,
+  BarChart3,
+  Code,
+  Network,
+  Atom,
+  Globe,
+  Cpu,
+  Lock,
+  Database,
+  Rocket,
+  CheckCircle,
+  Calendar,
+  Building,
+  Target,
+  Lightbulb,
+  Sparkles,
+  Flame,
+  Crown,
+  Infinity,
+  MessageCircle,
+  ExternalLink,
+  Play,
+  Download,
+  Share2,
+  Eye,
+  Heart,
+  Tag,
+  Filter as FilterIcon,
+  ChevronDown,
+  ChevronUp,
+  Settings
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+
+export default function CaseStudies() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState('all');
+  const [selectedService, setSelectedService] = useState('all');
+  const [selectedOutcome, setSelectedOutcome] = useState('all');
+  const [showFilters, setShowFilters] = useState(false);
+
+  const industries = [
+    { id: 'all', name: 'All Industries', count: 24 },
+    { id: 'healthcare', name: 'Healthcare', count: 6 },
+    { id: 'finance', name: 'Financial Services', count: 5 },
+    { id: 'manufacturing', name: 'Manufacturing', count: 4 },
+    { id: 'retail', name: 'Retail & E-commerce', count: 3 },
+    { id: 'technology', name: 'Technology', count: 3 },
+    { id: 'government', name: 'Government', count: 2 },
+    { id: 'education', name: 'Education', count: 1 }
+  ];
+
+  const services = [
+    { id: 'all', name: 'All Services', count: 24 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 8 },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 5 },
+    { id: 'cloud', name: 'Cloud & DevOps', count: 4 },
+    { id: 'data-analytics', name: 'Data Analytics', count: 3 },
+    { id: 'digital-transformation', name: 'Digital Transformation', count: 2 },
+    { id: 'iot', name: 'IoT Solutions', count: 2 }
+  ];
+
+  const outcomes = [
+    { id: 'all', name: 'All Outcomes', count: 24 },
+    { id: 'cost-reduction', name: 'Cost Reduction', count: 8 },
+    { id: 'efficiency', name: 'Efficiency Improvement', count: 7 },
+    { id: 'security', name: 'Security Enhancement', count: 5 },
+    { id: 'revenue', name: 'Revenue Growth', count: 4 }
+  ];
+
+  const caseStudies = [
+    {
+      id: 1,
+      title: "AI-Powered Healthcare Diagnosis Platform",
+      subtitle: "Revolutionizing patient care with machine learning",
+      description: "A leading healthcare provider transformed their diagnostic capabilities by implementing our AI-powered platform, resulting in faster, more accurate diagnoses and improved patient outcomes.",
+      longDescription: "This healthcare organization was struggling with long diagnosis times and inconsistent accuracy rates. Our AI-powered diagnostic platform integrated seamlessly with their existing systems, providing real-time analysis of medical images and patient data. The solution included advanced machine learning algorithms, secure data handling, and comprehensive training for medical staff.",
+      industry: "healthcare",
+      service: "ai-ml",
+      outcome: "efficiency",
+      client: "MetroHealth Medical Center",
+      clientSize: "Large Enterprise",
+      clientLocation: "United States",
+      duration: "8 months",
+      teamSize: 12,
+      challenge: "Long diagnosis times, inconsistent accuracy, overwhelmed medical staff",
+      solution: "AI-powered diagnostic platform with real-time analysis capabilities",
+      results: [
+        "85% reduction in diagnosis time",
+        "92% improvement in diagnostic accuracy",
+        "40% reduction in medical staff workload",
+        "Improved patient satisfaction scores by 78%"
+      ],
+      metrics: {
+        costSavings: "$2.3M annually",
+        efficiencyGain: "85%",
+        accuracyImprovement: "92%",
+        timeReduction: "85%"
+      },
+      technologies: ["Machine Learning", "Computer Vision", "Cloud Computing", "HIPAA Compliance"],
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=400",
+      images: [
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=400"
+      ],
+      featured: true,
+      tags: ["Healthcare", "AI", "Diagnostics", "Machine Learning", "Patient Care"],
+      testimonial: {
+        quote: "The AI platform has transformed how we approach patient care. We're now able to provide faster, more accurate diagnoses while reducing the burden on our medical staff.",
+        author: "Dr. Sarah Johnson",
+        role: "Chief Medical Officer",
+        company: "MetroHealth Medical Center"
+      },
+      publishedDate: "2025-01-15",
+      readTime: "5 min read"
+    },
+    {
+      id: 2,
+      title: "Quantum-Secure Financial Trading System",
+      subtitle: "Protecting billions in assets with next-gen security",
+      description: "A major financial institution implemented our quantum-resistant cybersecurity solution, protecting their high-frequency trading systems from emerging quantum threats.",
+      longDescription: "This financial institution needed to future-proof their trading infrastructure against quantum computing threats. Our solution included quantum-resistant encryption algorithms, real-time threat monitoring, and comprehensive security training. The implementation was completed with zero downtime and maintained full compliance with financial regulations.",
+      industry: "finance",
+      service: "cybersecurity",
+      outcome: "security",
+      client: "Global Capital Markets",
+      clientSize: "Large Enterprise",
+      clientLocation: "United Kingdom",
+      duration: "6 months",
+      teamSize: 8,
+      challenge: "Vulnerability to quantum computing attacks, regulatory compliance requirements",
+      solution: "Quantum-resistant cybersecurity platform with real-time monitoring",
+      results: [
+        "100% protection against quantum computing threats",
+        "Zero security breaches during implementation",
+        "Full regulatory compliance achieved",
+        "Enhanced customer confidence and trust"
+      ],
+      metrics: {
+        securityImprovement: "100%",
+        complianceScore: "100%",
+        breachPrevention: "100%",
+        customerTrust: "95%"
+      },
+      technologies: ["Quantum Cryptography", "AI Threat Detection", "Blockchain", "Real-time Monitoring"],
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=400",
+      images: [
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=400"
+      ],
+      featured: false,
+      tags: ["Finance", "Cybersecurity", "Quantum Computing", "Trading", "Compliance"],
+      testimonial: {
+        quote: "The quantum security solution has given us peace of mind and a competitive advantage. Our clients trust us more knowing their assets are protected by cutting-edge technology.",
+        author: "Michael Chen",
+        role: "CTO",
+        company: "Global Capital Markets"
+      },
+      publishedDate: "2025-01-10",
+      readTime: "4 min read"
+    },
+    {
+      id: 3,
+      title: "Smart Manufacturing IoT Platform",
+      subtitle: "Transforming production with real-time monitoring",
+      description: "A manufacturing company achieved significant cost savings and efficiency improvements by implementing our IoT edge computing solution across their production facilities.",
+      longDescription: "This manufacturing company was experiencing high operational costs and frequent equipment failures. Our IoT platform provided real-time monitoring of production equipment, predictive maintenance capabilities, and automated quality control. The solution was deployed across multiple facilities with minimal disruption to operations.",
+      industry: "manufacturing",
+      service: "iot",
+      outcome: "cost-reduction",
+      client: "Precision Manufacturing Co.",
+      clientSize: "Medium Enterprise",
+      clientLocation: "Germany",
+      duration: "10 months",
+      teamSize: 15,
+      challenge: "High operational costs, equipment failures, quality control issues",
+      solution: "IoT edge computing platform with predictive maintenance",
+      results: [
+        "30% reduction in operational costs",
+        "60% decrease in equipment downtime",
+        "25% improvement in product quality",
+        "15% increase in production capacity"
+      ],
+      metrics: {
+        costReduction: "30%",
+        downtimeReduction: "60%",
+        qualityImprovement: "25%",
+        capacityIncrease: "15%"
+      },
+      technologies: ["IoT Sensors", "Edge Computing", "Machine Learning", "Cloud Analytics"],
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=400",
+      images: [
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=400"
+      ],
+      featured: false,
+      tags: ["Manufacturing", "IoT", "Edge Computing", "Predictive Maintenance", "Quality Control"],
+      testimonial: {
+        quote: "The IoT platform has revolutionized our manufacturing process. We're now more efficient, have fewer breakdowns, and can produce higher quality products at a lower cost.",
+        author: "Hans Mueller",
+        role: "Operations Director",
+        company: "Precision Manufacturing Co."
+      },
+      publishedDate: "2025-01-05",
+      readTime: "6 min read"
+    },
+    {
+      id: 4,
+      title: "Cloud-Native E-commerce Platform",
+      subtitle: "Scaling to handle millions of customers",
+      description: "A retail company transformed their online presence with our cloud-native platform, achieving unprecedented scalability and performance improvements.",
+      longDescription: "This retail company was struggling with website performance issues during peak shopping periods. Our cloud-native solution included microservices architecture, auto-scaling capabilities, and advanced caching strategies. The platform was designed to handle traffic spikes and provide a seamless shopping experience.",
+      industry: "retail",
+      service: "cloud",
+      outcome: "efficiency",
+      client: "TechStyle Retail",
+      clientSize: "Medium Enterprise",
+      clientLocation: "United States",
+      duration: "7 months",
+      teamSize: 10,
+      challenge: "Website crashes during peak periods, slow loading times, poor user experience",
+      solution: "Cloud-native platform with microservices architecture",
+      results: [
+        "99.9% uptime during peak periods",
+        "70% improvement in page load times",
+        "300% increase in concurrent users",
+        "45% improvement in conversion rates"
+      ],
+      metrics: {
+        uptime: "99.9%",
+        performanceImprovement: "70%",
+        scalabilityIncrease: "300%",
+        conversionImprovement: "45%"
+      },
+      technologies: ["Kubernetes", "Docker", "AWS", "Microservices", "Redis"],
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=400",
+      images: [
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=400"
+      ],
+      featured: false,
+      tags: ["Retail", "E-commerce", "Cloud Computing", "Microservices", "Scalability"],
+      testimonial: {
+        quote: "Our new platform handles Black Friday traffic like it's a regular day. The performance improvements have directly translated to increased sales and customer satisfaction.",
+        author: "Jennifer Rodriguez",
+        role: "VP of Technology",
+        company: "TechStyle Retail"
+      },
+      publishedDate: "2024-12-20",
+      readTime: "5 min read"
+    },
+    {
+      id: 5,
+      title: "AI-Powered Customer Service Automation",
+      subtitle: "Reducing support costs while improving satisfaction",
+      description: "A technology company implemented our AI customer service solution, dramatically reducing support costs while improving customer satisfaction scores.",
+      longDescription: "This technology company was spending millions on customer support with long response times and inconsistent service quality. Our AI solution included natural language processing, automated ticket routing, and intelligent response generation. The system was trained on their specific product knowledge and customer interactions.",
+      industry: "technology",
+      service: "ai-ml",
+      outcome: "cost-reduction",
+      client: "InnovateTech Solutions",
+      clientSize: "Large Enterprise",
+      clientLocation: "Canada",
+      duration: "5 months",
+      teamSize: 6,
+      challenge: "High support costs, long response times, inconsistent service quality",
+      solution: "AI-powered customer service automation platform",
+      results: [
+        "65% reduction in support costs",
+        "80% faster response times",
+        "90% customer satisfaction rate",
+        "24/7 automated support availability"
+      ],
+      metrics: {
+        costReduction: "65%",
+        responseTimeImprovement: "80%",
+        satisfactionRate: "90%",
+        availability: "24/7"
+      },
+      technologies: ["Natural Language Processing", "Machine Learning", "Chatbots", "Sentiment Analysis"],
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=400",
+      images: [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=400",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=400"
+      ],
+      featured: false,
+      tags: ["Technology", "AI", "Customer Service", "Automation", "NLP"],
+      testimonial: {
+        quote: "The AI customer service platform has transformed our support operations. We're saving millions while providing better service to our customers.",
+        author: "David Thompson",
+        role: "VP of Customer Success",
+        company: "InnovateTech Solutions"
+      },
+      publishedDate: "2024-12-15",
+      readTime: "4 min read"
+    }
+  ];
+
+  const filteredCaseStudies = caseStudies.filter(study => {
+    const matchesSearch = study.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         study.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         study.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesIndustry = selectedIndustry === 'all' || study.industry === selectedIndustry;
+    const matchesService = selectedService === 'all' || study.service === selectedService;
+    const matchesOutcome = selectedOutcome === 'all' || study.outcome === selectedOutcome;
+    
+    return matchesSearch && matchesIndustry && matchesService && matchesOutcome;
+  });
+
+  const featuredCaseStudy = caseStudies.find(study => study.featured);
+  const regularCaseStudies = filteredCaseStudies.filter(study => !study.featured);
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
+  return (
+    <div className="min-h-screen bg-futuristic">
+      <SEO 
+        title="Case Studies - Zion Tech Group"
+        description="Discover real client success stories and measurable outcomes from our technology solutions. See how we've transformed businesses across industries."
+      />
+      
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            Client <span className="text-zion-cyan">Success Stories</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
+          >
+            Real results from real clients. Discover how our technology solutions 
+            have transformed businesses across industries with measurable outcomes.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Search and Filters */}
+      <section className="py-8 bg-zion-slate-dark border-b border-zion-slate-light/20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative w-full lg:w-96">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
+              <input
+                type="text"
+                placeholder="Search case studies..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200"
+              />
+            </div>
+
+            {/* Filters Toggle */}
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className="flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-all duration-200"
+            >
+              <FilterIcon className="w-4 h-4" />
+              Filters
+              {showFilters ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </button>
+          </div>
+
+          {/* Expanded Filters */}
+          {showFilters && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="mt-6 pt-6 border-t border-zion-slate-light/20"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Industry Filter */}
+                <div>
+                  <label className="block text-white font-medium mb-2">Industry</label>
+                  <select
+                    value={selectedIndustry}
+                    onChange={(e) => setSelectedIndustry(e.target.value)}
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                  >
+                    {industries.map((industry) => (
+                      <option key={industry.id} value={industry.id}>
+                        {industry.name} ({industry.count})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Service Filter */}
+                <div>
+                  <label className="block text-white font-medium mb-2">Service</label>
+                  <select
+                    value={selectedService}
+                    onChange={(e) => setSelectedService(e.target.value)}
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                  >
+                    {services.map((service) => (
+                      <option key={service.id} value={service.id}>
+                        {service.name} ({service.count})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Outcome Filter */}
+                <div>
+                  <label className="block text-white font-medium mb-2">Outcome</label>
+                  <select
+                    value={selectedOutcome}
+                    onChange={(e) => setSelectedOutcome(e.target.value)}
+                    className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan"
+                  >
+                    {outcomes.map((outcome) => (
+                      <option key={outcome.id} value={outcome.id}>
+                        {outcome.name} ({outcome.count})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Clear Filters */}
+              <div className="mt-6 pt-6 border-t border-zion-slate-light/20">
+                <button
+                  onClick={() => {
+                    setSelectedIndustry('all');
+                    setSelectedService('all');
+                    setSelectedOutcome('all');
+                    setSearchQuery('');
+                  }}
+                  className="px-6 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover:bg-zion-slate-light/30 hover:text-white transition-all duration-200"
+                >
+                  Clear All Filters
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </div>
+      </section>
+
+      {/* Featured Case Study */}
+      {featuredCaseStudy && (
+        <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-6xl mx-auto"
+            >
+              <div className="text-center mb-8">
+                <span className="inline-flex items-center px-4 py-2 bg-zion-cyan text-white text-sm font-medium rounded-full mb-4">
+                  <Star className="w-4 h-4 mr-2" />
+                  Featured Case Study
+                </span>
+                <h2 className="text-3xl font-bold text-white mb-4">Success Story of the Month</h2>
+              </div>
+              
+              <div className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  <div className="relative">
+                    <img 
+                      src={featuredCaseStudy.image} 
+                      alt={featuredCaseStudy.title}
+                      className="w-full h-full object-cover min-h-[300px]"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-flex items-center px-3 py-1 bg-zion-cyan text-white text-xs font-medium rounded-full">
+                        {industries.find(ind => ind.id === featuredCaseStudy.industry)?.name}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-8 flex flex-col justify-center">
+                    <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-4">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {formatDate(featuredCaseStudy.publishedDate)}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        {featuredCaseStudy.readTime}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+                      {featuredCaseStudy.title}
+                    </h3>
+                    
+                    <p className="text-zion-slate-light mb-6 leading-relaxed">
+                      {featuredCaseStudy.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-zion-cyan">
+                          {featuredCaseStudy.metrics.costSavings || featuredCaseStudy.metrics.efficiencyGain}%
+                        </div>
+                        <div className="text-zion-slate-light text-sm">
+                          {featuredCaseStudy.metrics.costSavings ? 'Cost Savings' : 'Efficiency Gain'}
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-zion-cyan">
+                          {featuredCaseStudy.metrics.accuracyImprovement || featuredCaseStudy.metrics.securityImprovement}%
+                        </div>
+                        <div className="text-zion-slate-light text-sm">
+                          {featuredCaseStudy.metrics.accuracyImprovement ? 'Accuracy' : 'Security'} Improvement
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {featuredCaseStudy.tags.slice(0, 4).map((tag) => (
+                        <span key={tag} className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105">
+                      Read Full Case Study
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Case Studies Grid */}
+      <section className="py-16 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl font-bold text-white text-center mb-12"
+          >
+            More Success Stories
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {regularCaseStudies.map((study, index) => (
+              <motion.article
+                key={study.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue/10 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105 group"
+              >
+                <div className="relative">
+                  <img 
+                    src={study.image} 
+                    alt={study.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-flex items-center px-3 py-1 bg-zion-cyan text-white text-xs font-medium rounded-full">
+                      {industries.find(ind => ind.id === study.industry)?.name}
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center gap-4 text-sm text-zion-slate-light mb-3">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      {formatDate(study.publishedDate)}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {study.readTime}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover:text-zion-cyan transition-colors duration-200">
+                    {study.title}
+                  </h3>
+                  
+                  <p className="text-zion-slate-light mb-4 leading-relaxed">
+                    {study.description}
+                  </p>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-white font-semibold mb-2">Key Results</h4>
+                    <div className="space-y-2">
+                      {study.results.slice(0, 2).map((result, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                          <span className="text-zion-slate-light">{result}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {study.tags.slice(0, 3).map((tag) => (
+                      <span key={tag} className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full inline-flex items-center justify-center px-4 py-2 border border-zion-cyan text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 group-hover:scale-105">
+                    Read Case Study
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+          
+          {filteredCaseStudies.length === 0 && (
+            <div className="text-center py-16">
+              <Award className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No case studies found</h3>
+              <p className="text-zion-slate-light">Try adjusting your search or filter criteria.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Write Your Success Story?
+            </h2>
+            <p className="text-zion-slate-light mb-8">
+              Let's discuss how our technology solutions can transform your business 
+              and deliver measurable results like the ones you've seen here.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 hover:scale-105"
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de8
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Start Your Project
+              </a>
+              <a
+<<<<<<< HEAD
+                href="mailto:sales@ziontechgroup.com"
+                className="inline-flex items-center border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg"
+              >
+                <Mail className="w-5 h-5 mr-2" />
+                Request Consultation
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+=======
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                <Settings className="w-5 h-5 mr-2" />
+                Explore Our Services
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> origin/cursor/website-audit-and-enhancement-7de8
+    </div>
+  );
+}
+
+export default CaseStudies;

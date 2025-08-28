@@ -1,5 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {
+  Shield,
+  Lock,
+  CheckCircle,
+  AlertTriangle,
+  Users,
+  Award,
+  FileText,
+  Globe,
+  Server,
+  Eye
+} from 'lucide-react';
 
 const securityFeatures = [
   {
@@ -90,8 +102,9 @@ export function SecurityComplianceSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Security & Compliance
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Enterprise-grade security with industry-leading compliance certifications
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Enterprise-grade security with industry-leading compliance certifications.
+            Your data and systems are protected by the highest security standards.
           </p>
         </motion.div>
 
@@ -199,9 +212,24 @@ export function SecurityComplianceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to secure your business?</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-4">
+              Secure Your Business Today
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Get enterprise-grade security and compliance without the complexity.
+              Our experts handle everything while you focus on your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Security Assessment
+                <Shield className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+                Compliance Review
+                <FileText className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BookOpen, 
-  FileText, 
-  Video, 
-  HelpCircle, 
+import {
+  BookOpen,
+  FileText,
+  Video,
+  HelpCircle,
   Search,
   Filter,
   ArrowRight,
@@ -50,6 +50,60 @@ const Resources: React.FC = () => {
   const resources = [
     {
       id: 1,
+      title: 'AI Autonomous Research: The Future of Knowledge Discovery',
+      description: 'Comprehensive guide on implementing AI Autonomous Research Assistant for accelerated research and discovery.',
+      category: 'white-papers',
+      type: 'White Paper',
+      author: 'Dr. Emily Watson',
+      date: '2025-01-20',
+      readTime: '18 min read',
+      downloads: 3120,
+      rating: 4.9,
+      image: '/resources/ai-autonomous-research.jpg',
+      tags: ['AI Research', 'Autonomous AI', 'Knowledge Discovery', 'Research Automation'],
+      featured: true,
+      fileSize: '3.1 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/resources/ai-autonomous-research.pdf'
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization: Implementation Guide',
+      description: 'Step-by-step guide to implementing AI-powered supply chain optimization for maximum efficiency and cost savings.',
+      category: 'white-papers',
+      type: 'Implementation Guide',
+      author: 'Supply Chain Team',
+      date: '2025-01-18',
+      readTime: '22 min read',
+      downloads: 2890,
+      rating: 4.8,
+      image: '/resources/ai-supply-chain-optimization.jpg',
+      tags: ['AI Supply Chain', 'Optimization', 'Implementation', 'Cost Savings'],
+      featured: true,
+      fileSize: '2.8 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/resources/ai-supply-chain-optimization.pdf'
+    },
+    {
+      id: 3,
+      title: 'AI Content Marketing Suite: Complete User Guide',
+      description: 'Comprehensive user guide for the AI Content Marketing Suite, covering all features and best practices.',
+      category: 'support',
+      type: 'User Guide',
+      author: 'Marketing Team',
+      date: '2025-01-16',
+      readTime: '25 min read',
+      downloads: 2650,
+      rating: 4.9,
+      image: '/resources/ai-content-marketing-guide.jpg',
+      tags: ['AI Content', 'Content Marketing', 'User Guide', 'Best Practices'],
+      featured: true,
+      fileSize: '3.5 MB',
+      fileType: 'PDF',
+      downloadUrl: 'https://ziontechgroup.com/resources/ai-content-marketing-guide.pdf'
+    },
+    {
+      id: 4,
       title: 'AI-Powered Business Transformation: A Complete Guide',
       description: 'Comprehensive guide on implementing AI solutions to transform business operations and drive growth.',
       category: 'white-papers',
@@ -61,13 +115,13 @@ const Resources: React.FC = () => {
       rating: 4.9,
       image: '/resources/ai-business-transformation.jpg',
       tags: ['AI', 'Business Transformation', 'Guide', 'Strategy'],
-      featured: true,
+      featured: false,
       fileSize: '2.4 MB',
       fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/ai-business-transformation.pdf'
     },
     {
-      id: 2,
+      id: 5,
       title: 'Quantum Computing Success Story: Financial Services',
       description: 'How we helped a major financial institution achieve 1000x performance improvement using quantum computing.',
       category: 'case-studies',
@@ -79,7 +133,7 @@ const Resources: React.FC = () => {
       rating: 4.8,
       image: '/resources/quantum-financial-case.jpg',
       tags: ['Quantum Computing', 'Financial Services', 'Performance', 'Success Story'],
-      featured: true,
+      featured: false,
       fileSize: '1.8 MB',
       fileType: 'PDF',
       downloadUrl: 'https://ziontechgroup.com/resources/quantum-financial-case.pdf'
@@ -207,10 +261,10 @@ const Resources: React.FC = () => {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   };
 
@@ -245,7 +299,7 @@ const Resources: React.FC = () => {
               <span className="block text-zion-cyan">Resources</span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Access our comprehensive library of case studies, white papers, webinars, and support materials. 
+              Access our comprehensive library of case studies, white papers, webinars, and support materials.
               Learn from our expertise and stay ahead of the technology curve.
             </p>
             <div className="flex items-center justify-center space-x-8 text-zion-slate-light">
@@ -339,7 +393,7 @@ const Resources: React.FC = () => {
                           </span>
                         </div>
                       </div>
-                      
+
                       <div className="p-6">
                         <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">
                           <span className="flex items-center">
@@ -359,7 +413,7 @@ const Resources: React.FC = () => {
                         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                           {resource.title}
                         </h3>
-                        
+
                         <p className="text-zion-slate-light mb-4 leading-relaxed">
                           {resource.description}
                         </p>
@@ -429,7 +483,7 @@ const Resources: React.FC = () => {
                     <div className="h-40 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
                       <ResourceIcon className="w-12 h-12 text-zion-cyan" />
                     </div>
-                    
+
                     <div className="p-6 flex-1">
                       <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
                         <span className="flex items-center">
@@ -445,7 +499,7 @@ const Resources: React.FC = () => {
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
                         {resource.title}
                       </h3>
-                      
+
                       <p className="text-zion-slate-light mb-4 leading-relaxed line-clamp-3">
                         {resource.description}
                       </p>
@@ -546,7 +600,7 @@ const Resources: React.FC = () => {
               Stay Informed
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Get notified about new resources, research findings, and industry insights. 
+              Get notified about new resources, research findings, and industry insights.
               Never miss valuable knowledge from Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">

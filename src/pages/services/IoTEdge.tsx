@@ -65,17 +65,17 @@ export default function IoTEdge() {
               <Cpu className="w-5 h-5 text-blue-400" />
               <span className="text-blue-400 font-medium">IoT & Edge Computing</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Connect, Process,
               <span className="text-gradient"> Transform</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Harness the power of IoT and edge computing to create intelligent, 
+              Harness the power of IoT and edge computing to create intelligent,
               connected systems that process data faster and more efficiently.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start IoT Project

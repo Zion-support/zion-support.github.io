@@ -1,14 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
+import {
+  Brain,
   Globe,
+  Zap,
+  Shield,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Code,
+  Lock,
+  Rocket,
+  Leaf,
+  Waves,
+  Factory,
+  Building2,
+  Cpu,
+  Network,
+  Eye,
+  Heart,
+  Lightbulb,
+  TrendingUp,
+  Users,
+  Target,
+  Award,
   Phone,
   Mail,
   MapPin,
@@ -68,8 +84,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {
       case 'price':
         return a.price - b.price;
       case 'innovation':
-        const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Innovative': 1 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
+        const innovationOrder = { 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 };
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));

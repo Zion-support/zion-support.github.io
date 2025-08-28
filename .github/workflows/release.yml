@@ -16,9 +16,9 @@ on:
         default: 'patch'
         type: choice
         options:
-        - major
-        - minor
-        - patch
+          - major
+          - minor
+          - patch
       pre_release:
         description: 'Pre-release'
         required: false
@@ -34,6 +34,8 @@ jobs:
     name: Version Management
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      new_version: ${{ steps.new_version.outputs.new_version }}
     
     steps:
     - name: Checkout code
@@ -136,11 +138,11 @@ jobs:
         npm test || echo "Tests completed with warnings"
     
     - name: Build application
+      env:
+        NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
       run: |
         echo "🏗️ Building application..."
         npm run build
-        env:
-          NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     
     - name: Build size analysis
       run: |

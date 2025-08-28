@@ -39,10 +39,13 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
-      error
+      error,
+      errorInfo: null,
+      showErrorDetails: false,
+      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
@@ -53,7 +56,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error Boundary caught an error:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -210,6 +213,7 @@ Timestamp: ${new Date().toISOString()}
         return this.props.fallback;
       }
 
+      // Default error UI
       return (
         <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 flex items-center justify-center p-4">
           <motion.div

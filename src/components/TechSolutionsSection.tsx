@@ -1,5 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Globe,
+  Rocket,
+  Cpu,
+  Database,
+  Lock,
+  Network,
+  Code,
+  Server
+} from 'lucide-react';
 
 const techSolutions = [
   {
@@ -60,8 +75,9 @@ export function TechSolutionsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Technology Solutions
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to transform your business and drive innovation
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to drive innovation,
+            enhance security, and accelerate your digital transformation journey.
           </p>
         </motion.div>
 
@@ -112,9 +128,30 @@ export function TechSolutionsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to transform your business?</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Let's discuss how our technology solutions can help you achieve
+              your business goals and stay ahead of the competition.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+              >
+                Get Started
+                <Rocket className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 transition-colors duration-200"
+              >
+                View All Services
+                <Code className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>

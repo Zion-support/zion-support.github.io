@@ -65,17 +65,17 @@ export default function Sustainability() {
               <Heart className="w-5 h-5 text-emerald-400" />
               <span className="text-emerald-400 font-medium">Green IT & Sustainability</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Technology for a
               <span className="text-gradient"> Sustainable Future</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Build a greener tomorrow with sustainable technology solutions. 
+              Build a greener tomorrow with sustainable technology solutions.
               Reduce environmental impact while maintaining performance and efficiency.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Go Green with Tech

@@ -21,7 +21,7 @@ import {
   Monitor,
   Smartphone,
   Server,
-  Chip,
+  Cpu,
   Wifi,
   Satellite,
   Radar,
@@ -104,7 +104,7 @@ export default function InterviewAssessmentAI() {
     {
       title: "Technical Assessment",
       description: "Comprehensive technical skills evaluation",
-      icon: Chip,
+      icon: Cpu,
       benefits: ["Coding challenges", "Problem solving", "Technical knowledge", "Performance tracking"]
     },
     {

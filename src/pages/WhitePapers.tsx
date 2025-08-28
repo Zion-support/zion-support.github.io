@@ -1,7 +1,8 @@
 
+
 import React, { useState } from 'react';
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -28,6 +29,38 @@ export default function WhitePapers() {
   const whitePapers = [
     {
       id: 1,
+      title: 'AI Autonomous Research: Revolutionizing Business Intelligence',
+      description: 'Comprehensive guide on implementing AI Autonomous Research Assistant systems that discover, analyze, and synthesize information across multiple sources autonomously.',
+      category: 'ai-ml',
+      author: 'Dr. Sarah Chen, AI Research Director',
+      publishDate: '2025-01-25',
+      readTime: '35 min',
+      downloads: 18750,
+      rating: 4.9,
+      featured: true,
+      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Innovation'],
+      coverImage: '/images/whitepapers/ai-autonomous-research.jpg',
+      fileSize: '3.2 MB',
+      language: 'English'
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
+      description: 'Strategic guide on implementing AI-powered supply chain optimization solutions that predict demand, optimize inventory, and significantly reduce operational costs.',
+      category: 'ai-ml',
+      author: 'Michael Rodriguez, Supply Chain AI Specialist',
+      publishDate: '2025-01-23',
+      readTime: '28 min',
+      downloads: 16230,
+      rating: 4.8,
+      featured: true,
+      tags: ['Supply Chain', 'AI Optimization', 'Cost Reduction', 'Predictive Analytics'],
+      coverImage: '/images/whitepapers/ai-supply-chain-optimization.jpg',
+      fileSize: '2.8 MB',
+      language: 'English'
+    },
+    {
+      id: 3,
       title: 'The Future of AI in Enterprise: 2025 and Beyond',
       description: 'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments. Learn how organizations can leverage AI for competitive advantage.',
       category: 'ai-ml',
@@ -43,7 +76,7 @@ export default function WhitePapers() {
       language: 'English'
     },
     {
-      id: 2,
+      id: 7,
       title: 'Zero-Trust Security Architecture: A Comprehensive Guide',
       description: 'Deep dive into zero-trust security principles, implementation strategies, and best practices for modern organizations.',
       category: 'security',
@@ -161,9 +194,9 @@ export default function WhitePapers() {
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
-    
+
     return matchesSearch && matchesCategory;
   });
 
@@ -296,7 +329,7 @@ export default function WhitePapers() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             White Papers Library
           </h2>
-          
+
           {filteredPapers.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredPapers.map((paper) => (

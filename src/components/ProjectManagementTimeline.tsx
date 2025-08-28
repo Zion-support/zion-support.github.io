@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Calendar, 
-  Clock, 
-  CheckCircle, 
-  Circle, 
-  AlertCircle, 
+import {
+  Calendar,
+  Clock,
+  CheckCircle,
+  Circle,
+  AlertCircle,
   Play,
   Pause,
   StopCircle,
@@ -205,7 +205,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(p => 
+      filtered = filtered.filter(p =>
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -293,7 +293,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <h1 className="text-4xl font-bold text-white mb-2">Project Management</h1>
           <p className="text-zinc-400 text-lg">Track and manage all your projects and milestones</p>
         </div>
-        
+
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
@@ -461,9 +461,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
                     {project.priority.charAt(0).toUpperCase() + project.priority.slice(1)}
                   </span>
                 </div>
-                
+
                 <p className="text-zinc-300 mb-3">{project.description}</p>
-                
+
                 <div className="flex flex-wrap items-center gap-4 text-sm text-zinc-400">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />

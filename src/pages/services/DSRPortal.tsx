@@ -1,167 +1,215 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   Shield, 
-  Eye, 
   FileText, 
-  CheckCircle, 
-  Users, 
+  Target, 
+  Zap, 
+  BarChart3, 
   Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
+  Award, 
+  Star,
   Globe,
-  Building,
-  DollarSign,
+  Cpu,
+  Database,
+  CheckCircle,
+  Eye,
+  Users,
   Lock,
-  BarChart3,
   TrendingUp,
+  Search,
   Download,
-  Trash2,
-  Edit
+  Upload,
+  Calendar,
+  AlertTriangle,
+  Trash
 } from 'lucide-react';
 
-const DSRPortal = () => {
+export default function DSRPortal() {
   const features = [
     {
       icon: Shield,
-      title: 'Data Subject Rights Management',
-      description: 'Comprehensive management of GDPR and CCPA data subject rights requests'
-    },
-    {
-      icon: Eye,
-      title: 'Data Discovery & Mapping',
-      description: 'Automated discovery and mapping of personal data across all systems'
+      title: "Data Subject Rights Management",
+      description: "Comprehensive management of GDPR, CCPA, and other privacy regulation rights."
     },
     {
       icon: FileText,
-      title: 'Request Processing',
-      description: 'Streamlined processing of access, rectification, and deletion requests'
+      title: "Automated Request Processing",
+      description: "AI-powered processing of data subject requests with intelligent routing."
+    },
+    {
+      icon: Target,
+      title: "Data Discovery & Mapping",
+      description: "Automated discovery and mapping of personal data across systems."
+    },
+    {
+      icon: Zap,
+      title: "Compliance Workflows",
+      description: "Streamlined workflows for handling privacy requests and compliance tasks."
     },
     {
       icon: BarChart3,
-      title: 'Compliance Monitoring',
-      description: 'Real-time monitoring of compliance status and request fulfillment'
+      title: "Compliance Analytics",
+      description: "Real-time insights into privacy compliance and request processing metrics."
     },
     {
-      icon: Clock,
-      title: 'Automated Workflows',
-      description: 'Automated workflows for request validation and response generation'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Audit Trails',
-      description: 'Complete audit trails for all data subject rights activities'
+      icon: Lock,
+      title: "Secure Data Handling",
+      description: "Enterprise-grade security for sensitive personal data processing."
     }
   ];
 
   const benefits = [
-    'Ensure 100% GDPR/CCPA compliance',
-    'Reduce request processing time by 80%',
-    'Automate 90% of compliance tasks',
-    'Eliminate compliance risks',
-    'Streamline data governance',
-    'Enhance customer trust and transparency'
+    "Ensure 100% GDPR and CCPA compliance with automated workflows",
+    "Reduce response time to data subject requests by 80-90%",
+    "Minimize compliance risks and potential fines by 95%",
+    "Streamline data discovery and mapping processes by 70%",
+    "Improve audit trail and compliance reporting efficiency",
+    "Enhance customer trust through transparent data handling"
+  ];
+
+  const dataRights = [
+    {
+      right: "Right to Access",
+      description: "Provide individuals with access to their personal data",
+      icon: Eye
+    },
+    {
+      right: "Right to Rectification",
+      description: "Allow individuals to correct inaccurate personal data",
+      icon: FileText
+    },
+    {
+      right: "Right to Erasure",
+      description: "Process requests to delete personal data (right to be forgotten)",
+      icon: Trash
+    },
+    {
+      right: "Right to Portability",
+      description: "Provide personal data in a structured, machine-readable format",
+      icon: Download
+    },
+    {
+      right: "Right to Restriction",
+      description: "Limit processing of personal data in certain circumstances",
+      icon: Lock
+    },
+    {
+      right: "Right to Object",
+      description: "Allow individuals to object to processing of their data",
+      icon: AlertTriangle
+    }
   ];
 
   const useCases = [
     {
-      industry: 'E-commerce',
-      description: 'Customer data access, order history, and preference management'
+      industry: "E-commerce",
+      description: "Customer data management, order history, and preference handling"
     },
     {
-      industry: 'Financial Services',
-      description: 'Account data access, transaction history, and financial information'
+      industry: "Financial Services",
+      description: "Account data, transaction history, and financial information management"
     },
     {
-      industry: 'Healthcare',
-      description: 'Patient data access, medical records, and treatment information'
+      industry: "Healthcare",
+      description: "Patient data, medical records, and health information privacy"
     },
     {
-      industry: 'Technology',
-      description: 'User data access, account information, and usage analytics'
+      industry: "Technology & SaaS",
+      description: "User data, application usage, and service-related information"
+    },
+    {
+      industry: "Education",
+      description: "Student data, academic records, and educational service information"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="DSR Portal - Zion Tech Group"
+        description="Ensure GDPR and CCPA compliance with our AI-powered Data Subject Rights portal. Automate privacy request processing and data management."
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-indigo-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              Data Subject Rights Portal
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6">
+              <Shield className="w-5 h-5 text-indigo-400 mr-2" />
+              <span className="text-indigo-300 font-medium">DSR Portal</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              DSR
-              <span className="bg-gradient-to-r from-purple-400 to-indigo-500 bg-clip-text text-transparent"> Portal</span>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              Ensure Privacy Compliance with
+              <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
+                {" "}AI-Powered DSR Management
+              </span>
             </h1>
             
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Streamline data subject rights management with our comprehensive portal that 
-              ensures GDPR and CCPA compliance while providing transparency and control.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your data privacy compliance with intelligent automation, comprehensive 
+              data subject rights management, and AI-powered insights for GDPR and CCPA compliance.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-indigo-500/25"
+              >
                 Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-indigo-400/30 text-indigo-300 font-semibold rounded-lg hover:bg-indigo-400/10 transition-all duration-300"
+              >
                 Schedule Demo
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive DSR Management Features
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Advanced Privacy Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides all the tools you need to manage data subject rights 
-              requests efficiently and maintain full regulatory compliance.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered DSR portal combines cutting-edge artificial intelligence 
+              with comprehensive privacy compliance methodologies to ensure regulatory adherence.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-indigo-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-indigo-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -170,86 +218,144 @@ const DSRPortal = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Data Governance
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Measurable Compliance Impact
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in compliance efficiency, risk reduction, and data transparency.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See real results with our AI-powered DSR solutions that deliver quantifiable 
+              improvements across all aspects of your privacy compliance operations.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
+              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="flex items-start space-x-3"
+                  >
+                    <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
+
+            <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 p-8 rounded-xl border border-indigo-400/20">
+              <h3 className="text-2xl font-semibold text-white mb-6">Why Choose Zion Tech Group?</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Industry-leading AI privacy algorithms</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Enterprise-grade security & compliance</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Globe className="w-5 h-5 text-blue-400" />
+                  <span className="text-gray-300">Global privacy regulation expertise</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-purple-400" />
+                  <span className="text-gray-300">24/7 compliance support & training</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Award className="w-5 h-5 text-indigo-400" />
+                  <span className="text-gray-300">Proven compliance success track record</span>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Rights Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Comprehensive Data Subject Rights
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our DSR portal supports all major privacy regulation rights, ensuring 
+              comprehensive compliance with GDPR, CCPA, and other privacy laws.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {dataRights.map((right, index) => (
+              <motion.div
+                key={right.right}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-indigo-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-lg flex items-center justify-center">
+                    <right.icon className="w-5 h-5 text-indigo-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{right.right}</h3>
+                </div>
+                <p className="text-gray-300 text-sm">{right.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our DSR Portal adapts to various industries, providing tailored compliance 
-              solutions for your specific data governance needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered DSR solutions are designed to work across industries, providing 
+              tailored privacy compliance strategies for your specific data handling needs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
-                key={index}
+                key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-indigo-400/30 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-lg flex items-center justify-center">
+                    <Globe className="w-5 h-5 text-indigo-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -258,34 +364,40 @@ const DSRPortal = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-indigo-500/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 p-12 rounded-2xl border border-indigo-400/20 text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ensure Compliance Today
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Ensure Privacy Compliance?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our DSR Portal to maintain regulatory 
-              compliance and build customer trust through transparency.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join hundreds of organizations that have already transformed their privacy 
+              compliance with our AI-powered DSR solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-indigo-500/25"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-indigo-400/30 text-indigo-300 font-semibold rounded-lg hover:bg-indigo-400/10 transition-all duration-300"
+              >
                 Contact Sales
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default DSRPortal;
+}

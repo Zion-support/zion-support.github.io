@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Star,
+  Quote,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  Pause,
+  Users,
+  Award,
+  TrendingUp
+} from 'lucide-react';
 
 const testimonials = [
   {
@@ -83,6 +94,27 @@ export function InteractiveTestimonials() {
     );
   };
 
+  const goToTestimonial = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  // Auto-advance testimonials
+  React.useEffect(() => {
+    if (!isPlaying) return;
+
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPlaying, currentIndex]);
+
+  const currentTestimonial = testimonials[currentIndex];
+
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -96,8 +128,9 @@ export function InteractiveTestimonials() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Real results from real clients across diverse industries
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Real stories from real clients. Discover how we've transformed businesses
+            across industries with our innovative technology solutions.
           </p>
         </motion.div>
 
@@ -109,128 +142,24 @@ export function InteractiveTestimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => {
-                setSelectedCategory(category);
-                setSelectedTestimonial(0);
-              }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Main Testimonial Display */}
-        <motion.div 
-          className="max-w-4xl mx-auto mb-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8 relative">
-            {/* Navigation Arrows */}
-            <button
-              onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-            >
-              ←
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-            >
-              →
-            </button>
-
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentTestimonial.id}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="text-center"
-              >
-                {/* Avatar and Rating */}
-                <div className="mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">{currentTestimonial.avatar}</span>
-                  </div>
-                  <div className="flex justify-center gap-1 mb-2">
-                    {[...Array(currentTestimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">⭐</span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Testimonial Content */}
-                <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
-                  "{currentTestimonial.content}"
-                </blockquote>
-
-                {/* Results */}
-                <div className="flex flex-wrap justify-center gap-3 mb-6">
-                  {currentTestimonial.results.map((result, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm"
-                    >
-                      {result}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Author Info */}
-                <div>
-                  <div className="text-white font-semibold text-lg">{currentTestimonial.name}</div>
-                  <div className="text-gray-400 text-sm">{currentTestimonial.position}</div>
-                  <div className="text-blue-400 text-sm">{currentTestimonial.company}</div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </motion.div>
-
-        {/* Testimonial Indicators */}
-        <motion.div 
-          className="flex justify-center gap-2 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          {filteredTestimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setSelectedTestimonial(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === selectedTestimonial
-                  ? 'bg-blue-500 scale-125'
-                  : 'bg-slate-600 hover:bg-slate-500'
-              }`}
-            />
-          ))}
-        </motion.div>
-
-        {/* Call to Action */}
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Join our success stories</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Join Our Success Stories?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Let's discuss how we can transform your business with innovative
+              technology solutions tailored to your specific needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Start Your Project
+                <Award className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+                Schedule Consultation
+                <Users className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

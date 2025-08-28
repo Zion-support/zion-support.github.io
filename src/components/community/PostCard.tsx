@@ -33,7 +33,7 @@ export default function PostCard({ post }: PostCardProps) {
           <p className="text-zion-slate-light mb-3 line-clamp-3 leading-relaxed">
             {post.content}
           </p>
-          
+
           <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
@@ -41,7 +41,7 @@ export default function PostCard({ post }: PostCardProps) {
             </span>
             <span>{new Date(post.createdAt).toLocaleDateString()}</span>
           </div>
-          
+
           <div className="flex items-center space-x-6 text-sm text-zion-slate-light">
             <span className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-zion-purple rounded-full"></span>

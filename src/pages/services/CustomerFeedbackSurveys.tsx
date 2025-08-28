@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function CustomerFeedbackSurveys() {
   return (
@@ -13,7 +13,7 @@ export default function CustomerFeedbackSurveys() {
           Mobile-First Feedback Surveys
         </h1>
         <p className="text-zion-slate-light max-w-3xl">
-          Launch engaging surveys across web, SMS, and email with real-time dashboards. 
+          Launch engaging surveys across web, SMS, and email with real-time dashboards.
           AI highlights themes, predicts churn risk, and recommends actions.
         </p>
 
@@ -36,7 +36,7 @@ export default function CustomerFeedbackSurveys() {
               <li>• Enterprise: SSO, DPA, custom SLAs</li>
             </ul>
             <p className="mt-4 text-xs text-zion-slate-light">
-              References: 
+              References:
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://www.typeform.com/pricing/" target="_blank" rel="noreferrer">Typeform pricing</a>,
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://www.surveymonkey.com/pricing/" target="_blank" rel="noreferrer">SurveyMonkey pricing</a>
             </p>

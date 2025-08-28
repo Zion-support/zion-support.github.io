@@ -65,17 +65,17 @@ export default function AIAnalytics() {
               <Brain className="w-5 h-5 text-indigo-400" />
               <span className="text-indigo-400 font-medium">AI & Analytics</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Intelligence Meets
               <span className="text-gradient"> Innovation</span>
             </h1>
-            
+
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Transform your business with cutting-edge AI and analytics solutions. 
+              Transform your business with cutting-edge AI and analytics solutions.
               Unlock insights, automate processes, and drive growth with intelligent technology.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start AI Project

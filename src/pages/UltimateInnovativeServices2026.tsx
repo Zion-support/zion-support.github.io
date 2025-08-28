@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Server,
+  Zap,
+  Globe,
+  Cpu,
   Database,
   Network,
   Lock,
@@ -56,7 +56,7 @@ import {
   Globe2,
   Leaf
 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 
 export default function UltimateInnovativeServices2026() {
@@ -110,14 +110,14 @@ export default function UltimateInnovativeServices2026() {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory);
-    
-    const matchesPrice = selectedPriceRange === 'all' || 
+
+    const matchesPrice = selectedPriceRange === 'all' ||
                         (selectedPriceRange === 'under-10k' && service.price < 10000) ||
                         (selectedPriceRange === '10k-20k' && service.price >= 10000 && service.price <= 20000) ||
                         (selectedPriceRange === 'over-20k' && service.price > 20000);
-    
+
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
@@ -129,7 +129,7 @@ export default function UltimateInnovativeServices2026() {
         return b.price - a.price;
       case 'innovation':
         const innovationOrder = { 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 };
-        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - 
+        return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'roi':
         const aROI = parseInt(a.roi.split('-')[0]);
@@ -146,12 +146,12 @@ export default function UltimateInnovativeServices2026() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <SEO
         title="Ultimate Innovative Services 2026 | Zion Tech Group"
         description="Discover our revolutionary micro SAAS services including Quantum AI, Neuromorphic Computing, Synthetic Biology, Space Technology, and more cutting-edge solutions."
         keywords="quantum AI, neuromorphic computing, synthetic biology, space technology, brain-computer interface, digital twin, extended reality, edge AI, federated learning, sustainable technology"
       />
-      
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -168,7 +168,7 @@ export default function UltimateInnovativeServices2026() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto">
-              Revolutionary micro SAAS solutions that push the boundaries of technology. 
+              Revolutionary micro SAAS solutions that push the boundaries of technology.
               From Quantum AI to Brain-Computer Interfaces, discover the future of innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -297,8 +297,8 @@ export default function UltimateInnovativeServices2026() {
                     {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category.toLowerCase())}`}>
-                        {React.createElement(getCategoryIcon(service.category.toLowerCase()), { 
-                          className: "w-6 h-6 text-white" 
+                        {React.createElement(getCategoryIcon(service.category.toLowerCase()), {
+                          className: "w-6 h-6 text-white"
                         })}
                       </div>
                       <div className="text-right">
@@ -322,7 +322,7 @@ export default function UltimateInnovativeServices2026() {
                     {/* Innovation Level Badge */}
                     <div className="flex items-center gap-2 mb-4">
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        service.innovationLevel === 'Revolutionary' 
+                        service.innovationLevel === 'Revolutionary'
                           ? 'bg-red-500/20 text-red-400 border border-red-500/30'
                           : service.innovationLevel === 'Cutting-edge'
                           ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
@@ -473,7 +473,7 @@ export default function UltimateInnovativeServices2026() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-300 mb-8">
-              Our revolutionary micro SAAS services are designed to give you a competitive edge. 
+              Our revolutionary micro SAAS services are designed to give you a competitive edge.
               Contact us today to discuss how we can help you achieve breakthrough results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

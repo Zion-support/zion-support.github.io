@@ -1,10 +1,10 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 function ReturnsManagement() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO 
+      <SEO
         title="E‑commerce Returns Management SaaS"
         description="Automate return labels, RMA approvals, and refunds with branded portals and carrier integrations."
       />

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Newspaper, 
-  Calendar, 
-  User, 
-  ArrowRight, 
-  Download, 
-  Mail, 
+import {
+  Newspaper,
+  Calendar,
+  User,
+  ArrowRight,
+  Download,
+  Mail,
   Phone,
   Globe,
   Award,
@@ -32,6 +32,28 @@ export default function Press() {
   const pressReleases = [
     {
       id: 1,
+      title: "Zion Tech Group Launches Revolutionary AI Autonomous Research Assistant",
+      date: "2025-01-20",
+      author: "Press Team",
+      category: "press-releases",
+      excerpt: "Groundbreaking AI system that autonomously discovers, analyzes, and synthesizes information across multiple sources, revolutionizing how businesses conduct research and gather intelligence.",
+      content: "Zion Tech Group today announced the launch of its revolutionary AI Autonomous Research Assistant, a breakthrough artificial intelligence system that autonomously discovers, analyzes, and synthesizes information across multiple sources. This innovative solution represents a paradigm shift in research methodology, enabling organizations to conduct comprehensive research 10x faster while maintaining 95% accuracy rates. The system continuously monitors and updates information, providing real-time insights that drive informed decision-making across industries.",
+      featured: true,
+      tags: ["AI Research", "Autonomous Systems", "Innovation", "Product Launch"]
+    },
+    {
+      id: 2,
+      title: "Zion Tech Group Introduces AI Supply Chain Optimization Platform",
+      date: "2025-01-18",
+      author: "Press Team",
+      category: "press-releases",
+      excerpt: "AI-powered supply chain solution that predicts demand, optimizes inventory, and reduces costs by up to 30% for global enterprises.",
+      content: "Zion Tech Group has launched its AI Supply Chain Optimization Platform, a comprehensive solution that leverages artificial intelligence to transform supply chain operations. The platform provides predictive analytics, real-time visibility, and intelligent routing capabilities that enable organizations to reduce costs by up to 30%, improve delivery times by 40%, and enhance overall supply chain efficiency. This solution addresses critical challenges faced by global enterprises in today's complex supply chain environment.",
+      featured: true,
+      tags: ["Supply Chain", "AI Optimization", "Predictive Analytics", "Product Launch"]
+    },
+    {
+      id: 3,
       title: "Zion Tech Group Announces Breakthrough in Quantum AI Technology",
       date: "2024-01-15",
       author: "Press Team",
@@ -42,7 +64,7 @@ export default function Press() {
       tags: ["Quantum AI", "Technology Breakthrough", "Innovation"]
     },
     {
-      id: 2,
+      id: 6,
       title: "Zion Tech Group Secures $50M Series B Funding Round",
       date: "2024-01-10",
       author: "Press Team",
@@ -175,7 +197,7 @@ export default function Press() {
     }
   ];
 
-  const filteredContent = selectedCategory === 'all' 
+  const filteredContent = selectedCategory === 'all'
     ? [...pressReleases, ...mediaCoverage, ...awards]
     : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory);
 
@@ -206,7 +228,7 @@ export default function Press() {
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -218,7 +240,7 @@ export default function Press() {
                 <Newspaper className="w-12 h-12 text-white" />
               </div>
             </div>
-            
+
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Press &{' '}
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -226,7 +248,7 @@ export default function Press() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Stay updated with the latest news, press releases, and media coverage about Zion Tech Group's 
+              Stay updated with the latest news, press releases, and media coverage about Zion Tech Group's
               innovations, achievements, and industry leadership.
             </p>
           </motion.div>
@@ -257,7 +279,7 @@ export default function Press() {
       {/* Featured Press Releases */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -272,7 +294,7 @@ export default function Press() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -280,7 +302,7 @@ export default function Press() {
             viewport={{ once: true }}
           >
             {filteredContent.filter(item => item.featured).map((item) => (
-              <motion.article 
+              <motion.article
                 key={item.id}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
@@ -296,11 +318,11 @@ export default function Press() {
                       {new Date(item.date).toLocaleDateString()}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
                     {item.title}
                   </h3>
-                  
+
                   <div className="mb-4">
                     <p className="text-zion-cyan font-medium text-sm mb-2">
                       {item.author} • {item.publication || 'Zion Tech Group'}
@@ -332,7 +354,7 @@ export default function Press() {
       {/* All Content Grid */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -347,7 +369,7 @@ export default function Press() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
@@ -355,7 +377,7 @@ export default function Press() {
             viewport={{ once: true }}
           >
             {filteredContent.filter(item => !item.featured).map((item) => (
-              <motion.article 
+              <motion.article
                 key={item.id}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
@@ -371,11 +393,11 @@ export default function Press() {
                       {new Date(item.date).toLocaleDateString()}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">
                     {item.title}
                   </h3>
-                  
+
                   <div className="mb-4">
                     <p className="text-zion-cyan font-medium text-xs mb-2">
                       {item.author} • {item.publication || 'Zion Tech Group'}
@@ -397,7 +419,7 @@ export default function Press() {
       {/* Media Resources */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -412,14 +434,14 @@ export default function Press() {
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <motion.div 
+            <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
@@ -434,7 +456,7 @@ export default function Press() {
               </button>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
@@ -449,7 +471,7 @@ export default function Press() {
               </button>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
@@ -464,7 +486,7 @@ export default function Press() {
               </button>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
@@ -495,10 +517,10 @@ export default function Press() {
               Contact Our Media Team
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              For media inquiries, interview requests, or additional information, 
+              For media inquiries, interview requests, or additional information,
               our media relations team is here to help.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center p-6 bg-zion-blue-dark/30 rounded-xl border border-zion-cyan/20">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -507,7 +529,7 @@ export default function Press() {
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                 <p className="text-zion-slate-light text-sm">press@ziontechgroup.com</p>
               </div>
-              
+
               <div className="text-center p-6 bg-zion-blue-dark/30 rounded-xl border border-zion-cyan/20">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-zion-cyan" />
@@ -515,7 +537,7 @@ export default function Press() {
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                 <p className="text-zion-slate-light text-sm">+1 (302) 464-0950</p>
               </div>
-              
+
               <div className="text-center p-6 bg-zion-blue-dark/30 rounded-xl border border-zion-cyan/20">
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-6 h-6 text-zion-cyan" />
@@ -524,8 +546,8 @@ export default function Press() {
                 <p className="text-zion-slate-light text-sm">ziontechgroup.com</p>
               </div>
             </div>
-            
-            <motion.button 
+
+            <motion.button
               className="mt-8 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

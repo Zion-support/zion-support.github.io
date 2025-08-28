@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Database, 
-  Users, 
-  Code, 
-  Lock, 
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Globe,
+  Zap,
+  Shield,
+  Cloud,
+  Brain,
+  Database,
+  Users,
+  Code,
+  Lock,
   Rocket,
   Sun,
   Moon
@@ -48,9 +48,9 @@ export function AppHeader() {
 
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
-    { 
-      name: 'Services', 
-      path: '/services', 
+    {
+      name: 'Services',
+      path: '/services',
       icon: null,
       dropdown: [
         { name: 'AI & Machine Learning', path: '/services?category=ai-ml', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -63,6 +63,11 @@ export function AppHeader() {
         { name: 'Cybersecurity', path: '/services?category=cybersecurity', icon: Lock, color: 'from-red-500 to-pink-500' },
       ]
     },
+    { name: 'Pricing', path: '/pricing', icon: null },
+    { name: 'Marketplace', path: '/marketplace', icon: null },
+    { name: 'Blog', path: '/blog', icon: null },
+    { name: 'Careers', path: '/careers', icon: null },
+    { name: 'Request Quote', path: '/request-quote', icon: null },
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
@@ -75,10 +80,10 @@ export function AppHeader() {
   };
 
   return (
-    <motion.header 
+    <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10' 
+        scrolled
+          ? 'bg-black/95 backdrop-blur-xl border-b border-zion-cyan/30 shadow-2xl shadow-zion-cyan/10'
           : 'bg-black/80 backdrop-blur-md border-b border-zion-cyan/20'
       }`}
       initial={{ y: -100 }}
@@ -89,7 +94,7 @@ export function AppHeader() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <motion.div 
+            <motion.div
               className="relative"
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -122,7 +127,7 @@ export function AppHeader() {
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4" />
                     </button>
-                    
+
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (

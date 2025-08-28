@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
@@ -29,6 +28,40 @@ export default function Webinars() {
   const webinars = [
     {
       id: 1,
+      title: 'AI Autonomous Research Assistant: Revolutionizing Business Intelligence',
+      description: 'Discover how our revolutionary AI Autonomous Research Assistant is transforming how businesses gather, analyze, and synthesize information across multiple sources.',
+      category: 'ai-ml',
+      type: 'upcoming',
+      date: '2025-02-10T14:00:00Z',
+      duration: '75 min',
+      speakers: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez', 'AI Research Team'],
+      maxAttendees: 600,
+      currentAttendees: 487,
+      featured: true,
+      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Innovation'],
+      thumbnail: '/images/webinars/ai-autonomous-research-2025.jpg',
+      registrationRequired: true,
+      recordingAvailable: false
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
+      description: 'Learn how AI-powered supply chain optimization can predict demand, optimize inventory, and reduce costs significantly for your organization.',
+      category: 'ai-ml',
+      type: 'upcoming',
+      date: '2025-02-12T15:00:00Z',
+      duration: '60 min',
+      speakers: ['Michael Rodriguez', 'Supply Chain Experts', 'AI Implementation Team'],
+      maxAttendees: 400,
+      currentAttendees: 298,
+      featured: true,
+      tags: ['Supply Chain', 'AI Optimization', 'Cost Reduction', 'Predictive Analytics'],
+      thumbnail: '/images/webinars/ai-supply-chain-2025.jpg',
+      registrationRequired: true,
+      recordingAvailable: false
+    },
+    {
+      id: 3,
       title: 'AI-Powered Business Transformation: Real-World Success Stories',
       description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
       category: 'ai-ml',
@@ -45,7 +78,7 @@ export default function Webinars() {
       recordingAvailable: false
     },
     {
-      id: 2,
+      id: 5,
       title: 'Zero-Trust Security: Implementation Strategies for 2025',
       description: 'Learn practical strategies for implementing zero-trust security architecture in your organization.',
       category: 'security',
@@ -82,10 +115,10 @@ export default function Webinars() {
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
     const matchesType = filterType === 'all' || webinar.type === filterType;
-    
+
     return matchesSearch && matchesCategory && matchesType;
   });
 
@@ -103,7 +136,7 @@ export default function Webinars() {
     const webinarDate = new Date(dateString);
     const diffTime = webinarDate.getTime() - now.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    
+
     if (diffDays < 0) return 'Past';
     if (diffDays === 0) return 'Today';
     if (diffDays < 7) return `${diffDays} days`;
@@ -130,13 +163,13 @@ export default function Webinars() {
               Stay Informed and Inspired
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Subscribe to our webinar series and never miss an opportunity to learn 
-              from industry experts and technology leaders. Get notified about upcoming 
+              Subscribe to our webinar series and never miss an opportunity to learn
+              from industry experts and technology leaders. Get notified about upcoming
               sessions and access to exclusive content.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button 
+              <motion.button
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

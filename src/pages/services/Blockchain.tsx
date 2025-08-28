@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { Link as RouterLink } from 'react-router-dom';
 
 export default function Blockchain() {
@@ -133,18 +133,42 @@ export default function Blockchain() {
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic relative overflow-hidden">
-      <SEO 
-        title="Blockchain Services - Zion Tech Group"
-        description="Transform your business with our advanced blockchain solutions. Smart contracts, DeFi, NFTs, and supply chain tracking for the digital age."
-        keywords="blockchain, smart contracts, DeFi, NFTs, supply chain, cryptocurrency, decentralized applications"
-      />
+    <div className="min-h-screen bg-futuristic">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-slate-900 to-slate-900"></div>
+        <div className="container-responsive relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
+              <Lock className="w-5 h-5 text-green-400" />
+              <span className="text-green-400 font-medium">Blockchain Solutions</span>
+            </div>
 
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
-        <div className="absolute top-20 left-10 animate-pulse">
-          <div className="w-32 h-32 bg-orange-500/20 rounded-full blur-3xl" />
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Trust Through
+              <span className="text-gradient"> Technology</span>
+            </h1>
+
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Build trust, transparency, and efficiency with blockchain technology.
+              Transform your business with decentralized solutions.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="btn-futuristic px-8 py-4 text-lg">
+                Start Blockchain Project
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="btn-outline px-8 py-4 text-lg">
+                Learn More
+              </button>
+            </div>
+          </motion.div>
         </div>
         <div className="absolute bottom-20 right-10 animate-pulse delay-1000">
           <div className="w-40 h-40 bg-red-500/20 rounded-full blur-3xl" />

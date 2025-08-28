@@ -23,12 +23,12 @@ export function generateSearchSuggestions() {
   ];
 }
 
-// Marketplace items data
+// Mock marketplace items data
 export const marketplaceItems = [
   {
     id: 1,
     title: "AI-Powered Business Intelligence Platform",
-    description: "Advanced analytics and insights powered by machine learning algorithms",
+    description: "Advanced analytics and machine learning insights for enterprise decision-making",
     category: "AI Services",
     price: "$2,500/month",
     rating: 4.8,
@@ -39,51 +39,51 @@ export const marketplaceItems = [
   },
   {
     id: 2,
-    title: "Quantum-Safe Cybersecurity Suite",
-    description: "Next-generation security solutions resistant to quantum computing attacks",
-    category: "Cybersecurity",
+    title: "Cloud DevOps Automation Suite",
+    description: "Complete infrastructure automation and deployment pipeline solution",
+    category: "Cloud Computing",
     price: "$1,800/month",
-    rating: 4.9,
-    location: "Global",
-    availability: "Available",
-    tags: ["Cybersecurity", "Quantum Computing", "Security", "Encryption"],
-    images: ["/images/quantum-security.jpg"]
-  },
-  {
-    id: 3,
-    title: "Blockchain Supply Chain Platform",
-    description: "Transparent and secure supply chain management using blockchain technology",
-    category: "Blockchain Solutions",
-    price: "$3,200/month",
     rating: 4.7,
     location: "Global",
     availability: "Available",
-    tags: ["Blockchain", "Supply Chain", "Transparency", "Security"],
-    images: ["/images/blockchain-supply.jpg"]
+    tags: ["DevOps", "Cloud", "Automation", "Infrastructure"],
+    images: ["/images/cloud-devops.jpg"]
+  },
+  {
+    id: 3,
+    title: "Cybersecurity Threat Detection System",
+    description: "AI-powered security monitoring and threat prevention platform",
+    category: "Cybersecurity",
+    price: "$3,200/month",
+    rating: 4.9,
+    location: "Global",
+    availability: "Available",
+    tags: ["Security", "AI", "Threat Detection", "Monitoring"],
+    images: ["/images/cybersecurity.jpg"]
   },
   {
     id: 4,
-    title: "IoT Smart City Infrastructure",
-    description: "Comprehensive IoT solutions for modern smart city development",
-    category: "IoT Services",
-    price: "$4,500/month",
+    title: "Micro SaaS CRM Platform",
+    description: "Lightweight customer relationship management for small businesses",
+    category: "Micro SAAS",
+    price: "$99/month",
     rating: 4.6,
     location: "Global",
     availability: "Available",
-    tags: ["IoT", "Smart City", "Infrastructure", "Automation"],
-    images: ["/images/iot-smart-city.jpg"]
+    tags: ["CRM", "SaaS", "Business", "Customer Management"],
+    images: ["/images/micro-crm.jpg"]
   },
   {
     id: 5,
-    title: "Cloud-Native Microservices Platform",
-    description: "Scalable microservices architecture for modern applications",
-    category: "Cloud Computing",
-    price: "$2,800/month",
-    rating: 4.8,
+    title: "IT Infrastructure Management",
+    description: "Comprehensive IT infrastructure monitoring and management solution",
+    category: "IT Infrastructure",
+    price: "$1,500/month",
+    rating: 4.5,
     location: "Global",
     availability: "Available",
-    tags: ["Cloud", "Microservices", "Scalability", "Architecture"],
-    images: ["/images/cloud-microservices.jpg"]
+    tags: ["IT", "Infrastructure", "Monitoring", "Management"],
+    images: ["/images/it-infrastructure.jpg"]
   }
 ];
 
@@ -124,6 +124,6 @@ export const marketplaceFilters = {
     "Available",
     "Coming Soon",
     "Limited Availability",
-    "Custom Development"
+    "Custom Quote Required"
   ]
 };

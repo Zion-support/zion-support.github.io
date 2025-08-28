@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
   Home,
   Brain,
   Cloud,
@@ -67,8 +67,9 @@ export const EnhancedSidebar: React.FC = () => {
       icon: Home,
       items: [
         { name: "Home", href: "/", icon: Home },
+        { name: "Solutions", href: "/solutions", icon: Target },
         { name: "Services", href: "/services", icon: Zap },
-        { name: "Pricing", href: "/pricing", icon: DollarSign },
+        { name: "Case Studies", href: "/case-studies", icon: FileText },
         { name: "Blog", href: "/blog", icon: FileText },
         { name: "Partners", href: "/partners", icon: Handshake },
         { name: "About", href: "/about", icon: Users },
@@ -84,27 +85,34 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu },
         { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp },
         { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain }
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
+        { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain },
+        { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users },
+        { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar },
+        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
+        { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
       ]
     },
     {
       title: "Resources",
       icon: BookOpen,
       items: [
+        { name: "Documentation", href: "/documentation", icon: FileText },
+        { name: "API Reference", href: "/api", icon: Code },
+        { name: "Developer Portal", href: "/developer", icon: Cpu },
+        { name: "Support Center", href: "/help-center", icon: HelpCircle },
         { name: "FAQ", href: "/faq", icon: HelpCircle },
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
-        { name: "Help Center", href: "/help", icon: HelpCircle },
-        { name: "Support", href: "/support", icon: HelpCircle },
-        { name: "Sitemap", href: "/sitemap", icon: Globe },
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
-        { name: "Login", href: "/login", icon: User }
+        { name: "Login", href: "/login", icon: User },
+        { name: "Support", href: "/support", icon: HelpCircle }
       ]
     }
   ];
 
   const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
-    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },
+    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
 
@@ -112,7 +120,7 @@ export const EnhancedSidebar: React.FC = () => {
     <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
       <div className="p-6">
         {/* Logo Section */}
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -135,7 +143,7 @@ export const EnhancedSidebar: React.FC = () => {
         </motion.div>
 
         {/* Quick Actions */}
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -227,7 +235,7 @@ export const EnhancedSidebar: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <motion.div 
+        <motion.div
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -39,7 +39,7 @@ import {
   Battery as BatteryIcon,
   Signal
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 const MobileLaunch: React.FC = () => {
   const features = [
