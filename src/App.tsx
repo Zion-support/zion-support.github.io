@@ -34,6 +34,18 @@ const Pricing = React.lazy(() => import('./pages/Pricing'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 
+// New pages for missing routes
+const APIDocumentation = React.lazy(() => import('./pages/APIDocumentation'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Support = React.lazy(() => import('./pages/Support'));
+const Demo = React.lazy(() => import('./pages/Demo'));
+
+const Investors = React.lazy(() => import('./pages/Investors'));
+const Legal = React.lazy(() => import('./pages/Legal'));
+const Press = React.lazy(() => import('./pages/Press'));
+
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
@@ -117,6 +129,18 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
+
+                {/* New routes for missing pages */}
+                <Route path="/api-docs" element={<APIDocumentation />} />
+                <Route path="/developers" element={<DeveloperPortal />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/demo" element={<Demo />} />
+
+                <Route path="/investors" element={<Investors />} />
+                <Route path="/legal" element={<Legal />} />
+                <Route path="/press" element={<Press />} />
 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
