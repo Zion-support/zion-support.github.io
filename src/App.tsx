@@ -123,6 +123,10 @@ function App() {
                 
                 {/* New Routes */}
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                <Route path="/schedule-demo" element={<ScheduleDemo />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/developers" element={<Developers />} />
+                <Route path="/demo" element={<Demo />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
