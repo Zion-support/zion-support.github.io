@@ -303,12 +303,25 @@ const Accessibility = () => (
 
 function App() {
   return (
+<<<<<<< HEAD
+    <ErrorBoundary>
+      <div className="min-h-screen futuristic-bg">
+        <SEO 
+          title="Zion Tech Group - Leading AI & Technology Solutions"
+          description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
+          keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
+          ogImage="/og-image.jpg"
+          canonicalUrl="https://ziontechgroup.com"
+        />
+        
+=======
     <ErrorBoundary 
       enableReporting={true}
       recoveryOptions={true}
       showDetails={process.env.NODE_ENV === 'development'}
     >
       <div className="min-h-screen bg-futuristic">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
         <AppHeader />
         
         <main className="relative">
@@ -468,9 +481,15 @@ function App() {
         </main>
         <EnhancedFooter />
         <ChatAssistant />
+<<<<<<< HEAD
+        <PerformanceOptimizer />
+        <AccessibilityEnhancer enabled={true} showControls={false} />
+        <MobileExperienceEnhancer enabled={true} />
+=======
         <PerformanceOptimizer enabled={true} showControls={true} autoOptimize={true} />
         <AccessibilityEnhancer enabled={true} showControls={true} />
         <MobileExperienceEnhancer enabled={true} showControls={true} autoOptimize={true} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
       </div>
     </ErrorBoundary>
   );

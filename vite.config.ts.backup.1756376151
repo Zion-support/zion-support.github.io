@@ -5,6 +5,10 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+<<<<<<< HEAD
+  root: '.',
+  base: '/',
+=======
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -17,6 +21,7 @@ export default defineConfig({
       '@assets': resolve(__dirname, './src/assets'),
     },
   },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -36,12 +41,28 @@ export default defineConfig({
           'router-vendor': ['react-router-dom'],
           'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
           'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+<<<<<<< HEAD
+          'charts-vendor': ['recharts'],
+          'ai-services': [
+            './src/pages/AIServices',
+            './src/pages/services/AISalesCopilot',
+            './src/pages/services/AIComplianceAssistant',
+            './src/pages/services/AIAutoEmailResponder'
+          ],
+          'micro-saas': [
+            './src/pages/MicroSaaS',
+            './src/pages/services/MicroCRM',
+            './src/pages/services/WebsiteAnalytics',
+            './src/pages/services/ITHelpdesk'
+          ]
+=======
           'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
           'charts-vendor': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
           return `js/${facadeModuleId}-[hash].js`;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
         },
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
@@ -57,8 +78,41 @@ export default defineConfig({
         },
       },
     },
+<<<<<<< HEAD
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2
+      },
+      mangle: {
+        toplevel: true
+      }
+    },
+    chunkSizeWarningLimit: 800,
+    reportCompressedSize: true
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+    }
+=======
     chunkSizeWarningLimit: 1000,
     sourcemap: false,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom'],
@@ -73,4 +127,12 @@ export default defineConfig({
     port: 4173,
     host: true,
   },
+<<<<<<< HEAD
+  // Performance optimizations
+  esbuild: {
+    drop: ['console', 'debugger'],
+    pure: ['console.log', 'console.info', 'console.debug', 'console.warn']
+  }
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
 })
