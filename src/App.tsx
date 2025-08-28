@@ -121,6 +121,14 @@ const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecur
 const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
+
+// New AI Services from feature branch
+const AIBusinessProcessOptimization = lazy(() => import('./pages/services/AIBusinessProcessOptimization'));
+const AICustomerSuccessPlatform = lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
+
+// 2025 Innovative Services
+const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
@@ -317,7 +325,9 @@ export default function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+<Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+<Route path="/services/ai-business-process-optimization" element={<AIBusinessProcessOptimization />} />
+<Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
                     
                     {/* Additional Service Routes */}
                     <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
