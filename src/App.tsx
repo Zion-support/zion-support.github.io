@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { EnhancedHeader } from './components/header/EnhancedHeader';
-import { EnhancedFooter } from './components/footer/EnhancedFooter';
+import { AppHeader } from './layout/AppHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
@@ -36,29 +36,23 @@ const Legal = React.lazy(() => import('./pages/Legal'));
 
 // Additional pages from enhancement branch
 const Careers = React.lazy(() => import('./pages/Careers'));
-const PartnersPage = React.lazy(() => import('./pages/PartnersPage'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const Talent = React.lazy(() => import('./pages/Talent'));
-const Equipment = React.lazy(() => import('./pages/EquipmentPage'));
+const Equipment = React.lazy(() => import('./pages/Equipment'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Security = React.lazy(() => import('./pages/Security'));
 const Status = React.lazy(() => import('./pages/Status'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Profile = React.lazy(() => import('./pages/Profile'));
-const Settings = React.lazy(() => import('./pages/Settings'));
 const Signup = React.lazy(() => import('./pages/Signup'));
-const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword'));
-const ResetPassword = React.lazy(() => import('./pages/ResetPassword'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
 const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
-const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
-const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
+const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -74,32 +68,7 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
 
-// Simple placeholder pages for missing ones
-const Careers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
-    </div>
-  </div>
-);
 
-const Marketplace = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Marketplace - Zion Tech Group"
-      description="Explore our marketplace of AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
-      <p className="text-xl text-gray-300">Explore our solutions</p>
-    </div>
-  </div>
-);
 
 function App() {
   return (
@@ -110,7 +79,7 @@ function App() {
           <FuturisticAnimatedBackground variant="default" intensity="low" />
           
           {/* Enhanced Header */}
-          <EnhancedHeader />
+          <AppHeader />
           
           {/* Main Content */}
           <main className="pt-24">
@@ -151,11 +120,9 @@ function App() {
                 <Route path="/legal" element={<Legal />} />
                 
                 {/* Additional Routes from Enhancement Branch */}
-                <Route path="/partners-page" element={<PartnersPage />} />
                 <Route path="/talent" element={<Talent />} />
                 <Route path="/equipment" element={<Equipment />} />
                 <Route path="/green-it" element={<GreenIT />} />
-                <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
                 <Route path="/help" element={<HelpCenter />} />
                 <Route path="/security" element={<Security />} />
                 <Route path="/status" element={<Status />} />
@@ -167,10 +134,6 @@ function App() {
                 <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesShowcase2025 />} />
                 <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/forgot-password" element={<ForgotPassword />} />
-                <Route path="/reset-password" element={<ResetPassword />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/settings" element={<Settings />} />
                 <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServicesShowcase2030 />} />
                 

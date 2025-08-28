@@ -373,6 +373,4 @@ export default function Security() {
       </section>
     </div>
   );
-};
-
-export default Security;
+}

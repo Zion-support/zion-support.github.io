@@ -57,18 +57,6 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
     let animationId: number;
     let time = 0;
 
-    // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
-      maxLife: number;
-    }> = [];
-
     // Create particles
     const createParticle = () => {
       const x = Math.random() * canvas.width;
@@ -82,9 +70,8 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         vx: Math.cos(angle) * speed,
         vy: Math.sin(angle) * speed,
         size: Math.random() * 3 + 1,
-        color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`,
-        life: 1,
-        maxLife: Math.random() * 100 + 50
+        opacity: Math.random() * 0.8 + 0.2,
+        color: `hsl(${200 + Math.random() * 60}, 70%, 60%)`
       });
     };
 
@@ -167,6 +154,25 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
         ctx.stroke();
       }
 
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        // Update particle position
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap particles around screen
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle
+        ctx.globalAlpha = particle.opacity;
+        ctx.fillStyle = particle.color;
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill();
+
         // Draw connections for intense variant
         if (intensity === 'high') {
           particles.forEach((otherParticle, otherIndex) => {
@@ -188,6 +194,11 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
           });
         }
       });
+
+      // Create new particles if needed
+      if (particles.length < particleCount) {
+        createParticle();
+      }
 
       animationRef.current = requestAnimationFrame(animate);
     };
