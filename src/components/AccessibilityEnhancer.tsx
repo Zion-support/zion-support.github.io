@@ -186,15 +186,15 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     
     // Check for alt text on images
     const images = document.querySelectorAll('img');
-    images.forEach((img, index) => {
+    images.forEach((img) => {
       if (!img.alt && !img.ariaLabel) {
-        issues.push(`Image ${index + 1} missing alt text`);
+        issues.push(`Image missing alt text`);
       }
     });
 
     // Check for form labels
     const inputs = document.querySelectorAll('input, select, textarea');
-    inputs.forEach((input, index) => {
+    inputs.forEach((input) => {
       const id = input.getAttribute('id');
       const label = document.querySelector(`label[for="${id}"]`);
       if (!label && !input.getAttribute('aria-label')) {
@@ -205,7 +205,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Check for heading structure
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
-    headings.forEach((heading, index) => {
+    headings.forEach((heading) => {
       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         issues.push(`Heading structure issue: ${heading.tagName} follows ${previousLevel > 0 ? `h${previousLevel}` : 'no heading'}`);
@@ -215,7 +215,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Check for color contrast (simplified)
     const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
-    textElements.forEach((element, index) => {
+    textElements.forEach((element) => {
       const style = window.getComputedStyle(element);
       const color = style.color;
       const backgroundColor = style.backgroundColor;
