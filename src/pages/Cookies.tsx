@@ -390,7 +390,10 @@ export default function Cookies() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Cookie Management */}
       <section className="py-20">

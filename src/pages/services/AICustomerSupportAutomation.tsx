@@ -673,6 +673,7 @@ const AICustomerSupportAutomation = () => {
           </div>
         </section>
       </div>
+    </div>
     </>
   );
 };

@@ -179,7 +179,7 @@ export default function InnovativeServicesLanding2025() {
                 Get Started
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 

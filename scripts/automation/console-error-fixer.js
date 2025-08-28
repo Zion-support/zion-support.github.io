@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log('🔧 Starting continuous console error fixer automation...');
 
@@ -16,10 +20,11 @@ async function runConsoleErrorFixer() {
     // Build the project first
     console.log('🏗️ Building project for console error detection...');
     try {
-      execSync('npm run build', { stdio: 'inherit' });
+      execSync('npm run build', { stdio: 'inherit', cwd: process.cwd() });
       console.log('✅ Build completed');
     } catch (error) {
       console.log('⚠️  Build failed but continuing...');
+      console.log('Build error:', error.message);
       return;
     }
     
