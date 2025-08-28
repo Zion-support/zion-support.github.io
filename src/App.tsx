@@ -57,6 +57,7 @@ const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensiveServicesShowcase2027 = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
 
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
@@ -397,6 +398,16 @@ function App() {
                   {/* 2028 Pricing */}
                   <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                   <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
+                  
+                  {/* 2027 Comprehensive Pricing Guide */}
+                  <Route path="/comprehensive-pricing-2027" element={<ComprehensivePricingGuide2027 />} />
+                  <Route path="/pricing-2027" element={<ComprehensivePricingGuide2027 />} />
+                  <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                  
+                  {/* 2027 Comprehensive Services Showcase */}
+                  <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027 />} />
+                  <Route path="/services-showcase-2027" element={<ComprehensiveServicesShowcase2027 />} />
+                  <Route path="/services-2027" element={<ComprehensiveServicesShowcase2027 />} />
                   
                   {/* 2028 Comprehensive Services */}
                   <Route path="/comprehensive-services-2028" element={<ComprehensiveServicesLanding2028 />} />
