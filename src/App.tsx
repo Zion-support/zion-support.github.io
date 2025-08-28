@@ -45,6 +45,15 @@ const ComprehensiveServicesShowcase2030 = lazy(() => import('./pages/Comprehensi
 // Add missing imports
 const EnhancedContact = lazy(() => import('./pages/EnhancedContact').then(module => ({ default: module.default })));
 
+// New service page imports
+const AIAutonomousBusinessOperationsPlatform = lazy(() => import('./pages/services/ai-autonomous-business-operations-platform').then(module => ({ default: module.default })));
+const QuantumAICybersecurityPlatform = lazy(() => import('./pages/services/quantum-ai-cybersecurity-platform').then(module => ({ default: module.default })));
+const AIContentCreationStudio = lazy(() => import('./pages/services/ai-content-creation-studio').then(module => ({ default: module.default })));
+const AISalesIntelligencePlatform = lazy(() => import('./pages/services/ai-sales-intelligence-platform').then(module => ({ default: module.default })));
+const AIDataAnalyticsBI = lazy(() => import('./pages/services/ai-data-analytics-bi').then(module => ({ default: module.default })));
+const CloudInfrastructureDevOps = lazy(() => import('./pages/services/cloud-infrastructure-devops').then(module => ({ default: module.default })));
+const IoTEdgeComputingPlatform = lazy(() => import('./pages/services/iot-edge-computing-platform').then(module => ({ default: module.default })));
+
 // Service pages with enhanced error boundaries
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps').then(module => ({ default: module.default })));
 const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin').then(module => ({ default: module.default })));
@@ -170,6 +179,15 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* New service routes */}
+                <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
+                <Route path="/services/quantum-ai-cybersecurity-platform" element={<QuantumAICybersecurityPlatform />} />
+                <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
+                <Route path="/services/ai-sales-intelligence-platform" element={<AISalesIntelligencePlatform />} />
+                <Route path="/services/ai-data-analytics-bi" element={<AIDataAnalyticsBI />} />
+                <Route path="/services/cloud-infrastructure-devops" element={<CloudInfrastructureDevOps />} />
+                <Route path="/services/iot-edge-computing-platform" element={<IoTEdgeComputingPlatform />} />
 
                 {/* Enhanced 404 route */}
                 <Route path="*" element={
