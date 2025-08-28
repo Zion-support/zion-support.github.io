@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
   Type, 
   Contrast, 
   Keyboard,
