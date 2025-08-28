@@ -37,6 +37,8 @@ Allow: /site.webmanifest
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
+<<<<<<< HEAD
+=======
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
@@ -55,6 +57,7 @@ Allow: /faq/
 Allow: /privacy/
 Allow: /terms/
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b773
 # Crawl delay (optional)
 Crawl-delay: 1
 

@@ -18,11 +18,18 @@ export default defineConfig({
     },
   },
   build: {
+<<<<<<< HEAD
+    target: 'es2022',
+    minify: 'terser',
+    sourcemap: process.env.NODE_ENV !== 'production' ? 'hidden' : false,
+    reportCompressedSize: false,
+=======
     target: 'esnext',
     minify: 'esbuild',
     sourcemap: process.env.SOURCEMAP === 'true',
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b773
     outDir: 'dist',
     cssCodeSplit: true,
     modulePreload: {
