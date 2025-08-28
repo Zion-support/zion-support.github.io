@@ -27,20 +27,6 @@ export function AppHeader() {
   const { user, logout } = useAuth();
 
   const navigation = [
-<<<<<<< HEAD
-    { name: 'Home', href: '/', current: true, icon: Home },
-    { name: 'Services', href: '/services', current: false, icon: Rocket },
-    { name: 'AI Services', href: '/ai-services', current: false, icon: Brain },
-    { name: 'IT Services', href: '/it-services', current: false, icon: Cpu },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false, icon: ShoppingCart },
-    { name: 'Pricing', href: '/pricing', current: false, icon: DollarSign },
-    { name: 'Partners', href: '/partners', current: false, icon: Users },
-    { name: 'Blog', href: '/blog', current: false, icon: BookOpen },
-    { name: 'Help', href: '/help', current: false, icon: HelpCircle },
-    { name: 'About', href: '/about', current: false, icon: Star },
-    { name: 'Contact', href: '/contact', current: false, icon: MessageCircle },
-    { name: 'Careers', href: '/careers', current: false, icon: Users },
-=======
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
     { name: 'Advertising', href: '/services-advertising', current: false },
@@ -55,11 +41,11 @@ export function AppHeader() {
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Careers', href: '/careers', current: false },
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ea1b
   ];
 
   // Organized services by category - only include existing pages
   const services = [
+<<<<<<< HEAD
     // Featured Micro SAAS Services
     { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Brain, description: 'AI-powered project management & optimization', featured: true },
     { name: 'AI Content Optimizer', href: '/services/ai-content-optimizer', icon: BookOpen, description: 'AI SEO & content performance analytics', featured: true },
@@ -95,6 +81,17 @@ export function AppHeader() {
     { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Tickets, KB, chat & AI' },
     { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA request workflow' },
     { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield, description: 'HSTS/CSP automation' },
+=======
+    { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Blockchain', href: '/services/blockchain', icon: Lock, description: 'DeFi & Smart Contracts' },
+    { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-f334
   ];
 
   // Quick links for easy access

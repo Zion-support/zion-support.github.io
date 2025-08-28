@@ -104,12 +104,18 @@ export function Footer() {
       icon: Zap,
       links: [
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+<<<<<<< HEAD
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
+=======
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
         { name: 'Infrastructure', path: '/services/infrastructure', icon: Building },
         { name: 'AI Analytics', path: '/services/ai-analytics', icon: Brain },
         // Newly exposed landing pages
         { name: 'AI Services', path: '/ai-services', icon: Brain },
+>>>>>>> origin/cursor/website-audit-and-enhancement-f334
         { name: 'IT Services', path: '/it-services', icon: Building },
         { name: 'Micro SaaS Solutions', path: '/services/micro-saas-solutions', icon: Zap },
         { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },

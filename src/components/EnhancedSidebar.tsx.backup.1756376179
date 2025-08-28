@@ -103,9 +103,15 @@ export const EnhancedSidebar: React.FC = () => {
   ];
 
   const quickActions = [
+<<<<<<< HEAD
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
+    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },
+    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
+=======
     { name: "Get Quote", href: "/request-quote", icon: MessageCircle, variant: "primary" },
     { name: "Book Demo", href: "/contact", icon: Calendar, variant: "secondary" },
     { name: "Support", href: "/help", icon: HelpCircle, variant: "secondary" }
+>>>>>>> origin/cursor/website-audit-and-enhancement-f334
   ];
 
   return (
