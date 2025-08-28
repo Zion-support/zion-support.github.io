@@ -22,6 +22,34 @@ export default function Services() {
 						</p>
 					</div>
 
+					{/* Enhanced Services Promo */}
+					<section className="mb-16">
+						<div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-8 text-center">
+							<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+								🚀 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Enhanced Services 2025</span>
+							</h2>
+							<p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
+								Discover our revolutionary portfolio of cutting-edge AI, Quantum Computing, Blockchain, and Emerging Technology solutions designed to transform your business.
+							</p>
+							<div className="flex flex-col sm:flex-row gap-4 justify-center">
+								<Link
+									to="/enhanced-services"
+									className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+								>
+									<span>Explore Enhanced Services</span>
+									<ExternalLink className="w-4 h-4" />
+								</Link>
+								<a
+									href="tel:+13024640950"
+									className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 font-semibold py-3 px-6 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+								>
+									<Phone className="w-4 h-4" />
+									Call for Consultation
+								</a>
+							</div>
+						</div>
+					</section>
+
 					<div className="grid grid-cols-1 gap-12">
 						{servicesCatalog.map(category => (<section key={category.slug}>
 								<h2 className="text-2xl md:text-3xl font-semibold text-white mb-6">{category.name}</h2>

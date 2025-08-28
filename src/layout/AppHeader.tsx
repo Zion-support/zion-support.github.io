@@ -45,6 +45,14 @@ export function AppHeader() {
 
   const services = [
     { 
+      name: 'Enhanced Services 2025', 
+      href: '/enhanced-services', 
+      icon: Zap, 
+      description: 'Cutting-edge AI, Quantum & Emerging Tech',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
       name: 'AI & Analytics', 
       href: '/services', 
       icon: Brain, 
