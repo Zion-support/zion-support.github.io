@@ -2,7 +2,7 @@
 import SEO from '@/components/SEO';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import Input from '@/components/ui/Input';
 import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
 import { motion } from 'framer-motion';
 import {

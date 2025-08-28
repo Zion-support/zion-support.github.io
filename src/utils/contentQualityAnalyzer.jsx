@@ -1,3 +1,5 @@
+import React from 'react';
+
 export class ContentQualityAnalyzer {
     static instance;
     constructor() {

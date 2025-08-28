@@ -4,7 +4,7 @@
 
 [build]
   # Use `npm install` for consistent dependency management, Vite builds to dist/
-  command = "npm ci && npm run build"
+  command = "npm ci && npm run build:netlify"
   publish = "dist"
   # Force static site build (not Next.js)
   # Functions moved to PM2 automation
@@ -15,7 +15,7 @@
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=6144"
   # Use npm for dependency management
-  NPM_FLAGS = "--ignore-scripts"
+  NPM_FLAGS = "--ignore-scripts --no-optional"
   # Skip Netlify's Next.js plugin since this is a Vite static site
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
   # Force Vite/static site detection
@@ -28,6 +28,21 @@
   # Skip all framework plugins
   NETLIFY_SKIP_FRAMEWORK_PLUGINS = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
+  # Fix Rollup module issues
+  NPM_CONFIG_OPTIONAL = "false"
+  NPM_CONFIG_PLATFORM = "linux"
+  NPM_CONFIG_ARCH = "x64"
+  NPM_CONFIG_TARGET_PLATFORM = "linux"
+  NPM_CONFIG_TARGET_ARCH = "x64"
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true"
+  NPM_CONFIG_STRICT_SSL = "false"
+  NPM_CONFIG_BUILD_FROM_SOURCE = "false"
+  NPM_CONFIG_PREFER_OFFLINE = "true"
+  # Additional Rollup fixes
+  VITE_ROLLUP_PLATFORM = "linux"
+  VITE_ROLLUP_ARCH = "x64"
+  ROLLUP_PLATFORM = "linux"
+  ROLLUP_ARCH = "x64"
 
 # Fix MIME type issues
 [[headers]]
