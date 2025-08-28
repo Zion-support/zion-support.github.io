@@ -1,4 +1,40 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import { EnhancedNavigation } from '../components/EnhancedNavigation';
+import { 
+  Brain, 
+  Workflow, 
+  Shield, 
+  Cloud, 
+  Cpu, 
+  Users, 
+  ShoppingCart, 
+  MessageCircle, 
+  BarChart3, 
+  HelpCircle, 
+  FileText, 
+  Truck, 
+  Mail, 
+  Smartphone, 
+  DollarSign, 
+  CheckCircle, 
+  Target, 
+  Zap, 
+  Atom, 
+  Network, 
+  Eye, 
+  Heart, 
+  Building, 
+  Rocket, 
+  Star, 
+  Gauge, 
+  Server, 
+  TrendingUp, 
+  Search, 
+  Lock, 
+  BookOpen
+} from 'lucide-react';
+=======
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, GitFork, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Newspaper, Briefcase } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -6,6 +42,7 @@ import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
 import { EnhancedSearch } from '../components/EnhancedSearch';
+>>>>>>> origin/cursor/website-audit-and-enhancement-faff
 
 export default function AppHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,6 +132,21 @@ export default function AppHeader() {
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+<<<<<<< HEAD
+    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'IT support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp, description: 'Affiliate program management', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
+    { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone, description: 'Mobile survey platform', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle, description: 'Audio to text conversion', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail, description: 'Automated email campaigns', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+    { name: 'Returns Management', href: '/services/returns-management', icon: Truck, description: 'Product returns system', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText, description: 'AI content creation', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
+    
+    // New AI-Powered Services
+    { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield, description: 'AI-powered data governance', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain, description: 'AI-powered customer insights', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'AI-powered financial risk assessment', category: 'AI & ML', color: 'from-red-500 to-orange-500' },
+    { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code, description: 'Automated code security analysis', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+=======
     { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'IT support automation', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
     { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp, description: 'Performance marketing tracking', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
     { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone, description: 'Mobile data collection', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
@@ -102,6 +154,7 @@ export default function AppHeader() {
     { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail, description: 'Automated email campaigns', category: 'Micro SaaS', color: 'from-green-500 to-teal-500' },
     { name: 'Returns Management', href: '/services/returns-management', icon: Truck, description: 'E-commerce returns automation', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText, description: 'AI content generation', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-faff
   ];
 
   const quickLinks = [
@@ -110,6 +163,10 @@ export default function AppHeader() {
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Partners', href: '/partners', icon: Users },
+<<<<<<< HEAD
+    { name: 'Careers', href: '/careers', icon: Users },
+    { name: 'Help Center', href: '/help', icon: MessageCircle },
+=======
     { name: 'Case Studies', href: '/case-studies', icon: FileText },
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Help Center', href: '/help', icon: HelpCircle },
@@ -117,6 +174,7 @@ export default function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'News', href: '/news', icon: Newspaper },
     { name: 'Careers', href: '/careers', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-faff
   ];
 
   const featuredServices = [

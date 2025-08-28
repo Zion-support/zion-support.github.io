@@ -89,6 +89,28 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       title: 'AI & Machine Learning',
       icon: Brain,
       items: [
+<<<<<<< HEAD
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: GitFork },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', icon: Shield },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Brain },
+        { name: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: TrendingUp },
+        { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: FileText },
+        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', icon: MessageCircle },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield },
+        { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', icon: Code },
+        { name: 'AI DevOps Automation Platform', href: '/services/ai-devops-automation-platform', icon: GitFork },
+        { name: 'AI Customer Experience Support', href: '/services/ai-customer-experience-support', icon: MessageCircle },
+        { name: 'AI Marketing Automation Personalization', href: '/services/ai-marketing-automation-personalization', icon: Target },
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
+        { name: 'AI Quantum Financial Trading', href: '/services/ai-quantum-financial-trading', icon: BarChart3 },
+        { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain', icon: Truck },
+        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield }
+=======
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
@@ -99,6 +121,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: GitFork },
         { name: 'AI Data Governance', href: '/services/ai-data-governance-platform', icon: Shield },
         { name: 'AI Customer Experience', href: '/services/ai-customer-experience-analytics', icon: Brain }
+>>>>>>> origin/cursor/website-audit-and-enhancement-faff
       ]
     },
     {
@@ -108,8 +131,15 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Server },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Building },
         { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
+<<<<<<< HEAD
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3 },
+        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart }
+=======
         { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap }
+>>>>>>> origin/cursor/website-audit-and-enhancement-faff
       ]
     },
     {
@@ -118,8 +148,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Eye },
+<<<<<<< HEAD
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield }
+      ]
+    },
+    {
+      title: 'Digital Transformation',
+      icon: Zap,
+      items: [
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
+        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }
+=======
         { name: 'Zero Trust Network', href: '/services/zero-trust-network-access', icon: Lock },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield }
+>>>>>>> origin/cursor/website-audit-and-enhancement-faff
       ]
     },
     {
@@ -128,9 +173,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
+<<<<<<< HEAD
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Brain },
+        { name: 'Space Technology', href: '/space-tech', icon: Satellite }
+      ]
+    },
+    {
+      title: 'Data & Analytics',
+      icon: BarChart3,
+      items: [
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'Business Intelligence', href: '/services/ai-business-intelligence-analytics', icon: TrendingUp }
+=======
         { name: 'AI Quantum Hybrid', href: '/services/ai-quantum-hybrid-platform', icon: Brain },
         { name: 'Space Technology', href: '/space-tech', icon: Satellite },
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye }
+>>>>>>> origin/cursor/website-audit-and-enhancement-faff
       ]
     },
     {
@@ -151,6 +209,30 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
+<<<<<<< HEAD
+      title: 'Featured Services',
+      icon: Star,
+      items: [
+        { name: '2025 New Innovative Services', href: '/new-innovative-services-2025', icon: Star },
+        { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star },
+        { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star },
+        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star },
+        { name: '2029 Comprehensive Services Showcase', href: '/comprehensive-services-showcase-2029', icon: Star }
+      ]
+    },
+    {
+      title: 'Support & Resources',
+      icon: HelpCircle,
+      items: [
+        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'FAQ', href: '/faq', icon: HelpCircle },
+        { name: 'Documentation', href: '/documentation', icon: BookOpen },
+        { name: 'API Documentation', href: '/api-docs', icon: Code },
+        { name: 'Developer Portal', href: '/developer', icon: Cpu },
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'White Papers', href: '/white-papers', icon: FileText }
+=======
       title: 'Additional Services',
       icon: Star,
       items: [
@@ -161,6 +243,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'FAQ', href: '/faq', icon: HelpCircle },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Sitemap', href: '/sitemap', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-faff
       ]
     }
   ];
