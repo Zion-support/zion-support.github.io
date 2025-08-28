@@ -12,8 +12,7 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/about'));
-const Contact = React.lazy(() => import('./pages/contact'));
-const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
+const Contact = React.lazy(() => import('../pages/contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
@@ -34,9 +33,9 @@ const Partners = React.lazy(() => import('./pages/Partners'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const Legal = React.lazy(() => import('./pages/Legal'));
+const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
 
 // Enhanced components
-const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 const Community = React.lazy(() => import('./pages/Community'));
 const Developers = React.lazy(() => import('./pages/Developers'));
@@ -65,18 +64,7 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 
-const Partners = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Partners - Zion Tech Group"
-      description="Partner with us to deliver cutting-edge technology solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Partners</h1>
-      <p className="text-xl text-gray-300">Partner with us</p>
-    </div>
-  </div>
-);
+
 
 function App() {
   return (
@@ -120,7 +108,6 @@ function App() {
                 <Route path="/marketplace" element={<Marketplace />} />
                 
                 {/* New Routes */}
-                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/developers" element={<Developers />} />
