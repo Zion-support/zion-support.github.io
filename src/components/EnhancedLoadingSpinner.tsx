@@ -183,4 +183,7 @@ export function EnhancedLoadingSpinner({
   );
 }
 
+// Export as ZionLoadingSpinner for backward compatibility
+export const ZionLoadingSpinner = EnhancedLoadingSpinner;
+
 export default EnhancedLoadingSpinner;
