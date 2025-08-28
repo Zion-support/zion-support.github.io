@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react';
 
@@ -128,7 +128,7 @@ const ModernFooter: React.FC = () => {
                 {serviceCategories.slice(0, 4).map((category) => (
                   <li key={category.name}>
                     <Link
-                      href={category.href}
+                      to={category.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors group"
                     >
                       {React.createElement(category.icon, { 
