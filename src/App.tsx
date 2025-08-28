@@ -6,7 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
+import Footer from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -29,13 +29,11 @@ import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/about'));
-const Services = lazy(() => import('./pages/services'));
-const Contact = lazy(() => import('./pages/contact'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
 const Blog = lazy(() => import('./pages/Blog'));
 const Careers = lazy(() => import('./pages/Careers'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const Team = lazy(() => import('./pages/Team'));
 
 // Additional missing page imports
 const Dashboard = lazy(() => import('./pages/Dashboard'));
