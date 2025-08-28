@@ -90,18 +90,7 @@ const Marketplace = () => (
   </div>
 );
 
-const Partners = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Partners - Zion Tech Group"
-      description="Partner with us to deliver cutting-edge technology solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Partners</h1>
-      <p className="text-xl text-gray-300">Partner with us</p>
-    </div>
-  </div>
-);
+
 
 function App() {
   return (
