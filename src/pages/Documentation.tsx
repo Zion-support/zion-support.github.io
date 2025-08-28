@@ -1,390 +1,457 @@
-import React, { useState } from 'react';
-import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter } from 'lucide-react';
+import React from 'react';
+import { SEO } from '../components/SEO';
+import { Code, BookOpen, Download, Search, Filter, ArrowRight, Star, Eye, Tag, ExternalLink, GitBranch, Zap, Database, Server, Lock, Globe, Cpu, FileText, Calendar, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Documentation() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
+  const documentation = [
+    {
+      title: 'API Reference Guide',
+      description: 'Complete API documentation for all Zion Tech Group services and platforms. Includes authentication, endpoints, request/response formats, and code examples.',
+      category: 'API Documentation',
+      version: 'v2.1.0',
+      lastUpdated: '2024-01-20',
+      author: 'Development Team',
+      tags: ['API', 'Documentation', 'Technical', 'Reference'],
+      featured: true,
+      color: 'from-blue-500 to-cyan-500',
+      sections: ['Authentication', 'Endpoints', 'Examples', 'SDKs'],
+      downloadUrl: '/docs/api-reference-v2.1.0.pdf'
+    },
+    {
+      title: 'Integration Best Practices',
+      description: 'Guidelines for integrating our services with your existing systems and workflows. Learn about best practices, common patterns, and troubleshooting.',
+      category: 'Integration Guides',
+      version: 'v1.5.0',
+      lastUpdated: '2024-01-15',
+      author: 'Solutions Architecture Team',
+      tags: ['Integration', 'Best Practices', 'Technical', 'Guide'],
+      featured: true,
+      color: 'from-green-500 to-emerald-500',
+      sections: ['Architecture', 'Patterns', 'Troubleshooting', 'Examples'],
+      downloadUrl: '/docs/integration-best-practices-v1.5.0.pdf'
+    },
+    {
+      title: 'AI Services Developer Guide',
+      description: 'Comprehensive guide to implementing and customizing our AI services. Includes model training, deployment, and optimization strategies.',
+      category: 'AI & Machine Learning',
+      version: 'v3.0.0',
+      lastUpdated: '2024-01-18',
+      author: 'AI Research Team',
+      tags: ['AI', 'Machine Learning', 'Developer', 'Guide'],
+      featured: true,
+      color: 'from-purple-500 to-pink-500',
+      sections: ['Models', 'Training', 'Deployment', 'Optimization'],
+      downloadUrl: '/docs/ai-services-developer-guide-v3.0.0.pdf'
+    },
+    {
+      title: 'Cloud Infrastructure Setup',
+      description: 'Step-by-step guide to setting up and configuring cloud infrastructure for our services. Covers AWS, Azure, and GCP deployment.',
+      category: 'Infrastructure',
+      version: 'v2.0.0',
+      lastUpdated: '2024-01-12',
+      author: 'Cloud Architecture Team',
+      tags: ['Cloud', 'Infrastructure', 'Setup', 'Deployment'],
+      featured: false,
+      color: 'from-orange-500 to-red-500',
+      sections: ['AWS Setup', 'Azure Setup', 'GCP Setup', 'Configuration'],
+      downloadUrl: '/docs/cloud-infrastructure-setup-v2.0.0.pdf'
+    },
+    {
+      title: 'Security Implementation Guide',
+      description: 'Security best practices and implementation guidelines for our services. Learn about authentication, authorization, and data protection.',
+      category: 'Security',
+      version: 'v1.8.0',
+      lastUpdated: '2024-01-10',
+      author: 'Security Team',
+      tags: ['Security', 'Authentication', 'Authorization', 'Best Practices'],
+      featured: false,
+      color: 'from-red-500 to-pink-500',
+      sections: ['Authentication', 'Authorization', 'Data Protection', 'Compliance'],
+      downloadUrl: '/docs/security-implementation-guide-v1.8.0.pdf'
+    },
+    {
+      title: 'Performance Optimization Guide',
+      description: 'Techniques and strategies for optimizing the performance of our services. Includes monitoring, profiling, and optimization best practices.',
+      category: 'Performance',
+      version: 'v1.3.0',
+      lastUpdated: '2024-01-08',
+      author: 'Performance Engineering Team',
+      tags: ['Performance', 'Optimization', 'Monitoring', 'Best Practices'],
+      featured: false,
+      color: 'from-emerald-500 to-green-500',
+      sections: ['Monitoring', 'Profiling', 'Optimization', 'Best Practices'],
+      downloadUrl: '/docs/performance-optimization-guide-v1.3.0.pdf'
+    }
+  ];
 
   const categories = [
-    { id: 'all', name: 'All Documentation', icon: <BookOpen className="w-5 h-5" />, count: 0 },
-    { id: 'getting-started', name: 'Getting Started', icon: <BookOpen className="w-5 h-5" />, count: 12 },
-    { id: 'api', name: 'API Reference', icon: <Code className="w-5 h-5" />, count: 28 },
-    { id: 'guides', name: 'User Guides', icon: <FileText className="w-5 h-5" />, count: 45 },
-    { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-5 h-5" />, count: 23 },
-    { id: 'examples', name: 'Code Examples', icon: <Code className="w-5 h-5" />, count: 67 },
-    { id: 'reference', name: 'Reference', icon: <FileText className="w-5 h-5" />, count: 34 }
+    { name: 'All', count: documentation.length, active: true },
+    { name: 'API Documentation', count: documentation.filter(d => d.category === 'API Documentation').length, active: false },
+    { name: 'Integration Guides', count: documentation.filter(d => d.category === 'Integration Guides').length, active: false },
+    { name: 'AI & Machine Learning', count: documentation.filter(d => d.category === 'AI & Machine Learning').length, active: false },
+    { name: 'Infrastructure', count: documentation.filter(d => d.category === 'Infrastructure').length, active: false },
+    { name: 'Security', count: documentation.filter(d => d.category === 'Security').length, active: false },
+    { name: 'Performance', count: documentation.filter(d => d.category === 'Performance').length, active: false }
   ];
 
-  const sortOptions = [
-    { value: 'popular', label: 'Most Popular' },
-    { value: 'newest', label: 'Newest First' },
-    { value: 'alphabetical', label: 'Alphabetical' },
-    { value: 'recently-updated', label: 'Recently Updated' }
-  ];
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const [searchQuery, setSearchQuery] = React.useState('');
 
-  const documentationItems = [
-    {
-      id: 1,
-      title: 'Getting Started with Zion Tech Group',
-      description: 'Complete guide to setting up your account and first project',
-      category: 'getting-started',
-      type: 'guide',
-      difficulty: 'beginner',
-      readTime: '15 min',
-      lastUpdated: '2025-01-20',
-      views: 15420,
-      rating: 4.9,
-      featured: true,
-      tags: ['onboarding', 'setup', 'first-steps']
-    },
-    {
-      id: 2,
-      title: 'API Authentication Guide',
-      description: 'Step-by-step guide to API key management and authentication',
-      category: 'api',
-      type: 'guide',
-      difficulty: 'intermediate',
-      readTime: '25 min',
-      lastUpdated: '2025-01-18',
-      views: 8920,
-      rating: 4.8,
-      featured: true,
-      tags: ['api', 'authentication', 'security']
-    },
-    {
-      id: 3,
-      title: 'AI Services Integration Tutorial',
-      description: 'Learn how to integrate our AI services into your applications',
-      category: 'tutorials',
-      type: 'tutorial',
-      difficulty: 'advanced',
-      readTime: '45 min',
-      lastUpdated: '2025-01-15',
-      views: 6540,
-      rating: 4.7,
-      featured: false,
-      tags: ['ai', 'integration', 'tutorial']
-    },
-    {
-      id: 4,
-      title: 'REST API Reference',
-      description: 'Complete API reference with endpoints, parameters, and examples',
-      category: 'api',
-      type: 'reference',
-      difficulty: 'intermediate',
-      readTime: '60 min',
-      lastUpdated: '2025-01-12',
-      views: 12340,
-      rating: 4.9,
-      featured: true,
-      tags: ['api', 'reference', 'endpoints']
-    },
-    {
-      id: 5,
-      title: 'Micro SaaS Platform Setup',
-      description: 'Comprehensive guide to setting up your micro SaaS platform',
-      category: 'guides',
-      type: 'guide',
-      difficulty: 'intermediate',
-      readTime: '35 min',
-      lastUpdated: '2025-01-10',
-      views: 7890,
-      rating: 4.6,
-      featured: false,
-      tags: ['micro-saas', 'platform', 'setup']
-    },
-    {
-      id: 6,
-      title: 'Python SDK Examples',
-      description: 'Code examples and best practices for using our Python SDK',
-      category: 'examples',
-      type: 'examples',
-      difficulty: 'intermediate',
-      readTime: '30 min',
-      lastUpdated: '2025-01-08',
-      views: 5670,
-      rating: 4.5,
-      featured: false,
-      tags: ['python', 'sdk', 'examples']
-    }
-  ];
-
-  const featuredResources = [
-    {
-      title: 'Zion Tech Group Developer Portal',
-      description: 'Access our comprehensive developer resources and tools',
-      type: 'portal',
-      link: 'https://developers.ziontechgroup.com',
-      featured: true
-    },
-    {
-      title: 'API Playground',
-      description: 'Interactive API testing and exploration environment',
-      type: 'tool',
-      link: '/api-playground',
-      featured: true
-    },
-    {
-      title: 'Community Forum',
-      description: 'Connect with other developers and get help',
-      type: 'community',
-      link: '/community',
-      featured: false
-    }
-  ];
-
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'beginner': return 'bg-green-500';
-      case 'intermediate': return 'bg-yellow-500';
-      case 'advanced': return 'bg-red-500';
-      default: return 'bg-gray-500';
-    }
-  };
-
-  const getDifficultyText = (difficulty: string) => {
-    switch (difficulty) {
-      case 'beginner': return 'Beginner';
-      case 'intermediate': return 'Intermediate';
-      case 'advanced': return 'Advanced';
-      default: return 'Unknown';
-    }
-  };
-
-  const filteredItems = documentationItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
-
-    return matchesSearch && matchesCategory;
-  });
-
-  // Update counts
-  categories.forEach(cat => {
-    if (cat.id === 'all') {
-      cat.count = documentationItems.length;
-    } else {
-      cat.count = documentationItems.filter(item => item.category === cat.id).length;
-    }
+  const filteredDocumentation = documentation.filter(doc => {
+    const matchesCategory = selectedCategory === 'All' || doc.category === selectedCategory;
+    const matchesSearch = doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         doc.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Documentation - Zion Tech Group"
+        description="Access comprehensive technical documentation, API guides, integration resources, and developer tools to help you implement our solutions effectively."
+      />
+      
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <BookOpen className="w-16 h-16 text-zion-cyan" />
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <div className="container-responsive relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Technical
+              <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"> Documentation</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Access comprehensive technical guides, API documentation, integration resources, 
+              and developer tools to help you implement our solutions effectively.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
+              >
+                Request Custom Docs
+              </Link>
+              <Link
+                to="/resources"
+                className="px-8 py-4 border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
+              >
+                Browse All Resources
+              </Link>
             </div>
           </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Documentation & Resources
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Comprehensive documentation, tutorials, and resources to help you succeed with Zion Tech Group's innovative solutions.
-          </p>
         </div>
-      </div>
+      </section>
 
-      {/* Search and Filters */}
-      <div className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+      {/* Search and Filter Section */}
+      <section className="py-12">
+        <div className="container-responsive">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search Bar */}
-            <div className="relative mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
               <input
                 type="text"
+                placeholder="Search documentation..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search documentation..."
-                className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               />
             </div>
 
-            {/* Categories and Sort */}
-            <div className="flex flex-col lg:flex-row gap-6 mb-8">
-              {/* Categories */}
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
-                      activeCategory === category.id
-                        ? 'bg-zion-cyan text-zion-slate-dark'
-                        : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                    }`}
-                  >
-                    {category.icon}
-                    {category.name}
-                    <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                      {category.count}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Sort Options */}
-              <div className="flex items-center gap-2">
-                <span className="text-zion-slate-light">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.name}
+                  onClick={() => setSelectedCategory(category.name)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                    selectedCategory === category.name
+                      ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20'
+                      : 'bg-slate-700/50 text-slate-300 hover:bg-indigo-500/10 hover:text-indigo-400 border border-slate-600'
+                  }`}
                 >
-                  {sortOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
+                  <span>{category.name}</span>
+                  <span className="text-xs opacity-75">({category.count})</span>
+                </button>
+              ))}
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Featured Resources */}
-      <div className="py-12 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Featured Resources
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {featuredResources.map((resource, index) => (
+      {/* Featured Documentation */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Featured Documentation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our most essential and comprehensive technical guides and references
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredDocumentation.filter(doc => doc.featured).map((doc, index) => (
               <div
                 key={index}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                className="group relative p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50"
               >
-                {resource.featured && (
-                  <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
+                <div className="absolute -top-3 -right-3">
+                  <div className="bg-gradient-to-r from-indigo-400 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+                    <Star className="w-4 h-4" />
                     Featured
                   </div>
-                )}
-                <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
-                <p className="text-zion-slate-light text-sm mb-4">{resource.description}</p>
-                <a
-                  href={resource.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
-                >
-                  {resource.type === 'portal' ? 'Visit Portal' : 'Learn More'}
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                </div>
+                
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${doc.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-3">{doc.title}</h3>
+                <p className="text-gray-300 mb-6">{doc.description}</p>
+                
+                <div className="flex items-center space-x-4 text-sm text-gray-400 mb-4">
+                  <span className="flex items-center">
+                    <GitBranch className="w-4 h-4 mr-2" />
+                    {doc.version}
+                  </span>
+                  <span className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {doc.lastUpdated}
+                  </span>
+                  <span className="flex items-center">
+                    <User className="w-4 h-4 mr-2" />
+                    {doc.author}
+                  </span>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-indigo-400 mb-2">Sections:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {doc.sections.map((section, idx) => (
+                      <span key={idx} className="px-3 py-1 bg-slate-700 text-gray-300 text-xs rounded-full">
+                        {section}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {doc.tags.map((tag, idx) => (
+                    <span key={idx} className="px-3 py-1 bg-slate-700 text-gray-300 text-xs rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="text-sm">
+                    <p className="text-indigo-400 font-semibold">{doc.category}</p>
+                  </div>
+                  <a
+                    href={doc.downloadUrl}
+                    className="flex items-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download
+                  </a>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Documentation Items */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Documentation Library
-          </h2>
+      {/* All Documentation */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              All Documentation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Browse our complete collection of technical guides and resources
+            </p>
+          </div>
 
-          {filteredItems.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-              {filteredItems.map((item) => (
-                <div
-                  key={item.id}
-                  className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
-                    item.featured ? 'ring-2 ring-zion-cyan' : ''
-                  }`}
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(item.difficulty)}`}>
-                        {getDifficultyText(item.difficulty)}
-                      </span>
-                      {item.featured && (
-                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                          Featured
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
-                      <Clock className="w-4 h-4" />
-                      {item.readTime}
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{item.description}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        {item.views.toLocaleString()}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        {item.rating}
-                      </div>
-                    </div>
-
-                    <button className="flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium">
-                      Read More
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredDocumentation.map((doc, index) => (
+              <div
+                key={index}
+                className="group p-6 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50"
+              >
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${doc.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <Code className="w-6 h-6 text-white" />
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <BookOpen className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No documentation found</h3>
-              <p className="text-zion-slate-light">
-                Try adjusting your search terms or browse all categories
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
+                
+                <h3 className="text-xl font-bold text-white mb-2">{doc.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm line-clamp-3">{doc.description}</p>
+                
+                <div className="flex items-center space-x-4 text-xs text-gray-400 mb-4">
+                  <span className="flex items-center">
+                    <GitBranch className="w-3 h-3 mr-1" />
+                    {doc.version}
+                  </span>
+                  <span className="flex items-center">
+                    <Calendar className="w-3 h-3 mr-1" />
+                    {doc.lastUpdated}
+                  </span>
+                </div>
 
-      {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Need More Help?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Can't find what you're looking for? Our support team is here to help you succeed.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/support"
-              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-            >
-              Contact Support
-            </a>
-            <a
-              href="/help"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-            >
-              Help Center
-            </a>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {doc.tags.slice(0, 3).map((tag, idx) => (
+                    <span key={idx} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="text-xs">
+                    <p className="text-indigo-400 font-semibold">{doc.category}</p>
+                  </div>
+                  <a
+                    href={doc.downloadUrl}
+                    className="flex items-center text-indigo-400 hover:text-indigo-300 font-medium transition-colors text-sm"
+                  >
+                    Download
+                    <Download className="w-3 h-3 ml-1" />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Developer Resources */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Developer Resources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Additional tools and resources to help developers succeed
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: 'SDKs & Libraries',
+                description: 'Official SDKs and client libraries for popular programming languages',
+                icon: Code,
+                color: 'from-blue-500 to-cyan-500',
+                link: '/sdk'
+              },
+              {
+                title: 'Code Examples',
+                description: 'Ready-to-use code examples and sample implementations',
+                icon: FileText,
+                color: 'from-green-500 to-emerald-500',
+                link: '/examples'
+              },
+              {
+                title: 'API Playground',
+                description: 'Interactive API testing and exploration environment',
+                icon: Server,
+                color: 'from-purple-500 to-pink-500',
+                link: '/playground'
+              },
+              {
+                title: 'Community Forum',
+                description: 'Connect with other developers and get support',
+                icon: Users,
+                color: 'from-orange-500 to-red-500',
+                link: '/community'
+              }
+            ].map((resource, index) => (
+              <div
+                key={index}
+                className="group p-6 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 text-center"
+              >
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${resource.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <resource.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3">{resource.title}</h3>
+                <p className="text-gray-300 text-sm mb-6">{resource.description}</p>
+                
+                <Link
+                  to={resource.link}
+                  className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium transition-colors"
+                >
+                  Explore
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl p-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Stay Updated with Latest Docs
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Subscribe to our newsletter and get notified about new documentation, 
+              API updates, and technical resources delivered directly to your inbox.
+            </p>
+            <div className="max-w-md mx-auto">
+              <div className="flex gap-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300">
+                  Subscribe
+                </button>
+              </div>
+              <p className="text-sm text-gray-400 mt-3">
+                No spam, unsubscribe at any time. We respect your privacy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Need Custom Documentation?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Our technical writing team can create custom documentation, tutorials, 
+              and guides tailored to your specific implementation needs.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
+              >
+                Request Custom Docs
+              </Link>
+              <Link
+                to="/resources"
+                className="px-8 py-4 border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-white font-semibold rounded-lg transition-all duration-300"
+              >
+                Browse All Resources
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

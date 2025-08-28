@@ -16,13 +16,21 @@ const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const Resources = React.lazy(() => import('./pages/Resources'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
 const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Documentation = React.lazy(() => import('./pages/Documentation')); // Added
 const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Partners = React.lazy(() => import('./pages/Partners')); // Added
+const Pricing = React.lazy(() => import('./pages/Pricing')); // Added
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 // Enhanced services pages - only import existing ones
@@ -81,12 +89,20 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
-                <Route path="/cookies" element={<Cookies />} />
-                <Route path="/services" element={<Services />} />
+                                       <Route path="/faq" element={<FAQ />} />
+                       <Route path="/docs" element={<Documentation />} /> {/* Added */}
+                       <Route path="/careers" element={<Careers />} />
+                                              <Route path="/privacy" element={<Privacy />} />
+                       <Route path="/terms" element={<Terms />} />
+                       <Route path="/cookies" element={<Cookies />} />
+                                              <Route path="/partners" element={<Partners />} /> {/* Added */}
+                       <Route path="/pricing" element={<Pricing />} /> {/* Added */}
+                       <Route path="/services" element={<Services />} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/webinars" element={<Webinars />} />
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
