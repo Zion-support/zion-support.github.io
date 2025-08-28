@@ -136,13 +136,13 @@ const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics'));
 
 // 2026 Services pages
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing'));
-const AICybersecurity = lazy(() => import('./pages/services/AICybersecurity'));
-const IoTEdgeComputing = lazy(() => import('./pages/services/IoTEdgeComputing'));
-const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation'));
-const AIHRPlatform = lazy(() => import('./pages/services/AIHRPlatform'));
-const SustainableTechnology = lazy(() => import('./pages/services/SustainableTechnology'));
-const AIPredictiveMaintenance = lazy(() => import('./pages/services/AIPredictiveMaintenance'));
-const QuantumMachineLearning = lazy(() => import('./pages/services/QuantumMachineLearning'));
+const AICybersecurity = lazy(() => import('./pages/services/ai-cybersecurity'));
+const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
+const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
+const AIHRPlatform = lazy(() => import('./pages/services/ai-hr-platform'));
+const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
+const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 
 // Additional missing components
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
@@ -407,7 +407,7 @@ function App() {
                   {/* 2026 Services routes */}
                   <Route path="/services/quantum-computing" element={<QuantumComputing />} />
                   <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
-                  <Route path="/services/ai-iot-edge-computing" element={<IoTEdgeComputing />} />
+                  <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
                   <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                   <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
                   <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
