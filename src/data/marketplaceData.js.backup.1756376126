@@ -23,12 +23,20 @@ export function generateSearchSuggestions() {
   ];
 }
 
+<<<<<<< HEAD
+// Marketplace items data
+=======
 // Mock marketplace items data
+>>>>>>> origin/cursor/website-audit-and-enhancement-081a
 export const marketplaceItems = [
   {
     id: 1,
     title: "AI-Powered Business Intelligence Platform",
+<<<<<<< HEAD
+    description: "Advanced analytics and insights powered by machine learning algorithms",
+=======
     description: "Advanced analytics and machine learning insights for enterprise decision-making",
+>>>>>>> origin/cursor/website-audit-and-enhancement-081a
     category: "AI Services",
     price: "$2,500/month",
     rating: 4.8,
@@ -39,6 +47,53 @@ export const marketplaceItems = [
   },
   {
     id: 2,
+<<<<<<< HEAD
+    title: "Quantum-Safe Cybersecurity Suite",
+    description: "Next-generation security solutions resistant to quantum computing attacks",
+    category: "Cybersecurity",
+    price: "$1,800/month",
+    rating: 4.9,
+    location: "Global",
+    availability: "Available",
+    tags: ["Cybersecurity", "Quantum Computing", "Security", "Encryption"],
+    images: ["/images/quantum-security.jpg"]
+  },
+  {
+    id: 3,
+    title: "Blockchain Supply Chain Platform",
+    description: "Transparent and secure supply chain management using blockchain technology",
+    category: "Blockchain Solutions",
+    price: "$3,200/month",
+    rating: 4.7,
+    location: "Global",
+    availability: "Available",
+    tags: ["Blockchain", "Supply Chain", "Transparency", "Security"],
+    images: ["/images/blockchain-supply.jpg"]
+  },
+  {
+    id: 4,
+    title: "IoT Smart City Infrastructure",
+    description: "Comprehensive IoT solutions for modern smart city development",
+    category: "IoT Services",
+    price: "$4,500/month",
+    rating: 4.6,
+    location: "Global",
+    availability: "Available",
+    tags: ["IoT", "Smart City", "Infrastructure", "Automation"],
+    images: ["/images/iot-smart-city.jpg"]
+  },
+  {
+    id: 5,
+    title: "Cloud-Native Microservices Platform",
+    description: "Scalable microservices architecture for modern applications",
+    category: "Cloud Computing",
+    price: "$2,800/month",
+    rating: 4.8,
+    location: "Global",
+    availability: "Available",
+    tags: ["Cloud", "Microservices", "Scalability", "Architecture"],
+    images: ["/images/cloud-microservices.jpg"]
+=======
     title: "Cloud DevOps Automation Suite",
     description: "Complete infrastructure automation and deployment pipeline solution",
     category: "Cloud Computing",
@@ -84,6 +139,7 @@ export const marketplaceItems = [
     availability: "Available",
     tags: ["IT", "Infrastructure", "Monitoring", "Management"],
     images: ["/images/it-infrastructure.jpg"]
+>>>>>>> origin/cursor/website-audit-and-enhancement-081a
   }
 ];
 
@@ -124,6 +180,10 @@ export const marketplaceFilters = {
     "Available",
     "Coming Soon",
     "Limited Availability",
+<<<<<<< HEAD
+    "Custom Development"
+=======
     "Custom Quote Required"
+>>>>>>> origin/cursor/website-audit-and-enhancement-081a
   ]
 };
