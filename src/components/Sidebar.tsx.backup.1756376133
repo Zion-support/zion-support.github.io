@@ -35,12 +35,30 @@ import {
   Infinity,
   ArrowRight,
   DollarSign,
+<<<<<<< HEAD
+  GitFork,
+  Briefcase,
+  Newspaper,
+  FileText,
+  Leaf,
+  Building,
+  Truck,
+  Mail,
+  Video,
+  Satellite,
+  TestTube,
+  Code,
+  Target,
+  GraduationCap,
+  Smartphone
+=======
   Workflow,
   Newspaper,
   GraduationCap,
   Video,
   FileText,
   Activity
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -73,6 +91,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Partners', href: '/partners', icon: Users },
         { name: 'Case Studies', href: '/case-studies', icon: FileText },
         { name: 'FAQ', href: '/faq', icon: HelpCircle },
+<<<<<<< HEAD
+        { name: 'Help Center', href: '/help', icon: HelpCircle }
+=======
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Careers', href: '/careers', icon: Star },
         { name: 'Partners', href: '/partners', icon: Users },
@@ -96,6 +117,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Globe },
         { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: TrendingUp },
         { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
@@ -105,6 +127,15 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
+<<<<<<< HEAD
+        { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', icon: TrendingUp },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: GitFork },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance-platform', icon: Shield },
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-analytics', icon: Brain }
+=======
         { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: TrendingUp },
         { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users },
         { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool },
@@ -116,6 +147,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3 },
         { name: 'AI HR Talent Platform', href: '/services/ai-hr-talent-platform', icon: Users },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
@@ -125,12 +157,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Server },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Building },
         { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
+<<<<<<< HEAD
+        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap }
+=======
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3 },
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
         { name: 'IT Consulting', href: '/services/it-consulting', icon: Cpu },
         { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
         { name: 'Infrastructure Services', href: '/it-services/infrastructure', icon: Server },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
@@ -138,6 +175,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       icon: Shield,
       items: [
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
+<<<<<<< HEAD
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Eye },
+        { name: 'Zero Trust Network', href: '/services/zero-trust-network-access', icon: Lock },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield }
+=======
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity', icon: Shield },
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
@@ -156,6 +198,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
         { name: 'AI Analytics', href: '/services/ai-analytics', icon: BarChart3 },
         { name: 'Analytics Dashboard', href: '/analytics', icon: BarChart3 },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
@@ -164,6 +207,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       items: [
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
+<<<<<<< HEAD
+        { name: 'AI Quantum Hybrid', href: '/services/ai-quantum-hybrid-platform', icon: Brain },
+        { name: 'Space Technology', href: '/space-tech', icon: Satellite },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye }
+=======
         { name: 'Blockchain Solutions', href: '/services/blockchain', icon: Lock },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain },
@@ -171,6 +219,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Space Technology', href: '/services/space-tech', icon: Rocket },
         { name: 'Quantum Technology', href: '/quantum-technology', icon: Atom },
         { name: 'Green IT Solutions', href: '/services/green-it', icon: Globe },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
@@ -185,8 +234,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
         { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },
         { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: MessageCircle },
+<<<<<<< HEAD
+        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail },
+        { name: 'Returns Management', href: '/services/returns-management', icon: Truck },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: FileText }
+=======
         { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
         { name: 'Mobile Survey', href: '/services/mobile-survey', icon: MessageCircle },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
@@ -199,12 +254,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'News', href: '/news', icon: Newspaper },
         { name: 'FAQ', href: '/faq', icon: HelpCircle },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
+<<<<<<< HEAD
+        { name: 'Sitemap', href: '/sitemap', icon: Globe }
+=======
         { name: 'Support', href: '/support', icon: MessageCircle },
         { name: 'Training', href: '/training', icon: GraduationCap },
         { name: 'Webinars', href: '/webinars', icon: Video },
         { name: 'White Papers', href: '/white-papers', icon: FileText },
         { name: 'Documentation', href: '/documentation', icon: FileText },
         { name: 'System Status', href: '/system-status', icon: Activity },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     }
   ];

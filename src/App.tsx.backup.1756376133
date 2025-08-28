@@ -150,10 +150,35 @@ const SpaceTech = lazy(() => import('./pages/SpaceTech'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 
 // Additional service pages
+<<<<<<< HEAD
+const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
+const AICybersecurity = lazy(() => import('./pages/services/ai-cybersecurity'));
+const AIHRPlatform = lazy(() => import('./pages/services/ai-hr-platform'));
+const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const IoTEdgeComputing = lazy(() => import('./pages/services/iot-edge-computing'));
+const QuantumComputing = lazy(() => import('./pages/services/quantum-computing'));
+const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
+const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
+const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
+const AIAutonomousForensics = lazy(() => import('./pages/services/AIAutonomousForensics'));
+const AIAutonomousThreatIntelligence = lazy(() => import('./pages/services/AIAutonomousThreatIntelligence'));
+const AIAutonomousLegalResearch = lazy(() => import('./pages/services/AIAutonomousLegalResearch'));
+const AIAutonomousMarketing = lazy(() => import('./pages/services/AIAutonomousMarketing'));
+const AIAutonomousBusinessOperations = lazy(() => import('./pages/services/AIAutonomousBusinessOperations'));
+const AIAutonomousEcosystemManager = lazy(() => import('./pages/services/AIAutonomousEcosystemManager'));
+const AIAutonomousCustomerService = lazy(() => import('./pages/services/AIAutonomousCustomerService'));
+const AIAutonomousSales = lazy(() => import('./pages/services/AIAutonomousSales'));
+const AIAutonomousFinance = lazy(() => import('./pages/services/AIAutonomousFinance'));
+const AIAutonomousHR = lazy(() => import('./pages/services/AIAutonomousHR'));
+const AIAutonomousLegalCounsel = lazy(() => import('./pages/services/AIAutonomousLegalCounsel'));
+=======
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 const SpaceTechnology = React.lazy(() => import('./pages/services/space-tech'));
 const IncidentResponsePlatform = React.lazy(() => import('./pages/services/incident-response-platform'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
 
 // Loading spinner component
 const LoadingSpinner = () => (
@@ -224,6 +249,9 @@ function App() {
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/help" element={<HelpCenter />} />
               
+<<<<<<< HEAD
+              {/* Catch-all route */}
+=======
               {/* Additional Routes */}
               <Route path="/events" element={<Events />} />
               <Route path="/help" element={<Help />} />
@@ -326,6 +354,7 @@ function App() {
               <Route path="/hybrid-demo" element={<ApiDemo />} />
               
               {/* Catch-all */}
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
               <Route path="*" element={<Home />} />
             </Routes>
           </Suspense>

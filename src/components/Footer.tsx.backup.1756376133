@@ -36,11 +36,40 @@ import {
   BarChart3,
   Sparkles,
   Award,
+<<<<<<< HEAD
+  ArrowRight,
+  Star,
+  Lock,
+  Eye,
+  Atom,
+  Network,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Server,
+  ShoppingCart,
+  MessageCircle,
+  Code,
+  BookOpen,
+  Truck,
+  ExternalLink,
+  ChevronDown,
+  Copyright,
+  PenTool,
+  MessageSquare,
+  Calendar,
+  Search,
+  Share2,
+  Lightbulb,
+  Workflow
+=======
   Workflow,
   Lock,
   Star,
   BookOpen,
   MessageCircle
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -207,6 +236,14 @@ const Footer: React.FC = () => {
       links: [
         { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
         { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
+<<<<<<< HEAD
+        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
+        { name: 'Space Technology', path: '/services/space-tech', icon: Satellite },
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
+        { name: 'Green IT Solutions', path: '/services/green-it', icon: Leaf },
+        { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock }
+=======
         { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Cpu },
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
@@ -214,12 +251,23 @@ const Footer: React.FC = () => {
         { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
         { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Shield },
         { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
       title: 'Cloud & Infrastructure',
       icon: Cloud,
       links: [
+<<<<<<< HEAD
+        { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+        { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+        { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
+        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
+        { name: 'IT Consulting', path: '/services/it-consulting', icon: Cpu },
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 },
+        { name: 'Business Intelligence', path: '/services/business-intelligence', icon: TrendingUp }
+=======
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
@@ -229,12 +277,23 @@ const Footer: React.FC = () => {
         { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
         { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
         { name: 'All Services', path: '/services', icon: Zap }
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
       title: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       links: [
+<<<<<<< HEAD
+        { name: 'Micro SaaS Platform', path: '/services/micro-saas-solutions', icon: ShoppingCart },
+        { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
+        { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
+        { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+        { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: FileText },
+        { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+        { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
+        { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 }
+=======
         { name: 'Innovative Services 2028', path: '/innovative-services-showcase-2028', icon: Sparkles },
         { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
         { name: 'Ultimate Services 2026', path: '/ultimate-services-showcase-2026', icon: Rocket },
@@ -244,6 +303,7 @@ const Footer: React.FC = () => {
         { name: 'Comprehensive Services 2025', path: '/comprehensive-services-landing-2025', icon: Globe },
         { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', icon: Rocket },
         { name: 'Advanced Services 2026', path: '/advanced-innovative-services-showcase-2026', icon: Star },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     },
     {
@@ -251,6 +311,43 @@ const Footer: React.FC = () => {
       icon: HelpCircle,
       links: [
         { name: 'Help Center', path: '/help', icon: HelpCircle },
+<<<<<<< HEAD
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'Developers', path: '/developers', icon: Code },
+        { name: 'Training', path: '/training', icon: GraduationCap },
+        { name: 'Support', path: '/support', icon: MessageCircle },
+        { name: 'Status', path: '/status', icon: Activity },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
+      ]
+    },
+    {
+      title: 'Marketplace',
+      icon: ShoppingCart,
+      links: [
+        { name: 'Marketplace Home', path: '/marketplace', icon: ShoppingCart },
+        { name: 'Products', path: '/marketplace/products', icon: ShoppingCart },
+        { name: 'Talent', path: '/marketplace/talent', icon: Users },
+        { name: 'Equipment', path: '/marketplace/equipment', icon: Server },
+        { name: 'Services', path: '/marketplace/services', icon: Zap },
+        { name: 'Request Quote', path: '/request-quote', icon: MessageCircle },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign },
+        { name: 'Case Studies', path: '/case-studies', icon: FileText }
+      ]
+    },
+    {
+      title: 'Legal & Privacy',
+      icon: Shield,
+      links: [
+        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
+        { name: 'Terms of Service', path: '/terms', icon: FileText },
+        { name: 'Cookies Policy', path: '/cookies', icon: Shield },
+        { name: 'Security', path: '/security', icon: Lock },
+        { name: 'Accessibility', path: '/accessibility', icon: Eye },
+        { name: 'GDPR Compliance', path: '/services/dsr-portal', icon: Shield },
+        { name: 'Data Protection', path: '/privacy', icon: Lock },
+        { name: 'Trust Center', path: '/security', icon: CheckCircle }
+=======
         { name: 'Documentation', path: '/documentation', icon: FileText },
         { name: 'Training', path: '/training', icon: GraduationCap },
         { name: 'Webinars', path: '/webinars', icon: Video },
@@ -259,6 +356,7 @@ const Footer: React.FC = () => {
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Support', path: '/support', icon: MessageCircle },
         { name: 'System Status', path: '/system-status', icon: Activity },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6854
       ]
     }
   };

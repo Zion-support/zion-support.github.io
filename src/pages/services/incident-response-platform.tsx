@@ -3,151 +3,133 @@ import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
-  Lock, 
-  Eye, 
+  AlertTriangle, 
+  Clock, 
+  Users, 
+  Target, 
+  Star, 
   Zap, 
   Brain, 
   Cloud, 
   BarChart3, 
-  Target,
-  Building,
+  Lock,
   Activity,
+  Eye,
   Cpu,
   Network,
-  Users,
-  TrendingUp,
-  Heart,
-  Globe,
+  FileText,
+  MessageCircle,
   Phone,
   Mail,
-  MapPin,
-  Award,
-  CheckCircle,
-  AlertTriangle
+  MapPin
 } from 'lucide-react';
 
-export default function Security() {
-  const securityServices = [
+export default function IncidentResponsePlatform() {
+  const features = [
     {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      benefits: ['Threat detection', 'Vulnerability assessment', 'Security monitoring', 'Incident response']
+      icon: AlertTriangle,
+      title: 'Real-Time Threat Detection',
+      description: 'Advanced monitoring systems that detect and alert on security incidents as they occur.',
+      benefits: ['24/7 monitoring', 'Instant alerts', 'Threat intelligence', 'Behavioral analysis']
     },
     {
-      icon: Lock,
-      title: 'Compliance & Governance',
-      description: 'Ensure your organization meets regulatory requirements and industry standards.',
-      benefits: ['SOC 2 compliance', 'ISO 27001', 'GDPR/CCPA', 'HIPAA compliance']
+      icon: Clock,
+      title: 'Rapid Response',
+      description: 'Automated incident response workflows that minimize response time and impact.',
+      benefits: ['Automated containment', 'Quick isolation', 'Response playbooks', 'Time tracking']
     },
     {
-      icon: Eye,
-      title: 'Security Monitoring',
-      description: '24/7 monitoring and threat intelligence for proactive security.',
-      benefits: ['Real-time alerts', 'Threat intelligence', 'Security analytics', 'Compliance reporting']
+      icon: Users,
+      title: 'Expert Team',
+      description: 'Certified cybersecurity professionals with extensive incident response experience.',
+      benefits: ['Certified analysts', 'Industry expertise', 'Continuous training', 'Team coordination']
     },
     {
-      icon: Brain,
-      title: 'AI-Powered Security',
-      description: 'Advanced AI and machine learning for intelligent threat detection.',
-      benefits: ['Behavioral analysis', 'Anomaly detection', 'Predictive security', 'Automated response']
+      icon: Target,
+      title: 'Forensic Analysis',
+      description: 'Comprehensive digital forensics to understand attack vectors and prevent future incidents.',
+      benefits: ['Evidence preservation', 'Root cause analysis', 'Attack reconstruction', 'Legal compliance']
     }
   ];
 
-  const solutions = [
+  const capabilities = [
     {
-      category: 'Infrastructure Security',
+      category: 'Detection & Monitoring',
       services: [
-        'Network security and firewalls',
-        'Endpoint protection and EDR',
-        'Cloud security and access control',
-        'Identity and access management',
-        'Zero trust network architecture'
+        'SIEM integration and correlation',
+        'Network traffic analysis',
+        'Endpoint detection and response',
+        'User behavior analytics',
+        'Threat intelligence feeds'
       ]
     },
     {
-      category: 'Application Security',
+      category: 'Response & Containment',
       services: [
-        'Secure code development',
-        'Application security testing',
-        'API security and protection',
-        'Container and Kubernetes security',
-        'DevSecOps integration'
+        'Automated incident triage',
+        'Threat containment workflows',
+        'System isolation protocols',
+        'Communication coordination',
+        'Escalation procedures'
       ]
     },
     {
-      category: 'Data Protection',
+      category: 'Investigation & Analysis',
       services: [
-        'Data encryption and key management',
-        'Data loss prevention',
-        'Privacy and compliance',
-        'Backup and disaster recovery',
-        'Data governance and classification'
+        'Digital forensics collection',
+        'Malware analysis',
+        'Attack timeline reconstruction',
+        'Impact assessment',
+        'Evidence documentation'
       ]
     },
     {
-      category: 'Security Operations',
+      category: 'Recovery & Lessons',
       services: [
-        'Security information and event management',
-        'Threat hunting and intelligence',
-        'Incident response and forensics',
-        'Security awareness training',
-        'Vulnerability management'
+        'System restoration',
+        'Security hardening',
+        'Post-incident review',
+        'Process improvement',
+        'Training recommendations'
       ]
     }
   ];
 
-  const frameworks = [
+  const technologies = [
     {
-      name: 'SOC 2 Type II',
-      description: 'Service Organization Control 2 compliance for data security.',
-      icon: CheckCircle
+      name: 'AI-Powered Threat Detection',
+      description: 'Machine learning algorithms that identify patterns and anomalies in real-time.',
+      icon: Brain
     },
     {
-      name: 'ISO 27001',
-      description: 'International standard for information security management.',
-      icon: CheckCircle
+      name: 'Automated Response Orchestration',
+      description: 'Intelligent workflows that automatically contain and mitigate threats.',
+      icon: Zap
     },
     {
-      name: 'GDPR/CCPA',
-      description: 'Data privacy and protection compliance frameworks.',
-      icon: CheckCircle
+      name: 'Cloud-Native Architecture',
+      description: 'Scalable platform that integrates with modern cloud environments.',
+      icon: Cloud
     },
     {
-      name: 'HIPAA',
-      description: 'Healthcare industry security and privacy standards.',
-      icon: CheckCircle
+      name: 'Advanced Analytics',
+      description: 'Comprehensive reporting and analytics for incident insights.',
+      icon: BarChart3
     }
   ];
 
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Proactive Protection',
-      description: 'Advanced threat detection and prevention before attacks occur.'
-    },
-    {
-      icon: Shield,
-      title: 'Comprehensive Coverage',
-      description: 'End-to-end security solutions across all technology layers.'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Enhanced Security',
-      description: 'Intelligent security systems that learn and adapt to new threats.'
-    },
-    {
-      icon: Globe,
-      title: 'Global Expertise',
-      description: 'Worldwide security expertise and 24/7 support coverage.'
-    }
+  const responseMetrics = [
+    { metric: 'Mean Time to Detection', value: '< 1 minute', improvement: '90% faster' },
+    { metric: 'Mean Time to Response', value: '< 5 minutes', improvement: '85% faster' },
+    { metric: 'Mean Time to Resolution', value: '< 2 hours', improvement: '75% faster' },
+    { metric: 'False Positive Rate', value: '< 2%', improvement: '95% accuracy' }
   ];
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <SEO 
-        title="Security & Compliance Services | Zion Tech Group" 
-        description="Comprehensive cybersecurity solutions including threat detection, compliance management, AI-powered security, and 24/7 monitoring services." 
+        title="Incident Response Platform | Zion Tech Group" 
+        description="Advanced cybersecurity incident response platform with AI-powered detection, automated response workflows, and expert incident management." 
       />
       
       {/* Hero Section */}
@@ -169,12 +151,12 @@ export default function Security() {
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent mb-6">
-              Security & Compliance
+              Incident Response Platform
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive cybersecurity solutions and compliance services to protect your organization 
-              from evolving threats and ensure regulatory compliance.
+              Advanced cybersecurity incident response platform with AI-powered detection, 
+              automated response workflows, and expert incident management to protect your organization.
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
@@ -183,21 +165,21 @@ export default function Security() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300"
               >
-                Get Protected
+                Get Started
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300"
               >
-                Security Assessment
+                Schedule Demo
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Security Services */}
+      {/* Features Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
@@ -206,31 +188,31 @@ export default function Security() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Security Services</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Incident Response</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our comprehensive security portfolio addresses all aspects of cybersecurity, 
-              from infrastructure protection to compliance management.
+              Our platform provides end-to-end incident response capabilities, from initial detection 
+              through resolution and recovery, ensuring your organization stays protected.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {securityServices.map((service, index) => (
+            {features.map((feature, index) => (
               <motion.div
-                key={service.title}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <service.icon className="w-8 h-8 text-red-400" />
+                  <feature.icon className="w-8 h-8 text-red-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-slate-300 mb-4">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-slate-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {service.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-slate-400">
-                      <CheckCircle className="w-4 h-4 text-red-400 mr-2" />
+                      <Star className="w-4 h-4 text-red-400 mr-2" />
                       {benefit}
                     </li>
                   ))}
@@ -241,7 +223,7 @@ export default function Security() {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Capabilities Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -250,17 +232,17 @@ export default function Security() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Security Solutions</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Platform Capabilities</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive security solutions that protect your organization across all technology layers, 
-              from infrastructure to applications and data.
+              Comprehensive incident response capabilities that cover the entire incident lifecycle, 
+              from initial detection through recovery and lessons learned.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+            {capabilities.map((capability, index) => (
               <motion.div
-                key={solution.category}
+                key={capability.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -268,10 +250,10 @@ export default function Security() {
               >
                 <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
                   <Target className="w-6 h-6 text-red-400 mr-3" />
-                  {solution.category}
+                  {capability.category}
                 </h3>
                 <ul className="space-y-3">
-                  {solution.services.map((service, idx) => (
+                  {capability.services.map((service, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
                       <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                       {service}
@@ -284,7 +266,7 @@ export default function Security() {
         </div>
       </section>
 
-      {/* Compliance Frameworks */}
+      {/* Technologies Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div
@@ -293,34 +275,36 @@ export default function Security() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Compliance Frameworks</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Advanced Technologies</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our security solutions help organizations achieve and maintain compliance 
-              with industry standards and regulatory requirements.
+              Our platform leverages cutting-edge technologies including AI, automation, and cloud-native 
+              architecture to deliver superior incident response capabilities.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {frameworks.map((framework, index) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {technologies.map((tech, index) => (
               <motion.div
-                key={framework.name}
+                key={tech.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <framework.icon className="w-8 h-8 text-red-400" />
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mr-4">
+                    <tech.icon className="w-6 h-6 text-red-400" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{tech.name}</h3>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{framework.name}</h3>
-                <p className="text-slate-300">{framework.description}</p>
+                <p className="text-slate-300">{tech.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Performance Metrics */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -329,29 +313,25 @@ export default function Security() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Security?</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Performance Metrics</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our security solutions provide comprehensive protection, intelligent threat detection, 
-              and proven compliance expertise.
+              Our platform consistently delivers superior performance metrics, significantly improving 
+              incident response times and reducing the impact of security incidents.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {responseMetrics.map((metric, index) => (
               <motion.div
-                key={benefit.title}
+                key={metric.metric}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 text-center"
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mr-4">
-                    <benefit.icon className="w-6 h-6 text-red-400" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{benefit.title}</h3>
-                </div>
-                <p className="text-slate-300">{benefit.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{metric.metric}</h3>
+                <div className="text-3xl font-bold text-red-400 mb-2">{metric.value}</div>
+                <div className="text-sm text-green-400">{metric.improvement}</div>
               </motion.div>
             ))}
           </div>
@@ -368,10 +348,10 @@ export default function Security() {
             className="text-center"
           >
             <div className="bg-gradient-to-r from-red-900/50 to-orange-900/50 border border-red-400/30 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Organization?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Enhance Your Incident Response?</h2>
               <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Protect your organization with our comprehensive security solutions 
-                and ensure compliance with industry standards.
+                Protect your organization with our advanced incident response platform and 
+                ensure rapid, effective response to security incidents.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button
@@ -386,7 +366,7 @@ export default function Security() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300"
                 >
-                  Security Assessment
+                  Schedule Demo
                 </motion.button>
               </div>
             </div>
@@ -398,9 +378,9 @@ export default function Security() {
       <section className="py-16 bg-slate-900/50">
         <div className="container-responsive">
           <div className="text-center">
-            <h3 className="text-2xl font-semibold text-white mb-4">Contact Our Security Team</h3>
+            <h3 className="text-2xl font-semibold text-white mb-4">Contact Our Incident Response Team</h3>
             <p className="text-slate-300 mb-6">
-              Ready to strengthen your security posture? Get in touch with our cybersecurity experts.
+              Ready to strengthen your incident response capabilities? Get in touch with our cybersecurity experts.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-slate-300">
               <div className="flex items-center">
