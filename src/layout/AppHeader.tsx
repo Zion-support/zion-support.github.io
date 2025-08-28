@@ -248,6 +248,14 @@ export function AppHeader() {
     },
     // Legacy Services
     { 
+      name: '2025 Services Showcase', 
+      href: '/services/showcase-2025', 
+      icon: Rocket, 
+      description: 'Complete 2025 Portfolio',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 

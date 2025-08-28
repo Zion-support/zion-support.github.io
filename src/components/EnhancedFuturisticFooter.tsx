@@ -78,6 +78,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'AI & Business Intelligence',
       featured: true,
       links: [
+        { name: '2025 Services Showcase', href: '/services/showcase-2025', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
         { name: 'AI Legal Document Analyzer', href: '/services/ai-legal-document-analysis', featured: true },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
