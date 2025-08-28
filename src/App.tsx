@@ -28,6 +28,11 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Support = React.lazy(() => import('./pages/Support'));
+const Developers = React.lazy(() => import('./pages/Developers'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -111,6 +116,12 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Additional pages */}
+                <Route path="/docs" element={<Documentation />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/developers" element={<Developers />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
