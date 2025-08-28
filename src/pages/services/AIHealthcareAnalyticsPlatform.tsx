@@ -1,15 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Users, 
-  MessageSquare, 
+  Heart, 
+  Activity, 
   TrendingUp, 
   CheckCircle, 
   ArrowRight,
   Play,
   Settings,
   Target,
-  Activity,
   Sparkles,
   Search,
   Zap,
@@ -79,7 +78,7 @@ import {
   Phone,
   Mail,
   Calendar,
-  MessageSquare2,
+  MessageSquare,
   UserPlus,
   UserCheck,
   UserX,
@@ -98,7 +97,6 @@ import {
   UserPlus2,
   UserEdit2,
   UserSearch2,
-  Heart,
   Star2,
   ThumbsUp,
   ThumbsDown,
@@ -220,92 +218,193 @@ import {
   UserEdit3,
   UserEditOff,
   UserSearch3,
-  UserSearchOff
+  UserSearchOff,
+  MapPin,
+  Clock,
+  AlertTriangle,
+  CheckCircle2,
+  XCircle,
+  Info,
+  HelpCircle,
+  FileText2,
+  BarChart3,
+  PieChart2,
+  LineChart2,
+  AreaChart,
+  ScatterChart,
+  RadarChart,
+  Thermometer,
+  Droplets,
+  Wind,
+  CloudRain,
+  CloudLightning,
+  Sun2 as SunIcon,
+  Moon2 as MoonIcon,
+  Star3,
+  Cloud2,
+  CloudOff,
+  CloudDrizzle,
+  CloudFog,
+  CloudHail,
+  CloudSnow,
+  CloudSleet,
+  CloudRain2,
+  CloudLightning2,
+  CloudOff2,
+  CloudDrizzle2,
+  CloudFog2,
+  CloudHail2,
+  CloudSnow2,
+  CloudSleet2,
+  CloudRain3,
+  CloudLightning3,
+  CloudOff3,
+  CloudDrizzle3,
+  CloudFog3,
+  CloudHail3,
+  CloudSnow3,
+  CloudSleet3,
+  CloudRain4,
+  CloudLightning4,
+  CloudOff4,
+  CloudDrizzle4,
+  CloudFog4,
+  CloudHail4,
+  CloudSnow4,
+  CloudSleet4,
+  CloudRain5,
+  CloudLightning5,
+  CloudOff5,
+  CloudDrizzle5,
+  CloudFog5,
+  CloudHail5,
+  CloudSnow5,
+  CloudSleet5,
+  CloudRain6,
+  CloudLightning6,
+  CloudOff6,
+  CloudDrizzle6,
+  CloudFog6,
+  CloudHail6,
+  CloudSnow6,
+  CloudSleet6,
+  CloudRain7,
+  CloudLightning7,
+  CloudOff7,
+  CloudDrizzle7,
+  CloudFog7,
+  CloudHail7,
+  CloudSnow7,
+  CloudSleet7,
+  CloudRain8,
+  CloudLightning8,
+  CloudOff8,
+  CloudDrizzle8,
+  CloudFog8,
+  CloudHail8,
+  CloudSnow8,
+  CloudSleet8,
+  CloudRain9,
+  CloudLightning9,
+  CloudOff9,
+  CloudDrizzle9,
+  CloudFog9,
+  CloudHail9,
+  CloudSnow9,
+  CloudSleet9,
+  CloudRain10,
+  CloudLightning10,
+  CloudOff10,
+  CloudDrizzle10,
+  CloudFog10,
+  CloudHail10,
+  CloudSnow10,
+  CloudSleet10
 } from 'lucide-react';
 
-const AICustomerSuccessPlatform = () => {
+const AIHealthcareAnalyticsPlatform = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Customer Insights',
-      description: 'Advanced machine learning algorithms analyze customer behavior patterns and predict churn risks'
+      title: 'AI-Powered Patient Analytics',
+      description: 'Advanced machine learning algorithms analyze patient data for predictive insights'
     },
     {
-      icon: MessageSquare,
-      title: 'Intelligent Communication Hub',
-      description: 'Automated, personalized communication workflows based on customer lifecycle stages'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'Forecast customer health scores and identify expansion opportunities proactively'
-    },
-    {
-      icon: Users,
-      title: '360° Customer View',
-      description: 'Comprehensive customer profiles with interaction history and preference analysis'
-    },
-    {
-      icon: Target,
-      title: 'Automated Success Playbooks',
-      description: 'AI-driven success strategies tailored to customer segments and use cases'
+      icon: Heart,
+      title: 'Clinical Decision Support',
+      description: 'AI-driven recommendations for treatment plans and medication management'
     },
     {
       icon: Activity,
       title: 'Real-time Health Monitoring',
-      description: 'Continuous monitoring of customer engagement and satisfaction metrics'
+      description: 'Continuous monitoring of patient vitals and health indicators'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Predictive Health Analytics',
+      description: 'Forecast patient outcomes and identify at-risk populations'
+    },
+    {
+      icon: Shield,
+      title: 'HIPAA-Compliant Security',
+      description: 'Enterprise-grade security with full HIPAA compliance and data encryption'
+    },
+    {
+      icon: BarChart4,
+      title: 'Population Health Insights',
+      description: 'Comprehensive analytics for population health management and public health'
     }
   ];
 
   const benefits = [
-    'Reduce customer churn by up to 40%',
-    'Increase customer lifetime value by 35%',
-    'Automate 70% of routine customer success tasks',
-    'Improve customer satisfaction scores by 25%',
-    'Enable proactive issue resolution before escalation',
-    'Scale customer success operations efficiently'
+    'Improve patient outcomes by 35%',
+    'Reduce readmission rates by 40%',
+    'Lower healthcare costs by 25-30%',
+    'Enhance clinical decision-making by 50%',
+    'Streamline administrative processes by 60%',
+    'Ensure 99.9% HIPAA compliance'
   ];
 
   const useCases = [
     {
-      industry: 'SaaS Companies',
-      description: 'Manage subscription renewals, feature adoption, and expansion opportunities'
+      industry: 'Hospitals & Health Systems',
+      description: 'Optimize patient care, reduce readmissions, and improve operational efficiency'
     },
     {
-      industry: 'Enterprise Software',
-      description: 'Ensure successful implementation, user adoption, and ROI achievement'
+      industry: 'Primary Care Practices',
+      description: 'Enhance preventive care, manage chronic conditions, and improve patient engagement'
     },
     {
-      industry: 'E-commerce',
-      description: 'Personalize customer experiences and increase repeat purchase rates'
+      industry: 'Specialty Clinics',
+      description: 'Streamline specialty care workflows and improve treatment outcomes'
     },
     {
-      industry: 'Financial Services',
-      description: 'Monitor account health and provide proactive financial advisory'
+      industry: 'Health Insurance',
+      description: 'Risk assessment, fraud detection, and population health management'
     }
   ];
 
   const pricing = [
     {
       plan: 'Starter',
-      price: '$1,200/month',
+      price: '$2,800/month',
       features: [
-        'Up to 1,000 customers',
-        'Basic AI insights',
-        'Email automation',
-        'Customer health scoring',
+        'Up to 50 providers',
+        'Basic AI analytics',
+        'Patient monitoring',
+        'Clinical decision support',
         'Basic reporting',
         'Email support'
       ]
     },
     {
       plan: 'Professional',
-      price: '$2,500/month',
+      price: '$5,500/month',
       features: [
-        'Up to 10,000 customers',
+        'Up to 200 providers',
         'Advanced AI analytics',
-        'Multi-channel communication',
-        'Custom success playbooks',
+        'Population health insights',
+        'Custom workflows',
         'Advanced reporting',
         'Priority support',
         'API access'
@@ -313,13 +412,13 @@ const AICustomerSuccessPlatform = () => {
     },
     {
       plan: 'Enterprise',
-      price: '$5,000/month',
+      price: '$12,000/month',
       features: [
-        'Unlimited customers',
+        'Unlimited providers',
         'Full AI capabilities',
         'Custom integrations',
         'White-label options',
-        'Dedicated success manager',
+        'Dedicated health manager',
         '24/7 phone support',
         'Custom training'
       ]
@@ -327,16 +426,52 @@ const AICustomerSuccessPlatform = () => {
   ];
 
   const integrations = [
-    'Salesforce CRM',
-    'HubSpot',
-    'Zendesk',
-    'Intercom',
-    'Slack',
-    'Microsoft Teams',
-    'Google Workspace',
-    'Slack',
-    'Zapier',
+    'Epic EHR',
+    'Cerner',
+    'Allscripts',
+    'Meditech',
+    'Athenahealth',
+    'Practice Fusion',
+    'eClinicalWorks',
+    'NextGen',
+    'Greenway Health',
+    'DrChrono',
+    'Kareo',
     'Webhook APIs'
+  ];
+
+  const keyMetrics = [
+    {
+      metric: '35%',
+      label: 'Patient Outcome Improvement'
+    },
+    {
+      metric: '40%',
+      label: 'Readmission Rate Reduction'
+    },
+    {
+      metric: '30%',
+      label: 'Cost Reduction'
+    },
+    {
+      metric: '50%',
+      label: 'Decision Enhancement'
+    }
+  ];
+
+  const complianceStandards = [
+    'HIPAA',
+    'HITECH',
+    'SOC 2 Type II',
+    'ISO 27001',
+    'HITRUST',
+    'GDPR',
+    'CCPA',
+    'FDA 21 CFR Part 11',
+    'ONC Health IT',
+    'Meaningful Use',
+    'MIPS',
+    'APMs'
   ];
 
   return (
@@ -350,25 +485,25 @@ const AICustomerSuccessPlatform = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
-              AI-Powered Customer Success
+              AI-Powered Healthcare Analytics Platform
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Customer Success with
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Transform Healthcare with
+              <span className="bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent">
                 {' '}AI Intelligence
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Leverage artificial intelligence to predict customer needs, automate success workflows, 
-              and drive sustainable business growth through proactive customer success management.
+              Leverage artificial intelligence to improve patient outcomes, reduce costs, and 
+              enhance clinical decision-making. HIPAA-compliant healthcare analytics for the modern era.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >
                 <Play className="w-5 h-5 mr-2" />
                 Watch Demo
@@ -386,8 +521,28 @@ const AICustomerSuccessPlatform = () => {
         </div>
       </section>
 
+      {/* Key Metrics Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {keyMetrics.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2">{item.metric}</div>
+                <div className="text-zion-slate-light text-lg">{item.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -396,10 +551,10 @@ const AICustomerSuccessPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful AI-Driven Features
+              Advanced AI-Powered Features
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with proven customer success methodologies
+              Our platform combines cutting-edge AI with healthcare best practices
             </p>
           </motion.div>
           
@@ -412,7 +567,7 @@ const AICustomerSuccessPlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -424,7 +579,7 @@ const AICustomerSuccessPlatform = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -433,10 +588,10 @@ const AICustomerSuccessPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Measurable Business Impact
+              Measurable Healthcare Impact
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See real results with our AI-powered customer success platform
+              See real results with our AI-powered healthcare analytics platform
             </p>
           </motion.div>
           
@@ -449,7 +604,7 @@ const AICustomerSuccessPlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
                 <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -458,7 +613,7 @@ const AICustomerSuccessPlatform = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -467,10 +622,10 @@ const AICustomerSuccessPlatform = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Solutions
+              Healthcare Solutions
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored solutions for various industries and business models
+              Tailored solutions for various healthcare organizations and specialties
             </p>
           </motion.div>
           
@@ -491,6 +646,39 @@ const AICustomerSuccessPlatform = () => {
         </div>
       </section>
 
+      {/* Compliance Standards Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Healthcare Compliance Standards
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Meet all major healthcare compliance and regulatory requirements
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {complianceStandards.map((standard, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-pink-400/40 transition-all duration-300"
+              >
+                <span className="text-zion-slate-light font-medium text-sm">{standard}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -504,7 +692,7 @@ const AICustomerSuccessPlatform = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your business needs and scale as you grow
+              Choose the plan that fits your healthcare organization and scale as you grow
             </p>
           </motion.div>
           
@@ -517,7 +705,7 @@ const AICustomerSuccessPlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
                   index === 1 
-                    ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent' 
+                    ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent' 
                     : 'border-zion-slate-light/20'
                 }`}
               >
@@ -525,7 +713,7 @@ const AICustomerSuccessPlatform = () => {
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-white mb-2">{plan.price}</div>
                   {index === 1 && (
-                    <span className="inline-block bg-blue-500 text-white text-sm px-3 py-1 rounded-full">
+                    <span className="inline-block bg-pink-500 text-white text-sm px-3 py-1 rounded-full">
                       Most Popular
                     </span>
                   )}
@@ -533,12 +721,12 @@ const AICustomerSuccessPlatform = () => {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
+                <button className="w-full py-3 px-6 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200">
                   Get Started
                 </button>
               </motion.div>
@@ -560,11 +748,11 @@ const AICustomerSuccessPlatform = () => {
               Seamless Integrations
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Connect with your existing tools and workflows
+              Connect with your existing EHR systems and healthcare platforms
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -573,7 +761,7 @@ const AICustomerSuccessPlatform = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300"
               >
-                <span className="text-zion-slate-light font-medium">{integration}</span>
+                <span className="text-zion-slate-light font-medium text-sm">{integration}</span>
               </motion.div>
             ))}
           </div>
@@ -589,16 +777,16 @@ const AICustomerSuccessPlatform = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Success?
+              Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join hundreds of companies using AI to drive customer success and business growth
+              Join leading healthcare organizations using AI to improve patient care
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Start Free Trial
@@ -628,26 +816,26 @@ const AICustomerSuccessPlatform = () => {
               Get in Touch
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Ready to discuss how AI can transform your customer success strategy?
+              Ready to discuss how AI can transform your healthcare operations?
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-blue-400" />
+                <Phone className="w-6 h-6 text-pink-400" />
                 <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-blue-400" />
+                <Mail className="w-6 h-6 text-pink-400" />
                 <span className="text-zion-slate-light">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-blue-400" />
+                <MapPin className="w-6 h-6 text-pink-400" />
                 <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Contact Us
@@ -667,4 +855,4 @@ const AICustomerSuccessPlatform = () => {
   );
 };
 
-export default AICustomerSuccessPlatform;
+export default AIHealthcareAnalyticsPlatform;
