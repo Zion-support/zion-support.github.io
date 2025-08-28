@@ -51,6 +51,7 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -63,6 +64,12 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
+
+// New innovative services
+const AIContractAnalysis = React.lazy(() => import('./pages/services/AI-Powered-Contract-Analysis'));
+const AISupplyChainOptimizationNew = React.lazy(() => import('./pages/services/AI-Supply-Chain-Optimization'));
+const AICybersecurityThreatIntelligence = React.lazy(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence'));
+const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AI-Healthcare-Diagnostics'));
 
 function App() {
   return (
@@ -112,7 +119,13 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-
+                
+                {/* New innovative service routes */}
+                <Route path="/services/ai-contract-analysis" element={<AIContractAnalysis />} />
+                <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimizationNew />} />
+                <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+                <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+                
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
               </Routes>
