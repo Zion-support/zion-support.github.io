@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
+=======
 import React, { useEffect, useMemo } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a811
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
@@ -6,14 +10,30 @@ interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
+<<<<<<< HEAD
+  image?: string;
+  url?: string;
+  type?: string;
+=======
   ogImage?: string;
   canonicalUrl?: string;
   type?: 'website' | 'article' | 'product' | 'service';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a811
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
+}
+
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - AI-Powered Business Solutions & Digital Transformation',
+  description = 'Transform your business with cutting-edge AI, cybersecurity, and digital transformation solutions. Zion Tech Group delivers innovative technology solutions that drive growth and innovation.',
+  keywords = 'AI solutions, cybersecurity, digital transformation, cloud services, DevOps, machine learning, business automation, IT consulting, technology innovation',
+  image = '/images/zion-tech-group-og.jpg',
+  url,
+=======
   structuredData?: Record<string, any>;
   noindex?: boolean;
   nofollow?: boolean;
@@ -26,10 +46,34 @@ export const SEO: React.FC<SEOProps> = ({
   keywords,
   ogImage = '/og-image.jpg',
   canonicalUrl,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a811
   type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
+<<<<<<< HEAD
+  section = 'Technology',
+  tags = ['AI', 'Cybersecurity', 'Digital Transformation', 'Cloud Computing', 'DevOps']
+}) => {
+  const location = useLocation();
+  const currentUrl = url || `${window.location.origin}${location.pathname}`;
+
+  // Generate structured data for better SEO
+  const generateStructuredData = () => {
+    const baseData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/images/logo.svg',
+      description: 'Leading provider of AI-powered business solutions and digital transformation services',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US',
+        addressLocality: 'San Francisco',
+        addressRegion: 'CA'
+      },
+=======
   section,
   tags = [],
   structuredData,
@@ -111,10 +155,29 @@ export const SEO: React.FC<SEOProps> = ({
         'https://linkedin.com/company/ziontechgroup',
         'https://github.com/ziontechgroup'
       ],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a811
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-555-0123',
         contactType: 'customer service',
+<<<<<<< HEAD
+        email: 'info@ziontechgroup.com'
+      },
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup',
+        'https://facebook.com/ziontechgroup'
+      ],
+      offers: {
+        '@type': 'Offer',
+        category: 'Technology Services',
+        description: 'AI solutions, cybersecurity, and digital transformation services'
+      }
+    };
+
+    return JSON.stringify(baseData);
+  };
+=======
         areaServed: 'US',
         availableLanguage: 'English'
       },
@@ -256,6 +319,7 @@ export const SEO: React.FC<SEOProps> = ({
       scripts.forEach(script => script.remove());
     };
   }, [generateStructuredData, generateBreadcrumbData, generateFAQData, title]);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a811
 
   // Generate article structured data if it's a blog post
   const generateArticleStructuredData = () => {
@@ -375,6 +439,46 @@ export const SEO: React.FC<SEOProps> = ({
 
   return (
     <Helmet>
+<<<<<<< HEAD
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      <meta name="robots" content="index, follow" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Additional Meta Tags */}
+      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="msapplication-TileColor" content="#0ea5e9" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+=======
       {/* Basic meta tags */}
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -384,10 +488,54 @@ export const SEO: React.FC<SEOProps> = ({
       {metaTags.map((tag, index) => (
         <meta key={index} {...tag} />
       ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a811
       
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<<<<<<< HEAD
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {generateStructuredData()}
+      </script>
+      
+      {generateArticleStructuredData() && (
+        <script type="application/ld+json">
+          {generateArticleStructuredData()}
+        </script>
+      )}
+      
+      <script type="application/ld+json">
+        {generateBreadcrumbStructuredData()}
+      </script>
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="generator" content="React + Vite" />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      
+      {/* Security Meta Tags */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      
+      {/* Mobile Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      
+      {/* PWA Meta Tags */}
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Manifest */}
+      <link rel="manifest" href="/manifest.json" />
+    </Helmet>
+  );
+}
+=======
       
       {/* Favicon and app icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -411,3 +559,4 @@ export const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a811
