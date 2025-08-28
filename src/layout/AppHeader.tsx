@@ -39,6 +39,8 @@ export function AppHeader() {
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];

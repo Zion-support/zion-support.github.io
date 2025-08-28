@@ -1,621 +1,574 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  BookOpen,
-  FileText,
-  Video,
-  HelpCircle,
-  Search,
-  Filter,
+import { Link } from 'react-router-dom';
+import { 
+  BookOpen, 
+  Target, 
+  FileText, 
+  Users, 
+  Code, 
+  HelpCircle, 
   ArrowRight,
+  Star,
   Download,
-  ExternalLink,
+  Play,
   Calendar,
   Clock,
-  Users,
-  Star,
   TrendingUp,
-  Award,
-  Rocket,
-  Brain,
-  Shield,
-  Code,
   Zap,
-  Lightbulb,
-  Target,
-  Building,
-  BarChart3,
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  Network,
+  Rocket,
+  Heart,
+  Leaf,
+  Atom,
   Globe,
-  Mail,
-  Phone,
-  MessageCircle,
+  Lock,
+  Cpu,
+  Settings,
+  BarChart3,
+  Eye,
+  Search,
+  Filter,
+  ExternalLink,
+  ChevronRight,
   CheckCircle,
-  Play,
-  Pause,
-  Stop
+  Bookmark,
+  Share2,
+  MessageCircle,
+  ThumbsUp,
+  Eye as EyeIcon
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-const Resources: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const categories = [
-    { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },
-    { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },
-    { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },
-    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },
-    { id: 'support', name: 'Support', count: 10, icon: HelpCircle }
+export const Resources: React.FC = () => {
+  const resourceCategories = [
+    {
+      title: 'Blog & Insights',
+      icon: BookOpen,
+      color: 'from-blue-500 to-cyan-500',
+      description: 'Latest industry trends, technology insights, and expert analysis',
+      resources: [
+        {
+          title: 'AI in 2025: The Future of Business Technology',
+          type: 'Article',
+          readTime: '8 min read',
+          date: '2025-01-15',
+          featured: true,
+          href: '/blog/ai-future-2025'
+        },
+        {
+          title: 'Cybersecurity Best Practices for Modern Enterprises',
+          type: 'Guide',
+          readTime: '12 min read',
+          date: '2025-01-10',
+          featured: true,
+          href: '/blog/cybersecurity-best-practices'
+        },
+        {
+          title: 'Digital Transformation: A Complete Roadmap',
+          type: 'Article',
+          readTime: '15 min read',
+          date: '2025-01-05',
+          featured: false,
+          href: '/blog/digital-transformation-roadmap'
+        }
+      ]
+    },
+    {
+      title: 'Case Studies',
+      icon: Target,
+      color: 'from-green-500 to-emerald-500',
+      description: 'Real-world success stories and implementation results',
+      resources: [
+        {
+          title: 'Healthcare Provider Achieves 40% Cost Reduction',
+          type: 'Case Study',
+          readTime: '10 min read',
+          date: '2025-01-12',
+          featured: true,
+          href: '/case-studies/healthcare-cost-reduction'
+        },
+        {
+          title: 'Manufacturing Company Boosts Efficiency 3x',
+          type: 'Case Study',
+          readTime: '12 min read',
+          date: '2025-01-08',
+          featured: true,
+          href: '/case-studies/manufacturing-efficiency'
+        },
+        {
+          title: 'Financial Services Digital Transformation',
+          type: 'Case Study',
+          readTime: '14 min read',
+          date: '2025-01-03',
+          featured: false,
+          href: '/case-studies/financial-transformation'
+        }
+      ]
+    },
+    {
+      title: 'White Papers',
+      icon: FileText,
+      color: 'from-purple-500 to-pink-500',
+      description: 'In-depth research and technical analysis reports',
+      resources: [
+        {
+          title: 'AI-Powered Cybersecurity: A Comprehensive Guide',
+          type: 'White Paper',
+          readTime: '25 min read',
+          date: '2025-01-14',
+          featured: true,
+          href: '/white-papers/ai-cybersecurity-guide'
+        },
+        {
+          title: 'Quantum Computing in Enterprise Applications',
+          type: 'White Paper',
+          readTime: '30 min read',
+          date: '2025-01-09',
+          featured: true,
+          href: '/white-papers/quantum-computing-enterprise'
+        },
+        {
+          title: 'Edge Computing: The Future of IoT',
+          type: 'White Paper',
+          readTime: '20 min read',
+          date: '2025-01-04',
+          featured: false,
+          href: '/white-papers/edge-computing-iot'
+        }
+      ]
+    },
+    {
+      title: 'Webinars',
+      icon: Users,
+      color: 'from-orange-500 to-red-500',
+      description: 'Expert-led learning sessions and interactive workshops',
+      resources: [
+        {
+          title: 'AI Strategy for Enterprise Leaders',
+          type: 'Webinar',
+          duration: '60 min',
+          date: '2025-01-20',
+          featured: true,
+          href: '/webinars/ai-strategy-enterprise'
+        },
+        {
+          title: 'Cybersecurity Threat Landscape 2025',
+          type: 'Webinar',
+          duration: '45 min',
+          date: '2025-01-17',
+          featured: true,
+          href: '/webinars/cybersecurity-threats-2025'
+        },
+        {
+          title: 'Digital Transformation Best Practices',
+          type: 'Webinar',
+          duration: '75 min',
+          date: '2025-01-13',
+          featured: false,
+          href: '/webinars/digital-transformation-practices'
+        }
+      ]
+    },
+    {
+      title: 'Documentation',
+      icon: Code,
+      color: 'from-cyan-500 to-blue-500',
+      description: 'Technical guides, API references, and implementation docs',
+      resources: [
+        {
+          title: 'API Reference Guide v2.1',
+          type: 'Documentation',
+          readTime: '45 min read',
+          date: '2025-01-16',
+          featured: true,
+          href: '/docs/api-reference'
+        },
+        {
+          title: 'Integration Guide for Developers',
+          type: 'Documentation',
+          readTime: '35 min read',
+          date: '2025-01-11',
+          featured: true,
+          href: '/docs/integration-guide'
+        },
+        {
+          title: 'Deployment Best Practices',
+          type: 'Documentation',
+          readTime: '25 min read',
+          date: '2025-01-06',
+          featured: false,
+          href: '/docs/deployment-practices'
+        }
+      ]
+    },
+    {
+      title: 'FAQ & Support',
+      icon: HelpCircle,
+      color: 'from-yellow-500 to-orange-500',
+      description: 'Common questions, troubleshooting guides, and support resources',
+      resources: [
+        {
+          title: 'Getting Started with Zion Tech Solutions',
+          type: 'FAQ',
+          readTime: '5 min read',
+          date: '2025-01-15',
+          featured: true,
+          href: '/faq/getting-started'
+        },
+        {
+          title: 'Troubleshooting Common Issues',
+          type: 'FAQ',
+          readTime: '8 min read',
+          date: '2025-01-10',
+          featured: true,
+          href: '/faq/troubleshooting'
+        },
+        {
+          title: 'Support and Contact Information',
+          type: 'FAQ',
+          readTime: '3 min read',
+          date: '2025-01-05',
+          featured: false,
+          href: '/faq/support-contact'
+        }
+      ]
+    }
   ];
 
-  const resources = [
+  const featuredResources = [
     {
-      id: 1,
-      title: 'AI Autonomous Research: The Future of Knowledge Discovery',
-      description: 'Comprehensive guide on implementing AI Autonomous Research Assistant for accelerated research and discovery.',
-      category: 'white-papers',
-      type: 'White Paper',
-      author: 'Dr. Emily Watson',
-      date: '2025-01-20',
-      readTime: '18 min read',
-      downloads: 3120,
+      title: 'AI Business Intelligence: Complete Implementation Guide',
+      category: 'White Paper',
+      description: 'Comprehensive guide to implementing AI-powered business intelligence solutions in your organization.',
+      readTime: '30 min read',
+      downloads: '2.5k',
       rating: 4.9,
-      image: '/resources/ai-autonomous-research.jpg',
-      tags: ['AI Research', 'Autonomous AI', 'Knowledge Discovery', 'Research Automation'],
-      featured: true,
-      fileSize: '3.1 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-autonomous-research.pdf'
+      href: '/white-papers/ai-business-intelligence-guide',
+      featured: true
     },
     {
-      id: 2,
-      title: 'AI Supply Chain Optimization: Implementation Guide',
-      description: 'Step-by-step guide to implementing AI-powered supply chain optimization for maximum efficiency and cost savings.',
-      category: 'white-papers',
-      type: 'Implementation Guide',
-      author: 'Supply Chain Team',
-      date: '2025-01-18',
-      readTime: '22 min read',
-      downloads: 2890,
-      rating: 4.8,
-      image: '/resources/ai-supply-chain-optimization.jpg',
-      tags: ['AI Supply Chain', 'Optimization', 'Implementation', 'Cost Savings'],
-      featured: true,
-      fileSize: '2.8 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-supply-chain-optimization.pdf'
-    },
-    {
-      id: 3,
-      title: 'AI Content Marketing Suite: Complete User Guide',
-      description: 'Comprehensive user guide for the AI Content Marketing Suite, covering all features and best practices.',
-      category: 'support',
-      type: 'User Guide',
-      author: 'Marketing Team',
-      date: '2025-01-16',
+      title: 'Cybersecurity Framework 2025',
+      category: 'Guide',
+      description: 'Updated cybersecurity framework incorporating the latest AI-powered threat detection and response strategies.',
       readTime: '25 min read',
-      downloads: 2650,
-      rating: 4.9,
-      image: '/resources/ai-content-marketing-guide.jpg',
-      tags: ['AI Content', 'Content Marketing', 'User Guide', 'Best Practices'],
-      featured: true,
-      fileSize: '3.5 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-content-marketing-guide.pdf'
-    },
-    {
-      id: 4,
-      title: 'AI-Powered Business Transformation: A Complete Guide',
-      description: 'Comprehensive guide on implementing AI solutions to transform business operations and drive growth.',
-      category: 'white-papers',
-      type: 'White Paper',
-      author: 'Dr. Sarah Chen',
-      date: '2025-01-15',
-      readTime: '15 min read',
-      downloads: 2540,
-      rating: 4.9,
-      image: '/resources/ai-business-transformation.jpg',
-      tags: ['AI', 'Business Transformation', 'Guide', 'Strategy'],
-      featured: false,
-      fileSize: '2.4 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-business-transformation.pdf'
-    },
-    {
-      id: 5,
-      title: 'Quantum Computing Success Story: Financial Services',
-      description: 'How we helped a major financial institution achieve 1000x performance improvement using quantum computing.',
-      category: 'case-studies',
-      type: 'Case Study',
-      author: 'Research Team',
-      date: '2025-01-10',
-      readTime: '8 min read',
-      downloads: 1890,
+      downloads: '1.8k',
       rating: 4.8,
-      image: '/resources/quantum-financial-case.jpg',
-      tags: ['Quantum Computing', 'Financial Services', 'Performance', 'Success Story'],
-      featured: false,
-      fileSize: '1.8 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/quantum-financial-case.pdf'
+      href: '/guides/cybersecurity-framework-2025',
+      featured: true
     },
     {
-      id: 3,
-      title: 'Cybersecurity in the AI Era: Threats & Solutions',
-      description: 'Expert analysis of emerging cybersecurity challenges and AI-powered security solutions.',
-      category: 'webinars',
-      type: 'Webinar Recording',
-      author: 'Marcus Rodriguez',
-      date: '2025-01-08',
-      duration: '60 minutes',
-      views: 3200,
-      rating: 4.7,
-      image: '/resources/cybersecurity-ai-webinar.jpg',
-      tags: ['Cybersecurity', 'AI', 'Webinar', 'Security'],
-      featured: false,
-      fileSize: '450 MB',
-      fileType: 'MP4',
-      downloadUrl: 'https://ziontechgroup.com/resources/cybersecurity-ai-webinar.mp4'
-    },
-    {
-      id: 4,
-      title: 'Blockchain Implementation: Enterprise Case Study',
-      description: 'Real-world implementation of blockchain technology in supply chain management.',
-      category: 'case-studies',
-      type: 'Case Study',
-      author: 'Blockchain Team',
-      date: '2025-01-05',
-      readTime: '10 min read',
-      downloads: 1560,
-      rating: 4.6,
-      image: '/resources/blockchain-supply-chain.jpg',
-      tags: ['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],
-      featured: false,
-      fileSize: '2.1 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/blockchain-supply-chain.pdf'
-    },
-    {
-      id: 5,
-      title: 'IoT Edge Computing: Architecture & Best Practices',
-      description: 'Technical deep-dive into IoT edge computing architecture and implementation best practices.',
-      category: 'white-papers',
-      type: 'White Paper',
-      author: 'Dr. Emily Watson',
-      date: '2024-12-28',
+      title: 'Digital Transformation Success Stories',
+      category: 'Case Studies',
+      description: 'Collection of successful digital transformation projects across various industries and company sizes.',
       readTime: '20 min read',
-      downloads: 2100,
-      rating: 4.8,
-      image: '/resources/iot-edge-computing.jpg',
-      tags: ['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],
-      featured: false,
-      fileSize: '3.2 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/iot-edge-computing.pdf'
-    },
-    {
-      id: 6,
-      title: 'AI Consciousness Research: Breakthrough Findings',
-      description: 'Latest research findings on AI consciousness simulation and its implications.',
-      category: 'white-papers',
-      type: 'Research Paper',
-      author: 'Dr. James Kim',
-      date: '2024-12-25',
-      readTime: '25 min read',
-      downloads: 3200,
+      downloads: '3.2k',
       rating: 4.9,
-      image: '/resources/ai-consciousness-research.jpg',
-      tags: ['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],
-      featured: false,
-      fileSize: '4.1 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/ai-consciousness-research.pdf'
-    },
-    {
-      id: 7,
-      title: 'Digital Transformation Workshop: Complete Guide',
-      description: 'Step-by-step guide to successful digital transformation implementation.',
-      category: 'webinars',
-      type: 'Workshop Recording',
-      author: 'Digital Transformation Team',
-      date: '2024-12-20',
-      duration: '120 minutes',
-      views: 2800,
-      rating: 4.7,
-      image: '/resources/digital-transformation-workshop.jpg',
-      tags: ['Digital Transformation', 'Workshop', 'Implementation', 'Guide'],
-      featured: false,
-      fileSize: '680 MB',
-      fileType: 'MP4',
-      downloadUrl: 'https://ziontechgroup.com/resources/digital-transformation-workshop.mp4'
-    },
-    {
-      id: 8,
-      title: 'Healthcare AI Solutions: Patient Outcomes Case Study',
-      description: 'How AI-powered diagnostic tools improved patient outcomes by 40%.',
-      category: 'case-studies',
-      type: 'Case Study',
-      author: 'Healthcare Team',
-      date: '2024-12-18',
-      readTime: '12 min read',
-      downloads: 1890,
-      rating: 4.8,
-      image: '/resources/healthcare-ai-case.jpg',
-      tags: ['Healthcare', 'AI', 'Patient Outcomes', 'Diagnostics'],
-      featured: false,
-      fileSize: '2.8 MB',
-      fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/healthcare-ai-case.pdf'
+      href: '/case-studies/digital-transformation-success',
+      featured: true
     }
   ];
 
-  const filteredResources = resources.filter(resource => {
-    const matchesCategory = selectedCategory === 'all' || resource.category === selectedCategory;
-    const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         resource.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const featuredResources = resources.filter(resource => resource.featured);
-  const regularResources = filteredResources.filter(resource => !resource.featured);
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-  const getResourceIcon = (type: string) => {
-    switch (type) {
-      case 'White Paper':
-      case 'Research Paper':
-        return FileText;
-      case 'Case Study':
-        return BarChart3;
-      case 'Webinar Recording':
-      case 'Workshop Recording':
-        return Video;
-      default:
-        return FileText;
+  const upcomingEvents = [
+    {
+      title: 'AI Strategy Workshop for Enterprise Leaders',
+      date: '2025-01-25',
+      time: '2:00 PM EST',
+      duration: '90 min',
+      type: 'Workshop',
+      spots: '25 remaining',
+      href: '/events/ai-strategy-workshop'
+    },
+    {
+      title: 'Cybersecurity Threat Intelligence Briefing',
+      date: '2025-01-28',
+      time: '1:00 PM EST',
+      duration: '60 min',
+      type: 'Briefing',
+      spots: '50 remaining',
+      href: '/events/cybersecurity-briefing'
+    },
+    {
+      title: 'Digital Transformation Roundtable',
+      date: '2025-02-01',
+      time: '3:00 PM EST',
+      duration: '120 min',
+      type: 'Roundtable',
+      spots: '15 remaining',
+      href: '/events/digital-transformation-roundtable'
     }
-  };
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Resources - Zion Tech Group"
+        description="Access our comprehensive library of resources including blog posts, case studies, white papers, webinars, and technical documentation."
+      />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
-        <div className="relative max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container-responsive relative z-10 py-24">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
-              Knowledge
-              <span className="block text-zion-cyan">Resources</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Knowledge Hub &
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Learning Resources
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Access our comprehensive library of case studies, white papers, webinars, and support materials.
-              Learn from our expertise and stay ahead of the technology curve.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Access our comprehensive library of resources, insights, and expertise to help you 
+              stay ahead in the rapidly evolving world of technology and AI.
             </p>
-            <div className="flex items-center justify-center space-x-8 text-zion-slate-light">
-              <div className="flex items-center">
-                <FileText className="w-6 h-6 mr-2 text-zion-cyan" />
-                <span>45+ Resources</span>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search resources..."
+                  className="w-full md:w-96 pl-12 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
               </div>
-              <div className="flex items-center">
-                <Download className="w-6 h-6 mr-2 text-zion-cyan" />
-                <span>15K+ Downloads</span>
-              </div>
-              <div className="flex items-center">
-                <Star className="w-6 h-6 mr-2 text-zion-cyan" />
-                <span>4.8+ Rating</span>
-              </div>
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+                Search
+              </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Search and Filter Section */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search Bar */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-              <input
-                type="text"
-                placeholder="Search resources..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              />
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
-                    selectedCategory === category.id
-                      ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/20'
-                      : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-cyan/20'
-                  }`}
-                >
-                  <category.icon className="w-4 h-4" />
-                  <span>{category.name}</span>
-                  <span className="text-xs opacity-75">({category.count})</span>
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Featured Resources */}
-      {featuredResources.length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Featured Resources</h2>
-              <p className="text-zion-slate-light">Our most popular and valuable resources</p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredResources.map((resource, index) => {
-                const ResourceIcon = getResourceIcon(resource.type);
-                return (
-                  <motion.article
-                    key={resource.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group"
-                  >
-                    <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
-                      {/* Resource Image Placeholder */}
-                      <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative">
-                        <ResourceIcon className="w-16 h-16 text-zion-cyan" />
-                        <div className="absolute top-4 right-4">
-                          <span className="px-3 py-1 bg-zion-cyan text-white text-xs rounded-full font-semibold">
-                            Featured
-                          </span>
-                        </div>
-                      </div>
-
-                      <div className="p-6">
-                        <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">
-                          <span className="flex items-center">
-                            <Calendar className="w-4 h-4 mr-2" />
-                            {formatDate(resource.date)}
-                          </span>
-                          <span className="flex items-center">
-                            <Clock className="w-4 h-4 mr-2" />
-                            {resource.readTime || resource.duration}
-                          </span>
-                          <span className="flex items-center">
-                            <Download className="w-4 h-4 mr-2" />
-                            {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
-                          </span>
-                        </div>
-
-                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
-                          {resource.title}
-                        </h3>
-
-                        <p className="text-zion-slate-light mb-4 leading-relaxed">
-                          {resource.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {resource.tags.map((tag, idx) => (
-                            <span
-                              key={idx}
-                              className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-
-                        <div className="flex items-center justify-between">
-                          <div className="text-sm">
-                            <p className="text-zion-cyan font-semibold">{resource.author}</p>
-                            <p className="text-zion-slate-light">{resource.type}</p>
-                          </div>
-                          <a
-                            href={resource.downloadUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 group"
-                          >
-                            Download
-                            <Download className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform duration-300" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Regular Resources Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">All Resources</h2>
-            <p className="text-zion-slate-light">Browse our complete library of knowledge resources</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {regularResources.map((resource, index) => {
-              const ResourceIcon = getResourceIcon(resource.type);
-              return (
-                <motion.article
-                  key={resource.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full">
-                    {/* Resource Image Placeholder */}
-                    <div className="h-40 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
-                      <ResourceIcon className="w-12 h-12 text-zion-cyan" />
-                    </div>
-
-                    <div className="p-6 flex-1">
-                      <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
-                        <span className="flex items-center">
-                          <Calendar className="w-4 h-4 mr-2" />
-                          {formatDate(resource.date)}
-                        </span>
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-2" />
-                          {resource.readTime || resource.duration}
-                        </span>
-                      </div>
-
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
-                        {resource.title}
-                      </h3>
-
-                      <p className="text-zion-slate-light mb-4 leading-relaxed line-clamp-3">
-                        {resource.description}
-                      </p>
-
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {resource.tags.slice(0, 2).map((tag, idx) => (
-                          <span
-                            key={idx}
-                            className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <div className="flex items-center justify-between mt-auto">
-                        <div className="text-sm">
-                          <p className="text-zion-cyan font-semibold">{resource.author}</p>
-                        </div>
-                        <a
-                          href={resource.downloadUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-300 group"
-                        >
-                          Download
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </motion.article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Support & Help Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">Need Help?</h2>
-            <p className="text-zion-slate-light">Get support and assistance from our expert team</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Live Chat Support</h3>
-              <p className="text-zion-slate-light mb-4">Get instant help from our support team</p>
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300">
-                Start Chat
-              </button>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Email Support</h3>
-              <p className="text-zion-slate-light mb-4">Send us a detailed message</p>
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300">
-                Send Email
-              </button>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-zion-cyan" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Phone Support</h3>
-              <p className="text-zion-slate-light mb-4">Call us directly for urgent issues</p>
-              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300">
-                Call Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Stay Informed
+              Featured Resources
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Get notified about new resources, research findings, and industry insights.
-              Never miss valuable knowledge from Zion Tech Group.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our most popular and valuable resources, carefully curated to help you succeed 
+              in your technology journey.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredResources.map((resource, index) => (
+              <motion.div
+                key={resource.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8 hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/10"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full">
+                    {resource.category}
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-sm text-gray-300">{resource.rating}</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {resource.title}
+                </h3>
+                <p className="text-gray-300 mb-4 leading-relaxed">{resource.description}</p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-4 text-sm text-gray-400">
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {resource.readTime}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Download className="w-4 h-4" />
+                      {resource.downloads}
+                    </span>
+                  </div>
+                </div>
+
+                <Link
+                  to={resource.href}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors group-hover:translate-x-1"
+                >
+                  Read More
+                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Resource Categories */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Browse by Category
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our resources organized by category to find exactly what you need 
+              for your specific interests and requirements.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {resourceCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-700/50 rounded-2xl border border-slate-600/50 p-8 hover:border-cyan-400/30 transition-all duration-300"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-3">{category.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{category.description}</p>
+                
+                <div className="space-y-3 mb-6">
+                  {category.resources.slice(0, 3).map((resource, idx) => (
+                    <div key={idx} className="flex items-center justify-between p-3 bg-slate-600/30 rounded-lg hover:bg-slate-600/50 transition-colors">
+                      <div className="flex-1">
+                        <h4 className="text-sm font-medium text-white mb-1">{resource.title}</h4>
+                        <div className="flex items-center gap-3 text-xs text-gray-400">
+                          <span>{resource.type}</span>
+                          <span>•</span>
+                          <span>{resource.readTime}</span>
+                        </div>
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  to={`/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                >
+                  View All {category.title}
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Events */}
+      <section className="py-20">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Upcoming Events & Webinars
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Join our live sessions and workshops to learn from industry experts 
+              and connect with like-minded professionals.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {upcomingEvents.map((event, index) => (
+              <motion.div
+                key={event.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-6 hover:border-cyan-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-medium rounded-full">
+                    {event.type}
+                  </span>
+                  <span className="text-sm text-gray-400">{event.spots}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3">{event.title}</h3>
+                
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-gray-300">
+                    <Calendar className="w-4 h-4" />
+                    {event.date}
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-300">
+                    <Clock className="w-4 h-4" />
+                    {event.time} • {event.duration}
+                  </div>
+                </div>
+
+                <Link
+                  to={event.href}
+                  className="inline-flex items-center w-full justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300"
+                >
+                  Register Now
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Stay Updated with Our Latest Resources
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get notified about new resources, upcoming events, and industry insights 
+              delivered directly to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Subscribe
-              </motion.button>
+              </button>
             </div>
           </motion.div>
         </div>

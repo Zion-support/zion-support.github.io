@@ -144,6 +144,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: false,
       links: [
         { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Pricing Plans', href: '/pricing', featured: true },
+        { name: 'Case Studies', href: '/case-studies', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },
         { name: 'Documentation', href: '/docs', featured: false },
@@ -151,7 +153,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Developer Portal', href: '/developers', featured: false },
         { name: 'Training & Certification', href: '/training', featured: false },
         { name: 'Community Forum', href: '/community', featured: false },
-        { name: 'Success Stories', href: '/case-studies', featured: false },
         { name: 'White Papers', href: '/whitepapers', featured: false }
       ]
     },
@@ -191,11 +192,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
-    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
+    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: true },
+    { name: 'Case Studies', href: '/case-studies', icon: Target, featured: true },
     { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
     { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
-    { name: 'Join Community', href: '/community', icon: Users, featured: false },
-    { name: 'Partner Program', href: '/partners', icon: Users, featured: false }
+    { name: 'Join Community', href: '/community', icon: Users, featured: false }
   ];
 
   const scrollToTop = () => {
