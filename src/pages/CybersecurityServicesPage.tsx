@@ -143,7 +143,7 @@ export default function CybersecurityServicesPage() {
     }
   };
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
       <SEOHead
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
@@ -160,7 +160,6 @@ export default function CybersecurityServicesPage() {
           }
         }}
       />
-      <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
         {/* Hero Section */}
         <section className="py-32 px-4 relative overflow-hidden">
           {/* Background Elements */}
@@ -547,7 +546,7 @@ export default function CybersecurityServicesPage() {
         </div>
       </div>
       {/* Cybersecurity Services Grid */}
-      <div className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

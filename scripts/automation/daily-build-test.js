@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+=======
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -7,6 +12,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+>>>>>>> 28afe268fef21da5bdddfedf2675a8e48c015fbd
 
 console.log('🏗️ Starting continuous build and test automation...');
 
