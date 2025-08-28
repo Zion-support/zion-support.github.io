@@ -4,8 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
+<<<<<<< HEAD
+import { EnhancedFooter } from './components/EnhancedFooter';
+=======
 import { Sidebar } from './components/Sidebar';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
+>>>>>>> origin/cursor/website-audit-and-enhancement-6085
 import { ChatAssistant } from './components/ChatAssistant';
 import { FullScreenLoader } from './components/ui/LoadingSpinner.tsx';
 import { SEO } from './components/SEO';
@@ -67,7 +71,11 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
+<<<<<<< HEAD
+
+=======
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-6085
 const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
 const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
@@ -305,12 +313,19 @@ function App() {
       showDetails={process.env.NODE_ENV === 'development'}
     >
       <div className="min-h-screen bg-futuristic">
+<<<<<<< HEAD
+        <AppHeader />
+        
+        <main className="flex-1 relative z-10">
+          <Suspense fallback={<FullScreenLoader />}>
+=======
         <FuturisticAnimatedBackground />
         <Sidebar />
         <AppHeader />
         
         <main className="flex-1 relative z-10 lg:ml-80">
           <Suspense fallback={<AppLoadingSpinner />}>
+>>>>>>> origin/cursor/website-audit-and-enhancement-6085
             <Routes>
               {/* Core Routes */}
               <Route path="/" element={<Home />} />
@@ -413,6 +428,14 @@ function App() {
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
               
+<<<<<<< HEAD
+              {/* Additional innovative AI service routes */}
+              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
+              <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+              <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+              <Route path="/services/ai-hr-talent-platform" element={<AIHRTalentPlatform />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+=======
               {/* Missing service routes from header navigation */}
               <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
               <Route path="/services/green-it" element={<GreenIT />} />
@@ -427,6 +450,7 @@ function App() {
               <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
               <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
               <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-6085
               
               {/* Showcase Pages */}
               <Route path="/innovative-ai-services" element={<InnovativeAIServicesShowcase />} />

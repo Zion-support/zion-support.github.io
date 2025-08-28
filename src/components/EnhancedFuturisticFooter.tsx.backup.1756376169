@@ -63,6 +63,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Featured Services',
       featured: true,
       links: [
+<<<<<<< HEAD
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true, icon: Workflow },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', featured: true, icon: Shield },
+        { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', featured: true, icon: Atom },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin', icon: Rocket }
+=======
         { name: '2026 Services Overview', href: '/services2026', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
@@ -74,6 +82,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Sustainable Technology', href: '/services/sustainable-technology' },
         { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' },
         { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-6085
       ]
     },
     {
