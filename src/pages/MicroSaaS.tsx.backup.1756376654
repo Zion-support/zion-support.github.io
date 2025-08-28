@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export { default } from './MicroSAAS';
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages } from 'lucide-react';
@@ -222,4 +225,5 @@ const MicroSaaS: React.FC = () => {
 };
 
 export default MicroSaaS;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-c4ed
 
