@@ -10,7 +10,7 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-  safelist: ['border-border'],
+  safelist: [],
   theme: {
     container: {
       center: true,

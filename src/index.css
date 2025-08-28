@@ -6,6 +6,25 @@
 
 /* Custom CSS Variables */
 :root {
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 220 13% 91%;
+  --background: 0 0% 100%;
+  --foreground: 220 13% 9%;
+  --primary: 220 13% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 220 13% 9%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 220 13% 9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 13% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 13% 9%;
   --zion-cyan: #0ea5e9;
   --zion-cyan-light: #38bdf8;
   --zion-cyan-dark: #0284c7;
@@ -730,16 +749,16 @@
   }
 
   * {
-    @apply border-border;
+    @apply border-gray-200;
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-white text-gray-900 font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-rajdhani font-semibold;
+    @apply font-sans font-semibold;
   }
 }
 
@@ -2009,9 +2028,11 @@ html {
   
   .futuristic-btn::before {
     display: none;
-=======
-[aria-expanded="true"] .expandable-content {
-  display: block;
+  }
+  
+  [aria-expanded="true"] .expandable-content {
+    display: block;
+  }
 }
 
 /* Enhanced Keyboard Navigation */

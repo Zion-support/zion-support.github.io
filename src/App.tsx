@@ -160,8 +160,6 @@ const DeveloperPortal = lazy(() => import('./pages/DeveloperPortal'));
 const ApiDemo = lazy(() => import('./components/ApiDemo'));
 
 // Additional pages
-const API = lazy(() => import('./pages/API'));
-const DeveloperPortal = lazy(() => import('./pages/DeveloperPortal'));
 const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
