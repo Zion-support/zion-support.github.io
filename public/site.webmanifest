@@ -1,7 +1,11 @@
 {
   "name": "Zion Tech Group - AI-Powered Business Solutions",
   "short_name": "Zion Tech",
+<<<<<<< HEAD
+  "description": "Leading provider of AI-powered business solutions, quantum computing, and autonomous business operations",
+=======
   "description": "Leading provider of AI-powered business solutions, quantum computing, and cutting-edge technology services",
+>>>>>>> origin/main
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -26,17 +30,28 @@
   "shortcuts": [
     {
       "name": "AI Services",
+<<<<<<< HEAD
+      "short_name": "AI",
+=======
       "short_name": "AI Services",
+>>>>>>> origin/main
       "description": "Explore our AI-powered solutions",
       "url": "/ai-services",
       "icons": [
         {
+<<<<<<< HEAD
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+=======
           "src": "/images/ai-services-icon.png",
           "sizes": "96x96"
+>>>>>>> origin/main
         }
       ]
     },
     {
+<<<<<<< HEAD
+=======
       "name": "Quantum Solutions",
       "short_name": "Quantum",
       "description": "Discover quantum computing solutions",
@@ -49,20 +64,52 @@
       ]
     },
     {
+>>>>>>> origin/main
       "name": "Contact Us",
       "short_name": "Contact",
       "description": "Get in touch with our team",
       "url": "/contact",
       "icons": [
         {
+<<<<<<< HEAD
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Request Quote",
+      "short_name": "Quote",
+      "description": "Request a custom quote",
+      "url": "/request-quote",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+=======
           "src": "/images/contact-icon.png",
           "sizes": "96x96"
+>>>>>>> origin/main
         }
       ]
     }
   ],
   "screenshots": [
     {
+<<<<<<< HEAD
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Homepage on desktop"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homepage on mobile"
+=======
       "src": "/images/screenshot-desktop.png",
       "sizes": "1280x720",
       "type": "image/png",
@@ -81,6 +128,7 @@
     {
       "platform": "webapp",
       "url": "https://ziontechgroup.com"
+>>>>>>> origin/main
     }
   ],
   "prefer_related_applications": false,

@@ -2,6 +2,7 @@ import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
@@ -9,6 +10,13 @@ import { Footer } from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import ErrorBoundary from './components/ErrorBoundary';
+import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PWAUpdater } from './components/PWAUpdater';
+import { ThemeToggle } from './components/ThemeToggle';
+import { ToastContainer } from './components/ui/Toast';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { EnhancedSEO } from './components/EnhancedSEO';
@@ -17,7 +25,6 @@ import { FloatingActionButton } from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
-import { ErrorBoundary } from './components/ErrorBoundary';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Core pages
@@ -119,7 +126,7 @@ const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTradin
 const AIContentCreationSuite = lazy(() => import('./pages/services/AIContentCreationSuite'));
 
 // Comprehensive services showcase
-const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServices.tsx'));
 
 // Innovative services showcase
 const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
@@ -141,11 +148,13 @@ const SustainableTechnology = lazy(() => import('./pages/services/sustainable-te
 const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 
+// Additional missing components
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
+const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
+
 // Comprehensive services imports
 const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
 const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
-const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
-const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = lazy(() => import('./pages/ComprehensivePricing2028'));
 const API = lazy(() => import('./pages/API'));
@@ -153,6 +162,7 @@ const DeveloperPortal = lazy(() => import('./pages/DeveloperPortal'));
 const ApiDemo = lazy(() => import('./components/ApiDemo'));
 
 // Additional pages
+const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
@@ -185,7 +195,7 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <div className="App min-h-screen bg-white">
+        <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
           {/* SEO Component */}
           <EnhancedSEO 
             title="Zion Tech Group - Empowering the Future Through Technology"
@@ -782,6 +792,12 @@ function App() {
                 } />
                 
                 {/* Additional Pages */}
+                <Route path="/revolutionary-services-2030" element={
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <RevolutionaryServices2030 />
+                  </Suspense>
+                } />
+                
                 <Route path="/marketplace" element={
                   <Suspense fallback={<LoadingSpinner />}>
                     <Marketplace />
@@ -924,6 +940,9 @@ function App() {
           
           {/* Chat Assistant */}
           <ChatAssistant />
+          
+          {/* Toast Container */}
+          <ToastContainer />
         </div>
       </ErrorBoundary>
     </HelmetProvider>

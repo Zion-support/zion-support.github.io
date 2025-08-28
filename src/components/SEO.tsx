@@ -13,384 +13,372 @@ import {
   Info
 } from 'lucide-react';
 
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  structuredData?: object;
-}
-
 interface SEOProps {
-  data: SEOData;
-  className?: string;
-  showAnalysis?: boolean;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean;
+  robots?: string;
 }
 
 interface SEOAnalysis {
-  titleLength: 'good' | 'warning' | 'poor';
-  descriptionLength: 'good' | 'warning' | 'poor';
-  keywordDensity: 'good' | 'warning' | 'poor';
-  hasStructuredData: boolean;
-  hasCanonical: boolean;
-  hasOpenGraph: boolean;
-  hasTwitterCard: boolean;
   score: number;
+  suggestions: string[];
+  issues: string[];
+  improvements: string[];
 }
 
-export const SEO: React.FC<SEOProps> = ({ 
-  data, 
-  className = '',
-  showAnalysis = false 
-}) => {
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
+export function SEO({
+  title = "Zion Tech Group - Leading AI & Technology Solutions",
+  description = "Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology.",
+  keywords = "AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation, machine learning, cloud computing, cybersecurity, blockchain, IoT",
+  ogImage = "/og-image.jpg",
+  canonicalUrl = "https://ziontechgroup.com",
+  type = "website",
+  author = "Zion Tech Group",
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  structuredData,
+  noindex = false,
+  nofollow = false,
+  robots
+}: SEOProps) {
+  
+  // Enhanced structured data for organization
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "alternateName": "Zion Tech",
+    "url": "https://ziontechgroup.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ziontechgroup.com/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Leading AI & Technology Solutions Provider specializing in artificial intelligence, quantum computing, and digital transformation",
+    "foundingDate": "2020",
+    "foundingLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      }
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "info@ziontechgroup.com",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Solutions",
+            "description": "Artificial Intelligence and Machine Learning Services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Quantum Computing",
+            "description": "Next-generation quantum computing solutions"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Micro SaaS",
+            "description": "Specialized software-as-a-service solutions"
+          }
+        }
+      ]
+    },
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Quantum Computing",
+      "Cloud Computing",
+      "Cybersecurity",
+      "Blockchain Technology",
+      "Internet of Things",
+      "Digital Transformation"
+    ]
+  };
 
-  useEffect(() => {
-    if (showAnalysis) {
-      const seoAnalysis = analyzeSEO(data);
-      setAnalysis(seoAnalysis);
-    }
-  }, [data, showAnalysis]);
+  let finalStructuredData = structuredData || defaultStructuredData;
 
-  const analyzeSEO = (seoData: SEOData): SEOAnalysis => {
-    let score = 0;
+  // Enhanced meta tags
+  const metaTags = [
+    // Basic SEO
+    { name: "description", content: description },
+    { name: "keywords", content: keywords },
+    { name: "author", content: author },
+    { name: "robots", content: robots || (noindex ? "noindex" : "index") + (nofollow ? ",nofollow" : ",follow") },
     
-    // Title length analysis (50-60 characters is optimal)
-    const titleLength = seoData.title.length;
-    let titleLengthStatus: 'good' | 'warning' | 'poor';
-    if (titleLength >= 50 && titleLength <= 60) {
-      titleLengthStatus = 'good';
-      score += 25;
-    } else if (titleLength >= 30 && titleLength <= 70) {
-      titleLengthStatus = 'warning';
-      score += 15;
-    } else {
-      titleLengthStatus = 'poor';
-      score += 5;
-    }
-
-    // Description length analysis (150-160 characters is optimal)
-    const descriptionLength = seoData.description.length;
-    let descriptionLengthStatus: 'good' | 'warning' | 'poor';
-    if (descriptionLength >= 150 && descriptionLength <= 160) {
-      descriptionLengthStatus = 'good';
-      score += 25;
-    } else if (descriptionLength >= 120 && descriptionLength <= 200) {
-      descriptionLengthStatus = 'warning';
-      score += 15;
-    } else {
-      descriptionLengthStatus = 'poor';
-      score += 5;
-    }
-
-    // Keyword density analysis
-    const content = `${seoData.title} ${seoData.description}`.toLowerCase();
-    const keywordDensity = seoData.keywords.reduce((total, keyword) => {
-      const regex = new RegExp(keyword.toLowerCase(), 'g');
-      const matches = content.match(regex);
-      return total + (matches ? matches.length : 0);
-    }, 0);
+    // Open Graph
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:type", content: type },
+    { property: "og:url", content: canonicalUrl },
+    { property: "og:image", content: ogImage },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:image:alt", content: title },
+    { property: "og:site_name", content: "Zion Tech Group" },
+    { property: "og:locale", content: "en_US" },
     
-    let keywordDensityStatus: 'good' | 'warning' | 'poor';
-    if (keywordDensity >= 2 && keywordDensity <= 5) {
-      keywordDensityStatus = 'good';
-      score += 20;
-    } else if (keywordDensity >= 1 && keywordDensity <= 7) {
-      keywordDensityStatus = 'warning';
-      score += 10;
-    } else {
-      keywordDensityStatus = 'poor';
-      score += 5;
-    }
+    // Twitter Card
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: ogImage },
+    { name: "twitter:site", content: "@ziontechgroup" },
+    { name: "twitter:creator", content: "@ziontechgroup" },
+    
+    // Additional SEO
+    { name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" },
+    { name: "theme-color", content: "#3B82F6" },
+    { name: "msapplication-TileColor", content: "#3B82F6" },
+    { name: "apple-mobile-web-app-capable", content: "yes" },
+    { name: "apple-mobile-web-app-status-bar-style", content: "default" },
+    { name: "apple-mobile-web-app-title", content: "Zion Tech Group" },
+    
+    // Security
+    { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
+    { "http-equiv": "Content-Security-Policy", content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;" },
+    
+    // Performance
+    { name: "format-detection", content: "telephone=no" },
+    { name: "mobile-web-app-capable", content: "yes" },
+    
+    // Business
+    { name: "application-name", content: "Zion Tech Group" },
+    { name: "msapplication-config", content: "/browserconfig.xml" }
+  ];
 
-    // Additional factors
-    if (seoData.structuredData) score += 10;
-    if (seoData.canonicalUrl) score += 10;
-    if (seoData.ogImage) score += 5;
-    if (seoData.ogType) score += 5;
+  // Add conditional meta tags
+  if (publishedTime) {
+    metaTags.push(
+      { property: "article:published_time", content: publishedTime },
+      { property: "og:article:published_time", content: publishedTime }
+    );
+  }
+  
+  if (modifiedTime) {
+    metaTags.push(
+      { property: "article:modified_time", content: modifiedTime },
+      { property: "og:article:modified_time", content: modifiedTime }
+    );
+  }
+  
+  if (section) {
+    metaTags.push(
+      { property: "article:section", content: section },
+      { property: "og:article:section", content: section }
+    );
+  }
+  
+  if (tags.length > 0) {
+    metaTags.push(
+      { property: "article:tag", content: tags.join(", ") },
+      { property: "og:article:tag", content: tags.join(", ") }
+    );
+  }
 
-    return {
-      titleLength: titleLengthStatus,
-      descriptionLength: descriptionLengthStatus,
-      keywordDensity: keywordDensityStatus,
-      hasStructuredData: !!seoData.structuredData,
-      hasCanonical: !!seoData.canonicalUrl,
-      hasOpenGraph: !!(seoData.ogImage && seoData.ogType),
-      hasTwitterCard: !!seoData.twitterCard,
-      score: Math.min(score, 100)
+  // Enhanced structured data for articles
+  if (type === 'article') {
+    const articleStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": title,
+      "description": description,
+      "image": ogImage,
+      "author": {
+        "@type": "Organization",
+        "name": author
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zion Tech Group",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ziontechgroup.com/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": canonicalUrl
+      },
+      "datePublished": publishedTime,
+      "dateModified": modifiedTime || publishedTime,
+      "keywords": keywords
     };
-  };
 
-  const getStatusIcon = (status: 'good' | 'warning' | 'poor') => {
-    switch (status) {
-      case 'good':
-        return <CheckCircle className="w-4 h-4 text-green-500" />;
-      case 'warning':
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
-      case 'poor':
-        return <AlertTriangle className="w-4 h-4 text-red-500" />;
+    if (section) {
+      articleStructuredData.articleSection = section;
     }
-  };
 
-  const getStatusColor = (status: 'good' | 'warning' | 'poor') => {
-    switch (status) {
-      case 'good':
-        return 'text-green-500';
-      case 'warning':
-        return 'text-yellow-500';
-      case 'poor':
-        return 'text-red-500';
+    if (tags.length > 0) {
+      articleStructuredData.keywords = tags.join(", ");
     }
-  };
 
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-500';
-    if (score >= 60) return 'text-yellow-500';
-    return 'text-red-500';
-  };
+    finalStructuredData = articleStructuredData;
+  }
 
-  const getScoreLabel = (score: number) => {
-    if (score >= 80) return 'Excellent';
-    if (score >= 60) return 'Good';
-    if (score >= 40) return 'Fair';
-    return 'Poor';
-  };
+  // Enhanced structured data for services
+  if (type === 'service') {
+    const serviceStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": title,
+      "description": description,
+      "provider": {
+        "@type": "Organization",
+        "name": "Zion Tech Group"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "serviceType": "Technology Consulting",
+      "category": "Technology Services"
+    };
+
+    finalStructuredData = serviceStructuredData;
+  }
 
   return (
-    <>
-      <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{data.title}</title>
-        <meta name="description" content={data.description} />
-        <meta name="keywords" content={data.keywords.join(', ')} />
-        
-        {/* Canonical URL */}
-        {data.canonicalUrl && <link rel="canonical" href={data.canonicalUrl} />}
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={data.title} />
-        <meta property="og:description" content={data.description} />
-        <meta property="og:type" content={data.ogType} />
-        <meta property="og:url" content={data.canonicalUrl} />
-        {data.ogImage && <meta property="og:image" content={data.ogImage} />}
-        
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content={data.twitterCard} />
-        <meta name="twitter:title" content={data.title} />
-        <meta name="twitter:description" content={data.description} />
-        {data.ogImage && <meta name="twitter:image" content={data.ogImage} />}
-        
-        {/* Additional SEO Meta Tags */}
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        {/* Structured Data */}
-        {data.structuredData && (
-          <script type="application/ld+json">
-            {JSON.stringify(data.structuredData)}
-          </script>
-        )}
-      </Helmet>
-
-      {/* SEO Analysis Panel */}
-      {showAnalysis && analysis && (
-        <motion.div
-          className={`fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-6 w-96 max-h-[80vh] overflow-y-auto ${className}`}
-          initial={{ opacity: 0, x: 100, scale: 0.9 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-        >
-          {/* Header */}
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center space-x-3">
-              <Search className="w-6 h-6 text-cyan-500" />
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                SEO Analysis
-              </h3>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className={`text-2xl font-bold ${getScoreColor(analysis.score)}`}>
-                {analysis.score}
-              </div>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {getScoreLabel(analysis.score)}
-              </span>
-            </div>
-          </div>
-
-          {/* Score Breakdown */}
-          <div className="space-y-4">
-            {/* Title Length */}
-            <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-              <div className="flex items-center space-x-3">
-                {getStatusIcon(analysis.titleLength)}
-                <div>
-                  <div className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Title Length
-                  </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
-                    {data.title.length} characters
-                  </div>
-                </div>
-              </div>
-              <span className={`text-sm font-medium ${getStatusColor(analysis.titleLength)}`}>
-                {analysis.titleLength === 'good' ? 'Optimal' : 
-                 analysis.titleLength === 'warning' ? 'Good' : 'Needs Work'}
-              </span>
-            </div>
-
-            {/* Description Length */}
-            <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-              <div className="flex items-center space-x-3">
-                {getStatusIcon(analysis.descriptionLength)}
-                <div>
-                  <div className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Description Length
-                  </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
-                    {data.description.length} characters
-                  </div>
-                </div>
-              </div>
-              <span className={`text-sm font-medium ${getStatusColor(analysis.descriptionLength)}`}>
-                {analysis.descriptionLength === 'good' ? 'Optimal' : 
-                 analysis.descriptionLength === 'warning' ? 'Good' : 'Needs Work'}
-              </span>
-            </div>
-
-            {/* Keyword Density */}
-            <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-              <div className="flex items-center space-x-3">
-                {getStatusIcon(analysis.keywordDensity)}
-                <div>
-                  <div className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Keyword Density
-                  </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
-                    {data.keywords.join(', ')}
-                  </div>
-                </div>
-              </div>
-              <span className={`text-sm font-medium ${getStatusColor(analysis.keywordDensity)}`}>
-                {analysis.keywordDensity === 'good' ? 'Optimal' : 
-                 analysis.keywordDensity === 'warning' ? 'Good' : 'Needs Work'}
-              </span>
-            </div>
-          </div>
-
-          {/* Technical SEO */}
-          <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-            <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
-              Technical SEO
-            </h4>
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600 dark:text-gray-400">Structured Data</span>
-                <div className="flex items-center space-x-2">
-                  {analysis.hasStructuredData ? 
-                    <CheckCircle className="w-4 h-4 text-green-500" /> : 
-                    <AlertTriangle className="w-4 h-4 text-red-500" />
-                  }
-                  <span className={analysis.hasStructuredData ? 'text-green-500' : 'text-red-500'}>
-                    {analysis.hasStructuredData ? 'Yes' : 'No'}
-                  </span>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600 dark:text-gray-400">Canonical URL</span>
-                <div className="flex items-center space-x-2">
-                  {analysis.hasCanonical ? 
-                    <CheckCircle className="w-4 h-4 text-green-500" /> : 
-                    <AlertTriangle className="w-4 h-4 text-red-500" />
-                  }
-                  <span className={analysis.hasCanonical ? 'text-green-500' : 'text-red-500'}>
-                    {analysis.hasCanonical ? 'Yes' : 'No'}
-                  </span>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600 dark:text-gray-400">Open Graph</span>
-                <div className="flex items-center space-x-2">
-                  {analysis.hasOpenGraph ? 
-                    <CheckCircle className="w-4 h-4 text-green-500" /> : 
-                    <AlertTriangle className="w-4 h-4 text-red-500" />
-                  }
-                  <span className={analysis.hasOpenGraph ? 'text-green-500' : 'text-red-500'}>
-                    {analysis.hasOpenGraph ? 'Yes' : 'No'}
-                  </span>
-                </div>
-              </div>
-              
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-gray-600 dark:text-gray-400">Twitter Cards</span>
-                <div className="flex items-center space-x-2">
-                  {analysis.hasTwitterCard ? 
-                    <CheckCircle className="w-4 h-4 text-green-500" /> : 
-                    <AlertTriangle className="w-4 h-4 text-red-500" />
-                  }
-                  <span className={analysis.hasTwitterCard ? 'text-green-500' : 'text-red-500'}>
-                    {analysis.hasTwitterCard ? 'Yes' : 'No'}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Recommendations */}
-          <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-            <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
-              Recommendations
-            </h4>
-            <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              {analysis.titleLength !== 'good' && (
-                <div className="flex items-start space-x-2">
-                  <Info className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                  <span>
-                    {analysis.titleLength === 'warning' 
-                      ? 'Title length is good but could be optimized for better click-through rates.'
-                      : 'Title is too short or too long. Aim for 50-60 characters for optimal SEO performance.'
-                    }
-                  </span>
-                </div>
-              )}
-              
-              {analysis.descriptionLength !== 'good' && (
-                <div className="flex items-start space-x-2">
-                  <Info className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                  <span>
-                    {analysis.descriptionLength === 'warning'
-                      ? 'Description length is acceptable but could be optimized for better search results display.'
-                      : 'Description is too short or too long. Aim for 150-160 characters for optimal display in search results.'
-                    }
-                  </span>
-                </div>
-              )}
-              
-              {!analysis.hasStructuredData && (
-                <div className="flex items-start space-x-2">
-                  <Info className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                  <span>Add structured data to help search engines better understand your content and display rich snippets.</span>
-                </div>
-              )}
-              
-              {!analysis.hasCanonical && (
-                <div className="flex items-start space-x-2">
-                  <Info className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
-                  <span>Add a canonical URL to prevent duplicate content issues and improve SEO performance.</span>
-                </div>
-              )}
-            </div>
-          </div>
-        </motion.div>
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+      <meta name="theme-color" content="#3B82F6" />
+      <meta name="msapplication-TileColor" content="#3B82F6" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Security Meta Tags */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;" />
+      
+      {/* Performance Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      
+      {/* Business Meta Tags */}
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
+      
+      {/* Conditional Meta Tags */}
+      {publishedTime && (
+        <>
+          <meta property="article:published_time" content={publishedTime} />
+          <meta property="og:article:published_time" content={publishedTime} />
+        </>
       )}
-    </>
+      
+      {modifiedTime && (
+        <>
+          <meta property="article:modified_time" content={modifiedTime} />
+          <meta property="og:article:modified_time" content={modifiedTime} />
+        </>
+      )}
+      
+      {section && (
+        <>
+          <meta property="article:section" content={section} />
+          <meta property="og:article:section" content={section} />
+        </>
+      )}
+      
+      {tags.length > 0 && (
+        <>
+          <meta property="article:tag" content={tags.join(", ")} />
+          <meta property="og:article:tag" content={tags.join(", ")} />
+        </>
+      )}
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3B82F6" />
+      
+      {/* Manifest */}
+      <link rel="manifest" href="/manifest.json" />
+      
+      {/* DNS Prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    </Helmet>
   );
-};
+}
 
 export default SEO;

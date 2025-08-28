@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -99,15 +99,6 @@ const footerSections = [
     title: 'AI & Machine Learning',
     icon: Brain,
     links: [
-      { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: TrendingUp },
-      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
-      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: DollarSign },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Shield },
-      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: Zap },
-      { name: 'AI Business Intelligence Analytics', path: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
-      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
-      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: TrendingUp },
       { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
       { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Truck },
       { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
@@ -123,6 +114,18 @@ const footerSections = [
       { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
       { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
       { name: 'AI Autonomous Threat Intelligence', path: '/ai-autonomous-threat-intelligence', icon: Eye },
+      { name: 'AI Business Intelligence Analytics', path: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
+      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+      { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
+      { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', icon: Users },
+      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
+      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
+      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
+      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target },
       { name: 'New Innovative Services 2025', path: '/new-innovative-services-2025', icon: Sparkles }
     ]
   },
@@ -243,13 +246,24 @@ const footerSections = [
       { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: DollarSign },
       { name: 'Innovative Services Landing 2025', path: '/innovative-services-landing-2025', icon: Building }
     ]
+  },
+  {
+    title: 'Featured Services',
+    icon: Star,
+    links: [
+      { name: '2025 New Innovative Services', path: '/new-innovative-services-2025', icon: Star },
+      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', icon: Star },
+      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', icon: Star },
+      { name: '2029 Services Showcase', path: '/comprehensive-services-showcase-2029', icon: Star },
+      { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', icon: Rocket }
+    ]
   }
 ];
 
 const contactInfo = [
-  { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-  { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-  { icon: MapPin, text: '123 Tech Street, Innovation City, IC 12345', href: '#' }
+  { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
 ];
 
 const socialLinks = [
@@ -261,6 +275,17 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -281,40 +306,60 @@ export function Footer() {
   return (
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Enhanced Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light opacity-10"></div>
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute -top-20 -left-20 w-40 h-40 bg-zion-cyan rounded-full opacity-20"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-20 -right-20 w-32 h-32 bg-zion-purple-dark rounded-full opacity-20"
-          animate={{
-            x: [0, -80, 0],
-            y: [0, -40, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light opacity-10">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                            radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.3) 0%, transparent 50%)`,
+            backgroundSize: '100% 100%',
+            animation: 'pulse 20s ease-in-out infinite alternate'
           }}
         />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {footerSections.map((section, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8 mb-12">
+          {/* Company Section - Takes 2 columns on larger screens */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h3>
+                <p className="text-sm text-gray-400">Innovation Hub</p>
+              </div>
+            </div>
+            
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Empowering businesses with cutting-edge AI, cloud infrastructure, and emerging technologies. 
+              We transform ideas into innovative solutions that drive growth and success.
+            </p>
+
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Phone className="w-4 h-4 text-cyan-400" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Service Sections */}
+          {footerSections.slice(1, 6).map((section, index) => (
             <motion.div
               key={section.title}
               initial={{ opacity: 0, y: 20 }}
@@ -381,17 +426,17 @@ export function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-6">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  initial={{ opacity: 0, scale: 0 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.7 + index * 0.1 }}
-                  className="w-10 h-10 bg-zion-slate rounded-full flex items-center justify-center text-gray-300 hover:text-zion-cyan hover:bg-zion-slate-light transition-all duration-200 group"
+                  className="text-gray-400 hover:text-zion-cyan transition-colors duration-200 group"
                 >
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
                 </motion.a>
@@ -399,23 +444,33 @@ export function Footer() {
             </div>
 
             {/* Copyright */}
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="text-gray-400 text-sm flex items-center space-x-2"
+            >
               <Copyright className="w-4 h-4" />
               <span>© 2024 Zion Tech Group. All rights reserved.</span>
-            </div>
-
-            {/* Scroll to Top Button */}
-            <motion.button
-              onClick={scrollToTop}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-10 h-10 bg-zion-cyan rounded-full flex items-center justify-center text-white hover:bg-zion-cyan-dark transition-colors duration-200"
-            >
-              <ArrowUp className="w-5 h-5" />
-            </motion.button>
+            </motion.div>
           </div>
         </motion.div>
       </div>
+
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 w-12 h-12 bg-zion-cyan text-white rounded-full shadow-lg hover:bg-zion-cyan-dark transition-colors duration-200 z-50 flex items-center justify-center"
+          >
+            <ArrowUp className="w-6 h-6" />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </footer>
   );
 }
