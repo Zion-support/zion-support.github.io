@@ -79,6 +79,8 @@ const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomous
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
 
 // Additional innovative services
+<<<<<<< HEAD
+=======
 const AIAutonomousCodeReviewer = lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
 const ZeroTrustNetworkAccess = lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
 
@@ -101,6 +103,7 @@ const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrc
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
 const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
 const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8475
 const AICodeReviewSecurityScanner = lazy(() => import('./pages/services/AICodeReviewSecurityScanner'));
 const AIDevOpsAutomationPlatform = lazy(() => import('./pages/services/AIDevOpsAutomationPlatform'));
 const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBusinessIntelligenceAnalytics'));
@@ -173,6 +176,70 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => (
 
 function App() {
   return (
+<<<<<<< HEAD
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        <SEO 
+          title="Zion Tech Group - Leading AI & Technology Solutions"
+          description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
+          keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
+          ogImage="/og-image.jpg"
+          canonicalUrl="https://ziontechgroup.com"
+        />
+        
+        <AppHeader />
+        
+        <main className="relative">
+          <Suspense fallback={<EnhancedLoadingSpinner />}>
+            <Routes>
+              {/* Core Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/team" element={<Team />} />
+              
+              {/* Service Routes */}
+              <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/micro-saas" element={<MicroSaaS />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              <Route path="/services2026" element={<Services2026 />} />
+              <Route path="/services2027" element={<Services2027 />} />
+              
+              {/* Additional Routes */}
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/help" element={<HelpCenter />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              
+              {/* Catch-all route */}
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </Suspense>
+        </main>
+        
+        <Footer />
+        <ChatAssistant />
+        <PerformanceOptimizer />
+        <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
+        <MobileExperienceEnhancer enabled={true} />
+        <PerformanceMonitor enabled={true} showMetrics={true} />
+        <FloatingActionButton />
+      </div>
+    </ErrorBoundary>
+=======
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
         <div className="App min-h-screen bg-white">
@@ -422,5 +489,6 @@ function App() {
                       </div>
         </ErrorBoundary>
     </HelmetProvider>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8475
   );
 }
