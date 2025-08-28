@@ -127,7 +127,6 @@ const AIBusinessProcessOptimization = lazy(() => import('./pages/services/AIBusi
 const AICustomerSuccessPlatform = lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
 // 2025 Innovative Services
-const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
