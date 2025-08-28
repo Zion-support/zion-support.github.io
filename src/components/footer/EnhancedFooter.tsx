@@ -30,14 +30,14 @@ const footerNavigation = {
     title: 'AI & ML Services',
     icon: Brain,
     items: [
-      { name: 'AI Business Manager', href: '/services/ai-autonomous-business-manager', price: '$2,499' },
-      { name: 'AI Content Factory', href: '/services/ai-content-factory-enterprise', price: '$899' },
-      { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-sentinel', price: '$1,899' },
-      { name: 'AI Healthcare', href: '/services/ai-biomedical-research-platform', price: '$4,999' },
-      { name: 'AI Financial Trading', href: '/services/ai-financial-trading-platform', price: '$2,999' },
-      { name: 'AI Legal Assistant', href: '/services/ai-legal-research-assistant', price: '$1,299' },
-      { name: 'AI Education', href: '/services/ai-education-professor', price: '$899' },
-      { name: 'AI Manufacturing', href: '/services/ai-manufacturing-optimization', price: '$2,499' }
+      { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', price: '$4,999' },
+      { name: 'AI Content Factory Enterprise', href: '/services/ai-content-factory-enterprise', price: '$899' },
+      { name: 'AI Cybersecurity Sentinel', href: '/services/ai-cybersecurity-sentinel', price: '$1,899' },
+      { name: 'AI Biomedical Research Platform', href: '/services/ai-biomedical-research-platform', price: '$6,999' },
+      { name: 'Quantum AI Financial Trading', href: '/services/quantum-ai-financial-trading', price: '$8,999' },
+      { name: 'AI Legal Research Assistant', href: '/services/ai-legal-research-assistant', price: '$1,299' },
+      { name: 'AI Education Professor', href: '/services/ai-education-professor', price: '$899' },
+      { name: 'AI Manufacturing Optimization', href: '/services/ai-manufacturing-optimization', price: '$2,499' }
     ],
   },
   cloudDevOps: {
@@ -45,33 +45,53 @@ const footerNavigation = {
     icon: Cloud,
     items: [
       { name: 'Quantum Cloud Infrastructure', href: '/services/quantum-cloud-infrastructure', price: '$3,999' },
-      { name: 'Autonomous DevOps', href: '/services/autonomous-devops-platform', price: '$1,299' },
-      { name: 'Cloud Migration', href: '/services/cloud-migration-enterprise', price: '$15,999' },
-      { name: 'DevOps Automation', href: '/services/devops-automation-suite', price: '$2,999' }
+      { name: 'Autonomous DevOps Platform', href: '/services/autonomous-devops-platform', price: '$3,999' },
+      { name: 'Cloud Migration Enterprise', href: '/services/cloud-migration-enterprise', price: '$15,999' },
+      { name: 'IoT Edge Intelligence Platform', href: '/services/iot-edge-intelligence-platform', price: '$2,499' },
+      { name: 'DevOps Automation Suite', href: '/services/devops-automation-suite', price: '$2,999' }
     ],
   },
   emergingTech: {
     title: 'Emerging Tech',
     icon: Sparkles,
     items: [
-      { name: 'IoT Edge Computing', href: '/services/iot-edge-intelligence-platform', price: '$2,199' },
-      { name: 'Blockchain Governance', href: '/services/blockchain-governance-platform', price: '$1,699' },
-      { name: 'Space Technology', href: '/services/space-tech-ai-platform', price: '$5,999' },
-      { name: 'Climate AI', href: '/services/ai-climate-prediction-engine', price: '$1,799' }
+      { name: 'Quantum AI Computing Platform', href: '/services/quantum-ai-computing-platform', price: '$15,999' },
+      { name: 'Space Technology AI Platform', href: '/services/space-technology-ai-platform', price: '$8,999' },
+      { name: 'Advanced Robotics & Automation', href: '/services/advanced-robotics-automation-platform', price: '$6,999' },
+      { name: 'Neuromorphic Computing', href: '/services/neuromorphic-computing-platform', price: '$12,999' },
+      { name: 'Synthetic Biology AI', href: '/services/synthetic-biology-ai-platform', price: '$9,999' },
+      { name: 'Advanced Materials AI', href: '/services/advanced-materials-ai-platform', price: '$7,999' },
+      { name: 'Brain-Computer Interface', href: '/services/brain-computer-interface-ai-platform', price: '$14,999' },
+      { name: 'Fusion Energy AI', href: '/services/fusion-energy-ai-platform', price: '$19,999' },
+      { name: 'Quantum Internet Platform', href: '/services/quantum-internet-platform', price: '$11,999' }
     ],
   },
   solutions: {
     title: 'Industry Solutions',
     icon: Shield,
     items: [
-      { name: 'Healthcare Solutions', href: '/solutions/healthcare', price: 'Custom' },
-      { name: 'Financial Services', href: '/solutions/financial', price: 'Custom' },
-      { name: 'Manufacturing', href: '/solutions/manufacturing', price: 'Custom' },
-      { name: 'Retail & E-commerce', href: '/solutions/retail', price: 'Custom' },
-      { name: 'Transportation', href: '/solutions/transportation', price: 'Custom' },
-      { name: 'Energy & Utilities', href: '/solutions/energy', price: 'Custom' },
-      { name: 'Real Estate', href: '/solutions/real-estate', price: 'Custom' },
-      { name: 'Agriculture', href: '/solutions/agriculture', price: 'Custom' }
+      { name: 'AI Healthcare Diagnostic Platform', href: '/services/ai-healthcare-diagnostic-platform', price: '$8,999' },
+      { name: 'AI Financial Services Platform', href: '/services/ai-financial-services-platform', price: '$5,999' },
+      { name: 'AI Manufacturing Suite', href: '/services/ai-manufacturing-suite', price: '$3,999' },
+      { name: 'AI Retail Intelligence Platform', href: '/services/ai-retail-intelligence-platform', price: '$2,499' },
+      { name: 'AI Transportation & Logistics', href: '/services/ai-transportation-logistics-platform', price: '$3,499' },
+      { name: 'AI Energy & Utilities Platform', href: '/services/ai-energy-utilities-platform', price: '$4,999' },
+      { name: 'AI Real Estate Platform', href: '/services/ai-real-estate-platform', price: '$1,999' },
+      { name: 'AI Agriculture Platform', href: '/services/ai-agriculture-platform', price: '$1,499' },
+      { name: 'AI Government Solutions', href: '/services/ai-government-solutions', price: '$7,999' },
+      { name: 'AI Education Platform', href: '/services/ai-education-platform', price: '$1,299' }
+    ],
+  },
+  specialized: {
+    title: 'Specialized Services',
+    icon: Star,
+    items: [
+      { name: 'AI Climate Prediction Engine', href: '/services/ai-climate-prediction-engine', price: '$1,799' },
+      { name: 'Blockchain Governance Platform', href: '/services/blockchain-governance-platform', price: '$1,699' },
+      { name: 'DevOps Automation Suite', href: '/services/devops-automation-suite', price: '$2,999' },
+      { name: 'Data Privacy & Compliance', href: '/services/data-privacy-compliance', price: '$1,999' },
+      { name: 'Green Tech & Sustainability', href: '/services/green-tech-sustainability', price: '$2,499' },
+      { name: 'Remote Work & Collaboration', href: '/services/remote-work-collaboration', price: '$1,299' }
     ],
   },
   company: {

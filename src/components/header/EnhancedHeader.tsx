@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import { Button } from '../ui/button';
 
-// Enhanced navigation structure with new services
+// Enhanced navigation structure with comprehensive services
 const navigation = [
   {
     name: 'AI & ML Services',
@@ -30,52 +30,53 @@ const navigation = [
     description: 'Cutting-edge AI solutions',
     children: [
       { 
-        name: 'AI Business Manager', 
+        name: 'AI Autonomous Business Manager', 
         href: '/services/ai-autonomous-business-manager', 
         description: 'Autonomous business operations',
         featured: true,
-        price: '$2,499'
+        price: '$4,999'
       },
       { 
-        name: 'AI Content Factory', 
+        name: 'AI Content Factory Enterprise', 
         href: '/services/ai-content-factory-enterprise', 
         description: 'Enterprise content generation',
         price: '$899'
       },
       { 
-        name: 'AI Cybersecurity', 
+        name: 'AI Cybersecurity Sentinel', 
         href: '/services/ai-cybersecurity-sentinel', 
         description: 'AI-powered security platform',
         featured: true,
         price: '$1,899'
       },
       { 
-        name: 'AI Healthcare', 
+        name: 'AI Biomedical Research Platform', 
         href: '/services/ai-biomedical-research-platform', 
         description: 'Biomedical research AI',
         featured: true,
-        price: '$4,999'
+        price: '$6,999'
       },
       { 
-        name: 'AI Financial Trading', 
-        href: '/services/ai-financial-trading-platform', 
-        description: 'Algorithmic trading platform',
-        price: '$2,999'
+        name: 'Quantum AI Financial Trading', 
+        href: '/services/quantum-ai-financial-trading', 
+        description: 'Quantum-enhanced trading platform',
+        featured: true,
+        price: '$8,999'
       },
       { 
-        name: 'AI Legal Assistant', 
+        name: 'AI Legal Research Assistant', 
         href: '/services/ai-legal-research-assistant', 
         description: 'Legal research automation',
         price: '$1,299'
       },
       { 
-        name: 'AI Education', 
+        name: 'AI Education Professor', 
         href: '/services/ai-education-professor', 
         description: 'Personalized learning platform',
         price: '$899'
       },
       { 
-        name: 'AI Manufacturing', 
+        name: 'AI Manufacturing Optimization', 
         href: '/services/ai-manufacturing-optimization', 
         description: 'Manufacturing optimization suite',
         featured: true,
@@ -97,16 +98,23 @@ const navigation = [
         price: '$3,999'
       },
       { 
-        name: 'Autonomous DevOps', 
+        name: 'Autonomous DevOps Platform', 
         href: '/services/autonomous-devops-platform', 
         description: 'Self-managing DevOps platform',
-        price: '$1,299'
+        featured: true,
+        price: '$3,999'
       },
       { 
-        name: 'Cloud Migration', 
+        name: 'Cloud Migration Enterprise', 
         href: '/services/cloud-migration-enterprise', 
         description: 'Enterprise cloud migration',
         price: '$15,999'
+      },
+      { 
+        name: 'IoT Edge Intelligence Platform', 
+        href: '/services/iot-edge-intelligence-platform', 
+        description: 'IoT edge intelligence platform',
+        price: '$2,499'
       }
     ],
   },
@@ -117,29 +125,63 @@ const navigation = [
     description: 'Next-generation technologies',
     children: [
       { 
-        name: 'IoT Edge Computing', 
-        href: '/services/iot-edge-intelligence-platform', 
-        description: 'IoT edge intelligence platform',
-        price: '$2,199'
+        name: 'Quantum AI Computing Platform', 
+        href: '/services/quantum-ai-computing-platform', 
+        description: 'Quantum AI computing platform',
+        featured: true,
+        price: '$15,999'
       },
       { 
-        name: 'Blockchain Governance', 
-        href: '/services/blockchain-governance-platform', 
-        description: 'AI-powered blockchain governance',
-        price: '$1,699'
-      },
-      { 
-        name: 'Space Technology', 
-        href: '/services/space-tech-ai-platform', 
+        name: 'Space Technology AI Platform', 
+        href: '/services/space-technology-ai-platform', 
         description: 'Space exploration AI platform',
         featured: true,
-        price: '$5,999'
+        price: '$8,999'
       },
       { 
-        name: 'Climate AI', 
-        href: '/services/ai-climate-prediction-engine', 
-        description: 'Climate prediction engine',
-        price: '$1,799'
+        name: 'Advanced Robotics & Automation', 
+        href: '/services/advanced-robotics-automation-platform', 
+        description: 'AI-powered robotics platform',
+        price: '$6,999'
+      },
+      { 
+        name: 'Neuromorphic Computing', 
+        href: '/services/neuromorphic-computing-platform', 
+        description: 'Brain-inspired computing',
+        featured: true,
+        price: '$12,999'
+      },
+      { 
+        name: 'Synthetic Biology AI', 
+        href: '/services/synthetic-biology-ai-platform', 
+        description: 'Biological system design',
+        price: '$9,999'
+      },
+      { 
+        name: 'Advanced Materials AI', 
+        href: '/services/advanced-materials-ai-platform', 
+        description: 'Material discovery platform',
+        price: '$7,999'
+      },
+      { 
+        name: 'Brain-Computer Interface', 
+        href: '/services/brain-computer-interface-ai-platform', 
+        description: 'Neural interface platform',
+        featured: true,
+        price: '$14,999'
+      },
+      { 
+        name: 'Fusion Energy AI', 
+        href: '/services/fusion-energy-ai-platform', 
+        description: 'Fusion energy optimization',
+        featured: true,
+        price: '$19,999'
+      },
+      { 
+        name: 'Quantum Internet Platform', 
+        href: '/services/quantum-internet-platform', 
+        description: 'Quantum networking platform',
+        price: '$11,999'
       }
     ],
   },
@@ -150,52 +192,136 @@ const navigation = [
     description: 'Industry-specific solutions',
     children: [
       { 
-        name: 'Healthcare Solutions', 
-        href: '/solutions/healthcare', 
-        description: 'AI-powered healthcare',
-        price: 'Custom'
+        name: 'AI Healthcare Diagnostic Platform', 
+        href: '/services/ai-healthcare-diagnostic-platform', 
+        description: 'AI-powered healthcare diagnostics',
+        featured: true,
+        price: '$8,999'
       },
       { 
-        name: 'Financial Services', 
-        href: '/solutions/financial', 
-        description: 'Fintech innovation',
-        price: 'Custom'
+        name: 'AI Financial Services Platform', 
+        href: '/services/ai-financial-services-platform', 
+        description: 'AI-powered financial services',
+        price: '$5,999'
       },
       { 
-        name: 'Manufacturing', 
-        href: '/solutions/manufacturing', 
-        description: 'Smart manufacturing',
-        price: 'Custom'
+        name: 'AI Manufacturing Suite', 
+        href: '/services/ai-manufacturing-suite', 
+        description: 'AI-powered manufacturing',
+        price: '$3,999'
       },
       { 
-        name: 'Retail & E-commerce', 
-        href: '/solutions/retail', 
-        description: 'Retail intelligence',
-        price: 'Custom'
+        name: 'AI Retail Intelligence Platform', 
+        href: '/services/ai-retail-intelligence-platform', 
+        description: 'AI-powered retail intelligence',
+        price: '$2,499'
       },
       { 
-        name: 'Transportation', 
-        href: '/solutions/transportation', 
-        description: 'Logistics optimization',
-        price: 'Custom'
+        name: 'AI Transportation & Logistics', 
+        href: '/services/ai-transportation-logistics-platform', 
+        description: 'AI-powered logistics',
+        price: '$3,499'
       },
       { 
-        name: 'Energy & Utilities', 
-        href: '/solutions/energy', 
-        description: 'Energy management',
-        price: 'Custom'
+        name: 'AI Energy & Utilities Platform', 
+        href: '/services/ai-energy-utilities-platform', 
+        description: 'AI-powered energy management',
+        price: '$4,999'
       },
       { 
-        name: 'Real Estate', 
-        href: '/solutions/real-estate', 
-        description: 'Real estate analytics',
-        price: 'Custom'
+        name: 'AI Real Estate Platform', 
+        href: '/services/ai-real-estate-platform', 
+        description: 'AI-powered real estate analytics',
+        price: '$1,999'
       },
       { 
-        name: 'Agriculture', 
-        href: '/solutions/agriculture', 
-        description: 'Precision farming',
-        price: 'Custom'
+        name: 'AI Agriculture Platform', 
+        href: '/services/ai-agriculture-platform', 
+        description: 'AI-powered precision farming',
+        price: '$1,499'
+      },
+      { 
+        name: 'AI Government Solutions', 
+        href: '/services/ai-government-solutions', 
+        description: 'AI-powered government services',
+        price: '$7,999'
+      },
+      { 
+        name: 'AI Education Platform', 
+        href: '/services/ai-education-platform', 
+        description: 'AI-powered education platform',
+        price: '$1,299'
+      }
+    ],
+  },
+  {
+    name: 'Specialized Services',
+    href: '/specialized-services',
+    icon: Star,
+    description: 'Expert specialized solutions',
+    children: [
+      { 
+        name: 'AI Climate Prediction Engine', 
+        href: '/services/ai-climate-prediction-engine', 
+        description: 'Climate prediction and analysis',
+        price: '$1,799'
+      },
+      { 
+        name: 'Blockchain Governance Platform', 
+        href: '/services/blockchain-governance-platform', 
+        description: 'AI-powered blockchain governance',
+        price: '$1,699'
+      },
+      { 
+        name: 'DevOps Automation Suite', 
+        href: '/services/devops-automation-suite', 
+        description: 'Advanced DevOps automation',
+        price: '$2,999'
+      },
+      { 
+        name: 'Data Privacy & Compliance', 
+        href: '/services/data-privacy-compliance', 
+        description: 'Privacy and compliance management',
+        price: '$1,999'
+      },
+      { 
+        name: 'Green Tech & Sustainability', 
+        href: '/services/green-tech-sustainability', 
+        description: 'Sustainability solutions',
+        price: '$2,499'
+      },
+      { 
+        name: 'Remote Work & Collaboration', 
+        href: '/services/remote-work-collaboration', 
+        description: 'Remote work optimization',
+        price: '$1,299'
+      }
+    ],
+  },
+  {
+    name: 'All Services',
+    href: '/comprehensive-services-2025',
+    icon: Zap,
+    description: 'Complete service portfolio',
+    children: [
+      { 
+        name: 'View All Services', 
+        href: '/comprehensive-services-2025', 
+        description: 'Complete service showcase',
+        featured: true,
+        price: 'Free'
+      },
+      { 
+        name: 'Service Categories', 
+        href: '/services', 
+        description: 'Browse by category',
+        price: 'Free'
+      },
+      { 
+        name: 'Pricing Tiers', 
+        href: '/comprehensive-services-2025#pricing', 
+        description: 'View pricing options',
+        price: 'Free'
       }
     ],
   },

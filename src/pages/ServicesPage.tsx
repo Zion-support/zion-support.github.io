@@ -30,7 +30,13 @@ import {
   Mail,
   MapPin,
   Globe as GlobeIcon,
-  Heart
+  Heart,
+  ShoppingCart,
+  Building,
+  Truck,
+  Sparkles,
+  Leaf,
+  Diamond
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
@@ -38,6 +44,7 @@ import { ADVANCED_ENTERPRISE_SOLUTIONS_2025 } from "@/data/advancedEnterpriseSol
 import { NEXT_GEN_AI_SERVICES_2025 } from "@/data/nextGenAIServices2025";
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/specializedIndustrySolutions2025";
 import { IOT_EDGE_COMPUTING_SERVICES_2025 } from "@/data/iotEdgeComputingServices2025";
+import { EMERGING_TECH_INNOVATIVE_SERVICES_2025 } from "@/data/emergingTechInnovativeServices2025";
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -56,7 +63,7 @@ export default function ServicesPage() {
     { id: 'iot-edge', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: Rocket, color: 'from-zion-blue to-zion-purple' },
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
-    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
+    { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-blue to-zion-pink' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
     { id: 'ai-content-marketing', name: 'AI Content & Marketing', icon: Code, color: 'from-zion-orange to-zion-pink' },
     { id: 'data-privacy-compliance', name: 'Data Privacy & Compliance', icon: Lock, color: 'from-zion-red to-zion-purple' },
@@ -67,7 +74,14 @@ export default function ServicesPage() {
     { id: 'educational-technology', name: 'Educational Technology', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
     { id: 'real-estate-technology', name: 'Real Estate Technology', icon: Building, color: 'from-zion-orange to-zion-blue' },
     { id: 'supply-chain-logistics', name: 'Supply Chain & Logistics', icon: Truck, color: 'from-zion-green to-zion-purple' },
-    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' }
+    { id: 'customer-support', name: 'Customer Support', icon: MessageCircle, color: 'from-zion-blue to-zion-pink' },
+    { id: 'emerging-tech', name: 'Emerging Technologies', icon: Sparkles, color: 'from-zion-purple to-zion-cyan' },
+    { id: 'robotics-automation', name: 'Robotics & Automation', icon: Cpu, color: 'from-zion-blue to-zion-green' },
+    { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Leaf, color: 'from-zion-green to-zion-blue' },
+    { id: 'advanced-materials', name: 'Advanced Materials', icon: Diamond, color: 'from-zion-cyan to-zion-orange' },
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Brain, color: 'from-zion-purple to-zion-pink' },
+    { id: 'fusion-energy', name: 'Fusion Energy', icon: Zap, color: 'from-zion-orange to-zion-red' },
+    { id: 'quantum-internet', name: 'Quantum Internet', icon: Globe, color: 'from-zion-blue to-zion-purple' }
   ];
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -89,7 +103,8 @@ export default function ServicesPage() {
     ...ADVANCED_ENTERPRISE_SOLUTIONS_2025,
     ...NEXT_GEN_AI_SERVICES_2025,
     ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
-    ...IOT_EDGE_COMPUTING_SERVICES_2025
+    ...IOT_EDGE_COMPUTING_SERVICES_2025,
+    ...EMERGING_TECH_INNOVATIVE_SERVICES_2025
   ];
   // Filter and sort services
   const filteredServices = allServices.filter(service => {
