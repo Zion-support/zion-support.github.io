@@ -32,6 +32,7 @@ const Partners = React.lazy(() => import('./pages/Partners'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Services2030 = React.lazy(() => import('./pages/Services2030'));
 const APIDocumentation = React.lazy(() => import('./pages/APIDocumentation'));
 const Developers = React.lazy(() => import('./pages/Developers'));
 const Training = React.lazy(() => import('./pages/Training'));
@@ -104,19 +105,12 @@ function App() {
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/cookies" element={<Cookies />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/services-2030" element={<Services2030 />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Resources />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/case-studies" element={<CaseStudies />} />
                 <Route path="/partners" element={<Partners />} />
-                <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
-                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
-                <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
-                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
-                <Route path="/request-quote" element={<RequestQuote />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/white-papers" element={<WhitePapers />} />
                 <Route path="/webinars" element={<Webinars />} />
                 <Route path="/docs" element={<Documentation />} />
@@ -129,6 +123,14 @@ function App() {
                 <Route path="/investors" element={<InvestorRelations />} />
                 <Route path="/press" element={<Press />} />
                 <Route path="/legal" element={<Legal />} />
+                <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
+                <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
+                <Route path="/request-quote" element={<RequestQuote />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/marketplace" element={<Marketplace />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
