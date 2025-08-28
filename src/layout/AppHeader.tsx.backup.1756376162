@@ -30,6 +30,14 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
+<<<<<<< HEAD
+    { name: '2028 Services', href: '/ultimate-services-showcase-2028', current: false, featured: true, new: true },
+    { name: '2027 Services', href: '/services2027', current: false, featured: true },
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false },
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-e48b
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -82,8 +90,13 @@ export function AppHeader() {
     
     // Micro SaaS Solutions
     { name: 'Micro SaaS Platform', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS' },
+<<<<<<< HEAD
+    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS' },
+    { name: 'Customer Feedback Surveys', href: '/services/customer-feedback-surveys', icon: MessageCircle, description: 'Intelligent feedback collection', category: 'Micro SaaS' },
+=======
     { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'Automated content creation', category: 'Micro SaaS' },
     { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, description: 'Intelligent support automation', category: 'Micro SaaS' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-e48b
   ];
 
   // Quick links for easy access
@@ -100,11 +113,19 @@ export function AppHeader() {
 
   const featuredServices = [
     { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
+<<<<<<< HEAD
+    { name: '2027 Services', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
+    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Advanced AI security solutions', category: 'Cybersecurity', featured: true },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye, description: 'Virtual system replicas', category: 'Digital Transformation', featured: true },
+=======
     { name: '2027 Services', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', true },
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Comprehensive AI solutions', category: 'AI & ML', featured: true },
     { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions', category: 'IT & Infrastructure', featured: true },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Zap, description: 'Niche software solutions', category: 'Micro SaaS', featured: true },
     { name: 'AI Solutions', href: '/ai-solutions', icon: Brain, description: 'AI-powered business solutions', category: 'AI & ML', featured: true },
+>>>>>>> origin/cursor/website-audit-and-enhancement-e48b
   ];
 
   // Group services by category for better organization

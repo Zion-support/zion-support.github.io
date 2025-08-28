@@ -64,18 +64,51 @@ export function Footer() {
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
+<<<<<<< HEAD
+        { name: 'Solutions', path: '/solutions', icon: Target },
+        { name: 'AI Services', path: '/ai-services', icon: Brain },
+        { name: 'Blog', path: '/blog', icon: Newspaper },
+=======
         { name: 'Team', path: '/team', icon: Users },
         { name: 'News', path: '/news', icon: Newspaper },
+>>>>>>> origin/cursor/website-audit-and-enhancement-e48b
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
+<<<<<<< HEAD
+      title: '2028 Services',
+      icon: Crown,
+      featured: true,
+      links: [
+        { name: '2028 Services Overview', path: '/ultimate-services-showcase-2028', icon: Crown, featured: true },
+        { name: 'Space Technology', path: '/services/space-technology', icon: Satellite },
+        { name: 'Biotechnology AI', path: '/services/biotech-ai', icon: Dna },
+        { name: 'Advanced Robotics', path: '/services/advanced-robotics', icon: Robot },
+        { name: 'Neuromorphic Computing', path: '/services/neuromorphic-computing', icon: Brain },
+        { name: 'Quantum Internet', path: '/services/quantum-internet', icon: Network },
+        { name: 'Advanced Materials', path: '/services/advanced-materials', icon: Atom },
+        { name: 'AI Ethics & Governance', path: '/services/ai-ethics-governance', icon: Shield }
+      ]
+    },
+    {
+      title: 'AI & Research Services',
+      icon: Brain,
+      links: [
+        { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Healthcare Diagnostics', path: '/services/ai-healthcare-diagnostics', icon: Heart },
+        { name: 'AI Legal Document Analyzer', path: '/services/ai-legal-document-analyzer', icon: FileText },
+=======
       title: 'Solutions & AI Services',
       icon: Brain,
       links: [
         { name: 'Solutions Overview', path: '/solutions', icon: Target },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'AI Services', path: '/ai-services', icon: Brain },
+>>>>>>> origin/cursor/website-audit-and-enhancement-e48b
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },

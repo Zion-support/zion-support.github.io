@@ -343,7 +343,11 @@ function App() {
             <Routes>
               {/* Core Routes */}
               <Route path="/" element={<Home />} />
+<<<<<<< HEAD
+              <Route path="/home2026" element={<Home2026 />} />
+=======
               <Route path="/home2026" element={<Home />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-e48b
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
