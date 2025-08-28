@@ -75,12 +75,25 @@ const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipm
 const MarketplaceServices = React.lazy(() => import('./pages/marketplace/Services'));
 const LoginPage = React.lazy(() => import('./pages/Login'));
 
+<<<<<<< HEAD
+// Core pages with optimized imports
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const ServicesOverview = createLazyComponent(() => import('./pages/ServicesOverview'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+=======
 // New 2025 service imports
 const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-b846
 
 // Service pages
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
@@ -185,6 +198,9 @@ function App() {
               <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/help" element={<HelpCenter />} />
               
+<<<<<<< HEAD
+              {/* Catch-all route */}
+=======
               {/* New sitemap routes */}
               <Route path="/ai-solutions" element={<AiSolutions />} />
               <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
@@ -270,6 +286,7 @@ function App() {
               <Route path="/developers" element={<DeveloperPortal />} />
               
               {/* Catch-all */}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-b846
               <Route path="*" element={<Home />} />
             </Routes>
           </Suspense>
