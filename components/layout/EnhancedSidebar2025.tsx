@@ -265,7 +265,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose, contactInfo }: En
   const finalContactInfo = contactInfo || defaultContactInfo;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const router = useLocation();
+
 
   const toggleSection = (sectionTitle: string) => {
     const newExpanded = new Set(expandedSections);
