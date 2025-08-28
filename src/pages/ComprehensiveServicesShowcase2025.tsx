@@ -267,8 +267,9 @@ export default function ComprehensiveServicesShowcase2025() {
                     </button>
                   </div>
                 </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

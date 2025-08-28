@@ -186,7 +186,7 @@ export default function Dashboard() {
                     <button className="p-2 text-zion-slate-light hover:text-white transition-colors">
                       <ArrowRight className="h-4 w-4" />
                     </button>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>

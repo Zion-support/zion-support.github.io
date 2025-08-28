@@ -473,7 +473,8 @@ export function HelpCenter() {
                 </button>
               ))}
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
         </div>
       </div>
 
