@@ -37,10 +37,17 @@ const navigationItems: NavigationItem[] = [
     href: '/services',
     children: [
       { label: 'AI & Machine Learning', href: '/services/ai-ml' },
-      { label: 'Cloud Solutions', href: '/services/cloud' },
+      { label: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant' },
+      { label: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+      { label: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite' },
+      { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+      { label: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics' },
+      { label: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management' },
+      { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
       { label: 'Cybersecurity', href: '/services/cybersecurity' },
       { label: 'Digital Transformation', href: '/services/digital-transformation' },
-      { label: 'Consulting', href: '/services/consulting' },
+      { label: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+      { label: 'IT Consulting', href: '/services/it-consulting' },
       { label: '2025 AI Services', href: '/comprehensive-services-showcase-2025' },
       { label: '2025 IT Services', href: '/comprehensive-services-showcase-2025' },
       { label: '2025 Micro SaaS', href: '/comprehensive-services-showcase-2025' }
@@ -52,7 +59,24 @@ const navigationItems: NavigationItem[] = [
     children: [
       { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
       { label: 'SMB Solutions', href: '/solutions/smb' },
-      { label: 'Industry Specific', href: '/solutions/industry' }
+      { label: 'Industry Specific', href: '/solutions/industry' },
+      { label: 'AI-Powered Solutions', href: '/ai-solutions' },
+      { label: 'Quantum Computing', href: '/services/quantum-computing' },
+      { label: 'IoT & Edge Computing', href: '/services/iot-edge-computing' }
+    ]
+  },
+  { 
+    label: 'Resources', 
+    href: '/resources',
+    children: [
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'Blog', href: '/blog' },
+      { label: 'News', href: '/news' },
+      { label: 'Research & Development', href: '/research-development' },
+      { label: 'White Papers', href: '/white-papers' },
+      { label: 'Webinars', href: '/webinars' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'Help Center', href: '/help' }
     ]
   },
   { label: 'About', href: '/about' },
