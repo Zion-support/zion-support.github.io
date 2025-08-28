@@ -30,6 +30,7 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
+const InnovativeServicesOverview = React.lazy(() => import('./pages/InnovativeServicesOverview.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -38,6 +39,12 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+
+// New innovative services
+const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-legal-document-analysis'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -89,6 +96,7 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/services/overview" element={<InnovativeServicesOverview />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
@@ -102,6 +110,12 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* New innovative service routes */}
+                <Route path="/services/ai-legal-document-analysis" element={<AILegalDocumentAnalysis />} />
+                <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
