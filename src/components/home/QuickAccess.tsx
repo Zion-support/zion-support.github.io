@@ -124,6 +124,15 @@ const quickLinks = [
   }
 ];
 
+const serviceCategories = [
+  { name: "AI & ML", count: "50+", color: "from-purple-500 to-indigo-600" },
+  { name: "Cloud", count: "30+", color: "from-cyan-500 to-blue-600" },
+  { name: "Security", count: "25+", color: "from-red-500 to-pink-600" },
+  { name: "DevOps", count: "20+", color: "from-green-500 to-emerald-600" },
+  { name: "Data", count: "35+", color: "from-yellow-500 to-orange-600" },
+  { name: "IoT", count: "15+", color: "from-indigo-500 to-purple-600" }
+];
+
 export function QuickAccess() {
   return (
     <section className="py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-black">
@@ -196,7 +205,7 @@ export function QuickAccess() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {categories.map((category, index) => (
+            {serviceCategories.map((category, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
