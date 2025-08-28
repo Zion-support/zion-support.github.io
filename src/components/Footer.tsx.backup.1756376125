@@ -46,11 +46,29 @@ import {
   Gamepad2,
   Coins,
   Satellite,
+<<<<<<< HEAD
+  MessageCircle,
+  Server,
+  ShoppingCart,
+  Smartphone,
+  Database,
+  Clock,
+  Code,
+  BookOpen,
+  Truck,
+  ExternalLink,
+  ChevronDown,
+  Copyright,
+  GitFork,
+  MessageSquare,
+  Map
+=======
   Server,
   ShoppingCart,
   MessageCircle,
   Code,
   Smartphone
+>>>>>>> origin/cursor/website-audit-and-enhancement-c773
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -258,6 +276,15 @@ export function Footer() {
     });
   };
 
+<<<<<<< HEAD
+  // Handle link click
+  const handleLinkClick = (link: FooterLink) => {
+    if (link.external) {
+      window.open(link.path, '_blank', 'noopener,noreferrer');
+    } else {
+      // Handle internal navigation
+      console.log('Navigate to:', link.path);
+=======
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -371,6 +398,7 @@ export function Footer() {
         { name: 'Data Protection', path: '/privacy', icon: Lock },
         { name: 'Trust Center', path: '/security', icon: CheckCircle }
       ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-c773
     }
   };
 
