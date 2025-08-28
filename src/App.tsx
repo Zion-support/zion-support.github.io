@@ -40,7 +40,7 @@ const Partners = lazy(() => import('./pages/Partners'));
 const News = lazy(() => import('./pages/News'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
 
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
@@ -118,7 +118,6 @@ const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransfo
 
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
-const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Additional missing imports
@@ -134,7 +133,6 @@ const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machi
 const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
 
 // Comprehensive services imports
-const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
 const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
@@ -325,7 +323,7 @@ function App() {
                     <Route path="/micro-saas" element={<MicroSaaS />} />
                     
                     {/* Comprehensive Service Routes */}
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+      
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
