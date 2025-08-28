@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Code, BookOpen, Key, Webhook, Play, Download, Github, Terminal, Database, Api, Zap, Shield, Users, Star } from 'lucide-react';
+import { Code, BookOpen, Key, Webhook, Play, Download, Github, Terminal, Database, Zap, Shield, Users, Star } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Developers() {

@@ -12,7 +12,7 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 // Enhanced lazy loading with preloading for critical routes
 const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.default })));
 const About = lazy(() => import('./pages/About').then(module => ({ default: module.default })));
-const Contact = lazy(() => import('./pages/Contact').then(module => ({ default: module.default })));
+const Contact = lazy(() => import('./pages/contact').then(module => ({ default: module.default })));
 const Blog = lazy(() => import('./pages/Blog').then(module => ({ default: module.default })));
 const BlogPost = lazy(() => import('./pages/BlogPost').then(module => ({ default: module.default })));
 const Services = lazy(() => import('./pages/Services').then(module => ({ default: module.default })));
@@ -61,7 +61,6 @@ const ScheduleDemo = lazy(() => import('./pages/ScheduleDemo').then(module => ({
 const Community = lazy(() => import('./pages/Community').then(module => ({ default: module.default })));
 const Developers = lazy(() => import('./pages/Developers').then(module => ({ default: module.default })));
 const Demo = lazy(() => import('./pages/Demo').then(module => ({ default: module.default })));
-const EnhancedContact = lazy(() => import('./pages/Contact').then(module => ({ default: module.default })));
 
 // Enhanced placeholder pages with better SEO and accessibility
 const Careers = () => (
