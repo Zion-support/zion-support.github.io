@@ -39,7 +39,7 @@ import {
   Globe as GlobeIcon,
   ExternalLink
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
 
 const ComprehensiveServicesLanding2025: React.FC = () => {

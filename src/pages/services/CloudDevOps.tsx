@@ -1,45 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Code, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone,
-  GitBranch,
-  Docker,
-  Kubernetes,
-  Terminal,
-  Workflow,
-  Rocket,
-  RefreshCw,
-  Shield,
-  Lock
-} from 'lucide-react';
+import { Cloud, Zap, Shield, BarChart3, Users, Clock, CheckCircle, ArrowRight, Server, Database, Lock, Globe, Cpu, HardDrive, Network, Monitor } from 'lucide-react';
+import SEO from '@/components/SEO';
+import { Link } from 'react-router-dom';
 
 const CloudDevOps = () => {
   const features = [

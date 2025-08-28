@@ -19,6 +19,7 @@ import {
   ExternalLink,
   ArrowRight
 } from 'lucide-react';
+import SEO from '@/components/SEO';
 
 export default function NewServicesShowcase2025() {
   const serviceCategories = [

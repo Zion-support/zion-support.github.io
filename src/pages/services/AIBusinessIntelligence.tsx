@@ -1,6 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, BarChart3, TrendingUp, Target, Users, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Clock, Globe, Database, PieChart, LineChart, Activity, Phone } from 'lucide-react';
+import { 
+  Brain, 
+  BarChart3, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  PieChart,
+  LineChart,
+  Activity,
+  Target,
+  Lightbulb,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Share2
+} from 'lucide-react';
+import SEO from '../../components/SEO';
 
 const AIBusinessIntelligence: React.FC = () => {
   const features = [

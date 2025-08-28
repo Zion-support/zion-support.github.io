@@ -1,48 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  X, 
-  Clock, 
-  Tag, 
-  User, 
-  Calendar,
-  ArrowRight,
-  FileText,
-  Code,
-  Brain,
-  Cloud,
-  Shield,
-  Rocket,
-  Atom,
-  Building,
-  Globe,
-  Zap,
-  TrendingUp,
-  CheckCircle,
-  Star,
-  BookOpen,
-  MessageCircle,
-  Users,
-  Target,
-  BarChart3,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  Heart,
-  DollarSign,
-  Factory,
-  ShoppingCart,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import React, { useState } from 'react'
+import SEO from '@/components/SEO'
 
 interface SearchResult {
   id: string;

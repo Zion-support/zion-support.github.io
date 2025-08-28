@@ -1,5 +1,5 @@
-// React import removed as it's not needed in modern React
-import { SEO } from '@/components/SEO';
+import React from 'react';
+import SEO from '@/components/SEO';
 
 export default function HealthcareSolutions() {
   return (

@@ -15,7 +15,7 @@ import {
   Cpu,
   Database
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function AIWorkflowAutomation() {
   const features = [

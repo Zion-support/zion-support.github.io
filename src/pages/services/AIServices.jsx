@@ -1,7 +1,6 @@
 import React from 'react';
-import { SEO } from "@/components/SEO";
-import { Brain, Shield, Database, TrendingUp, Cpu, Zap, Globe, MessageSquare, BarChart3, FileText, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, Lock, Wifi, Server, Smartphone, Code, Monitor, Users, Target, Rocket, Lightbulb, Eye, Shield as ShieldIcon, Database as DatabaseIcon, TrendingUp as TrendingUpIcon, Cpu as CpuIcon, Zap as ZapIcon, Globe as GlobeIcon, MessageSquare as MessageSquareIcon, BarChart3 as BarChart3Icon, FileText as FileTextIcon, CheckCircle as CheckCircleIcon, Star as StarIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, ExternalLink as ExternalLinkIcon, Lock as LockIcon, Wifi as WifiIcon, Server as ServerIcon, Smartphone as SmartphoneIcon, Code as CodeIcon, Monitor as MonitorIcon, Users as UsersIcon, Target as TargetIcon, Rocket as RocketIcon, Lightbulb as LightbulbIcon, Eye as EyeIcon } from 'lucide-react';
-
+import SEO from "@/components/SEO";
+import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
     const aiServices = [
         {

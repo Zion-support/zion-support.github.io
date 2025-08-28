@@ -24,7 +24,7 @@ import {
   Globe,
   Rocket
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');

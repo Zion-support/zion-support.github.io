@@ -4,21 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
-import Footer from './components/Footer';
-
-// Enhanced Components
-import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { ModernUIEnhancer } from './components/ModernUIEnhancer';
-import { BundleAnalyzer } from './components/BundleAnalyzer';
-import { ServiceWorker } from './components/ServiceWorker';
-import { FloatingActionButton } from './components/FloatingActionButton';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
+import { LoadingSpinner } from './components/ui/loading-spinner';
+import SEO from './components/SEO';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import MobileExperienceEnhancer from './components/MobileExperienceEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import FloatingActionButton from './components/FloatingActionButton';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));

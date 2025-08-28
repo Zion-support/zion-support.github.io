@@ -1,32 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  Lock,
-  Eye,
-  FileText,
-  Brain,
-  Users,
-  Phone,
-  Mail,
-  Monitor,
-  Smartphone
-} from 'lucide-react';
+import { Search, Brain, TrendingUp, BarChart3, Target, Zap, CheckCircle, ArrowRight, Globe, Users, Clock, Shield, Eye, MousePointer, Smartphone } from 'lucide-react';
+import SEO from '@/components/SEO';
+import { Link } from 'react-router-dom';
 
 const AIPoweredSEO = () => {
   const features = [

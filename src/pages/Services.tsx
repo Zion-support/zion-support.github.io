@@ -1,15 +1,10 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { 
-  Brain, Shield, Database, TrendingUp, Cpu, Zap, Globe, MessageSquare, 
-  BarChart3, FileText, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, 
-  Lock, Wifi, Server, Smartphone, Code, Monitor, Users, Target, Rocket, 
-  Lightbulb, Eye, Building, Calendar, CreditCard, Users as UsersIcon,
-  Cloud, Settings, HardDrive, ArrowRight
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck } from 'lucide-react';
+import SEO from '@/components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { NEW_SERVICES_2025 } from '../data/newServices2025';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const serviceCategories = [

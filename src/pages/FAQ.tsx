@@ -1,49 +1,7 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  ChevronDown, 
-  ChevronUp,
-  HelpCircle,
-  Brain,
-  Cloud,
-  Shield,
-  Rocket,
-  Atom,
-  Zap,
-  Users,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  Globe,
-  Building,
-  Code,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  Heart,
-  Factory,
-  ShoppingCart,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  TrendingUp,
-  BarChart3,
-  PenTool,
-  Server,
-  Smartphone,
-  Cpu,
-  Truck
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { motion } from 'framer-motion';
+import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain } from 'lucide-react';
+import SEO from '../components/SEO';
 
 interface FAQItem {
   question: string;

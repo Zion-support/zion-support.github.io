@@ -44,6 +44,7 @@ import {
   Shield2,
   Zap2
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 interface Partner {
   id: string;

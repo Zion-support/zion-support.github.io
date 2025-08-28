@@ -15,6 +15,7 @@ import {
   CheckCircle,
   AlertTriangle
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Privacy: React.FC = () => {
   const currentYear = new Date().getFullYear();

@@ -50,6 +50,10 @@ import {
   Coins,
   Lightbulb
 } from 'lucide-react';
+import SEO from "@/components/SEO";
+import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
+import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
+import { REVOLUTIONARY_PRICING_GUIDE_2030 } from "@/data/revolutionaryPricingGuide2030";
 
 const RevolutionaryServices2030: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');

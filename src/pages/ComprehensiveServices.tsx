@@ -5,6 +5,34 @@ import { SEO } from '@/components/SEO';
 import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
 import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
 import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  Cpu, 
+  Database, 
+  Rocket, 
+  Target, 
+  Users, 
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Workflow,
+  Atom,
+  MessageCircle,
+  PenTool,
+  Calendar,
+  Heart,
+  DollarSign,
+  ShoppingBag,
+  Settings,
+  Globe,
+  Award,
+  TrendingUp
+} from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function ComprehensiveServices() {
   const [searchTerm, setSearchTerm] = useState('');

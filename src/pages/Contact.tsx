@@ -1,4 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  MessageSquare, 
+  Send, 
+  CheckCircle, 
+  Globe, 
+  Users, 
+  Award,
+  Star,
+  ArrowRight,
+  Calendar,
+  Video,
+  FileText
+} from 'lucide-react';
+import SEO from '@/components/SEO';
+import { Footer } from '@/components/Footer';
 
 const Contact: React.FC = () => {
   return (

@@ -40,8 +40,8 @@ import {
   DollarSign,
   Percent
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { REAL_INNOVATIVE_SERVICES_2025 } from '../data/realInnovativeServices2025';
+import SEO from '../components/SEO';
+import { INNOVATIVE_SERVICES_2025, InnovativeService2025 } from '../data/innovativeServices2025';
 
 export default function InnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = React.useState('');

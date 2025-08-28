@@ -29,6 +29,7 @@ import {
   VideoCall,
   Mailbox
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Support = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');

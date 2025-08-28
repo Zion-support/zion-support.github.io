@@ -1,25 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  Accessibility, 
-  Eye, 
-  Ear, 
-  MousePointer, 
-  Keyboard, 
-  Globe, 
-  Mail, 
-  Phone,
-  MapPin,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Shield,
-  Info,
-  Settings,
-  Users,
-  Heart
-} from 'lucide-react';
+import SEO from '@/components/SEO';
 
 const Accessibility: React.FC = () => {
   const currentYear = new Date().getFullYear();

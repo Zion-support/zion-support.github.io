@@ -1,5 +1,166 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Target, 
+  TrendingUp, 
+  Users, 
+  Globe, 
+  Cpu, 
+  Lock, 
+  Heart, 
+  Star,
+  ArrowRight,
+  CheckCircle,
+  BarChart3,
+  MessageCircle,
+  BookOpen,
+  ShoppingCart,
+  DollarSign,
+  Gauge,
+  HelpCircle,
+  Search,
+  PenTool,
+  Workflow,
+  Atom,
+  Truck,
+  Building,
+  Database,
+  Network,
+  Award,
+  Lightbulb,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Globe2,
+  MessageSquare,
+  ShoppingBag,
+  FileText,
+  Settings,
+  Calendar,
+  Clock,
+  MapPin,
+  Phone,
+  Mail,
+  Eye
+} from 'lucide-react';
+import SEO from '../components/SEO';
+
+export default function AISolutions() {
+  const aiSolutions = [
+    {
+      category: 'AI Business Intelligence',
+      solutions: [
+        {
+          name: 'AI Business Intelligence',
+          href: '/services/ai-business-intelligence',
+          icon: Brain,
+          description: 'Advanced AI-powered analytics and business intelligence',
+          features: ['Predictive analytics', 'Real-time insights', 'Custom dashboards']
+        },
+        {
+          name: 'AI Data Analytics',
+          href: '/services/ai-data-analytics',
+          icon: BarChart3,
+          description: 'Intelligent data processing and visualization',
+          features: ['Data mining', 'Pattern recognition', 'Automated reporting']
+        },
+        {
+          name: 'AI Financial Analytics',
+          href: '/services/ai-financial-analytics',
+          icon: DollarSign,
+          description: 'AI-driven financial insights and forecasting',
+          features: ['Risk assessment', 'Portfolio optimization', 'Fraud detection']
+        }
+      ]
+    },
+    {
+      category: 'AI Workflow Automation',
+      solutions: [
+        {
+          name: 'AI Workflow Automation',
+          href: '/services/ai-workflow-automation',
+          icon: Workflow,
+          description: 'Intelligent process automation and optimization',
+          features: ['Process mining', 'Automated workflows', 'Performance optimization']
+        },
+        {
+          name: 'AI Project Manager',
+          href: '/services/ai-project-manager',
+          icon: Target,
+          description: 'AI-powered project management and planning',
+          features: ['Resource optimization', 'Risk prediction', 'Timeline automation']
+        },
+        {
+          name: 'AI Content Generator',
+          href: '/services/ai-content-generator',
+          icon: PenTool,
+          description: 'Automated content creation and optimization',
+          features: ['SEO optimization', 'Multi-format output', 'Brand consistency']
+        }
+      ]
+    },
+    {
+      category: 'AI Cybersecurity',
+      solutions: [
+        {
+          name: 'AI Cybersecurity Platform',
+          href: '/services/ai-cybersecurity',
+          icon: Shield,
+          description: 'Intelligent threat detection and response',
+          features: ['Real-time monitoring', 'Behavioral analysis', 'Automated response']
+        },
+        {
+          name: 'AI Compliance Assistant',
+          href: '/services/ai-compliance-assistant',
+          icon: Lock,
+          description: 'Automated regulatory compliance management',
+          features: ['GDPR compliance', 'Audit automation', 'Risk assessment']
+        }
+      ]
+    }
+  ];
+
+  const stats = [
+    { label: 'AI Models Deployed', value: '500+', icon: Brain },
+    { label: 'Data Points Processed', value: '10M+', icon: Database },
+    { label: 'Accuracy Rate', value: '99.7%', icon: Target },
+    { label: 'Cost Reduction', value: '40%', icon: DollarSign }
+  ];
+
+  const capabilities = [
+    {
+      title: 'Machine Learning & Deep Learning',
+      description: 'Advanced neural networks and predictive modeling',
+      icon: Brain,
+      features: ['Neural Networks', 'Deep Learning', 'Predictive Analytics']
+    },
+    {
+      title: 'Natural Language Processing',
+      description: 'Understanding and processing human language',
+      icon: MessageCircle,
+      features: ['Text Analysis', 'Language Generation', 'Sentiment Analysis']
+    },
+    {
+      title: 'Computer Vision',
+      description: 'Image and video recognition capabilities',
+      icon: Eye,
+      features: ['Object Detection', 'Facial Recognition', 'Image Classification']
+    },
+    {
+      title: 'Predictive Analytics',
+      description: 'Forecasting future trends and behaviors',
+      icon: TrendingUp,
+      features: ['Trend Analysis', 'Risk Assessment', 'Performance Prediction']
+    }
+  ];
 
 export default function AiSolutions() {
   return (

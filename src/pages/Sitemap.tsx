@@ -49,7 +49,7 @@ import {
   Award,
   ChevronRight
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '../components/SEO';
 
 interface SitemapSection {
   title: string;

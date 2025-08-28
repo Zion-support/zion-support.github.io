@@ -65,6 +65,7 @@ import {
   Chip,
   Circuit
 } from 'lucide-react';
+import SEO from '@/components/SEO';
 
 const IoTEdgeComputing = () => {
   const features = [

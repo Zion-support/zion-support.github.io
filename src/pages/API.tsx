@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Code, Database, Shield, Zap, Globe, Users, BookOpen, Download, Play, Terminal, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink } from 'lucide-react';
 

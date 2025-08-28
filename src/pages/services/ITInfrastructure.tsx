@@ -1,45 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Network, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  BarChart3,
-  TrendingUp,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  HardDrive,
-  Wifi,
-  Lock,
-  Shield,
-  Cloud,
-  Database2,
-  Router
-} from 'lucide-react';
+import { Server, Network, Shield, Database, Cloud, Zap, CheckCircle, ArrowRight, Cpu, HardDrive, Monitor, Users, Globe, Lock, BarChart3, Clock } from 'lucide-react';
+import SEO from '@/components/SEO';
+import { Link } from 'react-router-dom';
 
 const ITInfrastructure = () => {
   const features = [
