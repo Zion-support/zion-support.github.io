@@ -4,7 +4,8 @@ import {
     Brain,
     CheckCircle,
     Globe,
-    Shield
+    Shield,
+    Users
 } from 'lucide-react';
 
 // Animation variants
@@ -28,6 +29,40 @@ const itemVariants = {
     }
   }
 };
+
+const achievementVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
+const techVariants = {
+  hidden: { opacity: 0, y: 10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.4,
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const achievements = [
+  { icon: Users, number: "10K+", label: "Active Users", color: "text-zion-cyan" },
+  { icon: Globe, number: "150+", label: "Countries", color: "text-zion-purple" },
+  { icon: Shield, number: "99.9%", label: "Uptime", color: "text-zion-green" },
+  { icon: Award, number: "50+", label: "Awards", color: "text-zion-orange" }
+];
+
+const technologies = [
+  "React", "TypeScript", "Node.js", "Python", "AI/ML", "Blockchain", "Cloud", "DevOps"
+];
 
 const highlights = [
   {
