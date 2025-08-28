@@ -42,6 +42,8 @@ const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPa
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const CuttingEdgeServices2025 = React.lazy(() => import('./pages/CuttingEdgeServices2025'));
+const ComprehensiveServicesOverview2025 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2025'));
 
 // Service pages
 const CybersecurityServices = React.lazy(() => import('./pages/CybersecurityServices.tsx'));
@@ -157,6 +159,12 @@ function App() {
               
               {/* Revolutionary Services Routes */}
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServicesShowcase2030 />} />
+              
+              {/* Cutting Edge Services Routes */}
+              <Route path="/cutting-edge-services-2025" element={<CuttingEdgeServices2025 />} />
+              
+              {/* Comprehensive Services Routes */}
+              <Route path="/comprehensive-services-overview-2025" element={<ComprehensiveServicesOverview2025 />} />
               
               {/* Company Routes */}
               <Route path="/leadership" element={<About />} />
