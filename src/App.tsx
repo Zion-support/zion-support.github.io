@@ -47,6 +47,12 @@ const News = lazy(() => import('./pages/News'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
+// New innovative services pages
+const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
+const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const ITServices = lazy(() => import('./pages/ITServices'));
@@ -64,7 +70,6 @@ const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
@@ -123,7 +128,6 @@ const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessInt
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 
 // 2025 Innovative Services
-const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Additional missing imports
@@ -169,7 +173,6 @@ const DeveloperPortal = lazy(() => import('./pages/DeveloperPortal'));
 const ApiDemo = lazy(() => import('./components/ApiDemo'));
 
 // Additional pages
-const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
@@ -320,7 +323,9 @@ function App() {
                     
                     {/* Comprehensive Service Routes */}
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                    <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                     <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
                     
