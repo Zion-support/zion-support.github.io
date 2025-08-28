@@ -81,8 +81,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Careers', href: '/careers', icon: Briefcase },
         { name: 'Partners', href: '/partners', icon: Users },
         { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle },
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Help Center', href: '/help', icon: HelpCircle }
       ]
     },
     {
@@ -146,7 +145,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
-        { name: 'Privacy Policy', href: '/privacy', icon: Shield }
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield }
       ]
     },
     {
@@ -157,7 +156,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: TrendingUp },
         { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart }
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
+        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }
       ]
     },
     {
@@ -169,7 +172,16 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Autonomous Research', href: '/services/ai-autonomous-research-assistant', icon: Brain },
         { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye }
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
+        { name: 'Space Technology', href: '/space-tech', icon: Satellite }
+      ]
+    },
+    {
+      title: 'Data & Analytics',
+      icon: BarChart3,
+      items: [
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'Business Intelligence', href: '/services/ai-business-intelligence-analytics', icon: TrendingUp }
       ]
     },
     {
