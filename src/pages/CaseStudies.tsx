@@ -1,69 +1,16 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { ArrowRight, Users, Clock } from 'lucide-react';
 
 export default function CaseStudies() {
-  const studies = [
-    { id: 1, title: 'AI-Powered Customer Service Transformation', company: 'Global Retail Corp', industry: 'Retail', duration: '6 months', roi: '320%', investment: '$250,000', results: ['40% cost reduction', '85% faster responses', '92% CSAT'] },
-    { id: 2, title: 'Zero Trust Security Implementation', company: 'MediTech Solutions', industry: 'Healthcare', duration: '8 months', roi: '280%', investment: '$500,000', results: ['99.9% threat detection', '0 breaches in 18 months'] },
-  ];
-
   return (
-    <div className="min-h-screen bg-white">
-      <SEO title="Case Studies" description="Success stories powered by Zion Tech Group." />
-
-      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Case Studies</h1>
-          <p className="text-xl md:text-2l text-zion-slate-light max-w-3xl mx-auto">Real-world examples of how we transform organizations through innovative technology.</p>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {studies.map((study) => (
-              <div key={study.id} className="bg-white border border-zion-slate-light/20 rounded-xl p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-sm font-medium rounded-full">{study.industry}</span>
-                  <div className="flex items-center space-x-2 text-zion-slate-light">
-                    <Clock className="w-4 h-4" />
-                    <span className="text-sm">{study.duration}</span>
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-zion-slate-dark mb-2">{study.title}</h3>
-                <div className="flex items-center space-x-2 mb-4">
-                  <Users className="w-4 h-4 text-zion-slate-light" />
-                  <span className="text-zion-slate-light">{study.company}</span>
-                </div>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-3 bg-zion-slate-light/5 rounded-lg">
-                    <div className="text-2xl font-bold text-zion-cyan">{study.roi}</div>
-                    <div className="text-sm text-zion-slate-light">ROI</div>
-                  </div>
-                  <div className="text-center p-3 bg-zion-slate-light/5 rounded-lg">
-                    <div className="text-2xl font-bold text-zion-purple">{study.investment}</div>
-                    <div className="text-sm text-zion-slate-light">Investment</div>
-                  </div>
-                </div>
-                <ul className="space-y-2 mb-6">
-                  {study.results.map((r, i) => (
-                    <li key={i} className="flex items-start text-zion-slate-light">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      {r}
-                    </li>
-                  ))}
-                </ul>
-                <button className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300">
-                  View Full Case Study
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
+    <div className="min-h-screen bg-slate-900 text-white">
+      <SEO title="Case Studies - Zion Tech Group" description="Client success stories and outcomes." />
+      <section className="py-24 text-center">
+        <h1 className="text-5xl font-bold mb-4">Case Studies</h1>
+        <p className="text-slate-300 max-w-2xl mx-auto">
+          Explore how we help clients achieve measurable results with AI, cloud, and cybersecurity.
+        </p>
       </section>
     </div>
   );
 }
-

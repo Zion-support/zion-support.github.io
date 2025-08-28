@@ -69,7 +69,11 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Home", href: "/", icon: Home },
         { name: "Solutions", href: "/solutions", icon: Target },
         { name: "Services", href: "/services", icon: Zap },
+<<<<<<< HEAD
+        { name: "Solutions", href: "/solutions", icon: Globe },
+=======
         { name: "Case Studies", href: "/case-studies", icon: FileText },
+>>>>>>> origin/cursor/website-audit-and-enhancement-7cad
         { name: "Blog", href: "/blog", icon: FileText },
         { name: "Partners", href: "/partners", icon: Handshake },
         { name: "About", href: "/about", icon: Users },
@@ -102,10 +106,26 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Developer Portal", href: "/developer", icon: Cpu },
         { name: "Support Center", href: "/help-center", icon: HelpCircle },
         { name: "FAQ", href: "/faq", icon: HelpCircle },
+<<<<<<< HEAD
+        { name: "Blog", href: "/blog", icon: FileText },
+        { name: "Case Studies", href: "/case-studies", icon: BarChart3 }
+      ]
+    },
+    {
+      title: "Company",
+      icon: Building,
+      items: [
+        { name: "Our Team", href: "/team", icon: Users },
+        { name: "Press Kit", href: "/press", icon: FileText },
+        { name: "News & Updates", href: "/news", icon: Calendar },
+        { name: "Investor Relations", href: "/investors", icon: TrendingUp },
+        { name: "Sustainability", href: "/services/green-it", icon: Leaf }
+=======
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
         { name: "Login", href: "/login", icon: User },
         { name: "Support", href: "/support", icon: HelpCircle }
+>>>>>>> origin/cursor/website-audit-and-enhancement-7cad
       ]
     }
   ];

@@ -78,7 +78,15 @@ export function AppHeader() {
   // Quick links for easy access
   const quickLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+<<<<<<< HEAD
+    { name: 'Talent', href: '/talent', icon: Users },
+    { name: 'Equipment', href: '/equipment', icon: Cpu },
     { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+    { name: 'News', href: '/news', icon: MessageCircle },
+    { name: 'Events', href: '/events', icon: Calendar },
+=======
+    { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+>>>>>>> origin/cursor/website-audit-and-enhancement-7cad
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Sitemap', href: '/sitemap', icon: Globe },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
