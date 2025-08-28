@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 
@@ -6,19 +6,15 @@ import {
   Send, 
   Bot, 
   User, 
-  Sparkles, 
+  Sparkles,
   Loader2,
   Mic,
   MicOff,
-  Volume2,
-  VolumeX,
-  Settings,
-  HelpCircle,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket
+  Paperclip,
+  Image as ImageIcon,
+  FileText,
+  Download,
+  RefreshCw
 } from 'lucide-react';
 
 interface Message {
@@ -26,199 +22,220 @@ interface Message {
   type: 'user' | 'assistant';
   content: string;
   timestamp: Date;
-  isLoading?: boolean;
-  error?: string;
+  attachments?: Attachment[];
+}
+
+interface Attachment {
+  id: string;
+  name: string;
+  type: 'image' | 'document' | 'file';
+  url: string;
+  size?: string;
 }
 
 interface ChatAssistantProps {
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'dark' | 'light' | 'auto';
-  maxHeight?: string;
+  theme?: 'light' | 'dark' | 'auto';
   welcomeMessage?: string;
+  placeholder?: string;
+  maxHeight?: string;
 }
 
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({
+export function ChatAssistant({
   position = 'bottom-right',
-  theme = 'dark',
-  maxHeight = '600px',
-  welcomeMessage = "Hello! I'm Zion, your AI assistant. How can I help you today?"
-}) => {
+  theme = 'auto',
+  welcomeMessage = "Hi! I'm your AI assistant. How can I help you today?",
+  placeholder = "Type your message...",
+  maxHeight = "500px"
+}: ChatAssistantProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
       type: 'assistant',
       content: welcomeMessage,
-      timestamp: new Date(),
+      timestamp: new Date()
     }
   ]);
-  const [inputValue, setIsInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [isListening, setIsListening] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
+  const [isConnected, setIsConnected] = useState(true);
+  const [suggestions] = useState([
+    "Tell me about your services",
+    "How can AI help my business?",
+    "What are your pricing options?",
+    "Schedule a consultation"
+  ]);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<any>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Initialize speech recognition
+  // Handle theme changes
   useEffect(() => {
-    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = false;
-      recognitionRef.current.lang = 'en-US';
+    const handleThemeChange = () => {
+      if (theme === 'auto') {
+        const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.classList.toggle('dark', isDark);
+      } else {
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+      }
+    };
 
-      recognitionRef.current.onresult = (event: any) => {
-        const transcript = event.results[0][0].transcript;
-        setIsInputValue(transcript);
-        setIsListening(false);
-      };
-
-      recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
-        setIsListening(false);
-      };
+    handleThemeChange();
+    if (theme === 'auto') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      mediaQuery.addEventListener('change', handleThemeChange);
+      return () => mediaQuery.removeEventListener('change', handleThemeChange);
     }
-  }, []);
+  }, [theme]);
 
-  // Handle speech recognition
-  const toggleListening = useCallback(() => {
-    if (!recognitionRef.current) {
-      alert('Speech recognition is not supported in your browser');
-      return;
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      setTimeout(() => inputRef.current?.focus(), 300);
     }
+  };
 
-    if (isListening) {
-      recognitionRef.current.stop();
-      setIsListening(false);
-    } else {
-      recognitionRef.current.start();
-      setIsListening(true);
-    }
-  }, [isListening]);
-
-  // Toggle mute
-  const toggleMute = useCallback(() => {
-    setIsMuted(!isMuted);
-  }, [isMuted]);
-
-  // Send message
-  const sendMessage = useCallback(async (content: string) => {
-    if (!content.trim()) return;
+  const handleSendMessage = async () => {
+    if (!inputValue.trim() || isTyping) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
       type: 'user',
-      content: content.trim(),
-      timestamp: new Date(),
+      content: inputValue.trim(),
+      timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
-    setIsInputValue('');
+    setInputValue('');
     setIsTyping(true);
 
-    // Simulate AI response (replace with actual AI API call)
-    try {
-      const response = await generateAIResponse(content);
-      
-      const assistantMessage: Message = {
+    // Simulate AI response
+    setTimeout(() => {
+      const aiResponse: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: response,
-        timestamp: new Date(),
+        content: generateAIResponse(inputValue.trim()),
+        timestamp: new Date()
       };
 
-      setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      const errorMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        type: 'assistant',
-        content: 'Sorry, I encountered an error. Please try again.',
-        timestamp: new Date(),
-        error: 'Failed to generate response',
-      };
-
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
+      setMessages(prev => [...prev, aiResponse]);
       setIsTyping(false);
-    }
-  }, []);
-
-  // Generate AI response (simulated)
-  const generateAIResponse = async (userInput: string): Promise<string> => {
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
-
-    const responses = [
-      "That's a great question! Let me help you with that.",
-      "I understand your inquiry. Here's what I can tell you about that topic.",
-      "Based on your question, I'd recommend exploring our services in that area.",
-      "That's an interesting point. Let me provide you with some insights.",
-      "I'm here to help! Let me guide you through this.",
-    ];
-
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
-    
-    // Add some context-aware responses
-    if (userInput.toLowerCase().includes('ai') || userInput.toLowerCase().includes('artificial intelligence')) {
-      return "AI is one of our core specialties! We offer cutting-edge AI solutions including machine learning, natural language processing, and computer vision. Would you like to learn more about our AI services?";
-    }
-    
-    if (userInput.toLowerCase().includes('cloud') || userInput.toLowerCase().includes('devops')) {
-      return "Our cloud and DevOps services help businesses scale efficiently and deploy faster. We specialize in AWS, Azure, and Google Cloud solutions. Should I connect you with our cloud experts?";
-    }
-    
-    if (userInput.toLowerCase().includes('security') || userInput.toLowerCase().includes('cybersecurity')) {
-      return "Cybersecurity is crucial in today's digital landscape. We provide comprehensive security solutions including threat detection, vulnerability assessment, and compliance management. Would you like a security consultation?";
-    }
-
-    return randomResponse;
+    }, 1000 + Math.random() * 2000);
   };
 
-  // Handle form submission
-  const handleSubmit = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    sendMessage(inputValue);
-  }, [inputValue, sendMessage]);
+  const generateAIResponse = (userInput: string): string => {
+    const responses = {
+      services: "We offer comprehensive AI solutions including business intelligence, data analytics, cloud infrastructure, and custom software development. Our services are designed to transform your business operations.",
+      pricing: "Our pricing is flexible and based on your specific needs. We offer subscription plans starting at $99/month and custom enterprise solutions. Would you like me to connect you with our sales team?",
+      consultation: "I'd be happy to schedule a consultation! Our experts can discuss your specific needs and provide a tailored solution. What's the best time for you?",
+      ai: "AI can revolutionize your business by automating processes, providing insights from data, improving customer experiences, and optimizing operations. We specialize in implementing AI solutions that deliver real ROI.",
+      default: "That's a great question! I'd be happy to help you with that. Could you provide a bit more context so I can give you the most accurate and helpful response?"
+    };
 
-  // Quick action buttons
-  const quickActions = [
-    { text: 'AI Services', icon: Brain, action: () => sendMessage('Tell me about your AI services') },
-    { text: 'Cloud Solutions', icon: Cloud, action: () => sendMessage('What cloud solutions do you offer?') },
-    { text: 'Security', icon: Shield, action: () => sendMessage('Tell me about your security services') },
-    { text: 'Innovation', icon: Rocket, action: () => sendMessage('What makes Zion Tech Group innovative?') },
-  ];
+    const lowerInput = userInput.toLowerCase();
+    if (lowerInput.includes('service')) return responses.services;
+    if (lowerInput.includes('price') || lowerInput.includes('cost')) return responses.pricing;
+    if (lowerInput.includes('consult') || lowerInput.includes('meet')) return responses.consultation;
+    if (lowerInput.includes('ai') || lowerInput.includes('artificial intelligence')) return responses.ai;
+    
+    return responses.default;
+  };
 
-  // Position classes
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
+    }
+  };
+
+  const handleSuggestionClick = (suggestion: string) => {
+    setInputValue(suggestion);
+    inputRef.current?.focus();
+  };
+
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (files && files.length > 0) {
+      const file = files[0];
+      const attachment: Attachment = {
+        id: Date.now().toString(),
+        name: file.name,
+        type: file.type.startsWith('image/') ? 'image' : 'document',
+        url: URL.createObjectURL(file),
+        size: formatFileSize(file.size)
+      };
+
+      const message: Message = {
+        id: Date.now().toString(),
+        type: 'user',
+        content: `Sent: ${file.name}`,
+        timestamp: new Date(),
+        attachments: [attachment]
+      };
+
+      setMessages(prev => [...prev, message]);
+    }
+  };
+
+  const formatFileSize = (bytes: number): string => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
+  const toggleRecording = () => {
+    setIsRecording(!isRecording);
+    // Here you would implement actual voice recording functionality
+  };
+
   const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4',
+    'bottom-right': 'bottom-6 right-6',
+    'bottom-left': 'bottom-6 left-6',
+    'top-right': 'top-6 right-6',
+    'top-left': 'top-6 left-6'
   };
 
   return (
-    <div className={`fixed ${positionClasses[position]} z-50`}>
+    <>
       {/* Chat Toggle Button */}
       <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
+        onClick={toggleChat}
+        className={`fixed ${positionClasses[position]} z-50 p-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300/50"
-        aria-label="Open chat assistant"
+        title="Chat with AI Assistant"
       >
-        <MessageCircle className="w-6 h-6" />
+        <AnimatePresence mode="wait">
+          {isOpen ? (
+            <motion.div
+              key="close"
+              initial={{ rotate: -90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: 90, opacity: 0 }}
+            >
+              <X className="w-6 h-6" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="chat"
+              initial={{ rotate: 90, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: -90, opacity: 0 }}
+            >
+              <MessageCircle className="w-6 h-6" />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.button>
 
       {/* Chat Window */}
@@ -228,265 +245,193 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className={`absolute bottom-16 right-0 w-96 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl overflow-hidden ${isMinimized ? 'h-16' : ''}`}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            className={`fixed ${positionClasses[position]} z-40 w-96 max-w-[90vw] bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden`}
+            style={{ maxHeight: maxHeight }}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 bg-gradient-to-r from-slate-800 to-slate-700 border-b border-slate-600/50">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                  <Bot className="w-4 h-4 text-white" />
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className="relative">
+                    <Bot className="w-6 h-6" />
+                    <motion.div
+                      className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"
+                      animate={{ scale: [1, 1.2, 1] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">AI Assistant</h3>
+                    <p className="text-blue-100 text-sm">
+                      {isConnected ? 'Online' : 'Offline'}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-white">Zion AI Assistant</h3>
-                  <p className="text-xs text-slate-400">Powered by AI</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-2">
                 <button
-                  onClick={() => setIsMinimized(!isMinimized)}
-                  className="p-1 text-slate-400 hover:text-white transition-colors"
-                  aria-label={isMinimized ? 'Expand chat' : 'Minimize chat'}
+                  onClick={toggleChat}
+                  className="p-1 hover:bg-white/20 rounded-full transition-colors"
                 >
-                  {isMinimized ? '□' : '−'}
-                </button>
-                <button
-                  onClick={() => setShowSettings(!showSettings)}
-                  className="p-1 text-slate-400 hover:text-white transition-colors"
-                  aria-label="Settings"
-                >
-                  <Settings className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="p-1 text-slate-400 hover:text-white transition-colors"
-                  aria-label="Close chat"
-                >
-                  <X className="w-4 h-4" />
+                  <X className="w-5 h-5" />
                 </button>
               </div>
             </div>
 
-            {!isMinimized && (
-              <>
-                {/* Messages */}
-                <div 
-                  className="flex-1 overflow-y-auto p-4 space-y-4"
-                  style={{ maxHeight: maxHeight }}
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto p-4 space-y-4" style={{ maxHeight: 'calc(100vh - 200px)' }}>
+              {messages.map((message) => (
+                <motion.div
+                  key={message.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
-                  {messages.map((message) => (
-                    <motion.div
-                      key={message.id}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                    >
-                      <div
-                        className={`max-w-[80%] p-3 rounded-2xl ${
-                          message.type === 'user'
-                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                            : 'bg-slate-700/50 text-slate-200 border border-slate-600/50'
-                        }`}
-                      >
-                        <div className="flex items-start gap-2">
-                          {message.type === 'assistant' && (
-                            <Bot className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                          )}
-                          <div className="flex-1">
-                            <p className="text-sm leading-relaxed">{message.content}</p>
-                            {message.error && (
-                              <p className="text-xs text-red-400 mt-1">{message.error}</p>
-                            )}
+                  <div className={`max-w-[80%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
+                    <div className={`flex items-start space-x-2 ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                        message.type === 'user' 
+                          ? 'bg-blue-500 text-white' 
+                          : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
+                      }`}>
+                        {message.type === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
+                      </div>
+                      <div className={`rounded-2xl px-4 py-2 ${
+                        message.type === 'user'
+                          ? 'bg-blue-500 text-white'
+                          : 'bg-slate-100 dark:bg-slate-700 text-slate-900 dark:text-white'
+                      }`}>
+                        <p className="text-sm">{message.content}</p>
+                        {message.attachments && (
+                          <div className="mt-2 space-y-2">
+                            {message.attachments.map((attachment) => (
+                              <div key={attachment.id} className="flex items-center space-x-2 p-2 bg-white/20 rounded">
+                                {attachment.type === 'image' ? (
+                                  <ImageIcon className="w-4 h-4" />
+                                ) : (
+                                  <FileText className="w-4 h-4" />
+                                )}
+                                <span className="text-xs">{attachment.name}</span>
+                                {attachment.size && (
+                                  <span className="text-xs opacity-75">({attachment.size})</span>
+                                )}
+                              </div>
+                            ))}
                           </div>
-                          {message.type === 'user' && (
-                            <User className="w-4 h-4 text-white/80 mt-0.5 flex-shrink-0" />
-                          )}
-                        </div>
-                        <p className="text-xs opacity-70 mt-2">
-                          {message.timestamp.toLocaleTimeString()}
+                        )}
+                        <p className="text-xs opacity-75 mt-1">
+                          {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                         </p>
                       </div>
-                    </motion.div>
-                  ))}
-
-                  {/* Typing indicator */}
-                  {isTyping && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="flex justify-start"
-                    >
-                      <div className="bg-slate-700/50 text-slate-200 border border-slate-600/50 rounded-2xl p-3">
-                        <div className="flex items-center gap-2">
-                          <Bot className="w-4 h-4 text-cyan-400" />
-                          <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce"></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                            <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                          </div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  )}
-
-                  <div ref={messagesEndRef} />
-                </div>
-
-                {/* Quick Actions */}
-                {messages.length === 1 && (
-                  <div className="px-4 pb-4">
-                    <p className="text-xs text-slate-400 mb-3">Quick actions:</p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {quickActions.map((action, index) => (
-                        <motion.button
-                          key={action.text}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.1 }}
-                          onClick={action.action}
-                          className="flex items-center gap-2 p-2 bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 text-xs rounded-lg transition-colors border border-slate-600/50"
-                        >
-                          <action.icon className="w-3 h-3" />
-                          {action.text}
-                        </motion.button>
-                      ))}
                     </div>
                   </div>
-                )}
+                </motion.div>
+              ))}
 
-                {/* Input Form */}
-                <form onSubmit={handleSubmit} className="p-4 border-t border-slate-600/50">
-                  <div className="flex items-center gap-2">
-                    <div className="flex-1 relative">
-                      <input
-                        ref={inputRef}
-                        type="text"
-                        value={inputValue}
-                        onChange={(e) => setIsInputValue(e.target.value)}
-                        placeholder="Type your message..."
-                        className="w-full px-4 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500"
-                        disabled={isTyping}
-                      />
-                      {inputValue && (
-                        <button
-                          type="button"
-                          onClick={() => setIsInputValue('')}
-                          className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white"
-                        >
-                          <X className="w-4 h-4" />
-                        </button>
-                      )}
+              {/* Typing Indicator */}
+              {isTyping && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex justify-start"
+                >
+                  <div className="flex items-start space-x-2">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                      <Bot className="w-4 h-4 text-white" />
                     </div>
-                    
-                    <div className="flex items-center gap-1">
-                      <button
-                        type="button"
-                        onClick={toggleListening}
-                        className={`p-2 rounded-lg transition-colors ${
-                          isListening
-                            ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30'
-                            : 'bg-slate-700/50 text-slate-400 hover:bg-slate-600/50'
-                        }`}
-                        disabled={isTyping}
-                        aria-label={isListening ? 'Stop listening' : 'Start voice input'}
-                      >
-                        {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
-                      </button>
-                      
-                      <button
-                        type="button"
-                        onClick={toggleMute}
-                        className={`p-2 rounded-lg transition-colors ${
-                          isMuted
-                            ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30'
-                            : 'bg-slate-700/50 text-slate-400 hover:bg-slate-600/50'
-                        }`}
-                        aria-label={isMuted ? 'Unmute' : 'Mute'}
-                      >
-                        {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                      </button>
+                    <div className="bg-slate-100 dark:bg-slate-700 rounded-2xl px-4 py-2">
+                      <div className="flex items-center space-x-1">
+                        <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
+                        <span className="text-sm text-slate-600 dark:text-slate-300">AI is typing...</span>
+                      </div>
                     </div>
-                    
-                    <button
-                      type="submit"
-                      disabled={!inputValue.trim() || isTyping}
-                      className="p-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-                      aria-label="Send message"
+                  </div>
+                </motion.div>
+              )}
+
+              <div ref={messagesEndRef} />
+            </div>
+
+            {/* Quick Suggestions */}
+            {messages.length === 1 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="px-4 pb-3"
+              >
+                <div className="flex flex-wrap gap-2">
+                  {suggestions.map((suggestion, index) => (
+                    <motion.button
+                      key={index}
+                      onClick={() => handleSuggestionClick(suggestion)}
+                      className="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-xs hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                     >
-                      <Send className="w-4 h-4" />
+                      {suggestion}
+                    </motion.button>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
+            {/* Input Area */}
+            <div className="p-4 border-t border-slate-200 dark:border-slate-700">
+              <div className="flex items-end space-x-2">
+                <div className="flex-1 relative">
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    placeholder={placeholder}
+                    className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white dark:placeholder-slate-400"
+                    disabled={isTyping}
+                  />
+                  <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center space-x-1">
+                    <button
+                      onClick={() => fileInputRef.current?.click()}
+                      className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors"
+                      title="Attach file"
+                    >
+                      <Paperclip className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={toggleRecording}
+                      className={`p-1 transition-colors ${
+                        isRecording 
+                          ? 'text-red-500 hover:text-red-600' 
+                          : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
+                      }`}
+                      title={isRecording ? 'Stop recording' : 'Start recording'}
+                    >
+                      {isRecording ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                     </button>
                   </div>
-                </form>
-              </>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Settings Panel */}
-      <AnimatePresence>
-        {showSettings && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl p-4"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="font-semibold text-white">Chat Settings</h3>
-              <button
-                onClick={() => setShowSettings(false)}
-                className="text-slate-400 hover:text-white"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-            
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Theme
-                </label>
-                <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white">
-                  <option value="dark">Dark</option>
-                  <option value="light">Light</option>
-                  <option value="auto">Auto</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Position
-                </label>
-                <select className="w-full px-3 py-2 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white">
-                  <option value="bottom-right">Bottom Right</option>
-                  <option value="bottom-left">Bottom Left</option>
-                  <option value="top-right">Top Right</option>
-                  <option value="top-left">Top Left</option>
-                </select>
-              </div>
-              
-              <div className="pt-4 border-t border-slate-600/50">
+                </div>
                 <button
-                  onClick={() => {
-                    setMessages([{
-                      id: '1',
-                      type: 'assistant',
-                      content: welcomeMessage,
-                      timestamp: new Date(),
-                    }]);
-                    setShowSettings(false);
-                  }}
-                  className="w-full px-4 py-2 bg-slate-700/50 hover:bg-slate-600/50 text-white rounded-lg transition-colors"
+                  onClick={handleSendMessage}
+                  disabled={!inputValue.trim() || isTyping}
+                  className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-slate-400 disabled:to-slate-500 text-white rounded-lg transition-all duration-200 disabled:cursor-not-allowed"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  Clear Chat History
+                  <Send className="w-4 h-4" />
                 </button>
               </div>
             </div>
+
+            {/* Hidden file input */}
+            <input
+              ref={fileInputRef}
+              type="file"
+              onChange={handleFileUpload}
+              className="hidden"
+              accept="image/*,.pdf,.doc,.docx,.txt"
+            />
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
-};
+}
