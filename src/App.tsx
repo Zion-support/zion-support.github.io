@@ -46,14 +46,20 @@ const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/Compr
 
 // Add missing imports from remote branch
 const EnhancedContact = lazy(() => import('./pages/EnhancedContact').then(module => ({ default: module.default })));
+
+// New pages - only importing existing pages
+
+// Service pages with enhanced error boundaries
+const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps').then(module => ({ default: module.default })));
+const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin').then(module => ({ default: module.default })));
+const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics').then(module => ({ default: module.default })));
+const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure').then(module => ({ default: module.default })));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence').then(module => ({ default: module.default })));
+const MicroSaaSProducts = lazy(() => import('./pages/services/MicroSaaSProducts').then(module => ({ default: module.default })));
+
+// Additional pages from remote
 const Legal = lazy(() => import('./pages/Legal').then(module => ({ default: module.default })));
-const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServicesShowcase2027').then(module => ({ default: module.default })));
-const ComprehensiveServicesLanding2027 = lazy(() => import('./pages/ComprehensiveServicesLanding2027').then(module => ({ default: module.default })));
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029').then(module => ({ default: module.default })));
-const ScheduleDemo = lazy(() => import('./pages/ScheduleDemo').then(module => ({ default: module.default })));
-const Community = lazy(() => import('./pages/Community').then(module => ({ default: module.default })));
-const Developers = lazy(() => import('./pages/Developers').then(module => ({ default: module.default })));
-const Demo = lazy(() => import('./pages/Demo').then(module => ({ default: module.default })));
 
 // Service pages with enhanced error boundaries
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps').then(module => ({ default: module.default })));
@@ -165,6 +171,8 @@ function App() {
                 {/* Additional Routes */}
                 <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
                 <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
+                <Route path="/services/innovative-2025" element={<InnovativeServices2025 />} />
+                <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/developers" element={<Developers />} />
