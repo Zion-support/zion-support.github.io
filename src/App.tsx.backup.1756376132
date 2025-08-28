@@ -22,6 +22,7 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
+<<<<<<< HEAD
 // Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/about'));
@@ -51,6 +52,18 @@ const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/Comprehensi
 
 // New services overview page
 const InnovativeServicesOverview2025 = lazy(() => import('./pages/InnovativeServicesOverview2025'));
+=======
+// Core pages with optimized imports
+const Home = createLazyComponent(() => import('./pages/Home'));
+const About = createLazyComponent(() => import('./pages/About'));
+const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const ServicesOverview = createLazyComponent(() => import('./pages/ServicesOverview'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4151
 
 // Service pages
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
@@ -108,10 +121,6 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
-<<<<<<< HEAD
-// New AI Quantum Hybrid Platform
-const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
-=======
 // Comprehensive improvements components
 const AdvancedAIServicesHub = lazy(() => import('./components/AdvancedAIServicesHub'));
 const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
@@ -127,7 +136,6 @@ const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecur
 const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4905
 
 // 2029 Services Showcase
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
@@ -225,6 +233,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }) => (
 
 function App() {
   return (
+<<<<<<< HEAD
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
         <div className="App min-h-screen bg-white">
@@ -343,9 +352,6 @@ function App() {
                     <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
                     <Route path="/solutions/healthcare" element={<SolutionsHealthcare />} />
                     
-<<<<<<< HEAD
-                    {/* Enhanced services pages */}
-=======
                     {/* 2025 Innovative Services Routes */}
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
@@ -357,7 +363,6 @@ function App() {
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} />
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4905
                     <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                     
                     {/* New Enhanced Services Routes */}
@@ -510,5 +515,65 @@ function App() {
                       </div>
         </ErrorBoundary>
     </HelmetProvider>
+=======
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        <SEO 
+          title="Zion Tech Group - Leading AI & Technology Solutions"
+          description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
+          keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
+          ogImage="/og-image.jpg"
+          canonicalUrl="https://ziontechgroup.com"
+        />
+        
+        <AppHeader />
+        
+        <main className="relative">
+          <Suspense fallback={<EnhancedLoadingSpinner />}>
+            <Routes>
+              {/* Core Routes */}
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services-overview" element={<ServicesOverview />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/team" element={<Team />} />
+              
+              {/* Service Routes */}
+              <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/micro-saas" element={<MicroSaaS />} />
+              
+              {/* Additional Routes */}
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/faq" element={<FAQ />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/help" element={<HelpCenter />} />
+              
+              {/* Catch-all route */}
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </Suspense>
+        </main>
+        
+        <Footer />
+        <ChatAssistant />
+        <PerformanceOptimizer />
+        <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
+        <MobileExperienceEnhancer enabled={true} />
+        <PerformanceMonitor enabled={true} showMetrics={true} />
+        <AdvancedAnalytics enabled={true} showMetrics={true} />
+        <SmartNotificationSystem enabled={true} />
+        <FloatingActionButton />
+      </div>
+    </ErrorBoundary>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4151
   );
 }
