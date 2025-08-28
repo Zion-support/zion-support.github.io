@@ -68,32 +68,11 @@ const Events = React.lazy(() => import('./pages/Events'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Security = React.lazy(() => import('./pages/Security'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Talent = React.lazy(() => import('./pages/Talent'));
-const Equipment = React.lazy(() => import('./pages/Equipment'));
-const MarketplaceProducts = React.lazy(() => import('./pages/marketplace/Products'));
-const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'));
-const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
-const MarketplaceServices = React.lazy(() => import('./pages/marketplace/Services'));
-
-// New 2025 service imports
-const UltimateServicesShowcase2025 = React.lazy(() => import('./pages/UltimateServicesShowcase2025'));
-const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
-const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
-const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
-const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
-const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateServicesShowcase2028'));
-
-// New innovative services showcase and pricing guide
-const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
-const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
-
-// Sitemap-aligned pages
-const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
-const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
-const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -105,32 +84,7 @@ const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastruct
 const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
-const AIAutoEmailResponder = React.lazy(() => import('./pages/services/AIAutoEmailResponder'));
-const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/CustomerFeedbackSurveys'));
-const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
-const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
-const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
-const ReturnsManagement = React.lazy(() => import('./pages/services/ReturnsManagement'));
-const EmailSequencer = React.lazy(() => import('./pages/services/EmailSequencer'));
-const PodcastTranscription = React.lazy(() => import('./pages/services/PodcastTranscription'));
-const MicroCRM = React.lazy(() => import('./pages/services/micro-crm'));
-// New real service pages
-const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalytics'));
-const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
-const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
-const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
-const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
-const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
-const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
-const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
-const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
-// New innovative AI services
-const AIWorkflowAutomation = React.lazy(() => import('./pages/services/ai-workflow-automation'));
-const AIProjectManager = React.lazy(() => import('./pages/services/AIProjectManager'));
-const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGenerator'));
-const AICustomerSupport = React.lazy(() => import('./pages/services/AICustomerSupport'));
-const AIDataAnalytics = React.lazy(() => import('./pages/services/AIDataAnalytics'));
-const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const DigitalTransformation = React.lazy(() => import('./pages/DigitalTransformation'));
 
 // Additional innovative services
 const AIBlockchainIntegration = React.lazy(() => import('./pages/services/AIBlockchainIntegration'));
@@ -341,6 +295,8 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/faq" element={<FAQ />} />
+              <Route path="/help" element={<HelpCenterPage />} />
+              <Route path="/support" element={<HelpCenterPage />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/team" element={<Team />} />
@@ -358,29 +314,15 @@ function App() {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
-              <Route path="/system-status" element={<SystemStatus />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/partners" element={<Partners />} />
               <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/website-analyzer" element={<WebsiteAnalyzer />} />
-              <Route path="/sitemap-generator" element={<SitemapGenerator />} />
-              
-              {/* Additional Routes */}
-              <Route path="/events" element={<Events />} />
-              <Route path="/help" element={<Help />} />
-              <Route path="/security" element={<Security />} />
-              <Route path="/status" element={<Status />} />
-              <Route path="/cookies" element={<Cookies />} />
-              <Route path="/sitemap" element={<Sitemap />} />
-              <Route path="/talent" element={<Talent />} />
-              <Route path="/equipment" element={<Equipment />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/marketplace/products" element={<MarketplaceProducts />} />
-              <Route path="/marketplace/talent" element={<MarketplaceTalent />} />
-              <Route path="/marketplace/equipment" element={<MarketplaceEquipment />} />
-              <Route path="/marketplace/services" element={<MarketplaceServices />} />
-              <Route path="/login" element={<Login />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/services-advertising" element={<ServicesAdvertising />} />
+              {/* Aliases to match live domain URLs */}
+              <Route path="/ai-solutions" element={<AIServices />} />
+              <Route path="/services/infrastructure" element={<ITInfrastructure />} />
+              <Route path="/services/ai" element={<AIBusinessIntelligence />} />
+              <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
