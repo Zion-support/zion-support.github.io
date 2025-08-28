@@ -60,80 +60,82 @@ export function AppHeader() {
     localStorage.setItem('zion-theme', newTheme);
   };
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const navigationItems = [
-    {
-      name: 'Services',
-      href: '/services',
-      icon: Zap,
-      dropdown: [
-        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, description: 'Intelligent data analysis and insights' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
-        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud infrastructure and automation' },
-        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Internet of Things and edge computing' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, description: 'Next-generation quantum solutions' },
-        { name: 'Blockchain', href: '/services/blockchain', icon: Lock, description: 'Distributed ledger technology' },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, description: 'Virtual replica technology' },
-        { name: 'Sustainability', href: '/services/sustainability', icon: Heart, description: 'Green technology solutions' }
-      ]
-    },
-    {
-      name: 'Micro SAAS',
-      href: '/micro-saas',
-      icon: Code,
-      dropdown: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: Brain, description: 'AI-powered business insights' },
-        { name: 'Customer Experience', href: '/micro-saas/customer-experience', icon: Users, description: 'Enhanced customer engagement' },
-        { name: 'Quantum Computing', href: '/micro-saas/quantum-computing', icon: Rocket, description: 'Quantum advantage solutions' },
-        { name: 'Supply Chain', href: '/micro-saas/supply-chain', icon: Truck, description: 'Intelligent supply chain management' },
-        { name: 'Cybersecurity', href: '/micro-saas/cybersecurity', icon: Shield, description: 'Advanced security platforms' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, description: 'Edge computing solutions' },
-        { name: 'Content Creation', href: '/micro-saas/content-creation', icon: FileText, description: 'AI content generation' },
-        { name: 'HR Platform', href: '/micro-saas/hr-platform', icon: Users, description: 'Intelligent HR management' }
-      ]
-    },
-    {
-      name: 'IT Services',
-      href: '/it-services',
-      icon: Network,
-      dropdown: [
-        { name: 'Infrastructure', href: '/it-services/infrastructure', icon: Server, description: 'IT infrastructure solutions' },
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Sparkles, description: 'Business transformation' },
-        { name: 'Consulting', href: '/it-services/consulting', icon: Lightbulb, description: 'Technology consulting' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support', icon: Users, description: 'Professional IT support' },
-        { name: 'Green IT', href: '/it-services/green-it', icon: Heart, description: 'Sustainable technology' },
-        { name: '5G Solutions', href: '/it-services/5g-solutions', icon: Network, description: 'Next-generation connectivity' }
-      ]
-    },
-    {
-      name: 'Marketplace',
-      href: '/marketplace',
-      icon: Building,
-      dropdown: [
-        { name: 'Products', href: '/marketplace/products', icon: Package, description: 'Technology products' },
-        { name: 'Talent', href: '/marketplace/talent', icon: Users, description: 'Expert professionals' },
-        { name: 'Equipment', href: '/marketplace/equipment', icon: Cpu, description: 'Hardware and equipment' },
-        { name: 'Services', href: '/marketplace/services', icon: Zap, description: 'Professional services' }
-      ]
-    },
-    {
-      name: 'Company',
-      href: '/about',
-      icon: Users,
-      dropdown: [
-        { name: 'About Us', href: '/about', icon: Building, description: 'Our story and mission' },
-        { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
-        { name: 'Careers', href: '/careers', icon: Target, description: 'Join our team' },
-        { name: 'Partners', href: '/partners', icon: Handshake, description: 'Partnership opportunities' },
-        { name: 'Blog', href: '/blog', icon: FileText, description: 'Latest insights' },
-        { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch' }
-      ]
-    }
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Services', href: '/services', current: false },
+    { name: '2026 Services', href: '/services2026', current: false, featured: true },
+    { name: 'Revolutionary 2030', href: '/revolutionary-services-2030', current: false, featured: true },
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'Research', href: '/research-development', current: false },
+    { name: 'Events', href: '/events', current: false },
+    { name: 'News', href: '/news', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Partners', href: '/partners', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Help', href: '/help', current: false },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Careers', href: '/careers', current: false },
   ];
 
+  const services = [
+    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation' },
+    { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Quantum Solutions' },
+    { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IoT & Edge', href: '/services/it-infrastructure', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business Intelligence & Insights' },
+    { name: 'Healthcare Tech', href: '/services/ai-compliance-assistant', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability', href: '/services/green-it', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
+    { name: 'Mobile Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
+    { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart, description: 'E‑commerce RMA automation' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated follow‑ups' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen, description: 'Transcripts & show notes' },
+    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Local business CRM' },
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: Gauge, description: 'Privacy-first SMB analytics' },
+    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'Tickets, SLAs, portals' },
+    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: ShoppingCart, description: 'Partner revenue platform' },
+    { name: 'AI SEO Optimizer', href: '/services/ai-seo', icon: Search, description: 'Semantic SEO & content briefs' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'Structured interviews & scoring' },
+    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Tickets, KB, chat & AI' },
+    { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA request workflow' },
+    { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield, description: 'HSTS/CSP automation' },
+    { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Target, description: 'Intelligent project management' },
+    { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'AI-powered content creation' },
+    { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: '24/7 intelligent support' },
+    { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: BarChart3, description: 'Predictive business intelligence' },
+    { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Target, description: 'Smart marketing optimization' },
+  ];
+
+  const quickLinks = [
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Partners', href: '/partners', icon: Users },
+    { name: 'Careers', href: '/careers', icon: Users },
+    { name: 'Help Center', href: '/help', icon: MessageCircle },
+  ];
+
+  const featuredServices = [
+    { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
+  ];
   return (
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${

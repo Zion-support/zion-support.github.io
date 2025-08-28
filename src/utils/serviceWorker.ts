@@ -300,9 +300,12 @@ export class ServiceWorkerManager {
         return null;
       }
 
+      const vapidKey = process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '';
+      const applicationServerKey = this.urlBase64ToUint8Array(vapidKey);
+
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
-        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
+        applicationServerKey: applicationServerKey as ArrayBufferView
       });
 
       console.log('Push subscription created:', subscription);

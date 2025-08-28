@@ -75,7 +75,24 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Featured Services',
+      title: 'Revolutionary 2030',
+      featured: true,
+      links: [
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', featured: true },
+        { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
+        { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
+        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' },
+        { name: 'AI Sales Intelligence', href: '/revolutionary-services-2030#ai-sales-intelligence-2030' },
+        { name: 'AI Customer Support', href: '/revolutionary-services-2030#ai-customer-support-automation-2030' },
+        { name: 'AI Data Analytics & BI', href: '/revolutionary-services-2030#ai-data-analytics-bi-2030' },
+        { name: 'Cloud Infrastructure & DevOps', href: '/revolutionary-services-2030#cloud-infrastructure-devops-2030' },
+        { name: 'IoT Edge Computing', href: '/revolutionary-services-2030#iot-edge-computing-2030' },
+        { name: 'Digital Twin Platform', href: '/revolutionary-services-2030#digital-twin-platform-2030' },
+        { name: 'Blockchain Web3 Platform', href: '/revolutionary-services-2030#blockchain-web3-platform-2030' }
+      ]
+    },
+    {
+      title: '2026 Services',
       featured: true,
       links: [
         { name: '2026 Services Overview', href: '/services2026', featured: true },
