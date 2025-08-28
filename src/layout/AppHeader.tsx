@@ -92,6 +92,8 @@ export default function AppHeader() {
     { name: 'Home', href: '/', current: true, icon: Home, description: 'Welcome to Zion Tech Group' },
     { name: 'Services', href: '/services', current: false, icon: Rocket, description: 'Explore our services' },
     { name: 'Innovative 2025', href: '/innovative-services-landing-2025', current: false, featured: true, icon: Sparkles, description: 'Latest innovations' },
+    { name: '2029 Services', href: '/innovative-services-2029', current: false, featured: true, icon: Star, description: '2029 innovations' },
+    { name: 'All Services 2029', href: '/comprehensive-services-2029', current: false, featured: true, icon: Star, description: 'Complete 2029 services' },
     { name: '2026 Services', href: '/services2026', current: false, featured: true, icon: Star, description: 'Future services' },
     { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2027', current: false, icon: DollarSign, description: 'Comprehensive pricing' },
     { name: 'Revolutionary 2030', href: '/revolutionary-services-2030', current: false, featured: true, icon: Rocket, description: 'Future vision' },
@@ -121,6 +123,14 @@ export default function AppHeader() {
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent Process Automation' },
     { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'AI Autonomous Code Reviewer', href: '/services/ai-autonomous-code-reviewer', icon: Brain, description: 'Intelligent code review automation' },
+    { name: 'AI-Powered SEO Optimizer', href: '/services/ai-powered-seo-optimizer', icon: Search, description: 'AI-driven SEO optimization' },
+    { name: 'AI Interview Assessment Platform', href: '/services/ai-interview-assessment-platform', icon: Users, description: 'Intelligent candidate evaluation' },
+    { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Shield, description: 'Advanced network security' },
+    { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield, description: 'AI-powered threat detection' },
+    { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform', icon: BarChart3, description: 'AI-powered analytics' },
+    { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent process automation' },
     { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Quantum Solutions' },
     { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Cpu, description: 'Smart Devices & Networks' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
@@ -130,7 +140,7 @@ export default function AppHeader() {
     { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business Intelligence & Insights' },
     { name: 'Healthcare Tech', href: '/services/ai-compliance-assistant', icon: Heart, description: 'AI Medicine & Diagnostics' },
     { name: 'Sustainability', href: '/services/green-it', icon: Globe, description: 'Green IT Solutions' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    { name: 'Micro SaaS', href: '/services/ai-compliance-assistant', icon: ShoppingCart, description: 'Productized SaaS for niches' },
     { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
     { name: 'Mobile Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
@@ -162,6 +172,12 @@ export default function AppHeader() {
     { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }
   ];
 
+  const featuredServices = [
+    { name: '2029 Services', href: '/innovative-services-2029', icon: Star, description: 'Cutting-edge AI, Cybersecurity & Micro SaaS', category: 'Featured', featured: true },
+    { name: '2026 Services', href: '/services2026', icon: Star, description: 'Revolutionary AI, Quantum & Micro SaaS', category: 'Featured', featured: true },
+    { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced AI-powered analytics', category: 'AI & Analytics', featured: true },
+    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Next-generation quantum solutions', category: 'Quantum Computing', featured: true },
+  ];
   return (
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${

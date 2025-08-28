@@ -104,6 +104,9 @@ const footerSections = [
       { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
       { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Truck },
       { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+      { name: 'AI Autonomous Code Reviewer', path: '/services/ai-autonomous-code-reviewer', icon: Code },
+      { name: 'AI-Powered SEO Optimizer', path: '/services/ai-powered-seo-optimizer', icon: Search },
+      { name: 'AI Interview Assessment Platform', path: '/services/ai-interview-assessment-platform', icon: Users },
       { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: TrendingUp },
       { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
       { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
@@ -158,6 +161,7 @@ const footerSections = [
       { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Coins },
       { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
       { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
+      { name: 'AI Business Intelligence Platform', path: '/services/ai-business-intelligence-platform', icon: BarChart3 },
       { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
       { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
       { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
@@ -168,10 +172,12 @@ const footerSections = [
     icon: Shield,
     links: [
       { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Lock },
+      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
+      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
       { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Shield },
       { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
-      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
-      { name: 'AI Compliance Copilot', path: '/services/ai-compliance-copilot', icon: CheckCircle }
+      { name: 'AI Compliance Copilot', path: '/services/ai-compliance-copilot', icon: CheckCircle },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle }
     ]
   },
   {

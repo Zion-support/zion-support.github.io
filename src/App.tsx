@@ -62,6 +62,12 @@ const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
 // 2029 Cutting-Edge Services
 const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
 
+// 2029 Innovative Services Showcase
+const InnovativeServicesShowcase2029 = lazy(() => import('./pages/InnovativeServicesShowcase2029'));
+
+// 2029 Comprehensive Services Showcase
+const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
+
 // 2026 AI Marketplace Services
 const Zion2026AIMarketplaceShowcase = lazy(() => import('./pages/Zion2026AIMarketplaceShowcase'));
 
@@ -142,6 +148,22 @@ const Marketplace = lazy(() => import('./pages/Marketplace'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
+
+// Additional innovative AI services
+const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
+const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
+
+// Additional innovative services
+const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
+const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
+const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
+const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
+const AICodeReviewSecurityScanner = lazy(() => import('./pages/services/AICodeReviewSecurityScanner'));
+const AIDevOpsAutomationPlatform = lazy(() => import('./pages/services/AIDevOpsAutomationPlatform'));
+const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBusinessIntelligenceAnalytics'));
+const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustomerExperienceSupport'));
+const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
+const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
 export default function App() {
   return (
@@ -273,6 +295,12 @@ export default function App() {
                     
                     {/* Revolutionary Services 2030 */}
                     <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                    
+                    {/* 2029 Innovative Services Showcase */}
+                    <Route path="/innovative-services-2029" element={<InnovativeServicesShowcase2029 />} />
+                    
+                    {/* 2029 Comprehensive Services Showcase */}
+                    <Route path="/comprehensive-services-2029" element={<ComprehensiveServicesShowcase2029 />} />
                     
                     {/* Comprehensive Service Routes */}
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
