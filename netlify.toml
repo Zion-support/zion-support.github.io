@@ -3,8 +3,8 @@
 # No Next.js plugins or configurations are needed
 
 [build]
-  # Use `yarn install` for deterministic installs, Vite builds to dist/
-  command = "corepack disable && npm i -g yarn@1.22.22 && yarn cache clean && yarn install --frozen-lockfile && yarn build"
+  # Use `npm install` for consistent dependency management, Vite builds to dist/
+  command = "npm ci && npm run build"
   publish = "dist"
   # Force static site build (not Next.js)
   # Functions moved to PM2 automation
