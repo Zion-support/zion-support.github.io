@@ -109,7 +109,11 @@ const AIPoweredSEO = lazy(() => import('./pages/AIPoweredSEO'));
 const InterviewAssessmentAI = lazy(() => import('./pages/InterviewAssessmentAI'));
 const HelpdeskPlatform = lazy(() => import('./pages/HelpdeskPlatform'));
 const DSRPortal = lazy(() => import('./pages/services/DSRPortal'));
+const GDPRDSARPortal = lazy(() => import('./pages/services/GDPRDSARPortal'));
 const SecurityHeadersCSP = lazy(() => import('./pages/services/SecurityHeadersCSP'));
+const SecurityHeadersCSPManager = lazy(() => import('./pages/services/SecurityHeadersCSPManager'));
+const CheckoutPerformanceOptimizer = lazy(() => import('./pages/services/CheckoutPerformanceOptimizer'));
+const StatusIncidentHub = lazy(() => import('./pages/services/StatusIncidentHub'));
 const AIProjectManagement = lazy(() => import('./pages/services/AIProjectManagement'));
 const AICustomerSupportAutomation = lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnalytics'));
@@ -329,7 +333,11 @@ export default function App() {
                     <Route path="/services/interview-assessment-ai" element={<InterviewAssessmentAI />} />
                     <Route path="/services/helpdesk-platform" element={<HelpdeskPlatform />} />
                     <Route path="/services/dsr-portal" element={<DSRPortal />} />
+                    <Route path="/services/gdpr-dsar-portal" element={<GDPRDSARPortal />} />
                     <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+                    <Route path="/services/security-headers-csp-manager" element={<SecurityHeadersCSPManager />} />
+                    <Route path="/services/checkout-performance-optimizer" element={<CheckoutPerformanceOptimizer />} />
+                    <Route path="/services/status-incident-hub" element={<StatusIncidentHub />} />
                     <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
                     <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
