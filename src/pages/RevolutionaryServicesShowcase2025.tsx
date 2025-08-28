@@ -232,7 +232,7 @@ import {
   Watch as WatchIcon
 } from 'lucide-react';
 import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '@/data/revolutionaryMicroSaasServices2025';
-import { NEXT_GEN_INNOVATIVE_SERVICES_2025 } from '@/data/nextGenInnovativeServices2025';
+import { REVOLUTIONARY_MICRO_SAAS_SERVICES_2025 } from '@/data/revolutionaryMicroSaasServices2025';
 
 export default function RevolutionaryServicesShowcase2025() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -242,8 +242,7 @@ export default function RevolutionaryServicesShowcase2025() {
 
   // Combine all services
   const allServices = [
-    ...REVOLUTIONARY_MICRO_SAAS_SERVICES_2025,
-    ...NEXT_GEN_INNOVATIVE_SERVICES_2025
+    ...REVOLUTIONARY_MICRO_SAAS_SERVICES_2025
   ];
 
   const categories = [
