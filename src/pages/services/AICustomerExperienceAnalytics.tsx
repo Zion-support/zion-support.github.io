@@ -1,335 +1,387 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { BarChart3, Users, Heart, TrendingUp, CheckCircle, Clock, Sparkles, Eye, MessageCircle, Target, Globe, ArrowRight, Zap, Star, Activity } from 'lucide-react';
+import { Brain, Users, BarChart3, Eye, TrendingUp, CheckCircle, ArrowRight, MessageCircle, Heart, Target, Zap, Globe, Shield, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Lock, Database, Network, FileText, Search, Filter, AlertTriangle, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle as MessageCircleIcon, Server, ShoppingCart, Smartphone, Database as DatabaseIcon, BarChart3 as BarChart3Icon, Eye as EyeIcon, Search as SearchIcon, Filter as FilterIcon, AlertTriangle as AlertTriangleIcon, Clock as ClockIcon, DollarSign as DollarSignIcon, Star as StarIcon, Rocket as RocketIcon, Cpu as CpuIcon, Cloud as CloudIcon } from 'lucide-react';
 
-const AICustomerExperienceAnalytics: React.FC = () => {
+const AICustomerExperienceAnalytics = () => {
   const features = [
     {
-      icon: BarChart3,
-      title: 'Real-time Sentiment Analysis',
-      description: 'AI analyzes customer emotions and satisfaction in real-time'
+      icon: Brain,
+      title: 'AI-Powered Sentiment Analysis',
+      description: 'Advanced natural language processing to analyze customer feedback, reviews, and interactions across all channels in real-time.',
+      benefits: ['Real-time sentiment tracking', 'Multi-language support', 'Context-aware analysis', 'Emotion detection']
     },
     {
       icon: Users,
       title: 'Customer Journey Mapping',
-      description: 'Visualize and optimize complete customer touchpoints'
+      description: 'AI-driven customer journey visualization that identifies pain points, drop-off moments, and optimization opportunities across touchpoints.',
+      benefits: ['360-degree customer view', 'Behavioral pattern recognition', 'Journey optimization suggestions', 'Cross-channel tracking']
     },
     {
-      icon: Heart,
-      title: 'Predictive Satisfaction',
-      description: 'Forecast customer satisfaction before issues arise'
+      icon: BarChart3,
+      title: 'Predictive Analytics',
+      description: 'Machine learning algorithms that predict customer behavior, churn risk, and lifetime value to enable proactive customer experience improvements.',
+      benefits: ['Churn prediction models', 'LTV forecasting', 'Behavioral scoring', 'Risk assessment']
+    },
+    {
+      icon: Eye,
+      title: 'Real-time Experience Monitoring',
+      description: 'Continuous monitoring of customer interactions with instant alerts for negative experiences and automated response triggers.',
+      benefits: ['Live experience tracking', 'Instant alert system', 'Automated response triggers', 'Performance dashboards']
     },
     {
       icon: TrendingUp,
-      title: 'Behavioral Analytics',
-      description: 'Deep insights into customer behavior patterns'
+      title: 'Personalization Engine',
+      description: 'AI-powered personalization that adapts content, recommendations, and experiences based on individual customer preferences and behavior.',
+      benefits: ['Dynamic content adaptation', 'Behavioral targeting', 'A/B testing automation', 'Conversion optimization']
+    },
+    {
+      icon: MessageCircle,
+      title: 'Voice of Customer Analytics',
+      description: 'Comprehensive analysis of customer feedback from surveys, social media, support tickets, and direct communications.',
+      benefits: ['Multi-source feedback analysis', 'Trend identification', 'Priority scoring', 'Actionable insights']
     }
-  ];
-
-  const analyticsTypes = [
-    {
-      title: 'Voice Analytics',
-      description: 'Analyze call center interactions and customer sentiment',
-      icon: '🎤'
-    },
-    {
-      title: 'Text Analytics',
-      description: 'Process emails, chats, and social media interactions',
-      icon: '💬'
-    },
-    {
-      title: 'Behavioral Analytics',
-      description: 'Track user actions and engagement patterns',
-      icon: '👁️'
-    },
-    {
-      title: 'Predictive Analytics',
-      description: 'Forecast customer needs and satisfaction trends',
-      icon: '🔮'
-    }
-  ];
-
-  const benefits = [
-    'Increase customer satisfaction by 45%',
-    'Reduce customer churn by 60%',
-    'Improve response time by 70%',
-    'Boost customer lifetime value by 50%',
-    'Identify issues before they escalate',
-    'Personalize customer interactions at scale'
   ];
 
   const pricing = [
     {
-      plan: 'Starter',
-      price: 249,
-      period: 'month',
+      name: 'Starter',
+      price: '$1,800',
+      period: '/month',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 10,000 interactions/month',
+        'Up to 10,000 customer interactions/month',
         'Basic sentiment analysis',
         'Standard reporting',
         'Email support',
-        'Basic dashboards',
-        '2 team members'
-      ]
+        'Basic journey mapping'
+      ],
+      cta: 'Get Started',
+      popular: false
     },
     {
-      plan: 'Professional',
-      price: 499,
-      period: 'month',
+      name: 'Professional',
+      price: '$4,500',
+      period: '/month',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 100,000 interactions/month',
+        'Up to 100,000 customer interactions/month',
         'Advanced AI analytics',
-        'Custom dashboards',
+        'Predictive modeling',
         'Priority support',
+        'Custom dashboards',
         'API access',
-        'Unlimited team members',
-        'Advanced integrations'
-      ]
+        'Real-time monitoring'
+      ],
+      cta: 'Start Free Trial',
+      popular: true
     },
     {
-      plan: 'Enterprise',
-      price: 999,
-      period: 'month',
+      name: 'Enterprise',
+      price: '$9,000',
+      period: '/month',
+      description: 'For large-scale deployments',
       features: [
-        'Unlimited interactions',
+        'Unlimited customer interactions',
         'Custom AI models',
         'White-label solutions',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced security',
+        '24/7 dedicated support',
+        'Advanced integrations',
+        'Custom workflows',
         'On-premise deployment'
-      ]
+      ],
+      cta: 'Contact Sales',
+      popular: false
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'E-commerce & Retail',
+      description: 'Optimize customer journeys, reduce cart abandonment, and increase conversion rates with AI-powered insights.',
+      icon: ShoppingCart,
+      benefits: ['Cart abandonment analysis', 'Personalized recommendations', 'Customer segmentation', 'Conversion optimization']
+    },
+    {
+      title: 'SaaS & Technology',
+      description: 'Improve user onboarding, reduce churn, and increase customer satisfaction with behavioral analytics.',
+      icon: Cpu,
+      benefits: ['User behavior tracking', 'Feature adoption analysis', 'Churn prediction', 'Product optimization']
+    },
+    {
+      title: 'Financial Services',
+      description: 'Enhance customer experience while maintaining security and compliance in banking and financial applications.',
+      icon: DollarSign,
+      benefits: ['Secure experience analytics', 'Compliance monitoring', 'Risk assessment', 'Customer satisfaction tracking']
+    },
+    {
+      title: 'Healthcare',
+      description: 'Improve patient experience and satisfaction while maintaining privacy and HIPAA compliance.',
+      icon: Heart,
+      benefits: ['Patient journey mapping', 'Satisfaction tracking', 'Privacy-compliant analytics', 'Care optimization']
+    }
+  ];
+
+  const metrics = [
+    {
+      title: 'Customer Satisfaction Score (CSAT)',
+      value: '94%',
+      improvement: '+18%',
+      description: 'Average improvement in customer satisfaction scores'
+    },
+    {
+      title: 'Net Promoter Score (NPS)',
+      value: '72',
+      improvement: '+25',
+      description: 'Average NPS improvement across implementations'
+    },
+    {
+      title: 'Customer Churn Reduction',
+      value: '35%',
+      improvement: '-35%',
+      description: 'Average reduction in customer churn rates'
+    },
+    {
+      title: 'Response Time',
+      value: '<2min',
+      improvement: '85% faster',
+      description: 'Average response time to customer issues'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Customer Experience Analytics - Zion Tech Group"
-        description="Transform customer insights with AI-powered analytics. Understand customer emotions, predict satisfaction, and optimize experiences in real-time."
-      />
-      
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-400/30 mb-6">
-              <BarChart3 className="w-5 h-5 text-purple-400 mr-2" />
-              <span className="text-purple-300 font-medium">AI Customer Experience Analytics</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Customer Analytics
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Experience
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-rose-400">
-                Analytics
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Transform Customer Experience
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                with AI Analytics
               </span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform customer insights with AI-powered analytics. Understand customer emotions, 
-              predict satisfaction, and optimize experiences across all touchpoints in real-time.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Leverage artificial intelligence to understand your customers like never before. 
+              Get real-time insights, predict behavior, and deliver personalized experiences 
+              that drive satisfaction and loyalty.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-                Start Analyzing
-              </button>
-              <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center"
+              >
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
+              >
                 Schedule Demo
-              </button>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Metrics Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {metrics.map((metric, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center"
+              >
+                <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
+                <div className="text-lg font-semibold text-purple-400 mb-2">{metric.improvement}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{metric.title}</h3>
+                <p className="text-gray-300 text-sm">{metric.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Analytics Features
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced AI-Powered Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powered by advanced AI to transform customer insights
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform combines cutting-edge AI with comprehensive analytics to deliver 
+              actionable insights that transform customer experience.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 text-center"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Analytics Types Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Analytics Coverage
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Analyze every customer interaction across all channels
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {analyticsTypes.map((type, index) => (
-              <motion.div
-                key={type.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{type.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
-                    <p className="text-gray-300">{type.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI Customer Experience Analytics?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform customer insights with intelligent analytics
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
-              <p className="text-gray-300 mb-6">
-                Ready to transform customer insights? Our AI analytics experts can help you 
-                set up intelligent customer experience monitoring and optimization.
-              </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
-                Start Customer Analytics
-              </button>
-            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that fits your analytics needs
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your customer analytics needs. 
+              All plans include our core AI-powered features.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
-                key={plan.plan}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-slate-800/50 border rounded-xl p-8 ${
-                  plan.plan === 'Professional' 
-                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' 
-                    : 'border-slate-700/50'
-                }`}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular 
+                    ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
+                    : 'border-gray-700'
+                } hover:border-purple-500/50 transition-all duration-300`}
               >
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-semibold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    ${plan.price}
-                    <span className="text-lg text-gray-400">/{plan.period}</span>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
                   </div>
+                )}
+                
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300 mt-2">{plan.description}</p>
                 </div>
+
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 ${
-                  plan.plan === 'Professional'
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-400 hover:to-pink-500 shadow-lg shadow-purple-500/20'
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
-                  Get Started
-                </button>
+
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
+                      : 'bg-gray-700 text-white hover:bg-gray-600'
+                  }`}
+                >
+                  {plan.cta}
+                </motion.button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Use Cases
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Customer Experience Analytics platform is trusted across industries to 
+              improve customer satisfaction and drive business growth.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
+              >
+                <div className="flex items-start mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
+                    <p className="text-gray-300">{useCase.description}</p>
+                  </div>
+                </div>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -337,57 +389,37 @@ const AICustomerExperienceAnalytics: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Analyze Customer Experience?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Customer Experience?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform customer insights with AI-powered analytics
+              Join leading organizations that trust our AI-powered platform to understand 
+              customers and deliver exceptional experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center"
+              >
                 Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
+              >
                 Contact Sales
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Get in Touch
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8 text-gray-300">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-                <p>+1 302 464 0950</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-                <p>kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-                <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
-                  ziontechgroup.com
-                </a>
-              </div>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.button>
             </div>
           </motion.div>
         </div>

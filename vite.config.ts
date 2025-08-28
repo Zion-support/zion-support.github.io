@@ -5,28 +5,16 @@ import { resolve } from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@layout': resolve(__dirname, 'src/layout'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@assets': resolve(__dirname, 'src/assets'),
-      '@styles': resolve(__dirname, 'src/styles'),
-      '@data': resolve(__dirname, 'src/data'),
-      '@services': resolve(__dirname, 'src/services'),
-      '@context': resolve(__dirname, 'src/context'),
-      '@constants': resolve(__dirname, 'src/constants')
-    }
-  },
+  root: '.',
+  base: '/',
   build: {
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
+      input: {
+        main: './index.html'
+      },
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -59,6 +47,23 @@ export default defineConfig({
       }
     },
     chunkSizeWarningLimit: 1000
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+    }
   },
   optimizeDeps: {
     include: [
@@ -97,12 +102,7 @@ export default defineConfig({
   },
   css: {
     devSourcemap: true,
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer')
-      ]
-    }
+    postcss: './postcss.config.js'
   },
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),

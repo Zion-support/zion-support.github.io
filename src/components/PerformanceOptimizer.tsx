@@ -1,254 +1,250 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, TrendingUp, Gauge, Cpu, Memory, Wifi, Battery, Activity } from 'lucide-react';
+import React, { useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface PerformanceMetrics {
-  fps: number;
-  memory: number;
-  network: number;
-  cpu: number;
-  battery: number;
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
 }
 
 export function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fps: 60,
-    memory: 0,
-    network: 0,
-    cpu: 0,
-    battery: 0
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const location = useLocation();
 
-  // Performance monitoring
-  const measurePerformance = useCallback(() => {
-    if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const memory = (performance as any).memory;
-      
-      setMetrics(prev => ({
-        ...prev,
-        memory: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
-        network: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0
-      }));
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.as = 'style';
+    criticalCSS.href = '/css/critical.css';
+    document.head.appendChild(criticalCSS);
+
+    // Preload critical fonts
+    const criticalFont = document.createElement('link');
+    criticalFont.rel = 'preload';
+    criticalFont.as = 'font';
+    criticalFont.href = '/fonts/inter-var.woff2';
+    criticalFont.crossOrigin = 'anonymous';
+    document.head.appendChild(criticalFont);
+
+    // Preload hero image
+    const heroImage = document.createElement('link');
+    heroImage.rel = 'preload';
+    heroImage.as = 'image';
+    heroImage.href = '/images/hero-bg.jpg';
+    document.head.appendChild(heroImage);
+  }, []);
+
+  // Optimize images with lazy loading
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach(img => imageObserver.observe(img));
+    } else {
+      // Fallback for older browsers
+      images.forEach(img => {
+        const imgElement = img as HTMLImageElement;
+        imgElement.src = imgElement.dataset.src || '';
+      });
     }
   }, []);
 
-  // FPS monitoring
-  const measureFPS = useCallback(() => {
-    let frameCount = 0;
-    let lastTime = performance.now();
+  // Prefetch likely next routes
+  const prefetchNextRoutes = useCallback(() => {
+    const currentPath = location.pathname;
     
-    const countFrames = () => {
-      frameCount++;
-      const currentTime = performance.now();
-      
-      if (currentTime - lastTime >= 1000) {
-        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        setMetrics(prev => ({ ...prev, fps }));
-        frameCount = 0;
-        lastTime = currentTime;
-      }
-      
-      requestAnimationFrame(countFrames);
+    // Define likely next routes based on current page
+    const routeMap: Record<string, string[]> = {
+      '/': ['/services', '/about', '/contact'],
+      '/services': ['/pricing', '/contact', '/about'],
+      '/about': ['/services', '/contact', '/careers'],
+      '/contact': ['/services', '/about', '/pricing']
     };
-    
-    requestAnimationFrame(countFrames);
-  }, []);
 
-  // Battery monitoring
-  const measureBattery = useCallback(async () => {
-    if ('getBattery' in navigator) {
-      try {
-        const battery = await (navigator as any).getBattery();
-        setMetrics(prev => ({ ...prev, battery: Math.round(battery.level * 100) }));
-      } catch (error) {
-        console.log('Battery API not supported');
+    const nextRoutes = routeMap[currentPath] || [];
+    
+    nextRoutes.forEach(route => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = route;
+      document.head.appendChild(link);
+    });
+  }, [location.pathname]);
+
+  // Monitor Core Web Vitals
+  const monitorCoreWebVitals = useCallback(() => {
+    if (!('PerformanceObserver' in window)) return;
+
+    // First Contentful Paint (FCP)
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcp = entries[entries.length - 1];
+      console.log('FCP:', fcp.startTime);
+      
+      // Report to analytics
+      if (window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Web Vitals',
+          event_label: 'FCP',
+          value: Math.round(fcp.startTime)
+        });
       }
-    }
+    });
+    fcpObserver.observe({ entryTypes: ['first-contentful-paint'] });
+
+    // Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lcp = entries[entries.length - 1];
+      console.log('LCP:', lcp.startTime);
+      
+      if (window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Web Vitals',
+          event_label: 'LCP',
+          value: Math.round(lcp.startTime)
+        });
+      }
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // First Input Delay (FID)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach(entry => {
+        console.log('FID:', entry.processingStart - entry.startTime);
+        
+        if (window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            event_category: 'Web Vitals',
+            event_label: 'FID',
+            value: Math.round(entry.processingStart - entry.startTime)
+          });
+        }
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // Cumulative Layout Shift (CLS)
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (!entry.hadRecentInput) {
+          clsValue += (entry as any).value;
+        }
+      }
+      console.log('CLS:', clsValue);
+      
+      if (window.gtag) {
+        window.gtag('event', 'web_vitals', {
+          event_category: 'Web Vitals',
+          event_label: 'CLS',
+          value: Math.round(clsValue * 1000) / 1000
+        });
+      }
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+    return () => {
+      fcpObserver.disconnect();
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+    };
   }, []);
 
-  // CPU monitoring
-  const measureCPU = useCallback(() => {
-    if ('hardwareConcurrency' in navigator) {
-      const cores = navigator.hardwareConcurrency;
-      setMetrics(prev => ({ ...prev, cpu: cores }));
-    }
+  // Optimize bundle loading
+  const optimizeBundleLoading = useCallback(() => {
+    // Dynamic imports for non-critical components
+    const loadComponent = async (componentName: string) => {
+      try {
+        const module = await import(`../components/${componentName}.tsx`);
+        return module.default || module;
+      } catch (error) {
+        console.error(`Failed to load component ${componentName}:`, error);
+        return null;
+      }
+    };
+
+    // Preload components based on user interaction
+    const preloadComponents = () => {
+      const components = ['ContactForm', 'PricingTable', 'ServiceCard'];
+      components.forEach(component => {
+        loadComponent(component);
+      });
+    };
+
+    // Delay preloading to avoid blocking initial render
+    setTimeout(preloadComponents, 3000);
   }, []);
 
-  // Performance optimizations
-  const applyOptimizations = useCallback(() => {
-    const newOptimizations: string[] = [];
-    
-    // Image optimization
-    if (metrics.memory > 100) {
-      newOptimizations.push('Optimizing image loading and caching');
-    }
-    
-    // Network optimization
-    if (metrics.network > 1000) {
-      newOptimizations.push('Implementing service worker caching');
-    }
-    
-    // FPS optimization
-    if (metrics.fps < 30) {
-      newOptimizations.push('Reducing animation complexity');
-    }
-    
-    setOptimizations(newOptimizations);
-  }, [metrics]);
+  // Prevent memory leaks
+  const preventMemoryLeaks = useCallback(() => {
+    // Cleanup event listeners
+    const cleanup = () => {
+      // Remove any global event listeners
+      window.removeEventListener('resize', () => {});
+      window.removeEventListener('scroll', () => {});
+    };
 
-  useEffect(() => {
-    measurePerformance();
-    measureFPS();
-    measureBattery();
-    measureCPU();
-    
-    const interval = setInterval(measurePerformance, 5000);
-    return () => clearInterval(interval);
-  }, [measurePerformance, measureFPS, measureBattery, measureCPU]);
+    // Monitor memory usage
+    if ('memory' in performance) {
+      const memoryObserver = setInterval(() => {
+        const memory = (performance as any).memory;
+        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB threshold
+          console.warn('High memory usage detected:', memory.usedJSHeapSize / 1024 / 1024, 'MB');
+          // Trigger garbage collection if available
+          if (window.gc) {
+            window.gc();
+          }
+        }
+      }, 30000); // Check every 30 seconds
 
-  useEffect(() => {
-    applyOptimizations();
-  }, [applyOptimizations]);
+      return () => {
+        clearInterval(memoryObserver);
+        cleanup();
+      };
+    }
 
-  // Auto-hide after 5 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(false), 5000);
-    return () => clearTimeout(timer);
+    return cleanup;
   }, []);
 
-  if (!isVisible) {
-    return (
-      <motion.button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        title="Performance Monitor"
-      >
-        <Activity className="w-6 h-6 text-white" />
-      </motion.button>
-    );
-  }
+  // Initialize performance optimizations
+  useEffect(() => {
+    preloadCriticalResources();
+    optimizeImages();
+    prefetchNextRoutes();
+    const coreVitalsCleanup = monitorCoreWebVitals();
+    optimizeBundleLoading();
+    const memoryCleanup = preventMemoryLeaks();
 
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        className="fixed bottom-4 right-4 z-50 w-80 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6"
-      >
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-            <Gauge className="w-5 h-5 text-cyan-500" />
-            Performance Monitor
-          </h3>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-gray-600 transition-colors"
-          >
-            ×
-          </button>
-        </div>
+    return () => {
+      coreVitalsCleanup?.();
+      memoryCleanup?.();
+    };
+  }, [
+    preloadCriticalResources,
+    optimizeImages,
+    prefetchNextRoutes,
+    monitorCoreWebVitals,
+    optimizeBundleLoading,
+    preventMemoryLeaks
+  ]);
 
-        <div className="space-y-4">
-          {/* FPS */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-green-500" />
-              <span className="text-sm text-gray-600">FPS</span>
-            </div>
-            <span className={`font-mono text-sm ${metrics.fps >= 50 ? 'text-green-600' : metrics.fps >= 30 ? 'text-yellow-600' : 'text-red-600'}`}>
-              {metrics.fps}
-            </span>
-          </div>
-
-          {/* Memory */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Memory className="w-4 h-4 text-blue-500" />
-              <span className="text-sm text-gray-600">Memory</span>
-            </div>
-            <span className={`font-mono text-sm ${metrics.memory < 50 ? 'text-green-600' : metrics.memory < 100 ? 'text-yellow-600' : 'text-red-600'}`}>
-              {metrics.memory} MB
-            </span>
-          </div>
-
-          {/* Network */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Wifi className="w-4 h-4 text-purple-500" />
-              <span className="text-sm text-gray-600">Network</span>
-            </div>
-            <span className={`font-mono text-sm ${metrics.network < 500 ? 'text-green-600' : metrics.network < 1000 ? 'text-yellow-600' : 'text-red-600'}`}>
-              {metrics.network}ms
-            </span>
-          </div>
-
-          {/* CPU */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Cpu className="w-4 h-4 text-orange-500" />
-              <span className="text-sm text-gray-600">CPU Cores</span>
-            </div>
-            <span className="font-mono text-sm text-gray-800">{metrics.cpu}</span>
-          </div>
-
-          {/* Battery */}
-          {metrics.battery > 0 && (
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Battery className="w-4 h-4 text-green-500" />
-                <span className="text-sm text-gray-600">Battery</span>
-              </div>
-              <span className={`font-mono text-sm ${metrics.battery > 50 ? 'text-green-600' : metrics.battery > 20 ? 'text-yellow-600' : 'text-red-600'}`}>
-                {metrics.battery}%
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Optimizations */}
-        {optimizations.length > 0 && (
-          <div className="mt-4 pt-4 border-t border-gray-200">
-            <h4 className="text-sm font-medium text-gray-700 mb-2">Optimizations Applied:</h4>
-            <ul className="space-y-1">
-              {optimizations.map((opt, index) => (
-                <li key={index} className="text-xs text-gray-600 flex items-center gap-2">
-                  <Zap className="w-3 h-3 text-yellow-500" />
-                  {opt}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {/* Performance Score */}
-        <div className="mt-4 pt-4 border-t border-gray-200">
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-gray-700">Performance Score</span>
-            <div className="flex items-center gap-2">
-              <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
-                <div 
-                  className={`h-full rounded-full transition-all duration-300 ${
-                    metrics.fps >= 50 && metrics.memory < 100 ? 'bg-green-500' : 
-                    metrics.fps >= 30 && metrics.memory < 150 ? 'bg-yellow-500' : 'bg-red-500'
-                  }`}
-                  style={{ 
-                    width: `${Math.min(100, (metrics.fps / 60) * 100)}%` 
-                  }}
-                />
-              </div>
-              <span className="text-xs font-mono text-gray-600">
-                {Math.round((metrics.fps / 60) * 100)}%
-              </span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
-  );
+  // This component doesn't render anything visible
+  return null;
 }

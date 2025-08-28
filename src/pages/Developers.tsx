@@ -25,7 +25,7 @@ import {
   HelpCircle,
   Search,
   PenTool,
-  Workflow,
+  GitFork,
   Atom,
   Truck,
   Building,
