@@ -31,6 +31,9 @@
   
   <url>
     <loc>https://ziontechgroup.com/solutions</loc>
+<<<<<<< HEAD
+    <lastmod>2024-08-28</lastmod>
+=======
     <lastmod>2025-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -89,6 +92,7 @@
   <url>
     <loc>https://ziontechgroup.com/services/ai-analytics</loc>
     <lastmod>2025-01-26</lastmod>
+>>>>>>> origin/cursor/website-audit-and-enhancement-7ab5
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

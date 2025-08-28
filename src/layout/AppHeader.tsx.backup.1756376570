@@ -30,12 +30,18 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Services', href: '/services', current: false },
+<<<<<<< HEAD
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'News', href: '/news', current: false },
+    { name: 'Events', href: '/events', current: false },
+=======
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'Blog', href: '/blog', current: false },
+>>>>>>> origin/cursor/website-audit-and-enhancement-7ab5
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Careers', href: '/careers', current: false },

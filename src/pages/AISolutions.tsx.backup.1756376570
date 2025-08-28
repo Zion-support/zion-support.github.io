@@ -1,4 +1,6 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
 import { SEO } from '@/components/SEO';
 
 const AISolutions: React.FC = () => {
@@ -21,6 +23,7 @@ const AISolutions: React.FC = () => {
 export default AISolutions;
 
 import React, { useState } from 'react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-7ab5
 import { motion } from 'framer-motion';
 import {
   Brain,

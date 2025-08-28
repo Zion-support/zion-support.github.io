@@ -68,7 +68,11 @@ export const EnhancedSidebar: React.FC = () => {
       items: [
         { name: "Home", href: "/", icon: Home },
         { name: "Services", href: "/services", icon: Zap },
+<<<<<<< HEAD
+        { name: "Pricing", href: "/pricing", icon: DollarSign },
+=======
         { name: "Solutions", href: "/solutions", icon: Globe },
+>>>>>>> origin/cursor/website-audit-and-enhancement-7ab5
         { name: "Blog", href: "/blog", icon: FileText },
         { name: "Partners", href: "/partners", icon: Handshake },
         { name: "About", href: "/about", icon: Users },
