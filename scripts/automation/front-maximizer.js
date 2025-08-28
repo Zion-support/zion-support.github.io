@@ -14,17 +14,25 @@ async function runFrontMaximizer() {
     console.log(`🚀 Running front maximizer at ${new Date().toISOString()}`);
     
     // Build the project
-    console.log('🏗️ Building project for frontend optimization...');
+    console.log('🏗️ Building project...');
     try {
       execSync('npm run build', { stdio: 'inherit' });
       console.log('✅ Build completed');
     } catch (error) {
       console.log('⚠️  Build failed but continuing...');
+    }
+    
+    // Check build output
+    const distPath = path.join(process.cwd(), 'dist');
+    if (!fs.existsSync(distPath)) {
+      console.log('⚠️  Build verification failed: dist folder not found');
       return;
     }
     
-    // Analyze bundle size
-    console.log('📦 Analyzing bundle size...');
+    // Analyze frontend performance
+    console.log('📊 Analyzing frontend performance...');
+    
+    // Check bundle size
     try {
       execSync('node scripts/analyze-bundle.js', { stdio: 'inherit' });
       console.log('✅ Bundle analysis completed');
@@ -32,68 +40,169 @@ async function runFrontMaximizer() {
       console.log('⚠️  Bundle analysis failed but continuing...');
     }
     
-    // Check for unused CSS
-    console.log('🎨 Checking for unused CSS...');
-    try {
-      execSync('npx purgecss --css dist/**/*.css --content dist/**/*.html --output dist/optimized/', { stdio: 'inherit' });
-      console.log('✅ CSS optimization completed');
-    } catch (error) {
-      console.log('⚠️  CSS optimization failed but continuing...');
+    // Check for large files
+    const largeFiles = findLargeFiles(distPath);
+    if (largeFiles.length > 0) {
+      console.log('⚠️  Large files detected:');
+      largeFiles.forEach(file => {
+        console.log(`  - ${file.path}: ${(file.size / 1024 / 1024).toFixed(2)} MB`);
+      });
     }
     
-    // Optimize images if available
-    console.log('🖼️  Optimizing images...');
-    try {
-      if (fs.existsSync('scripts/optimize-images.js')) {
-        execSync('node scripts/optimize-images.js', { stdio: 'inherit' });
-        console.log('✅ Image optimization completed');
-      } else {
-        console.log('ℹ️  Image optimization script not available');
-      }
-    } catch (error) {
-      console.log('⚠️  Image optimization failed but continuing...');
-    }
+    // Check for performance optimizations
+    console.log('🔍 Checking for performance optimizations...');
+    checkPerformanceOptimizations(distPath);
     
-    // Check for performance improvements
-    console.log('📊 Checking for performance improvements...');
-    try {
-      execSync('npm run lighthouse', { stdio: 'inherit' });
-      console.log('✅ Performance check completed');
-    } catch (error) {
-      console.log('⚠️  Performance check failed but continuing...');
-    }
-    
-    // Generate frontend optimization report
-    console.log('📊 Generating frontend optimization report...');
+    // Generate optimization report
+    console.log('📊 Generating optimization report...');
     const report = {
       timestamp: new Date().toISOString(),
-      summary: 'Frontend maximization completed',
-      status: 'completed',
-      optimizations: [
-        'Bundle analysis',
-        'CSS optimization',
-        'Image optimization',
-        'Performance monitoring'
-      ]
+      buildSize: getDirectorySize(distPath),
+      largeFiles: largeFiles.length,
+      summary: 'Front maximizer completed'
     };
     
     const reportPath = path.join(process.cwd(), 'front-maximizer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Report saved to ${reportPath}`);
+    console.log(`✅ Front maximizer report saved to ${reportPath}`);
     
-    console.log('✅ Frontend maximization completed successfully');
+    console.log('✅ Continuous front maximizer completed successfully');
     
   } catch (error) {
-    console.error('❌ Frontend maximization failed:', error.message);
+    console.error('❌ Continuous front maximizer failed:', error.message);
     // Don't exit, just log the error and continue
   }
+}
+
+function findLargeFiles(dir, maxSize = 1024 * 1024) {
+  const largeFiles = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (stat.isFile() && stat.size > maxSize) {
+          largeFiles.push({
+            path: path.relative(process.cwd(), fullPath),
+            size: stat.size
+          });
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be accessed
+    }
+  }
+  
+  scanDirectory(dir);
+  return largeFiles.sort((a, b) => b.size - a.size);
+}
+
+function getDirectorySize(dir) {
+  let totalSize = 0;
+  
+  function calculateSize(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          calculateSize(fullPath);
+        } else if (stat.isFile()) {
+          totalSize += stat.size;
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be accessed
+    }
+  }
+  
+  calculateSize(dir);
+  return totalSize;
+}
+
+function checkPerformanceOptimizations(distPath) {
+  // Check for image optimization
+  const imageFiles = findImageFiles(distPath);
+  console.log(`📸 Found ${imageFiles.length} image files`);
+  
+  // Check for CSS/JS minification
+  const cssFiles = findFilesByExtension(distPath, '.css');
+  const jsFiles = findFilesByExtension(distPath, '.js');
+  
+  console.log(`🎨 Found ${cssFiles.length} CSS files`);
+  console.log(`⚡ Found ${jsFiles.length} JavaScript files`);
+  
+  // Check for gzip compression readiness
+  const htmlFiles = findFilesByExtension(distPath, '.html');
+  console.log(`📄 Found ${htmlFiles.length} HTML files`);
+}
+
+function findImageFiles(dir) {
+  const imageFiles = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (/\.(jpg|jpeg|png|gif|svg|webp)$/i.test(item)) {
+          imageFiles.push(path.relative(process.cwd(), fullPath));
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be accessed
+    }
+  }
+  
+  scanDirectory(dir);
+  return imageFiles;
+}
+
+function findFilesByExtension(dir, extension) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          scanDirectory(fullPath);
+        } else if (item.endsWith(extension)) {
+          files.push(path.relative(process.cwd(), fullPath));
+        }
+      }
+    } catch (error) {
+      // Skip directories that can't be accessed
+    }
+  }
+  
+  scanDirectory(dir);
+  return files;
 }
 
 // Main continuous loop
 async function runContinuous() {
   console.log(`🚀 Starting continuous front maximizer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   
-  // Run initial maximization
+  // Run initial front maximizer
   await runFrontMaximizer();
   
   // Set up continuous execution

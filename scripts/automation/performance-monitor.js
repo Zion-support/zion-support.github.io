@@ -4,10 +4,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('📊 Starting continuous performance monitoring automation...');
-
-// Get automation interval from environment variable (default: 2 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
+console.log('📊 Starting performance monitoring automation...');
 
 async function runPerformanceMonitor() {
   try {
@@ -81,11 +78,11 @@ async function runPerformanceMonitor() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Performance report saved to ${reportPath}`);
     
-    console.log('✅ Continuous performance monitoring completed successfully');
+    console.log('✅ Performance monitoring completed successfully');
     
   } catch (error) {
-    console.error('❌ Continuous performance monitoring failed:', error.message);
-    // Don't exit, just log the error and continue
+    console.error('❌ Performance monitoring failed:', error.message);
+    process.exit(1);
   }
 }
 
@@ -144,21 +141,6 @@ function getDirectorySize(dir) {
   return totalSize;
 }
 
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous performance monitoring with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial performance monitoring
-  await runPerformanceMonitor();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runPerformanceMonitor();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous performance monitoring running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
-
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('🛑 Received SIGINT, shutting down gracefully...');
@@ -170,8 +152,8 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Start the continuous performance monitor
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous performance monitoring:', error);
+// Run the performance monitoring once
+runPerformanceMonitor().catch(error => {
+  console.error('❌ Failed to run performance monitoring:', error);
   process.exit(1);
 });

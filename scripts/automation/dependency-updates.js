@@ -2,12 +2,9 @@
 
 const { execSync } = require('child_process');
 const fs = require('fs');
-const path = require('path'); // Added missing import for path
+const path = require('path');
 
-console.log('📦 Starting continuous dependency updates automation...');
-
-// Get automation interval from environment variable (default: 6 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours
+console.log('📦 Starting dependency updates automation...');
 
 async function runDependencyUpdates() {
   try {
@@ -107,27 +104,12 @@ async function runDependencyUpdates() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
     
-    console.log('✅ Continuous dependency updates completed successfully');
+    console.log('✅ Dependency updates completed successfully');
     
   } catch (error) {
-    console.error('❌ Continuous dependency updates failed:', error.message);
-    // Don't exit, just log the error and continue
+    console.error('❌ Dependency updates failed:', error.message);
+    process.exit(1);
   }
-}
-
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous dependency updates with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial dependency updates
-  await runDependencyUpdates();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runDependencyUpdates();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous dependency updates running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
 
 // Handle graceful shutdown
@@ -141,8 +123,8 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Start the continuous dependency updates
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous dependency updates:', error);
+// Run the dependency updates once
+runDependencyUpdates().catch(error => {
+  console.error('❌ Failed to run dependency updates:', error);
   process.exit(1);
 });

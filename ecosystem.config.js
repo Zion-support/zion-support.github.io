@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   apps: [
     // Main application
     {
@@ -36,125 +36,146 @@ module.exports = {
     }
   ],
 
-  // Automation processes
+  // Automation processes to replace Netlify functions and GitHub Actions
+  // All automations run autonomously and continuously with intelligent intervals
   automation: [
-    // Daily link checker
+    // Continuous link checker - runs every 30 minutes
     {
       name: 'link-checker',
       script: './scripts/automation/link-checker.js',
       instances: 1,
-      autorestart: false,
-      cron_restart: '0 2 * * *', // Daily at 2 AM
+      autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
     },
 
-    // Weekly continuous improvement
+    // Continuous improvement - runs every 2 hours
     {
       name: 'continuous-improvement',
       script: './scripts/automation/continuous-improvement.js',
       instances: 1,
-      autorestart: false,
-      cron_restart: '0 2 * * 1', // Weekly on Monday at 2 AM
+      autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '604800000' // 7 days
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
     },
 
-    // Daily build and test
+    // Continuous build and test - runs every hour
     {
       name: 'daily-build-test',
       script: './scripts/automation/daily-build-test.js',
       instances: 1,
-      autorestart: false,
-      cron_restart: '0 6 * * *', // Daily at 6 AM
+      autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
       }
     },
 
-    // Security audit
+    // Continuous security audit - runs every 4 hours
     {
       name: 'security-audit',
       script: './scripts/automation/security-audit.js',
       instances: 1,
-      autorestart: false,
-      cron_restart: '0 8 * * 0', // Weekly on Sunday at 8 AM
+      autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '604800000' // 7 days
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
       }
     },
 
-    // Dependency updates
+    // Continuous dependency updates - runs every 6 hours
     {
       name: 'dependency-updates',
       script: './scripts/automation/dependency-updates.js',
       instances: 1,
-      autorestart: false,
-      cron_restart: '0 10 * * 2', // Weekly on Tuesday at 10 AM
+      autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '604800000' // 7 days
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
     },
 
-    // Performance monitoring
+    // Continuous performance monitoring - runs every 2 hours
     {
       name: 'performance-monitor',
       script: './scripts/automation/performance-monitor.js',
       instances: 1,
-      autorestart: false,
-      cron_restart: '0 12 * * *', // Daily at 12 PM
+      autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
     },
 
-    // Quality checks
+    // Continuous quality checks - runs every 3 hours
     {
       name: 'quality-checks',
       script: './scripts/automation/quality-checks.js',
       instances: 1,
-      autorestart: false,
-      cron_restart: '0 14 * * *', // Daily at 2 PM
+      autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
+        AUTOMATION_INTERVAL: '10800000' // 3 hours
       }
     },
 
-    // Link integrity checker
+    // Continuous link integrity checker - runs every 2 hours
     {
       name: 'link-integrity',
       script: './scripts/automation/link-integrity.js',
       instances: 1,
-      autorestart: false,
-      cron_restart: '0 16 * * *', // Daily at 4 PM
+      autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // Continuous front maximizer - runs every 4 hours
+    {
+      name: 'front-maximizer',
+      script: './scripts/automation/front-maximizer.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Continuous sitemap runner - runs every 6 hours
+    {
+      name: 'sitemap-runner',
+      script: './scripts/automation/sitemap-runner.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
     }
   ]

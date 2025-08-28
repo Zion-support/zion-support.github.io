@@ -4,10 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🏗️ Starting continuous build and test automation...');
-
-// Get automation interval from environment variable (default: 1 hour)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 3600000; // 1 hour
+console.log('🏗️ Starting daily build and test automation...');
 
 async function runDailyBuildTest() {
   try {
@@ -94,27 +91,12 @@ async function runDailyBuildTest() {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
     
-    console.log('✅ Continuous build and test completed successfully');
+    console.log('✅ Daily build and test completed successfully');
     
   } catch (error) {
-    console.error('❌ Continuous build and test failed:', error.message);
-    // Don't exit, just log the error and continue
+    console.error('❌ Daily build and test failed:', error.message);
+    process.exit(1);
   }
-}
-
-// Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting continuous build and test with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
-  // Run initial build and test
-  await runDailyBuildTest();
-  
-  // Set up continuous execution
-  setInterval(async () => {
-    await runDailyBuildTest();
-  }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous build and test running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
 
 // Handle graceful shutdown
@@ -128,8 +110,8 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Start the continuous build and test
-runContinuous().catch(error => {
-  console.error('❌ Failed to start continuous build and test:', error);
+// Run the daily build and test once
+runDailyBuildTest().catch(error => {
+  console.error('❌ Failed to run daily build and test:', error);
   process.exit(1);
 });

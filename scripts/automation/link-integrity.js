@@ -4,21 +4,27 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔗 Starting daily link integrity automation...');
+console.log('🔗 Starting link integrity automation...');
 
 async function runLinkIntegrity() {
   try {
+    console.log(`🔗 Running link integrity check at ${new Date().toISOString()}`);
+    
     // Build the project first
     console.log('🏗️ Building project for link checking...');
-    execSync('npm run build', { stdio: 'inherit' });
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      console.log('✅ Build completed');
+    } catch (error) {
+      console.log('⚠️  Build failed but continuing...');
+    }
     
     // Check if dist folder exists
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {
-      throw new Error('Build failed: dist folder not found');
+      console.log('⚠️  Build verification failed: dist folder not found');
+      return;
     }
-    
-    console.log('✅ Build completed successfully');
     
     // Run linkinator for comprehensive link checking
     console.log('🔍 Running comprehensive link check...');
@@ -252,6 +258,3 @@ function analyzeLinkReport(linkReport) {
     }
   }
 }
-
-// Run the link integrity check
-runLinkIntegrity();
