@@ -168,9 +168,7 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
-// Additional missing components
-const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
-const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
+
 
 function App() {
   return (
@@ -187,18 +185,6 @@ function App() {
           />
           
           {/* Performance Optimizer */}
-          <PerformanceOptimizer />
-          
-          {/* Mobile Experience Enhancer */}
-          <MobileExperienceEnhancer />
-          
-          {/* Accessibility Enhancer */}
-          <EnhancedAccessibilityEnhancer />
-          
-          {/* Service Worker */}
-          <ServiceWorker />
-          
-          {/* Performance Optimizer */}
           <PerformanceOptimizer enabled={true} />
           
           {/* Enhanced Accessibility */}
@@ -212,6 +198,9 @@ function App() {
           
           {/* Mobile Experience Enhancer */}
           <MobileExperienceEnhancer enabled={true} />
+          
+          {/* Service Worker */}
+          <ServiceWorker />
           
           {/* Floating Action Button */}
           <FloatingActionButton />
