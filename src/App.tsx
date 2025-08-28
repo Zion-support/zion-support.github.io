@@ -119,6 +119,7 @@ const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransfo
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // Additional missing imports
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
@@ -324,6 +325,7 @@ function App() {
                     
                     {/* Comprehensive Service Routes */}
       
+                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                     <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
                     <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />

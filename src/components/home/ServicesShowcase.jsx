@@ -4,9 +4,46 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
+import { FuturisticCard } from '@/components/ui/futuristic-card';
+import { NeonText } from '@/components/ui/neon-text';
 export function ServicesShowcase() {
     const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
+    
+    const emergingServices = [
+        {
+            title: "AI Workflow Orchestrator",
+            description: "Intelligent process automation with AI-driven optimization",
+            category: "AI & Automation",
+            price: "$99/month",
+            icon: "🤖",
+            link: "/services/ai-workflow-orchestrator"
+        },
+        {
+            title: "AI Data Governance Platform",
+            description: "Enterprise data protection and compliance automation",
+            category: "Data & Security",
+            price: "$149/month",
+            icon: "🛡️",
+            link: "/services/ai-data-governance-platform"
+        },
+        {
+            title: "AI Customer Experience Analytics",
+            description: "Intelligent analytics and insights for data-driven decisions",
+            category: "Analytics",
+            price: "$99/month",
+            icon: "📊",
+            link: "/services/ai-customer-experience-analytics"
+        },
+        {
+            title: "Cloud DevOps Platform",
+            description: "Streamlined cloud infrastructure and deployment automation",
+            category: "Cloud & DevOps",
+            price: "$299/month",
+            icon: "☁️",
+            link: "/services/cloud-devops"
+        }
+    ];
     return (<section className="py-20 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-transparent"/>
@@ -82,8 +119,9 @@ export function ServicesShowcase() {
                     </Button>
                   </Link>
                 </div>
-              </div>
-            </FuturisticCard>))}
+              </CardContent>
+            </FuturisticCard>
+          ))}
         </div>
 
         {/* Emerging Technologies */}
