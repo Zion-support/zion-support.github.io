@@ -17,6 +17,11 @@ interface SEOProps {
   structuredData?: object;
   additionalMeta?: Array<{ name: string; content: string }>;
   additionalLinks?: Array<{ rel: string; href: string }>;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -34,7 +39,12 @@ export const SEO: React.FC<SEOProps> = ({
   nofollow = false,
   structuredData,
   additionalMeta = [],
-  additionalLinks = []
+  additionalLinks = [],
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = []
 }) => {
   // Default values
   const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg';
@@ -50,31 +60,77 @@ export const SEO: React.FC<SEOProps> = ({
     : description;
 
   // Default keywords if not provided
-  const defaultKeywords = keywords || 'AI, artificial intelligence, technology, business solutions, Zion Tech Group, digital transformation, cloud computing, data analytics, IT infrastructure, micro SaaS, digital twin';
+  const defaultKeywords = keywords || 'AI, artificial intelligence, technology, business solutions, Zion Tech Group, digital transformation, cloud computing, data analytics, IT infrastructure, micro SaaS, digital twin, enterprise software, machine learning, cybersecurity, DevOps, cloud infrastructure';
 
   // Generate structured data for organization
   const organizationStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
+    "alternateName": "Zion Tech",
     "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading provider of AI-powered business solutions and technology services",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "width": "300",
+      "height": "100"
+    },
+    "description": "Leading provider of AI-powered business solutions and comprehensive technology services for enterprise digital transformation",
     "foundingDate": "2020",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "United States"
+      "addressCountry": "United States",
+      "addressRegion": "Global"
     },
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
+      "email": "info@ziontechgroup.com",
+      "availableLanguage": "English"
     },
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
-    ]
+      "https://facebook.com/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ],
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Cloud Computing",
+      "Data Analytics",
+      "Digital Transformation",
+      "Cybersecurity",
+      "DevOps",
+      "Enterprise Software"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Business Intelligence"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud & DevOps"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cybersecurity"
+          }
+        }
+      ]
+    }
   };
 
   // Generate structured data for website
@@ -83,7 +139,7 @@ export const SEO: React.FC<SEOProps> = ({
     "@type": "WebSite",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
-    "description": "AI-powered business solutions and technology services",
+    "description": "AI-powered business solutions and comprehensive technology services for enterprise digital transformation",
     "publisher": {
       "@type": "Organization",
       "name": "Zion Tech Group"
@@ -95,62 +151,86 @@ export const SEO: React.FC<SEOProps> = ({
     }
   };
 
+  // Generate structured data for local business
+  const localBusinessStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Zion Tech Group",
+    "description": "AI-powered business solutions and technology services",
+    "url": "https://ziontechgroup.com",
+    "telephone": "+1-800-ZION-TECH",
+    "email": "info@ziontechgroup.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "United States"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.7749",
+      "longitude": "-122.4194"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services"
+    }
+  };
+
   // Combine structured data
   const combinedStructuredData = [
     organizationStructuredData,
     websiteStructuredData,
+    localBusinessStructuredData,
     ...(structuredData ? [structuredData] : [])
   ];
 
-  // Enhanced meta tags
-  const enhancedMetaTags = [
-    // Basic SEO
-    { name: 'description', content: enhancedDescription },
-    { name: 'keywords', content: defaultKeywords },
-    { name: 'author', content: 'Zion Tech Group' },
+  // Additional meta tags for better SEO
+  const enhancedAdditionalMeta = [
+    ...additionalMeta,
     { name: 'robots', content: `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}` },
+    { name: 'author', content: author },
     { name: 'language', content: 'English' },
     { name: 'revisit-after', content: '7 days' },
-    { name: 'rating', content: 'General' },
-    
-    // Open Graph
-    { property: 'og:title', content: enhancedTitle },
-    { property: 'og:description', content: enhancedDescription },
-    { property: 'og:type', content: ogType },
-    { property: 'og:url', content: defaultOgUrl },
-    { property: 'og:image', content: defaultOgImage },
-    { property: 'og:image:width', content: '1200' },
-    { property: 'og:image:height', content: '630' },
-    { property: 'og:site_name', content: 'Zion Tech Group' },
-    { property: 'og:locale', content: 'en_US' },
-    
-    // Twitter Card
-    { name: 'twitter:card', content: twitterCard },
-    { name: 'twitter:site', content: twitterSite },
-    { name: 'twitter:creator', content: twitterCreator },
-    { name: 'twitter:title', content: enhancedTitle },
-    { name: 'twitter:description', content: enhancedDescription },
-    { name: 'twitter:image', content: defaultOgImage },
-    
-    // Additional meta tags
-    ...additionalMeta
+    { name: 'distribution', content: 'global' },
+    { name: 'rating', content: 'general' },
+    { name: 'theme-color', content: '#06b6d4' },
+    { name: 'msapplication-TileColor', content: '#06b6d4' },
+    { name: 'apple-mobile-web-app-capable', content: 'yes' },
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+    { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
+    { name: 'application-name', content: 'Zion Tech Group' },
+    { name: 'format-detection', content: 'telephone=no' },
+    ...(tags.map(tag => ({ name: 'article:tag', content: tag }))),
+    ...(section ? [{ name: 'article:section', content: section }] : []),
+    ...(publishedTime ? [{ name: 'article:published_time', content: publishedTime }] : []),
+    ...(modifiedTime ? [{ name: 'article:modified_time', content: modifiedTime }] : [])
   ];
 
-  // Enhanced link tags
-  const enhancedLinkTags = [
-    // Canonical URL
-    { rel: 'canonical', href: defaultCanonicalUrl },
-    
-    // Preconnect to external domains
+  // Additional links for better SEO and performance
+  const enhancedAdditionalLinks = [
+    ...additionalLinks,
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
-    
-    // DNS prefetch
-    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-    
-    // Additional links
-    ...additionalLinks
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+    { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+    { rel: 'manifest', href: '/manifest.json' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+    { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#06b6d4' }
   ];
 
   // Performance optimization
@@ -219,96 +299,63 @@ export const SEO: React.FC<SEOProps> = ({
 
   return (
     <Helmet>
-      {/* Basic HTML tags */}
+      {/* Basic Meta Tags */}
       <title>{enhancedTitle}</title>
-      <html lang="en" />
+      <meta name="description" content={enhancedDescription} />
+      <meta name="keywords" content={defaultKeywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta charSet="utf-8" />
       
-      {/* Meta tags */}
-      {enhancedMetaTags.map((tag, index) => (
-        <meta key={index} {...tag} />
+      {/* Canonical URL */}
+      <link rel="canonical" href={defaultCanonicalUrl} />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={enhancedTitle} />
+      <meta property="og:description" content={enhancedDescription} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={defaultOgUrl} />
+      <meta property="og:image" content={defaultOgImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Zion Tech Group - AI-Powered Business Solutions" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:site" content={twitterSite} />
+      <meta name="twitter:creator" content={twitterCreator} />
+      <meta name="twitter:title" content={enhancedTitle} />
+      <meta name="twitter:description" content={enhancedDescription} />
+      <meta name="twitter:image" content={defaultOgImage} />
+      <meta name="twitter:image:alt" content="Zion Tech Group - AI-Powered Business Solutions" />
+      
+      {/* Additional Meta Tags */}
+      {enhancedAdditionalMeta.map((meta, index) => (
+        <meta key={index} name={meta.name} content={meta.content} />
       ))}
       
-      {/* Link tags */}
-      {enhancedLinkTags.map((link, index) => (
-        <link key={index} {...link} />
+      {/* Additional Links */}
+      {enhancedAdditionalLinks.map((link, index) => (
+        <link key={index} rel={link.rel} href={link.href} {...(link.type && { type: link.type })} {...(link.sizes && { sizes: link.sizes })} {...(link.color && { color: link.color })} />
       ))}
       
-      {/* Structured data */}
+      {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(combinedStructuredData)}
       </script>
       
-      {/* Additional performance optimizations */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta name="theme-color" content="#22ddd2" />
-      <meta name="msapplication-TileColor" content="#22ddd2" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      {/* Performance Optimizations */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
       
-      {/* Security headers */}
+      {/* Security Headers */}
+      <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'self';" />
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
-      {/* PWA meta tags */}
-      <link rel="manifest" href="/manifest.json" />
-      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
-      <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#22ddd2" />
-      
-      {/* Social media meta tags */}
-      <meta property="og:image:alt" content="Zion Tech Group - AI-powered business solutions" />
-      <meta property="og:image:secure_url" content={defaultOgImage} />
-      <meta property="og:image:type" content="image/jpeg" />
-      
-      {/* Business meta tags */}
-      <meta name="business:contact:phone" content="+1-800-ZION-TECH" />
-      <meta name="business:contact:email" content="info@ziontechgroup.com" />
-      <meta name="business:contact:website" content="https://ziontechgroup.com" />
-      <meta name="business:contact:address" content="United States" />
-      
-      {/* Verification meta tags */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" />
-      
-      {/* Analytics and tracking */}
-      <meta name="google-analytics" content="your-ga-tracking-id" />
-      <meta name="facebook-domain-verification" content="your-facebook-verification-code" />
-      
-      {/* Performance hints */}
-      <link rel="preload" href="/fonts/orbitron-v19-latin-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      <link rel="preload" href="/fonts/rajdhani-v15-latin-500.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* Critical CSS */}
-      <style>
-        {`
-          /* Critical CSS for above-the-fold content */
-          .bg-futuristic {
-            background: linear-gradient(180deg, rgba(2,6,23,1) 0%, rgba(2,6,23,0.95) 100%);
-          }
-          .animate-fade-in {
-            animation: fadeIn 220ms ease-out both;
-          }
-          .btn-futuristic {
-            background: linear-gradient(135deg, #22ddd2 0%, #2e73ea 100%);
-            border: none;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-          }
-          @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-        `}
-      </style>
     </Helmet>
   );
 };

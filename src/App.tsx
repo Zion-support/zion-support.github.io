@@ -12,7 +12,7 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('../pages/contact'));
+const Contact = React.lazy(() => import('./pages/EnhancedContact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
@@ -33,17 +33,24 @@ const Partners = React.lazy(() => import('./pages/Partners'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
-const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025.tsx'));
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
-const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
-const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding.tsx'));
-const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx'));
-const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx'));
-const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025.tsx'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
+const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding'));
+const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
+const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
+const InnovativeServicesOverview = React.lazy(() => import('./pages/InnovativeServicesOverview'));
 
+// New innovative services
+const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-legal-document-analysis'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -56,7 +63,6 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
-const InnovativeAIServices2025 = React.lazy(() => import('./pages/InnovativeAIServices2025'));
 
 function App() {
   return (
@@ -89,11 +95,9 @@ function App() {
                 <Route path="/webinars" element={<Webinars />} />
                 <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
-                <Route path="/services/comprehensive-2025" element={<ComprehensiveServicesLanding2025 />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
-                <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
@@ -102,8 +106,6 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
-                <Route path="/innovative-ai-services-2025" element={<InnovativeAIServices2025 />} />
-
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                 <Route path="/services/digital-twin" element={<DigitalTwin />} />
