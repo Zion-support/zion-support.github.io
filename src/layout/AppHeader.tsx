@@ -104,7 +104,41 @@ export function AppHeader() {
     { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
     { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
     { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+<<<<<<< HEAD
     { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+    
+    // New AI Services 2025
+    { name: 'AI Quantum ML Platform', href: '/services/ai-quantum-machine-learning', icon: Atom, description: 'Quantum-enhanced machine learning', category: 'AI & ML', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI NLP Suite', href: '/services/ai-natural-language-processing', icon: MessageCircle, description: 'Advanced language processing', category: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Computer Vision', href: '/services/ai-computer-vision', icon: Eye, description: 'Image recognition & analysis', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Predictive Analytics', href: '/services/ai-predictive-analytics', icon: TrendingUp, description: 'Forecasting & trend analysis', category: 'AI & ML', color: 'from-orange-500 to-red-500' },
+    { name: 'AI Autonomous Systems', href: '/services/ai-autonomous-systems', icon: Rocket, description: 'Robotics & automation', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics', icon: Heart, description: 'Medical AI & diagnostics', category: 'AI & ML', color: 'from-red-500 to-pink-500' },
+    { name: 'AI Fintech Trading', href: '/services/ai-fintech-trading', icon: DollarSign, description: 'Algorithmic trading & risk', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Content Generation', href: '/services/ai-creative-content', icon: PenTool, description: 'Creative AI & content creation', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
+    { name: 'AI Energy Management', href: '/services/ai-energy-management', icon: Zap, description: 'Smart grid & optimization', category: 'AI & ML', color: 'from-yellow-500 to-orange-500' },
+    
+    // New IT Services 2025
+    { name: 'Quantum Cloud Computing', href: '/services/quantum-cloud-computing', icon: Atom, description: 'Quantum-enhanced cloud infrastructure', category: 'Cloud & DevOps', color: 'from-indigo-500 to-purple-500' },
+    { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain', icon: Lock, description: 'Transparent supply chain management', category: 'Cloud & DevOps', color: 'from-green-500 to-emerald-500' },
+    { name: 'Edge Computing IoT', href: '/services/edge-computing-iot', icon: Network, description: 'Edge computing & IoT management', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Zero-Trust Security', href: '/services/zero-trust-security', icon: Shield, description: 'Advanced security architecture', category: 'Cloud & DevOps', color: 'from-red-500 to-orange-500' },
+    { name: 'DevOps Automation', href: '/services/devops-automation', icon: Workflow, description: 'CI/CD & automation platform', category: 'Cloud & DevOps', color: 'from-purple-500 to-pink-500' },
+    { name: 'Data Center Modernization', href: '/services/data-center-modernization', icon: Server, description: 'Hybrid cloud & modernization', category: 'Cloud & DevOps', color: 'from-gray-500 to-slate-500' },
+    { name: 'Network Virtualization', href: '/services/network-virtualization', icon: Network, description: 'SDN & network virtualization', category: 'Cloud & DevOps', color: 'from-blue-500 to-indigo-500' },
+    { name: 'API Management', href: '/services/api-management', icon: Code, description: 'API lifecycle management', category: 'Cloud & DevOps', color: 'from-green-500 to-teal-500' },
+    { name: 'Digital Twin Platform', href: '/services/digital-twin-simulation', icon: Eye, description: '3D simulation & modeling', category: 'Cloud & DevOps', color: 'from-cyan-500 to-blue-500' },
+    
+    // New Micro SaaS Services 2025
+    { name: 'AI Quantum Financial Modeling', href: '/services/ai-quantum-financial-modeling', icon: DollarSign, description: 'Quantum-enhanced financial modeling', category: 'Micro SaaS', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Autonomous Fleet Management', href: '/services/ai-autonomous-fleet-management', icon: Truck, description: 'Autonomous vehicle fleet management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure', icon: Building, description: 'Smart city management platform', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Personalized Education', href: '/services/ai-personalized-education', icon: BookOpen, description: 'Personalized learning platform', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', icon: Shield, description: 'Advanced threat detection', category: 'Micro SaaS', color: 'from-red-500 to-orange-500' },
+    { name: 'AI Climate Change Prediction', href: '/services/ai-climate-change-prediction', icon: Globe, description: 'Climate modeling & prediction', category: 'Micro SaaS', color: 'from-cyan-500 to-blue-500' },
+    { name: 'AI Quantum Drug Discovery', href: '/services/ai-quantum-drug-discovery', icon: Heart, description: 'Quantum-accelerated drug discovery', category: 'Micro SaaS', color: 'from-red-500 to-pink-500' },
+    { name: 'AI Space Exploration', href: '/services/ai-space-exploration-satellite', icon: Rocket, description: 'Satellite & space mission management', category: 'Micro SaaS', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Quantum Cryptography', href: '/services/ai-quantum-cryptography-security', icon: Lock, description: 'Unbreakable quantum encryption', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
   ];
 
   const quickLinks = [
