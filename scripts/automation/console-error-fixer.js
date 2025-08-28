@@ -20,10 +20,11 @@ async function runConsoleErrorFixer() {
     // Build the project first
     console.log('🏗️ Building project for console error detection...');
     try {
-      execSync('npm run build', { stdio: 'inherit' });
+      execSync('npm run build', { stdio: 'inherit', cwd: process.cwd() });
       console.log('✅ Build completed');
     } catch (error) {
       console.log('⚠️  Build failed but continuing...');
+      console.log('Build error:', error.message);
       return;
     }
     
