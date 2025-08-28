@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Heart, 
+  BookOpen, 
   Brain, 
   Target, 
   BarChart3, 
@@ -24,50 +24,50 @@ import {
   Zap,
   Shield,
   Users,
-  Stethoscope
+  Scale
 } from 'lucide-react';
 
-const AIHealthcarePlatform: React.FC = () => {
+const AIAutonomousLegalResearch: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Diagnosis',
-      description: 'Advanced machine learning for accurate medical diagnosis and treatment recommendations'
+      title: 'AI-Powered Legal Research',
+      description: 'Advanced machine learning for autonomous legal research and case analysis'
     },
     {
-      icon: Heart,
-      title: 'Patient Monitoring',
-      description: 'Real-time health monitoring and early warning systems for critical conditions'
+      icon: BookOpen,
+      title: 'Case Law Analysis',
+      description: 'Comprehensive analysis of case law with AI-driven insights and precedents'
     },
     {
       icon: Target,
-      title: 'Treatment Optimization',
-      description: 'Personalized treatment plans based on patient data and medical research'
+      title: 'Legal Document Review',
+      description: 'Automated review and analysis of legal documents and contracts'
     },
     {
       icon: BarChart3,
-      title: 'Health Analytics',
-      description: 'Comprehensive health data analysis and predictive insights'
+      title: 'Legal Analytics',
+      description: 'Data-driven legal insights and predictive analytics for case outcomes'
+    },
+    {
+      icon: Scale,
+      title: 'Compliance Monitoring',
+      description: 'Continuous monitoring of legal compliance and regulatory changes'
     },
     {
       icon: Shield,
-      title: 'Data Security',
-      description: 'HIPAA-compliant security with end-to-end encryption'
-    },
-    {
-      icon: Stethoscope,
-      title: 'Clinical Decision Support',
-      description: 'AI-powered tools to assist healthcare professionals in decision making'
+      title: 'Legal Risk Assessment',
+      description: 'AI-powered risk assessment and mitigation strategies'
     }
   ];
 
   const benefits = [
-    'Improve diagnostic accuracy by 40%',
-    'Reduce medical errors by 60%',
-    'Enhance patient outcomes by 35%',
-    'Optimize treatment plans',
-    'Reduce healthcare costs by 25%',
-    'Improve patient engagement'
+    'Reduce research time by 75%',
+    'Improve case analysis by 80%',
+    'Enhance legal accuracy by 90%',
+    'Automate document review',
+    '24/7 autonomous operation',
+    'Real-time legal updates'
   ];
 
   return (
@@ -80,26 +80,26 @@ const AIHealthcarePlatform: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-red-500/20 border border-pink-500/30 text-pink-400 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
-              AI-Powered Healthcare
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 text-purple-400 text-sm font-medium mb-6">
+              <BookOpen className="w-4 h-4 mr-2" />
+              AI-Powered Autonomous Legal Research
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Revolutionize Healthcare with
-              <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"> AI Intelligence</span>
+              Revolutionize Legal Research with
+              <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform patient care with our AI-powered healthcare platform. 
-              Improve diagnosis accuracy, optimize treatments, and enhance patient outcomes.
+              Transform your legal research capabilities with our AI-powered autonomous platform. 
+              Conduct research faster, analyze cases more effectively, and stay ahead of legal developments.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-pink-500/30 text-pink-400 rounded-lg font-semibold hover:bg-pink-500/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -118,10 +118,10 @@ const AIHealthcarePlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Healthcare Features
+              Advanced Legal Research Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive healthcare solutions for modern medical practices
+              Our AI platform provides comprehensive legal research capabilities for modern law practices
             </p>
           </motion.div>
           
@@ -133,9 +133,9 @@ const AIHealthcarePlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-pink-500/30 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -157,10 +157,10 @@ const AIHealthcarePlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Healthcare Platform?
+              Why Choose AI Autonomous Legal Research?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in patient care and healthcare outcomes
+              Experience measurable improvements in legal research efficiency and case analysis
             </p>
           </motion.div>
           
@@ -175,7 +175,7 @@ const AIHealthcarePlatform: React.FC = () => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -187,13 +187,13 @@ const AIHealthcarePlatform: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-pink-500/10 to-red-500/10 border border-pink-500/20 rounded-xl p-8"
+              className="bg-gradient-to-br from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Healthcare?</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Legal Research?</h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of healthcare providers already using AI to improve patient care.
+                Join thousands of legal professionals already using AI to enhance their research capabilities.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300">
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                 Get Started Today
               </button>
             </motion.div>
@@ -211,16 +211,16 @@ const AIHealthcarePlatform: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Healthcare?
+              Ready to Revolutionize Legal Research?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered healthcare with our comprehensive platform.
+              Start your journey to AI-powered legal research with our comprehensive platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-pink-500/30 text-pink-400 rounded-lg font-semibold hover:bg-pink-500/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300">
                 Contact Sales
               </button>
             </div>
@@ -231,4 +231,4 @@ const AIHealthcarePlatform: React.FC = () => {
   );
 };
 
-export default AIHealthcarePlatform;
+export default AIAutonomousLegalResearch;

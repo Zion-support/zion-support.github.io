@@ -1,6 +1,11 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-250d
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
@@ -18,8 +23,11 @@ import { FloatingActionButton } from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
+<<<<<<< HEAD
+=======
 import { ErrorBoundary } from './components/ErrorBoundary';
 
+>>>>>>> origin/cursor/website-audit-and-enhancement-250d
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance

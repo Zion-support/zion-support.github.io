@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Heart, 
+  DollarSign, 
   Brain, 
   Target, 
   BarChart3, 
@@ -16,58 +16,56 @@ import {
   Activity,
   Eye,
   Clock,
-  DollarSign,
   Award,
-  MessageSquare,
+  Users,
   Share2,
   TrendingUp,
   Zap,
   Shield,
-  Users,
-  Stethoscope
+  Calculator
 } from 'lucide-react';
 
-const AIHealthcarePlatform: React.FC = () => {
+const AIAutonomousFinance: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Diagnosis',
-      description: 'Advanced machine learning for accurate medical diagnosis and treatment recommendations'
+      title: 'AI-Powered Financial Management',
+      description: 'Advanced machine learning for autonomous financial planning and optimization'
     },
     {
-      icon: Heart,
-      title: 'Patient Monitoring',
-      description: 'Real-time health monitoring and early warning systems for critical conditions'
+      icon: DollarSign,
+      title: 'Budget Optimization',
+      description: 'Intelligent budget planning and expense optimization with AI-driven insights'
     },
     {
       icon: Target,
-      title: 'Treatment Optimization',
-      description: 'Personalized treatment plans based on patient data and medical research'
+      title: 'Investment Management',
+      description: 'AI-powered investment strategies and portfolio optimization'
     },
     {
       icon: BarChart3,
-      title: 'Health Analytics',
-      description: 'Comprehensive health data analysis and predictive insights'
+      title: 'Financial Analytics',
+      description: 'Real-time analytics and insights into financial performance and trends'
     },
     {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'HIPAA-compliant security with end-to-end encryption'
+      icon: Calculator,
+      title: 'Risk Assessment',
+      description: 'AI-driven financial risk assessment and mitigation strategies'
     },
     {
-      icon: Stethoscope,
-      title: 'Clinical Decision Support',
-      description: 'AI-powered tools to assist healthcare professionals in decision making'
+      icon: TrendingUp,
+      title: 'Revenue Optimization',
+      description: 'Continuous optimization of financial processes and revenue generation'
     }
   ];
 
   const benefits = [
-    'Improve diagnostic accuracy by 40%',
-    'Reduce medical errors by 60%',
-    'Enhance patient outcomes by 35%',
-    'Optimize treatment plans',
-    'Reduce healthcare costs by 25%',
-    'Improve patient engagement'
+    'Improve financial efficiency by 60%',
+    'Reduce financial risks by 70%',
+    'Optimize investments by 80%',
+    'Automate financial processes',
+    '24/7 autonomous operation',
+    'Real-time financial insights'
   ];
 
   return (
@@ -80,26 +78,26 @@ const AIHealthcarePlatform: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-red-500/20 border border-pink-500/30 text-pink-400 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
-              AI-Powered Healthcare
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 text-yellow-400 text-sm font-medium mb-6">
+              <DollarSign className="w-4 h-4 mr-2" />
+              AI-Powered Autonomous Finance
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Revolutionize Healthcare with
-              <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"> AI Intelligence</span>
+              Transform Your Finance with
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform patient care with our AI-powered healthcare platform. 
-              Improve diagnosis accuracy, optimize treatments, and enhance patient outcomes.
+              Revolutionize your financial operations with our AI-powered autonomous platform. 
+              Optimize budgets, manage investments, and maximize financial performance.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-pink-500/30 text-pink-400 rounded-lg font-semibold hover:bg-pink-500/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-yellow-500/30 text-yellow-400 rounded-lg font-semibold hover:bg-yellow-500/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -118,10 +116,10 @@ const AIHealthcarePlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Healthcare Features
+              Advanced Financial Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform provides comprehensive healthcare solutions for modern medical practices
+              Our AI platform provides comprehensive financial capabilities for modern businesses
             </p>
           </motion.div>
           
@@ -133,9 +131,9 @@ const AIHealthcarePlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-pink-500/30 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -157,10 +155,10 @@ const AIHealthcarePlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Healthcare Platform?
+              Why Choose AI Autonomous Finance?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in patient care and healthcare outcomes
+              Experience measurable improvements in financial performance and risk management
             </p>
           </motion.div>
           
@@ -175,7 +173,7 @@ const AIHealthcarePlatform: React.FC = () => {
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -187,13 +185,13 @@ const AIHealthcarePlatform: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-pink-500/10 to-red-500/10 border border-pink-500/20 rounded-xl p-8"
+              className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border border-yellow-500/20 rounded-xl p-8"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Healthcare?</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Ready to Transform Finance?</h3>
               <p className="text-gray-300 mb-6">
-                Join thousands of healthcare providers already using AI to improve patient care.
+                Join thousands of businesses already using AI to enhance their financial performance.
               </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300">
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300">
                 Get Started Today
               </button>
             </motion.div>
@@ -211,16 +209,16 @@ const AIHealthcarePlatform: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Revolutionize Healthcare?
+              Ready to Revolutionize Finance?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your journey to AI-powered healthcare with our comprehensive platform.
+              Start your journey to AI-powered finance with our comprehensive platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-red-600 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all duration-300">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-pink-500/30 text-pink-400 rounded-lg font-semibold hover:bg-pink-500/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-yellow-500/30 text-yellow-400 rounded-lg font-semibold hover:bg-yellow-500/10 transition-all duration-300">
                 Contact Sales
               </button>
             </div>
@@ -231,4 +229,4 @@ const AIHealthcarePlatform: React.FC = () => {
   );
 };
 
-export default AIHealthcarePlatform;
+export default AIAutonomousFinance;
