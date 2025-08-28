@@ -50,9 +50,9 @@ export function Footer() {
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Team', path: '/team', icon: Users },
-        { name: 'News', path: '/news', icon: Newspaper },
-        { name: 'Contact', path: '/contact', icon: Phone }
+        { name: 'News & Updates', path: '/news', icon: Newspaper },
+        { name: 'Case Studies', path: '/case-studies', icon: CheckCircle },
+        { name: 'Partners', path: '/partners', icon: Users }
       ]
     },
     {
@@ -92,13 +92,9 @@ export function Footer() {
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
         { name: 'Infrastructure', path: '/services/infrastructure', icon: Building },
-        { name: 'AI Analytics', path: '/services/ai-analytics', icon: Brain },
-        // Newly exposed landing pages
-        { name: 'AI Services', path: '/ai-services', icon: Brain },
-        { name: 'IT Services', path: '/it-services', icon: Building },
-        { name: 'Micro SaaS Solutions', path: '/services/micro-saas-solutions', icon: Zap },
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-        { name: 'All Services', path: '/services', icon: Zap }
+        { name: 'Digital Transformation', path: '/services/transformation', icon: Rocket },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Cpu },
+        { name: 'Space Technology', path: '/services/space-technology', icon: Rocket }
       ]
     },
     {
@@ -118,7 +114,7 @@ export function Footer() {
       icon: FileText,
       links: [
         { name: 'Blog', path: '/blog', icon: FileText },
-        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'Documentation', path: '/documentation', icon: FileText },
         { name: 'White Papers', path: '/white-papers', icon: FileText },
         { name: 'Webinars', path: '/webinars', icon: Video },
         { name: 'Research & Development', path: '/research-development', icon: TestTube },

@@ -157,7 +157,7 @@ export default function CybersecurityServices() {
                 Watch Demo
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
