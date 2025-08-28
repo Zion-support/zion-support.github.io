@@ -1,29 +1,18 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  Users, 
-  Eye, 
-  MousePointer, 
-  Clock, 
-  TrendingUp, 
-  TrendingDown,
-  Activity,
-  Zap,
-  Target,
-  MapPin,
-  Globe,
-  Smartphone,
-  Monitor,
-  Tablet,
-  Settings,
-  X,
-  Download,
-  Share2,
-  Filter,
-  Calendar,
-  RefreshCw
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+    BarChart3,
+    Clock,
+    Eye,
+    Monitor,
+    RefreshCw,
+    Smartphone,
+    Tablet,
+    Target,
+    Users,
+    X,
+    Zap
 } from 'lucide-react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -365,14 +354,26 @@ export function AdvancedAnalytics({
         sessionId: userSession
       };
 
-      // Send to analytics endpoint
-      await fetch('/api/analytics', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(analyticsPayload),
-      });
+      // Store analytics data locally instead of sending to non-existent API
+      try {
+        const storedAnalytics = localStorage.getItem('analytics-data') || '[]';
+        const analytics = JSON.parse(storedAnalytics);
+        analytics.push(analyticsPayload);
+        
+        // Keep only last 100 analytics records
+        if (analytics.length > 100) {
+          analytics.splice(0, analytics.length - 100);
+        }
+        
+        localStorage.setItem('analytics-data', JSON.stringify(analytics));
+        
+        // Log analytics for debugging (remove in production)
+        if (process.env['NODE_ENV'] === 'development') {
+          console.log('Analytics data stored locally:', analyticsPayload);
+        }
+      } catch (error) {
+        console.warn('Failed to store analytics data locally:', error);
+      }
     } catch (error) {
       console.warn('Failed to send analytics data:', error);
     }

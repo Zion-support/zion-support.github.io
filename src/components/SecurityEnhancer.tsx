@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 interface SecurityEvent {
   id: string;
@@ -97,31 +97,49 @@ export const SecurityEnhancer: React.FC = () => {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env['NODE_ENV'] === 'development') {
       console.warn('Security Event:', securityEvent);
     }
 
-    // Send to security monitoring service
-    sendToSecurityService(securityEvent);
+    // Store security event locally instead of sending to non-existent API
+    try {
+      const storedEvents = localStorage.getItem('security-events') || '[]';
+      const events = JSON.parse(storedEvents);
+      events.push(securityEvent);
+      
+      // Keep only last 100 events
+      if (events.length > 100) {
+        events.splice(0, events.length - 100);
+      }
+      
+      localStorage.setItem('security-events', JSON.stringify(events));
+    } catch (error) {
+      console.warn('Error storing security event locally:', error);
+    }
   }, [generateEventId]);
 
   // Send event to security service
   const sendToSecurityService = useCallback(async (event: SecurityEvent) => {
     try {
-      // Replace with your actual security monitoring endpoint
-      const response = await fetch('/api/security', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(event),
-      });
+      // Store security event locally instead of sending to non-existent API
+      // TODO: Implement actual security service when available
+      const storedEvents = localStorage.getItem('security-events') || '[]';
+      const events = JSON.parse(storedEvents);
+      events.push(event);
       
-      if (!response.ok) {
-        console.warn('Failed to send security event:', event);
+      // Keep only last 100 events
+      if (events.length > 100) {
+        events.splice(0, events.length - 100);
+      }
+      
+      localStorage.setItem('security-events', JSON.stringify(events));
+      
+      // Log event for debugging (remove in production)
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('Security event stored locally:', event);
       }
     } catch (error) {
-      console.warn('Error sending security event:', error);
+      console.warn('Error storing security event locally:', error);
     }
   }, []);
 
@@ -276,34 +294,33 @@ export const SecurityEnhancer: React.FC = () => {
     return true;
   }, [config.enableCSRFProtection, logSecurityEvent]);
 
-  // Security headers
+  // Set security headers
   useEffect(() => {
     if (!config.enableSecurityHeaders) return;
 
-    // Set security headers
+    // Note: Security headers should be set via HTTP headers, not meta tags
+    // These are handled by the server configuration (netlify.toml and _headers)
+    
+    // Only add non-security related meta tags here
     const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Content-Type-Options';
-    meta.content = 'nosniff';
+    meta.name = 'security-version';
+    meta.content = 'v1.0.0';
     document.head.appendChild(meta);
+  }, [config.enableSecurityHeaders]);
 
-    const meta2 = document.createElement('meta');
-    meta2.httpEquiv = 'X-Frame-Options';
-    meta2.content = 'DENY';
-    document.head.appendChild(meta2);
-
-    const meta3 = document.createElement('meta');
-    meta3.httpEquiv = 'X-XSS-Protection';
-    meta3.content = '1; mode=block';
-    document.head.appendChild(meta3);
-
-    // Content Security Policy
-    if (config.enableContentSecurityPolicy) {
-      const cspMeta = document.createElement('meta');
-      cspMeta.httpEquiv = 'Content-Security-Policy';
-      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:; frame-ancestors 'none';";
-      document.head.appendChild(cspMeta);
-    }
-  }, [config.enableSecurityHeaders, config.enableContentSecurityPolicy]);
+  // Content Security Policy - handled by server headers
+  useEffect(() => {
+    if (!config.enableContentSecurityPolicy) return;
+    
+    // Note: CSP should be set via HTTP headers, not meta tags
+    // This is handled by the server configuration
+    
+    // Only add non-security related meta tags here
+    const cspMeta = document.createElement('meta');
+    cspMeta.name = 'csp-version';
+    cspMeta.content = 'v1.0.0';
+    document.head.appendChild(cspMeta);
+  }, [config.enableContentSecurityPolicy]);
 
   // Monitor form submissions
   useEffect(() => {

@@ -12,50 +12,16 @@
   "categories": ["business", "productivity", "technology", "utilities"],
   "icons": [
     {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon",
+      "purpose": "any"
     },
     {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/zion-tech-group-logo.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/zion-tech-group-logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/images/screenshot-desktop.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Desktop Experience"
-    },
-    {
-      "src": "/images/screenshot-mobile.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile Experience"
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "shortcuts": [
@@ -63,49 +29,25 @@
       "name": "AI Solutions",
       "short_name": "AI",
       "description": "Explore our AI-powered business solutions",
-      "url": "/ai-solutions",
-      "icons": [
-        {
-          "src": "/images/ai-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/ai-solutions"
     },
     {
       "name": "Services",
       "short_name": "Services",
       "description": "View our comprehensive service offerings",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/images/services-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/services"
     },
     {
       "name": "Contact",
       "short_name": "Contact",
       "description": "Get in touch with our team",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/images/contact-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/contact"
     },
     {
       "name": "Request Quote",
       "short_name": "Quote",
       "description": "Request a custom quote for your project",
-      "url": "/request-quote",
-      "icons": [
-        {
-          "src": "/images/quote-icon.png",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/request-quote"
     }
   ],
   "related_applications": [

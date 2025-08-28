@@ -106,14 +106,26 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         }
       };
 
-      // Send to analytics endpoint
-      fetch('/api/analytics/error', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(errorReport)
-      }).catch(e => console.warn('Failed to send error report:', e));
+      // Store error report locally instead of sending to non-existent API
+      try {
+        const storedErrors = localStorage.getItem('error-reports') || '[]';
+        const errors = JSON.parse(storedErrors);
+        errors.push(errorReport);
+        
+        // Keep only last 50 error reports
+        if (errors.length > 50) {
+          errors.splice(0, errors.length - 50);
+        }
+        
+        localStorage.setItem('error-reports', JSON.stringify(errors));
+        
+        // Log error for debugging (remove in production)
+        if (process.env['NODE_ENV'] === 'development') {
+          console.log('Error report stored locally:', errorReport);
+        }
+      } catch (e) {
+        console.warn('Failed to store error report locally:', e);
+      }
     } catch (e) {
       console.warn('Failed to prepare error report:', e);
     }

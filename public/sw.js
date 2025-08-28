@@ -71,10 +71,7 @@ self.addEventListener('fetch', (event) => {
   }
   
   // Handle different types of requests
-  if (url.pathname.startsWith('/api/')) {
-    // API requests - network first, then cache
-    event.respondWith(handleApiRequest(request));
-  } else if (url.pathname.startsWith('/images/') || url.pathname.startsWith('/static/')) {
+  if (url.pathname.startsWith('/images/') || url.pathname.startsWith('/static/')) {
     // Static assets - cache first, then network
     event.respondWith(handleStaticRequest(request));
   } else {
@@ -82,38 +79,6 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(handlePageRequest(request));
   }
 });
-
-// Handle API requests
-async function handleApiRequest(request) {
-  try {
-    // Try network first
-    const networkResponse = await fetch(request);
-    
-    // Cache successful responses
-    if (networkResponse.ok) {
-      const cache = await caches.open(DYNAMIC_CACHE_NAME);
-      cache.put(request, networkResponse.clone());
-    }
-    
-    return networkResponse;
-  } catch (error) {
-    // Fallback to cache
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-      return cachedResponse;
-    }
-    
-    // Return offline response
-    return new Response(
-      JSON.stringify({ error: 'Network error, please try again later' }),
-      {
-        status: 503,
-        statusText: 'Service Unavailable',
-        headers: { 'Content-Type': 'application/json' }
-      }
-    );
-  }
-}
 
 // Handle static asset requests
 async function handleStaticRequest(request) {
@@ -171,76 +136,6 @@ async function handlePageRequest(request) {
   }
 }
 
-// Background sync for offline actions
-self.addEventListener('sync', (event) => {
-  console.log('Background sync triggered:', event.tag);
-  
-  if (event.tag === 'background-sync') {
-    event.waitUntil(doBackgroundSync());
-  }
-});
-
-// Background sync implementation
-async function doBackgroundSync() {
-  try {
-    // Get all clients
-    const clients = await self.clients.matchAll();
-    
-    // Notify clients about sync
-    clients.forEach((client) => {
-      client.postMessage({
-        type: 'BACKGROUND_SYNC',
-        message: 'Background sync completed'
-      });
-    });
-  } catch (error) {
-    console.error('Background sync failed:', error);
-  }
-}
-
-// Push notification handling
-self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
-    icon: '/images/zion-tech-group-logo.png',
-    badge: '/images/zion-tech-group-logo.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View',
-        icon: '/images/zion-tech-group-logo.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/images/zion-tech-group-logo.png'
-      }
-    ]
-  };
-
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
-});
-
-// Notification click handling
-self.addEventListener('notificationclick', (event) => {
-  console.log('Notification clicked:', event);
-  
-  event.notification.close();
-  
-  if (event.action === 'view') {
-    event.waitUntil(
-      self.clients.openWindow('/')
-    );
-  }
-});
-
 // Message handling from main thread
 self.addEventListener('message', (event) => {
   console.log('Message received in service worker:', event.data);
@@ -258,49 +153,6 @@ self.addEventListener('message', (event) => {
     );
   }
 });
-
-// Periodic background sync (if supported)
-if ('periodicSync' in self.registration) {
-  self.addEventListener('periodicsync', (event) => {
-    if (event.tag === 'content-update') {
-      event.waitUntil(updateContent());
-    }
-  });
-}
-
-// Update content periodically
-async function updateContent() {
-  try {
-    // Check for content updates
-    const response = await fetch('/api/content/check-updates');
-    if (response.ok) {
-      const updates = await response.json();
-      
-      if (updates.hasUpdates) {
-        // Update cached content
-        const cache = await caches.open(DYNAMIC_CACHE_NAME);
-        for (const url of updates.urls) {
-          try {
-            const response = await fetch(url);
-            if (response.ok) {
-              await cache.put(url, response);
-            }
-          } catch (error) {
-            console.error('Failed to update cached content:', error);
-          }
-        }
-        
-        // Show notification
-        await self.registration.showNotification('Content Updated', {
-          body: 'New content is available',
-          icon: '/logo.png'
-        });
-      }
-    }
-  } catch (error) {
-    console.error('Periodic content update failed:', error);
-  }
-}
 
 // Error handling
 self.addEventListener('error', (event) => {

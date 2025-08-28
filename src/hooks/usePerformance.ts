@@ -269,12 +269,26 @@ export function usePerformance(options: PerformanceOptions = {}) {
       window.gtag('event', 'performance_metrics', analyticsData);
     }
 
-    // Example: Send to custom endpoint
-    fetch('/api/analytics/performance', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(analyticsData)
-    }).catch(console.error);
+    // Store performance data locally instead of sending to non-existent API
+    try {
+      const storedMetrics = localStorage.getItem('performance-metrics') || '[]';
+      const metrics = JSON.parse(storedMetrics);
+      metrics.push(analyticsData);
+      
+      // Keep only last 100 performance records
+      if (metrics.length > 100) {
+        metrics.splice(0, metrics.length - 100);
+      }
+      
+      localStorage.setItem('performance-metrics', JSON.stringify(metrics));
+      
+      // Log metrics for debugging (remove in production)
+      if (process.env['NODE_ENV'] === 'development') {
+        console.log('Performance metrics stored locally:', analyticsData);
+      }
+    } catch (error) {
+      console.warn('Failed to store performance metrics locally:', error);
+    }
   }, [metrics, sendToAnalytics, getPerformanceScore]);
 
   // Auto-start monitoring on mount
