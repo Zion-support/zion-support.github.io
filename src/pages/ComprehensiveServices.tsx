@@ -1,38 +1,13 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck, Star, Phone, Mail, MapPin, Zap, Rocket, Car, Dna, Robot, Eye, Atom, Microscope, City, RefreshCw, Globe2 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+import { motion } from 'framer-motion';
+import {
+    ArrowRight, Cloud as CloudIcon,
+    Cpu, ExternalLink, Globe as GlobeIcon, Mail, MapPin, MessageSquare, Phone, Search, Sparkles, Star
+} from 'lucide-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
 import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Database, 
-  Rocket, 
-  Target, 
-  Users, 
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Workflow,
-  Atom,
-  MessageCircle,
-  PenTool,
-  Calendar,
-  Heart,
-  DollarSign,
-  ShoppingBag,
-  Settings,
-  Globe,
-  Award,
-  TrendingUp
-} from 'lucide-react';
-import SEO from '../components/SEO';
 
 export default function ComprehensiveServices() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -313,6 +288,13 @@ export default function ComprehensiveServices() {
     </a>
   );
 
+  const ExternalLinkButton: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-cyan-400 hover:underline">
+      {children}
+      <ExternalLink className="ml-2 h-4 w-4" />
+    </a>
+  );
+
   const Section: React.FC<{ icon: React.ReactNode; title: string; description: string; items: { title: string; desc: string; price: string; cta: string; features: string[]; }[]; gradient: string; }>
     = ({ icon, title, description, items, gradient }) => (
     <section className="py-14">
@@ -472,7 +454,7 @@ export default function ComprehensiveServices() {
     />
 
     <Section
-      icon={<Cloud className="h-6 w-6" />}
+      icon={<CloudIcon className="h-6 w-6" />}
       title="IT Services"
       description="Cloud, platform, and security engagements by seasoned architects and SREs."
       items={itServices}
@@ -495,13 +477,14 @@ export default function ComprehensiveServices() {
               <p className="text-white/80 mb-6">We will scope your needs and share a clear proposal with milestones and pricing.</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <a href="tel:+13024640950" className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <Phone className="h-5 w-5 text-zion-cyan mr-3" /> {/* contact.phone is not defined */}
+                  <Phone className="h-5 w-5 text-cyan-400 mr-3" />
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <Mail className="h-5 w-5 text-zion-cyan mr-3" /> {/* contact.email is not defined */}
+                  <Mail className="h-5 w-5 text-cyan-400 mr-3" />
                 </a>
                 <div className="flex items-center p-4 rounded-lg bg-black/40 border border-white/10">
-                  <MapPin className="h-5 w-5 text-zion-cyan mr-3" /> {/* contact.address is not defined */}
+                  <MapPin className="h-5 w-5 text-cyan-400 mr-3" />
+                  <span className="text-white">Delaware, USA</span>
                 </div>
               </div>
             </div>
@@ -520,7 +503,7 @@ export default function ComprehensiveServices() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold text-lg rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
-                <Globe className="w-5 h-5 mr-2" />
+                <GlobeIcon className="w-5 h-5 mr-2" />
                 Visit Our Website
               </a>
             </div>
