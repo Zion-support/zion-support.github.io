@@ -102,7 +102,8 @@ const footerSections = [
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle },
       { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
       { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', icon: Users },
-      { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain }
+      { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
+      { name: '2025 AI Services Showcase', path: '/comprehensive-services-showcase-2025', icon: Sparkles }
     ]
   },
   {
@@ -148,6 +149,20 @@ const footerSections = [
     ]
   },
   {
+    title: '2025 Innovative Services',
+    icon: Sparkles,
+    links: [
+      { name: 'AI Quantum ML Platform', path: '/comprehensive-services-showcase-2025', icon: Atom },
+      { name: 'Quantum Cloud Computing', path: '/comprehensive-services-showcase-2025', icon: Cloud },
+      { name: 'AI Financial Modeling', path: '/comprehensive-services-showcase-2025', icon: DollarSign },
+      { name: 'Blockchain Supply Chain', path: '/comprehensive-services-showcase-2025', icon: Coins },
+      { name: 'Edge Computing IoT', path: '/comprehensive-services-showcase-2025', icon: Network },
+      { name: 'AI Content Creation', path: '/comprehensive-services-showcase-2025', icon: Brain },
+      { name: 'AI Cybersecurity', path: '/comprehensive-services-showcase-2025', icon: Shield },
+      { name: 'View All 2025 Services', path: '/comprehensive-services-showcase-2025', icon: ArrowRight }
+    ]
+  },
+  {
     title: 'Resources & Support',
     icon: BookOpen,
     links: [
@@ -164,9 +179,9 @@ const footerSections = [
 ];
 
 const contactInfo = [
-  { icon: Mail, text: 'contact@ziontechgroup.com', href: 'mailto:contact@ziontechgroup.com' },
-  { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-  { icon: MapPin, text: '123 Tech Street, Innovation City, IC 12345', href: '#' }
+  { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
 ];
 
 const socialLinks = [
