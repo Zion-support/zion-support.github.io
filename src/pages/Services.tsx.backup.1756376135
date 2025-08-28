@@ -354,6 +354,17 @@ const Services = () => {
               Start with a consultation and see how our technology services can streamline your operations, 
               improve productivity, and drive innovation across your organization.
             </p>
+<<<<<<< HEAD
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
+                <Rocket className="h-5 w-5 mr-2"/>
+                Start Consultation
+              </Button>
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg font-semibold">
+                <Phone className="h-5 w-5 mr-2"/>
+                Call +1 302 464 0950
+              </Button>
+=======
           </motion.div>
           
           <motion.div 
@@ -400,6 +411,7 @@ const Services = () => {
                 <Globe className="w-5 h-5 mr-2" />
                 View All Services
               </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1735
             </div>
           </div>
         </div>
