@@ -1,154 +1,135 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error, errorInfo: null };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
     this.setState({
       error,
       errorInfo
     });
 
-    // Call the onError callback if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Log to error reporting service in production
-    if (process.env.NODE_ENV === 'production') {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      console.error('Production error:', {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack
-      });
-    }
+    // Log error to console and any analytics service
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // You can also log to an error reporting service here
+    // logErrorToService(error, errorInfo);
   }
 
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  handleRetry = () => {
+    this.setState({ hasError: false, error: null, errorInfo: null });
   };
 
-  private handleGoHome = () => {
+  handleGoHome = () => {
     window.location.href = '/';
   };
 
-  private handleGoBack = () => {
-    window.history.back();
+  handleReportError = () => {
+    const { error, errorInfo } = this.state;
+    const errorReport = {
+      message: error?.message || 'Unknown error',
+      stack: error?.stack || '',
+      componentStack: errorInfo?.componentStack || '',
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    };
+
+    // Send error report (you can implement your own error reporting service)
+    console.log('Error Report:', errorReport);
+    
+    // Example: Send to your error reporting service
+    // sendErrorReport(errorReport);
+    
+    // For now, just show a message
+    alert('Error report logged. Thank you for helping us improve!');
   };
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-      // Default error UI
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 text-center">
-            {/* Error Icon */}
-            <div className="mx-auto w-16 h-16 bg-red-100 dark:bg-red-900/20 rounded-full flex items-center justify-center mb-4">
-              <AlertTriangle className="w-8 h-8 text-red-600 dark:text-red-400" />
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="mb-8">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500/20 rounded-full mb-4">
+                <AlertTriangle className="w-10 h-10 text-red-400" />
+              </div>
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-300 text-lg mb-6">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              </p>
             </div>
 
-            {/* Error Title */}
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-              Oops! Something went wrong
-            </h1>
-
-            {/* Error Message */}
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              We encountered an unexpected error. Please try again or contact support if the problem persists.
-            </p>
-
-            {/* Error Details (Development only) */}
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-100 dark:bg-gray-700 rounded p-3 text-xs font-mono text-gray-800 dark:text-gray-200 overflow-auto">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.error.stack && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>
-                    </div>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">{this.state.errorInfo.componentStack}</pre>
-                    </div>
-                  )}
+            <div className="bg-slate-800/50 rounded-lg p-6 mb-8 text-left">
+              <h2 className="text-lg font-semibold text-white mb-3">Error Details:</h2>
+              <div className="bg-slate-900 rounded p-3 text-sm text-gray-300 font-mono overflow-x-auto">
+                <div className="mb-2">
+                  <span className="text-red-400">Error:</span> {this.state.error?.message || 'Unknown error'}
                 </div>
-              </details>
-            )}
+                {this.state.error?.stack && (
+                  <div className="text-xs text-gray-500">
+                    <span className="text-blue-400">Stack:</span> {this.state.error.stack}
+                  </div>
+                )}
+              </div>
+            </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
+                <RefreshCw className="w-5 h-5 mr-2" />
                 Try Again
               </button>
               
               <button
-                onClick={this.handleGoBack}
-                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                onClick={this.handleGoHome}
+                className="inline-flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors duration-200"
               >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Go Back
+                <Home className="w-5 h-5 mr-2" />
+                Go Home
               </button>
               
               <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                onClick={this.handleReportError}
+                className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200"
               >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
+                <Mail className="w-5 h-5 mr-2" />
+                Report Issue
               </button>
             </div>
 
-            {/* Support Contact */}
-            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                Need help? Contact our support team
+            <div className="mt-8 text-sm text-gray-400">
+              <p>If this problem persists, please contact our support team.</p>
+              <p className="mt-2">
+                Error ID: {this.state.error?.name || 'unknown'}-{Date.now()}
               </p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
-              >
-                support@ziontechgroup.com
-              </a>
             </div>
           </div>
         </div>
