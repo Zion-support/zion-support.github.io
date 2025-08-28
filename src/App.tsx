@@ -130,6 +130,7 @@ function App() {
                 <Route path="/docs" element={<Docs />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/enhanced-services" element={<EnhancedServices />} />
+                <Route path="/services" element={<EnhancedServices />} />
                 <Route path="/enhanced-pricing" element={<EnhancedPricing />} />
                 <Route path="/enhanced-contact" element={<EnhancedContact />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
