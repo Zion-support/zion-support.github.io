@@ -54,6 +54,22 @@ export function AppHeader() {
       color: 'from-purple-500 to-cyan-500'
     },
     { 
+      name: 'Innovative Micro SAAS 2025', 
+      href: '/services/innovative-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Innovative Micro SAAS 2025', 
+      href: '/services/innovative-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
       name: 'AI & Legal Tech', 
       href: '/services', 
       icon: Scale, 
