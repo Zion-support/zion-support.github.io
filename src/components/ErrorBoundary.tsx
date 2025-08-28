@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -10,125 +11,160 @@ interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
+  errorId: string;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error, errorInfo: null };
+    // Generate a unique error ID for tracking
+    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    
+    return {
+      hasError: true,
+      error,
+      errorInfo: null,
+      errorId
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
 
-    // Log error to console and any analytics service
-    console.error('Error caught by boundary:', error, errorInfo);
-    
-    // You can also log to an error reporting service here
-    // logErrorToService(error, errorInfo);
+    // Log error to error reporting service in production
+    if (process.env.NODE_ENV === 'production') {
+      // You can integrate with Sentry, LogRocket, or other error tracking services here
+      console.error('Production error:', {
+        errorId: this.state.errorId,
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack
+      });
+    }
+
+    this.setState({ errorInfo });
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: null, errorInfo: null });
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    });
   };
 
   handleGoHome = () => {
     window.location.href = '/';
   };
 
-  handleReportError = () => {
-    const { error, errorInfo } = this.state;
-    const errorReport = {
-      message: error?.message || 'Unknown error',
-      stack: error?.stack || '',
-      componentStack: errorInfo?.componentStack || '',
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    };
-
-    // Send error report (you can implement your own error reporting service)
-    console.log('Error Report:', errorReport);
-    
-    // Example: Send to your error reporting service
-    // sendErrorReport(errorReport);
-    
-    // For now, just show a message
-    alert('Error report logged. Thank you for helping us improve!');
-  };
-
   render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+      // Default error UI
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500/20 rounded-full mb-4">
+          <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8 text-center">
+            {/* Error Icon */}
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center">
                 <AlertTriangle className="w-10 h-10 text-red-400" />
               </div>
-              <h1 className="text-3xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-300 text-lg mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-              </p>
             </div>
 
-            <div className="bg-slate-800/50 rounded-lg p-6 mb-8 text-left">
-              <h2 className="text-lg font-semibold text-white mb-3">Error Details:</h2>
-              <div className="bg-slate-900 rounded p-3 text-sm text-gray-300 font-mono overflow-x-auto">
-                <div className="mb-2">
-                  <span className="text-red-400">Error:</span> {this.state.error?.message || 'Unknown error'}
-                </div>
-                {this.state.error?.stack && (
-                  <div className="text-xs text-gray-500">
-                    <span className="text-blue-400">Stack:</span> {this.state.error.stack}
+            {/* Error Title */}
+            <h1 className="text-3xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+
+            {/* Error Message */}
+            <p className="text-gray-300 text-lg mb-6">
+              We encountered an unexpected error. Our team has been notified and is working to fix it.
+            </p>
+
+            {/* Error Details (Development Only) */}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="text-left mb-6 bg-slate-700/50 rounded-lg p-4">
+                <summary className="text-cyan-400 cursor-pointer font-medium mb-2">
+                  Error Details (Development)
+                </summary>
+                <div className="text-sm text-gray-400 space-y-2">
+                  <div>
+                    <strong>Error ID:</strong> {this.state.errorId}
                   </div>
-                )}
-              </div>
-            </div>
+                  <div>
+                    <strong>Message:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.error.stack && (
+                    <div>
+                      <strong>Stack:</strong>
+                      <pre className="mt-2 text-xs bg-slate-800 p-2 rounded overflow-x-auto">
+                        {this.state.error.stack}
+                      </pre>
+                    </div>
+                  )}
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Component Stack:</strong>
+                      <pre className="mt-2 text-xs bg-slate-800 p-2 rounded overflow-x-auto">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </details>
+            )}
 
+            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="inline-flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105"
               >
-                <RefreshCw className="w-5 h-5 mr-2" />
+                <RefreshCw className="w-5 h-5" />
                 Try Again
               </button>
-              
-              <button
-                onClick={this.handleGoHome}
-                className="inline-flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors duration-200"
+
+              <Link
+                to="/"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-all duration-300"
               >
-                <Home className="w-5 h-5 mr-2" />
+                <Home className="w-5 h-5" />
                 Go Home
-              </button>
-              
+              </Link>
+
               <button
-                onClick={this.handleReportError}
-                className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200"
+                onClick={() => window.history.back()}
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-slate-600 hover:bg-slate-500 text-white font-medium rounded-lg transition-all duration-300"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                Report Issue
+                <ArrowLeft className="w-5 h-5" />
+                Go Back
               </button>
             </div>
 
-            <div className="mt-8 text-sm text-gray-400">
-              <p>If this problem persists, please contact our support team.</p>
-              <p className="mt-2">
-                Error ID: {this.state.error?.name || 'unknown'}-{Date.now()}
+            {/* Support Information */}
+            <div className="mt-8 pt-6 border-t border-slate-700/50">
+              <p className="text-gray-400 text-sm mb-2">
+                If this problem persists, please contact our support team.
+              </p>
+              <p className="text-gray-500 text-xs">
+                Error ID: {this.state.errorId}
               </p>
             </div>
           </div>

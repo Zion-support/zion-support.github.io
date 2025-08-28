@@ -26,13 +26,54 @@ export function AppHeader() {
     if (searchQuery.trim()) {
       setIsSearching(true);
       try {
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+        // Enhanced search with better UX
+        const query = searchQuery.trim();
+        
+        // Check if it's a direct service match
+        const serviceMatch = services.find(service => 
+          service.name.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        if (serviceMatch) {
+          window.location.href = serviceMatch.href;
+          return;
+        }
+        
+        // Check if it's a solution match
+        const solutionMatch = solutions.find(solution => 
+          solution.name.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        if (solutionMatch) {
+          window.location.href = solutionMatch.href;
+          return;
+        }
+        
+        // Default to search page
+        window.location.href = `/search?q=${encodeURIComponent(query)}`;
       } finally {
         setIsSearching(false);
       }
     }
   };
+
+  // Enhanced search suggestions
+  const searchSuggestions = [
+    ...services.map(s => ({ text: s.name, type: 'Service', href: s.href })),
+    ...solutions.map(s => ({ text: s.name, type: 'Solution', href: s.href })),
+    { text: 'AI & Machine Learning', type: 'Technology', href: '/services' },
+    { text: 'Cloud Computing', type: 'Technology', href: '/services' },
+    { text: 'Cybersecurity', type: 'Technology', href: '/services' },
+    { text: 'Data Analytics', type: 'Technology', href: '/services' },
+    { text: 'Digital Transformation', type: 'Service', href: '/services' },
+    { text: 'Consulting', type: 'Service', href: '/services' }
+  ];
+
+  const filteredSuggestions = searchQuery.trim() 
+    ? searchSuggestions.filter(item => 
+        item.text.toLowerCase().includes(searchQuery.toLowerCase())
+      ).slice(0, 5)
+    : [];
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
@@ -489,11 +530,42 @@ export function AppHeader() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                   <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search services, solutions..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
+                    onFocus={() => setSearchQuery(searchQuery)}
                     className="w-64 pl-10 pr-4 py-2 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
                   />
+                  
+                  {/* Search Suggestions */}
+                  {filteredSuggestions.length > 0 && searchQuery.trim() && (
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800/95 backdrop-blur-xl rounded-lg border border-slate-700/50 shadow-2xl shadow-black/50 overflow-hidden z-50">
+                      {filteredSuggestions.map((suggestion, index) => (
+                        <Link
+                          key={index}
+                          to={suggestion.href}
+                          className="block px-4 py-3 hover:bg-slate-700/50 transition-colors border-b border-slate-700/30 last:border-b-0"
+                          onClick={() => setSearchQuery('')}
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="text-white text-sm">{suggestion.text}</span>
+                            <span className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
+                              {suggestion.type}
+                            </span>
+                          </div>
+                        </Link>
+                      ))}
+                      <div className="px-4 py-2 bg-slate-700/30">
+                        <Link
+                          to={`/search?q=${encodeURIComponent(searchQuery.trim())}`}
+                          className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+                          onClick={() => setSearchQuery('')}
+                        >
+                          View all results →
+                        </Link>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </form>
 
