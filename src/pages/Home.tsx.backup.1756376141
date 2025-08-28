@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
+=======
 import React, { Suspense, useState, useEffect, useCallback, useMemo } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5f63
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -37,9 +41,44 @@ import {
   Eye,
   Sparkles,
   Zap as ZapIcon,
+<<<<<<< HEAD
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  DollarSign,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  FileText,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  Zap as ZapIcon2,
+  Accessibility,
+  Monitor,
+  Smartphone as MobileIcon,
+  Text
+=======
   Loader2
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5f63
 } from 'lucide-react';
 
+<<<<<<< HEAD
+// Import new components
+import ThemeToggle from '../components/ThemeToggle';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
+import { EnhancedSEO } from '../components/EnhancedSEO';
+
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5f63
 // Enhanced loading component with better UX and accessibility
 const EnhancedLoadingSpinner = () => (
   <div 
@@ -61,6 +100,13 @@ const EnhancedLoadingSpinner = () => (
   </div>
 );
 
+<<<<<<< HEAD
+// Enhanced futuristic animated background component with performance optimizations
+const FuturisticBackground = React.memo(() => {
+  const particles = useMemo(() => [...Array(40)], []);
+  const lines = useMemo(() => [...Array(8)], []);
+  const shapes = useMemo(() => [...Array(12)], []);
+=======
 // Enhanced futuristic animated background component with better performance
 const FuturisticBackground = React.memo(() => {
   const particleCount = useMemo(() => Math.min(30, Math.floor(window.innerWidth / 50)), []);
@@ -396,6 +442,7 @@ export default function Home() {
   if (isLoading) {
     return <EnhancedLoadingSpinner />;
   }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5f63
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
@@ -759,6 +806,171 @@ const Home = () => {
 
       {/* Enhanced Animated Background */}
       <FuturisticBackground />
+<<<<<<< HEAD
+
+      {/* Accessibility Features */}
+      <AccessibilityFeatures />
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="max-w-7xl mx-auto text-center">
+          {/* Hero Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-12"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">
+              <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Leading the future of technology with cutting-edge AI solutions, quantum computing, 
+              and innovative micro SAAS services that transform businesses worldwide.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/services"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+                aria-label="Explore our comprehensive service offerings"
+              >
+                <span>Explore Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-cyan-400/50 flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+                aria-label="Get started with Zion Tech Group"
+              >
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Enhanced Hero Slides */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="max-w-6xl mx-auto"
+          >
+            <div className="relative group">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5 }}
+                  className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12"
+                >
+                  <div className="text-center">
+                    <div className={`w-20 h-20 bg-gradient-to-r ${currentSlideData.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                      <currentSlideData.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{currentSlideData.title}</h3>
+                    <p className="text-lg text-gray-300 mb-6 max-w-2xl mx-auto">{currentSlideData.description}</p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {currentSlideData.features.map((feature, index) => (
+                        <div key={index} className="flex items-center space-x-2 text-sm text-cyan-400">
+                          <CheckCircle className="w-4 h-4" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Enhanced Navigation Controls */}
+              <button
+                onClick={prevSlide}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-full p-3 hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-full p-3 hover:bg-white/20 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+
+              {/* Enhanced Slide Indicators */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                {heroSlides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      index === currentSlide 
+                        ? 'bg-cyan-400 scale-125' 
+                        : 'bg-white/30 hover:bg-white/50'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                    aria-current={index === currentSlide ? 'true' : 'false'}
+                  />
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Enhanced Stats Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our track record speaks for itself. We deliver results that exceed expectations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center group cursor-pointer"
+                tabIndex={0}
+                role="button"
+                aria-label={`${stat.label}: ${stat.number}`}
+                onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.click()}
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300">
+                  <stat.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-400 text-sm mb-2">{stat.label}</div>
+                <div className="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {stat.description}
+                </div>
+              </motion.div>
+            ))}
+=======
       <div className="relative min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
         {/* Hero Section with Enhanced Futuristic Design */}
         <section 
@@ -893,6 +1105,7 @@ const Home = () => {
                 <ChevronRight className="w-6 h-6" />
               </button>
             </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5f63
           </div>
         </div>
       </section>
@@ -946,6 +1159,91 @@ const Home = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* Enhanced Services Showcase Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            viewport={{ once: true }} 
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Innovative Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive portfolio of cutting-edge micro SAAS solutions, AI services, and emerging technology platforms
+            </p>
+          </motion.div>
+          
+          <Suspense fallback={
+            <div className="flex items-center justify-center py-20">
+              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+            </div>
+          }>
+            <UltimateServicesShowcase2025 />
+          </Suspense>
+        </div>
+      </section>
+
+      {/* Enhanced Testimonials Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about our innovative solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 group cursor-pointer"
+                tabIndex={0}
+                role="button"
+                aria-label={`Read testimonial from ${testimonial.name}`}
+                onKeyDown={(e) => e.key === 'Enter' && e.currentTarget.click()}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">{testimonial.avatar}</span>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                    <p className="text-xs text-cyan-400">{testimonial.industry}</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-4">{testimonial.content}</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    {[...Array(5)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`w-4 h-4 ${i < testimonial.rating ? 'fill-current text-yellow-400' : 'text-gray-600'}`} 
+                      />
+                    ))}
+                    <span className="text-sm text-gray-400 ml-2">({testimonial.rating}/5)</span>
+                  </div>
+                  <div className="text-xs text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {testimonial.company}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+=======
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative" aria-label="Featured Services">
           <div className="max-w-7xl mx-auto">
@@ -1224,6 +1522,7 @@ const Home = () => {
                 No credit card required • Free consultation • 30-day money-back guarantee
               </p>
             </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5f63
           </div>
         </div>
       </section>
