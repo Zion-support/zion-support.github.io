@@ -20,6 +20,7 @@ import {
   Star
 } from 'lucide-react';
 import { Button } from '../ui/button';
+import SidebarNavigation from '../navigation/SidebarNavigation';
 
 // Enhanced navigation structure with new services
 const navigation = [
@@ -29,6 +30,20 @@ const navigation = [
     icon: Brain,
     description: 'Cutting-edge AI solutions',
     children: [
+      { 
+        name: 'Comprehensive Services 2025', 
+        href: '/comprehensive-services-2025', 
+        description: 'Complete service catalog',
+        featured: true,
+        price: 'Free'
+      },
+      { 
+        name: 'Innovative Services 2025', 
+        href: '/innovative-services-2025', 
+        description: 'Cutting-edge innovations',
+        featured: true,
+        price: 'Free'
+      },
       { 
         name: 'AI Business Manager', 
         href: '/services/ai-autonomous-business-manager', 
@@ -240,6 +255,7 @@ const navigation = [
 
 export function EnhancedHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -287,6 +303,16 @@ export function EnhancedHeader() {
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20 lg:h-24">
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsSidebarOpen(true)}
+                className="p-2 text-zion-slate-light hover:text-white transition-colors"
+              >
+                <Menu className="w-6 h-6" />
+              </button>
+            </div>
+
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -492,6 +518,12 @@ export function EnhancedHeader() {
           )}
         </AnimatePresence>
       </header>
+
+      {/* Sidebar Navigation */}
+      <SidebarNavigation 
+        isOpen={isSidebarOpen} 
+        onClose={() => setIsSidebarOpen(false)} 
+      />
     </>
   );
 }

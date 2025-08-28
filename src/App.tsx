@@ -41,6 +41,8 @@ const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
 const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
 const APIDocumentation = React.lazy(() => import('./pages/APIDocumentation'));
@@ -129,6 +131,8 @@ function App() {
               <Route path="/enhanced-services" element={<EnhancedServices />} />
               <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
               <Route path="/enhanced-services-2025" element={<EnhancedServicesPage />} />
+              <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
               <Route path="/request-quote" element={<RequestQuote />} />
               
               {/* User Dashboard */}

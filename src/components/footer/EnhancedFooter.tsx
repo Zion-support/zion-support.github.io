@@ -30,6 +30,8 @@ const footerNavigation = {
     title: 'AI & ML Services',
     icon: Brain,
     items: [
+      { name: 'Comprehensive Services 2025', href: '/comprehensive-services-2025', price: 'Free' },
+      { name: 'Innovative Services 2025', href: '/innovative-services-2025', price: 'Free' },
       { name: 'AI Business Manager', href: '/services/ai-autonomous-business-manager', price: '$2,499' },
       { name: 'AI Content Factory', href: '/services/ai-content-factory-enterprise', price: '$899' },
       { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-sentinel', price: '$1,899' },
