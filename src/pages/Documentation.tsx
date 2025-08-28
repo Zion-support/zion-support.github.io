@@ -30,7 +30,6 @@ import {
   Globe,
   Settings,
   Play,
-  Code2,
   GitBranch,
   Package,
   Server,
@@ -102,39 +101,31 @@ export const Documentation: React.FC = () => {
       ]
     },
     {
-              id: 'api',
-        title: 'API Reference',
-        icon: Code2,
+      id: 'api',
+      title: 'API Reference',
+      icon: Code2,
       color: 'from-blue-500 to-cyan-500',
       articles: [
         {
           title: 'REST API Overview',
-          description: 'Complete REST API documentation with examples',
+          description: 'Complete REST API reference with examples and best practices',
           difficulty: 'Intermediate',
-          readTime: '25 min',
+          readTime: '20 min',
           featured: true,
           path: '/docs/api/rest-overview'
         },
         {
-          title: 'GraphQL API',
-          description: 'GraphQL endpoint documentation and schema reference',
-          difficulty: 'Advanced',
-          readTime: '30 min',
+          title: 'Authentication & Authorization',
+          description: 'Learn about API keys, OAuth, and security best practices',
+          difficulty: 'Intermediate',
+          readTime: '15 min',
           featured: false,
-          path: '/docs/api/graphql'
-        },
-        {
-          title: 'WebSocket API',
-          description: 'Real-time communication API documentation',
-          difficulty: 'Advanced',
-          readTime: '20 min',
-          featured: false,
-          path: '/docs/api/websocket'
+          path: '/docs/api/authentication'
         },
         {
           title: 'Rate Limiting',
-          description: 'Understanding API rate limits and best practices',
-          difficulty: 'Intermediate',
+          description: 'Understanding API rate limits and optimization strategies',
+          difficulty: 'Advanced',
           readTime: '10 min',
           featured: false,
           path: '/docs/api/rate-limiting'
@@ -148,34 +139,26 @@ export const Documentation: React.FC = () => {
       color: 'from-purple-500 to-pink-500',
       articles: [
         {
-          title: 'JavaScript/TypeScript SDK',
-          description: 'Official SDK for Node.js and browser environments',
+          title: 'JavaScript/Node.js SDK',
+          description: 'Complete guide to using our JavaScript SDK',
           difficulty: 'Intermediate',
-          readTime: '18 min',
+          readTime: '25 min',
           featured: true,
           path: '/docs/sdks/javascript'
         },
         {
           title: 'Python SDK',
-          description: 'Python client library with examples and best practices',
+          description: 'Python SDK installation and usage examples',
           difficulty: 'Intermediate',
           readTime: '20 min',
-          featured: true,
+          featured: false,
           path: '/docs/sdks/python'
         },
         {
-          title: 'Java SDK',
-          description: 'Java client library for enterprise applications',
-          difficulty: 'Intermediate',
-          readTime: '22 min',
-          featured: false,
-          path: '/docs/sdks/java'
-        },
-        {
           title: 'Mobile SDKs',
-          description: 'iOS and Android SDKs for mobile applications',
+          description: 'iOS and Android SDK integration guides',
           difficulty: 'Advanced',
-          readTime: '25 min',
+          readTime: '30 min',
           featured: false,
           path: '/docs/sdks/mobile'
         }
@@ -188,36 +171,28 @@ export const Documentation: React.FC = () => {
       color: 'from-orange-500 to-red-500',
       articles: [
         {
-          title: 'Building an AI Chatbot',
-          description: 'Create a conversational AI chatbot from scratch',
-          difficulty: 'Intermediate',
+          title: 'Building Your First AI App',
+          description: 'Step-by-step tutorial for creating an AI-powered application',
+          difficulty: 'Beginner',
           readTime: '45 min',
           featured: true,
-          path: '/docs/tutorials/ai-chatbot'
+          path: '/docs/tutorials/first-ai-app'
         },
         {
-          title: 'Image Recognition API',
-          description: 'Implement computer vision in your applications',
-          difficulty: 'Intermediate',
-          readTime: '35 min',
-          featured: true,
-          path: '/docs/tutorials/image-recognition'
-        },
-        {
-          title: 'Natural Language Processing',
-          description: 'Build text analysis and language understanding features',
-          difficulty: 'Advanced',
-          readTime: '50 min',
-          featured: false,
-          path: '/docs/tutorials/nlp'
-        },
-        {
-          title: 'Real-time Analytics Dashboard',
-          description: 'Create live data visualization dashboards',
+          title: 'Real-time Data Processing',
+          description: 'Learn to process streaming data with our services',
           difficulty: 'Advanced',
           readTime: '60 min',
           featured: false,
-          path: '/docs/tutorials/analytics-dashboard'
+          path: '/docs/tutorials/real-time-processing'
+        },
+        {
+          title: 'Deploying to Production',
+          description: 'Production deployment strategies and best practices',
+          difficulty: 'Advanced',
+          readTime: '40 min',
+          featured: false,
+          path: '/docs/tutorials/production-deployment'
         }
       ]
     },
@@ -229,39 +204,33 @@ export const Documentation: React.FC = () => {
       articles: [
         {
           title: 'Docker Deployment',
-          description: 'Containerize and deploy your applications',
+          description: 'Containerized deployment with Docker',
           difficulty: 'Intermediate',
           readTime: '25 min',
           featured: true,
           path: '/docs/deployment/docker'
         },
         {
-          title: 'Kubernetes Orchestration',
-          description: 'Scale your applications with Kubernetes',
+          title: 'Kubernetes Setup',
+          description: 'Scalable deployment with Kubernetes',
           difficulty: 'Advanced',
-          readTime: '40 min',
+          readTime: '50 min',
           featured: false,
           path: '/docs/deployment/kubernetes'
         },
         {
-          title: 'Cloud Deployment',
-          description: 'Deploy to AWS, Azure, and Google Cloud',
-          difficulty: 'Intermediate',
-          readTime: '30 min',
-          featured: false,
-          path: '/docs/deployment/cloud'
-        },
-        {
           title: 'CI/CD Pipeline',
-          description: 'Set up automated deployment pipelines',
+          description: 'Automated deployment with GitHub Actions',
           difficulty: 'Advanced',
           readTime: '35 min',
           featured: false,
-          path: '/docs/deployment/cicd'
+          path: '/docs/deployment/ci-cd'
         }
       ]
     }
   ];
+
+  const allArticles = documentationSections.flatMap(section => section.articles);
 
   const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => 
@@ -271,30 +240,12 @@ export const Documentation: React.FC = () => {
     );
   };
 
-  const filteredSections = documentationSections.filter(section => 
-    selectedCategory === 'all' || section.id === selectedCategory
-  );
-
-  const allArticles = documentationSections.flatMap(section => 
-    section.articles.map(article => ({ ...article, section: section.title }))
-  );
-
-  const filteredArticles = allArticles.filter(article =>
-    article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    article.section.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  // Update category counts
-  React.useEffect(() => {
-    categories.forEach(cat => {
-      if (cat.id !== 'all') {
-        const section = documentationSections.find(s => s.id === cat.id);
-        cat.count = section ? section.articles.length : 0;
-      }
-    });
-    categories[0].count = allArticles.length;
-  }, []);
+  const filteredArticles = searchQuery 
+    ? allArticles.filter(article => 
+        article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        article.description.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : allArticles;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -406,82 +357,60 @@ export const Documentation: React.FC = () => {
               </div>
               
               <div className="space-y-4">
-                {filteredArticles.map((article, index) => (
+                {filteredArticles.map((article) => (
                   <motion.div
-                    key={`${article.section}-${index}`}
+                    key={article.path}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50"
+                    className="bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-300"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-2">
+                        <div className="flex items-center gap-3 mb-3">
                           <span className="inline-block px-3 py-1 bg-slate-700/50 text-blue-400 text-xs font-medium rounded-full">
-                            {article.section}
+                            {article.difficulty}
+                          </span>
+                          <span className="text-sm text-gray-500">
+                            {article.readTime}
                           </span>
                           {article.featured && (
-                            <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                              <Star className="w-3 h-3" />
+                            <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded-full border border-blue-400/30">
                               Featured
                             </span>
                           )}
                         </div>
                         
-                        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-semibold text-white mb-2 hover:text-blue-400 transition-colors">
                           {article.title}
                         </h3>
                         
-                        <p className="text-gray-400 text-sm mb-3">
+                        <p className="text-gray-400 text-sm leading-relaxed">
                           {article.description}
                         </p>
-                        
-                        <div className="flex items-center gap-4 text-sm text-gray-500">
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            {article.readTime}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <User className="w-4 h-4" />
-                            {article.difficulty}
-                          </span>
-                        </div>
                       </div>
                       
-                      <div className="flex-shrink-0 ml-4">
-                        <button className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 border border-blue-400/30 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-500/30 transition-all duration-300">
-                          View
-                          <ArrowRight className="w-4 h-4" />
-                        </button>
-                      </div>
+                      <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 rounded-lg transition-all duration-200">
+                        <span>Read</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
                     </div>
                   </motion.div>
                 ))}
               </div>
-              
-              {filteredArticles.length === 0 && (
-                <div className="text-center py-12">
-                  <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                  <p className="text-gray-400 text-lg">No documentation found matching your search.</p>
-                  <p className="text-gray-500 text-sm mt-2">Try different keywords or browse by category.</p>
-                </div>
-              )}
             </div>
           ) : (
-            // Category-based Documentation
+            // Documentation Sections
             <div className="space-y-8">
-              {filteredSections.map((section, sectionIndex) => (
+              {documentationSections.map((section) => (
                 <motion.div
                   key={section.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
                   className="bg-slate-800/30 border border-slate-700/30 rounded-2xl overflow-hidden"
                 >
-                  {/* Section Header */}
                   <button
                     onClick={() => toggleSection(section.id)}
-                    className="w-full p-6 text-left hover:bg-slate-800/50 transition-colors duration-200"
+                    className="w-full p-6 text-left hover:bg-slate-700/30 transition-all duration-200"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
@@ -489,77 +418,68 @@ export const Documentation: React.FC = () => {
                           <section.icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                          <h3 className="text-xl font-semibold text-white mb-1">
+                            {section.title}
+                          </h3>
                           <p className="text-gray-400 text-sm">
-                            {section.articles.length} articles • {section.articles.reduce((acc, article) => acc + parseInt(article.readTime), 0)} min total
+                            {section.articles.length} articles
                           </p>
                         </div>
                       </div>
-                      {expandedSections.includes(section.id) ? (
-                        <ChevronDown className="w-6 h-6 text-gray-400" />
-                      ) : (
-                        <ChevronRight className="w-6 h-6 text-gray-400" />
-                      )}
+                      <ChevronRight 
+                        className={`w-6 h-6 text-gray-400 transition-transform duration-200 ${
+                          expandedSections.includes(section.id) ? 'rotate-90' : ''
+                        }`}
+                      />
                     </div>
                   </button>
                   
-                  {/* Section Content */}
                   {expandedSections.includes(section.id) && (
-                    <div className="border-t border-slate-700/30">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
-                        {section.articles.map((article, articleIndex) => (
-                          <motion.div
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="border-t border-slate-700/30"
+                    >
+                      <div className="p-6 space-y-4">
+                        {section.articles.map((article) => (
+                          <div
                             key={article.path}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.3, delay: articleIndex * 0.1 }}
-                            className="group bg-slate-700/20 border border-slate-600/20 rounded-xl p-4 hover:border-slate-500/40 hover:bg-slate-700/30 transition-all duration-300"
+                            className="flex items-center justify-between p-4 bg-slate-700/20 rounded-lg hover:bg-slate-700/30 transition-all duration-200"
                           >
-                            <div className="flex items-start justify-between mb-3">
-                              <div className="flex items-center gap-2">
-                                {article.featured && (
-                                  <Star className="w-4 h-4 text-yellow-400" />
-                                )}
-                                <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full ${
-                                  article.difficulty === 'Beginner' 
-                                    ? 'bg-green-500/20 text-green-400' 
-                                    : article.difficulty === 'Intermediate'
-                                    ? 'bg-yellow-500/20 text-yellow-400'
-                                    : 'bg-red-500/20 text-red-400'
-                                }`}>
+                            <div className="flex-1">
+                              <div className="flex items-center gap-3 mb-2">
+                                <span className="inline-block px-2 py-1 bg-slate-600/50 text-blue-400 text-xs font-medium rounded">
                                   {article.difficulty}
                                 </span>
+                                <span className="text-sm text-gray-500">
+                                  {article.readTime}
+                                </span>
+                                {article.featured && (
+                                  <span className="inline-block px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded border border-blue-400/30">
+                                    Featured
+                                  </span>
+                                )}
                               </div>
-                              <span className="text-xs text-gray-500">{article.readTime}</span>
-                            </div>
-                            
-                            <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                              {article.title}
-                            </h3>
-                            
-                            <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                              {article.description}
-                            </p>
-                            
-                            <div className="flex items-center justify-between">
-                              <button className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
-                                Read Article
-                                <ArrowRight className="w-4 h-4" />
-                              </button>
                               
-                              <div className="flex gap-2">
-                                <button className="p-2 bg-slate-600/30 rounded-lg text-gray-400 hover:text-blue-400 transition-colors">
-                                  <Bookmark className="w-4 h-4" />
-                                </button>
-                                <button className="p-2 bg-slate-600/30 rounded-lg text-gray-400 hover:text-blue-400 transition-colors">
-                                  <Share2 className="w-4 h-4" />
-                                </button>
-                              </div>
+                              <h4 className="text-lg font-medium text-white mb-1">
+                                {article.title}
+                              </h4>
+                              
+                              <p className="text-gray-400 text-sm">
+                                {article.description}
+                              </p>
                             </div>
-                          </motion.div>
+                            
+                            <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 rounded-lg transition-all duration-200">
+                              <span>Read</span>
+                              <ArrowRight className="w-4 h-4" />
+                            </button>
+                          </div>
                         ))}
                       </div>
-                    </div>
+                    </motion.div>
                   )}
                 </motion.div>
               ))}
@@ -568,44 +488,8 @@ export const Documentation: React.FC = () => {
         </div>
       </section>
 
-      {/* Quick Actions */}
-      <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container-responsive">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Quick Actions</h2>
-            <p className="text-gray-400">Get started quickly with these popular resources</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: 'API Playground', icon: Terminal, color: 'from-green-500 to-emerald-500', href: '/docs/api-playground' },
-              { name: 'SDK Downloads', icon: Download, color: 'from-blue-500 to-cyan-500', href: '/docs/sdks/downloads' },
-              { name: 'Code Examples', icon: Code2, color: 'from-purple-500 to-pink-500', href: '/docs/examples' },
-              { name: 'Support Forum', icon: Globe, color: 'from-orange-500 to-red-500', href: '/support' }
-            ].map((action, index) => (
-              <motion.a
-                key={action.name}
-                href={action.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-400/50 transition-all duration-300 hover:bg-slate-800/70"
-              >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${action.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <action.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
-                  {action.name}
-                </h3>
-              </motion.a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
+      {/* Developer Support Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
