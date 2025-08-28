@@ -95,16 +95,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'AI & Technology Services',
       featured: true,
       links: [
-        { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations-platform', featured: true },
-        { name: 'Quantum AI Cybersecurity', href: '/services/quantum-ai-cybersecurity-platform', featured: true },
-        { name: 'AI Content Creation Studio', href: '/services/ai-content-creation-studio', featured: true },
-        { name: 'AI Sales Intelligence', href: '/services/ai-sales-intelligence-platform', featured: true },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
-        { name: 'AI Data Analytics & BI', href: '/services/ai-data-analytics-bi', featured: true },
-        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostics-platform', featured: true },
-        { name: 'AI Education Platform', href: '/services/ai-education-platform', featured: true },
-        { name: 'AI Metaverse Platform', href: '/services/ai-metaverse-platform', featured: true },
-        { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', featured: true }
+        { name: 'All Services', href: '/services', featured: true },
+        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
+        { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
+        { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
+        { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
+        { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
+        { name: 'AI Space Technology', href: '/services#ai-space-tech', featured: true },
+        { name: 'AI FinTech Platform', href: '/services#ai-fintech', featured: true },
+        { name: 'AI Supply Chain', href: '/services#ai-supply-chain', featured: true },
+        { name: 'AI Quality Assurance', href: '/services#ai-qa', featured: true }
       ]
     },
     {

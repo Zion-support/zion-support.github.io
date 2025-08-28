@@ -42,8 +42,17 @@ const EnhancedServicesLanding = lazy(() => import('./pages/EnhancedServicesLandi
 const ComprehensiveServicesAdvertising = lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx').then(module => ({ default: module.default })));
 const ComprehensiveServicesShowcase2030 = lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx').then(module => ({ default: module.default })));
 
-// Add missing imports
-const EnhancedContact = lazy(() => import('./pages/EnhancedContact').then(module => ({ default: module.default })));
+// New pages
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
+const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Developers = React.lazy(() => import('./pages/Developers'));
+const Demo = React.lazy(() => import('./pages/Demo'));
 
 // Service pages with enhanced error boundaries
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps').then(module => ({ default: module.default })));
@@ -161,6 +170,8 @@ function App() {
                 {/* Additional Routes */}
                 <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
                 <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
+                <Route path="/services/innovative-2025" element={<InnovativeServices2025 />} />
+                <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
                 <Route path="/community" element={<Community />} />
                 <Route path="/developers" element={<Developers />} />
