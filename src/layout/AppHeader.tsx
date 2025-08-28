@@ -131,6 +131,22 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Comprehensive Services 2025', 
+      href: '/comprehensive-services-showcase-2025', 
+      icon: Star, 
+      description: 'Complete Service Portfolio',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    { 
+      name: 'Innovative AI Services 2025', 
+      href: '/innovative-ai-services-2025', 
+      icon: Brain, 
+      description: 'Cutting-edge AI Solutions',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
     }
   ];
 
