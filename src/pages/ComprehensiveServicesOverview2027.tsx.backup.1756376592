@@ -298,6 +298,10 @@ export default function ComprehensiveServicesOverview2027() {
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-70fc
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO

@@ -81,6 +81,71 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+<<<<<<< HEAD
+      title: 'Core Services',
+      links: [
+        { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: Database },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server },
+        { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Cpu },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom }
+      ]
+    },
+    {
+      title: 'AI Solutions',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: Mail },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo', icon: TrendingUp },
+        { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Target },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: Lightbulb },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-powered-healthcare-diagnostics', icon: Heart }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      links: [
+        { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
+        { name: 'Website Analytics', href: '/services/website-analytics', icon: TrendingUp },
+        { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: Monitor },
+        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: Target },
+        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },
+        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: Globe },
+        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail },
+        { name: 'Returns Management', href: '/services/returns-management', icon: CheckCircle }
+      ]
+    },
+    {
+      title: 'Enterprise Tools',
+      icon: Zap,
+      links: [
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
+        { name: 'Customer Success Platform', href: '/services/ai-powered-customer-success', icon: Users },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: Monitor },
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Eye },
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
+        { name: 'Blockchain Supply Chain', href: '/services/blockchain-supply-chain', icon: Network },
+        { name: 'Metaverse Commerce', href: '/services/metaverse-commerce-platform', icon: Globe2 },
+        { name: 'Quantum Trading Platform', href: '/services/quantum-ai-trading-platform', icon: TrendingUp }
+      ]
+    },
+    {
+      title: 'Emerging Tech',
+      links: [
+        { name: 'Space Technology', href: '/services/space-tech-optimization-platform', icon: Planet },
+        { name: 'Autonomous Vehicles', href: '/services/autonomous-vehicle-fleet-management', icon: Car },
+        { name: 'Quantum Cybersecurity', href: '/services/quantum-cybersecurity-platform', icon: Shield },
+        { name: 'AI Legal Assistant', href: '/services/ai-powered-legal-assistant', icon: Scale },
+        { name: 'Green IT Solutions', href: '/services/green-it', icon: Leaf },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
+        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions', icon: Factory },
+        { name: 'Smart City Platform', href: '/services/iot-smart-city', icon: Building }
+=======
       title: 'Explore',
       links: [
         { name: 'Services', href: '/services' },
@@ -96,13 +161,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' },
         { name: 'Blog', href: '/blog' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-70fc
       ]
     }
   ];
 
+<<<<<<< HEAD
+  const companyInfo = [
+=======
   const quickLinks = [
     { name: 'Services', href: '/services' },
     { name: 'Pricing', href: '/pricing' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-70fc
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
@@ -110,8 +180,34 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'News & Events', href: '/news' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
+<<<<<<< HEAD
+    { name: 'Press Kit', href: '/press' }
+  ];
+
+  const supportResources = [
+    { name: 'Help Center', href: '/help' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Community Forum', href: '/community' },
+    { name: 'Training & Webinars', href: '/training' },
+    { name: 'Status Page', href: '/status' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' }
+  ];
+
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'GDPR Compliance', href: '/gdpr' },
+    { name: 'Data Processing Agreement', href: '/dpa' },
+    { name: 'Service Level Agreement', href: '/sla' },
+    { name: 'Acceptable Use Policy', href: '/aup' },
+    { name: 'Security Policy', href: '/security-policy' }
+=======
     { name: 'Careers', href: '/careers' },
     { name: 'Marketplace', href: '/marketplace' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-70fc
   ];
 
   const socialLinks = [
