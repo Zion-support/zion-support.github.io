@@ -42,17 +42,7 @@ const EnhancedServicesLanding = lazy(() => import('./pages/EnhancedServicesLandi
 const ComprehensiveServicesAdvertising = lazy(() => import('./pages/ComprehensiveServicesAdvertising.tsx').then(module => ({ default: module.default })));
 const ComprehensiveServicesShowcase2030 = lazy(() => import('./pages/ComprehensiveServicesShowcase2030.tsx').then(module => ({ default: module.default })));
 
-// New pages
-const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
-const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027'));
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-const ComprehensiveServicesLanding2027 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2027'));
-const InnovativeServices2025 = React.lazy(() => import('./pages/InnovativeServices2025'));
-const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
-const Community = React.lazy(() => import('./pages/Community'));
-const Developers = React.lazy(() => import('./pages/Developers'));
-const Demo = React.lazy(() => import('./pages/Demo'));
+// New pages - only importing existing pages
 
 // Service pages with enhanced error boundaries
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps').then(module => ({ default: module.default })));
@@ -63,13 +53,7 @@ const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessInt
 const MicroSaaSProducts = lazy(() => import('./pages/services/MicroSaaSProducts').then(module => ({ default: module.default })));
 // Additional pages from remote
 const Legal = lazy(() => import('./pages/Legal').then(module => ({ default: module.default })));
-const InnovativeServicesShowcase2027 = lazy(() => import('./pages/InnovativeServicesShowcase2027').then(module => ({ default: module.default })));
-const ComprehensiveServicesLanding2027 = lazy(() => import('./pages/ComprehensiveServicesLanding2027').then(module => ({ default: module.default })));
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029').then(module => ({ default: module.default })));
-const ScheduleDemo = lazy(() => import('./pages/ScheduleDemo').then(module => ({ default: module.default })));
-const Community = lazy(() => import('./pages/Community').then(module => ({ default: module.default })));
-const Developers = lazy(() => import('./pages/Developers').then(module => ({ default: module.default })));
-const Demo = lazy(() => import('./pages/Demo').then(module => ({ default: module.default })));
 
 // Enhanced placeholder pages with better SEO and accessibility
 const Careers = () => (
