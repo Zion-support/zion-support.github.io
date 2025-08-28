@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<<<<<<< HEAD
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Zion Tech Group - Cutting-Edge Technology Solutions & AI Services</title>
+    <meta name="title" content="Zion Tech Group - Cutting-Edge Technology Solutions & AI Services" />
+    <meta name="description" content="Transform your business with Zion Tech Group's innovative AI, cybersecurity, cloud solutions, and cutting-edge technology services. Expert consulting, development, and digital transformation." />
+    <meta name="keywords" content="AI services, cybersecurity, cloud solutions, digital transformation, technology consulting, software development, Zion Tech Group" />
+=======
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,22 +21,45 @@
       content="Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
     />
     <meta name="keywords" content="AI, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fa48
     <meta name="author" content="Zion Tech Group" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ziontechgroup.com/" />
+<<<<<<< HEAD
+    <meta property="og:title" content="Zion Tech Group - Cutting-Edge Technology Solutions & AI Services" />
+    <meta property="og:description" content="Transform your business with Zion Tech Group's innovative AI, cybersecurity, cloud solutions, and cutting-edge technology services." />
+    <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:locale" content="en_US" />
+=======
     <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
     <meta property="og:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
     <meta property="og:image" content="/og-image.svg" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fa48
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://ziontechgroup.com/" />
+<<<<<<< HEAD
+    <meta property="twitter:title" content="Zion Tech Group - Cutting-Edge Technology Solutions & AI Services" />
+    <meta property="twitter:description" content="Transform your business with Zion Tech Group's innovative AI, cybersecurity, cloud solutions, and cutting-edge technology services." />
+    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+    <meta name="twitter:site" content="@ziontechgroup" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+=======
     <meta property="twitter:title" content="Zion Tech Group - Technology Solutions" />
     <meta property="twitter:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
     <meta property="twitter:image" content="/og-image.svg" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fa48
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ziontechgroup.com/" />
@@ -38,9 +72,36 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
     
+<<<<<<< HEAD
+    <!-- Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/og-image.svg",
+      "description": "Cutting-edge technology solutions and AI services for modern businesses",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://twitter.com/ziontechgroup",
+        "https://linkedin.com/company/ziontechgroup"
+      ]
+    }
+    </script>
+=======
     <!-- Favicon -->
     <link rel="apple-touch-icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fa48
     
     <!-- Performance and Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
