@@ -85,7 +85,7 @@ const Solutions = React.lazy(() => import('./pages/solutions'));
 
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
-const Solutions = React.lazy(() => import('./pages/Solutions'));
+const SolutionsPage = React.lazy(() => import('./pages/Solutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
 
@@ -105,7 +105,6 @@ const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AIHeal
 const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 
-<<<<<<< HEAD
 // Additional service imports
 const AIPoweredSEO = lazy(() => import('./pages/AIPoweredSEO'));
 const InterviewAssessmentAI = lazy(() => import('./pages/InterviewAssessmentAI'));
@@ -124,7 +123,6 @@ const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase20
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
 const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
-const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
 const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMarketingSuite'));
