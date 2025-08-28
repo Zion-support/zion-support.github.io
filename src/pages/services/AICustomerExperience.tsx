@@ -3,14 +3,14 @@ import { SEO } from '../../components/SEO';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu } from 'lucide-react';
+import { CheckCircle, Brain, TrendingUp, Users, Shield, Zap, Globe, Clock, Phone, Mail, MessageCircle, Heart, Star, Target, BarChart3, Headphones, ShoppingBag } from 'lucide-react';
 
-const AICybersecurityPlatform: React.FC = () => {
+const AICustomerExperience: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Cybersecurity Platform - Zion Tech Group"
-        description="Revolutionary AI-powered cybersecurity platform that provides 99.9% threat detection, zero false positives, and automated response with advanced machine learning algorithms."
+        title="AI Customer Experience Platform - Zion Tech Group"
+        description="Revolutionary AI-powered customer experience platform that personalizes interactions, predicts customer needs, and delivers exceptional service with 95% customer satisfaction rates."
       />
       
       {/* Hero Section */}
@@ -19,19 +19,19 @@ const AICybersecurityPlatform: React.FC = () => {
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Security
+              AI-Powered CX Platform
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent">
-              AI Cybersecurity Platform
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent">
+              AI Customer Experience Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Protect your organization with AI that detects threats in real-time, prevents attacks before they happen, 
-              and provides 99.9% threat detection with zero false positives.
+              Transform customer interactions with AI that personalizes experiences, predicts needs, and delivers exceptional service. 
+              Achieve 95% customer satisfaction and 300% increase in customer lifetime value.
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
+            <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700">
               Start Free Trial
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
@@ -45,40 +45,40 @@ const AICybersecurityPlatform: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Why Choose AI Cybersecurity?
+            Why Choose AI Customer Experience?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">
-              <div className="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-red-400" />
+              <div className="w-16 h-16 bg-pink-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-pink-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">99.9% Threat Detection</h3>
-              <p className="text-gray-300">Advanced AI algorithms identify and neutralize threats before they can cause damage</p>
+              <h3 className="text-xl font-semibold text-white mb-3">95% Customer Satisfaction</h3>
+              <p className="text-gray-300">AI-powered personalization and proactive service exceed customer expectations</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">
-              <div className="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-orange-400" />
+              <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Zero False Positives</h3>
-              <p className="text-gray-300">Machine learning eliminates false alarms, reducing alert fatigue by 95%</p>
+              <h3 className="text-xl font-semibold text-white mb-3">300% CLV Increase</h3>
+              <p className="text-gray-300">Personalized experiences and predictive insights boost customer lifetime value</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">
-              <div className="w-16 h-16 bg-yellow-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-yellow-400" />
+              <div className="w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-indigo-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Real-time Response</h3>
-              <p className="text-gray-300">Automated threat response in milliseconds, 100x faster than human operators</p>
+              <h3 className="text-xl font-semibold text-white mb-3">80% Faster Resolution</h3>
+              <p className="text-gray-300">AI-powered routing and knowledge base automation resolve issues quickly</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">
-              <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-green-400" />
+              <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">90% Cost Reduction</h3>
-              <p className="text-gray-300">Automated security operations reduce manual intervention and operational costs</p>
+              <h3 className="text-xl font-semibold text-white mb-3">24/7 Availability</h3>
+              <p className="text-gray-300">AI chatbots and automated systems provide round-the-clock customer support</p>
             </Card>
           </div>
         </div>
@@ -88,7 +88,7 @@ const AICybersecurityPlatform: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Advanced Security Features
+            Advanced AI Features
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -96,32 +96,32 @@ const AICybersecurityPlatform: React.FC = () => {
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">AI Threat Detection</h3>
-                  <p className="text-gray-300">Machine learning algorithms analyze network traffic, user behavior, and system logs to identify sophisticated threats</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">AI-Powered Personalization</h3>
+                  <p className="text-gray-300">Machine learning algorithms create personalized experiences based on customer behavior and preferences</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Behavioral Analytics</h3>
-                  <p className="text-gray-300">User and entity behavior analytics (UEBA) detect insider threats and compromised accounts</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Predictive Customer Analytics</h3>
+                  <p className="text-gray-300">AI predicts customer needs, churn risk, and opportunities for upselling</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Automated Response</h3>
-                  <p className="text-gray-300">Intelligent automation blocks threats, isolates compromised systems, and initiates incident response</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Intelligent Chatbots</h3>
+                  <p className="text-gray-300">Natural language processing chatbots handle 80% of customer inquiries automatically</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Threat Intelligence</h3>
-                  <p className="text-gray-300">Real-time threat feeds and global intelligence sharing for proactive defense</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Sentiment Analysis</h3>
+                  <p className="text-gray-300">Real-time emotion detection and sentiment tracking across all customer touchpoints</p>
                 </div>
               </div>
             </div>
@@ -130,32 +130,32 @@ const AICybersecurityPlatform: React.FC = () => {
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Endpoint Protection</h3>
-                  <p className="text-gray-300">Advanced endpoint detection and response (EDR) with AI-powered malware analysis</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Omnichannel Integration</h3>
+                  <p className="text-gray-300">Seamless customer experience across web, mobile, social media, and contact centers</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Network Security</h3>
-                  <p className="text-gray-300">AI-driven network traffic analysis, intrusion detection, and firewall optimization</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Proactive Customer Service</h3>
+                  <p className="text-gray-300">AI identifies and resolves issues before customers even notice them</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Cloud Security</h3>
-                  <p className="text-gray-300">Multi-cloud security monitoring, configuration management, and compliance tracking</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Customer Journey Mapping</h3>
+                  <p className="text-gray-300">Visual mapping of customer touchpoints with optimization recommendations</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Compliance Automation</h3>
-                  <p className="text-gray-300">Automated compliance reporting for SOC 2, ISO 27001, GDPR, and industry standards</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">Voice & Video Analytics</h3>
+                  <p className="text-gray-300">Advanced speech recognition and video analysis for deeper customer insights</p>
                 </div>
               </div>
             </div>
@@ -163,60 +163,60 @@ const AICybersecurityPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Security Solutions */}
+      {/* Use Cases */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Comprehensive Security Solutions
+            Industry Applications
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-slate-800/50 border-slate-700 p-6">
-              <div className="w-12 h-12 bg-red-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Network className="w-6 h-6 text-red-400" />
+              <div className="w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4">
+                <ShoppingBag className="w-6 h-6 text-pink-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Network Security</h3>
-              <p className="text-gray-300">AI-powered intrusion detection, traffic analysis, and network segmentation</p>
+              <h3 className="text-xl font-semibold text-white mb-3">E-commerce & Retail</h3>
+              <p className="text-gray-300">Personalized shopping experiences, product recommendations, and customer support</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
-              <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Cpu className="w-6 h-6 text-orange-400" />
+              <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
+                <Headphones className="w-6 h-6 text-purple-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Endpoint Security</h3>
-              <p className="text-gray-300">Advanced EDR with behavioral analysis and automated threat response</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Contact Centers</h3>
+              <p className="text-gray-300">AI-powered call routing, sentiment analysis, and automated issue resolution</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
-              <div className="w-12 h-12 bg-yellow-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Database className="w-6 h-6 text-yellow-400" />
+              <div className="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center mb-4">
+                <MessageCircle className="w-6 h-6 text-indigo-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Data Protection</h3>
-              <p className="text-gray-300">Encryption, access control, and data loss prevention with AI monitoring</p>
-            </Card>
-            
-            <Card className="bg-slate-800/50 border-slate-700 p-6">
-              <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-green-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Identity & Access</h3>
-              <p className="text-gray-300">Multi-factor authentication, privileged access management, and user behavior analytics</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Social Media</h3>
+              <p className="text-gray-300">Social listening, automated responses, and brand sentiment monitoring</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
                 <Globe className="w-6 h-6 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Cloud Security</h3>
-              <p className="text-gray-300">Multi-cloud security, configuration management, and compliance monitoring</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Financial Services</h3>
+              <p className="text-gray-300">Personalized banking experiences, fraud detection, and customer support</p>
             </Card>
             
             <Card className="bg-slate-800/50 border-slate-700 p-6">
-              <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
-                <AlertTriangle className="w-6 h-6 text-purple-400" />
+              <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Incident Response</h3>
-              <p className="text-gray-300">Automated incident detection, response orchestration, and forensic analysis</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Healthcare</h3>
+              <p className="text-gray-300">Patient experience optimization, appointment scheduling, and health monitoring</p>
+            </Card>
+            
+            <Card className="bg-slate-800/50 border-slate-700 p-6">
+              <div className="w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 className="w-6 h-6 text-orange-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Travel & Hospitality</h3>
+              <p className="text-gray-300">Personalized travel recommendations, booking assistance, and customer service</p>
             </Card>
           </div>
         </div>
@@ -236,45 +236,45 @@ const AICybersecurityPlatform: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$599</span>
+                <span className="text-4xl font-bold text-white">$399</span>
                 <span className="text-gray-400">/month</span>
               </div>
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 100 endpoints
+                  Up to 10,000 customers
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic AI threat detection
+                  Basic AI personalization
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard reporting
+                  Standard chatbots
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                   Email support
                 </li>
               </ul>
-              <Button className="w-full bg-red-600 hover:bg-red-700">
+              <Button className="w-full bg-pink-600 hover:bg-pink-700">
                 Start Free Trial
               </Button>
             </Card>
             
-            <Card className="bg-gradient-to-br from-red-600 to-orange-600 p-8 text-center relative transform scale-105">
+            <Card className="bg-gradient-to-br from-pink-600 to-purple-600 p-8 text-center relative transform scale-105">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <Badge variant="secondary" className="bg-white text-red-600">Most Popular</Badge>
+                <Badge variant="secondary" className="bg-white text-pink-600">Most Popular</Badge>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$1,599</span>
-                <span className="text-red-100">/month</span>
+                <span className="text-4xl font-bold text-white">$999</span>
+                <span className="text-pink-100">/month</span>
               </div>
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Up to 1,000 endpoints
+                  Up to 100,000 customers
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
@@ -293,7 +293,7 @@ const AICybersecurityPlatform: React.FC = () => {
                   API access
                 </li>
               </ul>
-              <Button className="w-full bg-white text-red-600 hover:bg-gray-100">
+              <Button className="w-full bg-white text-pink-600 hover:bg-gray-100">
                 Get Started
               </Button>
             </Card>
@@ -304,13 +304,13 @@ const AICybersecurityPlatform: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Ultimate</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-white">$3,999</span>
+                <span className="text-4xl font-bold text-white">$2,499</span>
                 <span className="text-gray-400">/month</span>
               </div>
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Unlimited endpoints
+                  Unlimited customers
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -329,7 +329,7 @@ const AICybersecurityPlatform: React.FC = () => {
                   White-label options
                 </li>
               </ul>
-              <Button className="w-full bg-orange-600 hover:bg-orange-700">
+              <Button className="w-full bg-purple-600 hover:bg-purple-700">
                 Contact Sales
               </Button>
             </Card>
@@ -346,20 +346,20 @@ const AICybersecurityPlatform: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-red-400 mb-2">$376.3B</div>
-              <div className="text-gray-300">Global Cybersecurity Market (2026)</div>
+              <div className="text-4xl font-bold text-pink-400 mb-2">$109.5B</div>
+              <div className="text-gray-300">Global CX Market (2026)</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-orange-400 mb-2">400-800%</div>
-              <div className="text-gray-300">Average ROI for AI Security</div>
+              <div className="text-4xl font-bold text-purple-400 mb-2">300-500%</div>
+              <div className="text-gray-300">Average ROI for AI CX</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Threat Detection Rate</div>
+              <div className="text-4xl font-bold text-indigo-400 mb-2">95%</div>
+              <div className="text-gray-300">Customer Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">90%</div>
-              <div className="text-gray-300">Cost Reduction</div>
+              <div className="text-4xl font-bold text-blue-400 mb-2">300%</div>
+              <div className="text-gray-300">CLV Increase</div>
             </div>
           </div>
         </div>
@@ -369,36 +369,36 @@ const AICybersecurityPlatform: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Ready to Secure Your Organization?
+            Ready to Transform Customer Experience?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies already protected by AI-powered cybersecurity.
+            Join industry leaders already using AI to revolutionize customer interactions.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="flex items-center justify-center space-x-3 text-gray-300">
-              <Phone className="w-5 h-5 text-red-400" />
+              <Phone className="w-5 h-5 text-pink-400" />
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center justify-center space-x-3 text-gray-300">
-              <Mail className="w-5 h-5 text-red-400" />
+              <Mail className="w-5 h-5 text-pink-400" />
               <span>kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center justify-center space-x-3 text-gray-300">
-              <Globe className="w-5 h-5 text-red-400" />
+              <Globe className="w-5 h-5 text-pink-400" />
               <span>ziontechgroup.com</span>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700">
+            <Button size="lg" className="bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700">
               Start Free Trial
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
               Schedule Demo
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-              Download Security Report
+              Download CX Guide
             </Button>
           </div>
         </div>
@@ -407,4 +407,4 @@ const AICybersecurityPlatform: React.FC = () => {
   );
 };
 
-export default AICybersecurityPlatform;
+export default AICustomerExperience;
