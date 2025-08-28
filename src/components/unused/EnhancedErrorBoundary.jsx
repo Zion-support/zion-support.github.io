@@ -70,7 +70,7 @@ class EnhancedErrorBoundary extends Component {
         // Example: Sentry.captureException(error, { extra: errorReport });
     }
 
-    handleRetry = () => {
+    handleRetry() {
         this.setState({
             hasError: false,
             error: null,
@@ -80,11 +80,11 @@ class EnhancedErrorBoundary extends Component {
         });
     }
 
-    handleGoHome = () => {
+    handleGoHome() {
         window.location.href = '/';
     }
 
-    handleReportIssue = () => {
+    handleReportIssue() {
         const error = this.state.error;
         const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
