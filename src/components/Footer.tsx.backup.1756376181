@@ -34,7 +34,26 @@ import {
   Activity,
   Cpu,
   GraduationCap,
+<<<<<<< HEAD
+  BarChart3,
+  Sparkles,
+  Award,
+  Atom,
+  Lock,
+  Network,
+  Eye,
+  Workflow,
+  Database,
+  Smartphone,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Star
+=======
   ShoppingCart
+>>>>>>> origin/cursor/website-audit-and-enhancement-cd50
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
