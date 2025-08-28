@@ -50,6 +50,9 @@ import {
   ShoppingCart,
   MessageCircle,
   Code,
+<<<<<<< HEAD
+  Smartphone
+=======
   BookOpen,
   Truck,
   ExternalLink,
@@ -58,6 +61,7 @@ import {
   PenTool,
   Gauge,
   Search
+>>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
 } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -92,7 +96,12 @@ const footerSections = [
       { name: 'News', path: '/news', icon: Newspaper },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
       { name: 'Help Center', path: '/help', icon: HelpCircle },
+<<<<<<< HEAD
+      { name: 'Team', path: '/team', icon: Users },
+      { name: 'Leadership', path: '/leadership', icon: Award }
+=======
       { name: 'Sitemap', path: '/sitemap', icon: FileText }
+>>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
     ]
   },
   {
@@ -109,6 +118,18 @@ const footerSections = [
       { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+<<<<<<< HEAD
+      { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
+      { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', icon: Users },
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
+      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
+      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
+      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
+      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
+      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
+=======
       { name: 'AI-Powered SEO', path: '/services/ai-seo', icon: TrendingUp },
       { name: 'AI Customer Support', path: '/services/ai-customer-support-automation', icon: MessageCircle },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
@@ -121,6 +142,7 @@ const footerSections = [
       { name: 'AI HR Platform', path: '/services/ai-hr-platform', icon: Users },
       { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: Activity },
       { name: 'AI Content Creation', path: '/services/ai-content-creation', icon: PenTool }
+>>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
     ]
   },
   {
@@ -149,8 +171,13 @@ const footerSections = [
       { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
       { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
       { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+<<<<<<< HEAD
+      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+      { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 },
+=======
       { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3 },
       { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+>>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
       { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
     ]
   },
@@ -160,11 +187,16 @@ const footerSections = [
     links: [
       { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Lock },
       { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
+<<<<<<< HEAD
+      { name: 'AI Compliance Copilot', path: '/services/ai-compliance-copilot', icon: CheckCircle },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle }
+=======
       { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle },
       { name: 'AI Autonomous Forensics', path: '/ai-autonomous-forensics', icon: Shield },
       { name: 'AI Autonomous Threat Intelligence', path: '/ai-autonomous-threat-intelligence', icon: Eye },
       { name: 'AI Autonomous Mobile Security', path: '/ai-autonomous-mobile-security', icon: Smartphone }
+>>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
     ]
   },
   {
@@ -177,9 +209,14 @@ const footerSections = [
       { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Brain },
       { name: 'Space Technology', path: '/space-tech', icon: Satellite },
       { name: 'Quantum Machine Learning', path: '/services/quantum-machine-learning', icon: Atom },
+<<<<<<< HEAD
+      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance', icon: TrendingUp },
+      { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf }
+=======
       { name: 'Sustainable Technology', path: '/services/sustainable-technology', icon: Leaf },
       { name: 'AI Autonomous Scientific Researcher', path: '/ai-autonomous-scientific-researcher', icon: TestTube },
       { name: 'AI Autonomous Governance', path: '/ai-autonomous-governance', icon: Building }
+>>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
     ]
   },
   {
@@ -210,12 +247,26 @@ const footerSections = [
       { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
       { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
       { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+<<<<<<< HEAD
+      { name: 'AI Autonomous Code Reviewer', path: '/services/ai-autonomous-code-reviewer', icon: Code },
+      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
+      { name: 'AI Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
+      { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', icon: Users },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk-platform', icon: HelpCircle },
+      { name: 'DSR Portal', path: '/services/dsr-portal', icon: Shield },
+      { name: 'Security Headers CSP', path: '/services/security-headers-csp', icon: Lock },
+      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Briefcase },
+      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
+      { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp }
+=======
       { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
       { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video },
       { name: 'Returns Management', path: '/services/returns-management', icon: Truck },
       { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: PenTool },
       { name: 'Customer Feedback Surveys', path: '/services/customer-feedback-surveys', icon: MessageCircle },
       { name: 'AI Auto Email Responder', path: '/services/ai-auto-email-responder', icon: Mail }
+>>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
     ]
   },
   {
@@ -225,11 +276,17 @@ const footerSections = [
       { name: 'Help Center', path: '/help', icon: HelpCircle },
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
       { name: 'Contact Support', path: '/contact', icon: MessageCircle },
+<<<<<<< HEAD
+      { name: 'Documentation', path: '/help', icon: BookOpen },
+      { name: 'API Reference', path: '/help', icon: Code },
+      { name: 'Community Forum', path: '/help', icon: Users }
+=======
       { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
       { name: 'Sitemap', path: '/sitemap', icon: FileText },
       { name: 'Dashboard', path: '/dashboard', icon: Gauge },
       { name: 'Login', path: '/login', icon: Lock },
       { name: 'Search', path: '/search', icon: Search }
+>>>>>>> origin/cursor/website-audit-and-enhancement-fbb9
     ]
   }
 ];
