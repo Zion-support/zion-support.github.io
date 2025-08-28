@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -112,8 +112,6 @@ const footerSections = [
       { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
       { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
       { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
       { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
@@ -172,67 +170,29 @@ const footerSections = [
     ]
   },
   {
-    title: 'New AI Services 2025',
-    icon: Sparkles,
-    links: [
-      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
-      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-    ]
-  },
-  {
-    title: '2029 Services Showcase',
-    icon: Rocket,
-    links: [
-      { name: 'Comprehensive Services 2029', path: '/comprehensive-services-showcase-2029', icon: Star },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
-      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
-    ]
-  },
-  {
     title: 'Featured Services',
     icon: Star,
     links: [
       { name: '2025 New Innovative Services', path: '/new-innovative-services-2025', icon: Star },
       { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', icon: Star },
       { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', icon: Star },
-      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', icon: Star },
-      { name: '2029 Comprehensive Services Showcase', path: '/comprehensive-services-showcase-2029', icon: Star }
-    ]
-  },
-  {
-    title: 'Support & Resources',
-    icon: HelpCircle,
-    links: [
-      { name: 'Help Center', path: '/help', icon: HelpCircle },
-      { name: 'FAQ', path: '/faq', icon: HelpCircle },
-      { name: 'Documentation', path: '/documentation', icon: BookOpen },
-      { name: 'API Documentation', path: '/api-docs', icon: Code },
-      { name: 'Developer Portal', path: '/developer', icon: Cpu },
-      { name: 'Training', path: '/training', icon: GraduationCap },
-      { name: 'Webinars', path: '/webinars', icon: Video },
-      { name: 'White Papers', path: '/white-papers', icon: FileText }
+      { name: '2029 Services Showcase', path: '/comprehensive-services-showcase-2029', icon: Star },
+      { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', icon: Rocket }
     ]
   }
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-500' },
-  { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'hover:text-blue-600' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'hover:text-pink-500' },
-  { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+  { name: 'Email', href: 'mailto:contact@ziontechgroup.com', icon: Mail, color: 'hover:text-red-400' }
 ];
 
 export function Footer() {
-  const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set());
-  const [showScrollTop, setShowScrollTop] = React.useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
-  // Handle scroll to show/hide scroll to top button
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
     };
@@ -241,20 +201,6 @@ export function Footer() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
-    setExpandedSections(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(title)) {
-        newSet.delete(title);
-      } else {
-        newSet.add(title);
-      }
-      return newSet;
-    });
-  };
-
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -321,15 +267,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-sm text-gray-300">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-gray-300">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-gray-300">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>Innovation District, Tech City</span>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
@@ -419,3 +365,5 @@ export function Footer() {
     </footer>
   );
 }
+
+export default Footer;
