@@ -177,20 +177,6 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
-    },
-
-    // Continuous console error fixer - runs every 15 minutes
-    {
-      name: 'console-error-fixer',
-      script: './scripts/automation/console-error-fixer.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '900000' // 15 minutes
-      }
     }
   ]
 };

@@ -224,7 +224,7 @@ export default function Cookies() {
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center">
                         <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${type.color} rounded-xl mr-4`}>
-                          <type.icon className="w-6 h-6 text-white" />
+                          {React.createElement(type.icon, { className: "w-6 h-6 text-white" })}
                         </div>
                         <div>
                           <h3 className="text-lg font-bold text-white">{type.name}</h3>
@@ -311,7 +311,7 @@ export default function Cookies() {
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 h-full">
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${type.color} rounded-xl mb-6`}>
-                    <type.icon className="w-8 h-8 text-white" />
+                    {React.createElement(type.icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   
                   <h3 className="text-xl font-bold text-white mb-4">{type.name}</h3>

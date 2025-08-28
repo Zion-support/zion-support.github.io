@@ -1,19 +1,16 @@
-import Head from 'next/head'
 import { motion } from 'framer-motion'
-import { 
-  Handshake, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Users, 
-  Globe,
-  Award,
-  Zap,
-  Cpu,
-  Database,
-  Lock,
-  Rocket
+import {
+    Award,
+    Brain,
+    Cloud,
+    Database,
+    Handshake,
+    Rocket,
+    Shield,
+    Zap
 } from 'lucide-react'
+import Head from 'next/head'
+import React from 'react'
 
 export default function Partners() {
   const title = 'Partners — Zion Tech Group'
@@ -188,7 +185,7 @@ export default function Partners() {
                   className="text-center p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                    {React.createElement(benefit.icon, { className: "w-8 h-8 text-white" })}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
@@ -226,7 +223,7 @@ export default function Partners() {
                 >
                   <div className="flex items-center gap-4 mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                      <category.icon className="w-8 h-8 text-white" />
+                      {React.createElement(category.icon, { className: "w-8 h-8 text-white" })}
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold">{category.title}</h3>

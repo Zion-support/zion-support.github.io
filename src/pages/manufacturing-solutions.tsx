@@ -134,7 +134,7 @@ const ManufacturingSolutions: React.FC = () => {
               className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-400/50 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <benefit.icon className="w-8 h-8 text-white" />
+                {React.createElement(benefit.icon, { className: "w-8 h-8 text-white" })}
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
               <p className="text-gray-300 text-sm">{benefit.description}</p>
@@ -170,7 +170,7 @@ const ManufacturingSolutions: React.FC = () => {
             >
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <solution.icon className="w-6 h-6 text-white" />
+                  {React.createElement(solution.icon, { className: "w-6 h-6 text-white" })}
                 </div>
                 <h3 className="text-xl font-semibold text-white">{solution.title}</h3>
               </div>

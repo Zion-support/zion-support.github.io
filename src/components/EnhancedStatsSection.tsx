@@ -199,7 +199,7 @@ export default function EnhancedStatsSection() {
                   }}
                   transition={{ duration: 0.6 }}
                 >
-                  <stat.icon className={`w-10 h-10 text-${stat.color}`} />
+                  {React.createElement(stat.icon, { className: `w-10 h-10 text-${stat.color}` })}
                 </motion.div>
 
                 {/* Value */}

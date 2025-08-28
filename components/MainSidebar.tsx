@@ -144,7 +144,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   : 'text-gray-400 hover:text-white hover:bg-white/5'
               }`}
             >
-              <item.icon className="w-4 h-4 flex-shrink-0" />
+              {React.createElement(item.icon, { className: "w-4 h-4 flex-shrink-0" })}
               <div className="flex-1 min-w-0">
                 <div className="font-medium">{item.name}</div>
                 {item.description && (
@@ -264,7 +264,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
                 className="flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
               >
-                <contact.icon className="w-3 h-3" />
+                {React.createElement(contact.icon, { className: "w-3 h-3" })}
                 <span className="truncate">{contact.text}</span>
               </a>
             ))}
@@ -281,7 +281,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 className={`p-2 hover:bg-white/10 rounded-lg transition-all duration-200 ${social.color}`}
                 aria-label={social.name}
               >
-                <social.icon className="w-4 h-4" />
+                {React.createElement(social.icon, { className: "w-4 h-4" })}
               </a>
             ))}
           </div>
