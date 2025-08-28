@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+// Service Worker for Zion Tech Group
+const CACHE_NAME = 'zion-tech-group-v2.0.0';
+const STATIC_CACHE = 'zion-static-v2.0.0';
+const DYNAMIC_CACHE = 'zion-dynamic-v2.0.0';
+=======
 // Zion Tech Group Service Worker
 // Version: 1.0.0
 // Purpose: Performance optimization, offline support, and caching
@@ -6,11 +12,27 @@ const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 const API_CACHE = 'zion-api-v1.0.0';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
 
 // Files to cache immediately
 const STATIC_FILES = [
   '/',
   '/index.html',
+<<<<<<< HEAD
+  '/manifest.json',
+  '/favicon.ico',
+  '/favicon.svg',
+  '/apple-touch-icon.png',
+  '/images/logo.svg',
+  '/images/zion-tech-group-og.jpg'
+];
+
+// API routes to cache
+const API_ROUTES = [
+  '/api/services',
+  '/api/about',
+  '/api/contact'
+=======
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
@@ -27,6 +49,7 @@ const API_ENDPOINTS = [
   '/api/services',
   '/api/contact',
   '/api/analytics'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
 ];
 
 // Install event - cache static files
@@ -43,7 +66,11 @@ self.addEventListener('install', (event) => {
         console.log('Static files cached successfully');
         return self.skipWaiting();
       })
+<<<<<<< HEAD
+      .catch(error => {
+=======
       .catch((error) => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
         console.error('Failed to cache static files:', error);
       })
   );
@@ -68,7 +95,11 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
+<<<<<<< HEAD
+        console.log('Service worker activated');
+=======
         console.log('Service Worker activated successfully');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
         return self.clients.claim();
       })
       .catch((error) => {
@@ -87,30 +118,58 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+<<<<<<< HEAD
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
   // Handle different types of requests
   if (isStaticFile(request)) {
     event.respondWith(handleStaticFile(request));
   } else if (isAPIRequest(request)) {
     event.respondWith(handleAPIRequest(request));
+<<<<<<< HEAD
+  } else if (isHTMLRequest(request)) {
+    event.respondWith(handleHTMLRequest(request));
+  } else {
+    event.respondWith(handleOtherRequest(request));
+=======
   } else if (isImageRequest(request)) {
     event.respondWith(handleImageRequest(request));
   } else {
     event.respondWith(handleDynamicRequest(request));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
   }
 });
 
 // Check if request is for a static file
 function isStaticFile(request) {
   const url = new URL(request.url);
+<<<<<<< HEAD
+  return url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$/);
+=======
   return STATIC_FILES.some(file => url.pathname === file) ||
          url.pathname.startsWith('/static/') ||
          url.pathname.startsWith('/fonts/') ||
          url.pathname.startsWith('/images/');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
 }
 
 // Check if request is for an API endpoint
 function isAPIRequest(request) {
   const url = new URL(request.url);
+<<<<<<< HEAD
+  return url.pathname.startsWith('/api/');
+}
+
+// Check if request is for HTML content
+function isHTMLRequest(request) {
+  const url = new URL(request.url);
+  return url.pathname.endsWith('.html') || url.pathname === '/' || !url.pathname.includes('.');
+=======
   return url.pathname.startsWith('/api/') ||
          url.hostname === 'api.ziontechgroup.com';
 }
@@ -119,6 +178,7 @@ function isAPIRequest(request) {
 function isImageRequest(request) {
   const url = new URL(request.url);
   return /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(url.pathname);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
 }
 
 // Handle static file requests
@@ -138,6 +198,107 @@ async function handleStaticFile(request) {
       const cache = await caches.open(STATIC_CACHE);
       cache.put(request, networkResponse.clone());
     }
+<<<<<<< HEAD
+    
+    return networkResponse;
+  } catch (error) {
+    console.error('Failed to fetch static file:', error);
+    
+    // Return offline fallback for critical files
+    if (request.url.includes('logo.svg')) {
+      return new Response('<svg>Zion Tech Group</svg>', {
+        headers: { 'Content-Type': 'image/svg+xml' }
+      });
+    }
+    
+    throw error;
+  }
+}
+
+// Handle API requests
+async function handleAPIRequest(request) {
+  try {
+    // Try network first for API requests
+    const networkResponse = await fetch(request);
+    
+    // Cache successful responses
+    if (networkResponse.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.error('API request failed, trying cache:', error);
+    
+    // Fallback to cache
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Return offline response
+    return new Response(JSON.stringify({
+      error: 'Offline',
+      message: 'This content is not available offline'
+    }), {
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+}
+
+// Handle HTML requests
+async function handleHTMLRequest(request) {
+  try {
+    // Try network first for HTML
+    const networkResponse = await fetch(request);
+    
+    // Cache successful responses
+    if (networkResponse.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.error('HTML request failed, trying cache:', error);
+    
+    // Fallback to cache
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Return offline page
+    return caches.match('/offline.html') || new Response('Offline', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
+  }
+}
+
+// Handle other requests
+async function handleOtherRequest(request) {
+  try {
+    // Try cache first
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+
+    // Fetch from network
+    const networkResponse = await fetch(request);
+    
+    // Cache successful responses
+    if (networkResponse.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.error('Request failed:', error);
+=======
 
     return networkResponse;
   } catch (error) {
@@ -238,6 +399,7 @@ async function handleDynamicRequest(request) {
       return cachedResponse;
     }
     
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
     throw error;
   }
 }
@@ -254,8 +416,16 @@ self.addEventListener('sync', (event) => {
 // Perform background sync
 async function performBackgroundSync() {
   try {
+<<<<<<< HEAD
+    // Sync any pending data
+    console.log('Performing background sync');
+    
+    // You can add specific sync logic here
+    // For example, syncing form submissions, analytics, etc.
+=======
     // Get pending requests from IndexedDB
     const pendingRequests = await getPendingRequests();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
     
     for (const request of pendingRequests) {
       try {
@@ -273,6 +443,32 @@ async function performBackgroundSync() {
 
 // Push notification handling
 self.addEventListener('push', (event) => {
+<<<<<<< HEAD
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/images/logo.svg',
+      badge: '/images/logo.svg',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
+      },
+      actions: [
+        {
+          action: 'explore',
+          title: 'View',
+          icon: '/images/logo.svg'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/images/logo.svg'
+        }
+      ]
+    };
+=======
   console.log('Push notification received:', event);
   
   const options = {
@@ -297,6 +493,7 @@ self.addEventListener('push', (event) => {
       }
     ]
   };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
 
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
@@ -331,6 +528,13 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
   
+<<<<<<< HEAD
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: CACHE_NAME });
+  }
+});
+
+=======
   if (event.data && event.data.type === 'CACHE_URLS') {
     event.waitUntil(
       caches.open(DYNAMIC_CACHE)
@@ -360,11 +564,23 @@ async function removePendingRequest(id) {
   console.log('Removing pending request:', id);
 }
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
 // Periodic cache cleanup
 setInterval(async () => {
   try {
     const cacheNames = await caches.keys();
     
+<<<<<<< HEAD
+    // Remove old entries (older than 7 days)
+    const weekAgo = Date.now() - (7 * 24 * 60 * 60 * 1000);
+    
+    for (const request of keys) {
+      const response = await cache.match(request);
+      if (response) {
+        const date = response.headers.get('date');
+        if (date && new Date(date).getTime() < weekAgo) {
+          await cache.delete(request);
+=======
     for (const cacheName of cacheNames) {
       if (cacheName === STATIC_CACHE) continue; // Don't clean static cache
       
@@ -384,6 +600,7 @@ setInterval(async () => {
               await cache.delete(request);
             }
           }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
         }
       }
     }
@@ -391,5 +608,8 @@ setInterval(async () => {
     console.error('Cache cleanup failed:', error);
   }
 }, 24 * 60 * 60 * 1000); // Run once per day
+<<<<<<< HEAD
+=======
 
 console.log('Zion Tech Group Service Worker loaded successfully');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92

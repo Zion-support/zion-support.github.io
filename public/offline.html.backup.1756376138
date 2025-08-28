@@ -7,8 +7,12 @@
     <meta name="description" content="You're currently offline. Zion Tech Group provides cutting-edge AI and quantum solutions.">
 =======
     <title>Offline - Zion Tech Group</title>
+<<<<<<< HEAD
+    <meta name="description" content="You're currently offline. Some content may not be available.">
+=======
     <meta name="description" content="You're currently offline. Check your connection and try again.">
     <meta name="robots" content="noindex, nofollow">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
     <style>
         * {
             margin: 0;
@@ -17,19 +21,28 @@
         }
 
         body {
+<<<<<<< HEAD
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #f8fafc;
+=======
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
 =======
             font-family: 'Orbitron', 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
             color: #ffffff;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+<<<<<<< HEAD
+            padding: 2rem;
+=======
             padding: 20px;
             position: relative;
             overflow: hidden;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
         }
 
         /* Animated background */
@@ -118,6 +131,20 @@
 =======
             text-align: center;
             max-width: 600px;
+<<<<<<< HEAD
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .offline-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+=======
             z-index: 1;
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(20px);
@@ -132,6 +159,7 @@
             height: 120px;
             margin: 0 auto 30px;
             background: linear-gradient(135deg, #22ddd2, #8c15e9);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -163,23 +191,35 @@
             50% { transform: scale(1.05); }
         }
 
+<<<<<<< HEAD
+        h1 {
+=======
             font-size: 2rem;
 =======
         @keyframes ripple {
             0% { transform: scale(1); opacity: 1; }
             100% { transform: scale(1.3); opacity: 0; }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
         }
 
         .offline-title {
             font-size: 2.5rem;
             font-weight: 700;
+<<<<<<< HEAD
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+=======
             margin-bottom: 20px;
             background: linear-gradient(135deg, #22ddd2, #8c15e9);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
+<<<<<<< HEAD
+            font-size: 1.25rem;
+=======
         .offline-message {
             font-size: 1.2rem;
             color: #cbd5e1;
@@ -221,19 +261,33 @@
         .offline-actions {
             display: flex;
             gap: 16px;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
+<<<<<<< HEAD
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+=======
             padding: 16px 32px;
             border: none;
             border-radius: 12px;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
+<<<<<<< HEAD
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #06b6d4, #3b82f6);
+=======
             background: linear-gradient(135deg, #0ea5e9, #3b82f6);
 =======
             display: inline-flex;
@@ -243,11 +297,15 @@
 
         .btn-primary {
             background: linear-gradient(135deg, #22ddd2, #8c15e9);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
             color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
+<<<<<<< HEAD
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
+=======
             box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
         }
 
@@ -360,19 +418,31 @@
         .status-dot.online {
             background: #10b981;
             animation: none;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
             .offline-container {
+<<<<<<< HEAD
+                padding: 2rem 1rem;
+=======
                 padding: 40px 20px;
                 margin: 20px;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
             }
 
             .offline-title {
                 font-size: 2rem;
             }
 
+<<<<<<< HEAD
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .actions {
+=======
             .offline-message {
                 font-size: 1rem;
             }
@@ -382,6 +452,7 @@
                 font-size: 1rem;
             }
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
             .offline-actions {
                 flex-direction: column;
                 align-items: center;
@@ -431,6 +502,14 @@
     </style>
 </head>
 <body>
+<<<<<<< HEAD
+    <div class="connection-status pulse">
+        <span id="status-text">Offline</span>
+    </div>
+
+    <div class="offline-container">
+        <div class="offline-icon">🌐</div>
+=======
         <div class="offline-icon">
             📡
         </div>
@@ -526,10 +605,15 @@
                 <div class="status-dot" id="statusDot"></div>
                 <span id="statusText">Checking connection...</span>
             </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
         </div>
     </div>
 
     <script>
+<<<<<<< HEAD
+        // Check connection status
+        function checkConnection() {
+=======
         // Monitor connection status
         function updateConnectionStatus() {
             const statusText = document.getElementById('status-text');
@@ -653,10 +737,19 @@
                     console.log('Service Worker registered:', registration);
                 })
                 .catch((error) => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
                     console.log('Service Worker registration failed:', error);
                 });
         }
 
+<<<<<<< HEAD
+        // Periodic connection check
+        setInterval(() => {
+            if (navigator.onLine) {
+                updateConnectionStatus();
+            }
+        }, 5000);
+=======
         // Keyboard navigation support
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Enter' || event.key === ' ') {
@@ -766,6 +859,7 @@
 
         // Replace the simple checkConnection with enhanced version
         window.checkConnection = enhancedCheckConnection;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ab92
     </script>
 </body>
 </html>
