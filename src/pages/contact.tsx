@@ -186,179 +186,21 @@ const Contact: React.FC = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
-          >
-            <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-              <MessageSquare className="w-6 h-6 mr-3 text-cyan-400" />
-              Send Us a Message
-            </h3>
-
-            {submitStatus === 'success' && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center"
-              >
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                <span className="text-green-300">Thank you! Your message has been sent successfully.</span>
-              </motion.div>
-            )}
-
-            {submitStatus === 'error' && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center"
-              >
-                <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
-                <span className="text-red-300">Something went wrong. Please try again.</span>
-              </motion.div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Full Name *
-                  </label>
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your full name"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address *
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                    Company
-                  </label>
-                  <div className="relative">
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                      placeholder="Enter company name"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                      placeholder="Enter phone number"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                  Service Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                >
-                  {serviceOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={5}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
-                  placeholder="Tell us about your project or how we can help..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={!isFormValid || isSubmitting}
-                className={`w-full flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
-                  isFormValid && !isSubmitting
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 hover:scale-105 shadow-lg hover:shadow-cyan-500/25'
-                    : 'bg-gray-600 cursor-not-allowed'
-                } text-white`}
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-3"></div>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-5 h-5 mr-3" />
-                    Send Message
-                  </>
-                )}
-              </button>
-            </form>
-          </motion.div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              📞 Call Now
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              ✉️ Send Email
+            </a>
+          </div>
         </div>
       </div>
     </div>

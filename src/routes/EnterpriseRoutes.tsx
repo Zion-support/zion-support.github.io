@@ -15,6 +15,7 @@ export default function EnterpriseRoutes() {
       <Route path="/enterprise/demo" element={<EnterpriseDemo />} />
       <Route path="/company/:companySlug" element={<CompanyWorkspace />} />
       <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
+
     </Routes>
   );
 }

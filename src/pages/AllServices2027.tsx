@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from "../components/SEOHead";
+import SEO from "../components/SEOHead";
 import { INNOVATIVE_SERVICES_2027 } from '@/data/innovativeServices2027';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  Code, 
-  Signal, 
-  Users, 
+import {
+  Brain,
+  Shield,
+  Zap,
+  Code,
+  Signal,
+  Users,
   Truck,
   ArrowRight,
   Phone,
@@ -38,7 +38,7 @@ const AllServices2027: React.FC = () => {
     { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' }
   ];
 
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => 
+  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
@@ -81,17 +81,17 @@ const AllServices2027: React.FC = () => {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="All Services 2027 - Zion Tech Group"
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed."
         canonical="/all-services-2027"
         url="https://ziontechgroup.com/all-services-2027"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,18 +102,18 @@ const AllServices2027: React.FC = () => {
               All Services 2027
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive technology solutions portfolio designed to transform your business. 
+              Comprehensive technology solutions portfolio designed to transform your business.
               Discover the perfect combination of services to accelerate your digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/comprehensive-pricing-2027" 
+              <Link
+                to="/comprehensive-pricing-2027"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 View Pricing
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 Get Started
@@ -150,7 +150,7 @@ const AllServices2027: React.FC = () => {
               Service Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology services, each designed to address 
+              Explore our comprehensive range of technology services, each designed to address
               specific business challenges and drive innovation.
             </p>
           </div>
@@ -158,7 +158,7 @@ const AllServices2027: React.FC = () => {
             {categories.map((category) => {
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
-              
+
               return (
                 <motion.div
                   key={category.id}
@@ -233,7 +233,7 @@ const AllServices2027: React.FC = () => {
               Why Choose Our Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Each service category is designed with specific business needs in mind, 
+              Each service category is designed with specific business needs in mind,
               providing targeted solutions that deliver measurable results.
             </p>
           </div>
@@ -251,8 +251,9 @@ const AllServices2027: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white">AI Services</h3>
               </div>
               <p className="text-gray-300 mb-6">
-                Leverage the power of artificial intelligence to automate processes, 
-                gain insights from data, and create intelligent solutions.
+                Transform your business with cutting-edge artificial intelligence solutions.
+                From predictive analytics to autonomous systems, our AI services drive innovation
+                and efficiency across all business operations.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -282,8 +283,9 @@ const AllServices2027: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white">Cybersecurity</h3>
               </div>
               <p className="text-gray-300 mb-6">
-                Protect your digital assets with comprehensive security solutions 
-                that detect, prevent, and respond to cyber threats.
+                Protect your digital assets with enterprise-grade security solutions.
+                Our cybersecurity services provide comprehensive protection against evolving threats
+                while ensuring compliance with industry standards.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -296,7 +298,71 @@ const AllServices2027: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Security Audits</span>
+                  <span className="text-gray-300">Compliance automation</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Emerging Technology */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
+            >
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Emerging Technology</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Stay ahead of the curve with next-generation technologies. From quantum computing
+                to blockchain solutions, we help you explore and implement cutting-edge innovations
+                that give you a competitive advantage.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Quantum computing access</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Blockchain development</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">IoT and edge computing</span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* IT Services */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
+            >
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+                  <Code className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">IT Services</h3>
+              </div>
+              <p className="text-gray-300 mb-6">
+                Streamline your IT operations with our comprehensive technology services.
+                From DevOps automation to infrastructure management, we help you build
+                robust, scalable, and efficient technology systems.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">DevOps automation</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Cloud infrastructure</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Performance optimization</span>
                 </div>
               </div>
             </motion.div>
@@ -306,30 +372,35 @@ const AllServices2027: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Let's discuss how our innovative services can drive your success and 
-            create a competitive advantage in your industry.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              <span>Get Started Today</span>
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now
-            </a>
-          </div>
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+              Choose from our comprehensive portfolio of services and start your digital
+              transformation journey today. Our experts are ready to help you succeed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/comprehensive-pricing-2027"
+                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
@@ -368,7 +439,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-        
+
         {/* Category Badge */}
         <div className="absolute top-4 left-4 flex items-center space-x-2 bg-cyan-500/90 backdrop-blur-sm px-3 py-1 rounded-full">
           {getCategoryIcon(service.category)}

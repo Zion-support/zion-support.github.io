@@ -226,91 +226,91 @@ export class ContentOptimizer {
             service: `
         <h1>Service Title</h1>
         <p>Comprehensive description of the service and its benefits.</p>
-        
+
         <h2>What We Offer</h2>
         <p>Detailed explanation of service features and capabilities.</p>
-        
+
         <h2>Key Benefits</h2>
         <ul>
           <li>Benefit 1 with explanation</li>
           <li>Benefit 2 with explanation</li>
           <li>Benefit 3 with explanation</li>
         </ul>
-        
+
         <h2>How It Works</h2>
         <p>Step-by-step process or methodology explanation.</p>
-        
+
         <h2>Why Choose Us</h2>
         <p>Competitive advantages and unique selling points.</p>
-        
+
         <h2>Get Started</h2>
         <p>Call-to-action and next steps for potential clients.</p>
       `,
             about: `
         <h1>About Zion Tech Group</h1>
         <p>Comprehensive overview of our company, mission, and values.</p>
-        
+
         <h2>Our Mission</h2>
         <p>Clear statement of our purpose and goals.</p>
-        
+
         <h2>Our Story</h2>
         <p>Company history and journey to success.</p>
-        
+
         <h2>Our Values</h2>
         <ul>
           <li>Value 1 with explanation</li>
           <li>Value 2 with explanation</li>
           <li>Value 3 with explanation</li>
         </ul>
-        
+
         <h2>Our Team</h2>
         <p>Overview of leadership and key team members.</p>
-        
+
         <h2>Our Achievements</h2>
         <p>Key milestones, awards, and recognition.</p>
       `,
             contact: `
         <h1>Contact Us</h1>
         <p>Get in touch with our expert team for technology solutions and consultations.</p>
-        
+
         <h2>Get In Touch</h2>
         <p>Multiple ways to reach us and what to expect.</p>
-        
+
         <h2>Contact Information</h2>
         <ul>
           <li>Phone: +1-302-464-0950</li>
           <li>Email: kleber@ziontechgroup.com</li>
           <li>Address: 364 E Main St STE 1008, Middletown, DE 19709</li>
         </ul>
-        
+
         <h2>Business Hours</h2>
         <p>Our availability and response times.</p>
-        
+
         <h2>Request a Quote</h2>
         <p>How to get a custom quote for your project.</p>
-        
+
         <h2>Support</h2>
         <p>Technical support and customer service information.</p>
       `,
             blog: `
         <h1>Blog Post Title</h1>
         <p>Engaging introduction that hooks the reader and explains the value.</p>
-        
+
         <h2>Key Points Overview</h2>
         <p>Brief summary of what the reader will learn.</p>
-        
+
         <h2>Main Content Section 1</h2>
         <p>Detailed explanation with examples and insights.</p>
-        
+
         <h2>Main Content Section 2</h2>
         <p>Additional information and practical applications.</p>
-        
+
         <h2>Real-World Examples</h2>
         <p>Case studies or practical examples to illustrate points.</p>
-        
+
         <h2>Best Practices</h2>
         <p>Actionable advice and recommendations.</p>
-        
+
         <h2>Conclusion</h2>
         <p>Summary and call-to-action for further engagement.</p>
       `

@@ -1,5 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {
+  Award,
+  Users,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Star,
+  CheckCircle,
+  Globe,
+  Rocket
+} from 'lucide-react';
 
 const teamExpertise = [
   {
@@ -65,8 +77,9 @@ export function TeamExpertiseSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Team Expertise
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Our world-class team brings together decades of experience in cutting-edge technologies
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our team of certified professionals brings decades of combined experience
+            in cutting-edge technologies and proven methodologies.
           </p>
         </motion.div>
 
@@ -106,39 +119,24 @@ export function TeamExpertiseSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <h3 className="text-3xl font-bold text-white mb-6">
-            Core Technology Expertise
-          </h3>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            We specialize in the most advanced and in-demand technologies that drive business transformation
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          {coreExpertise.map((skill, index) => (
-            <motion.div
-              key={skill}
-              className="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-            >
-              <span className="text-white font-medium text-sm">{skill}</span>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to work with experts?</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Work with Experts?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Our certified professionals are ready to bring their expertise
+              to your project and help you achieve exceptional results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Schedule Consultation
+                <Rocket className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+                View Team Profiles
+                <Users className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

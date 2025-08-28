@@ -1,12 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Cpu, 
-  Zap, 
-  Shield, 
-  Target, 
+import {
+  Lightbulb,
+  Target,
+  TrendingUp,
+  Users,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe,
   ArrowRight,
   CheckCircle,
   Star,
@@ -130,8 +132,13 @@ export default function ITConsulting() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,21 +148,29 @@ export default function ITConsulting() {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IT Consulting Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with expert IT consulting from Zion Tech Group. 
-              We help organizations navigate complex technology challenges and achieve digital excellence.
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
+              Transform your business with strategic technology guidance from industry experts.
+              We help you navigate digital transformation and achieve sustainable competitive advantage.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center space-x-2"
+
+            <motion.div
+              className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <motion.button
+                className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-blue-400/50 flex items-center space-x-2"
+                Get Consultation
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </motion.button>
+              <motion.button
+                className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <span>Explore Services</span>
                 <ArrowRight className="w-5 h-5" />
@@ -165,11 +180,12 @@ export default function ITConsulting() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Consulting Services Grid */}
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -218,13 +234,20 @@ export default function ITConsulting() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Consulting Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT consulting services designed to address your unique business challenges and opportunities.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Comprehensive consulting solutions designed to address your unique business
+              challenges and drive measurable results.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {consultingServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -239,26 +262,73 @@ export default function ITConsulting() {
                   </div>
                   <h3 className="text-2xl font-semibold text-white">{service.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {benefit}
+
+                <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
+
+                <ul className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light text-sm">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Our Consulting?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Experience the difference of working with industry experts who understand
+              your business challenges and deliver proven solutions.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                variants={itemVariants}
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                  <benefit.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -267,13 +337,19 @@ export default function ITConsulting() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industries We Serve
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our IT consulting expertise spans across diverse industries, helping organizations 
-              leverage technology for competitive advantage and operational excellence.
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our consulting expertise spans across diverse industries, helping businesses
+              of all sizes achieve their technology goals.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {industries.map((industry, index) => (
               <motion.div
                 key={index}
@@ -302,26 +378,17 @@ export default function ITConsulting() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your IT Strategy?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Partner with Zion Tech Group's expert IT consultants to navigate complex technology challenges, 
-              optimize your IT infrastructure, and achieve digital transformation success.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Let our expert consultants help you navigate the complex world of technology
+              and achieve sustainable business success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 flex items-center space-x-2"
-              >
-                <span>Get Started Today</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-blue-400/50 flex items-center space-x-2"
-              >
-                <span>Explore Services</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
+            <motion.button
+              className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Start Your Consultation
+            </motion.button>
           </motion.div>
         </div>
       </section>

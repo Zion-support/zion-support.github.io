@@ -1,5 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {
+  Lightbulb,
+  TestTube,
+  BookOpen,
+  Award,
+  Users,
+  TrendingUp,
+  Rocket,
+  Brain,
+  Microscope,
+  Target
+} from 'lucide-react';
 
 const researchAreas = [
   {
@@ -53,8 +65,9 @@ export function InnovationResearchSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Innovation & Research
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research and innovative solutions
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Pushing the boundaries of technology through cutting-edge research,
+            breakthrough innovations, and collaborative partnerships with leading institutions.
           </p>
         </motion.div>
 
@@ -178,9 +191,24 @@ export function InnovationResearchSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 1.0 }}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Join the innovation revolution</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Join the Innovation Revolution
+            </h3>
+            <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
+              Partner with us to explore the frontiers of technology and create
+              solutions that will shape the future of humanity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+                Research Partnership
+                <Flask className="ml-2 h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-indigo-600 rounded-lg font-medium transition-colors duration-200">
+                View Publications
+                <BookOpen className="ml-2 h-5 w-5" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>

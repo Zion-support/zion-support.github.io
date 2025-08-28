@@ -68,14 +68,14 @@ export default function ComprehensivePricing() {
 
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
-  
+
   // Get unique categories
   const categories = Array.from(new Set(allServices.map(service => service.category)));
-  
+
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
+
     let matchesPrice = true;
     if (selectedPriceRange !== 'all') {
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -94,7 +94,7 @@ export default function ComprehensivePricing() {
           break;
       }
     }
-    
+
     return matchesCategory && matchesPrice;
   });
 
@@ -117,10 +117,10 @@ export default function ComprehensivePricing() {
             Comprehensive Pricing
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transparent pricing for our revolutionary micro SAAS solutions. 
+            Transparent pricing for our revolutionary micro SAAS solutions.
             Choose the plan that fits your business needs and budget.
           </p>
-          
+
           {/* Contact Information */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -190,7 +190,7 @@ export default function ComprehensivePricing() {
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Individual Service Pricing</h2>
-          
+
           {/* Filters */}
           <div className="flex flex-col md:flex-row gap-4 mb-12 max-w-4xl mx-auto">
             <select
@@ -237,15 +237,15 @@ export default function ComprehensivePricing() {
                     {service.price}
                     <span className="text-sm text-zion-slate-light font-normal">{service.period}</span>
                   </div>
-                  
+
                   <Badge className="mb-3 bg-zion-purple text-white">
                     {service.category}
                   </Badge>
-                  
+
                   <p className="text-sm text-zion-slate-dark mb-4 line-clamp-3">
                     {service.description}
                   </p>
-                  
+
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
                     <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features:</h4>
@@ -256,7 +256,7 @@ export default function ComprehensivePricing() {
                       </div>
                     ))}
                   </div>
-                  
+
                   {/* Market Information */}
                   <div className="space-y-2 mb-4 text-sm bg-zion-slate-light/20 p-3 rounded-lg">
                     <div className="flex justify-between">
@@ -272,7 +272,7 @@ export default function ComprehensivePricing() {
                       <span className="font-semibold">{service.roi}</span>
                     </div>
                   </div>
-                  
+
                   {/* Service Stats */}
                   <div className="flex items-center justify-between text-sm mb-4">
                     <div className="flex items-center">
@@ -284,7 +284,7 @@ export default function ComprehensivePricing() {
                       {service.customers} customers
                     </Badge>
                   </div>
-                  
+
                   {/* Action Buttons */}
                   <div className="space-y-2">
                     <Link to={service.link} className="w-full">
@@ -304,11 +304,11 @@ export default function ComprehensivePricing() {
               </Card>
             ))}
           </div>
-          
+
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
               <p className="text-zion-slate-light text-lg">No services found matching your criteria.</p>
-              <Button 
+              <Button
                 onClick={() => {
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
@@ -367,7 +367,7 @@ export default function ComprehensivePricing() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Contact us today for a free consultation and discover how our innovative solutions 
+              Contact us today for a free consultation and discover how our innovative solutions
               can transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

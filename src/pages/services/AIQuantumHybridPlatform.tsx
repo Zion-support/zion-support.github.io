@@ -6,169 +6,181 @@ import {
   Zap, 
   Shield, 
   TrendingUp, 
-  Users, 
-  Globe, 
   Cpu, 
   Database, 
-  Lock,
-  ArrowRight,
-  CheckCircle,
-  Star,
+  Network, 
+  Globe, 
   Rocket,
-  Target,
+  Star,
+  CheckCircle,
+  ArrowRight,
   BarChart3,
-  Cloud,
-  Network,
-  Eye,
+  Lock,
+  Users,
+  Target,
+  Lightbulb,
   Code,
-  GitFork,
+  Server,
+  Chip,
+  Satellite,
+  Eye,
+  Sparkles,
+  Activity,
+  Gauge,
+  Workflow,
+  Palette,
+  FileText,
   MessageCircle,
   Phone,
   Mail,
   MapPin,
-  TestTube
+  DollarSign,
+  Clock,
+  ExternalLink
 } from 'lucide-react';
 
-const AIQuantumHybridPlatform: React.FC = () => {
+export default function AIQuantumHybridPlatform() {
   const features = [
     {
-      title: "Quantum-Classical Hybrid Processing",
-      description: "Seamlessly integrate quantum algorithms with classical AI models for unprecedented computational power",
       icon: Atom,
-      color: "from-purple-500 to-indigo-500"
+      title: 'Quantum-Classical Hybrid Computing',
+      description: 'Seamlessly integrate quantum and classical computing for unprecedented computational power',
+      benefits: ['1000x faster complex calculations', 'Hybrid algorithm optimization', 'Quantum advantage in specific domains']
     },
     {
-      title: "Quantum Neural Networks",
-      description: "Advanced neural networks leveraging quantum superposition and entanglement for superior pattern recognition",
       icon: Brain,
-      color: "from-cyan-500 to-blue-500"
+      title: 'AI-Quantum Neural Networks',
+      description: 'Advanced neural networks leveraging quantum properties for superior pattern recognition',
+      benefits: ['Quantum-enhanced learning', 'Superior classification accuracy', 'Faster training convergence']
     },
     {
-      title: "Quantum-Safe AI Security",
-      description: "Post-quantum cryptography integrated with AI-powered threat detection and response",
       icon: Shield,
-      color: "from-green-500 to-emerald-500"
+      title: 'Quantum-Secure AI Operations',
+      description: 'Unbreakable encryption and security protocols using quantum cryptography',
+      benefits: ['Post-quantum cryptography', 'Quantum key distribution', 'Tamper-proof AI operations']
     },
     {
-      title: "Quantum Machine Learning",
-      description: "Quantum-enhanced ML algorithms for complex optimization problems and predictive analytics",
-      icon: TrendingUp,
-      color: "from-orange-500 to-red-500"
+      icon: Database,
+      title: 'Quantum Data Processing',
+      description: 'Process massive datasets with quantum algorithms for instant insights',
+      benefits: ['Exponential speedup', 'Real-time big data analysis', 'Quantum machine learning']
     }
   ];
 
   const useCases = [
     {
-      title: "Financial Modeling",
-      description: "Quantum-enhanced risk assessment and portfolio optimization",
-      icon: BarChart3
-    },
-          {
-        title: "Drug Discovery",
-        description: "Molecular simulation and protein folding optimization",
-        icon: TestTube
-      },
-    {
-      title: "Climate Modeling",
-      description: "Complex environmental simulations and prediction models",
-      icon: Globe
+      title: 'Financial Modeling',
+      description: 'Quantum-enhanced risk assessment and portfolio optimization',
+      icon: TrendingUp,
+      price: '$15,000/month'
     },
     {
-      title: "Supply Chain Optimization",
-      description: "Multi-dimensional logistics and inventory optimization",
-      icon: Network
+      title: 'Drug Discovery',
+      description: 'Molecular simulation and protein folding with quantum accuracy',
+      icon: TestTube,
+      price: '$25,000/month'
+    },
+    {
+      title: 'Climate Modeling',
+      description: 'Complex climate simulations with quantum precision',
+      icon: Globe,
+      price: '$20,000/month'
+    },
+    {
+      title: 'Supply Chain Optimization',
+      description: 'Quantum algorithms for logistics and route optimization',
+      icon: Network,
+      price: '$18,000/month'
     }
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,999",
-      period: "/month",
-      description: "Perfect for research institutions and startups",
+      name: 'Starter',
+      price: '$5,000',
+      period: '/month',
+      description: 'Basic quantum-AI integration for small teams',
       features: [
-        "Basic quantum-classical hybrid processing",
-        "Up to 100 qubits simulation",
-        "Standard AI model integration",
-        "Email support",
-        "Basic documentation"
-      ],
-      cta: "Start Free Trial",
-      popular: false
+        'Quantum API access',
+        'Basic hybrid algorithms',
+        'Standard support',
+        'Up to 100 quantum operations/day'
+      ]
     },
     {
-      name: "Professional",
-      price: "$7,999",
-      period: "/month",
-      description: "Ideal for growing enterprises and research teams",
+      name: 'Professional',
+      price: '$15,000',
+      period: '/month',
+      description: 'Advanced features for growing organizations',
       features: [
-        "Advanced quantum algorithms",
-        "Up to 1000 qubits simulation",
-        "Custom AI model training",
-        "Priority support",
-        "API access",
-        "Advanced analytics"
+        'Full quantum-AI platform',
+        'Custom hybrid algorithms',
+        'Priority support',
+        'Unlimited quantum operations',
+        'Quantum security features'
       ],
-      cta: "Get Started",
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$19,999",
-      period: "/month",
-      description: "For large organizations requiring maximum performance",
+      name: 'Enterprise',
+      price: '$50,000',
+      period: '/month',
+      description: 'Complete solution for large enterprises',
       features: [
-        "Full quantum advantage",
-        "Unlimited qubits simulation",
-        "Custom algorithm development",
-        "24/7 dedicated support",
-        "On-premise deployment",
-        "Custom integrations"
-      ],
-      cta: "Contact Sales",
-      popular: false
+        'Everything in Professional',
+        'Custom quantum hardware integration',
+        'Dedicated quantum engineer',
+        '24/7 support',
+        'Custom algorithm development'
+      ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(120,119,198,0.1)_50%,transparent_70%)] animate-pulse"></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="flex items-center justify-center mb-6">
-              <div className="p-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full">
-                <Atom className="w-8 h-8 text-white" />
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full">
+                <Atom className="h-8 w-8 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 bg-clip-text text-transparent mb-6">
               AI Quantum Hybrid Platform
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              The world's first platform combining quantum computing with artificial intelligence, 
-              delivering unprecedented computational power and breakthrough capabilities.
+            
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              The world's first integrated platform combining artificial intelligence with quantum computing capabilities. 
+              Experience computational power beyond imagination with our revolutionary hybrid approach.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5" />
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-purple-400 rounded-full font-semibold text-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300"
               >
-                Watch Demo
+                Schedule Demo
               </motion.button>
             </div>
           </motion.div>
@@ -176,15 +188,15 @@ const AIQuantumHybridPlatform: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -192,22 +204,34 @@ const AIQuantumHybridPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
               >
-                <div className={`p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300 h-full`}>
-                  <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-8 h-8 text-white" />
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full mr-4">
+                    <feature.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-2xl font-bold">{feature.title}</h3>
                 </div>
+                
+                <p className="text-gray-300 mb-6 text-lg leading-relaxed">
+                  {feature.description}
+                </p>
+                
+                <ul className="space-y-3">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-200">
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -215,36 +239,45 @@ const AIQuantumHybridPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/10 to-cyan-900/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transformative Use Cases
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+              Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our AI-Quantum hybrid platform is revolutionizing industries worldwide
+              Transform your industry with quantum-enhanced AI capabilities
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-purple-500/50 transition-all duration-300"
+                className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
-                  <useCase.icon className="w-6 h-6 text-white" />
+                <div className="flex items-center mb-4">
+                  <div className="p-2 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg mr-3">
+                    <useCase.icon className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold">{useCase.title}</h3>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
+                
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  {useCase.description}
+                </p>
+                
+                <div className="text-purple-400 font-semibold text-lg">
+                  {useCase.price}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -252,19 +285,19 @@ const AIQuantumHybridPlatform: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Competitive Pricing
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+              Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your organization's quantum AI journey
+              Choose the perfect plan for your quantum computing needs
             </p>
           </motion.div>
 
@@ -274,49 +307,49 @@ const AIQuantumHybridPlatform: React.FC = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative rounded-2xl p-8 ${
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className={`relative bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
                   plan.popular 
-                    ? 'bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border-2 border-purple-500' 
-                    : 'bg-slate-800/50 border border-slate-700'
-                }`}
+                    ? 'border-purple-400/60 shadow-lg shadow-purple-500/25' 
+                    : 'border-purple-500/20'
+                } hover:border-purple-400/40 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <h3 className="text-2xl font-bold mb-4">{plan.name}</h3>
+                  <div className="mb-2">
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-gray-400">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-
+                
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-200">
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-
+                
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
+                      ? 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700'
+                      : 'bg-purple-600/20 border border-purple-400 hover:bg-purple-600/30'
                   }`}
                 >
-                  {plan.cta}
+                  Get Started
                 </motion.button>
               </motion.div>
             ))}
@@ -324,74 +357,127 @@ const AIQuantumHybridPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/10 to-cyan-900/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/50 to-indigo-900/50">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
               Ready to Experience the Future?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our quantum AI experts to learn how our platform can transform your organization
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Join the quantum revolution and transform your business with AI-Quantum hybrid computing
             </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-purple-400 rounded-full font-semibold text-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300"
+              >
+                Contact Sales
+              </motion.button>
+            </div>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-white mb-6">Get in Touch</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <Phone className="w-6 h-6 text-purple-400" />
-                  <span className="text-gray-300">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <Mail className="w-6 h-6 text-purple-400" />
-                  <span className="text-gray-300">kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <MapPin className="w-6 h-6 text-purple-400" />
-                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
+                <Phone className="w-8 h-8 text-cyan-400" />
               </div>
-            </div>
+              <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
+              <a 
+                href="tel:+13024640950" 
+                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+              >
+                Call Now
+              </a>
+            </motion.div>
 
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
-              <h3 className="text-2xl font-semibold text-white mb-6">Request a Demo</h3>
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Company Name"
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                />
-                <textarea
-                  placeholder="Tell us about your use case"
-                  rows={4}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                ></textarea>
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300"
-                >
-                  Request Demo
-                </motion.button>
-              </form>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
+                <Mail className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+              <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+              >
+                Send Email
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
+                <MapPin className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">Address</h3>
+              <p className="text-gray-300 mb-4">364 E Main St STE 1008, Middletown DE 19709</p>
+              <a 
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+              >
+                View on Map
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center">
+              <Phone className="h-8 w-8 text-purple-400 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Phone</h3>
+              <p className="text-gray-300">+1 302 464 0950</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Mail className="h-8 w-8 text-purple-400 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Email</h3>
+              <p className="text-gray-300">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <MapPin className="h-8 w-8 text-purple-400 mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Address</h3>
+              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-};
-
-export default AIQuantumHybridPlatform;
+}

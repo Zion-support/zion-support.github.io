@@ -93,9 +93,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
-    
-    // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
-    ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
+
+    // Add services from ultimateInnovativeServices2026
+    ultimateInnovativeServices2026.forEach(service => {
       services.push({
         id: service.id,
         name: service.name,
@@ -242,7 +242,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
               Comprehensive Services 2027
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Discover our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions. 
+              Discover our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions.
               From quantum computing to autonomous business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

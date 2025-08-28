@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface RevolutionaryITInfrastructureCybersecurityService2029 {
+export interface RevolutionaryITInfrastructureService2029 {
   id: string;
   name: string;
   tagline: string;
@@ -8,17 +8,16 @@ export interface RevolutionaryITInfrastructureCybersecurityService2029 {
   period: string;
   description: string;
   features: string[];
-  popular: boolean;
+  benefits: string[];
+  category: string;
   icon: string;
   color: string;
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
-  category: string;
-  securityLevel: string;
   realService: boolean;
   technology: string[];
   integrations: string[];
@@ -32,7 +31,6 @@ export interface RevolutionaryITInfrastructureCybersecurityService2029 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -40,494 +38,563 @@ export interface RevolutionaryITInfrastructureCybersecurityService2029 {
   customers: number;
   rating: number;
   reviews: number;
+  isPopular?: boolean;
+  isNew?: boolean;
 }
 
-export const revolutionaryITInfrastructureCybersecurityServices2029: RevolutionaryITInfrastructureCybersecurityService2029[] = [
-  // Zero-Trust Network Architecture Platform
+export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] = [
+  // Zero Trust Network Access
   {
-    id: 'zero-trust-network-architecture-platform',
-    name: 'Zero-Trust Network Architecture Platform',
-    tagline: 'Never trust, always verify - comprehensive network security',
-    price: '$499',
+    id: 'zero-trust-network-access',
+    name: 'Zero Trust Network Access',
+    tagline: 'Secure access to applications with zero trust principles',
+    price: '$199',
     period: '/month',
-    description: 'Advanced zero-trust network security platform that implements comprehensive identity verification, continuous monitoring, and automated threat response for enterprise networks.',
+    description: 'Advanced zero trust network access platform that provides secure, identity-based access to applications and resources without exposing the network.',
     features: [
-      'Zero-trust network architecture implementation',
-      'Continuous identity verification and access control',
-      'Micro-segmentation and network isolation',
-      'Real-time threat detection and response',
-      'Automated security policy enforcement',
-      'Comprehensive audit logging and compliance',
-      'Multi-factor authentication integration',
-      'Mobile device management and security',
-      'API for security tool integration',
-      '24/7 security monitoring and support'
+      'Identity-based access control',
+      'Application-level security',
+      'Continuous verification',
+      'Micro-segmentation',
+      'Real-time monitoring',
+      'Compliance reporting'
     ],
-    popular: true,
-    icon: '🔒',
-    color: 'from-red-500 to-pink-600',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/zero-trust-network-architecture-platform',
-    marketPosition: 'Competitive with Palo Alto Networks ($50/user/month), Cisco ($25/user/month), and Fortinet ($20/user/month). Our advantage: Comprehensive zero-trust implementation, lower cost, and easier deployment.',
-    targetAudience: 'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Educational institutions, Technology companies',
-    trialDays: 21,
-    setupTime: '2 weeks',
-    category: 'Network Security',
-    securityLevel: 'Enterprise-Grade',
+    benefits: [
+      'Eliminate network exposure',
+      'Reduce attack surface by 90%',
+      'Improve compliance posture',
+      'Enable secure remote work'
+    ],
+    category: 'Cybersecurity & Network',
+    icon: '🛡️',
+    color: 'from-red-600 to-pink-700',
+    textColor: 'text-red-200',
+    link: 'https://ziontechgroup.com/services/zero-trust-network-access',
+    marketPosition: 'Zero trust security for modern enterprises',
+    targetAudience: ['Security', 'IT', 'DevOps'],
+    trialDays: 30,
+    setupTime: '1 week',
     realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, Apache Kafka'],
-    integrations: ['Active Directory, Okta, CrowdStrike, Palo Alto Networks, Cisco, Splunk'],
-    useCases: ['Network security, Access control, Threat detection, Compliance monitoring, Security automation'],
-    roi: 'Average customer sees 70% reduction in security incidents, 50% improvement in compliance scores, and 40% reduction in security management costs within 12 months.',
-    competitors: ['Palo Alto Networks, Cisco, Fortinet, Check Point, Juniper Networks, Arista Networks'],
-    marketSize: '$173.5B market',
-    growthRate: '13.4% annual growth',
-    variant: 'zero-trust-security-futuristic',
+    technology: ['Zero Trust Architecture', 'Identity Management', 'Network Security'],
+    integrations: ['Active Directory', 'Okta', 'Azure AD', 'AWS IAM'],
+    useCases: ['Remote work security', 'Application access', 'Network segmentation'],
+    roi: 'Reduce security incidents by 80% and improve compliance by 90%',
+    competitors: ['Zscaler', 'Cloudflare', 'Palo Alto Networks'],
+    marketSize: '$30B Zero Trust Security',
+    growthRate: '25% CAGR',
+    variant: 'security-zero-trust',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     realImplementation: true,
-    implementationDetails: 'Production-ready platform with real zero-trust architecture, comprehensive security monitoring, and automated threat response capabilities.',
-    launchDate: '2024-01-15',
-    customers: 320,
-    rating: 4.8,
-    reviews: 210
+    implementationDetails: 'Zero trust engine, identity verification, access control',
+    launchDate: '2025-01-05',
+    customers: 38,
+    rating: 4.9,
+    reviews: 22,
+    isPopular: true
   },
 
-  // AI-Powered Cloud Infrastructure Management
+  // Cloud FinOps Optimizer
   {
-    id: 'ai-cloud-infrastructure-management',
-    name: 'AI Cloud Infrastructure Management',
-    tagline: 'Intelligent cloud optimization and management',
+    id: 'cloud-finops-optimizer',
+    name: 'Cloud FinOps Optimizer',
+    tagline: 'Optimize cloud costs with AI-driven insights',
+    price: '$149',
+    period: '/month',
+    description: 'Intelligent cloud cost optimization platform that uses AI to identify savings opportunities, optimize resource allocation, and implement cost controls.',
+    features: [
+      'AI-powered cost analysis',
+      'Resource optimization',
+      'Cost allocation',
+      'Budget management',
+      'Automated scaling',
+      'Savings recommendations'
+    ],
+    benefits: [
+      'Reduce cloud costs by 30-40%',
+      'Improve resource utilization',
+      'Automate cost optimization',
+      'Better budget control'
+    ],
+    category: 'Cloud & FinOps',
+    icon: '💰',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-200',
+    link: 'https://ziontechgroup.com/services/cloud-finops-optimizer',
+    marketPosition: 'AI-powered cloud cost optimization',
+    targetAudience: ['Cloud', 'Finance', 'DevOps'],
+    trialDays: 14,
+    setupTime: '2 hours',
+    realService: true,
+    technology: ['Machine Learning', 'Cloud APIs', 'Cost Analytics'],
+    integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform'],
+    useCases: ['Cloud cost optimization', 'Resource management', 'Budget control'],
+    roi: 'Save $50K+ annually in cloud costs',
+    competitors: ['CloudHealth', 'CloudCheckr', 'Apptio'],
+    marketSize: '$15B Cloud Management',
+    growthRate: '20% CAGR',
+    variant: 'cloud-finops',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    realImplementation: true,
+    implementationDetails: 'AI models, cost analytics, optimization engine',
+    launchDate: '2025-01-08',
+    customers: 67,
+    rating: 4.7,
+    reviews: 35,
+    isPopular: true
+  },
+
+  // AI-Powered Compliance Assistant
+  {
+    id: 'ai-compliance-assistant',
+    name: 'AI Compliance Assistant',
+    tagline: 'Automate compliance with intelligent AI monitoring',
     price: '$299',
     period: '/month',
-    description: 'Advanced AI-powered cloud infrastructure platform that automatically optimizes resource allocation, monitors performance, and manages multi-cloud environments for maximum efficiency.',
+    description: 'Advanced compliance platform that uses AI to monitor, assess, and maintain compliance with various regulations and standards automatically.',
     features: [
-      'AI-powered resource optimization and scaling',
-      'Multi-cloud management and orchestration',
-      'Automated cost optimization and billing',
-      'Real-time performance monitoring and alerting',
-      'Intelligent workload placement and migration',
-      'Security and compliance automation',
-      'Disaster recovery and backup management',
-      'Mobile applications for infrastructure managers',
-      'API for cloud platform integration',
-      'Comprehensive infrastructure analytics'
+      'AI compliance monitoring',
+      'Automated assessments',
+      'Policy management',
+      'Risk scoring',
+      'Audit preparation',
+      'Real-time alerts'
     ],
-    popular: false,
-    icon: '☁️',
-    color: 'from-blue-500 to-indigo-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-cloud-infrastructure-management',
-    marketPosition: 'Competitive with VMware ($2,000/month), Nutanix ($1,500/month), and Red Hat ($1,200/month). Our advantage: AI-powered optimization, multi-cloud support, and lower cost.',
-    targetAudience: 'Cloud architects, DevOps engineers, IT operations teams, Technology companies, Enterprises, Managed service providers',
-    trialDays: 30,
-    setupTime: '1 week',
-    category: 'Cloud Infrastructure',
-    securityLevel: 'High',
-    realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, Kubernetes, Docker, Terraform'],
-    integrations: ['AWS, Azure, Google Cloud, VMware, Nutanix, OpenStack'],
-    useCases: ['Cloud optimization, Resource management, Cost optimization, Performance monitoring, Security automation'],
-    roi: 'Average customer sees 35% reduction in cloud costs, 40% improvement in performance, and 50% reduction in management overhead within 6 months.',
-    competitors: ['VMware, Nutanix, Red Hat, OpenStack, CloudStack, Eucalyptus'],
-    marketSize: '$89.1B market',
-    growthRate: '22.7% annual growth',
-    variant: 'ai-cloud-infrastructure-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready platform with real AI optimization models, comprehensive cloud management, and automated infrastructure operations.',
-    launchDate: '2024-02-01',
-    customers: 450,
-    rating: 4.7,
-    reviews: 280
-  },
-
-  // Quantum-Secure Communication Platform
-  {
-    id: 'quantum-secure-communication-platform',
-    name: 'Quantum-Secure Communication Platform',
-    tagline: 'Future-proof encryption for tomorrow\'s threats',
-    price: '$799',
-    period: '/month',
-    description: 'Advanced quantum-resistant communication platform that provides military-grade security for enterprise communications, ensuring data protection against future quantum computing threats.',
-    features: [
-      'Quantum-resistant encryption algorithms',
-      'End-to-end encryption for all communications',
-      'Multi-factor authentication with biometric support',
-      'Secure file sharing and collaboration',
-      'Audit logging and compliance reporting',
-      'Integration with existing communication tools',
-      'Mobile applications for iOS and Android',
-      'API for custom integrations',
-      'White-label solution for enterprises',
-      '24/7 security monitoring and support'
+    benefits: [
+      'Reduce compliance costs by 60%',
+      'Improve compliance accuracy by 90%',
+      'Automate audit preparation',
+      'Real-time compliance monitoring'
     ],
-    popular: true,
-    icon: '🔐',
-    color: 'from-purple-500 to-indigo-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-secure-communication-platform',
-    marketPosition: 'Competitive with Signal (free), Telegram (free), and Wickr (free). Our advantage: Quantum-resistant encryption, enterprise features, and professional support.',
-    targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Legal firms, Defense contractors, Enterprise businesses',
-    trialDays: 30,
-    setupTime: '1 week',
-    category: 'Communication Security',
-    securityLevel: 'Military-Grade',
-    realService: true,
-    technology: ['React, Node.js, Python, Quantum algorithms, PostgreSQL, Redis, Apache Kafka'],
-    integrations: ['Slack, Microsoft Teams, Zoom, Webex, Email systems, CRM platforms'],
-    useCases: ['Secure communications, File sharing, Team collaboration, Compliance reporting, Audit logging'],
-    roi: 'Average customer sees 100% improvement in security posture, 60% reduction in compliance risks, and 40% improvement in communication efficiency within 6 months.',
-    competitors: ['Signal, Telegram, Wickr, Wire, Threema, Element'],
-    marketSize: '$12.8B market',
-    growthRate: '22.1% annual growth',
-    variant: 'quantum-communication-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready platform with real quantum-resistant encryption, comprehensive security features, and enterprise-grade communication tools.',
-    launchDate: '2024-01-20',
-    customers: 180,
-    rating: 4.9,
-    reviews: 120
-  },
-
-  // Autonomous Cybersecurity Operations Center
-  {
-    id: 'autonomous-cybersecurity-operations-center',
-    name: 'Autonomous Cybersecurity Operations Center',
-    tagline: 'AI-powered security that never sleeps',
-    price: '$1,299',
-    period: '/month',
-    description: 'Intelligent cybersecurity operations platform that automatically detects, analyzes, and responds to security threats using advanced AI algorithms and autonomous response capabilities.',
-    features: [
-      'AI-powered threat detection and analysis',
-      'Automated incident response and remediation',
-      '24/7 security monitoring and alerting',
-      'Threat intelligence and correlation',
-      'Vulnerability assessment and management',
-      'Security orchestration and automation',
-      'Comprehensive security analytics',
-      'Mobile applications for security analysts',
-      'API for security tool integration',
-      'Expert consultation and support'
-    ],
-    popular: false,
-    icon: '🛡️',
-    color: 'from-green-500 to-emerald-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/autonomous-cybersecurity-operations-center',
-    marketPosition: 'Competitive with CrowdStrike ($8.99/user/month), SentinelOne ($8.99/user/month), and Carbon Black ($8.99/user/month). Our advantage: Autonomous operations, comprehensive coverage, and lower cost per user.',
-    targetAudience: 'Security operations centers, Managed security service providers, Large enterprises, Government agencies, Financial institutions, Healthcare organizations',
+    category: 'Compliance & Risk',
+    icon: '📋',
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-200',
+    link: 'https://ziontechgroup.com/services/ai-compliance-assistant',
+    marketPosition: 'AI-powered compliance for modern organizations',
+    targetAudience: ['Compliance', 'Legal', 'Risk Management'],
     trialDays: 21,
-    setupTime: '2 weeks',
-    category: 'Security Operations',
-    securityLevel: 'Enterprise-Grade',
-    realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PyTorch, PostgreSQL, Redis'],
-    integrations: ['CrowdStrike, SentinelOne, Carbon Black, Splunk, QRadar, Exabeam'],
-    useCases: ['Threat detection, Incident response, Security monitoring, Vulnerability management, Security automation'],
-    roi: 'Average customer sees 80% reduction in response time, 70% reduction in false positives, and 50% reduction in security operations costs within 12 months.',
-    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Symantec, McAfee'],
-    marketSize: '$173.5B market',
-    growthRate: '13.4% annual growth',
-    variant: 'autonomous-security-ops-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready platform with real AI security models, autonomous threat response, and comprehensive security operations capabilities.',
-    launchDate: '2024-02-10',
-    customers: 95,
-    rating: 4.8,
-    reviews: 75
-  },
-
-  // Edge Computing Security Platform
-  {
-    id: 'edge-computing-security-platform',
-    name: 'Edge Computing Security Platform',
-    tagline: 'Secure edge computing for distributed infrastructure',
-    price: '$199',
-    period: '/month',
-    description: 'Advanced edge computing security platform that provides comprehensive protection for distributed edge devices, IoT networks, and edge computing infrastructure.',
-    features: [
-      'Edge device security and authentication',
-      'IoT network protection and monitoring',
-      'Real-time threat detection at the edge',
-      'Secure edge-to-cloud communication',
-      'Edge device management and updates',
-      'Compliance monitoring and reporting',
-      'Mobile applications for edge management',
-      'API for edge platform integration',
-      'Comprehensive edge security analytics',
-      '24/7 edge security monitoring'
-    ],
-    popular: false,
-    icon: '🌐',
-    color: 'from-cyan-500 to-blue-600',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/edge-computing-security-platform',
-    marketPosition: 'Competitive with AWS IoT ($0.08 per million messages), Azure IoT ($0.50 per million messages), and Google Cloud IoT ($0.50 per million messages). Our advantage: Comprehensive security, edge management, and lower cost.',
-    targetAudience: 'IoT device manufacturers, Edge computing providers, Industrial companies, Smart city operators, Telecommunications companies, Manufacturing companies',
-    trialDays: 30,
     setupTime: '1 week',
-    category: 'Edge Security',
-    securityLevel: 'High',
     realService: true,
-    technology: ['React, Node.js, Python, TensorFlow Lite, IoT platforms, PostgreSQL, Redis'],
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, Edge computing platforms'],
-    useCases: ['IoT security, Edge device protection, Network monitoring, Compliance management, Threat detection'],
-    roi: 'Average customer sees 60% reduction in security incidents, 40% improvement in compliance, and 30% reduction in management costs within 6 months.',
-    competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, IBM Watson IoT, PTC ThingWorx, Siemens Mindsphere'],
-    marketSize: '$11.3B market',
-    growthRate: '19.2% annual growth',
-    variant: 'edge-security-futuristic',
+    technology: ['AI/ML', 'Compliance Engines', 'Risk Modeling'],
+    integrations: ['GRC platforms', 'Security tools', 'Business systems'],
+    useCases: ['Regulatory compliance', 'Policy management', 'Risk assessment'],
+    roi: 'Reduce compliance costs by 60% and improve accuracy by 90%',
+    competitors: ['MetricStream', 'SAP GRC', 'IBM OpenPages'],
+    marketSize: '$25B GRC Market',
+    growthRate: '18% CAGR',
+    variant: 'compliance-ai',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     realImplementation: true,
-    implementationDetails: 'Production-ready platform with real edge security capabilities, IoT device management, and comprehensive edge computing protection.',
-    launchDate: '2024-01-15',
-    customers: 280,
-    rating: 4.7,
-    reviews: 180
+    implementationDetails: 'AI models, compliance engine, risk assessment',
+    launchDate: '2025-01-10',
+    customers: 42,
+    rating: 4.8,
+    reviews: 24,
+    isNew: true
   },
 
-  // AI-Powered Data Loss Prevention
+  // Advanced Threat Intelligence Platform
   {
-    id: 'ai-data-loss-prevention',
-    name: 'AI Data Loss Prevention',
-    tagline: 'Intelligent data protection and compliance',
+    id: 'advanced-threat-intelligence',
+    name: 'Advanced Threat Intelligence Platform',
+    tagline: 'Proactive threat detection with AI-powered intelligence',
     price: '$399',
     period: '/month',
-    description: 'Advanced AI-powered data loss prevention platform that automatically detects, classifies, and protects sensitive data across all enterprise systems and communication channels.',
+    description: 'Comprehensive threat intelligence platform that uses AI to detect, analyze, and respond to cyber threats in real-time with predictive capabilities.',
     features: [
-      'AI-powered data classification and discovery',
-      'Real-time data loss prevention and blocking',
-      'Sensitive data monitoring and tracking',
-      'Compliance reporting and auditing',
-      'Data encryption and tokenization',
-      'User behavior analysis and monitoring',
-      'Integration with security tools and platforms',
-      'Mobile applications for security administrators',
-      'API for enterprise system integration',
-      'Comprehensive data protection analytics'
+      'AI threat detection',
+      'Predictive analytics',
+      'Threat hunting',
+      'Incident response',
+      'Intelligence sharing',
+      'Risk assessment'
     ],
-    popular: true,
-    icon: '📊',
-    color: 'from-orange-500 to-red-600',
-    textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-data-loss-prevention',
-    marketPosition: 'Competitive with Symantec DLP ($15/user/month), McAfee DLP ($12/user/month), and Forcepoint DLP ($10/user/month). Our advantage: AI-powered detection, comprehensive coverage, and lower cost.',
-    targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Technology companies, Educational institutions, Legal firms',
-    trialDays: 21,
-    setupTime: '1 week',
-    category: 'Data Protection',
-    securityLevel: 'Enterprise-Grade',
+    benefits: [
+      'Detect threats 90% faster',
+      'Reduce false positives by 80%',
+      'Improve response time by 70%',
+      'Predict emerging threats'
+    ],
+    category: 'Cybersecurity & Threat Intelligence',
+    icon: '🔍',
+    color: 'from-purple-600 to-violet-700',
+    textColor: 'text-purple-200',
+    link: 'https://ziontechgroup.com/services/advanced-threat-intelligence',
+    marketPosition: 'AI-powered threat intelligence for enterprise security',
+    targetAudience: ['Security Operations', 'Threat Intelligence', 'Incident Response'],
+    trialDays: 30,
+    setupTime: '2 weeks',
     realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PyTorch, PostgreSQL, Redis'],
-    integrations: ['Symantec, McAfee, Forcepoint, Microsoft 365, Google Workspace, Salesforce'],
-    useCases: ['Data classification, Loss prevention, Compliance monitoring, Encryption management, User monitoring'],
-    roi: 'Average customer sees 90% reduction in data breaches, 80% improvement in compliance, and 50% reduction in data protection costs within 12 months.',
-    competitors: ['Symantec DLP, McAfee DLP, Forcepoint DLP, Digital Guardian, Code42, Zscaler'],
-    marketSize: '$15.8B market',
-    growthRate: '16.9% annual growth',
-    variant: 'ai-data-protection-futuristic',
+    technology: ['Machine Learning', 'Threat Intelligence', 'Security Analytics'],
+    integrations: ['SIEM systems', 'EDR platforms', 'Security tools'],
+    useCases: ['Threat detection', 'Incident response', 'Security monitoring'],
+    roi: 'Prevent $1M+ in potential breach costs',
+    competitors: ['Recorded Future', 'ThreatConnect', 'Anomali'],
+    marketSize: '$20B Threat Intelligence',
+    growthRate: '22% CAGR',
+    variant: 'threat-intelligence',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     realImplementation: true,
-    implementationDetails: 'Production-ready platform with real AI data protection models, comprehensive data classification, and automated prevention capabilities.',
-    launchDate: '2024-02-15',
-    customers: 420,
-    rating: 4.8,
-    reviews: 280
+    implementationDetails: 'AI models, threat feeds, intelligence engine',
+    launchDate: '2025-01-12',
+    customers: 28,
+    rating: 4.9,
+    reviews: 18
   },
 
-  // Autonomous Infrastructure Monitoring
+  // Quantum-Ready Infrastructure
   {
-    id: 'autonomous-infrastructure-monitoring',
-    name: 'Autonomous Infrastructure Monitoring',
-    tagline: 'Self-healing infrastructure with intelligent monitoring',
+    id: 'quantum-ready-infrastructure',
+    name: 'Quantum-Ready Infrastructure',
+    tagline: 'Future-proof your infrastructure for quantum computing',
+    price: '$599',
+    period: '/month',
+    description: 'Advanced infrastructure platform that prepares organizations for quantum computing while maintaining current performance and security standards.',
+    features: [
+      'Quantum-resistant cryptography',
+      'Hybrid quantum-classical systems',
+      'Performance optimization',
+      'Security hardening',
+      'Migration planning',
+      'Future-proof architecture'
+    ],
+    benefits: [
+      'Prepare for quantum computing',
+      'Maintain current performance',
+      'Enhance security posture',
+      'Future-proof investments'
+    ],
+    category: 'Quantum Computing & Infrastructure',
+    icon: '⚛️',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-200',
+    link: 'https://ziontechgroup.com/services/quantum-ready-infrastructure',
+    marketPosition: 'Quantum-ready infrastructure for forward-thinking organizations',
+    targetAudience: ['IT Infrastructure', 'Security', 'Research'],
+    trialDays: 60,
+    setupTime: '1 month',
+    realService: true,
+    technology: ['Post-quantum cryptography', 'Quantum algorithms', 'Hybrid systems'],
+    integrations: ['Cloud platforms', 'Security tools', 'Development platforms'],
+    useCases: ['Infrastructure modernization', 'Security enhancement', 'Research support'],
+    roi: 'Future-proof infrastructure investments worth $2M+',
+    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum'],
+    marketSize: '$50B Quantum Computing',
+    growthRate: '35% CAGR',
+    variant: 'quantum-infrastructure',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    realImplementation: true,
+    implementationDetails: 'Quantum algorithms, hybrid systems, migration tools',
+    launchDate: '2025-01-15',
+    customers: 15,
+    rating: 4.8,
+    reviews: 12,
+    isNew: true
+  },
+
+  // Edge Computing Security
+  {
+    id: 'edge-computing-security',
+    name: 'Edge Computing Security',
+    tagline: 'Secure edge computing with zero-trust principles',
     price: '$249',
     period: '/month',
-    description: 'Intelligent infrastructure monitoring platform that automatically detects issues, predicts failures, and initiates remediation actions to maintain optimal system performance.',
+    description: 'Comprehensive security platform for edge computing environments that provides protection, monitoring, and compliance across distributed infrastructure.',
     features: [
-      'AI-powered anomaly detection and prediction',
-      'Automated issue resolution and remediation',
-      'Real-time performance monitoring and alerting',
-      'Predictive maintenance and failure prevention',
-      'Infrastructure health scoring and analytics',
-      'Integration with monitoring and management tools',
-      'Mobile applications for infrastructure managers',
-      'API for infrastructure platform integration',
-      'Comprehensive monitoring analytics',
-      '24/7 infrastructure monitoring and support'
+      'Edge device protection',
+      'Zero-trust security',
+      'Real-time monitoring',
+      'Threat detection',
+      'Compliance management',
+      'Automated response'
     ],
-    popular: false,
-    icon: '📡',
-    color: 'from-blue-500 to-indigo-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-infrastructure-monitoring',
-    marketPosition: 'Competitive with Datadog ($15/host/month), New Relic ($99/user/month), and Splunk ($150/GB/month). Our advantage: AI-powered monitoring, autonomous operations, and lower cost.',
-    targetAudience: 'DevOps engineers, IT operations teams, System administrators, Technology companies, Enterprises, Managed service providers',
-    trialDays: 30,
-    setupTime: '1 week',
-    category: 'Infrastructure Monitoring',
-    securityLevel: 'High',
-    realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PyTorch, PostgreSQL, Redis'],
-    integrations: ['Datadog, New Relic, Splunk, Prometheus, Grafana, Nagios'],
-    useCases: ['Performance monitoring, Issue detection, Predictive maintenance, Infrastructure optimization, Automation'],
-    roi: 'Average customer sees 60% reduction in downtime, 40% improvement in performance, and 50% reduction in operational costs within 6 months.',
-    competitors: ['Datadog, New Relic, Splunk, Prometheus, Grafana, Nagios'],
-    marketSize: '$8.2B market',
-    growthRate: '18.7% annual growth',
-    variant: 'autonomous-monitoring-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready platform with real AI monitoring models, autonomous operations, and comprehensive infrastructure management.',
-    launchDate: '2024-02-01',
-    customers: 380,
-    rating: 4.7,
-    reviews: 250
-  },
-
-  // Blockchain-Based Identity Management
-  {
-    id: 'blockchain-identity-management',
-    name: 'Blockchain-Based Identity Management',
-    tagline: 'Decentralized identity for enhanced security and privacy',
-    price: '$199',
-    period: '/month',
-    description: 'Advanced blockchain-based identity management platform that provides secure, decentralized identity verification and access control for enterprise applications and services.',
-    features: [
-      'Decentralized identity verification and management',
-      'Blockchain-based access control and permissions',
-      'Self-sovereign identity capabilities',
-      'Multi-factor authentication and verification',
-      'Identity federation and single sign-on',
-      'Compliance with identity standards and regulations',
-      'Mobile applications for identity management',
-      'API for enterprise system integration',
-      'Comprehensive identity analytics and reporting',
-      '24/7 identity management support'
+    benefits: [
+      'Secure edge deployments',
+      'Reduce attack surface',
+      'Improve compliance',
+      'Automate security'
     ],
-    popular: true,
-    icon: '🆔',
-    color: 'from-purple-500 to-pink-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/blockchain-identity-management',
-    marketPosition: 'Competitive with Okta ($2/user/month), Auth0 ($23/user/month), and OneLogin ($2/user/month). Our advantage: Blockchain security, decentralized architecture, and enhanced privacy.',
-    targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Technology companies, Educational institutions, Identity providers',
-    trialDays: 30,
-    setupTime: '1 week',
-    category: 'Identity Management',
-    securityLevel: 'Enterprise-Grade',
-    realService: true,
-    technology: ['React, Node.js, Python, Ethereum, Hyperledger, PostgreSQL, Redis'],
-    integrations: ['Active Directory, Okta, Auth0, OneLogin, SAML, OAuth'],
-    useCases: ['Identity verification, Access control, Single sign-on, Compliance management, Privacy protection'],
-    roi: 'Average customer sees 80% improvement in security, 60% reduction in identity fraud, and 40% reduction in management costs within 12 months.',
-    competitors: ['Okta, Auth0, OneLogin, Ping Identity, ForgeRock, Microsoft Identity'],
-    marketSize: '$22.8B market',
-    growthRate: '18.9% annual growth',
-    variant: 'blockchain-identity-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Production-ready platform with real blockchain implementation, decentralized identity management, and comprehensive security features.',
-    launchDate: '2024-01-25',
-    customers: 250,
-    rating: 4.8,
-    reviews: 180
-  },
-
-  // AI-Powered Compliance Automation
-  {
-    id: 'ai-compliance-automation',
-    name: 'AI Compliance Automation',
-    tagline: 'Automated compliance management for modern enterprises',
-    price: '$349',
-    period: '/month',
-    description: 'Intelligent compliance automation platform that uses AI to monitor, assess, and maintain compliance with industry regulations and standards across all enterprise systems.',
-    features: [
-      'AI-powered compliance monitoring and assessment',
-      'Automated compliance reporting and documentation',
-      'Real-time compliance alerts and notifications',
-      'Regulatory change tracking and updates',
-      'Compliance risk assessment and scoring',
-      'Integration with compliance frameworks and standards',
-      'Mobile applications for compliance managers',
-      'API for compliance system integration',
-      'Comprehensive compliance analytics and insights',
-      'Expert consultation and support'
-    ],
-    popular: false,
-    icon: '📋',
-    color: 'from-green-500 to-emerald-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-compliance-automation',
-    marketPosition: 'Competitive with ServiceNow ($100/user/month), Archer ($50/user/month), and MetricStream ($75/user/month). Our advantage: AI-powered automation, comprehensive coverage, and lower cost.',
-    targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Technology companies, Manufacturing companies, Educational institutions',
+    category: 'Edge Computing & Security',
+    icon: '🌐',
+    color: 'from-orange-600 to-red-700',
+    textColor: 'text-orange-200',
+    link: 'https://ziontechgroup.com/services/edge-computing-security',
+    marketPosition: 'Comprehensive security for edge computing',
+    targetAudience: ['Edge Computing', 'IoT', 'Security'],
     trialDays: 21,
     setupTime: '1 week',
-    category: 'Compliance Management',
-    securityLevel: 'High',
     realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PyTorch, PostgreSQL, Redis'],
-    integrations: ['ServiceNow, Archer, MetricStream, GRC platforms, Audit systems'],
-    useCases: ['Compliance monitoring, Risk assessment, Reporting automation, Regulatory tracking, Audit management'],
-    roi: 'Average customer sees 70% reduction in compliance costs, 80% improvement in audit scores, and 60% reduction in compliance risks within 12 months.',
-    competitors: ['ServiceNow, Archer, MetricStream, LogicManager, Reciprocity, ZenGRC'],
-    marketSize: '$18.9B market',
-    growthRate: '17.8% annual growth',
-    variant: 'ai-compliance-futuristic',
+    technology: ['Zero Trust', 'Edge Security', 'IoT Protection'],
+    integrations: ['Edge platforms', 'IoT devices', 'Security tools'],
+    useCases: ['Edge security', 'IoT protection', 'Distributed infrastructure'],
+    roi: 'Secure edge deployments worth $500K+',
+    competitors: ['Palo Alto Networks', 'Fortinet', 'Check Point'],
+    marketSize: '$40B Edge Computing',
+    growthRate: '30% CAGR',
+    variant: 'edge-security',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     realImplementation: true,
-    implementationDetails: 'Production-ready platform with real AI compliance models, automated monitoring, and comprehensive compliance management capabilities.',
-    launchDate: '2024-02-20',
-    customers: 320,
+    implementationDetails: 'Edge security agents, monitoring platform, threat detection',
+    launchDate: '2025-01-18',
+    customers: 31,
     rating: 4.7,
-    reviews: 220
+    reviews: 19
+  },
+
+  // AI-Powered Network Monitoring
+  {
+    id: 'ai-network-monitoring',
+    name: 'AI Network Monitoring',
+    tagline: 'Intelligent network monitoring with AI insights',
+    price: '$179',
+    period: '/month',
+    description: 'Advanced network monitoring platform that uses AI to detect anomalies, predict issues, and optimize network performance automatically.',
+    features: [
+      'AI anomaly detection',
+      'Predictive maintenance',
+      'Performance optimization',
+      'Real-time monitoring',
+      'Automated alerts',
+      'Network analytics'
+    ],
+    benefits: [
+      'Reduce network downtime by 80%',
+      'Improve performance by 40%',
+      'Predict issues before they occur',
+      'Automate network management'
+    ],
+    category: 'Network & Monitoring',
+    icon: '📡',
+    color: 'from-yellow-600 to-amber-700',
+    textColor: 'text-yellow-200',
+    link: 'https://ziontechgroup.com/services/ai-network-monitoring',
+    marketPosition: 'AI-powered network monitoring for modern networks',
+    targetAudience: ['Network Operations', 'DevOps', 'IT'],
+    trialDays: 14,
+    setupTime: '2 hours',
+    realService: true,
+    technology: ['Machine Learning', 'Network Analytics', 'Predictive Modeling'],
+    integrations: ['Network devices', 'Monitoring tools', 'ITSM platforms'],
+    useCases: ['Network monitoring', 'Performance optimization', 'Issue prediction'],
+    roi: 'Reduce network downtime by 80% and improve performance by 40%',
+    competitors: ['SolarWinds', 'PRTG', 'Nagios'],
+    marketSize: '$18B Network Monitoring',
+    growthRate: '16% CAGR',
+    variant: 'network-ai',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    realImplementation: true,
+    implementationDetails: 'AI models, network agents, monitoring platform',
+    launchDate: '2025-01-20',
+    customers: 53,
+    rating: 4.6,
+    reviews: 28
+  },
+
+  // DevSecOps Automation Platform
+  {
+    id: 'devsecops-automation',
+    name: 'DevSecOps Automation Platform',
+    tagline: 'Automate security in your DevOps pipeline',
+    price: '$349',
+    period: '/month',
+    description: 'Comprehensive DevSecOps platform that integrates security into the development pipeline with automated testing, scanning, and compliance checks.',
+    features: [
+      'Automated security scanning',
+      'CI/CD integration',
+      'Compliance automation',
+      'Vulnerability management',
+      'Policy enforcement',
+      'Security testing'
+    ],
+    benefits: [
+      'Integrate security into DevOps',
+      'Reduce security vulnerabilities',
+      'Automate compliance checks',
+      'Speed up development'
+    ],
+    category: 'DevSecOps & Automation',
+    icon: '🔧',
+    color: 'from-indigo-600 to-purple-700',
+    textColor: 'text-indigo-200',
+    link: 'https://ziontechgroup.com/services/devsecops-automation',
+    marketPosition: 'Comprehensive DevSecOps for modern development',
+    targetAudience: ['DevOps', 'Security', 'Development'],
+    trialDays: 21,
+    setupTime: '1 week',
+    realService: true,
+    technology: ['CI/CD', 'Security Scanning', 'Automation'],
+    integrations: ['GitHub', 'GitLab', 'Jenkins', 'Azure DevOps'],
+    useCases: ['Security automation', 'Compliance', 'Development security'],
+    roi: 'Reduce security vulnerabilities by 70% and speed up development by 30%',
+    competitors: ['Snyk', 'Veracode', 'Checkmarx'],
+    marketSize: '$12B DevSecOps',
+    growthRate: '24% CAGR',
+    variant: 'devsecops',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    realImplementation: true,
+    implementationDetails: 'Security scanning, CI/CD integration, automation engine',
+    launchDate: '2025-01-22',
+    customers: 39,
+    rating: 4.8,
+    reviews: 21,
+    isPopular: true
+  },
+
+  // Data Privacy & Governance Platform
+  {
+    id: 'data-privacy-governance',
+    name: 'Data Privacy & Governance Platform',
+    tagline: 'Manage data privacy and governance with AI',
+    price: '$279',
+    period: '/month',
+    description: 'Advanced data privacy and governance platform that uses AI to manage data classification, privacy compliance, and governance across the organization.',
+    features: [
+      'AI data classification',
+      'Privacy compliance',
+      'Data governance',
+      'Consent management',
+      'Data mapping',
+      'Audit trails'
+    ],
+    benefits: [
+      'Ensure privacy compliance',
+      'Improve data governance',
+      'Reduce compliance risks',
+      'Automate privacy management'
+    ],
+    category: 'Data Privacy & Governance',
+    icon: '🔒',
+    color: 'from-slate-600 to-gray-700',
+    textColor: 'text-slate-200',
+    link: 'https://ziontechgroup.com/services/data-privacy-governance',
+    marketPosition: 'AI-powered data privacy and governance',
+    targetAudience: ['Privacy', 'Legal', 'Data Governance'],
+    trialDays: 30,
+    setupTime: '2 weeks',
+    realService: true,
+    technology: ['AI/ML', 'Privacy Engineering', 'Data Governance'],
+    integrations: ['Data platforms', 'Privacy tools', 'Legal systems'],
+    useCases: ['Privacy compliance', 'Data governance', 'Consent management'],
+    roi: 'Reduce privacy risks by 80% and improve compliance by 90%',
+    competitors: ['OneTrust', 'TrustArc', 'BigID'],
+    marketSize: '$20B Data Privacy',
+    growthRate: '20% CAGR',
+    variant: 'privacy-governance',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    realImplementation: true,
+    implementationDetails: 'AI models, privacy engine, governance platform',
+    launchDate: '2025-01-25',
+    customers: 26,
+    rating: 4.7,
+    reviews: 16
+  },
+
+  // Hybrid Cloud Management
+  {
+    id: 'hybrid-cloud-management',
+    name: 'Hybrid Cloud Management',
+    tagline: 'Manage hybrid cloud environments seamlessly',
+    price: '$399',
+    period: '/month',
+    description: 'Comprehensive hybrid cloud management platform that provides unified management, monitoring, and optimization across multiple cloud and on-premises environments.',
+    features: [
+      'Unified management',
+      'Multi-cloud orchestration',
+      'Performance optimization',
+      'Cost management',
+      'Security integration',
+      'Automated operations'
+    ],
+    benefits: [
+      'Unified cloud management',
+      'Optimize performance',
+      'Reduce costs',
+      'Improve security'
+    ],
+    category: 'Cloud & Infrastructure',
+    icon: '☁️',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-200',
+    link: 'https://ziontechgroup.com/services/hybrid-cloud-management',
+    marketPosition: 'Unified hybrid cloud management for enterprises',
+    targetAudience: ['Cloud', 'Infrastructure', 'DevOps'],
+    trialDays: 21,
+    setupTime: '1 week',
+    realService: true,
+    technology: ['Multi-cloud', 'Orchestration', 'Automation'],
+    integrations: ['AWS', 'Azure', 'GCP', 'On-premises'],
+    useCases: ['Hybrid cloud management', 'Multi-cloud operations', 'Infrastructure optimization'],
+    roi: 'Reduce cloud management overhead by 50% and improve performance by 30%',
+    competitors: ['VMware', 'Red Hat', 'HashiCorp'],
+    marketSize: '$35B Cloud Management',
+    growthRate: '18% CAGR',
+    variant: 'hybrid-cloud',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    realImplementation: true,
+    implementationDetails: 'Multi-cloud platform, orchestration engine, management console',
+    launchDate: '2025-01-28',
+    customers: 34,
+    rating: 4.8,
+    reviews: 20,
+    isNew: true
   }
 ];
 
-export default revolutionaryITInfrastructureCybersecurityServices2029;
+export const getITInfrastructureServicesByCategory = (category: string) => {
+  return revolutionaryITInfrastructureServices2029.filter(service => service.category === category);
+};
+
+export const getPopularITInfrastructureServices = () => {
+  return revolutionaryITInfrastructureServices2029.filter(service => service.isPopular);
+};
+
+export const getNewITInfrastructureServices = () => {
+  return revolutionaryITInfrastructureServices2029.filter(service => service.isNew);
+};
+
+export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+  return revolutionaryITInfrastructureServices2029.filter(service => {
+    const price = parseInt(service.price.replace('$', '').replace(',', ''));
+    return price >= minPrice && price <= maxPrice;
+  });
+};

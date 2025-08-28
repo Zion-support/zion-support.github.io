@@ -9,12 +9,12 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
 }
-export function Button({ 
-  children, 
-  variant = 'default', 
+export function Button({
+  children,
+  variant = 'default',
   size = 'md',
   asChild = false,
-  className = '', 
+  className = '',
   onClick,
   type = 'button',
   disabled = false

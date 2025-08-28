@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  Code, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  Code,
   Database,
   Rocket,
   TrendingUp,
@@ -179,8 +179,8 @@ export const EnhancedServiceShowcase: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  const filteredServices = selectedCategory === 'All Services' 
-    ? services 
+  const filteredServices = selectedCategory === 'All Services'
+    ? services
     : services.filter(service => service.category === selectedCategory);
 
   const renderStars = (rating: number) => {
@@ -188,8 +188,8 @@ export const EnhancedServiceShowcase: React.FC = () => {
       <Star
         key={i}
         className={`w-4 h-4 ${
-          i < Math.floor(rating) 
-            ? 'text-yellow-400 fill-current' 
+          i < Math.floor(rating)
+            ? 'text-yellow-400 fill-current'
             : 'text-gray-400'
         }`}
       />
@@ -212,7 +212,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive technology solutions designed to drive your business forward with 
+            Comprehensive technology solutions designed to drive your business forward with
             cutting-edge AI, cybersecurity, and innovative digital transformation services.
           </p>
         </motion.div>
@@ -253,8 +253,8 @@ export const EnhancedServiceShowcase: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{
+                  duration: 0.6,
                   delay: index * 0.1,
                   type: "spring",
                   stiffness: 100
@@ -283,7 +283,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
                       <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
                         {service.title}
                       </h3>
-                      
+
                       <p className="text-gray-400 leading-relaxed">
                         {service.description}
                       </p>
@@ -343,7 +343,7 @@ export const EnhancedServiceShowcase: React.FC = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let our expert team help you implement cutting-edge technology solutions 
+              Let our expert team help you implement cutting-edge technology solutions
               that drive real business results and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

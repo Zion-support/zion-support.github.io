@@ -71,7 +71,7 @@ const IoTServices = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Connect, monitor, and control your world with cutting-edge IoT solutions 
+              Connect, monitor, and control your world with cutting-edge IoT solutions
               that drive innovation and operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -94,11 +94,11 @@ const IoTServices = () => {
               Our IoT Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              End-to-end IoT solutions designed to transform your business 
+              End-to-end IoT solutions designed to transform your business
               operations and unlock new possibilities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {iotServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -130,11 +130,11 @@ const IoTServices = () => {
               IoT Technologies We Use
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge technologies and platforms to build robust, 
+              Cutting-edge technologies and platforms to build robust,
               scalable IoT solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {iotTechnologies.map((tech, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
@@ -165,7 +165,7 @@ const IoTServices = () => {
                 Why Choose IoT Solutions?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                IoT technology provides unprecedented opportunities to monitor, 
+                IoT technology provides unprecedented opportunities to monitor,
                 control, and optimize your business operations.
               </p>
               <ul className="space-y-3">
@@ -182,7 +182,7 @@ const IoTServices = () => {
                 <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
                 <h3 className="text-2xl font-bold text-white mb-2">IoT Expertise</h3>
                 <p className="text-gray-300 mb-6">
-                  Our team has extensive experience building and deploying 
+                  Our team has extensive experience building and deploying
                   IoT solutions across various industries.
                 </p>
                 <div className="text-sm text-gray-400">
@@ -203,7 +203,7 @@ const IoTServices = () => {
             Ready to Connect Your World?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how IoT solutions can transform your business 
+            Let's discuss how IoT solutions can transform your business
             operations and unlock new opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

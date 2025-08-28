@@ -316,11 +316,11 @@ from dataclasses import dataclass
 @dataclass
 class GeneratedClass:
     """Generated class based on prompt."""
-    
+
     def __init__(self):
         # TODO: Implement initialization
         pass
-    
+
     async def process_data(self, data: Any) -> Any:
         """Process data based on prompt requirements."""
         # TODO: Implement data processing logic
@@ -330,7 +330,7 @@ async def main():
     """Main function."""
     instance = GeneratedClass()
     # TODO: Implement main logic based on prompt
-    
+
 if __name__ == "__main__":
     asyncio.run(main())`;
     };
@@ -496,12 +496,12 @@ class TestGeneratedClass:
     def test_initialization(self):
         instance = GeneratedClass()
         assert instance is not None
-    
+
     def test_process_data(self):
         instance = GeneratedClass()
         result = instance.process_data("test")
         assert result == "test"
-    
+
     # TODO: Add more specific test cases based on class functionality`;
     };
     const generateGenericTests = (_code, language) => {
@@ -519,9 +519,9 @@ describe('Generated Code Tests', () => {
     const generateJSDoc = (_code) => {
         return `/**
  * Generated Component
- * 
+ *
  * This component was generated based on user requirements.
- * 
+ *
  * @component
  * @example
  * <GeneratedComponent />
@@ -540,7 +540,7 @@ This module was generated based on user requirements.
 def generated_function():
     """
     Generated function with docstring.
-    
+
     Returns:
         str: Description of return value
     """
@@ -549,9 +549,9 @@ def generated_function():
     const generateGenericDocs = (_code, language) => {
         return `/**
  * Generated ${language} Code
- * 
+ *
  * This code was generated based on user requirements.
- * 
+ *
  * TODO: Add specific documentation based on code functionality
  */`;
     };

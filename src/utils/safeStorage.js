@@ -32,7 +32,7 @@ function safeConsoleError(message, error) {
     const env = globalThis.process?.env?.NODE_ENV ?? 'production';
     // Prevent infinite recursion in console logging
     if (env === 'production') return;
-    
+
     try {
         console.error(message, error);
     }

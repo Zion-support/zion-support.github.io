@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
 import { useAuth } from "@/hooks/useAuth";
-import { 
+import {
   Card,
   CardContent
 } from "@/components/ui/card";
@@ -21,7 +21,7 @@ import {
 export default function QuoteManager() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
-  
+
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 
@@ -70,7 +70,7 @@ export default function QuoteManager() {
   return (
     <ProtectedRoute adminOnly>
       <div>
-        
+
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -80,10 +80,10 @@ export default function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
-            
+
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
-            
+
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -96,14 +96,14 @@ export default function QuoteManager() {
               setDateRange={setDateRange}
               onReset={handleResetFilters}
             />
-            
+
             {/* Tabs for Active/Archived */}
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Quotes</TabsTrigger>
                 <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
               </TabsList>
-              
+
               <TabsContent value="active">
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -117,7 +117,7 @@ export default function QuoteManager() {
                   />
                 </Card>
               </TabsContent>
-              
+
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
@@ -134,7 +134,7 @@ export default function QuoteManager() {
             </Tabs>
           </div>
         </div>
-        
+
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
@@ -144,8 +144,8 @@ export default function QuoteManager() {
             setSelectedQuote(null);
           }}
         />
-        
-        
+
+
       </div>
     </ProtectedRoute>
   );

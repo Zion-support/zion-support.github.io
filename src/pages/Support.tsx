@@ -29,6 +29,7 @@ import {
   VideoCall,
   Mailbox
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const Support = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');
@@ -210,39 +211,112 @@ const Support = () => {
         <meta name="keywords" content="support, help, contact, customer service, Zion Tech Group, technical support" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
+      {/* Support Channels */}
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Multiple Ways to Get Support
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
+              <div key={index} className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className={`${channel.color} w-12 h-12 rounded-lg flex items-center justify-center text-white mb-4`}>
+                  {channel.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                <p className="text-zion-slate-light mb-4">{channel.description}</p>
+                <div className="space-y-2">
+                  <p className="text-sm text-zion-cyan font-medium">{channel.contact}</p>
+                  <p className="text-xs text-zion-slate-light flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    {channel.availability}
+                  </p>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{channel.name}</h3>
+                <p className="text-gray-400 text-sm mb-3">{channel.description}</p>
+                <p className="text-blue-400 text-sm font-medium">{channel.response}</p>
+                <a href={channel.link} className="inline-block mt-4 text-blue-400 hover:text-blue-300 text-sm font-medium">
+                  Get Help →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="py-20 bg-zion-slate-dark">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Frequently Asked Questions
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {faqCategories.map((category, index) => (
+              <div key={index} className="bg-zion-slate border border-zion-slate-light rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="text-zion-cyan">{category.icon}</div>
+                  <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {category.questions.map((question, qIndex) => (
+                    <li key={qIndex} className="text-zion-slate-light hover:text-zion-cyan cursor-pointer transition-colors">
+                      {question}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Resources Section */}
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            Helpful Resources
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {resources.map((resource, index) => (
+              <div key={index} className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow">
+                <div className="text-zion-cyan mb-4">{resource.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{resource.title}</h3>
+                <p className="text-zion-slate-light mb-4">{resource.description}</p>
+                <a
+                  href={resource.href}
+                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
+                >
+                  Learn more
+                  <span>→</span>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Contact CTA */}
+      <div className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Still Need Help?
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            Our support team is ready to assist you with any questions or technical issues you may have.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Headphones className="w-10 h-10 text-white" />
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
-                We're Here to Help
-              </h1>
-              
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-                Get the support you need through multiple channels. Our expert team is ready to help you succeed with Zion Tech Group services.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="flex items-center gap-2 text-sm text-slate-500">
-                  <Clock className="w-4 h-4" />
-                  <span>24/7 Support Available</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-slate-500">
-                  <Users className="w-4 h-4" />
-                  <span>Expert Technical Team</span>
-                </div>
-              </div>
-            </motion.div>
+              Contact Support
+            </a>
+            <a
+              href="/help"
+              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
+            >
+              Visit Help Center
+            </a>
           </div>
         </section>
 

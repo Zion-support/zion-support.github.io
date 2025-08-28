@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function AIAutoEmailResponder() {
   return (
@@ -13,8 +13,8 @@ export default function AIAutoEmailResponder() {
           AI Auto Email Responder
         </h1>
         <p className="text-zion-slate-light max-w-3xl">
-          Reduce response times and improve CSAT with an AI responder that drafts context-aware replies, 
-          classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options 
+          Reduce response times and improve CSAT with an AI responder that drafts context-aware replies,
+          classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options
           (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
         </p>
 
@@ -38,7 +38,7 @@ export default function AIAutoEmailResponder() {
               <li>• Enterprise: Custom SSO, VPC, SLAs</li>
             </ul>
             <p className="mt-4 text-xs text-zion-slate-light">
-              References: 
+              References:
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://openai.com/pricing" target="_blank" rel="noreferrer">OpenAI pricing</a>,
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://workspace.google.com/pricing" target="_blank" rel="noreferrer">Google Workspace</a>,
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noreferrer">AWS Bedrock</a>

@@ -184,8 +184,8 @@ const SpaceTech = () => {
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Pioneer the future with our cutting-edge space technology solutions 
-              that enable satellite operations, space communications, and Earth observation.
+              Explore the final frontier with cutting-edge space technology solutions
+              that push the boundaries of innovation and discovery.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -215,10 +215,10 @@ const SpaceTech = () => {
               Advanced Space Technology Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides cutting-edge space technology capabilities 
-              for modern space missions and satellite operations.
+              Comprehensive space technology solutions designed to advance
+              exploration and innovation beyond Earth's atmosphere.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -253,28 +253,16 @@ const SpaceTech = () => {
               Core Space Technology Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From satellite operations to space communications, we provide 
-              comprehensive space technology solutions.
+              Cutting-edge technologies and platforms to build robust,
+              reliable space systems and solutions.
             </p>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-                    <p className="text-gray-300">{service.description}</p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {spaceTechnologies.map((tech, index) => (
+              <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <tech.icon className="w-8 h-8 text-white"/>
                 </div>
               </motion.div>
             ))}
@@ -283,89 +271,62 @@ const SpaceTech = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Space Technology Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in global connectivity, monitoring, and space exploration capabilities.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose Space Technology?
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                Space technology provides unprecedented opportunities to explore,
+                monitor, and understand our world and beyond.
+              </p>
+              <ul className="space-y-3">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
+              <div className="text-center">
+                <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4"/>
+                <h3 className="text-2xl font-bold text-white mb-2">Space Innovation</h3>
+                <p className="text-gray-300 mb-6">
+                  Our team has deep expertise in space technology and
+                  is committed to advancing the frontiers of exploration.
+                </p>
+                <div className="text-sm text-gray-400">
+                  <p>• Space technology experts</p>
+                  <p>• Innovation leadership</p>
+                  <p>• Proven methodologies</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our space technology solutions adapt to various industries, providing 
-              innovative solutions for global challenges.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
-                <p className="text-gray-300 text-sm">{useCase.description}</p>
-              </motion.div>
-            ))}
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Reach for the Stars?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how space technology can advance your mission
+            and push the boundaries of what's possible.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Get Started
+            </a>
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+              View All Services
+            </a>
           </div>
         </div>
       </section>

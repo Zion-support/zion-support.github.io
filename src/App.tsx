@@ -1,110 +1,112 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/Footer';
-
-// Enhanced Components
+import { MainSidebar } from './components/layout/MainSidebar';
+import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
+import { ChatAssistant } from './components/ChatAssistant';
+import { AppLoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { LoadingSpinner } from './components/ui/LoadingSpinner.tsx';
+import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
-import ErrorBoundary from './components/ErrorBoundary';
+import { ErrorBoundary } from './components/ErrorBoundary';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { PWAUpdater } from './components/PWAUpdater';
-import { ThemeToggle } from './components/ThemeToggle';
-import { ToastContainer } from './components/ui/Toast';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import MobileExperienceEnhancer from './components/MobileExperienceEnhancer';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { ServiceWorker } from './components/ServiceWorker';
-import { FloatingActionButton } from './components/FloatingActionButton';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
-import { ChatAssistant } from './components/ChatAssistant';
-import LoadingSpinner from './components/ui/LoadingSpinner';
 
-// Lazy-loaded pages for better performance
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/about'));
-const Services = lazy(() => import('./pages/services'));
-const Contact = lazy(() => import('./pages/contact'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Careers = lazy(() => import('./pages/Careers'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const Team = lazy(() => import('./pages/Team'));
+// Lazy load only the essential, working pages
+const Home = React.lazy(() => import('./pages/Home'));
+const Home2026 = React.lazy(() => import('./pages/Home2026'));
+const About = React.lazy(() => import('./pages/About'));
+const ApiDemo = React.lazy(() => import('./components/ApiDemo'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Services2026 = React.lazy(() => import('./pages/Services2026'));
+const Services2027 = React.lazy(() => import('./pages/InnovativeServices2027'));
+const Services2028 = React.lazy(() => import('./pages/Services2028'));
+const AIServices = React.lazy(() => import('./pages/AIServices'));
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const ITServices = React.lazy(() => import('./pages/ITServices'));
+const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
+const Solutions = React.lazy(() => import('./pages/solutions'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Login = React.lazy(() => import('./pages/Login'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+const ServicesAdvertising = React.lazy(() => import('./pages/ServicesAdvertising'));
+const Help = React.lazy(() => import('./pages/Help'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Developers = React.lazy(() => import('./pages/Developers'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Support = React.lazy(() => import('./pages/Support'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
 
-// Additional missing page imports
-const Dashboard = lazy(() => import('./pages/Dashboard'));
-const Login = lazy(() => import('./pages/Login'));
-const FAQ = lazy(() => import('./pages/FAQ'));
-const SearchPage = lazy(() => import('./pages/SearchPage'));
-const Partners = lazy(() => import('./pages/Partners'));
-const News = lazy(() => import('./pages/News'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+// New service page imports
+const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
+const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
 
-// New innovative services pages
-const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
-const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
-const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
-
-// Service pages
-const AIServices = lazy(() => import('./pages/AIServices'));
-const ITServices = lazy(() => import('./pages/ITServices'));
-const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
-
-// 2029 Cutting-Edge Services
-const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeServices2029'));
-
-// 2029 Innovative Services Showcase
-const InnovativeServicesShowcase2029 = lazy(() => import('./pages/InnovativeServicesShowcase2029'));
-
-// 2029 Comprehensive Services Showcase
-const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
-
-// 2026 AI Marketplace Services
-const Zion2026AIMarketplaceShowcase = lazy(() => import('./pages/Zion2026AIMarketplaceShowcase'));
+// Additional simple pages
+const Events = React.lazy(() => import('./pages/Events'));
+const Help = React.lazy(() => import('./pages/Help'));
+const Security = React.lazy(() => import('./pages/Security'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const Team = React.lazy(() => import('./pages/Team'));
+const News = React.lazy(() => import('./pages/News'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Partners = React.lazy(() => import('./pages/Partners'));
+const Solutions = React.lazy(() => import('./pages/solutions'));
 
 // Sitemap-aligned pages
-const AiSolutions = lazy(() => import('./pages/AiSolutions'));
-const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
-const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
+const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
+const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
 // Service pages - only import existing ones
-const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
-const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
-const AISalesCopilot = lazy(() => import('./pages/services/AISalesCopilot'));
-const CloudFinOpsOptimizer = lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
-const AIComplianceAssistant = lazy(() => import('./pages/services/AIComplianceAssistant'));
-const AIAutoEmailResponder = lazy(() => import('./pages/services/AIAutoEmailResponder'));
-const CustomerFeedbackSurveys = lazy(() => import('./pages/services/CustomerFeedbackSurveys'));
-const AIComplianceCopilot = lazy(() => import('./pages/services/AIComplianceCopilot'));
-const LLMContentStudio = lazy(() => import('./pages/services/LLMContentStudio'));
-const FinOpsAdvisor = lazy(() => import('./pages/services/FinOpsAdvisor'));
-const ReturnsManagement = lazy(() => import('./pages/services/ReturnsManagement'));
-const EmailSequencer = lazy(() => import('./pages/services/EmailSequencer'));
-const PodcastTranscription = lazy(() => import('./pages/services/PodcastTranscription'));
-const MicroCRM = lazy(() => import('./pages/services/MicroCRM'));
-
-// New real service pages
-const WebsiteAnalytics = lazy(() => import('./pages/services/WebsiteAnalytics'));
-const ITHelpdesk = lazy(() => import('./pages/services/ITHelpdesk'));
-const AffiliateTracking = lazy(() => import('./pages/services/AffiliateTracking'));
-const MobileSurvey = lazy(() => import('./pages/services/MobileSurvey'));
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
+const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 
 // Additional innovative services
-const AIAutonomousCodeReviewer = lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
-const ZeroTrustNetworkAccess = lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
+const AIBlockchainIntegration = React.lazy(() => import('./pages/services/AIBlockchainIntegration'));
+const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 
-// Additional service imports from the incoming branch
+<<<<<<< HEAD
+// Additional service imports
 const AIPoweredSEO = lazy(() => import('./pages/AIPoweredSEO'));
 const InterviewAssessmentAI = lazy(() => import('./pages/InterviewAssessmentAI'));
 const HelpdeskPlatform = lazy(() => import('./pages/HelpdeskPlatform'));
@@ -129,43 +131,180 @@ const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMar
 const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
 const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
-const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 
-// New AI Services from feature branch
-const AIBusinessProcessOptimization = lazy(() => import('./pages/services/AIBusinessProcessOptimization'));
-const AICustomerSuccessPlatform = lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
+// Additional service pages
+const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
 
-// 2025 Innovative Services
-const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
-const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
-const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
-const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
-const AIContentCreationSuite = lazy(() => import('./pages/services/AIContentCreationSuite'));
-const AICybersecurity = lazy(() => import('./pages/services/AICybersecurity'));
-const AIHRPlatform = lazy(() => import('./pages/services/ai-hr-platform'));
-const SustainableTechnology = lazy(() => import('./pages/services/sustainable-technology'));
-const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
-const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
-const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
-const Marketplace = lazy(() => import('./pages/Marketplace'));
-const ITConsulting = lazy(() => import('./pages/ITConsulting'));
-const SpaceTech = lazy(() => import('./pages/SpaceTech'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
+// 2026 Services pages
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'));
+const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
+const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
 
-// Additional innovative AI services
-const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
-const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
+// New 2026 service routes
+const UltimateServicesShowcase2026 = React.lazy(() => import('./pages/UltimateServicesShowcase2026'));
+const ComprehensivePricing2026 = React.lazy(() => import('./pages/ComprehensivePricing2026'));
 
-// Additional innovative services
-const AICodeReviewSecurityScanner = lazy(() => import('./pages/services/AICodeReviewSecurityScanner'));
-const AIDevOpsAutomationPlatform = lazy(() => import('./pages/services/AIDevOpsAutomationPlatform'));
-const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBusinessIntelligenceAnalytics'));
-const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustomerExperienceSupport'));
-const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
-const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
+// 2028 Pricing
+const ComprehensivePricing2028 = React.lazy(() => import('./pages/ComprehensivePricing2028'));
 
-export default function App() {
+// Additional routes
+const API = React.lazy(() => import('./pages/API'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
+const ApiDemo = React.lazy(() => import('./components/ApiDemo'));
+
+// Service pages
+const AIServices = createLazyComponent(() => import('./pages/AIServices'));
+const ITServices = createLazyComponent(() => import('./pages/ITServices'));
+const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
+
+// 2029 Revolutionary Services
+const RevolutionaryServices2029 = React.lazy(() => import('./pages/RevolutionaryServices2029'));
+
+// Sitemap-aligned pages
+const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
+const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
+const SolutionsHealthcare = React.lazy(() => import('./pages/solutions/Healthcare'));
+
+// Enhanced services pages - only import existing ones
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
+
+// Service pages - only import existing ones
+const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
+const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
+const AISalesCopilot = React.lazy(() => import('./pages/services/AISalesCopilot'));
+const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
+const AIComplianceAssistant = React.lazy(() => import('./pages/services/AIComplianceAssistant'));
+const AIAutoEmailResponder = React.lazy(() => import('./pages/services/AIAutoEmailResponder'));
+const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/CustomerFeedbackSurveys'));
+const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
+const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
+const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
+const ReturnsManagement = React.lazy(() => import('./pages/services/ReturnsManagement'));
+const EmailSequencer = React.lazy(() => import('./pages/services/EmailSequencer'));
+const PodcastTranscription = React.lazy(() => import('./pages/services/PodcastTranscription'));
+const MicroCRM = React.lazy(() => import('./pages/services/MicroCRM'));
+const WebsiteAnalytics = React.lazy(() => import('./pages/services/WebsiteAnalytics'));
+const ITHelpdesk = React.lazy(() => import('./pages/services/ITHelpdesk'));
+const AffiliateTracking = React.lazy(() => import('./pages/services/AffiliateTracking'));
+const MobileSurvey = React.lazy(() => import('./pages/services/MobileSurvey'));
+const AIAutonomousCodeReviewer = React.lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
+const ZeroTrustNetworkAccess = React.lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
+
+// Additional new service imports
+const AIPoweredSEO = React.lazy(() => import('./pages/services/AIPoweredSEO'));
+const InterviewAssessmentAI = React.lazy(() => import('./pages/services/InterviewAssessmentAI'));
+const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
+const DSRPortal = React.lazy(() => import('./pages/services/DSRPortal'));
+const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
+// New innovative micro SAAS services
+const AIProjectManager = React.lazy(() => import('./pages/services/AIProjectManager'));
+const AIContentOptimizer = React.lazy(() => import('./pages/services/AIContentOptimizer'));
+const AICustomerSupport = React.lazy(() => import('./pages/services/AICustomerSupport'));
+const AIDataAnalytics = React.lazy(() => import('./pages/services/AIDataAnalytics'));
+
+// New AI-powered micro SAAS service imports
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
+const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const AIBusinessProcessOptimizer = React.lazy(() => import('./pages/services/AIBusinessProcessOptimizer'));
+const AICybersecurityThreatHunter = React.lazy(() => import('./pages/services/AICybersecurityThreatHunter'));
+const AIMarketingAutomationSuite = React.lazy(() => import('./pages/services/AIMarketingAutomationSuite'));
+const AIFinancialAnalyticsPlatform = React.lazy(() => import('./pages/services/AIFinancialAnalyticsPlatform'));
+const AICustomerSupportAutomationService = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
+const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/AIProjectManagementPlatform'));
+const NewServicesShowcase2025 = React.lazy(() => import('./pages/NewServicesShowcase2025'));
+
+// Advanced AI services imports
+const AdvancedAIServicesHub = React.lazy(() => import('./components/AdvancedAIServicesHub'));
+const PerformanceAnalytics = React.lazy(() => import('./components/PerformanceAnalytics'));
+const EnhancedSEOManager = React.lazy(() => import('./components/EnhancedSEOManager'));
+const ComprehensiveImprovements2025 = React.lazy(() => import('./pages/ComprehensiveImprovements2025'));
+
+// New innovative AI services imports
+const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIContentMarketingSuite = React.lazy(() => import('./pages/services/AIContentMarketingSuite'));
+const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AICybersecurityPlatform = React.lazy(() => import('./pages/services/AICybersecurityPlatform'));
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
+
+// Additional new innovative AI services imports
+const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
+const AIContentCreationSuite = React.lazy(() => import('./pages/services/AIContentCreationSuite'));
+
+// Additional service imports
+const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
+const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
+
+// 2026 Services imports - only import existing files
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'));
+const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
+const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
+
+// Additional route imports
+const API = React.lazy(() => import('./pages/API'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
+
+// Innovative services imports
+const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// All imports are now handled above - no duplicates needed
+
+// Additional Innovative Services
+const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
+const NewInnovativeServicesShowcase = React.lazy(() => import('./pages/NewInnovativeServicesShowcase'));
+
+// Accessibility page
+const Accessibility = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO
+      title="Accessibility - Zion Tech Group"
+      description="Learn about our commitment to accessibility and inclusive design."
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Accessibility</h1>
+      <p className="text-xl text-gray-300">We strive to meet WCAG 2.1 AA guidelines.</p>
+    </div>
+  </div>
+);
+
+// Not Found page
+const NotFound = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO
+      title="Page Not Found - Zion Tech Group"
+      description="The page you're looking for doesn't exist."
+      noindex
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">404 - Not Found</h1>
+      <p className="text-xl text-gray-300">Please check the URL or go back to the homepage.</p>
+    </div>
+  </div>
+);
+
+function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>

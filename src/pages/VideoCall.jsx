@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';

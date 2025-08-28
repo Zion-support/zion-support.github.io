@@ -1,5 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import {
+  TrendingUp,
+  Users,
+  DollarSign,
+  Clock,
+  ArrowRight,
+  Star,
+  CheckCircle
+} from 'lucide-react';
 
 const caseStudies = [
   {
@@ -63,8 +73,9 @@ export function CaseStudiesSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Success Stories
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Discover how our innovative solutions have transformed businesses across industries
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Discover how we've helped businesses across industries achieve
+            remarkable results through innovative technology solutions.
           </p>
         </motion.div>
 
@@ -90,42 +101,33 @@ export function CaseStudiesSection() {
                   </span>
                 </div>
               </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">
-                  {study.title}
-                </h3>
-                
-                <p className="text-blue-400 font-semibold mb-3">
-                  {study.company}
-                </p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Challenge:</h4>
-                  <p className="text-gray-400 text-sm">{study.challenge}</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Solution:</h4>
-                  <p className="text-gray-400 text-sm">{study.solution}</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Results:</h4>
-                  <ul className="space-y-1">
-                    {study.results.map((result, resultIndex) => (
-                      <li key={resultIndex} className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                        <span className="text-gray-300">{result}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="pt-4 border-t border-slate-700">
-                  <div className="text-blue-400 text-sm font-semibold hover:text-blue-300 transition-colors duration-200 cursor-pointer">
-                    Read Full Case Study →
-                  </div>
+
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
+                <p className="text-gray-600 text-sm mb-4">{study.challenge}</p>
+
+                <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
+                <p className="text-gray-600 text-sm">{study.solution}</p>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Results:</h4>
+                <ul className="space-y-2">
+                  {study.results.map((result, resultIndex) => (
+                    <li key={resultIndex} className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                      {result}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center text-sm text-gray-600">
+                  <Star className="h-4 w-4 text-yellow-500 mr-1" />
+                  <span>5.0</span>
+                  <span className="mx-2">•</span>
+                  <span>Verified Results</span>
                 </div>
               </div>
             </motion.div>
@@ -139,9 +141,30 @@ export function CaseStudiesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
-            <span>Ready to write your success story?</span>
-            <span className="text-2xl">→</span>
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">
+              Ready to Write Your Success Story?
+            </h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Join hundreds of satisfied clients who have transformed their
+              businesses with our innovative technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
+              >
+                Start Your Project
+                <TrendingUp className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/case-studies"
+                className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200"
+              >
+                View All Case Studies
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </motion.div>
       </div>

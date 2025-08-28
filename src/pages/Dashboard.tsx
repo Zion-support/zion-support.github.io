@@ -1,14 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  Star,
+import {
+  BarChart3,
+  Users,
+  TrendingUp,
+  DollarSign,
   Activity,
   DollarSign,
   Clock,
@@ -151,6 +147,7 @@ export default function Dashboard() {
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </button>
               </div>
+
               <div className="space-y-4">
                 {recentServices.map((service, index) => (
                   <motion.div
@@ -172,17 +169,24 @@ export default function Dashboard() {
                         </span>
                         <span>{service.lastUsed}</span>
                       </div>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm font-medium text-gray-900">{service.usage}</div>
-                      <div className="w-20 bg-gray-200 rounded-full h-2 mt-1">
-                        <div 
-                          className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
-                          style={{ width: service.usage }}
+
+                      <div className="flex items-center gap-4 text-sm text-zion-slate-light">
+                        <span>Due: {project.dueDate}</span>
+                        <span>Progress: {project.progress}%</span>
+                      </div>
+
+                      <div className="w-full bg-zion-purple/20 rounded-full h-2 mt-2">
+                        <div
+                          className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
+                          style={{ width: `${project.progress}%` }}
                         ></div>
                       </div>
                     </div>
-                  </motion.div>
+
+                    <button className="p-2 text-zion-slate-light hover:text-white transition-colors">
+                      <ArrowRight className="h-4 w-4" />
+                    </button>
+                  </div>
                 ))}
               </div>
             </div>

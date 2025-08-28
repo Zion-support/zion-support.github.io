@@ -1,7 +1,8 @@
 
+
 import React, { useState } from 'react';
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import SEO from '@/components/SEO';
 
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -193,9 +194,9 @@ export default function WhitePapers() {
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
-    
+
     return matchesSearch && matchesCategory;
   });
 
@@ -328,7 +329,7 @@ export default function WhitePapers() {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             White Papers Library
           </h2>
-          
+
           {filteredPapers.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {filteredPapers.map((paper) => (

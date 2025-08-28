@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
   Home,
   Brain,
   Cloud,
@@ -80,31 +80,58 @@ export const EnhancedSidebar: React.FC = () => {
       title: "Service Areas",
       icon: Zap,
       items: [
-        { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
-        { name: "Digital Twin", href: "/services/digital-twin", icon: Cpu },
-        { name: "Data Analytics", href: "/services/data-analytics", icon: TrendingUp },
-        { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain }
+        { name: "AI & Machine Learning", href: "/services/ai", icon: Brain },
+        { name: "Micro SAAS Solutions", href: "/services/micro-saas", icon: Cloud },
+        { name: "IT Infrastructure", href: "/services/infrastructure", icon: Server },
+        { name: "Emerging Technologies", href: "/services", icon: Rocket },
+        { name: "Cybersecurity", href: "/services/cybersecurity", icon: Shield },
+        { name: "Cloud Solutions", href: "/services/cloud", icon: Cloud },
+        { name: "DevOps & Automation", href: "/services/cloud-devops", icon: Code },
+        { name: "Data Management", href: "/services/data-analytics", icon: Database }
+      ]
+    },
+    {
+      title: "Solutions",
+      icon: Target,
+      items: [
+        { name: "Quantum Technology", href: "/services/quantum-technology", icon: Atom },
+        { name: "Blockchain & Web3", href: "/services/blockchain", icon: Link },
+        { name: "Edge Computing", href: "/services/iot-edge", icon: Network },
+        { name: "IoT Solutions", href: "/services/iot-services", icon: Wifi },
+        { name: "Healthcare AI", href: "/solutions/healthcare", icon: HeartPulse },
+        { name: "Financial AI", href: "/solutions/financial", icon: DollarSign },
+        { name: "Green Technology", href: "/services/green-it", icon: Leaf }
       ]
     },
     {
       title: "Resources",
       icon: BookOpen,
       items: [
+        { name: "Documentation", href: "/documentation", icon: FileText },
+        { name: "API Reference", href: "/api", icon: Code },
+        { name: "Developer Portal", href: "/developer", icon: Cpu },
+        { name: "Support Center", href: "/help-center", icon: HelpCircle },
         { name: "FAQ", href: "/faq", icon: HelpCircle },
-        { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
-        { name: "Help Center", href: "/help", icon: HelpCircle },
-        { name: "Support", href: "/support", icon: HelpCircle },
-        { name: "Sitemap", href: "/sitemap", icon: Globe },
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
-        { name: "Login", href: "/login", icon: User }
+        { name: "Blog", href: "/blog", icon: FileText },
+        { name: "Case Studies", href: "/case-studies", icon: BarChart3 }
+      ]
+    },
+    {
+      title: "Company",
+      icon: Building,
+      items: [
+        { name: "Our Team", href: "/team", icon: Users },
+        { name: "Press Kit", href: "/press", icon: FileText },
+        { name: "News & Updates", href: "/news", icon: Calendar },
+        { name: "Investor Relations", href: "/investors", icon: TrendingUp },
+        { name: "Sustainability", href: "/services/green-it", icon: Leaf }
       ]
     }
   ];
 
   const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
-    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },
+    { name: "Book Demo", href: "/request-quote", icon: Calendar, variant: "secondary" },
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
 
@@ -112,7 +139,7 @@ export const EnhancedSidebar: React.FC = () => {
     <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
       <div className="p-6">
         {/* Logo Section */}
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -135,7 +162,7 @@ export const EnhancedSidebar: React.FC = () => {
         </motion.div>
 
         {/* Quick Actions */}
-        <motion.div 
+        <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -227,7 +254,7 @@ export const EnhancedSidebar: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <motion.div 
+        <motion.div
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

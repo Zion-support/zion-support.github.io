@@ -1,256 +1,216 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
 import { 
   Shield, 
   Lock, 
-  Eye, 
-  CheckCircle, 
-  Users, 
+  Target, 
+  Zap, 
+  BarChart3, 
   Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
+  Award, 
+  Star,
   Globe,
-  Building,
-  DollarSign,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
+  Cpu,
   Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare
+  CheckCircle,
+  Eye,
+  Users,
+  AlertTriangle,
+  TrendingUp,
+  Search,
+  Download,
+  Upload,
+  Calendar,
+  Server,
+  FileText
 } from 'lucide-react';
 
-const SecurityHeadersCSP = () => {
+export default function SecurityHeadersCSP() {
   const features = [
     {
       icon: Shield,
-      title: 'Security Headers Implementation',
-      description: 'Comprehensive implementation of all essential security headers for web applications'
+      title: "Security Headers Implementation",
+      description: "Comprehensive implementation of OWASP-recommended security headers."
     },
     {
       icon: Lock,
-      title: 'Content Security Policy',
-      description: 'Advanced CSP rules to prevent XSS, injection attacks, and data exfiltration'
+      title: "Content Security Policy",
+      description: "Advanced CSP configuration and monitoring for XSS protection."
     },
     {
-      icon: Eye,
-      title: 'Real-time Monitoring',
-      description: 'Continuous monitoring of security headers and policy violations'
+      icon: Target,
+      title: "Threat Detection",
+      description: "Real-time monitoring and alerting for security violations."
     },
     {
-      icon: Code,
-      title: 'Automated Testing',
-      description: 'Automated testing and validation of security headers across all endpoints'
+      icon: Zap,
+      title: "Automated Security",
+      description: "Intelligent automation of security header management and updates."
     },
     {
-      icon: FileText,
-      title: 'Compliance Reporting',
-      description: 'Detailed compliance reports for security standards and regulations'
+      icon: BarChart3,
+      title: "Security Analytics",
+      description: "Comprehensive insights into security posture and threat landscape."
     },
     {
-      icon: Monitor,
-      title: 'Threat Detection',
-      description: 'Advanced threat detection and automated response for policy violations'
+      icon: Server,
+      title: "Infrastructure Security",
+      description: "Server-level security hardening and configuration optimization."
     }
   ];
 
   const benefits = [
-    'Prevent 99% of XSS and injection attacks',
-    'Achieve A+ security rating on security scanners',
-    'Comply with OWASP security guidelines',
-    'Reduce security incidents by 90%',
-    'Improve website security posture',
-    'Enhance customer trust and confidence'
+    "Reduce security vulnerabilities by 80-90% with proper headers",
+    "Improve security score by 40-60% on security testing platforms",
+    "Minimize XSS and injection attacks by 95%",
+    "Enhance compliance with security standards and regulations",
+    "Improve website security posture and trust indicators",
+    "Reduce security incident response time by 70%"
   ];
 
   const securityHeaders = [
     {
-      header: 'Content-Security-Policy',
-      description: 'Prevents XSS attacks by controlling resource loading',
-      example: "default-src 'self'; script-src 'self' 'unsafe-inline'"
+      header: "Content Security Policy (CSP)",
+      description: "Prevent XSS attacks by controlling resource loading",
+      icon: Shield
     },
     {
-      header: 'X-Frame-Options',
-      description: 'Prevents clickjacking attacks via iframe embedding',
-      example: 'DENY or SAMEORIGIN'
+      header: "X-Frame-Options",
+      description: "Protect against clickjacking attacks",
+      icon: Lock
     },
     {
-      header: 'X-Content-Type-Options',
-      description: 'Prevents MIME type sniffing attacks',
-      example: 'nosniff'
+      header: "X-Content-Type-Options",
+      description: "Prevent MIME type sniffing attacks",
+      icon: FileText
     },
     {
-      header: 'Strict-Transport-Security',
-      description: 'Enforces HTTPS connections and prevents downgrade attacks',
-      example: 'max-age=31536000; includeSubDomains'
+      header: "Strict-Transport-Security (HSTS)",
+      description: "Enforce HTTPS connections and prevent downgrade attacks",
+      icon: Server
     },
     {
-      header: 'X-XSS-Protection',
-      description: 'Enables browser XSS filtering (legacy support)',
-      example: '1; mode=block'
+      header: "X-XSS-Protection",
+      description: "Enable browser XSS filtering",
+      icon: AlertTriangle
     },
     {
-      header: 'Referrer-Policy',
-      description: 'Controls referrer information in HTTP requests',
-      example: 'strict-origin-when-cross-origin'
+      header: "Referrer-Policy",
+      description: "Control referrer information in HTTP requests",
+      icon: Eye
     }
   ];
 
   const useCases = [
     {
-      industry: 'E-commerce',
-      description: 'Protect customer data and payment information from attacks'
+      industry: "E-commerce",
+      description: "Secure payment processing, customer data protection, and transaction security"
     },
     {
-      industry: 'Banking',
-      description: 'Secure financial transactions and customer accounts'
+      industry: "Financial Services",
+      description: "Banking security, transaction protection, and regulatory compliance"
     },
     {
-      industry: 'Healthcare',
-      description: 'Protect patient data and medical information'
+      industry: "Healthcare",
+      description: "Patient data security, HIPAA compliance, and medical information protection"
     },
     {
-      industry: 'Government',
-      description: 'Secure citizen services and sensitive information'
+      industry: "Technology & SaaS",
+      description: "Application security, user data protection, and service security"
+    },
+    {
+      industry: "Government",
+      description: "Public data security, compliance requirements, and citizen information protection"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Security Headers CSP - Zion Tech Group"
+        description="Harden your web security with AI-powered security headers, content security policy, and comprehensive web protection solutions."
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              Web Security Hardening
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6">
+              <Shield className="w-5 h-5 text-red-400 mr-2" />
+              <span className="text-red-300 font-medium">Security Headers CSP</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Security
-              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> Headers & CSP</span>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              Harden Your Web Security with
+              <span className="bg-gradient-to-r from-red-400 via-orange-500 to-yellow-600 bg-clip-text text-transparent">
+                {" "}AI-Powered Protection
+              </span>
             </h1>
             
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Fortify your web applications with comprehensive security headers and 
-              Content Security Policy implementation that prevents modern web attacks.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your web security posture with intelligent security headers, advanced 
+              content security policies, and AI-powered threat detection and prevention.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200 flex items-center justify-center">
-                <Settings className="w-5 h-5 mr-2" />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-red-500/25"
+              >
+                Start Security Audit
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-300"
+              >
                 Schedule Demo
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Web Security Features
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Advanced Security Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides all the tools you need to implement and maintain 
-              enterprise-grade web security headers and policies.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered security platform combines cutting-edge artificial intelligence 
+              with proven security methodologies to deliver comprehensive web protection.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={index}
+                key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-red-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-red-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Security Headers Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Essential Security Headers
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Implement industry-standard security headers that protect your applications 
-              from common web vulnerabilities and attacks.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityHeaders.map((header, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <ShieldCheck className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white mb-2 font-mono">{header.header}</h3>
-                    <p className="text-gray-300 mb-3">{header.description}</p>
-                    <div className="bg-slate-900/50 border border-slate-600/50 rounded-lg p-3">
-                      <code className="text-green-400 text-sm">{header.example}</code>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
@@ -259,85 +219,143 @@ const SecurityHeadersCSP = () => {
 
       {/* Benefits Section */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Web Security
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Measurable Security Impact
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in security posture, compliance, and threat prevention.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See real results with our AI-powered security solutions that deliver quantifiable 
+              improvements across all aspects of your web security posture.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
+              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="flex items-start space-x-3"
+                  >
+                    <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </motion.div>
-              ))}
+
+            <div className="bg-gradient-to-br from-red-500/10 to-orange-500/10 p-8 rounded-xl border border-red-400/20">
+              <h3 className="text-2xl font-semibold text-white mb-6">Why Choose Zion Tech Group?</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <span className="text-gray-300">Industry-leading AI security algorithms</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Shield className="w-5 h-5 text-green-400" />
+                  <span className="text-gray-300">Enterprise-grade security & compliance</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Globe className="w-5 h-5 text-blue-400" />
+                  <span className="text-gray-300">Global security expertise and standards</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-purple-400" />
+                  <span className="text-gray-300">24/7 security monitoring & support</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Award className="w-5 h-5 text-red-400" />
+                  <span className="text-gray-300">Proven security success track record</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Security Headers Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Comprehensive Security Headers
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our security headers solution adapts to various industries, providing 
-              tailored protection for your specific security and compliance needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our security platform implements and manages all OWASP-recommended security 
+              headers to provide comprehensive web application protection.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {securityHeaders.map((header, index) => (
               <motion.div
-                key={index}
+                key={header.header}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-green-500/30 transition-all duration-200"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-red-400/30 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-lg flex items-center justify-center">
+                    <header.icon className="w-5 h-5 text-red-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{header.header}</h3>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
+                <p className="text-gray-300 text-sm">{header.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered security solutions are designed to work across industries, providing 
+              tailored protection strategies for your specific security needs.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-red-400/30 transition-all duration-300"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-lg flex items-center justify-center">
+                    <Globe className="w-5 h-5 text-red-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
+                </div>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -346,34 +364,40 @@ const SecurityHeadersCSP = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 p-12 rounded-2xl border border-red-400/20 text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Secure Your Web Applications Today
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Ready to Harden Your Security?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join organizations worldwide that use our security headers solution to 
-              protect their web applications and achieve compliance.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join hundreds of organizations that have already transformed their web security 
+              with our AI-powered protection solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-red-500/25"
+              >
+                Start Free Trial
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-300"
+              >
                 Contact Sales
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default SecurityHeadersCSP;
+}

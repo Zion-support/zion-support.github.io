@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  Zap, 
-  Shield, 
-  Globe, 
+import {
+  BarChart3,
+  TrendingUp,
+  Database,
+  Zap,
+  Shield,
+  Globe,
   Brain,
   Cloud,
   Lock,
@@ -28,7 +28,7 @@ import {
   Network,
   FileText
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import SEO from '../../components/SEO';
 
 export default function DataAnalytics() {
   const features = [
@@ -133,11 +133,11 @@ export default function DataAnalytics() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO
         title="Data Analytics Services - Zion Tech Group"
         description="Transform your business data into actionable insights with our comprehensive data analytics solutions. Real-time dashboards, predictive analytics, and automated reporting."
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
@@ -157,7 +157,7 @@ export default function DataAnalytics() {
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"> Analytics</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business data into actionable insights with our comprehensive 
+              Transform your business data into actionable insights with our comprehensive
               analytics solutions. Make data-driven decisions with confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -185,8 +185,8 @@ export default function DataAnalytics() {
                 What is Data Analytics?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Data Analytics is the process of examining, cleaning, transforming, and modeling data 
-                to discover useful information, draw conclusions, and support decision-making. 
+                Data Analytics is the process of examining, cleaning, transforming, and modeling data
+                to discover useful information, draw conclusions, and support decision-making.
                 It combines statistical analysis, machine learning, and business intelligence.
               </p>
               <div className="space-y-4">
@@ -213,7 +213,7 @@ export default function DataAnalytics() {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -268,7 +268,7 @@ export default function DataAnalytics() {
               Key Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our Data Analytics platform provides comprehensive capabilities for 
+              Our Data Analytics platform provides comprehensive capabilities for
               data processing, analysis, and visualization.
             </p>
           </motion.div>
@@ -306,7 +306,7 @@ export default function DataAnalytics() {
               Core Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive data analytics solutions designed to transform your business 
+              Comprehensive data analytics solutions designed to transform your business
               data into actionable intelligence and insights.
             </p>
           </motion.div>
@@ -354,7 +354,7 @@ export default function DataAnalytics() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Data analytics is transforming industries across the globe, 
+              Data analytics is transforming industries across the globe,
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
@@ -402,7 +402,7 @@ export default function DataAnalytics() {
               Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how data analytics can transform your organization 
+              Discover how data analytics can transform your organization
               and drive measurable business outcomes.
             </p>
           </motion.div>
@@ -497,7 +497,7 @@ export default function DataAnalytics() {
               Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how data analytics can revolutionize your business intelligence, 
+              Discover how data analytics can revolutionize your business intelligence,
               improve decision-making, and drive unprecedented growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

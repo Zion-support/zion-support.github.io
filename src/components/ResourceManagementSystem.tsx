@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Users, 
-  Calendar, 
-  Clock, 
-  Target, 
-  TrendingUp, 
+import {
+  Users,
+  Calendar,
+  Clock,
+  Target,
+  TrendingUp,
   AlertCircle,
   CheckCircle,
   XCircle,
@@ -211,7 +211,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(r => 
+      filtered = filtered.filter(r =>
         r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -313,7 +313,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
           <h1 className="text-4xl font-bold text-white mb-2">Resource Management</h1>
           <p className="text-zinc-400 text-lg">Monitor and manage all company resources efficiently</p>
         </div>
-        
+
         <div className="flex items-center gap-3 mt-4 lg:mt-0">
           {/* View Mode Toggle */}
           <div className="flex items-center gap-1 p-1 bg-zinc-900/30 rounded-lg">
@@ -531,7 +531,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                     <p className="text-zinc-400 text-sm">{resource.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-wrap items-center gap-3">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusDisplay(resource.status).color}`}>
                     <div className="flex items-center gap-1">
@@ -567,17 +567,17 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <div className="text-sm text-zinc-400 mb-1">Location</div>
                 <div className="text-white font-medium">{resource.location}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Department</div>
                 <div className="text-white font-medium">{resource.department}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Manager</div>
                 <div className="text-white font-medium">{resource.manager}</div>
               </div>
-              
+
               <div className="p-3 bg-zinc-800/30 rounded-lg">
                 <div className="text-sm text-zinc-400 mb-1">Annual Cost</div>
                 <div className="text-white font-medium">{formatCurrency(resource.cost)}</div>
@@ -628,7 +628,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
                 <Clock className="w-4 h-4" />
                 Last updated: {new Date(resource.lastUpdated).toLocaleDateString()}
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <button className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                   <Download className="w-4 h-4" />

@@ -481,148 +481,62 @@ const Services: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Micro-SaaS Solutions */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="mb-24"
-        >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Micro-SaaS Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Fast-to-deploy, subscription-based tools that solve specific business problems with clear ROI and immediate value.
-            </p>
-          </div>
-          
+        {/* New: Innovative AI-Powered Micro SAAS Services */}
+        <div className="mt-24 text-left">
+          <h2 className="text-4xl font-bold mb-4">Innovative AI-Powered Micro SAAS Services</h2>
+          <p className="text-gray-300 mb-10 max-w-4xl">Cutting-edge AI solutions that deliver immediate value and measurable ROI for your business.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-              >
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-white mb-3">Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.pricing}</div>
-                
-                <a
-                  href={service.ctaLink}
-                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
-                  {service.cta} <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </motion.div>
-            ))}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Autonomous Research Assistant</h3>
+              <p className="text-gray-300 mb-4">AI that independently conducts research across multiple sources and synthesizes findings.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $1,999/month</p>
+              <a href="/services/ai-autonomous-research-assistant" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Supply Chain Optimization</h3>
+              <p className="text-gray-300 mb-4">Transform your supply chain with AI that predicts demand and optimizes operations.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$499 - $2,999/month</p>
+              <a href="/services/ai-supply-chain-optimization" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Content Marketing Suite</h3>
+              <p className="text-gray-300 mb-4">AI-powered content creation, optimization, and distribution for maximum engagement.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$199 - $1,499/month</p>
+              <a href="/services/ai-content-marketing-suite" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Workflow Orchestrator</h3>
+              <p className="text-gray-300 mb-4">AI-powered workflow automation that streamlines your business processes.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$399 - $2,499/month</p>
+              <a href="/services/ai-workflow-orchestrator" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Customer Experience Analytics</h3>
+              <p className="text-gray-300 mb-4">Transform customer insights with AI-powered analytics and predictive modeling.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$599 - $3,999/month</p>
+              <a href="/services/ai-customer-experience-analytics" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Financial Risk Management</h3>
+              <p className="text-gray-300 mb-4">Intelligent financial risk assessment with AI-driven predictive analytics.</p>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$799 - $4,999/month</p>
+              <a href="/services/ai-financial-risk-management" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Innovative AI-Powered Services */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="mb-24"
-        >
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Innovative AI-Powered Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Cutting-edge AI solutions that transform business operations with intelligent automation, predictive analytics, and autonomous decision-making.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {innovativeAIServices.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-              >
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-white mb-3">Key Capabilities:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.pricing}</div>
-                
-                <a
-                  href={service.ctaLink}
-                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
-                  {service.cta} <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-2xl p-12">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Let's discuss how our innovative solutions can drive your success and give you a competitive edge.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
-                Start Your Journey <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 border-2 border-cyan-400/30 hover:border-cyan-400/50 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:scale-105"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
-              </a>
+        {/* CTA and Contact */}
+        <div className="mt-24 text-left">
+          <div className="bg-white/5 rounded-2xl p-8 border border-white/10">
+            <h3 className="text-3xl font-bold mb-4">Ready to start?</h3>
+            <p className="text-gray-300 mb-6 max-w-3xl">Talk with our experts to scope a pilot or request a tailored quote. We respond within 24 hours.</p>
+            <div className="flex flex-col md:flex-row gap-4 items-start md:items-center">
+              <a href="https://ziontechgroup.com/contact" className="px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 font-semibold">Book a consultation</a>
+              <a href="tel:+13024640950" className="px-6 py-3 rounded-lg border border-cyan-500 text-cyan-300 hover:bg-cyan-500/10">Call +1 302 464 0950</a>
+              <a href="mailto:kleber@ziontechgroup.com" className="px-6 py-3 rounded-lg border border-cyan-500 text-cyan-300 hover:bg-cyan-500/10">kleber@ziontechgroup.com</a>
+            </div>
+            <div className="mt-4 text-sm text-gray-400">
+              Address: 364 E Main St STE 1008, Middletown, DE 19709 • Website: ziontechgroup.com
             </div>
           </div>
         </motion.div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
 const Leadership = () => {
     const leadershipTeam = [
