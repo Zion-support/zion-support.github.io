@@ -217,11 +217,11 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       {/* Additional SEO Meta Tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {author && <meta property="article:author" content={author} />}
+      {author && <meta property="article:tag" content={author} />}
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
     </Helmet>
   );
-};
+}

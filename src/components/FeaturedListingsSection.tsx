@@ -89,7 +89,7 @@ export function FeaturedListingsSection() {
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
             Discover our most popular and innovative technology solutions that are transforming businesses worldwide
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredServices.map((service, index) => (

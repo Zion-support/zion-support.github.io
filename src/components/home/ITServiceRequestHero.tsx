@@ -1,6 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Zap, MapPin } from 'lucide-react';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const GradientHeading = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
+  <h1 className={`font-bold bg-gradient-to-r from-zion-cyan via-white to-zion-purple bg-clip-text text-transparent ${className}`}>
+    {children}
+  </h1>
+);
+
+const Button = ({ children, onClick, variant = 'default', className = '' }: { 
+  children: React.ReactNode; 
+  onClick?: () => void; 
+  variant?: 'default' | 'outline'; 
+  className?: string; 
+}) => (
+  <button
+    onClick={onClick}
+    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${className}`}
+  >
+    {children}
+  </button>
+);
 
 export function ITServiceRequestHero() {
   return (

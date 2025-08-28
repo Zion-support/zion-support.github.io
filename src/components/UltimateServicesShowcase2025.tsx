@@ -599,6 +599,6 @@ const UltimateServicesShowcase2025 = () => {
       </AnimatePresence>
     </div>
   );
-};
+}
 
 export default UltimateServicesShowcase2025;
