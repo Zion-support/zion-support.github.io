@@ -18,11 +18,9 @@ interface ToastProps {
 }
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
-  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(false);
       setTimeout(() => onRemove(toast.id), 300);
     }, toast.duration || 5000);
 
@@ -83,7 +81,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         </div>
         <button
           onClick={() => {
-            setIsVisible(false);
             setTimeout(() => onRemove(toast.id), 300);
           }}
           className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
