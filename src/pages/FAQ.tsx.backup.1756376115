@@ -265,7 +265,120 @@ export default function FAQ() {
     setExpandedItems(newExpanded);
   };
 
+<<<<<<< HEAD
+  const faqData = [
+    {
+      category: "General",
+      questions: [
+        {
+          question: "What is Zion Tech Group?",
+          answer: "Zion Tech Group is a leading technology company specializing in AI-powered solutions, cloud computing, cybersecurity, and digital transformation services. We help businesses leverage cutting-edge technology to drive innovation and growth."
+        },
+        {
+          question: "Where is Zion Tech Group located?",
+          answer: "Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We also have remote teams and serve clients globally."
+        },
+        {
+          question: "What industries do you serve?",
+          answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, technology, and government sectors. Our solutions are designed to be industry-agnostic and customizable."
+        }
+      ]
+    },
+    {
+      category: "Services",
+      questions: [
+        {
+          question: "What AI services do you offer?",
+          answer: "We offer comprehensive AI services including machine learning models, natural language processing, computer vision, predictive analytics, AI workflow automation, and custom AI solution development tailored to your business needs."
+        },
+        {
+          question: "Do you provide cloud migration services?",
+          answer: "Yes, we offer end-to-end cloud migration services including assessment, planning, migration execution, and post-migration optimization. We work with AWS, Azure, and Google Cloud platforms."
+        },
+        {
+          question: "What cybersecurity solutions do you offer?",
+          answer: "Our cybersecurity portfolio includes threat detection, vulnerability assessment, compliance automation, zero-trust architecture, security monitoring, and incident response services."
+        }
+      ]
+    },
+    {
+      category: "Pricing & Billing",
+      questions: [
+        {
+          question: "How do you price your services?",
+          answer: "We offer flexible pricing models including project-based pricing, monthly subscriptions, and custom enterprise solutions. Pricing depends on the scope, complexity, and duration of the project."
+        },
+        {
+          question: "Do you offer free consultations?",
+          answer: "Yes, we provide free initial consultations to understand your needs and discuss potential solutions. This helps us provide accurate estimates and recommendations."
+        },
+        {
+          question: "What payment terms do you offer?",
+          answer: "We offer flexible payment terms including upfront payments, milestone-based payments, and monthly billing for ongoing services. Enterprise clients may qualify for extended payment terms."
+        }
+      ]
+    },
+    {
+      category: "Support & Maintenance",
+      questions: [
+        {
+          question: "What support do you provide after project completion?",
+          answer: "We provide comprehensive post-project support including maintenance, updates, troubleshooting, and ongoing optimization. Support levels can be customized based on your needs."
+        },
+        {
+          question: "Do you offer 24/7 support?",
+          answer: "Yes, we offer 24/7 support for critical systems and enterprise clients. Standard support hours are Monday-Friday 9 AM-6 PM EST, with emergency support available 24/7."
+        },
+        {
+          question: "How quickly do you respond to support requests?",
+          answer: "Response times vary by priority level: Critical issues (1 hour), High priority (4 hours), Medium priority (24 hours), Low priority (48 hours). Enterprise clients receive priority response times."
+        }
+      ]
+    },
+    {
+      category: "Technology & Security",
+      questions: [
+        {
+          question: "What technologies do you use?",
+          answer: "We use cutting-edge technologies including React, Node.js, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and many more. We choose the best technology stack for each project."
+        },
+        {
+          question: "How do you ensure data security?",
+          answer: "We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance monitoring, and secure development practices. We're SOC2 compliant and follow industry best practices."
+        },
+        {
+          question: "Do you comply with industry regulations?",
+          answer: "Yes, we maintain compliance with various industry regulations including SOC2, GDPR, HIPAA, and others. We can help you achieve and maintain compliance for your specific industry requirements."
+        }
+      ]
+    },
+    {
+      category: "AI Services",
+      questions: [
+        {
+          question: "What is AI Autonomous Research Assistant?",
+          answer: "Our AI Autonomous Research Assistant is a revolutionary tool that automatically discovers, analyzes, and synthesizes information across multiple sources. It can handle complex research tasks, provide real-time updates, and deliver comprehensive insights without human intervention."
+        },
+        {
+          question: "How does AI Supply Chain Optimization work?",
+          answer: "Our AI Supply Chain Optimization uses advanced machine learning algorithms to predict demand, optimize inventory levels, identify bottlenecks, and suggest cost-saving opportunities. It provides real-time visibility and actionable recommendations for supply chain improvement."
+        },
+        {
+          question: "What can AI Content Marketing Suite do for my business?",
+          answer: "The AI Content Marketing Suite creates, optimizes, and distributes content automatically. It analyzes audience behavior, generates personalized content, optimizes for SEO, and provides performance analytics to maximize engagement and ROI."
+        },
+        {
+          question: "How accurate are your AI predictions?",
+          answer: "Our AI models achieve 95%+ accuracy rates through continuous learning and validation. We use multiple data sources, advanced algorithms, and regular model updates to ensure the highest prediction accuracy for business decisions."
+        }
+      ]
+    }
+  ];
+
+  const filteredFAQ = faqData.map(category => ({
+=======
   const filteredCategories = faqCategories.map(category => ({
+>>>>>>> origin/cursor/website-audit-and-enhancement-3a88
     ...category,
     items: category.items.filter(item => {
       const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
