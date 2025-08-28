@@ -98,6 +98,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
         { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', featured: true },
         { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
+        { name: 'Services Showcase 2025', href: '/services/showcase-2025', featured: true },
         { name: 'AI Research & Discovery', href: '/services#ai-research', featured: true },
         { name: 'AI Green Technology', href: '/services#ai-green-tech', featured: true },
         { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },

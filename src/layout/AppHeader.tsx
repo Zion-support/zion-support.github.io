@@ -69,6 +69,14 @@ export function AppHeader() {
       color: 'from-blue-500 to-indigo-500'
     },
     { 
+      name: 'Services Showcase 2025', 
+      href: '/services/showcase-2025', 
+      icon: Star, 
+      description: 'Comprehensive 2025 Services',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
       name: 'AI Cybersecurity', 
       href: '/services/ai-cybersecurity', 
       icon: Shield, 
