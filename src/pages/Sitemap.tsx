@@ -3,61 +3,31 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   Search, 
-  Map, 
   Globe, 
   Brain, 
   Server, 
   Shield, 
   Zap, 
-  Users, 
-  FileText,
+  Star, 
+  Target, 
   Building,
-  Heart,
-  Star,
   TrendingUp,
-  Rocket,
-  Cpu,
-  Cloud,
-  Lock,
-  Palette,
-  Code,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  MessageCircle,
-  Target,
-  GitFork,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  Eye,
-  Sparkles,
-  ShoppingCart,
-  HelpCircle,
-  DollarSign,
-  Truck,
-  Clock,
-  BookOpen,
-  Briefcase,
-  Newspaper,
-  PenTool
+  Activity
 } from 'lucide-react';
+
+interface Route {
+  path: string;
+  name: string;
+  description: string;
+  priority: number;
+  changefreq: string;
+}
 
 interface SitemapSection {
   title: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
   description: string;
-  routes: Array<{
-    path: string;
-    name: string;
-    description?: string;
-    priority: number;
-    changefreq: string;
-  }>;
+  routes: Route[];
 }
 
 const sitemapSections: SitemapSection[] = [
@@ -144,7 +114,7 @@ const sitemapSections: SitemapSection[] = [
   },
   {
     title: 'Additional Services',
-    icon: Rocket,
+    icon: Building,
     description: 'Specialized and industry-specific solutions',
     routes: [
       { path: '/marketplace', name: 'Marketplace', description: 'Service marketplace', priority: 0.8, changefreq: 'weekly' },
@@ -166,7 +136,7 @@ export default function Sitemap() {
                            section.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            section.routes.some(route => 
                              route.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                             route.description?.toLowerCase().includes(searchTerm.toLowerCase())
+                             route.description.toLowerCase().includes(searchTerm.toLowerCase())
                            );
       
       const matchesCategory = selectedCategory === 'all' || section.title.toLowerCase().includes(selectedCategory.toLowerCase());
@@ -286,9 +256,7 @@ export default function Sitemap() {
                       <h3 className="font-semibold text-white group-hover:text-blue-400 transition-colors">
                         {route.name}
                       </h3>
-                      {route.description && (
-                        <p className="text-sm text-gray-400 mt-1">{route.description}</p>
-                      )}
+                      <p className="text-sm text-gray-400 mt-1">{route.description}</p>
                       <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
                         <span>Priority: {route.priority}</span>
                         <span>Update: {route.changefreq}</span>
