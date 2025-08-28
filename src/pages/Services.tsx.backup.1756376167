@@ -1,5 +1,120 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Cpu, 
+  Atom, 
+  Network, 
+  Eye, 
+  PenTool, 
+  Lock, 
+  BarChart3, 
+  Rocket, 
+  Heart, 
+  ShoppingCart, 
+  Users, 
+  MessageCircle, 
+  TrendingUp, 
+  Globe, 
+  Star, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign, 
+  Settings, 
+  Server, 
+  Smartphone, 
+  FileText, 
+  Target,
+  Sparkles,
+  Flame,
+  Infinity,
+  Workflow,
+  Database,
+  Code,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow as WorkflowIcon
+} from 'lucide-react';
+
+export default function Services() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const serviceCategories = [
+    { id: 'all', name: 'All Services', icon: Star, color: 'from-cyan-400 to-blue-500' },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, color: 'from-purple-400 to-pink-500' },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, color: 'from-indigo-400 to-purple-500' },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, color: 'from-blue-400 to-cyan-500' },
+    { id: 'security', name: 'Cybersecurity', icon: Shield, color: 'from-red-400 to-orange-500' },
+    { id: 'iot', name: 'IoT & Edge', icon: Network, color: 'from-green-400 to-emerald-500' },
+    { id: 'microsaas', name: 'Micro SaaS', icon: Zap, color: 'from-yellow-400 to-orange-500' },
+    { id: 'data', name: 'Data & Analytics', icon: BarChart3, color: 'from-teal-400 to-cyan-500' },
+  ];
+
+  const allServices = [
+    // AI & Machine Learning Services
+    {
+      id: 'ai-business-intelligence',
+      name: 'AI Business Intelligence',
+      description: 'Advanced AI-powered analytics and business intelligence solutions that transform your data into actionable insights.',
+      category: 'ai',
+      icon: Brain,
+      features: ['Predictive Analytics', 'Machine Learning Models', 'Real-time Insights', 'Custom AI Dashboards'],
+      path: '/services/ai-business-intelligence',
+      featured: true,
+      price: 'Starting at $5,000/month'
+    },
+    {
+      id: 'ai-compliance-assistant',
+      name: 'AI Compliance Assistant',
+      description: 'Automated regulatory compliance monitoring and reporting using advanced AI algorithms.',
+      category: 'ai',
+      icon: Shield,
+      features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Compliance Tracking'],
+      path: '/services/ai-compliance-assistant',
+      featured: false,
+      price: 'Starting at $3,000/month'
+    },
+    {
+      id: 'ai-sales-copilot',
+      name: 'AI Sales Copilot',
+      description: 'Intelligent sales optimization and lead generation powered by artificial intelligence.',
+      category: 'ai',
+      icon: Users,
+      features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automated Follow-ups'],
+      path: '/services/ai-sales-copilot',
+      featured: true,
+      price: 'Starting at $4,000/month'
+    },
+    {
+      id: 'ai-content-generator',
+      name: 'AI Content Generator',
+      description: 'Automated content creation for marketing, blogs, and social media using advanced language models.',
+      category: 'ai',
+      icon: PenTool,
+      features: ['Content Creation', 'SEO Optimization', 'Multi-language Support', 'Brand Voice Consistency'],
+      path: '/services/ai-content-generator',
+      featured: false,
+      price: 'Starting at $2,500/month'
+    },
+    {
+      id: 'ai-healthcare-platform',
+      name: 'AI Healthcare Platform',
+      description: 'Comprehensive AI solutions for healthcare providers, including diagnostics and patient care optimization.',
+      category: 'ai',
+      icon: Heart,
+      features: ['Medical Imaging AI', 'Patient Risk Assessment', 'Treatment Optimization', 'Healthcare Analytics'],
+      path: '/services/ai-healthcare-platform',
+      featured: true,
+      price: 'Starting at $15,000/month'
+    },
+=======
 import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, Rocket } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
@@ -15,6 +130,7 @@ const Services: React.FC = () => {
     { icon: Globe, title: 'Localization & Multilingual', desc: '50+ languages, locale-aware UX, translation QA pipelines.', href: '/micro-saas' }
   ];
   ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
 
     // Quantum Computing Services
     {
@@ -250,6 +366,8 @@ const Services: React.FC = () => {
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our most popular and innovative solutions that are transforming businesses across industries.
             </p>
+<<<<<<< HEAD
+=======
           </motion.div>
           
           <div className="mt-8 text-center space-y-4">
@@ -265,6 +383,7 @@ const Services: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (

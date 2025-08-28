@@ -1,148 +1,152 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-interface SkeletonProps {
-  className?: string;
-  height?: string;
-  width?: string;
-  rounded?: string;
+interface EnhancedLoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+  showProgress?: boolean;
+  progress?: number;
+  variant?: 'default' | 'futuristic' | 'minimal';
 }
 
-const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = "", 
-  height = "h-4", 
-  width = "w-full", 
-  rounded = "rounded" 
-}) => (
-  <div 
-    className={`${height} ${width} ${rounded} bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-[length:200%_100%] animate-pulse ${className}`}
-    style={{
-      backgroundSize: '200% 100%',
-      animation: 'shimmer 2s infinite'
-    }}
-  />
-);
+export function EnhancedLoadingSpinner({
+  size = 'md',
+  text = 'Loading...',
+  showProgress = false,
+  progress = 0,
+  variant = 'futuristic'
+}: EnhancedLoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-16 h-16',
+    lg: 'w-32 h-32',
+    xl: 'w-48 h-48'
+  };
 
-export const ZionLoadingSpinner: React.FC = () => (
-  <div className="flex items-center justify-center min-h-[200px]">
-    <div className="relative">
-      <div className="w-16 h-16 border-4 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin"></div>
-      <div className="absolute inset-0 w-16 h-16 border-4 border-transparent border-t-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
-    </div>
-  </div>
-);
+  const textSizes = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-lg',
+    xl: 'text-xl'
+  };
 
-export const SkeletonCard: React.FC = () => (
-  <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 animate-pulse">
-    <div className="flex items-center space-x-4 mb-4">
-      <Skeleton className="w-16 h-16 rounded-2xl" />
-      <div className="flex-1">
-        <Skeleton className="h-6 mb-2" />
-        <Skeleton className="h-4 w-3/4" />
+  if (variant === 'minimal') {
+    return (
+      <div className="flex items-center justify-center">
+        <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`} />
+        {text && <span className={`ml-3 ${textSizes[size]} text-gray-600`}>{text}</span>}
       </div>
-    </div>
-    <div className="space-y-3">
-      <Skeleton className="h-4" />
-      <Skeleton className="h-4 w-5/6" />
-      <Skeleton className="h-4 w-4/6" />
-    </div>
-  </div>
-);
+    );
+  }
 
-export const SkeletonGrid: React.FC<{ cols?: number; rows?: number }> = ({ cols = 3, rows = 2 }) => (
-  <div className={`grid grid-cols-1 md:grid-cols-${cols} gap-6`}>
-    {Array.from({ length: cols * rows }).map((_, i) => (
-      <SkeletonCard key={i} />
-    ))}
-  </div>
-);
-
-export const SkeletonHero: React.FC = () => (
-  <div className="relative min-h-[600px] bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light rounded-3xl overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-    <div className="relative z-10 p-8 md:p-12 flex flex-col justify-center min-h-[600px]">
-      <div className="max-w-4xl mx-auto text-center">
-        <Skeleton className="h-12 md:h-16 mb-6 w-3/4 mx-auto" />
-        <Skeleton className="h-6 md:h-8 mb-8 w-2/3 mx-auto" />
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Skeleton className="h-12 w-48 mx-auto sm:mx-0" />
-          <Skeleton className="h-12 w-48 mx-auto sm:mx-0" />
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-export const SkeletonServiceCard: React.FC = () => (
-  <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300">
-    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl mb-6">
-      <Skeleton className="w-8 h-8 rounded" />
-    </div>
-    <Skeleton className="h-6 mb-3" />
-    <Skeleton className="h-4 mb-4" />
-    <div className="space-y-2">
-      {Array.from({ length: 4 }).map((_, i) => (
-        <div key={i} className="flex items-center space-x-2">
-          <Skeleton className="w-4 h-4 rounded-full" />
-          <Skeleton className="h-3 flex-1" />
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-export const SkeletonTestimonial: React.FC = () => (
-  <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6">
-    <div className="flex items-center mb-4">
-      <Skeleton className="w-12 h-12 rounded-full" />
-      <div className="ml-4 flex-1">
-        <Skeleton className="h-5 mb-1" />
-        <Skeleton className="h-4 w-2/3" />
-      </div>
-    </div>
-    <Skeleton className="h-4 mb-2" />
-    <Skeleton className="h-4 w-5/6 mb-4" />
-    <div className="flex items-center space-x-1">
-      {Array.from({ length: 5 }).map((_, i) => (
-        <Skeleton key={i} className="w-4 h-4 rounded" />
-      ))}
-      <Skeleton className="h-4 w-16 ml-2" />
-    </div>
-  </div>
-);
-
-export const SkeletonNavigation: React.FC = () => (
-  <div className="bg-zion-slate-dark/95 backdrop-blur-md border border-cyan-400/20 rounded-xl p-6">
-    <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-      {Array.from({ length: 3 }).map((_, categoryIndex) => (
-        <div key={categoryIndex} className="space-y-3">
-          <div className="flex items-center space-x-2">
-            <Skeleton className="w-5 h-5 rounded" />
-            <Skeleton className="h-5 w-24" />
+  if (variant === 'default') {
+    return (
+      <div className="flex flex-col items-center justify-center space-y-4">
+        <div className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`} />
+        {text && <p className={`${textSizes[size]} text-gray-600 font-medium`}>{text}</p>}
+        {showProgress && (
+          <div className="w-48 bg-gray-200 rounded-full h-2">
+            <motion.div
+              className="bg-blue-600 h-2 rounded-full"
+              initial={{ width: 0 }}
+              animate={{ width: `${progress}%` }}
+              transition={{ duration: 0.5 }}
+            />
           </div>
-          <div className="space-y-2">
-            {Array.from({ length: 4 }).map((_, serviceIndex) => (
-              <div key={serviceIndex} className="p-3 rounded-lg">
-                <Skeleton className="h-4 mb-1" />
-                <Skeleton className="h-3 w-3/4" />
-              </div>
-            ))}
-          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Futuristic variant (default)
+  return (
+    <div className="flex flex-col items-center justify-center space-y-6">
+      {/* Main spinner with gradient */}
+      <div className="relative">
+        <div className={`${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full`} />
+        <motion.div
+          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-cyan-400 border-t-transparent rounded-full`}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+        />
+        
+        {/* Inner glow effect */}
+        <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-sm`} />
+        
+        {/* Center logo/text */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <div className="text-cyan-400 font-bold text-lg animate-pulse">ZION</div>
         </div>
-      ))}
+      </div>
+
+      {/* Loading text */}
+      <div className="text-center space-y-2">
+        <motion.p
+          className={`${textSizes[size]} text-cyan-400 animate-pulse`}
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          {text}
+        </motion.p>
+        
+        {/* Animated dots */}
+        <div className="flex justify-center space-x-1">
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              className="w-2 h-2 bg-cyan-400 rounded-full"
+              animate={{ scale: [1, 1.5, 1] }}
+              transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Progress bar if enabled */}
+      {showProgress && (
+        <div className="w-64 bg-gray-800/50 rounded-full h-3 border border-cyan-400/30">
+          <motion.div
+            className="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full relative overflow-hidden"
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            {/* Shimmer effect */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+              animate={{ x: [-100, 100] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </motion.div>
+        </div>
+      )}
+
+      {/* Floating particles */}
+      <div className="relative w-full h-20">
+        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
+            animate={{
+              x: [0, 50, 0],
+              y: [0, -30, 0],
+              opacity: [0.6, 1, 0.6],
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+              delay: i * 0.3,
+            }}
+            style={{
+              left: `${20 + i * 15}%`,
+              top: `${30 + i * 10}%`,
+            }}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
-// Enhanced loading states for different components
-export const LoadingStates = {
-  Card: SkeletonCard,
-  Grid: SkeletonGrid,
-  Hero: SkeletonHero,
-  ServiceCard: SkeletonServiceCard,
-  Testimonial: SkeletonTestimonial,
-  Navigation: SkeletonNavigation,
-  Spinner: ZionLoadingSpinner
-};
-
-export default ZionLoadingSpinner;
+// Export default for backward compatibility
+export default EnhancedLoadingSpinner;

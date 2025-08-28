@@ -9,9 +9,16 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import SEO from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+<<<<<<< HEAD
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ErrorBoundary } from './utils/errorBoundary';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+=======
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { FuturisticAnimatedBackground } from './components/FuturisticAnimatedBackground';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -393,6 +400,9 @@ function App() {
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/data-analytics" element={<DataAnalytics />} />
+<<<<<<< HEAD
+
+=======
               
               {/* Additional innovative AI service routes */}
               <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
@@ -419,6 +429,7 @@ function App() {
               {/* Showcase Pages */}
               <Route path="/new-innovative-services" element={<NewInnovativeServicesShowcase />} />
               
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />
             </Routes>
@@ -428,8 +439,13 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+<<<<<<< HEAD
+        <AccessibilityEnhancer enabled={true} showControls={false} />
+        <PerformanceMonitor />
+=======
         <AccessibilityEnhancer />
         <PWAUpdater />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
       </div>
     </ErrorBoundary>
   );

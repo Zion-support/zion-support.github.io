@@ -947,6 +947,48 @@
   transform: translateX(-50%) translateY(-8px);
 }
 
+<<<<<<< HEAD
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .futuristic-grid {
+    background-size: 30px 30px;
+  }
+  
+  .floating-orb {
+    display: none;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor;
+  }
+}
+
+/* Enhanced Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .futuristic-card {
+    background: rgba(30, 41, 59, 0.8);
+  }
+  
+  .futuristic-input {
+    background: rgba(15, 23, 42, 0.8);
+  }
+}
+
+/* Enhanced Print Styles */
+@media print {
+  .floating-orb,
+  .futuristic-grid,
+  .futuristic-dots {
+    display: none;
+  }
+  
+  .neon-text {
+    text-shadow: none;
+    color: #000;
+  }
+=======
 /* High contrast focus styles */
 .high-contrast *:focus {
   outline: 3px solid #ffff00;
@@ -1024,4 +1066,5 @@
 
 .high-contrast .border-cyan-500 {
   border-color: #ffff00 !important;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
 }

@@ -5,7 +5,10 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
+<<<<<<< HEAD
+=======
   author?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
@@ -14,20 +17,27 @@ interface SEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
+=======
   noindex?: boolean;
   nofollow?: boolean;
   canonical?: string;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   twitterSite?: string;
   twitterCreator?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
   structuredData?: object;
 }
 
 export const SEO: React.FC<SEOProps> = ({
   title,
   description,
+<<<<<<< HEAD
+  keywords = 'AI, artificial intelligence, quantum computing, business solutions, technology, Zion Tech Group',
+=======
   keywords,
   author = 'Zion Tech Group',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
   image = '/images/zion-tech-group-og.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
@@ -36,6 +46,14 @@ export const SEO: React.FC<SEOProps> = ({
   modifiedTime,
   section,
   tags = [],
+<<<<<<< HEAD
+  structuredData
+}) => {
+  const fullTitle = `${title} | Zion Tech Group`;
+  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
+  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+
+=======
   noindex = false,
   nofollow = false,
   canonical,
@@ -48,6 +66,7 @@ export const SEO: React.FC<SEOProps> = ({
   const fullUrl = url || window.location.href;
   const fullImage = image.startsWith('http') ? image : `${window.location.origin}${image}`;
   
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
   // Default structured data for organization
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -55,6 +74,14 @@ export const SEO: React.FC<SEOProps> = ({
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/zion-logo.png",
+<<<<<<< HEAD
+    "description": "Leading provider of AI-powered business solutions, quantum computing, and autonomous business operations.",
+    "foundingDate": "2020",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    },
+=======
     "description": "Leading provider of AI-powered technology solutions, IT services, and innovative digital transformation services.",
     "foundingDate": "2020",
     "sameAs": [
@@ -62,12 +89,23 @@ export const SEO: React.FC<SEOProps> = ({
       "https://linkedin.com/company/zion-tech-group",
       "https://github.com/zion-holdings"
     ],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-800-ZION-TECH",
       "contactType": "customer service",
       "email": "contact@ziontechgroup.com"
     },
+<<<<<<< HEAD
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Services",
+=======
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US",
@@ -77,29 +115,45 @@ export const SEO: React.FC<SEOProps> = ({
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
+            "name": "AI Autonomous Business Operations",
+            "description": "Next-generation autonomous business operations platform"
+=======
             "name": "AI-Powered Solutions",
             "description": "Machine learning, data analytics, and intelligent automation services"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
+            "name": "Quantum Neural Network Platform",
+            "description": "Revolutionary quantum computing platform"
+=======
             "name": "IT Infrastructure",
             "description": "Cloud computing, DevOps, and enterprise IT solutions"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
+            "name": "AI-Powered Cybersecurity Suite",
+            "description": "Comprehensive cybersecurity solution"
+=======
             "name": "Micro SaaS Solutions",
             "description": "Custom software-as-a-service applications for niche markets"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
           }
         }
       ]
@@ -107,6 +161,78 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   // Merge custom structured data with default
+<<<<<<< HEAD
+  const finalStructuredData = structuredData || defaultStructuredData;
+
+  // Update document title and meta tags
+  React.useEffect(() => {
+    // Update document title
+    document.title = fullTitle;
+
+    // Update or create meta tags
+    const updateMetaTag = (name: string, content: string, property?: string) => {
+      const selector = property ? `meta[property="${property}"]` : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector) as HTMLMetaElement;
+
+      if (!meta) {
+        meta = document.createElement('meta');
+        if (property) {
+          meta.setAttribute('property', property);
+        } else {
+          meta.setAttribute('name', name);
+        }
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    // Basic meta tags
+    updateMetaTag('description', description);
+    updateMetaTag('keywords', metaKeywords);
+    updateMetaTag('author', author);
+    updateMetaTag('robots', `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`);
+
+    // Open Graph meta tags
+    updateMetaTag('og:title', fullTitle, 'og:title');
+    updateMetaTag('og:description', description, 'og:description');
+    updateMetaTag('og:type', type, 'og:type');
+    updateMetaTag('og:url', fullUrl, 'og:url');
+    updateMetaTag('og:image', fullImage, 'og:image');
+    updateMetaTag('og:site_name', 'Zion Tech Group', 'og:site_name');
+
+    // Twitter Card meta tags
+    updateMetaTag('twitter:card', 'summary_large_image', 'twitter:card');
+    updateMetaTag('twitter:title', fullTitle, 'twitter:title');
+    updateMetaTag('twitter:description', description, 'twitter:description');
+    updateMetaTag('twitter:image', fullImage, 'twitter:image');
+
+    // Canonical URL
+    let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', canonical || fullUrl);
+
+    // Structured data
+    let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
+    if (!script) {
+      script = document.createElement('script');
+      script.setAttribute('type', 'application/ld+json');
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(finalStructuredData);
+
+    // Cleanup function
+    return () => {
+      // Reset title to default
+      document.title = 'Zion Tech Group';
+    };
+  }, [fullTitle, description, metaKeywords, author, noindex, nofollow, type, fullUrl, fullImage, canonical, finalStructuredData]);
+
+  return null; // Component renders nothing, manages SEO via side effects
+=======
   const finalStructuredData = structuredData 
     ? { ...defaultStructuredData, ...structuredData }
     : defaultStructuredData;
@@ -197,6 +323,7 @@ export const SEO: React.FC<SEOProps> = ({
       <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
     </Helmet>
   );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-b4b0
 }
 
 export default SEO;
