@@ -30,7 +30,7 @@ import {
   MapPin,
   Globe as GlobeIcon,
   Atom,
-  Blockchain,
+  Link,
   Heart,
   Scale,
   Factory,
@@ -59,8 +59,7 @@ import {
 } from 'lucide-react';
 
 // Import our existing service data
-import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
-import { zion2026ComprehensiveServices } from '../data/zion2026ComprehensiveServices';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
 
 interface Service {
   id: string;
@@ -105,8 +104,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
 
-    // Add services from ultimateInnovativeServices2026
-    ultimateInnovativeServices2026.forEach(service => {
+      // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
+  ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
       services.push({
         id: service.id,
         name: service.name,
@@ -132,8 +131,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       });
     });
 
-    // Add services from zion2026ComprehensiveServices
-    zion2026ComprehensiveServices.forEach(service => {
+    // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026 (duplicate to fill the gap)
+    ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
       services.push({
         id: service.id,
         name: service.name,
@@ -210,7 +209,7 @@ const EnhancedComprehensiveServices2026: React.FC = () => {
       case 'Synthetic Biology':
         return <Heart className="w-6 h-6" />;
       case 'Blockchain':
-        return <Blockchain className="w-6 h-6" />;
+        return <Link className="w-6 h-6" />;
       case 'Cybersecurity':
         return <Shield className="w-6 h-6" />;
       case 'Internet of Things':

@@ -60,6 +60,49 @@ const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-health
 const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/ai-autonomous-research-assistant'));
 const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/ai-quantum-hybrid-platform'));
 
+// Additional service imports
+const MicroSAASSolutions = React.lazy(() => import('./pages/services/MicroSAASSolutions'));
+const GDPRDSARPortal = React.lazy(() => import('./pages/services/GDPRDSARPortal'));
+const AIComplianceAssistant = React.lazy(() => import('./pages/services/ai-compliance-assistant'));
+const AISalesCopilot = React.lazy(() => import('./pages/services/ai-sales-copilot'));
+const AIDataAnalytics = React.lazy(() => import('./pages/services/ai-data-analytics'));
+const FinOpsAdvisor = React.lazy(() => import('./pages/services/finops-advisor'));
+const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
+const Transformation = React.lazy(() => import('./pages/services/Transformation'));
+const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
+const BusinessIntelligence = React.lazy(() => import('./pages/services/business-intelligence'));
+const Blockchain = React.lazy(() => import('./pages/services/blockchain'));
+const Cybersecurity = React.lazy(() => import('./pages/services/cybersecurity'));
+const QuantumComputing = React.lazy(() => import('./pages/services/quantum-computing'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/iot-edge-computing'));
+const AIContentCreation = React.lazy(() => import('./pages/services/ai-content-creation'));
+const AIHRPlatform = React.lazy(() => import('./pages/services/ai-hr-platform'));
+const SustainableTechnology = React.lazy(() => import('./pages/services/sustainable-technology'));
+const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
+const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
+const SpaceTech = React.lazy(() => import('./pages/services/space-tech'));
+const AIContentGenerator = React.lazy(() => import('./pages/services/ai-content-generator'));
+const AICustomerSupport = React.lazy(() => import('./pages/services/ai-customer-support'));
+const AICybersecurity = React.lazy(() => import('./pages/services/ai-cybersecurity'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/ai-marketing-automation'));
+const AIProjectManagement = React.lazy(() => import('./pages/services/ai-project-management'));
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/ai-workflow-automation'));
+const MicroCRM = React.lazy(() => import('./pages/services/micro-crm'));
+const HelpdeskPlatform = React.lazy(() => import('./pages/services/HelpdeskPlatform'));
+const AIPoweredSEO = React.lazy(() => import('./pages/services/ai-powered-seo'));
+const InterviewAssessmentAI = React.lazy(() => import('./pages/services/interview-assessment-ai'));
+const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/ai-workflow-orchestrator'));
+const IncidentResponsePlatform = React.lazy(() => import('./pages/services/incident-response-platform'));
+const SecurityHeadersCSP = React.lazy(() => import('./pages/services/SecurityHeadersCSP'));
+const ZeroTrustNetworkAccess = React.lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
+
+// Additional page imports
+const Talent = React.lazy(() => import('./pages/Talent'));
+const Equipment = React.lazy(() => import('./pages/Equipment'));
+const API = React.lazy(() => import('./pages/API'));
+const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+
 // Enhanced placeholder pages with better UX
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -152,17 +195,14 @@ function App() {
                 <Route path="/enhanced-comprehensive-services-2026" element={<EnhancedComprehensiveServices2026 />} />
                 
                 {/* Business Solution Routes */}
-                <Route path="/services/micro-saas-solutions" element={<React.lazy(() => import('./pages/services/MicroSAASSolutions')) />} />
-                <Route path="/services/affiliate-tracking" element={<React.lazy(() => import('./pages/services/affiliate-tracking')) />} />
-                <Route path="/services/it-helpdesk" element={<React.lazy(() => import('./pages/services/ITHelpdesk')) />} />
-                <Route path="/services/green-it" element={<React.lazy(() => import('./pages/services/green-it')) />} />
-                <Route path="/talent" element={<React.lazy(() => import('./pages/Talent')) />} />
-                <Route path="/equipment" element={<React.lazy(() => import('./pages/Equipment')) />} />
+                <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+                <Route path="/talent" element={<Talent />} />
+                <Route path="/equipment" element={<Equipment />} />
                 
                 {/* Additional Resource Routes */}
-                <Route path="/api" element={<React.lazy(() => import('./pages/API')) />} />
-                <Route path="/developers" element={<React.lazy(() => import('./pages/DeveloperPortal')) />} />
-                <Route path="/accessibility" element={<React.lazy(() => import('./pages/Accessibility')) />} />
+                <Route path="/api" element={<API />} />
+                <Route path="/developers" element={<DeveloperPortal />} />
+                <Route path="/accessibility" element={<Accessibility />} />
                 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -175,43 +215,42 @@ function App() {
                 <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                 
                 {/* Additional Service Routes */}
-                <Route path="/services/dsr-portal" element={<React.lazy(() => import('./pages/services/GDPRDSARPortal')) />} />
-                <Route path="/services/ai-compliance-assistant" element={<React.lazy(() => import('./pages/services/ai-compliance-assistant')) />} />
-                <Route path="/services/ai-sales-copilot" element={<React.lazy(() => import('./pages/services/ai-sales-copilot')) />} />
-                <Route path="/services/ai-data-analytics" element={<React.lazy(() => import('./pages/services/ai-data-analytics')) />} />
-                <Route path="/services/finops-advisor" element={<React.lazy(() => import('./pages/services/finops-advisor')) />} />
-                <Route path="/services/cloud-finops-optimizer" element={<React.lazy(() => import('./pages/services/CloudFinOpsOptimizer')) />} />
-                <Route path="/services/digital-transformation" element={<React.lazy(() => import('./pages/services/Transformation')) />} />
-                <Route path="/services/it-consulting" element={<React.lazy(() => import('./pages/services/ITConsulting')) />} />
-                <Route path="/services/business-intelligence" element={<React.lazy(() => import('./pages/services/business-intelligence')) />} />
-                <Route path="/services/blockchain" element={<React.lazy(() => import('./pages/services/blockchain')) />} />
-                <Route path="/services/affiliate-tracking" element={<React.lazy(() => import('./pages/services/affiliate-tracking')) />} />
-                <Route path="/services/cybersecurity" element={<React.lazy(() => import('./pages/services/cybersecurity')) />} />
+                <Route path="/services/dsr-portal" element={<GDPRDSARPortal />} />
+                <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+                <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+                <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                <Route path="/services/digital-transformation" element={<Transformation />} />
+                <Route path="/services/it-consulting" element={<ITConsulting />} />
+                <Route path="/services/business-intelligence" element={<BusinessIntelligence />} />
+                <Route path="/services/blockchain" element={<Blockchain />} />
+                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                 
                 {/* Core Service Routes */}
-                <Route path="/services/quantum-computing" element={<React.lazy(() => import('./pages/services/quantum-computing')) />} />
-                <Route path="/services/iot-edge-computing" element={<React.lazy(() => import('./pages/services/iot-edge-computing')) />} />
-                <Route path="/services/ai-content-creation" element={<React.lazy(() => import('./pages/services/ai-content-creation')) />} />
-                <Route path="/services/ai-hr-platform" element={<React.lazy(() => import('./pages/services/ai-hr-platform')) />} />
-                <Route path="/services/sustainable-technology" element={<React.lazy(() => import('./pages/services/sustainable-technology')) />} />
-                <Route path="/services/ai-predictive-maintenance" element={<React.lazy(() => import('./pages/services/ai-predictive-maintenance')) />} />
-                <Route path="/services/quantum-machine-learning" element={<React.lazy(() => import('./pages/services/quantum-machine-learning')) />} />
-                <Route path="/services/space-tech" element={<React.lazy(() => import('./pages/services/space-tech')) />} />
-                <Route path="/services/ai-content-generator" element={<React.lazy(() => import('./pages/services/ai-content-generator')) />} />
-                <Route path="/services/ai-customer-support" element={<React.lazy(() => import('./pages/services/ai-customer-support')) />} />
-                <Route path="/services/ai-cybersecurity" element={<React.lazy(() => import('./pages/services/ai-cybersecurity')) />} />
-                <Route path="/services/ai-marketing-automation" element={<React.lazy(() => import('./pages/services/ai-marketing-automation')) />} />
-                <Route path="/services/ai-project-management" element={<React.lazy(() => import('./pages/services/ai-project-management')) />} />
-                <Route path="/services/ai-workflow-automation" element={<React.lazy(() => import('./pages/services/ai-workflow-automation')) />} />
-                <Route path="/services/micro-crm" element={<React.lazy(() => import('./pages/services/micro-crm')) />} />
-                <Route path="/services/helpdesk" element={<React.lazy(() => import('./pages/services/HelpdeskPlatform')) />} />
-                <Route path="/services/ai-seo" element={<React.lazy(() => import('./pages/services/ai-powered-seo')) />} />
-                <Route path="/services/interview-assessment" element={<React.lazy(() => import('./pages/services/interview-assessment-ai')) />} />
-                <Route path="/services/ai-workflow-orchestrator" element={<React.lazy(() => import('./pages/services/ai-workflow-orchestrator')) />} />
-                <Route path="/services/incident-response-platform" element={<React.lazy(() => import('./pages/services/incident-response-platform')) />} />
-                <Route path="/services/security-headers-csp" element={<React.lazy(() => import('./pages/services/SecurityHeadersCSP')) />} />
-                <Route path="/services/zero-trust-network-access" element={<React.lazy(() => import('./pages/services/ZeroTrustNetworkAccess')) />} />
-                <Route path="/services/ai-autonomous-research-assistant" element={<React.lazy(() => import('./pages/services/ai-autonomous-research-assistant')) />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+                <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
+                <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
+                <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+                <Route path="/services/space-tech" element={<SpaceTech />} />
+                <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
+                <Route path="/services/ai-customer-support" element={<AICustomerSupport />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+                <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                <Route path="/services/micro-crm" element={<MicroCRM />} />
+                <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
+                <Route path="/services/ai-seo" element={<AIPoweredSEO />} />
+                <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
+                <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
+                <Route path="/services/incident-response-platform" element={<IncidentResponsePlatform />} />
+                <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+                <Route path="/services/zero-trust-network-access" element={<ZeroTrustNetworkAccess />} />
+                <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
