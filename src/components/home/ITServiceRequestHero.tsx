@@ -73,7 +73,7 @@ export function ITServiceRequestHero() {
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
               >
                 Learn More
-              </Link>
+              </Button>
             </div>
           </motion.div>
 

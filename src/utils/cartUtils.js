@@ -187,7 +187,7 @@ export const validateCartItem = (item) => {
   if (!item) return false;
 
   const requiredFields = ['id', 'name', 'price'];
-  const hasRequiredFields = requiredFields.every(field => item.hasOwnProperty(field));
+  const hasRequiredFields = requiredFields.every(field => Object.prototype.hasOwnProperty.call(item, field));
 
   if (!hasRequiredFields) return false;
 

@@ -292,4 +292,3 @@ export default function About() {
   );
 };
 
-export default About;

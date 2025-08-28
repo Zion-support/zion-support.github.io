@@ -97,11 +97,6 @@ export function BenefitsSection() {
     { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
   ];
 
-  const statsVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }

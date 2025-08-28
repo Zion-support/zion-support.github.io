@@ -524,7 +524,7 @@ export default function ComprehensivePricingGuide2027() {
               <a href="tel:+13024640950">
                 Call Now: +1 302 464 0950
               </a>
-            </motion.div>
+            </Button>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}

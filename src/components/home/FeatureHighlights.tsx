@@ -199,7 +199,7 @@ export function FeatureHighlights() {
               </p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Achievements Section */}
         <motion.div

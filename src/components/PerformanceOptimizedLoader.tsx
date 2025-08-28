@@ -8,12 +8,12 @@ interface LoaderProps {
   fullScreen?: boolean;
   showLogo?: boolean;
 }
-export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
+export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   size = 'md',
   color = 'primary',
   text,
   fullScreen = false
-}: LoaderProps) {
+}: LoaderProps) => {
   const sizeClasses = {
     sm: 'w-6 h-6',
     md: 'w-12 h-12',

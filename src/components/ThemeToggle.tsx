@@ -181,4 +181,4 @@ export function ThemeToggleDropdown() {
       </AnimatePresence>
     </div>
   );
-};
+}

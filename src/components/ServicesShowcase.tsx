@@ -1,27 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Server,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Gauge,
-  HelpCircle
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, categories, services, containerVariants } from '@/data/services.constants';
+import { CheckCircle, TrendingUp, Mail } from 'lucide-react';
 
 interface ServiceShowcaseProps {
   className?: string;
@@ -39,7 +20,9 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
     if (!acc[category]) {
       acc[category] = [];
     }
-  ];
+    acc[category].push(service);
+    return acc;
+  }, {} as Record<string, any[]>);
 
   const toggleCategory = (category: string) => {
     setExpandedCategories(prev =>
@@ -76,7 +59,6 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
-          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -344,7 +326,7 @@ export function ServicesShowcase({ className = '' }: ServiceShowcaseProps) {
                 className="bg-zion-slate-light/10 text-white px-8 py-4 rounded-xl font-medium hover:bg-zion-slate-light/20 transition-all duration-300 inline-flex items-center gap-2"
               >
                 View All Services
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

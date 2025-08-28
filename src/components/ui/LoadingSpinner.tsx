@@ -151,7 +151,7 @@ export function FullPageLoader({
   className?: string;
 }) {
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>
+    <motion.div className={`min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center ${className}`}>
       <div className="text-center text-white">
         <motion.div
           className="w-32 h-32 border-4 border-gray-700 border-t-cyan-400 rounded-full mx-auto mb-6"
