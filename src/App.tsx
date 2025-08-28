@@ -27,7 +27,7 @@ import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
-// Core pages
+// Lazy-loaded pages for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/about'));
 const Services = lazy(() => import('./pages/services'));
@@ -36,6 +36,8 @@ const Blog = lazy(() => import('./pages/Blog'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Team = lazy(() => import('./pages/Team'));
+
+// Additional missing page imports
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const Login = lazy(() => import('./pages/Login'));
 const FAQ = lazy(() => import('./pages/FAQ'));
@@ -45,7 +47,13 @@ const News = lazy(() => import('./pages/News'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
-// Service category pages
+// New innovative services pages
+const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
+const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const ITServices = lazy(() => import('./pages/ITServices'));
 const MicroSaaS = lazy(() => import('./pages/MicroSaaS'));
@@ -61,7 +69,9 @@ const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
-// Service pages
+// Enhanced services pages - only import existing ones
+
+// Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
 const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
 const AISalesCopilot = lazy(() => import('./pages/services/AISalesCopilot'));
@@ -86,6 +96,8 @@ const MobileSurvey = lazy(() => import('./pages/services/MobileSurvey'));
 // Additional innovative services
 const AIAutonomousCodeReviewer = lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
 const ZeroTrustNetworkAccess = lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
+
+// Additional new service pages
 const AIPoweredSEO = lazy(() => import('./pages/services/AIPoweredSEO'));
 const InterviewAssessmentAI = lazy(() => import('./pages/services/InterviewAssessmentAI'));
 const HelpdeskPlatform = lazy(() => import('./pages/services/HelpdeskPlatform'));
@@ -116,7 +128,6 @@ const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessInt
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
 
 // 2025 Innovative Services
-const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Additional missing imports
@@ -162,7 +173,6 @@ const DeveloperPortal = lazy(() => import('./pages/DeveloperPortal'));
 const ApiDemo = lazy(() => import('./components/ApiDemo'));
 
 // Additional pages
-const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
 const SpaceTech = lazy(() => import('./pages/SpaceTech'));
@@ -188,9 +198,6 @@ const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustom
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
-// Additional missing components
-const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027'));
-
 function App() {
   return (
     <HelmetProvider>
@@ -198,10 +205,11 @@ function App() {
         <div className="App min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
           {/* SEO Component */}
           <EnhancedSEO 
-            title="Zion Tech Group - Empowering the Future Through Technology"
-            description="Leading provider of AI, IT consulting, and digital transformation services. Discover cutting-edge solutions for your business needs."
-            keywords={['AI services', 'IT consulting', 'digital transformation', 'technology solutions']}
-            type="website"
+            title="Zion Tech Group - Leading AI & Technology Solutions"
+            description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
+            keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
+            ogImage="/og-image.jpg"
+            canonicalUrl="https://ziontechgroup.com"
           />
           
           {/* Service Worker */}
@@ -211,13 +219,13 @@ function App() {
           <PerformanceOptimizer enabled={true} />
           
           {/* Enhanced Accessibility */}
-          <EnhancedAccessibilityEnhancer enabled={true} />
+          <EnhancedAccessibilityEnhancer enabled={true} showControls={true} />
           
           {/* Mobile Experience Enhancer */}
           <MobileExperienceEnhancer enabled={true} />
           
           {/* Advanced Analytics */}
-          <AdvancedAnalytics enabled={true} />
+          <AdvancedAnalytics enabled={true} showMetrics={true} />
           
           {/* Smart Notification System */}
           <SmartNotificationSystem enabled={true} />
@@ -939,7 +947,12 @@ function App() {
           <FloatingActionButton />
           
           {/* Chat Assistant */}
-          <ChatAssistant />
+          <ChatAssistant 
+            enabled={true} 
+            position="bottom-right"
+            theme="auto"
+            language="en"
+          />
           
           {/* Toast Container */}
           <ToastContainer />

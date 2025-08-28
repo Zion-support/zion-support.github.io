@@ -40,7 +40,10 @@ const navigationItems: NavigationItem[] = [
       { label: 'Cloud Solutions', href: '/services/cloud' },
       { label: 'Cybersecurity', href: '/services/cybersecurity' },
       { label: 'Digital Transformation', href: '/services/digital-transformation' },
-      { label: 'Consulting', href: '/services/consulting' }
+      { label: 'Consulting', href: '/services/consulting' },
+      { label: '2025 AI Services', href: '/comprehensive-services-showcase-2025' },
+      { label: '2025 IT Services', href: '/comprehensive-services-showcase-2025' },
+      { label: '2025 Micro SaaS', href: '/comprehensive-services-showcase-2025' }
     ]
   },
   { 
@@ -248,7 +251,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             {/* Contact Info */}
             <div className="flex items-center space-x-2 text-slate-400 text-sm">
               <Phone className="w-4 h-4" />
-              <span className="hidden xl:inline">+1 (555) 123-4567</span>
+              <span className="hidden xl:inline">+1 302 464 0950</span>
             </div>
           </div>
 
@@ -326,15 +329,15 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <div className="pt-4 border-t border-slate-700/50 space-y-3">
                 <div className="flex items-center space-x-4 text-slate-400">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-4 text-slate-400">
                   <Mail className="w-4 h-4" />
-                  <span>info@ziontechgroup.com</span>
+                  <span>kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-4 text-slate-400">
                   <MapPin className="w-4 h-4" />
-                  <span>123 Tech Street, Digital City</span>
+                  <span>364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
             </div>

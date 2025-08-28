@@ -19,7 +19,9 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Innovative 2025', href: '/innovative-services-landing-2025', current: false, featured: true },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
+    { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2027', current: false },
     { name: 'Revolutionary 2030', href: '/revolutionary-services-2030', current: false, featured: true },
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
