@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle, PenTool, Target, TrendingUp, Atom, ShieldCheck, DollarSign, Image, FileText, Smartphone, Eye, Cube, Gauge, Database, AlertTriangle, Key, Server, BarChart3 } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 
@@ -54,6 +54,74 @@ export function AppHeader() {
     { name: 'Space Tech', href: '/services', icon: Rocket, description: 'Space Exploration & Mining' },
     { name: 'Autonomous AI', href: '/services', icon: Brain, description: 'Self-Learning Systems' },
     { name: 'Micro SaaS Products', href: '/services/micro-saas', icon: ShoppingCart, description: 'AI automations with transparent pricing' },
+  ];
+
+  const servicesCategories = [
+    {
+      category: 'AI & Automation',
+      services: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: PenTool },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
+        { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Search },
+        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-platform', icon: Heart }
+      ]
+    },
+    {
+      category: 'Quantum Computing',
+      services: [
+        { name: 'Quantum AI Trading', href: '/services/quantum-ai-trading-platform', icon: TrendingUp },
+        { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Atom },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions', icon: Cpu },
+        { name: 'Quantum Cybersecurity', href: '/services/quantum-computing', icon: ShieldCheck }
+      ]
+    },
+    {
+      category: 'Blockchain & Web3',
+      services: [
+        { name: 'Blockchain Development', href: '/services/blockchain-web3-platform', icon: Lock },
+        { name: 'DeFi Solutions', href: '/services', icon: DollarSign },
+        { name: 'NFT Marketplaces', href: '/services', icon: Image },
+        { name: 'Smart Contracts', href: '/services', icon: FileText }
+      ]
+    },
+    {
+      category: 'IoT & Edge Computing',
+      services: [
+        { name: 'IoT Edge Platform', href: '/services/iot-edge-computing-platform', icon: Cpu },
+        { name: 'Smart City Solutions', href: '/services', icon: Building },
+        { name: 'Industrial IoT', href: '/services', icon: Truck },
+        { name: 'Connected Devices', href: '/services', icon: Smartphone }
+      ]
+    },
+    {
+      category: 'Digital Twin & Simulation',
+      services: [
+        { name: 'Digital Twin Platform', href: '/services/digital-twin-platform', icon: Eye },
+        { name: '3D Modeling', href: '/services', icon: Cube },
+        { name: 'Predictive Maintenance', href: '/services', icon: Gauge },
+        { name: 'Asset Management', href: '/services', icon: Database }
+      ]
+    },
+    {
+      category: 'Cybersecurity & Compliance',
+      services: [
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', icon: Shield },
+        { name: 'Incident Response', href: '/services/incident-response-platform', icon: AlertTriangle },
+        { name: 'Security Headers', href: '/services/security-headers-csp', icon: Lock },
+        { name: 'Zero Trust Access', href: '/services/zero-trust-network-access', icon: Key }
+      ]
+    },
+    {
+      category: 'Cloud & DevOps',
+      services: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+        { name: 'FinOps Optimization', href: '/services', icon: DollarSign }
+      ]
+    }
   ];
 
   const quickLinks = [
@@ -119,41 +187,43 @@ export function AppHeader() {
                 
                 {servicesDropdownOpen && (
                   <div 
-                    className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
+                    className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
                     onMouseEnter={() => setServicesDropdownOpen(true)}
                     onMouseLeave={() => setServicesDropdownOpen(false)}
                   >
                     <div className="p-6">
-                      <div className="grid grid-cols-1 gap-3">
-                        {services.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="flex items-center p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105"
-                          >
-                            <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
-                              <service.icon className="w-5 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                      <div className="grid grid-cols-2 gap-6">
+                        {servicesCategories.map((category) => (
+                          <div key={category.category} className="space-y-3">
+                            <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3">
+                              {category.category}
+                            </h3>
+                            <div className="space-y-2">
+                              {category.services.map((service) => (
+                                <Link
+                                  key={service.name}
+                                  to={service.href}
+                                  className="flex items-center p-2 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group"
+                                >
+                                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
+                                    <service.icon className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                                  </div>
+                                  <span className="ml-3 text-sm text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                    {service.name}
+                                  </span>
+                                </Link>
+                              ))}
                             </div>
-                            <div className="ml-4 flex-1">
-                              <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
-                                {service.name}
-                              </div>
-                              <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                                {service.description}
-                              </div>
-                            </div>
-                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                              <ChevronDown className="w-4 h-4 text-cyan-400 rotate-[-90deg]" />
-                            </div>
-                          </Link>
+                          </div>
                         ))}
                       </div>
                       <div className="mt-6 pt-4 border-t border-slate-700/50">
                         <Link
                           to="/services"
-                          className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors py-2 px-4 rounded-lg hover:bg-cyan-400/10"
+                          className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-200 hover:scale-105"
                         >
-                          View All Services →
+                          View All Services
+                          <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </div>
                     </div>
@@ -335,9 +405,8 @@ export function AppHeader() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </header>
-  );
-}
+      </header>
+    );
+  }
