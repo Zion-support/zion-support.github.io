@@ -20,6 +20,9 @@ import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
+<<<<<<< HEAD
+import LoadingSpinner from './components/ui/LoadingSpinner';
+=======
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
 const Home2026 = React.lazy(() => import('./pages/Home2026'));
@@ -79,6 +82,7 @@ const MarketplaceTalent = React.lazy(() => import('./pages/marketplace/Talent'))
 const MarketplaceEquipment = React.lazy(() => import('./pages/marketplace/Equipment'));
 const MarketplaceServices = React.lazy(() => import('./pages/marketplace/Services'));
 const LoginPage = React.lazy(() => import('./pages/Login'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fba
 
 // Core pages with optimized imports
 const Home = createLazyComponent(() => import('./pages/Home'));
@@ -153,6 +157,10 @@ function App() {
               <Route path="/careers" element={<Careers />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/team" element={<Team />} />
+<<<<<<< HEAD
+              
+              {/* Service Routes */}
+=======
               <Route path="/help" element={<HelpCenter />} />
               <Route path="/security" element={<Security />} />
               <Route path="/status" element={<Status />} />
@@ -171,6 +179,7 @@ function App() {
               <Route path="/services2026" element={<Services2026 />} />
               <Route path="/services2027" element={<Services2027 />} />
               <Route path="/services2028" element={<Services2028 />} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fba
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
