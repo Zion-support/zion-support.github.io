@@ -8,6 +8,7 @@ import { EnhancedSEO } from './components/EnhancedSEO';
 import { EnhancedServicesShowcase } from './components/EnhancedServicesShowcase';
 import { FeaturedListingsSection } from './components/FeaturedListingsSection';
 import { UltimateServicesShowcase2025 } from './components/UltimateServicesShowcase2025';
+import ComprehensiveServicesShowcase2025 from './components/ComprehensiveServicesShowcase2025.jsx';
 import { ITServiceRequestHero } from './components/home/ITServiceRequestHero';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
@@ -68,6 +69,7 @@ const EnhancedHeader: React.FC = () => {
             {[
               { href: '/', label: 'Home' },
               { href: '/services', label: 'Services' },
+              { href: '/comprehensive-services', label: 'All Services' },
               { href: '/about', label: 'About' },
               { href: '/blog', label: 'Blog' },
               { href: '/careers', label: 'Careers' },
@@ -270,6 +272,7 @@ const App: React.FC = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
+          <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase2025 />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
