@@ -30,9 +30,13 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Services', href: '/services', current: false },
+<<<<<<< HEAD
+    { name: 'Pricing', href: '/pricing', current: false },
+=======
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SAAS', href: '/micro-saas', current: false },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4865
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Help Center', href: '/help', current: false },
     { name: 'About', href: '/about', current: false },

@@ -1,77 +1,72 @@
 import React from 'react';
+import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
-import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building } from 'lucide-react';
+import { Server, Shield, Cloud, Network, Wrench, Headphones } from 'lucide-react';
 
-const ITServices: React.FC = () => {
+export default function ITServices() {
   const offerings = [
-    { icon: Cloud, title: 'Cloud & DevOps', desc: 'CI/CD, IaC, Kubernetes, cost optimization and SRE with 24/7 runbooks.', price: '$6,000 - $80,000+' },
-    { icon: Server, title: 'Migrations & Modernization', desc: 'On-prem to cloud, containerization, monolith-to-microservices, and zero-downtime cutovers.', price: '$10,000 - $120,000+' },
-    { icon: Shield, title: 'Security & Compliance', desc: 'SOC2/ISO readiness, zero-trust, vulnerability management, and incident response plans.', price: '$3,000 - $40,000+' },
-    { icon: Cpu, title: 'Networking & Edge', desc: 'SD-WAN, VPN, edge compute, IoT, and observability for distributed sites.', price: '$5,000 - $50,000+' },
-    { icon: Cable, title: 'IT Onsite & Managed Services', desc: 'Hands-on deployment, device lifecycle, patching, help desk, and inventory.', price: '$1,500 - $15,000/mo' },
-    { icon: LifeBuoy, title: 'Business Continuity', desc: 'Backups, DR plans, tabletop exercises, and RTO/RPO aligned architecture.', price: '$2,500 - $30,000+' },
-    // New items
-    { icon: Wrench, title: 'Platform Engineering', desc: 'Golden paths, internal developer platforms, Backstage portals, and paved-road governance.', price: '$8,000 - $90,000+' },
-    { icon: Database, title: 'Data Platforms & MLOps', desc: 'Lakehouse setups, ELT pipelines, feature stores, and ML deployment with observability.', price: '$7,000 - $95,000+' },
-    { icon: Building, title: 'Enterprise SaaS Rollouts', desc: 'Okta SSO, RBAC, tenant provisioning, and SOC2-aligned configuration baselines at scale.', price: '$5,000 - $70,000+' }
-    ,
-    { icon: Cloud, title: 'FinOps & Cloud Cost Governance', desc: 'Unit economics, budgets/alerts, rightsizing, savings plans/RI strategy, and showback/chargeback.', price: '$3,000 - $35,000+' },
-    { icon: Server, title: 'Zero-Downtime Migration Factory', desc: 'Repeatable playbooks for DB cutovers, blue/green, data sync, and rollback plans across portfolios.', price: '$12,000 - $150,000+' },
-    { icon: Shield, title: 'Security Engineering & IAM', desc: 'CSPM, CIEM, secrets management, PAM, policy-as-code, and detective controls with evidence pipelines.', price: '$6,000 - $80,000+' },
-    { icon: Cpu, title: 'Edge Networking & SD‑WAN', desc: 'SASE/SD‑WAN, private mesh, ZTNA, and observability with automated failover and policy rollout.', price: '$8,000 - $95,000+' },
-    { icon: LifeBuoy, title: 'Disaster Recovery as Code', desc: 'Automated DR drills, cross-region replication, RTO/RPO contracts, and compliance-ready reports.', price: '$4,000 - $45,000+' },
-    { icon: Wrench, title: 'Platform SRE & Reliability', desc: 'SLOs, error budgets, toil reduction, capacity planning, incident/postmortem program and on-call.', price: '$7,000 - $85,000+' },
-    { icon: Database, title: 'Data Mesh & Governance', desc: 'Domain data products, catalog/lineage, PII classification, policy controls and auditing.', price: '$9,000 - $110,000+' },
-    { icon: Building, title: 'Microsoft 365 & Google Workspace at Scale', desc: 'Identity, device posture, DLP, retention, and tenant governance with automation.', price: '$5,000 - $65,000+' }
+    { icon: Server, title: 'Managed IT', desc: 'Proactive monitoring, patching, backups, and end-user support.' },
+    { icon: Cloud, title: 'Cloud & DevOps', desc: 'Migrations, CI/CD, IaC, containerization, and FinOps.' },
+    { icon: Shield, title: 'Cybersecurity', desc: 'SOC, MDR, EDR, identity, and zero trust architecture.' },
+    { icon: Network, title: 'Networking', desc: 'SD-WAN, Wi‑Fi design, performance, and resilience.' },
+    { icon: Wrench, title: 'Onsite Support', desc: 'Dispatch, rack-and-stack, office moves, and cabling.' },
+    { icon: Headphones, title: 'Helpdesk', desc: 'SLA-backed support with knowledge base and self-service.' },
+  ];
+
+  const prices = [
+    { name: 'Essentials', price: '$49/user/mo', includes: ['Monitoring & patching', 'Ticketing & SLAs', 'Cloud backup 100GB'] },
+    { name: 'Professional', price: '$99/user/mo', includes: ['All Essentials', 'EDR + email security', 'SSO + MFA rollout'] },
+    { name: 'Enterprise', price: 'Custom', includes: ['24/7 SOC & MDR', 'Compliance (SOC2/ISO)', 'DR/BC, on-call, vCISO'] },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-        <h1 className="text-4xl font-bold sm:text-5xl">Enterprise-grade IT services, delivered with startup speed</h1>
-        <p className="mt-4 max-w-2xl text-slate-300">From modernization to managed services, we design and operate robust, secure and cost-efficient platforms.</p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link to="/contact" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500">Talk to an architect</Link>
-          <Link to="/request-quote" className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5">Request a quote</Link>
-        </div>
-        <div className="mt-10 text-xs text-slate-400">Typical T&M: $110–$200/hr blended; fixed-scope engagements available.</div>
-
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {offerings.map((o) => (
-            <div key={o.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:border-cyan-400/30">
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-500/15 text-blue-300">
-                <o.icon className="h-5 w-5" />
-              </div>
-              <h3 className="text-lg font-semibold">{o.title}</h3>
-              <p className="mt-2 text-sm text-slate-300">{o.desc}</p>
-              <div className="mt-4 text-sm font-semibold text-cyan-300">{o.price}</div>
+    <div className="min-h-screen bg-futuristic">
+      <SEO 
+        title="IT Services - Zion Tech Group"
+        description="Managed IT, Cloud & DevOps, Cybersecurity, Networking, Helpdesk, and Onsite services."
+      />
+      <section className="relative pt-28 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white">Modern Managed IT</h1>
+            <p className="mt-4 text-slate-300 max-w-3xl mx-auto">
+              Reliable, secure, and cost-efficient IT operations with clear SLAs and predictable pricing.
+            </p>
+            <div className="mt-8 flex items-center justify-center gap-3">
+              <Link to="/contact" className="btn-futuristic">Request Quote</Link>
+              <Link to="/privacy" className="btn-neon">Security & Compliance</Link>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-12 rounded-xl border border-white/10 bg-white/5 p-6 text-sm text-slate-300">
-          <div className="mb-2 font-semibold text-white">Deliverables</div>
-          <ul className="grid gap-2 sm:grid-cols-2">
-            <li>Architecture diagrams and IaC repositories</li>
-            <li>Security baselines, policies and runbooks</li>
-            <li>Monitoring and SLO dashboards</li>
-            <li>Knowledge transfer and training sessions</li>
-          </ul>
-          <div className="mt-4 flex items-center gap-2 text-xs">
-            <DollarSign className="h-3 w-3" />
-            Avg project budgets: $10k–$120k depending on scope.
           </div>
-          <a className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com/it-services" target="_blank" rel="noreferrer">
-            Explore IT services on our site <ExternalLink className="ml-1 h-3 w-3" />
-          </a>
-          <div className="mt-6 text-xs text-slate-400">
-            Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {offerings.map((o) => (
+              <div key={o.title} className="card-futuristic">
+                <div className="flex items-center gap-3">
+                  <o.icon className="w-6 h-6 text-cyan-400" />
+                  <h3 className="text-white font-semibold">{o.title}</h3>
+                </div>
+                <p className="mt-2 text-slate-300">{o.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {prices.map((p) => (
+              <div key={p.name} className="card-futuristic">
+                <h3 className="text-white font-semibold">{p.name}</h3>
+                <div className="mt-2 text-3xl font-extrabold text-white">{p.price}</div>
+                <ul className="mt-4 space-y-2 text-slate-300">
+                  {p.includes.map((i) => (
+                    <li key={i}>• {i}</li>
+                  ))}
+                </ul>
+                <Link to="/contact" className="mt-6 inline-flex btn-futuristic">Talk to Sales</Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
     </div>
   );
-};
-
-export default ITServices;
+}
 
