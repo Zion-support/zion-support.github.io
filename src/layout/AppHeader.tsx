@@ -45,6 +45,14 @@ export function AppHeader() {
 
   const services = [
     { 
+      name: 'Innovative Micro SAAS 2025', 
+      href: '/innovative-micro-saas-services-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI Services',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
@@ -212,6 +220,13 @@ export function AppHeader() {
       href: '/faq',
       icon: HelpCircle,
       description: 'Get help and answers',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2025',
+      href: '/pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Complete pricing information',
       featured: true
     }
   ];
