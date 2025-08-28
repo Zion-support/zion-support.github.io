@@ -29,10 +29,23 @@ export function AppHeader() {
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Solutions', href: '/solutions', current: false },
+<<<<<<< HEAD
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
+    { name: 'Research', href: '/research-development', current: false },
+    { name: 'Events', href: '/events', current: false },
+    { name: 'News', href: '/news', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Help', href: '/help', current: false },
+=======
     { name: 'Services', href: '/services', current: false },
     { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'News', href: '/news', current: false },
     { name: 'Events', href: '/events', current: false },
+>>>>>>> origin/cursor/website-audit-and-enhancement-3647
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Careers', href: '/careers', current: false },

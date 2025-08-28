@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
@@ -13,6 +18,7 @@ export default function News() {
   );
 }
 
+>>>>>>> origin/cursor/website-audit-and-enhancement-3647
 import { Link } from 'react-router-dom';
 import { 
   Newspaper, 
