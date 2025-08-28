@@ -1,969 +1,840 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
+import { motion } from 'framer-motion';
 import { 
-  BookOpen, 
   Code, 
+  BookOpen, 
   FileText, 
   Search, 
-  Filter,
+  Filter, 
   ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  Globe,
+  Rocket,
+  Atom,
+  Heart,
+  Lock,
+  TrendingUp,
+  Target,
+  Zap,
   Download,
   ExternalLink,
   Github,
-  Globe,
-  Database,
-  Server,
-  Shield,
-  Brain,
-  Cloud,
-  Cpu,
-  Zap,
+  Terminal,
+  Play,
   Users,
-  Calendar,
   Star,
-  Bookmark,
-  Share2,
-  Copy,
-  CheckCircle,
   Clock,
   Tag,
-  ChevronRight,
   ChevronDown,
-  Terminal,
-  Code2,
-  Settings,
-  Play,
-  GitBranch,
-  Package,
-  Lock,
-  Key,
-  Database as DatabaseIcon,
-  Network,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
+  ChevronRight,
+  Copy,
+  CheckCircle
 } from 'lucide-react';
 
-export default function Documentation() {
+const Documentation: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedDifficulty, setSelectedDifficulty] = useState('All');
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Getting Started']));
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedSections, setExpandedSections] = useState<string[]>(['getting-started']);
 
-  const categories = ['All', 'Getting Started', 'APIs', 'SDKs', 'Deployment', 'Security', 'Best Practices', 'Troubleshooting'];
-  const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
+  const categories = [
+    { id: 'all', name: 'All Categories', count: 0, active: true },
+    { id: 'getting-started', name: 'Getting Started', count: 8, active: false },
+    { id: 'apis', name: 'APIs & SDKs', count: 12, active: false },
+    { id: 'tutorials', name: 'Tutorials', count: 15, active: false },
+    { id: 'reference', name: 'Reference', count: 20, active: false },
+    { id: 'examples', name: 'Examples', count: 25, active: false },
+    { id: 'deployment', name: 'Deployment', count: 10, active: false },
+    { id: 'troubleshooting', name: 'Troubleshooting', count: 8, active: false }
+  ];
 
   const documentationSections = [
     {
       id: 'getting-started',
       title: 'Getting Started',
-      description: 'Quick start guides and tutorials for new users',
-      icon: BookOpen,
+      icon: Rocket,
       color: 'from-blue-500 to-cyan-500',
-      featured: true,
       articles: [
         {
+          id: 'quick-start',
           title: 'Quick Start Guide',
-          description: 'Get up and running with Zion Tech Group services in minutes',
+          description: 'Get up and running with Zion Tech Group services in under 10 minutes',
           difficulty: 'Beginner',
           readTime: '10 min',
-          lastUpdated: '2024-12-01',
-          featured: true,
-          tags: ['Quick Start', 'Setup', 'Configuration'],
-          path: '/docs/getting-started/quick-start'
+          tags: ['Quick Start', 'Setup', 'First Steps'],
+          featured: true
         },
         {
+          id: 'installation',
           title: 'Installation Guide',
           description: 'Step-by-step installation instructions for all platforms',
           difficulty: 'Beginner',
           readTime: '15 min',
-          lastUpdated: '2024-11-28',
-          featured: false,
-          tags: ['Installation', 'Setup', 'Platforms'],
-          path: '/docs/getting-started/installation'
+          tags: ['Installation', 'Setup', 'Configuration']
         },
         {
-          title: 'First Project Tutorial',
-          description: 'Build your first AI-powered application',
+          id: 'first-project',
+          title: 'Your First Project',
+          description: 'Create your first AI-powered application with our platform',
           difficulty: 'Beginner',
-          readTime: '25 min',
-          lastUpdated: '2024-11-25',
-          featured: true,
-          tags: ['Tutorial', 'First Project', 'AI'],
-          path: '/docs/getting-started/first-project'
-        }
-      ]
-    },
-    {
-      id: 'api',
-      title: 'API Reference',
-      description: 'Complete API documentation and examples',
-      icon: Code2,
-      color: 'from-purple-500 to-pink-500',
-      featured: true,
-      articles: [
-        {
-          title: 'REST API Overview',
-          description: 'Complete REST API reference with examples and best practices',
-          difficulty: 'Intermediate',
           readTime: '20 min',
-          lastUpdated: '2024-12-01',
-          featured: true,
-          tags: ['API', 'REST', 'Reference'],
-          path: '/docs/api/rest-overview'
+          tags: ['First Project', 'Tutorial', 'AI']
         },
         {
-          title: 'GraphQL API Guide',
-          description: 'GraphQL API documentation and query examples',
+          id: 'authentication',
+          title: 'Authentication Setup',
+          description: 'Configure authentication and API keys for secure access',
           difficulty: 'Intermediate',
-          readTime: '30 min',
-          lastUpdated: '2024-11-30',
-          featured: false,
-          tags: ['API', 'GraphQL', 'Queries'],
-          path: '/docs/api/graphql'
+          readTime: '12 min',
+          tags: ['Authentication', 'Security', 'API Keys']
         },
         {
-          title: 'Authentication & Authorization',
-          description: 'Learn about API keys, OAuth, and security best practices',
-          difficulty: 'Intermediate',
-          readTime: '15 min',
-          lastUpdated: '2024-11-29',
-          featured: false,
-          tags: ['Security', 'OAuth', 'API Keys'],
-          path: '/docs/api/authentication'
+          id: 'environment-setup',
+          title: 'Environment Configuration',
+          description: 'Set up your development environment for optimal productivity',
+          difficulty: 'Beginner',
+          readTime: '18 min',
+          tags: ['Environment', 'Development', 'Configuration']
         },
         {
-          title: 'Rate Limiting',
-          description: 'Understanding API rate limits and optimization strategies',
-          difficulty: 'Advanced',
-          readTime: '10 min',
-          lastUpdated: '2024-11-28',
-          featured: false,
-          tags: ['API', 'Rate Limiting', 'Performance'],
-          path: '/docs/api/rate-limiting'
-        },
-        {
-          title: 'Webhook Integration',
-          description: 'Set up webhooks for real-time notifications',
-          difficulty: 'Intermediate',
-          readTime: '20 min',
-          lastUpdated: '2024-11-27',
-          featured: false,
-          tags: ['Webhooks', 'Integration', 'Real-time'],
-          path: '/docs/api/webhooks'
-        }
-      ]
-    },
-    {
-      id: 'sdks',
-      title: 'SDKs & Libraries',
-      description: 'Client libraries and SDKs for popular languages',
-      icon: Package,
-      color: 'from-green-500 to-emerald-500',
-      featured: true,
-      articles: [
-        {
-          title: 'Python SDK',
-          description: 'Python client library with examples and tutorials',
-          difficulty: 'Intermediate',
-          readTime: '35 min',
-          lastUpdated: '2024-12-01',
-          featured: true,
-          tags: ['SDK', 'Python', 'Client Library'],
-          path: '/docs/sdks/python'
-        },
-        {
-          title: 'JavaScript SDK',
-          description: 'Node.js and browser JavaScript SDK documentation',
-          difficulty: 'Intermediate',
-          readTime: '30 min',
-          lastUpdated: '2024-11-29',
-          featured: true,
-          tags: ['SDK', 'JavaScript', 'Node.js'],
-          path: '/docs/sdks/javascript'
-        },
-        {
-          title: 'Java SDK',
-          description: 'Java client library for enterprise applications',
-          difficulty: 'Intermediate',
-          readTime: '40 min',
-          lastUpdated: '2024-11-27',
-          featured: false,
-          tags: ['SDK', 'Java', 'Enterprise'],
-          path: '/docs/sdks/java'
-        },
-        {
-          title: 'Go SDK',
-          description: 'Go client library for high-performance applications',
+          id: 'best-practices',
+          title: 'Best Practices',
+          description: 'Learn industry best practices for building AI applications',
           difficulty: 'Intermediate',
           readTime: '25 min',
-          lastUpdated: '2024-11-26',
-          featured: false,
-          tags: ['SDK', 'Go', 'Performance'],
-          path: '/docs/sdks/go'
-        }
-      ]
-    },
-    {
-      id: 'deployment',
-      title: 'Deployment & DevOps',
-      description: 'Deployment guides and DevOps best practices',
-      icon: Server,
-      color: 'from-orange-500 to-red-500',
-      featured: false,
-      articles: [
-        {
-          title: 'Docker Deployment',
-          description: 'Containerize and deploy your applications with Docker',
-          difficulty: 'Intermediate',
-          readTime: '30 min',
-          lastUpdated: '2024-11-25',
-          featured: false,
-          tags: ['Docker', 'Containers', 'Deployment'],
-          path: '/docs/deployment/docker'
+          tags: ['Best Practices', 'Guidelines', 'Standards']
         },
         {
-          title: 'Kubernetes Orchestration',
-          description: 'Deploy and manage applications with Kubernetes',
+          id: 'common-patterns',
+          title: 'Common Patterns',
+          description: 'Explore common design patterns and architectural approaches',
+          difficulty: 'Intermediate',
+          readTime: '30 min',
+          tags: ['Patterns', 'Architecture', 'Design']
+        },
+        {
+          id: 'migration-guide',
+          title: 'Migration Guide',
+          description: 'Migrate from other platforms to Zion Tech Group services',
           difficulty: 'Advanced',
           readTime: '45 min',
-          lastUpdated: '2024-11-24',
-          featured: false,
-          tags: ['Kubernetes', 'Orchestration', 'Scalability'],
-          path: '/docs/deployment/kubernetes'
-        },
-        {
-          title: 'CI/CD Pipeline Setup',
-          description: 'Set up continuous integration and deployment pipelines',
-          difficulty: 'Intermediate',
-          readTime: '35 min',
-          lastUpdated: '2024-11-23',
-          featured: false,
-          tags: ['CI/CD', 'DevOps', 'Automation'],
-          path: '/docs/deployment/cicd'
+          tags: ['Migration', 'Upgrade', 'Transition']
         }
       ]
     },
     {
-      id: 'security',
-      title: 'Security & Compliance',
-      description: 'Security best practices and compliance guidelines',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      featured: true,
-      articles: [
-        {
-          title: 'Security Best Practices',
-          description: 'Comprehensive security guidelines for your applications',
-          difficulty: 'Intermediate',
-          readTime: '40 min',
-          lastUpdated: '2024-11-22',
-          featured: true,
-          tags: ['Security', 'Best Practices', 'Guidelines'],
-          path: '/docs/security/best-practices'
-        },
-        {
-          title: 'Data Privacy & GDPR',
-          description: 'Ensure compliance with data privacy regulations',
-          difficulty: 'Intermediate',
-          readTime: '25 min',
-          lastUpdated: '2024-11-21',
-          featured: false,
-          tags: ['Privacy', 'GDPR', 'Compliance'],
-          path: '/docs/security/privacy'
-        },
-        {
-          title: 'API Security',
-          description: 'Secure your APIs against common vulnerabilities',
-          difficulty: 'Advanced',
-          readTime: '30 min',
-          lastUpdated: '2024-11-20',
-          featured: false,
-          tags: ['API Security', 'Vulnerabilities', 'Protection'],
-          path: '/docs/security/api-security'
-        }
-      ]
-    },
-    {
-      id: 'best-practices',
-      title: 'Best Practices',
-      description: 'Industry best practices and design patterns',
-      icon: Star,
-      color: 'from-yellow-500 to-orange-500',
-      featured: false,
-      articles: [
-        {
-          title: 'Code Organization',
-          description: 'Best practices for organizing and structuring your code',
-          difficulty: 'Intermediate',
-          readTime: '25 min',
-          lastUpdated: '2024-11-19',
-          featured: false,
-          tags: ['Code Organization', 'Architecture', 'Structure'],
-          path: '/docs/best-practices/code-organization'
-        },
-        {
-          title: 'Performance Optimization',
-          description: 'Techniques for optimizing application performance',
-          difficulty: 'Advanced',
-          readTime: '35 min',
-          lastUpdated: '2024-11-18',
-          featured: false,
-          tags: ['Performance', 'Optimization', 'Efficiency'],
-          path: '/docs/best-practices/performance'
-        },
-        {
-          title: 'Testing Strategies',
-          description: 'Comprehensive testing approaches for reliable applications',
-          difficulty: 'Intermediate',
-          readTime: '30 min',
-          lastUpdated: '2024-11-17',
-          featured: false,
-          tags: ['Testing', 'Quality Assurance', 'Reliability'],
-          path: '/docs/best-practices/testing'
-        }
-      ]
-    },
-    {
-      id: 'troubleshooting',
-      title: 'Troubleshooting',
-      description: 'Common issues and their solutions',
-      icon: Terminal,
-      color: 'from-gray-500 to-slate-500',
-      featured: false,
-      articles: [
-        {
-          title: 'Common Error Codes',
-          description: 'Understanding and resolving common error messages',
-          difficulty: 'Beginner',
-          readTime: '20 min',
-          lastUpdated: '2024-11-16',
-          featured: false,
-          tags: ['Errors', 'Troubleshooting', 'Debugging'],
-          path: '/docs/troubleshooting/error-codes'
-        },
-        {
-          title: 'Performance Issues',
-          description: 'Diagnose and fix performance problems',
-          difficulty: 'Advanced',
-          readTime: '30 min',
-          lastUpdated: '2024-11-15',
-          featured: false,
-          tags: ['Performance', 'Diagnostics', 'Optimization'],
-          path: '/docs/troubleshooting/performance'
-        },
-        {
-          title: 'Integration Problems',
-          description: 'Resolve common integration and connectivity issues',
-          difficulty: 'Intermediate',
-          readTime: '25 min',
-          lastUpdated: '2024-11-14',
-          featured: false,
-          tags: ['Integration', 'Connectivity', 'Issues'],
-          path: '/docs/troubleshooting/integration'
-        }
-=======
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { Code, BookOpen, FileText, Download, Search, Filter, ChevronRight, ExternalLink, Github, Globe, Database, Shield, Cloud, Brain, Zap } from 'lucide-react';
-
-export default function Documentation() {
-  const categories = [
-    {
-      name: 'Getting Started',
-      description: 'Quick start guides and basic setup instructions',
-      icon: BookOpen,
-      color: 'from-blue-500 to-cyan-500',
-      guides: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', difficulty: 'Beginner', time: '5 min' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', difficulty: 'Beginner', time: '15 min' },
-        { title: 'Configuration Basics', description: 'Essential configuration options', difficulty: 'Beginner', time: '20 min' }
-      ]
-    },
-    {
-      name: 'API Reference',
-      description: 'Complete API documentation and examples',
+      id: 'apis',
+      title: 'APIs & SDKs',
       icon: Code,
       color: 'from-purple-500 to-pink-500',
-      guides: [
-        { title: 'Authentication', description: 'API authentication and security', difficulty: 'Intermediate', time: '30 min' },
-        { title: 'Endpoints Reference', description: 'Complete API endpoint documentation', difficulty: 'Advanced', time: '45 min' },
-        { title: 'Rate Limiting', description: 'Understanding API rate limits', difficulty: 'Intermediate', time: '20 min' }
+      articles: [
+        {
+          id: 'rest-api',
+          title: 'REST API Reference',
+          description: 'Complete REST API documentation with examples and endpoints',
+          difficulty: 'Intermediate',
+          readTime: '40 min',
+          tags: ['REST API', 'Endpoints', 'Reference'],
+          featured: true
+        },
+        {
+          id: 'graphql-api',
+          title: 'GraphQL API',
+          description: 'GraphQL API documentation and schema reference',
+          difficulty: 'Intermediate',
+          readTime: '35 min',
+          tags: ['GraphQL', 'Schema', 'Queries']
+        },
+        {
+          id: 'python-sdk',
+          title: 'Python SDK',
+          description: 'Python SDK documentation with examples and best practices',
+          difficulty: 'Intermediate',
+          readTime: '30 min',
+          tags: ['Python', 'SDK', 'Examples']
+        },
+        {
+          id: 'javascript-sdk',
+          title: 'JavaScript SDK',
+          description: 'JavaScript/Node.js SDK documentation and usage examples',
+          difficulty: 'Intermediate',
+          readTime: '30 min',
+          tags: ['JavaScript', 'Node.js', 'SDK']
+        },
+        {
+          id: 'java-sdk',
+          title: 'Java SDK',
+          description: 'Java SDK documentation for enterprise applications',
+          difficulty: 'Intermediate',
+          readTime: '30 min',
+          tags: ['Java', 'Enterprise', 'SDK']
+        },
+        {
+          id: 'go-sdk',
+          title: 'Go SDK',
+          description: 'Go SDK documentation for high-performance applications',
+          difficulty: 'Intermediate',
+          readTime: '25 min',
+          tags: ['Go', 'Performance', 'SDK']
+        },
+        {
+          id: 'dotnet-sdk',
+          title: '.NET SDK',
+          description: '.NET SDK documentation for C# and F# applications',
+          difficulty: 'Intermediate',
+          readTime: '30 min',
+          tags: ['.NET', 'C#', 'F#', 'SDK']
+        },
+        {
+          id: 'mobile-sdks',
+          title: 'Mobile SDKs',
+          description: 'iOS and Android SDK documentation for mobile applications',
+          difficulty: 'Intermediate',
+          readTime: '35 min',
+          tags: ['Mobile', 'iOS', 'Android', 'SDK']
+        },
+        {
+          id: 'webhooks',
+          title: 'Webhooks',
+          description: 'Configure and use webhooks for real-time notifications',
+          difficulty: 'Intermediate',
+          readTime: '20 min',
+          tags: ['Webhooks', 'Real-time', 'Notifications']
+        },
+        {
+          id: 'rate-limiting',
+          title: 'Rate Limiting',
+          description: 'Understand rate limits and implement proper throttling',
+          difficulty: 'Intermediate',
+          readTime: '15 min',
+          tags: ['Rate Limiting', 'Throttling', 'Performance']
+        },
+        {
+          id: 'error-handling',
+          title: 'Error Handling',
+          description: 'Best practices for handling API errors and exceptions',
+          difficulty: 'Intermediate',
+          readTime: '20 min',
+          tags: ['Error Handling', 'Exceptions', 'Best Practices']
+        },
+        {
+          id: 'api-versioning',
+          title: 'API Versioning',
+          description: 'Understand API versioning and backward compatibility',
+          difficulty: 'Advanced',
+          readTime: '25 min',
+          tags: ['Versioning', 'Compatibility', 'Migration']
+        }
       ]
     },
     {
-      name: 'Integration Guides',
-      description: 'Step-by-step integration tutorials',
-      icon: Globe,
+      id: 'tutorials',
+      title: 'Tutorials',
+      icon: BookOpen,
       color: 'from-green-500 to-emerald-500',
-      guides: [
-        { title: 'React Integration', description: 'Integrate with React applications', difficulty: 'Intermediate', time: '40 min' },
-        { title: 'Node.js Backend', description: 'Server-side integration examples', difficulty: 'Advanced', time: '60 min' },
-        { title: 'Mobile SDKs', description: 'iOS and Android integration', difficulty: 'Intermediate', time: '50 min' }
+      articles: [
+        {
+          id: 'ai-chatbot',
+          title: 'Building an AI Chatbot',
+          description: 'Create an intelligent chatbot using our AI services',
+          difficulty: 'Intermediate',
+          readTime: '45 min',
+          tags: ['AI', 'Chatbot', 'NLP', 'Tutorial'],
+          featured: true
+        },
+        {
+          id: 'image-recognition',
+          title: 'Image Recognition App',
+          description: 'Build an image recognition application with computer vision',
+          difficulty: 'Intermediate',
+          readTime: '50 min',
+          tags: ['Computer Vision', 'Image Recognition', 'AI']
+        },
+        {
+          id: 'data-analytics',
+          title: 'Data Analytics Dashboard',
+          description: 'Create a real-time data analytics dashboard',
+          difficulty: 'Advanced',
+          readTime: '60 min',
+          tags: ['Data Analytics', 'Dashboard', 'Real-time']
+        },
+        {
+          id: 'machine-learning',
+          title: 'Machine Learning Pipeline',
+          description: 'Build a complete ML pipeline from data to deployment',
+          difficulty: 'Advanced',
+          readTime: '75 min',
+          tags: ['Machine Learning', 'Pipeline', 'MLOps']
+        },
+        {
+          id: 'blockchain-app',
+          title: 'Blockchain Application',
+          description: 'Develop a decentralized application using blockchain',
+          difficulty: 'Advanced',
+          readTime: '80 min',
+          tags: ['Blockchain', 'DApp', 'Web3']
+        },
+        {
+          id: 'iot-platform',
+          title: 'IoT Platform Development',
+          description: 'Build an IoT platform for connected devices',
+          difficulty: 'Advanced',
+          readTime: '70 min',
+          tags: ['IoT', 'Connected Devices', 'Platform']
+        },
+        {
+          id: 'quantum-app',
+          title: 'Quantum Computing Application',
+          description: 'Explore quantum computing with practical examples',
+          difficulty: 'Expert',
+          readTime: '90 min',
+          tags: ['Quantum Computing', 'Quantum Algorithms', 'Advanced']
+        },
+        {
+          id: 'cybersecurity-tool',
+          title: 'Cybersecurity Tool',
+          description: 'Build a cybersecurity monitoring and response tool',
+          difficulty: 'Advanced',
+          readTime: '65 min',
+          tags: ['Cybersecurity', 'Monitoring', 'Security Tools']
+        },
+        {
+          id: 'cloud-migration',
+          title: 'Cloud Migration Strategy',
+          description: 'Plan and execute a successful cloud migration',
+          difficulty: 'Advanced',
+          readTime: '55 min',
+          tags: ['Cloud Migration', 'Strategy', 'Planning']
+        },
+        {
+          id: 'microservices',
+          title: 'Microservices Architecture',
+          description: 'Design and implement a microservices architecture',
+          difficulty: 'Advanced',
+          readTime: '70 min',
+          tags: ['Microservices', 'Architecture', 'Design']
+        },
+        {
+          id: 'devops-automation',
+          title: 'DevOps Automation',
+          description: 'Automate your DevOps pipeline with CI/CD',
+          difficulty: 'Intermediate',
+          readTime: '50 min',
+          tags: ['DevOps', 'Automation', 'CI/CD']
+        },
+        {
+          id: 'testing-strategies',
+          title: 'Testing Strategies',
+          description: 'Implement comprehensive testing strategies for AI applications',
+          difficulty: 'Intermediate',
+          readTime: '40 min',
+          tags: ['Testing', 'Quality Assurance', 'AI Testing']
+        },
+        {
+          id: 'performance-optimization',
+          title: 'Performance Optimization',
+          description: 'Optimize your applications for maximum performance',
+          difficulty: 'Advanced',
+          readTime: '55 min',
+          tags: ['Performance', 'Optimization', 'Scalability']
+        },
+        {
+          id: 'security-audit',
+          title: 'Security Audit Guide',
+          description: 'Conduct comprehensive security audits of your applications',
+          difficulty: 'Advanced',
+          readTime: '60 min',
+          tags: ['Security', 'Audit', 'Compliance']
+        },
+        {
+          id: 'monitoring-alerting',
+          title: 'Monitoring & Alerting',
+          description: 'Set up comprehensive monitoring and alerting systems',
+          difficulty: 'Intermediate',
+          readTime: '45 min',
+          tags: ['Monitoring', 'Alerting', 'Observability']
+        }
       ]
     },
     {
-      name: 'Security & Compliance',
-      description: 'Security best practices and compliance guidelines',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      guides: [
-        { title: 'Security Best Practices', description: 'Implementing security measures', difficulty: 'Advanced', time: '45 min' },
-        { title: 'GDPR Compliance', description: 'Data protection and privacy', difficulty: 'Intermediate', time: '35 min' },
-        { title: 'SOC 2 Guidelines', description: 'Security compliance framework', difficulty: 'Advanced', time: '50 min' }
-      ]
-    },
-    {
-      name: 'Deployment & DevOps',
-      description: 'Deployment strategies and infrastructure setup',
-      icon: Cloud,
-      color: 'from-indigo-500 to-purple-500',
-      guides: [
-        { title: 'Docker Deployment', description: 'Containerized deployment guide', difficulty: 'Intermediate', time: '40 min' },
-        { title: 'Kubernetes Setup', description: 'Orchestration and scaling', difficulty: 'Advanced', time: '90 min' },
-        { title: 'CI/CD Pipeline', description: 'Automated deployment workflows', difficulty: 'Advanced', time: '60 min' }
-      ]
-    },
-    {
-      name: 'AI & Machine Learning',
-      description: 'AI model integration and ML workflows',
-      icon: Brain,
-      color: 'from-cyan-500 to-blue-500',
-      guides: [
-        { title: 'Model Training', description: 'Training custom AI models', difficulty: 'Advanced', time: '120 min' },
-        { title: 'Inference API', description: 'Real-time AI predictions', difficulty: 'Intermediate', time: '45 min' },
-        { title: 'Model Optimization', description: 'Performance and efficiency tuning', difficulty: 'Advanced', time: '75 min' }
->>>>>>> dfd8eabcb463241298fb940805e3298c0c707787
+      id: 'reference',
+      title: 'Reference',
+      icon: FileText,
+      color: 'from-orange-500 to-red-500',
+      articles: [
+        {
+          id: 'api-reference',
+          title: 'Complete API Reference',
+          description: 'Comprehensive API reference with all endpoints and parameters',
+          difficulty: 'Reference',
+          readTime: '120 min',
+          tags: ['API', 'Reference', 'Endpoints'],
+          featured: true
+        },
+        {
+          id: 'configuration-options',
+          title: 'Configuration Options',
+          description: 'All available configuration options and their descriptions',
+          difficulty: 'Reference',
+          readTime: '60 min',
+          tags: ['Configuration', 'Options', 'Settings']
+        },
+        {
+          id: 'environment-variables',
+          title: 'Environment Variables',
+          description: 'Complete list of environment variables and their usage',
+          difficulty: 'Reference',
+          readTime: '30 min',
+          tags: ['Environment', 'Variables', 'Configuration']
+        },
+        {
+          id: 'error-codes',
+          title: 'Error Codes & Messages',
+          description: 'Comprehensive list of error codes and troubleshooting steps',
+          difficulty: 'Reference',
+          readTime: '45 min',
+          tags: ['Error Codes', 'Troubleshooting', 'Debugging']
+        },
+        {
+          id: 'status-codes',
+          title: 'HTTP Status Codes',
+          description: 'HTTP status codes and their meanings in our APIs',
+          difficulty: 'Reference',
+          readTime: '25 min',
+          tags: ['HTTP', 'Status Codes', 'API']
+        },
+        {
+          id: 'data-formats',
+          title: 'Data Formats & Schemas',
+          description: 'Supported data formats and schema definitions',
+          difficulty: 'Reference',
+          readTime: '40 min',
+          tags: ['Data Formats', 'Schemas', 'JSON', 'XML']
+        },
+        {
+          id: 'authentication-methods',
+          title: 'Authentication Methods',
+          description: 'All supported authentication methods and their implementation',
+          difficulty: 'Reference',
+          readTime: '35 min',
+          tags: ['Authentication', 'Methods', 'Security']
+        },
+        {
+          id: 'rate-limit-details',
+          title: 'Rate Limit Details',
+          description: 'Detailed information about rate limits and quotas',
+          difficulty: 'Reference',
+          readTime: '20 min',
+          tags: ['Rate Limits', 'Quotas', 'Throttling']
+        },
+        {
+          id: 'webhook-events',
+          title: 'Webhook Events',
+          description: 'Complete list of webhook events and their payloads',
+          difficulty: 'Reference',
+          readTime: '30 min',
+          tags: ['Webhooks', 'Events', 'Payloads']
+        },
+        {
+          id: 'sdk-methods',
+          title: 'SDK Methods Reference',
+          description: 'Complete reference for all SDK methods and classes',
+          difficulty: 'Reference',
+          readTime: '90 min',
+          tags: ['SDK', 'Methods', 'Classes', 'Reference']
+        },
+        {
+          id: 'cli-commands',
+          title: 'CLI Commands',
+          description: 'All available CLI commands and their options',
+          difficulty: 'Reference',
+          readTime: '40 min',
+          tags: ['CLI', 'Commands', 'Terminal']
+        },
+        {
+          id: 'deployment-configs',
+          title: 'Deployment Configurations',
+          description: 'Deployment configuration options and examples',
+          difficulty: 'Reference',
+          readTime: '50 min',
+          tags: ['Deployment', 'Configuration', 'Examples']
+        },
+        {
+          id: 'monitoring-metrics',
+          title: 'Monitoring Metrics',
+          description: 'Available monitoring metrics and their meanings',
+          difficulty: 'Reference',
+          readTime: '35 min',
+          tags: ['Monitoring', 'Metrics', 'Observability']
+        },
+        {
+          id: 'security-standards',
+          title: 'Security Standards',
+          description: 'Security standards and compliance requirements',
+          difficulty: 'Reference',
+          readTime: '45 min',
+          tags: ['Security', 'Standards', 'Compliance']
+        },
+        {
+          id: 'performance-benchmarks',
+          title: 'Performance Benchmarks',
+          description: 'Performance benchmarks and optimization guidelines',
+          difficulty: 'Reference',
+          readTime: '40 min',
+          tags: ['Performance', 'Benchmarks', 'Optimization']
+        },
+        {
+          id: 'integration-patterns',
+          title: 'Integration Patterns',
+          description: 'Common integration patterns and best practices',
+          difficulty: 'Reference',
+          readTime: '55 min',
+          tags: ['Integration', 'Patterns', 'Best Practices']
+        },
+        {
+          id: 'troubleshooting-guide',
+          title: 'Troubleshooting Guide',
+          description: 'Common issues and their solutions',
+          difficulty: 'Reference',
+          readTime: '60 min',
+          tags: ['Troubleshooting', 'Issues', 'Solutions']
+        },
+        {
+          id: 'faq',
+          title: 'Frequently Asked Questions',
+          description: 'Answers to commonly asked questions',
+          difficulty: 'Reference',
+          readTime: '30 min',
+          tags: ['FAQ', 'Common Questions', 'Help']
+        },
+        {
+          id: 'glossary',
+          title: 'Technical Glossary',
+          description: 'Definitions of technical terms and concepts',
+          difficulty: 'Reference',
+          readTime: '25 min',
+          tags: ['Glossary', 'Definitions', 'Terms']
+        },
+        {
+          id: 'changelog',
+          title: 'Changelog',
+          description: 'Version history and release notes',
+          difficulty: 'Reference',
+          readTime: '20 min',
+          tags: ['Changelog', 'Releases', 'Updates']
+        }
       ]
     }
   ];
-
-<<<<<<< HEAD
-  const filteredSections = documentationSections.filter(section => {
-    const matchesSearch = section.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         section.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         section.articles.some(article => 
-                           article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-                         );
-    
-    const matchesCategory = selectedCategory === 'All' || section.title === selectedCategory;
-    
-    return matchesSearch && matchesCategory;
-  });
 
   const toggleSection = (sectionId: string) => {
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(sectionId)) {
-      newExpanded.delete(sectionId);
-    } else {
-      newExpanded.add(sectionId);
-    }
-    setExpandedSections(newExpanded);
+    setExpandedSections(prev => 
+      prev.includes(sectionId) 
+        ? prev.filter(id => id !== sectionId)
+        : [...prev, sectionId]
+    );
   };
 
-  const handleDownload = (articlePath: string) => {
-    console.log(`Downloading documentation: ${articlePath}`);
-    // In a real implementation, this would trigger a download
-  };
+  const filteredSections = documentationSections.filter(section => {
+    if (selectedCategory === 'all') return true;
+    return section.id === selectedCategory;
+  });
 
-  const handleShare = (articlePath: string) => {
-    console.log(`Sharing documentation: ${articlePath}`);
-    // In a real implementation, this would open share options
-  };
-
-  const handleBookmark = (articlePath: string) => {
-    console.log(`Bookmarking documentation: ${articlePath}`);
-    // In a real implementation, this would save to bookmarks
-  };
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    // In a real implementation, show a toast notification
-  };
-=======
-  const popularGuides = [
-    {
-      title: 'Quick Start Guide',
-      description: 'Get up and running with Zion Tech Group services in under 5 minutes',
-      category: 'Getting Started',
-      views: 15420,
-      rating: 4.9,
-      icon: BookOpen
-    },
-    {
-      title: 'API Authentication',
-      description: 'Learn how to securely authenticate with our APIs using various methods',
-      category: 'API Reference',
-      views: 12850,
-      rating: 4.8,
-      icon: Shield
-    },
-    {
-      title: 'React Integration',
-      description: 'Step-by-step guide to integrating our services with React applications',
-      category: 'Integration Guides',
-      views: 11230,
-      rating: 4.7,
-      icon: Code
-    }
-  ];
->>>>>>> dfd8eabcb463241298fb940805e3298c0c707787
+  const searchResults = documentationSections.flatMap(section =>
+    section.articles.filter(article =>
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+    )
+  );
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-<<<<<<< HEAD
-        title="Documentation - Zion Tech Group | API Docs, SDKs, Guides & Tutorials"
-        description="Comprehensive documentation for Zion Tech Group services including API references, SDK guides, deployment tutorials, and best practices for developers."
-        keywords="documentation, API docs, SDK guides, tutorials, deployment, security, best practices, Zion Tech Group"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-          <div className="relative container mx-auto px-4 py-24 text-center text-white">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-6"
-            >
-              <BookOpen className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
-            </motion.div>
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"
-            >
-              Documentation
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl mb-8 max-w-3xl mx-auto text-gray-300"
-            >
-              Comprehensive guides, API references, and tutorials to help you build amazing applications 
-              with Zion Tech Group services. From quick start guides to advanced deployment strategies.
-            </motion.p>
-            
-            {/* Search and Filter Bar */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="max-w-4xl mx-auto"
-            >
-              <div className="flex flex-col lg:flex-row gap-4 mb-8">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search documentation..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  />
-                </div>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category} className="bg-slate-800 text-white">
-                      {category}
-                    </option>
-                  ))}
-                </select>
-=======
         title="Documentation - Zion Tech Group"
-        description="Comprehensive technical documentation, API references, integration guides, and developer resources for Zion Tech Group services."
+        description="Comprehensive technical documentation, API references, tutorials, and developer resources for Zion Tech Group services."
+        keywords="documentation, API, SDK, tutorials, developer resources, technical guides, Zion Tech Group"
       />
       
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20"></div>
-        <div className="relative container-responsive py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl mb-6">
-              <Code className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Documentation
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive technical guides, API references, and integration tutorials to help you 
-              build powerful applications with Zion Tech Group services.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              Everything you need to build powerful AI applications with our platform
             </p>
-            
-            {/* Search Bar */}
-            <div className="relative max-w-2xl mx-auto mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <Code className="w-4 h-4" />
+                <span>APIs & SDKs</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4" />
+                <span>Tutorials & Guides</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FileText className="w-4 h-4" />
+                <span>Reference Docs</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search and Filter */}
+      <section className="py-12 border-b border-slate-700/50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search documentation..."
-                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-200"
               />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-gray-300">
-              <div className="flex items-center">
-                <BookOpen className="w-5 h-5 mr-2" />
-                <span>100+ Guides</span>
-              </div>
-              <div className="flex items-center">
-                <Code className="w-5 h-5 mr-2" />
-                <span>Complete APIs</span>
-              </div>
-              <div className="flex items-center">
-                <Download className="w-5 h-5 mr-2" />
-                <span>SDKs & Tools</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Popular Guides */}
-      <div className="container-responsive py-16">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Guides</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {popularGuides.map((guide, index) => (
-            <div key={index} className="group relative">
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <guide.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-slate-700/50 text-blue-400 text-sm rounded-full mb-3">
-                    {guide.category}
-                  </span>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                    {guide.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {guide.description}
-                  </p>
-                </div>
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <div className="flex items-center">
-                    <span className="mr-2">⭐</span>
-                    {guide.rating}
-                  </div>
-                  <div className="flex items-center">
-                    <span className="mr-2">👁️</span>
-                    {guide.views.toLocaleString()}
-                  </div>
-                </div>
-                <button className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group-hover:scale-105">
-                  Read Guide
-                  <ChevronRight className="w-4 h-4 ml-2" />
-                </button>
->>>>>>> dfd8eabcb463241298fb940805e3298c0c707787
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Documentation Categories */}
-        <div className="space-y-8">
-          {categories.map((category, index) => (
-            <div key={index} className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
-              <div className="flex items-start space-x-4 mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                  <category.icon className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{category.name}</h3>
-                  <p className="text-gray-300 text-lg">{category.description}</p>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.guides.map((guide, guideIndex) => (
-                  <div key={guideIndex} className="bg-slate-700/30 rounded-xl p-4 hover:bg-slate-700/50 transition-colors">
-                    <h4 className="text-lg font-semibold text-white mb-2">{guide.title}</h4>
-                    <p className="text-gray-400 text-sm mb-3">{guide.description}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-500">
-                      <span className={`px-2 py-1 rounded-full text-xs ${
-                        guide.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
-                        guide.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-red-500/20 text-red-400'
-                      }`}>
-                        {guide.difficulty}
-                      </span>
-                      <span className="flex items-center">
-                        <span className="mr-1">⏱️</span>
-                        {guide.time}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Developer Resources */}
-      <div className="container-responsive py-16">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">Developer Resources</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl mb-4">
-              <Github className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-3">GitHub Repositories</h3>
-            <p className="text-gray-400 text-sm mb-4">
-              Access our open-source SDKs, sample applications, and code examples
-            </p>
-            <button className="inline-flex items-center px-4 py-2 bg-slate-600 hover:bg-slate-500 text-white text-sm font-medium rounded-lg transition-colors">
-              View on GitHub
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </button>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl mb-4">
-              <Database className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-3">API Playground</h3>
-            <p className="text-gray-400 text-sm mb-4">
-              Test our APIs interactively with our online playground and sandbox
-            </p>
-            <button className="inline-flex items-center px-4 py-2 bg-slate-600 hover:bg-slate-500 text-white text-sm font-medium rounded-lg transition-colors">
-              Try APIs
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </button>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl mb-4">
-              <Zap className="w-8 h-8 text-white" />
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Developer Support</h3>
-            <p className="text-gray-400 text-sm mb-4">
-              Get help from our developer support team and community forums
-            </p>
-            <button className="inline-flex items-center px-4 py-2 bg-slate-600 hover:bg-slate-500 text-white text-sm font-medium rounded-lg transition-colors">
-              Get Support
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </button>
-          </div>
-        </div>
-<<<<<<< HEAD
-
-        {/* Documentation Sections */}
-        <div className="container mx-auto px-4 py-16">
-          <div className="space-y-8">
-            {filteredSections.map((section, sectionIndex) => (
-              <motion.div
-                key={section.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 overflow-hidden"
-              >
-                {/* Section Header */}
-                <div 
-                  className="p-6 cursor-pointer hover:bg-slate-700/30 transition-colors duration-200"
-                  onClick={() => toggleSection(section.id)}
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category, index) => (
+                <motion.button
+                  key={category.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
+                  }`}
                 >
-                  <div className="flex items-center justify-between">
+                  {category.name} ({category.count})
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Search Results */}
+      {searchQuery && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Search Results for "{searchQuery}"
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {searchResults.map((article, index) => (
+                <motion.div
+                  key={article.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${
+                      article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
+                      article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
+                      article.difficulty === 'Advanced' ? 'bg-orange-500/20 text-orange-400' :
+                      article.difficulty === 'Expert' ? 'bg-red-500/20 text-red-400' :
+                      'bg-blue-500/20 text-blue-400'
+                    }`}>
+                      {article.difficulty}
+                    </span>
+                    <span className="text-sm text-gray-400 flex items-center gap-1">
+                      <Clock className="w-3 h-3" />
+                      {article.readTime}
+                    </span>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                    {article.title}
+                  </h3>
+                  
+                  <p className="text-gray-400 text-sm mb-4">
+                    {article.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {article.tags.slice(0, 3).map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 py-1 bg-slate-700/30 text-gray-300 text-xs rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2 group">
+                    <BookOpen className="w-4 h-4" />
+                    Read More
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Documentation Sections */}
+      {!searchQuery && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="space-y-8">
+              {filteredSections.map((section, sectionIndex) => (
+                <motion.div
+                  key={section.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
+                  className="bg-slate-800/30 rounded-2xl border border-slate-700/30 overflow-hidden"
+                >
+                  <button
+                    onClick={() => toggleSection(section.id)}
+                    className="w-full p-6 flex items-center justify-between hover:bg-slate-800/50 transition-colors duration-300"
+                  >
                     <div className="flex items-center gap-4">
                       <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${section.color} flex items-center justify-center`}>
                         <section.icon className="w-6 h-6 text-white" />
                       </div>
-                      <div>
-                        <h2 className="text-2xl font-bold text-white mb-2">{section.title}</h2>
-                        <p className="text-gray-300">{section.description}</p>
+                      <div className="text-left">
+                        <h2 className="text-2xl font-bold text-white">{section.title}</h2>
+                        <p className="text-gray-400">{section.articles.length} articles</p>
                       </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      {section.featured && (
-                        <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
-                          Featured
-                        </span>
-                      )}
-                      <ChevronDown 
-                        className={`w-6 h-6 text-gray-400 transition-transform duration-200 ${
-                          expandedSections.has(section.id) ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Section Content */}
-                {expandedSections.has(section.id) && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="border-t border-slate-700/50"
-                  >
-                    <div className="p-6">
-                      <div className="grid gap-6">
+                    {expandedSections.includes(section.id) ? (
+                      <ChevronDown className="w-6 h-6 text-gray-400" />
+                    ) : (
+                      <ChevronRight className="w-6 h-6 text-gray-400" />
+                    )}
+                  </button>
+                  
+                  {expandedSections.includes(section.id) && (
+                    <div className="px-6 pb-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {section.articles.map((article, articleIndex) => (
                           <motion.div
-                            key={article.path}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.3, delay: articleIndex * 0.1 }}
-                            className="bg-slate-700/30 rounded-xl p-6 hover:bg-slate-700/50 transition-colors duration-200"
+                            key={article.id}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.3, delay: articleIndex * 0.05 }}
+                            className="group bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
                           >
-                            <div className="flex items-start justify-between mb-4">
-                              <div className="flex-1">
-                                <div className="flex items-center gap-3 mb-2">
-                                  <h3 className="text-xl font-semibold text-white">{article.title}</h3>
-                                  {article.featured && (
-                                    <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full text-xs font-medium text-white">
-                                      Featured
-                                    </span>
-                                  )}
-                                </div>
-                                <p className="text-gray-300 mb-4">{article.description}</p>
-                                
-                                <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-4">
-                                  <span className="flex items-center gap-1">
-                                    <Clock className="w-4 h-4" />
-                                    {article.readTime}
-                                  </span>
-                                  <span className="flex items-center gap-1">
-                                    <Calendar className="w-4 h-4" />
-                                    {article.lastUpdated}
-                                  </span>
-                                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                                    article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-300' :
-                                    article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-300' :
-                                    'bg-red-500/20 text-red-300'
-                                  }`}>
-                                    {article.difficulty}
-                                  </span>
-                                </div>
-
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                  {article.tags.map((tag, tagIndex) => (
-                                    <span 
-                                      key={tagIndex}
-                                      className="px-3 py-1 bg-slate-600/50 rounded-full text-xs text-gray-300"
-                                    >
-                                      {tag}
-                                    </span>
-                                  ))}
-                                </div>
-                              </div>
+                            <div className="flex items-center gap-2 mb-3">
+                              <span className={`px-2 py-1 text-xs font-medium rounded-full ${
+                                article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
+                                article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
+                                article.difficulty === 'Advanced' ? 'bg-orange-500/20 text-orange-400' :
+                                article.difficulty === 'Expert' ? 'bg-red-500/20 text-red-400' :
+                                'bg-blue-500/20 text-blue-400'
+                              }`}>
+                                {article.difficulty}
+                              </span>
+                              {article.featured && (
+                                <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-medium rounded-full">
+                                  Featured
+                                </span>
+                              )}
                             </div>
-
-                            <div className="flex items-center gap-3">
-                              <button
-                                onClick={() => handleDownload(article.path)}
-                                className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
-                              >
-                                <Download className="w-4 h-4" />
-                                Download
-                              </button>
-                              <button
-                                onClick={() => handleShare(article.path)}
-                                className="flex items-center gap-2 bg-slate-600 hover:bg-slate-500 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
-                              >
-                                <Share2 className="w-4 h-4" />
-                                Share
-                              </button>
-                              <button
-                                onClick={() => handleBookmark(article.path)}
-                                className="flex items-center gap-2 bg-slate-600 hover:bg-slate-500 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
-                              >
-                                <Bookmark className="w-4 h-4" />
-                                Bookmark
-                              </button>
-                              <button
-                                onClick={() => copyToClipboard(article.path)}
-                                className="flex items-center gap-2 bg-slate-600 hover:bg-slate-500 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
-                              >
-                                <Copy className="w-4 h-4" />
-                                Copy Link
-                              </button>
+                            
+                            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                              {article.title}
+                            </h3>
+                            
+                            <p className="text-gray-400 text-sm mb-3">
+                              {article.description}
+                            </p>
+                            
+                            <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+                              <span className="flex items-center gap-1">
+                                <Clock className="w-3 h-3" />
+                                {article.readTime}
+                              </span>
                             </div>
+                            
+                            <div className="flex flex-wrap gap-1 mb-4">
+                              {article.tags.slice(0, 2).map((tag, tagIndex) => (
+                                <span
+                                  key={tagIndex}
+                                  className="px-2 py-1 bg-slate-700/30 text-gray-300 text-xs rounded"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            
+                            <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium py-2 px-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2 group text-sm">
+                              <BookOpen className="w-3 h-3" />
+                              Read
+                              <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300" />
+                            </button>
                           </motion.div>
                         ))}
                       </div>
                     </div>
-                  </motion.div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-
-          {filteredSections.length === 0 && (
-            <div className="text-center py-16">
-              <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl text-white mb-2">No documentation found</h3>
-              <p className="text-gray-400">Try adjusting your search criteria or browse all categories.</p>
-            </div>
-          )}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center py-16">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-12 max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Need Help? Get Support
-            </h2>
-            <p className="text-xl mb-8 text-gray-300">
-              Can't find what you're looking for? Our technical support team is here to help. 
-              Get personalized assistance for your specific use case.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
-              >
-                📞 Call +1 (302) 464-0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-medium px-8 py-4 rounded-lg transition-colors duration-200"
-              >
-                ✉️ Email Support
-              </a>
+                  )}
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
-      </div>
-    </>
-=======
-      </div>
+        </section>
+      )}
 
       {/* CTA Section */}
-      <div className="container-responsive py-16">
-        <div className="bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 border border-blue-400/20 rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Need Help with Integration?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Our developer support team is here to help you integrate our services successfully. 
-            Get personalized assistance and best practices guidance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300">
-              Contact Developer Support
-            </button>
-            <button className="px-6 py-3 bg-slate-700/50 border border-slate-600 text-white font-medium rounded-lg hover:bg-slate-600/50 transition-all duration-300">
-              Join Developer Community
-            </button>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center border border-cyan-500/20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Need Help with Development?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join our developer community, get support, and stay updated with the latest features and improvements.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2">
+                  <Github className="w-5 h-5" />
+                  GitHub Repository
+                </button>
+                <button className="px-8 py-3 bg-slate-800/50 border border-slate-600 text-white font-medium rounded-xl hover:bg-slate-700/50 transition-all duration-300 flex items-center gap-2">
+                  <Users className="w-5 h-5" />
+                  Developer Community
+                </button>
+                <button className="px-8 py-3 bg-slate-800/50 border border-slate-600 text-white font-medium rounded-xl hover:bg-slate-700/50 transition-all duration-300 flex items-center gap-2">
+                  <Terminal className="w-5 h-5" />
+                  Support
+                </button>
+              </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
->>>>>>> dfd8eabcb463241298fb940805e3298c0c707787
   );
-}
+};
+
+export default Documentation;
