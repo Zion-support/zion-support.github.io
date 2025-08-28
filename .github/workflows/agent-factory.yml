@@ -1,37 +1,52 @@
-name: Link Checker
+name: Agent Factory
 
 on:
   schedule:
-    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
+    - cron: '0 */6 * * *'  # Every 6 hours
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'src/**'
+      - 'pages/**'
 
 permissions:
-  contents: write
-  issues: write
-
-concurrency:
-  group: link-checker
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  check-links:
-    name: Check External Links
+  generate-matrix:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Generate matrix
+        id: set-matrix
+        run: |
+          # Generate a matrix with 4 shards for parallel processing
+          matrix='{"include":[{"shard":0,"num_shards":4},{"shard":1,"num_shards":4},{"shard":2,"num_shards":4},{"shard":3,"num_shards":4}]}'
+          echo "matrix=$matrix" >> $GITHUB_OUTPUT
+
+  agent:
+    needs: [generate-matrix]
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix).include }}
     timeout-minutes: 30
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-<<<<<<< HEAD
-  agent:
-    needs: [generate-matrix]
-    runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 16
-      matrix: ${{ fromJson(needs.generate-matrix.outputs.matrix).include }}
-    steps:
-      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install linkinator
+        run: npm install -g linkinator
 
       - name: Partition queue for this shard
         id: part
@@ -47,39 +62,6 @@ jobs:
           wc -l shard_urls.txt || true
           if [ ! -s shard_urls.txt ]; then echo "No URLs for this shard"; fi
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - name: Install linkinator
-        run: npm install -g linkinator
-      - name: Run crawler (linkinator) on shard
-        run: |
-          set -e
-          urls=$(paste -sd' ' shard_urls.txt || true)
-          if [ -z "$urls" ]; then 
-            echo '{"links":[]}' > report.json
-            exit 0
-          fi
-          
-          # Run linkinator with error handling
-          if ! npx linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json 2>/dev/null; then
-            echo "Linkinator failed, creating empty report"
-            echo '{"links":[]}' > report.json
-          fi
-
-      - name: Upload shard report
-        uses: actions/upload-artifact@v4
-=======
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
->>>>>>> cursor/website-audit-and-enhancement-1eed
-        with:
-          node-version: '20'
-          cache: 'npm'
-
-      - name: Install linkinator
-        run: npm install -g linkinator
-
       - name: Check external links
         run: |
           # Create a simple list of external links to check
@@ -94,6 +76,21 @@ jobs:
           
           # Run linkinator on the external links
           linkinator external_links.txt --format json > link_report.json || true
+
+      - name: Run crawler (linkinator) on shard
+        run: |
+          set -e
+          urls=$(paste -sd' ' shard_urls.txt || true)
+          if [ -z "$urls" ]; then 
+            echo '{"links":[]}' > report.json
+            exit 0
+          fi
+          
+          # Run linkinator with error handling
+          if ! npx linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json 2>/dev/null; then
+            echo "Linkinator failed, creating empty report"
+            echo '{"links":[]}' > report.json
+          fi
 
       - name: Analyze results
         run: |
@@ -117,34 +114,71 @@ jobs:
               echo "| URL | Status |" >> LINK_REPORT.md
               echo "|-----|--------|" >> LINK_REPORT.md
               jq -r '.links[] | select(.state=="BROKEN") | "| \(.url) | \(.status // "unknown") |"' link_report.json >> LINK_REPORT.md 2>/dev/null || echo "| Error parsing results | |" >> LINK_REPORT.md
-            else
-              echo "## Status" >> LINK_REPORT.md
-              echo "✅ All external links are working correctly!" >> LINK_REPORT.md
             fi
-          else
-            echo "# Link Check Report" > LINK_REPORT.md
-            echo "" >> LINK_REPORT.md
-            echo "Generated on: $(date)" >> LINK_REPORT.md
-            echo "" >> LINK_REPORT.md
-            echo "## Error" >> LINK_REPORT.md
-            echo "❌ Failed to generate link report" >> LINK_REPORT.md
           fi
 
-      - name: Create issue for broken links
-        if: failure()
-        uses: peter-evans/create-issue-from-file@v5
-        with:
-          title: "External link check failed - broken links detected"
-          content-filepath: LINK_REPORT.md
-          labels: link-check, automated, broken-links
-          assignees: ''
-
-      - name: Upload report
+      - name: Upload shard report
         uses: actions/upload-artifact@v4
         with:
-          name: link-check-report
+          name: shard-${{ matrix.shard }}-report
           path: |
-            LINK_REPORT.md
+            report.json
             link_report.json
-            external_links.txt
+            LINK_REPORT.md
+          retention-days: 7
+
+  collect-results:
+    needs: [agent]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          
+      - name: Combine results
+        run: |
+          echo "# Combined Link Check Report" > COMBINED_REPORT.md
+          echo "" >> COMBINED_REPORT.md
+          echo "Generated on: $(date)" >> COMBINED_REPORT.md
+          echo "" >> COMBINED_REPORT.md
+          
+          total_broken=0
+          total_checked=0
+          
+          for report in artifacts/shard-*-report/report.json; do
+            if [ -f "$report" ]; then
+              broken=$(jq '.links[] | select(.state=="BROKEN") | length' "$report" 2>/dev/null || echo "0")
+              checked=$(jq '.links | length' "$report" 2>/dev/null || echo "0")
+              total_broken=$((total_broken + broken))
+              total_checked=$((total_checked + checked))
+            fi
+          done
+          
+          echo "## Overall Summary" >> COMBINED_REPORT.md
+          echo "- Total links checked: $total_checked" >> COMBINED_REPORT.md
+          echo "- Total broken links: $total_broken" >> COMBINED_REPORT.md
+          echo "" >> COMBINED_REPORT.md
+          
+          if [ $total_broken -gt 0 ]; then
+            echo "## Broken Links by Shard" >> COMBINED_REPORT.md
+            for report in artifacts/shard-*-report/report.json; do
+              if [ -f "$report" ]; then
+                shard=$(echo "$report" | sed 's/.*shard-\([0-9]*\)-report.*/\1/')
+                broken=$(jq '.links[] | select(.state=="BROKEN") | length' "$report" 2>/dev/null || echo "0")
+                echo "- Shard $shard: $broken broken links" >> COMBINED_REPORT.md
+              fi
+            done
+          fi
+
+      - name: Upload combined report
+        uses: actions/upload-artifact@v4
+        with:
+          name: combined-report
+          path: COMBINED_REPORT.md
           retention-days: 30
