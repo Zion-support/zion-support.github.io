@@ -172,7 +172,11 @@ export function Footer() {
     },
     {
       name: "Address",
+<<<<<<< HEAD
+      value: "364 E Main St STE 1008, Middletown, DE 19709",
+=======
       value: "364 E Main St STE 1008 Middletown DE 19709",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0528
       url: "https://www.google.com/maps/search/?api=1&query=364+E+Main+St+STE+1008+Middletown+DE+19709",
       icon: MapPin
     }

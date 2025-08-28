@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+=======
 
 const services = [
   {
@@ -147,6 +151,7 @@ export default Services;
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0528
 import { Link } from 'react-router-dom';
 import { 
   Brain, 

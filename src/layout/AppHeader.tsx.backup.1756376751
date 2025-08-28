@@ -30,8 +30,14 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Services', href: '/services', current: false },
+<<<<<<< HEAD
+    { name: 'AI Services', href: '/ai-services', current: false },
+    { name: 'IT Services', href: '/it-services', current: false },
+    { name: 'Micro SAAS', href: '/micro-saas', current: false },
+=======
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Pricing', href: '/services', current: false },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0528
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Help Center', href: '/help', current: false },
     { name: 'About', href: '/about', current: false },
@@ -75,8 +81,12 @@ export function AppHeader() {
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Sitemap', href: '/sitemap', icon: Globe },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+<<<<<<< HEAD
+    { name: 'Sitemap', href: '/sitemap', icon: Globe },
+=======
     { name: 'Call +1 302 464 0950', href: 'tel:+13024640950', icon: Phone },
     { name: 'Email kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', icon: Mail },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-0528
   ];
 
   // Group services by category for better organization
