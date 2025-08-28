@@ -9,7 +9,7 @@ import { Footer } from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
+import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { EnhancedSEO } from './components/EnhancedSEO';
 import { ModernUIEnhancer } from './components/ModernUIEnhancer';
@@ -168,6 +168,7 @@ const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/Comprehensi
 const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
 const AIAutonomousThreatIntelligence = lazy(() => import('./pages/AIAutonomousThreatIntelligence'));
+const AIQuantumFinancialTrading = lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
 
 // Additional innovative services
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
