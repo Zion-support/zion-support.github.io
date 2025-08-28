@@ -1,12 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
   Type, 
-  Contrast, 
   ZoomIn, 
   ZoomOut,
   Accessibility,
