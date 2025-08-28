@@ -1,33 +1,32 @@
-import React, { useEffect, useMemo, useCallback } from 'react';
+import { useEffect, useMemo, useCallback } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export const PerformanceOptimizer = ({ children }) => {
-    const location = useLocation();
+interface PerformanceOptimizerProps {
+    children: React.ReactNode;
+}
 
-    // Preload critical resources
-    useEffect(() => {
-        const preloadCriticalResources = () => {
-            // Note: CSS is already handled by Vite build process
-            // Fonts are loaded via Google Fonts CDN in index.html
-        };
-        preloadCriticalResources();
-    }, []);
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+    const location = useLocation();
 
     // Optimize images on route change
     useEffect(() => {
         const optimizeImages = () => {
             const images = document.querySelectorAll('img');
             images.forEach((img) => {
+                if (img.dataset.src && !img.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                
                 // Add loading="lazy" to images below the fold
                 if (img.getBoundingClientRect().top > window.innerHeight) {
                     img.loading = 'lazy';
                 }
-                // Add decoding="async" for better performance
-                img.decoding = 'async';
-                // Add error handling
-                img.onerror = () => {
-                    img.style.display = 'none';
-                };
+                
+                // Optimize image quality based on device pixel ratio
+                if (window.devicePixelRatio > 1) {
+                    img.style.imageRendering = 'crisp-edges';
+                }
             });
         };
 
@@ -95,8 +94,8 @@ export const PerformanceOptimizer = ({ children }) => {
 
     // Intersection Observer for lazy loading
     useEffect(() => {
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
+        if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+            const observer = new (window as any).IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         const target = entry.target;
@@ -127,21 +126,39 @@ export const PerformanceOptimizer = ({ children }) => {
 if (typeof window !== 'undefined') {
     // Optimize long tasks
     if ('scheduler' in window && 'postTask' in window.scheduler) {
-        window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time
-        }, { priority: 'background' });
+        // Use scheduler.postTask for non-critical tasks
+        const optimizeLongTasks = () => {
+            // Optimize DOM operations
+            const optimizeDOM = () => {
+                // Batch DOM reads and writes
+                const elements = document.querySelectorAll('[data-optimize]');
+                elements.forEach((el) => {
+                    if (el instanceof HTMLElement) {
+                        el.style.willChange = 'auto';
+                    }
+                });
+            };
+
+            (window as any).scheduler.postTask(optimizeDOM, { priority: 'background' });
+        };
+
+        // Run optimization periodically
+        setInterval(optimizeLongTasks, 30000); // Every 30 seconds
     }
 
     // Optimize memory usage
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB
-        if (performance.memory.usedJSHeapSize > memoryThreshold) {
-            // Trigger garbage collection if available
-            if ('gc' in window) {
-                window.gc();
+        const checkMemory = () => {
+            const memory = (performance as any).memory;
+            if (memory.usedJSHeapSize > memoryThreshold) {
+                // Trigger garbage collection if available
+                if ('gc' in window) {
+                    (window as any).gc();
+                }
             }
-        }
+        };
+
+        setInterval(checkMemory, 60000); // Every minute
     }
 }
-
-export default PerformanceOptimizer;
