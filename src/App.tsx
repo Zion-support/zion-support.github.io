@@ -40,6 +40,7 @@ const Partners = lazy(() => import('./pages/Partners'));
 const News = lazy(() => import('./pages/News'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
 
 
 // 2029 Cutting-Edge Services
@@ -152,7 +153,6 @@ const DigitalTwin = lazy(() => import('./pages/services/DigitalTwin'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const ITConsulting = lazy(() => import('./pages/ITConsulting'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -396,6 +396,7 @@ function App() {
                     <Route path="/news" element={<News />} />
                     <Route path="/case-studies" element={<CaseStudies />} />
                     <Route path="/help" element={<HelpCenter />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
                     
                     {/* 404 Page */}
                     <Route 

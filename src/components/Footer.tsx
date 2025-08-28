@@ -82,7 +82,7 @@ const footerSections = [
       { name: 'About Us', path: '/about', icon: Users },
       { name: 'Partners', path: '/partners', icon: Users },
       { name: 'Careers', path: '/careers', icon: Briefcase },
-      { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+      { name: 'AI Services', path: '/ai-services', icon: Brain },
       { name: 'Blog', path: '/blog', icon: Newspaper },
       { name: 'Contact', path: '/contact', icon: Phone },
       { name: 'News', path: '/news', icon: Newspaper },
@@ -114,7 +114,7 @@ const footerSections = [
       { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Cpu },
       { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
       { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
-      { name: 'Space Technology', path: '/space-tech', icon: Satellite },
+      { name: 'Space Technology', path: '/services/space-tech', icon: Satellite },
       { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
       { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
       { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock },
@@ -141,7 +141,7 @@ const footerSections = [
     links: [
       { name: 'Micro SaaS Platform', path: '/micro-saas', icon: ShoppingCart },
       { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
-      { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk-platform', icon: MessageCircle },
       { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
       { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
       { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
@@ -162,7 +162,6 @@ const footerSections = [
       { name: 'Case Studies', path: '/case-studies', icon: FileText },
       { name: 'Pricing', path: '/pricing', icon: DollarSign },
       { name: 'Contact Support', path: '/contact', icon: MessageCircle },
-      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
       { name: 'Sitemap', path: '/sitemap', icon: FileText }
     ]
   }
