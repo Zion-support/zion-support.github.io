@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon } from 'lucide-react';
+import { Braille } from 'lucide-react';
 
 interface AccessibilityContextType {
   highContrast: boolean;
@@ -216,7 +216,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               aria-label="Toggle reduced motion"
               title="Toggle reduced motion"
             >
-              {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+              {reducedMotion ? 'RM' : 'M'}
             </button>
 
             <button
@@ -259,7 +259,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
   children,
   isActive = true
 }) => {
-  const [focusedElement, setFocusedElement] = useState<HTMLElement | null>(null);
+
 
   useEffect(() => {
     if (!isActive) return;

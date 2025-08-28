@@ -38,12 +38,21 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing-guide-2030', current: false },
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
   const services = [
+    { 
+      name: 'Innovative Micro SAAS 2025', 
+      href: '/innovative-micro-saas-services-2025', 
+      icon: Rocket, 
+      description: 'Cutting-edge AI Services',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
     { 
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
@@ -107,6 +116,62 @@ export function AppHeader() {
       description: 'DevOps & Infrastructure',
       featured: true,
       color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'FinTech Solutions', 
+      href: '/services', 
+      icon: DollarSign, 
+      description: 'AI-Powered Financial Services',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI & Marketing', 
+      href: '/services', 
+      icon: TrendingUp, 
+      description: 'Automated Marketing & Analytics',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI & Content', 
+      href: '/services', 
+      icon: FileText, 
+      description: 'Content Creation & Management',
+      featured: true,
+      color: 'from-orange-500 to-red-500'
+    },
+    { 
+      name: 'AI & Customer Support', 
+      href: '/services', 
+      icon: MessageSquare, 
+      description: '24/7 Support Automation',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI & HR', 
+      href: '/services', 
+      icon: Users, 
+      description: 'HR Automation & Analytics',
+      featured: true,
+      color: 'from-indigo-500 to-blue-500'
+    },
+    { 
+      name: 'Digital Twin', 
+      href: '/services', 
+      icon: Cpu, 
+      description: 'Virtual Replication & Simulation',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'Sustainable Tech', 
+      href: '/services', 
+      icon: Leaf, 
+      description: 'Green Technology Solutions',
+      featured: true,
+      color: 'from-green-500 to-teal-500'
     },
     { 
       name: 'Micro SaaS Products', 
@@ -212,6 +277,13 @@ export function AppHeader() {
       href: '/faq',
       icon: HelpCircle,
       description: 'Get help and answers',
+      featured: true
+    },
+    {
+      name: 'Pricing Guide 2025',
+      href: '/pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Complete pricing information',
       featured: true
     }
   ];

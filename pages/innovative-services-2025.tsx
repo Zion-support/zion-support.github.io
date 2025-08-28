@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../src/data/innovativeServices2025';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../data/innovativeServices2025';
 const InnovativeServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -101,20 +101,10 @@ const InnovativeServicesShowcase: React.FC = () => {
           ))}
         </ul>
       </div>
-      <div className="mb-4">
-        <h4 className="font-semibold text-gray-900 mb-2">Technology Stack:</h4>
-        <div className="flex flex-wrap gap-2">
-          {service.technology.map((tech, index) => (
-            <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
       <div className="border-t pt-4">
         <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-          <span>Delivery: {service.estimatedDelivery}</span>
-          <span>Support: {service.supportLevel}</span>
+          <span>Category: {service.category}</span>
+          <span>Launch: {service.launchDate}</span>
         </div>
         
         <div className="flex space-x-3">
