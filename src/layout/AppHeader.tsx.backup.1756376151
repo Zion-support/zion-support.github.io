@@ -30,8 +30,12 @@ export default function AppHeader() {
     { name: '2025 Services', href: '/comprehensive-services-showcase-2025', current: false, featured: true },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
     { name: '2027 Services', href: '/services2027', current: false, featured: true },
+<<<<<<< HEAD
+    { name: '2030 Services', href: '/revolutionary-services-2030', current: false, featured: true, revolutionary: true },
+=======
     { name: '2029 Services', href: '/innovative-services-2029', current: false, featured: true },
     { name: '2029 Pricing', href: '/comprehensive-pricing-2029', current: false, featured: true },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3dc7
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
     { name: 'Blog', href: '/blog', current: false },
@@ -41,9 +45,15 @@ export default function AppHeader() {
   // Organized services by category with enhanced descriptions
   const services = [
     // Featured & New Services
+<<<<<<< HEAD
+    { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true, color: 'from-yellow-500 to-orange-500' },
+    { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true, color: 'from-purple-500 to-pink-500' },
+    { name: '2030 Revolutionary Services', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future of Technology - Revolutionary Solutions', category: 'Featured', featured: true, revolutionary: true, color: 'from-red-500 to-pink-500' },
+=======
     { name: '2026 Services Overview', href: '/services2026', icon: Star, description: 'Revolutionary AI & Quantum Solutions', category: 'Featured', featured: true },
     { name: '2027 Services Overview', href: '/services2027', icon: Star, description: 'Cutting-edge Innovation & Emerging Tech', category: 'Featured', featured: true },
     { name: '2029 Services Overview', href: '/innovative-services-2029', icon: Star, description: 'Next-Generation AI & Quantum Solutions', category: 'Featured', featured: true },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3dc7
     
     // AI & Machine Learning
     { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', icon: Brain, description: '24/7 autonomous business management', category: 'AI & ML', featured: true },

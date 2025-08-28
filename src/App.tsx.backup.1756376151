@@ -83,6 +83,10 @@ const UltimateServicesShowcase2028 = React.lazy(() => import('./pages/UltimateSe
 // Revolutionary 2030 services
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 
+// New 2029 service imports
+const InnovativeServicesShowcase2029 = React.lazy(() => import('./pages/InnovativeServicesShowcase2029'));
+const ComprehensivePricing2029 = React.lazy(() => import('./pages/ComprehensivePricing2029'));
+
 // Sitemap-aligned pages
 const AiSolutions = React.lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = React.lazy(() => import('./pages/solutions/Enterprise'));
@@ -303,25 +307,12 @@ const Accessibility = () => (
 
 function App() {
   return (
-<<<<<<< HEAD
-    <ErrorBoundary>
-      <div className="min-h-screen futuristic-bg">
-        <SEO 
-          title="Zion Tech Group - Leading AI & Technology Solutions"
-          description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
-          keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
-          ogImage="/og-image.jpg"
-          canonicalUrl="https://ziontechgroup.com"
-        />
-        
-=======
     <ErrorBoundary 
       enableReporting={true}
       recoveryOptions={true}
       showDetails={process.env.NODE_ENV === 'development'}
     >
       <div className="min-h-screen bg-futuristic">
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
         <AppHeader />
         
         <main className="relative">
@@ -446,9 +437,17 @@ function App() {
               <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
               <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
               
+<<<<<<< HEAD
               {/* Revolutionary 2030 Services */}
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/services-2030" element={<RevolutionaryServices2030 />} />
+=======
+              {/* 2029 Innovative Services */}
+              <Route path="/innovative-services-2029" element={<InnovativeServicesShowcase2029 />} />
+              <Route path="/services-2029" element={<InnovativeServicesShowcase2029 />} />
+              <Route path="/comprehensive-pricing-2029" element={<ComprehensivePricing2029 />} />
+              <Route path="/pricing-2029" element={<ComprehensivePricing2029 />} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3dc7
               
               {/* Additional service routes */}
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -481,15 +480,9 @@ function App() {
         </main>
         <EnhancedFooter />
         <ChatAssistant />
-<<<<<<< HEAD
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer enabled={true} showControls={false} />
-        <MobileExperienceEnhancer enabled={true} />
-=======
         <PerformanceOptimizer enabled={true} showControls={true} autoOptimize={true} />
         <AccessibilityEnhancer enabled={true} showControls={true} />
         <MobileExperienceEnhancer enabled={true} showControls={true} autoOptimize={true} />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9e9e
       </div>
     </ErrorBoundary>
   );

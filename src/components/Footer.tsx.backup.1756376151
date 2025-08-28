@@ -59,6 +59,16 @@ export function Footer() {
     {
       title: 'Resources',
       links: [
+<<<<<<< HEAD
+        { name: 'Blog', href: '/blog' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Developer Portal', href: '/developers' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' },
+        { name: 'Help Center', href: '/help-center' }
+=======
         { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
         { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
         { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
@@ -68,6 +78,7 @@ export function Footer() {
         { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
         { name: '2029 Innovative Services', path: '/innovative-services-2029', icon: Star }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3dc7
       ]
     },
     {

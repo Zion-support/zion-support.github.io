@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
+  Star, 
+  CheckCircle, 
+  ArrowRight, 
+  Zap, 
   Brain, 
   Shield, 
   Cloud, 
-  Zap, 
   Rocket, 
-  Star, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight,
   Globe,
   Cpu,
   Lock,
@@ -36,28 +35,35 @@ import {
   Database,
   Network,
   Clock,
-  PanelLeft,
   Search,
   Filter,
   Grid,
   List,
-  Play,
-  Pause,
-  Volume2,
-  VolumeX
+  TrendingUp,
+  Sparkles,
+  Crown,
+  Gem
 } from 'lucide-react';
 import { innovativeMicroSAASServices2029 } from '../../data/innovative-micro-saas-2029';
+import { revolutionaryAIServices2029 } from '../../data/revolutionary-ai-services-2029';
+import { revolutionaryITServices2029 } from '../../data/revolutionary-it-services-2029';
 
-export default function InnovativeServicesShowcase2029() {
+export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity'>('popularity');
 
-  const categories = ['All', 'AI & Analytics', 'Cybersecurity', 'AI & Operations', 'Blockchain & Security', 'AI & Legal Tech', 'IoT & Edge Computing', 'AI & Healthcare', 'Quantum Computing & AI', 'AI & Fintech', 'Sustainability & Consulting'];
+  const categories = ['All', 'AI & Analytics', 'Cybersecurity', 'AI & Operations', 'Blockchain & Security', 'AI & Legal Tech', 'IoT & Edge Computing', 'AI & Healthcare', 'Quantum Computing & AI', 'AI & Fintech', 'Sustainability & Consulting', 'Edge Computing', 'DevOps & Automation', 'Storage & Security', 'Network Optimization', 'Disaster Recovery', 'Quantum Security'];
 
-  const filteredServices = innovativeMicroSAASServices2029.filter(service => {
+  // Combine all services
+  const allServices = [
+    ...innovativeMicroSAASServices2029,
+    ...revolutionaryAIServices2029,
+    ...revolutionaryITServices2029
+  ];
+
+  const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -65,8 +71,41 @@ export default function InnovativeServicesShowcase2029() {
     return matchesCategory && matchesSearch;
   });
 
-  const togglePlayPause = () => setIsPlaying(!isPlaying);
-  const toggleMute = () => setIsMuted(!isMuted);
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+      case 'rating':
+        return b.rating - a.rating;
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      default:
+        return 0;
+    }
+  });
+
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: any } = {
+      'AI & Analytics': Brain,
+      'Cybersecurity': Shield,
+      'AI & Operations': Workflow,
+      'Blockchain & Security': Lock,
+      'AI & Legal Tech': BookOpen,
+      'IoT & Edge Computing': Network,
+      'AI & Healthcare': Heart,
+      'Quantum Computing & AI': Atom,
+      'AI & Fintech': DollarSign,
+      'Sustainability & Consulting': Globe,
+      'Edge Computing': Network,
+      'DevOps & Automation': Rocket,
+      'Storage & Security': Database,
+      'Network Optimization': BarChart3,
+      'Disaster Recovery': Shield,
+      'Quantum Security': Lock
+    };
+    return iconMap[category] || Cpu;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -115,8 +154,8 @@ export default function InnovativeServicesShowcase2029() {
             transition={{ duration: 1, delay: 0.2 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6"
           >
-            <Star className="w-4 h-4 mr-2 text-yellow-400" />
-            Revolutionary 2029 Services
+            <Crown className="w-4 h-4 mr-2 text-yellow-400" />
+            Premium 2029 Services
           </motion.div>
           
           <motion.h1
@@ -126,10 +165,10 @@ export default function InnovativeServicesShowcase2029() {
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Next-Generation
+              Comprehensive
             </span>
             <br />
-            <span className="text-white">Micro SAAS Solutions</span>
+            <span className="text-white">Pricing Guide 2029</span>
           </motion.h1>
           
           <motion.p
@@ -138,29 +177,33 @@ export default function InnovativeServicesShowcase2029() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
-            Experience the future of business technology with our cutting-edge micro SAAS services. 
-            From quantum computing to AI-powered healthcare, we're revolutionizing how businesses operate.
+            Discover our complete portfolio of revolutionary micro SAAS, AI, and IT services. 
+            From quantum computing to emotional intelligence AI, we have solutions for every business need.
           </motion.p>
 
-          {/* Audio Controls */}
+          {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex items-center justify-center space-x-4 mb-8"
+            className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
-            <button
-              onClick={togglePlayPause}
-              className="p-3 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-110"
-            >
-              {isPlaying ? <Pause className="w-5 h-5 text-white" /> : <Play className="w-5 h-5 text-white" />}
-            </button>
-            <button
-              onClick={toggleMute}
-              className="p-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-110"
-            >
-              {isMuted ? <VolumeX className="w-5 h-5 text-white" /> : <Volume2 className="w-5 h-5 text-white" />}
-            </button>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-2xl font-bold text-white">{allServices.length}</div>
+              <div className="text-gray-400 text-sm">Total Services</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-2xl font-bold text-white">$89</div>
+              <div className="text-gray-400 text-sm">Starting Price</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-2xl font-bold text-white">4.8</div>
+              <div className="text-gray-400 text-sm">Avg Rating</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
+              <div className="text-2xl font-bold text-white">24/7</div>
+              <div className="text-gray-400 text-sm">Support</div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
@@ -180,7 +223,7 @@ export default function InnovativeServicesShowcase2029() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search innovative services..."
+                  placeholder="Search services by name, description, or features..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -202,6 +245,20 @@ export default function InnovativeServicesShowcase2029() {
                     {category}
                   </button>
                 ))}
+              </div>
+
+              {/* Sort Options */}
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-400 text-sm">Sort by:</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                >
+                  <option value="popularity">Popularity</option>
+                  <option value="price">Price</option>
+                  <option value="rating">Rating</option>
+                </select>
               </div>
 
               {/* View Mode Toggle */}
@@ -242,13 +299,13 @@ export default function InnovativeServicesShowcase2029() {
             }`}
           >
             <AnimatePresence>
-              {filteredServices.map((service, index) => (
+              {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
                   className={`group relative ${
                     viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
                   }`}
@@ -265,11 +322,15 @@ export default function InnovativeServicesShowcase2029() {
                             <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                               {service.name}
                             </h3>
-                            <p className="text-gray-400 text-sm">{service.category}</p>
+                            <p className="text-gray-400 text-sm flex items-center">
+                              {React.createElement(getCategoryIcon(service.category), { className: "w-4 h-4 mr-2" })}
+                              {service.category}
+                            </p>
                           </div>
                         </div>
                         {service.popular && (
-                          <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full">
+                          <span className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium rounded-full flex items-center">
+                            <Crown className="w-3 h-3 mr-1" />
                             Popular
                           </span>
                         )}
@@ -353,7 +414,7 @@ export default function InnovativeServicesShowcase2029() {
           </motion.div>
 
           {/* No Results */}
-          {filteredServices.length === 0 && (
+          {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -379,7 +440,7 @@ export default function InnovativeServicesShowcase2029() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
-              Get in touch with our team to discuss how these innovative solutions can drive your business forward.
+              Get in touch with our team to discuss how these revolutionary solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
