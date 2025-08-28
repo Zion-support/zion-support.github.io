@@ -5,31 +5,53 @@ import {
   Check, 
   Star, 
   Zap, 
-  Brain, 
-  Cloud, 
   Shield, 
-  ShoppingCart,
-  Users,
-  Building,
-  Rocket,
-  DollarSign,
-  Clock,
+  Target, 
+  ArrowRight,
+  CheckCircle,
   Globe,
   Lock,
+  Activity,
   BarChart3,
-  MessageCircle,
-  Target,
-  TrendingUp,
-  Code,
-  Server,
+  Settings,
+  Bell,
+  Download,
+  Upload,
+  RefreshCw,
+  Monitor,
   Smartphone,
-  Database,
-  BookOpen,
-  HelpCircle,
-  Mail,
+  Server,
+  Chip,
+  Wifi,
+  Satellite,
+  Radar,
+  Camera,
   Video,
-  GraduationCap,
-  ArrowRight
+  FileText,
+  Calendar,
+  Tag,
+  TrendingUp,
+  PieChart,
+  LineChart,
+  Scatter,
+  Layers,
+  Cube,
+  Box,
+  Package,
+  Truck,
+  Building,
+  Factory,
+  Warehouse,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Database,
+  Cloud,
+  Eye,
+  Brain,
+  Network,
+  Rocket
 } from 'lucide-react';
 
 interface PricingTier {
@@ -159,10 +181,10 @@ const servicePricing = [
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header */}
-      <div className="bg-black/20 backdrop-blur-sm border-b border-zion-cyan/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -172,7 +194,7 @@ export default function Pricing() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
               Pricing & Plans
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Choose the perfect plan for your business needs. All plans include our core features with flexible scaling options.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -191,95 +213,39 @@ export default function Pricing() {
             </div>
           </motion.div>
         </div>
-      </div>
-
-      {/* Pricing Tiers */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Start with what you need and scale as you grow. All plans include our core features.
-          </p>
-        </motion.div>
-
-        <div className="grid gap-8 lg:grid-cols-3 mb-20">
-          {pricingTiers.map((tier, index) => (
-            <motion.div
-              key={tier.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className={`relative ${tier.popular ? 'lg:-mt-4 lg:mb-4' : ''}`}
-            >
-              {tier.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-medium">
-                    Most Popular
-                  </div>
-                </div>
-              )}
-              
-              <div className={`p-8 bg-white/5 backdrop-blur-sm rounded-2xl border ${
-                tier.popular 
-                  ? 'border-zion-cyan/40 ring-2 ring-zion-cyan/20' 
-                  : 'border-zion-cyan/20'
-              } hover:border-zion-cyan/40 transition-all duration-300 h-full`}>
-                <div className={`w-16 h-16 bg-gradient-to-r ${tier.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                  <tier.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                <p className="text-gray-400 mb-6">{tier.description}</p>
-                
-                <div className="mb-8">
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
-                    <span className="text-gray-400 ml-1">{tier.period}</span>
-                  </div>
-                </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {tier.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link
-                  to={tier.ctaLink}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
-                    tier.popular
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan/80 hover:to-zion-purple/80'
-                      : 'bg-white/10 text-white hover:bg-white/20 border border-zion-cyan/20'
-                  }`}
-                >
-                  {tier.cta}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </motion.div>
-          ))}
+      </section>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Transparent Pricing
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Choose the perfect plan for your business needs. All plans include our core AI services 
+              with flexible options to scale as you grow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center space-x-2"
+              >
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-purple-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-purple-400/50 flex items-center space-x-2"
+              >
+                <span>Explore Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
-
-        {/* Service Pricing */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl font-bold text-white mb-4">Individual Service Pricing</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Need just one specific service? Check out our individual service pricing below.
-          </p>
-        </motion.div>
+      </div>
 
         <div className="space-y-12">
           {servicePricing.map((category, categoryIndex) => (
@@ -383,6 +349,173 @@ export default function Pricing() {
           </div>
         </motion.div>
       </div>
+    );
+  }
+                  ))}
+                </ul>
+
+                <Link
+                  to="/contact"
+                  className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transform hover:scale-105'
+                      : 'bg-white/10 hover:bg-white/20 text-white border border-gray-400/30 hover:border-gray-400/50'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Add-ons Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Additional Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Enhance your experience with our premium add-on services and specialized solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {addOns.map((addon, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-gray-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-gray-400/40 transition-all duration-300"
+              >
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">{addon.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-2xl font-bold text-white">{addon.price}</span>
+                    <span className="text-gray-400 ml-1">{addon.period}</span>
+                  </div>
+                  <p className="text-gray-300 text-sm">{addon.description}</p>
+                </div>
+
+                <ul className="space-y-2 mb-6">
+                  {addon.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                      <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/contact"
+                  className="w-full py-2 px-4 bg-white/10 hover:bg-white/20 text-white border border-gray-400/30 hover:border-gray-400/50 rounded-xl font-semibold text-center transition-all duration-300 text-sm"
+                >
+                  Add Service
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-300">
+              Get answers to common questions about our pricing and services.
+            </p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {[
+              {
+                question: "Can I change my plan at any time?",
+                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle."
+              },
+              {
+                question: "Do you offer custom pricing for enterprise clients?",
+                answer: "Absolutely! We work with enterprise clients to create custom pricing plans that meet their specific needs and requirements."
+              },
+              {
+                question: "What payment methods do you accept?",
+                answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients."
+              },
+              {
+                question: "Is there a setup fee?",
+                answer: "No setup fees for our standard plans. Custom enterprise solutions may have one-time setup costs."
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-gray-400/20 rounded-xl p-6 hover:bg-white/10 hover:border-gray-400/40 transition-all duration-300"
+              >
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                <p className="text-gray-300">{faq.answer}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Choose the perfect plan for your business and start transforming your operations with AI-powered solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25 flex items-center space-x-2"
+              >
+                <span>Start Free Trial</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-purple-400/30 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:border-purple-400/50 flex items-center space-x-2"
+              >
+                <span>Contact Sales</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+>>>>>>> cursor/website-audit-and-enhancement-bc66
     </div>
   );
 }
