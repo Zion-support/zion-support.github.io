@@ -32,6 +32,28 @@ export default function Press() {
   const pressReleases = [
     {
       id: 1,
+      title: "Zion Tech Group Launches Revolutionary AI Autonomous Research Assistant",
+      date: "2025-01-20",
+      author: "Press Team",
+      category: "press-releases",
+      excerpt: "Groundbreaking AI system that autonomously discovers, analyzes, and synthesizes information across multiple sources, revolutionizing how businesses conduct research and gather intelligence.",
+      content: "Zion Tech Group today announced the launch of its revolutionary AI Autonomous Research Assistant, a breakthrough artificial intelligence system that autonomously discovers, analyzes, and synthesizes information across multiple sources. This innovative solution represents a paradigm shift in research methodology, enabling organizations to conduct comprehensive research 10x faster while maintaining 95% accuracy rates. The system continuously monitors and updates information, providing real-time insights that drive informed decision-making across industries.",
+      featured: true,
+      tags: ["AI Research", "Autonomous Systems", "Innovation", "Product Launch"]
+    },
+    {
+      id: 2,
+      title: "Zion Tech Group Introduces AI Supply Chain Optimization Platform",
+      date: "2025-01-18",
+      author: "Press Team",
+      category: "press-releases",
+      excerpt: "AI-powered supply chain solution that predicts demand, optimizes inventory, and reduces costs by up to 30% for global enterprises.",
+      content: "Zion Tech Group has launched its AI Supply Chain Optimization Platform, a comprehensive solution that leverages artificial intelligence to transform supply chain operations. The platform provides predictive analytics, real-time visibility, and intelligent routing capabilities that enable organizations to reduce costs by up to 30%, improve delivery times by 40%, and enhance overall supply chain efficiency. This solution addresses critical challenges faced by global enterprises in today's complex supply chain environment.",
+      featured: true,
+      tags: ["Supply Chain", "AI Optimization", "Predictive Analytics", "Product Launch"]
+    },
+    {
+      id: 3,
       title: "Zion Tech Group Announces Breakthrough in Quantum AI Technology",
       date: "2024-01-15",
       author: "Press Team",
@@ -42,7 +64,7 @@ export default function Press() {
       tags: ["Quantum AI", "Technology Breakthrough", "Innovation"]
     },
     {
-      id: 2,
+      id: 6,
       title: "Zion Tech Group Secures $50M Series B Funding Round",
       date: "2024-01-10",
       author: "Press Team",
