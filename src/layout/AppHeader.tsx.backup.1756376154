@@ -33,6 +33,15 @@ export default function AppHeader() {
     { name: '2025 Services', href: '/comprehensive-services-showcase-2025', current: false, featured: true },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
     { name: '2027 Services', href: '/services2027', current: false, featured: true },
+<<<<<<< HEAD
+    { name: '2029 Services', href: '/innovative-services-2029', current: false, featured: true },
+    { name: '2029 Pricing', href: '/comprehensive-pricing-2029', current: false, featured: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Careers', href: '/careers', current: false },
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-6d97
   ];
 
   // Organized services by category with enhanced descriptions
