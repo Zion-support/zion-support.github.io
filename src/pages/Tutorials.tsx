@@ -32,6 +32,26 @@ const Tutorials = () => {
 
   const featuredTutorials = [
     {
+      title: "AI Autonomous Research Assistant Implementation",
+      description: "Learn to implement and configure AI Autonomous Research Assistant systems for enterprise research and intelligence gathering.",
+      category: "Advanced",
+      duration: "75 min",
+      instructor: "Dr. Sarah Chen",
+      rating: 4.9,
+      students: "1.2k",
+      thumbnail: "/images/tutorials/ai-autonomous-research.jpg"
+    },
+    {
+      title: "AI Supply Chain Optimization Setup",
+      description: "Master the implementation of AI-powered supply chain optimization solutions for cost reduction and efficiency improvement.",
+      category: "Expert",
+      duration: "90 min",
+      instructor: "Michael Rodriguez",
+      rating: 4.8,
+      students: "856",
+      thumbnail: "/images/tutorials/ai-supply-chain.jpg"
+    },
+    {
       title: "Building Your First AI Chatbot",
       description: "Learn to create a conversational AI chatbot using our platform. This comprehensive tutorial covers everything from data preparation to deployment.",
       category: "Beginner",

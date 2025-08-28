@@ -29,6 +29,60 @@ const Careers = () => {
   const jobListings = [
     {
       id: 1,
+      title: "AI Research Scientist",
+      department: "AI Research & Development",
+      location: "Remote / San Francisco, CA",
+      type: "Full-time",
+      experience: "7+ years",
+      salary: "$150,000 - $220,000",
+      description: "Lead groundbreaking AI research initiatives, focusing on autonomous AI systems, natural language processing, and advanced machine learning algorithms.",
+      requirements: [
+        "PhD in Computer Science, AI, or related field",
+        "Published research in top AI conferences (NeurIPS, ICML, ACL)",
+        "Experience with autonomous AI systems and NLP",
+        "Strong background in theoretical and applied machine learning"
+      ],
+      benefits: ["Competitive salary", "Health insurance", "Research budget", "Conference attendance", "Publication support"],
+      category: "ai"
+    },
+    {
+      id: 2,
+      title: "AI Supply Chain Optimization Engineer",
+      department: "AI & Machine Learning",
+      location: "Remote / New York, NY",
+      type: "Full-time",
+      experience: "4+ years",
+      salary: "$130,000 - $180,000",
+      description: "Develop AI-powered supply chain optimization solutions that predict demand, optimize inventory, and reduce costs for global enterprises.",
+      requirements: [
+        "Experience with supply chain optimization and logistics",
+        "Strong background in machine learning and predictive analytics",
+        "Knowledge of Python, TensorFlow, and optimization libraries",
+        "Experience with real-time data processing and IoT integration"
+      ],
+      benefits: ["Competitive salary", "Health insurance", "Remote work", "Supply chain certifications", "Global travel opportunities"],
+      category: "ai"
+    },
+    {
+      id: 3,
+      title: "AI Content Marketing Specialist",
+      department: "AI & Marketing",
+      location: "Remote / Los Angeles, CA",
+      type: "Full-time",
+      experience: "3+ years",
+      salary: "$90,000 - $140,000",
+      description: "Create and optimize AI-powered content marketing solutions that drive engagement and ROI for enterprise clients.",
+      requirements: [
+        "Experience with AI content generation and optimization",
+        "Strong background in digital marketing and content strategy",
+        "Knowledge of NLP and content analytics",
+        "Experience with marketing automation platforms"
+      ],
+      benefits: ["Competitive salary", "Health insurance", "Remote work", "Marketing tools", "Creative freedom"],
+      category: "ai"
+    },
+    {
+      id: 4,
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",
       location: "Remote / San Francisco, CA",
@@ -46,7 +100,7 @@ const Careers = () => {
       category: "ai"
     },
     {
-      id: 2,
+      id: 5,
       title: "Cybersecurity Specialist",
       department: "Security",
       location: "New York, NY",

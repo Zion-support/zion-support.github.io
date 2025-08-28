@@ -31,6 +31,48 @@ export default function Search() {
     {
       id: 1,
       type: 'service',
+      title: 'AI Autonomous Research Assistant',
+      description: 'Revolutionary AI that discovers, analyzes, and synthesizes information across multiple sources autonomously',
+      category: 'AI Services',
+      rating: 4.9,
+      reviews: 89,
+      price: '$299/month',
+      location: 'Remote',
+      company: 'Zion Tech Group',
+      tags: ['AI Research', 'Autonomous AI', 'Knowledge Discovery', 'Research Automation'],
+      featured: true
+    },
+    {
+      id: 2,
+      type: 'service',
+      title: 'AI Supply Chain Optimization',
+      description: 'AI-powered supply chain optimization that predicts demand, optimizes inventory, and reduces costs',
+      category: 'AI Services',
+      rating: 4.8,
+      reviews: 156,
+      price: '$799/month',
+      location: 'Remote',
+      company: 'Zion Tech Group',
+      tags: ['AI Supply Chain', 'Optimization', 'Demand Forecasting', 'Cost Reduction'],
+      featured: true
+    },
+    {
+      id: 3,
+      type: 'service',
+      title: 'AI Content Marketing Suite',
+      description: 'AI-powered content creation, optimization, and distribution for maximum engagement and ROI',
+      category: 'AI Services',
+      rating: 4.9,
+      reviews: 203,
+      price: '$599/month',
+      location: 'Remote',
+      company: 'Zion Tech Group',
+      tags: ['AI Content', 'Content Marketing', 'Automation', 'ROI Optimization'],
+      featured: true
+    },
+    {
+      id: 4,
+      type: 'service',
       title: 'AI-Powered Business Intelligence Platform',
       description: 'Advanced analytics platform with machine learning capabilities for business insights',
       category: 'AI Services',
@@ -40,10 +82,10 @@ export default function Search() {
       location: 'Remote',
       company: 'Zion Tech Group',
       tags: ['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
-      featured: true
+      featured: false
     },
     {
-      id: 2,
+      id: 5,
       type: 'talent',
       title: 'Senior AI Engineer',
       description: 'Experienced AI engineer specializing in machine learning and neural networks',

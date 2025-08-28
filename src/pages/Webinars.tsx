@@ -29,6 +29,40 @@ export default function Webinars() {
   const webinars = [
     {
       id: 1,
+      title: 'AI Autonomous Research Assistant: Revolutionizing Business Intelligence',
+      description: 'Discover how our revolutionary AI Autonomous Research Assistant is transforming how businesses gather, analyze, and synthesize information across multiple sources.',
+      category: 'ai-ml',
+      type: 'upcoming',
+      date: '2025-02-10T14:00:00Z',
+      duration: '75 min',
+      speakers: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez', 'AI Research Team'],
+      maxAttendees: 600,
+      currentAttendees: 487,
+      featured: true,
+      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Innovation'],
+      thumbnail: '/images/webinars/ai-autonomous-research-2025.jpg',
+      registrationRequired: true,
+      recordingAvailable: false
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization: Reducing Costs by Up to 30%',
+      description: 'Learn how AI-powered supply chain optimization can predict demand, optimize inventory, and reduce costs significantly for your organization.',
+      category: 'ai-ml',
+      type: 'upcoming',
+      date: '2025-02-12T15:00:00Z',
+      duration: '60 min',
+      speakers: ['Michael Rodriguez', 'Supply Chain Experts', 'AI Implementation Team'],
+      maxAttendees: 400,
+      currentAttendees: 298,
+      featured: true,
+      tags: ['Supply Chain', 'AI Optimization', 'Cost Reduction', 'Predictive Analytics'],
+      thumbnail: '/images/webinars/ai-supply-chain-2025.jpg',
+      registrationRequired: true,
+      recordingAvailable: false
+    },
+    {
+      id: 3,
       title: 'AI-Powered Business Transformation: Real-World Success Stories',
       description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
       category: 'ai-ml',
@@ -45,7 +79,7 @@ export default function Webinars() {
       recordingAvailable: false
     },
     {
-      id: 2,
+      id: 5,
       title: 'Zero-Trust Security: Implementation Strategies for 2025',
       description: 'Learn practical strategies for implementing zero-trust security architecture in your organization.',
       category: 'security',

@@ -322,6 +322,121 @@ const FeaturesSection = React.memo(() => {
   );
 });
 
+// Optimized innovative AI services showcase component
+const InnovativeAIServicesSection = React.memo(() => {
+  const aiServices = [
+    {
+      icon: Brain,
+      title: "AI Autonomous Research Assistant",
+      description: "AI-powered autonomous research that discovers, analyzes, and synthesizes information across multiple sources.",
+      color: "from-blue-500 to-purple-500",
+      href: "/services/ai-autonomous-research-assistant",
+      features: ["Autonomous Research", "Multi-Source Analysis", "Intelligent Summarization", "Real-time Updates"]
+    },
+    {
+      icon: Network,
+      title: "AI Supply Chain Optimization",
+      description: "Transform your supply chain with AI that predicts demand, optimizes inventory, and reduces costs.",
+      color: "from-green-500 to-blue-500",
+      href: "/services/ai-supply-chain-optimization",
+      features: ["AI-Powered Forecasting", "Real-time Visibility", "Intelligent Routing", "Risk Management"]
+    },
+    {
+      icon: FileText,
+      title: "AI Content Marketing Suite",
+      description: "AI-powered content creation, optimization, and distribution for maximum engagement.",
+      color: "from-purple-500 to-pink-500",
+      href: "/services/ai-content-marketing-suite",
+      features: ["AI Content Generation", "Audience Intelligence", "SEO Optimization", "Performance Analytics"]
+    },
+    {
+      icon: GitFork,
+      title: "AI Workflow Orchestrator",
+      description: "Intelligent workflow automation that learns from your processes and optimizes them continuously.",
+      color: "from-indigo-500 to-purple-500",
+      href: "/services/ai-workflow-orchestrator",
+      features: ["Process Learning", "Automated Optimization", "Integration Hub", "Performance Analytics"]
+    },
+    {
+      icon: BarChart3,
+      title: "AI Customer Experience Analytics",
+      description: "Deep insights into customer behavior with predictive analytics and personalized recommendations.",
+      color: "from-teal-500 to-cyan-500",
+      href: "/services/ai-customer-experience-analytics",
+      features: ["Behavioral Analysis", "Predictive Insights", "Personalization Engine", "ROI Tracking"]
+    },
+    {
+      icon: Shield,
+      title: "AI Financial Risk Management",
+      description: "Intelligent financial risk assessment with AI-driven predictive analytics.",
+      color: "from-red-500 to-orange-500",
+      href: "/services/ai-financial-risk-management",
+      features: ["Risk Assessment", "Predictive Analytics", "Compliance Monitoring", "Real-time Alerts"]
+    }
+  ];
+
+  return (
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900/50 via-blue-900/30 to-indigo-900/50" aria-labelledby="ai-services-heading">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 id="ai-services-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Innovative AI-Powered Services
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Cutting-edge AI solutions that transform business operations with intelligent automation, predictive analytics, and autonomous decision-making.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {aiServices.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+            >
+              <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <service.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              
+              <div className="mb-4">
+                <h4 className="font-semibold text-white mb-2 text-sm">Key Capabilities:</h4>
+                <ul className="space-y-1">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300 text-xs">
+                      <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <Link
+                to={service.href}
+                className="inline-flex items-center text-cyan-300 hover:text-cyan-200 font-semibold text-sm group-hover:translate-x-1 transition-transform duration-200"
+              >
+                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+});
+
 // Optimized CTA section component
 const CTASection = React.memo(() => {
   return (
@@ -372,6 +487,7 @@ const Home: React.FC = () => {
       
       <HeroSection />
       <FeaturesSection />
+      <InnovativeAIServicesSection />
       <CTASection />
     </>
   );

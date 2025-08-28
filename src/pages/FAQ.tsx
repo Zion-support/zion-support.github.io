@@ -124,6 +124,27 @@ export default function FAQ() {
           answer: "Yes, we maintain compliance with various industry regulations including SOC2, GDPR, HIPAA, and others. We can help you achieve and maintain compliance for your specific industry requirements."
         }
       ]
+    },
+    {
+      category: "AI Services",
+      questions: [
+        {
+          question: "What is AI Autonomous Research Assistant?",
+          answer: "Our AI Autonomous Research Assistant is a revolutionary tool that automatically discovers, analyzes, and synthesizes information across multiple sources. It can handle complex research tasks, provide real-time updates, and deliver comprehensive insights without human intervention."
+        },
+        {
+          question: "How does AI Supply Chain Optimization work?",
+          answer: "Our AI Supply Chain Optimization uses advanced machine learning algorithms to predict demand, optimize inventory levels, identify bottlenecks, and suggest cost-saving opportunities. It provides real-time visibility and actionable recommendations for supply chain improvement."
+        },
+        {
+          question: "What can AI Content Marketing Suite do for my business?",
+          answer: "The AI Content Marketing Suite creates, optimizes, and distributes content automatically. It analyzes audience behavior, generates personalized content, optimizes for SEO, and provides performance analytics to maximize engagement and ROI."
+        },
+        {
+          question: "How accurate are your AI predictions?",
+          answer: "Our AI models achieve 95%+ accuracy rates through continuous learning and validation. We use multiple data sources, advanced algorithms, and regular model updates to ensure the highest prediction accuracy for business decisions."
+        }
+      ]
     }
   ];
 

@@ -22,6 +22,24 @@ const Contact: React.FC = () => {
     message: '',
     service: 'general'
   });
+
+  const serviceOptions = [
+    { value: 'general', label: 'General Inquiry' },
+    { value: 'ai-autonomous-research', label: 'AI Autonomous Research Assistant' },
+    { value: 'ai-supply-chain', label: 'AI Supply Chain Optimization' },
+    { value: 'ai-content-marketing', label: 'AI Content Marketing Suite' },
+    { value: 'ai-workflow-orchestrator', label: 'AI Workflow Orchestrator' },
+    { value: 'ai-customer-experience', label: 'AI Customer Experience Analytics' },
+    { value: 'ai-financial-risk', label: 'AI Financial Risk Management' },
+    { value: 'ai-cybersecurity', label: 'AI Cybersecurity Solutions' },
+    { value: 'cloud-devops', label: 'Cloud & DevOps Services' },
+    { value: 'digital-transformation', label: 'Digital Transformation' },
+    { value: 'micro-saas', label: 'Micro SaaS Solutions' },
+    { value: 'it-consulting', label: 'IT Consulting' },
+    { value: 'quantum-computing', label: 'Quantum Computing' },
+    { value: 'iot-edge', label: 'IoT & Edge Computing' },
+    { value: 'custom-development', label: 'Custom Development' }
+  ];
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -294,14 +312,11 @@ const Contact: React.FC = () => {
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                 >
-                  <option value="general">General Inquiry</option>
-                  <option value="ai-services">AI Services</option>
-                  <option value="cloud-devops">Cloud & DevOps</option>
-                  <option value="cybersecurity">Cybersecurity</option>
-                  <option value="digital-transformation">Digital Transformation</option>
-                  <option value="micro-saas">Micro-SaaS Solutions</option>
-                  <option value="consulting">IT Consulting</option>
-                  <option value="other">Other</option>
+                  {serviceOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
                 </select>
               </div>
 
