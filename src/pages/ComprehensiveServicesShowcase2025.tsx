@@ -269,6 +269,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 </div>
               </motion.div>
             ))}
+          </div>
         </div>
       </section>
 
