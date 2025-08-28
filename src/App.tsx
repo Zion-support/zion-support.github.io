@@ -361,7 +361,7 @@ function App() {
                     <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
                     <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
-                    <Route path="/services/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+                    <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
                     <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
                     <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
                     <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
