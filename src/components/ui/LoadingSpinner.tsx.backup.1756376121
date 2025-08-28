@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white' | 'custom';
+  customColor?: string;
+  text?: string;
+  showText?: boolean;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'primary',
+  customColor,
+  text = 'Loading...',
+  showText = false,
+  className = ''
+}) => {
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -49,6 +71,7 @@ export default function LoadingSpinner({
   const [isPaused, setIsPaused] = useState(false);
 
   // Size classes
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ccbe
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -58,6 +81,35 @@ export default function LoadingSpinner({
 
   // Color classes
   const colorClasses = {
+<<<<<<< HEAD
+    primary: 'border-cyan-500 border-t-transparent',
+    secondary: 'border-blue-500 border-t-transparent',
+    white: 'border-white border-t-transparent',
+    custom: customColor ? `border-${customColor} border-t-transparent` : 'border-cyan-500 border-t-transparent'
+  };
+
+  const textSizeClasses = {
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg',
+    xl: 'text-xl'
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <motion.div
+        className={`${sizeClasses[size]} border-2 rounded-full animate-spin ${colorClasses[color]}`}
+        animate={{ rotate: 360 }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+        role="status"
+        aria-label="Loading"
+      />
+      {showText && (
+=======
     primary: 'text-blue-500',
     secondary: 'text-gray-500',
     success: 'text-green-500',
@@ -399,6 +451,7 @@ export function PageLoaderOverlay({
     >
       <div className="text-center">
         {showSpinner && <LoadingSpinner size="xl" color="primary" />}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ccbe
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

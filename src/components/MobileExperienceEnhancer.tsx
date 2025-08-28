@@ -1,882 +1,549 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Smartphone, 
   Tablet, 
   Monitor, 
-  MousePointer, 
+  Wifi, 
+  Battery, 
   Hand, 
-  ArrowUpDown, 
+  RotateCcw, 
   ZoomIn, 
-  RotateCw,
+  ZoomOut,
+  Settings,
   X,
   Settings,
   CheckCircle,
   AlertTriangle,
-  Info,
-  Wifi,
-  Battery,
-  Signal
+  Info
 } from 'lucide-react';
 
-interface MobileSettings {
-  touchOptimization: boolean;
+interface MobileOptimizations {
+  touchOptimized: boolean;
   gestureSupport: boolean;
-  hapticFeedback: boolean;
-  mobileNavigation: boolean;
   responsiveImages: boolean;
-  touchTargets: boolean;
-  mobilePerformance: boolean;
+  mobileNavigation: boolean;
+  performanceMode: boolean;
+  offlineSupport: boolean;
+  pushNotifications: boolean;
 }
 
 interface MobileExperienceEnhancerProps {
-  enabled?: boolean;
-  className?: string;
+  enabled: boolean;
 }
 
-export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ({
-  enabled = true,
-  className = ''
-}) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+export function MobileExperienceEnhancer({ enabled }: MobileExperienceEnhancerProps) {
+  const [isOpen, setIsOpen] = useState(false);
   const [deviceType, setDeviceType] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
-  const [orientation, setOrientation] = useState<'portrait' | 'landscape'>('portrait');
-  const [settings, setSettings] = useState<MobileSettings>({
-    touchOptimization: true,
-    gestureSupport: true,
-    hapticFeedback: false,
-    mobileNavigation: true,
-    responsiveImages: true,
-    touchTargets: true,
-    mobilePerformance: true
-  });
-  const [gestureHistory, setGestureHistory] = useState<string[]>([]);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [touchGestures, setTouchGestures] = useState<TouchGesture[]>([]);
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [mobileScore, setMobileScore] = useState(0);
-  const [activeGestures, setActiveGestures] = useState<string[]>([]);
-
-  const [touchEvents, setTouchEvents] = useState<Array<{ type: string; timestamp: number }>>([]);
-  const [performanceMetrics, setPerformanceMetrics] = useState({
-    fps: 0,
-    memory: 0,
-    battery: 0,
-    network: 'unknown'
+  const [optimizations, setOptimizations] = useState<MobileOptimizations>({
+    touchOptimized: false,
+    gestureSupport: false,
+    responsiveImages: false,
+    mobileNavigation: false,
+    performanceMode: false,
+    offlineSupport: false,
+    pushNotifications: false
   });
 
-  // Detect device type and orientation
-  useEffect(() => {
-    const detectDevice = () => {
-      const userAgent = navigator.userAgent;
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-      const isTablet = /iPad|Android(?=.*\bMobile)/i.test(userAgent);
-      
-      if (isMobile && isTablet) {
-        setDeviceType('tablet');
-      } else if (isMobile) {
-        setDeviceType('mobile');
-      } else {
-        setDeviceType('desktop');
-      }
+  const [deviceInfo, setDeviceInfo] = useState({
+    userAgent: '',
+    screenSize: '',
+    touchSupport: false,
+    batteryLevel: 0,
+    connectionType: '',
+    memoryInfo: null as any
+  });
+
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
+  const gestureAreaRef = useRef<HTMLDivElement>(null);
+
+  // Detect device type and capabilities
+  const detectDeviceCapabilities = useCallback(() => {
+    const userAgent = navigator.userAgent;
+    const screenWidth = window.screen.width;
+    const screenHeight = window.screen.height;
+    
+    // Determine device type
+    let detectedType: 'mobile' | 'tablet' | 'desktop' = 'desktop';
+    if (screenWidth <= 768) {
+      detectedType = 'mobile';
+    } else if (screenWidth <= 1024) {
+      detectedType = 'tablet';
+    }
+    
+    setDeviceType(detectedType);
+
+    // Check touch support
+    const touchSupport = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    // Get battery information
+    let batteryLevel = 0;
+    if ('getBattery' in navigator) {
+      (navigator as any).getBattery().then((battery: any) => {
+        batteryLevel = Math.round(battery.level * 100);
+        setDeviceInfo(prev => ({ ...prev, batteryLevel }));
+      });
+    }
+
+    // Get connection information
+    let connectionType = 'unknown';
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      connectionType = connection.effectiveType || connection.type || 'unknown';
+    }
+
+    // Get memory information
+    let memoryInfo = null;
+    if ('memory' in performance) {
+      memoryInfo = (performance as any).memory;
+    }
+
+    setDeviceInfo({
+      userAgent: userAgent.substring(0, 100) + '...',
+      screenSize: `${screenWidth}x${screenHeight}`,
+      touchSupport,
+      batteryLevel,
+      connectionType,
+      memoryInfo
+    });
+  }, []);
+
+  // Apply mobile optimizations
+  const applyMobileOptimizations = useCallback((newOptimizations: MobileOptimizations) => {
+    const root = document.documentElement;
+    const body = document.body;
+
+    // Touch optimization
+    if (newOptimizations.touchOptimized) {
+      root.classList.add('touch-optimized');
+      body.style.setProperty('--touch-target-size', '44px');
+      body.style.setProperty('--touch-spacing', '8px');
+    } else {
+      root.classList.remove('touch-optimized');
+      body.style.removeProperty('--touch-target-size');
+      body.style.removeProperty('--touch-spacing');
+    }
+
+    // Performance mode
+    if (newOptimizations.performanceMode) {
+      root.classList.add('performance-mode');
+      body.style.setProperty('--animation-duration', '0.2s');
+      body.style.setProperty('--transition-duration', '0.2s');
+    } else {
+      root.classList.remove('performance-mode');
+      body.style.removeProperty('--animation-duration');
+      body.style.removeProperty('--transition-duration');
+    }
+
+    // Save optimizations
+    localStorage.setItem('mobile-optimizations', JSON.stringify(newOptimizations));
+  }, []);
+
+  // Setup touch gestures
+  const setupTouchGestures = useCallback(() => {
+    if (!optimizations.gestureSupport || !gestureAreaRef.current) return;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      const touch = e.touches[0];
+      touchStartRef.current = {
+        x: touch.clientX,
+        y: touch.clientY,
+        time: Date.now()
+      };
     };
 
-    const detectOrientation = () => {
-      if (window.innerHeight > window.innerWidth) {
-        setOrientation('portrait');
-      } else {
-        setOrientation('landscape');
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (!touchStartRef.current) return;
+
+      const touch = e.changedTouches[0];
+      const deltaX = touch.clientX - touchStartRef.current.x;
+      const deltaY = touch.clientY - touchStartRef.current.y;
+      const deltaTime = Date.now() - touchStartRef.current.time;
+
+      // Swipe detection
+      if (deltaTime < 300) {
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+          if (deltaX > 50) {
+            // Swipe right - go back
+            if (window.history.length > 1) {
+              window.history.back();
+            }
+          } else if (deltaX < -50) {
+            // Swipe left - go forward
+            window.history.forward();
+          }
+        } else {
+          if (deltaY > 50) {
+            // Swipe down - refresh
+            window.location.reload();
+          }
+        }
       }
+
+      touchStartRef.current = null;
     };
 
-    detectDevice();
-    detectOrientation();
-
-    window.addEventListener('resize', detectOrientation);
-    window.addEventListener('orientationchange', detectOrientation);
+    const gestureArea = gestureAreaRef.current;
+    gestureArea.addEventListener('touchstart', handleTouchStart);
+    gestureArea.addEventListener('touchend', handleTouchEnd);
 
     return () => {
-      window.removeEventListener('resize', detectOrientation);
-      window.removeEventListener('orientationchange', detectOrientation);
+      gestureArea.removeEventListener('touchstart', handleTouchStart);
+      gestureArea.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [optimizations.gestureSupport]);
+
+  // Setup responsive images
+  const setupResponsiveImages = useCallback(() => {
+    if (!optimizations.responsiveImages) return;
+
+    const images = document.querySelectorAll('img[data-srcset]');
+    images.forEach(img => {
+      const imgElement = img as HTMLImageElement;
+      if (imgElement.dataset.srcset) {
+        imgElement.srcset = imgElement.dataset.srcset;
+      }
+    });
+  }, [optimizations.responsiveImages]);
+
+  // Setup mobile navigation
+  const setupMobileNavigation = useCallback(() => {
+    if (!optimizations.mobileNavigation) return;
+
+    // Add mobile-specific navigation enhancements
+    const nav = document.querySelector('nav, [role="navigation"]');
+    if (nav) {
+      nav.classList.add('mobile-optimized');
+    }
+
+    // Add mobile menu toggle functionality
+    const menuToggle = document.querySelector('[data-mobile-menu-toggle]');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        const mobileMenu = document.querySelector('[data-mobile-menu]');
+        if (mobileMenu) {
+          mobileMenu.classList.toggle('open');
+        }
+      });
+    }
+  }, [optimizations.mobileNavigation]);
+
+  // Setup offline support
+  const setupOfflineSupport = useCallback(() => {
+    if (!optimizations.offlineSupport) return;
+
+    // Register service worker for offline functionality
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(error => {
+        console.log('ServiceWorker registration failed:', error);
+      });
+    }
+
+    // Add offline/online event listeners
+    const handleOnline = () => {
+      document.body.classList.remove('offline');
+      // Show online notification
+      if (window.showNotification) {
+        window.showNotification('Back online!', 'success');
+      }
+    };
+
+    const handleOffline = () => {
+      document.body.classList.add('offline');
+      // Show offline notification
+      if (window.showNotification) {
+        window.showNotification('You are offline', 'warning');
+      }
+    };
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, [optimizations.offlineSupport]);
+
+  // Setup push notifications
+  const setupPushNotifications = useCallback(() => {
+    if (!optimizations.pushNotifications) return;
+
+    // Request notification permission
+    if ('Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission().then(permission => {
+        if (permission === 'granted') {
+          console.log('Notification permission granted');
+        }
+      });
+    }
+  }, [optimizations.pushNotifications]);
+
+  // Load saved optimizations
+  useEffect(() => {
+    const savedOptimizations = localStorage.getItem('mobile-optimizations');
+    if (savedOptimizations) {
+      try {
+        const parsed = JSON.parse(savedOptimizations);
+        setOptimizations(parsed);
+        applyMobileOptimizations(parsed);
+      } catch (error) {
+        console.warn('Failed to parse saved mobile optimizations');
+      }
+    }
+  }, [applyMobileOptimizations]);
+
+  // Apply optimizations when they change
+  useEffect(() => {
+    applyMobileOptimizations(optimizations);
+  }, [optimizations, applyMobileOptimizations]);
+
+  // Setup device detection and optimizations
+  useEffect(() => {
+    detectDeviceCapabilities();
+    
+    const cleanupGestures = setupTouchGestures();
+    const cleanupOffline = setupOfflineSupport();
+    
+    setupResponsiveImages();
+    setupMobileNavigation();
+    setupPushNotifications();
+
+    return () => {
+      cleanupGestures?.();
+      cleanupOffline?.();
+    };
+  }, [
+    detectDeviceCapabilities,
+    setupTouchGestures,
+    setupOfflineSupport,
+    setupResponsiveImages,
+    setupMobileNavigation,
+    setupPushNotifications
+  ]);
+
+  // Add CSS for mobile optimizations
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      :root {
+        --touch-target-size: 44px;
+        --touch-spacing: 8px;
+      }
+      
+      .touch-optimized button,
+      .touch-optimized a,
+      .touch-optimized [role="button"] {
+        min-height: var(--touch-target-size);
+        min-width: var(--touch-target-size);
+        padding: var(--touch-spacing);
+      }
+      
+      .touch-optimized input,
+      .touch-optimized select,
+      .touch-optimized textarea {
+        min-height: var(--touch-target-size);
+        font-size: 16px; /* Prevents zoom on iOS */
+      }
+      
+      .performance-mode * {
+        animation-duration: 0.2s !important;
+        transition-duration: 0.2s !important;
+      }
+      
+      .mobile-optimized {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+      
+      .offline {
+        opacity: 0.7;
+      }
+      
+      .offline::before {
+        content: "Offline";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #f59e0b;
+        color: white;
+        text-align: center;
+        padding: 8px;
+        z-index: 9999;
+      }
+      
+      @media (max-width: 768px) {
+        .mobile-hidden {
+          display: none !important;
+        }
+        
+        .mobile-visible {
+          display: block !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    return () => {
+      document.head.removeChild(style);
     };
   }, []);
 
-  // Touch event handling
-  useEffect(() => {
-    if (!settings.touchOptimization) return;
-
-    const handleTouchStart = (event: TouchEvent) => {
-      setTouchEvents(prev => [...prev, { type: 'touchstart', timestamp: Date.now() }].slice(-10));
-      
-      // Add touch feedback
-      if (settings.hapticFeedback && 'vibrate' in navigator) {
-        navigator.vibrate(10);
-      }
-    };
-
-    const handleTouchMove = (event: TouchEvent) => {
-      setTouchEvents(prev => [...prev, { type: 'touchmove', timestamp: Date.now() }].slice(-10));
-    };
-
-    const handleTouchEnd = (event: TouchEvent) => {
-      setTouchEvents(prev => [...prev, { type: 'touchend', timestamp: Date.now() }].slice(-10));
-    };
-
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
-    document.addEventListener('touchmove', handleTouchMove, { passive: true });
-    document.addEventListener('touchend', handleTouchEnd, { passive: true });
-
-    return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleTouchEnd);
-    };
-  }, [settings.touchOptimization, settings.hapticFeedback]);
-
-  // Gesture support
-  useEffect(() => {
-    if (!settings.gestureSupport) return;
-
-    let startX = 0;
-    let startY = 0;
-    let startDistance = 0;
-    let startAngle = 0;
-
-    const handleTouchStart = (event: TouchEvent) => {
-      if (event.touches.length === 1) {
-        startX = event.touches[0].clientX;
-        startY = event.touches[0].clientY;
-      } else if (event.touches.length === 2) {
-        startDistance = Math.hypot(
-          event.touches[0].clientX - event.touches[1].clientX,
-          event.touches[0].clientY - event.touches[1].clientY
-        );
-        startAngle = Math.atan2(
-          event.touches[1].clientY - event.touches[0].clientY,
-          event.touches[1].clientX - event.touches[0].clientX
-        );
-      }
-    };
-
-    const handleTouchMove = (event: TouchEvent) => {
-      if (event.touches.length === 1) {
-        const deltaX = event.touches[0].clientX - startX;
-        const deltaY = event.touches[0].clientY - startY;
-        
-        // Swipe detection
-        if (Math.abs(deltaX) > 50 || Math.abs(deltaY) > 50) {
-          const direction = Math.abs(deltaX) > Math.abs(deltaY) 
-            ? (deltaX > 0 ? 'right' : 'left')
-            : (deltaY > 0 ? 'down' : 'up');
-          
-          // Handle swipe gestures
-          handleSwipe(direction, event);
-        }
-      } else if (event.touches.length === 2) {
-        const currentDistance = Math.hypot(
-          event.touches[0].clientX - event.touches[1].clientX,
-          event.touches[0].clientY - event.touches[1].clientY
-        );
-        const currentAngle = Math.atan2(
-          event.touches[1].clientY - event.touches[0].clientY,
-          event.touches[1].clientX - event.touches[0].clientX
-        );
-        
-        const scale = currentDistance / startDistance;
-        const rotation = currentAngle - startAngle;
-        
-        // Handle pinch and rotate gestures
-        handlePinchRotate(scale, rotation, event);
-      }
-    };
-
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
-    document.addEventListener('touchmove', handleTouchMove, { passive: true });
-
-    return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, [settings.gestureSupport]);
-
-  // Performance monitoring
-  useEffect(() => {
-    if (!settings.mobilePerformance) return;
-
-    let frameCount = 0;
-    let lastTime = performance.now();
-
-    const measurePerformance = () => {
-      frameCount++;
-      const currentTime = performance.now();
-      
-      if (currentTime - lastTime >= 1000) {
-        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        setPerformanceMetrics(prev => ({ ...prev, fps }));
-        frameCount = 0;
-        lastTime = currentTime;
-      }
-
-      // Memory usage
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        setPerformanceMetrics(prev => ({ 
-          ...prev, 
-          memory: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
-        }));
-      }
-
-      // Battery status
-      if ('getBattery' in navigator) {
-        (navigator as any).getBattery().then((battery: any) => {
-          setPerformanceMetrics(prev => ({ 
-            ...prev, 
-            battery: Math.round(battery.level * 100) 
-          }));
-        });
-      }
-
-      // Network status
-      if ('connection' in navigator) {
-        const connection = (navigator as any).connection;
-        setPerformanceMetrics(prev => ({ 
-          ...prev, 
-          network: connection.effectiveType || 'unknown' 
-        }));
-      }
-
-      requestAnimationFrame(measurePerformance);
-    };
-
-    requestAnimationFrame(measurePerformance);
-  }, [settings.mobilePerformance]);
-
-  // Touch target optimization
-  useEffect(() => {
-    if (!settings.touchTargets) return;
-
-    const optimizeTouchTargets = () => {
-      const touchTargets = document.querySelectorAll('button, a, input, select, textarea, [role="button"], [role="link"]');
-      
-      touchTargets.forEach((target) => {
-        const element = target as HTMLElement;
-        const rect = element.getBoundingClientRect();
-        
-        // Ensure minimum touch target size (44x44px for iOS, 48x48px for Android)
-        const minSize = deviceType === 'mobile' ? 48 : 44;
-        
-        if (rect.width < minSize || rect.height < minSize) {
-          element.style.minWidth = `${minSize}px`;
-          element.style.minHeight = `${minSize}px`;
-          element.style.padding = '12px';
-        }
-      });
-    };
-
-    optimizeTouchTargets();
-    
-    // Re-optimize on resize
-    const resizeObserver = new ResizeObserver(optimizeTouchTargets);
-    resizeObserver.observe(document.body);
-    
-    return () => resizeObserver.disconnect();
-  }, [settings.touchTargets, deviceType]);
-
-  // Responsive images
-  useEffect(() => {
-    if (!settings.responsiveImages) return;
-
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      
-      images.forEach((img) => {
-        const element = img as HTMLImageElement;
-        
-        // Add loading="lazy" for better performance
-        if (!element.loading) {
-          element.loading = 'lazy';
-        }
-        
-        // Add srcset for responsive images
-        if (!element.srcset && element.src) {
-          const src = element.src;
-          const baseName = src.substring(0, src.lastIndexOf('.'));
-          const extension = src.substring(src.lastIndexOf('.'));
-          
-          element.srcset = `
-            ${baseName}-320w${extension} 320w,
-            ${baseName}-480w${extension} 480w,
-            ${baseName}-768w${extension} 768w,
-            ${baseName}-1024w${extension} 1024w,
-            ${baseName}-1440w${extension} 1440w
-          `.trim();
-          
-          element.sizes = `
-            (max-width: 320px) 320px,
-            (max-width: 480px) 480px,
-            (max-width: 768px) 768px,
-            (max-width: 1024px) 1024px,
-            (max-width: 1440px) 1440px,
-            100vw
-          `.trim();
-        }
-      });
-    };
-
-    optimizeImages();
-    
-    // Re-optimize when new images are added
-    const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
-    
-    return () => observer.disconnect();
-  }, [settings.responsiveImages]);
-
-  const handleSwipe = (direction: string, event: TouchEvent) => {
-    // Custom swipe handling logic
-    console.log(`Swipe ${direction} detected`);
-    
-    // Example: Navigate between pages on swipe
-    if (direction === 'left' && window.location.pathname !== '/') {
-      window.history.forward();
-    } else if (direction === 'right' && window.location.pathname !== '/') {
-      window.history.back();
-    }
-  };
-
-  const handlePinchRotate = (scale: number, rotation: number, event: TouchEvent) => {
-    // Custom pinch and rotate handling logic
-    console.log(`Pinch scale: ${scale.toFixed(2)}, rotation: ${(rotation * 180 / Math.PI).toFixed(1)}°`);
-  };
-
-  const toggleSetting = useCallback((key: keyof MobileSettings) => {
-    setSettings(prev => ({ ...prev, [key]: !prev[key] }));
-    localStorage.setItem('zion-mobile-settings', JSON.stringify(settings));
-  }, [settings]);
-
-  if (!enabled || deviceType === 'desktop') return null;
-
-  const getPerformanceColor = (score: number) => {
-    if (score >= 80) return 'text-green-500';
-    if (score >= 60) return 'text-yellow-500';
-    return 'text-red-500';
-  };
-
-  const getDeviceIcon = (deviceType: string) => {
-    switch (deviceType) {
-      case 'mobile': return <Smartphone className="w-6 h-6" />;
-      case 'tablet': return <Tablet className="w-6 h-6" />;
-      case 'desktop': return <Monitor className="w-6 h-6" />;
-      default: return <Monitor className="w-6 h-6" />;
-    }
-  };
+  if (!enabled) return null;
 
   return (
     <>
       {/* Mobile Experience Toggle Button */}
       <motion.button
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed bottom-4 right-4 z-50 p-3 bg-gradient-to-r from-green-500 to-blue-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-white"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => setIsVisible(!isVisible)}
-        className={`fixed bottom-4 left-20 z-50 p-3 bg-purple-500 hover:bg-purple-600 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 ${className}`}
-        aria-label="Mobile experience settings"
-        aria-expanded={isVisible}
+        aria-label="Mobile Experience Settings"
+        aria-expanded={isOpen}
+        aria-controls="mobile-experience-panel"
       >
         <Smartphone className="w-6 h-6" />
       </motion.button>
+
+      {/* Gesture Area for Touch Gestures */}
+      <div
+        ref={gestureAreaRef}
+        className="fixed inset-0 pointer-events-none z-30"
+        aria-hidden="true"
+      />
 
       {/* Mobile Experience Panel */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            className="fixed bottom-20 left-4 z-50 w-80 bg-slate-900/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl overflow-hidden"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 100 }}
+            className="fixed bottom-20 right-4 z-50 w-80 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6"
+            id="mobile-experience-panel"
+            role="dialog"
+            aria-labelledby="mobile-experience-title"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
-              <div className="flex items-center space-x-2">
-                <Smartphone className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-semibold">Mobile Experience</span>
+            <div className="flex items-center justify-between mb-4">
+              <h2 id="mobile-experience-title" className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+                <Smartphone className="w-5 h-5 text-green-500" />
+                Mobile Experience
+              </h2>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-gray-400 hover:text-gray-600 transition-colors"
+                aria-label="Close mobile experience settings"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Device Information */}
+            <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+              <div className="flex items-center gap-2 mb-2">
+                {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-blue-500" />}
+                {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-purple-500" />}
+                {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-gray-500" />}
+                <span className="text-sm font-medium text-gray-700 capitalize">{deviceType}</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  className="p-1 text-slate-400 hover:text-white transition-colors"
-                  aria-label={isExpanded ? 'Collapse settings' : 'Expand settings'}
-                >
-                  <Settings className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setIsVisible(false)}
-                  className="p-1 text-slate-400 hover:text-white transition-colors"
-                  aria-label="Close mobile experience panel"
-                >
-                  <X className="w-4 h-4" />
-                </button>
+              <div className="text-xs text-gray-600 space-y-1">
+                <div>Screen: {deviceInfo.screenSize}</div>
+                <div>Touch: {deviceInfo.touchSupport ? 'Yes' : 'No'}</div>
+                <div>Connection: {deviceInfo.connectionType}</div>
+                {deviceInfo.batteryLevel > 0 && <div>Battery: {deviceInfo.batteryLevel}%</div>}
               </div>
             </div>
 
-            {/* Device Info */}
-            <div className="p-4 bg-slate-800/50">
-              <div className="flex items-center justify-between text-sm">
-                <div className="flex items-center space-x-2">
-                  {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-400" />}
-                  {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-blue-400" />}
-                  <span className="text-slate-400 capitalize">{deviceType}</span>
+            {/* Optimizations */}
+            <div className="space-y-4">
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={optimizations.touchOptimized}
+                  onChange={(e) => setOptimizations(prev => ({ ...prev, touchOptimized: e.target.checked }))}
+                  className="w-4 h-4 text-green-500 rounded focus:ring-green-500"
+                />
+                <Hand className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700">Touch Optimized</span>
+              </label>
+
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={optimizations.gestureSupport}
+                  onChange={(e) => setOptimizations(prev => ({ ...prev, gestureSupport: e.target.checked }))}
+                  className="w-4 h-4 text-green-500 rounded focus:ring-green-500"
+                />
+                <RotateCcw className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700">Gesture Support</span>
+              </label>
+
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={optimizations.responsiveImages}
+                  onChange={(e) => setOptimizations(prev => ({ ...prev, responsiveImages: e.target.checked }))}
+                  className="w-4 h-4 text-green-500 rounded focus:ring-green-500"
+                />
+                <ZoomIn className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700">Responsive Images</span>
+              </label>
+
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={optimizations.mobileNavigation}
+                  onChange={(e) => setOptimizations(prev => ({ ...prev, mobileNavigation: e.target.checked }))}
+                  className="w-4 h-4 text-green-500 rounded focus:ring-green-500"
+                />
+                <Settings className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700">Mobile Navigation</span>
+              </label>
+
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={optimizations.performanceMode}
+                  onChange={(e) => setOptimizations(prev => ({ ...prev, performanceMode: e.target.checked }))}
+                  className="w-4 h-4 text-green-500 rounded focus:ring-green-500"
+                />
+                <Battery className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700">Performance Mode</span>
+              </label>
+
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={optimizations.offlineSupport}
+                  onChange={(e) => setOptimizations(prev => ({ ...prev, offlineSupport: e.target.checked }))}
+                  className="w-4 h-4 text-green-500 rounded focus:ring-green-500"
+                />
+                <Wifi className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700">Offline Support</span>
+              </label>
+            </div>
+
+            {/* Status Indicators */}
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span>Optimizations applied</span>
+              </div>
+              {deviceType === 'mobile' && (
+                <div className="flex items-center gap-2 text-sm text-blue-600 mt-1">
+                  <Info className="w-4 h-4" />
+                  <span>Mobile-optimized experience</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-slate-400 capitalize">{orientation}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Toggles */}
-            <div className="p-4 space-y-3">
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  onClick={() => toggleSetting('touchOptimization')}
-                  className={`p-3 rounded-lg border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
-                    settings.touchOptimization 
-                      ? 'bg-purple-500/20 border-purple-400 text-purple-400' 
-                      : 'bg-slate-800/50 border-slate-600 text-slate-300 hover:border-slate-500'
-                  }`}
-                  aria-pressed={settings.touchOptimization}
-                >
-                  <MousePointer className="w-5 h-5 mx-auto mb-2" />
-                  <span className="text-xs font-medium">Touch Opt</span>
-                </button>
-
-                <button
-                  onClick={() => toggleSetting('gestureSupport')}
-                  className={`p-3 rounded-lg border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
-                    settings.gestureSupport 
-                      ? 'bg-purple-500/20 border-purple-400 text-purple-400' 
-                      : 'bg-slate-800/50 border-slate-600 text-slate-300 hover:border-slate-500'
-                  }`}
-                  aria-pressed={settings.gestureSupport}
-                >
-                  <Hand className="w-5 h-5 mx-auto mb-2" />
-                  <span className="text-xs font-medium">Gestures</span>
-                </button>
-
-                <button
-                  onClick={() => toggleSetting('touchTargets')}
-                  className={`p-3 rounded-lg border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
-                    settings.touchTargets 
-                      ? 'bg-purple-500/20 border-purple-400 text-purple-400' 
-                      : 'bg-slate-800/50 border-slate-600 text-slate-300 hover:border-slate-500'
-                  }`}
-                  aria-pressed={settings.touchTargets}
-                >
-                  <MousePointer className="w-5 h-5 mx-auto mb-2" />
-                  <span className="text-xs font-medium">Touch Targets</span>
-                </button>
-
-                <button
-                  onClick={() => toggleSetting('responsiveImages')}
-                  className={`p-3 rounded-lg border transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 ${
-                    settings.responsiveImages 
-                      ? 'bg-purple-500/20 border-purple-400 text-purple-400' 
-                      : 'bg-slate-800/50 border-slate-600 text-slate-300 hover:border-slate-500'
-                  }`}
-                  aria-pressed={settings.responsiveImages}
-                >
-                  <Monitor className="w-5 h-5 mx-auto mb-2" />
-                  <span className="text-xs font-medium">Responsive</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Expanded Settings */}
-            <AnimatePresence>
-              {isExpanded && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  className="border-t border-slate-700/50"
-                >
-                  <div className="p-4 space-y-4">
-                    {/* Haptic Feedback */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <MousePointer className="w-5 h-5 text-slate-400" />
-                        <div>
-                          <div className="text-white font-medium">Haptic Feedback</div>
-                          <div className="text-slate-400 text-sm">Touch vibrations</div>
-                        </div>
-                      </div>
-                      <button
-                        onClick={() => toggleSetting('hapticFeedback')}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
-                          settings.hapticFeedback ? 'bg-purple-500' : 'bg-slate-600'
-                        }`}
-                        role="switch"
-                        aria-checked={settings.hapticFeedback}
-                      >
-                        <span
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                            settings.hapticFeedback ? 'translate-x-6' : 'translate-x-1'
-                          }`}
-                        />
-                      </button>
-                    </div>
-
-                    {/* Mobile Navigation */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <Smartphone className="w-5 h-5 text-slate-400" />
-                        <div>
-                          <div className="text-white font-medium">Mobile Navigation</div>
-                          <div className="text-slate-400 text-sm">Touch-friendly nav</div>
-                        </div>
-                      </div>
-                      <button
-                        onClick={() => toggleSetting('mobileNavigation')}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
-                          settings.mobileNavigation ? 'bg-purple-500' : 'bg-slate-600'
-                        }`}
-                        role="switch"
-                        aria-checked={settings.mobileNavigation}
-                      >
-                        <span
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                            settings.mobileNavigation ? 'translate-x-6' : 'translate-x-1'
-                          }`}
-                        />
-                      </button>
-                    </div>
-
-                    {/* Mobile Performance */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-slate-400" />
-                        <div>
-                          <div className="text-white font-medium">Performance Monitor</div>
-                          <div className="text-slate-400 text-sm">FPS & memory tracking</div>
-                        </div>
-                      </div>
-                      <button
-                        onClick={() => toggleSetting('mobilePerformance')}
-                        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
-                          settings.mobilePerformance ? 'bg-purple-500' : 'bg-slate-600'
-                        }`}
-                        role="switch"
-                        aria-checked={settings.mobilePerformance}
-                      >
-                        <span
-                          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                            settings.mobilePerformance ? 'translate-x-6' : 'translate-x-1'
-                          }`}
-                        />
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
               )}
-            </AnimatePresence>
-
-            {/* Performance Metrics */}
-            {settings.mobilePerformance && (
-              <div className="p-4 bg-slate-800/50 border-t border-slate-700/50">
-                <div className="grid grid-cols-2 gap-4 text-center text-sm">
-                  <div>
-                    <div className="text-2xl font-bold text-purple-400">
-                      {performanceMetrics.fps || '--'}
-                    </div>
-                    <div className="text-xs text-slate-400">FPS</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-blue-400">
-                      {performanceMetrics.memory || '--'}
-                    </div>
-                    <div className="text-xs text-slate-400">MB</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-green-400">
-                      {performanceMetrics.battery || '--'}
-                    </div>
-                    <div className="text-xs text-slate-400">%</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-yellow-400">
-                      {performanceMetrics.network}
-                    </div>
-                    <div className="text-xs text-slate-400">Network</div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Touch Events Log */}
-            {touchEvents.length > 0 && (
-              <div className="p-4 bg-slate-800/50 border-t border-slate-700/50">
-                <div className="text-sm text-slate-400 mb-2">Recent Touch Events</div>
-                <div className="space-y-1">
-                  {touchEvents.slice(-5).map((event, index) => (
-                    <div key={index} className="text-xs text-slate-500">
-                      {event.type} - {new Date(event.timestamp).toLocaleTimeString()}
-                    </div>
-
-                    {/* Performance Metrics */}
-                    <div className="space-y-4">
-                      <h4 className="font-medium text-gray-900 dark:text-white">Performance Metrics</h4>
-                      
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <Zap className="w-4 h-4 text-yellow-500" />
-                            <span className="text-sm text-gray-600 dark:text-gray-400">Performance</span>
-                          </div>
-                          <div className={`text-lg font-bold ${getPerformanceColor(metrics.performanceScore)}`}>
-                            {metrics.performanceScore}/100
-                          </div>
-                        </div>
-
-                        <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <Battery className="w-4 h-4 text-green-500" />
-                            <span className="text-sm text-gray-600 dark:text-gray-400">Battery</span>
-                          </div>
-                          <div className="text-lg font-bold text-gray-900 dark:text-white">
-                            {metrics.batteryLevel.toFixed(0)}%
-                          </div>
-                        </div>
-
-                        <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <Wifi className="w-4 h-4 text-blue-500" />
-                            <span className="text-sm text-gray-600 dark:text-gray-400">Connection</span>
-                          </div>
-                          <div className="text-lg font-bold text-gray-900 dark:text-white capitalize">
-                            {metrics.connectionType}
-                          </div>
-                        </div>
-
-                        <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <Hand className="w-4 h-4 text-purple-500" />
-                            <span className="text-sm text-gray-600 dark:text-gray-400">Memory</span>
-                          </div>
-                          <div className="text-lg font-bold text-gray-900 dark:text-white">
-                            {metrics.memoryUsage.toFixed(0)}%
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Gesture History */}
-                    {gestureHistory.length > 0 && (
-                      <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                        <h4 className="font-medium text-blue-900 dark:text-blue-100 mb-3">Recent Gestures</h4>
-                        <div className="space-y-2">
-                          {gestureHistory.map((gesture, index) => (
-                            <div key={index} className="flex items-center space-x-2 text-sm">
-                              <Hand className="w-4 h-4 text-blue-500" />
-                              <span className="text-blue-700 dark:text-blue-300">{gesture}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Mobile Controls */}
-                  <div className="space-y-6">
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                      Mobile Controls
-                    </h3>
-                    
-                    {/* Touch & Gesture Controls */}
-                    <div className="space-y-4">
-                      <h4 className="font-medium text-gray-900 dark:text-white">Touch & Gestures</h4>
-                      
-                      <div className="space-y-3">
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.touchOptimization}
-                            onChange={(e) => setSettings(prev => ({ ...prev, touchOptimization: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Hand className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Touch Optimization</span>
-                        </label>
-
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.gestureSupport}
-                            onChange={(e) => setSettings(prev => ({ ...prev, gestureSupport: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Hand className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Gesture Support</span>
-                        </label>
-
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.touchFeedback}
-                            onChange={(e) => setSettings(prev => ({ ...prev, touchFeedback: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Eye className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Touch Feedback</span>
-                        </label>
-
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.hapticFeedback}
-                            onChange={(e) => setSettings(prev => ({ ...prev, hapticFeedback: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Zap className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Haptic Feedback</span>
-                        </label>
-                      </div>
-                    </div>
-
-                    {/* Performance Controls */}
-                    <div className="space-y-4">
-                      <h4 className="font-medium text-gray-900 dark:text-white">Performance & Battery</h4>
-                      
-                      <div className="space-y-3">
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.performanceMode}
-                            onChange={(e) => setSettings(prev => ({ ...prev, performanceMode: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Zap className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Performance Mode</span>
-                        </label>
-
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.batteryOptimization}
-                            onChange={(e) => setSettings(prev => ({ ...prev, batteryOptimization: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Battery className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Battery Optimization</span>
-                        </label>
-
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.dataOptimization}
-                            onChange={(e) => setSettings(prev => ({ ...prev, dataOptimization: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Wifi className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Data Optimization</span>
-                        </label>
-                      </div>
-                    </div>
-
-                    {/* Display Controls */}
-                    <div className="space-y-4">
-                      <h4 className="font-medium text-gray-900 dark:text-white">Display & Interface</h4>
-                      
-                      <div className="space-y-3">
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.darkMode}
-                            onChange={(e) => setSettings(prev => ({ ...prev, darkMode: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Moon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Dark Mode</span>
-                        </label>
-
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.fullscreen}
-                            onChange={(e) => setSettings(prev => ({ ...prev, fullscreen: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <Maximize className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Fullscreen Mode</span>
-                        </label>
-
-                        <label className="flex items-center space-x-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={settings.orientationLock}
-                            onChange={(e) => setSettings(prev => ({ ...prev, orientationLock: e.target.checked }))}
-                            className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500"
-                          />
-                          <RotateCcw className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Lock Orientation</span>
-                        </label>
-                      </div>
-                    </div>
-
-                    {/* Quick Actions */}
-                    <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg">
-                      <h4 className="font-medium text-purple-900 dark:text-purple-100 mb-3">Quick Actions</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        <button
-                          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                          className="p-2 bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-300 rounded text-sm hover:bg-purple-200 dark:hover:bg-purple-700 transition-colors"
-                        >
-                          Scroll to Top
-                        </button>
-                        <button
-                          onClick={() => window.location.reload()}
-                          className="p-2 bg-purple-100 dark:bg-purple-800 text-purple-700 dark:text-purple-300 rounded text-sm hover:bg-purple-200 dark:hover:bg-purple-700 transition-colors"
-                        >
-                          Refresh Page
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Action Buttons */}
-                    <div className="flex items-center justify-between pt-6 border-t border-gray-200 dark:border-gray-700">
-                      <div className="flex space-x-3">
-                        <button
-                          onClick={saveSettings}
-                          disabled={isOptimizing}
-                          className="flex items-center space-x-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors disabled:opacity-50"
-                        >
-                          {isOptimizing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
-                          <span>Save Settings</span>
-                        </button>
-                        
-                        <button
-                          onClick={loadSettings}
-                          disabled={isOptimizing}
-                          className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors disabled:opacity-50"
-                        >
-                          {isOptimizing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Settings className="w-4 h-4" />}
-                          <span>Load Settings</span>
-                        </button>
-                        
-                        <button
-                          onClick={resetSettings}
-                          className="flex items-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-                        >
-                          <RotateCcw className="w-4 h-4" />
-                          <span>Reset to Default</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
