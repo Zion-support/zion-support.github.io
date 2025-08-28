@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { servicesCatalog } from '../../src/data/servicesCatalog';
 
 export default function ServicesIndex() {
   return (
@@ -42,6 +43,40 @@ export default function ServicesIndex() {
           <p className="mx-auto mt-5 max-w-3xl text-lg text-white/80">Choose from specialized agents and blueprints to ship value faster.</p>
         </section>
 
+        {/* Expanded catalog pulled from data with prices and links */}
+        <section className="mx-auto max-w-7xl px-6 pb-20">
+          <h2 className="mb-6 text-2xl font-bold">More Services</h2>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {servicesCatalog
+              .flatMap((c) => c.items.map((item) => ({...item, categoryName: c.name})))
+              .slice(0, 18)
+              .map((item) => (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  target={item.external ? '_blank' : undefined}
+                  rel={item.external ? 'noreferrer' : undefined}
+                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30"
+                >
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                  <div className="flex items-start justify-between">
+                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <span className="rounded-full border border-white/15 px-2 py-0.5 text-xs text-white/70">{item.categoryName}</span>
+                  </div>
+                  <p className="mt-1 text-sm text-white/75">{item.description}</p>
+                  <div className="mt-4 text-sm text-white/80">Starting at <span className="font-semibold">{item.price}</span>/{item.billing}</div>
+                  <ul className="mt-3 list-disc space-y-1 pl-5 text-xs text-white/70">
+                    {item.features.slice(0,4).map((f, i) => (
+                      <li key={i}>{f}</li>
+                    ))}
+                  </ul>
+                  <div className="mt-4">
+                    <span className="inline-block rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-white">{item.ctaLabel}</span>
+                  </div>
+                </a>
+            ))}
+          </div>
+        </section>
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[

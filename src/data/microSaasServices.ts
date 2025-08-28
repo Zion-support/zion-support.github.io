@@ -224,8 +224,8 @@ export const PRICING_TIERS = [
 ];
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
-  phone: '+1 (555) 123-4567',
-  address: '123 Tech Street, Innovation City, IC 12345'
+  phone: '+1 302 464 0950',
+  address: '364 E Main St STE 1008 Middletown DE 19709'
 };
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);
