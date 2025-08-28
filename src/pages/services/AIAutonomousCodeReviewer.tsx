@@ -1,381 +1,371 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import { 
   Code, 
   Shield, 
-  Zap, 
-  TrendingUp, 
-  Users, 
-  Clock, 
   CheckCircle, 
-  Star,
-  ArrowRight,
-  Github,
-  Gitlab,
-  Slack,
-  MessageSquare,
+  AlertTriangle,
+  Zap,
+  Brain,
+  GitBranch,
+  Clock,
+  TrendingUp,
+  Users,
   BarChart3,
-  Settings,
   Lock,
   Globe,
   Smartphone,
-  Database
+  Database,
+  Server,
+  Cloud,
+  Activity,
+  Target,
+  Award,
+  ArrowRight,
+  Play
 } from 'lucide-react';
 
 const AIAutonomousCodeReviewer: React.FC = () => {
   const features = [
     {
-      icon: Code,
-      title: "Automated Code Review",
-      description: "AI-powered analysis of code quality, security vulnerabilities, and performance issues across multiple programming languages.",
-      benefits: ["Reduce review time by 70%", "Consistent code standards", "24/7 availability"]
+      icon: <Brain className="w-6 h-6 text-blue-600" />,
+      title: "AI-Powered Analysis",
+      description: "Advanced machine learning algorithms that understand code context, patterns, and best practices across multiple programming languages."
     },
     {
-      icon: Shield,
-      title: "Security Analysis",
-      description: "Advanced security scanning to detect vulnerabilities, security anti-patterns, and compliance issues in real-time.",
-      benefits: ["Early vulnerability detection", "Security best practices", "Compliance checking"]
+      icon: <Shield className="w-6 h-6 text-green-600" />,
+      title: "Security Vulnerability Detection",
+      description: "Automated scanning for security flaws, SQL injection, XSS attacks, and other critical security vulnerabilities in real-time."
     },
     {
-      icon: Zap,
+      icon: <CheckCircle className="w-6 h-6 text-purple-600" />,
+      title: "Code Quality Assessment",
+      description: "Comprehensive code quality metrics including complexity analysis, maintainability scores, and adherence to coding standards."
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-yellow-600" />,
       title: "Performance Optimization",
-      description: "Intelligent suggestions for code optimization, memory management, and performance improvements.",
-      benefits: ["Performance insights", "Memory leak detection", "Optimization recommendations"]
+      description: "AI-driven suggestions for code optimization, memory management, and performance improvements based on industry best practices."
     },
     {
-      icon: TrendingUp,
-      title: "Quality Metrics",
-      description: "Comprehensive code quality metrics, technical debt analysis, and improvement recommendations.",
-      benefits: ["Quality scoring", "Technical debt tracking", "Improvement roadmaps"]
+      icon: <GitBranch className="w-6 h-6 text-indigo-600" />,
+      title: "Git Integration",
+      description: "Seamless integration with Git workflows, automated PR reviews, and continuous code quality monitoring."
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-red-600" />,
+      title: "Multi-Language Support",
+      description: "Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust, and more."
     }
   ];
 
-  const supportedLanguages = [
-    "Python", "JavaScript", "TypeScript", "Java", "C#", "C++", "Go", "Rust", "PHP", "Ruby", "Swift", "Kotlin"
+  const benefits = [
+    "Reduce code review time by 70%",
+    "Catch 95% of security vulnerabilities before deployment",
+    "Improve code quality consistency across teams",
+    "Automated compliance checking for industry standards",
+    "Real-time feedback and learning recommendations",
+    "Integration with existing CI/CD pipelines"
   ];
 
-  const integrations = [
-    { name: "GitHub", icon: Github, description: "Seamless integration with GitHub repositories and pull requests" },
-    { name: "GitLab", icon: Gitlab, description: "Full support for GitLab CI/CD pipelines and merge requests" },
-    { name: "Slack", icon: Slack, description: "Real-time notifications and alerts in Slack channels" },
-    { name: "Jira", icon: MessageSquare, description: "Connect code reviews with Jira tickets and workflows" }
-  ];
-
-  const pricingPlans = [
+  const pricing = [
     {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small development teams",
+      plan: "Starter",
+      price: "$299",
+      period: "per month",
       features: [
         "Up to 10 developers",
-        "Basic code analysis",
-        "Security scanning",
-        "GitHub integration",
-        "Email support"
-      ],
-      cta: "Get Started",
-      popular: false
+        "Basic security scanning",
+        "Code quality metrics",
+        "Git integration",
+        "Email support",
+        "5 programming languages"
+      ]
     },
     {
-      name: "Professional",
-      price: "$399",
-      period: "/month",
-      description: "Ideal for growing development teams",
+      plan: "Professional",
+      price: "$599",
+      period: "per month",
       features: [
         "Up to 50 developers",
-        "Advanced AI analysis",
+        "Advanced security analysis",
         "Performance optimization",
-        "Multi-repository support",
+        "Custom rules engine",
         "Priority support",
-        "Custom rules"
-      ],
-      cta: "Start Free Trial",
-      popular: true
+        "15 programming languages",
+        "API access"
+      ]
     },
     {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "For large organizations and enterprises",
+      plan: "Enterprise",
+      price: "$1,299",
+      period: "per month",
       features: [
         "Unlimited developers",
-        "Custom AI models",
-        "Advanced security features",
-        "API access",
-        "Dedicated support",
-        "Custom integrations",
-        "SLA guarantee"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Software Development Teams",
-      description: "Automate code reviews and maintain consistent quality standards across development teams.",
-      icon: Users
-    },
-    {
-      title: "Code Quality Assurance",
-      description: "Ensure high code quality and reduce technical debt through automated analysis.",
-      icon: CheckCircle
-    },
-    {
-      title: "Security Compliance",
-      description: "Meet security requirements and compliance standards with automated security scanning.",
-      icon: Shield
-    },
-    {
-      title: "Performance Optimization",
-      description: "Identify and fix performance bottlenecks through intelligent code analysis.",
-      icon: Zap
+        "Full security suite",
+        "Custom AI training",
+        "White-label solution",
+        "24/7 dedicated support",
+        "All programming languages",
+        "Advanced analytics",
+        "SLA guarantees"
+      ]
     }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>AI Autonomous Code Reviewer — Zion Tech Group | Automated Code Quality & Security</title>
-        <meta name="description" content="Revolutionize your code review process with AI-powered automated analysis. Detect security vulnerabilities, optimize performance, and maintain code quality across multiple programming languages."/>
-        <meta property="og:title" content="AI Autonomous Code Reviewer — Zion Tech Group"/>
-        <meta property="og:description" content="AI-powered automated code review with security analysis, performance optimization, and quality metrics for development teams."/>
-        <meta property="og:url" content="https://ziontechgroup.com/services/ai-autonomous-code-reviewer"/>
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-code-reviewer"/>
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-xl mr-4">
-                <Code className="w-8 h-8 text-white" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-blue-100 rounded-full">
+                <Code className="w-8 h-8 text-blue-600" />
               </div>
-              <span className="text-blue-400 text-lg font-medium">AI-Powered Development</span>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Autonomous
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Code Reviewer
-              </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI Autonomous Code Reviewer
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your development workflow with AI-powered automated code review. 
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Revolutionize your code review process with AI-powered autonomous analysis. 
               Detect security vulnerabilities, optimize performance, and maintain code quality 
-              across multiple programming languages with 70% faster review times.
+              across your entire development team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+              >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link to="/services" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                View All Services
-              </Link>
+              </a>
+              <a
+                href="#demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                Watch Demo
+                <Play className="ml-2 w-5 h-5" />
+              </a>
             </div>
-          </div>
-        </section>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Key Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose AI Code Review?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Leverage artificial intelligence to revolutionize your code review process
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/40 transition-all duration-300">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Intelligent Code Analysis Powered by AI
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our autonomous code reviewer uses advanced AI algorithms to provide 
+              comprehensive analysis, security scanning, and optimization recommendations.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+              >
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Transform Your Development Workflow
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Experience unprecedented efficiency and code quality with our AI-powered solution.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                <span className="text-gray-700">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Flexible Pricing Plans
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Choose the plan that best fits your team size and requirements.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className={`bg-white p-8 rounded-xl shadow-lg border-2 ${
+                  index === 1 ? 'border-blue-500 scale-105' : 'border-gray-200'
+                }`}
+              >
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {plan.plan}
+                  </h3>
+                  <div className="text-4xl font-bold text-blue-600 mb-1">
+                    {plan.price}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="text-gray-600">{plan.period}</div>
                 </div>
-              ))}
-            </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    index === 1
+                      ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                  }`}
+                >
+                  Get Started
+                </a>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Supported Languages */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Multi-Language Support
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive code analysis across the most popular programming languages
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {supportedLanguages.map((language, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20 text-center hover:border-blue-400/40 transition-all duration-300">
-                  <Code className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <span className="text-white font-medium">{language}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Integrations */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Seamless Integrations
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Works with your existing development tools and workflows
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {integrations.map((integration, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/40 transition-all duration-300">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <integration.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{integration.name}</h3>
-                  <p className="text-gray-300">{integration.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect For
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Ideal solutions for various development scenarios
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-3 rounded-lg w-fit mb-4">
-                    <useCase.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that fits your team size and needs
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-blue-400 bg-gradient-to-br from-blue-600/20 to-cyan-600/20' 
-                    : 'border-white/20 hover:border-blue-400/40'
-                }`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
-                  </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link 
-                    to={plan.cta === "Contact Sales" ? "/contact" : "/contact"}
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
-                        : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                    }`}
-                  >
-                    {plan.cta}
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Code Review Process?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of developers who have already improved their code quality and security with AI-powered automation.
+            <p className="text-xl text-blue-100 mb-8">
+              Join thousands of developers who trust our AI-powered code review solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-                Start Free Trial
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Sales
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
                 Call +1 302 464 0950
               </a>
             </div>
-            <p className="text-sm text-gray-400 mt-6">
-              Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
-            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+              <p className="text-gray-400">
+                Empowering the future through innovative technology solutions.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <p className="text-gray-400">+1 302 464 0950</p>
+              <p className="text-gray-400">kleber@ziontechgroup.com</p>
+              <p className="text-gray-400">364 E Main St STE 1008</p>
+              <p className="text-gray-400">Middletown DE 19709</p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li>AI Solutions</li>
+                <li>IT Services</li>
+                <li>Micro SaaS</li>
+                <li>Cybersecurity</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                <a href="https://ziontechgroup.com" className="text-gray-400 hover:text-white">
+                  Website
+                </a>
+              </div>
+            </div>
           </div>
-        </section>
-      </div>
-    </>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 };
 

@@ -439,6 +439,7 @@ function App() {
                   <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                   <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                   <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                  <Route path="/services/AIAutonomousCodeReviewer" element={<AIAutonomousCodeReviewer />} />
                   
                   {/* Service Showcase Pages */}
                   <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
