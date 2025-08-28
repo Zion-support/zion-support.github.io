@@ -1,11 +1,7 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { CheckCircle, Zap, Shield, Globe, Users, TrendingUp, Star, ArrowRight, Brain, Cloud, Lock, Rocket } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, BarChart3, Target, Lightbulb, Database, Network, Eye, Globe2, Smartphone, Monitor, Server, Atom, Car, Scale, Leaf, Factory, Building, Clock, Phone, Mail, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-514d
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -43,20 +39,6 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
-<<<<<<< HEAD
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="relative">
-          <div className="w-32 h-32 border-4 border-cyan-400/20 rounded-full"></div>
-          <div className="absolute top-0 left-0 w-32 h-32 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-lg">
-            ZION
-          </div>
-          <div className="mt-4 text-center">
-            <div className="text-cyan-400 text-sm animate-pulse">Loading amazing experiences...</div>
-          </div>
-=======
   const stats = [
     {
       value: "500+",
@@ -284,7 +266,6 @@ export default function Home() {
         </div>
         <div className="absolute bottom-40 left-20 animate-float">
           <div className="w-2 h-2 bg-purple-400 rounded-full opacity-60 neon-glow"></div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-514d
         </div>
         <div className="absolute top-1/2 left-1/4 animate-quantum-pulse">
           <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-40 neon-glow"></div>
@@ -308,72 +289,6 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
         
-<<<<<<< HEAD
-        {/* Quick Access */}
-        <QuickAccess />
-        
-        {/* Feature Highlights */}
-        <FeatureHighlights />
-        
-        {/* AI Services Showcase */}
-        <AIServicesShowcase />
-        
-        {/* Tech Solutions Section */}
-        <TechSolutionsSection />
-        
-        {/* Services Showcase */}
-        <ServicesShowcase />
-        
-        {/* Categories Section */}
-        <CategoriesSection />
-        
-        {/* Benefits Section */}
-        <BenefitsSection />
-        
-        {/* How It Works */}
-        <HowItWorksSection />
-        
-        {/* Case Studies */}
-        <CaseStudiesSection />
-        
-        {/* Team Expertise */}
-        <TeamExpertiseSection />
-        
-        {/* Global Presence */}
-        <GlobalPresenceSection />
-        
-        {/* Innovation Research */}
-        <InnovationResearchSection />
-        
-        {/* Client Success Stories */}
-        <ClientSuccessStoriesSection />
-        
-        {/* Technology Stack */}
-        <TechnologyStackSection />
-        
-        {/* Security & Compliance */}
-        <SecurityComplianceSection />
-        
-        {/* Feature CTAs */}
-        <FeatureCTAs />
-        
-        {/* Pricing Section */}
-        <PricingSection />
-        
-        {/* Featured Listings */}
-        <FeaturedListingsSection />
-        
-        {/* Newsletter */}
-        <NewsletterSection />
-        
-        {/* IT Service Request Hero */}
-        <ITServiceRequestHero />
-        
-        {/* Floating CTA */}
-        <FloatingCTA />
-      </main>
-    </>
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -439,14 +354,21 @@ export default function Home() {
         </div>
       </motion.section>
 
+<<<<<<< HEAD
       {/* Enhanced AI Services Showcase */}
       <motion.section 
         className="py-24 bg-gradient-to-b from-slate-900/50 to-slate-800/50 relative"
+=======
+      {/* Innovative Micro SAAS Services Showcase */}
+      <motion.section 
+        className="py-24 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm relative"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6e33
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
@@ -656,6 +578,18 @@ export default function Home() {
             </h2>
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
               Our track record speaks for itself - delivering innovative solutions that drive real business results
+=======
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/10 via-blue-600/10 to-purple-600/10" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div className="text-center mb-20" variants={itemVariants}>
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
+              Innovative <span className="bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Solutions</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Discover our cutting-edge micro SAAS services that deliver enterprise-grade functionality with startup simplicity
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6e33
             </p>
           </motion.div>
           
@@ -666,6 +600,7 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
+<<<<<<< HEAD
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -692,10 +627,104 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+=======
+            {/* AI Project Manager */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/services/ai-project-manager" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">📊</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                      AI Project Manager
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      AI-powered project management with intelligent task prioritization and resource optimization
+                    </p>
+                    <div className="text-blue-400 text-sm font-medium">From $29/month</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* AI Content Optimizer */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/services/ai-content-optimizer" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">✍️</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
+                      AI Content Optimizer
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Optimize content performance with AI-powered SEO and multi-platform analytics
+                    </p>
+                    <div className="text-green-400 text-sm font-medium">From $19/month</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* AI Customer Support */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/services/ai-customer-support" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">💬</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors duration-300">
+                      AI Customer Support
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      24/7 AI-powered support with multi-language capabilities and smart ticket routing
+                    </p>
+                    <div className="text-indigo-400 text-sm font-medium">From $39/month</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+
+            {/* AI Data Analytics */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/services/ai-data-analytics" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">📈</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
+                      AI Data Analytics
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Transform data into insights with predictive analytics and automated reporting
+                    </p>
+                    <div className="text-emerald-400 text-sm font-medium">From $49/month</div>
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <motion.div className="text-center mt-12" variants={itemVariants}>
+            <Link 
+              to="/micro-saas" 
+              className="btn-futuristic inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
+            >
+              View All Micro SAAS Services
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6e33
           </motion.div>
         </div>
       </motion.section>
 
+<<<<<<< HEAD
       {/* Call to Action Section */}
       <motion.section 
         className="py-24 bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-purple-500/10 relative"
@@ -742,6 +771,16 @@ export default function Home() {
                   <Mail className="w-4 h-4 mr-2" />
                   kleber@ziontechgroup.com
                 </a>
+=======
+      {/* Interactive Service Showcase - Lazy Loaded */}
+      <Suspense fallback={
+        <div className="py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="animate-pulse">
+                <div className="h-12 bg-zion-cyan/20 rounded-lg mb-4 max-w-md mx-auto"></div>
+                <div className="h-6 bg-zion-slate-light/20 rounded-lg max-w-2xl mx-auto"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6e33
               </div>
             </div>
           </motion.div>
@@ -769,7 +808,6 @@ export default function Home() {
       
       <FloatingCTA />
     </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-514d
   );
 };
 

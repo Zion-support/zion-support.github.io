@@ -43,32 +43,41 @@ export function AppHeader() {
 
   // Organized services by category - only include existing pages
   const services = [
-    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science', category: 'AI' },
-    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring', category: 'IoT' },
-    { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield, description: 'AI-Powered Security', category: 'Security' },
-    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation', category: 'Cloud' },
-    { name: 'IoT & Edge', href: '/services/it-infrastructure', icon: Cpu, description: 'Smart Devices & Networks', category: 'IoT' },
-    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business Intelligence & Insights', category: 'Analytics' },
-    { name: 'Healthcare Tech', href: '/services/ai-compliance-assistant', icon: Heart, description: 'AI Medicine & Diagnostics', category: 'Healthcare' },
-    { name: 'Sustainability', href: '/services/green-it', icon: Globe, description: 'Green IT Solutions', category: 'Sustainability' },
-    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches', category: 'SaaS' },
-    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging', category: 'AI' },
-    { name: 'Mobile Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights', category: 'AI' },
-    { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation', category: 'Compliance' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content', category: 'AI' },
-    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'FinOps' },
-    { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart, description: 'E‑commerce RMA automation', category: 'E-commerce' },
-    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated follow‑ups', category: 'Automation' },
-    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen, description: 'Transcripts & show notes', category: 'AI' },
-    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Local business CRM', category: 'CRM' },
-    { name: 'Website Analytics', href: '/services/website-analytics', icon: Gauge, description: 'Privacy-first SMB analytics', category: 'Analytics' },
-    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'Tickets, SLAs, portals', category: 'IT' },
-    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: ShoppingCart, description: 'Partner revenue platform', category: 'Marketing' },
-    { name: 'AI SEO Optimizer', href: '/services/ai-seo', icon: Search, description: 'Semantic SEO & content briefs', category: 'AI' },
-    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'Structured interviews & scoring', category: 'AI' },
-    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Tickets, KB, chat & AI', category: 'Support' },
-    { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA request workflow', category: 'Privacy' },
-    { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield, description: 'HSTS/CSP automation', category: 'Security' },
+    // Featured Micro SAAS Services
+    { name: 'AI Project Manager', href: '/services/ai-project-manager', icon: Brain, description: 'AI-powered project management & optimization', featured: true },
+    { name: 'AI Content Optimizer', href: '/services/ai-content-optimizer', icon: BookOpen, description: 'AI SEO & content performance analytics', featured: true },
+    { name: 'AI Customer Support', href: '/services/ai-customer-support', icon: MessageCircle, description: '24/7 AI chatbots & smart ticket routing', featured: true },
+    { name: 'AI Data Analytics', href: '/services/ai-data-analytics', icon: Gauge, description: 'Predictive analytics & business intelligence', featured: true },
+    
+    // Core AI Services
+    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'Cybersecurity', href: '/services/ai-compliance-assistant', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IoT & Edge', href: '/services/it-infrastructure', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Blockchain', href: '/services', icon: Lock, description: 'DeFi & Smart Contracts' },
+    { name: 'Healthcare Tech', href: '/services', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability', href: '/services/green-it', icon: Globe, description: 'Green IT Solutions' },
+    
+    // Additional Micro SaaS
+    { name: 'Micro SaaS Hub', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
+    { name: 'Mobile Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
+    { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'Returns Management', href: '/services/returns-management', icon: ShoppingCart, description: 'E‑commerce RMA automation' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: MessageCircle, description: 'Automated follow‑ups' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: BookOpen, description: 'Transcripts & show notes' },
+    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Local business CRM' },
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: Gauge, description: 'Privacy-first SMB analytics' },
+    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'Tickets, SLAs, portals' },
+    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: ShoppingCart, description: 'Partner revenue platform' },
+    { name: 'AI SEO Optimizer', href: '/services/ai-seo', icon: Search, description: 'Semantic SEO & content briefs' },
+    { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users, description: 'Structured interviews & scoring' },
+    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Tickets, KB, chat & AI' },
+    { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield, description: 'GDPR/CCPA request workflow' },
+    { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Shield, description: 'HSTS/CSP automation' },
   ];
 
   // Quick links for easy access
@@ -177,46 +186,69 @@ export function AppHeader() {
                   <ChevronDown className="ml-1 w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </button>
                 
-                <AnimatePresence>
-                  {servicesDropdownOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2 }}
-                      onMouseEnter={() => setServicesDropdownOpen(true)}
-                      onMouseLeave={() => setServicesDropdownOpen(false)}
-                      className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 p-6"
-                    >
-                      <div className="grid grid-cols-2 gap-6">
-                        {Object.entries(servicesByCategory).map(([category, categoryServices]) => (
-                          <div key={category} className="space-y-3">
-                            <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">
-                              {category}
-                            </h3>
-                            <div className="space-y-2">
-                              {categoryServices.slice(0, 4).map((service) => (
-                                <Link
-                                  key={service.name}
-                                  to={service.href}
-                                  className="flex items-center p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
-                                >
-                                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${categoryColors[service.category as keyof typeof categoryColors] || 'from-gray-400 to-slate-500'} flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-200`}>
-                                    <service.icon className="w-4 h-4 text-white" />
-                                  </div>
-                                  <div className="flex-1 min-w-0">
-                                    <p className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
-                                      {service.name}
-                                    </p>
-                                    <p className="text-xs text-slate-400 truncate">
-                                      {service.description}
-                                    </p>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
+                {servicesDropdownOpen && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 border border-cyan-400/20 rounded-xl shadow-2xl backdrop-blur-xl animate-fade-in"
+                    onMouseEnter={() => setServicesDropdownOpen(true)}
+                    onMouseLeave={() => setServicesDropdownOpen(false)}
+                  >
+                    <div className="p-6">
+                      {/* Featured Services Section */}
+                      <div className="mb-6">
+                        <h3 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider">Featured Micro SAAS</h3>
+                        <div className="grid grid-cols-1 gap-3 mb-4">
+                          {services.filter(service => service.featured).map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.href}
+                              className="flex items-center p-4 rounded-lg bg-gradient-to-r from-cyan-400/10 to-blue-500/10 border border-cyan-400/20 hover:bg-gradient-to-r hover:from-cyan-400/20 hover:to-blue-500/20 transition-all duration-200 group hover:scale-105"
+                            >
+                              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/30 to-blue-500/30 rounded-lg flex items-center justify-center group-hover:from-cyan-400/50 group-hover:to-blue-500/50 transition-all duration-200">
+                                <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                              </div>
+                              <div className="ml-4 flex-1">
+                                <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                                  {service.name}
+                                </div>
+                                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                                  {service.description}
+                                </div>
+                              </div>
+                              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                <ChevronDown className="w-4 h-4 text-cyan-400 rotate-[-90deg]" />
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* All Services Section */}
+                      <div>
+                        <h3 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">All Services</h3>
+                        <div className="grid grid-cols-1 gap-3">
+                          {services.filter(service => !service.featured).map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.href}
+                              className="flex items-center p-4 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group hover:scale-105"
+                            >
+                              <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-200">
+                                <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                              </div>
+                              <div className="ml-4 flex-1">
+                                <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                                  {service.name}
+                                </div>
+                                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                                  {service.description}
+                                </div>
+                              </div>
+                              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                <ChevronDown className="w-4 h-4 text-cyan-400 rotate-[-90deg]" />
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
                       </div>
 
                       <div className="mt-6 pt-4 border-t border-slate-700/50">

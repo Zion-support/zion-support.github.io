@@ -1,59 +1,59 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot } from 'lucide-react';
+import { CheckCircle, TrendingUp, Target, Zap, BarChart3, Globe, Smartphone, Users, Shield, Brain, Search, PenTool } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AICustomerSupport() {
+export default function AIContentOptimizer() {
   const features = [
     {
-      title: "24/7 AI Chat Support",
-      description: "Intelligent chatbots that handle customer inquiries around the clock with human-like responses",
-      icon: Bot,
+      title: "AI-Powered SEO Optimization",
+      description: "Advanced algorithms analyze search trends and automatically optimize your content for maximum visibility",
+      icon: Search,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Automatically detect and respond in over 50 languages to serve global customers",
-      icon: Globe,
+      title: "Content Performance Analytics",
+      description: "Real-time insights into how your content performs across different platforms and audiences",
+      icon: BarChart3,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Ticket Routing",
-      description: "AI automatically categorizes and routes complex issues to the right human agents",
-      icon: MessageCircle,
+      title: "Multi-Platform Optimization",
+      description: "Automatically adapts content for different platforms including web, social media, and mobile",
+      icon: Globe,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Sentiment Analysis",
-      description: "Real-time emotion detection to prioritize urgent cases and improve customer satisfaction",
-      icon: BarChart3,
+      title: "Intelligent Content Suggestions",
+      description: "AI generates topic ideas, headlines, and content structures based on trending topics and audience interests",
+      icon: Brain,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Knowledge Base Integration",
-      description: "Seamlessly connects with your existing documentation to provide accurate answers instantly",
-      icon: Shield,
+      title: "Automated A/B Testing",
+      description: "Test different content variations automatically to find what resonates best with your audience",
+      icon: Target,
       color: "from-indigo-500 to-blue-500"
     },
     {
-      title: "Omnichannel Support",
-      description: "Unified support across chat, email, social media, and phone channels",
-      icon: Smartphone,
+      title: "Content Repurposing Engine",
+      description: "Transform one piece of content into multiple formats for different channels and audiences",
+      icon: PenTool,
       color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$39",
+      name: "Creator",
+      price: "$19",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individual content creators",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI chatbot",
+        "Up to 10 content pieces/month",
+        "Basic SEO optimization",
+        "Content performance tracking",
         "Email support",
-        "Knowledge base integration",
         "Mobile app access"
       ],
       cta: "Start Free Trial",
@@ -61,27 +61,27 @@ export default function AICustomerSupport() {
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$49",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing content teams",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI with sentiment analysis",
-        "Multi-language support",
+        "Up to 100 content pieces/month",
+        "Advanced AI optimization",
+        "Multi-platform analytics",
         "Priority support",
         "API access",
-        "Advanced analytics"
+        "Custom templates"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$149",
       period: "/month",
-      description: "For large organizations",
+      description: "For large content operations",
       features: [
-        "Unlimited conversations",
+        "Unlimited content pieces",
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
@@ -95,63 +95,63 @@ export default function AICustomerSupport() {
 
   const benefits = [
     {
-      title: "90% Faster Response Time",
-      description: "AI responds instantly, reducing customer wait times dramatically",
-      icon: Clock,
-      metric: "90%"
-    },
-    {
-      title: "70% Cost Reduction",
-      description: "Automate routine inquiries and reduce support staff overhead",
+      title: "300% Increase in Organic Traffic",
+      description: "AI-optimized content drives significantly more search traffic",
       icon: TrendingUp,
-      metric: "70%"
+      metric: "300%"
     },
     {
-      title: "95% Customer Satisfaction",
-      description: "AI-powered support consistently delivers high-quality assistance",
+      title: "50% Higher Engagement Rates",
+      description: "Optimized content resonates better with target audiences",
       icon: Users,
-      metric: "95%"
+      metric: "50%"
+    },
+    {
+      title: "80% Time Savings",
+      description: "Automated optimization reduces manual content work",
+      icon: Zap,
+      metric: "80%"
     }
   ];
 
-  const integrations = [
+  const useCases = [
     {
-      name: "Slack",
-      description: "Integrate support directly into your team's communication platform",
-      icon: MessageCircle,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      name: "Zendesk",
-      description: "Seamlessly connect with existing helpdesk systems",
-      icon: Headphones,
+      title: "Blog Content",
+      description: "Optimize blog posts for search engines and social sharing",
+      icon: PenTool,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      name: "Salesforce",
-      description: "Sync customer data and support history automatically",
-      icon: Users,
-      color: "from-green-500 to-emerald-500"
+      title: "Social Media",
+      description: "Create engaging social media content that drives engagement",
+      icon: Smartphone,
+      color: "from-purple-500 to-pink-500"
     },
     {
-      name: "Shopify",
-      description: "Provide instant support for e-commerce customers",
-      icon: Globe,
+      title: "Email Marketing",
+      description: "Optimize email subject lines and content for better open rates",
+      icon: PenTool, // Changed from Mail to PenTool for consistency with other icons
       color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Landing Pages",
+      description: "Create high-converting landing pages with AI optimization",
+      icon: Target,
+      color: "from-green-500 to-emerald-500"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group"
-        description="Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today."
-        keywords="AI customer support, chatbot, customer service automation, AI support, customer service software"
+        title="AI Content Optimizer - Intelligent Content Optimization Platform | Zion Tech Group"
+        description="Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today."
+        keywords="AI content optimization, content SEO, content analytics, content performance, AI content creation"
       />
 
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20" />
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -162,16 +162,16 @@ export default function AICustomerSupport() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Customer Support
+              AI Content Optimizer
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              Revolutionize your customer service with AI-powered support that's available 24/7, speaks 50+ languages, and never gets tired.
+              Supercharge your content performance with AI-powered optimization, analytics, and intelligent content creation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+                <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 Watch Demo
               </button>
             </div>
@@ -193,7 +193,7 @@ export default function AICustomerSupport() {
               Powered by Advanced AI
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our AI understands context, learns from interactions, and provides human-like support experiences
+              Our AI engine analyzes millions of content pieces to optimize yours for maximum impact
             </p>
           </motion.div>
 
@@ -219,8 +219,47 @@ export default function AICustomerSupport() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Use Cases Section */}
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Optimize Any Content Type
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              From blog posts to social media, our AI optimizes content for every platform and audience
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className={`w-20 h-20 bg-gradient-to-r ${useCase.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                  <useCase.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-zion-slate-light">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
@@ -233,7 +272,7 @@ export default function AICustomerSupport() {
               Proven Results
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Join thousands of businesses who have transformed their customer support with AI
+              Join thousands of content creators who have transformed their content performance with AI
             </p>
           </motion.div>
 
@@ -247,51 +286,12 @@ export default function AICustomerSupport() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
                 <div className="text-5xl font-bold text-white mb-4">{benefit.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integrations Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Seamless Integrations
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Connect with your existing tools and workflows without disruption
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {integrations.map((integration, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <div className={`w-20 h-20 bg-gradient-to-r ${integration.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
-                  <integration.icon className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{integration.name}</h3>
-                <p className="text-zion-slate-light">{integration.description}</p>
               </motion.div>
             ))}
           </div>
@@ -312,7 +312,7 @@ export default function AICustomerSupport() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Choose the plan that fits your support volume. All plans include a 14-day free trial.
+              Choose the plan that fits your content creation needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
 
@@ -321,7 +321,7 @@ export default function AICustomerSupport() {
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
+                  plan.popular ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -331,7 +331,7 @@ export default function AICustomerSupport() {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -357,7 +357,7 @@ export default function AICustomerSupport() {
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'
+                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                 }`}>
                   {plan.cta}
@@ -369,7 +369,7 @@ export default function AICustomerSupport() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 relative">
+      <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -378,13 +378,13 @@ export default function AICustomerSupport() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Optimize Your Content?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of businesses who have already revolutionized their customer service with AI
+              Join thousands of content creators who have already revolutionized their content performance with AI
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">

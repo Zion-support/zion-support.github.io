@@ -425,11 +425,43 @@ function App() {
               <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
               <Route path="/services/dsr-portal" element={<DSRPortal />} />
               <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+<<<<<<< HEAD
+              {/* New innovative AI service routes */}
+              <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
+              <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
+              <Route path="/services/ai-customer-support" element={<AICustomerSupport />} />
+              <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              
+              {/* Additional innovative service routes */}
+              <Route path="/services/ai-blockchain-integration" element={<AIBlockchainIntegration />} />
+              <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+              <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              
+              {/* New innovative AI service routes */}
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+              <Route path="/services/ai-customer-experience" element={<AICustomerExperience />} />
+              <Route path="/services/ai-fintech-platform" element={<AIFinTechPlatform />} />
+              
+              {/* Additional service routes */}
+              <Route path="/services/digital-twin" element={<DigitalTwin />} />
+              <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+              <Route path="/services/data-analytics" element={<DataAnalytics />} />
+              
+              {/* New service routes for missing pages */}
+              <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+              <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+              <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+              <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+=======
               {/* New innovative micro SAAS service routes */}
               <Route path="/services/ai-project-manager" element={<AIProjectManager />} />
               <Route path="/services/ai-content-optimizer" element={<AIContentOptimizer />} />
               <Route path="/services/ai-customer-support" element={<AICustomerSupport />} />
               <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6e33
               
               {/* Catch-all */}
               <Route path="*" element={<NotFound />} />

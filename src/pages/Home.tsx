@@ -354,223 +354,24 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Enhanced AI Services Showcase */}
+      {/* Innovative Micro SAAS Services Showcase */}
       <motion.section 
-        className="py-24 bg-gradient-to-b from-slate-900/50 to-slate-800/50 relative"
+        className="py-24 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm relative"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/10 via-blue-600/10 to-purple-600/10" />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div className="text-center mb-20" variants={itemVariants}>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              <span className="futuristic-heading">AI-Powered</span> Solutions
+              Innovative <span className="bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Solutions</span>
             </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              Leverage the power of artificial intelligence to automate, optimize, and transform your business operations
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {aiServices.map((service, index) => (
-              <motion.div
-                key={service.title}
-                variants={itemVariants}
-                className="group"
-              >
-                <div className="futuristic-card h-full">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="space-y-3 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-slate-400">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <Link
-                    to={service.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200 group-hover:translate-x-1"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Emerging Technology Showcase */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-slate-800/50 to-slate-900/50 relative"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div className="text-center mb-20" variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              <span className="futuristic-heading">Emerging</span> Technologies
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              Stay ahead of the curve with our cutting-edge solutions in quantum computing, space technology, and autonomous systems
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {emergingTech.map((tech, index) => (
-              <motion.div
-                key={tech.title}
-                variants={itemVariants}
-                className="group"
-              >
-                <div className="futuristic-card h-full">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <tech.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="text-right">
-                      <div className="text-sm text-cyan-400 font-medium">{tech.category}</div>
-                      <div className="text-2xl font-bold text-white">{tech.price}</div>
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                    {tech.title}
-                  </h3>
-                  
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    {tech.description}
-                  </p>
-                  
-                  <Link
-                    to={tech.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200 group-hover:translate-x-1"
-                  >
-                    Explore Technology
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Micro SaaS Solutions */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-slate-900/50 to-slate-800/50 relative"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div className="text-center mb-20" variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              <span className="futuristic-heading">Micro SaaS</span> Solutions
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              Affordable, specialized software solutions designed for specific business needs and niche markets
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-          >
-            {microSaasServices.map((service, index) => (
-              <motion.div
-                key={service.title}
-                variants={itemVariants}
-                className="group"
-              >
-                <div className="futuristic-card h-full text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <div className="text-sm text-cyan-400 font-medium mb-2">{service.category}</div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-slate-300 mb-4 leading-relaxed text-sm">
-                    {service.description}
-                  </p>
-                  
-                  <div className="text-2xl font-bold text-white mb-4">{service.price}</div>
-                  
-                  <Link
-                    to={service.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200 group-hover:translate-x-1 text-sm"
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-          
-          <motion.div className="text-center mt-12" variants={itemVariants}>
-            <Link
-              to="/micro-saas"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-            >
-              View All Micro SaaS Solutions
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Enhanced Stats Section */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-white/5 to-white/10 backdrop-blur-sm relative"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div className="text-center mb-20" variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Why Choose <span className="futuristic-heading">Zion Tech Group</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              Our track record speaks for itself - delivering innovative solutions that drive real business results
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Discover our cutting-edge micro SAAS services that deliver enterprise-grade functionality with startup simplicity
             </p>
           </motion.div>
           
@@ -581,82 +382,109 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                variants={itemVariants}
-                className="text-center group"
-              >
-                <div className="relative mb-6">
-                  <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
-                    <stat.icon className="w-10 h-10 text-white" />
+            {/* AI Project Manager */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/services/ai-project-manager" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">📊</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                      AI Project Manager
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      AI-powered project management with intelligent task prioritization and resource optimization
+                    </p>
+                    <div className="text-blue-400 text-sm font-medium">From $29/month</div>
                   </div>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-300`}></div>
                 </div>
-                
-                <div className="text-4xl md:text-5xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                  {stat.value}
+              </Link>
+            </motion.div>
+
+            {/* AI Content Optimizer */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/services/ai-content-optimizer" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">✍️</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
+                      AI Content Optimizer
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Optimize content performance with AI-powered SEO and multi-platform analytics
+                    </p>
+                    <div className="text-green-400 text-sm font-medium">From $19/month</div>
+                  </div>
                 </div>
-                
-                <div className="text-xl font-semibold text-white mb-2">
-                  {stat.label}
+              </Link>
+            </motion.div>
+
+            {/* AI Customer Support */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/services/ai-customer-support" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">💬</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors duration-300">
+                      AI Customer Support
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      24/7 AI-powered support with multi-language capabilities and smart ticket routing
+                    </p>
+                    <div className="text-indigo-400 text-sm font-medium">From $39/month</div>
+                  </div>
                 </div>
-                
-                <div className="text-slate-400 leading-relaxed">
-                  {stat.description}
+              </Link>
+            </motion.div>
+
+            {/* AI Data Analytics */}
+            <motion.div variants={itemVariants} className="group">
+              <Link to="/services/ai-data-analytics" className="block h-full">
+                <div className="card-futuristic h-full flex flex-col justify-between hover-lift">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                      <span className="text-2xl">📈</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
+                      AI Data Analytics
+                    </h3>
+                    <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                      Transform data into insights with predictive analytics and automated reporting
+                    </p>
+                    <div className="text-emerald-400 text-sm font-medium">From $49/month</div>
+                  </div>
                 </div>
-              </motion.div>
-            ))}
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          <motion.div className="text-center mt-12" variants={itemVariants}>
+            <Link 
+              to="/micro-saas" 
+              className="btn-futuristic inline-flex items-center px-8 py-4 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300"
+            >
+              View All Micro SAAS Services
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Call to Action Section */}
-      <motion.section 
-        className="py-24 bg-gradient-to-br from-cyan-400/10 via-blue-500/10 to-purple-500/10 relative"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <motion.div variants={itemVariants}>
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Ready to <span className="futuristic-heading">Transform</span> Your Business?
-            </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed mb-12">
-              Join hundreds of companies already leveraging our cutting-edge technology solutions to drive innovation and growth
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-              >
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-white transition-all duration-300 hover:scale-105"
-              >
-                Explore Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
-            
-            <div className="mt-12 text-slate-400">
-              <p className="text-lg mb-4">Need immediate assistance?</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-                <a href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                  <Phone className="w-4 h-4 mr-2" />
-                  +1 302 464 0950
-                </a>
-                <a href="mailto:kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                  <Mail className="w-4 h-4 mr-2" />
-                  kleber@ziontechgroup.com
-                </a>
+      {/* Interactive Service Showcase - Lazy Loaded */}
+      <Suspense fallback={
+        <div className="py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="animate-pulse">
+                <div className="h-12 bg-zion-cyan/20 rounded-lg mb-4 max-w-md mx-auto"></div>
+                <div className="h-6 bg-zion-slate-light/20 rounded-lg max-w-2xl mx-auto"></div>
               </div>
             </div>
           </motion.div>
