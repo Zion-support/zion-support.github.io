@@ -7,6 +7,13 @@ import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar } from '../components/Sidebar';
 import { EnhancedSearch } from '../components/EnhancedSearch';
 
+<<<<<<< HEAD
+export default function AppHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
+=======
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -15,6 +22,7 @@ export function AppHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c7af
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +44,12 @@ export function AppHeader() {
     { name: '2025 Services', href: '/comprehensive-services-showcase-2025', current: false, featured: true },
     { name: '2026 Services', href: '/services2026', current: false, featured: true },
     { name: '2027 Services', href: '/services2027', current: false, featured: true },
+<<<<<<< HEAD
+=======
     { name: '2028 Services', href: '/innovative-services-showcase-2028', current: false, featured: true, new: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c7af
   ];
 
   // Organized services by category with enhanced descriptions
@@ -143,6 +154,27 @@ export function AppHeader() {
   }, {} as Record<string, typeof services>);
 
   return (
+<<<<<<< HEAD
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-neon' 
+        : 'bg-transparent'
+    }`}>
+      {/* Futuristic Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-green-500/5"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-50"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-2 group">
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center shadow-neon group-hover:shadow-neon-purple transition-all duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+=======
     <>
       <header role="banner" className={`sticky top-0 z-50 w-full transition-all duration-500 ${
         scrolled 
@@ -188,6 +220,7 @@ export function AppHeader() {
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
                     Zion Tech Group
                   </h1>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c7af
                 </div>
                 <div className="absolute inset-0 w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg opacity-20 animate-pulse"></div>
               </div>
@@ -208,16 +241,26 @@ export function AppHeader() {
                 <Link
                   key={item.name}
                   to={item.href}
+<<<<<<< HEAD
+                  className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 group ${
+                    item.current
+                      ? 'text-cyan-400 neon-text'
+                      : 'text-gray-300 hover:text-cyan-400 hover:neon-text'
+=======
                   onMouseEnter={() => setHoveredNav(item.name)}
                   onMouseLeave={() => setHoveredNav(null)}
                   className={`text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-300 relative group ${
                     item.featured ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg border border-cyan-400/30' : ''
                   } ${
                     item.new ? 'bg-gradient-to-r from-pink-500/20 to-purple-500/20 border-pink-400/30' : ''
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c7af
                   }`}
                 >
                   {item.name}
                   {item.featured && (
+<<<<<<< HEAD
+                    <span className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-pulse"></span>
+=======
                     <span className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
                   )}
                   {item.new && (
@@ -376,6 +419,7 @@ export function AppHeader() {
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                       <ZionLoadingSpinner size="sm" />
                     </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c7af
                   )}
                 </div>
               ))}
