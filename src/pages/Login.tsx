@@ -29,7 +29,7 @@ import {
   Linkedin,
   Twitter,
   Facebook,
-  Google,
+  Chrome,
   Apple,
   Smartphone,
   Monitor,

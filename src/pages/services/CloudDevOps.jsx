@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
-import SEO from '@/components/SEO';
+import { SEO } from '@/components/SEO';
 
 const CloudDevOps = () => {
   const cloudServices = [

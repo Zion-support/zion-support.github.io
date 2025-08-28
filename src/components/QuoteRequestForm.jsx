@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle, Send } from "lucide-react";
 
@@ -193,13 +193,13 @@ export const QuoteRequestForm = () => {
             <label className="block text-sm font-medium text-zion-slate-light mb-2">
               Project Description *
             </label>
-            <Textarea
+            <textarea
               name="description"
               value={formData.description}
               onChange={handleChange}
               required
               rows={6}
-              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
+              className="bg-zion-blue border-zion-purple/30 text-white placeholder-zion-slate-light focus:border-zion-cyan w-full p-3 rounded-md resize-none"
               placeholder="Please describe your project requirements, goals, and any specific details that would help us provide an accurate quote..."
             />
           </div>
