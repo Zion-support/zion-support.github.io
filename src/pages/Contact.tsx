@@ -109,7 +109,7 @@ export default function Contact() {
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <motion.section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
@@ -127,7 +127,7 @@ export default function Contact() {
             </p>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Form & Info Section */}
       <section className="py-20">
@@ -265,7 +265,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <button
+                  <motion.button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full flex items-center justify-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
@@ -489,11 +489,10 @@ export default function Contact() {
                     Send Email
                   </a>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
-        </div>
-      </section>
+        </motion.section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">

@@ -292,4 +292,4 @@ export default function About() {
   );
 };
 
-export default About;
+// default export is already declared above

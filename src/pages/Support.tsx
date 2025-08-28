@@ -7,8 +7,7 @@ export default function Support() {
         <h1 className="text-4xl font-bold mb-4">Support</h1>
         <p className="text-slate-300">Get help with products, services, and account assistance.</p>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Support;

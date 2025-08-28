@@ -50,7 +50,7 @@ export function LoadingSpinner({
           transition={{ delay: 0.2 }}
         >
           <span className="text-slate-300 font-medium">{text}</span>
-        </motion.div>
+        </motion.p>
       )}
       
       <span className="sr-only">Loading...</span>
@@ -126,7 +126,7 @@ export function LoadingSkeleton({
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, i) => (
+      {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}
           className="h-4 bg-gray-300 rounded animate-pulse"
@@ -179,7 +179,7 @@ export function FullPageLoader({
           Preparing your digital transformation journey...
         </motion.p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
