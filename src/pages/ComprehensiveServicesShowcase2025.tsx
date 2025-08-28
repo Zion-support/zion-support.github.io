@@ -24,10 +24,8 @@ import {
   Search,
   Filter,
   DollarSign,
-  Clock,
-  Users,
-  Target,
-  CheckCircle,
+  Server,
+  Code,
   ExternalLink,
   Phone,
   Mail,
@@ -56,26 +54,17 @@ export default function ComprehensiveServicesShowcase2025() {
     { value: 'premium', label: 'Over $15,000/month' }
   ];
 
-  const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025
+  const filteredServices = allServices
     .filter(service =>
       service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     )
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'innovation':
-          return getInnovationScore(b.innovationLevel) - getInnovationScore(a.innovationLevel);
-        case 'price':
-          return a.price - b.price;
-        case 'roi':
-          return parseFloat(b.roi.split('%')[0]) - parseFloat(a.roi.split('%')[0]);
-        case 'rating':
-          return b.rating - a.rating;
-        default:
-          return 0;
-      }
+    .filter(service => {
+      if (selectedPriceRange === 'all') return true;
+      const priceRange = getPriceRange(service.price);
+      return priceRange === selectedPriceRange;
     });
 
   const getPriceRange = (price: number) => {
@@ -92,6 +81,27 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'high': return 'bg-yellow-100 text-yellow-800';
       case 'premium': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getInnovationColor = (level: string) => {
+    switch (level) {
+      case 'high': return 'from-purple-500 to-pink-500';
+      case 'medium': return 'from-blue-500 to-cyan-500';
+      case 'low': return 'from-green-500 to-emerald-500';
+      default: return 'from-gray-500 to-slate-500';
+    }
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'AI/ML': return Brain;
+      case 'Cybersecurity': return Shield;
+      case 'Analytics': return BarChart3;
+      case 'Communication': return MessageSquare;
+      case 'Infrastructure': return Server;
+      case 'Development': return Code;
+      default: return Globe;
     }
   };
 
@@ -221,46 +231,46 @@ export default function ComprehensiveServicesShowcase2025() {
                     </div>
                   </div>
                 </div>
-              )}
 
-              {/* Market Info */}
-              {service.marketSize && (
-                <div className="mb-4 p-3 bg-white/5 rounded-lg">
-                  <div className="text-xs text-gray-300">
-                    <span className="text-gray-400">Market Size:</span> {service.marketSize}
-                  </div>
-                </div>
-              )}
-
-              {/* Contact and CTA */}
-              <div className="border-t border-white/20 pt-4">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="text-sm text-gray-400">
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {service.estimatedDelivery}
+                {/* Market Info */}
+                {service.marketSize && (
+                  <div className="mb-4 p-3 bg-white/5 rounded-lg">
+                    <div className="text-xs text-gray-300">
+                      <span className="text-gray-400">Market Size:</span> {service.marketSize}
                     </div>
                   </div>
-                  <div className="text-sm text-gray-400">
-                    <div className="flex items-center">
-                      <Target className="w-4 h-4 mr-1" />
-                      {service.supportLevel}
+                )}
+
+                {/* Contact and CTA */}
+                <div className="border-t border-white/20 pt-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-sm text-gray-400">
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {service.estimatedDelivery}
+                      </div>
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      <div className="flex items-center">
+                        <Target className="w-4 h-4 mr-1" />
+                        {service.supportLevel}
+                      </div>
                     </div>
                   </div>
+                  
+                  <div className="flex space-x-2">
+                    <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
+                      Get Quote
+                    </button>
+                    <button className="px-4 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-200">
+                      <ExternalLink className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
-                
-                <div className="flex space-x-2">
-                  <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-                    Get Quote
-                  </button>
-                  <button className="px-4 py-2 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all duration-200">
-                    <ExternalLink className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
+      </section>
 
       {/* Contact Information */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -322,7 +332,7 @@ export default function ComprehensiveServicesShowcase2025() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

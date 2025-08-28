@@ -1,116 +1,23 @@
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Shield,
-  TrendingUp,
-  Zap,
-  Globe,
-  Users,
-  BarChart3,
-  Lock,
-  Eye,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  DollarSign,
-  Target,
-  Lightbulb,
-  Award,
-  ShieldCheck,
-  Server,
-  Smartphone,
-  Monitor,
-  Wifi,
-  Flask,
-  TestTube,
-  Syringe,
-  Stethoscope,
-  HeartPulse,
-  BrainCircuit,
-  Ear,
-  Hand,
-  Foot,
-  Bone,
-  Tooth,
-  Pill,
-  Bandage,
-  Thermometer,
-  Scale,
-  Calculator,
-  ChartBar,
-  PieChart,
-  LineChart,
-  Activity,
-  TrendingDown,
-  Minus,
-  Plus,
-  Equal,
-  Divide,
-  Percent,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  Ethereum,
-  CreditCard,
-  Wallet,
-  Banknote,
-  Coins,
-  PiggyBank,
-  Safe,
-  Vault,
-  LockKeyhole,
-  Key,
-  Fingerprint,
-  QrCode,
-  Barcode,
-  Scan,
-  Camera,
-  VideoOff,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX,
-  Play,
-  Pause,
-  Stop,
-  SkipBack,
-  SkipForward,
-  Rewind,
-  FastForward,
-  Shuffle,
-  Repeat,
-  Repeat1,
-  Shuffle2,
-  SkipBack2,
-  SkipForward2,
-  PlayCircle,
-  PauseCircle,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ShoppingCart,
-  MessageCircle,
-  HelpCircle,
-  FileText,
-  Video,
-  Truck,
-  Briefcase
-} from 'lucide-react';
-import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
 import SEO from '@/components/SEO';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
+import { motion } from 'framer-motion';
+import {
+    ArrowRight,
+    BarChart3,
+    Briefcase,
+    Globe,
+    Grid,
+    List,
+    MessageCircle,
+    Search,
+    Star
+} from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
@@ -313,21 +220,22 @@ export default function ComprehensiveServicesOverview2027() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            Comprehensive Services Overview
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-              2027 Edition
-            </span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-zion-slate-light max-w-3xl mx-auto"
-          >
-            Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
-          </motion.p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Comprehensive Services Overview
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                2027 Edition
+              </span>
+            </h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-zion-slate-light max-w-3xl mx-auto"
+            >
+              Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
+            </motion.p>
+          </motion.div>
         </div>
 
         {/* Filters and Controls */}
@@ -463,29 +371,6 @@ export default function ComprehensiveServicesOverview2027() {
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
-          <div className="flex flex-wrap gap-4">
-            {pricingModels.map((pricing) => (
-              <Button
-                key={pricing.id}
-                variant={selectedPricing === pricing.id ? 'default' : 'outline'}
-                onClick={() => setSelectedPricing(pricing.id)}
-                className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
-              >
-                {pricing.name}
-              </Button>
-            ))}
-          </div>
-        </div>
-        {/* Services Grid */}
-        <div className={`grid gap-8 ${
-          viewMode === 'grid' 
-            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
-            : 'grid-cols-1'
-        }`}>
-          {filteredServices.map((service) => (
-            <ServiceCard key={service.id} service={service} />
-          ))}
-        </div>
         {filteredServices.length === 0 && (
           <div className="text-center py-16">
             <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
@@ -501,7 +386,8 @@ export default function ComprehensiveServicesOverview2027() {
             </Button>
           </div>
         )}
-      </div>
+        </div>
+      </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
         <div className="max-w-4xl mx-auto text-center">
