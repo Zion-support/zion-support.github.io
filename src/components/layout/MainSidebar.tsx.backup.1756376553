@@ -70,6 +70,42 @@ export function MainSidebar() {
 
   const navigation: SidebarItem[] = [
     {
+<<<<<<< HEAD
+      name: 'Home',
+      href: '/',
+      icon: Home
+    },
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      children: [
+        {
+          name: '2026 Services',
+          href: '/services2026',
+          icon: Star,
+          featured: true,
+          description: 'Revolutionary AI, Quantum & Micro SaaS'
+        },
+        {
+          name: 'AI Services',
+          href: '/ai-services',
+          icon: Brain,
+          description: 'Artificial Intelligence Solutions'
+        },
+        {
+          name: 'IT Services',
+          href: '/it-services',
+          icon: Cpu,
+          description: 'Information Technology Solutions'
+        },
+        {
+          name: 'Micro SaaS',
+          href: '/micro-saas',
+          icon: ShoppingCart,
+          description: 'Productized SaaS Solutions'
+        }
+=======
       title: 'Main',
       items: [
         { name: 'Home', href: '/', icon: Home },
@@ -83,6 +119,7 @@ export function MainSidebar() {
         { name: 'News', href: '/news', icon: Newspaper },
         { name: 'Contact', href: '/contact', icon: Mail },
         { name: 'Blog', href: '/blog', icon: FileText },
+>>>>>>> origin/cursor/website-audit-and-enhancement-e0b4
       ]
     },
     {

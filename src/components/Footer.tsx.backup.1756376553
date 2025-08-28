@@ -50,10 +50,16 @@ export function Footer() {
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Partners', path: '/partners', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
+<<<<<<< HEAD
+        { name: 'News & Updates', path: '/news', icon: Newspaper },
+        { name: 'Case Studies', path: '/case-studies', icon: CheckCircle },
+        { name: 'Partners', path: '/partners', icon: Users }
+=======
         { name: 'Solutions', path: '/solutions', icon: Target },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'Blog', path: '/blog', icon: Newspaper },
         { name: 'Contact', path: '/contact', icon: Phone }
+>>>>>>> origin/cursor/website-audit-and-enhancement-e0b4
       ]
     },
     {
