@@ -52,6 +52,11 @@ const AIHealthcarePlatform = React.lazy(() => import('./pages/services/ai-health
 const AIAutonomousResearchAssistant = React.lazy(() => import('./pages/services/ai-autonomous-research-assistant'));
 const AIQuantumHybridPlatform = React.lazy(() => import('./pages/services/ai-quantum-hybrid-platform'));
 
+// Enhanced services pages
+const EnhancedServices = React.lazy(() => import('./pages/EnhancedServices'));
+const EnhancedPricing = React.lazy(() => import('./pages/EnhancedPricing'));
+const EnhancedContact = React.lazy(() => import('./pages/EnhancedContact'));
+
 // Enhanced placeholder pages with better UX
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -124,6 +129,9 @@ function App() {
                 <Route path="/help" element={<Help />} />
                 <Route path="/docs" element={<Docs />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/enhanced-services" element={<EnhancedServices />} />
+                <Route path="/enhanced-pricing" element={<EnhancedPricing />} />
+                <Route path="/enhanced-contact" element={<EnhancedContact />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
