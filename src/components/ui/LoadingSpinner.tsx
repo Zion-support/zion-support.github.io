@@ -3,233 +3,195 @@ import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'ripple' | 'orbit';
-  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'white';
-  text?: string;
-  showText?: boolean;
+  variant?: 'spinner' | 'dots' | 'pulse' | 'skeleton';
   className?: string;
-  ariaLabel?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  variant = 'default',
-  color = 'primary',
-  text = 'Loading...',
-  showText = false,
-  className = '',
-  ariaLabel,
-}) => {
+export function LoadingSpinner({ 
+  size = 'md', 
+  variant = 'spinner',
+  className = '' 
+}: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
+    xl: 'w-16 h-16'
   };
 
-  const colorClasses = {
-    primary: 'text-cyan-500',
-    secondary: 'text-slate-500',
-    success: 'text-green-500',
-    warning: 'text-yellow-500',
-    error: 'text-red-500',
-    white: 'text-white',
-  };
+  if (variant === 'skeleton') {
+    return <SkeletonLoader size={size} className={className} />;
+  }
 
-  const renderSpinner = () => {
-    switch (variant) {
-      case 'pulse':
-        return (
-          <motion.div
-            className={`${sizeClasses[size]} ${colorClasses[color]} animate-pulse`}
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <div className="w-full h-full bg-current rounded-full" />
-          </motion.div>
-        );
+  if (variant === 'dots') {
+    return <DotsLoader size={size} className={className} />;
+  }
 
-      case 'dots':
-        return (
-          <div className={`flex space-x-1 ${sizeClasses[size]}`}>
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={i}
-                className={`w-2 h-2 ${colorClasses[color]} bg-current rounded-full`}
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  duration: 1.4,
-                  repeat: Infinity,
-                  delay: i * 0.2,
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-          </div>
-        );
+  if (variant === 'pulse') {
+    return <PulseLoader size={size} className={className} />;
+  }
 
-      case 'bars':
-        return (
-          <div className={`flex space-x-1 ${sizeClasses[size]}`}>
-            {[0, 1, 2, 3].map((i) => (
-              <motion.div
-                key={i}
-                className={`w-1 ${colorClasses[color]} bg-current rounded-full`}
-                animate={{
-                  height: ['40%', '100%', '40%'],
-                }}
-                transition={{
-                  duration: 1.2,
-                  repeat: Infinity,
-                  delay: i * 0.1,
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-          </div>
-        );
+  return (
+    <motion.div
+      className={`${sizeClasses[size]} ${className}`}
+      animate={{ rotate: 360 }}
+      transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+    >
+      <div className="w-full h-full border-2 border-slate-300 border-t-cyan-400 rounded-full" />
+    </motion.div>
+  );
+}
 
-      case 'ripple':
-        return (
-          <div className={`relative ${sizeClasses[size]}`}>
-            <motion.div
-              className={`absolute inset-0 ${colorClasses[color]} bg-current rounded-full`}
-              animate={{
-                scale: [0, 1],
-                opacity: [1, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeOut",
-              }}
-            />
-            <motion.div
-              className={`absolute inset-0 ${colorClasses[color]} bg-current rounded-full`}
-              animate={{
-                scale: [0, 1],
-                opacity: [1, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                delay: 0.5,
-                ease: "easeOut",
-              }}
-            />
-          </div>
-        );
+function DotsLoader({ size, className }: { size: LoadingSpinnerProps['size'], className: string }) {
+  const dotSize = size === 'sm' ? 'w-1 h-1' : size === 'md' ? 'w-2 h-2' : size === 'lg' ? 'w-3 h-3' : 'w-4 h-4';
+  
+  return (
+    <div className={`flex space-x-1 ${className}`}>
+      {[0, 1, 2].map((i) => (
+        <motion.div
+          key={i}
+          className={`${dotSize} bg-cyan-400 rounded-full`}
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.5, 1, 0.5]
+          }}
+          transition={{
+            duration: 1.4,
+            repeat: Infinity,
+            delay: i * 0.2
+          }}
+        />
+      ))}
+    </div>
+  );
+}
 
-      case 'orbit':
-        return (
-          <div className={`relative ${sizeClasses[size]}`}>
-            <motion.div
-              className={`absolute inset-0 ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full`}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            />
-            <motion.div
-              className={`absolute inset-2 ${colorClasses[color]} border-2 border-current border-b-transparent rounded-full`}
-              animate={{ rotate: -360 }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
-            />
-          </div>
-        );
-
-      default:
-        return (
-          <motion.div
-            className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full`}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          />
-        );
-    }
+function PulseLoader({ size, className }: { size: LoadingSpinnerProps['size'], className: string }) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
   };
 
   return (
-    <div 
-      className={`flex flex-col items-center justify-center ${className}`}
-      role="status"
-      aria-label={ariaLabel || text}
-      aria-live="polite"
-    >
-      {renderSpinner()}
-      {showText && (
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className={`mt-3 text-sm font-medium ${colorClasses[color]} text-center`}
-        >
-          {text}
-        </motion.p>
-      )}
+    <motion.div
+      className={`${sizeClasses[size]} bg-cyan-400 rounded-full ${className}`}
+      animate={{
+        scale: [1, 1.2, 1],
+        opacity: [0.7, 1, 0.7]
+      }}
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
+    />
+  );
+}
+
+function SkeletonLoader({ size, className }: { size: LoadingSpinnerProps['size'], className: string }) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  return (
+    <div className={`${sizeClasses[size]} ${className}`}>
+      <motion.div
+        className="w-full h-full bg-slate-300 rounded animate-pulse"
+        animate={{
+          opacity: [0.5, 1, 0.5]
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+      />
     </div>
   );
-};
+}
 
-// Specialized loading components for common use cases
-export const PageLoader: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <LoadingSpinner 
-        size="xl" 
-        variant="orbit" 
-        color="primary" 
-        showText 
-        text="Loading amazing content..."
-      />
-    </div>
-  </div>
-);
-
-export const ButtonLoader: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'sm' }) => (
-  <LoadingSpinner 
-    size={size} 
-    variant="dots" 
-    color="white" 
-    className="inline-flex"
-  />
-);
-
-export const CardLoader: React.FC = () => (
-  <div className="animate-pulse">
-    <div className="h-48 bg-slate-700 rounded-lg mb-4"></div>
-    <div className="h-4 bg-slate-700 rounded w-3/4 mb-2"></div>
-    <div className="h-4 bg-slate-700 rounded w-1/2"></div>
-  </div>
-);
-
-export const TableLoader: React.FC = () => (
-  <div className="animate-pulse space-y-3">
-    {[...Array(5)].map((_, i) => (
-      <div key={i} className="flex space-x-4">
-        <div className="h-4 bg-slate-700 rounded w-1/4"></div>
-        <div className="h-4 bg-slate-700 rounded w-1/4"></div>
-        <div className="h-4 bg-slate-700 rounded w-1/4"></div>
-        <div className="h-4 bg-slate-700 rounded w-1/4"></div>
+// Skeleton components for different content types
+export function SkeletonCard({ className = '' }: { className?: string }) {
+  return (
+    <div className={`bg-white rounded-lg shadow-sm p-6 ${className}`}>
+      <div className="animate-pulse space-y-4">
+        <div className="h-4 bg-slate-200 rounded w-3/4"></div>
+        <div className="h-4 bg-slate-200 rounded w-1/2"></div>
+        <div className="h-4 bg-slate-200 rounded w-5/6"></div>
       </div>
-    ))}
-  </div>
-);
+    </div>
+  );
+}
 
-export const SkeletonLoader: React.FC<{ 
-  className?: string;
-  lines?: number;
-  height?: string;
-}> = ({ className = '', lines = 3, height = 'h-4' }) => (
-  <div className={`animate-pulse space-y-2 ${className}`}>
-    {[...Array(lines)].map((_, i) => (
-      <div
-        key={i}
-        className={`bg-slate-700 rounded ${height} ${
-          i === lines - 1 ? 'w-3/4' : 'w-full'
-        }`}
-      />
-    ))}
-  </div>
-);
+export function SkeletonText({ lines = 3, className = '' }: { lines?: number, className?: string }) {
+  return (
+    <div className={`space-y-2 ${className}`}>
+      {Array.from({ length: lines }).map((_, i) => (
+        <div
+          key={i}
+          className={`h-4 bg-slate-200 rounded animate-pulse ${
+            i === lines - 1 ? 'w-3/4' : 'w-full'
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
+
+export function SkeletonImage({ className = '' }: { className?: string }) {
+  return (
+    <div className={`bg-slate-200 rounded-lg animate-pulse ${className}`}>
+      <div className="w-full h-full min-h-[200px] bg-slate-200 rounded-lg" />
+    </div>
+  );
+}
+
+export function SkeletonButton({ className = '' }: { className?: string }) {
+  return (
+    <div className={`h-10 bg-slate-200 rounded-lg animate-pulse ${className}`} />
+  );
+}
+
+export function SkeletonAvatar({ size = 'md', className = '' }: { size?: 'sm' | 'md' | 'lg', className?: string }) {
+  const sizeClasses = {
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
+  };
+
+  return (
+    <div className={`${sizeClasses[size]} bg-slate-200 rounded-full animate-pulse ${className}`} />
+  );
+}
+
+export function PageSkeleton() {
+  return (
+    <div className="min-h-screen bg-slate-50 p-6">
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* Header Skeleton */}
+        <div className="space-y-4">
+          <div className="h-8 bg-slate-200 rounded w-1/3 animate-pulse" />
+          <div className="h-4 bg-slate-200 rounded w-2/3 animate-pulse" />
+        </div>
+
+        {/* Content Grid Skeleton */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <SkeletonCard key={i} />
+          ))}
+        </div>
+
+        {/* Footer Skeleton */}
+        <div className="space-y-4">
+          <div className="h-4 bg-slate-200 rounded w-1/2 animate-pulse" />
+          <div className="h-4 bg-slate-200 rounded w-1/3 animate-pulse" />
+        </div>
+      </div>
+    </div>
+  );
+}

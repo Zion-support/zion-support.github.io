@@ -7,6 +7,8 @@ import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { AnalyticsMonitor } from './components/AnalyticsMonitor';
 
 // Lazy load pages with error boundaries
 const Home = React.lazy(() => import('./pages/Home'));
@@ -162,6 +164,8 @@ function App() {
           <Footer />
           <ChatAssistant />
           <PerformanceOptimizer />
+          <AccessibilityEnhancer />
+          <AnalyticsMonitor />
         </div>
       </Router>
     </ErrorBoundary>
