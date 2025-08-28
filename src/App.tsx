@@ -33,6 +33,15 @@ const Partners = lazy(() => import('./pages/Partners').then(module => ({ default
 const Pricing = lazy(() => import('./pages/Pricing').then(module => ({ default: module.default })));
 const SearchPage = lazy(() => import('./pages/SearchPage').then(module => ({ default: module.default })));
 const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030').then(module => ({ default: module.default })));
+const APIDocumentation = lazy(() => import('./pages/APIDocumentation').then(module => ({ default: module.default })));
+const Developers = lazy(() => import('./pages/Developers').then(module => ({ default: module.default })));
+const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
+const Community = lazy(() => import('./pages/Community').then(module => ({ default: module.default })));
+const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
+const ScheduleDemo = lazy(() => import('./pages/ScheduleDemo').then(module => ({ default: module.default })));
+const InvestorRelations = lazy(() => import('./pages/InvestorRelations').then(module => ({ default: module.default })));
+const Press = lazy(() => import('./pages/Press').then(module => ({ default: module.default })));
+const Legal = lazy(() => import('./pages/Legal').then(module => ({ default: module.default })));
 
 // Enhanced services pages with better error handling
 const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx').then(module => ({ default: module.default })));
@@ -140,6 +149,15 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/api-docs" element={<APIDocumentation />} />
+                <Route path="/developers" element={<Developers />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/community" element={<Community />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/demo" element={<ScheduleDemo />} />
+                <Route path="/investors" element={<InvestorRelations />} />
+                <Route path="/press" element={<Press />} />
+                <Route path="/legal" element={<Legal />} />
 
                 {/* Service Routes with enhanced error handling */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
