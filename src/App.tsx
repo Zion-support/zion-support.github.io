@@ -15,6 +15,9 @@ const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const Services = React.lazy(() => import('./pages/Services'));
+const RevolutionaryServices = React.lazy(() => import('./pages/RevolutionaryServices'));
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const RequestQuote = React.lazy(() => import('./pages/RequestQuote'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const Login = React.lazy(() => import('./pages/Login'));
@@ -81,6 +84,9 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/revolutionary-services" element={<RevolutionaryServices />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
               <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
               <Route path="/request-quote" element={<RequestQuote />} />
               <Route path="/dashboard" element={<Dashboard />} />
