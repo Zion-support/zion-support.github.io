@@ -1,8 +1,12 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 console.log('🔗 Starting continuous link checker automation...');
 
@@ -73,10 +77,8 @@ async function checkLinks() {
       });
     }
     
-    if (hasIssues) {
-      console.log('⚠️  Link check completed with issues found');
-    } else {
-      console.log('✅ Link check completed successfully - no issues found');
+    if (!hasIssues) {
+      console.log('✅ No broken references found');
     }
     
     // Generate report
