@@ -125,29 +125,6 @@ const serviceCategories: ServiceCategory[] = [
     icon: Brain,
     color: 'from-purple-500 to-pink-500',
     services: [
-<<<<<<< HEAD
-      { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', description: 'AI-powered workflow automation', featured: true },
-      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', description: 'AI-powered data governance', featured: true },
-      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', description: 'AI-powered customer insights' },
-      { name: 'AI Business Intelligence Analytics', path: '/services/ai-business-intelligence-analytics', description: 'Advanced analytics & ML insights' },
-      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
-      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
-      { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' },
-      { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', description: 'AI-powered candidate evaluation' },
-      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', description: 'Automated content creation' },
-      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
-      { name: 'AI Project Management', path: '/services/ai-project-management', description: 'AI-driven project optimization' },
-      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', description: 'Intelligent financial insights' },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', description: 'AI-powered financial risk assessment' },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', description: 'Automated code security analysis' },
-      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', description: 'AI-driven DevOps automation' },
-      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', description: 'Enhanced customer experience' },
-      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', description: 'Personalized marketing automation' },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', description: 'Quantum-AI integration platform' },
-      { name: 'AI Quantum Financial Trading', path: '/services/ai-quantum-financial-trading', description: 'Quantum-AI trading platform' },
-      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', description: 'AI-powered supply chain automation' },
-      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', description: 'AI-powered threat detection' }
-=======
       {
         name: 'AI Workflow Orchestrator',
         description: 'Automate complex business processes with AI',
@@ -286,7 +263,6 @@ const serviceCategories: ServiceCategory[] = [
         color: 'from-purple-500 to-pink-500',
         features: ['Process Optimization', 'Technology Integration', 'Change Management']
       }
->>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements
     ]
   },
   {
@@ -295,15 +271,6 @@ const serviceCategories: ServiceCategory[] = [
     icon: Cloud,
     color: 'from-blue-500 to-cyan-500',
     services: [
-<<<<<<< HEAD
-      { name: 'Cloud DevOps', path: '/services/cloud-devops', description: 'Infrastructure automation & scaling', featured: true },
-      { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
-      { name: 'FinOps Advisor', path: '/services/finops-advisor', description: 'Cloud cost optimization' },
-      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', description: 'Financial operations automation' },
-      { name: 'IT Consulting', path: '/it-consulting', description: 'Technology strategy & planning' },
-      { name: 'Enterprise Solutions', path: '/solutions/enterprise', description: 'Large-scale enterprise solutions' },
-      { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare technology solutions' }
-=======
       {
         name: 'Cloud DevOps',
         description: 'Streamline development and deployment',
@@ -369,7 +336,6 @@ const serviceCategories: ServiceCategory[] = [
         color: 'from-green-500 to-emerald-500',
         features: ['HIPAA Compliance', 'Patient Care', 'Data Security']
       }
->>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements
     ]
   },
   {
@@ -378,13 +344,6 @@ const serviceCategories: ServiceCategory[] = [
     icon: Shield,
     color: 'from-red-500 to-orange-500',
     services: [
-<<<<<<< HEAD
-      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', description: 'AI-powered security platform', featured: true },
-      { name: 'Security Headers & CSP', path: '/services/security-headers-csp', description: 'Content security policy' },
-      { name: 'DSR Privacy Portal', path: '/services/dsr-portal', description: 'Data subject rights portal' },
-      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', description: 'Zero trust security model' },
-      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', description: 'Automated compliance management' }
-=======
       {
         name: 'Zero Trust Network Access',
         description: 'Secure access to your network resources',
@@ -426,7 +385,6 @@ const serviceCategories: ServiceCategory[] = [
         color: 'from-blue-500 to-cyan-500',
         features: ['Privacy Management', 'Data Rights', 'Compliance']
       }
->>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements
     ]
   },
   {
@@ -435,14 +393,6 @@ const serviceCategories: ServiceCategory[] = [
     icon: Atom,
     color: 'from-purple-500 to-pink-500',
     services: [
-<<<<<<< HEAD
-      { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Quantum computing solutions', featured: true },
-      { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', description: 'Edge computing infrastructure' },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', description: 'Quantum-AI integration' },
-      { name: 'Space Technology', path: '/space-tech', description: 'Space technology solutions' },
-      { name: 'Digital Twin', path: '/services/digital-twin', description: 'Digital twin technology' },
-      { name: 'Digital Transformation', path: '/services/digital-transformation', description: 'Digital transformation consulting' }
-=======
       {
         name: 'Quantum Computing',
         description: 'Quantum computing solutions',
@@ -492,27 +442,10 @@ const serviceCategories: ServiceCategory[] = [
         color: 'from-purple-500 to-pink-500',
         features: ['Process Optimization', 'Technology Integration', 'Change Management']
       }
->>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements
     ]
   },
   {
     title: 'Micro SaaS Solutions',
-<<<<<<< HEAD
-    icon: ShoppingCart,
-    description: 'Specialized software-as-a-service solutions',
-    color: 'from-green-500 to-emerald-500',
-    services: [
-      { name: 'Micro CRM', path: '/services/micro-crm', description: 'Customer relationship management', featured: true },
-      { name: 'Helpdesk Platform', path: '/services/helpdesk-platform', description: 'Customer support platform' },
-      { name: 'Website Analytics', path: '/services/website-analytics', description: 'Website performance analytics' },
-      { name: 'IT Helpdesk', path: '/services/it-helpdesk', description: 'IT support management' },
-      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', description: 'Affiliate program management' },
-      { name: 'Mobile Survey', path: '/services/mobile-survey', description: 'Mobile survey platform' },
-      { name: 'Podcast Transcription', path: '/services/podcast-transcription', description: 'Audio transcription service' },
-      { name: 'Email Sequencer', path: '/services/email-sequencer', description: 'Email automation platform' },
-      { name: 'Returns Management', path: '/services/returns-management', description: 'Returns processing system' },
-      { name: 'LLM Content Studio', path: '/services/llm-content-studio', description: 'AI content creation platform' }
-=======
     description: 'Specialized software solutions for specific business needs',
     icon: Zap,
     color: 'from-green-500 to-emerald-500',
@@ -629,7 +562,6 @@ const serviceCategories: ServiceCategory[] = [
         color: 'from-blue-500 to-cyan-500',
         features: ['Mobile Optimization', 'Survey Creation', 'Response Collection']
       }
->>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements
     ]
   }
 ];
@@ -696,8 +628,6 @@ export default function Services() {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
       {/* Featured Services */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -745,7 +675,6 @@ export default function Services() {
         </div>
       </div>
 
->>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements
       {/* Service Categories */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -819,7 +748,7 @@ export default function Services() {
                     className="group"
                   >
                     <Link
-                      to={service.path}
+                      to={service.href}
                       className="block p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-zion-cyan/50 transition-all duration-300 group-hover:scale-105 h-full"
                     >
                       <div className="flex items-start justify-between mb-4">
@@ -881,7 +810,7 @@ export default function Services() {
                     className="group"
                   >
                     <Link
-                      to={service.path}
+                      to={service.href}
                       className="block p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-zion-cyan/50 transition-all duration-300 group-hover:scale-105 h-full"
                     >
                       <div className="flex items-start justify-between mb-4">

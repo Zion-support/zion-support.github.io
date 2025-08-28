@@ -65,7 +65,9 @@ import {
   Workflow,
   Gauge,
   PenTool,
-  Home
+  Home,
+  Calendar,
+  Newspaper
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -87,55 +89,28 @@ export default function AppHeader() {
   const { user, logout } = useAuth();
 
   const navigation = [
-<<<<<<< HEAD
-    { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false },
-    { name: 'Innovative 2025', href: '/innovative-services-landing-2025', current: false, featured: true },
-    { name: '2026 Services', href: '/services2026', current: false, featured: true },
-    { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2027', current: false },
-    { name: 'Revolutionary 2030', href: '/revolutionary-services-2030', current: false, featured: true },
-    { name: 'AI Services', href: '/ai-services', current: false },
-    { name: 'IT Services', href: '/it-services', current: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false },
-    { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'AI Solutions', href: '/ai-solutions', current: false },
-    { name: 'Case Studies', href: '/case-studies', current: false },
-    { name: 'Research', href: '/research-development', current: false },
-    { name: 'Events', href: '/events', current: false },
-    { name: 'News', href: '/news', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
-    { name: 'Partners', href: '/partners', current: false },
-    { name: 'Blog', href: '/blog', current: false },
-    { name: 'Help', href: '/help', current: false },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
-    { name: 'Careers', href: '/careers', current: false },
-=======
-    {
-      name: 'Home',
-      href: '/',
-      icon: Home,
-      description: 'Welcome to Zion Tech Group'
-    },
-    {
-      name: 'Services',
-      href: '/services',
-      icon: Rocket,
-      description: 'Explore our services'
-    },
-    {
-      name: 'About',
-      href: '/about',
-      icon: Users,
-      description: 'Learn about our company'
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: Phone,
-      description: 'Get in touch with us'
-    }
->>>>>>> origin/cursor/enhance-application-with-new-services-and-site-improvements
+    { name: 'Home', href: '/', current: true, icon: Home, description: 'Welcome to Zion Tech Group' },
+    { name: 'Services', href: '/services', current: false, icon: Rocket, description: 'Explore our services' },
+    { name: 'Innovative 2025', href: '/innovative-services-landing-2025', current: false, featured: true, icon: Sparkles, description: 'Latest innovations' },
+    { name: '2026 Services', href: '/services2026', current: false, featured: true, icon: Star, description: 'Future services' },
+    { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2027', current: false, icon: DollarSign, description: 'Comprehensive pricing' },
+    { name: 'Revolutionary 2030', href: '/revolutionary-services-2030', current: false, featured: true, icon: Rocket, description: 'Future vision' },
+    { name: 'AI Services', href: '/ai-services', current: false, icon: Brain, description: 'AI solutions' },
+    { name: 'IT Services', href: '/it-services', current: false, icon: Cpu, description: 'IT infrastructure' },
+    { name: 'Micro SaaS', href: '/micro-saas', current: false, icon: Zap, description: 'Micro SaaS solutions' },
+    { name: 'Solutions', href: '/solutions', current: false, icon: Target, description: 'Business solutions' },
+    { name: 'AI Solutions', href: '/ai-solutions', current: false, icon: Brain, description: 'AI-powered solutions' },
+    { name: 'Case Studies', href: '/case-studies', current: false, icon: FileText, description: 'Success stories' },
+    { name: 'Research', href: '/research-development', current: false, icon: Lightbulb, description: 'R&D initiatives' },
+    { name: 'Events', href: '/events', current: false, icon: Calendar, description: 'Upcoming events' },
+    { name: 'News', href: '/news', current: false, icon: Newspaper, description: 'Latest news' },
+    { name: 'Pricing', href: '/pricing', current: false, icon: DollarSign, description: 'Service pricing' },
+    { name: 'Partners', href: '/partners', current: false, icon: Users, description: 'Our partners' },
+    { name: 'Blog', href: '/blog', current: false, icon: BookOpen, description: 'Insights & updates' },
+    { name: 'Help', href: '/help', current: false, icon: HelpCircle, description: 'Support center' },
+    { name: 'About', href: '/about', current: false, icon: Users, description: 'Learn about our company' },
+    { name: 'Contact', href: '/contact', current: false, icon: Phone, description: 'Get in touch with us' },
+    { name: 'Careers', href: '/careers', current: false, icon: Briefcase, description: 'Join our team' }
   ];
 
   const services = [
@@ -227,13 +202,16 @@ export default function AppHeader() {
 
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-8">
-                {navigation.map((item) => (
+                {navigation.slice(0, 6).map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
                     className="relative group px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan transition-colors duration-300"
                   >
                     {item.name}
+                    {item.featured && (
+                      <span className="absolute -top-1 -right-1 w-2 h-2 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full animate-pulse"></span>
+                    )}
                     <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                   </Link>
                 ))}
