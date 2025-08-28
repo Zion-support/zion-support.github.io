@@ -1,55 +1,63 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
+  Search, 
+  Map, 
   Globe, 
   Brain, 
-  Cloud, 
+  Server, 
   Shield, 
   Zap, 
-  Atom, 
-  ShoppingCart, 
   Users, 
-  FileText, 
-  HelpCircle, 
-  DollarSign, 
-  Star,
-  Rocket,
+  FileText,
   Building,
   Heart,
-  Truck,
-  Network,
-  Eye,
+  Star,
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Cloud,
   Lock,
+  Palette,
+  Code,
+  Database,
+  Network,
+  Smartphone,
   BarChart3,
   MessageCircle,
   Target,
-  TrendingUp,
-  Code,
-  Server,
-  Smartphone,
-  Database,
+  GitFork,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  Eye,
+  Sparkles,
+  ShoppingCart,
+  HelpCircle,
+  DollarSign,
+  Truck,
   Clock,
   BookOpen,
   Briefcase,
   Newspaper,
-  Satellite,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Cpu,
-  PenTool,
-  GitFork
+  PenTool
 } from 'lucide-react';
+import { defaultSitemapConfig } from '../utils/sitemapGenerator';
 
 interface SitemapSection {
   title: string;
-  icon: any;
+  icon: React.ComponentType<any>;
   description: string;
-  links: Array<{
-    name: string;
+  routes: Array<{
     path: string;
+    name: string;
     description?: string;
+    priority: number;
+    changefreq: string;
   }>;
 }
 
@@ -58,18 +66,18 @@ const sitemapSections: SitemapSection[] = [
     title: 'Main Pages',
     icon: Globe,
     description: 'Core website pages and navigation',
-    links: [
-      { name: 'Home', path: '/', description: 'Main landing page' },
-      { name: 'About', path: '/about', description: 'Company information' },
-      { name: 'Services', path: '/services', description: 'Main services overview' },
-      { name: 'Contact', path: '/contact', description: 'Get in touch' },
-      { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
-      { name: 'Careers', path: '/careers', description: 'Job opportunities' },
-      { name: 'Partners', path: '/partners', description: 'Partnership information' },
-      { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
-      { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
-      { name: 'Help Center', path: '/help', description: 'Support resources' },
-      { name: 'Sitemap', path: '/sitemap', description: 'This page' }
+    routes: [
+      { name: 'Home', path: '/', description: 'Main landing page', priority: 1.0, changefreq: 'daily' },
+      { name: 'About', path: '/about', description: 'Company information', priority: 0.8, changefreq: 'weekly' },
+      { name: 'Services', path: '/services', description: 'Main services overview', priority: 0.9, changefreq: 'weekly' },
+      { name: 'Contact', path: '/contact', description: 'Get in touch', priority: 0.7, changefreq: 'monthly' },
+      { name: 'Blog', path: '/blog', description: 'Latest news and insights', priority: 0.8, changefreq: 'weekly' },
+      { name: 'Careers', path: '/careers', description: 'Job opportunities', priority: 0.6, changefreq: 'monthly' },
+      { name: 'Partners', path: '/partners', description: 'Partnership information', priority: 0.6, changefreq: 'monthly' },
+      { name: 'Case Studies', path: '/case-studies', description: 'Success stories', priority: 0.7, changefreq: 'monthly' },
+      { name: 'FAQ', path: '/faq', description: 'Frequently asked questions', priority: 0.5, changefreq: 'monthly' },
+      { name: 'Help Center', path: '/help', description: 'Support resources', priority: 0.6, changefreq: 'monthly' },
+      { name: 'Sitemap', path: '/sitemap', description: 'This page', priority: 0.3, changefreq: 'monthly' }
     ]
   },
   {
@@ -200,7 +208,141 @@ const sitemapSections: SitemapSection[] = [
   }
 ];
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fdeb
 export default function Sitemap() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  // Organize routes into logical sections
+  const sitemapSections: SitemapSection[] = useMemo(() => [
+    {
+      title: 'Main Pages',
+      icon: Globe,
+      description: 'Core website pages and navigation',
+      routes: [
+        { path: '/', name: 'Home', description: 'Main landing page', priority: 1.0, changefreq: 'daily' },
+        { path: '/about', name: 'About Us', description: 'Company information and mission', priority: 0.8, changefreq: 'monthly' },
+        { path: '/contact', name: 'Contact', description: 'Get in touch with our team', priority: 0.8, changefreq: 'monthly' },
+        { path: '/sitemap', name: 'Sitemap', description: 'Complete site navigation', priority: 0.6, changefreq: 'weekly' }
+      ]
+    },
+    {
+      title: 'AI & Machine Learning Services',
+      icon: Brain,
+      description: 'Artificial intelligence and machine learning solutions',
+      routes: [
+        { path: '/ai-services', name: 'AI Services Hub', description: 'Overview of AI services', priority: 0.9, changefreq: 'weekly' },
+        { path: '/services/ai-workflow-orchestrator', name: 'AI Workflow Orchestrator', description: 'AI-powered workflow automation', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/ai-data-governance-platform', name: 'AI Data Governance Platform', description: 'AI-powered data governance', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/ai-customer-experience-analytics', name: 'AI Customer Experience Analytics', description: 'AI-powered customer insights', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/ai-sales-copilot', name: 'AI Sales Copilot', description: 'Intelligent sales optimization', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/ai-compliance-assistant', name: 'AI Compliance Assistant', description: 'Automated regulatory compliance', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/ai-powered-seo', name: 'AI-Powered SEO', description: 'Machine learning SEO optimization', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/interview-assessment-ai', name: 'Interview Assessment AI', description: 'AI-powered candidate evaluation', priority: 0.7, changefreq: 'monthly' }
+      ]
+    },
+    {
+      title: 'IT & Infrastructure Services',
+      icon: Server,
+      description: 'Information technology and infrastructure solutions',
+      routes: [
+        { path: '/it-services', name: 'IT Services Overview', description: 'Complete IT services portfolio', priority: 0.9, changefreq: 'weekly' },
+        { path: '/services/cloud-devops', name: 'Cloud DevOps', description: 'Infrastructure automation & scaling', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/it-infrastructure', name: 'IT Infrastructure', description: 'Enterprise infrastructure solutions', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/cloud-finops-optimizer', name: 'Cloud FinOps Optimizer', description: 'Financial operations automation', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/finops-advisor', name: 'FinOps Advisor', description: 'Cloud cost optimization', priority: 0.7, changefreq: 'monthly' }
+      ]
+    },
+    {
+      title: 'Cybersecurity Services',
+      icon: Shield,
+      description: 'Security and compliance solutions',
+      routes: [
+        { path: '/services/security-headers-csp', name: 'Security Headers & CSP', description: 'Web security hardening', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/dsr-portal', name: 'DSR Privacy Portal', description: 'GDPR/CCPA compliance', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/zero-trust-network-access', name: 'Zero Trust Network Access', description: 'Modern security architecture', priority: 0.7, changefreq: 'monthly' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: Zap,
+      description: 'Specialized software-as-a-service applications',
+      routes: [
+        { path: '/micro-saas', name: 'Micro SaaS Overview', description: 'Specialized SaaS solutions', priority: 0.8, changefreq: 'weekly' },
+        { path: '/services/micro-crm', name: 'Micro CRM', description: 'Lightweight customer relationship management', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/website-analytics', name: 'Website Analytics', description: 'Comprehensive website insights', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/affiliate-tracking', name: 'Affiliate Tracking', description: 'Affiliate program management', priority: 0.7, changefreq: 'monthly' },
+        { path: '/services/mobile-survey', name: 'Mobile Survey', description: 'Mobile-first survey platform', priority: 0.7, changefreq: 'monthly' }
+      ]
+    },
+    {
+      title: 'Service Showcases',
+      icon: Star,
+      description: 'Year-based service overviews and innovations',
+      routes: [
+        { path: '/new-innovative-services-2025', name: '2025 New Innovative Services', description: 'Revolutionary AI & Micro SAAS Solutions', priority: 0.8, changefreq: 'weekly' },
+        { path: '/ultimate-services-showcase-2026', name: '2026 Services Overview', description: 'Revolutionary AI & Quantum Solutions', priority: 0.8, changefreq: 'weekly' },
+        { path: '/comprehensive-services-showcase-2027', name: '2027 Services Overview', description: 'Cutting-edge Innovation & Emerging Tech', priority: 0.8, changefreq: 'weekly' },
+        { path: '/zion-cutting-edge-services-2029', name: '2029 Cutting-Edge Services', description: 'Future-ready Technology Solutions', priority: 0.8, changefreq: 'weekly' }
+      ]
+    },
+    {
+      title: 'Solutions & Industries',
+      icon: Target,
+      description: 'Industry-specific solutions and use cases',
+      routes: [
+        { path: '/ai-solutions', name: 'AI Solutions Overview', description: 'Comprehensive AI solutions', priority: 0.8, changefreq: 'weekly' },
+        { path: '/solutions/enterprise', name: 'Enterprise Solutions', description: 'Large-scale business solutions', priority: 0.7, changefreq: 'monthly' },
+        { path: '/solutions/healthcare', name: 'Healthcare Solutions', description: 'Healthcare technology solutions', priority: 0.7, changefreq: 'monthly' }
+      ]
+    },
+    {
+      title: 'Business & Support',
+      icon: Building,
+      description: 'Business operations and customer support',
+      routes: [
+        { path: '/blog', name: 'Blog', description: 'Company insights and updates', priority: 0.6, changefreq: 'weekly' },
+        { path: '/careers', name: 'Careers', description: 'Job opportunities and careers', priority: 0.6, changefreq: 'weekly' },
+        { path: '/partners', name: 'Partners', description: 'Partnership information', priority: 0.5, changefreq: 'monthly' },
+        { path: '/news', name: 'News', description: 'Company news and announcements', priority: 0.5, changefreq: 'weekly' },
+        { path: '/case-studies', name: 'Case Studies', description: 'Success stories and examples', priority: 0.6, changefreq: 'monthly' },
+        { path: '/help-center', name: 'Help Center', description: 'Customer support and help', priority: 0.5, changefreq: 'monthly' },
+        { path: '/faq', name: 'FAQ', description: 'Frequently asked questions', priority: 0.5, changefreq: 'monthly' },
+        { path: '/pricing', name: 'Pricing', description: 'Service pricing information', priority: 0.6, changefreq: 'monthly' },
+        { path: '/marketplace', name: 'Marketplace', description: 'Service marketplace', priority: 0.7, changefreq: 'weekly' }
+      ]
+    }
+  ], []);
+
+  // Filter sections and routes based on search and category
+  const filteredSections = useMemo(() => {
+    return sitemapSections.map(section => ({
+      ...section,
+      routes: section.routes.filter(route => {
+        const matchesSearch = route.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            route.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                            route.path.toLowerCase().includes(searchTerm.toLowerCase());
+        
+        const matchesCategory = selectedCategory === 'all' || 
+                              (selectedCategory === 'ai' && section.title.includes('AI')) ||
+                              (selectedCategory === 'it' && section.title.includes('IT')) ||
+                              (selectedCategory === 'saas' && section.title.includes('SaaS')) ||
+                              (selectedCategory === 'business' && section.title.includes('Business'));
+        
+        return matchesSearch && matchesCategory;
+      })
+    })).filter(section => section.routes.length > 0);
+  }, [sitemapSections, searchTerm, selectedCategory]);
+
+  const categoryOptions = [
+    { value: 'all', label: 'All Categories', icon: Globe },
+    { value: 'ai', label: 'AI & ML', icon: Brain },
+    { value: 'it', label: 'IT & Infrastructure', icon: Server },
+    { value: 'saas', label: 'Micro SaaS', icon: Zap },
+    { value: 'business', label: 'Business & Support', icon: Building }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
@@ -226,15 +368,59 @@ export default function Sitemap() {
         </div>
       </div>
 
+      {/* Search and Filters */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-black/20 backdrop-blur-sm border border-zion-cyan/20 rounded-lg p-6 mb-8">
+          <div className="flex flex-col sm:flex-row gap-4">
+            {/* Search */}
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-cyan w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search pages, services, or descriptions..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border border-zion-cyan/30 rounded-lg bg-black/20 text-white placeholder-gray-400 focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="sm:w-48">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 border border-zion-cyan/30 rounded-lg bg-black/20 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {categoryOptions.map(option => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Results Count */}
+          <div className="mt-4 text-sm text-zion-cyan">
+            Showing {filteredSections.reduce((total, section) => total + section.routes.length, 0)} of {defaultSitemapConfig.urls.length} pages
+          </div>
+        </div>
+
       {/* Sitemap Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-8">
           {sitemapSections.map((section, index) => (
+
+                {/* Sitemap Sections */}
+        <div className="space-y-8">
+          {filteredSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl border border-zion-cyan/20 p-6 hover:border-zion-cyan/40 transition-all duration-300"
             >
               <div className="flex items-center mb-6">
@@ -248,26 +434,70 @@ export default function Sitemap() {
               </div>
               
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {section.links.map((link) => (
-                  <Link
-                    key={link.path}
-                    to={link.path}
+                {section.routes.map((route, routeIndex) => (
+                  <motion.div
+                    key={route.path}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: (sectionIndex * 0.1) + (routeIndex * 0.05) }}
                     className="group p-4 bg-white/5 rounded-xl border border-zion-cyan/10 hover:border-zion-cyan/30 hover:bg-white/10 transition-all duration-300"
                   >
-                    <h4 className="font-semibold text-zion-cyan group-hover:text-white transition-colors duration-300">
-                      {link.name}
-                    </h4>
-                    {link.description && (
-                      <p className="text-sm text-gray-400 mt-2 group-hover:text-gray-300 transition-colors duration-300">
-                        {link.description}
-                      </p>
-                    )}
-                  </Link>
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1 min-w-0">
+                        <Link
+                          to={route.path}
+                          className="text-lg font-medium text-zion-cyan group-hover:text-white transition-colors duration-300 hover:underline"
+                        >
+                          {route.name}
+                        </Link>
+                        {route.description && (
+                          <p className="text-sm text-gray-400 mt-2 group-hover:text-gray-300 transition-colors duration-300">
+                            {route.description}
+                          </p>
+                        )}
+                        <div className="flex items-center space-x-4 mt-2 text-sm text-gray-500">
+                          <span className="flex items-center space-x-1">
+                            <TrendingUp className="w-4 h-4" />
+                            <span>Priority: {route.priority}</span>
+                          </span>
+                          <span className="flex items-center space-x-1">
+                            <Activity className="w-4 h-4" />
+                            <span>Update: {route.changefreq}</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div className="ml-4 flex-shrink-0">
+                        <Link
+                          to={route.path}
+                          className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-zion-cyan hover:bg-zion-purple focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-cyan transition-colors"
+                        >
+                          Visit
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* No Results */}
+        {filteredSections.length === 0 && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="text-center py-12"
+          >
+            <Search className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
+            <h3 className="text-lg font-medium text-white mb-2">
+              No pages found
+            </h3>
+            <p className="text-gray-400">
+              Try adjusting your search terms or category filter.
+            </p>
+          </motion.div>
+        )}
 
         {/* Quick Navigation */}
         <motion.div
