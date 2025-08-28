@@ -45,6 +45,14 @@ export function AppHeader() {
 
   const services = [
     { 
+      name: 'Revolutionary 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Next-Generation AI & Tech',
+      featured: true,
+      color: 'from-cyan-500 to-purple-500'
+    },
+    { 
       name: 'AI & Analytics', 
       href: '/services', 
       icon: Brain, 
