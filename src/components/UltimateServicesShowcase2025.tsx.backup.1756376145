@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle } from 'lucide-react';
@@ -93,6 +96,7 @@ const UltimateServicesShowcase2025: React.FC = () => {
       }
     }
   };
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6ac1
 
 const UltimateServicesShowcase2025 = () => {
   return (
@@ -187,6 +191,8 @@ const UltimateServicesShowcase2025 = () => {
           </a>
         </div>
       </div>
+<<<<<<< HEAD
+=======
 
       {/* Header Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -550,6 +556,7 @@ const UltimateServicesShowcase2025 = () => {
           </motion.div>
         )}
       </AnimatePresence>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6ac1
     </div>
   );
 };

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+import React from 'react';
+import SEO from '@/components/SEO';
+import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Clock, Users, TrendingUp, Headphones, Shield } from 'lucide-react';
+=======
 import { MessageSquare, Headphones, Check, ExternalLink, Phone, Mail, Brain, Target, Users, Clock, Zap, TrendingUp } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6ac1
 
 export default function AICustomerSupportAutomation() {
   const features = [
