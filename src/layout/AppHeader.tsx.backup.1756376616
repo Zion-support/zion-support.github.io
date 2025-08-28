@@ -30,13 +30,21 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Services', href: '/services', current: false },
+<<<<<<< HEAD
+=======
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Partners', href: '/partners', current: false },
+>>>>>>> origin/cursor/website-audit-and-enhancement-9299
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'AI Solutions', href: '/ai-solutions', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
+<<<<<<< HEAD
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Partners', href: '/partners', current: false },
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9299
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Help Center', href: '/help', current: false },
     { name: 'About', href: '/about', current: false },
@@ -80,6 +88,10 @@ export function AppHeader() {
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Sitemap', href: '/sitemap', icon: Globe },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+<<<<<<< HEAD
+    { name: 'Status', href: '/status', icon: Gauge },
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9299
     { name: 'Sitemap', href: '/sitemap', icon: Globe },
   ];
 
