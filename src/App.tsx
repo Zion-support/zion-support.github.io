@@ -25,6 +25,13 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
+// New pages
+const Solutions = React.lazy(() => import('./pages/Solutions'));
+const Resources = React.lazy(() => import('./pages/Resources'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030.tsx'));
@@ -92,6 +99,18 @@ function App() {
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
+                
+                {/* New pages */}
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/resources" element={<Resources />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/white-papers" element={<WhitePapers />} />
+                <Route path="/webinars" element={<Webinars />} />
+                <Route path="/docs" element={<Documentation />} />
+                <Route path="/api-docs" element={<APIDocs />} />
+                <Route path="/developers" element={<Developers />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/community" element={<Community />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
