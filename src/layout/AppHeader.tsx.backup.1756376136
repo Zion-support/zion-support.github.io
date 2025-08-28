@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, FileText, GraduationCap } from 'lucide-react';
+=======
 import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin } from 'lucide-react';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4433
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
@@ -153,6 +157,206 @@ export default function AppHeader() {
 
   return (
     <>
+<<<<<<< HEAD
+      <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl' 
+          : 'bg-transparent'
+      }`}>
+        {/* Enhanced animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/20 rounded-full animate-pulse float"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full animate-pulse delay-1000 float-delayed"></div>
+            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full animate-pulse delay-2000 float-slow"></div>
+            <div className="absolute top-40 right-40 w-12 h-12 border border-zion-cyan/20 rounded-full animate-pulse delay-3000 float-fast"></div>
+          </div>
+        </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {mainNavigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-white hover:text-cyan-300 transition-colors duration-200 font-medium"
+              >
+                {item.name}
+              </Link>
+            ))}
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                className="flex items-center text-white hover:text-cyan-300 transition-colors duration-200 font-medium"
+              >
+                Services
+                <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              <AnimatePresence>
+                {servicesDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-zion-slate-dark/95 backdrop-blur-md border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
+                  >
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                        {/* Featured Services */}
+                        <div className="lg:col-span-1">
+                          <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                            <Star className="w-5 h-5 text-yellow-400 mr-2" />
+                            Featured Services
+                          </h3>
+                          <div className="space-y-3">
+                            {services.filter(s => s.featured).map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                              >
+                                <div className="flex items-center space-x-3">
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                                    <service.icon className="w-5 h-5 text-white" />
+                                  </div>
+                                  <div>
+                                    <h4 className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-200">
+                                      {service.name}
+                                    </h4>
+                                    <p className="text-sm text-zion-slate-light">
+                                      {service.description}
+                                    </p>
+                                  </div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* AI & ML Services */}
+                        <div className="lg:col-span-1">
+                          <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                            <Brain className="w-5 h-5 text-cyan-400 mr-2" />
+                            AI & Machine Learning
+                          </h3>
+                          <div className="space-y-3">
+                            {services.filter(s => s.category === 'AI & ML').slice(0, 6).map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                              >
+                                <div className="flex items-center space-x-3">
+                                  <div className={`w-8 h-8 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                                    <service.icon className="w-4 h-4 text-white" />
+                                  </div>
+                                  <div>
+                                    <h4 className="text-white text-sm font-medium group-hover:text-cyan-300 transition-colors duration-200">
+                                      {service.name}
+                                    </h4>
+                                  </div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Micro SaaS Solutions */}
+                        <div className="lg:col-span-1">
+                          <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                            <ShoppingCart className="w-5 h-5 text-purple-400 mr-2" />
+                            Micro SaaS Solutions
+                          </h3>
+                          <div className="space-y-3">
+                            {services.filter(s => s.category === 'Micro SaaS').slice(0, 6).map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                              >
+                                <div className="flex items-center space-x-3">
+                                  <div className={`w-8 h-8 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                                    <service.icon className="w-4 h-4 text-white" />
+                                  </div>
+                                  <div>
+                                    <h4 className="text-white text-sm font-medium group-hover:text-cyan-300 transition-colors duration-200">
+                                      {service.name}
+                                    </h4>
+                                  </div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* IT & Infrastructure */}
+                        <div className="lg:col-span-1">
+                          <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                            <Server className="w-5 h-5 text-green-400 mr-2" />
+                            IT & Infrastructure
+                          </h3>
+                          <div className="space-y-3">
+                            {services.filter(s => s.category === 'Cloud & DevOps' || s.category === 'Cybersecurity').slice(0, 6).map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.href}
+                                className="block p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
+                              >
+                                <div className="flex items-center space-x-3">
+                                  <div className={`w-8 h-8 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>
+                                    <service.icon className="w-4 h-4 text-white" />
+                                  </div>
+                                  <div>
+                                    <h4 className="text-white text-sm font-medium group-hover:text-cyan-300 transition-colors duration-200">
+                                      {service.name}
+                                    </h4>
+                                  </div>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* View All Services Link */}
+                      <div className="mt-6 pt-6 border-t border-cyan-400/20">
+                        <Link
+                          to="/services"
+                          className="inline-flex items-center text-cyan-300 hover:text-cyan-200 font-medium transition-colors duration-200"
+                        >
+                          View All Services
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </nav>
+
+          {/* Right side actions */}
+          <div className="flex items-center space-x-4">
+            {/* Search */}
+            <div className="hidden md:block">
+              <EnhancedSearch onSearch={handleSearch} />
+            </div>
+
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 text-white hover:text-cyan-300 transition-colors duration-200"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+=======
       {/* Matrix Rain Background Effect */}
       <div className="matrix-rain"></div>
       
@@ -296,9 +500,86 @@ export default function AppHeader() {
                 )}
               </button>
             </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4433
           </div>
         </div>
 
+<<<<<<< HEAD
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-zion-slate-dark/95 backdrop-blur-md border-b border-cyan-400/20"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {mainNavigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="block text-white hover:text-cyan-300 transition-colors duration-200 font-medium py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              
+              {/* Mobile Services */}
+              <div className="pt-4 border-t border-cyan-400/20">
+                <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+                <div className="grid grid-cols-1 gap-3">
+                  {services.slice(0, 12).map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.href}
+                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-colors duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <div className={`w-8 h-8 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center`}>
+                        <service.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="text-white text-sm font-medium">{service.name}</h4>
+                        <p className="text-xs text-zion-slate-light">{service.description}</p>
+                      </div>
+                    </Link>
+                  ))}
+                  <Link
+                    to="/services"
+                    onClick={() => setIsOpen(false)}
+                    className="block px-6 py-2 text-sm text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-300"
+                  >
+                    View All Services →
+                  </Link>
+                </div>
+                <div className="mt-4 pt-4 border-t border-cyan-400/20">
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center text-cyan-300 hover:text-cyan-200 font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    View All Services
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Click outside to close dropdown */}
+      {servicesDropdownOpen && (
+        <div
+          className="fixed inset-0 z-40"
+          onClick={() => setServicesDropdownOpen(false)}
+        />
+      )}
+    </header>
+=======
         {/* Mobile Menu */}
         <AnimatePresence>
           {mobileMenuOpen && (
@@ -374,5 +655,6 @@ export default function AppHeader() {
       {/* Spacer for fixed header */}
       <div className="h-24"></div>
     </>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4433
   );
 }

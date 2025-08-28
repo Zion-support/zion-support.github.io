@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import './styles/accessibility.css';
+=======
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap');
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4433
 
 @tailwind base;
 @tailwind components;
@@ -622,6 +627,14 @@ a {
   background-clip: text;
 }
 
+<<<<<<< HEAD
+.text-gradient-pink {
+  background: linear-gradient(135deg, #ec4899, #db2777);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+=======
 @keyframes zoom-in {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
@@ -1865,4 +1878,5 @@ a {
     border: 1px solid #ccc;
     box-shadow: none;
   }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4433
 }
