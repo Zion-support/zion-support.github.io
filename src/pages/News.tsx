@@ -33,6 +33,28 @@ export default function News() {
   const newsArticles = [
     {
       id: 1,
+      title: 'Zion Tech Group Unveils AI Autonomous Research Assistant: A Game-Changer for Business Intelligence',
+      excerpt: 'Revolutionary AI system that autonomously discovers, analyzes, and synthesizes information across multiple sources, enabling organizations to conduct research 10x faster with 95% accuracy.',
+      category: 'ai',
+      author: 'Dr. Sarah Johnson',
+      date: '2025-01-20',
+      readTime: '8 min read',
+      featured: true,
+      tags: ['AI Research', 'Autonomous Systems', 'Business Intelligence', 'Innovation']
+    },
+    {
+      id: 2,
+      title: 'AI Supply Chain Optimization Platform Launches: Reducing Costs by Up to 30%',
+      excerpt: 'New AI-powered supply chain solution provides predictive analytics, real-time visibility, and intelligent routing capabilities for global enterprises.',
+      category: 'ai',
+      author: 'Michael Chen',
+      date: '2025-01-18',
+      readTime: '6 min read',
+      featured: true,
+      tags: ['Supply Chain', 'AI Optimization', 'Predictive Analytics', 'Cost Reduction']
+    },
+    {
+      id: 3,
       title: 'Zion Tech Group Launches Revolutionary AI Business Intelligence Platform',
       excerpt: 'Our new AI-powered BI solution transforms how enterprises analyze data and make decisions, featuring advanced machine learning algorithms and real-time insights.',
       category: 'ai',
@@ -43,7 +65,7 @@ export default function News() {
       tags: ['AI', 'Business Intelligence', 'Launch', 'Enterprise']
     },
     {
-      id: 2,
+      id: 5,
       title: 'Quantum Computing Breakthrough: Zion Tech Achieves 1000+ Qubit Milestone',
       excerpt: 'Our quantum research team has successfully demonstrated a 1000+ qubit quantum processor, marking a significant advancement in quantum computing capabilities.',
       category: 'quantum',
