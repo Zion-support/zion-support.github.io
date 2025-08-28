@@ -154,7 +154,20 @@ const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealth
 const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
 const AIContentCreationSuite = React.lazy(() => import('./pages/services/AIContentCreationSuite'));
 
+<<<<<<< HEAD
+// Enhanced services showcase
+const EnhancedServicesShowcase2025 = React.lazy(() => import('./pages/EnhancedServicesShowcase2025'));
+
+// Comprehensive services showcase
+const ComprehensiveServicesShowcase2025Page = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// Innovative services showcase
+const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+
+// Additional service pages
+=======
 // Additional service imports
+>>>>>>> origin/cursor/website-audit-and-enhancement-a9de
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'));
@@ -170,6 +183,31 @@ const SustainableTechnology = React.lazy(() => import('./pages/services/sustaina
 const AIPredictiveMaintenance = React.lazy(() => import('./pages/services/ai-predictive-maintenance'));
 const QuantumMachineLearning = React.lazy(() => import('./pages/services/quantum-machine-learning'));
 
+<<<<<<< HEAD
+// Additional pages
+const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const SearchPage = createLazyComponent(() => import('./pages/SearchPage'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const News = createLazyComponent(() => import('./pages/News'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const HelpCenter = createLazyComponent(() => import('./pages/HelpCenter'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+
+// Enhanced loading component
+const EnhancedLoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen futuristic-bg">
+    <div className="relative">
+      <div className="w-16 h-16 border-4 border-cyan-400/20 rounded-full"></div>
+      <div className="absolute top-0 left-0 w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
+      <div className="mt-4 text-center">
+        <div className="text-cyan-400 text-sm animate-pulse">Loading Zion Tech...</div>
+      </div>
+=======
 // Additional route imports
 const API = React.lazy(() => import('./pages/API'));
 const DeveloperPortal = React.lazy(() => import('./pages/DeveloperPortal'));
@@ -190,6 +228,7 @@ const Accessibility = () => (
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Careers</h1>
       <p className="text-xl text-gray-300">Join our team</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-a9de
     </div>
   </div>
 );
