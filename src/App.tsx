@@ -8,8 +8,8 @@ import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 
 // Enhanced Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { EnhancedSEO } from './components/EnhancedSEO';
 import { ServiceWorker } from './components/ServiceWorker';
@@ -195,8 +195,8 @@ function App() {
           {/* Service Worker */}
           <ServiceWorker />
           
-          {/* Performance Optimizer */}
-          <PerformanceOptimizer enabled={true} />
+          {/* Performance Monitor */}
+          <PerformanceMonitor enabled={true} />
           
           {/* Enhanced Accessibility */}
           <EnhancedAccessibilityEnhancer enabled={true} />

@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import accessibility styles */
+@import './styles/accessibility.css';
+
 /* Custom CSS Variables */
 :root {
   --zion-cyan: #0ea5e9;

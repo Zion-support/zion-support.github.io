@@ -64,7 +64,7 @@ import {
 import ThemeToggle from '../components/ThemeToggle';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SEO from '../components/SEO';
+import { EnhancedSEO } from '../components/EnhancedSEO';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -172,8 +172,16 @@ export default function Home() {
 
   return (
     <>
-      {/* SEO Component */}
-      <SEO data={seoData} showAnalysis={false} />
+      {/* Enhanced SEO Component */}
+      <EnhancedSEO 
+        title={seoData.title}
+        description={seoData.description}
+        keywords={seoData.keywords}
+        type="website"
+        section="Home"
+        tags={['technology', 'AI', 'cloud', 'cybersecurity', 'digital transformation']}
+        structuredData={seoData.structuredData}
+      />
       
       {/* Theme Toggle */}
       <div className="fixed top-4 right-4 z-50">

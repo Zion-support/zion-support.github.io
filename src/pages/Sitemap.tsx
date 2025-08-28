@@ -405,13 +405,10 @@ export default function Sitemap() {
             Showing {filteredSections.reduce((total, section) => total + section.routes.length, 0)} of {defaultSitemapConfig.urls.length} pages
           </div>
         </div>
+      </div>
 
       {/* Sitemap Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid gap-8">
-          {sitemapSections.map((section, index) => (
-
-                {/* Sitemap Sections */}
         <div className="space-y-8">
           {filteredSections.map((section, sectionIndex) => (
             <motion.div
