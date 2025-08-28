@@ -92,6 +92,23 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Core Services',
+      featured: true,
+      links: [
+        { name: 'All Services', href: '/services', featured: true },
+        { name: 'AI Business Intelligence', href: '/services#ai-business-intelligence', featured: true },
+        { name: 'AI Healthcare Diagnostics', href: '/services#ai-healthcare', featured: true },
+        { name: 'AI Legal Tech Platform', href: '/services#ai-legal-tech', featured: true },
+        { name: 'AI Research Assistant', href: '/services#ai-research', featured: true },
+        { name: 'AI Education Platform', href: '/services#ai-education', featured: true },
+        { name: 'AI Entertainment Platform', href: '/services#ai-entertainment', featured: true },
+        { name: 'AI Development Platform', href: '/services#ai-development', featured: true },
+        { name: 'AI Green Tech Platform', href: '/services#ai-green-tech', featured: true },
+        { name: 'AI Metaverse Platform', href: '/services#ai-metaverse', featured: true },
+        { name: 'AI Space Tech Platform', href: '/services#ai-space-tech', featured: true }
+      ]
+    },
+    {
       title: 'AI & Technology Services',
       featured: true,
       links: [
