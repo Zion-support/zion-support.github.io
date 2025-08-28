@@ -256,6 +256,34 @@ export default function Services() {
           </div>
         </section>
 
+        {/* Innovative Services CTA */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-3xl p-12 border border-cyan-500/20 text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                🚀 New for 2025: Innovative Micro SAAS Services
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Explore our cutting-edge AI-powered micro SAAS solutions with instant setup, enterprise security, and proven ROI
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/services/innovative-2025"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 text-lg"
+                >
+                  Explore Innovative Services
+                </Link>
+                <Link
+                  to="/services/innovative-2025/pricing"
+                  className="px-8 py-4 bg-white/10 border border-white/20 text-white rounded-xl font-medium hover:bg-white/20 transition-all duration-200 text-lg"
+                >
+                  View Pricing
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">

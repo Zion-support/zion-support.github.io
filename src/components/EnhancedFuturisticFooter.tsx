@@ -75,6 +75,22 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
+      title: 'Innovative Services 2025',
+      featured: true,
+      links: [
+        { name: 'Innovative Micro SAAS Services', href: '/services/innovative-2025', featured: true },
+        { name: 'AI Content Optimization', href: '/services/innovative-2025#ai-content-optimization-engine' },
+        { name: 'AI Customer Intelligence', href: '/services/innovative-2025#ai-customer-intelligence-platform' },
+        { name: 'AI Financial Analytics', href: '/services/innovative-2025#ai-financial-analytics-suite' },
+        { name: 'AI Supply Chain Optimization', href: '/services/innovative-2025#ai-supply-chain-optimization' },
+        { name: 'AI HR Talent Analytics', href: '/services/innovative-2025#ai-hr-talent-analytics' },
+        { name: 'AI Legal Document Analysis', href: '/services/innovative-2025#ai-legal-document-analysis' },
+        { name: 'AI Healthcare Diagnostics', href: '/services/innovative-2025#ai-healthcare-diagnostics-platform' },
+        { name: 'AI Marketing Automation', href: '/services/innovative-2025#ai-marketing-automation-suite' },
+        { name: 'AI Research Assistant', href: '/services/innovative-2025#ai-research-assistant-platform' }
+      ]
+    },
+    {
       title: 'Revolutionary 2030',
       featured: true,
       links: [

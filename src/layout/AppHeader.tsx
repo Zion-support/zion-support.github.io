@@ -46,6 +46,14 @@ export function AppHeader() {
 
   const services = [
     { 
+      name: 'Innovative Services 2025', 
+      href: '/services/innovative-2025', 
+      icon: Sparkles, 
+      description: 'Cutting-edge AI Micro SAAS Solutions',
+      featured: true,
+      color: 'from-cyan-500 to-purple-500'
+    },
+    { 
       name: 'AI & Analytics', 
       href: '/services', 
       icon: Brain, 
