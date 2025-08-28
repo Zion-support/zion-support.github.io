@@ -148,7 +148,7 @@ export function AppHeader() {
                                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group/item"
                               >
                                 <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
-                                  <dropdownItem.icon className="w-5 h-5 text-white" />
+                                  {React.createElement(dropdownItem.icon, { className: "w-5 h-5 text-white" })}
                                 </div>
                                 <div>
                                   <div className="text-white font-medium group-hover/item:text-zion-cyan transition-colors duration-300">

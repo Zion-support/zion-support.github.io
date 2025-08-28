@@ -352,7 +352,7 @@ export default function RevolutionaryServices2030() {
                   className="text-center"
                 >
                   <div className="p-4 bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl">
-                    <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                    {React.createElement(stat.icon, { className: "w-8 h-8 text-cyan-400 mx-auto mb-2" })}
                     <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-slate-400 text-sm">{stat.label}</div>
                   </div>
