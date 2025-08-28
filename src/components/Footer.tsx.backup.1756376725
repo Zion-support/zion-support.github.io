@@ -157,6 +157,13 @@ export function Footer() {
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
   ];
 
+<<<<<<< HEAD
+  const quickActions = [
+    { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
+    { name: 'Schedule Demo', path: '/demo', icon: Video },
+    { name: 'Get Support', path: '/support', icon: HelpCircle },
+    { name: 'Join Newsletter', path: '/newsletter', icon: Mail }
+=======
   const contactInfo = [
     {
       name: "Email",
@@ -176,6 +183,7 @@ export function Footer() {
       url: "https://www.google.com/maps/search/?api=1&query=364+E+Main+St+STE+1008+Middletown+DE+19709",
       icon: MapPin
     }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-723d
   ];
 
   return (
