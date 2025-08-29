@@ -53,20 +53,20 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
-      href: 'mailto:info@ziontechgroup.com'
+      details: ['kleber@ziontechgroup.com', 'support@ziontechgroup.com'],
+      href: 'mailto:kleber@ziontechgroup.com'
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
-      href: 'tel:+15551234567'
+      details: ['+1 302 464 0950'],
+      href: 'tel:+13024640950'
     },
     {
       icon: MapPin,
       title: 'Office',
-      details: ['123 Innovation Drive', 'San Francisco, CA 94105'],
-      href: '#'
+      details: ['364 E Main St STE 1008', 'Middletown DE 19709'],
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
       icon: Clock,

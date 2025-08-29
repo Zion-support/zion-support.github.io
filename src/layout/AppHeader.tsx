@@ -47,18 +47,30 @@ export function AppHeader() {
     // AI & Analytics Services
     { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator', icon: Brain, description: 'Multi-agent AI coordination & workflow automation' },
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { name: 'AI Healthcare Predictive Analytics', href: '/services/ai-healthcare-predictive-analytics', icon: Heart, description: 'Predictive diagnostics with 94% accuracy' },
-    { name: 'AI Financial Compliance Assistant', href: '/services/ai-financial-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance' },
-    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'End-to-end supply chain intelligence' },
-    { name: 'AI Incident Postmortems', href: '/services/ai-incident-postmortems', icon: AlertTriangle, description: 'AI-powered incident management' },
+    { name: 'AI Predictive Analytics', href: '/services/ai-predictive-analytics', icon: Brain, description: 'Advanced forecasting with 95% accuracy' },
+    { name: 'AI Customer Behavior Analytics', href: '/services/ai-customer-behavior-analytics', icon: Brain, description: 'Deep customer insights & personalization' },
     
-    // Cybersecurity & Infrastructure
-    { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield, description: 'AI-Powered Threat Detection & Response' },
+    // AI Automation & Security
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Settings, description: 'Intelligent process automation' },
+    { name: 'AI Threat Detection', href: '/services/ai-threat-detection', icon: Shield, description: 'Advanced security with 97% accuracy' },
+    { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection', icon: Shield, description: 'Real-time fraud prevention' },
+    { name: 'AI Identity Verification', href: '/services/ai-identity-verification', icon: Shield, description: 'Biometric & document verification' },
+    
+    // AI Healthcare & Finance
+    { name: 'AI Medical Diagnosis', href: '/services/ai-medical-diagnosis', icon: Heart, description: 'AI-powered diagnostic support' },
+    { name: 'AI Trading Algorithms', href: '/services/ai-trading-algorithms', icon: DollarSign, description: 'Advanced trading intelligence' },
+    { name: 'AI Credit Risk Assessment', href: '/services/ai-credit-risk-assessment', icon: DollarSign, description: 'Intelligent risk scoring' },
+    
+    // AI Marketing & Operations
+    { name: 'AI Marketing Optimization', href: '/services/ai-marketing-optimization', icon: TrendingUp, description: 'Campaign & content optimization' },
+    { name: 'AI Content Generation', href: '/services/ai-content-generation', icon: BookOpen, description: 'Human-like content creation' },
+    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'End-to-end supply chain intelligence' },
+    { name: 'AI Quality Control', href: '/services/ai-quality-control', icon: CheckCircle, description: 'Computer vision inspection' },
+    
+    // Infrastructure & Emerging Tech
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
     { name: 'IoT & Edge Computing', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
-    
-    // Emerging Technologies
     { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', icon: Zap, description: 'Next-Generation Quantum Computing' },
     { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
     
@@ -217,6 +229,15 @@ export function AppHeader() {
                               View all services
                               <ArrowRight className="ml-1 w-4 h-4" />
                             </Link>
+                            <div className="mt-3">
+                              <Link
+                                to="/comprehensive-services-showcase-2025-new"
+                                className="inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-700"
+                              >
+                                Comprehensive Services Showcase
+                                <ArrowRight className="ml-1 w-4 h-4" />
+                              </Link>
+                            </div>
                           </div>
                         </div>
                       )}

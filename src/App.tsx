@@ -140,6 +140,7 @@ const App = React.memo(() => {
     { path: '/innovative-services-showcase-2030', element: <InnovativeServicesShowcase2030 /> },
     { path: '/comprehensive-pricing-guide-2030', element: <ComprehensivePricingGuide2030 /> },
     { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
+    { path: '/comprehensive-services-showcase-2025-new', element: <ComprehensiveServicesShowcase2025 /> },
     { path: '/schedule-demo', element: <ScheduleDemo /> },
     { path: '/services/cloud-devops', element: <CloudDevOps /> },
     { path: '/services/digital-transformation', element: <DigitalTransformation /> },

@@ -59,18 +59,20 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Healthcare Predictive Analytics', href: '/services/ai-healthcare-predictive-analytics' },
-        { name: 'AI Financial Compliance Assistant', href: '/services/ai-financial-compliance-assistant' },
+        { name: 'AI Predictive Analytics', href: '/services/ai-predictive-analytics' },
+        { name: 'AI Customer Behavior Analytics', href: '/services/ai-customer-behavior-analytics' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Document Processing', href: '/services/ai-document-processing' },
+        { name: 'AI Customer Service Automation', href: '/services/ai-customer-service-automation' },
+        { name: 'AI Threat Detection', href: '/services/ai-threat-detection' },
+        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
+        { name: 'AI Identity Verification', href: '/services/ai-identity-verification' },
+        { name: 'AI Medical Diagnosis', href: '/services/ai-medical-diagnosis' },
+        { name: 'AI Trading Algorithms', href: '/services/ai-trading-algorithms' },
+        { name: 'AI Marketing Optimization', href: '/services/ai-marketing-optimization' },
+        { name: 'AI Content Generation', href: '/services/ai-content-generation' },
         { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
-        { name: 'AI Incident Postmortems', href: '/services/ai-incident-postmortems' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
-        { name: 'AI Content Optimizer Pro', href: '/services/ai-content-optimizer-pro' },
-        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring' },
-        { name: 'AI HR Talent Acquisition', href: '/services/ai-hr-talent-acquisition' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
-        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' }
+        { name: 'AI Quality Control', href: '/services/ai-quality-control' }
       ]
     },
     {
@@ -87,6 +89,32 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', featured: true },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', featured: true },
         { name: 'Green IT Solutions', href: '/services/green-it', featured: true }
+      ]
+    },
+    {
+      title: 'Comprehensive IT Services',
+      featured: true,
+      links: [
+        { name: 'Enterprise Network Infrastructure', href: '/services/enterprise-network-infrastructure' },
+        { name: 'Data Center Optimization', href: '/services/data-center-optimization' },
+        { name: 'Virtualization Solutions', href: '/services/virtualization-solutions' },
+        { name: 'Zero Trust Security Implementation', href: '/services/zero-trust-security-implementation' },
+        { name: 'Advanced Threat Detection', href: '/services/advanced-threat-detection' },
+        { name: 'Compliance Management Suite', href: '/services/compliance-management-suite' },
+        { name: 'Multi-Cloud Strategy', href: '/services/multi-cloud-strategy' },
+        { name: 'Cloud Cost Optimization', href: '/services/cloud-cost-optimization' },
+        { name: 'Serverless Architecture', href: '/services/serverless-architecture' },
+        { name: 'Data Lake Implementation', href: '/services/data-lake-implementation' },
+        { name: 'Real-Time Analytics Platform', href: '/services/real-time-analytics-platform' },
+        { name: 'Data Quality Management', href: '/services/data-quality-management' },
+        { name: 'SD-WAN Implementation', href: '/services/sd-wan-implementation' },
+        { name: 'Network Performance Monitoring', href: '/services/network-performance-monitoring' },
+        { name: 'Digital Workplace Transformation', href: '/services/digital-workplace-transformation' },
+        { name: 'Legacy System Modernization', href: '/services/legacy-system-modernization' },
+        { name: 'Technology Roadmap Development', href: '/services/technology-roadmap-development' },
+        { name: 'IT Governance Framework', href: '/services/it-governance-framework' },
+        { name: 'Managed IT Services', href: '/services/managed-it-services' },
+        { name: 'Managed Security Services', href: '/services/managed-security-services' }
       ]
     },
     {
@@ -123,6 +151,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     {
       title: 'Innovation & Research',
       links: [
+        { name: 'Comprehensive Services Showcase', href: '/comprehensive-services-showcase-2025-new', featured: true },
         { name: 'Quantum Technology', href: '/quantum-technology' },
         { name: 'Space Technology', href: '/space-tech' },
         { name: 'Sustainability Solutions', href: '/sustainability' },
@@ -192,6 +221,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               Transforming businesses through cutting-edge technology and strategic insights. 
               We deliver innovative solutions that drive growth and competitive advantage.
             </p>
+            <div className="text-slate-300 text-sm space-y-2 mb-6">
+              <p>📞 +1 302 464 0950</p>
+              <p>✉️ kleber@ziontechgroup.com</p>
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a

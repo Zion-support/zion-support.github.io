@@ -1,640 +1,582 @@
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
 
-export interface ServiceContact {
-  phone: string;
-  email: string;
-  website: string;
-  address: string;
-}
-
-export interface AIService {
-  id: number;
-  name: string;
-  category: string;
+export type AIServiceItem = {
+  id: string;
+  title: string;
   description: string;
-  pricing: string;
-  price: number;
-  pricingModel: string;
+  category: 'AI Analytics' | 'AI Automation' | 'AI Security' | 'AI Healthcare' | 'AI Finance' | 'AI Marketing' | 'AI Operations' | 'AI Research' | 'AI Infrastructure' | 'AI Ethics';
+  price: string;
+  billing: 'month' | 'project' | 'hour' | 'year';
   features: string[];
   benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: ServiceContact;
   marketPrice: string;
-  aiModels: string[];
-  accuracy: string;
-  trainingData: string;
-  compliance: string[];
-  aiScore: number;
-  useCases: string[];
-  innovationLevel: string;
-  marketSize: string;
-  ethicalAI: string[];
-  technologies: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
-  freeTier: boolean;
-  trialPeriod: string;
-}
-
-// Zion Tech Group Contact Information
-const zionContact: ServiceContact = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  ctaLabel: string;
+  href: string;
+  external?: boolean;
+  accuracy?: string;
+  processingTime?: string;
 };
 
-// Comprehensive AI Services 2030
-export const comprehensiveAIServices2030: AIService[] = [
+export const comprehensiveAIServices2030: AIServiceItem[] = [
+  // AI Analytics Services
   {
-    id: 1,
-    name: "AI-Powered Predictive Analytics Platform",
-    category: "Predictive Analytics",
-    description: "Advanced AI platform that analyzes historical data to predict future trends, customer behavior, and business outcomes with 95%+ accuracy. Enables proactive decision-making and strategic planning.",
-    price: 1299,
-    pricingModel: "monthly",
+    id: 'ai-predictive-analytics-platform',
+    title: 'AI Predictive Analytics Platform',
+    description: 'Advanced predictive analytics platform using machine learning for business forecasting and decision making',
+    category: 'AI Analytics',
+    price: '$1,200',
+    billing: 'month',
     features: [
-      "Machine learning algorithms",
-      "Real-time data processing",
-      "Predictive modeling",
-      "Automated insights generation",
-      "Custom dashboard creation",
-      "API integration",
-      "Scalable architecture",
-      "Multi-tenant support"
+      'Multi-variable forecasting',
+      'Real-time data processing',
+      'Custom algorithm training',
+      'Interactive dashboards',
+      'API integration',
+      'Automated reporting'
     ],
     benefits: [
-      "95%+ prediction accuracy",
-      "Real-time insights delivery",
-      "Automated decision support",
-      "Reduced manual analysis time",
-      "Improved forecasting accuracy",
-      "Competitive advantage through foresight"
+      'Improve forecast accuracy by 85%',
+      'Faster decision making',
+      'Reduced operational risks',
+      'Data-driven insights'
     ],
-    targetAudience: ["Financial services", "Retail companies", "Manufacturing firms", "Healthcare organizations"],
-    tags: ["AI", "Predictive Analytics", "Machine Learning", "Business Intelligence", "Forecasting"],
-    contactInfo: zionContact,
-    marketPrice: "$1,000 - $2,000/month",
-    aiModels: ["Random Forest", "Gradient Boosting", "Neural Networks", "Time Series Models"],
-    accuracy: "95.2%",
-    trainingData: "Multi-source enterprise data",
-    compliance: ["GDPR", "SOC 2", "ISO 27001", "Industry-specific regulations"],
-    aiScore: 98,
-    useCases: [
-      "Sales forecasting",
-      "Customer churn prediction",
-      "Inventory optimization",
-      "Risk assessment",
-      "Market trend analysis"
-    ],
-    innovationLevel: "Advanced",
-    marketSize: "$67.8 billion",
-    ethicalAI: ["Bias detection", "Transparent algorithms", "Fairness metrics", "Explainable AI"],
-    technologies: [
-      "Python",
-      "TensorFlow",
-      "PyTorch",
-      "Scikit-learn",
-      "Apache Spark",
-      "Kubernetes",
-      "Cloud platforms"
-    ],
-    roi: "400% within 12 months",
-    setupTime: "3-6 weeks",
-    integrations: ["ERP systems", "CRM platforms", "Data warehouses", "Business intelligence tools"],
-    freeTier: true,
-    trialPeriod: "30 days"
+    marketPrice: '$1,800-5,000/month',
+    ctaLabel: 'Start Free Trial',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '95%',
+    processingTime: '< 1 second'
   },
   {
-    id: 2,
-    name: "Natural Language Processing & Chatbot Platform",
-    category: "NLP & Conversational AI",
-    description: "Sophisticated NLP platform that understands, processes, and generates human language. Powers intelligent chatbots, virtual assistants, and language processing applications with 98% accuracy.",
-    price: 899,
-    pricingModel: "monthly",
+    id: 'ai-business-intelligence-suite',
+    title: 'AI Business Intelligence Suite',
+    description: 'Comprehensive BI solution with AI-powered insights, natural language queries, and automated reporting',
+    category: 'AI Analytics',
+    price: '$899',
+    billing: 'month',
     features: [
-      "Advanced NLP algorithms",
-      "Multi-language support",
-      "Context understanding",
-      "Sentiment analysis",
-      "Intent recognition",
-      "Custom training",
-      "API access",
-      "Analytics dashboard"
+      'Natural language queries',
+      'Automated insights generation',
+      'Real-time dashboards',
+      'Data visualization',
+      'Mobile optimization',
+      'Collaborative features'
     ],
     benefits: [
-      "98% language understanding accuracy",
-      "24/7 customer support automation",
-      "Multi-language customer service",
-      "Improved customer satisfaction",
-      "Reduced support costs",
-      "Scalable communication"
+      'Reduce report generation time by 80%',
+      'Improved data accessibility',
+      'Better decision making',
+      'Automated insights'
     ],
-    targetAudience: ["E-commerce platforms", "Customer service centers", "Healthcare providers", "Financial institutions"],
-    tags: ["NLP", "Chatbots", "Virtual Assistants", "Language Processing", "Customer Service"],
-    contactInfo: zionContact,
-    marketPrice: "$700 - $1,500/month",
-    aiModels: ["BERT", "GPT models", "Transformer models", "Custom NLP models"],
-    accuracy: "98.1%",
-    trainingData: "Multi-language corpora",
-    compliance: ["GDPR", "SOC 2", "ISO 27001", "Data privacy"],
-    aiScore: 97,
-    useCases: [
-      "Customer service chatbots",
-      "Virtual assistants",
-      "Document processing",
-      "Language translation",
-      "Content generation"
-    ],
-    innovationLevel: "Advanced",
-    marketSize: "$43.2 billion",
-    ethicalAI: ["Bias-free language models", "Privacy protection", "Transparent processing", "Ethical guidelines"],
-    technologies: [
-      "Hugging Face Transformers",
-      "SpaCy",
-      "NLTK",
-      "TensorFlow",
-      "PyTorch",
-      "Cloud NLP APIs",
-      "WebSocket connections"
-    ],
-    roi: "350% within 10 months",
-    setupTime: "2-4 weeks",
-    integrations: ["CRM systems", "Website platforms", "Mobile apps", "Social media", "Email systems"],
-    freeTier: true,
-    trialPeriod: "21 days"
+    marketPrice: '$1,200-3,500/month',
+    ctaLabel: 'Schedule Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '92%',
+    processingTime: '< 2 seconds'
   },
   {
-    id: 3,
-    name: "Computer Vision & Image Recognition Platform",
-    category: "Computer Vision",
-    description: "Advanced computer vision platform that analyzes images and videos to extract insights, detect objects, and automate visual processes. Achieves 99% accuracy in object detection and classification.",
-    price: 1499,
-    pricingModel: "monthly",
+    id: 'ai-customer-behavior-analytics',
+    title: 'AI Customer Behavior Analytics',
+    description: 'Deep customer behavior analysis using AI to predict preferences and optimize customer experience',
+    category: 'AI Analytics',
+    price: '$699',
+    billing: 'month',
     features: [
-      "Object detection and recognition",
-      "Image classification",
-      "Facial recognition",
-      "Video analysis",
-      "Custom model training",
-      "Real-time processing",
-      "API integration",
-      "Analytics dashboard"
+      'Behavioral pattern recognition',
+      'Predictive modeling',
+      'Segmentation analysis',
+      'Churn prediction',
+      'Lifetime value calculation',
+      'Personalization engine'
     ],
     benefits: [
-      "99% object detection accuracy",
-      "Real-time visual processing",
-      "Automated quality control",
-      "Enhanced security monitoring",
-      "Improved operational efficiency",
-      "Cost reduction through automation"
+      'Increase customer retention by 45%',
+      'Improve personalization',
+      'Better marketing ROI',
+      'Enhanced customer experience'
     ],
-    targetAudience: ["Manufacturing companies", "Security firms", "Healthcare providers", "Retail companies"],
-    tags: ["Computer Vision", "Image Recognition", "Object Detection", "Video Analysis", "Automation"],
-    contactInfo: zionContact,
-    marketPrice: "$1,200 - $2,500/month",
-    aiModels: ["YOLO", "ResNet", "EfficientNet", "Custom CNN models"],
-    accuracy: "99.2%",
-    trainingData: "Multi-domain image datasets",
-    compliance: ["GDPR", "SOC 2", "ISO 27001", "Privacy regulations"],
-    aiScore: 99,
-    useCases: [
-      "Quality control automation",
-      "Security surveillance",
-      "Medical image analysis",
-      "Retail analytics",
-      "Autonomous vehicles"
+    marketPrice: '$1,000-2,800/month',
+    ctaLabel: 'Get Started',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '89%',
+    processingTime: '< 3 seconds'
+  },
+
+  // AI Automation Services
+  {
+    id: 'ai-workflow-automation-platform',
+    title: 'AI Workflow Automation Platform',
+    description: 'Intelligent workflow automation that learns and optimizes business processes automatically',
+    category: 'AI Automation',
+    price: '$1,500',
+    billing: 'month',
+    features: [
+      'Process discovery',
+      'Automated workflow design',
+      'Intelligent routing',
+      'Performance optimization',
+      'Integration capabilities',
+      'Analytics dashboard'
     ],
-    innovationLevel: "Advanced",
-    marketSize: "$51.3 billion",
-    ethicalAI: ["Privacy protection", "Bias detection", "Transparent algorithms", "Ethical guidelines"],
-    technologies: [
-      "OpenCV",
-      "TensorFlow",
-      "PyTorch",
-      "CUDA",
-      "GPU acceleration",
-      "Cloud vision APIs",
-      "Edge computing"
+    benefits: [
+      'Reduce process time by 70%',
+      'Eliminate manual errors',
+      'Improve efficiency',
+      'Scalable automation'
     ],
-    roi: "450% within 15 months",
-    setupTime: "4-8 weeks",
-    integrations: ["Camera systems", "IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],
-    freeTier: false,
-    trialPeriod: "14 days"
+    marketPrice: '$2,000-6,000/month',
+    ctaLabel: 'Automation Assessment',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '94%',
+    processingTime: '< 5 seconds'
   },
   {
-    id: 4,
-    name: "AI-Powered Recommendation Engine",
-    category: "Recommendation Systems",
-    description: "Intelligent recommendation engine that analyzes user behavior and preferences to deliver personalized suggestions. Increases conversion rates by 35% and improves customer engagement significantly.",
-    price: 799,
-    pricingModel: "monthly",
+    id: 'ai-document-processing-automation',
+    title: 'AI Document Processing Automation',
+    description: 'Intelligent document processing with OCR, classification, and data extraction capabilities',
+    category: 'AI Automation',
+    price: '$599',
+    billing: 'month',
     features: [
-      "Collaborative filtering",
-      "Content-based filtering",
-      "Hybrid algorithms",
-      "Real-time recommendations",
-      "A/B testing framework",
-      "Performance analytics",
-      "Custom algorithms",
-      "Scalable architecture"
+      'Multi-format support',
+      'Intelligent classification',
+      'Data extraction',
+      'Quality validation',
+      'Integration APIs',
+      'Custom training'
     ],
     benefits: [
-      "35% increase in conversion rates",
-      "Improved customer engagement",
-      "Personalized user experience",
-      "Higher customer satisfaction",
-      "Increased revenue per user",
-      "Better inventory management"
+      'Process documents 10x faster',
+      'Reduce manual data entry',
+      'Improve accuracy',
+      'Lower processing costs'
     ],
-    targetAudience: ["E-commerce platforms", "Streaming services", "Social media platforms", "Content providers"],
-    tags: ["Recommendation Engine", "Personalization", "Machine Learning", "User Experience", "E-commerce"],
-    contactInfo: zionContact,
-    marketPrice: "$600 - $1,200/month",
-    aiModels: ["Matrix Factorization", "Neural Networks", "Deep Learning", "Ensemble methods"],
-    accuracy: "94.8%",
-    trainingData: "User behavior data",
-    compliance: ["GDPR", "CCPA", "SOC 2", "Privacy regulations"],
-    aiScore: 96,
-    useCases: [
-      "Product recommendations",
-      "Content suggestions",
-      "Movie/music recommendations",
-      "Friend suggestions",
-      "Ad targeting"
-    ],
-    innovationLevel: "Advanced",
-    marketSize: "$38.7 billion",
-    ethicalAI: ["Privacy protection", "Bias detection", "Transparent algorithms", "User control"],
-    technologies: [
-      "Python",
-      "Scikit-learn",
-      "TensorFlow",
-      "Apache Spark",
-      "Redis",
-      "Elasticsearch",
-      "Cloud platforms"
-    ],
-    roi: "300% within 8 months",
-    setupTime: "2-4 weeks",
-    integrations: ["E-commerce platforms", "CRM systems", "Analytics tools", "Marketing platforms"],
-    freeTier: true,
-    trialPeriod: "30 days"
+    marketPrice: '$800-2,500/month',
+    ctaLabel: 'Start Free Trial',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '96%',
+    processingTime: '< 2 seconds'
   },
   {
-    id: 5,
-    name: "AI-Powered Fraud Detection System",
-    category: "Fraud Detection",
-    description: "Advanced AI system that detects fraudulent activities in real-time across financial transactions, insurance claims, and digital interactions. Achieves 99.5% accuracy with minimal false positives.",
-    price: 1899,
-    pricingModel: "monthly",
+    id: 'ai-customer-service-automation',
+    title: 'AI Customer Service Automation',
+    description: 'Intelligent customer service automation with natural language processing and sentiment analysis',
+    category: 'AI Automation',
+    price: '$799',
+    billing: 'month',
     features: [
-      "Real-time fraud detection",
-      "Machine learning algorithms",
-      "Behavioral analysis",
-      "Risk scoring",
-      "Automated alerts",
-      "Case management",
-      "Performance analytics",
-      "Custom rule engine"
+      'Natural language processing',
+      'Sentiment analysis',
+      'Automated responses',
+      'Ticket routing',
+      'Knowledge base integration',
+      'Performance analytics'
     ],
     benefits: [
-      "99.5% fraud detection accuracy",
-      "Real-time threat prevention",
-      "Reduced financial losses",
-      "Automated risk assessment",
-      "Improved compliance",
-      "Cost-effective security"
+      'Reduce response time by 80%',
+      '24/7 availability',
+      'Lower support costs',
+      'Improved satisfaction'
     ],
-    targetAudience: ["Banks", "Credit card companies", "Insurance firms", "E-commerce platforms"],
-    tags: ["Fraud Detection", "Security", "Machine Learning", "Risk Management", "Financial Services"],
-    contactInfo: zionContact,
-    marketPrice: "$1,500 - $3,000/month",
-    aiModels: ["Isolation Forest", "Autoencoders", "Random Forest", "Neural Networks"],
-    accuracy: "99.5%",
-    trainingData: "Historical fraud data",
-    compliance: ["PCI DSS", "SOC 2", "ISO 27001", "Financial regulations"],
-    aiScore: 99,
-    useCases: [
-      "Credit card fraud detection",
-      "Insurance fraud prevention",
-      "E-commerce fraud protection",
-      "Banking security",
-      "Identity theft prevention"
+    marketPrice: '$1,200-3,000/month',
+    ctaLabel: 'Service Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '91%',
+    processingTime: '< 1 second'
+  },
+
+  // AI Security Services
+  {
+    id: 'ai-threat-detection-system',
+    title: 'AI Threat Detection System',
+    description: 'Advanced AI-powered threat detection with behavioral analysis and automated response',
+    category: 'AI Security',
+    price: '$2,200',
+    billing: 'month',
+    features: [
+      'Behavioral analysis',
+      'Anomaly detection',
+      'Threat intelligence',
+      'Automated response',
+      'Forensic analysis',
+      'Real-time monitoring'
     ],
-    innovationLevel: "Advanced",
-    marketSize: "$42.1 billion",
-    ethicalAI: ["Privacy protection", "Bias detection", "Transparent algorithms", "Fairness metrics"],
-    technologies: [
-      "Python",
-      "Scikit-learn",
-      "TensorFlow",
-      "Apache Kafka",
-      "Redis",
-      "Cloud platforms",
-      "Real-time processing"
+    benefits: [
+      'Detect threats 90% faster',
+      'Reduce false positives',
+      'Automated mitigation',
+      '24/7 protection'
     ],
-    roi: "500% within 12 months",
-    setupTime: "4-8 weeks",
-    integrations: ["Payment gateways", "Banking systems", "CRM platforms", "Analytics tools"],
-    freeTier: false,
-    trialPeriod: "21 days"
+    marketPrice: '$3,000-8,000/month',
+    ctaLabel: 'Security Assessment',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '97%',
+    processingTime: '< 500ms'
   },
   {
-    id: 6,
-    name: "AI-Powered Supply Chain Optimization",
-    category: "Supply Chain AI",
-    description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and streamline operations. Reduces costs by 30% and improves efficiency by 50%.",
-    price: 1699,
-    pricingModel: "monthly",
+    id: 'ai-fraud-detection-platform',
+    title: 'AI Fraud Detection Platform',
+    description: 'Real-time fraud detection using machine learning and behavioral analysis',
+    category: 'AI Security',
+    price: '$1,800',
+    billing: 'month',
     features: [
-      "Demand forecasting",
-      "Inventory optimization",
-      "Route optimization",
-      "Supplier management",
-      "Risk assessment",
-      "Performance analytics",
-      "Real-time monitoring",
-      "Automated alerts"
+      'Real-time monitoring',
+      'Behavioral profiling',
+      'Risk scoring',
+      'Automated alerts',
+      'Compliance reporting',
+      'Custom rules engine'
     ],
     benefits: [
-      "30% reduction in supply chain costs",
-      "50% improvement in efficiency",
-      "Real-time visibility",
-      "Predictive risk management",
-      "Optimized inventory levels",
-      "Enhanced customer satisfaction"
+      'Reduce fraud losses by 85%',
+      'Real-time protection',
+      'Lower false positives',
+      'Compliance assurance'
     ],
-    targetAudience: ["Manufacturing companies", "Retail chains", "Logistics providers", "E-commerce platforms"],
-    tags: ["Supply Chain", "AI", "Optimization", "Logistics", "Inventory Management"],
-    contactInfo: zionContact,
-    marketPrice: "$1,300 - $2,800/month",
-    aiModels: ["Time Series Models", "Optimization Algorithms", "Neural Networks", "Reinforcement Learning"],
-    accuracy: "96.3%",
-    trainingData: "Supply chain data",
-    compliance: ["ISO 28000", "SOC 2", "ISO 27001", "Industry standards"],
-    aiScore: 97,
-    useCases: [
-      "Inventory optimization",
-      "Demand forecasting",
-      "Route planning",
-      "Supplier selection",
-      "Risk management"
-    ],
-    innovationLevel: "Advanced",
-    marketSize: "$18.7 billion",
-    ethicalAI: ["Transparent algorithms", "Fair optimization", "Bias detection", "Ethical guidelines"],
-    technologies: [
-      "Python",
-      "OR-Tools",
-      "TensorFlow",
-      "Apache Spark",
-      "Cloud platforms",
-      "IoT integration",
-      "Real-time analytics"
-    ],
-    roi: "400% within 15 months",
-    setupTime: "6-10 weeks",
-    integrations: ["ERP systems", "WMS platforms", "TMS systems", "Analytics tools"],
-    freeTier: false,
-    trialPeriod: "30 days"
+    marketPrice: '$2,500-7,000/month',
+    ctaLabel: 'Fraud Assessment',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '95%',
+    processingTime: '< 200ms'
   },
   {
-    id: 7,
-    name: "AI-Powered Healthcare Diagnostics",
-    category: "Healthcare AI",
-    description: "Advanced AI platform for medical image analysis, disease detection, and diagnostic support. Achieves 97% accuracy in medical imaging and provides real-time diagnostic assistance.",
-    price: 2499,
-    pricingModel: "monthly",
+    id: 'ai-identity-verification',
+    title: 'AI Identity Verification System',
+    description: 'Advanced identity verification using biometrics, document analysis, and behavioral patterns',
+    category: 'AI Security',
+    price: '$1,200',
+    billing: 'month',
     features: [
-      "Medical image analysis",
-      "Disease detection",
-      "Diagnostic support",
-      "Patient data analysis",
-      "Treatment recommendations",
-      "Clinical decision support",
-      "Performance analytics",
-      "Compliance management"
+      'Biometric verification',
+      'Document authentication',
+      'Liveness detection',
+      'Behavioral analysis',
+      'Multi-factor authentication',
+      'Compliance tracking'
     ],
     benefits: [
-      "97% diagnostic accuracy",
-      "Faster diagnosis times",
-      "Improved patient outcomes",
-      "Reduced diagnostic errors",
-      "Enhanced clinical efficiency",
-      "Cost-effective healthcare"
+      'Improve verification accuracy',
+      'Reduce fraud',
+      'Faster onboarding',
+      'Regulatory compliance'
     ],
-    targetAudience: ["Hospitals", "Medical clinics", "Radiology centers", "Healthcare networks"],
-    tags: ["Healthcare AI", "Medical Imaging", "Diagnostics", "Clinical Support", "Medical Technology"],
-    contactInfo: zionContact,
-    marketPrice: "$2,000 - $4,000/month",
-    aiModels: ["CNN", "ResNet", "DenseNet", "Custom medical models"],
-    accuracy: "97.1%",
-    trainingData: "Medical imaging datasets",
-    compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "Medical regulations"],
-    aiScore: 98,
-    useCases: [
-      "Radiology imaging",
-      "Pathology analysis",
-      "Cardiology diagnostics",
-      "Oncology screening",
-      "Clinical decision support"
+    marketPrice: '$1,800-4,500/month',
+    ctaLabel: 'Verification Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '99.5%',
+    processingTime: '< 3 seconds'
+  },
+
+  // AI Healthcare Services
+  {
+    id: 'ai-medical-diagnosis-assistant',
+    title: 'AI Medical Diagnosis Assistant',
+    description: 'AI-powered medical diagnosis support with image analysis and symptom assessment',
+    category: 'AI Healthcare',
+    price: '$2,500',
+    billing: 'month',
+    features: [
+      'Medical image analysis',
+      'Symptom assessment',
+      'Differential diagnosis',
+      'Treatment recommendations',
+      'Clinical decision support',
+      'Integration with EMR'
     ],
-    innovationLevel: "Cutting-edge",
-    marketSize: "$31.2 billion",
-    ethicalAI: ["Patient privacy", "Bias detection", "Transparent algorithms", "Medical ethics"],
-    technologies: [
-      "TensorFlow",
-      "PyTorch",
-      "Medical imaging libraries",
-      "Cloud platforms",
-      "HIPAA-compliant infrastructure",
-      "Real-time processing"
+    benefits: [
+      'Improve diagnosis accuracy',
+      'Reduce diagnostic time',
+      'Better patient outcomes',
+      'Support for healthcare providers'
     ],
-    roi: "600% within 24 months",
-    setupTime: "8-16 weeks",
-    integrations: ["PACS systems", "EMR platforms", "Medical devices", "Analytics tools"],
-    freeTier: false,
-    trialPeriod: "30 days"
+    marketPrice: '$3,500-10,000/month',
+    ctaLabel: 'Healthcare Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '94%',
+    processingTime: '< 5 seconds'
   },
   {
-    id: 8,
-    name: "AI-Powered Financial Trading Intelligence",
-    category: "Financial AI",
-    description: "Sophisticated AI platform for financial market analysis, trading strategy optimization, and risk management. Provides real-time insights and automated trading recommendations.",
-    price: 2999,
-    pricingModel: "monthly",
+    id: 'ai-patient-monitoring-system',
+    title: 'AI Patient Monitoring System',
+    description: 'Intelligent patient monitoring with predictive analytics and early warning systems',
+    category: 'AI Healthcare',
+    price: '$1,800',
+    billing: 'month',
     features: [
-      "Market data analysis",
-      "Trading strategy optimization",
-      "Risk assessment",
-      "Portfolio optimization",
-      "Real-time monitoring",
-      "Performance analytics",
-      "Automated alerts",
-      "Custom algorithms"
+      'Real-time monitoring',
+      'Predictive analytics',
+      'Early warning system',
+      'Vital signs tracking',
+      'Alert management',
+      'Mobile integration'
     ],
     benefits: [
-      "25% improvement in trading performance",
-      "Real-time market insights",
-      "Automated risk management",
-      "Enhanced portfolio returns",
-      "Faster decision-making",
-      "Competitive advantage"
+      'Early detection of issues',
+      'Reduce adverse events',
+      'Improve patient safety',
+      'Better resource utilization'
     ],
-    targetAudience: ["Investment firms", "Hedge funds", "Banks", "Individual traders"],
-    tags: ["Financial AI", "Trading", "Risk Management", "Portfolio Optimization", "Market Analysis"],
-    contactInfo: zionContact,
-    marketPrice: "$2,500 - $5,000/month",
-    aiModels: ["LSTM", "Transformer models", "Reinforcement Learning", "Ensemble methods"],
-    accuracy: "93.7%",
-    trainingData: "Financial market data",
-    compliance: ["SEC", "FINRA", "SOC 2", "Financial regulations"],
-    aiScore: 96,
-    useCases: [
-      "Algorithmic trading",
-      "Risk management",
-      "Portfolio optimization",
-      "Market analysis",
-      "Compliance monitoring"
+    marketPrice: '$2,500-6,000/month',
+    ctaLabel: 'Monitoring Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '96%',
+    processingTime: '< 1 second'
+  },
+
+  // AI Finance Services
+  {
+    id: 'ai-trading-algorithm-platform',
+    title: 'AI Trading Algorithm Platform',
+    description: 'Advanced AI-powered trading algorithms with real-time market analysis and risk management',
+    category: 'AI Finance',
+    price: '$3,500',
+    billing: 'month',
+    features: [
+      'Algorithmic trading',
+      'Risk management',
+      'Portfolio optimization',
+      'Market analysis',
+      'Backtesting engine',
+      'Performance tracking'
     ],
-    innovationLevel: "Advanced",
-    marketSize: "$42.8 billion",
-    ethicalAI: ["Transparent algorithms", "Risk disclosure", "Fair trading", "Ethical guidelines"],
-    technologies: [
-      "Python",
-      "TensorFlow",
-      "PyTorch",
-      "Financial libraries",
-      "Real-time data feeds",
-      "Cloud platforms",
-      "High-frequency trading"
+    benefits: [
+      'Improve trading performance',
+      'Reduce risk exposure',
+      'Automated execution',
+      'Data-driven decisions'
     ],
-    roi: "500% within 18 months",
-    setupTime: "6-12 weeks",
-    integrations: ["Trading platforms", "Market data feeds", "Risk management systems", "Analytics tools"],
-    freeTier: false,
-    trialPeriod: "14 days"
+    marketPrice: '$5,000-15,000/month',
+    ctaLabel: 'Trading Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '87%',
+    processingTime: '< 100ms'
   },
   {
-    id: 9,
-    name: "AI-Powered Content Generation Platform",
-    category: "Content AI",
-    description: "Advanced AI platform that generates high-quality, engaging content for marketing, social media, and business communications. Supports multiple languages and content types with 96% quality score.",
-    price: 699,
-    pricingModel: "monthly",
+    id: 'ai-credit-risk-assessment',
+    title: 'AI Credit Risk Assessment',
+    description: 'Intelligent credit risk assessment using machine learning and alternative data sources',
+    category: 'AI Finance',
+    price: '$1,500',
+    billing: 'month',
     features: [
-      "Multi-format content generation",
-      "Multi-language support",
-      "SEO optimization",
-      "Brand voice customization",
-      "Content planning",
-      "Performance analytics",
-      "API integration",
-      "Collaboration tools"
+      'Risk scoring models',
+      'Alternative data analysis',
+      'Portfolio management',
+      'Compliance reporting',
+      'API integration',
+      'Custom model training'
     ],
     benefits: [
-      "96% content quality score",
-      "10x faster content creation",
-      "Multi-language support",
-      "SEO-optimized content",
-      "Consistent brand voice",
-      "Cost-effective content production"
+      'Improve risk assessment',
+      'Reduce default rates',
+      'Faster decision making',
+      'Better portfolio performance'
     ],
-    targetAudience: ["Marketing agencies", "E-commerce companies", "Content creators", "Businesses"],
-    tags: ["Content Generation", "AI Writing", "Marketing", "SEO", "Multi-language"],
-    contactInfo: zionContact,
-    marketPrice: "$500 - $1,200/month",
-    aiModels: ["GPT models", "BERT", "Custom language models", "Transformer models"],
-    accuracy: "96.2%",
-    trainingData: "Multi-language content",
-    compliance: ["GDPR", "SOC 2", "Content guidelines", "Copyright compliance"],
-    aiScore: 95,
-    useCases: [
-      "Marketing content",
-      "Social media posts",
-      "Product descriptions",
-      "Blog articles",
-      "Email campaigns"
+    marketPrice: '$2,000-6,000/month',
+    ctaLabel: 'Risk Assessment',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '93%',
+    processingTime: '< 2 seconds'
+  },
+
+  // AI Marketing Services
+  {
+    id: 'ai-marketing-optimization-platform',
+    title: 'AI Marketing Optimization Platform',
+    description: 'Comprehensive marketing optimization using AI for campaigns, content, and customer targeting',
+    category: 'AI Marketing',
+    price: '$1,200',
+    billing: 'month',
+    features: [
+      'Campaign optimization',
+      'Content personalization',
+      'Customer segmentation',
+      'A/B testing automation',
+      'ROI tracking',
+      'Predictive analytics'
     ],
-    innovationLevel: "Advanced",
-    marketSize: "$28.9 billion",
-    ethicalAI: ["Original content", "Copyright compliance", "Bias detection", "Quality standards"],
-    technologies: [
-      "OpenAI GPT",
-      "Hugging Face",
-      "TensorFlow",
-      "Natural language processing",
-      "Cloud platforms",
-      "API integration"
+    benefits: [
+      'Increase conversion rates by 60%',
+      'Improve marketing ROI',
+      'Personalized experiences',
+      'Automated optimization'
     ],
-    roi: "300% within 8 months",
-    setupTime: "1-3 weeks",
-    integrations: ["CMS platforms", "Social media tools", "Marketing automation", "Analytics platforms"],
-    freeTier: true,
-    trialPeriod: "30 days"
+    marketPrice: '$1,800-5,000/month',
+    ctaLabel: 'Marketing Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '91%',
+    processingTime: '< 3 seconds'
   },
   {
-    id: 10,
-    name: "AI-Powered Process Automation Platform",
-    category: "Process Automation",
-    description: "Intelligent process automation platform that uses AI to automate complex business processes, workflows, and decision-making. Reduces manual work by 70% and improves accuracy by 95%.",
-    price: 1199,
-    pricingModel: "monthly",
+    id: 'ai-content-generation-engine',
+    title: 'AI Content Generation Engine',
+    description: 'Advanced AI content generation for marketing, blogs, and social media with human-like quality',
+    category: 'AI Marketing',
+    price: '$899',
+    billing: 'month',
     features: [
-      "Process discovery",
-      "Workflow automation",
-      "Decision automation",
-      "Document processing",
-      "Integration capabilities",
-      "Performance monitoring",
-      "Custom workflows",
-      "Analytics dashboard"
+      'Multi-format content',
+      'SEO optimization',
+      'Brand voice consistency',
+      'Plagiarism detection',
+      'Content scheduling',
+      'Performance analytics'
     ],
     benefits: [
-      "70% reduction in manual work",
-      "95% improvement in accuracy",
-      "Faster process execution",
-      "24/7 operation capability",
-      "Cost reduction",
-      "Improved compliance"
+      'Reduce content creation time by 80%',
+      'Improve SEO performance',
+      'Consistent brand voice',
+      'Scalable content production'
     ],
-    targetAudience: ["Enterprises", "Manufacturing companies", "Financial services", "Healthcare organizations"],
-    tags: ["Process Automation", "RPA", "Workflow Automation", "Business Process", "AI Automation"],
-    contactInfo: zionContact,
-    marketPrice: "$900 - $2,000/month",
-    aiModels: ["Decision trees", "Neural networks", "Reinforcement learning", "Process mining"],
-    accuracy: "95.8%",
-    trainingData: "Process execution data",
-    compliance: ["SOC 2", "ISO 27001", "Industry regulations", "Process standards"],
-    aiScore: 97,
-    useCases: [
-      "Invoice processing",
-      "Customer onboarding",
-      "Claims processing",
-      "Quality control",
-      "Compliance monitoring"
+    marketPrice: '$1,200-3,500/month',
+    ctaLabel: 'Content Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '89%',
+    processingTime: '< 10 seconds'
+  },
+
+  // AI Operations Services
+  {
+    id: 'ai-supply-chain-optimization',
+    title: 'AI Supply Chain Optimization',
+    description: 'Intelligent supply chain optimization with demand forecasting and inventory management',
+    category: 'AI Operations',
+    price: '$1,800',
+    billing: 'month',
+    features: [
+      'Demand forecasting',
+      'Inventory optimization',
+      'Route optimization',
+      'Supplier analytics',
+      'Risk assessment',
+      'Performance monitoring'
     ],
-    innovationLevel: "Advanced",
-    marketSize: "$23.4 billion",
-    ethicalAI: ["Transparent processes", "Bias detection", "Fair automation", "Human oversight"],
-    technologies: [
-      "Python",
-      "RPA tools",
-      "Workflow engines",
-      "Integration platforms",
-      "Cloud services",
-      "API management"
+    benefits: [
+      'Reduce costs by 25%',
+      'Improve efficiency',
+      'Better planning',
+      'Risk mitigation'
     ],
-    roi: "400% within 12 months",
-    setupTime: "4-8 weeks",
-    integrations: ["ERP systems", "CRM platforms", "Document management", "Workflow tools"],
-    freeTier: true,
-    trialPeriod: "30 days"
+    marketPrice: '$2,500-7,000/month',
+    ctaLabel: 'Supply Chain Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '92%',
+    processingTime: '< 5 seconds'
+  },
+  {
+    id: 'ai-quality-control-system',
+    title: 'AI Quality Control System',
+    description: 'Automated quality control using computer vision and machine learning for manufacturing',
+    category: 'AI Operations',
+    price: '$2,200',
+    billing: 'month',
+    features: [
+      'Computer vision inspection',
+      'Defect detection',
+      'Quality scoring',
+      'Process optimization',
+      'Real-time monitoring',
+      'Analytics dashboard'
+    ],
+    benefits: [
+      'Improve quality by 95%',
+      'Reduce defects',
+      'Lower inspection costs',
+      '24/7 monitoring'
+    ],
+    marketPrice: '$3,000-8,000/month',
+    ctaLabel: 'Quality Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '98%',
+    processingTime: '< 1 second'
+  },
+
+  // AI Research Services
+  {
+    id: 'ai-research-assistant-platform',
+    title: 'AI Research Assistant Platform',
+    description: 'Intelligent research assistant for scientific literature analysis and knowledge discovery',
+    category: 'AI Research',
+    price: '$1,500',
+    billing: 'month',
+    features: [
+      'Literature analysis',
+      'Knowledge extraction',
+      'Research synthesis',
+      'Citation management',
+      'Collaboration tools',
+      'Progress tracking'
+    ],
+    benefits: [
+      'Accelerate research',
+      'Discover insights',
+      'Improve collaboration',
+      'Better organization'
+    ],
+    marketPrice: '$2,000-6,000/month',
+    ctaLabel: 'Research Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: '90%',
+    processingTime: '< 5 seconds'
+  },
+
+  // AI Infrastructure Services
+  {
+    id: 'ai-model-training-platform',
+    title: 'AI Model Training Platform',
+    description: 'Enterprise AI model training platform with automated hyperparameter tuning and deployment',
+    category: 'AI Infrastructure',
+    price: '$2,500',
+    billing: 'month',
+    features: [
+      'Automated training',
+      'Hyperparameter optimization',
+      'Model versioning',
+      'Deployment automation',
+      'Performance monitoring',
+      'Scalable infrastructure'
+    ],
+    benefits: [
+      'Faster model development',
+      'Better performance',
+      'Automated deployment',
+      'Scalable training'
+    ],
+    marketPrice: '$3,500-10,000/month',
+    ctaLabel: 'Training Demo',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: 'N/A',
+    processingTime: 'Variable'
+  },
+
+  // AI Ethics Services
+  {
+    id: 'ai-ethics-compliance-platform',
+    title: 'AI Ethics Compliance Platform',
+    description: 'Comprehensive AI ethics and compliance monitoring for responsible AI deployment',
+    category: 'AI Ethics',
+    price: '$1,200',
+    billing: 'month',
+    features: [
+      'Bias detection',
+      'Fairness monitoring',
+      'Transparency tracking',
+      'Compliance reporting',
+      'Ethics guidelines',
+      'Audit trails'
+    ],
+    benefits: [
+      'Ensure ethical AI',
+      'Reduce bias',
+      'Compliance assurance',
+      'Trust building'
+    ],
+    marketPrice: '$1,800-5,000/month',
+    ctaLabel: 'Ethics Assessment',
+    href: 'https://ziontechgroup.com/contact',
+    accuracy: 'N/A',
+    processingTime: 'N/A'
   }
 ];
 
