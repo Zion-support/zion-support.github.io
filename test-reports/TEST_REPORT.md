@@ -18,7 +18,8 @@
 | Performance | ✅ PASS | Hello, this is AnupamAS01!
 ... |
 | Accessibility | ✅ PASS | Lint check failed: Command failed: npm run lint
-(node:31284) [MODULE_TYPELESS_PACKAGE_JSON] Warning:... |
+Invalid option '--ext' - perhaps you meant '-c'?
+You... |
 | Coverage | ✅ PASS | Coverage generation failed
 ... |
 
