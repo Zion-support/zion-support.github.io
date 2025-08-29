@@ -116,6 +116,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
+                <Route path="/innovative-ai-services-2025" element={<InnovativeAIServices2025 />} />
 
                 {/* Service Routes - only for existing pages */}
                 <Route path="/services/cloud-devops" element={<CloudDevOps />} />
