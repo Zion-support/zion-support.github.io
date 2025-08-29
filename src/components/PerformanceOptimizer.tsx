@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Zap, TrendingUp, Clock, Database, Cpu, Memory, Network, AlertTriangle } from 'lucide-react';
+import { Zap, TrendingUp, Clock, Database, Cpu, HardDrive, Network, AlertTriangle } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -270,9 +270,9 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             </div>
             
             <div className="text-center">
-              <Memory className="w-4 h-4 text-green-400 mx-auto mb-1" />
+              <HardDrive className="w-4 h-4 text-green-400 mx-auto mb-1" />
               <div className="text-xs text-slate-300">Memory</div>
-              <div className="text-sm font-semibold text-white">
+              <div className="text-lg font-semibold text-white">
                 {metrics.memoryUsage.toFixed(1)}MB
               </div>
             </div>
