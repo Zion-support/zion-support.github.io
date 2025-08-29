@@ -1,28 +1,21 @@
-name: Status
+name: Status (DISABLED - Migrated to PM2)
 
 on:
-  workflow_run:
-    workflows: ["Simple CI", "CI/CD Pipeline"]
-    types:
-      - completed
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling workflow status monitoring
+  # Now handled by PM2 processes: continuous-improvement, quality-checks
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 jobs:
-  status:
-    name: Update Status
+  disabled:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion != 'skipped' }}
-    
     steps:
-    - name: Check workflow status
-      run: |
-        echo "Workflow: ${{ github.event.workflow_run.name }}"
-        echo "Status: ${{ github.event.workflow_run.conclusion }}"
-        echo "Branch: ${{ github.event.workflow_run.head_branch }}"
-        
-        if [ "${{ github.event.workflow_run.conclusion }}" == "success" ]; then
-          echo "✅ Workflow completed successfully"
-        elif [ "${{ github.event.workflow_run.conclusion }}" == "failure" ]; then
-          echo "❌ Workflow failed"
-        else
-          echo "⚠️ Workflow completed with warnings"
-        fi
+      - name: Workflow Disabled
+        run: |
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "Workflow status monitoring is now handled by:"
+          echo "- continuous-improvement PM2 process (every 2 hours)"
+          echo "- quality-checks PM2 process (every 3 hours)"
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          exit 0
