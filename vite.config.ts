@@ -1,10 +1,21 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
+import { compression } from 'vite-plugin-compression2'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    compression({
+      algorithm: 'gzip',
+      exclude: [/\.(br)$/, /\.(gz)$/],
+    }),
+    compression({
+      algorithm: 'brotliCompress',
+      exclude: [/\.(br)$/, /\.(gz)$/],
+    }),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
@@ -14,7 +25,7 @@ export default defineConfig({
     target: 'es2019',
     minify: 'terser',
     sourcemap: process.env.NODE_ENV === 'production' ? false : 'hidden',
-    reportCompressedSize: false,
+    reportCompressedSize: true,
     outDir: 'dist',
     cssCodeSplit: true,
     modulePreload: {
@@ -72,20 +83,78 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        passes: 3
+        passes: 3,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_Function: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
       },
       format: {
         comments: false
+      },
+      mangle: {
+        safari10: true
       }
     },
     cssMinify: true,
+    chunkSizeWarningLimit: 1000,
   },
   esbuild: {
     legalComments: 'none',
     logOverride: { 'this-is-undefined-in-esm': 'silent' },
+    target: 'es2019',
   },
   server: {
     port: 3000,
     open: true,
+    headers: {
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1; mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+    },
+  },
+  preview: {
+    port: 4173,
+    headers: {
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1; mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+    },
+  },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'framer-motion',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-alert-dialog',
+      '@radix-ui/react-aspect-ratio',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox',
+      '@radix-ui/react-context-menu',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-label',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-progress',
+      '@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-select',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-slider',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-switch',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-toast',
+      '@radix-ui/react-tooltip',
+    ],
   },
 })

@@ -10,12 +10,23 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="msapplication-TileColor" content="#0f172a" />
     <meta name="description" content="Zion Tech Group - Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
-    <meta name="keywords" content="AI, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group" />
+    <meta name="keywords" content="AI, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group, quantum computing, blockchain, IoT, edge computing" />
     <meta name="author" content="Zion Tech Group" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no,address=no,email=no" />
     <meta name="color-scheme" content="dark light" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- Performance Optimizations -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preload" href="/src/main.tsx" as="script" type="module" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -23,6 +34,10 @@
     <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
     <meta property="og:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
     <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Zion Tech Group" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -30,6 +45,8 @@
     <meta property="twitter:title" content="Zion Tech Group - Technology Solutions" />
     <meta property="twitter:description" content="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services." />
     <meta property="twitter:image" content="/og-image.svg" />
+    <meta property="twitter:site" content="@ziontechgroup" />
+    <meta property="twitter:creator" content="@ziontechgroup" />
 
     <link rel="canonical" href="https://ziontechgroup.com/" />
 
@@ -49,6 +66,7 @@
 
     <title>Zion Tech Group - Technology Solutions</title>
 
+    <!-- Enhanced Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -57,11 +75,32 @@
         "url": "https://ziontechgroup.com/",
         "logo": "https://ziontechgroup.com/favicon.svg",
         "sameAs": [
-          "https://www.linkedin.com/company/ziontechgroup"
+          "https://www.linkedin.com/company/ziontechgroup",
+          "https://twitter.com/ziontechgroup",
+          "https://github.com/Zion-Holdings"
         ],
         "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
         "brand": { "@type": "Brand", "name": "Zion Tech Group" },
-        "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "info@ziontechgroup.com" }
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "sales",
+            "email": "info@ziontechgroup.com",
+            "availableLanguage": "English"
+          },
+          {
+            "@type": "ContactPoint",
+            "contactType": "technical support",
+            "email": "support@ziontechgroup.com",
+            "availableLanguage": "English"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "foundingDate": "2020",
+        "numberOfEmployees": "50-100"
       }
     </script>
     <script type="application/ld+json">
@@ -74,7 +113,41 @@
           "@type": "SearchAction",
           "target": "https://ziontechgroup.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
         }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "AI Technology Solutions",
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "description": "Comprehensive AI solutions including machine learning, natural language processing, and computer vision services.",
+        "areaServed": "Worldwide",
+        "serviceType": "Technology Consulting",
+        "category": "Artificial Intelligence"
+      }
+    </script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
       }
     </script>
   </head>
