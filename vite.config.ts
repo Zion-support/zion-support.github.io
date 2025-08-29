@@ -21,8 +21,7 @@ export default defineConfig({
           'router-vendor': ['react-router-dom'],
           'ui-vendor': ['framer-motion', 'lucide-react'],
           'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'charts-vendor': ['recharts']
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',

@@ -18,6 +18,7 @@ import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { ErrorFallback } from './components/ErrorFallback';
 import LoadingSpinner from './components/ui/LoadingSpinner';
 
 // Lazy-loaded pages for better performance
@@ -99,6 +100,20 @@ const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnal
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
+// Enhanced Services Showcase 2025
+const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
+
+// Zion Tech Group 2025 Comprehensive Showcase
+const ZionTechGroup2025ComprehensiveShowcase = lazy(() => import('./pages/ZionTechGroup2025ComprehensiveShowcase'));
+
+// 2025 New Innovative Services
+const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
+const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
+const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
+const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
+
 // Comprehensive improvements components
 const AdvancedAIServicesHub = lazy(() => import('./components/AdvancedAIServicesHub'));
 const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
@@ -107,13 +122,16 @@ const ComprehensiveImprovements2025 = lazy(() => import('./pages/ComprehensiveIm
 
 // New innovative AI services
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/services/AIAutonomousResearchAssistant'));
-const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMarketingSuite'));
 const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
 const AIHealthcarePlatform = lazy(() => import('./pages/services/AIHealthcarePlatform'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = lazy(() => import('./pages/services/DigitalTransformation'));
+
+// 2025 Innovative Services
+const InnovativeServicesLanding2025 = lazy(() => import('./pages/InnovativeServicesLanding2025'));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Additional new innovative AI services
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
@@ -144,6 +162,10 @@ const SustainableTechnology = lazy(() => import('./pages/services/sustainable-te
 const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictive-maintenance'));
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 
+// Comprehensive services imports
+const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
+const ComprehensiveServicesLanding2025 = lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
+
 // Additional missing components
 const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
@@ -169,24 +191,20 @@ const AIAutonomousThreatIntelligence = lazy(() => import('./pages/AIAutonomousTh
 
 // Advanced AI service pages
 const AIAutonomousBusinessIntelligence = lazy(() => import('./pages/services/AIAutonomousBusinessIntelligence'));
-const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
 
-// Additional innovative services
-const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
-const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
-const AICustomerExperienceAnalytics = lazy(() => import('./pages/services/AICustomerExperienceAnalytics'));
-const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
+// Additional missing imports
+const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
 const AICodeReviewSecurityScanner = lazy(() => import('./pages/services/AICodeReviewSecurityScanner'));
 const AIDevOpsAutomationPlatform = lazy(() => import('./pages/services/AIDevOpsAutomationPlatform'));
 const AIBusinessIntelligenceAnalytics = lazy(() => import('./pages/services/AIBusinessIntelligenceAnalytics'));
 const AICustomerExperienceSupport = lazy(() => import('./pages/services/AICustomerExperienceSupport'));
 const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services/AIMarketingAutomationPersonalization'));
-const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
+const AIQuantumFinancialTrading = lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
 
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
         <div className="App min-h-screen bg-white">
           {/* SEO Component */}
           <EnhancedSEO 
@@ -363,12 +381,14 @@ function App() {
                   <Route path="/services/it-helpdesk" element={<ITHelpdesk />} />
                   <Route path="/services/affiliate-tracking" element={<AffiliateTracking />} />
                   <Route path="/services/mobile-survey" element={<MobileSurvey />} />
+                  
                   {/* Additional new service routes */}
                   <Route path="/services/ai-seo" element={<AIPoweredSEO />} />
                   <Route path="/services/interview-assessment" element={<InterviewAssessmentAI />} />
                   <Route path="/services/helpdesk" element={<HelpdeskPlatform />} />
                   <Route path="/services/dsr-portal" element={<DSRPortal />} />
                   <Route path="/services/security-headers-csp" element={<SecurityHeadersCSP />} />
+                  
                   {/* New AI-powered micro SAAS service routes */}
                   <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
                   <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
@@ -396,7 +416,6 @@ function App() {
                   {/* New 2025 service routes */}
                   <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
                   <Route path="/ultimate-services-showcase-2025" element={<UltimateServicesShowcase2025 />} />
-                  <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                   <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                   <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
                   <Route path="/services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
@@ -442,7 +461,6 @@ function App() {
                   <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
                   <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                   <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
-                  <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                   
                   {/* Advanced AI service routes */}
                   <Route path="/services/ai-autonomous-business-intelligence" element={<AIAutonomousBusinessIntelligence />} />
@@ -464,19 +482,16 @@ function App() {
                   <Route path="/2029-comprehensive-services-showcase" element={<ComprehensiveServicesShowcase2029 />} />
                   
                   {/* Additional Pages */}
-                  <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/faq" element={<FAQ />} />
-                  <Route path="/search" element={<SearchPage />} />
-                  <Route path="/partners" element={<Partners />} />
-                  <Route path="/news" element={<News />} />
-                  <Route path="/case-studies" element={<CaseStudies />} />
-                  <Route path="/help" element={<HelpCenter />} />
                   <Route path="/marketplace" element={<Marketplace />} />
-                  <Route path="/pricing" element={<Pricing />} />
                   <Route path="/it-consulting" element={<ITConsulting />} />
                   <Route path="/space-tech" element={<SpaceTech />} />
                   <Route path="/sitemap" element={<Sitemap />} />
+                  
+                  {/* Enhanced Services Showcase 2025 */}
+                  <Route path="/services/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />
+                  
+                  {/* Zion Tech Group 2025 Comprehensive Showcase */}
+                  <Route path="/zion-tech-group-2025-comprehensive-showcase" element={<ZionTechGroup2025ComprehensiveShowcase />} />
                   
                   {/* 404 Page */}
                   <Route 
