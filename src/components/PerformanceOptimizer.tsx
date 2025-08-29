@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { useInView } from 'framer-motion';
+import React, { useEffect, useRef, useCallback, useState, useMemo } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 interface PerformanceMetrics {
   fps: number;
@@ -13,12 +13,11 @@ interface PerformanceMetrics {
   firstInputDelay: number;
 }
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  threshold?: number;
-  rootMargin?: string;
+interface LazyLoadConfig {
+  threshold: number;
+  rootMargin: string;
+  triggerOnce: boolean;
 }
-
 
 interface PerformanceReport {
   timestamp: number;
@@ -302,128 +301,6 @@ export function PerformanceOptimizer() {
         clearInterval(optimizationIntervalRef.current);
       }
     };
-
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('SW registered: ', registration);
-        })
-        .catch(registrationError => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    }
-  }, []);
-
-  // Performance budget monitoring
-  useEffect(() => {
-    const checkPerformanceBudget = () => {
-      if (metrics) {
-        const budget = {
-          fcp: 2000,
-          lcp: 4000,
-          fid: 100,
-          cls: 0.1,
-          ttfb: 800
-        };
-
-        const violations = [];
-        if (metrics.fcp > budget.fcp) violations.push(`FCP: ${metrics.fcp}ms > ${budget.fcp}ms`);
-        if (metrics.lcp > budget.lcp) violations.push(`LCP: ${metrics.lcp}ms > ${budget.lcp}ms`);
-        if (metrics.fid > budget.fid) violations.push(`FID: ${metrics.fid}ms > ${budget.fid}ms`);
-        if (metrics.cls > budget.cls) violations.push(`CLS: ${metrics.cls} > ${budget.cls}`);
-        if (metrics.ttfb > budget.ttfb) violations.push(`TTFB: ${metrics.ttfb}ms > ${budget.ttfb}ms`);
-
-        if (violations.length > 0) {
-          console.warn('Performance budget violations:', violations);
-          // Send to analytics
-          if (window.gtag) {
-            window.gtag('event', 'performance_budget_violation', {
-              violations: violations.join(', ')
-            });
-          }
-        }
-      }
-    };
-
-    if (metrics) {
-      checkPerformanceBudget();
-    }
-  }, [metrics]);
-
-  return (
-    <>
-      {children}
-      
-      {/* Performance monitoring overlay (development only) */}
-      {process.env.NODE_ENV === 'development' && metrics && (
-        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-          <div className="mb-2 font-bold">Performance Metrics</div>
-          <div>FCP: {metrics.fcp?.toFixed(0)}ms</div>
-          <div>LCP: {metrics.lcp?.toFixed(0)}ms</div>
-          <div>FID: {metrics.fid?.toFixed(0)}ms</div>
-          <div>CLS: {metrics.cls?.toFixed(3)}</div>
-          <div>TTFB: {metrics.ttfb?.toFixed(0)}ms</div>
-          <div className="mt-2 text-green-400">
-            {isOptimized ? '✓ Optimized' : 'Optimizing...'}
-          </div>
-        </div>
-      )}
-    </>
-  );
-};
-
-// Intersection Observer Hook for lazy loading
-export const useLazyLoad = (threshold = 0.1, rootMargin = '50px') => {
-  const [ref, inView] = useInView({
-    threshold,
-    rootMargin,
-    triggerOnce: true
-  });
-
-  return [ref, inView];
-};
-
-// Resource preloader
-export const ResourcePreloader: React.FC<{ resources: string[] }> = ({ resources }) => {
-  useEffect(() => {
-    resources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.woff2') ? 'font' : 
-                resource.endsWith('.jpg') || resource.endsWith('.png') || resource.endsWith('.webp') ? 'image' : 
-                resource.endsWith('.css') ? 'style' : 'script';
-      document.head.appendChild(link);
-    });
-  }, [resources]);
-
-  return null;
-};
-
-// Performance budget component
-export const PerformanceBudget: React.FC<{ budget: Partial<PerformanceMetrics> }> = ({ budget }) => {
-  const [currentMetrics, setCurrentMetrics] = useState<PerformanceMetrics | null>(null);
-
-  useEffect(() => {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      // Update metrics based on entries
-      // This is a simplified version - you'd want more sophisticated logic
-    });
-
-    observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-    return () => observer.disconnect();
-  }, []);
-
-  if (!currentMetrics) return null;
-
-  return (
-    <div className="performance-budget">
-      {/* Budget visualization */}
-    </div>
-  );
-};
-
   }, [measurePerformance, setupWebVitalsObserver, measureFPS, autoOptimize]);
 
   // Performance metrics display
