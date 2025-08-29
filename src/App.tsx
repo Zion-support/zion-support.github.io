@@ -5,12 +5,12 @@ import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturis
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { EnhancedSEO } from './components/EnhancedSEO';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+// import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
-import { InteractiveUserExperience } from './components/InteractiveUserExperience';
-import { SecurityEnhancer } from './components/SecurityEnhancer';
+// import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
+// import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
+// import { InteractiveUserExperience } from './components/InteractiveUserExperience';
+// import { SecurityEnhancer } from './components/SecurityEnhancer';
 
 // Core pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -176,11 +176,11 @@ const App = React.memo(() => {
   // Memoize the performance components to prevent unnecessary re-renders
   const performanceComponents = useMemo(() => (
     <>
-      <PerformanceOptimizer />
-      <AdvancedPerformanceMonitor />
-      <InteractiveUserExperience />
-      <SecurityEnhancer />
-      <EnhancedAccessibilityPanel />
+      {/* <PerformanceOptimizer /> */}
+      {/* <AdvancedPerformanceMonitor /> */}
+      {/* <InteractiveUserExperience /> */}
+      {/* <SecurityEnhancer /> */}
+      {/* <EnhancedAccessibilityPanel /> */}
     </>
   ), []);
 

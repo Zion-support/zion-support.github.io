@@ -1,0 +1,232 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+// Configuration
+const BASE_URL = 'https://ziontechgroup.com';
+const OUTPUT_DIR = './link-reports';
+const MAX_DEPTH = 3;
+
+// Create output directory if it doesn't exist
+if (!fs.existsSync(OUTPUT_DIR)) {
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+}
+
+// Track all links and their status
+const linkStatus = {
+  working: [],
+  broken: [],
+  missing: [],
+  external: [],
+  total: 0
+};
+
+// Track visited URLs to avoid duplicates
+const visitedUrls = new Set();
+
+// Function to check if a URL is accessible
+async function checkUrl(url) {
+  try {
+    const response = await fetch(url, {
+      method: 'HEAD',
+      timeout: 10000
+    });
+    return response.ok;
+  } catch (error) {
+    return false;
+  }
+}
+
+// Function to extract links from HTML content
+function extractLinks(html, baseUrl) {
+  const links = [];
+  const linkRegex = /href=["']([^"']+)["']/g;
+  let match;
+  
+  while ((match = linkRegex.exec(html)) !== null) {
+    let link = match[1];
+    
+    // Skip javascript:, mailto:, tel:, etc.
+    if (link.startsWith('javascript:') || link.startsWith('mailto:') || link.startsWith('tel:')) {
+      continue;
+    }
+    
+    // Convert relative URLs to absolute
+    if (link.startsWith('/')) {
+      link = baseUrl + link;
+    } else if (!link.startsWith('http')) {
+      link = baseUrl + '/' + link;
+    }
+    
+    links.push(link);
+  }
+  
+  return [...new Set(links)]; // Remove duplicates
+}
+
+// Function to crawl a URL and extract links
+async function crawlUrl(url, depth = 0) {
+  if (depth > MAX_DEPTH || visitedUrls.has(url)) {
+    return [];
+  }
+  
+  visitedUrls.add(url);
+  console.log(`Crawling: ${url} (depth: ${depth})`);
+  
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      linkStatus.broken.push({
+        url,
+        status: response.status,
+        depth
+      });
+      return [];
+    }
+    
+    const html = await response.text();
+    linkStatus.working.push({
+      url,
+      status: response.status,
+      depth
+    });
+    
+    if (depth < MAX_DEPTH) {
+      const links = extractLinks(html, BASE_URL);
+      for (const link of links) {
+        if (link.startsWith(BASE_URL)) {
+          await crawlUrl(link, depth + 1);
+        } else {
+          linkStatus.external.push({
+            url: link,
+            depth
+          });
+        }
+      }
+    }
+    
+    return extractLinks(html, BASE_URL);
+  } catch (error) {
+    console.error(`Error crawling ${url}:`, error.message);
+    linkStatus.broken.push({
+      url,
+      error: error.message,
+      depth
+    });
+    return [];
+  }
+}
+
+// Function to generate report
+function generateReport() {
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const reportPath = path.join(OUTPUT_DIR, `link-analysis-${timestamp}.json`);
+  
+  const report = {
+    timestamp: new Date().toISOString(),
+    baseUrl: BASE_URL,
+    summary: {
+      total: linkStatus.total,
+      working: linkStatus.working.length,
+      broken: linkStatus.broken.length,
+      missing: linkStatus.missing.length,
+      external: linkStatus.external.length
+    },
+    working: linkStatus.working,
+    broken: linkStatus.broken,
+    missing: linkStatus.missing,
+    external: linkStatus.external
+  };
+  
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  console.log(`\nReport generated: ${reportPath}`);
+  
+  // Generate markdown report
+  const markdownPath = path.join(OUTPUT_DIR, `link-analysis-${timestamp}.md`);
+  const markdown = generateMarkdownReport(report);
+  fs.writeFileSync(markdownPath, markdown);
+  console.log(`Markdown report generated: ${markdownPath}`);
+  
+  return report;
+}
+
+// Function to generate markdown report
+function generateMarkdownReport(report) {
+  return `# Zion Tech Group Website Link Analysis Report
+
+**Generated:** ${new Date().toLocaleString()}
+**Base URL:** ${report.baseUrl}
+
+## 📊 Executive Summary
+
+- **Total Pages Analyzed:** ${report.summary.total}
+- **Working Links:** ${report.summary.working}
+- **Broken Links:** ${report.summary.broken}
+- **Missing Pages:** ${report.summary.missing}
+- **External Links:** ${report.summary.external}
+
+## 🚨 Critical Issues
+
+### Broken Links (${report.summary.broken})
+${report.broken.map(link => `- ${link.url} - Status: ${link.status || 'Error'}${link.error ? ` - ${link.error}` : ''}`).join('\n')}
+
+### Missing Pages (${report.summary.missing})
+${report.missing.map(page => `- ${page.url}`).join('\n')}
+
+## ✅ Working Pages (${report.summary.working})
+${report.working.map(page => `- ${page.url}`).join('\n')}
+
+## 🔗 External Links (${report.summary.external})
+${report.external.map(link => `- ${link.url}`).join('\n')}
+
+## 🎯 Recommendations
+
+1. **Fix all broken links immediately**
+2. **Complete missing page content**
+3. **Verify external link validity**
+4. **Implement proper error handling**
+5. **Add 404 pages for missing routes**
+
+---
+*Report generated by Zion Tech Group Website Analyzer*
+`;
+}
+
+// Main execution
+async function main() {
+  console.log('🚀 Starting Zion Tech Group Website Analysis...');
+  console.log(`Base URL: ${BASE_URL}`);
+  console.log(`Max Depth: ${MAX_DEPTH}`);
+  console.log('=' .repeat(50));
+  
+  try {
+    await crawlUrl(BASE_URL);
+    linkStatus.total = visitedUrls.size;
+    
+    const report = generateReport();
+    
+    console.log('\n🎯 Analysis Complete!');
+    console.log(`Total URLs checked: ${report.summary.total}`);
+    console.log(`Working: ${report.summary.working}`);
+    console.log(`Broken: ${report.summary.broken}`);
+    console.log(`Missing: ${report.summary.missing}`);
+    console.log(`External: ${report.summary.external}`);
+    
+    if (report.summary.broken > 0) {
+      console.log('\n⚠️  Broken links found! Please fix them immediately.');
+    }
+    
+  } catch (error) {
+    console.error('❌ Analysis failed:', error);
+    process.exit(1);
+  }
+}
+
+// Run the analysis
+if (require.main === module) {
+  main();
+}
+
+module.exports = { crawlUrl, checkUrl, generateReport };

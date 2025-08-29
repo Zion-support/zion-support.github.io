@@ -1,491 +1,382 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
-  Search, 
+  HelpCircle, 
   ChevronDown, 
   ChevronUp,
+  Search,
   MessageCircle,
+  BookOpen,
+  Phone,
+  Mail,
+  Clock,
+  Users,
   Shield,
   Zap,
-  Cloud,
   Brain,
-  Rocket,
-  Users,
-  Globe,
+  Cloud,
   Lock,
-  HelpCircle,
-  Mail,
-  Phone,
-  Clock,
-  Star,
-  CheckCircle,
-  AlertCircle,
-  Info
+  Globe,
+  Rocket
 } from 'lucide-react';
 
-interface FAQItem {
-  id: string;
-  question: string;
-  answer: string;
-  category: string;
-  tags: string[];
-}
-
-interface FAQCategory {
-  id: string;
-  name: string;
-  icon: React.ReactNode;
-  description: string;
-  color: string;
-}
-
 const FAQ: React.FC = () => {
+  const [openItems, setOpenItems] = useState<Set<number>>(new Set([0]));
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories: FAQCategory[] = [
+  const categories = [
+    'All',
+    'General',
+    'AI Services',
+    'Cybersecurity',
+    'Cloud & Infrastructure',
+    'Pricing & Billing',
+    'Support & Training',
+    'Technical'
+  ];
+
+  const faqs = [
     {
-      id: 'general',
-      name: 'General',
-      icon: <HelpCircle className="w-6 h-6" />,
-      description: 'Basic questions about Zion Tech Group',
-      color: 'from-blue-500 to-cyan-500'
+      id: 1,
+      category: 'General',
+      question: "What is Zion Tech Group and what services do you offer?",
+      answer: "Zion Tech Group is a leading technology consulting and solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation. We offer comprehensive services including AI enterprise orchestration, cybersecurity suites, cloud DevOps, digital twin solutions, IoT edge computing, blockchain enterprise solutions, and specialized micro SaaS applications. Our team of experts helps businesses leverage cutting-edge technology to drive innovation and competitive advantage.",
+      tags: ['company', 'services', 'overview']
     },
     {
-      id: 'services',
-      name: 'Services',
-      icon: <Zap className="w-6 h-6" />,
-      description: 'Questions about our service offerings',
-      color: 'from-purple-500 to-pink-500'
+      id: 2,
+      category: 'General',
+      question: "How can I get started with Zion Tech Group services?",
+      answer: "Getting started is easy! You can begin by scheduling a free consultation call where we'll discuss your business needs and technology goals. We offer a comprehensive assessment to understand your current infrastructure and recommend the best solutions. You can also explore our service catalog, request a quote, or schedule a demo of specific solutions. Our team will guide you through the entire process from initial consultation to implementation.",
+      tags: ['getting-started', 'consultation', 'assessment']
     },
     {
-      id: 'ai',
-      name: 'AI & Analytics',
-      icon: <Brain className="w-6 h-6" />,
-      description: 'AI and data analytics services',
-      color: 'from-green-500 to-emerald-500'
+      id: 3,
+      category: 'AI Services',
+      question: "What AI services do you provide and how do they benefit businesses?",
+      answer: "Our AI services include AI Enterprise Orchestrator for workflow automation, AI Business Intelligence for data-driven insights, AI Cybersecurity Suite for threat detection, AI Healthcare Predictive Analytics, AI Financial Compliance Assistant, and AI Supply Chain Optimization. These services help businesses automate processes, gain predictive insights, enhance security, improve decision-making, and optimize operations. We use state-of-the-art machine learning models and ensure responsible AI implementation.",
+      tags: ['AI', 'automation', 'intelligence', 'machine-learning']
     },
     {
-      id: 'cloud',
-      name: 'Cloud & DevOps',
-      icon: <Cloud className="w-6 h-6" />,
-      description: 'Cloud computing and DevOps solutions',
-      color: 'from-orange-500 to-red-500'
+      id: 4,
+      category: 'AI Services',
+      question: "How do you ensure AI solutions are ethical and compliant?",
+      answer: "We prioritize ethical AI development through comprehensive governance frameworks, bias detection and mitigation, transparent model development, regular audits, and compliance with industry standards like GDPR, HIPAA, and SOC2. Our AI Ethics Guardian Platform monitors AI systems for fairness, accountability, and transparency. We also provide training on responsible AI use and maintain detailed documentation of all AI decision-making processes.",
+      tags: ['AI ethics', 'compliance', 'governance', 'responsible AI']
     },
     {
-      id: 'security',
-      name: 'Cybersecurity',
-      icon: <Shield className="w-6 h-6" />,
-      description: 'Security and compliance services',
-      color: 'from-red-500 to-pink-500'
+      id: 5,
+      category: 'Cybersecurity',
+      question: "What cybersecurity solutions do you offer for enterprise protection?",
+      answer: "Our cybersecurity portfolio includes AI-powered threat detection and response, zero-trust network architecture, incident response platforms, compliance management tools, penetration testing services, security audits, and 24/7 security monitoring. We provide comprehensive protection against modern cyber threats including ransomware, phishing, advanced persistent threats, and insider threats. Our solutions are designed to meet enterprise security requirements and regulatory compliance standards.",
+      tags: ['cybersecurity', 'threat-detection', 'zero-trust', 'compliance']
     },
     {
-      id: 'support',
-      name: 'Support',
-      icon: <MessageCircle className="w-6 h-6" />,
-      description: 'Technical support and customer service',
-      color: 'from-indigo-500 to-purple-500'
+      id: 6,
+      category: 'Cybersecurity',
+      question: "How do you handle cybersecurity incidents and provide support?",
+      answer: "We provide 24/7 cybersecurity incident response with our AI-powered incident management platform. Our team follows industry-standard incident response procedures including immediate threat containment, forensic analysis, system recovery, and post-incident reporting. We offer incident response training, tabletop exercises, and continuous monitoring to prevent future incidents. Our support team is available around the clock for emergency situations.",
+      tags: ['incident-response', 'support', 'monitoring', 'training']
+    },
+    {
+      id: 7,
+      category: 'Cloud & Infrastructure',
+      question: "What cloud and infrastructure services do you provide?",
+      answer: "Our cloud and infrastructure services include cloud migration, DevOps automation, infrastructure as code, container orchestration, serverless architecture, multi-cloud management, and edge computing solutions. We help businesses optimize cloud costs, improve performance, enhance security, and achieve scalability. Our team specializes in AWS, Azure, Google Cloud, and hybrid cloud environments, providing end-to-end infrastructure management and optimization.",
+      tags: ['cloud', 'infrastructure', 'DevOps', 'migration']
+    },
+    {
+      id: 8,
+      category: 'Cloud & Infrastructure',
+      question: "How do you help optimize cloud costs and performance?",
+      answer: "We use our FinOps Advisor platform to analyze cloud spending, identify optimization opportunities, implement cost-saving strategies, and monitor performance metrics. Our approach includes rightsizing resources, implementing auto-scaling, optimizing storage costs, using reserved instances, and monitoring unused resources. We provide detailed cost analysis reports and recommendations for ongoing optimization to ensure maximum ROI from cloud investments.",
+      tags: ['cost-optimization', 'FinOps', 'performance', 'ROI']
+    },
+    {
+      id: 9,
+      category: 'Pricing & Billing',
+      question: "What are your pricing models and payment options?",
+      answer: "We offer flexible pricing models including project-based pricing, monthly subscriptions, usage-based pricing, and enterprise licensing. Payment options include monthly billing, quarterly payments, and annual contracts with volume discounts. We provide transparent pricing with no hidden fees and offer custom pricing for enterprise clients. All pricing includes implementation, training, and ongoing support. Contact our sales team for a personalized quote based on your specific needs.",
+      tags: ['pricing', 'billing', 'payment', 'subscription']
+    },
+    {
+      id: 10,
+      category: 'Pricing & Billing',
+      question: "Do you offer free trials or pilot programs?",
+      answer: "Yes, we offer free trials for most of our SaaS solutions and pilot programs for enterprise services. Free trials typically last 14-30 days with full functionality. Pilot programs are customized to your business needs and can run for 30-90 days. We also provide proof-of-concept projects for complex implementations. These programs help you evaluate our solutions before making a full commitment, ensuring the right fit for your organization.",
+      tags: ['free-trial', 'pilot', 'proof-of-concept', 'evaluation']
+    },
+    {
+      id: 11,
+      category: 'Support & Training',
+      question: "What support and training options do you provide?",
+      answer: "We provide comprehensive support including 24/7 technical support, dedicated account managers, online knowledge base, video tutorials, live training sessions, and certification programs. Our training covers product usage, best practices, advanced features, and industry-specific applications. We offer both in-person and virtual training options, customized to your team's needs. Support is available through multiple channels including phone, email, chat, and our support portal.",
+      tags: ['support', 'training', 'certification', 'knowledge-base']
+    },
+    {
+      id: 12,
+      category: 'Support & Training',
+      question: "How do you ensure successful implementation and adoption?",
+      answer: "We follow a proven implementation methodology including detailed planning, phased rollout, comprehensive training, change management support, and ongoing optimization. Our team works closely with your staff throughout the process, providing hands-on guidance and support. We conduct regular check-ins, gather feedback, and make adjustments to ensure successful adoption. Our success metrics include user adoption rates, performance improvements, and ROI achievement.",
+      tags: ['implementation', 'adoption', 'change-management', 'success']
+    },
+    {
+      id: 13,
+      category: 'Technical',
+      question: "What are your system requirements and integration capabilities?",
+      answer: "Our solutions are designed to work with modern web browsers and support integration with popular business systems including CRM platforms, ERP systems, accounting software, and collaboration tools. We provide REST APIs, webhooks, and pre-built connectors for seamless integration. System requirements vary by solution but generally include modern browsers, stable internet connection, and standard business hardware. We can customize integrations for specific business needs.",
+      tags: ['system-requirements', 'integration', 'APIs', 'connectors']
+    },
+    {
+      id: 14,
+      category: 'Technical',
+      question: "How do you handle data security and privacy compliance?",
+      answer: "We implement enterprise-grade security measures including end-to-end encryption, multi-factor authentication, regular security audits, and compliance with international standards like ISO 27001, SOC2, and GDPR. Our data centers are located in secure facilities with redundant systems and disaster recovery capabilities. We provide detailed privacy policies, data processing agreements, and regular compliance reports. Customer data is never shared with third parties without explicit consent.",
+      tags: ['data-security', 'privacy', 'compliance', 'encryption']
+    },
+    {
+      id: 15,
+      category: 'Technical',
+      question: "What is your approach to scalability and performance optimization?",
+      answer: "We design all solutions with scalability in mind, using cloud-native architecture, microservices, and auto-scaling capabilities. Our performance optimization includes database optimization, CDN integration, caching strategies, and load balancing. We conduct regular performance testing and monitoring to ensure optimal performance under various load conditions. Our infrastructure automatically scales to handle increased demand while maintaining performance standards.",
+      tags: ['scalability', 'performance', 'optimization', 'monitoring']
     }
   ];
 
-  const faqData: FAQItem[] = [
-    // General
-    {
-      id: 'what-is-zion',
-      question: 'What is Zion Tech Group?',
-      answer: 'Zion Tech Group is a leading technology consulting company specializing in AI, cloud computing, cybersecurity, and digital transformation. We help businesses leverage cutting-edge technology to drive innovation and growth.',
-      category: 'general',
-      tags: ['company', 'about', 'overview']
-    },
-    {
-      id: 'where-located',
-      question: 'Where is Zion Tech Group located?',
-      answer: 'We are headquartered in the United States with offices in major tech hubs and serve clients globally through our remote-first approach and strategic partnerships.',
-      category: 'general',
-      tags: ['location', 'offices', 'global']
-    },
-    {
-      id: 'company-size',
-      question: 'How large is your company?',
-      answer: 'Zion Tech Group is a growing company with a team of experienced professionals across various technology domains. We maintain a lean, agile structure to provide personalized service while leveraging our extensive network of experts.',
-      category: 'general',
-      tags: ['size', 'team', 'structure']
-    },
-
-    // Services
-    {
-      id: 'service-offerings',
-      question: 'What services does Zion Tech Group offer?',
-      answer: 'We offer a comprehensive range of services including AI and machine learning solutions, cloud infrastructure and DevOps, cybersecurity services, digital transformation consulting, IoT solutions, and custom software development.',
-      category: 'services',
-      tags: ['services', 'offerings', 'portfolio']
-    },
-    {
-      id: 'custom-solutions',
-      question: 'Do you provide custom solutions?',
-      answer: 'Yes, we specialize in creating custom technology solutions tailored to your specific business needs. Our team works closely with you to understand your requirements and develop solutions that drive real business value.',
-      category: 'services',
-      tags: ['custom', 'tailored', 'solutions']
-    },
-    {
-      id: 'industry-focus',
-      question: 'What industries do you serve?',
-      answer: 'We serve clients across various industries including healthcare, finance, manufacturing, retail, education, and technology. Our solutions are adaptable to meet the unique challenges of different sectors.',
-      category: 'services',
-      tags: ['industries', 'sectors', 'clients']
-    },
-
-    // AI & Analytics
-    {
-      id: 'ai-capabilities',
-      question: 'What AI capabilities do you offer?',
-      answer: 'Our AI services include machine learning model development, natural language processing, computer vision, predictive analytics, recommendation systems, and AI strategy consulting. We help businesses implement AI solutions that deliver measurable results.',
-      category: 'ai',
-      tags: ['AI', 'machine learning', 'analytics']
-    },
-    {
-      id: 'data-privacy',
-      question: 'How do you handle data privacy in AI projects?',
-      answer: 'Data privacy is paramount in all our AI projects. We implement strict data governance practices, ensure compliance with regulations like GDPR and CCPA, and use privacy-preserving techniques when possible.',
-      category: 'ai',
-      tags: ['privacy', 'compliance', 'GDPR']
-    },
-    {
-      id: 'ai-roi',
-      question: 'How do you measure AI project ROI?',
-      answer: 'We establish clear KPIs and success metrics at the start of each project. ROI is measured through improved efficiency, cost savings, revenue growth, and other business metrics relevant to your specific use case.',
-      category: 'ai',
-      tags: ['ROI', 'metrics', 'measurement']
-    },
-
-    // Cloud & DevOps
-    {
-      id: 'cloud-providers',
-      question: 'Which cloud providers do you work with?',
-      answer: 'We work with all major cloud providers including AWS, Azure, and Google Cloud Platform. We help you choose the best platform for your needs and can also implement multi-cloud strategies for optimal performance and cost efficiency.',
-      category: 'cloud',
-      tags: ['AWS', 'Azure', 'GCP', 'multi-cloud']
-    },
-    {
-      id: 'devops-benefits',
-      question: 'What are the benefits of implementing DevOps?',
-      answer: 'DevOps implementation leads to faster software delivery, improved collaboration between development and operations teams, increased deployment frequency, reduced failure rates, and faster recovery from failures.',
-      category: 'cloud',
-      tags: ['DevOps', 'automation', 'deployment']
-    },
-    {
-      id: 'cost-optimization',
-      question: 'How do you optimize cloud costs?',
-      answer: 'We implement various cost optimization strategies including right-sizing resources, implementing auto-scaling, using reserved instances, monitoring usage patterns, and implementing cost governance policies.',
-      category: 'cloud',
-      tags: ['cost', 'optimization', 'savings']
-    },
-
-    // Cybersecurity
-    {
-      id: 'security-standards',
-      question: 'What security standards do you follow?',
-      answer: 'We follow industry best practices and standards including ISO 27001, SOC 2, NIST Cybersecurity Framework, and OWASP guidelines. Our security approach is comprehensive and continuously updated to address emerging threats.',
-      category: 'security',
-      tags: ['standards', 'compliance', 'best practices']
-    },
-    {
-      id: 'incident-response',
-      question: 'Do you provide incident response services?',
-      answer: 'Yes, we offer 24/7 incident response services including threat detection, rapid response, forensic analysis, and recovery assistance. We also help develop incident response plans and conduct security training.',
-      category: 'security',
-      tags: ['incident response', 'threats', 'recovery']
-    },
-    {
-      id: 'compliance-help',
-      question: 'Can you help with compliance requirements?',
-      answer: 'Absolutely. We help businesses achieve and maintain compliance with various regulations including HIPAA, PCI DSS, SOX, and industry-specific requirements. Our team includes compliance experts who understand the technical and regulatory landscape.',
-      category: 'security',
-      tags: ['compliance', 'HIPAA', 'PCI DSS', 'SOX']
-    },
-
-    // Support
-    {
-      id: 'support-hours',
-      question: 'What are your support hours?',
-      answer: 'We provide 24/7 support for critical issues and business hours support for general inquiries. Premium support plans include dedicated support managers and faster response times.',
-      category: 'support',
-      tags: ['support', 'hours', 'availability']
-    },
-    {
-      id: 'response-time',
-      question: 'What is your typical response time?',
-      answer: 'Response times vary by support tier: Critical issues (1 hour), High priority (4 hours), Medium priority (24 hours), and Low priority (48 hours). Premium clients receive faster response times.',
-      category: 'support',
-      tags: ['response', 'SLA', 'priority']
-    },
-    {
-      id: 'training-offered',
-      question: 'Do you provide training for your solutions?',
-      answer: 'Yes, we offer comprehensive training programs including user training, administrator training, and technical training. We also provide documentation, video tutorials, and ongoing support to ensure successful adoption.',
-      category: 'support',
-      tags: ['training', 'documentation', 'adoption']
-    }
-  ];
-
-  const toggleItem = (id: string) => {
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(id)) {
-      newExpanded.delete(id);
+  const toggleItem = (id: number) => {
+    const newOpenItems = new Set(openItems);
+    if (newOpenItems.has(id)) {
+      newOpenItems.delete(id);
     } else {
-      newExpanded.add(id);
+      newOpenItems.add(id);
     }
-    setExpandedItems(newExpanded);
+    setOpenItems(newOpenItems);
   };
 
-  const filteredFAQs = faqData.filter(item => {
-    const matchesSearch = item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+  const filteredFAQs = faqs.filter(faq => {
+    const matchesCategory = selectedCategory === 'All' || faq.category === selectedCategory;
+    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
   });
 
-  const getCategoryStats = (categoryId: string) => {
-    if (categoryId === 'all') {
-      return faqData.length;
-    }
-    return faqData.filter(item => item.category === categoryId).length;
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl font-bold text-white mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Frequently Asked Questions - Zion Tech Group</title>
+        <meta name="description" content="Find answers to common questions about Zion Tech Group's AI services, cybersecurity solutions, cloud infrastructure, and technology consulting services." />
+        <meta name="keywords" content="FAQ, frequently asked questions, AI services, cybersecurity, cloud computing, technology consulting" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">
+              <HelpCircle className="w-10 h-10 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Find answers to common questions about Zion Tech Group's services, 
-              solutions, and how we can help transform your business with cutting-edge technology.
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Find answers to common questions about our services, solutions, and how we can help 
+              transform your business with cutting-edge technology.
             </p>
-            
-            {/* Search Bar */}
-            <div className="relative max-w-2xl mx-auto">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+          </div>
+          
+          {/* Search and Filter */}
+          <div className="max-w-4xl mx-auto space-y-4">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input
                 type="text"
-                placeholder="Search questions, topics, or keywords..."
+                placeholder="Search for answers..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-slate-600/30 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent backdrop-blur-md"
+                className="w-full pl-12 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
-          </motion.div>
+            
+            <div className="flex flex-wrap justify-center gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    selectedCategory === category
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+                      : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-slate-600'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Categories */}
-      <div className="container mx-auto px-4 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-12"
-        >
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Browse by Category
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((category) => (
-              <motion.button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`p-6 rounded-xl border transition-all duration-300 text-left group ${
-                  selectedCategory === category.id
-                    ? 'border-cyan-500 bg-gradient-to-r from-cyan-500/20 to-blue-500/20'
-                    : 'border-slate-600/30 bg-white/5 hover:border-slate-500/50 hover:bg-white/10'
-                }`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  {category.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {category.name}
-                </h3>
-                <p className="text-slate-400 text-sm mb-3">
-                  {category.description}
-                </p>
-                <div className="text-cyan-400 font-medium text-sm">
-                  {getCategoryStats(category.id)} questions
-                </div>
-              </motion.button>
+      {/* FAQ Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4">
+            {filteredFAQs.map((faq) => (
+              <div key={faq.id} className="bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden">
+                <button
+                  onClick={() => toggleItem(faq.id)}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
+                >
+                  <h3 className="text-lg font-semibold text-white pr-4">
+                    {faq.question}
+                  </h3>
+                  {openItems.has(faq.id) ? (
+                    <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  )}
+                </button>
+                
+                {openItems.has(faq.id) && (
+                  <div className="px-6 pb-4">
+                    <p className="text-slate-300 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {faq.tags.map((tag) => (
+                        <span key={tag} className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
-        </motion.div>
-
-        {/* FAQ List */}
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mb-8"
-          >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold text-white">
-                {selectedCategory === 'all' ? 'All Questions' : categories.find(c => c.id === selectedCategory)?.name + ' Questions'}
-              </h3>
-              <span className="text-slate-400">
-                {filteredFAQs.length} of {faqData.length} questions
-              </span>
-            </div>
-          </motion.div>
-
-          <div className="space-y-4">
-            <AnimatePresence>
-              {filteredFAQs.map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className="bg-white/5 border border-slate-600/30 rounded-xl overflow-hidden backdrop-blur-md"
-                >
-                  <button
-                    onClick={() => toggleItem(item.id)}
-                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors duration-200"
-                  >
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-white mb-2">
-                        {item.question}
-                      </h4>
-                      <div className="flex items-center gap-4 text-sm text-slate-400">
-                        <span className="capitalize">{item.category}</span>
-                        <div className="flex gap-2">
-                          {item.tags.slice(0, 3).map((tag) => (
-                            <span key={tag} className="px-2 py-1 bg-slate-700/50 rounded-md text-xs">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="ml-4 text-slate-400">
-                      {expandedItems.has(item.id) ? (
-                        <ChevronUp className="w-5 h-5" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5" />
-                      )}
-                    </div>
-                  </button>
-                  
-                  <AnimatePresence>
-                    {expandedItems.has(item.id) && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-6 pb-6 border-t border-slate-600/30">
-                          <p className="text-slate-300 leading-relaxed pt-4">
-                            {item.answer}
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-
+          
           {filteredFAQs.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-12"
-            >
-              <Search className="w-16 h-16 text-slate-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">
-                No questions found
-              </h3>
-              <p className="text-slate-400">
-                Try adjusting your search terms or browse by category to find what you're looking for.
-              </p>
-            </motion.div>
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No questions found</h3>
+              <p className="text-slate-300">Try adjusting your search criteria or browse all categories.</p>
+            </div>
           )}
         </div>
-      </div>
+      </section>
 
-      {/* Contact Section */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
+      {/* Contact Support Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Still have questions?
+              Still Have Questions?
             </h2>
-            <p className="text-slate-300 mb-8 text-lg">
-              Can't find the answer you're looking for? Our team is here to help.
+            <p className="text-slate-300 mb-8">
+              Can't find what you're looking for? Our expert team is here to help. 
+              Get in touch with us for personalized assistance and support.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-cyan-400" />
+              <div className="flex flex-col items-center space-y-3">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-cyan-400" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-white">Email Support</h4>
-                  <p className="text-slate-400 text-sm">support@ziontechgroup.com</p>
-                </div>
+                <h3 className="font-semibold text-white">Live Chat</h3>
+                <p className="text-slate-300 text-sm">Get instant answers from our support team</p>
               </div>
               
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+              <div className="flex flex-col items-center space-y-3">
+                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
                   <Phone className="w-6 h-6 text-blue-400" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-white">Phone Support</h4>
-                  <p className="text-slate-400 text-sm">+1 (555) 123-4567</p>
-                </div>
+                <h3 className="font-semibold text-white">Phone Support</h3>
+                <p className="text-slate-300 text-sm">Speak directly with our experts</p>
               </div>
               
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-purple-400" />
+              <div className="flex flex-col items-center space-y-3">
+                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-purple-400" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-white">Response Time</h4>
-                  <p className="text-slate-400 text-sm">Within 24 hours</p>
-                </div>
+                <h3 className="font-semibold text-white">Email Support</h3>
+                <p className="text-slate-300 text-sm">Send us a detailed message</p>
               </div>
             </div>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+              >
                 Contact Support
-              </button>
-              <button className="px-8 py-3 border border-slate-600/30 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300">
-                Schedule a Call
-              </button>
+              </Link>
+              <Link
+                to="/support"
+                className="inline-flex items-center px-6 py-3 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-all duration-200"
+              >
+                Visit Support Center
+              </Link>
             </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
+
+      {/* Quick Links Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Quick Links & Resources
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link
+              to="/services"
+              className="group p-6 bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl hover:bg-white/10 transition-all duration-300 text-center"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+                <Rocket className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Our Services</h3>
+              <p className="text-slate-300 text-sm">Explore our comprehensive service portfolio</p>
+            </Link>
+            
+            <Link
+              to="/case-studies"
+              className="group p-6 bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl hover:bg-white/10 transition-all duration-300 text-center"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Case Studies</h3>
+              <p className="text-slate-300 text-sm">See how we've helped other businesses</p>
+            </Link>
+            
+            <Link
+              to="/training"
+              className="group p-6 bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl hover:bg-white/10 transition-all duration-300 text-center"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Training</h3>
+              <p className="text-slate-300 text-sm">Learn from our expert-led training programs</p>
+            </Link>
+            
+            <Link
+              to="/documentation"
+              className="group p-6 bg-white/5 backdrop-blur-sm border border-slate-700 rounded-xl hover:bg-white/10 transition-all duration-300 text-center"
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+                <BookOpen className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
+              <p className="text-slate-300 text-sm">Access technical guides and APIs</p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
