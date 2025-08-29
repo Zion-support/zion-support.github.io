@@ -94,6 +94,10 @@ const Solutions = createLazyComponent(() => import('./pages/solutions'));
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
 
+// 2025 Innovative Services
+const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
+const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -139,7 +143,6 @@ const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/servic
 
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = createLazyComponent(() => import('./pages/InnovativeServicesLanding2025'));
-const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Additional innovative services
 const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/AIAutonomousResearchAssistant'));
@@ -305,8 +308,7 @@ function App() {
                     <Route path="/mobile" element={<GreenIT />} />
 
                     {/* 2025 Innovative Services Routes */}
-                    <Route path="/innovative-services-landing-2025" element={<InnovativeServicesLanding2025 />} />
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                     <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
 
                     {/* Enhanced Services Showcase 2025 */}
