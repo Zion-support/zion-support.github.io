@@ -31,10 +31,29 @@ import {
   Building,
   Briefcase,
   Lightbulb,
-  Sparkles
+  Sparkles,
+  Target,
+  TrendingUp,
+  Heart,
+  Star,
+  CheckCircle,
+  Clock,
+  Award,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Search,
+  ExternalLink
 } from 'lucide-react';
-import { additionalInnovativeMicroSaasServices } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
+
 export default function InnovativeServicesShowcase2025() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+
   const featuredServices = [
     {
       title: 'AI Project Management Platform',
@@ -77,12 +96,14 @@ export default function InnovativeServicesShowcase2025() {
       category: 'Healthcare'
     }
   ];
+
   const categories = useMemo(() => {
-    const cats = [...new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2025.map(service => service.category))];
+    const cats = [...new Set(INNOVATIVE_SERVICES_2025.map(service => service.category))];
     return cats.sort();
   }, []);
+
   const filteredServices = useMemo(() => {
-    let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+    let filtered = INNOVATIVE_SERVICES_2025;
     // Filter by search query
     if (searchQuery) {
       filtered = filtered.filter(service =>
@@ -128,12 +149,14 @@ export default function InnovativeServicesShowcase2025() {
     });
     return filtered;
   }, [searchQuery, selectedCategory, priceRange, sortBy]);
+
   const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"
   };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -304,8 +327,8 @@ export default function InnovativeServicesShowcase2025() {
                   {/* Service Header */}
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-3">
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}>
-                        {categoryIcons[service.category] || <Star className="w-5 h-5 text-white" />}
+                      <div className={`p-2 rounded-lg bg-gradient-to-r ${service.category === 'Project Management' ? 'from-purple-600 to-pink-600' : service.category === 'Cybersecurity' ? 'from-red-600 to-orange-600' : service.category === 'Financial Services' ? 'from-green-600 to-blue-600' : 'from-blue-600 to-cyan-600'}`}>
+                        {service.icon || <Star className="w-5 h-5 text-white" />}
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-white">
@@ -331,7 +354,7 @@ export default function InnovativeServicesShowcase2025() {
                   {/* Description */}
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {service.description}
-                  </div>
+                  </p>
                   {/* Key Features */}
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -393,7 +416,7 @@ export default function InnovativeServicesShowcase2025() {
                   {/* CTA Button */}
                   <div className="flex space-x-3">
                     <a
-                      href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service. Please provide more information about pricing, features, and implementation.`}
+                      href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service.`}
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-center text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
                     >
                       <span>Get Quote</span>
@@ -424,7 +447,7 @@ export default function InnovativeServicesShowcase2025() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
       {/* Featured Services */}
       <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50">
         <div className="container mx-auto px-4">
@@ -442,7 +465,7 @@ export default function InnovativeServicesShowcase2025() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
+            {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -495,10 +518,12 @@ export default function InnovativeServicesShowcase2025() {
                     Learn More
                   </motion.button>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
+      </section>
+      
       {/* Market Insights */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -634,6 +659,51 @@ export default function InnovativeServicesShowcase2025() {
                   Call Now
                 </a>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Contact CTA */}
+      <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Get in touch with our team to discuss how our innovative services can drive your business forward
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href={`tel:${contactInfo.phone}`}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>{contactInfo.phone}</span>
+              </a>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2"
+              >
+                <Mail className="w-5 h-5" />
+                <span>{contactInfo.email}</span>
+              </a>
+            </div>
+            <div className="mt-8 text-gray-400">
+              <p>{contactInfo.address}</p>
+              <a 
+                href={contactInfo.website} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                {contactInfo.website}
+              </a>
             </div>
           </motion.div>
         </div>

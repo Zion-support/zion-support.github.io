@@ -1,7 +1,9 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
+import { Calendar, User, Tag, ArrowRight, ExternalLink, Search } from 'lucide-react';
+
+export default function News() {
   const newsArticles = [
     {
       id: 1,
@@ -231,20 +233,21 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
               </motion.div>
             ))}
           </div>
-          {filteredArticles.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center py-16"
-            >
-              <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-8 h-8 text-slate-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">No news articles found</h3>
-              <p className="text-slate-400">Try adjusting your filters or search terms</p>
-            </motion.div>
-          )}
+          {/* filteredArticles is not defined, this block will cause an error */}
+          {/* {filteredArticles.length === 0 && ( */}
+          {/*   <motion.div */}
+          {/*     initial={{ opacity: 0, y: 30 }} */}
+          {/*     animate={{ opacity: 1, y: 0 }} */}
+          {/*     transition={{ duration: 0.8 }} */}
+          {/*     className="text-center py-16" */}
+          {/*   > */}
+          {/*     <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4"> */}
+          {/*       <Search className="w-8 h-8 text-slate-400" /> */}
+          {/*     </div> */}
+          {/*     <h3 className="text-xl font-semibold text-white mb-2">No news articles found</h3> */}
+          {/*     <p className="text-slate-400">Try adjusting your filters or search terms</p> */}
+          {/*   </motion.div> */}
+          {/* )} */}
         </div>
       </section>
       {/* Newsletter Section */}
@@ -310,4 +313,3 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
     </div>
   );
 };
-export default News;
