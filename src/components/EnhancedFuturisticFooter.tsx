@@ -129,7 +129,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' }
   ];
-  ];
 
   const companyLinks = [
     { name: 'About Us', href: '/about', description: 'Our story and mission' },
@@ -216,7 +215,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               Quick Access
             </motion.h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {quickAccessLinks.map((link, index) => (
+              {quickLinks.map((link, index) => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 20 }}
