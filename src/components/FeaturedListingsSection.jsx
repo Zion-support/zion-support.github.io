@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, Award, Zap, Shield, Rocket, Brain, TrendingUp, Phone, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowRight, CheckCircle, Clock, Eye, Heart, Star, Users } from 'lucide-react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const featuredListings = [
   {
