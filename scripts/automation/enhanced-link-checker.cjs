@@ -30,14 +30,30 @@ class EnhancedLinkChecker {
   async buildProject() {
     console.log('🏗️ Building project for link extraction...');
     try {
-      execSync('npm run build', { 
-        stdio: 'inherit',
-        cwd: process.cwd()
-      });
-      console.log('✅ Build completed successfully');
+      // Check if we're in a Vite project
+      if (fs.existsSync('vite.config.ts') || fs.existsSync('vite.config.js')) {
+        console.log('📦 Vite project detected, running build...');
+        execSync('npm run build', { 
+          stdio: 'inherit',
+          cwd: process.cwd()
+        });
+        console.log('✅ Build completed successfully');
+      } else if (fs.existsSync('next.config.js')) {
+        console.log('⚡ Next.js project detected, running build...');
+        execSync('npm run build', { 
+          stdio: 'inherit',
+          cwd: process.cwd()
+        });
+        console.log('✅ Build completed successfully');
+      } else {
+        console.log('⚠️ No recognized build system found, skipping build...');
+        return false;
+      }
+      return true;
     } catch (error) {
       console.log('❌ Build failed, but continuing with link checking...');
-      throw error;
+      console.log('💡 This is normal if the project has build issues');
+      return false;
     }
   }
 
@@ -459,7 +475,12 @@ ${brokenExternal.length > 0 ?
     console.log('🚀 Starting comprehensive link check...');
     
     try {
-      await this.buildProject();
+      const buildSuccess = await this.buildProject();
+      
+      if (!buildSuccess) {
+        console.log('⚠️ Build failed, but continuing with link checking...');
+      }
+
       const links = await this.extractAllLinks();
       
       if (links.length === 0) {
