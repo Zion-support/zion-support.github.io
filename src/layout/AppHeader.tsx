@@ -62,6 +62,69 @@ export function AppHeader() {
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
   ];
 
+  const servicesCategories = [
+    {
+      name: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600',
+      description: 'Intelligent data solutions',
+      services: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales assistance' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+      ]
+    },
+    {
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      color: 'from-blue-600 to-cyan-600',
+      description: 'Infrastructure & automation',
+      services: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure & Automation' },
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', description: 'Productized SaaS for niches' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cloud cost optimization' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations optimization' }
+      ]
+    },
+    {
+      name: 'IoT & Digital Twin',
+      icon: Rocket,
+      color: 'from-green-600 to-emerald-600',
+      description: 'Smart devices & simulation',
+      services: [
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Simulation & Monitoring' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart Devices & Networks' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence & insights' }
+      ]
+    },
+    {
+      name: 'Cybersecurity',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
+      description: 'AI-powered security',
+      services: [
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-Powered Security' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-architecture', description: 'Modern security framework' },
+        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+      ]
+    },
+    {
+      name: 'Emerging Tech',
+      icon: Crown,
+      color: 'from-indigo-600 to-purple-600',
+      description: 'Future-ready solutions',
+      services: [
+        { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-gen computing' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'DeFi & Smart Contracts' },
+        { name: 'Space Technology', href: '/services/space-tech', description: 'Space industry solutions' },
+        { name: 'Sustainability', href: '/services/sustainability', description: 'Green IT Solutions' }
+      ]
+    }
+  ];
+
   const quickLinks = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },

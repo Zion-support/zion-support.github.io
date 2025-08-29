@@ -14,6 +14,15 @@ const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const Press = React.lazy(() => import('./pages/Press'));
+const Docs = React.lazy(() => import('./pages/Docs'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const Security = React.lazy(() => import('./pages/Security'));
+const Compliance = React.lazy(() => import('./pages/Compliance'));
 const Services = React.lazy(() => import('./pages/Services'));
 const AIServices = React.lazy(() => import('./pages/AIServices'));
 const ITServices = React.lazy(() => import('./pages/ITServices'));
@@ -33,6 +42,8 @@ const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Support = React.lazy(() => import('./pages/Support'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -60,6 +71,13 @@ const CustomerFeedbackSurveys = React.lazy(() => import('./pages/services/Custom
 const AIComplianceCopilot = React.lazy(() => import('./pages/services/AIComplianceCopilot'));
 const LLMContentStudio = React.lazy(() => import('./pages/services/LLMContentStudio'));
 const FinOpsAdvisor = React.lazy(() => import('./pages/services/FinOpsAdvisor'));
+
+// Additional service pages
+const IoTEdge = React.lazy(() => import('./pages/services/IoTEdge'));
+const BlockchainEnterpriseSolutions = React.lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
+const HealthcareTech = React.lazy(() => import('./pages/services/HealthcareTech'));
+const ZeroTrustArchitecture = React.lazy(() => import('./pages/services/ZeroTrustArchitecture'));
+const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -102,9 +120,20 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/help" element={<Help />} />
+              <Route path="/press" element={<Press />} />
+              <Route path="/docs" element={<Docs />} />
+              <Route path="/training" element={<Training />} />
+                                        <Route path="/webinars" element={<Webinars />} />
+                          <Route path="/status" element={<Status />} />
+                          <Route path="/sitemap" element={<Sitemap />} />
+                          <Route path="/accessibility" element={<Accessibility />} />
+                          <Route path="/security" element={<Security />} />
+                          <Route path="/compliance" element={<Compliance />} />
+                          <Route path="/faq" element={<FAQ />} />
+                          <Route path="/help" element={<Help />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/support" element={<Support />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
@@ -140,6 +169,13 @@ function App() {
               <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
               <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
               <Route path="/services/finops-advisor" element={<FinOpsAdvisor />} />
+              
+              {/* Additional Service Routes */}
+              <Route path="/services/iot-edge" element={<IoTEdge />} />
+              <Route path="/services/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
+              <Route path="/services/healthcare-tech" element={<HealthcareTech />} />
+              <Route path="/services/zero-trust-architecture" element={<ZeroTrustArchitecture />} />
+              <Route path="/services/incident-response-platform" element={<IncidentResponsePlatform />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
