@@ -52,6 +52,7 @@ const Sitemap = () => {
         { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
         { name: 'Pricing', path: '/pricing', description: 'Service pricing information' },
         { name: 'Marketplace', path: '/marketplace', description: 'Product and service marketplace' },
+        { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', description: 'Future technology solutions' },
       ]
     },
     {
@@ -82,6 +83,8 @@ const Sitemap = () => {
         { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', description: 'Healthcare AI solutions' },
         { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', description: 'AI-powered security' },
         { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', description: 'Quantum-AI integration' },
+        { name: 'AI Legal Document Analysis', path: '/services/ai-legal-document-analysis', description: 'Legal document processing AI' },
+        { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', description: 'Advanced network security' },
       ]
     },
     {

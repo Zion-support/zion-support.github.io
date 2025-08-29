@@ -117,10 +117,10 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500'
     },
     { 
-      name: 'Innovative Services 2025', 
-      href: '/services/innovative-2025', 
-      icon: Rocket, 
-      description: 'Cutting-edge AI Services',
+      name: 'AI Autonomous Research Assistant', 
+      href: '/services/ai-autonomous-research-assistant', 
+      icon: Search, 
+      description: 'AI Research & Discovery',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
     },
@@ -137,23 +137,23 @@ export function AppHeader() {
   const solutions = [
     {
       name: 'Enterprise Solutions',
-      href: '/solutions',
+      href: '/solutions/enterprise',
       icon: Building2,
       description: 'Large-scale business transformations',
       featured: true
     },
     {
       name: 'Healthcare Solutions',
-      href: '/solutions',
+      href: '/solutions/healthcare',
       icon: Heart,
       description: 'Digital health transformation',
       featured: true
     },
     {
-      name: 'Financial Solutions',
-      href: '/solutions',
-      icon: TrendingUp,
-      description: 'Fintech innovation & compliance',
+      name: 'AI Solutions',
+      href: '/ai-solutions',
+      icon: Brain,
+      description: 'AI-powered business solutions',
       featured: true
     },
     {
@@ -224,7 +224,7 @@ export function AppHeader() {
     },
     {
       name: 'Pricing Guide 2025',
-      href: '/pricing-guide-2025',
+      href: '/comprehensive-pricing-guide-2025',
       icon: DollarSign,
       description: 'Complete pricing information',
       featured: true

@@ -181,6 +181,7 @@ const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
+const RevolutionaryServices2030 = lazy(() => import('./pages/RevolutionaryServices2030'));
 const AISalesCopilot = lazy(() => import('./pages/services/AISalesCopilot'));
 const CloudFinOpsOptimizer = lazy(() => import('./pages/services/CloudFinOpsOptimizer'));
 const AIComplianceAssistant = lazy(() => import('./pages/services/AIComplianceAssistant'));
@@ -331,6 +332,7 @@ function App() {
                 <Route path="/it-consulting" element={<ITConsulting />} />
                 <Route path="/space-tech" element={<SpaceTech />} />
                 <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
                 
                 {/* Enhanced Services Showcase 2025 */}
                 <Route path="/services/enhanced-services-showcase-2025" element={<EnhancedServicesShowcase2025 />} />

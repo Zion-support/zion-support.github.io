@@ -96,7 +96,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: true,
       links: [
         { name: 'All Services', href: '/services', featured: true },
-        { name: 'Innovative Services 2025', href: '/services/innovative-2025', featured: true },
+        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: true },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
         { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-analytics', featured: true },
         { name: 'AI Legal Tech Platform', href: '/services/ai-legal-document-analysis', featured: true },
@@ -150,7 +150,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: true,
       links: [
         { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
-        { name: 'Enterprise Solutions', href: '/solutions', featured: true },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', featured: true },
         { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
         { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
