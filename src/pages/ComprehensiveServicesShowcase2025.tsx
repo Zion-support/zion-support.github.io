@@ -156,11 +156,11 @@ export default function ComprehensiveServicesShowcase2025() {
                     {service.innovationLevel}
                   </div>
                 </div>
-              </div>
-            </div>
-          </motion.div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      )}
+      </section>
 
       {/* Contact Section */}
       <section className="py-20 bg-zion-slate-dark/30">

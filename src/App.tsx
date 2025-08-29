@@ -44,7 +44,7 @@ const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
 const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+// const ComprehensivePricingGuide2027 = lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = lazy(() => import('./pages/services/CloudDevOps'));
@@ -317,7 +317,7 @@ function App() {
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
                     <Route path="/comprehensive-services-showcase-2027" element={<ComprehensiveServicesShowcase2027Page />} />
                     <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
-                    <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
+                    {/* <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} /> */}
                     <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                     
@@ -369,21 +369,6 @@ function App() {
                     <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
                     <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
-                    
-                    {/* Additional Pages */}
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/faq" element={<FAQ />} />
-                    <Route path="/search" element={<SearchPage />} />
-                    <Route path="/partners" element={<Partners />} />
-                    <Route path="/news" element={<News />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
-                    <Route path="/help" element={<HelpCenter />} />
-                    <Route path="/marketplace" element={<Marketplace />} />
-                    <Route path="/pricing" element={<Pricing />} />
-                    <Route path="/it-consulting" element={<ITConsulting />} />
-                    <Route path="/space-tech" element={<SpaceTech />} />
-                    <Route path="/sitemap" element={<Sitemap />} />
                     
                     {/* 404 Page */}
                     <Route 
@@ -444,47 +429,7 @@ function App() {
       </ErrorBoundary>
     </HelmetProvider>
   );
-
-  // Memoize the header and footer to prevent unnecessary re-renders
-  const header = useMemo(() => <AppHeader />, []);
-  const footer = useMemo(() => <Footer />, []);
-
-  // Memoize the chat assistant to prevent unnecessary re-renders
-  const chatAssistant = useMemo(() => <ChatAssistant />, []);
-
-  // Memoize the performance components to prevent unnecessary re-renders
-  const performanceComponents = useMemo(() => (
-    <>
-      {/* <PerformanceOptimizer />
-      <AdvancedPerformanceMonitor />
-      <InteractiveUserExperience />
-      <SecurityEnhancer />
-      <EnhancedAccessibilityPanel /> */}
-    </>
-  ), []);
-
-  return (
-    <EnhancedErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          {header}
-          
-          <main className="flex-1">
-            <Suspense fallback={<EnhancedLoadingSpinner />}>
-              <Routes>
-                {routeElements}
-              </Routes>
-            </Suspense>
-          </main>
-
-          {footer}
-          {chatAssistant}
-          {performanceComponents}
-        </div>
-      </Router>
-    </EnhancedErrorBoundary>
-  );
-});
+}
 
 App.displayName = 'App';
 
