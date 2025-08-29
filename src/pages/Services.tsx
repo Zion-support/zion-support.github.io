@@ -278,6 +278,49 @@ export default function Services() {
               </div>
             </motion.div>
 
+            {/* Anchor Sections for Footer Links */}
+            <div className="mb-12 space-y-4">
+              {/* AI Services Anchors */}
+              <div id="ai-business-intelligence" className="invisible absolute -mt-20"></div>
+              <div id="ai-healthcare" className="invisible absolute -mt-20"></div>
+              <div id="ai-legal-tech" className="invisible absolute -mt-20"></div>
+              <div id="ai-research" className="invisible absolute -mt-20"></div>
+              <div id="ai-green-tech" className="invisible absolute -mt-20"></div>
+              <div id="ai-metaverse" className="invisible absolute -mt-20"></div>
+              <div id="ai-space-tech" className="invisible absolute -mt-20"></div>
+              <div id="ai-fintech" className="invisible absolute -mt-20"></div>
+              <div id="ai-supply-chain" className="invisible absolute -mt-20"></div>
+              <div id="ai-qa" className="invisible absolute -mt-20"></div>
+              <div id="ai-marketing-automation" className="invisible absolute -mt-20"></div>
+              <div id="ai-customer-support" className="invisible absolute -mt-20"></div>
+              <div id="ai-hr" className="invisible absolute -mt-20"></div>
+              <div id="ai-content-creation" className="invisible absolute -mt-20"></div>
+              <div id="ai-workflow-automation" className="invisible absolute -mt-20"></div>
+              <div id="ai-project-management" className="invisible absolute -mt-20"></div>
+              <div id="ai-sales-intelligence" className="invisible absolute -mt-20"></div>
+              <div id="ai-innovation-management" className="invisible absolute -mt-20"></div>
+              
+              {/* Infrastructure & Security Anchors */}
+              <div id="zero-trust-security" className="invisible absolute -mt-20"></div>
+              <div id="ai-ethics-guardian" className="invisible absolute -mt-20"></div>
+              <div id="cybersecurity" className="invisible absolute -mt-20"></div>
+              <div id="cloud-devops" className="invisible absolute -mt-20"></div>
+              <div id="data-analytics" className="invisible absolute -mt-20"></div>
+              <div id="it-infrastructure" className="invisible absolute -mt-20"></div>
+              <div id="digital-twin" className="invisible absolute -mt-20"></div>
+              <div id="iot-edge" className="invisible absolute -mt-20"></div>
+              <div id="blockchain" className="invisible absolute -mt-20"></div>
+              <div id="quantum-computing" className="invisible absolute -mt-20"></div>
+              
+              {/* Revolutionary Services 2030 Anchors */}
+              <div id="quantum-ai-trading" className="invisible absolute -mt-20"></div>
+              <div id="neural-interface" className="invisible absolute -mt-20"></div>
+              <div id="holographic-workspace" className="invisible absolute -mt-20"></div>
+              <div id="biodigital-twin" className="invisible absolute -mt-20"></div>
+              <div id="space-debris-tracking" className="invisible absolute -mt-20"></div>
+              <div id="metaverse-builder" className="invisible absolute -mt-20"></div>
+            </div>
+
             {/* Search and Filter Controls */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -220,7 +220,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+      <section id="team" className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

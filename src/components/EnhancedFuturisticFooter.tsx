@@ -165,7 +165,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       title: 'Resources & Support',
       featured: false,
       links: [
-        { name: 'Comprehensive Pricing 2027', href: '/comprehensive-pricing-guide-2027', featured: true },
+        { name: 'Comprehensive Pricing 2027', href: '/pricing-guide-2027', featured: true },
         { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },

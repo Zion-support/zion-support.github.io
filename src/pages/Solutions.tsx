@@ -226,6 +226,21 @@ const Solutions: React.FC = () => {
         </div>
       </section>
 
+      {/* Anchor Sections for Footer Links */}
+      <div className="space-y-4">
+        {/* Industry Solutions Anchors */}
+        <div id="healthcare" className="invisible absolute -mt-20"></div>
+        <div id="financial" className="invisible absolute -mt-20"></div>
+        <div id="legal" className="invisible absolute -mt-20"></div>
+        <div id="research" className="invisible absolute -mt-20"></div>
+        <div id="manufacturing" className="invisible absolute -mt-20"></div>
+        <div id="retail" className="invisible absolute -mt-20"></div>
+        <div id="government" className="invisible absolute -mt-20"></div>
+        <div id="energy" className="invisible absolute -mt-20"></div>
+        <div id="space" className="invisible absolute -mt-20"></div>
+        <div id="education" className="invisible absolute -mt-20"></div>
+      </div>
+
       {/* Industry Solutions Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container-responsive">
