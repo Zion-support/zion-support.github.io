@@ -248,7 +248,7 @@ interface EnhancedSidebar2025Props {
   onClose: () => void;
 }
 
-export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
+export default function EnhancedSidebar2025({ isOpen: unknown, onClose }: EnhancedSidebar2025Props) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
@@ -281,7 +281,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     setExpandedItems(newExpanded);
   };
 
-  useEffect(() => {
+  useEffect((: unknown) => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -369,10 +369,9 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
           </Link>
 
           {/* Service Sections */}
-          {sidebarSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} className="space-y-3">
+          {sidebarSections.map((section: unknown, sectionIndex: unknown) => (<div key={sectionIndex} className="space-y-3">
               <button
-                onClick={() => toggleSection(section.title)}
+                onClick={(: unknown) => toggleSection(section.title)}
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover:bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3">
@@ -389,18 +388,16 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               </button>
 
               <AnimatePresence>
-                {expandedSections.has(section.title) && (
-                  <motion.div
+                {expandedSections.has(section.title) && (<motion.div
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="space-y-2 ml-6"
                   >
-                    {section.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="space-y-2">
+                    {section.items.map((item, itemIndex: unknown) => (<div key={itemIndex} className="space-y-2">
                         <button
-                          onClick={() => toggleItem(item.name)}
+                          onClick={(: unknown) => toggleItem(item.name)}
                           className="w-full flex items-center justify-between p-2 hover:bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"
                         >
                           <div className="flex items-center gap-3">
@@ -424,15 +421,14 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                         {/* Sub-items */}
                         {item.subItems && item.subItems.length > 0 && (
                           <AnimatePresence>
-                            {expandedItems.has(item.name) && (
-                              <motion.div
+                            {expandedItems.has(item.name) && (<motion.div
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: 'auto' }}
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.3 }}
                                 className="space-y-1 ml-6"
                               >
-                                {item.subItems.map((subItem, subIndex) => (
+                                {item.subItems.map((subItem, subIndex: unknown) => (
                                   <Link
                                     key={subIndex}
                                     href={subItem.href}

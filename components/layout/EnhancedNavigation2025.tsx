@@ -7,7 +7,7 @@ export default function EnhancedNavigation2025() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-	useEffect(() => {
+	useEffect((: unknown) => {
 		const handleScroll = () => setIsScrolled(window.scrollY > 20);
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
@@ -58,8 +58,7 @@ export default function EnhancedNavigation2025() {
 		setActiveDropdown(null);
 	};
 
-	return (
-		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+	return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'
 		}`}>
 			{/* Top Contact Bar */}
@@ -101,13 +100,12 @@ export default function EnhancedNavigation2025() {
 						</div>
 					</Link>
 
-					{/* Desktop Navigation */}
+					{/* Monitor Navigation */}
 					<div className="hidden lg:flex lg:items-center lg:space-x-8">
-						{navigation.map((item) => (
-							<div key={item.name} className="relative group">
+						{navigation.map((item) => (<div key={item.name} className="relative group">
 								{item.children ? (
 									<button
-										onClick={() => toggleDropdown(item.name)}
+										onClick={(: unknown) => toggleDropdown(item.name)}
 										className="flex items-center space-x-1 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 font-medium"
 										aria-expanded={activeDropdown === item.name}
 										aria-haspopup="true"
@@ -129,13 +127,11 @@ export default function EnhancedNavigation2025() {
 								)}
 
 								{/* Dropdown Menu */}
-								{item.children && (
-									<div className={`absolute top-full left-0 mt-2 w-80 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl shadow-cyan-500/25 p-4 transition-all duration-200 ${
+								{item.children && (<div className={`absolute top-full left-0 mt-2 w-80 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl shadow-cyan-500/25 p-4 transition-all duration-200 ${
 										activeDropdown === item.name ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
 									}`}>
 										<div className="grid gap-3">
-											{item.children.map((child) => (
-												<Link
+											{item.children.map((child) => (<Link
 													key={child.name}
 													href={child.href}
 													className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
@@ -176,15 +172,13 @@ export default function EnhancedNavigation2025() {
 			</div>
 
 			{/* Mobile Navigation */}
-			{isOpen && (
-				<div className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50">
+			{isOpen && (<div className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50">
 					<div className="px-4 py-4 space-y-3">
-						{navigation.map((item) => (
-							<div key={item.name}>
+						{navigation.map((item) => (<div key={item.name}>
 								{item.children ? (
 									<div>
 										<button
-											onClick={() => toggleDropdown(item.name)}
+											onClick={(: unknown) => toggleDropdown(item.name)}
 											className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
 											aria-expanded={activeDropdown === item.name}
 										>
@@ -195,9 +189,8 @@ export default function EnhancedNavigation2025() {
 												}`}
 											/>
 										</button>
-										{activeDropdown === item.name && (
-											<div className="ml-4 mt-2 space-y-2">
-												{item.children.map((child) => (
+										{activeDropdown === item.name && (<div className="ml-4 mt-2 space-y-2">
+												{item.children.map((child: unknown) => (
 													<Link
 														key={child.name}
 														href={child.href}

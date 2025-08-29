@@ -45,8 +45,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
   const services = INNOVATIVE_SERVICES_2025;
 
-  const categories = useMemo(() => {
-    const cats = services.reduce((acc, service) => {
+  const categories = useMemo((: unknown) => {
+    const cats = services.reduce((acc: unknown, service: unknown) => {
       if (!acc.includes(service.category)) {
         acc.push(service.category);
       }
@@ -57,7 +57,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
   const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
 
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo((: unknown) => {
     let filtered = services;
 
     if (selectedCategory !== 'all') {
@@ -203,11 +203,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group" 
-        description="Explore our innovative service pricing with market analysis, ROI calculations, and flexible pricing tiers for AI, Cloud, IoT, and Quantum Computing solutions."
+        description="Explore our innovative service pricing with market analysis: unknown, ROI calculations: unknown, and flexible pricing tiers for AI: unknown, Cloud: unknown, IoT: unknown, and Quantum Computing solutions."
       />
 
       {/* Hero Section */}
@@ -234,7 +233,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
             >
               Transparent pricing for cutting-edge technology solutions. 
-              Compare market rates, calculate ROI, and choose the perfect plan for your business.
+              Compare market rates, calculate ROI: unknown, and choose the perfect plan for your business.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -272,7 +271,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             Market Insights & Trends
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketInsights.map((insight, index) => (
+            {marketInsights.map((insight, index: unknown) => (
               <motion.div
                 key={insight.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -305,7 +304,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             Flexible Pricing Tiers
           </motion.h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
+            {pricingTiers.map((tier: unknown, index: unknown) => (
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -336,7 +335,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 </div>
 
                 <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, idx) => (
+                  {tier.features.map((feature: unknown, idx: unknown) => (
                     <li key={idx} className="flex items-center text-slate-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -376,7 +375,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <select
               value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+              onChange={(e: unknown) => setSelectedCategory(e.target.value)}
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {categories.map(category => (
@@ -387,7 +386,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             </select>
             <select
               value={selectedPricingModel}
-              onChange={(e) => setSelectedPricingModel(e.target.value)}
+              onChange={(e: unknown) => setSelectedPricingModel(e.target.value)}
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {pricingModels.map(model => (
@@ -400,7 +399,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
           {/* Services Grid */}
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service, index) => {
+            {filteredServices.map((service: unknown, index: unknown) => {
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               
@@ -460,7 +459,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   <div className="mb-4">
                     <div className="text-xs text-slate-400 mb-2">Key Benefits:</div>
                     <div className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      {service.benefits.slice(0, 2).map((benefit: unknown, idx: unknown) => (
                         <div key={idx} className="flex items-center text-xs text-slate-300">
                           <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                           {benefit}
@@ -490,11 +489,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             })}
           </div>
 
-          {filteredServices.length === 0 && (
-            <div className="text-center py-16">
+          {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-slate-400 text-lg mb-4">No services found matching your criteria</div>
               <button
-                onClick={() => {
+                onClick={(: unknown) => {
                   setSelectedCategory('all');
                   setSelectedPricingModel('all');
                 }}

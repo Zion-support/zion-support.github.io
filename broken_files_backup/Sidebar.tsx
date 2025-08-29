@@ -177,8 +177,7 @@ export function Sidebar() {
 
   const isActive = (path: string) => location.pathname === path;
 
-  return (
-    <div className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
+  return (<div className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
       isOpen ? 'translate-x-0' : 'translate-x-full'
     }`}>
       <div className="flex flex-col h-full">
@@ -197,12 +196,11 @@ export function Sidebar() {
         {/* Navigation Items */}
         <nav className="flex-1 overflow-y-auto p-6">
           <div className="space-y-2">
-            {sidebarItems.map((item) => (
-              <div key={item.name}>
+            {sidebarItems.map((item) => (<div key={item.name}>
                 {item.children ? (
                   <div>
                     <button
-                      onClick={() => toggleItem(item.name)}
+                      onClick={(: unknown) => toggleItem(item.name)}
                       className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
                         isActive(item.path)
                           ? 'bg-blue-600/20 text-white'
@@ -220,9 +218,8 @@ export function Sidebar() {
                       />
                     </button>
                     
-                    {expandedItems.includes(item.name) && (
-                      <div className="ml-6 mt-2 space-y-1">
-                        {item.children.map((child) => (
+                    {expandedItems.includes(item.name) && (<div className="ml-6 mt-2 space-y-1">
+                        {item.children.map((child: unknown) => (
                           <Link
                             key={child.path}
                             to={child.path}
@@ -282,6 +279,6 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
+export default function SidebarWrapper({ isOpen: unknown, onClose }: SidebarProps) {
   return <Sidebar isOpen={isOpen} onClose={onClose} />;
 }

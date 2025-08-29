@@ -72,7 +72,7 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const MainSidebar: React.FC<SidebarProps> = ({ isOpen: unknown, onClose }: unknown) => {
   const router = useNavigate();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
@@ -150,10 +150,9 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: string, items: any[], sectionKey: string) => (
-    <div key={sectionKey} className="mb-6">
+  const renderNavSection = (title: string, items: unknown[], sectionKey: string) => (<div key={sectionKey} className="mb-6">
       <button
-        onClick={() => toggleSection(sectionKey)}
+        onClick={(: unknown) => toggleSection(sectionKey)}
         className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:text-white transition-colors duration-200 font-medium"
       >
         <span className="text-sm font-semibold uppercase tracking-wide">{title}</span>
@@ -164,9 +163,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         )}
       </button>
       
-      {expandedSections.includes(sectionKey) && (
-        <div className="mt-2 space-y-1">
-          {items.map((item) => (
+      {expandedSections.includes(sectionKey) && (<div className="mt-2 space-y-1">
+          {items.map((item: unknown) => (
             <Link
               key={item.name}
               href={item.href}
@@ -237,7 +235,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="mb-6">
             <h3 className="text-sm font-semibold text-white mb-3 px-3">Quick Actions</h3>
             <div className="grid grid-cols-2 gap-2">
-              {quickActions.map((action) => (
+              {quickActions.map((action: unknown) => (
                 <Link
                   key={action.name}
                   href={action.href}
@@ -255,7 +253,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           {/* Main Navigation */}
           <div className="space-y-1">
-            {navigation.main.map((item) => (
+            {navigation.main.map((item: unknown) => (
               <Link
                 key={item.name}
                 href={item.href}
@@ -289,7 +287,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <div className="p-4 border-t border-zion-blue-light">
           {/* Contact Info */}
           <div className="mb-4 space-y-2">
-            {contactInfo.map((contact, index) => (
+            {contactInfo.map((contact: unknown, index: unknown) => (
               <a
                 key={index}
                 href={contact.href}
@@ -305,7 +303,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           {/* Social Links */}
           <div className="flex items-center gap-3 mb-4">
-            {socialLinks.map((social) => (
+            {socialLinks.map((social: unknown) => (
               <a
                 key={social.name}
                 href={social.href}

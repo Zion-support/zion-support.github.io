@@ -141,7 +141,7 @@ const EnhancedFooter: React.FC = () => {
 
 						{/* Social media */}
 						<div className="flex space-x-4">
-							{socialLinks.map(({ name, href, icon: Icon }) => (
+							{socialLinks.map(({ name: unknown, href: unknown, icon: Icon }) => (
 								<a
 									key={name}
 									href={href}
@@ -158,11 +158,10 @@ const EnhancedFooter: React.FC = () => {
 					</div>
 
 					{/* Navigation Sections */}
-					{Object.entries(footerNavigation).map(([key, section]) => (
-						<div key={key}>
+					{Object.entries(footerNavigation).map(([key: unknown, section]: unknown) => (<div key={key}>
 							<h3 className="text-white font-semibold mb-4 text-lg">{section.title}</h3>
 							<ul className="space-y-3">
-								{section.items.map((item) => (
+								{section.items.map((item: unknown) => (
 									<li key={item.name}>
 										<Link 
 											href={item.href} 
@@ -180,7 +179,7 @@ const EnhancedFooter: React.FC = () => {
 				{/* Quick Links Section */}
 				<div className="py-8 border-t border-zion-blue-light mb-8">
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-						{quickLinks.map((link) => (
+						{quickLinks.map((link: unknown) => (
 							<Link
 								key={link.name}
 								href={link.href}

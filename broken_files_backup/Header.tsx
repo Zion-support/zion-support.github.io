@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
-  useEffect(() => {
+  useEffect((: unknown) => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setIsMenuOpen(false);
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  useEffect(() => {
+  useEffect((: unknown) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -53,8 +53,7 @@ const Header: React.FC = () => {
 
   const isActive = (path: string) => router.pathname === path;
 
-  const renderDropdown = (items: NavigationItem[], isOpen: boolean, onToggle: () => void) => (
-    <div className="relative">
+  const renderDropdown = (items: NavigationItem[], isOpen: boolean, onToggle: () => void) => (<div className="relative">
       <button
         onClick={onToggle}
         className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-colors ${
@@ -71,8 +70,7 @@ const Header: React.FC = () => {
         <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
           <div className="p-4">
             <div className="grid grid-cols-1 gap-2">
-              {items.map((item) => (
-                <Link
+              {items.map((item) => (<Link
                   key={item.path}
                   href={item.path}
                   className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
@@ -95,8 +93,7 @@ const Header: React.FC = () => {
     </div>
   );
 
-  return (
-    <header className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+  return (<header className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -109,7 +106,7 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Monitor Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -124,7 +121,7 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Monitor CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
               to="/pricing"
@@ -155,8 +152,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
+        {isMenuOpen && (<motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

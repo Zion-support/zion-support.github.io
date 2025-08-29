@@ -10,7 +10,7 @@ async function main() {
   console.log('ZIONToken deployed at:', addr);
   console.log('Total supply:', totalSupply.toString());
 }
-main().catch((error) => {
+main().catch((error: unknown) => {
   console.error(error);
   process.exitCode = 1;
 });

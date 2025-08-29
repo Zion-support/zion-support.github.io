@@ -156,7 +156,7 @@ export const emergingTechServices2025: MicroSaasService[] = [
     period: '/month',
     description: 'Enterprise-grade IoT platform that manages connected devices, processes edge data, and provides real-time analytics. Supports industrial IoT, smart cities, and connected consumer applications.',
     features: [
-      'Device management and provisioning',
+      'Smartphone management and provisioning',
       'Edge computing and local data processing',
       'Real-time data streaming and analytics',
       'Predictive maintenance and anomaly detection',

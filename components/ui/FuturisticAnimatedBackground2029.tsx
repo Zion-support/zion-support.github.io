@@ -7,7 +7,7 @@ interface FuturisticAnimatedBackground2029Props {
 export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
+  useEffect((: unknown) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -196,7 +196,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       });
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particle: unknown, index: unknown) => {
         particle.update();
         particle.draw();
 

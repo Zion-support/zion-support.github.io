@@ -131,8 +131,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           initial="hidden"
           animate="visible"
         >
-          {categories.map((category, index) => (
-            <motion.div key={category.title} variants={itemVariants}>
+          {categories.map((category: unknown, index: unknown) => (<motion.div key={category.title} variants={itemVariants}>
               <Link 
                 to={category.link} 
                 className="group block h-full"
@@ -154,7 +153,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   
                   {/* Features */}
                   <div className="space-y-2 mb-4">
-                    {category.features.map((feature, idx) => (
+                    {category.features.map((feature, idx: unknown) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-zion-slate-light">
                         <div className="w-1.5 h-1.5 rounded-full bg-zion-cyan"></div>
                         {feature}
@@ -188,7 +187,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Services</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {specialServices.map((service, index) => (
+            {specialServices.map((service: unknown, index: unknown) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, scale: 0.9 }}

@@ -9,7 +9,7 @@ interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>;
 }
 // Simple error component to replace Next.js ErrorPage
-const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
+const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }: unknown) => (
   <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
     <div className="text-center">
       <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>
@@ -33,7 +33,7 @@ const TalentProfilePage: React.FC = () => {
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
+  useEffect((: unknown) => {
     const fetchProfile = async () => {
       if (!id) return;
       setLoading(true);
@@ -41,7 +41,7 @@ const TalentProfilePage: React.FC = () => {
       try {
         // For now, we'll simulate a profile since we don't have the API
         // In a real app, this would be: const res = await fetch(`/api/talent/${id}`);
-        setTimeout(() => {
+        setTimeout((: unknown) => {
           const mockProfile: TalentProfileWithSocial = {
             full_name: `Talent ${id}`,
             skills: ['React', 'TypeScript', 'Node.js'],
@@ -88,7 +88,7 @@ const TalentProfilePage: React.FC = () => {
           <div>
             <h2 className="font-semibold">Social Links</h2>
             <div className="space-x-4">
-              {Object.entries(profile.social).map(([platform, url]) => (
+              {Object.entries(profile.social).map(([platform: unknown, url]: unknown) => (
                 <a
                   key={platform}
                   href={url}

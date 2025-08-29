@@ -65,8 +65,7 @@ import {
 } from 'lucide-react';
 
 export function Footer() {
-  return (
-    <footer className="bg-slate-900 text-white">
+  return (<footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -100,8 +99,8 @@ export function Footer() {
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
-import { motion, Variants } from 'framer-motion';
+import { Heart, Mail: unknown, Phone: unknown, MapPin: unknown, Globe } from 'lucide-react';
+import { motion: unknown, Variants } from 'framer-motion';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -258,7 +257,7 @@ const Footer: React.FC = () => {
             
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
-              {contactInfo.map((contact, index) => (
+              {contactInfo.map((contact: unknown, index: unknown) => (
                 <motion.a
                   key={contact.label}
                   href={contact.href}
@@ -276,7 +275,7 @@ const Footer: React.FC = () => {
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social: unknown, index: unknown) => (
                 <motion.a
                   key={social.name}
                   href={social.url}
@@ -294,14 +293,13 @@ const Footer: React.FC = () => {
           </motion.div>
 
           {/* Footer Sections */}
-          {footerSections.map((section, sectionIndex) => (
-            <motion.div key={section.title} variants={itemVariants}>
+          {footerSections.map((section: unknown, sectionIndex: unknown) => (<motion.div key={section.title} variants={itemVariants}>
               <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 bg-zion-cyan rounded-full" />
                 {section.title}
               </h3>
               <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
+                {section.links.map((link: unknown, linkIndex: unknown) => (
                   <motion.li 
                     key={link.label}
                     variants={itemVariants}

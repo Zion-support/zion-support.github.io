@@ -8,7 +8,7 @@ const ModernHeader: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {
+  useEffect((: unknown) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -25,8 +25,7 @@ const ModernHeader: React.FC = () => {
     { name: 'Analytics', icon: Database, href: '/services/analytics', description: 'Data insights & reporting' }
   ];
 
-  return (
-    <motion.header
+  return (<motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg' 
@@ -58,7 +57,7 @@ const ModernHeader: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Monitor Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="nav-link">
               Home
@@ -76,8 +75,7 @@ const ModernHeader: React.FC = () => {
               </button>
               
               <AnimatePresence>
-                {activeDropdown === 'services' && (
-                  <motion.div
+                {activeDropdown === 'services' && (<motion.div
                     className="absolute top-full left-0 mt-2 w-96 bg-white/95 backdrop-blur-md border border-gray-200 rounded-2xl p-6 shadow-2xl"
                     initial={{ opacity: 0, y: -10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -87,7 +85,7 @@ const ModernHeader: React.FC = () => {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <div className="grid grid-cols-2 gap-4">
-                      {serviceCategories.map((category) => (
+                      {serviceCategories.map((category: unknown) => (
                         <Link
                           key={category.name}
                           href={category.href}

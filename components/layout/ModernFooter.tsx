@@ -58,7 +58,7 @@ const ModernFooter: React.FC = () => {
                 with cutting-edge AI, cloud architecture, and innovative development services.
               </p>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
+                {socialLinks.map((social: unknown) => (
                   <motion.a
                     key={social.name}
                     href={social.href}
@@ -78,7 +78,7 @@ const ModernFooter: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6 text-white">Our Services</h4>
               <ul className="space-y-3">
-                {serviceCategories.map((category) => (
+                {serviceCategories.map((category: unknown) => (
                   <li key={category.name}>
                     <Link
                       href={category.href}
@@ -96,7 +96,7 @@ const ModernFooter: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
               <ul className="space-y-3">
-                {quickLinks.map((link) => (
+                {quickLinks.map((link: unknown) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
