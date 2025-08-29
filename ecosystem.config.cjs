@@ -187,6 +187,48 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // Dependency review automation - runs every 6 hours
+    {
+      name: 'dependency-review',
+      script: './scripts/automation/dependency-review.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // CodeQL analysis automation - runs every 12 hours
+    {
+      name: 'codeql-analyzer',
+      script: './scripts/automation/codeql-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '43200000' // 12 hours
+      }
+    },
+
+    // Workflow status monitor - runs every 30 minutes
+    {
+      name: 'workflow-monitor',
+      script: './scripts/automation/workflow-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
     }
   ]
 };
