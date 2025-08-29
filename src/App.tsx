@@ -38,6 +38,7 @@ const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedService
 const RevolutionaryServicesLanding = React.lazy(() => import('./pages/RevolutionaryServicesLanding.tsx'));
 const RevolutionaryPricingGuide = React.lazy(() => import('./pages/RevolutionaryPricingGuide.tsx'));
 const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2029.tsx'));
+const InnovativeMicroSaasServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeMicroSaasServicesShowcase2025.tsx'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -103,6 +104,7 @@ function App() {
                 <Route path="/services/enhanced" element={<EnhancedServicesLanding />} />
                 <Route path="/services/comprehensive-2030" element={<ComprehensiveServicesLanding2030 />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
+                <Route path="/services/innovative-micro-saas-2025" element={<InnovativeMicroSaasServicesShowcase2025 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />

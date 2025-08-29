@@ -244,6 +244,13 @@ export default function Services() {
                   View Enhanced Services Landing
                 </Link>
                 <Link
+                  to="/services/innovative-micro-saas-2025"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  View Innovative Micro SAAS Services 2025
+                </Link>
+                <Link
                   to="/services/comprehensive-2030"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
