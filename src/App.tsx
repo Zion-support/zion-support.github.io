@@ -37,6 +37,7 @@ const Webinars = React.lazy(() => import('./pages/Webinars'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 
 // Enhanced services pages - only import existing ones
@@ -139,7 +140,6 @@ const Equipment = React.lazy(() => import('./pages/Equipment'));
 const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
 const News = React.lazy(() => import('./pages/News'));
 const Events = React.lazy(() => import('./pages/events'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 
 // Additional service pages
@@ -148,6 +148,22 @@ const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMoni
 const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
 const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
 const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
+
+const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const EmergingTechShowcase2025 = React.lazy(() => import('./pages/EmergingTechShowcase2025'));
+
+const Marketplace = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+    <SEO 
+      title="Marketplace - Zion Tech Group"
+      description="Explore our marketplace of AI-powered technology solutions and services."
+    />
+    <div className="text-center text-white">
+      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
+      <p className="text-xl text-gray-300">Explore our solutions</p>
+    </div>
+  </div>
+);
 
 function App() {
   return (
@@ -201,25 +217,17 @@ function App() {
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+              <Route path="/emerging-tech-showcase-2025" element={<EmergingTechShowcase2025 />} />
               <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
               <Route path="/pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
               <Route path="/comprehensive-services-landing-2028" element={<ComprehensiveServicesLanding2028 />} />
-              
-              {/* Service Category Routes */}
-              <Route path="/ai-services" element={<AIServices />} />
-              <Route path="/it-services" element={<ITServices />} />
-              <Route path="/micro-saas" element={<MicroSaaS />} />
-              <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
+              <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+              <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
               <Route path="/services/uptime-sla-monitor" element={<UptimeSLAMonitor />} />
               <Route path="/services/soc2-compliance-tracker" element={<SOC2ComplianceTracker />} />
               <Route path="/services/employee-scheduling-saas" element={<EmployeeSchedulingSaaS />} />
               <Route path="/services/ai-support-helpdesk" element={<AISupportHelpdesk />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-              <Route path="/request-quote" element={<RequestQuote />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/marketplace" element={<Marketplace />} />
-              <Route path="/partners" element={<Partners />} />
               
               {/* Additional Routes */}
               <Route path="/talent" element={<Talent />} />
@@ -227,6 +235,16 @@ function App() {
               <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
               <Route path="/news" element={<News />} />
               <Route path="/events" element={<Events />} />
+              
+              {/* Service Category Routes */}
+              <Route path="/ai-services" element={<AIServices />} />
+              <Route path="/it-services" element={<ITServices />} />
+              <Route path="/micro-saas" element={<MicroSaaS />} />
+              <Route path="/request-quote" element={<RequestQuote />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/marketplace" element={<Marketplace />} />
+              <Route path="/partners" element={<Partners />} />
               
               {/* Service Routes */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
@@ -301,7 +319,6 @@ function App() {
               <Route path="/services/employee-scheduling-saas" element={<EmployeeSchedulingSaaS />} />
               <Route path="/services/ai-support-helpdesk" element={<AISupportHelpdesk />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-              
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
             </Routes>
