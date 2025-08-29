@@ -91,6 +91,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Innovative Services 2028',
+      featured: true,
+      links: [
+        { name: 'Innovative Services Showcase 2028', href: '/innovative-services-2028', featured: true },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', featured: true },
+        { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection', featured: true },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas', featured: true },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true }
+      ]
+    },
+    {
       title: 'AI & Analytics Services',
       featured: true,
       links: [
@@ -98,6 +110,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
@@ -390,7 +405,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         {/* Contact Information Footer */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-6 h-6 text-white" />
@@ -421,6 +436,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   Middletown DE 19709
                 </p>
                 <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
+                <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  ziontechgroup.com
+                </a>
+                <p className="text-sm text-slate-400 mt-2">Explore our services online</p>
               </div>
             </div>
             

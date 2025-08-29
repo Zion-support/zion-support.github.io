@@ -75,10 +75,14 @@ export function AppHeader() {
     { name: 'AI Learning Management', href: '/innovative-services-showcase-2025', icon: GraduationCap, description: 'Personalized learning platform' },
     { name: 'AI Legal Automation', href: '/innovative-services-showcase-2025', icon: FileText, description: 'Legal document automation' },
     { name: 'AI Healthcare Analytics', href: '/innovative-services-showcase-2025', icon: Heart, description: 'Healthcare insights platform' },
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow, description: 'Intelligent process automation' },
+    { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', icon: Heart, description: 'Proactive customer success' },
+    { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection', icon: Shield, description: '99.9% fraud detection accuracy' },
     { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', icon: Target, description: 'AI-powered project optimization' },
     { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', icon: Shield, description: 'Advanced threat detection' },
     { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', icon: DollarSign, description: 'AI-powered trading' },
-    { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, description: 'Healthcare analytics platform' }
+    { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, description: 'Healthcare analytics platform' },
+    { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Rocket, description: 'Latest AI innovations' }
   ];
 
   const servicesCategories = [

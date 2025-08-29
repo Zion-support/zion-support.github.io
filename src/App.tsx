@@ -98,12 +98,16 @@ const AISEOOptimizer = React.lazy(() => import('./pages/services/AISEOOptimizer'
 const SaaSChurnPredictor = React.lazy(() => import('./pages/services/SaaSChurnPredictor'));
 const AIIncidentPostmortems = React.lazy(() => import('./pages/services/AIIncidentPostmortems'));
 const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
+
+// New innovative services
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
+const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/AIFinancialFraudDetection'));
 const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
 const AIProofreadingStudio = React.lazy(() => import('./pages/services/AIProofreadingStudio'));
 
 // Additional innovative AI services
 const AICustomerChurnPrediction = React.lazy(() => import('./pages/services/AICustomerChurnPrediction'));
-const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/AIFinancialFraudDetection'));
 const AIHRTalentAcquisition = React.lazy(() => import('./pages/services/AIHRTalentAcquisition'));
 
 // Additional service pages
@@ -121,7 +125,6 @@ const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealth
 const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
-const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 const AIEnterpriseOrchestrator = React.lazy(() => import('./pages/services/AIEnterpriseOrchestrator'));
 
 // Additional Micro SaaS Services
@@ -232,6 +235,7 @@ function App() {
               <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
               <Route path="/pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
               <Route path="/comprehensive-services-landing-2028" element={<ComprehensiveServicesLanding2028 />} />
+              <Route path="/innovative-services-2028" element={<InnovativeServicesShowcase2028 />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
@@ -293,6 +297,11 @@ function App() {
               <Route path="/services/ecommerce-personalization" element={<EcommercePersonalization />} />
               <Route path="/services/returns-management" element={<ReturnsManagementSaaS />} />
               <Route path="/services/api-monitoring" element={<APIMonitoringSaaS />} />
+              
+              {/* New Innovative Service Routes */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+              <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+              <Route path="/services/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} />
               <Route path="/services/gdpr-cookie-compliance" element={<GDPRCookieCompliance />} />
               <Route path="/services/ai-proofreading-studio" element={<AIProofreadingStudio />} />
               

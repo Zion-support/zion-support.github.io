@@ -1,177 +1,349 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Shield, 
-  Brain, 
-  BarChart3, 
+  TrendingUp, 
   AlertTriangle, 
-  Zap, 
-  Lock, 
-  Target, 
+  Clock, 
+  BarChart3, 
   CheckCircle,
-  ArrowRight,
+  Play,
   Star,
-  Clock,
+  Award,
   DollarSign,
-  TrendingUp,
+  Target,
+  Zap,
+  Brain,
+  Globe,
+  Rocket,
   Eye,
-  Cpu
+  Lock,
+  Activity,
+  Cpu,
+  Database
 } from 'lucide-react';
 
-const AIFinancialFraudDetection: React.FC = () => {
+export default function AIFinancialFraudDetection() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Detection",
-      description: "Advanced machine learning models that detect fraud patterns with 99.2% accuracy using behavioral analysis and real-time transaction monitoring."
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Monitoring",
-      description: "24/7 transaction monitoring with sub-second response times, detecting and blocking fraudulent activities before they impact your business."
+      title: "AI-Powered Fraud Detection",
+      description: "Advanced machine learning algorithms that detect fraudulent transactions in real-time with 99.9% accuracy"
     },
     {
       icon: Shield,
-      title: "Multi-Layer Security",
-      description: "Comprehensive fraud prevention combining AI detection, rule-based systems, and human expertise for maximum protection."
+      title: "Real-time Protection",
+      description: "Instant fraud detection and blocking before transactions are processed, protecting your business 24/7"
     },
     {
-      icon: Target,
-      title: "Adaptive Learning",
-      description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time."
+      icon: Activity,
+      title: "Behavioral Analysis",
+      description: "Learn customer patterns and detect anomalies that indicate potential fraud or suspicious activity"
+    },
+    {
+      icon: Eye,
+      title: "Multi-layered Security",
+      description: "Combines AI, machine learning, and rule-based systems for comprehensive fraud protection"
+    },
+    {
+      icon: BarChart3,
+      title: "Advanced Analytics",
+      description: "Comprehensive fraud analytics dashboard with detailed insights and reporting capabilities"
+    },
+    {
+      icon: Lock,
+      title: "Compliance Ready",
+      description: "Built-in compliance features for PCI DSS, SOC2, and other financial security standards"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$499",
+      period: "/month",
+      description: "Perfect for small businesses processing up to 10,000 transactions monthly",
+      features: [
+        "Up to 10,000 transactions/month",
+        "Basic AI fraud detection",
+        "Email support",
+        "Standard integrations",
+        "Basic reporting",
+        "Email alerts"
+      ],
+      cta: "Start Free Trial",
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$1,299",
+      period: "/month",
+      description: "Ideal for growing businesses with 10,000-100,000 monthly transactions",
+      features: [
+        "Up to 100,000 transactions/month",
+        "Advanced AI algorithms",
+        "Priority support",
+        "Custom integrations",
+        "Advanced analytics",
+        "Real-time alerts",
+        "Custom rules engine"
+      ],
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$3,999",
+      period: "/month",
+      description: "For large organizations processing 100,000+ transactions monthly",
+      features: [
+        "Unlimited transactions",
+        "Custom AI models",
+        "24/7 dedicated support",
+        "White-label options",
+        "Advanced security features",
+        "Custom SLA guarantees",
+        "API access & webhooks"
+      ],
+      cta: "Contact Sales",
+      popular: false
     }
   ];
 
   const benefits = [
-    "Reduce fraud losses by 85-95%",
-    "Improve detection accuracy by 40%",
-    "Reduce false positives by 60%",
-    "Save $100K+ annually on fraud prevention",
-    "Comply with PCI DSS, SOC 2, and GDPR requirements"
-  ];
-
-  const useCases = [
-    "Credit Card Fraud",
-    "Banking & Financial Services",
-    "E-commerce & Retail",
-    "Insurance Claims",
-    "Healthcare Billing",
-    "Cryptocurrency Transactions"
-  ];
-
-  const integrations = [
-    "Stripe, PayPal, Square",
-    "Visa, Mastercard, American Express",
-    "Banking APIs (Plaid, Yodlee)",
-    "QuickBooks, Xero, NetSuite",
-    "Salesforce, HubSpot, Pipedrive"
-  ];
-
-  const pricing = [
     {
-      plan: "Starter",
-      price: "$799",
-      period: "/month",
-      features: ["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],
-      popular: false
+      icon: Shield,
+      title: "Prevent Fraud Losses",
+      description: "Stop fraudulent transactions before they cost your business money"
     },
     {
-      plan: "Professional",
-      price: "$1,999",
-      period: "/month",
-      features: ["Up to 100K transactions/month", "Advanced AI models", "Real-time blocking", "Priority support", "API access"],
-      popular: true
+      icon: Clock,
+      title: "Real-time Protection",
+      description: "24/7 monitoring and instant fraud detection and blocking"
     },
     {
-      plan: "Enterprise",
-      price: "Custom",
-      period: "",
-      features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
-      popular: false
+      icon: TrendingUp,
+      title: "Reduce False Positives",
+      description: "AI algorithms minimize legitimate transaction rejections"
+    },
+    {
+      icon: BarChart3,
+      title: "Compliance & Reporting",
+      description: "Meet regulatory requirements with comprehensive fraud reporting"
+    }
+  ];
+
+  const fraudTypes = [
+    {
+      title: "Payment Card Fraud",
+      description: "Detect stolen credit cards, counterfeit cards, and unauthorized transactions",
+      protection: "99.9% detection rate",
+      icon: CreditCard
+    },
+    {
+      title: "Account Takeover",
+      description: "Identify suspicious login patterns and unauthorized account access",
+      protection: "Real-time blocking",
+      icon: Lock
+    },
+    {
+      title: "Identity Theft",
+      description: "Detect synthetic identities and stolen personal information",
+      protection: "Advanced verification",
+      icon: User
+    },
+    {
+      title: "Transaction Fraud",
+      description: "Identify unusual spending patterns and suspicious transactions",
+      protection: "Instant alerts",
+      icon: AlertTriangle
+    }
+  ];
+
+  const industries = [
+    {
+      name: "E-commerce",
+      description: "Protect online stores from payment fraud and chargebacks",
+      metrics: ["40% reduction in chargebacks", "99.9% fraud detection", "Real-time protection"]
+    },
+    {
+      name: "Financial Services",
+      description: "Secure banking, lending, and investment platforms",
+      metrics: ["60% fraud prevention", "Compliance ready", "Advanced analytics"]
+    },
+    {
+      name: "Healthcare",
+      description: "Protect patient data and prevent insurance fraud",
+      metrics: ["HIPAA compliant", "Real-time monitoring", "Custom rules"]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO 
-        title="AI Financial Fraud Detection Platform - Zion Tech Group"
-        description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
-        keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
-        canonical="https://ziontechgroup.com/services/ai-financial-fraud-detection"
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-800 to-orange-900/20"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 text-red-300 text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
-              Fraud Prevention Platform
+              AI-Powered Financial Fraud Detection
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
-              AI Financial Fraud Detection
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Protect Your Business with
+              <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                {" "}AI Fraud Detection
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8">
-              Stop financial fraud before it happens. Our AI platform detects fraud with 99.2% accuracy, reducing losses by 85-95% and ensuring regulatory compliance.
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Stop financial fraud in its tracks with our advanced AI-powered detection system. 
+              Real-time protection with 99.9% accuracy, protecting your business 24/7 from fraudulent transactions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center text-cyan-400 font-semibold">
-                <Star className="w-5 h-5 mr-2 fill-current" />
-                4.9/5 Rating
-              </div>
-              <div className="flex items-center text-green-400 font-semibold">
-                <TrendingUp className="w-5 h-5 mr-2" />
-                99.2% Accuracy
-              </div>
-              <div className="flex items-center text-blue-400 font-semibold">
-                <Clock className="w-5 h-5 mr-2" />
-                Real-time Detection
-              </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg font-semibold text-white hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Free Trial
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border-2 border-red-500 text-red-400 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-300"
+              >
+                <Play className="w-5 h-5 inline mr-2" />
+                Watch Demo
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
-              Advanced Security Features
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced Fraud Detection Features
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology designed to protect your business from sophisticated financial fraud
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Everything you need to protect your business from financial fraud
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300"
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-slate-300 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fraud Types Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Fraud Protection
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Protect against all types of financial fraud with our AI-powered detection system
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {fraudTypes.map((fraud, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <fraud.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{fraud.title}</h3>
+                <p className="text-gray-300 mb-4">{fraud.description}</p>
+                <div className="inline-flex items-center px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-red-300 text-sm">
+                  {fraud.protection}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Tailored fraud protection for your industry's unique challenges
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">{industry.name}</h3>
+                <p className="text-gray-300 mb-6">{industry.description}</p>
+                <div className="space-y-2">
+                  {industry.metrics.map((metric, metricIndex) => (
+                    <div key={metricIndex} className="flex items-center text-red-400">
+                      <Shield className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <span className="text-sm">{metric}</span>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -179,110 +351,38 @@ const AIFinancialFraudDetection: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-              Proven Results
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose AI Fraud Detection?
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform delivers measurable security improvements that directly protect your bottom line
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Protect your business with intelligent fraud prevention
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
-                key={benefit}
-                initial={{ opacity: 0, y: 30 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-slate-300 font-medium">{benefit}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive fraud protection solutions for various financial and business sectors
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <p className="text-slate-300 font-medium">{useCase}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integrations Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
-              Seamless Integrations
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with your existing payment processors, banking systems, and business tools
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
-              <motion.div
-                key={integration}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-indigo-500 transition-colors"
-              >
-                <p className="text-slate-300 text-sm font-medium">{integration}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -290,35 +390,35 @@ const AIFinancialFraudDetection: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-              Transparent Pricing
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your transaction volume and security requirements
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your fraud protection needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
               <motion.div
-                key={plan.plan}
-                initial={{ opacity: 0, y: 30 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
+                viewport={{ once: true }}
+                className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-red-500 shadow-lg shadow-red-500/20' 
-                    : 'border-slate-700'
+                    ? 'border-red-500/50 bg-gradient-to-br from-red-500/10 to-orange-500/10' 
+                    : 'border-white/10'
                 }`}
               >
                 {plan.popular && (
@@ -328,31 +428,35 @@ const AIFinancialFraudDetection: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.plan}</h3>
-                  <div className="flex items-baseline justify-center">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-slate-400 ml-2">{plan.period}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-slate-300">
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                
-                <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }">
-                  Get Started
-                </button>
+
+                <Link
+                  to={plan.name === "Enterprise" ? "/contact" : "/signup"}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                  }`}
+                >
+                  {plan.cta}
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -360,74 +464,37 @@ const AIFinancialFraudDetection: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 px-4 bg-gradient-to-r from-red-600/20 to-orange-600/20">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Ready to Stop Financial Fraud?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Protect Your Business?
             </h2>
-            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-              Join 200+ companies that have protected their business with our AI-powered fraud detection platform
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses that trust our AI fraud detection to protect their financial transactions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg font-semibold text-white hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
               >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
+                Get Started Today
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border-2 border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Schedule Demo
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Contact Info */}
-      <section className="py-16 bg-slate-900">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-slate-300">
-              <div>
-                <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                <p className="font-semibold">Starting at $799/month</p>
-                <p className="text-sm">No setup fees, cancel anytime</p>
-              </div>
-              <div>
-                <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                <p className="font-semibold">Setup in 24 hours</p>
-                <p className="text-sm">Quick integration with your systems</p>
-              </div>
-              <div>
-                <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2" />
-                <p className="font-semibold">Enterprise Security</p>
-                <p className="text-sm">PCI DSS, SOC 2, GDPR compliant</p>
-              </div>
-            </div>
-            <div className="mt-8 p-6 bg-slate-800 rounded-xl border border-slate-700">
-              <p className="text-slate-300 mb-4">
-                <strong>Contact:</strong> +1 302 464 0950 | kleber@ziontechgroup.com
-              </p>
-              <p className="text-slate-300">
-                <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
-};
-
-export default AIFinancialFraudDetection;
+}
