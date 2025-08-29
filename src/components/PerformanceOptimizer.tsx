@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { Zap, TrendingUp, Clock, Database, Wifi, Cpu } from 'lucide-react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { Zap, TrendingUp, Clock, HardDrive, Wifi, Battery } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number;
@@ -11,93 +11,166 @@ interface PerformanceMetrics {
   windowLoad: number;
 }
 
-interface PerformanceOptimizerProps {
-  enableMonitoring?: boolean;
-  enableOptimizations?: boolean;
-  showMetrics?: boolean;
+interface NetworkInfo {
+  effectiveType: string;
+  downlink: number;
+  rtt: number;
+  saveData: boolean;
 }
 
-export function PerformanceOptimizer({
-  enableMonitoring = true,
-  enableOptimizations = true,
-  showMetrics = false
-}: PerformanceOptimizerProps) {
+export function PerformanceOptimizer() {
+  const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizationStatus, setOptimizationStatus] = useState<string[]>([]);
-  const observerRef = useRef<PerformanceObserver | null>(null);
-  const optimizationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [networkInfo, setNetworkInfo] = useState<NetworkInfo | null>(null);
+  const [batteryInfo, setBatteryInfo] = useState<any>(null);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const performanceObserverRef = useRef<PerformanceObserver | null>(null);
 
   // Performance monitoring
   useEffect(() => {
-    if (!enableMonitoring) return;
+    if ('PerformanceObserver' in window) {
+      // First Contentful Paint
+      try {
+        performanceObserverRef.current = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+              setMetrics(prev => prev ? { ...prev, fcp: entry.startTime } : null);
+            }
+          });
+        });
+        performanceObserverRef.current.observe({ entryTypes: ['paint'] });
+      } catch (e) {
+        console.warn('PerformanceObserver not supported');
+      }
 
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paint = performance.getEntriesByType('paint');
-        
-        const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-        const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
-        
-        const metrics: PerformanceMetrics = {
-          fcp: Math.round(fcp),
-          lcp: Math.round(lcp),
-          fid: 0, // Will be updated by observer
-          cls: 0, // Will be updated by observer
-          ttfb: Math.round(navigation.responseStart - navigation.requestStart),
-          domLoad: Math.round(navigation.domContentLoadedEventEnd - navigation.navigationStart),
-          windowLoad: Math.round(navigation.loadEventEnd - navigation.navigationStart)
-        };
+      // Largest Contentful Paint
+      try {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            setMetrics(prev => prev ? { ...prev, lcp: lastEntry.startTime } : null);
+          }
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (e) {
+        console.warn('LCP observer not supported');
+      }
 
-        setMetrics(metrics);
+      // First Input Delay
+      try {
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.entryType === 'first-input') {
+              setMetrics(prev => prev ? { ...prev, fid: entry.processingStart - entry.startTime } : null);
+            }
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch (e) {
+        console.warn('FID observer not supported');
+      }
+
+      // Cumulative Layout Shift
+      try {
+        const clsObserver = new PerformanceObserver((list) => {
+          let clsValue = 0;
+          list.getEntries().forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          setMetrics(prev => prev ? { ...prev, cls: clsValue } : null);
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch (e) {
+        console.warn('CLS observer not supported');
+      }
+    }
+
+    // DOM and Window load times
+    const handleLoad = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        setMetrics(prev => ({
+          ...prev,
+          ttfb: navigation.responseStart - navigation.requestStart,
+          domLoad: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          windowLoad: navigation.loadEventEnd - navigation.loadEventStart
+        } as PerformanceMetrics));
       }
     };
 
-    // Measure after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+      handleLoad();
     } else {
-      window.addEventListener('load', measurePerformance);
-      return () => window.removeEventListener('load', measurePerformance);
+      window.addEventListener('load', handleLoad);
     }
-  }, [enableMonitoring]);
 
-  // Performance observer for FID and CLS
+    return () => {
+      if (performanceObserverRef.current) {
+        performanceObserverRef.current.disconnect();
+      }
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
+  // Network information
   useEffect(() => {
-    if (!enableMonitoring) return;
-
-    try {
-      // First Input Delay observer
-      if ('PerformanceObserver' in window) {
-        observerRef.current = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              const fid = Math.round((entry as any).processingStart - (entry as any).startTime);
-              setMetrics(prev => prev ? { ...prev, fid } : null);
-            }
-          }
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      const updateNetworkInfo = () => {
+        setNetworkInfo({
+          effectiveType: connection.effectiveType || 'unknown',
+          downlink: connection.downlink || 0,
+          rtt: connection.rtt || 0,
+          saveData: connection.saveData || false
         });
-        
-        observerRef.current.observe({ entryTypes: ['first-input'] });
-      }
+      };
 
-      // Cumulative Layout Shift observer
-      if ('PerformanceObserver' in window) {
-        const clsObserver = new PerformanceObserver((list) => {
-          let cls = 0;
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift') {
-              cls += (entry as any).value;
-            }
-          }
-          setMetrics(prev => prev ? { ...prev, cls: Math.round(cls * 1000) / 1000 } : null);
-        });
+      updateNetworkInfo();
+      connection.addEventListener('change', updateNetworkInfo);
+
+      return () => connection.removeEventListener('change', updateNetworkInfo);
+    }
+  }, []);
+
+  // Battery information
+  useEffect(() => {
+    if ('getBattery' in navigator) {
+      (navigator as any).getBattery().then((battery: any) => {
+        setBatteryInfo(battery);
         
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      }
-    } catch (error) {
-      console.warn('Performance observer not supported:', error);
+        const updateBatteryInfo = () => {
+          setBatteryInfo(battery);
+        };
+
+        battery.addEventListener('levelchange', updateBatteryInfo);
+        battery.addEventListener('chargingchange', updateBatteryInfo);
+
+        return () => {
+          battery.removeEventListener('levelchange', updateBatteryInfo);
+          battery.removeEventListener('chargingchange', updateBatteryInfo);
+        };
+      });
+    }
+  }, []);
+
+  // Intersection Observer for visibility
+  useEffect(() => {
+    const target = document.body;
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    if (target) {
+      observerRef.current.observe(target);
     }
 
     return () => {
@@ -105,100 +178,49 @@ export function PerformanceOptimizer({
         observerRef.current.disconnect();
       }
     };
-  }, [enableMonitoring]);
+  }, []);
 
   // Performance optimizations
-  const runOptimizations = useCallback(async () => {
-    if (!enableOptimizations) return;
-
-    setIsOptimizing(true);
-    setOptimizationStatus([]);
-
-    const optimizations = [
-      'Preloading critical resources...',
-      'Optimizing images...',
-      'Compressing assets...',
-      'Caching strategies...',
-      'Bundle optimization...'
-    ];
-
-    for (let i = 0; i < optimizations.length; i++) {
-      setOptimizationStatus(prev => [...prev, optimizations[i]]);
-      await new Promise(resolve => setTimeout(resolve, 500));
-    }
-
-    // Simulate optimization completion
-    setTimeout(() => {
-      setIsOptimizing(false);
-      setOptimizationStatus(prev => [...prev, '✅ All optimizations completed']);
-    }, 1000);
-  }, [enableOptimizations]);
-
-  // Auto-optimize on performance issues
   useEffect(() => {
-    if (!enableOptimizations || !metrics) return;
+    const newOptimizations: string[] = [];
 
-    const shouldOptimize = 
-      metrics.fcp > 2000 || 
-      metrics.lcp > 4000 || 
-      metrics.fid > 100 || 
-      metrics.cls > 0.1;
-
-    if (shouldOptimize && !isOptimizing) {
-      optimizationTimeoutRef.current = setTimeout(() => {
-        runOptimizations();
-      }, 2000);
-    }
-
-    return () => {
-      if (optimizationTimeoutRef.current) {
-        clearTimeout(optimizationTimeoutRef.current);
+    // Check for performance issues and suggest optimizations
+    if (metrics) {
+      if (metrics.fcp > 1800) {
+        newOptimizations.push('First Contentful Paint is slow. Consider optimizing critical resources.');
       }
-    };
-  }, [metrics, enableOptimizations, isOptimizing, runOptimizations]);
+      if (metrics.lcp > 2500) {
+        newOptimizations.push('Largest Contentful Paint is slow. Optimize images and critical resources.');
+      }
+      if (metrics.fid > 100) {
+        newOptimizations.push('First Input Delay is high. Reduce JavaScript execution time.');
+      }
+      if (metrics.cls > 0.1) {
+        newOptimizations.push('Cumulative Layout Shift is high. Fix layout shifts.');
+      }
+    }
 
-  // Resource hints optimization
-  useEffect(() => {
-    if (!enableOptimizations) return;
+    if (networkInfo) {
+      if (networkInfo.effectiveType === 'slow-2g' || networkInfo.effectiveType === '2g') {
+        newOptimizations.push('Network is slow. Enable offline support and optimize bundle size.');
+      }
+      if (networkInfo.saveData) {
+        newOptimizations.push('Data saver is enabled. Minimize data usage.');
+      }
+    }
 
-    // Preload critical resources
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
-      '/images/hero-bg.jpg',
-      '/api/services'
-    ];
+    if (batteryInfo && batteryInfo.level < 0.2) {
+      newOptimizations.push('Battery is low. Reduce background processing and animations.');
+    }
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.includes('.woff2') ? 'font' : 'image';
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
+    setOptimizations(newOptimizations);
+  }, [metrics, networkInfo, batteryInfo]);
 
-    // DNS prefetch for external domains
-    const externalDomains = [
-      'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
-      'https://api.ziontechgroup.com'
-    ];
-
-    externalDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = domain;
-      document.head.appendChild(link);
-    });
-  }, [enableOptimizations]);
-
-  // Intersection Observer for lazy loading
-  useEffect(() => {
-    if (!enableOptimizations) return;
-
-    const lazyImages = document.querySelectorAll('img[data-src]');
+  // Lazy loading optimization
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
@@ -208,115 +230,116 @@ export function PerformanceOptimizer({
       });
     });
 
-    lazyImages.forEach(img => imageObserver.observe(img));
+    images.forEach((img) => imageObserver.observe(img));
+  }, []);
 
-    return () => imageObserver.disconnect();
-  }, [enableOptimizations]);
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/fonts/inter-var.woff2',
+      '/css/critical.css'
+    ];
 
-  // Performance score calculation
-  const getPerformanceScore = useCallback(() => {
-    if (!metrics) return 0;
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+  }, []);
 
-    let score = 100;
-    
-    // FCP scoring (0-2000ms = 100-0 points)
-    if (metrics.fcp > 2000) score -= Math.min(30, (metrics.fcp - 2000) / 100);
-    
-    // LCP scoring (0-4000ms = 100-0 points)
-    if (metrics.lcp > 4000) score -= Math.min(25, (metrics.lcp - 4000) / 160);
-    
-    // FID scoring (0-100ms = 100-0 points)
-    if (metrics.fid > 100) score -= Math.min(25, (metrics.fid - 100) / 4);
-    
-    // CLS scoring (0-0.1 = 100-0 points)
-    if (metrics.cls > 0.1) score -= Math.min(20, metrics.cls * 200);
+  useEffect(() => {
+    if (isVisible) {
+      optimizeImages();
+      preloadCriticalResources();
+    }
+  }, [isVisible, optimizeImages, preloadCriticalResources]);
 
-    return Math.max(0, Math.round(score));
-  }, [metrics]);
+  // Service Worker optimization
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then((registration) => {
+        // Enable background sync for offline support
+        if ('sync' in registration) {
+          console.log('Background sync available');
+        }
+      });
+    }
+  }, []);
 
-  const score = getPerformanceScore();
-  const scoreColor = score >= 90 ? 'text-green-400' : score >= 70 ? 'text-yellow-400' : 'text-red-400';
-
-  if (!showMetrics && !isOptimizing) return null;
+  if (!isVisible) return null;
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      {/* Performance Metrics Panel */}
-      {showMetrics && metrics && (
-        <div className="bg-slate-800/90 backdrop-blur-sm rounded-xl p-4 mb-4 border border-slate-600/50 shadow-2xl">
-          <div className="flex items-center gap-2 mb-3">
-            <Zap className="w-5 h-5 text-cyan-400" />
-            <h3 className="text-white font-semibold">Performance</h3>
-            <div className={`ml-auto text-2xl font-bold ${scoreColor}`}>
-              {score}
-            </div>
-          </div>
-          
-          <div className="space-y-2 text-sm">
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-green-400" />
-              <span className="text-gray-300">FCP:</span>
-              <span className={`font-mono ${metrics.fcp < 2000 ? 'text-green-400' : 'text-red-400'}`}>
-                {metrics.fcp}ms
+      <div className="bg-slate-800/90 backdrop-blur-sm rounded-2xl p-4 shadow-2xl border border-slate-700/50 max-w-sm">
+        <div className="flex items-center gap-2 mb-3">
+          <Zap className="w-5 h-5 text-yellow-400" />
+          <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
+        </div>
+
+        {metrics && (
+          <div className="space-y-2 mb-3">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-slate-300">FCP:</span>
+              <span className={`font-mono ${metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400'}`}>
+                {Math.round(metrics.fcp)}ms
               </span>
             </div>
-            
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-green-400" />
-              <span className="text-gray-300">LCP:</span>
-              <span className={`font-mono ${metrics.lcp < 4000 ? 'text-green-400' : 'text-red-400'}`}>
-                {metrics.lcp}ms
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-slate-300">LCP:</span>
+              <span className={`font-mono ${metrics.lcp < 2500 ? 'text-green-400' : 'text-red-400'}`}>
+                {Math.round(metrics.lcp)}ms
               </span>
             </div>
-            
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-blue-400" />
-              <span className="text-gray-300">FID:</span>
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-slate-300">FID:</span>
               <span className={`font-mono ${metrics.fid < 100 ? 'text-green-400' : 'text-red-400'}`}>
-                {metrics.fid}ms
-              </span>
-            </div>
-            
-            <div className="flex items-center gap-2">
-              <Database className="w-4 h-4 text-purple-400" />
-              <span className="text-gray-300">CLS:</span>
-              <span className={`font-mono ${metrics.cls < 0.1 ? 'text-green-400' : 'text-red-400'}`}>
-                {metrics.cls}
+                {Math.round(metrics.fid)}ms
               </span>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Optimization Status */}
-      {isOptimizing && (
-        <div className="bg-slate-800/90 backdrop-blur-sm rounded-xl p-4 border border-slate-600/50 shadow-2xl">
-          <div className="flex items-center gap-2 mb-3">
-            <Cpu className="w-5 h-5 text-cyan-400 animate-pulse" />
-            <h3 className="text-white font-semibold">Optimizing...</h3>
+        {networkInfo && (
+          <div className="flex items-center gap-2 mb-3 text-xs text-slate-300">
+            <Wifi className="w-4 h-4" />
+            <span>{networkInfo.effectiveType.toUpperCase()}</span>
+            <span>{Math.round(networkInfo.downlink)}Mbps</span>
           </div>
-          
-          <div className="space-y-2">
-            {optimizationStatus.map((status, index) => (
-              <div key={index} className="text-sm text-gray-300 flex items-center gap-2">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-                {status}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+        )}
 
-      {/* Manual Optimization Button */}
-      {enableOptimizations && !isOptimizing && (
-        <button
-          onClick={runOptimizations}
-          className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white p-3 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105"
-          title="Run Performance Optimizations"
-        >
-          <Zap className="w-5 h-5" />
-        </button>
-      )}
+        {batteryInfo && (
+          <div className="flex items-center gap-2 mb-3 text-xs text-slate-300">
+            <Battery className="w-4 h-4" />
+            <span>{Math.round(batteryInfo.level * 100)}%</span>
+            <span>{batteryInfo.charging ? '⚡' : '🔋'}</span>
+          </div>
+        )}
+
+        {optimizations.length > 0 && (
+          <div className="border-t border-slate-600 pt-3">
+            <div className="flex items-center gap-2 mb-2">
+              <TrendingUp className="w-4 h-4 text-blue-400" />
+              <span className="text-xs font-medium text-blue-400">Optimizations</span>
+            </div>
+            <ul className="space-y-1">
+              {optimizations.slice(0, 3).map((opt, index) => (
+                <li key={index} className="text-xs text-slate-300 flex items-start gap-2">
+                  <span className="text-blue-400 mt-1">•</span>
+                  <span>{opt}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className="text-xs text-slate-500 text-center mt-3">
+          <Clock className="w-3 h-3 inline mr-1" />
+          {new Date().toLocaleTimeString()}
+        </div>
+      </div>
     </div>
   );
 }
