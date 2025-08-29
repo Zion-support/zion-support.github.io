@@ -110,6 +110,39 @@ const RevolutionaryServices2030 = React.lazy(() => import('./pages/Revolutionary
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const ServicesComparison = React.lazy(() => import('./pages/ServicesComparisonPage'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const DeveloperPortal = React.lazy(() => import('./pages/Documentation'));
+const Community = React.lazy(() => import('./pages/Community'));
+const Help = React.lazy(() => import('./pages/FAQ'));
+const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
+const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
+const ITServices = React.lazy(() => import('./pages/ITServices'));
+const AIServices = React.lazy(() => import('./pages/AISolutions'));
+const MicroSaaS = React.lazy(() => import('./pages/MicroSaaS'));
+const ServicesCatalog = React.lazy(() => import('./pages/ServicesOverview'));
+const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
+const News = React.lazy(() => import('./pages/News'));
+const Events = React.lazy(() => import('./pages/Events'));
+const Accessibility = React.lazy(() => import('./pages/FAQ'));
+const Security = React.lazy(() => import('./pages/FAQ'));
+const Compliance = React.lazy(() => import('./pages/FAQ'));
+const Press = React.lazy(() => import('./pages/Press'));
+const Webinars = React.lazy(() => import('./pages/Webinars'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Signup = React.lazy(() => import('./pages/Login'));
+const SearchPage = React.lazy(() => import('./pages/FAQ'));
+const BlogPost = React.lazy(() => import('./pages/Blog'));
+const RequestQuote = React.lazy(() => import('./pages/Contact'));
+const Talent = React.lazy(() => import('./pages/Careers'));
+const Equipment = React.lazy(() => import('./pages/FAQ'));
+const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
+const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 
 function App() {
   return (
@@ -218,6 +251,36 @@ function App() {
                   <Route path="/pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                   <Route path="/schedule-demo" element={<ScheduleDemo />} />
                   <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                  <Route path="/services/services-comparison" element={<ServicesComparison />} />
+                  
+                  {/* Additional missing routes */}
+                  <Route path="/training" element={<Training />} />
+                  <Route path="/status" element={<Status />} />
+                  <Route path="/team" element={<Team />} />
+                  <Route path="/docs" element={<Documentation />} />
+                  <Route path="/developers" element={<DeveloperPortal />} />
+                  <Route path="/help" element={<Help />} />
+                  <Route path="/onsite-support" element={<OnsiteSupport />} />
+                  <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+                  <Route path="/it-services" element={<ITServices />} />
+                  <Route path="/ai-services" element={<AIServices />} />
+                  <Route path="/micro-saas" element={<MicroSaaS />} />
+                  <Route path="/services-catalog" element={<ServicesCatalog />} />
+                  <Route path="/services-overview" element={<ServicesOverview />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/events" element={<Events />} />
+                  <Route path="/accessibility" element={<Accessibility />} />
+                  <Route path="/security" element={<Security />} />
+                  <Route path="/compliance" element={<Compliance />} />
+                  <Route path="/press" element={<Press />} />
+                  <Route path="/sitemap" element={<Sitemap />} />
+                  <Route path="/signup" element={<Signup />} />
+                  <Route path="/search" element={<SearchPage />} />
+                  <Route path="/blog/:id" element={<BlogPost />} />
+                  <Route path="/talent" element={<Talent />} />
+                  <Route path="/equipment" element={<Equipment />} />
+                  <Route path="/research-development" element={<ResearchDevelopment />} />
+                  <Route path="/services/space-tech" element={<SpaceTech />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={<Home />} />
