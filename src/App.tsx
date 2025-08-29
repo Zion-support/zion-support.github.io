@@ -145,6 +145,7 @@ const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/Employe
 const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
 
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const EmergingTechShowcase2025 = React.lazy(() => import('./pages/EmergingTechShowcase2025'));
 
 const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -211,6 +212,7 @@ function App() {
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
               <Route path="/comprehensive-services-landing-2025" element={<ComprehensiveServicesLanding2025 />} />
+              <Route path="/emerging-tech-showcase-2025" element={<EmergingTechShowcase2025 />} />
               <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
               <Route path="/pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
               <Route path="/comprehensive-services-landing-2028" element={<ComprehensiveServicesLanding2028 />} />
