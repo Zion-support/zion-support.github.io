@@ -3,10 +3,10 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
->>>>>>> cursor/website-audit-content-update-and-deployment-c7b2
 import { SEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
+import { Users, Rocket, TrendingUp, Star, Brain, Cloud, Shield, Mic, FileText } from 'lucide-react';
 
 // Lazy load components for better performance
 const CategoriesSection = React.lazy(() => import("@/components/CategoriesSection"));
@@ -54,8 +54,16 @@ const serviceCategories = [
     description: "Cutting-edge artificial intelligence services for business transformation",
     icon: "🤖",
     href: "/ai-services",
-    count: 15,
+    count: 18,
     color: "from-cyan-500 to-blue-600"
+  },
+  {
+    name: "Voice & Document AI",
+    description: "Advanced voice recognition and document processing solutions",
+    icon: "🎤",
+    href: "/services/ai-voice-assistant",
+    count: 3,
+    color: "from-purple-500 to-pink-600"
   },
   {
     name: "Cloud & DevOps",
@@ -163,6 +171,30 @@ const aiServices = [
       "Real-time Dashboards",
       "Automated Reporting",
       "Custom ML Models"
+    ]
+  },
+  {
+    icon: Mic,
+    title: "AI Voice Assistant",
+    description: "Enterprise-grade voice AI platform with multi-language support and CRM integration.",
+    path: "/services/ai-voice-assistant",
+    features: [
+      "Advanced Speech Recognition",
+      "Multi-language Support",
+      "CRM Integration",
+      "Real-time Analytics"
+    ]
+  },
+  {
+    icon: FileText,
+    title: "AI Document Intelligence",
+    description: "Intelligent document processing with 99.9% OCR accuracy and automated workflows.",
+    path: "/services/ai-document-intelligence",
+    features: [
+      "Advanced OCR Technology",
+      "Data Extraction",
+      "Workflow Automation",
+      "Enterprise Security"
     ]
   },
   {

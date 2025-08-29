@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Mic, FileText } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -45,6 +45,8 @@ export function AppHeader() {
 
   const services = [
     { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'AI Voice Assistant', href: '/services/ai-voice-assistant', icon: Mic, description: 'Voice AI & Speech Recognition' },
+    { name: 'AI Document Intelligence', href: '/services/ai-document-intelligence', icon: FileText, description: 'Document Processing & OCR' },
     { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
     { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
     { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
@@ -77,6 +79,8 @@ export function AppHeader() {
       color: 'from-purple-600 to-pink-600',
       services: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Voice Assistant', href: '/services/ai-voice-assistant', description: 'Voice AI & Speech Recognition' },
+        { name: 'AI Document Intelligence', href: '/services/ai-document-intelligence', description: 'Document Processing & OCR' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
@@ -120,6 +124,8 @@ export function AppHeader() {
       color: 'from-purple-600 to-pink-600',
       solutions: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
+        { name: 'AI Voice Assistant', href: '/services/ai-voice-assistant', description: 'Voice AI & Speech Recognition' },
+        { name: 'AI Document Intelligence', href: '/services/ai-document-intelligence', description: 'Document Processing & OCR' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }

@@ -948,6 +948,340 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   }
 ];
+
+// New Innovative AI Services
+export const INNOVATIVE_AI_SERVICES: MicroSaasService[] = [
+  {
+    id: "ai-voice-assistant-platform",
+    title: "AI Voice Assistant Platform",
+    description: "Enterprise-grade voice AI platform with natural language processing, multi-language support, and seamless CRM integration.",
+    category: "AI Services",
+    subcategory: "Voice AI & Speech Recognition",
+    price: 199,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Advanced speech-to-text & text-to-speech",
+      "Multi-language support (100+ languages)",
+      "Custom voice cloning & branding",
+      "CRM integrations (Salesforce, HubSpot, Pipedrive)",
+      "Call analytics & insights dashboard",
+      "API access for custom integrations",
+      "24/7 technical support",
+      "White-label options"
+    ],
+    benefits: [
+      "Reduce call handling time by 70%",
+      "Improve customer satisfaction by 45%",
+      "24/7 multilingual customer support",
+      "Scalable voice interactions",
+      "Data-driven call insights"
+    ],
+    targetAudience: ["Call centers", "Customer service teams", "Sales organizations", "Multilingual businesses"],
+    marketPrice: "$199-599/month",
+    website: "https://ziontechgroup.com/ai-voice-assistant",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Voice AI", "Speech Recognition", "Call Center", "Multilingual"],
+    aiScore: 98,
+    rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-12-01T10:00:00.000Z"
+  },
+  {
+    id: "ai-document-intelligence",
+    title: "AI Document Intelligence Suite",
+    description: "Intelligent document processing platform that extracts, analyzes, and processes information from any document format.",
+    category: "AI Services",
+    subcategory: "Document Processing & OCR",
+    price: 149,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Advanced OCR for 200+ document types",
+      "Intelligent data extraction & validation",
+      "Automated form processing",
+      "Document classification & routing",
+      "Compliance monitoring & audit trails",
+      "API integration capabilities",
+      "Custom workflow automation",
+      "Enterprise security & encryption"
+    ],
+    benefits: [
+      "Reduce document processing time by 80%",
+      "Eliminate manual data entry errors",
+      "Improve compliance accuracy by 95%",
+      "Streamline workflow automation",
+      "Cost savings of $50K+ annually"
+    ],
+    targetAudience: ["Legal firms", "Financial institutions", "Healthcare organizations", "Government agencies"],
+    marketPrice: "$149-399/month",
+    website: "https://ziontechgroup.com/ai-document-intelligence",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Document Processing", "OCR", "Data Extraction", "Workflow Automation"],
+    aiScore: 96,
+    rating: 4.8,
+    reviewCount: 134,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-12-01T10:00:00.000Z"
+  },
+  {
+    id: "ai-predictive-maintenance",
+    title: "AI Predictive Maintenance Platform",
+    description: "IoT-powered predictive maintenance solution that prevents equipment failures and optimizes maintenance schedules.",
+    category: "AI Services",
+    subcategory: "IoT & Predictive Analytics",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time equipment monitoring",
+      "AI-powered failure prediction",
+      "Maintenance schedule optimization",
+      "Cost analysis & ROI tracking",
+      "Mobile app for field technicians",
+      "Integration with existing systems",
+      "Custom alerting & notifications",
+      "24/7 monitoring support"
+    ],
+    benefits: [
+      "Reduce unplanned downtime by 60%",
+      "Lower maintenance costs by 40%",
+      "Extend equipment lifespan by 25%",
+      "Improve safety & compliance",
+      "ROI of 300%+ within 12 months"
+    ],
+    targetAudience: ["Manufacturing", "Energy companies", "Transportation", "Facility management"],
+    marketPrice: "$299-899/month",
+    website: "https://ziontechgroup.com/ai-predictive-maintenance",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Predictive Maintenance", "IoT", "Equipment Monitoring", "Analytics"],
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 67,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-12-01T10:00:00.000Z"
+  }
+];
+
+// New IT Infrastructure Services
+export const IT_INFRASTRUCTURE_SERVICES: MicroSaasService[] = [
+  {
+    id: "zero-trust-security-platform",
+    title: "Zero Trust Security Platform",
+    description: "Comprehensive zero-trust security solution with identity verification, network segmentation, and continuous monitoring.",
+    category: "IT Services",
+    subcategory: "Cybersecurity & Network Security",
+    price: 399,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Identity & access management (IAM)",
+      "Network segmentation & micro-segmentation",
+      "Continuous threat monitoring",
+      "Multi-factor authentication (MFA)",
+      "Privileged access management",
+      "Security analytics & reporting",
+      "Compliance monitoring (SOC2, ISO27001)",
+      "24/7 security operations center"
+    ],
+    benefits: [
+      "Reduce security incidents by 85%",
+      "Achieve compliance requirements faster",
+      "Protect against advanced threats",
+      "Simplify security management",
+      "Lower insurance premiums"
+    ],
+    targetAudience: ["Financial services", "Healthcare", "Government", "Enterprise companies"],
+    marketPrice: "$399-1299/month",
+    website: "https://ziontechgroup.com/zero-trust-security",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Zero Trust", "Cybersecurity", "Network Security", "Compliance"],
+    aiScore: 99,
+    rating: 4.9,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-12-01T10:00:00.000Z"
+  },
+  {
+    id: "cloud-migration-platform",
+    title: "Cloud Migration Platform",
+    description: "End-to-end cloud migration solution with automated assessment, planning, and execution for seamless cloud transitions.",
+    category: "IT Services",
+    subcategory: "Cloud Migration & Strategy",
+    price: 599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Automated workload assessment",
+      "Migration planning & cost analysis",
+      "Zero-downtime migration execution",
+      "Performance optimization",
+      "Security & compliance validation",
+      "Post-migration support",
+      "Multi-cloud management",
+      "Dedicated migration team"
+    ],
+    benefits: [
+      "Reduce migration time by 50%",
+      "Lower cloud costs by 30%",
+      "Minimize business disruption",
+      "Improve scalability & performance",
+      "Expert guidance throughout process"
+    ],
+    targetAudience: ["Enterprise companies", "Mid-market businesses", "Government agencies", "Healthcare organizations"],
+    marketPrice: "$599-1999/month",
+    website: "https://ziontechgroup.com/cloud-migration",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Cloud Migration", "AWS", "Azure", "GCP", "Strategy"],
+    aiScore: 95,
+    rating: 4.8,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-12-01T10:00:00.000Z"
+  }
+];
+
+// New Micro SaaS Solutions
+export const MICRO_SAAS_SOLUTIONS: MicroSaasService[] = [
+  {
+    id: "ai-customer-success-platform",
+    title: "AI Customer Success Platform",
+    description: "Intelligent customer success platform that predicts churn, identifies upsell opportunities, and automates customer engagement.",
+    category: "Micro SaaS",
+    subcategory: "Customer Success & Retention",
+    price: 89,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Churn prediction & prevention",
+      "Customer health scoring",
+      "Automated engagement workflows",
+      "Upsell opportunity identification",
+      "Customer feedback collection",
+      "Success metrics dashboard",
+      "Integration with CRM systems",
+      "Mobile app for success managers"
+    ],
+    benefits: [
+      "Reduce customer churn by 35%",
+      "Increase upsell revenue by 50%",
+      "Improve customer satisfaction scores",
+      "Automate routine success tasks",
+      "Data-driven success strategies"
+    ],
+    targetAudience: ["SaaS companies", "B2B businesses", "Subscription services", "Customer success teams"],
+    marketPrice: "$89-299/month",
+    website: "https://ziontechgroup.com/ai-customer-success",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Customer Success", "Churn Prevention", "Upselling", "Automation"],
+    aiScore: 94,
+    rating: 4.7,
+    reviewCount: 123,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-12-01T10:00:00.000Z"
+  },
+  {
+    id: "ai-recruitment-platform",
+    title: "AI Recruitment Platform",
+    description: "Intelligent recruitment platform that automates candidate sourcing, screening, and matching for faster, better hiring decisions.",
+    category: "Micro SaaS",
+    subcategory: "HR & Recruitment",
+    price: 129,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered candidate sourcing",
+      "Automated resume screening",
+      "Skills assessment & testing",
+      "Interview scheduling automation",
+      "Candidate matching algorithms",
+      "Diversity & inclusion tracking",
+      "Integration with ATS systems",
+      "Analytics & reporting dashboard"
+    ],
+    benefits: [
+      "Reduce time-to-hire by 60%",
+      "Improve candidate quality by 40%",
+      "Lower recruitment costs by 35%",
+      "Enhance diversity hiring",
+      "Better candidate experience"
+    ],
+    targetAudience: ["HR departments", "Recruitment agencies", "Startups", "Enterprise companies"],
+    marketPrice: "$129-399/month",
+    website: "https://ziontechgroup.com/ai-recruitment",
+    contactEmail: "kleber@ziontechgroup.com",
+    tags: ["Recruitment", "AI Screening", "HR Automation", "Talent Acquisition"],
+    aiScore: 93,
+    rating: 4.6,
+    reviewCount: 78,
+    featured: true,
+    location: "Global",
+    availability: "Immediate",
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      verified: true
+    },
+    images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-12-01T10:00:00.000Z"
+  }
+];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };

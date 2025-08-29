@@ -81,6 +81,10 @@ const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflo
 const AICustomerExperiencePlatform = React.lazy(() => import('./pages/services/AICustomerExperiencePlatform'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 
+// New Innovative AI Services
+const AIVoiceAssistant = React.lazy(() => import('./pages/services/AIVoiceAssistant'));
+const AIDocumentIntelligence = React.lazy(() => import('./pages/services/AIDocumentIntelligence'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -200,6 +204,10 @@ function App() {
               <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
               <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              
+              {/* New Innovative AI Services Routes */}
+              <Route path="/services/ai-voice-assistant" element={<AIVoiceAssistant />} />
+              <Route path="/services/ai-document-intelligence" element={<AIDocumentIntelligence />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
