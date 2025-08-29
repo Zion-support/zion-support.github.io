@@ -117,7 +117,6 @@ export default function NotFound() {
       {/* Popular Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div>
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -170,7 +169,6 @@ export default function NotFound() {
               </motion.div>
             ))}
           </motion.div>
-          </div>
         </div>
       </section>
 

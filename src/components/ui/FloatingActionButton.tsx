@@ -1,6 +1,6 @@
+import { AnimatePresence, motion } from 'framer-motion';
+import { ArrowUp, Mail, MessageCircle, Phone, Plus, X } from 'lucide-react';
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, MessageCircle, Phone, Mail, ArrowUp, X } from 'lucide-react';
 
 interface FloatingActionButtonProps {
   className?: string;

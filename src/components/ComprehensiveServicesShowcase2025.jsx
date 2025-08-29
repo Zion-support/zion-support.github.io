@@ -1,20 +1,20 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Search, 
-  Clock, 
-  Shield, 
-  ExternalLink, 
-  CheckCircle, 
-  TrendingUp 
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+  CheckCircle,
+  Clock,
+  ExternalLink,
+  Mail,
+  MapPin,
+  Phone,
+  Search,
+  Shield,
+  TrendingUp
 } from 'lucide-react';
+import { useState } from 'react';
 
 // Import the services data
-import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/cleanInnovativeMicroSaasServices2025';
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
+import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/cleanInnovativeMicroSaasServices2025';
 import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
 const ComprehensiveServicesShowcase2025 = () => {
