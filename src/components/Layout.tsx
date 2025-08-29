@@ -197,7 +197,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     >
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.label}</span>
-                    </a>
+                    </Link>
                   )}
 
                   {/* Mobile Dropdown */}
