@@ -47,7 +47,10 @@ import {
   Calendar,
   UserCheck,
   ShieldCheck,
-  Zap as ZapIcon
+  Zap as ZapIcon,
+  ShoppingCart,
+  Gauge,
+  MessageCircle as MessageCircleIcon
 } from 'lucide-react';
 import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
 
@@ -438,6 +441,14 @@ export default function EnhancedServicesShowcase2025() {
                   <List className="w-4 h-4" />
                 </button>
               </div>
+            </div>
+
+            {/* Results Count */}
+            <div className="mt-4 text-sm text-gray-400">
+              Showing {filteredServices.length} of {enhancedServicesCatalog2025.length} services
+              {selectedCategory !== 'all' && (
+                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></>
+              )}
             </div>
           </div>
         </div>
