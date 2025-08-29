@@ -1,15 +1,14 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
 import { 
-  Network, 
+  Users, 
   Brain, 
   BarChart3, 
-  Truck, 
-  Warehouse, 
-  Globe, 
   Target, 
+  Zap, 
+  Search, 
+  Briefcase, 
   CheckCircle,
   ArrowRight,
   Star,
@@ -17,78 +16,79 @@ import {
   DollarSign,
   TrendingUp,
   Shield,
-  Zap
+  Cpu,
+  Filter
 } from 'lucide-react';
 
-const AISupplyChainOptimization: React.FC = () => {
+const AIHRTalentAcquisition: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI Demand Forecasting",
-      description: "Predict demand with 92% accuracy using machine learning models that analyze historical data, market trends, and external factors."
+      title: "AI-Powered Candidate Matching",
+      description: "Advanced algorithms that match candidates to job requirements with 94% accuracy using skills, experience, and cultural fit analysis."
     },
     {
-      icon: Network,
-      title: "Route Optimization",
-      description: "AI-powered logistics optimization that reduces delivery costs by 25% and improves delivery times by 30%."
+      icon: Search,
+      title: "Intelligent Sourcing",
+      description: "Automated candidate discovery across multiple platforms, social networks, and databases to find passive talent."
     },
     {
-      icon: Warehouse,
-      title: "Inventory Management",
-      description: "Smart inventory control with automated reorder points, safety stock calculations, and demand-driven replenishment."
+      icon: BarChart3,
+      title: "Predictive Analytics",
+      description: "Data-driven insights into candidate success probability, time-to-hire optimization, and recruitment funnel performance."
     },
     {
-      icon: Globe,
-      title: "Global Supply Chain Visibility",
-      description: "End-to-end visibility across your entire supply chain with real-time tracking and predictive analytics."
+      icon: Filter,
+      title: "Smart Screening",
+      description: "Automated resume parsing, skill assessment, and initial screening to reduce manual review time by 70%."
     }
   ];
 
   const benefits = [
-    "Reduce supply chain costs by 20-35%",
-    "Improve delivery performance by 40%",
-    "Reduce inventory carrying costs by 25%",
-    "Increase supplier collaboration efficiency by 50%",
-    "Minimize supply chain disruptions by 60%"
+    "Reduce time-to-hire by 40-60%",
+    "Improve candidate quality by 35%",
+    "Reduce recruitment costs by 30%",
+    "Increase diversity in hiring by 45%",
+    "Automate 80% of screening processes"
   ];
 
   const useCases = [
-    "Manufacturing & Production",
-    "Retail & E-commerce",
-    "Healthcare & Pharmaceuticals",
-    "Food & Beverage",
-    "Automotive & Aerospace",
-    "Logistics & Transportation"
+    "Corporate Recruiting",
+    "Tech Hiring",
+    "Healthcare Staffing",
+    "Sales & Marketing",
+    "Executive Search",
+    "Contract Staffing"
   ];
 
   const integrations = [
-    "SAP, Oracle, Microsoft Dynamics",
-    "Shopify, WooCommerce, Magento",
-    "FedEx, UPS, DHL APIs",
-    "QuickBooks, Xero, NetSuite",
-    "Salesforce, HubSpot, Pipedrive"
+    "LinkedIn, Indeed, Glassdoor",
+    "Workday, BambooHR, ADP",
+    "Greenhouse, Lever, Workable",
+    "Slack, Microsoft Teams, Email",
+    "Calendly, Zoom, Google Meet"
   ];
 
   const pricing = [
     {
       plan: "Starter",
-      price: "$599",
+      price: "$399",
       period: "/month",
-      features: ["Up to 5 locations", "Basic demand forecasting", "Route optimization", "Standard support"],
+      features: ["Up to 50 active jobs", "Basic AI matching", "Resume parsing", "Standard support"],
       popular: false
     },
     {
       plan: "Professional",
-      price: "$1,299",
+      price: "$899",
       period: "/month",
-      features: ["Up to 25 locations", "Advanced AI models", "Multi-warehouse optimization", "Priority support", "API access"],
+      features: ["Up to 200 active jobs", "Advanced AI models", "Predictive analytics", "Priority support", "API access"],
       popular: true
     },
     {
       plan: "Enterprise",
       price: "Custom",
       period: "",
-      features: ["Unlimited locations", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
+      features: ["Unlimited jobs", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
     }
   ];
@@ -96,15 +96,15 @@ const AISupplyChainOptimization: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
-        title="AI Supply Chain Optimization Platform - Zion Tech Group"
-        description="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 20-35%, improve delivery performance."
-        keywords="supply chain optimization, AI logistics, demand forecasting, inventory management, route optimization, supply chain analytics"
-        canonical="https://ziontechgroup.com/services/ai-supply-chain-optimization"
+        title="AI HR Talent Acquisition Platform - Zion Tech Group"
+        description="Transform your hiring process with AI-powered talent acquisition. Reduce time-to-hire by 40-60%, improve candidate quality by 35%, and automate 80% of screening processes."
+        keywords="talent acquisition, AI recruiting, HR automation, candidate matching, recruitment software, hiring platform"
+        canonical="https://ziontechgroup.com/services/ai-hr-talent-acquisition"
       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-800 to-green-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-slate-800 to-purple-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -113,14 +113,14 @@ const AISupplyChainOptimization: React.FC = () => {
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
-              <Network className="w-4 h-4 mr-2" />
-              Supply Chain AI Platform
+              <Users className="w-4 h-4 mr-2" />
+              Talent Acquisition Platform
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-              AI Supply Chain Optimization
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AI HR Talent Acquisition
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8">
-              Transform your supply chain with AI-powered optimization. Reduce costs by 20-35%, improve delivery performance by 40%, and gain end-to-end visibility.
+              Revolutionize your hiring process with AI-powered talent acquisition. Find the best candidates faster, reduce costs, and build stronger teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center text-cyan-400 font-semibold">
@@ -129,37 +129,12 @@ const AISupplyChainOptimization: React.FC = () => {
               </div>
               <div className="flex items-center text-green-400 font-semibold">
                 <TrendingUp className="w-5 h-5 mr-2" />
-                92% Accuracy
+                94% Accuracy
               </div>
               <div className="flex items-center text-blue-400 font-semibold">
                 <Clock className="w-5 h-5 mr-2" />
-                Real-time Updates
+                40-60% Faster Hiring
               </div>
-            </div>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">20-35%</div>
-              <div className="text-slate-400">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">30-50%</div>
-              <div className="text-slate-400">Lead Time Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">25-40%</div>
-              <div className="text-slate-400">Inventory Optimization</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">40-60%</div>
-              <div className="text-slate-400">Efficiency Improvement</div>
             </div>
           </motion.div>
         </div>
@@ -175,11 +150,11 @@ const AISupplyChainOptimization: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Advanced AI Capabilities
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to optimize every aspect of your supply chain operations
+              Cutting-edge artificial intelligence designed to transform every aspect of your talent acquisition process
             </p>
           </motion.div>
           
@@ -193,7 +168,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -218,7 +193,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Measurable Results
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform delivers quantifiable improvements across your entire supply chain
+              Our AI platform delivers quantifiable improvements across your entire recruitment process
             </p>
           </motion.div>
           
@@ -256,7 +231,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Industry Solutions
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Tailored AI optimization solutions for various industries and business models
+              Tailored AI recruitment solutions for various industries and hiring needs
             </p>
           </motion.div>
           
@@ -271,7 +246,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-6 h-6 text-white" />
+                  <Briefcase className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-slate-300 font-medium">{useCase}</p>
               </motion.div>
@@ -294,7 +269,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Seamless Integrations
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with your existing ERP, CRM, and logistics systems without disruption
+              Connect with your existing HR systems, job boards, and communication tools
             </p>
           </motion.div>
           
@@ -329,7 +304,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your supply chain complexity and business needs
+              Choose the plan that fits your hiring volume and recruitment needs
             </p>
           </motion.div>
           
@@ -349,7 +324,7 @@ const AISupplyChainOptimization: React.FC = () => {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -374,7 +349,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 
                 <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }">
                   Get Started
@@ -386,7 +361,7 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -395,10 +370,10 @@ const AISupplyChainOptimization: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your Hiring?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join 300+ companies that have transformed their supply chain operations with AI-powered optimization
+              Join 150+ companies that have revolutionized their recruitment process with our AI-powered talent acquisition platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -415,10 +390,6 @@ const AISupplyChainOptimization: React.FC = () => {
                 Schedule Demo
               </a>
             </div>
-            <div className="mt-6 text-slate-400">
-              <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>
-              <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">ziontechgroup.com</a></p>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -431,13 +402,13 @@ const AISupplyChainOptimization: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-6 text-slate-300">
               <div>
                 <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                <p className="font-semibold">Starting at $599/month</p>
+                <p className="font-semibold">Starting at $399/month</p>
                 <p className="text-sm">No setup fees, cancel anytime</p>
               </div>
               <div>
                 <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />
-                <p className="font-semibold">Setup in 48 hours</p>
-                <p className="text-sm">Quick integration with your systems</p>
+                <p className="font-semibold">Setup in 24 hours</p>
+                <p className="text-sm">Quick integration with your HR systems</p>
               </div>
               <div>
                 <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2" />
@@ -460,4 +431,4 @@ const AISupplyChainOptimization: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimization;
+export default AIHRTalentAcquisition;

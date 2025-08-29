@@ -1,119 +1,119 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone } from 'lucide-react';
+import { PenTool, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Edit3, Type, Image, Video, Music } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AISupportHelpdesk() {
+export default function AIContentGenerator() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Support",
-      description: "Intelligent chatbots and virtual agents that understand context and provide accurate, helpful responses 24/7."
+      title: "AI-Powered Writing",
+      description: "Advanced language models that generate high-quality, engaging content in multiple styles and tones."
     },
     {
-      icon: MessageCircle,
-      title: "Multi-channel Support",
-      description: "Seamless support across email, chat, phone, social media, and self-service portals."
+      icon: PenTool,
+      title: "Multi-format Content",
+      description: "Create blog posts, articles, social media content, emails, and marketing copy with AI assistance."
     },
     {
       icon: Zap,
-      title: "Instant Resolution",
-      description: "Automated ticket routing, smart categorization, and AI-powered solutions for faster issue resolution."
+      title: "Instant Generation",
+      description: "Generate content in seconds with customizable templates and intelligent suggestions."
     },
     {
       icon: BarChart3,
-      title: "Advanced Analytics",
-      description: "Comprehensive insights into support performance, customer satisfaction, and operational efficiency."
+      title: "SEO Optimization",
+      description: "AI-powered SEO recommendations and keyword optimization for better search rankings."
     },
     {
       icon: Smartphone,
       title: "Mobile-First Design",
-      description: "Fully responsive support platform accessible on any device with native mobile apps."
+      description: "Create and edit content on any device with our responsive platform and mobile apps."
     },
     {
       icon: Globe,
-      title: "Global Support",
-      description: "Multi-language support with localization and timezone-aware routing for global teams."
+      title: "Multi-language Support",
+      description: "Generate content in over 50 languages with native-level quality and cultural adaptation."
     }
   ];
 
-  const aiCapabilities = [
+  const contentTypes = [
     {
-      icon: Brain,
-      title: "Natural Language Processing",
-      description: "Advanced NLP for understanding customer intent and context"
+      icon: Edit3,
+      title: "Blog Posts & Articles",
+      description: "Long-form content with research, citations, and engaging narratives"
     },
     {
-      icon: MessageCircle,
-      title: "Conversational AI",
-      description: "Human-like conversations with personality and empathy"
+      icon: Type,
+      title: "Social Media Content",
+      description: "Platform-optimized posts for Twitter, LinkedIn, Instagram, and Facebook"
     },
     {
-      icon: Zap,
-      title: "Predictive Analytics",
-      description: "Anticipate issues and proactively resolve problems"
+      icon: FileText,
+      title: "Marketing Copy",
+      description: "Compelling ad copy, landing pages, and promotional materials"
     },
     {
-      icon: Shield,
-      title: "Smart Escalation",
-      description: "Intelligent routing to the right agent or department"
+      icon: Mail,
+      title: "Email Campaigns",
+      description: "Newsletters, drip campaigns, and personalized email content"
     },
     {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Round-the-clock support without human intervention"
+      icon: Image,
+      title: "Visual Content",
+      description: "AI-generated images, infographics, and visual assets"
     },
     {
-      icon: Users,
-      title: "Learning & Improvement",
-      description: "Continuous learning from interactions to improve responses"
+      icon: Video,
+      title: "Video Scripts",
+      description: "Scripts for YouTube, TikTok, and marketing videos"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Support Starter",
-      price: "$79",
+      name: "Content Creator",
+      price: "$39",
       period: "/month",
-      description: "Perfect for small teams starting with AI support",
+      description: "Perfect for individual creators and small businesses",
       features: [
-        "Up to 5 agents",
-        "Basic AI chatbot",
-        "Email & chat support",
-        "Standard reporting",
+        "Up to 100 content pieces/month",
+        "Basic AI writing tools",
+        "5 content templates",
+        "Standard SEO suggestions",
         "Mobile app access",
         "Email support"
       ],
       popular: false
     },
     {
-      name: "Support Professional",
-      price: "$199",
+      name: "Content Professional",
+      price: "$99",
       period: "/month",
-      description: "Ideal for growing support teams with advanced needs",
+      description: "Ideal for growing businesses and content teams",
       features: [
-        "Up to 20 agents",
+        "Up to 500 content pieces/month",
         "Advanced AI capabilities",
-        "Multi-channel support",
-        "Advanced analytics",
+        "Unlimited templates",
+        "Advanced SEO tools",
         "Priority support",
         "API access",
-        "Custom integrations"
+        "Team collaboration"
       ],
       popular: true
     },
     {
-      name: "Support Enterprise",
-      price: "$499",
+      name: "Content Enterprise",
+      price: "$299",
       period: "/month",
-      description: "For large organizations with complex support requirements",
+      description: "For large organizations with high-volume content needs",
       features: [
-        "Unlimited agents",
+        "Unlimited content generation",
         "Custom AI models",
         "White-label solutions",
-        "Dedicated support manager",
-        "Advanced security",
+        "Dedicated content manager",
+        "Advanced analytics",
         "Custom training",
         "On-premise options"
       ],
@@ -123,72 +123,72 @@ export default function AISupportHelpdesk() {
 
   const benefits = [
     {
-      title: "Reduce Support Costs",
-      description: "Automate routine inquiries and reduce the need for human agents by up to 70%.",
+      title: "Save Time & Resources",
+      description: "Generate high-quality content in minutes instead of hours, freeing up your team for strategic work.",
+      icon: Clock
+    },
+    {
+      title: "Improve Content Quality",
+      description: "AI-powered suggestions and optimization improve readability, engagement, and SEO performance.",
       icon: TrendingUp
     },
     {
-      title: "Improve Customer Satisfaction",
-      description: "Provide instant, accurate responses and faster resolution times for better customer experience.",
-      icon: Users
-    },
-    {
-      title: "Scale Support Operations",
-      description: "Handle unlimited support requests without increasing headcount or response times.",
+      title: "Scale Content Production",
+      description: "Create unlimited content without increasing headcount or compromising quality.",
       icon: Globe
     },
     {
-      title: "Gain Actionable Insights",
-      description: "Understand customer needs and improve products with comprehensive support analytics.",
-      icon: BarChart3
+      title: "Maintain Brand Consistency",
+      description: "Ensure all content follows your brand guidelines and voice with AI-powered style guides.",
+      icon: Shield
     }
   ];
 
-  const supportChannels = [
+  const useCases = [
     {
-      icon: MessageCircle,
-      title: "Live Chat",
-      description: "Real-time chat support with AI assistance and human handoff"
+      icon: Users,
+      title: "Marketing Teams",
+      description: "Generate campaign content, social media posts, and promotional materials"
     },
     {
-      icon: Mail,
-      title: "Email Support",
-      description: "Structured email support with automated categorization and routing"
-    },
-    {
-      icon: Phone,
-      title: "Phone Support",
-      description: "Voice support with AI call screening and intelligent routing"
+      icon: BookOpen,
+      title: "Content Creators",
+      description: "Create blog posts, articles, and long-form content efficiently"
     },
     {
       icon: Globe,
-      title: "Self-Service Portal",
-      description: "Knowledge base and FAQ with AI-powered search and suggestions"
+      title: "E-commerce",
+      description: "Generate product descriptions, category pages, and marketing copy"
     },
     {
-      icon: Smartphone,
-      title: "Mobile App",
-      description: "Native mobile apps for iOS and Android with push notifications"
+      icon: Settings,
+      title: "Agencies",
+      description: "Scale client content production with AI-powered tools"
     },
     {
-      icon: Users,
-      title: "Social Media",
-      description: "Monitor and respond to support requests across social platforms"
+      icon: Target,
+      title: "Startups",
+      description: "Create professional content without large marketing budgets"
+    },
+    {
+      icon: Award,
+      title: "Enterprises",
+      description: "Maintain consistent brand voice across global content operations"
     }
   ];
 
   return (
     <>
       <SEO 
-        title="AI Support Helpdesk - Zion Tech Group"
-        description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
-        canonical="/services/ai-support-helpdesk"
+        title="AI Content Generator - Zion Tech Group"
+        description="Professional AI-powered content generation platform for creating high-quality blog posts, social media content, marketing copy, and more with intelligent automation."
+        canonical="/services/ai-content-generator"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-cyan-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
@@ -197,24 +197,24 @@ export default function AISupportHelpdesk() {
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-400 bg-clip-text text-transparent">
-                    AI Support Helpdesk
+                  <span className="bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent">
+                    AI Content Generator
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, 
-                  and advanced analytics for exceptional customer service. Transform your support operations with AI.
+                  Professional AI-powered content generation platform for creating high-quality blog posts, social media content, 
+                  marketing copy, and more. Transform your content creation with intelligent automation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/request-quote"
-                    className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                    className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Start Free Trial
                   </Link>
                   <Link 
                     to="/contact"
-                    className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
+                    className="px-8 py-4 border-2 border-pink-500 text-pink-400 rounded-lg font-semibold hover:bg-pink-500 hover:text-white transition-all duration-300"
                   >
                     Schedule Demo
                   </Link>
@@ -229,10 +229,10 @@ export default function AISupportHelpdesk() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
-                Powerful AI Support Features
+                Powerful AI Content Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to deliver exceptional customer support with AI assistance
+                Everything you need to create engaging, high-quality content with AI assistance
               </p>
             </div>
             
@@ -243,9 +243,9 @@ export default function AISupportHelpdesk() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
@@ -256,64 +256,64 @@ export default function AISupportHelpdesk() {
           </div>
         </section>
 
-        {/* AI Capabilities Section */}
+        {/* Content Types Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
-                Advanced AI Capabilities
+                Create Any Type of Content
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Intelligent automation that understands and helps your customers
+                From blog posts to social media content, our AI handles it all
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index) => (
+              {contentTypes.map((type, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <capability.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                    <type.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">{capability.title}</h3>
-                  <p className="text-gray-300">{capability.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{type.title}</h3>
+                  <p className="text-gray-300">{type.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Support Channels Section */}
+        {/* Use Cases Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
-                Multi-Channel Support
+                Perfect for Every Team
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Meet your customers where they are with comprehensive support channels
+                Whether you're a solo creator or enterprise team, our platform scales with you
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index) => (
+              {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                    <channel.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">{channel.title}</h3>
-                  <p className="text-gray-300">{channel.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -325,10 +325,10 @@ export default function AISupportHelpdesk() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
-                Why Choose Our AI Support Platform?
+                Why Choose Our AI Content Platform?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Professional support tools that transform customer service with AI
+                Professional content creation tools that transform how you write and publish
               </p>
             </div>
             
@@ -341,7 +341,7 @@ export default function AISupportHelpdesk() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -362,7 +362,7 @@ export default function AISupportHelpdesk() {
                 Transparent Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the support plan that fits your team size and requirements
+                Choose the content generation plan that fits your needs
               </p>
             </div>
             
@@ -375,13 +375,13 @@ export default function AISupportHelpdesk() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular 
-                      ? 'border-teal-500 ring-2 ring-teal-500/20' 
+                      ? 'border-pink-500 ring-2 ring-pink-500/20' 
                       : 'border-slate-700'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -409,7 +409,7 @@ export default function AISupportHelpdesk() {
                     to="/request-quote"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-teal-500 to-cyan-600 text-white hover:from-teal-600 hover:to-cyan-700'
+                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
                   >
@@ -422,7 +422,7 @@ export default function AISupportHelpdesk() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">
+        <section className="py-20 bg-gradient-to-r from-pink-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -430,21 +430,21 @@ export default function AISupportHelpdesk() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
-                Ready to Transform Your Support?
+                Ready to Transform Your Content Creation?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using our AI platform to deliver exceptional customer service.
+                Join thousands of creators using our AI platform to generate amazing content.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                 </Link>
                 <Link 
                   to="/contact"
-                  className="px-8 py-4 border-2 border-teal-500 text-teal-400 rounded-lg font-semibold hover:bg-teal-500 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border-2 border-pink-500 text-pink-400 rounded-lg font-semibold hover:bg-pink-500 hover:text-white transition-all duration-300"
                 >
                   Contact Sales
                 </Link>
@@ -456,4 +456,3 @@ export default function AISupportHelpdesk() {
     </>
   );
 }
-

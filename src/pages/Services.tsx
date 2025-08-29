@@ -47,10 +47,54 @@ import {
 export default function Services() {
   const serviceCategories = [
     {
-      name: 'AI & Machine Learning',
+      name: 'Revolutionary AI Services',
       icon: Brain,
-      description: 'Cutting-edge artificial intelligence and machine learning solutions',
+      description: 'Next-generation AI solutions that transform enterprise operations',
       color: 'from-purple-600 to-pink-600',
+      services: [
+        {
+          name: 'AI Enterprise Orchestrator',
+          description: 'Multi-agent AI coordination and workflow automation for enterprise transformation',
+          features: ['Multi-Agent Coordination', 'Intelligent Process Orchestration', 'Predictive Analytics Engine', 'Enterprise Security Suite'],
+          href: '/services/ai-enterprise-orchestrator',
+          price: 'From $15,000',
+          rating: 5.0,
+          reviewCount: 89
+        },
+        {
+          name: 'Quantum AI Platform',
+          description: 'Next-generation quantum computing with AI capabilities for complex problem solving',
+          features: ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Optimization', 'Quantum Simulation'],
+          href: '/services/quantum-ai-platform',
+          price: 'From $25,000',
+          rating: 5.0,
+          reviewCount: 67
+        },
+        {
+          name: 'AI Cybersecurity Suite',
+          description: 'AI-powered threat detection and automated incident response with zero-trust architecture',
+          features: ['AI Threat Detection', 'Zero-Trust Architecture', 'Automated Incident Response', 'Compliance Automation'],
+          href: '/services/ai-cybersecurity-suite',
+          price: 'From $8,500',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          description: 'Predictive diagnostics and patient care optimization with AI-powered insights',
+          features: ['Predictive Diagnostics', 'Patient Care Optimization', 'Clinical Research Acceleration', 'Healthcare Operations'],
+          href: '/services/ai-healthcare-analytics',
+          price: 'From $12,000',
+          rating: 4.9,
+          reviewCount: 134
+        }
+      ]
+    },
+    {
+      name: 'AI & Analytics',
+      icon: Brain,
+      description: 'Cutting-edge artificial intelligence and data analytics solutions',
+      color: 'from-blue-600 to-cyan-600',
       services: [
         {
           name: 'AI Business Intelligence Platform',
@@ -147,56 +191,16 @@ export default function Services() {
           href: '/services/cloud-landing-zones',
           price: 'From $15,000',
           rating: 4.8,
-          reviewCount: 89,
-          benefits: ['Enhanced security', 'Compliance ready', 'Cost optimization']
-        }
-      ]
-    },
-    {
-      name: 'Cybersecurity & Compliance',
-      icon: Shield,
-      description: 'Advanced security solutions and compliance management',
-      color: 'from-red-600 to-orange-600',
-      services: [
+          reviewCount: 76
+        },
         {
-          name: 'AI Cybersecurity Suite',
-          description: 'AI-powered threat detection and response with automated security operations',
-          features: ['Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Incident Management', 'Security Analytics'],
-          href: '/services/ai-cybersecurity',
-          price: 'From $7,500',
+          name: 'AI Supply Chain Optimization',
+          description: 'AI-powered supply chain optimization with demand forecasting and route optimization',
+          features: ['AI Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Global Visibility'],
+          href: '/services/ai-supply-chain-optimization',
+          price: 'From $599',
           rating: 4.9,
-          reviewCount: 145,
-          benefits: ['95% faster threat detection', 'Automated response', 'Reduced false positives']
-        },
-        {
-          name: 'SOC as a Service',
-          description: '24/7 security operations center with advanced threat hunting and incident response',
-          features: ['24/7 Monitoring', 'Threat Hunting', 'Incident Response', 'Vulnerability Management', 'Security Reporting'],
-          href: '/services/soc-as-a-service',
-          price: 'From $5,000/month',
-          rating: 4.8,
-          reviewCount: 167,
-          benefits: ['24/7 protection', 'Expert security team', 'Compliance ready']
-        },
-        {
-          name: 'Zero Trust Enablement',
-          description: 'Network segmentation, identity-aware proxies, and continuous verification',
-          features: ['Network Segmentation', 'Identity Management', 'Continuous Verification', 'Access Control', 'Monitoring'],
-          href: '/services/zero-trust',
-          price: 'From $18,000',
-          rating: 4.7,
-          reviewCount: 93,
-          benefits: ['Enhanced security', 'Compliance ready', 'Reduced attack surface']
-        },
-        {
-          name: 'Penetration Testing Platform',
-          description: 'Automated security testing with comprehensive vulnerability assessment',
-          features: ['Automated Testing', 'Vulnerability Assessment', 'Compliance Reporting', 'Remediation Guidance', 'Continuous Monitoring'],
-          href: '/services/penetration-testing',
-          price: 'From $3,500',
-          rating: 4.6,
-          reviewCount: 78,
-          benefits: ['Regular security testing', 'Compliance validation', 'Risk reduction']
+          reviewCount: 98
         }
       ]
     },
@@ -265,34 +269,40 @@ export default function Services() {
           benefits: ['Faster contract processing', 'Reduced risks', 'Better compliance']
         },
         {
-          name: 'Invoice & Billing Automation',
-          description: 'Automated invoicing and billing with payment tracking',
-          features: ['Automated Invoicing', 'Payment Tracking', 'Recurring Billing', 'Integration', 'Reporting'],
-          href: '/services/billing-automation',
-          price: 'From $2,800',
-          rating: 4.5,
-          reviewCount: 67,
-          benefits: ['Faster payments', 'Reduced errors', 'Better cash flow']
+          name: 'AI Customer Success Platform',
+          description: 'Intelligent customer success with predictive analytics and automated engagement',
+          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
+          href: '/services/ai-customer-success-platform',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 234
         },
         {
-          name: 'Project Management Suite',
-          description: 'Comprehensive project management with team collaboration',
-          features: ['Task Management', 'Team Collaboration', 'Resource Planning', 'Reporting', 'Integration'],
-          href: '/services/project-management',
-          price: 'From $4,500',
-          rating: 4.7,
-          reviewCount: 123,
-          benefits: ['Better project visibility', 'Improved collaboration', 'On-time delivery']
+          name: 'AI Customer Churn Prediction',
+          description: 'Predict and prevent customer churn with 95%+ accuracy using AI-powered analytics',
+          features: ['Churn Prediction', 'Real-time Analytics', 'Proactive Interventions', 'Customer Segmentation'],
+          href: '/services/ai-customer-churn-prediction',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 156
         },
         {
-          name: 'HR Management Platform',
-          description: 'Complete HR solution with employee lifecycle management',
-          features: ['Recruitment', 'Onboarding', 'Performance Management', 'Payroll', 'Analytics'],
-          href: '/services/hr-management',
-          price: 'From $5,500',
-          rating: 4.6,
-          reviewCount: 89,
-          benefits: ['Streamlined HR processes', 'Better employee experience', 'Compliance ready']
+          name: 'AI Financial Fraud Detection',
+          description: 'Protect your business with AI-powered fraud detection and 99.2% accuracy',
+          features: ['Fraud Detection', 'Real-time Monitoring', 'Multi-layer Security', 'Adaptive Learning'],
+          href: '/services/ai-financial-fraud-detection',
+          price: 'From $799',
+          rating: 4.9,
+          reviewCount: 189
+        },
+        {
+          name: 'AI HR Talent Acquisition',
+          description: 'Revolutionize hiring with AI-powered candidate matching and recruitment automation',
+          features: ['AI Matching', 'Intelligent Sourcing', 'Predictive Analytics', 'Smart Screening'],
+          href: '/services/ai-hr-talent-acquisition',
+          price: 'From $399',
+          rating: 4.8,
+          reviewCount: 267
         }
       ]
     }

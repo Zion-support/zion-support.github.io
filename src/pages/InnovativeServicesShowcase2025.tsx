@@ -1,31 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import { 
   Brain, 
   Shield, 
-  Cloud, 
   Rocket, 
-  Heart, 
-  Zap, 
-  Globe, 
-  Star,
-  Search,
-  Filter,
-  DollarSign,
+  Cpu, 
+  Globe,
+  Zap,
   Users,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Award,
-  Clock,
-  Target,
-  BarChart3,
-  Cpu,
-  Lock,
   ShoppingCart,
   MessageCircle,
   BookOpen,
@@ -186,42 +170,50 @@ export default function InnovativeServicesShowcase2025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Innovative Micro SaaS Services 2025 - Zion Tech Group"
-        description="Discover our cutting-edge micro SaaS solutions powered by AI, quantum computing, and emerging technologies. Transform your business with innovative, scalable solutions."
+        title="Innovative Micro SAAS Services 2025 - Zion Tech Group"
+        description="Discover our cutting-edge micro SAAS services for 2025. AI-powered solutions, quantum cybersecurity, edge computing, and more. Transform your business with innovative technology."
       />
-
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-4xl mx-auto"
           >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center">
+                <Rocket className="w-10 h-10 text-white" />
+              </div>
+            </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Innovative Micro SaaS
+              Innovative Micro SAAS Services
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                2025 Edition
               </span>
-              <br />
-              <span className="text-white">Services 2025</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge micro SaaS solutions powered by AI, quantum computing, 
-              and emerging technologies. Scalable, innovative, and designed for the future.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our cutting-edge micro SAAS solutions. From AI-powered content management to quantum cybersecurity, 
+              we deliver innovative technology that drives growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center space-x-2 text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>50+ Innovative Solutions</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>AI-Powered Technology</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Enterprise Ready</span>
-              </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+              >
+                Explore Services
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 border border-gray-600 text-white rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-800 transition-all duration-300"
+              >
+                Get Pricing
+              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -481,22 +473,150 @@ export default function InnovativeServicesShowcase2025() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </div>
 
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
-              <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setSelectedCategory('all');
-                  setPriceRange('all');
-                }}
-                className="text-blue-400 hover:text-blue-300 underline"
+      {/* Featured Services */}
+      <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Featured Innovative Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our most advanced and in-demand micro SAAS solutions
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300"
               >
-                Clear all filters
-              </button>
-            </div>
-          )}
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                  </div>
+                  <div className="ml-4 text-right">
+                    <div className="text-3xl font-bold text-blue-400">{service.currency}{service.price.toLocaleString()}</div>
+                    <div className="text-gray-400 text-sm">per month</div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center p-3 bg-gray-700/50 rounded-lg">
+                    <div className="text-2xl font-bold text-green-400">{service.roi}</div>
+                    <div className="text-gray-300 text-sm">ROI</div>
+                  </div>
+                  <div className="text-center p-3 bg-gray-700/50 rounded-lg">
+                    <div className="text-2xl font-bold text-purple-400">{service.estimatedDelivery}</div>
+                    <div className="text-gray-300 text-sm">Delivery</div>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                    <span className="text-white font-semibold">4.9</span>
+                    <span className="text-gray-400 text-sm">(127 reviews)</span>
+                  </div>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                  >
+                    Learn More
+                  </motion.button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+      {/* Market Insights */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Market Insights & ROI
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our services deliver exceptional returns on investment with proven market performance
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center p-6 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl border border-blue-500/30"
+            >
+              <TrendingUp className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">400%</div>
+              <div className="text-gray-300">Average ROI</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center p-6 bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl border border-green-500/30"
+            >
+              <Users className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">10,000+</div>
+              <div className="text-gray-300">Active Users</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center p-6 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl border border-purple-500/30"
+            >
+              <Award className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime SLA</div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-center p-6 bg-gradient-to-br from-orange-600/20 to-red-600/20 rounded-2xl border border-orange-500/30"
+            >
+              <Globe className="w-12 h-12 text-orange-400 mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-gray-300">Countries Served</div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

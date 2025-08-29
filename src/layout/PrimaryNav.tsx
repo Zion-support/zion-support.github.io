@@ -15,10 +15,10 @@ import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigati
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { Menu, X, ShoppingCart } from 'lucide-react';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import { ModeToggle } from '@/components/ModeToggle';
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -124,7 +124,9 @@ export function PrimaryNav() {
                   </Link>
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <MiniCartPreview />
+                  <div className="p-4">
+                    <p className="text-sm text-muted-foreground">Cart preview</p>
+                  </div>
                 </HoverCardContent>
               </HoverCard>
             </div>
@@ -154,21 +156,8 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-            </Link>
-            <LanguageSelector />
-            <ModeToggle />
-            {!isLoggedIn && (
-              <>
-                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
-                  {t('login', 'Login')}
-                </Link>
-                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
-                  {t('signup', 'Sign up')}
-                </Link>
-              </>
-            )}
-            {isLoggedIn && <UserMenu />}
-          </div>
+              {isLoggedIn && <UserMenu />}
+            </div>
           
           {/* Mobile menu button */}
           <button
