@@ -16,8 +16,7 @@ import {
   Smartphone, 
   Monitor, 
   AlertTriangle, 
-  FileText, 
-  BarChart3 
+  FileText
 } from 'lucide-react';
 
 const AIHealthcarePlatform: React.FC = () => {
