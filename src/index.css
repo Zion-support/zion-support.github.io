@@ -846,3 +846,159 @@ img {
     border: 1px solid #ccc;
   }
 }
+
+/* Accessibility Features */
+.high-contrast {
+  --bg-primary: #000000 !important;
+  --text-primary: #ffffff !important;
+  --accent-color: #ffff00 !important;
+  --border-color: #ffffff !important;
+}
+
+.high-contrast * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+.large-text {
+  font-size: 120% !important;
+}
+
+.large-text h1 { font-size: 2.5rem !important; }
+.large-text h2 { font-size: 2rem !important; }
+.large-text h3 { font-size: 1.75rem !important; }
+.large-text p, .large-text span, .large-text div { font-size: 1.2rem !important; }
+
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-delay: 0.01ms !important;
+  transition-duration: 0.01ms !important;
+  transition-delay: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+.keyboard-navigation {
+  --focus-outline: 3px solid #3b82f6 !important;
+  --focus-outline-offset: 2px !important;
+}
+
+.keyboard-navigation *:focus {
+  outline: var(--focus-outline) !important;
+  outline-offset: var(--focus-outline-offset) !important;
+}
+
+.focus-indicators *:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3) !important;
+}
+
+.color-blind-mode {
+  filter: contrast(1.2) saturate(0.8) !important;
+}
+
+.color-blind-mode * {
+  filter: contrast(1.2) saturate(0.8) !important;
+}
+
+.dyslexia-friendly {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', 'Arial', sans-serif !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.1em !important;
+  word-spacing: 0.2em !important;
+}
+
+.dyslexia-friendly p {
+  margin-bottom: 1.5em !important;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* High Contrast Mode Enhancements */
+.high-contrast .bg-gray-100 { background-color: #000000 !important; }
+.high-contrast .bg-gray-200 { background-color: #000000 !important; }
+.high-contrast .bg-gray-300 { background-color: #000000 !important; }
+.high-contrast .bg-gray-400 { background-color: #000000 !important; }
+.high-contrast .bg-gray-500 { background-color: #000000 !important; }
+.high-contrast .bg-gray-600 { background-color: #000000 !important; }
+.high-contrast .bg-gray-700 { background-color: #000000 !important; }
+.high-contrast .bg-gray-800 { background-color: #000000 !important; }
+.high-contrast .bg-gray-900 { background-color: #000000 !important; }
+
+.high-contrast .text-gray-100 { color: #ffffff !important; }
+.high-contrast .text-gray-200 { color: #ffffff !important; }
+.high-contrast .text-gray-300 { color: #ffffff !important; }
+.high-contrast .text-gray-400 { color: #ffffff !important; }
+.high-contrast .text-gray-500 { color: #ffffff !important; }
+.high-contrast .text-gray-600 { color: #ffffff !important; }
+.high-contrast .text-gray-700 { color: #ffffff !important; }
+.high-contrast .text-gray-800 { color: #ffffff !important; }
+.high-contrast .text-gray-900 { color: #ffffff !important; }
+
+/* Focus Management */
+.focus-visible:focus {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px !important;
+}
+
+/* Skip Links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Reduced Motion Media Query */
+@media (prefers-reduced-motion: reduce) {
+  .reduced-motion * {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Media Query */
+@media (prefers-contrast: high) {
+  .high-contrast * {
+    border: 1px solid currentColor !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .accessibility-panel,
+  .performance-monitor,
+  .chat-assistant {
+    display: none !important;
+  }
+  
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
