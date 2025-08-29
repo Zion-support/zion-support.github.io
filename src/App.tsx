@@ -92,6 +92,11 @@ const EcommercePersonalization = React.lazy(() => import('./pages/services/Ecomm
 const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
 const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
 const AIProofreadingStudio = React.lazy(() => import('./pages/services/AIProofreadingStudio'));
+const SEOSiteAuditor = React.lazy(() => import('./pages/services/SEOSiteAuditor'));
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const CustomerDataPlatform = React.lazy(() => import('./pages/services/CustomerDataPlatform'));
+const LogisticsRouteOptimizer = React.lazy(() => import('./pages/services/LogisticsRouteOptimizer'));
+const SOC2ComplianceAutomation = React.lazy(() => import('./pages/services/SOC2ComplianceAutomation'));
 
 // Catalog page
 const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
@@ -253,6 +258,11 @@ function App() {
               <Route path="/services/api-monitoring" element={<APIMonitoringSaaS />} />
               <Route path="/services/gdpr-cookie-compliance" element={<GDPRCookieCompliance />} />
               <Route path="/services/ai-proofreading-studio" element={<AIProofreadingStudio />} />
+              <Route path="/services/seo-site-auditor" element={<SEOSiteAuditor />} />
+              <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
+              <Route path="/services/customer-data-platform" element={<CustomerDataPlatform />} />
+              <Route path="/services/logistics-route-optimizer" element={<LogisticsRouteOptimizer />} />
+              <Route path="/services/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
               
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />

@@ -88,7 +88,9 @@ export function AppHeader() {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
+        { name: 'AI Proofreading Studio', href: '/services/ai-proofreading-studio', description: 'Grammar & tone assistant' },
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Prioritize prospects with ML' }
       ]
     },
     {
@@ -99,7 +101,9 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' },
+        { name: 'API Monitoring', href: '/services/api-monitoring', description: 'SLOs, tracing, and alerts' },
+        { name: 'SEO Site Auditor', href: '/services/seo-site-auditor', description: 'Technical SEO at scale' }
       ]
     },
     {
@@ -111,7 +115,9 @@ export function AppHeader() {
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual simulation & monitoring' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
         { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' }
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Logistics Route Optimizer', href: '/services/logistics-route-optimizer', description: 'VRP with time windows' },
+        { name: 'Customer Data Platform (CDP)', href: '/services/customer-data-platform', description: 'Unify profiles & events' }
       ]
     },
     {
@@ -122,7 +128,8 @@ export function AppHeader() {
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
-        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' },
+        { name: 'SOC 2 Automation', href: '/services/soc2-compliance-automation', description: 'Controls and evidence' }
       ]
     },
     {

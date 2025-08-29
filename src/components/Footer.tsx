@@ -73,6 +73,12 @@ export function Footer() {
         { name: 'Compliance Copilot', path: '/services/ai-compliance-copilot', icon: Shield },
         { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText },
         { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+        { name: 'API Monitoring', path: '/services/api-monitoring', icon: Activity },
+        { name: 'SEO Site Auditor', path: '/services/seo-site-auditor', icon: Globe },
+        { name: 'Affiliate Tracker', path: '/services/affiliate-marketing-tracker', icon: TrendingUp },
+        { name: 'Customer Data Platform', path: '/services/customer-data-platform', icon: Users },
+        { name: 'Logistics Optimizer', path: '/services/logistics-route-optimizer', icon: Target },
+        { name: 'SOC 2 Automation', path: '/services/soc2-compliance-automation', icon: Shield },
         { name: 'All Services', path: '/services', icon: Zap },
         { name: 'Services Catalog', path: '/comprehensive-services', icon: Zap }
       ]
