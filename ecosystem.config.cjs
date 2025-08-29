@@ -35,6 +35,62 @@ module.exports = {
       }
     },
 
+    // 🧠 Smart Automation Orchestrator - coordinates all processes intelligently
+    {
+      name: 'smart-orchestrator',
+      script: './scripts/automation/smart-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '300000' // 5 minutes
+      }
+    },
+
+    // 🤖 AI-Powered Code Quality Analyzer - intelligent code analysis
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // ⚡ Intelligent Performance Optimizer - smart performance analysis
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './scripts/automation/intelligent-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // 🔮 Intelligent Error Predictor - predicts and prevents errors
+    {
+      name: 'intelligent-error-predictor',
+      script: './scripts/automation/intelligent-error-predictor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',

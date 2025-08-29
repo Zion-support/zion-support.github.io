@@ -1,244 +1,543 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+console.log('🎛️ Starting PM2 Automation Dashboard...\n');
 
-console.log('🚀 Starting PM2 Automation Dashboard...');
-
-class AutomationDashboard {
+class PM2AutomationDashboard {
   constructor() {
-    this.processes = [];
-    this.reports = {};
-    this.healthStatus = {};
+    this.processes = new Map();
+    this.reports = new Map();
+    this.startTime = Date.now();
+    this.updateInterval = 5000; // 5 seconds
   }
 
-  async getPM2Status() {
+  async startDashboard() {
+    console.log('🚀 PM2 Automation Dashboard Started');
+    console.log('📊 Real-time monitoring of all automation processes\n');
+    
+    // Initial load
+    await this.loadAllData();
+    
+    // Start continuous updates
+    setInterval(async () => {
+      await this.updateDashboard();
+    }, this.updateInterval);
+    
+    // Handle user input
+    this.handleUserInput();
+  }
+
+  async loadAllData() {
     try {
-      const output = execSync('pm2 jlist', { encoding: 'utf8' });
-      const processes = JSON.parse(output);
-      
-      this.processes = processes.filter(proc => 
-        proc.name !== 'pm2-logrotate' && 
-        proc.name !== 'zion-app' && 
-        proc.name !== 'zion-backend'
-      );
-      
-      return this.processes;
+      await this.loadPM2Processes();
+      await this.loadAutomationReports();
+      this.displayDashboard();
     } catch (error) {
-      console.error('❌ Failed to get PM2 status:', error.message);
-      return [];
+      console.error('❌ Failed to load dashboard data:', error.message);
     }
   }
 
-  async generateHealthReport() {
-    console.log('📊 Generating automation health report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalProcesses: this.processes.length,
-        onlineProcesses: this.processes.filter(p => p.pm2_env.status === 'online').length,
-        erroredProcesses: this.processes.filter(p => p.pm2_env.status === 'errored').length,
-        stoppedProcesses: this.processes.filter(p => p.pm2_env.status === 'stopped').length
-      },
-      processes: this.processes.map(proc => ({
-        name: proc.name,
-        status: proc.pm2_env.status,
-        memory: `${Math.round(proc.monit.memory / 1024 / 1024)}MB`,
-        cpu: `${proc.monit.cpu}%`,
-        uptime: this.formatUptime(proc.pm2_env.pm_uptime),
-        restarts: proc.pm2_env.restart_time,
-        pm_id: proc.pm_id
-      })),
-      recommendations: []
-    };
-
-    // Generate recommendations
-    if (report.summary.erroredProcesses > 0) {
-      report.recommendations.push('⚠️  Some automation processes have errors. Check logs for details.');
-    }
-
-    if (report.summary.onlineProcesses === 0) {
-      report.recommendations.push('🚨 No automation processes are running. Start the automation system.');
-    }
-
-    if (report.summary.onlineProcesses > 0 && report.summary.onlineProcesses < report.summary.totalProcesses) {
-      report.recommendations.push('⚠️  Some automation processes are not running. Consider restarting failed processes.');
-    }
-
-    // Save report
-    const reportPath = path.join(process.cwd(), 'automation-health-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.reports.health = report;
-    return report;
-  }
-
-  formatUptime(uptime) {
-    if (!uptime) return 'N/A';
-    const seconds = Math.floor((Date.now() - uptime) / 1000);
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    return `${hours}h ${minutes}m`;
-  }
-
-  async displayDashboard() {
-    console.clear();
-    console.log('🚀 PM2 Automation Dashboard');
-    console.log('=' .repeat(50));
-    
-    const status = await this.getPM2Status();
-    const health = await this.generateHealthReport();
-    
-    console.log(`📊 Status: ${health.summary.onlineProcesses}/${health.summary.totalProcesses} processes online`);
-    console.log(`⏰ Last Updated: ${new Date().toLocaleTimeString()}`);
-    console.log('');
-    
-    // Display process table
-    console.log('🔄 Automation Processes:');
-    console.log('─'.repeat(80));
-    console.log('Name'.padEnd(25) + 'Status'.padEnd(10) + 'Memory'.padEnd(10) + 'CPU'.padEnd(8) + 'Uptime'.padEnd(15) + 'Restarts');
-    console.log('─'.repeat(80));
-    
-    health.processes.forEach(proc => {
-      const statusIcon = proc.status === 'online' ? '🟢' : proc.status === 'errored' ? '🔴' : '🟡';
-      console.log(
-        proc.name.padEnd(25) +
-        `${statusIcon} ${proc.status}`.padEnd(10) +
-        proc.memory.padEnd(10) +
-        proc.cpu.padEnd(8) +
-        proc.uptime.padEnd(15) +
-        proc.restarts
-      );
-    });
-    
-    console.log('');
-    
-    // Display recommendations
-    if (health.recommendations.length > 0) {
-      console.log('💡 Recommendations:');
-      health.recommendations.forEach(rec => console.log(`  ${rec}`));
-      console.log('');
-    }
-    
-    // Display recent logs
-    console.log('📝 Recent Activity:');
-    console.log('─'.repeat(50));
-    
+  async loadPM2Processes() {
     try {
-      const logs = execSync('pm2 logs --lines 5 --nostream', { encoding: 'utf8' });
-      const recentLogs = logs.split('\n').slice(-5).filter(line => line.trim());
-      recentLogs.forEach(log => {
-        if (log.includes('ERROR') || log.includes('error')) {
-          console.log(`🔴 ${log}`);
-        } else if (log.includes('WARN') || log.includes('warn')) {
-          console.log(`🟡 ${log}`);
-        } else {
-          console.log(`ℹ️  ${log}`);
+      const pm2Status = execSync('pm2 jlist', { encoding: 'utf8' });
+      const processes = JSON.parse(pm2Status);
+      
+      this.processes.clear();
+      processes.forEach(process => {
+        this.processes.set(process.name, {
+          id: process.pm_id,
+          name: process.name,
+          status: process.pm2_env.status,
+          memory: process.monit.memory,
+          cpu: process.monit.cpu,
+          uptime: process.pm2_env.pm_uptime,
+          restarts: process.pm2_env.restart_time,
+          instances: process.pm2_env.instances,
+          pm_uptime: process.pm2_env.pm_uptime,
+          pm_created_at: process.pm2_env.pm_created_at
+        });
+      });
+    } catch (error) {
+      console.log('⚠️  Could not load PM2 processes:', error.message);
+    }
+  }
+
+  async loadAutomationReports() {
+    try {
+      const reportDirs = [
+        'automation-reports',
+        'code-quality-reports',
+        'performance-reports',
+        'error-prediction-reports',
+        'ci-cd-reports'
+      ];
+      
+      this.reports.clear();
+      
+      reportDirs.forEach(dir => {
+        const reportPath = path.join(process.cwd(), dir);
+        if (fs.existsSync(reportPath)) {
+          const files = fs.readdirSync(reportPath).filter(file => file.endsWith('.json'));
+          const latestReports = {};
+          
+          files.forEach(file => {
+            const filePath = path.join(reportPath, file);
+            try {
+              const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+              const baseName = path.basename(file, '.json');
+              latestReports[baseName] = content;
+            } catch (error) {
+              // Skip invalid JSON files
+            }
+          });
+          
+          this.reports.set(dir, latestReports);
         }
       });
     } catch (error) {
-      console.log('  No recent logs available');
+      console.log('⚠️  Could not load automation reports:', error.message);
     }
-    
-    console.log('');
-    console.log('Commands:');
-    console.log('  pm2 logs <process-name> - View specific process logs');
-    console.log('  pm2 restart <process-name> - Restart specific process');
-    console.log('  pm2 restart all - Restart all processes');
-    console.log('  pm2 monit - Open PM2 monitoring interface');
-    console.log('  Ctrl+C - Exit dashboard');
   }
 
-  async startMonitoring() {
-    console.log('🔄 Starting continuous monitoring...');
-    
-    // Initial display
-    await this.displayDashboard();
-    
-    // Update every 30 seconds
-    setInterval(async () => {
-      await this.displayDashboard();
-    }, 30000);
+  async updateDashboard() {
+    try {
+      await this.loadPM2Processes();
+      await this.loadAutomationReports();
+      this.displayDashboard();
+    } catch (error) {
+      console.log('⚠️  Dashboard update failed:', error.message);
+    }
   }
 
-  async restartFailedProcesses() {
-    console.log('🔄 Restarting failed processes...');
+  displayDashboard() {
+    // Clear console
+    console.clear();
     
-    const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored');
+    // Header
+    this.displayHeader();
     
-    if (failedProcesses.length === 0) {
-      console.log('✅ No failed processes to restart');
+    // Process Status
+    this.displayProcessStatus();
+    
+    // Automation Insights
+    this.displayAutomationInsights();
+    
+    // Recent Reports
+    this.displayRecentReports();
+    
+    // System Health
+    this.displaySystemHealth();
+    
+    // Commands
+    this.displayCommands();
+  }
+
+  displayHeader() {
+    const uptime = this.formatUptime(Date.now() - this.startTime);
+    console.log('🎛️  PM2 AUTOMATION DASHBOARD');
+    console.log('='.repeat(60));
+    console.log(`⏰ Dashboard Uptime: ${uptime} | 📅 ${new Date().toLocaleString()}`);
+    console.log('='.repeat(60) + '\n');
+  }
+
+  displayProcessStatus() {
+    console.log('📊 PROCESS STATUS');
+    console.log('-'.repeat(60));
+    
+    const automationProcesses = Array.from(this.processes.entries())
+      .filter(([name]) => name.includes('automation') || name.includes('ai') || name.includes('smart') || name.includes('intelligent') || name.includes('console-error-fixer') || name.includes('link-checker') || name.includes('continuous-improvement') || name.includes('daily-build-test') || name.includes('security-audit') || name.includes('dependency-updates') || name.includes('performance-monitor') || name.includes('quality-checks') || name.includes('link-integrity') || name.includes('front-maximizer') || name.includes('sitemap-runner'))
+      .sort((a, b) => a[1].name.localeCompare(b[1].name));
+    
+    if (automationProcesses.length === 0) {
+      console.log('❌ No automation processes found');
       return;
     }
     
-    failedProcesses.forEach(proc => {
-      try {
-        execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit' });
-        console.log(`✅ Restarted ${proc.name}`);
-      } catch (error) {
-        console.error(`❌ Failed to restart ${proc.name}:`, error.message);
+    // Group processes by status
+    const online = automationProcesses.filter(([_, process]) => process.status === 'online');
+    const offline = automationProcesses.filter(([_, process]) => process.status === 'stopped');
+    const errored = automationProcesses.filter(([_, process]) => process.status === 'errored');
+    
+    console.log(`🟢 Online: ${online.length} | 🔴 Offline: ${offline.length} | ⚠️  Errored: ${errored.length}\n`);
+    
+    // Display process table
+    console.log('Process Name'.padEnd(35) + 'Status'.padEnd(10) + 'Memory'.padEnd(10) + 'CPU'.padEnd(8) + 'Uptime'.padEnd(12) + 'Restarts');
+    console.log('-'.repeat(85));
+    
+    automationProcesses.forEach(([name, process]) => {
+      const statusIcon = this.getStatusIcon(process.status);
+      const memoryMB = Math.round(process.memory / 1024 / 1024);
+      const cpuPercent = Math.round(process.cpu);
+      const uptime = this.formatUptime(process.uptime);
+      
+      console.log(
+        name.padEnd(35) +
+        `${statusIcon} ${process.status}`.padEnd(10) +
+        `${memoryMB}MB`.padEnd(10) +
+        `${cpuPercent}%`.padEnd(8) +
+        uptime.padEnd(12) +
+        process.restarts
+      );
+    });
+    
+    console.log('');
+  }
+
+  displayAutomationInsights() {
+    console.log('🧠 AUTOMATION INSIGHTS');
+    console.log('-'.repeat(60));
+    
+    try {
+      // Smart Orchestrator insights
+      const orchestratorReports = this.reports.get('automation-reports');
+      if (orchestratorReports && orchestratorReports['smart-orchestration-report']) {
+        const report = orchestratorReports['smart-orchestration-report'];
+        if (report.healthSummary) {
+          const health = report.healthSummary;
+          console.log(`🏥 System Health Score: ${health.healthScore}/100`);
+          console.log(`📈 Online Processes: ${health.online}/${health.total}`);
+          
+          if (health.recommendations && health.recommendations.length > 0) {
+            console.log(`💡 Recommendations: ${health.recommendations.length} active`);
+          }
+        }
+      }
+      
+      // Code Quality insights
+      const qualityReports = this.reports.get('code-quality-reports');
+      if (qualityReports && qualityReports['code-quality-report']) {
+        const report = qualityReports['code-quality-report'];
+        console.log(`🎯 Code Quality Score: ${report.overallScore}/100 (${report.grade})`);
+        
+        if (report.summary) {
+          const summary = report.summary;
+          console.log(`🔍 Total Issues: ${summary.totalIssues} | Critical: ${summary.criticalIssues} | Warnings: ${summary.warningIssues}`);
+        }
+      }
+      
+      // Performance insights
+      const performanceReports = this.reports.get('performance-reports');
+      if (performanceReports && performanceReports['performance-report']) {
+        const report = performanceReports['performance-report'];
+        console.log(`⚡ Performance Status: ${report.overallStatus.toUpperCase()}`);
+        
+        if (report.summary) {
+          const summary = report.summary;
+          console.log(`📊 Metrics: ${summary.excellentMetrics} Excellent | ${summary.warningMetrics} Warnings | ${summary.criticalMetrics} Critical`);
+        }
+      }
+      
+      // Error Prediction insights
+      const errorReports = this.reports.get('error-prediction-reports');
+      if (errorReports && errorReports['error-prediction-report']) {
+        const report = errorReports['error-prediction-report'];
+        console.log(`🔮 Error Risk Level: ${report.riskLevel} (${report.overallRisk}/100)`);
+        
+        if (report.predictions) {
+          const predictions = report.predictions;
+          console.log(`⚠️  High Risk: ${predictions.highRisk.length} | Medium Risk: ${predictions.mediumRisk.length} | Low Risk: ${predictions.lowRisk.length}`);
+        }
+      }
+      
+    } catch (error) {
+      console.log('⚠️  Could not load automation insights');
+    }
+    
+    console.log('');
+  }
+
+  displayRecentReports() {
+    console.log('📋 RECENT REPORTS');
+    console.log('-'.repeat(60));
+    
+    try {
+      const allReports = [];
+      
+      this.reports.forEach((reports, dir) => {
+        Object.entries(reports).forEach(([name, report]) => {
+          if (report.timestamp) {
+            allReports.push({
+              name: `${dir}/${name}`,
+              timestamp: new Date(report.timestamp),
+              report: report
+            });
+          }
+        });
+      });
+      
+      // Sort by timestamp (newest first)
+      allReports.sort((a, b) => b.timestamp - a.timestamp);
+      
+      // Display last 5 reports
+      const recentReports = allReports.slice(0, 5);
+      
+      if (recentReports.length === 0) {
+        console.log('📭 No recent reports found');
+      } else {
+        recentReports.forEach((report, index) => {
+          const timeAgo = this.formatTimeAgo(report.timestamp);
+          const status = report.report.status || 'unknown';
+          console.log(`${index + 1}. ${report.name} - ${status} (${timeAgo})`);
+        });
+      }
+      
+    } catch (error) {
+      console.log('⚠️  Could not load recent reports');
+    }
+    
+    console.log('');
+  }
+
+  displaySystemHealth() {
+    console.log('💚 SYSTEM HEALTH');
+    console.log('-'.repeat(60));
+    
+    try {
+      // Memory usage
+      const memUsage = process.memoryUsage();
+      const memUsageMB = Math.round(memUsage.heapUsed / 1024 / 1024);
+      const memTotalMB = Math.round(memUsage.heapTotal / 1024 / 1024);
+      
+      console.log(`🧠 Memory Usage: ${memUsageMB}MB / ${memTotalMB}MB (${Math.round(memUsageMB / memTotalMB * 100)}%)`);
+      
+      // Process count
+      const totalProcesses = this.processes.size;
+      const onlineProcesses = Array.from(this.processes.values()).filter(p => p.status === 'online').length;
+      const healthPercentage = Math.round((onlineProcesses / totalProcesses) * 100);
+      
+      console.log(`📊 Process Health: ${onlineProcesses}/${totalProcesses} online (${healthPercentage}%)`);
+      
+      // Uptime
+      const systemUptime = process.uptime();
+      console.log(`⏱️  System Uptime: ${this.formatUptime(systemUptime * 1000)}`);
+      
+      // Health status
+      let healthStatus = '🟢 EXCELLENT';
+      if (healthPercentage < 80) healthStatus = '🟡 GOOD';
+      if (healthPercentage < 60) healthStatus = '🟠 FAIR';
+      if (healthPercentage < 40) healthStatus = '🔴 POOR';
+      
+      console.log(`🏥 Overall Health: ${healthStatus}`);
+      
+    } catch (error) {
+      console.log('⚠️  Could not load system health');
+    }
+    
+    console.log('');
+  }
+
+  displayCommands() {
+    console.log('🎮 COMMANDS');
+    console.log('-'.repeat(60));
+    console.log('r - Refresh Dashboard    | s - Start All Processes    | x - Stop All Processes');
+    console.log('l - View Logs           | m - Open PM2 Monitor       | h - Process Health Check');
+    console.log('q - Quit Dashboard      | 1-9 - Select Process      | Enter - Refresh\n');
+    console.log('Type command and press Enter:');
+  }
+
+  getStatusIcon(status) {
+    switch (status) {
+      case 'online': return '🟢';
+      case 'stopped': return '🔴';
+      case 'errored': return '⚠️';
+      case 'restarting': return '🔄';
+      default: return '❓';
+    }
+  }
+
+  formatUptime(milliseconds) {
+    const seconds = Math.floor(milliseconds / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    
+    if (days > 0) return `${days}d ${hours % 24}h`;
+    if (hours > 0) return `${hours}h ${minutes % 60}m`;
+    if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
+    return `${seconds}s`;
+  }
+
+  formatTimeAgo(timestamp) {
+    const now = new Date();
+    const diff = now - timestamp;
+    const minutes = Math.floor(diff / 60000);
+    const hours = Math.floor(diff / 3600000);
+    const days = Math.floor(diff / 86400000);
+    
+    if (days > 0) return `${days}d ago`;
+    if (hours > 0) return `${hours}h ago`;
+    if (minutes > 0) return `${minutes}m ago`;
+    return 'Just now';
+  }
+
+  async handleUserInput() {
+    const readline = require('readline');
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+    
+    rl.on('line', async (input) => {
+      const command = input.trim().toLowerCase();
+      
+      switch (command) {
+        case 'r':
+        case '':
+          await this.updateDashboard();
+          break;
+          
+        case 's':
+          await this.startAllProcesses();
+          break;
+          
+        case 'x':
+          await this.stopAllProcesses();
+          break;
+          
+        case 'l':
+          await this.viewLogs();
+          break;
+          
+        case 'm':
+          await this.openPM2Monitor();
+          break;
+          
+        case 'h':
+          await this.processHealthCheck();
+          break;
+          
+        case 'q':
+          console.log('\n👋 Shutting down dashboard...');
+          rl.close();
+          process.exit(0);
+          break;
+          
+        default:
+          if (/^[1-9]$/.test(command)) {
+            await this.selectProcess(parseInt(command));
+          } else {
+            console.log('❌ Invalid command. Type "h" for help.');
+          }
+          break;
+      }
+      
+      if (command !== 'q') {
+        setTimeout(() => {
+          this.displayCommands();
+        }, 1000);
       }
     });
   }
 
-  async generatePerformanceReport() {
-    console.log('📊 Generating performance report...');
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      system: {
-        memory: process.memoryUsage(),
-        uptime: process.uptime(),
-        platform: process.platform,
-        nodeVersion: process.version
-      },
-      processes: this.processes.map(proc => ({
-        name: proc.name,
-        memory: proc.monit.memory,
-        cpu: proc.monit.cpu,
-        status: proc.pm2_env.status,
-        restarts: proc.pm2_env.restart_time
-      })),
-      summary: {
-        totalMemory: this.processes.reduce((sum, p) => sum + p.monit.memory, 0),
-        averageCPU: this.processes.reduce((sum, p) => sum + p.monit.cpu, 0) / this.processes.length,
-        totalRestarts: this.processes.reduce((sum, p) => sum + p.pm2_env.restart_time, 0)
+  async startAllProcesses() {
+    console.log('\n🚀 Starting all automation processes...');
+    try {
+      execSync('pm2 start ecosystem.config.cjs', { stdio: 'inherit' });
+      console.log('✅ All processes started successfully');
+    } catch (error) {
+      console.log('❌ Failed to start processes:', error.message);
+    }
+  }
+
+  async stopAllProcesses() {
+    console.log('\n🛑 Stopping all automation processes...');
+    try {
+      execSync('pm2 stop ecosystem.config.cjs', { stdio: 'inherit' });
+      console.log('✅ All processes stopped successfully');
+    } catch (error) {
+      console.log('❌ Failed to stop processes:', error.message);
+    }
+  }
+
+  async viewLogs() {
+    console.log('\n📋 Recent logs from all processes...');
+    try {
+      execSync('pm2 logs --lines 20', { stdio: 'inherit' });
+    } catch (error) {
+      console.log('❌ Failed to view logs:', error.message);
+    }
+  }
+
+  async openPM2Monitor() {
+    console.log('\n📊 Opening PM2 monitoring interface...');
+    try {
+      execSync('pm2 monit', { stdio: 'inherit' });
+    } catch (error) {
+      console.log('❌ Failed to open monitor:', error.message);
+    }
+  }
+
+  async processHealthCheck() {
+    console.log('\n🏥 Running comprehensive health check...');
+    try {
+      // Check PM2 status
+      const status = execSync('pm2 status', { encoding: 'utf8' });
+      console.log(status);
+      
+      // Check for any errored processes
+      const erroredProcesses = Array.from(this.processes.values()).filter(p => p.status === 'errored');
+      if (erroredProcesses.length > 0) {
+        console.log(`\n⚠️  Found ${erroredProcesses.length} errored processes:`);
+        erroredProcesses.forEach(process => {
+          console.log(`  - ${process.name} (ID: ${process.id})`);
+        });
       }
-    };
+      
+    } catch (error) {
+      console.log('❌ Health check failed:', error.message);
+    }
+  }
+
+  async selectProcess(processNumber) {
+    const automationProcesses = Array.from(this.processes.entries())
+      .filter(([name]) => name.includes('automation') || name.includes('ai') || name.includes('smart') || name.includes('intelligent') || name.includes('console-error-fixer') || name.includes('link-checker') || name.includes('continuous-improvement') || name.includes('daily-build-test') || name.includes('security-audit') || name.includes('dependency-updates') || name.includes('performance-monitor') || name.includes('quality-checks') || name.includes('link-integrity') || name.includes('front-maximizer') || name.includes('sitemap-runner'))
+      .sort((a, b) => a[1].name.localeCompare(b[1].name));
     
-    const reportPath = path.join(process.cwd(), 'automation-performance-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.reports.performance = report;
-    return report;
+    if (processNumber <= automationProcesses.length) {
+      const [name, process] = automationProcesses[processNumber - 1];
+      console.log(`\n📊 Process Details: ${name}`);
+      console.log('-'.repeat(40));
+      console.log(`ID: ${process.id}`);
+      console.log(`Status: ${process.status}`);
+      console.log(`Memory: ${Math.round(process.memory / 1024 / 1024)}MB`);
+      console.log(`CPU: ${Math.round(process.cpu)}%`);
+      console.log(`Uptime: ${this.formatUptime(process.uptime)}`);
+      console.log(`Restarts: ${process.restarts}`);
+      
+      // Show recent logs for this process
+      console.log('\n📋 Recent logs:');
+      try {
+        const logs = execSync(`pm2 logs ${name} --lines 10 --nostream`, { encoding: 'utf8' });
+        console.log(logs);
+      } catch (error) {
+        console.log('No logs available');
+      }
+    } else {
+      console.log('❌ Invalid process number');
+    }
   }
 }
 
 // Main execution
-async function main() {
-  const dashboard = new AutomationDashboard();
+if (require.main === module) {
+  const dashboard = new PM2AutomationDashboard();
   
   // Handle graceful shutdown
-  process.on('SIGINT', async () => {
-    console.log('\n🛑 Shutting down automation dashboard...');
-    await dashboard.generatePerformanceReport();
-    console.log('✅ Performance report saved');
+  process.on('SIGINT', () => {
+    console.log('\n🛑 Shutting down dashboard...');
     process.exit(0);
   });
   
-  try {
-    await dashboard.startMonitoring();
-  } catch (error) {
-    console.error('❌ Dashboard failed:', error);
-    process.exit(1);
-  }
+  process.on('SIGTERM', () => {
+    console.log('\n🛑 Shutting down dashboard...');
+    process.exit(0);
+  });
+  
+  // Start dashboard
+  dashboard.startDashboard();
 }
 
-// Start the dashboard
-main().catch(console.error);
+module.exports = PM2AutomationDashboard;
