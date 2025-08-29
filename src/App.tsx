@@ -27,6 +27,8 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
+const RevolutionaryServices2025 = React.lazy(() => import('./pages/RevolutionaryServices2025'));
+const RevolutionaryPricing2025 = React.lazy(() => import('./pages/RevolutionaryPricing2025'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -95,6 +97,8 @@ function App() {
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/revolutionary-services-2025" element={<RevolutionaryServices2025 />} />
+              <Route path="/revolutionary-pricing-2025" element={<RevolutionaryPricing2025 />} />
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />

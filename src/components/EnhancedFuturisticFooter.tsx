@@ -72,6 +72,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Revolutionary Services 2025',
+      links: [
+        { name: 'Quantum AI Optimization', href: '/revolutionary-services-2025' },
+        { name: 'AI Cybersecurity Sentinel', href: '/revolutionary-services-2025' },
+        { name: 'Autonomous AI Sales', href: '/revolutionary-services-2025' },
+        { name: 'Edge AI Computing', href: '/revolutionary-services-2025' },
+        { name: 'AI Healthcare Diagnostics', href: '/revolutionary-services-2025' },
+        { name: 'Blockchain AI Platform', href: '/revolutionary-services-2025' }
+      ]
+    },
+    {
       title: 'Micro SAAS',
       links: [
         { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
