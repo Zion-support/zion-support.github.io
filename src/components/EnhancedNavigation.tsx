@@ -15,7 +15,8 @@ import {
   Globe,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  PanelLeft
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -28,6 +29,7 @@ interface NavigationItem {
 interface EnhancedNavigationProps {
   className?: string;
   onThemeChange?: (theme: 'light' | 'dark' | 'system') => void;
+  onSidebarToggle?: () => void;
 }
 
 const navigationItems: NavigationItem[] = [
@@ -36,11 +38,14 @@ const navigationItems: NavigationItem[] = [
     label: 'Services', 
     href: '/services',
     children: [
-      { label: 'AI & Machine Learning', href: '/services/ai-ml' },
-      { label: 'Cloud Solutions', href: '/services/cloud' },
+      { label: 'AI & Machine Learning', href: '/services/ai' },
+      { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
       { label: 'Cybersecurity', href: '/services/cybersecurity' },
       { label: 'Digital Transformation', href: '/services/digital-transformation' },
-      { label: 'Consulting', href: '/services/consulting' }
+      { label: 'IT Infrastructure', href: '/services/it-infrastructure' },
+      { label: 'Micro SaaS Solutions', href: '/services/micro-saas' },
+      { label: 'Quantum Computing', href: '/services/quantum-computing' },
+      { label: 'Space Technology', href: '/space-tech' }
     ]
   },
   { 
@@ -48,11 +53,38 @@ const navigationItems: NavigationItem[] = [
     href: '/solutions',
     children: [
       { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { label: 'SMB Solutions', href: '/solutions/smb' },
-      { label: 'Industry Specific', href: '/solutions/industry' }
+      { label: 'Healthcare Solutions', href: '/solutions/healthcare' },
+      { label: 'Financial Solutions', href: '/solutions/financial' },
+      { label: 'Government Solutions', href: '/solutions/government' },
+      { label: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
+      { label: 'Retail Solutions', href: '/solutions/retail' }
     ]
   },
-  { label: 'About', href: '/about' },
+  { 
+    label: 'Company', 
+    href: '/about',
+    children: [
+      { label: 'About Us', href: '/about' },
+      { label: 'Team', href: '/team' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Partners', href: '/partners' },
+      { label: 'News', href: '/news' },
+      { label: 'Case Studies', href: '/case-studies' }
+    ]
+  },
+  { 
+    label: 'Resources', 
+    href: '/resources',
+    children: [
+      { label: 'Blog', href: '/blog' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'Help Center', href: '/help' },
+      { label: 'Training', href: '/training' },
+      { label: 'White Papers', href: '/white-papers' },
+      { label: 'Webinars', href: '/webinars' }
+    ]
+  },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'Contact', href: '/contact' }
 ];
 
@@ -122,6 +154,15 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Sidebar Toggle */}
+          <button
+            onClick={onSidebarToggle}
+            className="lg:hidden p-2 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+            aria-label="Toggle sidebar"
+          >
+            <PanelLeft className="w-5 h-5" />
+          </button>
+
           {/* Logo */}
           <Link 
             to="/" 
@@ -194,20 +235,22 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           {/* Right Side Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
-            <button
+            <Link
+              to="/search"
               className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
               aria-label="Search"
             >
               <Search className="w-5 h-5" />
-            </button>
+            </Link>
 
-            {/* Notifications */}
-            <button
+            {/* Dashboard */}
+            <Link
+              to="/dashboard"
               className="p-2 text-slate-400 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-              aria-label="Notifications"
+              aria-label="Dashboard"
             >
-              <Bell className="w-5 h-5" />
-            </button>
+              <User className="w-5 h-5" />
+            </Link>
 
             {/* Theme Toggle */}
             <div className="relative group">
@@ -249,6 +292,12 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             <div className="flex items-center space-x-2 text-slate-400 text-sm">
               <Phone className="w-4 h-4" />
               <span className="hidden xl:inline">+1 (555) 123-4567</span>
+            </div>
+            
+            {/* Email */}
+            <div className="flex items-center space-x-2 text-slate-400 text-sm">
+              <Mail className="w-4 h-4" />
+              <span className="hidden xl:inline">info@ziontechgroup.com</span>
             </div>
           </div>
 
@@ -335,6 +384,24 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 <div className="flex items-center space-x-4 text-slate-400">
                   <MapPin className="w-4 h-4" />
                   <span>123 Tech Street, Digital City</span>
+                </div>
+                
+                {/* Quick Links */}
+                <div className="pt-2 space-y-2">
+                  <Link
+                    to="/search"
+                    className="flex items-center space-x-2 text-slate-400 hover:text-white px-3 py-2 rounded-md transition-colors duration-200"
+                  >
+                    <Search className="w-4 h-4" />
+                    <span>Search</span>
+                  </Link>
+                  <Link
+                    to="/dashboard"
+                    className="flex items-center space-x-2 text-slate-400 hover:text-white px-3 py-2 rounded-md transition-colors duration-200"
+                  >
+                    <User className="w-4 h-4" />
+                    <span>Dashboard</span>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { EnhancedNavigation } from '../components/EnhancedNavigation';
 
-export function AppHeader() {
+interface AppHeaderProps {
+  onSidebarToggle?: () => void;
+}
+
+export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
 
   useEffect(() => {
@@ -19,6 +23,7 @@ export function AppHeader() {
   return (
     <EnhancedNavigation 
       onThemeChange={handleThemeChange}
+      onSidebarToggle={onSidebarToggle}
       className=""
     />
   );

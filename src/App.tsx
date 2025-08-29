@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
@@ -6,6 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 // Layout Components
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
+import { Sidebar } from './components/Sidebar';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
@@ -29,6 +30,7 @@ const Blog = lazy(() => import('./pages/Blog'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Team = lazy(() => import('./pages/Team'));
+const Resources = lazy(() => import('./pages/Resources'));
 
 // Additional missing page imports
 const Dashboard = lazy(() => import('./pages/Dashboard'));
@@ -180,6 +182,12 @@ const AIMarketingAutomationPersonalization = lazy(() => import('./pages/services
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <HelmetProvider>
       <ErrorBoundary>
@@ -208,7 +216,10 @@ function App() {
           <AdvancedAnalytics enabled={true} />
           
           {/* Header */}
-          <AppHeader />
+          <AppHeader onSidebarToggle={toggleSidebar} />
+          
+          {/* Sidebar */}
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
           
           {/* Main Content */}
           <main className="flex-1">
@@ -324,6 +335,7 @@ function App() {
                   <Route path="/ai-services" element={<AIServices />} />
                   <Route path="/it-services" element={<ITServices />} />
                   <Route path="/micro-saas" element={<MicroSaaS />} />
+                  <Route path="/services/micro-saas" element={<MicroSaaS />} />
                   
                   {/* Additional Routes */}
                   <Route path="/dashboard" element={<Dashboard />} />
@@ -464,6 +476,7 @@ function App() {
                   <Route path="/news" element={<News />} />
                   <Route path="/case-studies" element={<CaseStudies />} />
                   <Route path="/help" element={<HelpCenter />} />
+                  <Route path="/resources" element={<Resources />} />
                   <Route path="/marketplace" element={<Marketplace />} />
                   <Route path="/pricing" element={<Pricing />} />
                   <Route path="/it-consulting" element={<ITConsulting />} />
