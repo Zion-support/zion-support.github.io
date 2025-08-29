@@ -2,132 +2,123 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
+  BookOpen, 
+  Users, 
+  Zap, 
+  Brain, 
+  Target, 
   Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight, 
+  BarChart3, 
+  Cpu, 
+  Database, 
+  Network,
+  CheckCircle,
+  ArrowRight,
   Star,
   Clock,
   TrendingUp,
   Award,
   Play,
-  BookOpen,
   MessageCircle,
   Phone,
   Mail,
   MapPin,
-  Headphones,
-  HelpCircle,
-  Bot,
-  Globe,
-  Zap,
-  Cpu,
-  Network,
-  Database,
-  Gauge,
-  Activity,
-  Rocket,
-  Wifi,
-  Server,
-  Key,
-  Fingerprint,
-  ShieldCheck,
-  Bug,
-  FileShield,
-  Network,
-  Monitor,
-  Smartphone,
-  Building
+  GraduationCap,
+  Lightbulb,
+  Heart,
+  Sparkles,
+  Palette,
+  Music,
+  Calculator,
+  Globe
 } from 'lucide-react';
 
-export default function Cybersecurity() {
+export default function AIEducation() {
   const features = [
     {
+      icon: BookOpen,
+      title: 'Personalized Learning Paths',
+      description: 'AI algorithms that adapt to individual student needs and learning styles'
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Tutoring',
+      description: 'AI-powered virtual tutors with natural language processing and adaptive responses'
+    },
+    {
+      icon: Target,
+      title: 'Progress Analytics',
+      description: 'Advanced tracking and analysis of student performance and learning outcomes'
+    },
+    {
+      icon: Users,
+      title: 'Collaborative Learning',
+      description: 'AI-enhanced group projects and peer-to-peer learning experiences'
+    },
+    {
+      icon: Lightbulb,
+      title: 'Content Generation',
+      description: 'AI-powered creation of educational materials, quizzes, and interactive content'
+    },
+    {
       icon: Shield,
-      title: 'Advanced Threat Protection',
-      description: 'Multi-layered security with AI-powered threat detection and prevention'
-    },
-    {
-      icon: Lock,
-      title: 'Zero Trust Security',
-      description: 'Comprehensive identity verification and access control for all resources'
-    },
-    {
-      icon: Eye,
-      title: '24/7 Security Monitoring',
-      description: 'Continuous surveillance and real-time threat intelligence'
-    },
-    {
-      icon: Key,
-      title: 'Encryption & Key Management',
-      description: 'Enterprise-grade encryption with secure key management systems'
-    },
-    {
-      icon: Bug,
-      title: 'Vulnerability Assessment',
-      description: 'Regular security audits and penetration testing'
-    },
-    {
-      icon: Network2,
-      title: 'Network Security',
-      description: 'Advanced firewall and intrusion detection systems'
+      title: 'Learning Security',
+      description: 'AI-driven protection systems for educational data and student privacy'
     }
   ];
 
   const benefits = [
-    '99.9% threat detection rate',
-    'Zero false positive alerts',
-    '24/7 security monitoring',
-    'Compliance with industry standards',
-    'Reduced security incidents',
-    'Cost-effective protection'
+    'Personalized learning experiences tailored to individual needs',
+    'Adaptive content that adjusts to student progress and comprehension',
+    'Real-time feedback and assessment for immediate improvement',
+    'Scalable educational solutions for institutions of all sizes',
+    'Enhanced engagement through interactive AI-powered content',
+    'Data-driven insights for continuous educational improvement'
   ];
 
   const useCases = [
     {
-      title: 'Financial Services',
-      description: 'Banking and fintech security with fraud detection, transaction monitoring, and regulatory compliance'
+      title: 'K-12 Education',
+      description: 'AI-powered learning platforms that adapt to each student\'s pace, style, and needs, providing personalized education from kindergarten through high school'
     },
     {
-      title: 'Healthcare & Medical',
-      description: 'Patient data protection, medical device security, and HIPAA compliance for healthcare organizations'
+      title: 'Higher Education',
+      description: 'Advanced AI systems for universities and colleges, offering intelligent course management, research assistance, and student support services'
     },
     {
-      title: 'Government & Defense',
-      description: 'Classified information protection, secure communications, and national security infrastructure'
+      title: 'Corporate Training',
+      description: 'AI-driven employee development programs with personalized learning paths, skill assessments, and continuous professional development'
     },
     {
-      title: 'Enterprise & Corporations',
-      description: 'Business data protection, employee security training, and incident response management'
+      title: 'Special Needs Education',
+      description: 'Adaptive AI systems designed to support students with diverse learning needs and provide inclusive educational experiences'
     }
   ];
 
   const pricing = [
     {
-      name: 'Essential',
+      name: 'Starter',
       price: '$399',
       period: '/month',
-      description: 'Basic cybersecurity for small businesses',
+      description: 'Basic AI education platform for small learning environments',
       features: [
-        'Basic threat protection',
-        'Firewall management',
-        'Security monitoring',
-        'Email security'
+        'Personalized learning paths',
+        'Basic AI tutoring',
+        'Email support',
+        'Standard analytics'
       ]
     },
     {
       name: 'Professional',
-      price: '$899',
+      price: '$799',
       period: '/month',
-      description: 'Advanced cybersecurity for growing organizations',
+      description: 'Advanced AI platform for medium-scale educational institutions',
       features: [
-        'AI threat detection',
-        'Zero trust security',
-        'Vulnerability assessment',
-        'Incident response',
-        'Priority support'
+        'Advanced AI algorithms',
+        'Real-time content adaptation',
+        'Priority support',
+        'Custom integrations',
+        'Advanced analytics'
       ],
       popular: true
     },
@@ -135,12 +126,12 @@ export default function Cybersecurity() {
       name: 'Enterprise',
       price: '$1,999',
       period: '/month',
-      description: 'Comprehensive cybersecurity for large organizations',
+      description: 'Full-scale AI education solution for large institutions',
       features: [
-        'Custom security solutions',
-        'Advanced threat hunting',
+        'Custom AI models',
         '24/7 dedicated support',
-        'Compliance management',
+        'White-label solutions',
+        'Advanced security',
         'Custom development'
       ]
     }
@@ -149,14 +140,14 @@ export default function Cybersecurity() {
   return (
     <div className="min-h-screen bg-futuristic">
       <SEO 
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity solutions with AI-powered threat detection, zero trust security, and 24/7 monitoring. Protect your digital assets with enterprise-grade security."
-        keywords="cybersecurity, threat detection, zero trust security, network security, data protection, security monitoring"
+        title="AI Education Platform - Zion Tech Group"
+        description="Revolutionary AI-powered education solutions for personalized learning, intelligent tutoring, and educational innovation. Advanced machine learning for the future of education."
+        keywords="AI education, personalized learning, intelligent tutoring, educational AI, learning platform, adaptive education"
         ogType="website"
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 py-20">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-800/20"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -166,15 +157,15 @@ export default function Cybersecurity() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-purple-500 rounded-full mb-6">
-              <Shield className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mb-6">
+              <BookOpen className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Cybersecurity
+              AI Education Platform
             </h1>
-            <p className="text-xl text-red-200 max-w-3xl mx-auto leading-relaxed">
-              Revolutionary cybersecurity platform with cutting-edge AI technology. 
-              From threat detection to zero trust security, our platform protects your digital future.
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+              Revolutionizing education with cutting-edge AI technology. 
+              From personalized learning to intelligent tutoring, our platform transforms how we teach and learn.
             </p>
           </motion.div>
 
@@ -207,11 +198,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Cybersecurity Features
+              Advanced AI Education Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform delivers cutting-edge cybersecurity capabilities 
-              for threat detection, prevention, and comprehensive digital protection.
+              Our AI platform combines cutting-edge machine learning with educational expertise 
+              to deliver unprecedented capabilities in personalized learning and teaching.
             </p>
           </motion.div>
 
@@ -223,9 +214,9 @@ export default function Cybersecurity() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-red-500 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -237,7 +228,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-red-900 to-purple-900">
+      <section className="py-20 bg-gradient-to-br from-blue-900 to-indigo-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,11 +238,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Cybersecurity?
+              Why Choose AI Education?
             </h2>
-            <p className="text-xl text-red-200 max-w-3xl mx-auto">
-              Experience the future of digital protection with our cybersecurity platform that delivers 
-              unprecedented security, reliability, and peace of mind.
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Experience the future of education with our AI-powered platform that delivers 
+              unprecedented personalization, engagement, and learning outcomes.
             </p>
           </motion.div>
 
@@ -265,7 +256,7 @@ export default function Cybersecurity() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                 <p className="text-lg text-white">{benefit}</p>
               </motion.div>
             ))}
@@ -284,11 +275,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cybersecurity platform is protecting critical infrastructure and enabling secure operations 
-              across industries that demand the highest levels of digital security.
+              Our AI education platform is transforming learning environments and enabling new possibilities 
+              in personalized education and skill development.
             </p>
           </motion.div>
 
@@ -311,7 +302,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 to-red-900">
+      <section className="py-20 bg-gradient-to-br from-indigo-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -321,10 +312,10 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your Cybersecurity Plan
+              Choose Your AI Education Plan
             </h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your security needs and compliance requirements.
+            <p className="text-xl text-indigo-200 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your educational initiatives.
             </p>
           </motion.div>
 
@@ -337,12 +328,12 @@ export default function Cybersecurity() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-2xl p-8 ${
-                  plan.popular ? 'ring-2 ring-red-500 transform scale-105' : ''
+                  plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -360,7 +351,7 @@ export default function Cybersecurity() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -376,7 +367,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -385,14 +376,14 @@ export default function Cybersecurity() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready for Advanced Security?
+              Ready to Transform Education with AI?
             </h2>
-            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-               Join the future of cybersecurity with our advanced protection platform. 
-               Contact us today to learn how we can secure your digital assets.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+               Join the future of education with our AI-powered platform. 
+               Contact us today to learn how we can revolutionize your learning environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-red-600 hover:bg-red-50">
+              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-blue-600 hover:bg-blue-50">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contact Sales
               </button>
@@ -419,21 +410,21 @@ export default function Cybersecurity() {
                 Get in Touch
               </h2>
               <p className="text-gray-300 mb-8">
-                Ready to explore the future of cybersecurity? Our team of security experts 
-                is here to help you build protection systems that define the next generation of digital security.
+                Ready to explore the future of education? Our team of experts 
+                is here to help you build AI-powered learning experiences that transform education.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-red-400" />
+                  <Phone className="w-5 h-5 text-blue-400" />
                   <span className="text-white">+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-red-400" />
+                  <Mail className="w-5 h-5 text-blue-400" />
                   <span className="text-white">kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-red-400" />
+                  <MapPin className="w-5 h-5 text-blue-400" />
                   <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
@@ -454,21 +445,21 @@ export default function Cybersecurity() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                   />
                 </div>
                 <div>
                   <textarea
-                    placeholder="Tell us about your cybersecurity needs"
+                    placeholder="Tell us about your educational needs"
                     rows={4}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
                   ></textarea>
                 </div>
                 <button type="submit" className="w-full btn-futuristic">

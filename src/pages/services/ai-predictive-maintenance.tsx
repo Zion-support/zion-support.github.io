@@ -1,139 +1,228 @@
 import React from 'react';
-import SEO from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity } from 'lucide-react';
+import { SEO } from '../../components/SEO';
+import { 
+  Wrench, 
+  Brain, 
+  Target, 
+  Shield, 
+  BarChart3, 
+  Cpu, 
+  Database, 
+  Network,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  TrendingUp,
+  Award,
+  Play,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Headphones,
+  HelpCircle,
+  Bot,
+  Globe,
+  Activity,
+  AlertTriangle,
+  Gauge,
+  Settings,
+  Zap,
+  Monitor,
+  HardDrive,
+  Server
+} from 'lucide-react';
 
-const AIPredictiveMaintenance: React.FC = () => {
+export default function AIPredictiveMaintenance() {
   const features = [
     {
+      icon: Wrench,
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting for equipment failures and maintenance needs before they occur'
+    },
+    {
       icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Machine learning algorithms predict equipment failures'
+      title: 'Machine Learning Models',
+      description: 'Advanced ML algorithms that learn from historical data to predict maintenance requirements'
+    },
+    {
+      icon: Target,
+      title: 'Condition Monitoring',
+      description: 'Real-time monitoring of equipment health and performance metrics with AI analysis'
+    },
+    {
+      icon: Activity,
+      title: 'Anomaly Detection',
+      description: 'Intelligent detection of unusual patterns and early warning systems for potential issues'
     },
     {
       icon: Gauge,
-      title: 'Real-time Monitoring',
-      description: 'Continuous monitoring of equipment performance'
+      title: 'Performance Optimization',
+      description: 'AI-driven recommendations for optimal equipment operation and efficiency improvements'
     },
     {
-      icon: AlertTriangle,
-      title: 'Early Warning System',
-      description: 'Proactive alerts before equipment failure'
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Data-driven insights for optimization'
-    }
-  ];
-
-  const applications = [
-    {
-      title: 'Manufacturing',
-      description: 'Predictive maintenance for production equipment',
-      icon: '🏭'
-    },
-    {
-      title: 'Energy & Utilities',
-      description: 'Monitor power plants and distribution systems',
-      icon: '⚡'
-    },
-    {
-      title: 'Transportation',
-      description: 'Fleet maintenance and vehicle optimization',
-      icon: '🚚'
-    },
-    {
-      title: 'Healthcare',
-      description: 'Medical equipment maintenance and reliability',
-      icon: '🏥'
+      icon: Shield,
+      title: 'Risk Management',
+      description: 'Comprehensive risk assessment and mitigation strategies for critical equipment'
     }
   ];
 
   const benefits = [
-    'Reduce unplanned downtime by up to 75%',
-    'Extend equipment lifespan and reliability',
-    'Lower maintenance costs and labor requirements',
-    'Improve safety and compliance standards',
-    'Optimize spare parts inventory management',
-    'Increase overall operational efficiency'
+    '50% reduction in unplanned downtime',
+    '30% decrease in maintenance costs',
+    'Extended equipment lifespan',
+    'Improved safety and compliance',
+    'Real-time monitoring and alerts',
+    'Data-driven maintenance decisions'
+  ];
+
+  const useCases = [
+    {
+      title: 'Manufacturing Equipment',
+      description: 'AI-powered predictive maintenance for production lines, machinery, and industrial equipment with real-time monitoring and failure prediction'
+    },
+    {
+      title: 'Data Center Infrastructure',
+      description: 'Intelligent monitoring of servers, cooling systems, and power infrastructure with predictive failure analysis and automated alerts'
+    },
+    {
+      title: 'Transportation & Logistics',
+      description: 'Predictive maintenance for fleet vehicles, aircraft, and logistics equipment with route optimization and performance monitoring'
+    },
+    {
+      title: 'Energy & Utilities',
+      description: 'Smart grid monitoring and predictive maintenance for power plants, transmission systems, and renewable energy infrastructure'
+    }
+  ];
+
+  const pricing = [
+    {
+      name: 'Starter',
+      price: '$399',
+      period: '/month',
+      description: 'Basic AI predictive maintenance for small operations',
+      features: [
+        'Basic predictive analytics',
+        'Equipment monitoring',
+        'Standard alerts',
+        'Basic reporting'
+      ]
+    },
+    {
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
+      description: 'Advanced AI predictive maintenance for growing operations',
+      features: [
+        'Advanced ML models',
+        'Real-time monitoring',
+        'Custom alerts',
+        'Advanced analytics',
+        'Priority support'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,599',
+      period: '/month',
+      description: 'Full-scale AI predictive maintenance for large organizations',
+      features: [
+        'Custom AI models',
+        'Multi-site monitoring',
+        '24/7 dedicated support',
+        'White-label solutions',
+        'Custom integrations'
+      ]
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-futuristic">
       <SEO 
-        title="AI Predictive Maintenance Services - Zion Tech Group"
-        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
+        title="AI Predictive Maintenance Platform - Zion Tech Group"
+        description="Revolutionary AI-powered predictive maintenance platform for equipment monitoring, failure prediction, and maintenance optimization. Prevent downtime with intelligent insights."
+        keywords="AI predictive maintenance, equipment monitoring, failure prediction, maintenance optimization, IoT monitoring, predictive analytics"
+        ogType="website"
       />
-      
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-green-900 to-teal-900 py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-800/20"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
+            className="mb-8"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
-              <Wrench className="w-5 h-5 text-orange-400 mr-2" />
-              <span className="text-orange-300 font-medium">AI Predictive Maintenance</span>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mb-6">
+              <Wrench className="w-10 h-10 text-white" />
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Predictive
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-400">
-                Maintenance
-              </span>
+              AI Predictive Maintenance
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment 
-              failures, reduce downtime, and optimize performance with intelligent monitoring and analytics.
+            <p className="text-xl text-green-200 max-w-3xl mx-auto leading-relaxed">
+              Revolutionizing equipment maintenance with cutting-edge AI technology. 
+              From failure prediction to performance optimization, our platform prevents downtime.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
-                Get Started
-              </button>
-              <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
-                Learn More
-              </button>
-            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <button className="btn-futuristic text-lg px-8 py-4">
+              <Play className="w-5 h-5 mr-2" />
+              Watch Demo
+            </button>
+            <button className="btn-futuristic-outline text-lg px-8 py-4">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Contact Sales
+            </button>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Predictive Maintenance Features
+              Advanced AI Predictive Maintenance Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Intelligent monitoring and predictive analytics for optimal performance
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform combines cutting-edge machine learning with IoT expertise 
+              to deliver unprecedented capabilities in equipment monitoring and maintenance prediction.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105"
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-emerald-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-orange-400" />
+                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -141,126 +230,249 @@ const AIPredictiveMaintenance: React.FC = () => {
         </div>
       </section>
 
-      {/* Applications Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-br from-emerald-900 to-green-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Why Choose AI Predictive Maintenance?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform maintenance across various industries
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+              Experience the future of equipment maintenance with our AI-powered platform that delivers 
+              unprecedented reliability, efficiency, and cost savings for your operations.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {applications.map((application, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
-                key={application.title}
+                key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200"
+                viewport={{ once: true }}
+                className="flex items-start space-x-4"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{application.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>
-                    <p className="text-gray-300">{application.description}</p>
-                  </div>
-                </div>
+                <CheckCircle className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
+                <p className="text-lg text-white">{benefit}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* Use Cases Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose AI Predictive Maintenance?
+              Real-World Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Transform your maintenance strategy with intelligent automation
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI predictive maintenance platform is transforming industries and enabling new possibilities 
+              in equipment reliability and operational efficiency across diverse sectors.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8"
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
-              <p className="text-gray-300 mb-6">
-                Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you 
-                implement intelligent monitoring systems that prevent failures and optimize performance.
-              </p>
-              <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
-                Contact Maintenance Experts
-              </button>
-            </motion.div>
+      {/* Pricing Section */}
+      <section className="py-20 bg-gradient-to-br from-green-900 to-emerald-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Choose Your AI Predictive Maintenance Plan
+            </h2>
+            <p className="text-xl text-green-200 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your equipment monitoring needs and operational scale.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-white rounded-2xl p-8 ${
+                  plan.popular ? 'ring-2 ring-emerald-500 transform scale-105' : ''
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-gray-600 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-600 mt-2">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className="w-full btn-futuristic">
+                  Get Started
+                </button>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 bg-gradient-to-r from-emerald-600 to-green-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready for Predictive Maintenance?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Prevent Equipment Failures?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Transform your maintenance strategy with AI-powered intelligence
+            <p className="text-xl text-emerald-100 mb-8 max-w-3xl mx-auto">
+               Join the future of equipment maintenance with our AI-powered platform. 
+               Contact us today to learn how we can optimize your maintenance operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
-                Start Predictive Journey
+              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-emerald-600 hover:bg-emerald-50">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Contact Sales
               </button>
-              <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
+              <button className="btn-futuristic text-lg px-8 py-4">
+                <Play className="w-5 h-5 mr-2" />
                 Schedule Demo
               </button>
             </div>
           </motion.div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl font-bold text-white mb-6">
+                Get in Touch
+              </h2>
+              <p className="text-gray-300 mb-8">
+                Ready to explore the future of equipment maintenance? Our team of experts 
+                is here to help you build AI-powered predictive maintenance systems that prevent downtime.
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-emerald-400" />
+                  <span className="text-white">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-emerald-400" />
+                  <span className="text-white">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 text-emerald-400" />
+                  <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-gray-800 p-8 rounded-xl"
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6">
+                Request Information
+              </h3>
+              <form className="space-y-4">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="Tell us about your maintenance needs"
+                    rows={4}
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
+                  ></textarea>
+                </div>
+                <button type="submit" className="w-full btn-futuristic">
+                  Send Message
+                </button>
+              </form>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default AIPredictiveMaintenance;
+}

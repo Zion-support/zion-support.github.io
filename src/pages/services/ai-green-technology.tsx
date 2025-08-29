@@ -2,13 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
+  Leaf, 
+  Globe, 
+  Zap, 
+  Brain, 
+  Target, 
   Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight, 
+  BarChart3, 
+  Cpu, 
+  Database, 
+  Network,
+  CheckCircle,
+  ArrowRight,
   Star,
+  Users,
   Clock,
   TrendingUp,
   Award,
@@ -18,129 +25,112 @@ import {
   Phone,
   Mail,
   MapPin,
-  Headphones,
-  HelpCircle,
-  Bot,
-  Globe,
-  Zap,
-  Cpu,
-  Network,
-  Database,
-  Gauge,
-  Activity,
-  Rocket,
-  Wifi,
-  Server,
-  Key,
-  Fingerprint,
-  ShieldCheck,
-  Bug,
-  FileShield,
-  Network,
-  Monitor,
-  Smartphone,
-  Building
+  Sun,
+  Wind,
+  Droplets,
+  Recycle,
+  Tree
 } from 'lucide-react';
 
-export default function Cybersecurity() {
+export default function AIGreenTechnology() {
   const features = [
     {
+      icon: Leaf,
+      title: 'Green Energy Optimization',
+      description: 'AI algorithms for renewable energy production, storage, and distribution optimization'
+    },
+    {
+      icon: Globe,
+      title: 'Environmental Monitoring',
+      description: 'Real-time AI monitoring of air quality, water resources, and ecosystem health'
+    },
+    {
+      icon: Recycle,
+      title: 'Waste Management AI',
+      description: 'Intelligent waste sorting, recycling optimization, and circular economy solutions'
+    },
+    {
+      icon: Brain,
+      title: 'Climate Prediction Models',
+      description: 'Advanced AI models for climate change forecasting and impact assessment'
+    },
+    {
+      icon: Target,
+      title: 'Carbon Footprint Tracking',
+      description: 'AI-powered carbon accounting and reduction strategies for businesses'
+    },
+    {
       icon: Shield,
-      title: 'Advanced Threat Protection',
-      description: 'Multi-layered security with AI-powered threat detection and prevention'
-    },
-    {
-      icon: Lock,
-      title: 'Zero Trust Security',
-      description: 'Comprehensive identity verification and access control for all resources'
-    },
-    {
-      icon: Eye,
-      title: '24/7 Security Monitoring',
-      description: 'Continuous surveillance and real-time threat intelligence'
-    },
-    {
-      icon: Key,
-      title: 'Encryption & Key Management',
-      description: 'Enterprise-grade encryption with secure key management systems'
-    },
-    {
-      icon: Bug,
-      title: 'Vulnerability Assessment',
-      description: 'Regular security audits and penetration testing'
-    },
-    {
-      icon: Network2,
-      title: 'Network Security',
-      description: 'Advanced firewall and intrusion detection systems'
+      title: 'Sustainable Supply Chain',
+      description: 'AI-driven supply chain optimization for environmental and social responsibility'
     }
   ];
 
   const benefits = [
-    '99.9% threat detection rate',
-    'Zero false positive alerts',
-    '24/7 security monitoring',
-    'Compliance with industry standards',
-    'Reduced security incidents',
-    'Cost-effective protection'
+    'Reduced environmental impact and carbon emissions',
+    'Optimized resource utilization and efficiency',
+    'Predictive maintenance for green infrastructure',
+    'Automated sustainability reporting and compliance',
+    'Enhanced renewable energy integration',
+    'Improved circular economy practices'
   ];
 
   const useCases = [
     {
-      title: 'Financial Services',
-      description: 'Banking and fintech security with fraud detection, transaction monitoring, and regulatory compliance'
+      title: 'Renewable Energy Management',
+      description: 'AI-powered optimization of solar, wind, and hydroelectric energy systems for maximum efficiency and grid stability'
     },
     {
-      title: 'Healthcare & Medical',
-      description: 'Patient data protection, medical device security, and HIPAA compliance for healthcare organizations'
+      title: 'Smart Cities & Buildings',
+      description: 'Intelligent building management systems that optimize energy consumption, water usage, and waste management'
     },
     {
-      title: 'Government & Defense',
-      description: 'Classified information protection, secure communications, and national security infrastructure'
+      title: 'Agriculture & Food Systems',
+      description: 'AI-driven precision agriculture, sustainable farming practices, and food waste reduction solutions'
     },
     {
-      title: 'Enterprise & Corporations',
-      description: 'Business data protection, employee security training, and incident response management'
+      title: 'Manufacturing & Industry',
+      description: 'Green manufacturing processes, energy-efficient production, and sustainable material management'
     }
   ];
 
   const pricing = [
     {
-      name: 'Essential',
-      price: '$399',
+      name: 'Starter',
+      price: '$699',
       period: '/month',
-      description: 'Basic cybersecurity for small businesses',
+      description: 'Basic AI green technology platform for small organizations',
       features: [
-        'Basic threat protection',
-        'Firewall management',
-        'Security monitoring',
-        'Email security'
+        'Environmental monitoring dashboard',
+        'Basic sustainability analytics',
+        'Email support',
+        'Standard reporting tools'
       ]
     },
     {
       name: 'Professional',
-      price: '$899',
+      price: '$1,399',
       period: '/month',
-      description: 'Advanced cybersecurity for growing organizations',
+      description: 'Advanced AI platform for medium-scale sustainability initiatives',
       features: [
-        'AI threat detection',
-        'Zero trust security',
-        'Vulnerability assessment',
-        'Incident response',
-        'Priority support'
+        'Advanced AI algorithms',
+        'Real-time monitoring',
+        'Priority support',
+        'Custom integrations',
+        'Advanced analytics'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$3,499',
       period: '/month',
-      description: 'Comprehensive cybersecurity for large organizations',
+      description: 'Full-scale AI green technology solution for large operations',
       features: [
-        'Custom security solutions',
-        'Advanced threat hunting',
+        'Custom AI models',
         '24/7 dedicated support',
-        'Compliance management',
+        'White-label solutions',
+        'Advanced security',
         'Custom development'
       ]
     }
@@ -149,15 +139,15 @@ export default function Cybersecurity() {
   return (
     <div className="min-h-screen bg-futuristic">
       <SEO 
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity solutions with AI-powered threat detection, zero trust security, and 24/7 monitoring. Protect your digital assets with enterprise-grade security."
-        keywords="cybersecurity, threat detection, zero trust security, network security, data protection, security monitoring"
+        title="AI Green Technology Platform - Zion Tech Group"
+        description="Revolutionary AI-powered green technology solutions for environmental protection, renewable energy, and sustainable innovation. Advanced machine learning for a greener future."
+        keywords="AI green technology, green AI, renewable energy AI, environmental monitoring, climate AI, sustainable innovation"
         ogType="website"
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-800/20"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 to-teal-900/20"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -166,15 +156,15 @@ export default function Cybersecurity() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-purple-500 rounded-full mb-6">
-              <Shield className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mb-6">
+              <Leaf className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Cybersecurity
+              AI Green Technology
             </h1>
-            <p className="text-xl text-red-200 max-w-3xl mx-auto leading-relaxed">
-              Revolutionary cybersecurity platform with cutting-edge AI technology. 
-              From threat detection to zero trust security, our platform protects your digital future.
+            <p className="text-xl text-green-200 max-w-3xl mx-auto leading-relaxed">
+              Pioneering the future of environmental sustainability with cutting-edge AI technology. 
+              From renewable energy optimization to climate prediction, our platform drives green innovation.
             </p>
           </motion.div>
 
@@ -207,11 +197,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Cybersecurity Features
+              Advanced AI Green Technology Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform delivers cutting-edge cybersecurity capabilities 
-              for threat detection, prevention, and comprehensive digital protection.
+              Our AI platform combines cutting-edge machine learning with environmental expertise 
+              to deliver unprecedented capabilities in sustainability and green technology.
             </p>
           </motion.div>
 
@@ -223,9 +213,9 @@ export default function Cybersecurity() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-red-500 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -237,7 +227,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-red-900 to-purple-900">
+      <section className="py-20 bg-gradient-to-br from-green-900 to-emerald-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,11 +237,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Cybersecurity?
+              Why Choose AI Green Technology?
             </h2>
-            <p className="text-xl text-red-200 max-w-3xl mx-auto">
-              Experience the future of digital protection with our cybersecurity platform that delivers 
-              unprecedented security, reliability, and peace of mind.
+            <p className="text-xl text-green-200 max-w-3xl mx-auto">
+              Experience the future of environmental sustainability with our AI-powered platform that delivers 
+              unprecedented efficiency, accuracy, and positive environmental impact.
             </p>
           </motion.div>
 
@@ -265,7 +255,7 @@ export default function Cybersecurity() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <p className="text-lg text-white">{benefit}</p>
               </motion.div>
             ))}
@@ -284,11 +274,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cybersecurity platform is protecting critical infrastructure and enabling secure operations 
-              across industries that demand the highest levels of digital security.
+              Our AI green technology platform is transforming industries and enabling new possibilities 
+              in environmental protection and green innovation.
             </p>
           </motion.div>
 
@@ -311,7 +301,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 to-red-900">
+      <section className="py-20 bg-gradient-to-br from-emerald-900 to-green-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -321,10 +311,10 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your Cybersecurity Plan
+              Choose Your AI Green Technology Plan
             </h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your security needs and compliance requirements.
+            <p className="text-xl text-emerald-200 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your sustainability initiatives.
             </p>
           </motion.div>
 
@@ -337,12 +327,12 @@ export default function Cybersecurity() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-2xl p-8 ${
-                  plan.popular ? 'ring-2 ring-red-500 transform scale-105' : ''
+                  plan.popular ? 'ring-2 ring-green-500 transform scale-105' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -360,7 +350,7 @@ export default function Cybersecurity() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -376,7 +366,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -385,14 +375,14 @@ export default function Cybersecurity() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready for Advanced Security?
+              Ready to Build a Sustainable Future?
             </h2>
-            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-               Join the future of cybersecurity with our advanced protection platform. 
-               Contact us today to learn how we can secure your digital assets.
+            <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+               Join the green technology revolution with our AI-powered platform. 
+               Contact us today to learn how we can help you achieve your sustainability goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-red-600 hover:bg-red-50">
+              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-green-600 hover:bg-green-50">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contact Sales
               </button>
@@ -419,21 +409,21 @@ export default function Cybersecurity() {
                 Get in Touch
               </h2>
               <p className="text-gray-300 mb-8">
-                Ready to explore the future of cybersecurity? Our team of security experts 
-                is here to help you build protection systems that define the next generation of digital security.
+                Ready to explore the future of sustainable technology? Our team of experts 
+                is here to help you build a greener, more sustainable future with AI.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-red-400" />
+                  <Phone className="w-5 h-5 text-green-400" />
                   <span className="text-white">+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-red-400" />
+                  <Mail className="w-5 h-5 text-green-400" />
                   <span className="text-white">kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-red-400" />
+                  <MapPin className="w-5 h-5 text-green-400" />
                   <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
@@ -454,21 +444,21 @@ export default function Cybersecurity() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500"
                   />
                 </div>
                 <div>
                   <textarea
-                    placeholder="Tell us about your cybersecurity needs"
+                    placeholder="Tell us about your sustainability goals"
                     rows={4}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500"
                   ></textarea>
                 </div>
                 <button type="submit" className="w-full btn-futuristic">

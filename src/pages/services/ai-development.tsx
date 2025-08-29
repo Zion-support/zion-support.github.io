@@ -2,12 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
+  Code, 
+  Users, 
+  Zap, 
+  Brain, 
+  Target, 
   Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight, 
+  BarChart3, 
+  Cpu, 
+  Database, 
+  Network,
+  CheckCircle,
+  ArrowRight,
   Star,
   Clock,
   TrendingUp,
@@ -18,129 +24,113 @@ import {
   Phone,
   Mail,
   MapPin,
-  Headphones,
-  HelpCircle,
-  Bot,
-  Globe,
-  Zap,
-  Cpu,
-  Network,
-  Database,
-  Gauge,
-  Activity,
-  Rocket,
-  Wifi,
-  Server,
-  Key,
-  Fingerprint,
-  ShieldCheck,
+  GitBranch,
+  Terminal,
   Bug,
-  FileShield,
-  Network,
-  Monitor,
-  Smartphone,
-  Building
+  Globe,
+  Layers,
+  Settings
 } from 'lucide-react';
 
-export default function Cybersecurity() {
+export default function AIDevelopment() {
   const features = [
     {
+      icon: Code,
+      title: 'AI Code Generation',
+      description: 'Advanced AI algorithms that generate, optimize, and debug code automatically'
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Development',
+      description: 'AI-powered development tools that enhance productivity and code quality'
+    },
+    {
+      icon: Target,
+      title: 'Automated Testing',
+      description: 'AI-driven testing frameworks that ensure code reliability and performance'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'AI-enhanced development workflows and collaborative coding environments'
+    },
+    {
+      icon: GitBranch,
+      title: 'Version Control AI',
+      description: 'Intelligent version control with automated conflict resolution and code review'
+    },
+    {
       icon: Shield,
-      title: 'Advanced Threat Protection',
-      description: 'Multi-layered security with AI-powered threat detection and prevention'
-    },
-    {
-      icon: Lock,
-      title: 'Zero Trust Security',
-      description: 'Comprehensive identity verification and access control for all resources'
-    },
-    {
-      icon: Eye,
-      title: '24/7 Security Monitoring',
-      description: 'Continuous surveillance and real-time threat intelligence'
-    },
-    {
-      icon: Key,
-      title: 'Encryption & Key Management',
-      description: 'Enterprise-grade encryption with secure key management systems'
-    },
-    {
-      icon: Bug,
-      title: 'Vulnerability Assessment',
-      description: 'Regular security audits and penetration testing'
-    },
-    {
-      icon: Network2,
-      title: 'Network Security',
-      description: 'Advanced firewall and intrusion detection systems'
+      title: 'Security & Compliance',
+      description: 'AI-powered security scanning and compliance checking for development projects'
     }
   ];
 
   const benefits = [
-    '99.9% threat detection rate',
-    'Zero false positive alerts',
-    '24/7 security monitoring',
-    'Compliance with industry standards',
-    'Reduced security incidents',
-    'Cost-effective protection'
+    'Automated code generation and optimization',
+    'Enhanced development productivity and efficiency',
+    'Intelligent debugging and error resolution',
+    'Automated testing and quality assurance',
+    'Advanced code analysis and optimization',
+    'Streamlined development workflows'
   ];
 
   const useCases = [
     {
-      title: 'Financial Services',
-      description: 'Banking and fintech security with fraud detection, transaction monitoring, and regulatory compliance'
+      title: 'Software Development',
+      description: 'AI-powered development tools that accelerate software creation, from initial design to deployment, with intelligent code generation and optimization'
     },
     {
-      title: 'Healthcare & Medical',
-      description: 'Patient data protection, medical device security, and HIPAA compliance for healthcare organizations'
+      title: 'Web & Mobile Apps',
+      description: 'Intelligent frameworks for building responsive web applications and mobile apps with AI-enhanced user experience and performance optimization'
     },
     {
-      title: 'Government & Defense',
-      description: 'Classified information protection, secure communications, and national security infrastructure'
+      title: 'API Development',
+      description: 'AI-driven API design and development tools that create efficient, scalable, and well-documented application programming interfaces'
     },
     {
-      title: 'Enterprise & Corporations',
-      description: 'Business data protection, employee security training, and incident response management'
+      title: 'DevOps & Automation',
+      description: 'Intelligent DevOps pipelines with AI-powered deployment automation, monitoring, and continuous integration/continuous deployment (CI/CD)'
     }
   ];
 
   const pricing = [
     {
-      name: 'Essential',
-      price: '$399',
+      name: 'Starter',
+      price: '$599',
       period: '/month',
-      description: 'Basic cybersecurity for small businesses',
+      description: 'Basic AI development platform for small development teams',
       features: [
-        'Basic threat protection',
-        'Firewall management',
-        'Security monitoring',
-        'Email security'
+        'AI code generation tools',
+        'Basic testing automation',
+        'Email support',
+        'Standard templates'
       ]
     },
     {
       name: 'Professional',
-      price: '$899',
+      price: '$1,199',
       period: '/month',
-      description: 'Advanced cybersecurity for growing organizations',
+      description: 'Advanced AI platform for medium-scale development operations',
       features: [
-        'AI threat detection',
-        'Zero trust security',
-        'Vulnerability assessment',
-        'Incident response',
-        'Priority support'
+        'Advanced AI algorithms',
+        'Real-time code optimization',
+        'Priority support',
+        'Custom integrations',
+        'Advanced analytics'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$2,999',
       period: '/month',
-      description: 'Comprehensive cybersecurity for large organizations',
+      description: 'Full-scale AI development solution for large development teams',
       features: [
-        'Custom security solutions',
-        'Advanced threat hunting',
+        'Custom AI models',
         '24/7 dedicated support',
-        'Compliance management',
+        'White-label solutions',
+        'Advanced security',
         'Custom development'
       ]
     }
@@ -149,15 +139,15 @@ export default function Cybersecurity() {
   return (
     <div className="min-h-screen bg-futuristic">
       <SEO 
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity solutions with AI-powered threat detection, zero trust security, and 24/7 monitoring. Protect your digital assets with enterprise-grade security."
-        keywords="cybersecurity, threat detection, zero trust security, network security, data protection, security monitoring"
+        title="AI Development Platform - Zion Tech Group"
+        description="Revolutionary AI-powered development solutions for code generation, intelligent development, and automated testing. Advanced machine learning for the future of software development."
+        keywords="AI development, code generation, intelligent development, automated testing, development AI, software development AI"
         ogType="website"
       />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-900 via-purple-900 to-indigo-900 py-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-800/20"></div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 py-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-indigo-900/20"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -166,15 +156,15 @@ export default function Cybersecurity() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-purple-500 rounded-full mb-6">
-              <Shield className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
+              <Code className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Cybersecurity
+              AI Development Platform
             </h1>
-            <p className="text-xl text-red-200 max-w-3xl mx-auto leading-relaxed">
-              Revolutionary cybersecurity platform with cutting-edge AI technology. 
-              From threat detection to zero trust security, our platform protects your digital future.
+            <p className="text-xl text-cyan-200 max-w-3xl mx-auto leading-relaxed">
+              Revolutionizing software development with cutting-edge AI technology. 
+              From code generation to intelligent testing, our platform transforms how we build software.
             </p>
           </motion.div>
 
@@ -207,11 +197,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Cybersecurity Features
+              Advanced AI Development Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform delivers cutting-edge cybersecurity capabilities 
-              for threat detection, prevention, and comprehensive digital protection.
+              Our AI platform combines cutting-edge machine learning with development expertise 
+              to deliver unprecedented capabilities in software creation and optimization.
             </p>
           </motion.div>
 
@@ -223,9 +213,9 @@ export default function Cybersecurity() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-red-500 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gradient-to-br from-gray-800 to-gray-700 p-6 rounded-xl border border-gray-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -237,7 +227,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-gradient-to-br from-red-900 to-purple-900">
+      <section className="py-20 bg-gradient-to-br from-cyan-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -247,11 +237,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Cybersecurity?
+              Why Choose AI Development?
             </h2>
-            <p className="text-xl text-red-200 max-w-3xl mx-auto">
-              Experience the future of digital protection with our cybersecurity platform that delivers 
-              unprecedented security, reliability, and peace of mind.
+            <p className="text-xl text-cyan-200 max-w-3xl mx-auto">
+              Experience the future of software development with our AI-powered platform that delivers 
+              unprecedented productivity, quality, and innovation.
             </p>
           </motion.div>
 
@@ -265,7 +255,7 @@ export default function Cybersecurity() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-4"
               >
-                <CheckCircle className="w-6 h-6 text-red-400 mt-1 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                 <p className="text-lg text-white">{benefit}</p>
               </motion.div>
             ))}
@@ -284,11 +274,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cybersecurity platform is protecting critical infrastructure and enabling secure operations 
-              across industries that demand the highest levels of digital security.
+              Our AI development platform is transforming industries and enabling new possibilities 
+              in software creation and system optimization.
             </p>
           </motion.div>
 
@@ -311,7 +301,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-900 to-red-900">
+      <section className="py-20 bg-gradient-to-br from-blue-900 to-cyan-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -321,10 +311,10 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your Cybersecurity Plan
+              Choose Your AI Development Plan
             </h2>
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your security needs and compliance requirements.
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Flexible pricing options designed to scale with your development initiatives.
             </p>
           </motion.div>
 
@@ -337,12 +327,12 @@ export default function Cybersecurity() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white rounded-2xl p-8 ${
-                  plan.popular ? 'ring-2 ring-red-500 transform scale-105' : ''
+                  plan.popular ? 'ring-2 ring-cyan-500 transform scale-105' : ''
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -360,7 +350,7 @@ export default function Cybersecurity() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-red-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-cyan-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -376,7 +366,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -385,14 +375,14 @@ export default function Cybersecurity() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready for Advanced Security?
+              Ready to Develop with AI?
             </h2>
-            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-               Join the future of cybersecurity with our advanced protection platform. 
-               Contact us today to learn how we can secure your digital assets.
+            <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+               Join the future of software development with our AI-powered platform. 
+               Contact us today to learn how we can transform your development workflow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-red-600 hover:bg-red-50">
+              <button className="btn-futuristic-outline text-lg px-8 py-4 bg-white text-cyan-600 hover:bg-cyan-50">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contact Sales
               </button>
@@ -419,21 +409,21 @@ export default function Cybersecurity() {
                 Get in Touch
               </h2>
               <p className="text-gray-300 mb-8">
-                Ready to explore the future of cybersecurity? Our team of security experts 
-                is here to help you build protection systems that define the next generation of digital security.
+                Ready to explore the future of development? Our team of experts 
+                is here to help you build AI-powered development tools that accelerate innovation.
               </p>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-red-400" />
+                  <Phone className="w-5 h-5 text-cyan-400" />
                   <span className="text-white">+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-red-400" />
+                  <Mail className="w-5 h-5 text-cyan-400" />
                   <span className="text-white">kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-red-400" />
+                  <MapPin className="w-5 h-5 text-cyan-400" />
                   <span className="text-white">364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
@@ -454,21 +444,21 @@ export default function Cybersecurity() {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                   />
                 </div>
                 <div>
                   <textarea
-                    placeholder="Tell us about your cybersecurity needs"
+                    placeholder="Tell us about your development needs"
                     rows={4}
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-red-500"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                   ></textarea>
                 </div>
                 <button type="submit" className="w-full btn-futuristic">
