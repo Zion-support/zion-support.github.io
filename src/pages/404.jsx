@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search, Users, Brain, Shield, Zap } from 'lucide-react';
 const NotFoundPage = () => {

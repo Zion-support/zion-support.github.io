@@ -165,7 +165,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                     error: error instanceof Error ? error.message : 'Unknown error'
                 });
             }
-            console.error('Form submission failed:', error);
+            // console.error('Form submission failed:', error);
         }
         finally {
             setIsSubmitting(false);

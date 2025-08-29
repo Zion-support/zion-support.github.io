@@ -58,7 +58,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         setSettings({ ...DEFAULT_SETTINGS, ...parsed });
         applySettings({ ...DEFAULT_SETTINGS, ...parsed });
       } catch (error) {
-        console.warn('Failed to parse accessibility settings:', error);
+        // console.warn('Failed to parse accessibility settings:', error);
       }
     }
   }, []);

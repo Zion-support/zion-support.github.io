@@ -1,18 +1,13 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield } from 'lucide-react';
+import { Search, X, Filter, TrendingUp, Clock, Globe, Building, Code, Shield, Sparkles, Brain, Zap, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '@/hooks/useDebounce';
-=======
-import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight } from 'lucide-react';
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
 
 interface SearchResult {
   id: string;
   title: string;
   description: string;
-<<<<<<< HEAD
   url: string;
   type: 'service' | 'page' | 'blog' | 'case-study';
   category: string;
@@ -152,11 +147,16 @@ export const EnhancedSearch: React.FC = () => {
 
     setResults(searchResults);
   }, [debouncedQuery, filters]);
-=======
-  type: 'service' | 'page' | 'article' | 'ai-suggestion';
-  url: string;
-  icon?: React.ComponentType<any>;
+  type: 'service' | 'page' | 'blog' | 'case-study';
+  category: string;
+  tags: string[];
   relevance: number;
+}
+
+interface SearchFilter {
+  type: string[];
+  category: string[];
+  tags: string[];
 }
 
 interface SearchSuggestion {
@@ -186,55 +186,12 @@ export function EnhancedSearch({
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Mock search results - in real app, this would come from API
-  const mockSearchResults: SearchResult[] = [
-    {
-      id: '1',
-      title: 'AI Business Intelligence',
-      description: 'Advanced analytics and machine learning insights for your business',
-      type: 'service',
-      url: '/services/ai-business-intelligence',
-      icon: Brain,
-      relevance: 0.95
-    },
-    {
-      id: '2',
-      title: 'Quantum Computing Solutions',
-      description: 'Next-generation computational power for complex problem solving',
-      type: 'service',
-      url: '/services/quantum-computing',
-      icon: Zap,
-      relevance: 0.92
-    },
-    {
-      id: '3',
-      title: 'Micro SaaS Platform',
-      description: 'Scalable software solutions tailored to your specific needs',
-      type: 'service',
-      url: '/services/micro-saas',
-      icon: TrendingUp,
-      relevance: 0.88
-    }
-  ];
-
-  // Mock suggestions
-  const mockSuggestions: SearchSuggestion[] = [
-    { text: 'AI compliance assistant', type: 'recent' },
-    { text: 'Quantum machine learning', type: 'trending' },
-    { text: 'Digital transformation consulting', type: 'ai' },
-    { text: 'Cloud DevOps automation', type: 'trending' }
-  ];
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
-
   // Handle click outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
-<<<<<<< HEAD
-=======
         setSelectedIndex(-1);
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
       }
     };
 
@@ -245,48 +202,16 @@ export function EnhancedSearch({
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-<<<<<<< HEAD
       if (event.key === 'Escape') {
         setIsOpen(false);
       } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
         event.preventDefault();
         setIsOpen(true);
-        inputRef.current?.focus();
-=======
-      if (!isOpen) return;
-
-      switch (event.key) {
-        case 'ArrowDown':
-          event.preventDefault();
-          setSelectedIndex(prev => 
-            prev < results.length - 1 ? prev + 1 : 0
-          );
-          break;
-        case 'ArrowUp':
-          event.preventDefault();
-          setSelectedIndex(prev => 
-            prev > 0 ? prev - 1 : results.length - 1
-          );
-          break;
-        case 'Enter':
-          event.preventDefault();
-          if (selectedIndex >= 0 && results[selectedIndex]) {
-            handleResultClick(results[selectedIndex]);
-          } else if (query.trim()) {
-            handleSearch();
-          }
-          break;
-        case 'Escape':
-          setIsOpen(false);
-          setSelectedIndex(-1);
-          break;
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
-      }
+        inputRef.current?.focus();      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-<<<<<<< HEAD
   }, []);
 
   const handleSearch = useCallback((searchQuery: string) => {
@@ -305,41 +230,13 @@ export function EnhancedSearch({
   const handleResultClick = (result: SearchResult) => {
     handleSearch(result.title);
     navigate(result.url);
-=======
-  }, [isOpen, results, selectedIndex, query]);
-
-  const handleSearch = useCallback(async () => {
-    if (!query.trim()) return;
-
-    setIsLoading(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    // Filter results based on query
-    const filteredResults = mockSearchResults.filter(result =>
-      result.title.toLowerCase().includes(query.toLowerCase()) ||
-      result.description.toLowerCase().includes(query.toLowerCase())
-    );
-
-    setResults(filteredResults);
-    setSuggestions(mockSuggestions);
-    setIsLoading(false);
-    setIsOpen(true);
-    
-    if (onSearch) {
-      onSearch(query);
-    }
-  }, [query, onSearch]);
-
-  const handleResultClick = (result: SearchResult) => {
-    window.location.href = result.url;
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
+    setIsOpen(false);
+    setQuery('');
+  };
     setIsOpen(false);
     setQuery('');
   };
 
-<<<<<<< HEAD
   const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
     setFilters(prev => ({
       ...prev,
@@ -360,7 +257,9 @@ export function EnhancedSearch({
       case 'blog': return <TrendingUp className="h-4 w-4" />;
       case 'case-study': return <Building className="h-4 w-4" />;
       default: return <Search className="h-4 w-4" />;
-=======
+    }
+  };
+
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     setQuery(suggestion.text);
     handleSearch();
@@ -396,12 +295,12 @@ export function EnhancedSearch({
         return 'bg-gray-100 border border-gray-200 hover:border-gray-300 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
       default:
         return 'bg-white border border-gray-300 hover:border-gray-400 focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500/20';
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
+    }
+  };
     }
   };
 
   return (
-<<<<<<< HEAD
     <div className="relative" ref={searchRef}>
       {/* Search Trigger */}
       <button
@@ -614,7 +513,6 @@ export function EnhancedSearch({
                 </div>
               </div>
             </motion.div>
-=======
     <div ref={searchRef} className={`relative ${className}`}>
       {/* Search Input */}
       <div className={`relative flex items-center rounded-xl transition-all duration-300 ${getVariantClasses()}`}>
@@ -750,14 +648,9 @@ export function EnhancedSearch({
                 </p>
               </div>
             )}
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf
           </motion.div>
         )}
       </AnimatePresence>
     </div>
   );
-<<<<<<< HEAD
-};
-=======
 }
->>>>>>> c96b5a35dcd0e882c20e1a1b4af59f1237edbcbf

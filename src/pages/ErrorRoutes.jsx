@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { Home, ArrowLeft, AlertTriangle } from 'lucide-react';

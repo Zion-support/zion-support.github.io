@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { CogIcon, ChartBarIcon, ShieldCheckIcon, RocketLaunchIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 const AIAutonomousBusinessManager = () => {

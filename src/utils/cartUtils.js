@@ -31,7 +31,7 @@ export const getCartFromStorage = () => {
     
     return JSON.parse(cartData);
   } catch (error) {
-    console.error('Error reading cart from storage:', error);
+    // console.error('Error reading cart from storage:', error);
     return [];
   }
 };
@@ -46,7 +46,7 @@ export const saveCartToStorage = (cart) => {
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     localStorage.setItem(CART_EXPIRY_KEY, expiry.toString());
   } catch (error) {
-    console.error('Error saving cart to storage:', error);
+    // console.error('Error saving cart to storage:', error);
   }
 };
 
@@ -58,7 +58,7 @@ export const clearCartFromStorage = () => {
     localStorage.removeItem(CART_STORAGE_KEY);
     localStorage.removeItem(CART_EXPIRY_KEY);
   } catch (error) {
-    console.error('Error clearing cart from storage:', error);
+    // console.error('Error clearing cart from storage:', error);
   }
 };
 
@@ -70,7 +70,7 @@ export const clearCartFromStorage = () => {
  */
 export const addToCart = (currentCart, item) => {
   if (!item || !item.id) {
-    console.error('Invalid item provided to addToCart');
+    // console.error('Invalid item provided to addToCart');
     return currentCart;
   }
   
@@ -273,7 +273,7 @@ export const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
-    console.error('Error exporting cart data:', error);
+    // console.error('Error exporting cart data:', error);
     return '[]';
   }
 };
@@ -291,7 +291,7 @@ export const importCartData = (cartData) => {
     }
     return [];
   } catch (error) {
-    console.error('Error importing cart data:', error);
+    // console.error('Error importing cart data:', error);
     return [];
   }
 };

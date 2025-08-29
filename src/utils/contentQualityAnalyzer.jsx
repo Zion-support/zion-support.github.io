@@ -1,3 +1,4 @@
+
 export class ContentQualityAnalyzer {
     static instance;
     analyzedPages = new Map();

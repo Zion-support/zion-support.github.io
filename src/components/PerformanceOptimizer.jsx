@@ -72,7 +72,7 @@ export const PerformanceOptimizer = ({ children }) => {
                     updateViaCache: 'none'
                 })
                 .then((registration) => {
-                    console.log('SW registered: ', registration);
+                    // console.log('SW registered: ', registration);
                     
                     // Check for updates
                     registration.addEventListener('updatefound', () => {
@@ -81,14 +81,14 @@ export const PerformanceOptimizer = ({ children }) => {
                             newWorker.addEventListener('statechange', () => {
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     // New service worker available
-                                    console.log('New service worker available');
+                                    // console.log('New service worker available');
                                 }
                             });
                         }
                     });
                 })
                 .catch((registrationError) => {
-                    console.warn('SW registration failed: ', registrationError);
+                    // console.warn('SW registration failed: ', registrationError);
                 });
         }
     }, []);

@@ -1,3 +1,4 @@
+
 export class SEOOptimizer {
     static DEFAULT_META_DESCRIPTIONS = {
         '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',

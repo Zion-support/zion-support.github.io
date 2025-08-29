@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Factory, Cpu, Zap, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Network } from 'lucide-react';
 export default function ManufacturingSolutions() {

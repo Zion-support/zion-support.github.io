@@ -22,8 +22,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 // Register service worker with error handling
 try {
   registerServiceWorker().catch(error => {
-    console.warn('Service worker registration failed:', error);
+    // // console.warn('Service worker registration failed:', error);
   });
 } catch (error) {
-  console.warn('Service worker registration error:', error);
+  // // console.warn('Service worker registration error:', error);
 }

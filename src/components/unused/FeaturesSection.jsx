@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircleIcon, ClockIcon, UserGroupIcon, ShieldCheckIcon, RocketLaunchIcon, CogIcon } from '@heroicons/react/24/outline';
 export function FeaturesSection() {

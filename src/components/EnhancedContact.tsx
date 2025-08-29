@@ -106,7 +106,7 @@ export function EnhancedContact() {
         message: ''
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
     }

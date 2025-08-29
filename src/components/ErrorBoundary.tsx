@@ -55,7 +55,7 @@ export class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // console.error('ErrorBoundary caught an error:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -81,7 +81,7 @@ export class ErrorBoundary extends Component<Props, State> {
       };
 
       // You can send this to your error logging service
-      console.log('Error logged:', errorData);
+      // console.log('Error logged:', errorData);
       
       // Example: Send to external service
       // fetch('/api/errors', {
@@ -90,7 +90,7 @@ export class ErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorData)
       // });
     } catch (logError) {
-      console.error('Failed to log error:', logError);
+      // console.error('Failed to log error:', logError);
     }
   };
 
@@ -345,7 +345,7 @@ export function withErrorBoundary<P extends object>(
 // Hook for functional components to catch errors
 export function useErrorHandler() {
   return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by useErrorHandler:', error, errorInfo);
+    // console.error('Error caught by useErrorHandler:', error, errorInfo);
     
     // You can add custom error handling logic here
     // For example, sending to an error reporting service

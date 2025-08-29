@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell } from 'lucide-react';

@@ -106,7 +106,7 @@ export default function Login() {
       // Redirect to dashboard or handle successful login
       window.location.href = '/dashboard';
     } catch (error) {
-      console.error('Login failed:', error);
+      // console.error('Login failed:', error);
     } finally {
       setIsLoading(false);
     }

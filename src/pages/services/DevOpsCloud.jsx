@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from "@/components/SEO";
 import Link from 'next/link';
 import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from 'lucide-react';
