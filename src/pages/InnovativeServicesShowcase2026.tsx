@@ -30,9 +30,8 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import { INNOVATIVE_SERVICES } from '../data/servicesData';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 export default function InnovativeServicesShowcase2026() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('innovation');
