@@ -39,6 +39,11 @@ export default function Services() {
         { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: BarChart3, description: 'Customer sentiment & behavior analytics' },
         { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Intelligent supply chain management' },
         { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', icon: Shield, description: 'Real-time risk monitoring & optimization' },
+        
+        // New Innovative AI Services 2025
+        { name: 'AI Blockchain Integration', href: '/services/ai-blockchain-integration', icon: Shield, description: 'AI-powered blockchain solutions for DeFi & NFTs' },
+        { name: 'AI Edge Computing Platform', href: '/services/ai-edge-computing-platform', icon: Network, description: 'Edge AI for IoT & real-time processing' },
+        { name: 'AI Metaverse Development', href: '/services/ai-metaverse-development', icon: Globe, description: 'AI-powered virtual world creation platform' },
       ]
     },
     {

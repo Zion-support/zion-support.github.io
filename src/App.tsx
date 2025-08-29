@@ -93,6 +93,11 @@ const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnal
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
 
+// New innovative AI services 2025
+const AIBlockchainIntegration = lazy(() => import('./pages/services/AIBlockchainIntegration'));
+const AIEdgeComputingPlatform = lazy(() => import('./pages/services/AIEdgeComputingPlatform'));
+const AIMetaverseDevelopment = lazy(() => import('./pages/services/AIMetaverseDevelopment'));
+
 // 2025 New Innovative Services
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
@@ -360,6 +365,12 @@ function App() {
                     <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
                     <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
                     <Route path="/services/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+                    
+                    {/* New Innovative AI Services 2025 */}
+                    <Route path="/services/ai-blockchain-integration" element={<AIBlockchainIntegration />} />
+                    <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+                    <Route path="/services/ai-metaverse-development" element={<AIMetaverseDevelopment />} />
+                    
                     <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
                     <Route path="/services/ai-data-governance-platform" element={<AIDataGovernancePlatform />} />
                     <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />

@@ -98,6 +98,9 @@ const footerSections = [
       { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
       { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
       { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
+      { name: 'AI Blockchain Integration', path: '/services/ai-blockchain-integration', icon: Shield },
+      { name: 'AI Edge Computing Platform', path: '/services/ai-edge-computing-platform', icon: Network },
+      { name: 'AI Metaverse Development', path: '/services/ai-metaverse-development', icon: Globe },
       { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
       { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
       { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
@@ -152,6 +155,17 @@ const footerSections = [
     ]
   },
   {
+    title: 'Pricing & Guides',
+    icon: DollarSign,
+    links: [
+      { name: 'Comprehensive Pricing 2025', path: '/comprehensive-pricing-guide-2025', icon: DollarSign },
+      { name: 'Pricing Plans', path: '/pricing', icon: DollarSign },
+      { name: 'Service Comparison', path: '/service-comparison', icon: BarChart3 },
+      { name: 'ROI Calculator', path: '/roi-calculator', icon: Calculator },
+      { name: 'Enterprise Solutions', path: '/enterprise', icon: Building }
+    ]
+  },
+  {
     title: 'Support & Resources',
     icon: HelpCircle,
     links: [
@@ -160,7 +174,6 @@ const footerSections = [
       { name: 'Blog', path: '/blog', icon: BookOpen },
       { name: 'News', path: '/news', icon: Newspaper },
       { name: 'Case Studies', path: '/case-studies', icon: FileText },
-      { name: 'Pricing', path: '/pricing', icon: DollarSign },
       { name: 'Contact Support', path: '/contact', icon: MessageCircle },
       { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
       { name: 'Sitemap', path: '/sitemap', icon: FileText }
@@ -415,6 +428,37 @@ export function Footer() {
           {/* Divider */}
           <div className="border-t border-slate-700 my-12" />
 
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 mb-8"
+          >
+            <h3 className="text-lg font-semibold text-white mb-4 text-center">Contact Information</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
+              <div className="flex items-center justify-center">
+                <Phone className="w-5 h-5 text-blue-400 mr-3" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Mail className="w-5 h-5 text-blue-400 mr-3" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center md:col-span-2">
+                <MapPin className="w-5 h-5 text-blue-400 mr-3" />
+                <span className="text-gray-300">364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center justify-center md:col-span-2">
+                <Globe className="w-5 h-5 text-blue-400 mr-3" />
+                <a href="https://ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  ziontechgroup.com
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Bottom Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Copyright and Legal */}
@@ -427,7 +471,7 @@ export function Footer() {
             >
               <div className="flex items-center gap-2 text-slate-400">
                 <Copyright className="w-4 h-4" />
-                <span>2024 Zion Tech Group. All rights reserved.</span>
+                <span>2025 Zion Tech Group. All rights reserved.</span>
               </div>
               
               <div className="flex items-center gap-6 text-sm">

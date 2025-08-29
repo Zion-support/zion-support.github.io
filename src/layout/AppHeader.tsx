@@ -73,6 +73,14 @@ export function AppHeader() {
     { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target, description: 'AI-driven project optimization', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
     { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
     
+    // New Innovative AI Services 2025
+    { name: 'AI Blockchain Integration', href: '/services/ai-blockchain-integration', icon: Shield, description: 'AI-powered blockchain solutions', category: 'AI & ML', color: 'from-blue-500 to-purple-500' },
+    { name: 'AI Edge Computing Platform', href: '/services/ai-edge-computing-platform', icon: Network, description: 'Edge AI for IoT & real-time processing', category: 'AI & ML', color: 'from-green-500 to-blue-500' },
+    { name: 'AI Metaverse Development', href: '/services/ai-metaverse-development', icon: Globe, description: 'AI-powered virtual world creation', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
+    
+    // Pricing & Guides
+    { name: 'Comprehensive Pricing 2025', href: '/comprehensive-pricing-guide-2025', icon: DollarSign, description: 'Complete pricing guide for all services', category: 'Pricing', color: 'from-green-500 to-emerald-500' },
+    
     // Cloud & DevOps
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps', color: 'from-gray-500 to-slate-500' },
