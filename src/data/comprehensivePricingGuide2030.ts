@@ -25,6 +25,318 @@ export interface ServicePricing {
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
+  // NEW INNOVATIVE MICRO SAAS SERVICES 2024-2025
+  
+  {
+    id: "ai-legal-document-analyzer",
+    title: "AI Legal Document Analyzer",
+    description: "Advanced AI platform that analyzes legal documents, contracts, and agreements with 99.2% accuracy. Identifies risks, compliance issues, and provides intelligent recommendations.",
+    category: "AI & Legal Tech",
+    pricing: [
+      {
+        name: "Basic",
+        price: 3499,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Document analysis up to 100 pages/month",
+          "Basic risk assessment",
+          "Compliance checking",
+          "Email support",
+          "Standard templates"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 5999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Unlimited document analysis",
+          "Advanced risk assessment",
+          "Custom compliance rules",
+          "Priority support",
+          "API access"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 9999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Custom AI models",
+          "White-label solution",
+          "Dedicated support",
+          "Custom integrations",
+          "Training & onboarding"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $3,000-6,000. Our solution provides 99.2% accuracy vs. industry standard of 85-90%.",
+    roi: "400% within 4 months through improved efficiency and risk reduction.",
+    setupTime: "3-5 weeks with dedicated onboarding team.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-legal-analyzer"
+    }
+  },
+
+  {
+    id: "ai-real-estate-investment-analyzer",
+    title: "AI Real Estate Investment Analyzer",
+    description: "Comprehensive real estate investment analysis platform using AI to evaluate properties, market trends, and investment opportunities with 94% accuracy.",
+    category: "AI & Real Estate",
+    pricing: [
+      {
+        name: "Starter",
+        price: 2799,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Property analysis up to 50 properties/month",
+          "Basic ROI calculations",
+          "Market trend analysis",
+          "Email support",
+          "Standard reports"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 4499,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Starter",
+          "Unlimited property analysis",
+          "Advanced ROI modeling",
+          "Predictive market forecasting",
+          "Priority support",
+          "API access"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 7999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Custom AI models",
+          "Portfolio optimization",
+          "Dedicated support",
+          "Custom integrations",
+          "Training & consulting"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $2,500-5,000. Our solution provides 94% accuracy vs. industry standard of 75-80%.",
+    roi: "350% within 3 months through better investment decisions.",
+    setupTime: "2-4 weeks with dedicated onboarding team.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-real-estate-analyzer"
+    }
+  },
+
+  {
+    id: "ai-restaurant-management-system",
+    title: "AI Restaurant Management System",
+    description: "Intelligent restaurant management platform with AI-powered inventory management, customer behavior analysis, and predictive ordering.",
+    category: "AI & Hospitality",
+    pricing: [
+      {
+        name: "Basic",
+        price: 1899,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Inventory management",
+          "Basic customer analytics",
+          "Menu optimization",
+          "Email support",
+          "Standard reports"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 2999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced AI analytics",
+          "Predictive ordering",
+          "Customer behavior insights",
+          "Priority support",
+          "API access"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 4999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Multi-location support",
+          "Custom AI models",
+          "Dedicated support",
+          "Custom integrations",
+          "Training & setup"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $1,500-3,500. Our solution reduces food waste by 30% vs. industry standard of 10-15%.",
+    roi: "300% within 2 months through waste reduction and increased efficiency.",
+    setupTime: "2-3 weeks with dedicated onboarding team.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-restaurant-management"
+    }
+  },
+
+  {
+    id: "ai-fitness-coaching-platform",
+    title: "AI Fitness Coaching Platform",
+    description: "Personalized AI fitness coaching platform that creates custom workout plans, tracks progress, and provides real-time feedback with 97% accuracy.",
+    category: "AI & Health Tech",
+    pricing: [
+      {
+        name: "Basic",
+        price: 1299,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic workout planning",
+          "Progress tracking",
+          "Standard exercises",
+          "Email support",
+          "Mobile app access"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 1999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced AI coaching",
+          "Custom workout plans",
+          "Real-time feedback",
+          "Priority support",
+          "API access"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 3499,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Custom AI models",
+          "White-label solution",
+          "Dedicated support",
+          "Custom integrations",
+          "Training & setup"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $1,000-2,500. Our solution provides 97% accuracy vs. industry standard of 80-85%.",
+    roi: "250% within 2 months through improved user engagement.",
+    setupTime: "1-2 weeks with dedicated onboarding team.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-fitness-coaching"
+    }
+  },
+
+  {
+    id: "ai-ecommerce-personalization-engine",
+    title: "AI E-commerce Personalization Engine",
+    description: "Advanced AI-powered e-commerce personalization platform that increases conversion rates by 40% through intelligent product recommendations.",
+    category: "AI & E-commerce",
+    pricing: [
+      {
+        name: "Basic",
+        price: 2499,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Basic product recommendations",
+          "User behavior tracking",
+          "Standard personalization",
+          "Email support",
+          "Basic analytics"
+        ],
+        cta: "Get Started"
+      },
+      {
+        name: "Professional",
+        price: 3999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Basic",
+          "Advanced AI personalization",
+          "Dynamic pricing",
+          "Real-time optimization",
+          "Priority support",
+          "API access"
+        ],
+        popular: true,
+        cta: "Most Popular"
+      },
+      {
+        name: "Enterprise",
+        price: 6999,
+        currency: "$",
+        billing: "one-time setup",
+        features: [
+          "Everything in Professional",
+          "Custom AI models",
+          "White-label solution",
+          "Dedicated support",
+          "Custom integrations",
+          "Training & consulting"
+        ],
+        cta: "Contact Sales"
+      }
+    ],
+    marketComparison: "Market average: $2,000-5,000. Our solution increases conversion rates by 40% vs. industry standard of 15-20%.",
+    roi: "450% within 3 months through increased sales and conversions.",
+    setupTime: "3-4 weeks with dedicated onboarding team.",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-ecommerce-personalization"
+    }
+  },
+
   {
     id: "ai-powered-business-intelligence-suite",
     title: "AI-Powered Business Intelligence Suite",
