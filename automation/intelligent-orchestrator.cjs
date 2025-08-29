@@ -38,7 +38,11 @@ class IntelligentOrchestrator {
       { name: 'content-generator', path: 'content-generator.cjs', priority: 'low' },
       { name: 'seo-optimizer', path: 'seo-optimizer.cjs', priority: 'medium' },
       { name: 'security-scanner', path: 'security-scanner.cjs', priority: 'high' },
-      { name: 'test-generator', path: 'test-generator.cjs', priority: 'medium' }
+      { name: 'test-generator', path: 'test-generator.cjs', priority: 'medium' },
+      // New intelligent automations
+      { name: 'ai-code-reviewer', path: '../scripts/automation/ai-code-reviewer.cjs', priority: 'high' },
+      { name: 'intelligent-dependency-monitor', path: '../scripts/automation/intelligent-dependency-monitor.cjs', priority: 'high' },
+      { name: 'smart-performance-optimizer', path: '../scripts/automation/smart-performance-optimizer.cjs', priority: 'medium' }
     ];
 
     for (const system of systems) {
