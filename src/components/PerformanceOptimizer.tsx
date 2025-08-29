@@ -15,22 +15,36 @@ export function PerformanceOptimizer() {
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     const criticalPaths = [
-      '/services',
-      '/ai-services',
-      '/contact',
-      '/about'
+      '/images/hero-bg.jpg',
+      '/images/grid-pattern.svg',
+      '/fonts/inter-var.woff2'
     ];
 
     criticalPaths.forEach(path => {
       const link = document.createElement('link');
-      link.rel = 'prefetch';
+      link.rel = 'preload';
+      link.as = path.endsWith('.woff2') ? 'font' : 'image';
       link.href = path;
+      link.crossOrigin = path.endsWith('.woff2') ? 'anonymous' : '';
       document.head.appendChild(link);
     });
   }, []);
 
-  // Monitor Core Web Vitals
-  const monitorCoreWebVitals = useCallback(() => {
+  // Optimize images
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+    });
+  }, []);
+
+  // Monitor performance metrics
+  const monitorPerformance = useCallback(() => {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
@@ -38,12 +52,6 @@ export function PerformanceOptimizer() {
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             console.log('FCP:', entry.startTime);
-            // Send to analytics
-            if (entry.startTime < 1800) {
-              console.log('✅ FCP is good');
-            } else {
-              console.log('⚠️ FCP needs improvement');
-            }
           }
         });
       });
@@ -55,11 +63,6 @@ export function PerformanceOptimizer() {
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           console.log('LCP:', lastEntry.startTime);
-          if (lastEntry.startTime < 2500) {
-            console.log('✅ LCP is good');
-          } else {
-            console.log('⚠️ LCP needs improvement');
-          }
         }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -69,12 +72,6 @@ export function PerformanceOptimizer() {
         const entries = list.getEntries();
         entries.forEach((entry) => {
           console.log('FID:', entry.processingStart - entry.startTime);
-          const fid = entry.processingStart - entry.startTime;
-          if (fid < 100) {
-            console.log('✅ FID is good');
-          } else {
-            console.log('⚠️ FID needs improvement');
-          }
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -89,84 +86,89 @@ export function PerformanceOptimizer() {
           }
         });
         console.log('CLS:', clsValue);
-        if (clsValue < 0.1) {
-          console.log('✅ CLS is good');
-        } else {
-          console.log('⚠️ CLS needs improvement');
-        }
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
   }, []);
 
-  // Optimize images
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      
-      // Add decoding="async" for better performance
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
+  // Implement service worker for offline support
+  const registerServiceWorker = useCallback(() => {
+    if ('serviceWorker' in navigator && import.meta.env.PROD) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
   }, []);
 
-  // Add intersection observer for animations
-  const setupIntersectionObserver = useCallback(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+  // Optimize scroll performance
+  const optimizeScroll = useCallback(() => {
+    let ticking = false;
+    
+    const updateScroll = () => {
+      ticking = false;
+      // Add scroll-based optimizations here
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, observerOptions);
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateScroll);
+        ticking = true;
+      }
+    };
 
-    // Observe elements with data-animate attribute
-    const animatedElements = document.querySelectorAll('[data-animate]');
-    animatedElements.forEach((el) => observer.observe(el));
+    window.addEventListener('scroll', requestTick, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', requestTick);
+    };
   }, []);
 
-  // Route change optimization
-  useEffect(() => {
-    // Preload critical resources on route change
-    preloadCriticalResources();
-    
-    // Optimize images on route change
-    setTimeout(optimizeImages, 100);
-    
-    // Setup intersection observer
-    setupIntersectionObserver();
-  }, [location.pathname, preloadCriticalResources, optimizeImages, setupIntersectionObserver]);
+  // Implement intersection observer for lazy loading
+  const setupIntersectionObserver = useCallback(() => {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              imageObserver.unobserve(img);
+            }
+          }
+        });
+      });
 
-  // Initial setup
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => imageObserver.observe(img));
+
+      return () => imageObserver.disconnect();
+    }
+  }, []);
+
   useEffect(() => {
-    monitorCoreWebVitals();
     preloadCriticalResources();
     optimizeImages();
-    setupIntersectionObserver();
+    monitorPerformance();
+    registerServiceWorker();
+    const cleanupScroll = optimizeScroll();
+    const cleanupObserver = setupIntersectionObserver();
 
-    // Add performance monitoring to window for debugging
-    (window as any).performanceMetrics = {
-      getMetrics: () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        return {
-          ttfb: navigation.responseStart - navigation.requestStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          totalTime: navigation.loadEventEnd - navigation.navigationStart
-        };
-      }
+    return () => {
+      cleanupScroll();
+      cleanupObserver();
     };
-  }, [monitorCoreWebVitals, preloadCriticalResources, optimizeImages, setupIntersectionObserver]);
+  }, [preloadCriticalResources, optimizeImages, monitorPerformance, registerServiceWorker, optimizeScroll, setupIntersectionObserver]);
+
+  // Re-optimize on route changes
+  useEffect(() => {
+    optimizeImages();
+    setupIntersectionObserver();
+  }, [location, optimizeImages, setupIntersectionObserver]);
 
   return null; // This component doesn't render anything
 }
