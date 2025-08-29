@@ -2,7 +2,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Zap } from 'lucide-react';
-import { SEO } from "@/components/SEO";
+import { EnhancedSEO } from "@/components/EnhancedSEO";
 import { HeroSection } from "@/components/HeroSection";
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
@@ -31,11 +31,33 @@ export default function Home() {
 
   return (
     <>
-      <SEO 
+      <EnhancedSEO 
         title="Zion Tech Group - Leading AI & Technology Solutions"
         description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
         canonical="/"
         url="https://ziontechgroup.com"
+        type="website"
+        tags={['AI Solutions', 'Technology Services', 'Digital Transformation', 'IT Consulting', 'Cloud Services', 'Cybersecurity']}
+        services={[
+          {
+            name: 'AI Business Intelligence',
+            description: 'Transform your business with AI-powered insights and analytics',
+            url: '/services/ai-business-intelligence',
+            category: 'Artificial Intelligence'
+          },
+          {
+            name: 'Cloud DevOps',
+            description: 'Streamline your development and operations with cloud-native solutions',
+            url: '/services/cloud-devops',
+            category: 'Cloud Services'
+          },
+          {
+            name: 'Digital Transformation',
+            description: 'Modernize your business processes and technology infrastructure',
+            url: '/services/digital-transformation',
+            category: 'Consulting'
+          }
+        ]}
       />
       
       {/* Hero Section */}

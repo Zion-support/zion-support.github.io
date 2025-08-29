@@ -4,10 +4,13 @@ import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
+import { EnhancedSEO } from './components/EnhancedSEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
+import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
+import { InteractiveUserExperience } from './components/InteractiveUserExperience';
+import { SecurityEnhancer } from './components/SecurityEnhancer';
 
 // Core pages
 const Home = React.lazy(() => import('./pages/Home'));
@@ -301,7 +304,10 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer showMetrics={true} />
-        <AccessibilityEnhancer />
+        <EnhancedAccessibilityPanel />
+        <AdvancedPerformanceMonitor />
+        <InteractiveUserExperience />
+        <SecurityEnhancer />
       </div>
     </ErrorBoundary>
   );
