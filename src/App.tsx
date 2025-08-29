@@ -167,6 +167,10 @@ const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomous
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
 const AIAutonomousThreatIntelligence = lazy(() => import('./pages/AIAutonomousThreatIntelligence'));
 
+// Advanced AI service pages
+const AIAutonomousBusinessIntelligence = lazy(() => import('./pages/services/AIAutonomousBusinessIntelligence'));
+const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
+
 // Additional innovative services
 const AIWorkflowOrchestrator = lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernancePlatform = lazy(() => import('./pages/services/AIDataGovernancePlatform'));
@@ -439,6 +443,10 @@ function App() {
                   <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                   <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
                   <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                  
+                  {/* Advanced AI service routes */}
+                  <Route path="/services/ai-autonomous-business-intelligence" element={<AIAutonomousBusinessIntelligence />} />
+                  <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
                   
                   {/* Service Showcase Pages */}
                   <Route path="/new-innovative-services-2025" element={<NewInnovativeServices2025 />} />
