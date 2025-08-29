@@ -243,104 +243,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Multi-carrier integration',
       'Mobile app for drivers'
     ],
-<<<<<<< HEAD
     popular: true,
-=======
-    capabilities: [
-      'Production optimization',
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Energy management',
-      'Performance analytics'
-    ],
-    marketAdvantage: 'Superior AI capabilities for manufacturing optimization with comprehensive IoT integration compared to traditional manufacturing platforms.',
-    averageMarketPrice: '$500-2000/month',
-    featuresCapabilities: [
-      'AI production optimization',
-      'Predictive maintenance',
-      'Quality control',
-      'Supply chain optimization',
-      'Energy management',
-      'Performance analytics'
-    ]
-  },
-  {
-    id: 'ai-powered-healthcare-diagnostics',
-    name: 'AI-Powered Healthcare Diagnostics',
-    tagline: 'Revolutionary medical diagnostics with AI accuracy',
-    price: '$2,999',
-    period: '/month',
-    description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis, treatment recommendations, and patient monitoring. Features medical imaging analysis, predictive diagnostics, and personalized medicine.',
-    features: [
-      'Medical imaging analysis',
-      'Predictive diagnostics',
-      'Personalized medicine',
-      'Patient monitoring',
-      'Treatment recommendations',
-      'Drug interaction analysis',
-      'Clinical decision support',
-      'Telemedicine integration',
-      'HIPAA compliance',
-      'Expert consultation'
-    ],
-    popular: true,
-    icon: '🏥',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-powered-healthcare-diagnostics',
-    marketPosition: 'Leading AI-powered healthcare diagnostics platform. Our advantage: Advanced medical AI with comprehensive diagnostic capabilities and regulatory compliance.',
-    targetAudience: 'Hospitals', 'Clinics', 'Medical practices', 'Pharmaceutical companies', 'Research institutions',
-    trialDays: 45,
-    setupTime: '4-6 weeks',
-    category: 'Healthcare AI & Medical Diagnostics',
-    realService: true,
-    technology: ['AI/ML', 'Medical Imaging', 'Predictive Analytics', 'Natural Language Processing', 'Clinical Decision Support'],
-    integrations: ['Electronic Health Records', 'Medical imaging systems', 'Laboratory systems', 'Telemedicine platforms', 'Custom medical systems'],
-    useCases: ['Medical diagnosis', 'Treatment planning', 'Patient monitoring', 'Drug discovery', 'Clinical research'],
-    roi: 'Healthcare organizations achieve 400% ROI with 90% improvement in diagnostic accuracy and 80% reduction in diagnostic time.',
-    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Custom medical AI platforms'],
-    marketSize: '$45.8B AI healthcare market',
-    growthRate: '65% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Advanced AI-powered healthcare diagnostics platform with comprehensive medical AI capabilities and regulatory compliance.',
-    launchDate: '2024-12-10',
-    customers: 18,
-    rating: 4.9,
-    reviews: 35
-  },
-  {
-    id: 'smart-manufacturing-orchestrator',
-    name: 'Smart Manufacturing Orchestrator',
-    tagline: 'Intelligent manufacturing with AI and IoT optimization',
-    price: '$1,899',
-    period: '/month',
-    description: 'Comprehensive smart manufacturing platform that uses AI, IoT, and automation to optimize production processes, quality control, and supply chain management. Features predictive maintenance and real-time optimization.',
-    features: [
-      'AI-powered production optimization',
-      'IoT sensor integration',
-      'Predictive maintenance',
-      'Quality control automation',
-      'Supply chain optimization',
-      'Real-time monitoring',
-      'Energy efficiency',
-      'Workforce management',
-      'Analytics dashboard',
-      'Mobile app access'
-    ],
-    popular: true,
-    icon: '🏭',
-    color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/smart-manufacturing-orchestrator',
     marketPosition: 'Leading smart manufacturing platform. Our advantage: Comprehensive AI and IoT integration with real-time optimization and predictive capabilities.',
-    targetAudience: 'Manufacturing companies', 'Industrial companies', 'Automotive manufacturers', 'Electronics companies', 'Chemical companies',
+    targetAudience: ['Manufacturing companies', 'Industrial companies', 'Automotive manufacturers', 'Electronics companies', 'Chemical companies'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Smart Manufacturing & Industry 4.0',
@@ -390,7 +297,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/financial-ai-trading-platform',
     marketPosition: 'Leading AI-powered financial trading platform. Our advantage: Advanced AI algorithms with comprehensive risk management and compliance monitoring.',
-    targetAudience: 'Investment firms', 'Hedge funds', 'Banks', 'Trading companies', 'Financial institutions',
+    targetAudience: ['Investment firms', 'Hedge funds', 'Banks', 'Trading companies', 'Financial institutions'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Financial AI & Algorithmic Trading',
@@ -440,7 +347,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/retail-ai-optimization-platform',
     marketPosition: 'Leading retail AI optimization platform. Our advantage: Comprehensive AI-powered retail optimization with personalized customer experiences.',
-    targetAudience: 'Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers',
+    targetAudience: ['Retail chains', 'E-commerce companies', 'Department stores', 'Specialty retailers', 'Shopping centers'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Retail AI & Customer Experience',
@@ -485,7 +392,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Mobile app access'
     ],
     popular: false,
->>>>>>> origin/clean-merge-website-fixes
     icon: '🚚',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
@@ -505,19 +411,11 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     growthRate: '22.5% annual growth',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
-    implementationDetails: 'Advanced logistics AI platform with comprehensive optimization and tracking capabilities.',
-    launchDate: '2024-05-01',
-    customers: 38,
-    rating: 4.6,
-    reviews: 32
-=======
     implementationDetails: 'Advanced logistics AI platform with comprehensive logistics optimization and real-time tracking capabilities.',
     launchDate: '2024-08-25',
     customers: 28,
     rating: 4.7,
     reviews: 58
->>>>>>> origin/clean-merge-website-fixes
   }
 ];
 export const INDUSTRY_SOLUTION_CATEGORIES = [

@@ -175,7 +175,6 @@ export function AppHeader() {
       featured: true,
       color: 'from-green-500 to-teal-500'
     },
-    },
     { 
       name: 'Micro SaaS Products', 
       href: '/services/micro-saas', 
