@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-08-29T17:14:05.291Z",
-  "duration": "15295ms",
+  "timestamp": "2025-08-29T17:14:21.191Z",
+  "duration": "15766ms",
   "summary": {
     "total": 6,
     "passed": 2,
@@ -11,7 +11,7 @@
     "dependencies": {
       "status": "success",
       "result": {
-        "duration": "5746ms",
+        "duration": "6261ms",
         "output": "Dependencies installed successfully"
       }
     },
@@ -42,7 +42,7 @@
     "build": {
       "status": "success",
       "result": {
-        "duration": "7284ms",
+        "duration": "7642ms",
         "output": "Build completed successfully",
         "buildSize": "4.48 MB"
       }
