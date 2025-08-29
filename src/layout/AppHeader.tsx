@@ -86,6 +86,7 @@ export function AppHeader() {
       services: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & insights' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', description: 'AI-powered project management' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
@@ -121,9 +122,22 @@ export function AppHeader() {
       color: 'from-red-500 to-orange-600',
       icon: Shield,
       services: [
+        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', description: 'AI-powered threat detection' },
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
         { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+      ]
+    },
+    {
+      name: 'Supply Chain & Operations',
+      description: 'Intelligent operations optimization',
+      color: 'from-emerald-500 to-teal-600',
+      icon: Truck,
+      services: [
+        { name: 'AI Supply Chain Optimization Platform', href: '/services/ai-supply-chain-optimization-platform', description: 'End-to-end supply chain optimization' },
+        { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual simulation & monitoring' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' }
       ]
     },
     {

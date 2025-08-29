@@ -2,10 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
-  Truck, 
+  Shield, 
   Brain, 
-  BarChart3, 
+  AlertTriangle, 
+  Eye, 
   Zap, 
+  BarChart3, 
+  Users, 
+  Lock, 
   Globe, 
   Clock, 
   TrendingUp, 
@@ -13,7 +17,6 @@ import {
   MessageSquare,
   FileText,
   GitBranch,
-  AlertTriangle,
   Lightbulb,
   Rocket,
   Star,
@@ -22,112 +25,104 @@ import {
   Cpu,
   Network,
   Database,
-  Server,
-  Package,
-  Warehouse,
-  Route,
-  MapPin,
-  Calendar,
-  Users,
-  Shield,
-  Eye
+  Server
 } from 'lucide-react';
 
-export default function AISupplyChainOptimizationPlatform() {
+export default function AICybersecurityThreatIntelligence() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Demand Forecasting',
-      description: 'Machine learning algorithms predict demand patterns with 95% accuracy, optimizing inventory levels',
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      icon: Route,
-      title: 'Intelligent Route Optimization',
-      description: 'AI calculates optimal delivery routes reducing fuel costs and delivery times by up to 30%',
-      color: 'from-green-500 to-emerald-600'
-    },
-    {
-      icon: Warehouse,
-      title: 'Smart Inventory Management',
-      description: 'Real-time inventory tracking with automated reorder points and supplier management',
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      icon: Globe,
-      title: 'Global Supply Chain Visibility',
-      description: 'End-to-end visibility across all suppliers, warehouses, and distribution centers',
-      color: 'from-yellow-500 to-orange-600'
-    },
-    {
-      icon: AlertTriangle,
-      title: 'Risk Assessment & Mitigation',
-      description: 'AI continuously monitors supply chain risks and suggests proactive mitigation strategies',
+      title: 'AI-Powered Threat Detection',
+      description: 'Advanced machine learning algorithms detect zero-day threats and sophisticated attacks in real-time',
       color: 'from-red-500 to-pink-600'
     },
     {
+      icon: Eye,
+      title: '24/7 Threat Monitoring',
+      description: 'Continuous monitoring of global threat landscape with automated incident response',
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
       icon: Zap,
-      title: 'Automated Procurement',
-      description: 'Intelligent supplier selection and automated purchase order generation',
+      title: 'Predictive Threat Intelligence',
+      description: 'AI models predict emerging threats before they become active, enabling proactive defense',
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      icon: BarChart3,
+      title: 'Real-time Risk Assessment',
+      description: 'Dynamic risk scoring and threat correlation across your entire infrastructure',
+      color: 'from-yellow-500 to-orange-600'
+    },
+    {
+      icon: Network,
+      title: 'Global Threat Intelligence Network',
+      description: 'Collaborative threat sharing with global security community and real-time updates',
       color: 'from-indigo-500 to-purple-600'
+    },
+    {
+      icon: Shield,
+      title: 'Automated Incident Response',
+      description: 'AI-driven response automation with customizable playbooks and escalation rules',
+      color: 'from-purple-500 to-pink-600'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$149',
+      name: 'Essential',
+      price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 5 locations',
-        'Basic demand forecasting',
-        'Inventory tracking',
-        'Email support',
-        'Basic reporting',
+        'Up to 100 endpoints',
+        'Basic threat detection',
+        'Email alerts',
+        'Standard support',
+        '10GB log storage',
         'Mobile app access',
-        'Supplier database',
-        'Purchase order management'
+        'Basic reporting',
+        'Threat intelligence feeds'
       ],
       popular: false,
       color: 'from-gray-500 to-gray-600'
     },
     {
       name: 'Professional',
-      price: '$399',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing businesses and supply chains',
+      description: 'Ideal for growing businesses and security teams',
       features: [
-        'Up to 25 locations',
-        'Advanced AI forecasting',
-        'Route optimization',
+        'Up to 1000 endpoints',
+        'Advanced AI detection',
+        'Real-time monitoring',
         'Priority support',
-        'Advanced analytics',
+        '100GB log storage',
         'API access',
-        'Risk management',
-        'Multi-warehouse support',
-        'Supplier performance tracking',
-        'Custom integrations'
+        'Advanced analytics',
+        'Custom threat feeds',
+        'Incident response automation',
+        'Threat hunting tools'
       ],
       popular: true,
       color: 'from-blue-500 to-cyan-600'
     },
     {
       name: 'Enterprise',
-      price: '$999',
+      price: '$799',
       period: '/month',
-      description: 'For large organizations with complex supply chains',
+      description: 'For large organizations with complex security needs',
       features: [
-        'Unlimited locations',
-        'Full AI optimization suite',
-        'Custom algorithms',
+        'Unlimited endpoints',
+        'Full AI threat intelligence',
+        'Custom integrations',
         'Dedicated support',
-        'Advanced security',
+        'Unlimited storage',
+        'Advanced security features',
         'White-label options',
         'Custom training',
         'On-premise deployment',
-        'Compliance reporting',
-        'Multi-currency support'
+        'Compliance reporting'
       ],
       popular: false,
       color: 'from-purple-500 to-pink-600'
@@ -137,77 +132,77 @@ export default function AISupplyChainOptimizationPlatform() {
   const benefits = [
     {
       icon: TrendingUp,
-      title: '25% Reduction in Inventory Costs',
-      description: 'AI-optimized inventory levels reduce carrying costs and stockouts'
+      title: '99.9% Threat Detection Rate',
+      description: 'AI-powered detection identifies threats that traditional security tools miss'
     },
     {
       icon: Clock,
-      title: '40% Faster Delivery Times',
-      description: 'Optimized routes and warehouse operations accelerate order fulfillment'
-    },
-    {
-      icon: DollarSign,
-      title: '30% Lower Operational Costs',
-      description: 'Automated processes and optimized workflows reduce manual overhead'
+      title: '90% Faster Incident Response',
+      description: 'Automated response reduces mean time to resolution from hours to minutes'
     },
     {
       icon: Shield,
-      title: 'Improved Risk Management',
-      description: 'AI-powered risk assessment prevents supply chain disruptions'
+      title: 'Proactive Threat Prevention',
+      description: 'Predictive intelligence stops attacks before they can cause damage'
+    },
+    {
+      icon: Users,
+      title: 'Reduced Security Team Workload',
+      description: 'AI automation handles routine tasks, allowing teams to focus on strategic security'
     }
   ];
 
   const useCases = [
     {
-      title: 'E-commerce',
-      description: 'Optimize fulfillment centers and last-mile delivery for online retail',
-      icon: Package
+      title: 'Financial Services',
+      description: 'Protect against sophisticated financial fraud and cyber attacks with real-time threat intelligence',
+      icon: DollarSign
     },
     {
-      title: 'Manufacturing',
-      description: 'Streamline raw material procurement and production scheduling',
-      icon: Cpu
-    },
-    {
-      title: 'Retail',
-      description: 'Optimize store inventory and distribution network management',
-      icon: Warehouse
-    },
-    {
-      title: 'Logistics',
-      description: 'Enhance fleet management and route optimization for delivery services',
-      icon: Truck
-    }
-  ];
-
-  const optimizationAreas = [
-    {
-      name: 'Demand Planning',
-      description: 'AI predicts customer demand with seasonal and trend analysis',
-      icon: BarChart3
-    },
-    {
-      name: 'Inventory Optimization',
-      description: 'Smart reorder points and safety stock calculations',
-      icon: Package
-    },
-    {
-      name: 'Supplier Management',
-      description: 'Performance tracking and automated supplier selection',
+      title: 'Healthcare',
+      description: 'Secure patient data and medical systems against healthcare-specific cyber threats',
       icon: Users
     },
     {
-      name: 'Transportation',
-      description: 'Route optimization and carrier selection for cost efficiency',
-      icon: Route
+      title: 'Manufacturing',
+      description: 'Protect industrial control systems and operational technology from cyber threats',
+      icon: Cpu
+    },
+    {
+      title: 'Government',
+      description: 'Defend critical infrastructure and government systems against nation-state attacks',
+      icon: Globe
+    }
+  ];
+
+  const threatTypes = [
+    {
+      name: 'Ransomware',
+      description: 'AI detects ransomware behavior patterns and blocks encryption attempts',
+      icon: Lock
+    },
+    {
+      name: 'Phishing',
+      description: 'Advanced email analysis identifies sophisticated phishing campaigns',
+      icon: MessageSquare
+    },
+    {
+      name: 'DDoS Attacks',
+      description: 'Real-time traffic analysis and automated mitigation of DDoS attacks',
+      icon: Network
+    },
+    {
+      name: 'Insider Threats',
+      description: 'Behavioral analysis detects anomalous user activity and potential insider threats',
+      icon: Users
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization Platform - Zion Tech Group"
-        description="Revolutionary AI-powered supply chain optimization platform that reduces costs, improves efficiency, and provides end-to-end visibility. Transform your supply chain operations today!"
+        title="AI Cybersecurity Threat Intelligence Platform - Zion Tech Group"
+        description="Advanced AI-powered cybersecurity threat intelligence platform that detects, predicts, and responds to cyber threats in real-time. Protect your organization with cutting-edge security AI."
       />
       
       {/* Hero Section */}
@@ -219,35 +214,35 @@ export default function AISupplyChainOptimizationPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain Optimization
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 text-red-300 text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              AI-Powered Cybersecurity
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-                AI Supply Chain
+              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                AI Cybersecurity
               </span>
               <br />
-              <span className="text-white">Optimization Platform</span>
+              <span className="text-white">Threat Intelligence</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your supply chain with AI that optimizes inventory, routes, and operations 
-              in real-time, reducing costs and improving customer satisfaction.
+              Stay ahead of cyber threats with AI that detects, predicts, and responds to attacks 
+              in real-time, protecting your organization 24/7.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/request-quote"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold text-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold text-lg hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
-                <Rocket className="w-5 h-5 mr-2" />
+                <Shield className="w-5 h-5 mr-2" />
                 Start Free Trial
               </a>
               <a
                 href="/demo"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-blue-500/30 text-blue-300 font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 rounded-lg border border-red-500/30 text-red-300 font-semibold text-lg hover:bg-red-500/10 transition-all duration-300"
               >
                 <Eye className="w-5 h-5 mr-2" />
                 Watch Demo
@@ -257,8 +252,8 @@ export default function AISupplyChainOptimizationPlatform() {
         </div>
         
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-red-500/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
       </section>
 
       {/* Features Section */}
@@ -275,7 +270,7 @@ export default function AISupplyChainOptimizationPlatform() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our platform leverages cutting-edge artificial intelligence to revolutionize how you 
-              manage and optimize your supply chain operations.
+              detect, analyze, and respond to cyber threats.
             </p>
           </motion.div>
           
@@ -288,7 +283,7 @@ export default function AISupplyChainOptimizationPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="relative p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 hover:border-red-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -301,7 +296,7 @@ export default function AISupplyChainOptimizationPlatform() {
         </div>
       </section>
 
-      {/* Optimization Areas Section */}
+      {/* Threat Types Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-slate-800/30 to-slate-700/30">
         <div className="container mx-auto max-w-7xl">
           <motion.div
@@ -311,16 +306,16 @@ export default function AISupplyChainOptimizationPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comprehensive Optimization
+              Comprehensive Threat Protection
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform optimizes every aspect of your supply chain, from demand planning 
-              to final delivery.
+              Our AI platform protects against all types of cyber threats, from common attacks 
+              to sophisticated nation-state campaigns.
             </p>
           </motion.div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {optimizationAreas.map((area, index) => (
+            {threatTypes.map((threat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -328,11 +323,11 @@ export default function AISupplyChainOptimizationPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <area.icon className="w-10 h-10 text-white" />
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <threat.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{area.name}</h3>
-                <p className="text-gray-300 leading-relaxed">{area.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{threat.name}</h3>
+                <p className="text-gray-300 leading-relaxed">{threat.description}</p>
               </motion.div>
             ))}
           </div>
@@ -349,11 +344,11 @@ export default function AISupplyChainOptimizationPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Scalable Solutions for Every Business
+              Enterprise-Grade Security at Scale
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the optimization plan that fits your supply chain complexity and business needs. 
-              All plans include our core AI optimization features.
+              Choose the security plan that fits your organization's size and threat landscape. 
+              All plans include our core AI threat intelligence features.
             </p>
           </motion.div>
           
@@ -368,7 +363,7 @@ export default function AISupplyChainOptimizationPlatform() {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-sm font-semibold">
+                    <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500 to-pink-600 text-white text-sm font-semibold">
                       <Star className="w-4 h-4 mr-2" />
                       Most Popular
                     </span>
@@ -376,8 +371,8 @@ export default function AISupplyChainOptimizationPlatform() {
                 )}
                 
                 <div className={`p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-700/50 border-2 ${
-                  plan.popular ? 'border-blue-500/50' : 'border-slate-600/30'
-                } hover:border-blue-500/50 transition-all duration-300`}>
+                  plan.popular ? 'border-red-500/50' : 'border-slate-600/30'
+                } hover:border-red-500/50 transition-all duration-300`}>
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-4">
@@ -400,8 +395,8 @@ export default function AISupplyChainOptimizationPlatform() {
                     href="/request-quote"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
-                        : 'border border-blue-500/30 text-blue-300 hover:bg-blue-500/10'
+                        ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
+                        : 'border border-red-500/30 text-red-300 hover:bg-red-500/10'
                     }`}
                   >
                     Get Started
@@ -423,11 +418,11 @@ export default function AISupplyChainOptimizationPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven Business Results
+              Proven Security Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Organizations using our AI Supply Chain Optimization Platform see measurable 
-              improvements in efficiency, costs, and customer satisfaction.
+              Organizations using our AI Cybersecurity Threat Intelligence Platform see measurable 
+              improvements in threat detection and response times.
             </p>
           </motion.div>
           
@@ -440,7 +435,7 @@ export default function AISupplyChainOptimizationPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="flex items-start space-x-6"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <div>
@@ -463,11 +458,11 @@ export default function AISupplyChainOptimizationPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Perfect for Every Industry
+              Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform adapts to your specific industry needs and supply chain requirements, 
-              from manufacturing to retail to logistics.
+              Our platform protects organizations across all industries, from healthcare to finance, 
+              manufacturing to government.
             </p>
           </motion.div>
           
@@ -480,7 +475,7 @@ export default function AISupplyChainOptimizationPlatform() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <useCase.icon className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
@@ -500,24 +495,24 @@ export default function AISupplyChainOptimizationPlatform() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Secure Your Organization?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations already using AI to optimize their supply chain 
-              operations and reduce costs.
+              Join thousands of organizations already protected by AI-powered cybersecurity 
+              threat intelligence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/request-quote"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold text-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold text-lg hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
               >
-                <Rocket className="w-5 h-5 mr-2" />
+                <Shield className="w-5 h-5 mr-2" />
                 Start Free Trial
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-blue-500/30 text-blue-300 font-semibold text-lg hover:bg-blue-500/10 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 rounded-lg border border-red-500/30 text-red-300 font-semibold text-lg hover:bg-red-500/10 transition-all duration-300"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Contact Sales

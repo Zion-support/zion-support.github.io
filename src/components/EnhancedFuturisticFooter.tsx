@@ -66,16 +66,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Revolutionary 2030',
-      icon: Rocket,
+      title: 'AI Services',
+      icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'Quantum AI Hybrid Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Cybersecurity Platform', href: '/revolutionary-services-2030' },
-        { name: 'Autonomous AI Operations', href: '/revolutionary-services-2030' },
-        { name: 'Quantum Financial Trading', href: '/revolutionary-services-2030' },
-        { name: 'AI Healthcare Diagnostics', href: '/revolutionary-services-2030' },
-        { name: 'Smart City Platform', href: '/revolutionary-services-2030' }
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-platform' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
       ]
     },
     {
@@ -149,6 +149,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Accessibility', href: '/accessibility' },
         { name: 'Security', href: '/security' },
         { name: 'Compliance', href: '/compliance' }
+      ]
+    },
+    {
+      title: 'Contact Information',
+      icon: MessageSquare,
+      color: 'from-cyan-600 to-blue-600',
+      links: [
+        { name: 'Phone: +1 302 464 0950', href: 'tel:+13024640950' },
+        { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+        { name: 'Address: 364 E Main St STE 1008', href: '#' },
+        { name: 'Middletown DE 19709', href: '#' },
+        { name: 'Website: ziontechgroup.com', href: 'https://ziontechgroup.com' }
       ]
     }
   ];

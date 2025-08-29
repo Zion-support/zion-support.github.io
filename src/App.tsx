@@ -130,6 +130,11 @@ const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComp
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
 
+// New comprehensive AI services
+const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/AIProjectManagementPlatform'));
+const AICybersecurityThreatIntelligence = React.lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
+const AISupplyChainOptimizationPlatform = React.lazy(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
+
 // Additional innovative services
 const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
@@ -148,7 +153,6 @@ const Demo = React.lazy(() => import('./pages/Demo'));
 const AIProjectManagementAssistant = React.lazy(() => import('./pages/services/AIProjectManagementAssistant'));
 const AIFinancialPlanningAssistant = React.lazy(() => import('./pages/services/AIFinancialPlanningAssistant'));
 const AIHealthcareAnalyticsPlatform = React.lazy(() => import('./pages/services/AIHealthcareAnalyticsPlatform'));
-const AISupplyChainOptimizationPlatform = React.lazy(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
 const AICybersecurityThreatIntelligencePlatform = React.lazy(() => import('./pages/services/AICybersecurityThreatIntelligencePlatform'));
 
 // Simple placeholder pages for missing ones
@@ -314,6 +318,11 @@ function App() {
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
               <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+              
+              {/* New comprehensive AI services routes */}
+              <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
+              <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+              <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
               
               {/* Additional innovative services routes */}
               <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
