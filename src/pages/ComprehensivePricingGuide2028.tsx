@@ -12,8 +12,7 @@ import {
   Activity, TrendingDown, Minus, Plus, Equal, Divide, Percent,
   Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
   Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
-  Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
-} from 'lucide-react';
+  Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX} from 'lucide-react';
 
 const pricingData2028 = {
   aiServices: [

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   AlertTriangle, 
@@ -23,9 +22,7 @@ import {
   Bell,
   Phone,
   Mail,
-  MapPin,
-  Server
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIIncidentPostmortems() {

@@ -195,7 +195,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       "Real-time analytics",
       "Low-latency processing",
       "Edge AI capabilities",
-      "Device provisioning",
+      "Smartphone provisioning",
       "Security management",
       "Monitoring dashboard",
       "API access",
@@ -239,7 +239,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
       integrations: ["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],
       apiEndpoints: 300,
       uptime: "99.9%",
-      security: ["Edge security", "Device authentication", "Data encryption"]
+      security: ["Edge security", "Smartphone authentication", "Data encryption"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
     marketSize: "$43.4 billion by 2025",

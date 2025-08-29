@@ -16,9 +16,7 @@ import {
   Eye,
   Clock,
   Star,
-  ArrowUpRight,
-  RefreshCw
-} from 'lucide-react';
+  ArrowUpRight} from 'lucide-react';
 
 interface SEOAnalysis {
   score: number;

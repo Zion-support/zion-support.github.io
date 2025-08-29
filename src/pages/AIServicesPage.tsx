@@ -21,9 +21,7 @@ import {
   Target,
   Award,
   Clock,
-  Star,
-  Heart
-} from 'lucide-react';
+  Star} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {

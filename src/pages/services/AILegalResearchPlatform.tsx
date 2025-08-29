@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -30,9 +29,7 @@ import {
   Search,
   Gavel,
   Library,
-  Briefcase,
-  Award
-} from 'lucide-react';
+  Briefcase} from 'lucide-react';
 
 export default function AILegalResearchPlatform() {
   const features = [

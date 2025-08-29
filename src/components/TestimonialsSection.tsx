@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe } from 'lucide-react';
+import { Quote, Star, ChevronLeft, ChevronRight, User, Building} from 'lucide-react';
 const testimonials = [
   {
     id: 1,

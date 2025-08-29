@@ -30,9 +30,7 @@ import {
   Truck,
   BarChart3,
   Calendar,
-  MapPin,
-  DollarSign
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -440,6 +438,6 @@ export default function HelpCenter() {
       </div>
     </>
   );
-};
+}
 
 export default HelpCenter;

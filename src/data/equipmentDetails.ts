@@ -32,7 +32,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
   },
   {
     id: "3",
-    name: "Edge Computing Device",
+    name: "Edge Computing Smartphone",
     description: "IoT edge computing solution",
     price: 800,
     category: "IoT",

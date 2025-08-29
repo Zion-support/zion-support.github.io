@@ -17,9 +17,7 @@ import {
   AlertTriangle,
   Info,
   Keyboard,
-  MousePointer,
-  Smartphone
-} from 'lucide-react';
+  MousePointer} from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

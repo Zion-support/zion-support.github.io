@@ -54,9 +54,7 @@ import {
   BarChart,
   Users2,
   Settings,
-  Palette,
-  Zap as ZapIcon2
-} from 'lucide-react';
+  Palette} from 'lucide-react';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {

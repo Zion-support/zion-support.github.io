@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -24,9 +23,7 @@ import {
   Clock,
   DollarSign,
   Shield,
-  Headphones,
-  Rocket
-} from 'lucide-react';
+  Headphones} from 'lucide-react';
 
 export default function AIContentMarketingAutomation() {
   const features = [

@@ -14,9 +14,7 @@ import {
   Flag,
   Share2,
   Download,
-  Filter,
-  Search
-} from 'lucide-react';
+  Filter} from 'lucide-react';
 
 interface Feedback {
   id: string;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -18,9 +17,7 @@ import {
   Cpu,
   Database,
   PieChart,
-  LineChart,
-  Activity
-} from 'lucide-react';
+  LineChart} from 'lucide-react';
 
 export default function AIBusinessIntelligence() {
   const features = [

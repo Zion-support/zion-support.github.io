@@ -82,9 +82,7 @@ import {
   Shuffle2,
   SkipBack2,
   SkipForward2,
-  PlayCircle,
-  PauseCircle
-} from 'lucide-react';
+  PlayCircle} from 'lucide-react';
 import { revolutionary2025AdvancedMicroSaasServices } from '../data/revolutionary-2025-advanced-micro-saas-v2';
 import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-2025-specialized-it-ai-services';
 // Combine all services

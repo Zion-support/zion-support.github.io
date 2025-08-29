@@ -102,9 +102,7 @@ import {
   City as CityIcon,
   CheckCircle as CheckCircleIcon,
   ArrowUpRight as ArrowUpRightIcon,
-  Play as PlayIcon,
-  MailIcon as MailIcon2
-} from 'lucide-react';
+  Play as PlayIcon} from 'lucide-react';
 
 export const EnhancedSidebar: React.FC = () => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));

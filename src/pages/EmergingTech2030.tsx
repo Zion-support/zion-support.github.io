@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -26,9 +25,7 @@ import {
   Network,
   Lock,
   Eye,
-  Heart,
-  Zap as Lightning
-} from 'lucide-react';
+  Heart} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { emergingTechServices2030 } from '../data/emergingTechServices2030';
 

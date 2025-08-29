@@ -13,9 +13,7 @@ import {
   Globe,
   Brain,
   Rocket,
-  Target,
-  TrendingUp
-} from 'lucide-react';
+  Target} from 'lucide-react';
 
 interface HeroSlide {
   title: string;

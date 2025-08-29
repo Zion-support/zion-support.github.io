@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap } from 'lucide-react';
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp} from 'lucide-react';
 
 const NewsletterSection: React.FC = () => {
   const [email, setEmail] = useState('');

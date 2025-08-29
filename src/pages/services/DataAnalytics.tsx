@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   BarChart3, 
@@ -25,9 +24,7 @@ import {
   Download,
   Share2,
   Cpu,
-  Network,
-  FileText
-} from 'lucide-react';
+  Network} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function DataAnalytics() {

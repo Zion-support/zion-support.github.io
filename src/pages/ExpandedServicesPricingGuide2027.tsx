@@ -58,9 +58,7 @@ import {
   Cpu as FinTech,
   ChevronRight,
   Info,
-  AlertTriangle,
-  Zap
-} from 'lucide-react';
+  AlertTriangle} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { 
   ALL_EXPANDED_SERVICES_PRICING,

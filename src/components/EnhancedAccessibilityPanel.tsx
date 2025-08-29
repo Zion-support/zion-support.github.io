@@ -12,9 +12,7 @@ import {
   Monitor,
   Settings,
   X,
-  Check,
-  AlertTriangle
-} from 'lucide-react';
+  Check} from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

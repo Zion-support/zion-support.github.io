@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SEO } from '@/components/SEO';
-import { TrendingUp, CheckCircle, Database, PlugZap } from 'lucide-react';
+import { TrendingUp, CheckCircle, Database} from 'lucide-react';
 
 const AiLeadScoring: React.FC = () => {
   return (

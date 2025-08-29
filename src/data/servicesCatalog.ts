@@ -678,7 +678,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				billing: 'month',
 				features: [
 					'Quantum edge processing',
-					'Device optimization',
+					'Smartphone optimization',
 					'Intelligent routing',
 					'Energy efficiency',
 					'Scalable deployment'

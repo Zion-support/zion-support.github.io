@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -36,9 +35,7 @@ import {
   DollarSign,
   AlertCircle,
   Calendar,
-  MapPin,
-  Store
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 export default function AIInventoryManagement() {
   const features = [

@@ -146,9 +146,7 @@ import {
   Building,
   Leaf,
   Space,
-  Handshake,
-  Calendar
-} from 'lucide-react';
+  Handshake} from 'lucide-react';
 
 const microSAASServices2028 = [
   // AI-Powered Content Creation

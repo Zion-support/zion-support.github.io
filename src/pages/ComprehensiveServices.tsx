@@ -25,9 +25,7 @@ import {
   ShoppingBag,
   Settings,
   Globe,
-  Award,
-  TrendingUp
-} from 'lucide-react';
+  Award} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const ComprehensiveServices: React.FC = () => {

@@ -30,9 +30,7 @@ import {
   BarChart3,
   Palette,
   RotateCcw,
-  Save,
-  Loader2
-} from 'lucide-react';
+  Save} from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -32,9 +31,7 @@ import {
   Database,
   Network,
   Lock,
-  Eye,
-  AlertTriangle
-} from 'lucide-react';
+  Eye} from 'lucide-react';
 
 export default function AIFinancialTradingPlatform() {
   const features = [

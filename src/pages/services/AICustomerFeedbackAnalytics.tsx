@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -29,9 +28,7 @@ import {
   PieChart,
   Activity,
   ShoppingCart,
-  Shield,
-  Settings
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 
 export default function AICustomerFeedbackAnalytics() {
   const features = [

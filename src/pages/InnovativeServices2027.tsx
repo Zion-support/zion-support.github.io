@@ -29,9 +29,7 @@ import {
   Leaf,
   Satellite,
   Banknote,
-  Building,
-  Phone
-} from 'lucide-react';
+  Building} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { SEO } from '../components/SEO';
 

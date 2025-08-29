@@ -16,9 +16,7 @@ import {
   ArrowRight,
   Play,
   Target,
-  Award,
-  CheckCircle
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 interface Service {
   id: string;

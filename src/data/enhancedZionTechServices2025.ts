@@ -216,10 +216,10 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     title: "IoT Management Platform",
     description: "Enterprise IoT device management platform with real-time monitoring, data analytics, and automated device management. Scalable solution for large IoT deployments.",
     category: "IoT Solutions",
-    subcategory: "Device Management",
+    subcategory: "Smartphone Management",
     price: 599,
     currency: "$",
-    tags: ["IoT", "Device Management", "Real-time Monitoring", "Data Analytics"],
+    tags: ["IoT", "Smartphone Management", "Real-time Monitoring", "Data Analytics"],
     author: {
       name: "Zion Tech Group",
       id: "ziontech",

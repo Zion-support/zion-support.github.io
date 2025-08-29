@@ -24,9 +24,7 @@ import {
   Heart,
   DollarSign,
   Clock,
-  MapPin,
-  Factory
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('all');

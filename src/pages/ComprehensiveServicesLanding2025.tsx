@@ -36,9 +36,7 @@ import {
   Phone,
   Mail as MailIcon,
   MapPin,
-  Globe as GlobeIcon,
-  ExternalLink
-} from 'lucide-react';
+  Globe as GlobeIcon} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
 

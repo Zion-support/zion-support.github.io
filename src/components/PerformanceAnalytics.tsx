@@ -11,9 +11,7 @@ import {
   BarChart3,
   Cpu,
   HardDrive,
-  Network,
-  Monitor
-} from 'lucide-react';
+  Network} from 'lucide-react';
 
 interface PerformanceMetric {
   name: string;

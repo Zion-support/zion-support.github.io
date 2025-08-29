@@ -21,9 +21,7 @@ import {
   Cloud,
   Lock,
   Users,
-  Globe,
-  Rocket
-} from 'lucide-react';
+  Globe} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Help() {

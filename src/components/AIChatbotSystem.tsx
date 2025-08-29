@@ -25,9 +25,7 @@ import {
   Brain,
   Globe,
   Clock,
-  CheckCircle,
-  AlertCircle
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 
 interface ChatMessage {
   id: string;

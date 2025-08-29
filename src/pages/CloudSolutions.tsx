@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Cloud, 
@@ -13,9 +12,7 @@ import {
   CheckCircle,
   Play,
   Code,
-  Settings,
-  Users
-} from 'lucide-react';
+  Settings} from 'lucide-react';
 
 export default function CloudSolutions() {
   const cloudServices = [

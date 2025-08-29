@@ -22,9 +22,7 @@ import {
   Database,
   Network,
   Lock,
-  Cloud,
-  Rocket
-} from 'lucide-react';
+  Cloud} from 'lucide-react';
 
 const AllServices2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');

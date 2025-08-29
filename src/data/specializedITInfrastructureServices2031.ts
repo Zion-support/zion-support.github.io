@@ -282,7 +282,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
       integrations: ["IoT Platforms", "Cloud Services", "Monitoring Tools", "Security Systems"],
       apiEndpoints: 600,
       uptime: "99.9%",
-      security: ["SOC 2", "End-to-end encryption", "Device authentication", "Secure communication"]
+      security: ["SOC 2", "End-to-end encryption", "Smartphone authentication", "Secure communication"]
     },
     competitors: ["AWS", "Microsoft", "Google", "IBM", "Cisco"],
     marketSize: "$34.2 billion by 2031"

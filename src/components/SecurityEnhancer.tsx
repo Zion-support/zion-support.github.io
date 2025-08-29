@@ -15,9 +15,7 @@ import {
   Zap,
   ShieldCheck,
   Bug,
-  Network,
-  Database
-} from 'lucide-react';
+  Network} from 'lucide-react';
 
 interface SecurityThreat {
   id: string;

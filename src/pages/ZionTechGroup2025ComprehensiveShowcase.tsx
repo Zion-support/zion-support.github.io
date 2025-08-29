@@ -17,9 +17,7 @@ import {
   CheckCircle,
   TrendingUp,
   Users,
-  Target,
-  Lightbulb
-} from 'lucide-react';
+  Target} from 'lucide-react';
 import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices } from '../data/zionTechGroup2025ComprehensiveServices';
 
 const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {

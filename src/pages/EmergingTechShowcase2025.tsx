@@ -25,9 +25,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Play,
-  Pause,
-  RotateCcw
-} from 'lucide-react';
+  Pause} from 'lucide-react';
 import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 
 const EmergingTechShowcase2025: React.FC = () => {

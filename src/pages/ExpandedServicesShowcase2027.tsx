@@ -54,9 +54,7 @@ import {
   Network,
   Smartphone as IoT,
   Server as Edge,
-  Monitor as Healthcare,
-  Cpu as FinTech
-} from 'lucide-react';
+  Monitor as Healthcare} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { 
   ALL_EXPANDED_SERVICES_2027, 

@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Zap, Target, TrendingUp } from 'lucide-react';
+import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Zap, Target} from 'lucide-react';
 
 export default function AIProjectManager() {
   const features = [

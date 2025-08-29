@@ -721,7 +721,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
       "Edge computing infrastructure",
       "Real-time data processing",
       "Predictive maintenance",
-      "Device connectivity",
+      "Smartphone connectivity",
       "Data analytics",
       "Security monitoring",
       "Scalable architecture",
@@ -765,7 +765,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
       integrations: ["Cloud platforms", "Database systems", "Analytics tools", "Security systems"],
       apiEndpoints: 200,
       uptime: "99.9%",
-      security: ["Device authentication", "Data encryption", "Secure communication"]
+      security: ["Smartphone authentication", "Data encryption", "Secure communication"]
     },
     competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
     marketSize: "$25.6 billion by 2025",
@@ -986,7 +986,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     pricingModel: "monthly",
     features: [
       "Identity verification",
-      "Device authentication",
+      "Smartphone authentication",
       "Network segmentation",
       "Continuous monitoring",
       "Access controls",

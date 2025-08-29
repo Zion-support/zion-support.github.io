@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -20,9 +19,7 @@ import {
   Key,
   Network,
   Server,
-  Monitor,
-  CreditCard
-} from 'lucide-react';
+  Monitor} from 'lucide-react';
 export default function CybersecurityServices() {
   const cyberServices = [
     {

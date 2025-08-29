@@ -1,4 +1,4 @@
-import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale, Lock } from 'lucide-react';
+import { FileText, Shield, Clock, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Scale} from 'lucide-react';
 
 export default function AILegalDocumentAutomation() {
   const features = [

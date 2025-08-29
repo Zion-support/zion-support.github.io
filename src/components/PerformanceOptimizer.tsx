@@ -10,9 +10,7 @@ import {
   TrendingUp, 
   AlertTriangle,
   CheckCircle,
-  Clock,
-  Cpu
-} from 'lucide-react';
+  Clock} from 'lucide-react';
 
 // Simple Progress component
 const Progress: React.FC<{ value: number; className?: string }> = ({ value, className = "" }) => (

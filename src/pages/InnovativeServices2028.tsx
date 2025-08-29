@@ -24,9 +24,7 @@ import {
   ExternalLink,
   Filter,
   Search,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+  ChevronDown} from 'lucide-react';
 import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from '../data/innovativeServices2028';
 
 export default function InnovativeServices2028() {

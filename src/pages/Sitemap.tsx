@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
@@ -11,9 +10,7 @@ import {
   Mail, 
   Video, 
   Heart,
-  Globe,
-  ArrowRight
-} from 'lucide-react';
+  Globe} from 'lucide-react';
 
 interface SitemapSection {
   title: string;

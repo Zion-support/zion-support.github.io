@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -23,9 +22,7 @@ import {
   Rocket,
   Building2,
   Cpu,
-  Network,
-  GitFork
-} from 'lucide-react';
+  Network} from 'lucide-react';
 
 export default function CustomDevelopment() {
   const services = [

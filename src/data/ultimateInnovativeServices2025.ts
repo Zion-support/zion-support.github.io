@@ -308,7 +308,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     subcategory: 'Edge AI',
     price: 8000,
     currency: 'USD',
-    pricingModel: 'Per-Device + Data Processing',
+    pricingModel: 'Per-Smartphone + Data Processing',
     features: [
       'Edge AI processing',
       'Real-time data analytics',

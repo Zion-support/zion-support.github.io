@@ -111,7 +111,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     pricingModel: "monthly",
     features: [
       "Identity verification",
-      "Device trust assessment",
+      "Smartphone trust assessment",
       "Network segmentation",
       "Continuous monitoring",
       "Access control policies",
@@ -353,7 +353,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
       integrations: ["Cloud Platforms", "IoT Devices", "Monitoring Tools", "Security Systems"],
       apiEndpoints: 150,
       uptime: "99.8%",
-      security: ["Edge Security", "Data Encryption", "Access Control", "Device Authentication"]
+      security: ["Edge Security", "Data Encryption", "Access Control", "Smartphone Authentication"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "FogHorn", "ClearBlade"],
     marketSize: "$43.4 billion by 2026"

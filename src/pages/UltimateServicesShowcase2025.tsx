@@ -20,9 +20,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink,
-  Search
-} from 'lucide-react';
+  ExternalLink} from 'lucide-react';
 import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
 
 export default function UltimateServicesShowcase2025() {

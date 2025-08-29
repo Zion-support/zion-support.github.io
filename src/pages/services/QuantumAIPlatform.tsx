@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -26,9 +25,7 @@ import {
   Sparkles,
   Atom,
   Infinity,
-  CpuIcon,
-  CircuitBoard
-} from 'lucide-react';
+  CpuIcon} from 'lucide-react';
 
 export default function QuantumAIPlatform() {
   const features = [

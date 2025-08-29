@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -31,9 +30,7 @@ import {
   Mic,
   PenTool,
   Users as UsersIcon,
-  Award,
-  Lightbulb
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 export default function AIEducationPlatform() {
   const features = [

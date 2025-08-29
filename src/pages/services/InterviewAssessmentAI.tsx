@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -22,9 +21,7 @@ import {
   UserCheck,
   Calendar,
   Video,
-  Download,
-  Share2
-} from 'lucide-react';
+  Download} from 'lucide-react';
 
 export default function InterviewAssessmentAI() {
   const features = [

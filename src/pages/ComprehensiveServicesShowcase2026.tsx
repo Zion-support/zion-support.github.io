@@ -16,9 +16,7 @@ import {
   TrendingUp,
   Users,
   Clock,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { 
   revolutionaryMicroSaasServices2026,

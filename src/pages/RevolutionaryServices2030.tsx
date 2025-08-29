@@ -30,9 +30,7 @@ import {
   Network,
   Code,
   Palette,
-  Gamepad2,
-  Music
-} from 'lucide-react';
+  Gamepad2} from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
 import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";

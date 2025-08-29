@@ -8,9 +8,7 @@ import {
   Star, 
   Zap, 
   Shield,
-  Award,
-  Rocket
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 interface Stat {
   id: string;

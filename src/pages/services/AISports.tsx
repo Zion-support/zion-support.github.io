@@ -1,4 +1,4 @@
-import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 } from 'lucide-react';
+import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users} from 'lucide-react';
 
 export default function AISports() {
   const features = [

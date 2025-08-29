@@ -100,7 +100,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Device management & provisioning",
+      "Smartphone management & provisioning",
       "Edge computing capabilities",
       "Real-time data processing",
       "AI-powered analytics",

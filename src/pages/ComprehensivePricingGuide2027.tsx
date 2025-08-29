@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -113,9 +112,7 @@ import {
   Atom as AtomIcon,
   Leaf as LeafIcon3,
   Gamepad2 as Gamepad2Icon3,
-  Coins as CoinsIcon3,
-  Satellite as SatelliteIcon3
-} from 'lucide-react';
+  Coins as CoinsIcon3} from 'lucide-react';
 
 export default function ComprehensivePricingGuide2027() {
   const serviceCategories = [

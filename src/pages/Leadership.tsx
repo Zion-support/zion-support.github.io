@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -18,9 +17,7 @@ import {
   ArrowRight,
   Linkedin,
   Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
+  Phone} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Leadership() {

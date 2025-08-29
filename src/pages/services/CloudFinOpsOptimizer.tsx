@@ -46,9 +46,7 @@ import {
   Gauge,
   BarChart4,
   TrendingUp,
-  Lightbulb,
-  Rocket
-} from 'lucide-react';
+  Lightbulb} from 'lucide-react';
 
 const CloudFinOpsOptimizer = () => {
   const features = [

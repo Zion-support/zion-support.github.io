@@ -24,9 +24,7 @@ import {
   Lock,
   Heart,
   Globe,
-  Atom,
-  Satellite
-} from 'lucide-react';
+  Atom} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function PricingGuide() {

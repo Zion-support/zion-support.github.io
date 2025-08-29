@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -16,9 +15,7 @@ import {
   Target,
   Smartphone,
   Mail,
-  Phone,
-  Bot
-} from 'lucide-react';
+  Phone} from 'lucide-react';
 
 export default function AICustomerSupport() {
   const features = [

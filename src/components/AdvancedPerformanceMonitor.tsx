@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info } from 'lucide-react';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle} from 'lucide-react';
 
 interface PerformanceMetrics {
   fps: number;

@@ -36,9 +36,7 @@ import {
   Key,
   Wifi,
   Server,
-  Network,
-  Settings as SettingsIcon
-} from 'lucide-react';
+  Network} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const Match: React.FC = () => {
@@ -115,7 +113,7 @@ const Match: React.FC = () => {
       rating: 4.8,
       reviews: 94,
       price: "$2,499/mo",
-      features: ["Edge Processing", "Real-time Analytics", "Device Management", "Security"],
+      features: ["Edge Processing", "Real-time Analytics", "Smartphone Management", "Security"],
       matchScore: 88,
       icon: Cpu,
       featured: false

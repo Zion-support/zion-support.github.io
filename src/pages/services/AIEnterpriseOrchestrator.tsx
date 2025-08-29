@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -22,9 +21,7 @@ import {
   Lock,
   Eye,
   Target,
-  Rocket,
-  Sparkles
-} from 'lucide-react';
+  Rocket} from 'lucide-react';
 
 export default function AIEnterpriseOrchestrator() {
   const features = [

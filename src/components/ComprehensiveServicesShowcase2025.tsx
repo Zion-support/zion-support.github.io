@@ -400,9 +400,7 @@ import {
   Phi,
   Chi,
   Psi,
-  Omega,
-  Crown
-} from 'lucide-react';
+  Omega} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {

@@ -230,9 +230,7 @@ import {
   Clock,
   Handshake,
   Leaf,
-  HardDrive,
-  RefreshCw
-} from 'lucide-react';
+  HardDrive} from 'lucide-react';
 
 interface MainSidebarProps {
   isOpen: boolean;

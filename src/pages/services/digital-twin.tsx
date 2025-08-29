@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database } from 'lucide-react';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function DigitalTwin() {
@@ -138,7 +137,7 @@ export default function DigitalTwin() {
                   title: "Healthcare",
                   description: "Patient monitoring, medical device management, and treatment optimization.",
                   icon: Users,
-                  benefits: ["Patient monitoring", "Device management", "Treatment optimization"]
+                  benefits: ["Patient monitoring", "Smartphone management", "Treatment optimization"]
                 },
                 {
                   title: "Energy & Utilities",

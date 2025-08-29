@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -20,9 +19,7 @@ import {
   Rocket,
   Heart,
   Award,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Community() {

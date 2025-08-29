@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -20,9 +19,7 @@ import {
   Star,
   DollarSign,
   Globe,
-  Smartphone,
-  Cloud
-} from 'lucide-react';
+  Smartphone} from 'lucide-react';
 
 export default function AIProjectManagementPlatform() {
   const features = [

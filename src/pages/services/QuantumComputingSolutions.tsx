@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -15,9 +14,7 @@ import {
   Rocket,
   Target,
   Shield,
-  TrendingUp,
-  Layers
-} from 'lucide-react';
+  TrendingUp} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function QuantumComputingSolutions() {

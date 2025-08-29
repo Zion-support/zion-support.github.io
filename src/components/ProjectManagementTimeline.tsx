@@ -22,9 +22,7 @@ import {
   Plus,
   Edit,
   Trash2,
-  Eye,
-  Settings
-} from 'lucide-react';
+  Eye} from 'lucide-react';
 
 interface Project {
   id: string;

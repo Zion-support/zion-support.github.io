@@ -7,9 +7,7 @@ import {
   Palette, 
   Eye, 
   Layers,
-  Settings,
-  X
-} from 'lucide-react';
+  Settings} from 'lucide-react';
 
 interface UISettings {
   glassmorphism: boolean;

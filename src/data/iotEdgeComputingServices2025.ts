@@ -157,19 +157,19 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
   },
   {
     id: 'connected-device-management',
-    title: 'Connected Device Management Platform',
+    title: 'Connected Smartphone Management Platform',
     description: 'Comprehensive management platform for IoT devices and sensors',
     longDescription: 'Manage thousands of IoT devices with our comprehensive platform. Features device provisioning, monitoring, updates, and security management.',
     icon: 'Smartphone',
     color: 'from-purple-500 to-pink-600',
     category: 'connected-devices',
     features: [
-      'Device provisioning',
+      'Smartphone provisioning',
       'Remote monitoring',
       'Over-the-air updates',
       'Security management',
       'Performance analytics',
-      'Device lifecycle management'
+      'Smartphone lifecycle management'
     ],
     benefits: [
       'Centralized device management',
@@ -179,7 +179,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     ],
     useCases: [
       'IoT deployments',
-      'Device manufacturers',
+      'Smartphone manufacturers',
       'Service providers',
       'Enterprise IoT'
     ],
@@ -190,7 +190,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
       custom: 'Contact us'
     },
     estimatedTime: '6-12 weeks',
-    technologies: ['Device Management', 'IoT Protocols', 'Cloud Computing', 'Security', 'Analytics', 'APIs'],
+    technologies: ['Smartphone Management', 'IoT Protocols', 'Cloud Computing', 'Security', 'Analytics', 'APIs'],
     iotScore: 95,
     marketPrice: '$1,999-$12,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
@@ -293,7 +293,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     color: 'from-red-500 to-orange-600',
     category: 'iot-security',
     features: [
-      'Device authentication',
+      'Smartphone authentication',
       'Network security',
       'Data encryption',
       'Threat detection',

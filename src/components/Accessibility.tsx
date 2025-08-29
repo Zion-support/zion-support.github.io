@@ -11,9 +11,7 @@ import {
   Minus,
   Contrast,
   Sun,
-  Moon,
-  Settings
-} from 'lucide-react';
+  Moon} from 'lucide-react';
 
 interface AccessibilitySettings {
   fontSize: number;

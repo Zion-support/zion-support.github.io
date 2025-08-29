@@ -62,9 +62,7 @@ import {
   TrendingUp,
   Activity,
   Target,
-  BarChart3,
-  PieChart
-} from 'lucide-react';
+  BarChart3} from 'lucide-react';
 
 interface TeamMember {
   id: string;

@@ -84,9 +84,7 @@ import {
   Brain2,
   Cpu2,
   Memory,
-  HardDrive,
-  Server2
-} from 'lucide-react';
+  HardDrive} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
 

@@ -121,9 +121,7 @@ import {
   DollarSign as DollarSignIcon3,
   Users as UsersIcon8,
   Calendar as CalendarIcon3,
-  Shield as ShieldIcon5,
-  BookOpen as BookOpenIcon5
-} from 'lucide-react';
+  Shield as ShieldIcon5} from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();

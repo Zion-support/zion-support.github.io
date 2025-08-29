@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Code, 
@@ -36,9 +35,7 @@ import {
   Network,
   Key,
   Download,
-  Play,
-  ExternalLink
-} from 'lucide-react';
+  Play} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Developers() {

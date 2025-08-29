@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark, Filter } from 'lucide-react';
+import { BookOpen, Code, FileText, Video, Download, Search, ChevronRight, ExternalLink, Star, Clock, Users, Bookmark} from 'lucide-react';
 
 export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');

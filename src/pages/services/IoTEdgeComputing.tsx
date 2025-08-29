@@ -62,9 +62,7 @@ import {
   Bluetooth,
   Radio,
   Sensor,
-  Chip,
-  Circuit
-} from 'lucide-react';
+  Chip} from 'lucide-react';
 
 const IoTEdgeComputing = () => {
   const features = [
@@ -112,7 +110,7 @@ const IoTEdgeComputing = () => {
   const services = [
     {
       icon: Circuit,
-      title: 'Edge Device Development',
+      title: 'Edge Smartphone Development',
       description: 'Custom IoT edge device design and development'
     },
     {

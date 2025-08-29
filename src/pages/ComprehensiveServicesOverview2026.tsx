@@ -79,9 +79,7 @@ import {
   Smartphone as SmartphoneIcon2,
   Globe as GlobeIcon3,
   Cpu as CpuIcon2,
-  Network as NetworkIcon,
-  Leaf as LeafIcon
-} from 'lucide-react';
+  Network as NetworkIcon} from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
 

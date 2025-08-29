@@ -37,9 +37,7 @@ import {
   Workflow,
   Rocket,
   RefreshCw,
-  Shield,
-  Lock
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 
 const CloudDevOps = () => {
   const features = [

@@ -31,9 +31,7 @@ import {
   Eye,
   PieChart,
   PenTool,
-  Shield,
-  Cloud
-} from "lucide-react";
+  Shield} from "lucide-react";
 
 export function FeatureCTAs() {
   const features = [

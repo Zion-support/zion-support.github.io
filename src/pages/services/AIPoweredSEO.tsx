@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -26,9 +25,7 @@ import {
   Building,
   FileText,
   MapPin,
-  Cloud,
-  Heart
-} from 'lucide-react';
+  Cloud} from 'lucide-react';
 
 export default function AIPoweredSEO() {
   const features = [

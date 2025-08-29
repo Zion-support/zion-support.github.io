@@ -17,9 +17,7 @@ import {
   MapPin,
   Laptop,
   Monitor,
-  Smartphone,
-  Tablet
-} from 'lucide-react';
+  Smartphone} from 'lucide-react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -117,7 +115,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     // Track user agent
     const trackUserAgent = () => {
       const userAgent = navigator.userAgent;
-      let device = 'Desktop';
+      let device = 'Monitor';
       
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
         device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
@@ -379,11 +377,11 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
             </div>
           </div>
 
-          {/* Device Distribution */}
+          {/* Smartphone Distribution */}
           <div>
             <h4 className="text-lg font-medium text-gray-700 mb-3 flex items-center gap-2">
-              <Device className="w-4 h-4 text-purple-500" />
-              Device Distribution
+              <Smartphone className="w-4 h-4 text-purple-500" />
+              Smartphone Distribution
             </h4>
             
             <div className="space-y-2">
@@ -392,7 +390,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
                   <div className="flex items-center gap-2">
                     {device.device === 'Mobile' && <Smartphone className="w-4 h-4 text-blue-500" />}
                     {device.device === 'Tablet' && <Tablet className="w-4 h-4 text-green-500" />}
-                    {device.device === 'Desktop' && <Monitor className="w-4 h-4 text-purple-500" />}
+                    {device.device === 'Monitor' && <Monitor className="w-4 h-4 text-purple-500" />}
                     <span className="text-sm text-gray-700">{device.device}</span>
                   </div>
                   <span className="text-sm font-medium text-gray-800">{device.count}</span>

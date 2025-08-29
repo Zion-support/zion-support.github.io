@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -20,9 +19,7 @@ import {
   Lock,
   Eye,
   PieChart,
-  TrendingUp,
-  AlertTriangle
-} from 'lucide-react';
+  TrendingUp} from 'lucide-react';
 
 export default function AIHealthcareAnalyticsPlatform() {
   const features = [

@@ -15,9 +15,7 @@ import {
   Brain,
   Shield,
   Cloud,
-  Code,
-  BarChart3
-} from 'lucide-react';
+  Code} from 'lucide-react';
 
 interface NavigationLink {
   key: string;
@@ -178,7 +176,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
   return (
     <nav className={`${className}`}>
-      {/* Desktop Navigation */}
+      {/* Monitor Navigation */}
       <div className="hidden lg:flex items-center space-x-1">
         {baseLinks.map((link) => (
           <div key={link.key}>

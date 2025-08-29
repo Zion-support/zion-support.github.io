@@ -13,9 +13,7 @@ import {
   Star,
   Eye,
   Share2,
-  Bookmark,
-  ExternalLink
-} from 'lucide-react';
+  Bookmark} from 'lucide-react';
 
 export default function News() {
   const [selectedCategory, setSelectedCategory] = useState('all');

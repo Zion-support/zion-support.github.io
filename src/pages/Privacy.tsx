@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -11,9 +10,7 @@ import {
   AlertTriangle,
   FileText,
   Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
+  Phone} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Privacy() {
@@ -53,8 +50,8 @@ export default function Privacy() {
     },
     {
       title: 'Technical Data',
-      description: 'Device information and technical specifications',
-      examples: ['IP address', 'Browser type', 'Device information']
+      description: 'Smartphone information and technical specifications',
+      examples: ['IP address', 'Browser type', 'Smartphone information']
     },
     {
       title: 'Communication Data',

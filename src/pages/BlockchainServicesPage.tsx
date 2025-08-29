@@ -22,9 +22,7 @@ import {
   Sparkles,
   ChevronRight,
   Users,
-  Clock,
-  Check
-} from 'lucide-react';
+  Clock} from 'lucide-react';
 
 const BlockchainServicesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

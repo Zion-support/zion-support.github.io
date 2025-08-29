@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -28,9 +27,7 @@ import {
   HelpCircle,
   Mail,
   Video,
-  GraduationCap,
-  ArrowRight
-} from 'lucide-react';
+  GraduationCap} from 'lucide-react';
 
 interface PricingTier {
   name: string;

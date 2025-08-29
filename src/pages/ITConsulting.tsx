@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Lightbulb, 
@@ -13,9 +12,7 @@ import {
   CheckCircle,
   Play,
   Clock,
-  Award,
-  MessageSquare
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 export default function ITConsulting() {
   const consultingServices = [

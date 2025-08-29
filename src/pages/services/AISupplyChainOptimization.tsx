@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -39,9 +38,7 @@ import {
   Warehouse,
   Factory,
   Ship,
-  Plane,
-  Store
-} from 'lucide-react';
+  Plane} from 'lucide-react';
 
 export default function AISupplyChainOptimization() {
   const features = [

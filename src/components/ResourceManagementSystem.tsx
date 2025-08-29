@@ -38,9 +38,7 @@ import {
   Wifi,
   Server,
   Database,
-  Lock,
-  Unlock
-} from 'lucide-react';
+  Lock} from 'lucide-react';
 
 interface Resource {
   id: string;

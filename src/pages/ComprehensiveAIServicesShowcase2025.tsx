@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -18,9 +17,7 @@ import {
   FileText,
   Heart,
   DollarSign,
-  Truck,
-  Target
-} from 'lucide-react';
+  Truck} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ComprehensiveAIServicesShowcase2025() {

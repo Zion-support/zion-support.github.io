@@ -54,9 +54,7 @@ import {
   Crown,
   Target as TargetIcon,
   Zap as ZapIcon,
-  Grid,
-  List
-} from 'lucide-react';
+  Grid} from 'lucide-react';
 
 // Import our existing service data
 import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';

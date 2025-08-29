@@ -15,9 +15,7 @@ import {
   Clock,
   DollarSign,
   TrendingUp,
-  Eye,
-  Cpu
-} from 'lucide-react';
+  Eye} from 'lucide-react';
 
 const AIFinancialFraudDetection: React.FC = () => {
   const features = [

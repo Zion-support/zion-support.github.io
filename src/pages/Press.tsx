@@ -14,9 +14,7 @@ import {
   Users,
   Zap,
   Shield,
-  Brain,
-  Rocket
-} from 'lucide-react';
+  Brain} from 'lucide-react';
 
 export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -11,9 +11,7 @@ import {
   Database,
   ArrowRight,
   Star,
-  CheckCircle,
-  Rocket
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface AIService {

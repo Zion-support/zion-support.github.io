@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle } from 'lucide-react';
+import { Download, Wifi, WifiOff, CheckCircle} from 'lucide-react';
 
 interface ServiceWorkerState {
   isInstalled: boolean;

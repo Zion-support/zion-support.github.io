@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -26,9 +25,7 @@ import {
   FileText,
   ShoppingCart,
   Home,
-  DollarSign,
-  Heart
-} from 'lucide-react';
+  DollarSign} from 'lucide-react';
 
 export default function AISalesCopilot() {
   const features = [

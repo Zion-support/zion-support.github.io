@@ -9,9 +9,7 @@ import {
   TrendingUp,
   Cpu,
   Database,
-  Network,
-  Shield
-} from 'lucide-react';
+  Network} from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';

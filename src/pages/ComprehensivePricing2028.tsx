@@ -31,9 +31,7 @@ import {
   ArrowRight,
   Info,
   X,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+  ChevronDown} from 'lucide-react';
 
 const ComprehensivePricing2028 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

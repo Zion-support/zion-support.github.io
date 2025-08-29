@@ -20,9 +20,7 @@ import {
   Cloud,
   TrendingUp,
   MessageCircle,
-  BookOpen,
-  CheckCircle
-} from 'lucide-react';
+  BookOpen} from 'lucide-react';
 
 const events = [
   {

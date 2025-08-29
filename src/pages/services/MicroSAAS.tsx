@@ -1,5 +1,5 @@
 import React from 'react';
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings } from 'lucide-react';
+import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket} from 'lucide-react';
 
 const MicroSAAS = () => {
   const microsaasServices = [

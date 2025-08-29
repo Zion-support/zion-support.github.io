@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -36,9 +35,7 @@ import {
   MapPin,
   GraduationCap,
   Heart,
-  TrendingDown,
-  Lightbulb
-} from 'lucide-react';
+  TrendingDown} from 'lucide-react';
 
 export default function AIEmployeePerformanceAnalytics() {
   const features = [

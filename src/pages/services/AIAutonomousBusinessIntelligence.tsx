@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import {
@@ -34,9 +33,7 @@ import {
   ShoppingCart,
   DollarSign,
   Heart,
-  GraduationCap,
-  Home
-} from 'lucide-react';
+  GraduationCap} from 'lucide-react';
 
 export default function AIAutonomousBusinessIntelligence() {
   const features = [

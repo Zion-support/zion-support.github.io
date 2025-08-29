@@ -17,9 +17,7 @@ import {
   ExternalLink,
   ArrowRight,
   CheckCircle,
-  Clock,
-  DollarSign
-} from 'lucide-react';
+  Clock} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
 import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import { Mail, Send} from 'lucide-react';
 
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');

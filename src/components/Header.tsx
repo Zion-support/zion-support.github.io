@@ -17,9 +17,7 @@ import {
   Users,
   FileText,
   Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+  Mail} from 'lucide-react';
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,7 +81,7 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Monitor Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">

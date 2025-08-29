@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -16,9 +15,7 @@ import {
   Search,
   Target,
   BarChart3,
-  Users,
-  Sparkles
-} from 'lucide-react';
+  Users} from 'lucide-react';
 
 export default function AIContentGenerator() {
   const features = [

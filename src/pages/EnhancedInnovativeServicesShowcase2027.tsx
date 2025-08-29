@@ -36,9 +36,7 @@ import {
   ChevronLeft,
   Play,
   Eye,
-  X,
-  Beaker
-} from 'lucide-react';
+  X} from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from '../data/enhancedInnovativeServices2027';
 
 const EnhancedInnovativeServicesShowcase2027: React.FC = () => {

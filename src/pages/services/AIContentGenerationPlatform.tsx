@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -20,9 +19,7 @@ import {
   TrendingUp,
   Clock,
   DollarSign,
-  Target,
-  Award
-} from 'lucide-react';
+  Target} from 'lucide-react';
 
 export default function AIContentGenerationPlatform() {
   const features = [

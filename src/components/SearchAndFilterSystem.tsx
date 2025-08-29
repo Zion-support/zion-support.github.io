@@ -14,9 +14,7 @@ import {
   Zap,
   Brain,
   Cloud,
-  Shield,
-  Globe
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 
 interface SearchResult {
   id: string;

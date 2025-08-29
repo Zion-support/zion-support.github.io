@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   BarChart3, 
@@ -47,9 +46,7 @@ import {
   Building,
   Truck,
   Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
+  Phone} from 'lucide-react';
 
 export default function Dashboard() {
   const stats = [

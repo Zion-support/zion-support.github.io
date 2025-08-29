@@ -30,9 +30,7 @@ import {
   Wifi,
   Key,
   BarChart3,
-  Globe2,
-  ShieldCheck
-} from 'lucide-react';
+  Globe2} from 'lucide-react';
 
 const InnovativeServicesHub: React.FC = () => {
   const serviceCategories = [

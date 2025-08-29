@@ -64,9 +64,7 @@ import {
   Share2,
   Eye,
   Calendar as CalendarIcon,
-  User,
-  Tag as TagIcon
-} from 'lucide-react';
+  User} from 'lucide-react';
 
 interface SearchResult {
   id: string;

@@ -14,9 +14,7 @@ import {
   Shield,
   Cloud,
   Brain,
-  Zap,
-  CheckCircle
-} from 'lucide-react';
+  Zap} from 'lucide-react';
 
 interface FAQItem {
   id: string;
@@ -337,6 +335,6 @@ export default function FAQ() {
       </div>
     </>
   );
-};
+}
 
 export default FAQ;

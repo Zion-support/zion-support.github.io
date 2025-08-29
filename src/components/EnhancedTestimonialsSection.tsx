@@ -7,9 +7,7 @@ import {
   ChevronRight,
   Globe,
   Building,
-  Users,
-  Award
-} from 'lucide-react';
+  Users} from 'lucide-react';
 
 interface Testimonial {
   id: string;

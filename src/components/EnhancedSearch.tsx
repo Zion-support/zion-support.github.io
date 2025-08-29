@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight, Globe, Building, Code, Shield } from 'lucide-react';
+import { Search, X, Sparkles, Brain, Zap, TrendingUp, Clock, ArrowRight, Globe, Building, Code} from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '@/hooks/useDebounce';
 

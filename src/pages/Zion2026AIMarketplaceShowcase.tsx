@@ -15,9 +15,7 @@ import {
   Globe,
   Phone,
   Mail,
-  MapPin,
-  ExternalLink
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 import { zion2026AIMarketplaceServices } from '../../data/zion-2026-ai-marketplace-services';
 
 const Zion2026AIMarketplaceShowcase: React.FC = () => {

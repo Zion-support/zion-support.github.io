@@ -4,7 +4,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Privacy from "@/pages/Privacy";
-import Blog from "@/pages/Blog";
+import { Blog } from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import GreenIT from "@/pages/GreenIT";
 import Careers from "@/pages/Careers";

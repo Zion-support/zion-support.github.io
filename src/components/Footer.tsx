@@ -56,9 +56,7 @@ import {
   BookOpen,
   Truck,
   ExternalLink,
-  ChevronDown,
-  Copyright
-} from 'lucide-react';
+  ChevronDown} from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
 
 interface FooterLink {

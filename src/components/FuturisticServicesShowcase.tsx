@@ -13,9 +13,7 @@ import {
 	Bot,
 	ArrowRight,
 	Star,
-	Play,
-	Pause
-} from 'lucide-react';
+	Play} from 'lucide-react';
 interface ServiceShowcase {
 	id: string;
 	title: string;

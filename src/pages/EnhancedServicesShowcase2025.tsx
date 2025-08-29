@@ -49,9 +49,7 @@ import {
   ShieldCheck,
   Zap as ZapIcon,
   ShoppingCart,
-  Gauge,
-  MessageCircle as MessageCircleIcon
-} from 'lucide-react';
+  Gauge} from 'lucide-react';
 import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025';
 
 export default function EnhancedServicesShowcase2025() {

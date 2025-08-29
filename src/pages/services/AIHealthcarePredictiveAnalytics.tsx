@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Heart, 
@@ -40,9 +39,7 @@ import {
   Activity as Heartbeat,
   FileText,
   UserCheck,
-  Clipboard,
-  TestTube
-} from 'lucide-react';
+  Clipboard} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIHealthcarePredictiveAnalytics() {

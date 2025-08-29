@@ -16,9 +16,7 @@ import {
   ChevronDown,
   ChevronUp,
   Shield,
-  Server,
-  X
-} from 'lucide-react';
+  Server} from 'lucide-react';
 
 interface ReportData {
   id: string;

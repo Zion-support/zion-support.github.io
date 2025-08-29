@@ -27,9 +27,7 @@ import {
   ChevronUp,
   Minimize2,
   Maximize2,
-  Volume2,
-  VolumeX
-} from 'lucide-react';
+  Volume2} from 'lucide-react';
 
 interface Message {
   id: string;

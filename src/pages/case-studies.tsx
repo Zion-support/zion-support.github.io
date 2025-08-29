@@ -14,9 +14,7 @@ import {
   Zap,
   Shield,
   Cloud,
-  Brain,
-  Globe
-} from 'lucide-react';
+  Brain} from 'lucide-react';
 
 const caseStudies = [
   {

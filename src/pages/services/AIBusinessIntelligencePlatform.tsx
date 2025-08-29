@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
@@ -19,9 +18,7 @@ import {
   DollarSign,
   Target,
   PieChart,
-  LineChart,
-  Activity
-} from 'lucide-react';
+  LineChart} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';

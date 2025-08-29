@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -20,9 +19,7 @@ import {
   Cpu,
   Users,
   Lock,
-  Eye,
-  PieChart
-} from 'lucide-react';
+  Eye} from 'lucide-react';
 
 export default function AIFinancialTradingPlatform() {
   const features = [

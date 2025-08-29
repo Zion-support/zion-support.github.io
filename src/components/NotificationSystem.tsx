@@ -12,9 +12,7 @@ import {
   Zap,
   Star,
   MessageSquare,
-  Shield,
-  Clock
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 

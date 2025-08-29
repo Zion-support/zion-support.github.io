@@ -39,9 +39,7 @@ import {
   Target,
   Wallet,
   PiggyBank,
-  CreditCard,
-  Receipt
-} from 'lucide-react';
+  CreditCard} from 'lucide-react';
 
 const FinOpsAdvisor = () => {
   const features = [

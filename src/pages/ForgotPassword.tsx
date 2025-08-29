@@ -12,9 +12,7 @@ import {
   Brain,
   Cloud,
   Rocket,
-  ArrowRight,
-  RefreshCw
-} from 'lucide-react';
+  ArrowRight} from 'lucide-react';
 
 const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState('');

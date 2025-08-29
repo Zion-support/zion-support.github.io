@@ -92,9 +92,7 @@ import {
   Volume2,
   VolumeX,
   ChevronRight,
-  Star,
-  Sparkles
-} from 'lucide-react';
+  Star} from 'lucide-react';
 
 const QuickAccess: React.FC = () => {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);

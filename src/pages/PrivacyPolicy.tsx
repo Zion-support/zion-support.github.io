@@ -16,9 +16,7 @@ import {
   Info,
   ArrowRight,
   ExternalLink,
-  Download,
-  FileText
-} from 'lucide-react';
+  Download} from 'lucide-react';
 
 const PrivacyPolicy = () => {
   const lastUpdated = '2025-01-15';

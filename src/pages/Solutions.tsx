@@ -31,9 +31,7 @@ import {
   Award,
   Clock,
   DollarSign,
-  Search,
-  Filter
-} from 'lucide-react';
+  Search} from 'lucide-react';
 
 const solutionCategories = [
   {
@@ -103,7 +101,7 @@ const solutionCategories = [
     description: 'Connect devices and process data closer to the source for real-time insights',
     color: 'from-yellow-500 to-orange-600',
     solutions: [
-      'IoT Device Management',
+      'IoT Smartphone Management',
       'Edge Computing Platforms',
       'Sensor Networks',
       'Real-time Monitoring',
@@ -241,7 +239,7 @@ const featuredSolutions = [
     description: 'Implement a comprehensive security framework that continuously verifies every user, device, and connection to protect your organization from modern threats.',
     features: [
       'Identity verification',
-      'Device authentication',
+      'Smartphone authentication',
       'Network segmentation',
       'Threat detection',
       'Compliance monitoring',

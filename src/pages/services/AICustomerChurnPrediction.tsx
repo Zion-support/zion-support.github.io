@@ -12,9 +12,7 @@ import {
   CheckCircle,
   ArrowRight,
   Star,
-  Clock,
-  DollarSign
-} from 'lucide-react';
+  Clock} from 'lucide-react';
 
 const AICustomerChurnPrediction: React.FC = () => {
   const features = [

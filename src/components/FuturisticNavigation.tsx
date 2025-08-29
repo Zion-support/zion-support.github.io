@@ -176,9 +176,7 @@ import {
   RepeatDodecagon,
   Repeat1Dodecagon,
   Shuffle2Dodecagon,
-  SkipBack2Dodecagon,
-  SkipForward2Dodecagon
-} from 'lucide-react';
+  SkipBack2Dodecagon} from 'lucide-react';
 export const FuturisticNavigation: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -301,7 +299,7 @@ export const FuturisticNavigation: React.FC = () => {
                 </div>
               </Link>
             </motion.div>
-            {/* Desktop Navigation */}
+            {/* Monitor Navigation */}
             <nav className="hidden lg:flex items-center space-x-1">
               {/* Main Navigation Links */}
               <motion.div

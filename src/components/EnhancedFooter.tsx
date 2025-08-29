@@ -47,9 +47,7 @@ import {
   Twitter,
   Github,
   Facebook,
-  Instagram,
-  Youtube
-} from 'lucide-react';
+  Instagram} from 'lucide-react';
 
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();

@@ -18,9 +18,7 @@ import {
   Users,
   Clock,
   Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+  Mail} from 'lucide-react';
 
 const AIQuantumFinancialTrading = () => {
   const features = [

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import {
@@ -23,9 +22,7 @@ import {
   Download,
   Upload,
   MessageSquare,
-  Image,
-  Video
-} from 'lucide-react';
+  Image} from 'lucide-react';
 
 export default function AIContentCreation() {
   const features = [

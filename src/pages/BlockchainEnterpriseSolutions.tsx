@@ -264,8 +264,7 @@ import {
   RedBlackTree,
   AVLTree,
   SplayTree,
-  Treap,
-} from 'lucide-react';
+  Treap} from 'lucide-react';
 
 const blockchainSolutions = [
   {

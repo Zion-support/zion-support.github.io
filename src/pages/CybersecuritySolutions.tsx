@@ -23,9 +23,7 @@ import {
   Target,
   TrendingUp,
   Clock,
-  BarChart3,
-  CreditCard
-} from 'lucide-react';
+  BarChart3} from 'lucide-react';
 
 export default function CybersecuritySolutions() {
   const [selectedThreat, setSelectedThreat] = useState('all');

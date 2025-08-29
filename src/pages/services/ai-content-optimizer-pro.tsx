@@ -20,9 +20,7 @@ import {
   Brain,
   Search,
   PenTool,
-  Eye,
-  Share2
-} from 'lucide-react';
+  Eye} from 'lucide-react';
 
 const AIContentOptimizerPro: React.FC = () => {
   const contactInfo = {

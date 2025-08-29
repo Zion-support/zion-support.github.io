@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -30,9 +29,7 @@ import {
   GitBranch,
   FileText,
   Users as UsersIcon,
-  PieChart,
-  Activity
-} from 'lucide-react';
+  PieChart} from 'lucide-react';
 
 export default function AIProjectManagementPlatform() {
   const features = [

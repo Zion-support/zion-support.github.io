@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -20,9 +19,7 @@ import {
   MessageSquare,
   Heart,
   DollarSign,
-  Factory,
-  ShoppingCart
-} from 'lucide-react';
+  Factory} from 'lucide-react';
 
 export default function AIServices() {
   const aiServices = [

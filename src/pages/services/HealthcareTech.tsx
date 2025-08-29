@@ -1,7 +1,6 @@
-import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain } from 'lucide-react';
+import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill} from 'lucide-react';
 
 export default function HealthcareTech() {
   const features = [
@@ -63,10 +62,10 @@ export default function HealthcareTech() {
       features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools']
     },
     {
-      title: 'Medical Device Integration',
+      title: 'Medical Smartphone Integration',
       description: 'IoT integration for medical devices and wearables',
       price: 'From $18,000',
-      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']
+      features: ['Smartphone connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']
     }
   ];
 

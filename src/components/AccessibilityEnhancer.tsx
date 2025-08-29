@@ -13,9 +13,7 @@ import {
   Minus,
   Contrast,
   Accessibility,
-  CheckCircle,
-  AlertTriangle
-} from 'lucide-react';
+  CheckCircle} from 'lucide-react';
 
 interface AccessibilitySettings {
   fontSize: number;

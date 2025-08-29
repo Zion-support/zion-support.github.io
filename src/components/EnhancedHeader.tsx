@@ -48,9 +48,7 @@ import {
   Mail, 
   MapPin, 
   Satellite, 
-  FileText,
-  Sparkles as SparklesIcon
-} from 'lucide-react';
+  FileText} from 'lucide-react';
 import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
 export function EnhancedHeader() {
@@ -276,7 +274,7 @@ export function EnhancedHeader() {
               </div>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Monitor Navigation */}
             <nav className="hidden xl:flex items-center space-x-8">
               {navigation.slice(0, 6).map((item) => (
                 <Link

@@ -27,9 +27,7 @@ import {
   Crown,
   Sparkles,
   ArrowRight,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+  ChevronDown} from 'lucide-react';
 
 const Cookies = () => {
   const [expandedSections, setExpandedSections] = useState({

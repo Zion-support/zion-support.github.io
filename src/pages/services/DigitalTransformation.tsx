@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -87,18 +86,18 @@ import {
   UserCog,
   UserShield,
   UserStar,
-  UserHeart,
+  Heart,
   UserCheck2,
   UserX2,
   UserMinus2,
   UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  UserList2,
-  UserSettings2,
+  Edit,
+  Search,
+  Users2,
+  Settings2,
   UserCog2,
-  UserShield2,
-  UserStar2,
+  Shield,
+  Star,
   UserHeart2,
   Monitor,
   Eye2,
@@ -106,12 +105,12 @@ import {
   MousePointer,
   Clock,
   MapPin,
-  Device,
+  Smartphone,
   Globe2,
   Smartphone2,
   Tablet,
   Laptop,
-  Desktop,
+  Monitor,
   Server3,
   Database3,
   HardDrive2,
@@ -150,9 +149,7 @@ import {
   DollarSign,
   Users,
   Clock,
-  Search,
-  Sparkles
-} from 'lucide-react';
+  Search} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function DigitalTransformation() {
@@ -493,6 +490,6 @@ export default function DigitalTransformation() {
       </section>
     </div>
   );
-};
+}
 
 export default DigitalTransformation;

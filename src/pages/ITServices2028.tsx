@@ -13,8 +13,7 @@ import {
   LineChart, Activity, TrendingDown, Minus, Plus, Equal, Divide,
   Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins,
   PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
-  Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
-} from 'lucide-react';
+  Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2} from 'lucide-react';
 
 const itServices2028 = [
   {

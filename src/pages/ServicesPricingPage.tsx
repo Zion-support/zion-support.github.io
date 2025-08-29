@@ -22,9 +22,7 @@ import {
   Phone,
   MapPin,
   ExternalLink,
-  DollarSign,
-  Clock
-} from "lucide-react";
+  DollarSign} from "lucide-react";
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {

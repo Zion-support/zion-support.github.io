@@ -54,9 +54,7 @@ import {
   Microscope,
   X,
   Atom,
-  Heart,
-  Leaf
-} from 'lucide-react';
+  Heart} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {

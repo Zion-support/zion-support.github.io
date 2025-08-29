@@ -14,9 +14,7 @@ import {
   Minus,
   Eye,
   Download,
-  Share2,
-  RefreshCw
-} from 'lucide-react';
+  Share2} from 'lucide-react';
 
 interface ChartData {
   labels: string[];

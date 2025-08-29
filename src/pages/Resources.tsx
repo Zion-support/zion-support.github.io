@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -53,9 +52,7 @@ import {
   GitBranch,
   GitCommit,
   GitPullRequest,
-  GitMerge,
-  GitCompare
-} from 'lucide-react';
+  GitMerge} from 'lucide-react';
 
 export default function Resources() {
   const resourceCategories = [

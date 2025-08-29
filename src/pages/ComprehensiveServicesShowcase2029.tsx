@@ -38,9 +38,7 @@ import {
   Package,
   Route,
   Warehouse,
-  AlertTriangle,
-  GitFork
-} from 'lucide-react';
+  AlertTriangle} from 'lucide-react';
 
 const ComprehensiveServicesShowcase2029 = () => {
   const serviceCategories = [

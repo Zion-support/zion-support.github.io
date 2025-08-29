@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   FileText, 
@@ -11,9 +10,7 @@ import {
   Lock,
   Mail,
   Phone,
-  MapPin,
-  Calendar
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Terms() {

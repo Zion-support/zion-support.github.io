@@ -33,9 +33,7 @@ import {
   Lightbulb,
   CheckSquare,
   Square,
-  Info,
-  HelpCircle
-} from 'lucide-react';
+  Info} from 'lucide-react';
 
 interface QuoteForm {
   // Company Information

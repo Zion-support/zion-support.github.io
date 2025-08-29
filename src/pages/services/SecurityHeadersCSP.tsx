@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -35,9 +34,7 @@ import {
   ShoppingCart,
   DollarSign,
   Heart,
-  Building,
-  GraduationCap
-} from 'lucide-react';
+  Building} from 'lucide-react';
 
 export default function SecurityHeadersCSP() {
   const features = [

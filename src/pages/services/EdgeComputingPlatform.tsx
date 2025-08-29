@@ -60,9 +60,7 @@ import {
   Wind,
   Thermometer,
   Droplets,
-  Umbrella,
-  MapPin
-} from 'lucide-react';
+  Umbrella} from 'lucide-react';
 
 const EdgeComputingPlatform: React.FC = () => {
   const features = [

@@ -18,9 +18,7 @@ import {
   CheckCircle,
   ArrowRight,
   Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+  Mail} from 'lucide-react';
 
 // Import the new services
 import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';

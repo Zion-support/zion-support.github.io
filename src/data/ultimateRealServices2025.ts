@@ -159,7 +159,7 @@ export const ULTIMATE_REAL_SERVICES_2025: ProductListing[] = [
     subcategory: "Edge Computing",
     price: 11999,
     currency: "$",
-    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Data Processing", "Cloud Sync", "Device Management"],
+    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Data Processing", "Cloud Sync", "Smartphone Management"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
     images: ["https://ziontechgroup.com/images/iot-edge-computing.jpg"],
     createdAt: "2024-02-10T10:00:00.000Z",

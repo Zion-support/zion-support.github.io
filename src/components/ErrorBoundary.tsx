@@ -10,9 +10,7 @@ import {
   X,
   AlertCircle,
   Info,
-  Zap,
-  CheckCircle
-} from 'lucide-react';
+  Zap} from 'lucide-react';
 
 interface Props {
   children: ReactNode;

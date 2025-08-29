@@ -18,9 +18,7 @@ import {
   Briefcase,
   Award,
   Rocket,
-  Target,
-  Globe
-} from 'lucide-react';
+  Target} from 'lucide-react';
 const MicroSAASPage = () => {
   const saasServices = [
     {

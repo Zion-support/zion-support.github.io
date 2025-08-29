@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -8,8 +7,7 @@ import {
   Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
   Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
   CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
-  Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon
-} from 'lucide-react';
+  Award, TrendingUp as TrendingUpIcon} from 'lucide-react';
 
 export default function InnovativeServicesLanding2025() {
   const featuredServices = [

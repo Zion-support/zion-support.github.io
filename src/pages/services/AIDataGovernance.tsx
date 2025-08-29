@@ -40,9 +40,7 @@ import {
   Unlink,
   EyeOff,
   EyeOn,
-  LockOpen,
-  LockClosed
-} from 'lucide-react';
+  LockOpen} from 'lucide-react';
 
 const AIDataGovernance: React.FC = () => {
   const features = [

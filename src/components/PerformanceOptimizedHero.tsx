@@ -12,9 +12,7 @@ import {
   CheckCircle,
   TrendingUp,
   Users,
-  Globe,
-  Rocket
-} from 'lucide-react';
+  Globe} from 'lucide-react';
 
 interface HeroProps {
   title?: string;

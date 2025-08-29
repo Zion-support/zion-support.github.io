@@ -23,9 +23,7 @@ import {
   Check,
   BarChart3,
   Lock,
-  Eye,
-  Heart
-} from 'lucide-react';
+  Eye} from 'lucide-react';
 
 const DigitalTransformation = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);

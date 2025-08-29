@@ -18,9 +18,7 @@ import {
   CheckCircle,
   Star,
   Globe,
-  Award,
-  Lightbulb
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 const Careers = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -19,9 +18,7 @@ import {
   Building,
   Monitor,
   Clock,
-  AlertTriangle,
-  Info
-} from 'lucide-react';
+  AlertTriangle} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Compliance() {

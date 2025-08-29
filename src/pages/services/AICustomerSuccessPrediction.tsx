@@ -29,9 +29,7 @@ import {
   BarChart3,
   MessageCircle,
   Calendar,
-  AlertTriangle,
-  Star
-} from 'lucide-react';
+  AlertTriangle} from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AICustomerSuccessPrediction() {

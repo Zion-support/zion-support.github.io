@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -20,9 +19,7 @@ import {
   Cloud,
   Database,
   Cpu,
-  Brain,
-  Users
-} from 'lucide-react';
+  Brain} from 'lucide-react';
 
 export default function AICybersecurityThreatDetection() {
   const features = [

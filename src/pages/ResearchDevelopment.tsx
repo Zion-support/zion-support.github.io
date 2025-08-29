@@ -15,9 +15,7 @@ import {
   Rocket,
   BookOpen,
   Users,
-  Award,
-  ArrowRight
-} from 'lucide-react';
+  Award} from 'lucide-react';
 
 const ResearchDevelopment: React.FC = () => {
   const [selectedArea, setSelectedArea] = useState('all');

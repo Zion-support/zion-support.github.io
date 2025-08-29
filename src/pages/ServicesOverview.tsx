@@ -76,9 +76,7 @@ import {
   EyeOff,
   AlertTriangle,
   CheckCircle2,
-  XCircle,
-  Info as InfoIcon
-} from 'lucide-react';
+  XCircle} from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { servicesCatalog } from '../data/servicesCatalog';
 

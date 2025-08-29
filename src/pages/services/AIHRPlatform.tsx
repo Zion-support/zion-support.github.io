@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
@@ -30,9 +29,7 @@ import {
   Briefcase,
   GraduationCap,
   Award,
-  Heart,
-  Building
-} from 'lucide-react';
+  Heart} from 'lucide-react';
 
 export default function AIHRPlatform() {
   const features = [

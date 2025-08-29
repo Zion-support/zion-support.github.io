@@ -288,7 +288,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
       integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"],
       apiEndpoints: 500,
       uptime: "99.9%",
-      security: ["Edge encryption", "Device authentication", "Secure boot", "Zero-trust edge"]
+      security: ["Edge encryption", "Smartphone authentication", "Secure boot", "Zero-trust edge"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"],
     marketSize: "$155.9 billion by 2028"

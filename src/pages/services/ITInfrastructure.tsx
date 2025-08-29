@@ -37,9 +37,7 @@ import {
   Lock,
   Shield,
   Cloud,
-  Database2,
-  Router
-} from 'lucide-react';
+  Database2} from 'lucide-react';
 
 const ITInfrastructure = () => {
   const features = [

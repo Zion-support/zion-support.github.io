@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -30,9 +29,7 @@ import {
   ShoppingCart,
   Heart,
   GraduationCap,
-  Settings,
-  Smartphone
-} from 'lucide-react';
+  Settings} from 'lucide-react';
 
 export default function HelpdeskPlatform() {
   const features = [

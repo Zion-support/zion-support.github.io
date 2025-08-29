@@ -191,7 +191,7 @@ export const innovativeServices2028 = [
     pricingModel: "monthly",
     userLimit: "Up to 10,000 devices",
     features: [
-      "Device management",
+      "Smartphone management",
       "Real-time analytics",
       "Edge computing processing",
       "Predictive maintenance",
@@ -209,7 +209,7 @@ export const innovativeServices2028 = [
       "Predictive capabilities"
     ],
     targetAudience: ["Manufacturing companies", "Smart cities", "Healthcare providers", "Retail chains"],
-    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Device Management", "Predictive Maintenance"],
+    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Smartphone Management", "Predictive Maintenance"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",

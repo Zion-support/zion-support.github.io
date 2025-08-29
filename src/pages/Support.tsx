@@ -26,9 +26,7 @@ import {
   Ticket,
   Headphones,
   MessageSquare,
-  VideoCall,
-  Mailbox
-} from 'lucide-react';
+  VideoCall} from 'lucide-react';
 
 const Support = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');

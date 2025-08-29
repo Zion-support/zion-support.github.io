@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle} from 'lucide-react';
 
 export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -173,7 +173,7 @@ export default function ApiPlayground() {
     },
     {
       id: 5,
-      name: 'IoT Device Management',
+      name: 'IoT Smartphone Management',
       description: 'Manage IoT devices, monitor sensors, and control actuators.',
       category: 'iot',
       method: 'GET',
@@ -184,9 +184,9 @@ export default function ApiPlayground() {
       rateLimit: '300 requests/hour',
       authentication: 'API Key',
       parameters: [
-        { name: 'location', type: 'string', required: false, description: 'Device location' },
-        { name: 'type', type: 'string', required: false, description: 'Device type' },
-        { name: 'status', type: 'string', required: false, description: 'Device status' }
+        { name: 'location', type: 'string', required: false, description: 'Smartphone location' },
+        { name: 'type', type: 'string', required: false, description: 'Smartphone type' },
+        { name: 'status', type: 'string', required: false, description: 'Smartphone status' }
       ],
       requestExample: {
         location: "building-a",

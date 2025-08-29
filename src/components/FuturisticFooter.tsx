@@ -22,9 +22,7 @@ import {
   Briefcase,
   FileText,
   HelpCircle,
-  MessageCircle,
-  Zap as ZapIcon
-} from 'lucide-react';
+  MessageCircle} from 'lucide-react';
 export const FuturisticFooter: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

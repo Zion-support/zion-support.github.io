@@ -19,9 +19,7 @@ import {
   BarChart3,
   TrendingUp,
   Lightbulb,
-  Target,
-  Award
-} from 'lucide-react';
+  Target} from 'lucide-react';
 
 const InnovativeServices: React.FC = () => {
   const innovations = [

@@ -22,9 +22,7 @@ import {
   Monitor,
   Server,
   Cloud,
-  Lock,
-  Eye
-} from 'lucide-react';
+  Lock} from 'lucide-react';
 
 export default function QuantumTechnology() {
   const [selectedApplication, setSelectedApplication] = useState('all');

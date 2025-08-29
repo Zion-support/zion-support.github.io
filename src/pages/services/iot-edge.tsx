@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield } from 'lucide-react';
+import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function IoTEdge() {
@@ -72,7 +71,7 @@ export default function IoTEdge() {
                 },
                 {
                   icon: Wifi,
-                  title: "Device Connectivity",
+                  title: "Smartphone Connectivity",
                   description: "Seamless connectivity across multiple protocols and network types."
                 },
                 {
@@ -82,7 +81,7 @@ export default function IoTEdge() {
                 },
                 {
                   icon: Settings,
-                  title: "Device Management",
+                  title: "Smartphone Management",
                   description: "Centralized management and monitoring of all IoT devices and sensors."
                 },
                 {
@@ -138,7 +137,7 @@ export default function IoTEdge() {
                   title: "Healthcare IoT",
                   description: "Patient monitoring, medical device management, and remote healthcare delivery.",
                   icon: Users,
-                  benefits: ["Patient monitoring", "Device management", "Remote care"]
+                  benefits: ["Patient monitoring", "Smartphone management", "Remote care"]
                 },
                 {
                   title: "Energy Management",

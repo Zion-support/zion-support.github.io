@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
@@ -25,9 +24,7 @@ import {
   Eye, 
   AlertTriangle, 
   Info, 
-  ArrowRight,
-  Globe
-} from 'lucide-react';
+  ArrowRight} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function OnsiteSupport() {

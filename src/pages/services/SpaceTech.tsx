@@ -72,9 +72,7 @@ import {
   Signal,
   Navigation,
   Earth,
-  Moon,
-  Sun
-} from 'lucide-react';
+  Moon} from 'lucide-react';
 
 const SpaceTech = () => {
   const features = [

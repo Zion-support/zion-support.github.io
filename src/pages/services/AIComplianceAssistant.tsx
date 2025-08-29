@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
@@ -20,9 +19,7 @@ import {
   Database,
   Search,
   Filter,
-  Download,
-  Share2
-} from 'lucide-react';
+  Download} from 'lucide-react';
 
 export default function AIComplianceAssistant() {
   const features = [

@@ -47,9 +47,7 @@ import {
   Check,
   X,
   Play,
-  ChevronRight,
-  ChevronLeft
-} from 'lucide-react';
+  ChevronRight} from 'lucide-react';
 import { 
   revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 

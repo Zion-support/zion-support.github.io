@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -53,9 +52,7 @@ import {
   Car as CarIcon,
   Factory as FactoryIcon2,
   City as CityIcon2,
-  Home as HomeIcon2,
-  Car as CarIcon2
-} from 'lucide-react';
+  Home as HomeIcon2} from 'lucide-react';
 
 export default function ComprehensivePricingGuide2025() {
   const pricingTiers = [

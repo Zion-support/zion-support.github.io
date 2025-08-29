@@ -158,7 +158,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       integrations: ["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"],
       apiEndpoints: 300,
       uptime: "99.9%",
-      security: ["Edge security", "Data encryption", "Device authentication", "Network isolation"]
+      security: ["Edge security", "Data encryption", "Smartphone authentication", "Network isolation"]
     },
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"],
     marketSize: "$43.4 billion by 2025"

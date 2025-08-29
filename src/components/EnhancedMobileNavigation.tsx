@@ -31,9 +31,7 @@ import {
   BookOpen,
   MessageCircle,
   Mail,
-  MapPin,
-  Clock
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 
 interface NavigationItem {
   label: string;

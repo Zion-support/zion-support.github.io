@@ -594,7 +594,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Mining operations'
     ],
     pricing: {
-      model: 'Per-Device + Data Processing',
+      model: 'Per-Smartphone + Data Processing',
       basePrice: 2800,
       currency: 'USD',
       pricingTiers: {

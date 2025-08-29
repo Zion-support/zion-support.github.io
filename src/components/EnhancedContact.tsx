@@ -9,9 +9,7 @@ import {
   AlertCircle,
   Clock,
   MessageSquare,
-  Building,
-  Globe
-} from 'lucide-react';
+  Building} from 'lucide-react';
 
 interface ContactFormData {
   name: string;

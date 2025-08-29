@@ -36,9 +36,7 @@ import {
   Maximize2,
   RotateCcw,
   Wifi as WifiIcon,
-  Battery as BatteryIcon,
-  Signal
-} from 'lucide-react';
+  Battery as BatteryIcon} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const MobileLaunch: React.FC = () => {

@@ -92,9 +92,7 @@ import {
   MicroscopeIcon,
   XIcon,
   AtomIcon,
-  HeartIcon,
-  LeafIcon
-} from 'lucide-react';
+  HeartIcon} from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031';
 import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031 } from '../data/specializedITInfrastructureServices2031';
 import { SPECIALIZED_AI_SERVICES_2031 } from '../data/specializedAIServices2031';

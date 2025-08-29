@@ -11,9 +11,7 @@ import {
   ArrowRight,
   Shield,
   Zap,
-  Users,
-  CheckCircle
-} from "lucide-react";
+  Users} from "lucide-react";
 export default function Signup() {
   const [formData, setFormData] = useState({
     firstName: '',

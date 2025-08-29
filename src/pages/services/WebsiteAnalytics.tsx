@@ -91,18 +91,18 @@ import {
   UserCog,
   UserShield,
   UserStar,
-  UserHeart,
+  Heart,
   UserCheck2,
   UserX2,
   UserMinus2,
   UserPlus2,
-  UserEdit2,
-  UserSearch2,
-  UserList2,
-  UserSettings2,
+  Edit,
+  Search,
+  Users2,
+  Settings2,
   UserCog2,
-  UserShield2,
-  UserStar2,
+  Shield,
+  Star,
   UserHeart2,
   Monitor,
   Eye,
@@ -146,9 +146,7 @@ import {
   Brain,
   Cpu,
   Memory,
-  HardDrive,
-  Server
-} from 'lucide-react';
+  HardDrive} from 'lucide-react';
 
 const WebsiteAnalytics = () => {
   const features = [
@@ -178,8 +176,8 @@ const WebsiteAnalytics = () => {
       description: 'User location and regional performance data'
     },
     {
-      icon: Device,
-      title: 'Device Analytics',
+      icon: Smartphone,
+      title: 'Smartphone Analytics',
       description: 'Cross-device performance and user experience insights'
     }
   ];
