@@ -30,9 +30,33 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink
+  ExternalLink,
+  BarChart3,
+  Code,
+  Palette,
+  Target,
+  Clock,
+  ShieldCheck,
+  Globe2,
+  CpuIcon,
+  DatabaseIcon,
+  NetworkIcon,
+  SmartphoneIcon,
+  ServerIcon,
+  BrainCircuit,
+  Blockchain,
+  Leaf,
+  Car,
+  Building2,
+  Scale,
+  UserCheck,
+  Megaphone,
+  Headphones,
+  TrendingDown,
+  ZapIcon,
+  Sparkles
 } from 'lucide-react';
-import expandedServices2025 from '../data/expandedServices2025';
+import { servicesCatalog } from '../data/servicesCatalog';
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const contactInfo = {
@@ -43,8 +67,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
   };
 
   const stats = [
-    { label: 'Services Available', value: '25+' },
-    { label: 'Industries Served', value: '15+' },
+    { label: 'Services Available', value: '100+' },
+    { label: 'Industries Served', value: '25+' },
     { label: 'Client Satisfaction', value: '98%' },
     { label: 'Years Experience', value: '15+' }
   ];
@@ -70,6 +94,75 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       company: 'HealthTech Solutions',
       content: 'Their healthcare AI platform has improved our diagnosis accuracy and patient outcomes. The ROI was immediate and substantial.',
       rating: 5
+    },
+    {
+      name: 'David Kim',
+      role: 'Head of Innovation, FinTech Ventures',
+      company: 'FinTech Ventures',
+      content: 'Zion Tech Group\'s blockchain and DeFi solutions have revolutionized our financial services. The security and efficiency gains are remarkable.',
+      rating: 5
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      name: 'AI & Machine Learning',
+      icon: BrainCircuit,
+      description: 'Cutting-edge AI solutions for business transformation',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      name: 'Cybersecurity & Compliance',
+      icon: ShieldCheck,
+      description: 'Advanced security solutions for modern threats',
+      color: 'from-red-500 to-orange-500'
+    },
+    {
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      description: 'Scalable cloud infrastructure and automation',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      name: 'Blockchain & Web3',
+      icon: Blockchain,
+      description: 'Next-generation decentralized solutions',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      name: 'IoT & Edge Computing',
+      icon: NetworkIcon,
+      description: 'Connected devices and edge intelligence',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      name: 'Data & Analytics',
+      icon: BarChart3,
+      description: 'Data-driven insights and business intelligence',
+      color: 'from-teal-500 to-blue-500'
+    }
+  ];
+
+  const keyBenefits = [
+    {
+      title: 'Rapid Deployment',
+      description: 'Get your solutions up and running in weeks, not months',
+      icon: ZapIcon
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Bank-grade security with SOC 2, GDPR, and HIPAA compliance',
+      icon: ShieldCheck
+    },
+    {
+      title: 'Scalable Architecture',
+      description: 'Built to grow with your business needs',
+      icon: TrendingUp
+    },
+    {
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and monitoring',
+      icon: Headphones
     }
   ];
 
@@ -91,6 +184,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4" />
+                Innovation Leader 2025
+              </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Comprehensive Services Showcase 2025
               </h1>
@@ -98,49 +195,20 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 Discover our complete portfolio of innovative AI-powered solutions, enterprise IT services, and cutting-edge technology platforms designed to transform your business.
               </p>
               
-              {/* Contact Information */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="flex items-center justify-center space-x-3">
-                    <Phone className="text-blue-400 w-5 h-5" />
-                    <div className="text-left">
-                      <p className="text-sm text-gray-400">Phone</p>
-                      <p className="text-white font-semibold">{contactInfo.phone}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center space-x-3">
-                    <Mail className="text-green-400 w-5 h-5" />
-                    <div className="text-left">
-                      <p className="text-sm text-gray-400">Email</p>
-                      <p className="text-white font-semibold">{contactInfo.email}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-center space-x-3">
-                    <MapPin className="text-red-400 w-5 h-5" />
-                    <div className="text-left">
-                      <p className="text-sm text-gray-400">Address</p>
-                      <p className="text-white font-semibold text-sm">{contactInfo.address}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href={contactInfo.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                 >
-                  <span>Visit Our Website</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-                <a 
-                  href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
+                  Explore All Services
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <a
+                  href={`tel:${contactInfo.phone}`}
+                  className="inline-flex items-center gap-2 border border-purple-500 text-purple-400 font-semibold py-3 px-6 rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-200"
                 >
-                  <span>Contact Us</span>
-                  <Mail className="w-4 h-4" />
+                  <Phone className="w-5 h-5" />
+                  Call Now
                 </a>
               </div>
             </motion.div>
@@ -148,175 +216,208 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <motion.div
-                  key={index}
+                  key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center"
                 >
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Services Categories */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Service Categories Overview */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Comprehensive Service Portfolio
+                Comprehensive Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From AI-powered micro SaaS to enterprise IT infrastructure, we provide end-to-end technology solutions that drive innovation and growth.
+                From AI-powered solutions to cutting-edge cybersecurity, we offer the most comprehensive range of technology services in the industry.
               </p>
             </motion.div>
 
-            {expandedServices2025.map((category, categoryIndex) => (
-              <motion.div
-                key={category.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
-                className="mb-20"
-              >
-                <div className="text-center mb-12">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{category.name}</h3>
-                  <p className="text-lg text-gray-300 max-w-2xl mx-auto">{category.description}</p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {category.items.map((service, serviceIndex) => (
-                    <motion.div
-                      key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
-                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
-                    >
-                      <div className="mb-4">
-                        <h4 className="text-xl font-bold text-white mb-2">{service.title}</h4>
-                        <p className="text-gray-300 text-sm mb-3">{service.description}</p>
-                        
-                        {/* Price */}
-                        <div className="flex items-baseline space-x-2 mb-4">
-                          <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                          <span className="text-gray-400">/{service.billing}</span>
-                        </div>
-
-                        {/* Market Size */}
-                        <div className="bg-blue-900/30 rounded-lg p-3 mb-4">
-                          <p className="text-sm text-blue-300">
-                            <span className="font-semibold">Market Size:</span> {service.marketSize}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Features */}
-                      <div className="mb-4">
-                        <h5 className="text-sm font-semibold text-white mb-2">Key Features:</h5>
-                        <ul className="space-y-1">
-                          {service.features.slice(0, 4).map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                              <CheckCircle className="text-green-400 w-3 h-3 mr-2 flex-shrink-0" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Benefits */}
-                      <div className="mb-4">
-                        <h5 className="text-sm font-semibold text-white mb-2">Key Benefits:</h5>
-                        <ul className="space-y-1">
-                          {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                              <TrendingUp className="text-blue-400 w-3 h-3 mr-2 flex-shrink-0" />
-                              {benefit}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Target Audience */}
-                      <div className="mb-4">
-                        <h5 className="text-sm font-semibold text-white mb-2">Target Audience:</h5>
-                        <p className="text-gray-300 text-xs">{service.targetAudience}</p>
-                      </div>
-
-                      {/* CTA Button */}
-                      <a
-                        href={service.href}
-                        className={`w-full py-3 px-4 rounded-lg font-semibold text-center transition-all duration-300 block ${
-                          service.ctaLabel.includes('Free') || service.ctaLabel.includes('Demo')
-                            ? 'bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white'
-                            : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white'
-                        }`}
-                      >
-                        {service.ctaLabel}
-                      </a>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {serviceCategories.map((category, index) => (
+                <motion.div
+                  key={category.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl h-full transform group-hover:scale-105 transition-all duration-300`}>
+                    <div className="flex items-center gap-4 mb-4">
+                      <category.icon className="w-8 h-8 text-white" />
+                      <h3 className="text-xl font-semibold text-white">{category.name}</h3>
+                    </div>
+                    <p className="text-white/90">{category.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        {/* Key Benefits */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver enterprise-grade solutions with the agility of a startup and the reliability of industry leaders.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {keyBenefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
+                      <benefit.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                    <p className="text-gray-300">{benefit.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Services */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Featured Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our most popular and innovative solutions that are transforming businesses across industries.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {servicesCatalog.slice(0, 6).flatMap(category => 
+                category.items.slice(0, 2)
+              ).map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-6 border border-slate-600 hover:border-purple-500 transition-all duration-300"
+                >
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                    <div className="text-right min-w-[100px]">
+                      <div className="text-purple-400 font-semibold">{service.price}</div>
+                      <div className="text-gray-400 text-sm">
+                        {service.billing === 'month' ? 'Monthly' : service.billing === 'hour' ? 'Hourly' : 'Project-based'}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <span className="inline-block bg-purple-500/20 text-purple-400 text-xs px-2 py-1 rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+
+                  <Link
+                    to={service.href}
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 w-full justify-center"
+                  >
+                    {service.ctaLabel}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Link
+                to="/services"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
+              >
+                View All Services
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Clients Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what industry leaders have to say about our services.
+                Don't just take our word for it. Here's what industry leaders say about our services.
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {testimonials.map((testimonial, index) => (
                 <motion.div
-                  key={index}
+                  key={testimonial.name}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-6 border border-slate-600"
                 >
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 text-sm">{testimonial.content}</p>
                   <div>
-                    <p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    <p className="text-blue-400 text-sm">{testimonial.company}</p>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-purple-400 text-sm">{testimonial.role}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.company}</div>
                   </div>
                 </motion.div>
               ))}
@@ -324,66 +425,89 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        {/* Contact Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our comprehensive technology solutions can drive innovation, efficiency, and growth for your organization.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Let's discuss how our innovative solutions can drive your success. Contact us today for a personalized consultation.
               </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <Phone className="text-blue-400 w-8 h-8 mx-auto mb-3" />
-                  <h3 className="text-white font-semibold mb-2">Call Us</h3>
-                  <p className="text-gray-300 text-sm">{contactInfo.phone}</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <Mail className="text-green-400 w-8 h-8 mx-auto mb-3" />
-                  <h3 className="text-white font-semibold mb-2">Email Us</h3>
-                  <p className="text-gray-300 text-sm">{contactInfo.email}</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                  <MapPin className="text-red-400 w-8 h-8 mx-auto mb-3" />
-                  <h3 className="text-white font-semibold mb-2">Visit Us</h3>
-                  <p className="text-gray-300 text-sm">{contactInfo.address}</p>
-                </div>
-              </div>
+            </motion.div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-6 border border-slate-600 text-center"
+              >
+                <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+                <p className="text-gray-300 mb-4">{contactInfo.phone}</p>
+                <a
                   href={`tel:${contactInfo.phone}`}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                 >
-                  <Phone className="w-4 h-4" />
-                  <span>Call Now</span>
+                  Call Now
                 </a>
-                <a 
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-6 border border-slate-600 text-center"
+              >
+                <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+                <p className="text-gray-300 mb-4">{contactInfo.email}</p>
+                <a
                   href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                 >
-                  <Mail className="w-4 h-4" />
-                  <span>Send Email</span>
+                  Send Email
                 </a>
-                <a 
-                  href={contactInfo.website}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-6 border border-slate-600 text-center"
+              >
+                <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-gray-300 mb-4">{contactInfo.address}</p>
+                <a
+                  href="https://maps.google.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                 >
-                  <ExternalLink className="w-4 h-4" />
-                  <span>Visit Website</span>
+                  Get Directions
                 </a>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
+
+            <div className="text-center">
+              <a
+                href={contactInfo.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors duration-200"
+              >
+                Visit our website
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
           </div>
         </section>
       </div>

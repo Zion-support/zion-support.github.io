@@ -1567,5 +1567,965 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 		]
+	},
+	{
+		name: 'Advanced Cybersecurity Solutions',
+		slug: 'advanced-cybersecurity-solutions',
+		items: [
+			{
+				id: 'ai-threat-hunting-platform',
+				title: 'AI Threat Hunting Platform',
+				description: 'Advanced AI-powered threat hunting platform that proactively detects and neutralizes sophisticated cyber threats.',
+				category: 'Cybersecurity',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'AI-powered threat detection',
+					'Behavioral analysis',
+					'Threat intelligence feeds',
+					'Automated response',
+					'Forensic analysis',
+					'Compliance reporting'
+				],
+				ctaLabel: 'Hunt Threats',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'zero-day-vulnerability-scanner',
+				title: 'Zero-Day Vulnerability Scanner',
+				description: 'Advanced vulnerability scanner that detects zero-day exploits and provides immediate mitigation strategies.',
+				category: 'Cybersecurity',
+				price: '$2,299',
+				billing: 'month',
+				features: [
+					'Zero-day detection',
+					'Exploit prediction',
+					'Mitigation strategies',
+					'Real-time alerts',
+					'Vulnerability scoring',
+					'Patch management'
+				],
+				ctaLabel: 'Scan Vulnerabilities',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quantum-cryptography-platform',
+				title: 'Quantum Cryptography Platform',
+				description: 'Future-proof cryptography platform using quantum key distribution for unbreakable encryption.',
+				category: 'Cybersecurity',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'Quantum key distribution',
+					'Post-quantum algorithms',
+					'Quantum-resistant encryption',
+					'Key management',
+					'Compliance standards',
+					'Future-proof security'
+				],
+				ctaLabel: 'Quantum Security',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Next-Generation Data Analytics',
+		slug: 'next-generation-data-analytics',
+		items: [
+			{
+				id: 'real-time-streaming-analytics',
+				title: 'Real-Time Streaming Analytics Platform',
+				description: 'High-performance streaming analytics platform for processing and analyzing data in real-time at scale.',
+				category: 'Data & Analytics',
+				price: '$2,799',
+				billing: 'month',
+				features: [
+					'Real-time processing',
+					'Stream analytics',
+					'Low latency',
+					'Scalable architecture',
+					'Multiple data sources',
+					'Alert system'
+				],
+				ctaLabel: 'Stream Analytics',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'graph-analytics-platform',
+				title: 'Graph Analytics Platform',
+				description: 'Advanced graph analytics platform for uncovering hidden relationships and patterns in complex data networks.',
+				category: 'Data & Analytics',
+				price: '$1,899',
+				billing: 'month',
+				features: [
+					'Graph algorithms',
+					'Relationship mapping',
+					'Pattern recognition',
+					'Network analysis',
+					'Visualization tools',
+					'Performance optimization'
+				],
+				ctaLabel: 'Analyze Graphs',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'time-series-forecasting',
+				title: 'Time Series Forecasting Platform',
+				description: 'AI-powered time series forecasting platform for predicting trends, patterns, and future events.',
+				category: 'Data & Analytics',
+				price: '$1,599',
+				billing: 'month',
+				features: [
+					'Time series analysis',
+					'AI forecasting',
+					'Multiple algorithms',
+					'Accuracy metrics',
+					'Automated insights',
+					'Custom models'
+				],
+				ctaLabel: 'Forecast Trends',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Cloud-Native Solutions',
+		slug: 'cloud-native-solutions',
+		items: [
+			{
+				id: 'kubernetes-orchestration-platform',
+				title: 'Kubernetes Orchestration Platform',
+				description: 'Enterprise-grade Kubernetes orchestration platform with advanced management, monitoring, and security features.',
+				category: 'Cloud & DevOps',
+				price: '$1,299',
+				billing: 'month',
+				features: [
+					'Multi-cluster management',
+					'Advanced monitoring',
+					'Security policies',
+					'Automated scaling',
+					'Disaster recovery',
+					'Compliance tools'
+				],
+				ctaLabel: 'Orchestrate K8s',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'serverless-workflow-engine',
+				title: 'Serverless Workflow Engine',
+				description: 'Advanced serverless workflow engine for building complex, event-driven applications without managing infrastructure.',
+				category: 'Cloud & DevOps',
+				price: '$899',
+				billing: 'month',
+				features: [
+					'Visual workflow builder',
+					'Event-driven architecture',
+					'Auto-scaling',
+					'Monitoring & logging',
+					'Error handling',
+					'Integration APIs'
+				],
+				ctaLabel: 'Build Workflows',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'multi-cloud-management',
+				title: 'Multi-Cloud Management Platform',
+				description: 'Unified platform for managing applications, resources, and costs across multiple cloud providers.',
+				category: 'Cloud & DevOps',
+				price: '$2,199',
+				billing: 'month',
+				features: [
+					'Multi-cloud dashboard',
+					'Cost optimization',
+					'Resource management',
+					'Security policies',
+					'Compliance monitoring',
+					'Unified billing'
+				],
+				ctaLabel: 'Manage Clouds',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Blockchain & Web3 Innovation',
+		slug: 'blockchain-web3-innovation',
+		items: [
+			{
+				id: 'defi-yield-optimizer',
+				title: 'DeFi Yield Optimizer',
+				description: 'Automated DeFi yield optimization platform that maximizes returns across multiple protocols and strategies.',
+				category: 'Blockchain & Web3',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Yield optimization',
+					'Risk management',
+					'Multi-protocol support',
+					'Automated rebalancing',
+					'Performance tracking',
+					'Tax reporting'
+				],
+				ctaLabel: 'Optimize Yield',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'nft-marketplace-platform',
+				title: 'NFT Marketplace Platform',
+				description: 'Complete NFT marketplace platform with advanced features for creators, collectors, and traders.',
+				category: 'Blockchain & Web3',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Multi-chain support',
+					'Advanced trading tools',
+					'Creator royalties',
+					'Analytics dashboard',
+					'Mobile app',
+					'API integration'
+				],
+				ctaLabel: 'Launch Marketplace',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'dao-governance-platform',
+				title: 'DAO Governance Platform',
+				description: 'Comprehensive platform for managing decentralized autonomous organizations with voting, proposals, and treasury management.',
+				category: 'Blockchain & Web3',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Voting mechanisms',
+					'Proposal management',
+					'Treasury controls',
+					'Member management',
+					'Analytics',
+					'Integration APIs'
+				],
+				ctaLabel: 'Govern DAO',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'IoT & Edge Computing',
+		slug: 'iot-edge-computing',
+		items: [
+			{
+				id: 'iot-device-management',
+				title: 'IoT Device Management Platform',
+				description: 'Enterprise IoT device management platform with remote monitoring, updates, and security features.',
+				category: 'IoT & Edge',
+				price: '$1,799',
+				billing: 'month',
+				features: [
+					'Device provisioning',
+					'Remote monitoring',
+					'Firmware updates',
+					'Security management',
+					'Data collection',
+					'Analytics dashboard'
+				],
+				ctaLabel: 'Manage IoT',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'edge-ai-inference',
+				title: 'Edge AI Inference Engine',
+				description: 'Lightweight AI inference engine optimized for edge devices with minimal resource requirements.',
+				category: 'IoT & Edge',
+				price: '$1,299',
+				billing: 'month',
+				features: [
+					'Edge optimization',
+					'Model compression',
+					'Low latency',
+					'Offline capability',
+					'Multiple frameworks',
+					'Performance monitoring'
+				],
+				ctaLabel: 'Edge AI',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'industrial-iot-platform',
+				title: 'Industrial IoT Platform',
+				description: 'Comprehensive IIoT platform for manufacturing, energy, and industrial applications with predictive maintenance.',
+				category: 'IoT & Edge',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'Industrial protocols',
+					'Predictive maintenance',
+					'Asset monitoring',
+					'Energy optimization',
+					'Safety systems',
+					'Compliance reporting'
+				],
+				ctaLabel: 'Industrial IoT',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Healthcare & Life Sciences',
+		slug: 'healthcare-life-sciences',
+		items: [
+			{
+				id: 'ai-diagnostic-platform',
+				title: 'AI Diagnostic Platform',
+				description: 'Advanced AI-powered diagnostic platform for medical imaging and clinical decision support.',
+				category: 'BioTech & Health',
+				price: '$4,999',
+				billing: 'month',
+				features: [
+					'Medical imaging AI',
+					'Clinical decision support',
+					'Diagnostic accuracy',
+					'Regulatory compliance',
+					'Integration APIs',
+					'Performance tracking'
+				],
+				ctaLabel: 'AI Diagnostics',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'drug-discovery-platform',
+				title: 'Drug Discovery Platform',
+				description: 'AI-powered drug discovery platform for accelerating pharmaceutical research and development.',
+				category: 'BioTech & Health',
+				price: '$8,999',
+				billing: 'month',
+				features: [
+					'Molecular modeling',
+					'Target identification',
+					'Drug screening',
+					'Clinical trial design',
+					'Regulatory support',
+					'Collaboration tools'
+				],
+				ctaLabel: 'Discover Drugs',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'telemedicine-platform',
+				title: 'Telemedicine Platform',
+				description: 'Comprehensive telemedicine platform with AI-powered triage, scheduling, and patient management.',
+				category: 'BioTech & Health',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Video consultations',
+					'AI triage',
+					'Patient scheduling',
+					'Electronic health records',
+					'Prescription management',
+					'Insurance integration'
+				],
+				ctaLabel: 'Telemedicine',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Financial Technology',
+		slug: 'financial-technology',
+		items: [
+			{
+				id: 'ai-trading-platform',
+				title: 'AI Trading Platform',
+				description: 'Advanced AI-powered trading platform with algorithmic trading, risk management, and market analysis.',
+				category: 'FinTech & DeFi',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'Algorithmic trading',
+					'Risk management',
+					'Market analysis',
+					'Portfolio optimization',
+					'Real-time data',
+					'Compliance tools'
+				],
+				ctaLabel: 'AI Trading',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'regtech-compliance-platform',
+				title: 'RegTech Compliance Platform',
+				description: 'Automated regulatory compliance platform for financial institutions with real-time monitoring and reporting.',
+				category: 'FinTech & DeFi',
+				price: '$2,799',
+				billing: 'month',
+				features: [
+					'Regulatory monitoring',
+					'Compliance reporting',
+					'Risk assessment',
+					'Automated alerts',
+					'Audit trails',
+					'Integration APIs'
+				],
+				ctaLabel: 'RegTech',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'digital-banking-platform',
+				title: 'Digital Banking Platform',
+				description: 'Complete digital banking platform with mobile apps, online banking, and advanced financial services.',
+				category: 'FinTech & DeFi',
+				price: '$5,999',
+				billing: 'month',
+				features: [
+					'Mobile banking',
+					'Online banking',
+					'Payment processing',
+					'Investment tools',
+					'Security features',
+					'API ecosystem'
+				],
+				ctaLabel: 'Digital Banking',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Education Technology',
+		slug: 'education-technology',
+		items: [
+			{
+				id: 'adaptive-learning-platform',
+				title: 'Adaptive Learning Platform',
+				description: 'AI-powered adaptive learning platform that personalizes education based on individual student needs and progress.',
+				category: 'EdTech',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Personalized learning',
+					'Progress tracking',
+					'Content adaptation',
+					'Assessment tools',
+					'Analytics dashboard',
+					'Multi-subject support'
+				],
+				ctaLabel: 'Adaptive Learning',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'virtual-reality-classroom',
+				title: 'Virtual Reality Classroom',
+				description: 'Immersive VR classroom platform for interactive learning experiences across various subjects.',
+				category: 'EdTech',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'VR learning environments',
+					'Interactive simulations',
+					'Multi-user support',
+					'Content creation tools',
+					'Progress tracking',
+					'Device compatibility'
+				],
+				ctaLabel: 'VR Classroom',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'student-analytics-platform',
+				title: 'Student Analytics Platform',
+				description: 'Comprehensive analytics platform for tracking student performance, engagement, and learning outcomes.',
+				category: 'EdTech',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Performance tracking',
+					'Engagement metrics',
+					'Learning analytics',
+					'Predictive insights',
+					'Reporting tools',
+					'Integration APIs'
+				],
+				ctaLabel: 'Student Analytics',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Manufacturing & Industry 4.0',
+		slug: 'manufacturing-industry-4-0',
+		items: [
+			{
+				id: 'smart-manufacturing-platform',
+				title: 'Smart Manufacturing Platform',
+				description: 'Comprehensive Industry 4.0 platform for smart manufacturing with IoT, AI, and automation.',
+				category: 'Manufacturing',
+				price: '$4,999',
+				billing: 'month',
+				features: [
+					'IoT integration',
+					'AI optimization',
+					'Predictive maintenance',
+					'Quality control',
+					'Supply chain management',
+					'Performance analytics'
+				],
+				ctaLabel: 'Smart Manufacturing',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'digital-twin-platform',
+				title: 'Digital Twin Platform',
+				description: 'Advanced digital twin platform for creating virtual replicas of physical assets and processes.',
+				category: 'Manufacturing',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'3D modeling',
+					'Real-time simulation',
+					'Predictive analytics',
+					'Performance optimization',
+					'Integration APIs',
+					'Visualization tools'
+				],
+				ctaLabel: 'Digital Twin',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'quality-management-system',
+				title: 'Quality Management System',
+				description: 'AI-powered quality management system for manufacturing with automated inspection and defect detection.',
+				category: 'Manufacturing',
+				price: '$2,799',
+				billing: 'month',
+				features: [
+					'Automated inspection',
+					'Defect detection',
+					'Quality metrics',
+					'Compliance tracking',
+					'Root cause analysis',
+					'Reporting tools'
+				],
+				ctaLabel: 'Quality Management',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Retail & E-commerce',
+		slug: 'retail-e-commerce',
+		items: [
+			{
+				id: 'ai-personalization-engine',
+				title: 'AI Personalization Engine',
+				description: 'Advanced AI-powered personalization engine for e-commerce with product recommendations and customer insights.',
+				category: 'Retail',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Product recommendations',
+					'Customer segmentation',
+					'Behavioral analysis',
+					'A/B testing',
+					'Performance metrics',
+					'Integration APIs'
+				],
+				ctaLabel: 'Personalize Experience',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'inventory-optimization',
+				title: 'Inventory Optimization Platform',
+				description: 'AI-powered inventory optimization platform for reducing costs and improving supply chain efficiency.',
+				category: 'Retail',
+				price: '$1,799',
+				billing: 'month',
+				features: [
+					'Demand forecasting',
+					'Stock optimization',
+					'Reorder automation',
+					'Cost analysis',
+					'Supplier management',
+					'Performance tracking'
+				],
+				ctaLabel: 'Optimize Inventory',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'omnichannel-commerce',
+				title: 'Omnichannel Commerce Platform',
+				description: 'Unified omnichannel commerce platform for seamless customer experience across all sales channels.',
+				category: 'Retail',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'Multi-channel integration',
+					'Unified inventory',
+					'Customer data platform',
+					'Order management',
+					'Analytics dashboard',
+					'Mobile commerce'
+				],
+				ctaLabel: 'Omnichannel Commerce',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Transportation & Logistics',
+		slug: 'transportation-logistics',
+		items: [
+			{
+				id: 'fleet-management-platform',
+				title: 'Fleet Management Platform',
+				description: 'Comprehensive fleet management platform with GPS tracking, maintenance scheduling, and driver analytics.',
+				category: 'Transportation',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'GPS tracking',
+					'Maintenance scheduling',
+					'Driver analytics',
+					'Fuel optimization',
+					'Route optimization',
+					'Compliance reporting'
+				],
+				ctaLabel: 'Manage Fleet',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'last-mile-delivery-optimization',
+				title: 'Last-Mile Delivery Optimization',
+				description: 'AI-powered last-mile delivery optimization platform for improving delivery efficiency and customer satisfaction.',
+				category: 'Transportation',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Route optimization',
+					'Delivery scheduling',
+					'Real-time tracking',
+					'Customer notifications',
+					'Performance analytics',
+					'Integration APIs'
+				],
+				ctaLabel: 'Optimize Delivery',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'logistics-visibility-platform',
+				title: 'Logistics Visibility Platform',
+				description: 'End-to-end logistics visibility platform for tracking shipments and optimizing supply chain operations.',
+				category: 'Transportation',
+				price: '$2,799',
+				billing: 'month',
+				features: [
+					'Shipment tracking',
+					'Supply chain visibility',
+					'Performance metrics',
+					'Risk assessment',
+					'Analytics dashboard',
+					'Integration APIs'
+				],
+				ctaLabel: 'Logistics Visibility',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Real Estate & PropTech',
+		slug: 'real-estate-proptech',
+		items: [
+			{
+				id: 'property-management-platform',
+				title: 'Property Management Platform',
+				description: 'Comprehensive property management platform with tenant management, maintenance tracking, and financial reporting.',
+				category: 'PropTech',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Tenant management',
+					'Maintenance tracking',
+					'Financial reporting',
+					'Document management',
+					'Communication tools',
+					'Analytics dashboard'
+				],
+				ctaLabel: 'Manage Properties',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'virtual-tour-platform',
+				title: 'Virtual Tour Platform',
+				description: 'Advanced virtual tour platform for real estate with 360-degree views, interactive features, and lead generation.',
+				category: 'PropTech',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'360-degree tours',
+					'Interactive features',
+					'Lead generation',
+					'Analytics tracking',
+					'Mobile optimization',
+					'Integration APIs'
+				],
+				ctaLabel: 'Virtual Tours',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'market-analysis-platform',
+				title: 'Market Analysis Platform',
+				description: 'AI-powered real estate market analysis platform for investment decisions and market insights.',
+				category: 'PropTech',
+				price: '$2,299',
+				billing: 'month',
+				features: [
+					'Market analysis',
+					'Investment insights',
+					'Property valuation',
+					'Trend forecasting',
+					'Data visualization',
+					'Reporting tools'
+				],
+				ctaLabel: 'Market Analysis',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Legal Technology',
+		slug: 'legal-technology',
+		items: [
+			{
+				id: 'contract-analysis-platform',
+				title: 'Contract Analysis Platform',
+				description: 'AI-powered contract analysis platform for legal document review, risk assessment, and compliance checking.',
+				category: 'LegalTech',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'Document analysis',
+					'Risk assessment',
+					'Compliance checking',
+					'Contract templates',
+					'Version control',
+					'Collaboration tools'
+				],
+				ctaLabel: 'Analyze Contracts',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'legal-research-platform',
+				title: 'Legal Research Platform',
+				description: 'Advanced legal research platform with AI-powered case law analysis and legal precedent identification.',
+				category: 'LegalTech',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Case law analysis',
+					'Legal precedent',
+					'Research tools',
+					'Citation management',
+					'Collaboration features',
+					'Integration APIs'
+				],
+				ctaLabel: 'Legal Research',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'e-discovery-platform',
+				title: 'E-Discovery Platform',
+				description: 'Comprehensive e-discovery platform for legal document review and evidence management.',
+				category: 'LegalTech',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'Document review',
+					'Evidence management',
+					'Search capabilities',
+					'Review workflows',
+					'Analytics dashboard',
+					'Compliance tools'
+				],
+				ctaLabel: 'E-Discovery',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Human Resources & HR Tech',
+		slug: 'human-resources-hr-tech',
+		items: [
+			{
+				id: 'ai-recruitment-platform',
+				title: 'AI Recruitment Platform',
+				description: 'AI-powered recruitment platform for candidate sourcing, screening, and matching with job requirements.',
+				category: 'HR Tech',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Candidate sourcing',
+					'AI screening',
+					'Skill matching',
+					'Interview scheduling',
+					'Analytics dashboard',
+					'Integration APIs'
+				],
+				ctaLabel: 'AI Recruitment',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'employee-engagement-platform',
+				title: 'Employee Engagement Platform',
+				description: 'Comprehensive employee engagement platform with surveys, feedback tools, and performance analytics.',
+				category: 'HR Tech',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Employee surveys',
+					'Feedback tools',
+					'Performance analytics',
+					'Recognition programs',
+					'Communication tools',
+					'Analytics dashboard'
+				],
+				ctaLabel: 'Employee Engagement',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'workforce-analytics-platform',
+				title: 'Workforce Analytics Platform',
+				description: 'Advanced workforce analytics platform for HR decision-making and organizational insights.',
+				category: 'HR Tech',
+				price: '$2,299',
+				billing: 'month',
+				features: [
+					'Workforce analytics',
+					'Predictive insights',
+					'Performance metrics',
+					'Talent analytics',
+					'Reporting tools',
+					'Integration APIs'
+				],
+				ctaLabel: 'Workforce Analytics',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Marketing & Advertising',
+		slug: 'marketing-advertising',
+		items: [
+			{
+				id: 'ai-marketing-automation',
+				title: 'AI Marketing Automation Platform',
+				description: 'Advanced AI-powered marketing automation platform for personalized campaigns and customer journey optimization.',
+				category: 'Marketing',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Campaign automation',
+					'Personalization',
+					'Customer journey mapping',
+					'A/B testing',
+					'Analytics dashboard',
+					'Integration APIs'
+				],
+				ctaLabel: 'Marketing Automation',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'social-media-management',
+				title: 'Social Media Management Platform',
+				description: 'Comprehensive social media management platform with scheduling, analytics, and engagement tools.',
+				category: 'Marketing',
+				price: '$1,299',
+				billing: 'month',
+				features: [
+					'Content scheduling',
+					'Analytics dashboard',
+					'Engagement tools',
+					'Multi-platform support',
+					'Team collaboration',
+					'Integration APIs'
+				],
+				ctaLabel: 'Social Media Management',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'influencer-marketing-platform',
+				title: 'Influencer Marketing Platform',
+				description: 'AI-powered influencer marketing platform for campaign management, performance tracking, and ROI optimization.',
+				category: 'Marketing',
+				price: '$1,799',
+				billing: 'month',
+				features: [
+					'Influencer discovery',
+					'Campaign management',
+					'Performance tracking',
+					'ROI optimization',
+					'Analytics dashboard',
+					'Integration APIs'
+				],
+				ctaLabel: 'Influencer Marketing',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Customer Experience & Support',
+		slug: 'customer-experience-support',
+		items: [
+			{
+				id: 'ai-customer-support',
+				title: 'AI Customer Support Platform',
+				description: 'AI-powered customer support platform with chatbots, ticket management, and customer satisfaction tracking.',
+				category: 'Customer Experience',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'AI chatbots',
+					'Ticket management',
+					'Customer satisfaction',
+					'Knowledge base',
+					'Analytics dashboard',
+					'Integration APIs'
+				],
+				ctaLabel: 'AI Customer Support',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'voice-of-customer-platform',
+				title: 'Voice of Customer Platform',
+				description: 'Comprehensive voice of customer platform for collecting, analyzing, and acting on customer feedback.',
+				category: 'Customer Experience',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Feedback collection',
+					'Sentiment analysis',
+					'Action planning',
+					'Performance tracking',
+					'Analytics dashboard',
+					'Integration APIs'
+				],
+				ctaLabel: 'Voice of Customer',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'customer-journey-mapping',
+				title: 'Customer Journey Mapping Platform',
+				description: 'Advanced customer journey mapping platform for understanding and optimizing customer experiences.',
+				category: 'Customer Experience',
+				price: '$1,799',
+				billing: 'month',
+				features: [
+					'Journey mapping',
+					'Touchpoint analysis',
+					'Optimization tools',
+					'Performance metrics',
+					'Collaboration features',
+					'Analytics dashboard'
+				],
+				ctaLabel: 'Customer Journey',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
 	}
 ];
