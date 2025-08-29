@@ -1,351 +1,262 @@
 
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Users, 
   Calendar, 
   Clock, 
+  Clock3, 
+  Users, 
   Play, 
-  ExternalLink, 
+  BookOpen, 
   ArrowRight,
   Brain,
-  Cloud,
   Shield,
-  Database,
-  Globe,
-  Rocket,
-  Atom,
-  Heart,
-  Lock,
-  TrendingUp,
-  Target,
+  Cloud,
   Zap,
-  BookOpen,
-  Video,
-  Mic,
+  Rocket,
+  Heart,
+  Globe,
+  Cpu,
+  Leaf,
   Star,
-  Clock3,
-  MapPin,
-  Tag,
-  Filter,
-  Search
+  Target,
+  TrendingUp,
+  Code,
+  Database,
+  Network,
+  Smartphone,
+  BarChart3,
+  MessageSquare,
+  FileText,
+  ShoppingCart,
+  Headphones,
+  Mail,
+  Search,
+  HelpCircle,
+  ShieldCheck,
+  Globe2,
+  Sparkles,
+  DollarSign,
+  Award,
+  Truck,
+  Building,
+  PenTool,
+  Eye,
+  Server,
+  Lock,
+  Settings,
+  Key,
+  Atom,
+  Building2,
+  Car,
+  Home,
+  Factory,
+  City,
+  CheckCircle,
+  ArrowUpRight,
+  MailIcon
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 const Webinars: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const webinars = [
+  const categories = [
+    { id: 'all', name: 'All Categories', count: 24, icon: '🎯' },
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 8, icon: '🤖' },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 6, icon: '🛡️' },
+    { id: 'cloud-devops', name: 'Cloud & DevOps', count: 5, icon: '☁️' },
+    { id: 'data-analytics', name: 'Data Analytics', count: 3, icon: '📊' },
+    { id: 'blockchain', name: 'Blockchain & Web3', count: 2, icon: '🔗' }
+  ];
+
+  const featuredWebinars = [
     {
-      id: 'ai-business-intelligence-2024',
-      title: 'AI Business Intelligence: Transforming Decision Making in 2024',
-      description: 'Learn how AI is revolutionizing business intelligence with real-time analytics, predictive insights, and automated reporting.',
-      category: 'AI & Analytics',
-      date: '2024-12-15',
-      time: '14:00 EST',
-      duration: '60 min',
+      id: 1,
+      title: 'AI-Powered Business Intelligence: Transforming Decision Making',
+      description: 'Discover how AI is revolutionizing business intelligence and enabling data-driven decision making at unprecedented speeds.',
+      category: 'AI & Machine Learning',
+      date: '2025-01-15',
+      time: '2:00 PM EST',
+      duration: '90 minutes',
       speaker: 'Dr. Sarah Chen',
       speakerTitle: 'AI Research Director',
-      speakerAvatar: '/images/speakers/sarah-chen.jpg',
-      featured: true,
+      attendees: 1250,
+      tags: ['AI', 'Business Intelligence', 'Data Science', 'Machine Learning'],
+      color: 'from-purple-500 to-pink-500',
       icon: Brain,
-      color: 'from-purple-500 to-cyan-500',
-      tags: ['AI', 'Business Intelligence', 'Analytics', 'Decision Making'],
-      attendees: 1247,
       recording: true,
       slides: true
     },
     {
-      id: 'quantum-computing-applications',
-      title: 'Quantum Computing Applications: Beyond the Hype',
-      description: 'Explore practical applications of quantum computing in optimization, cryptography, and machine learning.',
-      category: 'Quantum Technology',
-      date: '2024-12-10',
-      time: '15:30 EST',
-      duration: '90 min',
-      speaker: 'Dr. James Wilson',
-      speakerTitle: 'Quantum Computing Lead',
-      speakerAvatar: '/images/speakers/james-wilson.jpg',
-      featured: true,
-      icon: Atom,
-      color: 'from-blue-500 to-indigo-500',
-      tags: ['Quantum Computing', 'Optimization', 'Cryptography', 'ML'],
-      attendees: 892,
-      recording: true,
-      slides: true
-    },
-    {
-      id: 'cybersecurity-ai-defense',
-      title: 'AI-Powered Cybersecurity: Defending Against Modern Threats',
-      description: 'Discover how AI is enhancing cybersecurity with threat detection, automated response, and predictive security.',
+      id: 2,
+      title: 'Next-Generation Cybersecurity: AI vs. AI Threats',
+      description: 'Explore the cutting-edge of cybersecurity where AI systems battle AI-powered threats in real-time.',
       category: 'Cybersecurity',
-      date: '2024-12-08',
-      time: '13:00 EST',
-      duration: '75 min',
-      speaker: 'Alex Thompson',
-      speakerTitle: 'Cybersecurity Architect',
-      speakerAvatar: '/images/speakers/alex-thompson.jpg',
-      featured: true,
+      date: '2025-01-20',
+      time: '1:00 PM EST',
+      duration: '75 minutes',
+      speaker: 'Michael Rodriguez',
+      speakerTitle: 'Cybersecurity Expert',
+      attendees: 980,
+      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security'],
+      color: 'from-red-500 to-orange-500',
       icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      tags: ['Cybersecurity', 'AI Security', 'Threat Detection', 'Automation'],
-      attendees: 1567,
       recording: true,
       slides: true
     },
     {
-      id: 'cloud-native-architecture',
-      title: 'Building Cloud-Native Applications for Scale',
-      description: 'Learn best practices for designing and deploying cloud-native applications with microservices and containers.',
+      id: 3,
+      title: 'Cloud-Native Architecture: Building for Scale',
+      description: 'Learn the principles and practices of building scalable, resilient cloud-native applications.',
       category: 'Cloud & DevOps',
-      date: '2024-12-05',
-      time: '16:00 EST',
-      duration: '60 min',
-      speaker: 'David Chen',
-      speakerTitle: 'Cloud Solutions Architect',
-      speakerAvatar: '/images/speakers/david-chen.jpg',
-      featured: false,
+      date: '2025-01-25',
+      time: '3:00 PM EST',
+      duration: '60 minutes',
+      speaker: 'Jennifer Kim',
+      speakerTitle: 'Cloud Architect',
+      attendees: 750,
+      tags: ['Cloud', 'DevOps', 'Architecture', 'Scalability'],
+      color: 'from-blue-500 to-cyan-500',
       icon: Cloud,
-      color: 'from-cyan-500 to-blue-500',
-      tags: ['Cloud Native', 'Microservices', 'DevOps', 'Scalability'],
-      attendees: 734,
-      recording: true,
+      recording: false,
       slides: true
-    },
+    }
+  ];
+
+  const pastWebinars = [
     {
-      id: 'digital-twin-implementation',
-      title: 'Digital Twin Implementation: From Concept to Reality',
-      description: 'Step-by-step guide to implementing digital twins in manufacturing, healthcare, and smart cities.',
-      category: 'IoT & Digital Twins',
-      date: '2024-12-03',
-      time: '14:30 EST',
-      duration: '80 min',
-      speaker: 'Dr. Emily Johnson',
-      speakerTitle: 'IoT Research Lead',
-      speakerAvatar: '/images/speakers/emily-johnson.jpg',
-      featured: false,
-      icon: Globe,
-      color: 'from-green-500 to-emerald-500',
-      tags: ['Digital Twin', 'IoT', 'Manufacturing', 'Smart Cities'],
-      attendees: 623,
-      recording: true,
-      slides: true
-    },
-    {
-      id: 'ai-healthcare-diagnostics',
-      title: 'AI in Healthcare Diagnostics: Clinical Applications',
-      description: 'Explore AI applications in medical imaging, disease prediction, and clinical decision support systems.',
-      category: 'AI & Healthcare',
-      date: '2024-11-30',
-      time: '15:00 EST',
-      duration: '70 min',
-      speaker: 'Dr. Michael Brown',
-      speakerTitle: 'Healthcare AI Specialist',
-      speakerAvatar: '/images/speakers/michael-brown.jpg',
-      featured: false,
-      icon: Heart,
-      color: 'from-pink-500 to-rose-500',
-      tags: ['AI Healthcare', 'Medical Imaging', 'Diagnostics', 'Clinical AI'],
-      attendees: 445,
-      recording: true,
-      slides: true
-    },
-    {
-      id: 'blockchain-business-applications',
-      title: 'Blockchain Beyond Cryptocurrency: Business Applications',
-      description: 'Discover practical blockchain applications in supply chain, identity management, and decentralized finance.',
-      category: 'Blockchain & Web3',
-      date: '2024-11-28',
-      time: '16:30 EST',
-      duration: '65 min',
-      speaker: 'Lisa Rodriguez',
-      speakerTitle: 'Blockchain Solutions Lead',
-      speakerAvatar: '/images/speakers/lisa-rodriguez.jpg',
-      featured: false,
-      icon: Lock,
-      color: 'from-orange-500 to-red-500',
-      tags: ['Blockchain', 'Supply Chain', 'Identity', 'DeFi'],
-      attendees: 567,
-      recording: true,
-      slides: true
-    },
-    {
-      id: 'edge-computing-iot',
-      title: 'Edge Computing & IoT: Real-Time Processing at Scale',
-      description: 'Learn about edge computing architectures and IoT deployment strategies for real-time applications.',
-      category: 'Edge Computing & IoT',
-      date: '2024-11-25',
-      time: '14:00 EST',
-      duration: '55 min',
-      speaker: 'Robert Kim',
-      speakerTitle: 'Edge Computing Engineer',
-      speakerAvatar: '/images/speakers/robert-kim.jpg',
-      featured: false,
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
-      tags: ['Edge Computing', 'IoT', 'Real-time', 'Distributed Systems'],
-      attendees: 389,
-      recording: true,
-      slides: true
-    },
-    {
-      id: 'sustainable-technology-practices',
-      title: 'Sustainable Technology: Green Computing Practices',
-      description: 'Implement energy-efficient computing, sustainable software development, and ESG technology practices.',
-      category: 'Sustainability',
-      date: '2024-11-22',
-      time: '15:30 EST',
-      duration: '60 min',
-      speaker: 'Dr. Amanda Green',
-      speakerTitle: 'Sustainability Technology Lead',
-      speakerAvatar: '/images/speakers/amanda-green.jpg',
-      featured: false,
-      icon: Target,
-      color: 'from-emerald-500 to-green-500',
-      tags: ['Sustainability', 'Green Computing', 'ESG', 'Energy Efficiency'],
-      attendees: 234,
-      recording: true,
-      slides: true
-    },
-    {
-      id: 'ai-workflow-automation',
-      title: 'AI Workflow Automation: Streamlining Business Processes',
-      description: 'Learn how to automate complex business workflows using AI and machine learning technologies.',
-      category: 'AI & Automation',
-      date: '2024-11-20',
-      time: '16:00 EST',
-      duration: '70 min',
-      speaker: 'Chris Anderson',
-      speakerTitle: 'Automation Solutions Architect',
-      speakerAvatar: '/images/speakers/chris-anderson.jpg',
-      featured: false,
-      icon: TrendingUp,
+      id: 4,
+      title: 'Quantum Computing: The Future of Problem Solving',
+      description: 'An in-depth exploration of quantum computing principles and their applications in solving complex problems.',
+      category: 'Emerging Tech',
+      date: '2024-12-15',
+      time: '2:00 PM EST',
+      duration: '90 minutes',
+      speaker: 'Dr. Alex Thompson',
+      speakerTitle: 'Quantum Physicist',
+      attendees: 2100,
+      tags: ['Quantum Computing', 'Physics', 'Technology', 'Innovation'],
       color: 'from-indigo-500 to-purple-500',
-      tags: ['AI Automation', 'Workflow', 'Business Processes', 'ML'],
-      attendees: 456,
+      icon: Atom,
+      recording: true,
+      slides: true
+    },
+    {
+      id: 5,
+      title: 'Sustainable Technology: Green Solutions for Business',
+      description: 'Discover how businesses can leverage sustainable technology to reduce environmental impact while improving efficiency.',
+      category: 'Sustainability',
+      date: '2024-12-10',
+      time: '1:00 PM EST',
+      duration: '75 minutes',
+      speaker: 'Emma Wilson',
+      speakerTitle: 'Sustainability Consultant',
+      attendees: 890,
+      tags: ['Sustainability', 'Green Tech', 'Business', 'Environment'],
+      color: 'from-green-500 to-emerald-500',
+      icon: Leaf,
       recording: true,
       slides: true
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Categories', count: webinars.length, active: true },
-    { id: 'ai', name: 'AI & Analytics', count: webinars.filter(w => w.category.includes('AI')).length, active: false },
-    { id: 'quantum', name: 'Quantum Technology', count: webinars.filter(w => w.category.includes('Quantum')).length, active: false },
-    { id: 'security', name: 'Cybersecurity', count: webinars.filter(w => w.category.includes('Cybersecurity')).length, active: false },
-    { id: 'cloud', name: 'Cloud & DevOps', count: webinars.filter(w => w.category.includes('Cloud')).length, active: false },
-    { id: 'iot', name: 'IoT & Digital Twins', count: webinars.filter(w => w.category.includes('IoT')).length, active: false },
-    { id: 'healthcare', name: 'AI & Healthcare', count: webinars.filter(w => w.category.includes('Healthcare')).length, active: false },
-    { id: 'blockchain', name: 'Blockchain & Web3', count: webinars.filter(w => w.category.includes('Blockchain')).length, active: false },
-    { id: 'edge', name: 'Edge Computing & IoT', count: webinars.filter(w => w.category.includes('Edge')).length, active: false },
-    { id: 'sustainability', name: 'Sustainability', count: webinars.filter(w => w.category.includes('Sustainability')).length, active: false },
-    { id: 'automation', name: 'AI & Automation', count: webinars.filter(w => w.category.includes('Automation')).length, active: false }
-  ];
-
-  const filteredWebinars = webinars.filter(webinar => {
-    const matchesCategory = selectedCategory === 'all' || 
-      (selectedCategory === 'ai' && webinar.category.includes('AI')) ||
-      (selectedCategory === 'quantum' && webinar.category.includes('Quantum')) ||
-      (selectedCategory === 'security' && webinar.category.includes('Cybersecurity')) ||
-      (selectedCategory === 'cloud' && webinar.category.includes('Cloud')) ||
-      (selectedCategory === 'iot' && webinar.category.includes('IoT')) ||
-      (selectedCategory === 'healthcare' && webinar.category.includes('Healthcare')) ||
-      (selectedCategory === 'blockchain' && webinar.category.includes('Blockchain')) ||
-      (selectedCategory === 'edge' && webinar.category.includes('Edge')) ||
-      (selectedCategory === 'sustainability' && webinar.category.includes('Sustainability')) ||
-      (selectedCategory === 'automation' && webinar.category.includes('Automation'));
-    
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         webinar.speaker.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+  const filteredWebinars = [...featuredWebinars, ...pastWebinars].filter(webinar => {
+    const matchesCategory = activeCategory === 'all' || webinar.category.toLowerCase().includes(activeCategory.toLowerCase());
+    const matchesSearch = webinar.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         webinar.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         webinar.speaker.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
-  const featuredWebinars = webinars.filter(webinar => webinar.featured);
-  const upcomingWebinars = webinars.filter(webinar => webinar.status === 'upcoming');
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <SEO 
         title="Webinars - Zion Tech Group"
-        description="Join our expert-led webinars on AI, quantum computing, cybersecurity, cloud computing, and emerging technologies"
+        description="Join our expert-led webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
+        keywords="webinars, AI, cybersecurity, cloud computing, technology education, online learning"
+        ogType="website"
       />
-      
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Expert-Led Webinars
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              Expert-Led
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+                Technology Webinars
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Learn from industry leaders about cutting-edge technologies and practical applications
+            <p className="text-xl text-gray-300 mb-8">
+              Join industry experts and thought leaders as they share insights on the latest AI, cybersecurity, 
+              cloud computing, and emerging technology trends. Stay ahead of the curve with our comprehensive webinar series.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <Video className="w-4 h-4" />
-                <span>{webinars.length} Expert Sessions</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-4 h-4" />
-                <span>Live & Recorded</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <BookOpen className="w-4 h-4" />
-                <span>Free Resources</span>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300"
+              >
+                View Upcoming Webinars
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Browse Past Sessions
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Search and Filter */}
-      <section className="py-12 border-b border-slate-700/50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+      {/* Search and Filter Section */}
+      <section className="py-16 bg-slate-800/50">
+        <div className="container-responsive">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl font-bold text-white mb-4">Find Your Perfect Webinar</h2>
+              <p className="text-gray-300">Search and filter through our extensive collection of technology webinars</p>
+            </motion.div>
+
+            {/* Search Bar */}
+            <div className="relative mb-8">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search webinars..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-200"
+                placeholder="Search webinars by title, speaker, or topic..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category, index) => (
+            {/* Category Filters */}
+            <div className="flex flex-wrap gap-3 justify-center">
+              {categories.map((category) => (
                 <motion.button
                   key={category.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                    activeCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
+                      : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white'
                   }`}
                 >
                   {category.name} ({category.count})
@@ -358,7 +269,7 @@ const Webinars: React.FC = () => {
 
       {/* Featured Webinars */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
+        <div className="container-responsive">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Featured Webinars</h2>
             <p className="text-gray-400">Don't miss these highly anticipated sessions with industry experts</p>
@@ -450,7 +361,7 @@ const Webinars: React.FC = () => {
       {/* Past Webinars */}
       {upcomingWebinars.length > 0 && (
         <section className="py-16">
-          <div className="container mx-auto px-4">
+          <div className="container-responsive">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
               Upcoming Webinars
             </h2>
@@ -623,35 +534,40 @@ const Webinars: React.FC = () => {
       )}
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-cyan-600 to-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center"
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Stay Updated with Our Webinars
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Never Miss a Webinar
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get notified about upcoming webinars, exclusive content, and early access 
-              to registration for our most popular sessions.
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto mb-8">
+              Stay updated with our latest webinars and technology insights. Subscribe to our newsletter 
+              and get notified about upcoming sessions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              />
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                Subscribe
-              </button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
+              >
+                Subscribe to Newsletter
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
+              >
+                View All Webinars
+              </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
