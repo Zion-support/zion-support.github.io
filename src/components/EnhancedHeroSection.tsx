@@ -18,7 +18,8 @@ import {
   Pause,
   Sparkles,
   Lightbulb,
-  Cpu
+  Cpu,
+  Loader2
 } from 'lucide-react';
 
 interface HeroSlide {
@@ -121,311 +122,271 @@ const swipePower = (offset: number, velocity: number) => {
 export function EnhancedHeroSection() {
   const [[page, direction], setPage] = useState([0, 0]);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
 
-  const rotateX = useTransform(mouseY, [-300, 300], [15, -15]);
-  const rotateY = useTransform(mouseX, [-300, 300], [-15, 15]);
+  // Performance optimization: Memoize current slide data
+  const currentSlideData = useMemo(() => heroSlides[currentSlide], [currentSlide]);
 
   const paginate = useCallback((newDirection: number) => {
-    setPage([page + newDirection, newDirection]);
-    setCurrentSlide((prev) => (prev + newDirection + heroSlides.length) % heroSlides.length);
-  }, [page]);
+    const newPage = (currentSlide + newDirection + heroSlides.length) % heroSlides.length;
+    setPage([newPage, newDirection]);
+    setCurrentSlide(newPage);
+  }, [currentSlide]);
 
-  const handleMouseMove = useCallback((event: React.MouseEvent<HTMLDivElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    mouseX.set(event.clientX - centerX);
-    mouseY.set(event.clientY - centerY);
-  }, [mouseX, mouseY]);
-
-  const handleMouseLeave = useCallback(() => {
-    mouseX.set(0);
-    mouseY.set(0);
-  }, [mouseX, mouseY]);
-
+  // Auto-advance slides
   useEffect(() => {
     if (!isPlaying) return;
 
     const interval = setInterval(() => {
       paginate(1);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [isPlaying, paginate]);
 
-  const currentSlideData = heroSlides[currentSlide];
+  // Preload images for better performance
+  useEffect(() => {
+    const imagePromises = heroSlides.map(slide => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = resolve;
+        img.src = slide.image;
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setIsLoading(false);
+    });
+  }, []);
+
+  const handleDragEnd = useCallback((e: any, { offset, velocity }: any) => {
+    const swipe = swipePower(offset.x, velocity.x);
+
+    if (swipe < -swipeConfidenceThreshold) {
+      paginate(1);
+    } else if (swipe > swipeConfidenceThreshold) {
+      paginate(-1);
+    }
+  }, [paginate]);
+
+  // Accessibility: Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        paginate(-1);
+      } else if (e.key === 'ArrowRight') {
+        paginate(1);
+      } else if (e.key === ' ') {
+        e.preventDefault();
+        setIsPlaying(!isPlaying);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [paginate, isPlaying]);
+
+  if (isLoading) {
+    return (
+      <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-center text-white">
+          <Loader2 className="w-12 h-12 animate-spin mx-auto mb-4 text-cyan-400" />
+          <p className="text-xl font-medium">Loading amazing content...</p>
+          <p className="text-sm text-gray-400 mt-2">Powered by Zion Tech Group</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-futuristic-enhanced">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-3xl animate-float-delayed" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-2xl animate-pulse-slow" />
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]" />
       </div>
 
-      {/* Floating Particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 1, 0.3],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="container-responsive relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content Section */}
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            {/* Badge */}
+      {/* Hero Content */}
+      <div className="relative z-10 flex items-center min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
             <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-white space-y-8"
             >
-              <Sparkles className="w-4 h-4" />
-              <span>Innovation at Scale</span>
-            </motion.div>
-
-            {/* Title */}
-            <motion.h1
-              className="text-5xl lg:text-7xl font-bold text-white leading-tight"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              {currentSlideData.title.split(' ').map((word, index) => (
-                <span key={index} className="inline-block">
-                  {word === 'AI-Powered' && (
-                    <span className={`${currentSlideData.accentColor} bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent`}>
-                      {word}
-                    </span>
-                  )}
-                  {word !== 'AI-Powered' && word}
-                  {' '}
-                </span>
-              ))}
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.p
-              className="text-xl lg:text-2xl text-gray-300 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              {currentSlideData.subtitle}
-            </motion.p>
-
-            {/* Description */}
-            <motion.p
-              className="text-lg text-gray-400 leading-relaxed max-w-2xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-            >
-              {currentSlideData.description}
-            </motion.p>
-
-            {/* Features */}
-            <motion.div
-              className="grid grid-cols-2 gap-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-            >
-              {currentSlideData.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-sm">{feature}</span>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* CTA Buttons */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-            >
-              <Link
-                to={currentSlideData.path}
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
-              >
-                <span>{currentSlideData.cta}</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              
-              <button className="inline-flex items-center gap-3 px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 backdrop-blur-sm">
-                <Play className="w-5 h-5" />
-                <span>Watch Demo</span>
-              </button>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-700/50"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
-            >
-              {currentSlideData.stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 mx-auto mb-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl border border-cyan-500/30">
-                    <stat.icon className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Visual Section */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-          >
-            {/* Main Visual Container */}
-            <motion.div
-              className="relative w-full h-[600px] rounded-2xl overflow-hidden border border-gray-700/50 backdrop-blur-sm bg-gradient-to-br from-gray-900/50 to-gray-800/50"
-              style={{
-                transformStyle: "preserve-3d",
-                rotateX,
-                rotateY,
-              }}
-            >
-              {/* Background Image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10" />
-              
-              {/* Icon Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="space-y-4">
                 <motion.div
-                  className="w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center border border-cyan-500/30 backdrop-blur-sm"
-                  animate={{
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 360],
-                  }}
-                  transition={{
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30"
                 >
-                  <currentSlideData.icon className="w-16 h-16 text-cyan-400" />
+                  <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+                  <span className="text-sm font-medium text-cyan-300">
+                    {currentSlideData.subtitle}
+                  </span>
+                </motion.div>
+
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
+                >
+                  <span className="text-white">{currentSlideData.title.split(' ').slice(0, -1).join(' ')}</span>
+                  <span className={`${currentSlideData.accentColor} bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent`}>
+                    {' ' + currentSlideData.title.split(' ').slice(-1).join(' ')}
+                  </span>
+                </motion.h1>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                  className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl"
+                >
+                  {currentSlideData.description}
+                </motion.p>
+              </div>
+
+              {/* Features */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                className="grid grid-cols-2 gap-3"
+              >
+                {currentSlideData.features.map((feature, index) => (
+                  <div key={feature} className="flex items-center space-x-2">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <span className="text-gray-300 text-sm">{feature}</span>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <Link
+                  to={currentSlideData.path}
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+                >
+                  {currentSlideData.cta}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                
+                <button
+                  onClick={() => setIsPlaying(!isPlaying)}
+                  className="inline-flex items-center justify-center px-8 py-4 border border-gray-600 hover:border-gray-500 text-white font-semibold rounded-lg transition-all duration-300 hover:bg-white/5"
+                  aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
+                >
+                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                </button>
+              </motion.div>
+
+              {/* Stats */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.2 }}
+                className="grid grid-cols-3 gap-6 pt-8"
+              >
+                {currentSlideData.stats.map((stat, index) => (
+                  <div key={stat.label} className="text-center">
+                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    <div className="text-sm text-gray-400">{stat.label}</div>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            {/* Visual Content */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative"
+            >
+              <div className="relative">
+                {/* Main Image */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src={currentSlideData.image}
+                    alt={currentSlideData.title}
+                    className="w-full h-auto object-cover"
+                    loading="eager"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                </div>
+
+                {/* Floating Elements */}
+                <motion.div
+                  animate={{ y: [-10, 10, -10] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <currentSlideData.icon className="w-10 h-10 text-white" />
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [10, -10, 10] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center shadow-lg"
+                >
+                  <Zap className="w-8 h-8 text-white" />
                 </motion.div>
               </div>
-
-              {/* Floating Elements */}
-              <div className="absolute top-10 right-10">
-                <motion.div
-                  className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full border border-purple-500/30 backdrop-blur-sm"
-                  animate={{
-                    y: [0, -10, 0],
-                    rotate: [0, 180, 360],
-                  }}
-                  transition={{
-                    duration: 6,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              </div>
-
-              <div className="absolute bottom-10 left-10">
-                <motion.div
-                  className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-500/30 backdrop-blur-sm"
-                  animate={{
-                    y: [0, 10, 0],
-                    scale: [1, 1.2, 1],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                />
-              </div>
             </motion.div>
-
-            {/* Navigation Dots */}
-            <div className="flex justify-center mt-8 space-x-3">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setCurrentSlide(index);
-                    setPage([index, index > currentSlide ? 1 : -1]);
-                  }}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide
-                      ? 'bg-cyan-400 scale-125'
-                      : 'bg-gray-600 hover:bg-gray-500'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* Play/Pause Button */}
-            <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className="absolute top-4 right-4 w-12 h-12 bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-full flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-300"
-              aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
-            >
-              {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-            </button>
-          </motion.div>
+          </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 2.0 }}
+      {/* Navigation Controls */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="flex space-x-2">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                const direction = index > currentSlide ? 1 : -1;
+                setPage([index, direction]);
+                setCurrentSlide(index);
+              }}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? 'bg-cyan-400 w-8'
+                  : 'bg-gray-600 hover:bg-gray-500'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={() => paginate(-1)}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 backdrop-blur-sm"
+        aria-label="Previous slide"
       >
-        <motion.div
-          className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <motion.div
-            className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </motion.div>
-      </motion.div>
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+
+      <button
+        onClick={() => paginate(1)}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110 backdrop-blur-sm"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
     </section>
   );
 }

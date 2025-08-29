@@ -357,86 +357,91 @@ const Webinars: React.FC = () => {
       </section>
 
       {/* Featured Webinars */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Featured Webinars</h2>
-            <p className="text-gray-400">Don't miss these highly anticipated sessions with industry experts</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredWebinars.map((webinar, index) => (
-              <motion.div
-                key={webinar.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70"
-              >
-                {/* Header */}
-                <div className={`h-32 bg-gradient-to-br ${webinar.color} relative overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/20"></div>
-                  <div className="absolute top-4 right-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${webinar.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                      <webinar.icon className="w-6 h-6 text-white" />
+      {featuredWebinars.length > 0 && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Featured Webinars</h2>
+              <p className="text-gray-400">Don't miss these highly anticipated sessions with industry experts</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredWebinars.map((webinar, index) => (
+                <motion.div
+                  key={webinar.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70"
+                >
+                  {/* Header */}
+                  <div className={`h-32 bg-gradient-to-br ${webinar.color} relative overflow-hidden`}>
+                    <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute top-4 right-4">
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${webinar.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                        <webinar.icon className="w-6 h-6 text-white" />
+                      </div>
                     </div>
                   </div>
                   
-                  <div className="mb-4">
-                    <span className="inline-block px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs font-medium rounded-full">
-                      {webinar.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                    {webinar.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 mb-4 line-clamp-3">
-                    {webinar.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {webinar.tags.slice(0, 3).map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-2 py-1 bg-slate-700/30 text-gray-300 text-xs rounded"
-                      >
-                        {tag}
+                  {/* Content */}
+                  <div className="p-6">
+                    <div className="mb-4">
+                      <span className="inline-block px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs font-medium rounded-full">
+                        {webinar.category}
                       </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                    <span className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      {new Date(webinar.date).toLocaleDateString()}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock3 className="w-3 h-3" />
-                      {webinar.time}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {webinar.duration}
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center">
-                      <Users className="w-4 h-4 text-gray-400" />
                     </div>
-                    <div>
-                      <p className="text-sm text-white font-medium">{webinar.speaker}</p>
-                      <p className="text-xs text-gray-400">{webinar.speakerTitle}</p>
+                    
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                      {webinar.title}
+                    </h3>
+                    
+                    <p className="text-gray-400 mb-4 line-clamp-3">
+                      {webinar.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {webinar.tags.slice(0, 3).map((tag, tagIndex) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 bg-slate-700/30 text-gray-300 text-xs rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
+                    
+                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-3 h-3" />
+                        {new Date(webinar.date).toLocaleDateString()}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock3 className="w-3 h-3" />
+                        {webinar.time}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3 h-3" />
+                        {webinar.duration}
+                      </span>
+                    </div>
+                    
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center">
+                        <Users className="w-4 h-4 text-gray-400" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-white font-medium">{webinar.speaker}</p>
+                        <p className="text-xs text-gray-400">{webinar.speakerTitle}</p>
+                      </div>
+                    </div>
+                    
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2 group">
+                      <Play className="w-4 h-4" />
+                      Register Now
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </button>
                   </div>
-                  
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2 group">
-                    <Play className="w-4 h-4" />
-                    Register Now
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
                 </motion.div>
               ))}
             </div>
