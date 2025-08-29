@@ -27,7 +27,12 @@
     "pm2:restart": "pm2 restart ecosystem.config.cjs --only automation",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 50",
-    "pm2:monit": "pm2 monit"
+    "pm2:monit": "pm2 monit",
+    "automation:enhanced-testing": "node scripts/automation/enhanced-testing-automation.cjs",
+    "automation:enhanced-security": "node scripts/automation/enhanced-security-automation.cjs",
+    "automation:enhanced-links": "node scripts/automation/enhanced-link-checker.cjs",
+    "automation:enhanced-ci-cd": "node scripts/automation/enhanced-ci-cd-automation.cjs",
+    "automation:run-all-enhanced": "npm run automation:enhanced-testing && npm run automation:enhanced-security && npm run automation:enhanced-links && npm run automation:enhanced-ci-cd"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

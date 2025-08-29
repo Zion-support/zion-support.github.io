@@ -305,24 +305,12 @@ export default function EnhancedServicesShowcase() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
-                {category === 'all' ? 'All Services' : category}
-              </button>
-            ))}
+                Get Started Today
+              </Link>
+            </div>
           </div>
-
-          {/* Search */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
-            />
-            <Search className="absolute right-3 top-2.5 w-5 h-5 text-zion-slate-light" />
-          </div>
-        </div>
-      </div>
+        </motion.div>
+      </section>
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto">
