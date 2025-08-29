@@ -168,6 +168,74 @@ module.exports = {
       log_file: './logs/project-health-dashboard.log',
       error_file: './logs/project-health-dashboard-error.log',
       out_file: './logs/project-health-dashboard-out.log'
+    },
+
+    // NEW: AI-Powered Code Quality Analyzer
+    {
+      name: 'ai-code-analyzer',
+      script: './scripts/automation/ai-code-analyzer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/20 * * * *', // Every 20 minutes
+      log_file: './logs/ai-code-analyzer.log',
+      error_file: './logs/ai-code-analyzer-error.log',
+      out_file: './logs/ai-code-analyzer-out.log'
+    },
+
+    // NEW: Smart Build Optimizer
+    {
+      name: 'smart-build-optimizer',
+      script: './scripts/automation/smart-build-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './logs/smart-build-optimizer.log',
+      error_file: './logs/smart-build-optimizer-error.log',
+      out_file: './logs/smart-build-optimizer-out.log'
+    },
+
+    // NEW: Intelligent Dependency Manager
+    {
+      name: 'intelligent-dependency-manager',
+      script: './scripts/automation/intelligent-dependency-manager.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/intelligent-dependency-manager.log',
+      error_file: './logs/intelligent-dependency-manager-error.log',
+      out_file: './logs/intelligent-dependency-manager-out.log'
+    },
+
+    // NEW: Advanced Performance Monitor
+    {
+      name: 'advanced-performance-monitor',
+      script: './scripts/automation/advanced-performance-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/2 * * * *', // Every 2 minutes
+      log_file: './logs/advanced-performance-monitor.log',
+      error_file: './logs/advanced-performance-monitor-error.log',
+      out_file: './logs/advanced-performance-monitor-out.log'
     }
   ],
 
