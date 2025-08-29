@@ -249,6 +249,12 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Building },
         { name: 'Services', href: '/services', icon: Briefcase },
+        { name: 'Solutions', href: '/solutions', icon: Target },
+        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research', href: '/research-development', icon: TestTube },
+        { name: 'Events', href: '/events', icon: Video },
+        { name: 'News', href: '/news', icon: Newspaper },
         { name: 'Contact', href: '/contact', icon: Mail },
         { name: 'Blog', href: '/blog', icon: FileText },
       ]

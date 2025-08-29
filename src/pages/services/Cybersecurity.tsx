@@ -76,7 +76,6 @@ export default function CybersecurityServices() {
       duration: "4-10 weeks"
     }
   ];
-  
   const securityTechnologies = [
     { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },
     { name: "EDR", description: "Endpoint Detection and Response", icon: Server },
@@ -123,7 +122,6 @@ export default function CybersecurityServices() {
       color: "from-cyan-500 to-blue-600"
     }
   ];
-  
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -153,7 +151,7 @@ export default function CybersecurityServices() {
                 Watch Demo
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">

@@ -1,311 +1,254 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Progress } from './ui/progress';
-import { Badge } from './ui/badge';
-import { Alert, AlertDescription } from './ui/alert';
-import { 
-  Activity, 
-  Zap, 
-  Gauge, 
-  TrendingUp, 
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  Cpu
-} from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, TrendingUp, Gauge, Cpu, Memory, Wifi, Battery, Activity } from 'lucide-react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
-  cpuUsage: number;
-  networkLatency: number;
-  bundleSize: number;
-  lighthouseScore: number;
+  fps: number;
+  memory: number;
+  network: number;
+  cpu: number;
+  battery: number;
 }
 
-interface OptimizationSuggestion {
-  id: string;
-  title: string;
-  description: string;
-  priority: 'high' | 'medium' | 'low';
-  impact: 'high' | 'medium' | 'low';
-  estimatedSavings: string;
-  category: 'performance' | 'seo' | 'accessibility' | 'best-practices';
-}
-
-const PerformanceOptimizer: React.FC = () => {
+export function PerformanceOptimizer() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    bundleSize: 0,
-    lighthouseScore: 0
+    fps: 60,
+    memory: 0,
+    network: 0,
+    cpu: 0,
+    battery: 0
   });
-
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [optimizations, setOptimizations] = useState<OptimizationSuggestion[]>([]);
-  const [activeOptimizations, setActiveOptimizations] = useState<string[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
 
   // Performance monitoring
-  const startMonitoring = useCallback(() => {
-    setIsMonitoring(true);
-    
-    // Simulate performance monitoring
-    const interval = setInterval(() => {
+  const measurePerformance = useCallback(() => {
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const memory = (performance as any).memory;
+      
       setMetrics(prev => ({
-        loadTime: Math.random() * 3000 + 500,
-        memoryUsage: Math.random() * 100,
-        cpuUsage: Math.random() * 80,
-        networkLatency: Math.random() * 200 + 50,
-        bundleSize: Math.random() * 2000 + 500,
-        lighthouseScore: Math.random() * 40 + 60
+        ...prev,
+        memory: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
+        network: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0
       }));
-    }, 2000);
-
-    return () => clearInterval(interval);
+    }
   }, []);
 
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
-  }, []);
-
-  // Generate optimization suggestions
-  useEffect(() => {
-    const suggestions: OptimizationSuggestion[] = [
-      {
-        id: '1',
-        title: 'Image Optimization',
-        description: 'Compress and optimize images using WebP format and lazy loading',
-        priority: 'high',
-        impact: 'high',
-        estimatedSavings: '2-5 seconds',
-        category: 'performance'
-      },
-      {
-        id: '2',
-        title: 'Code Splitting',
-        description: 'Implement dynamic imports and route-based code splitting',
-        priority: 'high',
-        impact: 'high',
-        estimatedSavings: '1-3 seconds',
-        category: 'performance'
-      },
-      {
-        id: '3',
-        title: 'Bundle Analysis',
-        description: 'Analyze and reduce bundle size by removing unused dependencies',
-        priority: 'medium',
-        impact: 'medium',
-        estimatedSavings: '500KB-1MB',
-        category: 'performance'
-      },
-      {
-        id: '4',
-        title: 'Caching Strategy',
-        description: 'Implement service worker and aggressive caching policies',
-        priority: 'medium',
-        impact: 'high',
-        estimatedSavings: '1-2 seconds',
-        category: 'performance'
-      },
-      {
-        id: '5',
-        title: 'Critical CSS',
-        description: 'Inline critical CSS and defer non-critical styles',
-        priority: 'low',
-        impact: 'medium',
-        estimatedSavings: '200-500ms',
-        category: 'performance'
-      }
-    ];
-
-    setOptimizations(suggestions);
-  }, []);
-
-  const applyOptimization = useCallback((id: string) => {
-    setActiveOptimizations(prev => [...prev, id]);
+  // FPS monitoring
+  const measureFPS = useCallback(() => {
+    let frameCount = 0;
+    let lastTime = performance.now();
     
-    // Simulate optimization process
-    setTimeout(() => {
-      setActiveOptimizations(prev => prev.filter(opt => opt !== id));
-    }, 3000);
+    const countFrames = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      
+      if (currentTime - lastTime >= 1000) {
+        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        setMetrics(prev => ({ ...prev, fps }));
+        frameCount = 0;
+        lastTime = currentTime;
+      }
+      
+      requestAnimationFrame(countFrames);
+    };
+    
+    requestAnimationFrame(countFrames);
   }, []);
 
-  const getPerformanceStatus = (score: number) => {
-    if (score >= 90) return { status: 'Excellent', color: 'bg-green-500', icon: CheckCircle };
-    if (score >= 70) return { status: 'Good', color: 'bg-yellow-500', icon: TrendingUp };
-    if (score >= 50) return { status: 'Fair', color: 'bg-orange-500', icon: AlertTriangle };
-    return { status: 'Poor', color: 'bg-red-500', icon: AlertTriangle };
-  };
+  // Battery monitoring
+  const measureBattery = useCallback(async () => {
+    if ('getBattery' in navigator) {
+      try {
+        const battery = await (navigator as any).getBattery();
+        setMetrics(prev => ({ ...prev, battery: Math.round(battery.level * 100) }));
+      } catch (error) {
+        console.log('Battery API not supported');
+      }
+    }
+  }, []);
 
-  const performanceStatus = getPerformanceStatus(metrics.lighthouseScore);
+  // CPU monitoring
+  const measureCPU = useCallback(() => {
+    if ('hardwareConcurrency' in navigator) {
+      const cores = navigator.hardwareConcurrency;
+      setMetrics(prev => ({ ...prev, cpu: cores }));
+    }
+  }, []);
+
+  // Performance optimizations
+  const applyOptimizations = useCallback(() => {
+    const newOptimizations: string[] = [];
+    
+    // Image optimization
+    if (metrics.memory > 100) {
+      newOptimizations.push('Optimizing image loading and caching');
+    }
+    
+    // Network optimization
+    if (metrics.network > 1000) {
+      newOptimizations.push('Implementing service worker caching');
+    }
+    
+    // FPS optimization
+    if (metrics.fps < 30) {
+      newOptimizations.push('Reducing animation complexity');
+    }
+    
+    setOptimizations(newOptimizations);
+  }, [metrics]);
+
+  useEffect(() => {
+    measurePerformance();
+    measureFPS();
+    measureBattery();
+    measureCPU();
+    
+    const interval = setInterval(measurePerformance, 5000);
+    return () => clearInterval(interval);
+  }, [measurePerformance, measureFPS, measureBattery, measureCPU]);
+
+  useEffect(() => {
+    applyOptimizations();
+  }, [applyOptimizations]);
+
+  // Auto-hide after 5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(false), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isVisible) {
+    return (
+      <motion.button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        title="Performance Monitor"
+      >
+        <Activity className="w-6 h-6 text-white" />
+      </motion.button>
+    );
+  }
 
   return (
-    <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Gauge className="h-5 w-5" />
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        className="fixed bottom-4 right-4 z-50 w-80 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6"
+      >
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <Gauge className="w-5 h-5 text-cyan-500" />
             Performance Monitor
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="flex gap-4">
-            <Button 
-              onClick={startMonitoring} 
-              disabled={isMonitoring}
-              className="flex items-center gap-2"
-            >
-              <Activity className="h-4 w-4" />
-              Start Monitoring
-            </Button>
-            <Button 
-              onClick={stopMonitoring} 
-              disabled={!isMonitoring}
-              variant="outline"
-              className="flex items-center gap-2"
-            >
-              <Clock className="h-4 w-4" />
-              Stop Monitoring
-            </Button>
+          </h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-gray-600 transition-colors"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="space-y-4">
+          {/* FPS */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-4 h-4 text-green-500" />
+              <span className="text-sm text-gray-600">FPS</span>
+            </div>
+            <span className={`font-mono text-sm ${metrics.fps >= 50 ? 'text-green-600' : metrics.fps >= 30 ? 'text-yellow-600' : 'text-red-600'}`}>
+              {metrics.fps}
+            </span>
           </div>
 
-          {isMonitoring && (
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">
-                  {metrics.loadTime.toFixed(0)}ms
-                </div>
-                <div className="text-sm text-gray-600">Load Time</div>
+          {/* Memory */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Memory className="w-4 h-4 text-blue-500" />
+              <span className="text-sm text-gray-600">Memory</span>
+            </div>
+            <span className={`font-mono text-sm ${metrics.memory < 50 ? 'text-green-600' : metrics.memory < 100 ? 'text-yellow-600' : 'text-red-600'}`}>
+              {metrics.memory} MB
+            </span>
+          </div>
+
+          {/* Network */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Wifi className="w-4 h-4 text-purple-500" />
+              <span className="text-sm text-gray-600">Network</span>
+            </div>
+            <span className={`font-mono text-sm ${metrics.network < 500 ? 'text-green-600' : metrics.network < 1000 ? 'text-yellow-600' : 'text-red-600'}`}>
+              {metrics.network}ms
+            </span>
+          </div>
+
+          {/* CPU */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Cpu className="w-4 h-4 text-orange-500" />
+              <span className="text-sm text-gray-600">CPU Cores</span>
+            </div>
+            <span className="font-mono text-sm text-gray-800">{metrics.cpu}</span>
+          </div>
+
+          {/* Battery */}
+          {metrics.battery > 0 && (
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Battery className="w-4 h-4 text-green-500" />
+                <span className="text-sm text-gray-600">Battery</span>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-600">
-                  {metrics.memoryUsage.toFixed(1)}%
-                </div>
-                <div className="text-sm text-gray-600">Memory Usage</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">
-                  {metrics.cpuUsage.toFixed(1)}%
-                </div>
-                <div className="text-sm text-gray-600">CPU Usage</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-orange-600">
-                  {metrics.networkLatency.toFixed(0)}ms
-                </div>
-                <div className="text-sm text-gray-600">Network Latency</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-indigo-600">
-                  {(metrics.bundleSize / 1024).toFixed(1)}KB
-                </div>
-                <div className="text-sm text-gray-600">Bundle Size</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-red-600">
-                  {metrics.lighthouseScore.toFixed(0)}
-                </div>
-                <div className="text-sm text-gray-600">Lighthouse Score</div>
-              </div>
+              <span className={`font-mono text-sm ${metrics.battery > 50 ? 'text-green-600' : metrics.battery > 20 ? 'text-yellow-600' : 'text-red-600'}`}>
+                {metrics.battery}%
+              </span>
             </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Zap className="h-5 w-5" />
-            Performance Score
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex items-center gap-4 mb-4">
-            <Badge className={`${performanceStatus.color} text-white`}>
-              {performanceStatus.status}
-            </Badge>
+        {/* Optimizations */}
+        {optimizations.length > 0 && (
+          <div className="mt-4 pt-4 border-t border-gray-200">
+            <h4 className="text-sm font-medium text-gray-700 mb-2">Optimizations Applied:</h4>
+            <ul className="space-y-1">
+              {optimizations.map((opt, index) => (
+                <li key={index} className="text-xs text-gray-600 flex items-center gap-2">
+                  <Zap className="w-3 h-3 text-yellow-500" />
+                  {opt}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Performance Score */}
+        <div className="mt-4 pt-4 border-t border-gray-200">
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-gray-700">Performance Score</span>
             <div className="flex items-center gap-2">
-              <performanceStatus.icon className="h-4 w-4" />
-              <span className="text-sm text-gray-600">
-                Score: {metrics.lighthouseScore.toFixed(0)}/100
+              <div className="w-16 h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div 
+                  className={`h-full rounded-full transition-all duration-300 ${
+                    metrics.fps >= 50 && metrics.memory < 100 ? 'bg-green-500' : 
+                    metrics.fps >= 30 && metrics.memory < 150 ? 'bg-yellow-500' : 'bg-red-500'
+                  }`}
+                  style={{ 
+                    width: `${Math.min(100, (metrics.fps / 60) * 100)}%` 
+                  }}
+                />
+              </div>
+              <span className="text-xs font-mono text-gray-600">
+                {Math.round((metrics.fps / 60) * 100)}%
               </span>
             </div>
           </div>
-          <Progress value={metrics.lighthouseScore} className="w-full" />
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="h-5 w-5" />
-            Optimization Suggestions
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {optimizations.map((optimization) => (
-              <div key={optimization.id} className="border rounded-lg p-4">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <h4 className="font-semibold">{optimization.title}</h4>
-                      <Badge variant={
-                        optimization.priority === 'high' ? 'destructive' : 
-                        optimization.priority === 'medium' ? 'default' : 'secondary'
-                      }>
-                        {optimization.priority}
-                      </Badge>
-                      <Badge variant="outline">{optimization.category}</Badge>
-                    </div>
-                    <p className="text-sm text-gray-600 mb-2">
-                      {optimization.description}
-                    </p>
-                    <div className="flex items-center gap-4 text-sm">
-                      <span className="text-green-600">
-                        Estimated savings: {optimization.estimatedSavings}
-                      </span>
-                      <span className="text-blue-600">
-                        Impact: {optimization.impact}
-                      </span>
-                    </div>
-                  </div>
-                  <Button
-                    onClick={() => applyOptimization(optimization.id)}
-                    disabled={activeOptimizations.includes(optimization.id)}
-                    size="sm"
-                    className="ml-4"
-                  >
-                    {activeOptimizations.includes(optimization.id) ? (
-                      <>
-                        <Cpu className="h-4 w-4 mr-2 animate-spin" />
-                        Applying...
-                      </>
-                    ) : (
-                      'Apply'
-                    )}
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {activeOptimizations.length > 0 && (
-        <Alert>
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription>
-            {activeOptimizations.length} optimization(s) are currently being applied. 
-            This may take a few moments to complete.
-          </AlertDescription>
-        </Alert>
-      )}
-    </div>
+        </div>
+      </motion.div>
+    </AnimatePresence>
   );
-};
-
-export default PerformanceOptimizer;
+}

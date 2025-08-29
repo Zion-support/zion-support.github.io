@@ -11,7 +11,6 @@ import {
 	DollarSign, 
 	Eye, 
 	Bot,
-	Search,
 	ArrowRight,
 	Star,
 	Play,
@@ -88,58 +87,6 @@ const futuristicServices: ServiceShowcase[] = [
 		price: '$22,000/month',
 		status: 'active'
 	}
-  ,
-  // Real, concrete service offerings
-  {
-    id: 'ai-lead-scoring',
-    title: 'AI Lead Scoring',
-    description: 'Explainable lead scoring integrated with your CRM to prioritize outreach and improve conversion.',
-    icon: TrendingUp,
-    color: 'from-cyan-500 to-blue-600',
-    features: ['CRM integration', 'Feature importance', 'A/B testing harness'],
-    price: '$199–$799/month',
-    status: 'active'
-  },
-  {
-    id: 'website-ai-chatbot',
-    title: 'Website AI Chatbot',
-    description: 'RAG‑powered assistant trained on your site and docs with analytics and human handoff.',
-    icon: Bot,
-    color: 'from-indigo-500 to-purple-600',
-    features: ['RAG with citations', 'Escalation to human', 'Analytics dashboard'],
-    price: '$99–$499/month',
-    status: 'active'
-  },
-  {
-    id: 'rag-search',
-    title: 'RAG Site Search',
-    description: 'Cited semantic search across knowledge bases and help centers with filters and relevancy.',
-    icon: Search,
-    color: 'from-emerald-500 to-teal-600',
-    features: ['Vector search', 'Citations', 'Access controls'],
-    price: '$149–$699/month',
-    status: 'active'
-  },
-  {
-    id: 'mlops-pipeline',
-    title: 'MLOps Pipeline',
-    description: 'Production‑grade CI/CD for models, monitoring, drift alerts, and rollbacks.',
-    icon: Shield,
-    color: 'from-orange-500 to-amber-600',
-    features: ['Model registry', 'Validation gates', 'Drift monitoring'],
-    price: '$399–$1,999/month',
-    status: 'beta'
-  },
-  {
-    id: 'ecommerce-personalization',
-    title: 'E‑commerce Personalization',
-    description: 'Personalized recommendations, bundles, and pricing nudges to maximize AOV and LTV.',
-    icon: DollarSign,
-    color: 'from-pink-500 to-rose-600',
-    features: ['Realtime recs', 'Bundles', 'Campaign experiments'],
-    price: '$249–$1,499/month',
-    status: 'active'
-  }
 ];
 export default function FuturisticServicesShowcase() {
 	const [currentService, setCurrentService] = useState(0);
@@ -233,7 +180,7 @@ export default function FuturisticServicesShowcase() {
 								<div>
 									<div className="flex items-center gap-4 mb-6">
 										<div className={`p-4 rounded-2xl bg-gradient-to-r ${futuristicServices[currentService].color}`}>
-											{futuristicServices[currentService].icon && React.createElement(futuristicServices[currentService].icon, { className: "w-8 h-8 text-white" })}
+											{React.createElement(futuristicServices[currentService].icon, { className: "w-8 h-8 text-white" })}
 										</div>
 										<span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(futuristicServices[currentService].status)}`}>
 											{getStatusText(futuristicServices[currentService].status)}
@@ -279,7 +226,7 @@ export default function FuturisticServicesShowcase() {
 									<div className={`w-full h-80 rounded-2xl bg-gradient-to-br ${futuristicServices[currentService].color} relative overflow-hidden`}>
 										<div className="absolute inset-0 bg-black/20"></div>
 										<div className="absolute inset-0 flex items-center justify-center">
-											{futuristicServices[currentService].icon && React.createElement(futuristicServices[currentService].icon, { className: "w-32 h-32 text-white/80" })}
+											{React.createElement(futuristicServices[currentService].icon, { className: "w-32 h-32 text-white/80" })}
 										</div>
 										{/* Animated particles */}
 										<motion.div
@@ -321,7 +268,7 @@ export default function FuturisticServicesShowcase() {
 							>
 								<div className="flex items-center justify-between mb-4">
 									<div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
-										{service.icon && React.createElement(service.icon, { className: "w-6 h-6 text-white" })}
+										{React.createElement(service.icon, { className: "w-6 h-6 text-white" })}
 									</div>
 									<span className={`px-2 py-1 rounded-full text-xs font-semibold text-white ${getStatusColor(service.status)}`}>
 										{getStatusText(service.status)}

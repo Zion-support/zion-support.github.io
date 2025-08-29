@@ -153,6 +153,24 @@ export default function Services() {
 								</ul>
 								<div className="text-gray-500 mt-1">SMB: $50–$1,000/mo</div>
 							</div>
+							<div>
+								<div className="font-medium text-gray-800 mb-1">Cloud & DevOps</div>
+								<ul className="text-blue-700 list-disc list-inside">
+									<li><a className="underline" href="https://aws.amazon.com/pricing/" target="_blank" rel="noreferrer">aws.amazon.com/pricing</a></li>
+									<li><a className="underline" href="https://azure.microsoft.com/pricing" target="_blank" rel="noreferrer">azure.microsoft.com/pricing</a></li>
+									<li><a className="underline" href="https://cloud.google.com/pricing" target="_blank" rel="noreferrer">cloud.google.com/pricing</a></li>
+								</ul>
+								<div className="text-gray-500 mt-1">SMB: $200–$20,000/mo</div>
+							</div>
+							<div>
+								<div className="font-medium text-gray-800 mb-1">Analytics & BI</div>
+								<ul className="text-blue-700 list-disc list-inside">
+									<li><a className="underline" href="https://www.snowflake.com/pricing/" target="_blank" rel="noreferrer">snowflake.com/pricing</a></li>
+									<li><a className="underline" href="https://cloud.google.com/bigquery/pricing" target="_blank" rel="noreferrer">cloud.google.com/bigquery/pricing</a></li>
+									<li><a className="underline" href="https://www.tableau.com/pricing" target="_blank" rel="noreferrer">tableau.com/pricing</a></li>
+								</ul>
+								<div className="text-gray-500 mt-1">SMB: $300–$10,000/mo</div>
+							</div>
 						</div>
 					</div>
 					{/* Results Count */}
