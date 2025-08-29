@@ -181,6 +181,9 @@ const Sitemap = lazy(() => import('./pages/Sitemap'));
 // 2029 Services Showcase
 const ComprehensiveServicesShowcase2029 = lazy(() => import('./pages/ComprehensiveServicesShowcase2029'));
 
+// 2031 Comprehensive Services Showcase
+const ComprehensiveServicesShowcase2031 = lazy(() => import('./pages/ComprehensiveServicesShowcase2031'));
+
 // Additional innovative AI services
 const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
@@ -477,6 +480,14 @@ function App() {
                   {/* 2029 Services Showcase */}
                   <Route path="/comprehensive-services-showcase-2029" element={<ComprehensiveServicesShowcase2029 />} />
                   <Route path="/2029-comprehensive-services-showcase" element={<ComprehensiveServicesShowcase2029 />} />
+                  
+                  {/* 2031 Comprehensive Services Showcase */}
+                  <Route path="/comprehensive-services-showcase-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                  <Route path="/2029-comprehensive-services-showcase" element={<ComprehensiveServicesShowcase2031 />} />
+                  <Route path="/services-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                  <Route path="/ai-services-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                  <Route path="/it-services-2031" element={<ComprehensiveServicesShowcase2031 />} />
+                  <Route path="/micro-saas-2031" element={<ComprehensiveServicesShowcase2031 />} />
                   
                   {/* Additional Pages */}
                   <Route path="/marketplace" element={<Marketplace />} />
