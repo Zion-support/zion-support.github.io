@@ -77,6 +77,10 @@ const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICybersecuritySuite'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
+const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
+const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
+const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
@@ -194,6 +198,10 @@ function App() {
               <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
               <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
               <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
+              <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
+              <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
+              <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />

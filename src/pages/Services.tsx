@@ -65,6 +65,24 @@ export default function Services() {
           reviewCount: 156
         },
         {
+          name: 'AI Workflow Orchestrator',
+          description: 'Intelligent workflow automation with multi-agent coordination and real-time optimization',
+          features: ['Process Orchestration', 'Multi-Agent Systems', 'Dynamic Adaptation', 'Performance Analytics'],
+          href: '/services/ai-workflow-orchestrator',
+          price: 'From $2,500',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'AI Data Governance',
+          description: 'AI-powered data classification, compliance automation, and intelligent access control',
+          features: ['Data Classification', 'Compliance Automation', 'Access Control', 'Data Lineage'],
+          href: '/services/ai-data-governance',
+          price: 'From $3,500',
+          rating: 4.8,
+          reviewCount: 134
+        },
+        {
           name: 'LLM Content Studio',
           description: 'AI-powered content generation and management platform',
           features: ['Content Creation', 'Brand Voice Consistency', 'SEO Optimization', 'Multi-language Support'],
@@ -107,6 +125,15 @@ export default function Services() {
           price: 'From $6,000',
           rating: 4.9,
           reviewCount: 98
+        },
+        {
+          name: 'Edge Computing Platform',
+          description: 'Distributed edge computing with ultra-low latency and real-time analytics',
+          features: ['Edge Nodes', 'Load Balancing', 'Real-time Analytics', 'Global Network'],
+          href: '/services/edge-computing-platform',
+          price: 'From $4,500',
+          rating: 4.8,
+          reviewCount: 76
         }
       ]
     },
@@ -203,6 +230,15 @@ export default function Services() {
           price: 'From $1,500',
           rating: 4.6,
           reviewCount: 445
+        },
+        {
+          name: 'AI Customer Success Platform',
+          description: 'Intelligent customer success with predictive analytics and automated engagement',
+          features: ['Churn Prevention', 'Health Scoring', 'Automated Engagement', 'Predictive Analytics'],
+          href: '/services/ai-customer-success-platform',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 234
         }
       ]
     }
