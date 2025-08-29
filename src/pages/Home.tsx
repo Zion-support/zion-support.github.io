@@ -2,10 +2,28 @@
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  Rocket, 
+  TrendingUp, 
+  Star, 
+  Brain, 
+  Cloud, 
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Globe,
+  Award,
+  Target,
+  Clock,
+  Heart,
+  Crown,
+  Sparkles
+} from 'lucide-react';
 
->>>>>>> cursor/website-audit-content-update-and-deployment-c7b2
 import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
+import { EnhancedHeroSection } from "@/components/EnhancedHeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
 // Lazy load components for better performance
@@ -47,195 +65,94 @@ const LoadingFallback = ({ message }: { message: string }) => (
   </div>
 );
 
-// Service categories data
+// Enhanced service categories data with better descriptions and icons
 const serviceCategories = [
   {
     name: "AI Solutions",
     description: "Cutting-edge artificial intelligence services for business transformation",
-    icon: "🤖",
+    icon: Brain,
     href: "/ai-services",
     count: 20,
-    color: "from-cyan-500 to-blue-600"
+    color: "from-cyan-500 to-blue-600",
+    features: ["Machine Learning", "Predictive Analytics", "Process Automation"]
   },
   {
     name: "Edge & IoT",
     description: "Ultra-low latency edge computing and IoT platform solutions",
-    icon: "⚡",
+    icon: Zap,
     href: "/services/edge-computing-platform",
     count: 8,
-    color: "from-blue-500 to-purple-600"
+    color: "from-blue-500 to-purple-600",
+    features: ["Real-time Processing", "Low Latency", "Scalable Architecture"]
   },
   {
     name: "Cloud & DevOps",
     description: "Scalable cloud infrastructure and automated deployment solutions",
-    icon: "☁️",
+    icon: Cloud,
     href: "/services/cloud-devops",
     count: 12,
-    color: "from-green-500 to-emerald-600"
+    color: "from-green-500 to-emerald-600",
+    features: ["CI/CD Automation", "Infrastructure as Code", "Container Orchestration"]
   },
   {
     name: "Cybersecurity",
     description: "Advanced security protocols and threat protection systems",
-    icon: "🔒",
+    icon: Shield,
     href: "/services/ai-compliance-copilot",
     count: 10,
-    color: "from-red-500 to-orange-600"
+    color: "from-red-500 to-orange-600",
+    features: ["Threat Detection", "Compliance Management", "24/7 Monitoring"]
   },
   {
     name: "Data Governance",
     description: "AI-powered data protection and compliance management",
-    icon: "🛡️",
+    icon: Globe,
     href: "/services/ai-data-governance",
     count: 6,
-    color: "from-purple-500 to-pink-600"
+    color: "from-purple-500 to-pink-600",
+    features: ["Data Privacy", "Regulatory Compliance", "Risk Management"]
   },
   {
     name: "Customer Success",
     description: "AI-driven customer engagement and retention platforms",
-    icon: "💝",
+    icon: Heart,
     href: "/services/ai-customer-success-platform",
     count: 5,
-    color: "from-yellow-500 to-orange-600"
+    color: "from-yellow-500 to-orange-600",
+    features: ["Customer Analytics", "Personalization", "Retention Optimization"]
   }
 ];
 
-// Animation variants for smooth performance
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
-
-// Stats data
-const stats = [
-  {
-    icon: Users,
-    value: "500+",
-    label: "Global Clients",
-    description: "Trusted worldwide"
-  },
-  {
-    icon: Rocket,
-    value: "1000+",
-    label: "Projects Delivered",
-    description: "Successfully completed"
-  },
-  {
-    icon: TrendingUp,
-    value: "99.9%",
-    label: "Uptime SLA",
-    description: "Enterprise reliability"
-  },
-  {
-    icon: Star,
-    value: "24/7",
-    label: "Expert Support",
-    description: "Always available"
-  }
+// Enhanced stats section data
+const companyStats = [
+  { label: "Years of Experience", value: "15+", icon: Clock, color: "text-blue-400" },
+  { label: "Global Clients", value: "500+", icon: Users, color: "text-green-400" },
+  { label: "Success Rate", value: "98%", icon: Star, color: "text-yellow-400" },
+  { label: "Innovation Index", value: "95%", icon: Rocket, color: "text-purple-400" }
 ];
 
-// AI Services data
-const aiServices = [
+// Enhanced features data
+const keyFeatures = [
   {
+    title: "AI-Powered Innovation",
+    description: "Leverage cutting-edge artificial intelligence to transform your business operations",
     icon: Brain,
-    title: "AI Business Intelligence",
-    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
-    path: "/services/ai-business-intelligence",
-    features: [
-      "Predictive Analytics",
-      "Real-time Dashboards",
-      "Automated Reporting",
-      "Custom ML Models"
-    ]
+    color: "from-cyan-500 to-blue-600",
+    benefits: ["Increased Efficiency", "Better Decision Making", "Cost Reduction"]
   },
   {
-    icon: Cloud,
-    title: "Cloud DevOps",
-    description: "Streamline your development pipeline with automated cloud infrastructure.",
-    path: "/services/cloud-devops",
-    features: [
-      "CI/CD Automation",
-      "Infrastructure as Code",
-      "Container Orchestration",
-      "Security Integration"
-    ]
-  },
-  {
-    icon: Shield,
-    title: "AI Cybersecurity",
-    description: "Protect your business with intelligent threat detection and response systems.",
-    path: "/services/ai-cybersecurity-suite",
-    features: [
-      "Threat Intelligence",
-      "Automated Response",
-      "Zero Trust Architecture",
-      "Compliance Monitoring"
-    ]
-  }
-];
-
-// Why Choose Us data
-const whyChooseUs = [
-  {
-    icon: Award,
-    title: "Industry Expertise",
-    description: "15+ years of proven technology leadership and innovation"
-  },
-  {
+    title: "Global Expertise",
+    description: "Access world-class technology expertise from our international team",
     icon: Globe,
-    title: "Global Reach",
-    description: "Serving clients across 50+ countries with 24/7 support"
+    color: "from-green-500 to-emerald-600",
+    benefits: ["24/7 Support", "Local Knowledge", "Cultural Understanding"]
   },
   {
-    icon: Shield,
-    title: "Enterprise Security",
-    description: "Bank-grade security and compliance standards"
-  },
-  {
-    icon: Heart,
-    title: "Customer Success",
-    description: "98% customer satisfaction with dedicated success managers"
-  }
-];
-
-// Trust Signals data
-const trustSignals = [
-  {
-    icon: Award,
-    label: "ISO 27001 Certified",
-    description: "Information security management"
-  },
-  {
-    icon: Shield,
-    label: "SOC 2 Compliant",
-    description: "Security, availability, and confidentiality"
-  },
-  {
-    icon: Globe,
-    label: "GDPR Ready",
-    description: "Data protection compliance"
-  },
-  {
-    icon: Star,
-    label: "99.9% Uptime",
-    description: "Enterprise-grade reliability"
+    title: "Future-Ready Solutions",
+    description: "Stay ahead of the curve with our forward-thinking technology solutions",
+    icon: Rocket,
+    color: "from-purple-500 to-pink-600",
+    benefits: ["Scalable Architecture", "Future-Proof Design", "Continuous Innovation"]
   }
 ];
 
@@ -246,282 +163,262 @@ export default function Home() {
     setIsVisible(true);
   }, []);
 
-
   return (
-    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Zion Tech Group - Leading AI & Technology Solutions" 
-        description="Transform your business with Zion's cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. Join the future of technology."
-        keywords="AI solutions, cloud services, cybersecurity, digital transformation, technology consulting, Zion Tech Group"
-        canonical="https://ziontechgroup.com/"
+        title="Zion Tech Group - AI-Powered Business Solutions & IT Services"
+        description="Transform your business with Zion Tech Group's cutting-edge AI solutions, comprehensive IT services, and innovative technology consulting. Drive growth with our expert team."
+        keywords="AI solutions, IT services, business transformation, cloud computing, cybersecurity, digital transformation, Zion Tech Group"
       />
+      
+      {/* Enhanced Hero Section */}
+      <EnhancedHeroSection />
 
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Service Categories Overview */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-slate-800/50 to-slate-900/50 backdrop-blur-sm relative"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Company Stats Section */}
+      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="text-center mb-20"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.6, staggerChildren: 0.1 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Our <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Service Categories</span>
+            {companyStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className={`mx-auto mb-3 p-3 rounded-full bg-slate-700 w-16 h-16 flex items-center justify-center`}>
+                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-slate-300 text-sm">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Enhanced Service Categories */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              Explore our comprehensive range of technology solutions designed to transform your business and drive innovation
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to drive your business forward in the digital age
             </p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.name}
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-700 p-8 hover:from-slate-700 hover:to-slate-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+                whileHover={{ y: -5 }}
               >
-                <Link to={category.href} className="block h-full">
-                  <div className="bg-slate-800/50 backdrop-blur-md p-8 rounded-3xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25 h-full flex flex-col justify-between">
-                    <div>
-                      <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-500 shadow-lg`}>
-                        <span className="text-3xl">{category.icon}</span>
-                      </div>
-                      <h3 className="text-2xl font-bold text-white mb-4 text-center group-hover:text-cyan-400 transition-colors duration-300">
-                        {category.name}
-                      </h3>
-                      <p className="text-slate-300 text-center mb-6 leading-relaxed">
-                        {category.description}
-                      </p>
-                    </div>
-                    <div className="text-center">
-                      <span className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 text-cyan-400 text-sm font-semibold border border-cyan-500/30">
-                        {category.count} Services
-                      </span>
-                    </div>
+                <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                <div className="relative z-10">
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${category.color} mb-6`}>
+                    <category.icon className="w-8 h-8 text-white" />
                   </div>
-                </Link>
+                  <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
+                  <p className="text-slate-300 mb-6">{category.description}</p>
+                  
+                  {category.features && (
+                    <div className="mb-6">
+                      <ul className="space-y-2">
+                        {category.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-slate-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-slate-400">{category.count} services</span>
+                    <Link 
+                      to={category.href}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
+                </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </motion.section>
+      </section>
 
-
-      {/* Featured Services Section */}
-      <motion.section 
-        className="py-24 bg-gradient-to-b from-slate-900 to-slate-800"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
+      {/* Enhanced Key Features Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
-            className="text-center mb-20"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Featured <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech</span>
             </h2>
-            <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
-              Discover our most popular and innovative technology solutions
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              We combine innovation, expertise, and dedication to deliver exceptional results for your business
             </p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* AI-Powered Solutions */}
-            <motion.div 
-              initial={{ x: -30, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="group"
-            >
-              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-md p-8 rounded-3xl border border-cyan-500/30 hover:border-cyan-500/60 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/25">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">🤖</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">AI-Powered Solutions</h3>
-                    <p className="text-cyan-400 text-sm font-medium">Most Popular</p>
-                  </div>
+
+          <motion.div 
+            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {keyFeatures.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                className="text-center group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+                transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+              >
+                <div className={`mx-auto mb-6 p-4 rounded-2xl bg-gradient-to-r ${feature.color} w-20 h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-10 h-10 text-white" />
                 </div>
-                <p className="text-slate-300 mb-6 leading-relaxed">
-                  Leverage cutting-edge artificial intelligence to automate processes, gain insights, and transform your business operations with our comprehensive AI solutions.
-                </p>
-                <Link 
-                  to="/ai-services" 
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 group-hover:scale-105"
-                >
-                  Explore AI Solutions
-                  <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Cloud & DevOps */}
-            <motion.div 
-              initial={{ x: 30, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="group"
-            >
-              <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 backdrop-blur-md p-8 rounded-3xl border border-blue-500/30 hover:border-blue-500/60 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">☁️</span>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white">Cloud & DevOps</h3>
-                    <p className="text-blue-400 text-sm font-medium">Enterprise Ready</p>
-                  </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-slate-300 mb-6">{feature.description}</p>
+                
+                <div className="space-y-3">
+                  {feature.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center justify-center text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span className="text-sm">{benefit}</span>
+                    </div>
+                  ))}
                 </div>
-                <p className="text-slate-300 mb-6 leading-relaxed">
-                  Build, deploy, and scale your applications with our enterprise-grade cloud infrastructure and automated DevOps practices.
-                </p>
-                <Link 
-                  to="/services/cloud-devops" 
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group-hover:scale-105"
-                >
-                  Explore Cloud Services
-                  <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </motion.div>
-          </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </motion.section>
+      </section>
 
-      {/* CTA Section */}
-      <motion.section 
-        className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Join hundreds of businesses that have already revolutionized their operations with our AI-powered solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Journey
-            </Link>
-            <Link 
-              to="/services" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              Explore Services
-            </Link>
-          </div>
+      {/* Enhanced CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+              Join hundreds of companies already leveraging our AI-powered solutions to drive growth and innovation
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-xl hover:bg-slate-100 transition-colors duration-200 transform hover:scale-105"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-cyan-600 transition-all duration-200 transform hover:scale-105"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </motion.div>
         </div>
-      </motion.section>
+      </section>
 
-      {/* Lazy Loaded Sections */}
-      <Suspense fallback={<LoadingFallback message="Loading services..." />}>
+      {/* Lazy Loaded Components with Better Error Handling */}
+      <Suspense fallback={<LoadingFallback message="Loading Categories..." />}>
         <CategoriesSection />
       </Suspense>
-      
-      <Suspense fallback={<LoadingFallback message="Loading features..." />}>
-        <FeatureHighlights />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
-        <FeatureCTAs />
-      </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading benefits..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Benefits..." />}>
         <BenefitsSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading how it works..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading How It Works..." />}>
         <HowItWorksSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading tech solutions..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Tech Solutions..." />}>
         <TechSolutionsSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading case studies..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Case Studies..." />}>
         <CaseStudiesSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading team expertise..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Team Expertise..." />}>
         <TeamExpertiseSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading global presence..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Global Presence..." />}>
         <GlobalPresenceSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading innovation research..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Innovation Research..." />}>
         <InnovationResearchSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading client stories..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Client Success Stories..." />}>
         <ClientSuccessStoriesSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
-        <InteractiveTestimonials />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading technology stack..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Technology Stack..." />}>
         <TechnologyStackSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading security compliance..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Security Compliance..." />}>
         <SecurityComplianceSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading pricing..." />}>
-        <PricingSection />
+      <Suspense fallback={<LoadingFallback message="Loading AI Services Showcase..." />}>
+        <AIServicesShowcase />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading featured listings..." />}>
-        <FeaturedListingsSection />
+      <Suspense fallback={<LoadingFallback message="Loading Interactive Testimonials..." />}>
+        <InteractiveTestimonials />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading newsletter..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Services Showcase..." />}>
+        <ServicesShowcase />
+      </Suspense>
+
+      <Suspense fallback={<LoadingFallback message="Loading Newsletter..." />}>
         <NewsletterSection />
       </Suspense>
 
-      <Suspense fallback={<LoadingFallback message="Loading IT service request..." />}>
-        <ITServiceRequestHero />
-      </Suspense>
-
-      <Suspense fallback={<LoadingFallback message="Loading floating CTA..." />}>
+      <Suspense fallback={<LoadingFallback message="Loading Floating CTA..." />}>
         <FloatingCTA />
       </Suspense>
     </div>
