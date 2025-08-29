@@ -284,11 +284,11 @@ body {
 
 /* Focus States */
 .focus-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zion-slate;
+  @apply focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900;
 }
 
 .focus-ring-light {
-  @apply focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-white;
+  @apply focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-white;
 }
 
 /* Scrollbar Styling */
