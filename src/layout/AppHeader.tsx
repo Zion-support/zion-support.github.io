@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Activity, Calendar, PenTool } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -64,6 +64,12 @@ export function AppHeader() {
     { name: 'RAG Search', href: '/services/rag-search', icon: BookOpen, description: 'AI answers with citations' },
     { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' },
     { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', icon: ShoppingCart, description: 'Recos & search' },
+    { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker', icon: TrendingUp, description: 'Advanced affiliate tracking & analytics' },
+    { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor', icon: Activity, description: 'Professional uptime monitoring' },
+    { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker', icon: Shield, description: 'Automated compliance management' },
+    { name: 'Employee Scheduling SaaS', href: '/services/employee-scheduling-saas', icon: Calendar, description: 'AI-powered workforce management' },
+    { name: 'AI Support Helpdesk', href: '/services/ai-support-helpdesk', icon: MessageCircle, description: 'Intelligent customer support' },
+    { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'AI-powered content creation' },
   ];
 
   const servicesCategories = [

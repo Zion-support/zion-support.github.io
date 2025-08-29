@@ -101,6 +101,14 @@ const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGoverna
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
+// Additional Micro SaaS Services
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
+const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
+const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
+const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
+const AIContentGenerator = React.lazy(() => import('./pages/services/AIContentGenerator'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -196,6 +204,7 @@ function App() {
               <Route path="/services/soc2-compliance-tracker" element={<SOC2ComplianceTracker />} />
               <Route path="/services/employee-scheduling-saas" element={<EmployeeSchedulingSaaS />} />
               <Route path="/services/ai-support-helpdesk" element={<AISupportHelpdesk />} />
+              <Route path="/services/ai-content-generator" element={<AIContentGenerator />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
               <Route path="/request-quote" element={<RequestQuote />} />
               <Route path="/dashboard" element={<Dashboard />} />

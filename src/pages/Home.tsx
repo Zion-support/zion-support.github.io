@@ -2,7 +2,7 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap, TrendingUp, Activity, Calendar, MessageCircle, PenTool } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -692,6 +692,168 @@ export default function Home() {
                   </svg>
                 </Link>
               </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* New Services Showcase */}
+      <motion.section 
+        className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-400 bg-clip-text text-transparent">
+                New & Innovative Services
+              </span>
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+              Discover our latest AI-powered solutions and micro SaaS services designed to transform your business
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            {/* Affiliate Marketing Tracker */}
+            <motion.div 
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Affiliate Marketing Tracker</h3>
+              <p className="text-gray-300 mb-4">Advanced affiliate tracking with AI-powered analytics, fraud detection, and real-time reporting.</p>
+              <Link 
+                to="/services/affiliate-marketing-tracker"
+                className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200"
+              >
+                Learn More
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </motion.div>
+
+            {/* Uptime SLA Monitor */}
+            <motion.div 
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300"
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                <Activity className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Uptime SLA Monitor</h3>
+              <p className="text-gray-300 mb-4">Professional uptime monitoring and SLA tracking for websites, APIs, and infrastructure.</p>
+              <Link 
+                to="/services/uptime-sla-monitor"
+                className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors duration-200"
+              >
+                Learn More
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </motion.div>
+
+            {/* SOC2 Compliance Tracker */}
+            <motion.div 
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">SOC2 Compliance Tracker</h3>
+              <p className="text-gray-300 mb-4">Automated SOC2 compliance management with controls monitoring and audit preparation.</p>
+              <Link 
+                to="/services/soc2-compliance-tracker"
+                className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors duration-200"
+              >
+                Learn More
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </motion.div>
+
+            {/* Employee Scheduling SaaS */}
+            <motion.div 
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300"
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                <Calendar className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Employee Scheduling SaaS</h3>
+              <p className="text-gray-300 mb-4">AI-powered workforce management with smart scheduling and time tracking.</p>
+              <Link 
+                to="/services/employee-scheduling-saas"
+                className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors duration-200"
+              >
+                Learn More
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </motion.div>
+
+            {/* AI Support Helpdesk */}
+            <motion.div 
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
+                <MessageCircle className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">AI Support Helpdesk</h3>
+              <p className="text-gray-300 mb-4">Intelligent customer support with AI chatbots and multi-channel assistance.</p>
+              <Link 
+                to="/services/ai-support-helpdesk"
+                className="inline-flex items-center text-teal-400 hover:text-teal-300 transition-colors duration-200"
+              >
+                Learn More
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </motion.div>
+
+            {/* AI Content Generator */}
+            <motion.div 
+              className="group bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300"
+              whileHover={{ y: -5 }}
+            >
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <PenTool className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">AI Content Generator</h3>
+              <p className="text-gray-300 mb-4">Create engaging content with AI-powered writing tools and templates.</p>
+              <Link 
+                to="/services/ai-content-generator"
+                className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors duration-200"
+              >
+                Learn More
+                <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
             </motion.div>
           </motion.div>
         </div>
