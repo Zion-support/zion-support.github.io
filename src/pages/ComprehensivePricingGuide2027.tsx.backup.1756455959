@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+import { SEO } from '@/components/SEO';
+=======
 // Lightweight top summary for SEO. The richer, interactive guide continues below.
 import React from 'react';
 import { SEO } from '@/components/SEO';
@@ -15,6 +19,7 @@ export const PricingSummaryIntro: React.FC = () => (
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-9e26
 import { Link } from 'react-router-dom';
 import { servicesCatalog } from '@/data/servicesCatalog';
 import { 
