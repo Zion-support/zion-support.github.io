@@ -100,7 +100,7 @@ const AIContentMarketingSuite = lazy(() => import('./pages/services/AIContentMar
 const AIQuantumHybridPlatform = lazy(() => import('./pages/services/AIQuantumHybridPlatform'));
 const AIQuantumFinancialTrading = lazy(() => import('./pages/services/AIQuantumFinancialTrading'));
 const AIPredictiveMaintenance = lazy(() => import('./pages/services/AIPredictiveMaintenance'));
-const QuantumMachineLearning = lazy(() => import('./pages/services/QuantumMachineLearning'));
+// const QuantumMachineLearning = lazy(() => import('./pages/services/QuantumMachineLearning'));
 const AIAutonomousSupplyChain = lazy(() => import('./pages/services/AIAutonomousSupplyChain'));
 const AICybersecurityThreatIntelligence = lazy(() => import('./pages/services/AICybersecurityThreatIntelligence'));
 const AIAutonomousThreatIntelligence = lazy(() => import('./pages/services/AIAutonomousThreatIntelligence'));
@@ -240,7 +240,7 @@ function App() {
                 {/* Additional innovative AI services */}
                 <Route path="/services/ai-quantum-financial-trading" element={<AIQuantumFinancialTrading />} />
                 <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
-                <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+                {/* <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} /> */}
                 
                 {/* Additional innovative AI services */}
                 <Route path="/services/ai-autonomous-supply-chain" element={<AIAutonomousSupplyChain />} />
