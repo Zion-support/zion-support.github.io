@@ -36,72 +36,30 @@ export function AppHeader() {
 
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false, hasDropdown: true },
+    { name: 'Services', href: '/services-overview', current: false },
+    { name: 'Pricing', href: '/pricing-guide', current: false },
+    { name: 'Partners', href: '/partners', current: false },
     { name: 'AI Services', href: '/ai-services', current: false },
     { name: 'IT Services', href: '/it-services', current: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
-  const servicesCategories = [
-    {
-      name: 'AI & Analytics',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      description: 'Intelligent business solutions',
-      services: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics platform' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & coaching' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Intelligent email automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
-      ]
-    },
-    {
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Infrastructure & automation',
-      services: [
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization platform' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'DevOps automation & CI/CD' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure management' },
-      ]
-    },
-    {
-      name: 'IoT & Digital Twin',
-      icon: Cpu,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Smart systems & monitoring',
-      services: [
-        { name: 'Digital Twin Platform', href: '/services/digital-twin', description: 'System simulation & monitoring' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Edge computing solutions' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data insights' },
-      ]
-    },
-    {
-      name: 'Quantum Computing',
-      icon: Rocket,
-      color: 'from-indigo-600 to-purple-600',
-      description: 'Next-generation computing',
-      services: [
-        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', description: 'Quantum algorithms & optimization' },
-        { name: 'Quantum Neural Networks', href: '/services/quantum-neural-network-platform', description: 'Quantum AI platform' },
-      ]
-    },
-    {
-      name: 'Specialized Solutions',
-      icon: Award,
-      color: 'from-orange-600 to-red-600',
-      description: 'Industry-specific solutions',
-      services: [
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations optimization' },
-        { name: 'Customer Feedback Platform', href: '/services/mobile-feedback-surveys', description: 'AI-powered feedback analysis' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Advanced compliance management' },
-      ]
-    }
+  const services = [
+    { name: 'AI & Analytics', href: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Simulation & Monitoring' },
+    { name: 'Cybersecurity', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'DeFi & Smart Contracts' },
+    { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
+    { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
   ];
 
   const quickLinks = [

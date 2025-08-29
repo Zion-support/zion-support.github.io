@@ -70,12 +70,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics platform' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & coaching' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Intelligent email automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Advanced compliance management' }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
       ]
     },
     {
@@ -83,12 +83,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization platform' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'DevOps automation & CI/CD' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure management' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business transformation services' },
-        { name: 'Green IT Solutions', href: '/services/green-it', description: 'Sustainable technology solutions' },
-        { name: '5G Network Solutions', href: '/services/5g-solutions', description: 'Next-gen network infrastructure' }
+        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' }
       ]
     },
     {
@@ -96,12 +96,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'Digital Twin Platform', href: '/services/digital-twin', description: 'System simulation & monitoring' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Edge computing solutions' },
-        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data insights' },
-        { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions', description: 'Industry 4.0 solutions' },
-        { name: 'Supply Chain Optimization', href: '/services/supply-chain', description: 'Smart supply chain management' },
-        { name: 'Retail Solutions', href: '/services/retail-solutions', description: 'Digital retail transformation' }
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Onsite Support', href: '/services/onsite-support' },
+        { name: 'Green IT Solutions', href: '/services/green-it' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
       ]
     },
     {
@@ -109,23 +109,26 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', description: 'Quantum algorithms & optimization' },
-        { name: 'Quantum Neural Networks', href: '/services/quantum-neural-network-platform', description: 'Quantum AI platform' },
-        { name: 'Blockchain & Web3', href: '/services/blockchain-web3', description: 'Decentralized solutions' },
-        { name: 'Space Technology', href: '/services/space-tech', description: 'Space tech innovations' },
-        { name: 'Cybersecurity Suite', href: '/services/cybersecurity', description: 'Advanced security solutions' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' }
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Sustainability', href: '/services/sustainability' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
       ]
     }
   ];
 
-  const quickAccessLinks = [
-    { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-    { name: 'Services Showcase 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: Award, description: 'Advanced pricing strategies' },
-    { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', icon: Users, description: 'Productized SaaS solutions' },
-    { name: 'Request Quote', href: '/request-quote', icon: CheckCircle, description: 'Get custom pricing' },
-    { name: 'Contact Us', href: '/contact', icon: Mail, description: 'Get in touch today' }
+  const quickLinks = [
+    { name: 'Services Overview', href: '/services-overview' },
+    { name: 'Pricing Guide', href: '/pricing-guide' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' }
+  ];
   ];
 
   const companyLinks = [
@@ -439,6 +442,20 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-10 left-10 opacity-20">
+        <Brain className="w-8 h-8 text-zion-cyan animate-bounce" />
+      </div>
+      <div className="absolute top-20 right-20 opacity-20">
+        <Rocket className="w-8 h-8 text-zion-purple animate-pulse" />
+      </div>
+      <div className="absolute bottom-20 left-20 opacity-20">
+        <Brain className="w-8 h-8 text-zion-cyan animate-spin" />
+      </div>
+      <div className="absolute bottom-10 right-10 opacity-20">
+        <Shield className="w-8 h-8 text-zion-purple animate-bounce delay-1000" />
       </div>
     </footer>
   );
