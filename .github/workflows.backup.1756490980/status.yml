@@ -2,7 +2,7 @@ name: Status
 
 on:
   workflow_run:
-    workflows: ["CodeQL"]
+    workflows: ["Simple CI", "CI/CD Pipeline"]
     types:
       - completed
 
@@ -26,17 +26,3 @@ jobs:
         else
           echo "⚠️ Workflow completed with warnings"
         fi
-        
-        echo ""
-        echo "Note: Most automation tasks are now handled by PM2 processes:"
-        echo "- console-error-fixer (every 15 minutes)"
-        echo "- continuous-improvement (every 2 hours)"
-        echo "- daily-build-test (every hour)"
-        echo "- security-audit (every 4 hours)"
-        echo "- dependency-updates (every 6 hours)"
-        echo "- performance-monitor (every 2 hours)"
-        echo "- quality-checks (every 3 hours)"
-        echo "- link-checker (every 30 minutes)"
-        echo "- link-integrity (every 2 hours)"
-        echo "- front-maximizer (every 4 hours)"
-        echo "- sitemap-runner (every 6 hours)"
