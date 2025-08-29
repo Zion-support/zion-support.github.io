@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap } from 'lucide-react'
+import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap, BarChart3, Star, TrendingUp, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -165,7 +165,7 @@ export default function Index() {
 							</div>
 							<div className="mt-8">
 								<Link
-									to="/services"
+									href="/services"
 									className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
 								>
 									View All Services
