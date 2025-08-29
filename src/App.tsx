@@ -111,7 +111,7 @@ const AIContentCreation = createLazyComponent(() => import('./pages/services/ai-
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/iot-edge-computing'));
 const QuantumComputing = createLazyComponent(() => import('./pages/services/quantum-computing'));
 const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));
-const DataAnalytics = createLazyComponent(() => import('./pages/DataAnalytics'));
+const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));
 const API = createLazyComponent(() => import('./pages/API'));
 const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
 
@@ -134,6 +134,7 @@ const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/
 const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/AIAutonomousResearchAssistant'));
 const AIContentMarketingSuite = createLazyComponent(() => import('./pages/services/AIContentMarketingSuite'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AIQuantumHybridPlatform'));
+const AIAutonomousThreatIntelligence = createLazyComponent(() => import('./pages/AIAutonomousThreatIntelligence'));
 const AICybersecurityPlatform = createLazyComponent(() => import('./pages/services/AICybersecurityPlatform'));
 const AIHealthcarePlatform = createLazyComponent(() => import('./pages/services/AIHealthcarePlatform'));
 
@@ -302,6 +303,11 @@ function App() {
                     <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
                     <Route path="/services/digital-twin" element={<DigitalTwin />} />
                     <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                    
+                    {/* New AI Services Routes */}
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    <Route path="/services/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                    <Route path="/services/ai-autonomous-threat-intelligence" element={<AIAutonomousThreatIntelligence />} />
                     
                     {/* Additional Pages */}
                     <Route path="/api" element={<API />} />
