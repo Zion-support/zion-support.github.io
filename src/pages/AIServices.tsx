@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink, Image as ImageIcon, FileText, Workflow, Globe, Video } from 'lucide-react';
+import { Brain, LineChart, Bot, Database, Shield, DollarSign, ExternalLink, Image as ImageIcon, FileText, Workflow, Globe, Video, Users, ShoppingCart, Heart, Building, Zap, Truck, Camera, Mic, TrendingUp, Palette, Target, Lock, TrendingUp as TrendingUpIcon, Building as BuildingIcon, Zap as ZapIcon, Truck as TruckIcon, Camera as CameraIcon, Mic as MicIcon, Users as UsersIcon, ShoppingCart as ShoppingCartIcon, Heart as HeartIcon, Lock as LockIcon, Globe as GlobeIcon } from 'lucide-react';
 
 const AIServices: React.FC = () => {
   const offerings = [
@@ -89,6 +89,109 @@ const AIServices: React.FC = () => {
       title: 'Agentic Process Automation',
       desc: 'Task-centric multi-agent systems integrating CRMs/ERPs/ticketing with guardrails and observability.',
       price: '$6,000 - $55,000+'
+    },
+    // New AI Services
+    {
+      icon: Brain,
+      title: 'AI Model Governance & MLOps',
+      desc: 'End-to-end ML model lifecycle management with versioning, monitoring, and automated retraining.',
+      price: '$8,000 - $75,000+'
+    },
+    {
+      icon: Shield,
+      title: 'AI Security & Adversarial Testing',
+      desc: 'Robust AI security with adversarial training, model hardening, and security validation.',
+      price: '$5,000 - $45,000+'
+    },
+    {
+      icon: Globe,
+      title: 'AI-Powered Market Intelligence',
+      desc: 'Real-time market analysis, competitor monitoring, and predictive market trends using AI.',
+      price: '$4,500 - $35,000+'
+    },
+    {
+      icon: Users,
+      title: 'AI Talent Acquisition Platform',
+      desc: 'Intelligent candidate matching, skill assessment, and automated recruitment workflows.',
+      price: '$3,500 - $28,000+'
+    },
+    {
+      icon: ShoppingCart,
+      title: 'AI E-commerce Optimization',
+      desc: 'Personalized recommendations, dynamic pricing, and inventory optimization using AI.',
+      price: '$4,000 - $40,000+'
+    },
+    {
+      icon: Heart,
+      title: 'AI Drug Discovery Platform',
+      desc: 'Machine learning for drug discovery, molecular modeling, and clinical trial optimization.',
+      price: '$25,000 - $200,000+'
+    },
+    {
+      icon: Building,
+      title: 'AI Smart City Solutions',
+      desc: 'Urban planning, traffic optimization, and infrastructure management using AI and IoT.',
+      price: '$15,000 - $150,000+'
+    },
+    {
+      icon: Zap,
+      title: 'AI Energy Trading Platform',
+      desc: 'Predictive energy trading, demand forecasting, and renewable energy optimization.',
+      price: '$20,000 - $180,000+'
+    },
+    {
+      icon: Truck,
+      title: 'AI Supply Chain Optimization',
+      desc: 'End-to-end supply chain optimization with demand forecasting and logistics automation.',
+      price: '$12,000 - $120,000+'
+    },
+    {
+      icon: Camera,
+      title: 'AI Computer Vision Solutions',
+      desc: 'Custom computer vision applications for quality control, security, and automation.',
+      price: '$6,000 - $60,000+'
+    },
+    {
+      icon: Mic,
+      title: 'AI Voice & Speech Analytics',
+      desc: 'Voice recognition, sentiment analysis, and automated call center optimization.',
+      price: '$4,500 - $45,000+'
+    },
+    {
+      icon: Database,
+      title: 'AI Data Fabric Platform',
+      desc: 'Unified data access, governance, and AI-powered data discovery across silos.',
+      price: '$15,000 - $120,000+'
+    },
+    {
+      icon: TrendingUp,
+      title: 'AI Financial Risk Management',
+      desc: 'Real-time risk assessment, fraud detection, and regulatory compliance automation.',
+      price: '$18,000 - $150,000+'
+    },
+    {
+      icon: Palette,
+      title: 'AI Creative Content Generation',
+      desc: 'AI-powered content creation, design generation, and creative asset management.',
+      price: '$3,000 - $25,000+'
+    },
+    {
+      icon: Target,
+      title: 'AI Marketing Attribution',
+      desc: 'Multi-touch attribution modeling with ROI optimization and campaign performance analytics.',
+      price: '$5,000 - $40,000+'
+    },
+    {
+      icon: Lock,
+      title: 'AI Privacy & Data Protection',
+      desc: 'Automated data privacy compliance, PII detection, and data anonymization.',
+      price: '$4,000 - $35,000+'
+    },
+    {
+      icon: Globe,
+      title: 'AI Climate & Sustainability',
+      desc: 'Environmental impact assessment, carbon footprint tracking, and sustainability optimization.',
+      price: '$8,000 - $80,000+'
     }
   ];
 

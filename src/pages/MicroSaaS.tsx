@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages } from 'lucide-react';
+import { Mail, MessageSquare, Calendar, PenTool, BarChart3, Users, DollarSign, ExternalLink, Shield, FileSearch, Bug, Globe, CreditCard, ShoppingCart, Bell, Languages, Database, Cpu, Lock, TrendingUp, Heart, Building, Truck, Camera, Mic, Palette, Target } from 'lucide-react';
 
 const MicroSaaS: React.FC = () => {
   const products = [
@@ -102,6 +102,147 @@ const MicroSaaS: React.FC = () => {
       desc: 'Intelligent customer success with predictive analytics, churn prevention, and automated engagement.',
       pricing: 'From $299/mo',
       href: 'https://ziontechgroup.com/services/ai-customer-success-platform'
+    },
+    // New innovative micro SaaS products
+    {
+      icon: FileSearch,
+      name: 'AI Document Intelligence Hub',
+      desc: 'Extract, classify, and analyze documents with AI-powered OCR and intelligent data extraction.',
+      pricing: 'From $89/mo + $0.10/page',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: BarChart3,
+      name: 'Predictive Analytics Engine',
+      desc: 'Build and deploy ML models for forecasting, anomaly detection, and predictive insights.',
+      pricing: 'From $199/mo + $0.50/prediction',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Shield,
+      name: 'Compliance Automation Suite',
+      desc: 'Automated compliance monitoring for GDPR, CCPA, SOC2, and industry-specific regulations.',
+      pricing: 'From $149/mo per compliance framework',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Globe,
+      name: 'Global Content Localization',
+      desc: 'AI-powered content translation, cultural adaptation, and multi-language SEO optimization.',
+      pricing: 'From $79/mo + $0.05/word',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Users,
+      name: 'Employee Experience Platform',
+      desc: 'HR automation with onboarding, performance tracking, and employee engagement analytics.',
+      pricing: 'From $5/employee/mo',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: ShoppingCart,
+      name: 'E-commerce Intelligence Suite',
+      desc: 'Customer behavior analytics, inventory optimization, and conversion rate optimization.',
+      pricing: 'From $99/mo + 1% revenue increase',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: MessageSquare,
+      name: 'Multi-Channel Support Hub',
+      desc: 'Unified customer support across email, chat, social media, and phone with AI routing.',
+      pricing: 'From $129/mo per agent',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Database,
+      name: 'Data Pipeline Orchestrator',
+      desc: 'Visual ETL pipeline builder with data quality monitoring and automated scheduling.',
+      pricing: 'From $199/mo + $0.01/GB processed',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Cpu,
+      name: 'Edge Computing Management',
+      desc: 'Deploy and manage edge applications with real-time monitoring and auto-scaling.',
+      pricing: 'From $79/mo per edge node',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Lock,
+      name: 'Identity & Access Governance',
+      desc: 'Enterprise identity management with SSO, MFA, and role-based access control.',
+      pricing: 'From $3/user/mo',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Revenue Operations Platform',
+      desc: 'Unified revenue operations with sales forecasting, pipeline management, and analytics.',
+      pricing: 'From $199/mo + $0.50/opportunity',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Heart,
+      name: 'Healthcare Compliance Manager',
+      desc: 'HIPAA, HITECH, and healthcare compliance automation with audit trails.',
+      pricing: 'From $299/mo per provider',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Building,
+      name: 'Manufacturing IoT Platform',
+      desc: 'Industrial IoT monitoring with predictive maintenance and quality control analytics.',
+      pricing: 'From $149/mo per production line',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: CreditCard,
+      name: 'Financial Risk Analytics',
+      desc: 'Real-time risk assessment, fraud detection, and regulatory compliance for financial services.',
+      pricing: 'From $399/mo + $0.01/transaction',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Zap,
+      name: 'Energy Management System',
+      desc: 'Smart energy monitoring, optimization, and sustainability reporting for enterprises.',
+      pricing: 'From $89/mo per facility',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Truck,
+      name: 'Supply Chain Visibility',
+      desc: 'End-to-end supply chain tracking with real-time analytics and predictive insights.',
+      pricing: 'From $199/mo + $0.10/shipment',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Camera,
+      name: 'Computer Vision Platform',
+      desc: 'AI-powered image and video analysis for quality control, security, and automation.',
+      pricing: 'From $299/mo + $0.01/image processed',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Mic,
+      name: 'Voice AI Assistant Platform',
+      desc: 'Build and deploy custom voice assistants with natural language processing.',
+      pricing: 'From $149/mo + $0.05/minute',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Palette,
+      name: 'AI Design Assistant',
+      desc: 'AI-powered design generation, brand consistency, and creative asset management.',
+      pricing: 'From $79/mo + $0.10/design generated',
+      href: 'https://ziontechgroup.com/services'
+    },
+    {
+      icon: Target,
+      name: 'Marketing Attribution Engine',
+      desc: 'Multi-touch attribution modeling with ROI optimization and campaign performance analytics.',
+      pricing: 'From $199/mo + 1% of ad spend',
+      href: 'https://ziontechgroup.com/services'
     }
   ];
 
