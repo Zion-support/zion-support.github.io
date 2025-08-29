@@ -77,6 +77,14 @@ export function AppHeader() {
       color: 'from-purple-500 to-pink-500'
     },
     { 
+      name: 'Analytics Dashboard', 
+      href: '/analytics-dashboard', 
+      icon: BarChart3, 
+      description: 'Performance & ROI Metrics',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
       name: 'AI Cybersecurity', 
       href: '/services/ai-cybersecurity', 
       icon: Shield, 
