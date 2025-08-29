@@ -4,8 +4,7 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin";
 import CompanyWorkspace from "../pages/CompanyWorkspace";
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import EnterpriseDemo from "../pages/EnterpriseDemo";
-=======
-// Next.js routing - no need for react-router-dom
+
 
 export default function EnterpriseRoutes() {
   return (

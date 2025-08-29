@@ -327,13 +327,17 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                   <div className="flex justify-between items-center">
                     <span className="text-gray-300">Savings:</span>
                     <span className="text-green-400 font-semibold">
-                      {Math.round(((MICRO_SAAS_SERVICES.reduce((sum, s) => {
-                        const priceRange = s.marketPrice.match(/\$(\d+)/);
-                        return sum + (priceRange ? parseInt(priceRange[1]) : s.price);
-                      }, 0) / MICRO_SAAS_SERVICES.length) - (MICRO_SAAS_SERVICES.reduce((sum, s) => sum + s.price, 0) / MICRO_SAAS_SERVICES.length)) / (MICRO_SAAS_SERVICES.reduce((sum, s) => {
-                        const priceRange = s.marketPrice.match(/\$(\d+)/);
-                        return sum + (priceRange ? parseInt(priceRange[1]) : s.price);
-                      }, 0) / MICRO_SAAS_SERVICES.length)) * 100)}%
+                      {(() => {
+                        const avgMarketPrice = MICRO_SAAS_SERVICES.reduce((sum, s) => {
+                          const priceRange = s.marketPrice.match(/\$(\d+)/);
+                          return sum + (priceRange ? parseInt(priceRange[1]) : s.price);
+                        }, 0) / MICRO_SAAS_SERVICES.length;
+                        
+                        const avgOurPrice = MICRO_SAAS_SERVICES.reduce((sum, s) => sum + s.price, 0) / MICRO_SAAS_SERVICES.length;
+                        
+                        const savingsPercentage = ((avgMarketPrice - avgOurPrice) / avgMarketPrice) * 100;
+                        return Math.round(savingsPercentage);
+                      })()}%
                     </span>
                   </div>
                 </div>
