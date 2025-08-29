@@ -21,40 +21,27 @@ export default defineConfig({
       polyfill: true,
     },
     assetsInlineLimit: 4096,
+    cssMinify: true,
     rollupOptions: {
       input: path.resolve(__dirname, 'index.html'),
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'ui-vendor': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-alert-dialog',
-            '@radix-ui/react-aspect-ratio',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-checkbox',
-            '@radix-ui/react-context-menu',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-label',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-progress',
-            '@radix-ui/react-radio-group',
-            '@radix-ui/react-scroll-area',
-            '@radix-ui/react-select',
-            '@radix-ui/react-separator',
-            '@radix-ui/react-slider',
-            '@radix-ui/react-slot',
-            '@radix-ui/react-switch',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-toast',
-            '@radix-ui/react-tooltip',
-          ],
-          'animation-vendor': ['framer-motion'],
-          'form-vendor': ['react-hook-form'],
-          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
-          'icons-vendor': ['lucide-react'],
-          'charts-vendor': ['recharts'],
-          'date-vendor': ['date-fns', 'react-day-picker'],
+        manualChunks: (id) => {
+          // More granular chunking for better caching
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-core';
+            }
+            if (id.includes('@radix-ui')) {
+              return 'radix-ui';
+            }
+            if (id.includes('framer-motion')) {
+              return 'framer-motion';
+            }
+            if (id.includes('lucide-react')) {
+              return 'lucide-icons';
+            }
+            return 'vendor';
+          }
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
@@ -72,20 +59,36 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        passes: 3
+        passes: 3,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_Function: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true
       },
       format: {
         comments: false
       }
-    },
-    cssMinify: true,
+    }
   },
   esbuild: {
     legalComments: 'none',
     logOverride: { 'this-is-undefined-in-esm': 'silent' },
+    // Additional ESBuild optimizations
+    target: 'es2019',
+    minify: true,
+    treeShaking: true
   },
   server: {
     port: 3000,
     open: true,
   },
+  // Performance optimizations
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion'],
+    exclude: ['@radix-ui/react-accordion']
+  }
 })

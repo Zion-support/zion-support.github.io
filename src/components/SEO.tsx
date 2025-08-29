@@ -4,211 +4,128 @@ import { Helmet } from 'react-helmet-async';
 interface SEOProps {
   title: string;
   description: string;
-  canonical?: string;
-  url?: string;
+  keywords?: string;
   image?: string;
-  type?: 'website' | 'article' | 'product';
+  url?: string;
+  type?: 'website' | 'article' | 'service';
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
-  keywords?: string[];
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
+  section?: string;
+  tags?: string[];
+  structuredData?: object;
 }
 
 export function SEO({
   title,
   description,
-  canonical,
-  url,
-  image = '/og-image.svg',
+  keywords,
+  image = '/images/zion-tech-group-og.jpg',
+  url = window.location.href,
   type = 'website',
   publishedTime,
   modifiedTime,
   author = 'Zion Tech Group',
-  keywords = ['AI', 'Technology', 'IT Services', 'Digital Transformation', 'Innovation'],
-  structuredData,
-  noindex = false,
-  nofollow = false
+  section,
+  tags = [],
+  structuredData
 }: SEOProps) {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} - Zion Tech Group`;
-  const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
-  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading AI & Technology Solutions Provider",
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
+    "description": "Leading provider of AI-powered business solutions, IT services, and digital transformation consulting.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
       "addressCountry": "US"
-    }
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
+    ]
+  };
+
+  const pageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": type === 'article' ? 'Article' : 'WebPage',
+    "headline": title,
+    "description": description,
+    "url": url,
+    "image": image,
+    "author": {
+      "@type": "Organization",
+      "name": author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+      }
+    },
+    ...(type === 'article' && publishedTime && {
+      "datePublished": publishedTime,
+      "dateModified": modifiedTime || publishedTime,
+      "articleSection": section,
+      "keywords": tags.join(', ')
+    })
   };
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="author" content={author} />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
-      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={`https://ziontechgroup.com${canonical}`} />}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:image" content={fullImageUrl} />
       <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImageUrl} />
-      
-      {/* Article specific meta tags */}
-      {type === 'article' && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {type === 'article' && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {type === 'article' && author && (
-        <meta property="article:author" content={author} />
-      )}
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#2e73ea" />
       <meta name="msapplication-TileColor" content="#2e73ea" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
       
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(structuredData || pageStructuredData)}
       </script>
-      
-      {/* Additional Structured Data for specific pages */}
-      {type === 'article' && structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": title,
-            "description": description,
-            "image": fullImageUrl,
-            "author": {
-              "@type": "Person",
-              "name": author
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
-              }
-            },
-            "datePublished": publishedTime,
-            "dateModified": modifiedTime || publishedTime,
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": fullUrl
-            }
-          })}
-        </script>
-      )}
       
       {/* Organization Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "alternateName": ["Zion Tech", "Zion Technology"],
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-          "description": "Leading AI & Technology Solutions Provider specializing in artificial intelligence, cloud computing, cybersecurity, and digital transformation services.",
-          "foundingDate": "2020",
-          "numberOfEmployees": "50-100",
-          "industry": "Technology",
-          "knowsAbout": [
-            "Artificial Intelligence",
-            "Machine Learning",
-            "Cloud Computing",
-            "Cybersecurity",
-            "Digital Transformation",
-            "IT Consulting",
-            "Software Development"
-          ],
-          "serviceArea": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-              "@type": "GeoCoordinates",
-              "latitude": 37.7749,
-              "longitude": -122.4194
-            },
-            "geoRadius": "50000"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Technology Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "AI Business Intelligence",
-                  "description": "Advanced analytics and insights powered by artificial intelligence"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Cloud DevOps",
-                  "description": "Modern infrastructure automation and cloud management"
-                }
-              }
-            ]
-          }
-        })}
+        {JSON.stringify(defaultStructuredData)}
       </script>
     </Helmet>
   );

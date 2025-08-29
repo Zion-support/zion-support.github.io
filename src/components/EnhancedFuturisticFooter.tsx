@@ -66,16 +66,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Revolutionary 2030',
-      icon: Rocket,
+      title: 'AI & Analytics Services',
+      icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'Quantum AI Hybrid Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Cybersecurity Platform', href: '/revolutionary-services-2030' },
-        { name: 'Autonomous AI Operations', href: '/revolutionary-services-2030' },
-        { name: 'Quantum Financial Trading', href: '/revolutionary-services-2030' },
-        { name: 'AI Healthcare Diagnostics', href: '/revolutionary-services-2030' },
-        { name: 'Smart City Platform', href: '/revolutionary-services-2030' }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
       ]
     },
     {
@@ -84,71 +87,40 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       color: 'from-blue-600 to-cyan-600',
       links: [
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+      ]
+    },
+    {
+      title: 'Edge & IoT Services',
+      icon: Server,
+      color: 'from-blue-600 to-cyan-600',
+      links: [
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
-      ]
-    },
-    {
-      title: 'IoT & Digital Solutions',
-      icon: Rocket,
-      color: 'from-green-600 to-emerald-600',
-      links: [
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
-        { name: 'Sustainability Solutions', href: '/services/sustainability' },
-        { name: 'Green IT', href: '/services/green-it' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Space Technology', href: '/services/space-tech' }
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Onsite Support', href: '/services/onsite-support' },
+        { name: 'Green IT Solutions', href: '/services/green-it' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
       ]
     },
     {
-      title: 'Revolutionary 2030 Services',
+      title: 'Quantum & Emerging Tech',
       icon: Crown,
-      color: 'from-yellow-600 to-orange-600',
-      links: [
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
-        { name: 'AI Autonomous Business Operations', href: '/revolutionary-services-2030' },
-        { name: 'Quantum AI Hybrid Computing', href: '/revolutionary-services-2030' },
-        { name: 'AI Metaverse Development', href: '/revolutionary-services-2030' },
-        { name: 'AI Space Technology', href: '/revolutionary-services-2030' },
-        { name: 'Next-Gen Cybersecurity', href: '/revolutionary-services-2030' },
-        { name: 'Quantum Internet Infrastructure', href: '/revolutionary-services-2030' },
-        { name: 'AI Autonomous Vehicles', href: '/revolutionary-services-2030' },
-        { name: 'Brain-Computer Interface', href: '/revolutionary-services-2030' },
-        { name: 'AI Climate Change Solutions', href: '/revolutionary-services-2030' },
-        { name: 'AI Drug Discovery Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Financial Services Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Manufacturing Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Retail Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Transportation Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Energy Management Platform', href: '/revolutionary-services-2030' }
-      ]
-    },
-    {
-      title: 'Company & Support',
-      icon: Users,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Contact', href: '/contact' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Help Center', href: '/help' },
-        { name: 'Support', href: '/support' },
-        { name: 'Training', href: '/training' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'Accessibility', href: '/accessibility' },
-        { name: 'Security', href: '/security' },
-        { name: 'Compliance', href: '/compliance' }
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Sustainability', href: '/services/sustainability' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
       ]
     }
   ];
@@ -161,7 +133,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'Careers', href: '/careers' },
+    { name: 'Sitemap', href: '/sitemap' }
   ];
 
   const companyLinks = [
@@ -190,6 +163,21 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Security', href: '/security', description: 'Security practices' },
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
   ];
+
+  // Create missing pages for broken links
+  const createMissingPage = (name: string, href: string) => {
+    // For now, we'll create placeholder pages for missing routes
+    // These will be created as separate components
+    return (
+      <Link
+        key={name}
+        to={href}
+        className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
+      >
+        {name}
+      </Link>
+    );
+  };
 
   return (
     <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-cyan-400/20">
@@ -261,14 +249,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
-                      <link.icon className="w-4 h-4 text-cyan-400" />
+                      <Star className="w-4 h-4 text-cyan-400" />
                     </div>
                     <div>
                       <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
                         {link.name}
                       </div>
                       <div className="text-xs text-slate-400">
-                        {link.description}
+                        Quick access
                       </div>
                     </div>
                   </Link>
@@ -479,16 +467,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 opacity-20">
-        <Brain className="w-8 h-8 text-zion-cyan animate-bounce" />
+        <Brain className="w-8 h-8 text-cyan-400 animate-bounce" />
       </div>
       <div className="absolute top-20 right-20 opacity-20">
-        <Rocket className="w-8 h-8 text-zion-purple animate-pulse" />
+        <Rocket className="w-8 h-8 text-purple-400 animate-pulse" />
       </div>
       <div className="absolute bottom-20 left-20 opacity-20">
-        <Brain className="w-8 h-8 text-zion-cyan animate-spin" />
+        <Brain className="w-8 h-8 text-cyan-400 animate-spin" />
       </div>
       <div className="absolute bottom-10 right-10 opacity-20">
-        <Shield className="w-8 h-8 text-zion-purple animate-bounce delay-1000" />
+        <Shield className="w-8 h-8 text-purple-400 animate-bounce delay-1000" />
       </div>
     </footer>
   );
