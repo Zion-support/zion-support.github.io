@@ -73,7 +73,8 @@ export function Footer() {
         { name: 'Compliance Copilot', path: '/services/ai-compliance-copilot', icon: Shield },
         { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText },
         { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
-        { name: 'All Services', path: '/services', icon: Zap }
+        { name: 'All Services', path: '/services', icon: Zap },
+        { name: 'Services Catalog', path: '/comprehensive-services', icon: Zap }
       ]
     },
     {

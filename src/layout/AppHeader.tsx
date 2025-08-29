@@ -37,6 +37,7 @@ export function AppHeader() {
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Services Catalog', href: '/comprehensive-services', current: false },
     { name: 'Marketplace', href: '/marketplace', current: false },
     { name: 'Company', href: '/about', current: false },
     { name: 'Support', href: '/support', current: false },
@@ -239,7 +240,7 @@ export function AppHeader() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
               {mainNavigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
@@ -272,7 +273,7 @@ export function AppHeader() {
                   placeholder="Search services..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 pl-10 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 text-sm"
+                  className="w-48 xl:w-64 pl-10 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 text-sm"
                 />
               </form>
 
@@ -280,7 +281,7 @@ export function AppHeader() {
               <ThemeToggle />
 
               {/* Contact Info */}
-              <div className="hidden lg:flex items-center space-x-4 text-sm text-slate-300">
+              <div className="hidden lg:flex items-center gap-3 xl:gap-4 text-sm text-slate-300">
                 <a href="tel:+13024640950" className="flex items-center space-x-1 hover:text-cyan-400 transition-colors">
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
