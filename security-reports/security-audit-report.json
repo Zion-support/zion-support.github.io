@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-08-29T15:32:01.683Z",
+  "duration": 30467,
+  "vulnerabilities": [],
+  "securityIssues": [
+    {
+      "type": "secrets_found",
+      "count": 63,
+      "message": "63 potential secrets found in code",
+      "severity": "high",
+      "timestamp": "2025-08-29T15:32:01.682Z"
+    }
+  ],
+  "passedChecks": [],
+  "totalVulnerabilities": 0,
+  "totalSecurityIssues": 1,
+  "totalPassedChecks": 0,
+  "status": "vulnerabilities_found"
+}
