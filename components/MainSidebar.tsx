@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { 
   Home, 
   Briefcase, 
@@ -73,7 +73,7 @@ interface SidebarProps {
 }
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const router = useRouter();
+  const router = useNavigate();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {

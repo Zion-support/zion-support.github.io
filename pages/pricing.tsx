@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function PricingPage() {
   const pricingTiers = [
     {
@@ -114,12 +114,12 @@ export default function PricingPage() {
   ];
   return (
     <>
-      <Head>
+      <Helmet>
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Helmet>
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">

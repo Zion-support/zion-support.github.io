@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion'
 import { 
   Handshake, 
@@ -112,7 +112,7 @@ export default function Partners() {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="canonical" href="https://ziontechgroup.com/partners/" />
@@ -120,7 +120,7 @@ export default function Partners() {
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/partners/" />
-      </Head>
+      </Helmet>
       
       <main className="min-h-screen bg-white text-gray-900">
         {/* Hero Section */}

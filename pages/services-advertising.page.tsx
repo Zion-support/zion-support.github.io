@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 export default function ServicesAdvertisingPage() {
   const contact = {
     mobile: '+1 302 464 0950',
@@ -147,11 +147,11 @@ export default function ServicesAdvertisingPage() {
   }
   return (
     <div className="min-h-screen bg-black">
-      <Head>
+      <Helmet>
         <title>AI, IT and Micro SaaS Services Advertising | Zion Tech Group</title>
         <meta name="description" content="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options." />
         <link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
-      </Head>
+      </Helmet>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">

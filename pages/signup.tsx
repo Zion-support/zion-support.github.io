@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import {
@@ -115,7 +115,7 @@ export default function Signup() {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -131,7 +131,7 @@ export default function Signup() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-      </Head>
+      </Helmet>
 
       <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
         {/* Hero Section */}

@@ -20,14 +20,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   
   return `import type { NextPage } from 'next';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 const ${componentName}: NextPage = () => {
   return (
     <div>
-      <Head>
+      <Helmet>
         <title>${componentName} - Zion Tech Solutions</title>
         <meta name="description" content="${componentName} page" />
-      </Head>
+      </Helmet>
       
       <main>
         <h1>${componentName}</h1>
