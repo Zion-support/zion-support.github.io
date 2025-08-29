@@ -1,6 +1,7 @@
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
+const API_CACHE = 'zion-api-v1.0.0';
 
 // Files to cache immediately
 const STATIC_FILES = [
@@ -10,23 +11,21 @@ const STATIC_FILES = [
   '/static/css/main.css',
   '/manifest.json',
   '/favicon.ico',
-  '/images/zion-tech-group-logo.png',
-  '/images/grid-pattern.svg',
-  '/images/zion-tech-group-og.jpg'
+  '/favicon.svg',
+  '/apple-touch-icon.png',
+  '/android-chrome-192x192.png',
+  '/android-chrome-512x512.png'
 ];
 
-// API routes to cache
-const API_ROUTES = [
+// API endpoints to cache
+const API_ENDPOINTS = [
   '/api/services',
-  '/api/ai-services',
   '/api/contact',
-  '/api/blog'
+  '/api/quote'
 ];
 
 // Install event - cache static files
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...');
-  
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
@@ -45,14 +44,14 @@ self.addEventListener('install', (event) => {
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...');
-  
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+            if (cacheName !== STATIC_CACHE && 
+                cacheName !== DYNAMIC_CACHE && 
+                cacheName !== API_CACHE) {
               console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
@@ -60,13 +59,13 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
-        console.log('Service Worker activated');
+        console.log('Service worker activated');
         return self.clients.claim();
       })
   );
 });
 
-// Fetch event - serve from cache or network
+// Fetch event - handle different caching strategies
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -76,72 +75,116 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Skip chrome-extension and other non-http requests
-  if (!url.protocol.startsWith('http')) {
-    return;
-  }
-
   // Handle different types of requests
-  if (url.pathname === '/' || url.pathname === '/index.html') {
-    // Homepage - serve from cache first, then network
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-  } else if (STATIC_FILES.some(file => url.pathname.includes(file))) {
-    // Static assets - serve from cache first, then network
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
-  } else if (API_ROUTES.some(route => url.pathname.startsWith(route))) {
-    // API routes - network first, then cache
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
-  } else if (url.pathname.startsWith('/static/') || url.pathname.startsWith('/images/')) {
-    // Other static assets - cache first
-    event.respondWith(cacheFirst(request, STATIC_CACHE));
+  if (url.origin === self.location.origin) {
+    // Same-origin requests
+    if (url.pathname.startsWith('/api/')) {
+      // API requests - Network first with cache fallback
+      event.respondWith(handleApiRequest(request));
+    } else if (url.pathname.startsWith('/static/') || url.pathname.includes('.')) {
+      // Static assets - Cache first with network fallback
+      event.respondWith(handleStaticRequest(request));
+    } else {
+      // HTML pages - Network first with cache fallback
+      event.respondWith(handlePageRequest(request));
+    }
   } else {
-    // Other routes - network first
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+    // Cross-origin requests - Network first with cache fallback
+    event.respondWith(handleCrossOriginRequest(request));
   }
 });
 
-// Cache first strategy
-async function cacheFirst(request, cacheName) {
+// Handle API requests
+async function handleApiRequest(request) {
   try {
+    // Try network first
+    const networkResponse = await fetch(request);
+    
+    if (networkResponse.ok) {
+      // Cache successful responses
+      const cache = await caches.open(API_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    // Fallback to cache
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
     
-    const networkResponse = await fetch(request);
-    if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
-      cache.put(request, networkResponse.clone());
-    }
-    return networkResponse;
-  } catch (error) {
-    console.error('Cache first strategy failed:', error);
-    return new Response('Network error', { status: 503 });
+    // Return offline response for API requests
+    return new Response(
+      JSON.stringify({ error: 'Offline - Please check your connection' }),
+      {
+        status: 503,
+        statusText: 'Service Unavailable',
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
   }
 }
 
-// Network first strategy
-async function networkFirst(request, cacheName) {
+// Handle static asset requests
+async function handleStaticRequest(request) {
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+
   try {
     const networkResponse = await fetch(request);
     if (networkResponse.ok) {
-      const cache = await caches.open(cacheName);
+      const cache = await caches.open(DYNAMIC_CACHE);
       cache.put(request, networkResponse.clone());
     }
     return networkResponse;
   } catch (error) {
-    console.log('Network failed, trying cache:', error);
+    // Return a default response for failed static requests
+    return new Response('Offline', { status: 503 });
+  }
+}
+
+// Handle page requests
+async function handlePageRequest(request) {
+  try {
+    // Try network first for pages
+    const networkResponse = await fetch(request);
+    
+    if (networkResponse.ok) {
+      // Cache successful page responses
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    // Fallback to cache
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
     
-    // Return offline page for navigation requests
-    if (request.mode === 'navigate') {
-      return caches.match('/offline.html');
+    // Return offline page
+    return caches.match('/offline.html');
+  }
+}
+
+// Handle cross-origin requests
+async function handleCrossOriginRequest(request) {
+  try {
+    const networkResponse = await fetch(request);
+    return networkResponse;
+  } catch (error) {
+    // Try to find in cache
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
     }
     
-    return new Response('Network error', { status: 503 });
+    // Return offline response
+    return new Response('Offline', { status: 503 });
   }
 }
 
@@ -152,23 +195,59 @@ self.addEventListener('sync', (event) => {
   }
 });
 
+// Handle push notifications
+self.addEventListener('push', (event) => {
+  const options = {
+    body: event.data ? event.data.text() : 'New update available!',
+    icon: '/android-chrome-192x192.png',
+    badge: '/favicon-32x32.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'View',
+        icon: '/favicon-32x32.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/favicon-32x32.png'
+      }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
+
+// Handle notification clicks
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// Background sync function
 async function doBackgroundSync() {
   try {
-    // Get pending requests from IndexedDB
-    const pendingRequests = await getPendingRequests();
+    // Sync any pending data
+    const pendingData = await getPendingData();
     
-    for (const request of pendingRequests) {
+    for (const data of pendingData) {
       try {
-        await fetch(request.url, {
-          method: request.method,
-          headers: request.headers,
-          body: request.body
-        });
-        
-        // Remove from pending requests
-        await removePendingRequest(request.id);
+        await syncData(data);
+        await removePendingData(data.id);
       } catch (error) {
-        console.error('Background sync failed for request:', request, error);
+        console.error('Failed to sync data:', error);
       }
     }
   } catch (error) {
@@ -176,66 +255,23 @@ async function doBackgroundSync() {
   }
 }
 
-// Push notification handling
-self.addEventListener('push', (event) => {
-  if (event.data) {
-    const data = event.data.json();
-    
-    const options = {
-      body: data.body,
-      icon: '/images/zion-tech-group-logo.png',
-      badge: '/images/zion-tech-group-logo.png',
-      vibrate: [100, 50, 100],
-      data: {
-        url: data.url
-      },
-      actions: [
-        {
-          action: 'explore',
-          title: 'Explore',
-          icon: '/images/explore-icon.png'
-        },
-        {
-          action: 'close',
-          title: 'Close',
-          icon: '/images/close-icon.png'
-        }
-      ]
-    };
-    
-    event.waitUntil(
-      self.registration.showNotification(data.title, options)
-    );
-  }
-});
-
-// Notification click handling
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-  
-  if (event.action === 'explore') {
-    event.waitUntil(
-      clients.openWindow(event.notification.data.url)
-    );
-  } else if (event.action === 'close') {
-    // Just close the notification
-    return;
-  } else {
-    // Default action - open the app
-    event.waitUntil(
-      clients.openWindow('/')
-    );
-  }
-});
-
-// Helper functions for IndexedDB operations
-async function getPendingRequests() {
-  // Implementation would depend on your IndexedDB structure
+// Helper functions for background sync
+async function getPendingData() {
+  // This would typically interact with IndexedDB
+  // For now, return empty array
   return [];
 }
 
-async function removePendingRequest(id) {
-  // Implementation would depend on your IndexedDB structure
+async function syncData(data) {
+  // This would typically make API calls
+  // For now, just log the data
+  console.log('Syncing data:', data);
+}
+
+async function removePendingData(id) {
+  // This would typically remove from IndexedDB
+  // For now, just log the ID
+  console.log('Removing pending data:', id);
 }
 
 // Message handling for communication with main thread
@@ -251,9 +287,9 @@ self.addEventListener('message', (event) => {
 
 // Error handling
 self.addEventListener('error', (event) => {
-  console.error('Service Worker error:', event.error);
+  console.error('Service worker error:', event.error);
 });
 
 self.addEventListener('unhandledrejection', (event) => {
-  console.error('Service Worker unhandled rejection:', event.reason);
+  console.error('Service worker unhandled rejection:', event.reason);
 });

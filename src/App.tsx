@@ -7,6 +7,7 @@ import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -124,7 +125,7 @@ function App() {
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
         
-        <main className="flex-1">
+        <main className="flex-1" id="main-content">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -212,6 +213,7 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <EnhancedAccessibility />
       </div>
     </ErrorBoundary>
   );
