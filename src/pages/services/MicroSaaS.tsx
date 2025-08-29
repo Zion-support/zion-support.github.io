@@ -1,86 +1,86 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, AlertTriangle, Users, Zap, Globe, Award, BarChart3, CheckCircle, Target, Database } from 'lucide-react';
+import { Rocket, Zap, Users, Globe, Award, BarChart3, CheckCircle, Target, Database, Shield, Cpu, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function Cybersecurity() {
+export default function MicroSaaS() {
   const services = [
     {
-      icon: Shield,
-      title: "Security Assessment",
-      description: "Comprehensive security audits and vulnerability assessments to identify and mitigate risks"
-    },
-    {
-      icon: Lock,
-      title: "Penetration Testing",
-      description: "Ethical hacking services to test your security defenses and identify weaknesses"
-    },
-    {
-      icon: Eye,
-      title: "Security Monitoring",
-      description: "24/7 threat detection and response to protect against cyber attacks"
-    },
-    {
-      icon: AlertTriangle,
-      title: "Incident Response",
-      description: "Rapid response and recovery services when security incidents occur"
-    },
-    {
-      icon: Users,
-      title: "Security Training",
-      description: "Employee cybersecurity awareness and training programs"
+      icon: Rocket,
+      title: "SaaS Development",
+      description: "Build scalable, cloud-native SaaS applications with modern architecture and best practices"
     },
     {
       icon: Zap,
-      title: "Security Automation",
-      description: "AI-powered security tools and automated threat response systems"
+      title: "Rapid Prototyping",
+      description: "Quickly prototype and validate your SaaS idea with rapid development cycles"
+    },
+    {
+      icon: Users,
+      title: "User Experience Design",
+      description: "Create intuitive, engaging user interfaces that drive adoption and retention"
+    },
+    {
+      icon: Database,
+      title: "Data Architecture",
+      description: "Design scalable data models and efficient database solutions for your SaaS platform"
+    },
+    {
+      icon: Shield,
+      title: "Security & Compliance",
+      description: "Implement enterprise-grade security and ensure compliance with industry standards"
+    },
+    {
+      icon: TrendingUp,
+      title: "Growth & Scaling",
+      description: "Strategies and tools to scale your SaaS business and acquire customers"
     }
   ];
 
   const benefits = [
-    "Protect sensitive data and customer information",
-    "Maintain compliance with industry regulations",
-    "Reduce risk of costly data breaches",
-    "Build customer trust and brand reputation",
-    "Minimize business disruption from attacks",
-    "Stay ahead of evolving cyber threats"
+    "Launch your SaaS product in weeks, not months",
+    "Reduce development costs by 40-60%",
+    "Scale from MVP to enterprise solution seamlessly",
+    "Focus on core business logic, not infrastructure",
+    "Access to proven SaaS patterns and best practices",
+    "Built-in analytics and user insights"
   ];
 
-  const securityAreas = [
+  const saasTypes = [
     {
-      title: "Network Security",
-      description: "Protect your network infrastructure with advanced firewalls, intrusion detection, and monitoring"
+      title: "B2B SaaS",
+      description: "Enterprise software solutions for businesses, including CRM, ERP, and productivity tools"
     },
     {
-      title: "Application Security",
-      description: "Secure your applications with code analysis, testing, and security best practices"
+      title: "B2C SaaS",
+      description: "Consumer-facing applications like productivity tools, creative software, and lifestyle apps"
     },
     {
-      title: "Cloud Security",
-      description: "Ensure security across cloud platforms with identity management and data protection"
+      title: "Vertical SaaS",
+      description: "Industry-specific solutions tailored to particular sectors like healthcare, finance, or manufacturing"
     },
     {
-      title: "Data Protection",
-      description: "Implement encryption, access controls, and data loss prevention strategies"
+      title: "Horizontal SaaS",
+      description: "Cross-industry solutions that serve multiple business functions and departments"
     }
   ];
 
   const capabilities = [
-    "Vulnerability assessment and management",
-    "Penetration testing and red teaming",
-    "Security architecture design",
-    "Incident response and forensics",
-    "Compliance and risk management",
-    "Security awareness training",
-    "Threat intelligence and monitoring",
-    "Security automation and orchestration"
+    "Full-stack SaaS application development",
+    "Cloud-native architecture and deployment",
+    "User authentication and authorization systems",
+    "Subscription and billing management",
+    "API development and integration",
+    "Real-time features and notifications",
+    "Analytics and reporting dashboards",
+    "Mobile-responsive web applications"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity services to protect your business from evolving cyber threats and ensure compliance."
+        title="MicroSaaS Services - Zion Tech Group"
+        description="Build and scale your SaaS business with our expert development services, from rapid prototyping to enterprise solutions."
       />
       
       {/* Hero Section */}
@@ -92,23 +92,22 @@ export default function Cybersecurity() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              Advanced Threat Protection
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-600 to-red-600 text-white text-sm font-medium mb-6">
+              <Rocket className="w-4 h-4 mr-2" />
+              Rapid SaaS Development
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Cybersecurity Services
+              MicroSaaS
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Protect your business from evolving cyber threats with our comprehensive 
-              cybersecurity services. From assessment to response, we keep your 
-              digital assets secure and compliant.
+              Turn your SaaS idea into reality with our rapid development services. 
+              Build, launch, and scale your software business faster than ever before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
-                Security Assessment
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                Start Building
               </button>
-              <button className="px-8 py-4 border border-red-400 text-red-400 font-semibold rounded-lg hover:bg-red-400 hover:text-slate-900 transition-all duration-300">
+              <button className="px-8 py-4 border border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-slate-900 transition-all duration-300">
                 Free Consultation
               </button>
             </div>
@@ -126,11 +125,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Security Solutions
+              Complete SaaS Development Services
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our cybersecurity services cover all aspects of digital protection, 
-              from prevention to response and recovery.
+              From concept to launch, we provide end-to-end SaaS development services 
+              that accelerate your time to market.
             </p>
           </motion.div>
 
@@ -141,9 +140,9 @@ export default function Cybersecurity() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-red-400 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-orange-400 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-red-600 rounded-lg flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -164,11 +163,11 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Cybersecurity Matters
+              Why Choose Our SaaS Development?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              In today's digital landscape, robust cybersecurity is not optional—it's essential 
-              for business survival and growth.
+              Our proven approach delivers faster development, lower costs, and 
+              better outcomes for your SaaS business.
             </p>
           </motion.div>
 
@@ -181,7 +180,7 @@ export default function Cybersecurity() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-center space-x-3"
               >
-                <CheckCircle className="w-6 h-6 text-red-400 flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-orange-400 flex-shrink-0" />
                 <span className="text-slate-300">{benefit}</span>
               </motion.div>
             ))}
@@ -189,7 +188,7 @@ export default function Cybersecurity() {
         </div>
       </section>
 
-      {/* Security Areas Section */}
+      {/* SaaS Types Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -199,24 +198,25 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Security Focus Areas
+              SaaS Business Models
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive protection across all critical areas of your digital infrastructure.
+              We specialize in all types of SaaS applications, from B2B enterprise 
+              solutions to consumer-focused applications.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityAreas.map((area, index) => (
+            {saasTypes.map((type, index) => (
               <motion.div
-                key={area.title}
+                key={type.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                <p className="text-slate-300">{area.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
+                <p className="text-slate-300">{type.description}</p>
               </motion.div>
             ))}
           </div>
@@ -233,10 +233,10 @@ export default function Cybersecurity() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Security Capabilities
+              Advanced SaaS Capabilities
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Built with cutting-edge technology and industry expertise for maximum protection.
+              Built with modern technologies and proven SaaS patterns for successful outcomes.
             </p>
           </motion.div>
 
@@ -249,7 +249,7 @@ export default function Cybersecurity() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-center space-x-3"
               >
-                <div className="w-2 h-2 bg-red-400 rounded-full flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-orange-400 rounded-full flex-shrink-0"></div>
                 <span className="text-slate-300">{capability}</span>
               </motion.div>
             ))}
@@ -258,7 +258,7 @@ export default function Cybersecurity() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -266,17 +266,17 @@ export default function Cybersecurity() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Secure Your Digital Future
+              Ready to Build Your SaaS?
             </h2>
-            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
-              Don't wait for a breach to happen. Proactively protect your business 
-              with enterprise-grade cybersecurity solutions.
+            <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+              Join successful entrepreneurs who have launched their SaaS businesses 
+              with our rapid development services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
-                Get Security Assessment
+              <button className="px-8 py-4 bg-white text-orange-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
+                Start Building
               </button>
-              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300">
                 Schedule Consultation
               </button>
             </div>

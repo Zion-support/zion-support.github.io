@@ -1,43 +1,284 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Shield, CheckCircle, AlertTriangle, FileText, Users, Zap, Globe, Award, BarChart3, Lock, Eye, Clock } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function AIComplianceCopilot() {
-  return (
-    <div className="min-h-screen bg-futuristic text-white">
-      <SEO
-        title="AI Compliance Copilot | Zion Tech Group"
-        description="Continuously map controls, flag risks, and auto-generate audit evidence for SOC 2, ISO 27001, HIPAA, GDPR."
-      />
-      <section className="container-responsive py-16">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-          AI Compliance Copilot
-        </h1>
-        <p className="text-zion-slate-light max-w-3xl">
-          Automate compliance with real-time control monitoring, policy mapping, gap analysis, and auto-evidence generation.
-          Integrates with cloud, code, identity, and ticketing to reduce audit prep from months to days.
-        </p>
+  const features = [
+    {
+      icon: Shield,
+      title: "Automated Compliance Monitoring",
+      description: "24/7 monitoring of regulatory requirements with intelligent alerts and recommendations"
+    },
+    {
+      icon: CheckCircle,
+      title: "Policy Management",
+      description: "AI-powered policy creation, updates, and compliance tracking across all frameworks"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Risk Assessment",
+      description: "Intelligent risk identification and automated mitigation strategies"
+    },
+    {
+      icon: FileText,
+      title: "Documentation Automation",
+      description: "Automated generation and maintenance of compliance documentation and reports"
+    },
+    {
+      icon: Users,
+      title: "Training & Certification",
+      description: "Automated compliance training programs with progress tracking and certification"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Updates",
+      description: "Instant updates on regulatory changes and their impact on your business"
+    }
+  ];
 
-        <div className="grid gap-8 md:grid-cols-3 mt-10">
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-lg font-semibold mb-2">Frameworks</h2>
-            <p className="text-sm text-zion-slate-light">SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, NIST 800-53.</p>
-          </div>
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-lg font-semibold mb-2">Integrations</h2>
-            <p className="text-sm text-zion-slate-light">AWS, GCP, Azure, GitHub, GitLab, Okta, Jira, Slack.</p>
-          </div>
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-lg font-semibold mb-2">Pricing</h2>
-            <p className="text-sm text-zion-slate-light">From $1,500/mo; enterprise tiers with dedicated CSM.</p>
-            <p className="text-xs text-zion-slate-light mt-2">
-              References: <a className="text-cyan-400" href="https://drata.com/pricing" target="_blank" rel="noreferrer">Drata</a>, <a className="text-cyan-400" href="https://vanta.com/pricing" target="_blank" rel="noreferrer">Vanta</a>
+  const benefits = [
+    "Reduce compliance violations by 95%",
+    "Cut compliance costs by 70%",
+    "Automate 90% of compliance tasks",
+    "Ensure 24/7 regulatory monitoring",
+    "Improve audit readiness by 98%",
+    "Reduce manual compliance work by 85%"
+  ];
+
+  const complianceFrameworks = [
+    {
+      title: "SOC 2 & ISO 27001",
+      description: "Information security management with automated controls testing and evidence collection"
+    },
+    {
+      title: "GDPR & Data Privacy",
+      description: "Data protection compliance with automated privacy impact assessments and consent management"
+    },
+    {
+      title: "HIPAA & Healthcare",
+      description: "Healthcare compliance with automated privacy rule compliance and breach detection"
+    },
+    {
+      title: "PCI DSS & Financial",
+      description: "Payment card security compliance with automated security controls and monitoring"
+    }
+  ];
+
+  const capabilities = [
+    "Regulatory change monitoring and alerts",
+    "Automated compliance gap analysis",
+    "Policy and procedure management",
+    "Compliance training automation",
+    "Audit trail and documentation",
+    "Risk assessment and mitigation",
+    "Incident reporting and tracking",
+    "Compliance dashboard and reporting"
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AI Compliance Copilot - Zion Tech Group"
+        description="Automate regulatory compliance with AI-powered monitoring, risk assessment, and policy management for enterprise security."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              AI-Powered Compliance Automation
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Compliance Copilot
+            </h1>
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+              Transform your compliance operations with intelligent automation. Our AI Compliance 
+              Copilot monitors regulations, manages policies, and ensures your business stays 
+              compliant 24/7 with minimal manual effort.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-semibold rounded-lg hover:from-amber-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105">
+                Get Compliant
+              </button>
+              <button className="px-8 py-4 border border-amber-400 text-amber-400 font-semibold rounded-lg hover:bg-amber-400 hover:text-slate-900 transition-all duration-300">
+                Compliance Audit
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Compliance Features
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our AI Compliance Copilot covers all aspects of regulatory compliance 
+              with intelligent automation and real-time monitoring.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-amber-400 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-slate-300">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="mt-10 rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-          <h3 className="font-semibold mb-2">Contact</h3>
-          <p className="text-sm text-zion-slate-light">+1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Measurable Compliance Results
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Our AI solutions deliver quantifiable improvements in compliance efficiency and risk reduction.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-amber-400 flex-shrink-0" />
+                <span className="text-slate-300">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Frameworks Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Regulatory Framework Support
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Comprehensive coverage across major regulatory frameworks and industry standards.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {complianceFrameworks.map((framework, index) => (
+              <motion.div
+                key={framework.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{framework.title}</h3>
+                <p className="text-slate-300">{framework.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced AI Capabilities
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Built with enterprise-grade AI technology for reliable compliance management.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {capabilities.map((capability, index) => (
+              <motion.div
+                key={capability}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center space-x-3"
+              >
+                <div className="w-2 h-2 bg-amber-400 rounded-full flex-shrink-0"></div>
+                <span className="text-slate-300">{capability}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-amber-600 to-orange-600">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Simplify Compliance?
+            </h2>
+            <p className="text-xl text-amber-100 mb-8 max-w-3xl mx-auto">
+              Join hundreds of organizations already using AI to stay compliant and reduce risk.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-amber-600 font-semibold rounded-lg hover:bg-slate-100 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-amber-600 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
