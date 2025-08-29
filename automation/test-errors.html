@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Error Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .error-section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+        }
+        .error-section h3 {
+            margin-top: 0;
+            color: #ff6b6b;
+        }
+        button {
+            background: #4ecdc4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: #45b7aa;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .danger {
+            background: #ff6b6b !important;
+        }
+        .danger:hover {
+            background: #ee5a52 !important;
+        }
+        .warning {
+            background: #feca57 !important;
+            color: #2c3e50 !important;
+        }
+        .warning:hover {
+            background: #f39c12 !important;
+        }
+        .info {
+            background: #48dbfb !important;
+            color: #2c3e50 !important;
+        }
+        .info:hover {
+            background: #0abde3 !important;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .error-count {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐛 Console Error Test Page</h1>
+        <p>This page is designed to generate various types of console errors to test the Console Error Capture Automation system.</p>
+        
+        <div class="error-section">
+            <h3>Console Errors</h3>
+            <p>Generate different types of console errors:</p>
+            <button onclick="generateConsoleError()">Generate Console Error</button>
+            <button onclick="generateConsoleWarn()" class="warning">Generate Console Warning</button>
+            <button onclick="generateConsoleLog()" class="info">Generate Error-like Log</button>
+        </div>
+
+        <div class="error-section">
+            <h3>JavaScript Runtime Errors</h3>
+            <p>Generate unhandled JavaScript errors:</p>
+            <button onclick="generateReferenceError()" class="danger">Generate Reference Error</button>
+            <button onclick="generateTypeError()" class="danger">Generate Type Error</button>
+            <button onclick="generateSyntaxError()" class="danger">Generate Syntax Error</button>
+        </div>
+
+        <div class="error-section">
+            <h3>Promise Rejections</h3>
+            <p>Generate unhandled promise rejections:</p>
+            <button onclick="generateUnhandledRejection()" class="danger">Generate Unhandled Rejection</button>
+            <button onclick="generateAsyncError()" class="danger">Generate Async Error</button>
+        </div>
+
+        <div class="error-section">
+            <h3>Network Errors</h3>
+            <p>Generate network-related errors:</p>
+            <button onclick="generateFetchError()" class="danger">Generate Fetch Error</button>
+            <button onclick="generateXHRError()" class="danger">Generate XHR Error</button>
+        </div>
+
+        <div class="error-section">
+            <h3>Resource Errors</h3>
+            <p>Generate resource loading errors:</p>
+            <button onclick="generateImageError()" class="warning">Generate Image Error</button>
+            <button onclick="generateScriptError()" class="warning">Generate Script Error</button>
+        </div>
+
+        <div class="error-section">
+            <h3>Custom Errors</h3>
+            <p>Generate custom error types:</p>
+            <button onclick="generateCustomError()" class="info">Generate Custom Error</button>
+            <button onclick="generateMultipleErrors()" class="danger">Generate Multiple Errors</button>
+        </div>
+
+        <div class="status">
+            <h4>Status: <span id="errorCount" class="error-count">0</span> errors generated</h4>
+            <p>Check the browser console to see the captured errors.</p>
+            <p>If you have the Error Monitor component active, it will capture these errors automatically.</p>
+        </div>
+    </div>
+
+    <!-- Include the browser error capture script -->
+    <script src="browser-error-capture.js"></script>
+    
+    <script>
+        let errorCount = 0;
+        
+        function updateErrorCount() {
+            errorCount++;
+            document.getElementById('errorCount').textContent = errorCount;
+        }
+
+        function generateConsoleError() {
+            console.error('This is a test console error for automation testing');
+            updateErrorCount();
+        }
+
+        function generateConsoleWarn() {
+            console.warn('This is a test console warning for automation testing');
+            updateErrorCount();
+        }
+
+        function generateConsoleLog() {
+            console.log('This log contains the word error for testing');
+            updateErrorCount();
+        }
+
+        function generateReferenceError() {
+            try {
+                // This will cause a reference error
+                undefinedVariable.someMethod();
+            } catch (error) {
+                console.error('Caught reference error:', error);
+                updateErrorCount();
+            }
+        }
+
+        function generateTypeError() {
+            try {
+                // This will cause a type error
+                const obj = null;
+                obj.property = 'value';
+            } catch (error) {
+                console.error('Caught type error:', error);
+                updateErrorCount();
+            }
+        }
+
+        function generateSyntaxError() {
+            try {
+                // This will cause a syntax error
+                eval('function test() { return; }');
+            } catch (error) {
+                console.error('Caught syntax error:', error);
+                updateErrorCount();
+            }
+        }
+
+        function generateUnhandledRejection() {
+            // This will cause an unhandled rejection
+            Promise.reject(new Error('Test unhandled promise rejection'));
+            updateErrorCount();
+        }
+
+        function generateAsyncError() {
+            setTimeout(() => {
+                throw new Error('Test async error for automation');
+            }, 100);
+            updateErrorCount();
+        }
+
+        function generateFetchError() {
+            // This will cause a fetch error
+            fetch('https://nonexistent-domain-12345.com/api/test')
+                .catch(error => {
+                    console.error('Fetch error caught:', error);
+                    updateErrorCount();
+                });
+        }
+
+        function generateXHRError() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://nonexistent-domain-12345.com/api/test');
+            xhr.onerror = function() {
+                console.error('XHR error occurred');
+                updateErrorCount();
+            };
+            xhr.send();
+        }
+
+        function generateImageError() {
+            const img = new Image();
+            img.onerror = function() {
+                console.error('Image failed to load');
+                updateErrorCount();
+            };
+            img.src = 'https://nonexistent-domain-12345.com/test-image.jpg';
+        }
+
+        function generateScriptError() {
+            const script = document.createElement('script');
+            script.onerror = function() {
+                console.error('Script failed to load');
+                updateErrorCount();
+            };
+            script.src = 'https://nonexistent-domain-12345.com/test-script.js';
+            document.head.appendChild(script);
+        }
+
+        function generateCustomError() {
+            const customError = new Error('Custom test error for automation');
+            customError.name = 'CustomTestError';
+            customError.code = 'TEST_001';
+            console.error('Custom error:', customError);
+            updateErrorCount();
+        }
+
+        function generateMultipleErrors() {
+            // Generate multiple errors quickly
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    console.error(`Batch error ${i + 1}: Test error for automation`);
+                    updateErrorCount();
+                }, i * 100);
+            }
+        }
+
+        // Auto-generate some errors after page load
+        setTimeout(() => {
+            console.log('🚀 Page loaded, auto-generating test errors...');
+            generateConsoleError();
+            generateConsoleWarn();
+        }, 2000);
+
+        // Check if error capture is active
+        setTimeout(() => {
+            if (window.errorCaptureInstance) {
+                console.log('✅ Error capture automation is active!');
+                console.log('📊 Current error count:', window.errorCaptureInstance.getErrorCount());
+            } else {
+                console.log('⚠️ Error capture automation not detected');
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "project": "Zion Tech Group Website",
+  "version": "1.0.0",
+  "urls": {
+    "localhost": [
+      "http://localhost:3000",
+      "http://localhost:3000/services",
+      "http://localhost:3000/about",
+      "http://localhost:3000/contact",
+      "http://localhost:3000/blog"
+    ],
+    "production": [
+      "https://ziontechgroup.com",
+      "https://ziontechgroup.com/services",
+      "https://ziontechgroup.com/about",
+      "https://ziontechgroup.com/contact",
+      "https://ziontechgroup.com/blog"
+    ]
+  },
+  "errorCapture": {
+    "maxErrors": 200,
+    "autoReport": true,
+    "reportInterval": 60000,
+    "captureConsole": true,
+    "captureNetwork": true,
+    "captureUnhandled": true,
+    "captureResource": true
+  },
+  "integration": {
+    "nextjs": true,
+    "react": true,
+    "supabase": true,
+    "tailwind": true
+  },
+  "reporting": {
+    "format": [
+      "markdown",
+      "json"
+    ],
+    "includeStackTraces": true,
+    "includeUserAgent": true,
+    "includePerformance": true
+  }
+}

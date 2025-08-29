@@ -1,8 +1,8 @@
 import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
 import './index.css';
-import { HelmetProvider } from 'react-helmet-async';
 
 const rootElement = document.getElementById('root');
 
