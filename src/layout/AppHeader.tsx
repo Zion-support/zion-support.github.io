@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { ArrowRight, Atom, BarChart3, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Server, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
-import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-=======
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, Eye, FileText, Globe, Handshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Gauge, Link, Play, Globe2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
 import { ThemeToggle } from '../components/ThemeToggle';
 
 export function AppHeader() {
@@ -52,8 +46,6 @@ export function AppHeader() {
 
   const services = [
     { 
-<<<<<<< HEAD
-=======
       name: 'Innovative Micro SAAS 2025', 
       href: '/innovative-micro-saas-services-2025', 
       icon: Rocket, 
@@ -62,7 +54,6 @@ export function AppHeader() {
       color: 'from-purple-500 to-pink-500'
     },
     { 
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
@@ -116,17 +107,6 @@ export function AppHeader() {
       icon: Globe, 
       description: 'Virtual Replicas & Simulation',
       featured: true,
-<<<<<<< HEAD
-      color: 'from-blue-500 to-cyan-500',
-      price: 'Custom Pricing',
-      category: 'IoT & Edge Computing'
-    },
-    { 
-      name: 'Cloud & DevOps', 
-      href: '/services/cloud-devops', 
-      icon: Cloud, 
-      description: 'Infrastructure & Automation',
-=======
       color: 'from-green-500 to-emerald-500'
     },
     { 
@@ -134,25 +114,10 @@ export function AppHeader() {
       href: '/services/cloud-devops', 
       icon: Cloud, 
       description: 'DevOps & Infrastructure',
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
       featured: true,
       color: 'from-blue-500 to-cyan-500'
     },
     { 
-<<<<<<< HEAD
-      name: 'Data Analytics & BI', 
-      href: '/services/data-analytics', 
-      icon: BarChart3, 
-      description: 'Business Intelligence & Analytics',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    },
-    { 
-      name: 'IT Infrastructure', 
-      href: '/services/it-infrastructure', 
-      icon: Server, 
-      description: 'Server & Network Management',
-=======
       name: 'FinTech Solutions', 
       href: '/services', 
       icon: DollarSign, 
@@ -165,19 +130,10 @@ export function AppHeader() {
       href: '/services', 
       icon: TrendingUp, 
       description: 'Automated Marketing & Analytics',
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
       featured: true,
       color: 'from-green-500 to-emerald-500'
     },
     { 
-<<<<<<< HEAD
-      name: 'Micro SaaS Products', 
-      href: '/services/micro-saas', 
-      icon: Zap, 
-      description: 'Specialized Software Solutions',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-=======
       name: 'AI & Content', 
       href: '/services', 
       icon: FileText, 
@@ -392,7 +348,6 @@ export function AppHeader() {
       description: 'Future Technology Solutions',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
     }
   ];
 
@@ -418,31 +373,6 @@ export function AppHeader() {
       description: 'Accelerate your startup growth',
       featured: false
     },
-<<<<<<< HEAD
-    { 
-      name: 'Government & Defense', 
-      href: '/solutions/government-defense', 
-      icon: Shield, 
-      description: 'Secure government solutions',
-      featured: true,
-      color: 'from-red-500 to-orange-500'
-    },
-    { 
-      name: 'Healthcare Solutions', 
-      href: '/solutions/healthcare', 
-      icon: Heart, 
-      description: 'Medical & health technology',
-      featured: true,
-      color: 'from-red-500 to-pink-500'
-    },
-    { 
-      name: 'Financial Services', 
-      href: '/solutions/financial', 
-      icon: DollarSign, 
-      description: 'Fintech & banking solutions',
-      featured: true,
-      color: 'from-yellow-500 to-orange-500'
-=======
     {
       name: 'Government Solutions',
       href: '/solutions',
@@ -463,7 +393,6 @@ export function AppHeader() {
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
       featured: true
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
     }
   ];
 
@@ -489,50 +418,6 @@ export function AppHeader() {
       description: 'In-depth research and analysis',
       featured: true
     },
-<<<<<<< HEAD
-    { 
-      name: 'Webinars', 
-      href: '/webinars', 
-      icon: Users, 
-      description: 'Live events & training',
-      featured: true,
-      color: 'from-orange-500 to-red-500'
-    },
-    { 
-      name: 'White Papers', 
-      href: '/white-papers', 
-      icon: FileText, 
-      description: 'In-depth research & analysis',
-      featured: true,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    { 
-      name: 'FAQ', 
-      href: '/faq', 
-      icon: HelpCircle, 
-      description: 'Frequently asked questions',
-      featured: true,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    { 
-      name: 'Pricing', 
-      href: '/pricing', 
-      icon: DollarSign, 
-      description: 'Transparent pricing plans',
-      featured: true,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    { 
-      name: 'Get Support', 
-      href: '/support', 
-      icon: MessageCircle, 
-      description: 'Technical support & help',
-      featured: true,
-      color: 'from-green-500 to-cyan-500'
-    }
-  ];
-
-=======
     {
       name: 'Webinars',
       href: '/webinars',
@@ -579,7 +464,6 @@ export function AppHeader() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
   return (
     <>
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${

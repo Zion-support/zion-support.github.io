@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Rocket, 
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -18,7 +8,6 @@ import {
   Rocket, 
   Zap, 
   Users, 
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
   Globe, 
   Cpu,
   Lock,
@@ -48,20 +37,6 @@ import {
   Clock,
   Award,
   Phone,
-<<<<<<< HEAD
-  MapPin,
-  Infinity,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSAASServices2025';
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
-=======
   Mail as MailIcon,
   MapPin,
   Infinity,
@@ -107,34 +82,12 @@ import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGu
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
 
 export default function ComprehensiveServicesShowcase2025() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState('grid');
-<<<<<<< HEAD
-  const [priceRange, setPriceRange] = useState([0, 50000]);
-  const [showFilters, setShowFilters] = useState(false);
-
-  const categories = [
-    { id: 'all', name: 'All Services', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Marketing').length, icon: '📈', color: 'from-green-500 to-emerald-500' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' },
-    { id: 'Digital Twin', name: 'Digital Twin', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Digital Twin').length, icon: '🔄', color: 'from-blue-500 to-indigo-500' },
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
-    { id: 'Space Technology', name: 'Space Technology', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
-    { id: 'Sustainable Technology', name: 'Sustainable Technology', count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' }
-  ];
-
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(service => {
-=======
 
   // Get unique categories from services
   const categories = [
@@ -166,18 +119,12 @@ export default function ComprehensiveServicesShowcase2025() {
   ];
 
   const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-<<<<<<< HEAD
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
-    return matchesCategory && matchesSearch && matchesPrice;
-=======
     return matchesCategory && matchesSearch;
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -190,30 +137,6 @@ export default function ComprehensiveServicesShowcase2025() {
         return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title);
-<<<<<<< HEAD
-      case 'aiScore':
-        return b.aiScore - a.aiScore;
-      default:
-        return b.rating - a.rating;
-    }
-  });
-
-  const formatPrice = (price: number) => {
-    if (price >= 1000) {
-      return `$${(price / 1000).toFixed(1)}K`;
-    }
-    return `$${price}`;
-  };
-
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(c => c.id === category);
-    return categoryData?.icon || '🚀';
-  };
-
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(c => c.id === category);
-    return categoryData?.color || 'from-gray-500 to-gray-600';
-=======
       default:
         return 0;
     }
@@ -247,60 +170,11 @@ export default function ComprehensiveServicesShowcase2025() {
       'AI & Entertainment': <SparklesIcon className="w-6 h-6" />
     };
     return iconMap[category] || <StarIcon className="w-6 h-6" />;
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-<<<<<<< HEAD
-        title="2025 Comprehensive Services Showcase - Zion Tech Group"
-        description="Explore our comprehensive portfolio of innovative AI, IT, and technology solutions for 2025. Cutting-edge micro SAAS services with guaranteed ROI and enterprise-grade support."
-      />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
-          >
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              2025 Services Showcase
-            </span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-          >
-            Discover our comprehensive portfolio of innovative AI, IT, and technology solutions. 
-            From micro SAAS services to enterprise platforms, we deliver cutting-edge solutions with guaranteed ROI.
-          </motion.p>
-          
-          {/* Contact Info */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto"
-          >
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-white">
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>Middletown DE 19709</span>
-=======
         title="Comprehensive AI & Technology Services Showcase 2025 - Zion Tech Group"
         description="Explore our cutting-edge AI-powered micro SAAS services, IT solutions, and innovative technology platforms. Transform your business with autonomous AI systems, quantum computing, and next-generation solutions."
       />
@@ -382,17 +256,12 @@ export default function ComprehensiveServicesShowcase2025() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">98%</div>
                 <div className="text-gray-400">AI Score</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
               </div>
             </div>
           </motion.div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* Filters and Search */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-12">
-=======
       {/* Services Showcase */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Filters and Search */}
@@ -637,7 +506,6 @@ export default function ComprehensiveServicesShowcase2025() {
 
       {/* Services Grid */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -694,34 +562,6 @@ export default function ComprehensiveServicesShowcase2025() {
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </div>
-      </section>
-
-      {/* Category Navigation */}
-      <section className="px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((category) => (
-              <motion.button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category.id
-                    ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg scale-105'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:scale-105'
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="mr-2">{category.icon}</span>
-                {category.name} ({category.count})
-              </motion.button>
-=======
                   
                   <div className="flex space-x-2">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
@@ -733,7 +573,6 @@ export default function ComprehensiveServicesShowcase2025() {
                   </div>
                 </div>
               </motion.div>
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
             ))}
           </div>
         </div>
@@ -766,13 +605,8 @@ export default function ComprehensiveServicesShowcase2025() {
               <h3 className="text-xl font-semibold text-white mb-2">Visit Website</h3>
               <p className="text-gray-300">Explore our full range of services</p>
               <a
-<<<<<<< HEAD
-                href="mailto:kleber@ziontechgroup.com?subject=Free Consultation Request"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-semibold"
-=======
                 href="https://ziontechgroup.com"
                 className="mt-2 text-indigo-400 hover:text-indigo-300 transition-colors"
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
               >
                 ziontechgroup.com
               </a>

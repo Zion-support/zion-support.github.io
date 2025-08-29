@@ -141,28 +141,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
-      title: 'Micro SAAS Products',
-      featured: true,
-      links: [
-        { name: 'Micro CRM Platform', href: '/services/micro-crm', featured: true },
-        { name: 'Interview Assessment AI', href: '/services/interview-assessment-ai', featured: true },
-        { name: 'Incident Response Platform', href: '/services/incident-response-platform', featured: true },
-        { name: 'Website Analytics Tool', href: '/services/website-analytics', featured: true },
-        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', featured: true },
-        { name: 'Security Headers CSP Manager', href: '/services/security-headers-csp', featured: true },
-        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', featured: true },
-        { name: 'AI Content Generator', href: '/services/ai-content-generator', featured: true },
-        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation', featured: true },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true }
-      ]
-    },
-    {
-      title: 'Resources & Learning',
-      featured: false,
-      links: [
-        { name: 'AI Research Papers', href: '/resources/research-papers', featured: false },
-=======
       title: 'Industry Solutions',
       featured: false,
       links: [
@@ -183,7 +161,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: false,
       links: [
         { name: 'Blog & Insights', href: '/blog', featured: true },
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
         { name: 'Case Studies', href: '/case-studies', featured: true },
         { name: 'White Papers', href: '/white-papers', featured: true },
         { name: 'Webinars', href: '/webinars', featured: true },
@@ -191,12 +168,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'FAQ & Support', href: '/faq', featured: true },
         { name: 'Pricing Guide 2027', href: '/pricing-guide-2027', featured: true },
         { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
-<<<<<<< HEAD
-        { name: 'Request Quote', href: '/request-quote', featured: true }
-=======
         { name: 'Request Quote', href: '/request-quote', featured: true },
         { name: 'Contact Us', href: '/contact', featured: true }
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
       ]
     },
     {
@@ -206,15 +179,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'About Us', href: '/about', featured: true },
         { name: 'Partners', href: '/partners', featured: true },
         { name: 'Careers', href: '/careers', featured: true },
-<<<<<<< HEAD
-        { name: 'Support Center', href: '/support', featured: true },
-        { name: 'Privacy Policy', href: '/privacy', featured: false },
-        { name: 'Terms of Service', href: '/terms', featured: false },
-        { name: 'Cookie Policy', href: '/cookies', featured: false },
-        { name: 'Dashboard', href: '/dashboard', featured: false },
-        { name: 'Login', href: '/login', featured: false },
-        { name: 'Marketplace', href: '/marketplace', featured: true }
-=======
         { name: 'Marketplace', href: '/marketplace', featured: true },
         { name: 'Privacy Policy', href: '/privacy', featured: true },
         { name: 'Terms of Service', href: '/terms', featured: true },
@@ -222,7 +186,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Security', href: '/security', featured: true },
         { name: 'Press & Media', href: '/press', featured: true },
         { name: 'Research', href: '/research', featured: true }
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
       ]
     }
   ];
@@ -245,26 +208,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-<<<<<<< HEAD
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-400' },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-blue-400' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
-  ];
-
-  const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
-    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: true },
-    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: true },
-    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: true },
-    { name: 'Join Community', href: '/community', icon: Users, featured: true },
-    { name: 'Partner Program', href: '/partners', icon: Users, featured: true }
-=======
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-300' }
->>>>>>> cursor/analyze-improve-and-deploy-application-663e
   ];
 
   const scrollToTop = () => {
