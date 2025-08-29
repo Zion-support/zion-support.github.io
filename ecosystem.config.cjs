@@ -182,6 +182,71 @@ module.exports = {
     }
   ],
 
+  // NEW: Intelligent Automation Processes
+  intelligentAutomation: [
+    // AI-Powered Code Quality Automation
+    {
+      name: 'ai-code-quality',
+      script: './scripts/automation/ai-code-quality-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000', // 30 minutes
+        QUALITY_THRESHOLD: '80',
+        AUTO_FIX_ENABLED: 'true'
+      },
+      error_file: 'logs/ai-code-quality-error.log',
+      out_file: 'logs/ai-code-quality-out.log',
+      log_file: 'logs/ai-code-quality-combined.log',
+      time: true
+    },
+
+    // Intelligent Performance Optimization
+    {
+      name: 'intelligent-performance',
+      script: './scripts/automation/intelligent-performance-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        BUNDLE_ANALYSIS_INTERVAL: '3600000', // 1 hour
+        PERFORMANCE_MONITORING_INTERVAL: '7200000', // 2 hours
+        PERFORMANCE_BUDGET_ENFORCED: 'true',
+        AUTO_OPTIMIZATION_ENABLED: 'true'
+      },
+      error_file: 'logs/intelligent-performance-error.log',
+      out_file: 'logs/intelligent-performance-out.log',
+      log_file: 'logs/intelligent-performance-combined.log',
+      time: true
+    },
+
+    // Smart Dependency Management
+    {
+      name: 'smart-dependency',
+      script: './scripts/automation/smart-dependency-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        DEPENDENCY_ANALYSIS_INTERVAL: '86400000', // 24 hours
+        AUTO_UPDATE_ENABLED: 'true',
+        SECURITY_AUTO_FIX: 'true',
+        CONFLICT_RESOLUTION: 'true'
+      },
+      error_file: 'logs/smart-dependency-error.log',
+      out_file: 'logs/smart-dependency-out.log',
+      log_file: 'logs/smart-dependency-combined.log',
+      time: true
+    }
+  ],
+
   // PM2 Log Rotation
   module: {
     name: 'pm2-logrotate',
