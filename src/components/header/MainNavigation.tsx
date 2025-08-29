@@ -29,6 +29,8 @@ export function MainNavigation({ className }) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
+                    <li><Link to="/advanced-services-showcase-2027" className="text-zion-slate-light hover:text-zion-cyan transition-colors font-semibold">🚀 Advanced 2027 Services</Link></li>
+                    <li><Link to="/advanced-pricing-comparison-2027" className="text-zion-slate-light hover:text-zion-cyan transition-colors">💰 Pricing Comparison</Link></li>
                     <li><Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Sales Copilot</Link></li>
                     <li><Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud FinOps Optimizer</Link></li>
                     <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>

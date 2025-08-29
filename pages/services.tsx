@@ -64,6 +64,22 @@ export default function Services() {
 								<span>99.9% Uptime</span>
 							</div>
 						</div>
+						<div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+							<Link
+								to="/advanced-services-showcase-2027"
+								className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-800 transition-all duration-200 shadow-lg hover:shadow-xl"
+							>
+								🚀 Explore Our Advanced 2027 Services
+								<ArrowRight className="ml-2 h-5 w-5" />
+							</Link>
+							<Link
+								to="/advanced-pricing-comparison-2027"
+								className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-800 transition-all duration-200 shadow-lg hover:shadow-xl"
+							>
+								💰 View Pricing Comparison
+								<ArrowRight className="ml-2 h-5 w-5" />
+							</Link>
+						</div>
 					</div>
 				</div>
 			</section>
