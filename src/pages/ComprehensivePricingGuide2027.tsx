@@ -729,118 +729,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* New Innovative Services Pricing */}
-      <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              New Innovative Micro SAAS Services 2025
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our latest cutting-edge services with competitive pricing and exceptional ROI
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {NEW_INNOVATIVE_MICRO_SAAS_PRICING_2025.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300"
-              >
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                  <div className="text-gray-400 text-sm mb-4">{service.category}</div>
-                </div>
-
-                {/* Pricing Tiers */}
-                <div className="space-y-4 mb-6">
-                  {Object.entries(service.pricing).map(([tier, details]) => (
-                    <div key={tier} className="bg-gray-700/50 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-white font-semibold capitalize">{tier}</span>
-                        <span className="text-2xl font-bold text-blue-400">
-                          {details.currency}{details.price.toLocaleString()}
-                          <span className="text-gray-400 text-sm">/{details.period}</span>
-                        </span>
-                      </div>
-                      <div className="space-y-2">
-                        {details.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{feature}</span>
-                          </div>
-                        ))}
-                        {details.features.length > 3 && (
-                          <div className="text-blue-400 text-sm font-medium">
-                            +{details.features.length - 3} more features
-                          </div>
-                        )}
-                      </div>
-                      {details.limitations && (
-                        <div className="mt-3 pt-3 border-t border-gray-600">
-                          <div className="text-gray-400 text-sm">
-                            <strong>Limitations:</strong> {details.limitations.join(', ')}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Market Analysis */}
-                <div className="bg-gray-700/30 rounded-lg p-4 mb-6">
-                  <h4 className="text-white font-semibold mb-3">Market Analysis</h4>
-                  <div className="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <span className="text-gray-400">Market Price:</span>
-                      <div className="text-white font-medium">{service.marketAnalysis.averageMarketPrice}</div>
-                    </div>
-                    <div>
-                      <span className="text-gray-400">ROI:</span>
-                      <div className="text-green-400 font-medium">{service.marketAnalysis.roi}</div>
-                    </div>
-                    <div>
-                      <span className="text-gray-400">Market Size:</span>
-                      <div className="text-white font-medium">{service.marketAnalysis.marketSize}</div>
-                    </div>
-                    <div>
-                      <span className="text-gray-400">Competitors:</span>
-                      <div className="text-white font-medium">{service.marketAnalysis.competitors.slice(0, 2).join(', ')}</div>
-                    </div>
-                  </div>
-                </div>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-                >
-                  Get Quote
-                </motion.button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8">
-            Contact us today for a personalized consultation and custom pricing quote tailored to your specific needs.
-=======
       {/* Contact Section */}
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
@@ -848,7 +736,10 @@ const ComprehensivePricingGuide2027: React.FC = () => {
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Contact our team to discuss pricing, implementation, and how our revolutionary services 
             can transform your business and drive unprecedented growth.
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-a8bf
+      {/* Contact Section */}
+      <section className="py-16 bg-slate-900/50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
