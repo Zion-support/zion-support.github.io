@@ -5,7 +5,7 @@
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
-      "file": "/Users/miami2/zion-app-clone/src/components/unused/BrokenLinkFixer.jsx",
+      "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
       "line": 185
     },
     {
@@ -13,7 +13,7 @@
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
-      "file": "/Users/miami2/zion-app-clone/src/components/unused/ContentQualityEnhancer.jsx",
+      "file": "/workspace/src/components/unused/ContentQualityEnhancer.jsx",
       "line": 260
     },
     {
@@ -21,7 +21,7 @@
       "severity": 2,
       "message": "eval() usage detected",
       "rule": "no-eval",
-      "file": "/Users/miami2/zion-app-clone/src/hooks/useAICodeGeneration.js.jsx",
+      "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
       "line": 459
     },
     {
@@ -29,7 +29,7 @@
       "severity": 1,
       "message": "document.write() usage detected",
       "rule": "no-document-write",
-      "file": "/Users/miami2/zion-app-clone/src/hooks/useAICodeGeneration.js.jsx",
+      "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
       "line": 398
     },
     {
@@ -37,7 +37,7 @@
       "severity": 2,
       "message": "eval() usage detected",
       "rule": "no-eval",
-      "file": "/Users/miami2/zion-app-clone/src/hooks/useAICodeGeneration.jsx",
+      "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
       "line": 459
     },
     {
@@ -45,7 +45,7 @@
       "severity": 1,
       "message": "document.write() usage detected",
       "rule": "no-document-write",
-      "file": "/Users/miami2/zion-app-clone/src/hooks/useAICodeGeneration.jsx",
+      "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
       "line": 398
     },
     {
@@ -53,7 +53,7 @@
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
-      "file": "/Users/miami2/zion-app-clone/src/main.js.jsx",
+      "file": "/workspace/src/main.js.jsx",
       "line": 48
     },
     {
@@ -61,7 +61,7 @@
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
-      "file": "/Users/miami2/zion-app-clone/src/main.jsx",
+      "file": "/workspace/src/main.jsx",
       "line": 69
     }
   ],
