@@ -148,6 +148,41 @@ export default function ComprehensiveServicesOverview() {
         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery)))
       );
     }
+    
+    // Category filter
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
     }
+    
+    // Price filter
+    if (priceRange !== 'all') {
+      filtered = filtered.filter(service => {
+        const price = service.price.replace('$', '').replace(',', '');
+        const numPrice = parseInt(price);
+        
+        switch (priceRange) {
+          case 'under-100':
+            return numPrice < 100;
+          case '100-500':
+            return numPrice >= 100 && numPrice <= 500;
+          case '500-1000':
+            return numPrice > 500 && numPrice <= 1000;
+          case 'over-1000':
+            return numPrice > 1000;
+          default:
+            return true;
+        }
+      });
+    }
+    
+    // Support level filter
+    if (selectedSupportLevel !== 'all') {
+      filtered = filtered.filter(service => service.supportLevel === selectedSupportLevel);
+    }
+    
+    return filtered;
+  }, [searchQuery, selectedCategory, priceRange, selectedSupportLevel]);
+
+  const getPriceValue = (service: any) => {
     return service.pricing?.basic || 0;
   };
