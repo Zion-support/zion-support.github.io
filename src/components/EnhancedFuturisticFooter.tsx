@@ -70,33 +70,30 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
-        { name: 'AI Data Governance', href: '/services/ai-data-governance' },
-        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Predictive Analytics Platform', href: '/services/ai-predictive-analytics-platform' },
+        { name: 'AI Customer Experience Platform', href: '/services/ai-customer-experience-platform' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Content Studio Pro', href: '/services/ai-content-studio' }
       ]
     },
     {
-      title: 'Cloud & DevOps',
-      icon: Zap,
-      color: 'from-blue-600 to-cyan-600',
+      title: 'Cybersecurity & Emerging Tech',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600',
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'Smart Contract Risk Scanner', href: '/services/smart-contract-risk-scanner' },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
+        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Space Tech Solutions', href: '/services/space-tech' }
       ]
     },
     {
-      title: 'Edge & IoT Services',
-      icon: Server,
+      title: 'IT Infrastructure & Cloud',
+      icon: Cloud,
       color: 'from-blue-600 to-cyan-600',
       links: [
         { name: 'IoT & Edge Computing', href: '/services/iot-edge' },
