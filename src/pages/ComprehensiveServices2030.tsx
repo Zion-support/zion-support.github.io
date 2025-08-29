@@ -48,7 +48,7 @@ import {
   GraduationCap,
   Gamepad2,
   Microscope,
-  Vr,
+  VirtualReality,
   TreePine,
   Satellite
 } from 'lucide-react';

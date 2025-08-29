@@ -65,7 +65,6 @@ const AIRealEstateInvestmentAnalyzer = React.lazy(() => import('./pages/services
 const AIRestaurantManagementSystem = React.lazy(() => import('./pages/services/ai-restaurant-management-system'));
 const AIFitnessCoachingPlatform = React.lazy(() => import('./pages/services/ai-fitness-coaching-platform'));
 const AIEcommercePersonalizationEngine = React.lazy(() => import('./pages/services/ai-ecommerce-personalization-engine'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIVideoContentCreationStudio = React.lazy(() => import('./pages/services/ai-video-content-creation-studio'));
 const AICustomerChurnPrediction = React.lazy(() => import('./pages/services/ai-customer-churn-prediction'));
 const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/ai-financial-fraud-detection'));
@@ -73,7 +72,6 @@ const AIEnergyManagementSystem = React.lazy(() => import('./pages/services/ai-en
 
 // New innovative services
 const AIContractAnalysis = React.lazy(() => import('./pages/services/AI-Powered-Contract-Analysis'));
-const AISupplyChainOptimizationNew = React.lazy(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurityThreatIntelligence = React.lazy(() => import('./pages/services/AI-Cybersecurity-Threat-Intelligence'));
 const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AI-Healthcare-Diagnostics'));
 
