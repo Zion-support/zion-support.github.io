@@ -2,125 +2,109 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
-// https://vitejs.dev/config/
+// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@pages': resolve(__dirname, './src/pages'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@data': resolve(__dirname, './src/data'),
-      '@styles': resolve(__dirname, './src/styles'),
-    },
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+    }
   },
   build: {
-    // Enable source maps for debugging
-    sourcemap: true,
-    
-    // Optimize chunk size
-    chunkSizeWarningLimit: 1000,
-    
-    // Enable minification
+    target: 'esnext',
     minify: 'terser',
-    
-    // Terser options for better minification
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router-vendor': ['react-router-dom'],
+          'ui-vendor': ['framer-motion', 'lucide-react'],
+          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']
+        },
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
+            return `images/[name]-[hash][extname]`;
+          }
+          if (/css/i.test(ext)) {
+            return `css/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        }
+      }
+    },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-      },
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+      }
     },
-    
-    // Rollup options for better code splitting
-    rollupOptions: {
-      output: {
-        // Optimize chunk naming
-        chunkFileNames: 'js/[name]-[hash].js',
-        
-        // Optimize asset naming
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name?.split('.') || []
-          const ext = info[info.length - 1]
-          if (/\.(css)$/.test(assetInfo.name || '')) {
-            return `css/[name]-[hash].${ext}`
-          }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
-            return `images/[name]-[hash].${ext}`
-          }
-          return `assets/[name]-[hash].${ext}`
-        },
-      },
-    },
-    
-    // Target modern browsers for better optimization
-    target: 'es2015',
-    
-    // Enable CSS code splitting
-    cssCodeSplit: true,
-    
-    // Optimize dependencies
-    commonjsOptions: {
-      include: [/node_modules/],
-    },
+    chunkSizeWarningLimit: 1000
   },
-  
-  // Development server optimization
-  server: {
-    port: 3000,
-    host: true,
-    open: true,
-  },
-  
-  // Preview server optimization
-  preview: {
-    port: 4173,
-    host: true,
-  },
-  
-  // Optimize dependencies
   optimizeDeps: {
     include: [
       'react',
       'react-dom',
       'react-router-dom',
-      '@radix-ui/react-accordion',
-      '@radix-ui/react-alert-dialog',
-      '@radix-ui/react-avatar',
-      '@radix-ui/react-checkbox',
-      '@radix-ui/react-dialog',
-      '@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-hover-card',
-      '@radix-ui/react-label',
-      '@radix-ui/react-navigation-menu',
-      '@radix-ui/react-popover',
-      '@radix-ui/react-progress',
-      '@radix-ui/react-radio-group',
-      '@radix-ui/react-scroll-area',
-      '@radix-ui/react-select',
-      '@radix-ui/react-separator',
-      '@radix-ui/react-slider',
-      '@radix-ui/react-slot',
-      '@radix-ui/react-switch',
-      '@radix-ui/react-tabs',
-      '@radix-ui/react-toast',
-      '@radix-ui/react-toggle',
-      '@radix-ui/react-tooltip',
-      'react-hook-form',
-      '@hookform/resolvers',
-      'zod',
-      '@reduxjs/toolkit',
-      'react-redux',
       'framer-motion',
-      '@heroicons/react',
       'lucide-react',
+      'date-fns',
       'clsx',
-      'class-variance-authority',
-      'tailwind-merge',
-      'react-hot-toast',
+      'tailwind-merge'
     ],
+    exclude: ['@vite/client', '@vite/env']
   },
+  server: {
+    port: 3000,
+    host: true,
+    open: true,
+    cors: true,
+    hmr: {
+      overlay: false
+    },
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
+    }
+  },
+  preview: {
+    port: 4173,
+    host: true,
+    open: true
+  },
+  css: {
+    devSourcemap: true,
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer')
+      ]
+    }
+  },
+  define: {
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString())
+  }
 })

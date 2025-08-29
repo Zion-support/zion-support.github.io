@@ -72,7 +72,7 @@ const benefits: Benefit[] = [
   }
 ];
 
-const initialStats = [
+const stats = [
   { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
   { icon: <CheckCircle className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
   { icon: <TrendingDown className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
@@ -94,10 +94,10 @@ export function BenefitsSection() {
   };
 
   const stats = [
-    { value: "500+", label: "Projects Delivered", icon: <Clock className="w-6 h-6" /> },
-    { value: "50+", label: "Expert Team Members", icon: <Globe className="w-6 h-6" /> },
-    { value: "99.9%", label: "Client Satisfaction", icon: <CheckCircle className="w-6 h-6" /> },
-    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6" /> }
+    { value: "500+", label: "Projects Delivered", icon: Rocket },
+    { value: "50+", label: "Expert Team Members", icon: Users },
+    { value: "99.9%", label: "Client Satisfaction", icon: Star },
+    { value: "24/7", label: "Support Availability", icon: Clock }
   ];
 
   return (
@@ -270,7 +270,7 @@ export function BenefitsSection() {
                 className="text-center group"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+                  <stat.icon className="w-10 h-10 text-white" />
                 </div>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-gray-300 font-medium">{stat.label}</div>
