@@ -39,6 +39,7 @@ const RevolutionaryServicesLanding = React.lazy(() => import('./pages/Revolution
 const RevolutionaryPricingGuide = React.lazy(() => import('./pages/RevolutionaryPricingGuide.tsx'));
 const ComprehensiveServicesShowcase2029 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2029.tsx'));
 const InnovativeMicroSaasServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeMicroSaasServicesShowcase2025.tsx'));
+const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025.tsx'));
 const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedServicesShowcase2025.tsx'));
 const AdvancedPricingGuide2025 = React.lazy(() => import('./pages/AdvancedPricingGuide2025.tsx'));
 
@@ -49,6 +50,11 @@ const DataAnalytics = lazy(() => import('./pages/services/DataAnalytics'));
 const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = lazy(() => import('./pages/services/MicroSaaSProducts'));
+
+// New Innovative Services
+const AIAutonomousVehiclePlatform = lazy(() => import('./pages/services/ai-autonomous-vehicle-platform'));
+const AISmartCityPlatform = lazy(() => import('./pages/services/ai-smart-city-platform'));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
 // Simple placeholder pages for missing ones
 const Careers = () => (
@@ -120,6 +126,7 @@ function App() {
                 <Route path="/services/comprehensive-2030" element={<ComprehensiveServicesLanding2030 />} />
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/innovative-micro-saas-2025" element={<InnovativeMicroSaasServicesShowcase2025 />} />
+                <Route path="/services/innovative-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                 <Route path="/services/advanced-micro-saas-2025" element={<AdvancedServicesShowcase2025 />} />
                 <Route path="/pricing-guide-2025" element={<AdvancedPricingGuide2025 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
@@ -135,6 +142,11 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* New Innovative Services */}
+                <Route path="/services/ai-autonomous-vehicle-platform" element={<AIAutonomousVehiclePlatform />} />
+                <Route path="/services/ai-smart-city-platform" element={<AISmartCityPlatform />} />
+                <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />

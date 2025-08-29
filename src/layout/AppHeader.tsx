@@ -72,6 +72,14 @@ export function AppHeader() {
       color: 'from-red-500 to-pink-500'
     },
     { 
+      name: 'AI Healthcare Analytics', 
+      href: '/services/ai-healthcare-analytics-platform', 
+      icon: Activity, 
+      description: 'Predictive Healthcare AI',
+      featured: true,
+      color: 'from-pink-500 to-purple-500'
+    },
+    { 
       name: 'AI Content Creation', 
       href: '/services/ai-content-creation', 
       icon: PenTool, 
@@ -110,6 +118,14 @@ export function AppHeader() {
       description: 'Virtual Replicas & Simulation',
       featured: true,
       color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'AI Autonomous Vehicles', 
+      href: '/services/ai-autonomous-vehicle-platform', 
+      icon: Car, 
+      description: 'Fleet Management & Safety',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
     },
     { 
       name: 'Cloud DevOps', 
@@ -272,6 +288,14 @@ export function AppHeader() {
       color: 'from-green-500 to-teal-500'
     },
     { 
+      name: 'AI Smart City Platform', 
+      href: '/services/ai-smart-city-platform', 
+      icon: Building2, 
+      description: 'Urban Intelligence & Optimization',
+      featured: true,
+      color: 'from-emerald-500 to-teal-500'
+    },
+    { 
       name: 'AI FinTech Platform', 
       href: '/services/ai-powered-financial-technology', 
       icon: DollarSign, 
@@ -358,6 +382,14 @@ export function AppHeader() {
       description: 'Cutting-edge AI Services',
       featured: true,
       color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Innovative Services Showcase 2025', 
+      href: '/services/innovative-showcase-2025', 
+      icon: Rocket, 
+      description: 'Complete Portfolio of AI Services',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 

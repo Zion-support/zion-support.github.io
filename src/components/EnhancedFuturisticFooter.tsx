@@ -88,7 +88,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Metaverse Builder Platform', href: '/services#metaverse-builder', featured: true },
         { name: 'AI Autonomous Operations', href: '/revolutionary-services-2030#ai-autonomous-business-operations-2030' },
         { name: 'Quantum AI Cybersecurity', href: '/revolutionary-services-2030#quantum-ai-cybersecurity-2030' },
-        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' }
+        { name: 'AI Content Creation Studio', href: '/revolutionary-services-2030#ai-content-creation-studio-2030' },
+        { name: 'AI Autonomous Vehicle Platform', href: '/services/ai-autonomous-vehicle-platform' },
+        { name: 'AI Smart City Platform', href: '/services/ai-smart-city-platform' },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' }
       ]
     },
     {
