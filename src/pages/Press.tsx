@@ -119,7 +119,7 @@ export default function Press() {
     }
   ];
 
-  const mediaResources = [
+  const mediaAssets = [
     {
       title: 'Company Logo Package',
       description: 'High-resolution logos in various formats',
@@ -433,7 +433,7 @@ export default function Press() {
           </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {mediaResources.map((resource, index) => (
+            {mediaAssets.map((resource, index) => (
               <motion.div
                 key={resource.title}
                 initial={{ opacity: 0, y: 30 }}
