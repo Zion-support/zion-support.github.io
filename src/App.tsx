@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { LoadingSpinner } from './components/LoadingSpinner';
+import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { AppHeader } from './layout/AppHeader';
-import { Footer } from './components/EnhancedFuturisticFooter';
+import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
