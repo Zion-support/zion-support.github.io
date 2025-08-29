@@ -4,10 +4,10 @@ import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { EnhancedSEO } from './components/EnhancedSEO';
+import { EnhancedPerformanceOptimizer } from './components/EnhancedPerformanceOptimizer';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/Home'));
@@ -80,7 +80,7 @@ function App() {
         <div className="min-h-screen bg-futuristic">
           <AppHeader />
           
-          <main className="flex-1">
+          <main className="flex-1" id="main-content">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -143,10 +143,13 @@ function App() {
               </Routes>
             </Suspense>
           </main>
+          
           <Footer />
           <ChatAssistant />
-          <PerformanceOptimizer />
-          <AccessibilityEnhancer />
+          
+          {/* Enhanced Performance and Accessibility Tools */}
+          <EnhancedPerformanceOptimizer />
+          <EnhancedAccessibility />
         </div>
       </Router>
     </ErrorBoundary>
