@@ -82,6 +82,10 @@ const AICustomerExperiencePlatform = React.lazy(() => import('./pages/services/A
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AIAutonomousBusinessOperations = React.lazy(() => import('./pages/services/AIAutonomousBusinessOperations'));
 const QuantumComputingSolutions = React.lazy(() => import('./pages/services/QuantumComputingSolutions'));
+const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
+const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
+const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
+const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
@@ -93,6 +97,17 @@ const Security = React.lazy(() => import('./pages/Security'));
 const Compliance = React.lazy(() => import('./pages/Compliance'));
 const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 
+// Additional missing pages
+const Talent = React.lazy(() => import('./pages/Talent'));
+const Equipment = React.lazy(() => import('./pages/Equipment'));
+const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const News = React.lazy(() => import('./pages/News'));
+const Events = React.lazy(() => import('./pages/events'));
+const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+
 const Careers = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
     <SEO 
@@ -102,19 +117,6 @@ const Careers = () => (
     <div className="text-center text-white">
       <h1 className="text-4xl font-bold mb-4">Careers</h1>
       <p className="text-xl text-gray-300">Join our team</p>
-    </div>
-  </div>
-);
-
-const Marketplace = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <SEO 
-      title="Marketplace - Zion Tech Group"
-      description="Explore our marketplace of AI-powered technology solutions and services."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Marketplace</h1>
-      <p className="text-xl text-gray-300">Explore our solutions</p>
     </div>
   </div>
 );
@@ -167,6 +169,16 @@ function App() {
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/partners" element={<Partners />} />
               
+              {/* Additional missing routes */}
+              <Route path="/talent" element={<Talent />} />
+              <Route path="/equipment" element={<Equipment />} />
+              <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/events" element={<Events />} />
+              
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
               <Route path="/services/digital-twin" element={<DigitalTwin />} />
@@ -204,6 +216,10 @@ function App() {
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
               <Route path="/services/ai-autonomous-business-operations" element={<AIAutonomousBusinessOperations />} />
               <Route path="/services/quantum-computing-solutions" element={<QuantumComputingSolutions />} />
+              <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
+              <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
+              <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
+              <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
@@ -213,7 +229,7 @@ function App() {
         
         <EnhancedFuturisticFooter />
         <ChatAssistant />
-        <PerformanceOptimizer />
+        <PerformanceOptimizer showMetrics={true} />
       </div>
     </ErrorBoundary>
   );
