@@ -1,199 +1,296 @@
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
-import { Code, Book, Search, Zap, Layers, GitBranch, ArrowRight, CheckCircle, Lock, Database, Bot, Cloud, DollarSign, AlertCircle } from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { 
+  Code, 
+  Search, 
+  Filter,
+  ArrowRight,
+  Download,
+  ExternalLink,
+  Github,
+  Globe,
+  Database,
+  Server,
+  Shield,
+  Brain,
+  Cloud,
+  Cpu,
+  Zap,
+  Users,
+  Calendar,
+  Star,
+  Bookmark,
+  Share2,
+  Copy,
+  CheckCircle,
+  Clock,
+  Tag,
+  Play,
+  Terminal,
+  FileText,
+  Key,
+  Lock,
+  Eye,
+  EyeOff,
+  ChevronDown,
+  ChevronRight,
+  AlertCircle,
+  Info
+} from 'lucide-react';
 
-const APIDocumentation: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
+export default function APIDocumentation() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedMethod, setSelectedMethod] = useState('All');
+  const [expandedEndpoints, setExpandedEndpoints] = useState<Set<string>>(new Set());
 
-  const apiCategories = [
-    { id: 'all', name: 'All APIs', icon: <Layers className="w-6 h-6" /> },
-    { id: 'auth', name: 'Authentication', icon: <Lock className="w-6 h-6" /> },
-    { id: 'data', name: 'Data Services', icon: <Database className="w-6 h-6" /> },
-    { id: 'ai', name: 'AI/ML', icon: <Bot className="w-6 h-6" /> },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-6 h-6" /> },
-    { id: 'payments', name: 'Payments', icon: <DollarSign className="w-6 h-6" /> },
-  ];
+  const categories = ['All', 'Authentication', 'AI Services', 'Data Analytics', 'Cloud Services', 'IoT & Edge', 'Blockchain', 'Quantum Computing'];
+  const methods = ['All', 'GET', 'POST', 'PUT', 'DELETE', 'PATCH'];
 
   const apiEndpoints = [
     {
-      id: 'auth-login',
-      category: 'auth',
-      name: 'Login User',
-      method: 'POST',
-      path: '/api/v1/auth/login',
-      description: 'Authenticates a user and returns an access token.',
-      requestBody: '{ "email": "string", "password": "string" }',
-      responseBody: '{ "token": "string", "user": { "id": "string", "email": "string" } }',
-      status: 'Stable'
+      category: 'Authentication',
+      endpoints: [
+        {
+          path: '/auth/login',
+          method: 'POST',
+          title: 'User Login',
+          description: 'Authenticate user with email and password',
+          parameters: [
+            { name: 'email', type: 'string', required: true, description: 'User email address' },
+            { name: 'password', type: 'string', required: true, description: 'User password' }
+          ],
+          responses: [
+            { code: 200, description: 'Login successful', example: '{ "token": "jwt_token", "user": {...} }' },
+            { code: 401, description: 'Invalid credentials', example: '{ "error": "Invalid credentials" }' }
+          ],
+          examples: {
+            curl: 'curl -X POST /auth/login -H "Content-Type: application/json" -d \'{"email":"user@example.com","password":"password"}\'',
+            python: 'requests.post("/auth/login", json={"email": "user@example.com", "password": "password"})',
+            javascript: 'fetch("/auth/login", { method: "POST", body: JSON.stringify({email: "user@example.com", password: "password"}) })'
+          }
+        },
+        {
+          path: '/auth/register',
+          method: 'POST',
+          title: 'User Registration',
+          description: 'Create a new user account',
+          parameters: [
+            { name: 'email', type: 'string', required: true, description: 'User email address' },
+            { name: 'password', type: 'string', required: true, description: 'Minimum 8 characters' },
+            { name: 'name', type: 'string', required: true, description: 'Full name' }
+          ],
+          responses: [
+            { code: 201, description: 'User created successfully', example: '{ "user": {...}, "message": "User created" }' },
+            { code: 400, description: 'Validation error', example: '{ "error": "Email already exists" }' }
+          ],
+          examples: {
+            curl: 'curl -X POST /auth/register -H "Content-Type: application/json" -d \'{"email":"new@example.com","password":"password123","name":"John Doe"}\'',
+            python: 'requests.post("/auth/register", json={"email": "new@example.com", "password": "password123", "name": "John Doe"})',
+            javascript: 'fetch("/auth/register", { method: "POST", body: JSON.stringify({email: "new@example.com", password: "password123", name: "John Doe"}) })'
+          }
+        }
+      ]
     },
     {
-      id: 'auth-register',
-      category: 'auth',
-      name: 'Register User',
-      method: 'POST',
-      path: '/api/v1/auth/register',
-      description: 'Creates a new user account and returns user details.',
-      requestBody: '{ "email": "string", "password": "string", "name": "string" }',
-      responseBody: '{ "user": { "id": "string", "email": "string", "name": "string" } }',
-      status: 'Stable'
+      category: 'AI Services',
+      endpoints: [
+        {
+          path: '/ai/generate',
+          method: 'POST',
+          title: 'AI Content Generation',
+          description: 'Generate content using AI models',
+          parameters: [
+            { name: 'prompt', type: 'string', required: true, description: 'Input prompt for generation' },
+            { name: 'model', type: 'string', required: false, description: 'AI model to use', default: 'gpt-4' },
+            { name: 'max_tokens', type: 'integer', required: false, description: 'Maximum tokens to generate', default: 1000 }
+          ],
+          responses: [
+            { code: 200, description: 'Content generated successfully', example: '{ "content": "Generated text...", "usage": {...} }' },
+            { code: 400, description: 'Invalid request', example: '{ "error": "Invalid prompt" }' }
+          ],
+          examples: {
+            curl: 'curl -X POST /ai/generate -H "Content-Type: application/json" -d \'{"prompt":"Write a blog post about AI"}\'',
+            python: 'requests.post("/ai/generate", json={"prompt": "Write a blog post about AI"})',
+            javascript: 'fetch("/ai/generate", { method: "POST", body: JSON.stringify({prompt: "Write a blog post about AI"}) })'
+          }
+        }
+      ]
     },
     {
-      id: 'ai-generate',
-      category: 'ai',
-      name: 'Generate AI Content',
-      method: 'POST',
-      path: '/api/v1/ai/generate',
-      description: 'Generates AI content based on provided prompts and parameters.',
-      requestBody: '{ "prompt": "string", "model": "string", "max_tokens": "number" }',
-      responseBody: '{ "content": "string", "usage": { "tokens": "number" } }',
-      status: 'Stable'
-    },
-    {
-      id: 'data-query',
-      category: 'data',
-      name: 'Query Data',
-      method: 'POST',
-      path: '/api/v1/data/query',
-      description: 'Executes data queries and returns results.',
-      requestBody: '{ "query": "string", "parameters": "object" }',
-      responseBody: '{ "results": "array", "metadata": "object" }',
-      status: 'Beta'
-    },
-    {
-      id: 'cloud-deploy',
-      category: 'cloud',
-      name: 'Deploy Application',
-      method: 'POST',
-      path: '/api/v1/cloud/deploy',
-      description: 'Deploys an application to the cloud infrastructure.',
-      requestBody: '{ "app_name": "string", "config": "object" }',
-      responseBody: '{ "deployment_id": "string", "status": "string" }',
-      status: 'Stable'
-    },
-    {
-      id: 'payments-charge',
-      category: 'payments',
-      name: 'Process Payment',
-      method: 'POST',
-      path: '/api/v1/payments/charge',
-      description: 'Processes a payment transaction.',
-      requestBody: '{ "amount": "number", "currency": "string", "token": "string" }',
-      responseBody: '{ "transaction_id": "string", "status": "string" }',
-      status: 'Stable'
-    }
-  ];
-
-  const codeExamples = [
-    {
-      language: 'JavaScript',
-      code: `fetch('/api/v1/auth/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: 'user@example.com', password: 'password123' })
-    })
-    .then(response => response.json())
-    .then(data => console.log(data));`,
-    },
-    {
-      language: 'Python',
-      code: `import requests
-
-response = requests.post('/api/v1/ai/generate', 
-    headers={'Authorization': 'Bearer YOUR_API_KEY'},
-    json={
-        'prompt': 'Generate a business proposal',
-        'model': 'gpt-4',
-        'max_tokens': 1000
-    }
-)
-print(response.json())`,
-    },
-    {
-      language: 'cURL',
-      code: `curl -X POST 'https://api.ziontechgroup.com/api/v1/data/query' \\
-  -H 'Authorization: Bearer YOUR_API_KEY' \\
-  -H 'Content-Type: application/json' \\
-  -d '{"query": "SELECT * FROM users", "parameters": {}}'`,
+      category: 'Data Analytics',
+      endpoints: [
+        {
+          path: '/analytics/query',
+          method: 'POST',
+          title: 'Data Query',
+          description: 'Query analytics data with SQL-like syntax',
+          parameters: [
+            { name: 'query', type: 'string', required: true, description: 'SQL query string' },
+            { name: 'format', type: 'string', required: false, description: 'Output format', default: 'json' }
+          ],
+          responses: [
+            { code: 200, description: 'Query executed successfully', example: '{ "data": [...], "columns": [...] }' },
+            { code: 400, description: 'Invalid query', example: '{ "error": "Syntax error" }' }
+          ],
+          examples: {
+            curl: 'curl -X POST /analytics/query -H "Content-Type: application/json" -d \'{"query":"SELECT * FROM users LIMIT 10"}\'',
+            python: 'requests.post("/analytics/query", json={"query": "SELECT * FROM users LIMIT 10"})',
+            javascript: 'fetch("/analytics/query", { method: "POST", body: JSON.stringify({query: "SELECT * FROM users LIMIT 10"}) })'
+          }
+        }
+      ]
     }
   ];
 
   const sdks = [
-    { name: 'JavaScript SDK', version: '1.2.0', link: '#', icon: <Code className="w-6 h-6" /> },
-    { name: 'Python SDK', version: '0.9.5', link: '#', icon: <GitBranch className="w-6 h-6" /> },
-    { name: 'Java SDK', version: '1.0.3', link: '#', icon: <Code className="w-6 h-6" /> },
-    { name: 'Go SDK', version: '0.8.1', link: '#', icon: <GitBranch className="w-6 h-6" /> },
-    { name: 'Ruby SDK', version: '0.7.2', link: '#', icon: <Code className="w-6 h-6" /> },
-    { name: 'PHP SDK', version: '0.6.8', link: '#', icon: <GitBranch className="w-6 h-6" /> }
+    {
+      name: 'JavaScript SDK',
+      description: 'Official JavaScript/Node.js client library',
+      version: 'v2.1.0',
+      downloads: '125K+',
+      language: 'JavaScript',
+      features: ['TypeScript support', 'Promise-based', 'Browser & Node.js']
+    },
+    {
+      name: 'Python SDK',
+      description: 'Python client library with async support',
+      version: 'v1.8.2',
+      downloads: '89K+',
+      language: 'Python',
+      features: ['Async/await', 'Type hints', 'Pandas integration']
+    },
+    {
+      name: 'Java SDK',
+      description: 'Enterprise Java client library',
+      version: 'v1.5.1',
+      downloads: '67K+',
+      language: 'Java',
+      features: ['Spring integration', 'Reactive streams', 'Enterprise features']
+    }
   ];
 
-  const filteredEndpoints = apiEndpoints.filter(endpoint => {
-    const matchesCategory = activeCategory === 'all' || endpoint.category === activeCategory;
-    const matchesSearch = endpoint.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          endpoint.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const toggleEndpoint = (endpointPath: string) => {
+    setExpandedEndpoints(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(endpointPath)) {
+        newSet.delete(endpointPath);
+      } else {
+        newSet.add(endpointPath);
+      }
+      return newSet;
+    });
+  };
+
+  const filteredEndpoints = apiEndpoints.flatMap(category => 
+    category.endpoints.filter(endpoint => {
+      const matchesSearch = searchQuery === '' || 
+        endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        endpoint.description.toLowerCase().includes(searchQuery.toLowerCase());
+      
+      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory;
+      const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod;
+      
+      return matchesSearch && matchesCategory && matchesMethod;
+    })
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
+      <SEO 
         title="API Documentation - Zion Tech Group"
-        description="Comprehensive API documentation, endpoints, and integration guides for Zion Tech Group services."
+        description="Complete API reference, examples, and SDK documentation for Zion Tech Group services"
       />
-
+      
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 overflow-hidden">
+        <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Code className="w-4 h-4 mr-2" />
-              API Documentation
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
+              <Code className="w-4 h-4" />
+              Developer APIs
             </div>
-
+            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              API Reference
+              API Documentation &
+              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Integration Guides
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Integrate with Zion Tech Group's powerful APIs. Build amazing applications with our comprehensive documentation.
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Build powerful applications with our comprehensive API suite. 
+              From AI services to cloud infrastructure, everything you need to integrate Zion Tech Group solutions.
             </p>
-
-            <div className="relative max-w-xl mx-auto">
-              <input
-                type="text"
-                placeholder="Search APIs..."
-                className="w-full px-6 py-4 pl-14 bg-slate-700 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-200"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <Search className="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center gap-2 text-gray-400">
+                <Code className="w-5 h-5" />
+                <span>{apiEndpoints.flatMap(cat => cat.endpoints).length} API Endpoints</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-400">
+                <Download className="w-5 h-5" />
+                <span>Multiple SDKs</span>
+              </div>
+              <div className="flex items-center gap-2 text-gray-400">
+                <Shield className="w-5 h-5" />
+                <span>Secure & Reliable</span>
+              </div>
             </div>
           </motion.div>
         </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
       </section>
 
-      {/* API Categories */}
-      <section className="py-16">
+      {/* Search and Filter Section */}
+      <section className="py-12 border-b border-slate-700/50">
         <div className="container-responsive">
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
-            {apiCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center px-6 py-3 rounded-lg border transition-all duration-200 ${
-                  activeCategory === category.id
-                    ? 'bg-cyan-500 border-cyan-400 text-white'
-                    : 'bg-slate-800/50 border-slate-600 text-gray-300 hover:border-cyan-500/50'
-                }`}
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search APIs..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+              />
+            </div>
+
+            {/* Filters */}
+            <div className="flex flex-wrap gap-3">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
               >
-                {category.icon}
-                <span className="ml-2 font-medium">{category.name}</span>
-              </button>
-            ))}
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+              
+              <select
+                value={selectedMethod}
+                onChange={(e) => setSelectedMethod(e.target.value)}
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
+              >
+                {methods.map(method => (
+                  <option key={method} value={method}>{method}</option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
       </section>
@@ -201,112 +298,187 @@ print(response.json())`,
       {/* API Endpoints */}
       <section className="py-16">
         <div className="container-responsive">
-          <div className="grid gap-6">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">API Endpoints</h2>
+            <p className="text-gray-400">Explore our comprehensive API reference</p>
+          </div>
+          
+          <div className="space-y-6">
             {filteredEndpoints.map((endpoint) => (
               <motion.div
-                key={endpoint.id}
+                key={endpoint.path}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-200"
+                className="bg-slate-800/30 border border-slate-700/30 rounded-xl overflow-hidden hover:border-cyan-400/30 transition-all duration-300"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                <button
+                  onClick={() => toggleEndpoint(endpoint.path)}
+                  className="w-full p-6 text-left hover:bg-slate-700/30 transition-all duration-200"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className={`px-3 py-1 rounded-full text-sm font-medium ${
                         endpoint.method === 'GET' ? 'bg-green-500/20 text-green-400' :
                         endpoint.method === 'POST' ? 'bg-blue-500/20 text-blue-400' :
                         endpoint.method === 'PUT' ? 'bg-yellow-500/20 text-yellow-400' :
-                        'bg-red-500/20 text-red-400'
+                        endpoint.method === 'DELETE' ? 'bg-red-500/20 text-red-400' :
+                        'bg-gray-500/20 text-gray-400'
                       }`}>
                         {endpoint.method}
-                      </span>
-                      <span className="text-cyan-400 font-mono text-sm">{endpoint.path}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-1">
+                          {endpoint.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm">
+                          {endpoint.path}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{endpoint.name}</h3>
-                    <p className="text-gray-300">{endpoint.description}</p>
+                    <ChevronRight 
+                      className={`w-5 h-5 text-gray-400 transition-transform duration-200 ${
+                        expandedEndpoints.has(endpoint.path) ? 'rotate-90' : ''
+                      }`}
+                    />
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    endpoint.status === 'Stable' ? 'bg-green-500/20 text-green-400' :
-                    endpoint.status === 'Beta' ? 'bg-yellow-500/20 text-yellow-400' :
-                    'bg-red-500/20 text-red-400'
-                  }`}>
-                    {endpoint.status}
-                  </span>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-sm font-medium text-gray-400 mb-2">Request Body</h4>
-                    <pre className="bg-slate-900 p-3 rounded-lg text-sm text-gray-300 overflow-x-auto">
-                      <code>{endpoint.requestBody}</code>
-                    </pre>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-medium text-gray-400 mb-2">Response Body</h4>
-                    <pre className="bg-slate-900 p-3 rounded-lg text-sm text-gray-300 overflow-x-auto">
-                      <code>{endpoint.responseBody}</code>
-                    </pre>
-                  </div>
-                </div>
+                </button>
+                
+                {expandedEndpoints.has(endpoint.path) && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="border-t border-slate-700/30"
+                  >
+                    <div className="p-6 space-y-6">
+                      {/* Description */}
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-300 mb-2">Description</h4>
+                        <p className="text-gray-400">{endpoint.description}</p>
+                      </div>
+                      
+                      {/* Parameters */}
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-300 mb-3">Parameters</h4>
+                        <div className="space-y-2">
+                          {endpoint.parameters.map((param, index) => (
+                            <div key={index} className="flex items-center justify-between p-3 bg-slate-700/20 rounded-lg">
+                              <div className="flex items-center gap-3">
+                                <span className="text-white font-medium">{param.name}</span>
+                                <span className="text-cyan-400 text-sm">{param.type}</span>
+                                {param.required && (
+                                  <span className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">Required</span>
+                                )}
+                              </div>
+                              <p className="text-gray-400 text-sm">{param.description}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* Responses */}
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-300 mb-3">Responses</h4>
+                        <div className="space-y-2">
+                          {endpoint.responses.map((response, index) => (
+                            <div key={index} className="flex items-center gap-3 p-3 bg-slate-700/20 rounded-lg">
+                              <span className={`px-2 py-1 rounded text-sm font-medium ${
+                                response.code >= 200 && response.code < 300 ? 'bg-green-500/20 text-green-400' :
+                                response.code >= 400 && response.code < 500 ? 'bg-red-500/20 text-red-400' :
+                                'bg-yellow-500/20 text-yellow-400'
+                              }`}>
+                                {response.code}
+                              </span>
+                              <span className="text-white">{response.description}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* Examples */}
+                      <div>
+                        <h4 className="text-sm font-medium text-gray-300 mb-3">Examples</h4>
+                        <div className="space-y-3">
+                          {Object.entries(endpoint.examples).map(([language, code]) => (
+                            <div key={language}>
+                              <div className="flex items-center justify-between mb-2">
+                                <span className="text-sm font-medium text-gray-300 capitalize">{language}</span>
+                                <button className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 text-sm transition-colors">
+                                  <Copy className="w-4 h-4" />
+                                  Copy
+                                </button>
+                              </div>
+                              <pre className="bg-slate-900/50 border border-slate-600/50 rounded-lg p-4 text-sm text-gray-300 overflow-x-auto">
+                                <code>{code}</code>
+                              </pre>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Code Examples */}
+      {/* SDKs Section */}
       <section className="py-16">
         <div className="container-responsive">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Code Examples</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {codeExamples.map((example, index) => (
-              <motion.div
-                key={example.language}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <Code className="w-5 h-5 text-cyan-400" />
-                  <h3 className="text-lg font-semibold text-white">{example.language}</h3>
-                </div>
-                <pre className="bg-slate-900 p-4 rounded-lg text-sm text-gray-300 overflow-x-auto">
-                  <code>{example.code}</code>
-                </pre>
-              </motion.div>
-            ))}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">SDKs & Libraries</h2>
+            <p className="text-gray-400">Official client libraries for popular programming languages</p>
           </div>
-        </div>
-      </section>
-
-      {/* SDKs */}
-      <section className="py-16">
-        <div className="container-responsive">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">SDKs & Libraries</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sdks.map((sdk, index) => (
               <motion.div
                 key={sdk.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-200"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  {sdk.icon}
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{sdk.name}</h3>
-                    <p className="text-sm text-gray-400">v{sdk.version}</p>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <Code className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <span className="text-sm text-gray-400">{sdk.language}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-500">{sdk.downloads} downloads</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <a
-                  href={sdk.link}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
-                >
-                  View Documentation
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+                
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                  {sdk.name}
+                </h3>
+                
+                <p className="text-gray-400 mb-4">
+                  {sdk.description}
+                </p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <span className="text-sm text-cyan-400 font-medium bg-cyan-400/10 px-3 py-1 rounded-full">
+                    {sdk.version}
+                  </span>
+                  <span className="text-sm text-gray-500">Latest</span>
+                </div>
+                
+                <div className="flex space-x-3">
+                  <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 px-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                    Install
+                  </button>
+                  <button className="bg-slate-700/50 text-white p-3 rounded-xl hover:bg-slate-600/50 transition-colors duration-200">
+                    <ExternalLink className="w-4 h-4" />
+                  </button>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -315,30 +487,27 @@ print(response.json())`,
 
       {/* CTA Section */}
       <section className="py-20">
-        <div className="container-responsive text-center">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-12"
+            transition={{ duration: 0.6, delay: 1.2 }}
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start building with our APIs today. Get your API key and begin integrating powerful AI and technology services.
+              Start building with our APIs today. Get your API key, explore our SDKs, 
+              and join thousands of developers building amazing applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
-              >
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Get API Key
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a
-                href="/docs"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-              >
-                View Full Documentation
-              </a>
+              </button>
+              <button className="bg-slate-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-700 transition-all duration-300 border border-slate-600">
+                View Full Docs
+              </button>
             </div>
           </motion.div>
         </div>
@@ -346,5 +515,3 @@ print(response.json())`,
     </div>
   );
 };
-
-export default APIDocumentation;
