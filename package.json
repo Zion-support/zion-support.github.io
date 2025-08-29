@@ -38,7 +38,17 @@
     "deps:check": "node scripts/pm2/dependency-monitor.js",
     "perf:check": "node scripts/pm2/performance-monitor.js",
     "automation:setup": "npm run pm2:start && echo 'PM2 automation processes started successfully!'",
-    "automation:stop": "npm run pm2:stop && echo 'PM2 automation processes stopped successfully!'"
+    "automation:stop": "npm run pm2:stop && echo 'PM2 automation processes stopped successfully!'",
+    "ai:review": "node scripts/automation/ai-code-review-automation.cjs",
+    "ai:review:quick": "node scripts/automation/ai-code-review-automation.cjs --quick",
+    "perf:optimize": "node scripts/automation/intelligent-performance-optimizer.cjs",
+    "perf:analyze": "node scripts/automation/intelligent-performance-optimizer.cjs --analyze-only",
+    "test:smart": "node scripts/automation/smart-testing-automation.cjs",
+    "test:generate": "node scripts/automation/smart-testing-automation.cjs --generate-only",
+    "orchestrate": "node scripts/automation/intelligent-orchestrator.cjs",
+    "orchestrate:status": "node scripts/automation/intelligent-orchestrator.cjs --status",
+    "automation:full": "npm run ai:review && npm run perf:optimize && npm run test:smart && npm run orchestrate",
+    "automation:health": "pm2 status && echo '--- Automation Health Check ---' && node scripts/automation/intelligent-orchestrator.cjs --health"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
