@@ -121,6 +121,23 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Optimize Supply Chain',
 				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-predictive-maintenance-platform',
+				title: 'AI-Powered Predictive Maintenance Platform',
+				description: 'Transform maintenance operations with intelligent failure prediction, real-time monitoring, and automated scheduling. Reduce unplanned downtime by 75% while cutting maintenance costs by 40%.',
+				category: 'Micro SaaS',
+				price: '$399',
+				billing: 'month',
+				features: [
+					'AI-powered failure prediction with 94% accuracy',
+					'Real-time equipment monitoring',
+					'Automated maintenance scheduling',
+					'Industry-specific solutions',
+					'Edge computing capabilities'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: 'https://ziontechgroup.com/contact'
 			}
 			,
 			{
@@ -422,6 +439,23 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Start Recording',
 				href: 'https://ziontechgroup.com/services/ai-meeting-notes-agent'
+			},
+			{
+				id: 'quantum-computing-as-a-service',
+				title: 'Quantum Computing as a Service',
+				description: 'Access cutting-edge quantum computing power through our cloud platform. Solve complex problems 1000x faster with quantum algorithms and simulation tools.',
+				category: 'AI Solutions',
+				price: '$999',
+				billing: 'month',
+				features: [
+					'100+ qubit quantum processors',
+					'Quantum machine learning algorithms',
+					'Quantum simulation engine',
+					'Multi-industry applications',
+					'Expert quantum engineering support'
+				],
+				ctaLabel: 'Start Quantum Journey',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -549,6 +583,23 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Plan Zero Trust',
 				href: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching'
+			},
+			{
+				id: 'blockchain-development-platform',
+				title: 'Blockchain Development Platform',
+				description: 'Build, deploy, and manage blockchain applications with our comprehensive development platform. Launch DeFi protocols, NFT marketplaces, and enterprise solutions with audited smart contracts.',
+				category: 'IT Services',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Multi-chain support (Ethereum, Polygon, Solana)',
+					'Audited smart contracts',
+					'DeFi & NFT development',
+					'Enterprise blockchain solutions',
+					'Security & compliance tools'
+				],
+				ctaLabel: 'Start Building',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},
@@ -1004,6 +1055,23 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Build a Twin',
 				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'iot-edge-computing-platform',
+				title: 'IoT Edge Computing Platform',
+				description: 'Transform your IoT deployments with our edge computing platform. Process data locally, reduce latency by 90%, and enable real-time decision making without cloud dependency.',
+				category: 'IoT & Edge',
+				price: '$199',
+				billing: 'month',
+				features: [
+					'Distributed edge computing nodes',
+					'AI at the edge processing',
+					'Multi-protocol IoT support',
+					'Real-time data processing',
+					'Enhanced security & privacy'
+				],
+				ctaLabel: 'Start IoT Journey',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	},

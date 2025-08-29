@@ -61,6 +61,12 @@ const AILegalDocumentAnalysis = React.lazy(() => import('./pages/services/ai-leg
 const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/ai-healthcare-analytics'));
 const AIFinancialTrading = React.lazy(() => import('./pages/services/ai-financial-trading'));
+
+// Additional innovative services
+const AIPredictiveMaintenancePlatform = React.lazy(() => import('./pages/services/ai-predictive-maintenance-platform'));
+const QuantumComputingAsAService = React.lazy(() => import('./pages/services/quantum-computing-as-a-service'));
+const BlockchainDevelopmentPlatform = React.lazy(() => import('./pages/services/blockchain-development-platform'));
+const IoTEdgeComputingPlatform = React.lazy(() => import('./pages/services/iot-edge-computing-platform'));
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -137,6 +143,12 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                
+                {/* Additional innovative services */}
+                <Route path="/services/ai-predictive-maintenance-platform" element={<AIPredictiveMaintenancePlatform />} />
+                <Route path="/services/quantum-computing-as-a-service" element={<QuantumComputingAsAService />} />
+                <Route path="/services/blockchain-development-platform" element={<BlockchainDevelopmentPlatform />} />
+                <Route path="/services/iot-edge-computing-platform" element={<IoTEdgeComputingPlatform />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
