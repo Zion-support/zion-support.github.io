@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Truck, 
-  Globe, 
+  Shield, 
+  FileText, 
   TrendingUp, 
   Users, 
   Database, 
@@ -13,6 +13,7 @@ import {
   Star,
   DollarSign,
   Target,
+  Globe,
   Lock,
   Search,
   Calendar,
@@ -30,20 +31,11 @@ import {
   Clock,
   Award,
   Gauge,
-  PieChart,
-  Route,
-  Package,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  ShoppingCart,
-  Heart
+  PieChart
 } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
-export default function AISupplyChainOptimization() {
+export default function AIFinancialComplianceAssistant() {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -53,183 +45,170 @@ export default function AISupplyChainOptimization() {
 
   const features = [
     {
-      icon: Truck,
-      title: 'AI-Powered Route Optimization',
-      description: 'Intelligent route planning that reduces delivery times by 30% and fuel costs by 25%'
+      icon: Shield,
+      title: 'Automated Compliance Monitoring',
+      description: '24/7 monitoring of financial transactions and regulatory requirements with real-time alerts'
     },
     {
-      icon: Globe,
-      title: 'Global Supply Chain Visibility',
-      description: 'Real-time tracking across all suppliers, warehouses, and distribution centers worldwide'
+      icon: FileText,
+      title: 'AI-Powered Document Analysis',
+      description: 'Automatically analyze financial documents, contracts, and reports for compliance issues'
     },
     {
       icon: TrendingUp,
-      title: 'Predictive Demand Forecasting',
-      description: 'Advanced AI algorithms predict demand patterns with 95% accuracy up to 12 months ahead'
+      title: 'Predictive Risk Assessment',
+      description: 'Identify potential compliance risks before they become violations using advanced AI algorithms'
     },
     {
       icon: Users,
-      title: 'Supplier Performance Analytics',
-      description: 'Comprehensive supplier scoring and performance monitoring with automated alerts'
+      title: 'Multi-Stakeholder Collaboration',
+      description: 'Enable seamless collaboration between compliance officers, auditors, and management teams'
     },
     {
       icon: Database,
-      title: 'Inventory Optimization',
-      description: 'AI-driven inventory management that reduces stockouts by 80% and excess inventory by 60%'
+      title: 'Centralized Compliance Hub',
+      description: 'Single source of truth for all compliance-related data, policies, and procedures'
     },
     {
       icon: BarChart3,
-      title: 'Real-time Analytics Dashboard',
-      description: 'Live insights into supply chain performance, costs, and efficiency metrics'
+      title: 'Advanced Analytics & Reporting',
+      description: 'Comprehensive dashboards and automated reporting for regulatory submissions'
     }
   ];
 
   const benefits = [
-    'Reduce supply chain costs by 25-40%',
-    'Improve delivery performance by 35%',
-    'Cut inventory carrying costs by 30%',
-    'Enhance supplier collaboration by 50%',
-    'Reduce lead times by 20-30%',
-    'Increase customer satisfaction by 45%'
+    'Reduce compliance violations by 85%',
+    'Cut compliance costs by 60%',
+    'Improve audit efficiency by 70%',
+    'Ensure 99.9% regulatory accuracy',
+    'Streamline reporting processes',
+    'Enhance risk management capabilities'
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$799',
+      price: '$499',
       period: '/month',
-      description: 'Perfect for small to medium businesses',
+      description: 'Perfect for small financial institutions',
       features: [
-        'Up to 5 locations',
-        'Basic route optimization',
-        'Standard analytics',
+        'Up to 1,000 transactions/month',
+        'Basic compliance monitoring',
+        'Standard regulatory updates',
         'Email support',
         'Basic reporting',
-        'Up to 10 user licenses',
-        'Core integrations'
+        'Up to 5 user licenses',
+        'Core compliance frameworks'
       ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
       name: 'Professional',
-      price: '$1,599',
+      price: '$999',
       period: '/month',
-      description: 'Ideal for growing organizations',
+      description: 'Ideal for growing financial organizations',
       features: [
-        'Up to 25 locations',
-        'Advanced AI optimization',
-        'Real-time analytics',
+        'Up to 10,000 transactions/month',
+        'Advanced AI compliance monitoring',
+        'Real-time regulatory updates',
         'Priority support',
         'Custom reporting',
-        'Up to 50 user licenses',
-        'Advanced integrations',
-        'API access',
+        'Up to 25 user licenses',
+        'Advanced compliance frameworks',
+        'API integrations',
         'Custom workflows',
-        'Advanced AI models'
+        'Advanced analytics'
       ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$3,999',
+      price: '$2,499',
       period: '/month',
-      description: 'For large enterprises with complex supply chains',
+      description: 'For large financial institutions with complex needs',
       features: [
-        'Unlimited locations',
-        'Premium AI optimization',
+        'Unlimited transactions',
+        'Premium AI compliance monitoring',
         '24/7 dedicated support',
         'Custom dashboards',
         'Unlimited user licenses',
+        'All compliance frameworks',
         'Enterprise integrations',
         'Advanced AI models',
         'On-premise deployment option',
-        'Dedicated supply chain consultant',
+        'Dedicated compliance consultant',
         'Custom training programs',
-        'White-label solutions',
-        'Multi-tenant architecture'
+        'White-label solutions'
       ],
       cta: 'Contact Sales',
       popular: false
     }
   ];
 
-  const optimizationAreas = [
+  const complianceFrameworks = [
     {
-      title: 'Transportation',
-      description: 'Optimize routes, modes, and carriers for maximum efficiency',
-      icon: Route
+      title: 'SOX Compliance',
+      description: 'Sarbanes-Oxley Act compliance with automated controls testing and reporting',
+      icon: Building
     },
     {
-      title: 'Warehousing',
-      description: 'Smart warehouse layout and inventory placement optimization',
-      icon: Warehouse
+      title: 'GDPR & Privacy',
+      description: 'Data protection compliance with automated privacy impact assessments',
+      icon: Eye
     },
     {
-      title: 'Manufacturing',
-      description: 'Production planning and capacity optimization',
-      icon: Factory
+      title: 'PCI DSS',
+      description: 'Payment card industry compliance with automated security assessments',
+      icon: CreditCard
     },
     {
-      title: 'Procurement',
-      description: 'Supplier selection and procurement strategy optimization',
-      icon: Package
+      title: 'AML/KYC',
+      description: 'Anti-money laundering and know-your-customer compliance automation',
+      icon: Shield
     },
     {
-      title: 'Logistics',
-      description: 'End-to-end logistics network optimization',
-      icon: Ship
+      title: 'Basel III',
+      description: 'Banking regulation compliance with automated risk calculations',
+      icon: Scale
     },
     {
-      title: 'Last Mile',
-      description: 'Final delivery optimization and customer experience enhancement',
-      icon: Truck
+      title: 'IFRS/GAAP',
+      description: 'Accounting standards compliance with automated financial reporting',
+      icon: BookOpen
     }
   ];
 
   const useCases = [
     {
-      title: 'E-commerce & Retail',
-      description: 'Optimize fulfillment networks and last-mile delivery for online retailers',
-      icon: ShoppingCart
+      title: 'Banks & Credit Unions',
+      description: 'Comprehensive compliance for financial institutions of all sizes',
+      icon: Building
     },
     {
-      title: 'Manufacturing',
-      description: 'Streamline production planning and supplier management for manufacturers',
-      icon: Factory
+      title: 'Investment Firms',
+      description: 'SEC and FINRA compliance with automated reporting',
+      icon: TrendingUp
     },
     {
-      title: 'Healthcare & Pharma',
-      description: 'Ensure critical supplies reach healthcare facilities on time',
-      icon: Heart
+      title: 'Insurance Companies',
+      description: 'State and federal insurance regulation compliance',
+      icon: Shield
     },
     {
-      title: 'Food & Beverage',
-      description: 'Optimize cold chain logistics and perishable goods management',
-      icon: Package
+      title: 'Fintech Startups',
+      description: 'Rapid compliance scaling for growing financial technology companies',
+      icon: Zap
     }
   ];
 
-  const industries = [
-    'E-commerce & Retail',
-    'Manufacturing',
-    'Healthcare & Pharmaceuticals',
-    'Food & Beverage',
-    'Automotive',
-    'Electronics',
-    'Fashion & Apparel',
-    'Logistics & Transportation',
-    'Construction',
-    'Energy & Utilities'
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization Platform | Zion Tech Group"
-        description="Revolutionize your supply chain with AI-powered optimization. Reduce costs by 25-40%, improve delivery performance, and gain real-time visibility across your entire network."
-        keywords="AI supply chain optimization, supply chain management, logistics optimization, inventory optimization, demand forecasting, supplier management"
+        title="AI Financial Compliance Assistant | Zion Tech Group"
+        description="Revolutionize your financial compliance with AI-powered automation. Monitor regulations, detect risks, and ensure 99.9% compliance accuracy."
+        keywords="AI financial compliance, regulatory compliance, SOX compliance, GDPR compliance, PCI DSS, AML KYC, financial regulations"
       />
       
       {/* Hero Section */}
@@ -240,28 +219,28 @@ export default function AISupplyChainOptimization() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100/10 border border-green-200/20 text-green-200 text-sm font-medium mb-6">
-              <Truck className="w-4 h-4 mr-2" />
-              AI-Powered Supply Chain Optimization
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100/10 border border-blue-200/20 text-blue-200 text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              AI-Powered Financial Compliance
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-                Optimization
+              AI Financial Compliance
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Assistant
               </span>
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Transform your supply chain with AI-powered optimization. Reduce costs by 25-40%, improve delivery performance by 35%, 
-              and gain real-time visibility across your entire network.
+              Transform your financial compliance with AI-powered automation. Monitor regulations in real-time, 
+              detect risks proactively, and ensure 99.9% compliance accuracy across all frameworks.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-green-200/20 text-green-200 font-semibold rounded-lg hover:bg-green-200/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-blue-200/20 text-blue-200 font-semibold rounded-lg hover:bg-blue-200/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -280,10 +259,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Supply Chain Intelligence
+              Comprehensive Compliance Automation
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Everything you need to optimize your supply chain from end to end
+              Everything you need to stay compliant with evolving financial regulations
             </p>
           </motion.div>
           
@@ -295,9 +274,9 @@ export default function AISupplyChainOptimization() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -308,7 +287,7 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
 
-      {/* Optimization Areas Section */}
+      {/* Compliance Frameworks Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -319,28 +298,28 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              End-to-End Optimization
+              Supported Compliance Frameworks
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Optimize every aspect of your supply chain for maximum efficiency
+              Comprehensive coverage of all major financial compliance requirements
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {optimizationAreas.map((area, index) => (
+            {complianceFrameworks.map((framework, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                  <area.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <framework.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
-                <p className="text-slate-300">{area.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{framework.title}</h3>
+                <p className="text-slate-300">{framework.description}</p>
               </motion.div>
             ))}
           </div>
@@ -358,10 +337,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose AI Supply Chain Optimization?
+              Why Choose AI Financial Compliance?
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Transform your supply chain and unlock new levels of efficiency and cost savings
+              Transform your compliance process and unlock new levels of efficiency and accuracy
             </p>
           </motion.div>
           
@@ -394,10 +373,10 @@ export default function AISupplyChainOptimization() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Industry
+              Perfect for Every Financial Organization
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              From retail to manufacturing, our platform adapts to your specific industry needs
+              From startups to enterprise institutions, our platform scales with your needs
             </p>
           </motion.div>
           
@@ -411,7 +390,7 @@ export default function AISupplyChainOptimization() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
@@ -422,43 +401,8 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted Across Industries
-            </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our platform serves businesses across all major industries
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700/50 hover:border-green-500/50 transition-all duration-300"
-              >
-                <span className="text-slate-300 font-medium">{industry}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -471,7 +415,7 @@ export default function AISupplyChainOptimization() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Choose the plan that fits your organization size and supply chain complexity
+              Choose the plan that fits your organization size and compliance needs
             </p>
           </motion.div>
           
@@ -485,13 +429,13 @@ export default function AISupplyChainOptimization() {
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-green-500/50 bg-gradient-to-br from-green-900/20 to-emerald-900/20' 
+                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-900/20 to-cyan-900/20' 
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -517,7 +461,7 @@ export default function AISupplyChainOptimization() {
                 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   {plan.cta}
@@ -538,17 +482,17 @@ export default function AISupplyChainOptimization() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your Compliance?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join thousands of companies who have already transformed their supply chains with AI
+              Join hundreds of financial institutions who have already improved their compliance with AI
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-green-200/20 text-green-200 font-semibold rounded-lg hover:bg-green-200/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-blue-200/20 text-blue-200 font-semibold rounded-lg hover:bg-blue-200/10 transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -573,22 +517,22 @@ export default function AISupplyChainOptimization() {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our supply chain experts are here to help you get started and answer any questions
+              Our compliance experts are here to help you get started and answer any questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-green-400 mb-3" />
+                <Phone className="w-8 h-8 text-blue-400 mb-3" />
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300">{contactInfo.phone}</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-green-400 mb-3" />
+                <Mail className="w-8 h-8 text-blue-400 mb-3" />
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300">{contactInfo.email}</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-green-400 mb-3" />
+                <MapPin className="w-8 h-8 text-blue-400 mb-3" />
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">{contactInfo.address}</p>
               </div>
@@ -596,7 +540,7 @@ export default function AISupplyChainOptimization() {
             
             <a
               href={`mailto:${contactInfo.email}`}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />

@@ -59,18 +59,18 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'AI Enterprise Orchestrator', href: '/services/ai-enterprise-orchestrator' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Healthcare Predictive Analytics', href: '/services/ai-healthcare-predictive-analytics' },
+        { name: 'AI Financial Compliance Assistant', href: '/services/ai-financial-compliance-assistant' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Incident Postmortems', href: '/services/ai-incident-postmortems' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Content Optimizer Pro', href: '/services/ai-content-optimizer-pro' },
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring' },
+        { name: 'AI HR Talent Acquisition', href: '/services/ai-hr-talent-acquisition' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance' },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
-        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
-        { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
-        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' }
       ]
     },
     {
@@ -81,23 +81,34 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Digital Twin Solutions', href: '/services/digital-twin', featured: true },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
         { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
-        { name: 'Cybersecurity Solutions', href: '/services/ai-cybersecurity', featured: true },
-        { name: 'Zero Trust Security', href: '/services/ai-cybersecurity', featured: true },
-        { name: 'AI Ethics & Governance', href: '/services/ai-cybersecurity', featured: true },
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', featured: true },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', featured: true },
+        { name: 'Zero Trust Security', href: '/services/zero-trust-network-architecture', featured: true },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge', featured: true },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform', featured: true },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', featured: true },
         { name: 'Green IT Solutions', href: '/services/green-it', featured: true }
       ]
     },
     {
-      title: 'Micro SaaS Solutions',
+      title: 'Innovative Micro SaaS',
       featured: true,
       links: [
         { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring' },
         { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot' },
-        { name: 'RAG Search Engine', href: '/services/rag-search' },
+        { name: 'AI Content Optimizer Pro', href: '/services/ai-content-optimizer-pro' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI HR Talent Acquisition', href: '/services/ai-hr-talent-acquisition' },
+        { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
         { name: 'MLOps Pipeline', href: '/services/mlops-pipeline' },
-        { name: 'E-commerce Personalization', href: '/services/ecommerce-personalization' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' }
+      ]
+    },
+    {
+      title: 'Additional Micro SaaS',
+      featured: false,
+      links: [
         { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker' },
         { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor' },
         { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker' },
