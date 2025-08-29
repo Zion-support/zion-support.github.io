@@ -99,7 +99,7 @@ import {
   MicOff,
   Volume2,
   VolumeX,
-  Handshake,
+  Users,
   Play,
   Pause,
   Stop,
