@@ -53,7 +53,7 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import { NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025.ts';
+import { additionalInnovativeMicroSaasServices } from '../data/innovativeMicroSaasServices2025';
 
 export default function ComprehensiveServicesLanding2025() {
   const contactInfo = {
@@ -69,68 +69,68 @@ export default function ComprehensiveServicesLanding2025() {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       description: 'Transform your content strategy with AI-powered creation, optimization, and distribution',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Content Management')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'AI & Content Management')
     },
     {
       name: 'Cybersecurity & Quantum',
       icon: Shield,
       color: 'from-red-600 to-orange-600',
       description: 'Protect your business with next-generation quantum-resistant cybersecurity solutions',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Cybersecurity')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'Cybersecurity')
     },
     {
       name: 'Business Automation',
       icon: Rocket,
       color: 'from-blue-600 to-cyan-600',
       description: 'Automate and optimize your business operations with intelligent AI platforms',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Business Automation')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'Business Automation')
     },
     {
       name: 'Edge Computing & IoT',
       icon: Cpu,
       color: 'from-green-600 to-emerald-600',
       description: 'Bring AI and analytics to the edge for real-time processing and decision-making',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Edge Computing')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'Edge Computing')
     },
     {
       name: 'Sustainability & ESG',
       icon: Leaf,
       color: 'from-teal-600 to-green-600',
       description: 'Measure, optimize, and report on your environmental impact and sustainability metrics',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Sustainability')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'Sustainability')
     },
     {
       name: 'Healthcare & Life Sciences',
       icon: Heart,
       color: 'from-pink-600 to-red-600',
       description: 'Improve patient outcomes with AI-powered healthcare analytics and clinical decision support',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Healthcare')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'Healthcare')
     },
     {
       name: 'Financial Technology',
       icon: Banknote,
       color: 'from-yellow-600 to-orange-600',
       description: 'Revolutionize your financial operations with AI-powered trading and risk management',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Financial Technology')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'Financial Technology')
     },
     {
       name: 'Supply Chain & Logistics',
       icon: Truck,
       color: 'from-indigo-600 to-purple-600',
       description: 'Optimize your supply chain with end-to-end visibility and predictive analytics',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Supply Chain')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'Supply Chain')
     },
     {
       name: 'Digital Twin & 3D',
       icon: Globe2,
       color: 'from-violet-600 to-purple-600',
       description: 'Create virtual representations of physical assets for optimization and simulation',
-      services: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'Digital Twin')
+      services: additionalInnovativeMicroSaasServices.filter(s => s.category === 'Digital Twin')
     }
   ];
 
   const stats = [
-    { label: 'Total Services', value: NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.length, icon: Server },
+    { label: 'Total Services', value: additionalInnovativeMicroSaasServices.length, icon: Server },
     { label: 'Service Categories', value: serviceCategories.length, icon: Layers },
     { label: 'Average ROI', value: '400%+', icon: TrendingUp },
     { label: 'Countries Served', value: '50+', icon: Globe },
@@ -332,7 +332,7 @@ export default function ComprehensiveServicesLanding2025() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 8).map((service, index) => (
+            {additionalInnovativeMicroSaasServices.slice(0, 8).map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

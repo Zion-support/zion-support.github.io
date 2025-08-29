@@ -110,6 +110,9 @@ const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComp
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
 
+// Emerging Technology 2030
+const EmergingTech2030 = React.lazy(() => import('./pages/EmergingTech2030'));
+
 // AI platform services
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
@@ -216,6 +219,7 @@ function App() {
               <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
               <Route path="/news" element={<News />} />
               <Route path="/events" element={<Events />} />
+              <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
               
               {/* Service Routes */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />

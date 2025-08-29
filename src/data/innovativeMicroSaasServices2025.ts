@@ -1133,7 +1133,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Industrial protocols"],
       apiEndpoints: 300,
       uptime: "99.9%",
-      security: ["Device authentication", "Data encryption", "Secure boot", "OTA updates"]
+      security: ["Device authentication", "Data encryption", "Secure boot", "OTA updates", "Access control"]
     },
     competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
     marketSize: "$73.5 billion by 2027"
@@ -1208,14 +1208,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
   {
     id: "digital-twin-platform",
     title: "Digital Twin Platform",
-    description: "Advanced digital twin platform that creates virtual replicas of physical assets, processes, and systems for real-time monitoring, simulation, and optimization.",
+    description: "Advanced digital twin platform that creates virtual representations of physical assets, processes, and systems for real-time monitoring, simulation, and optimization.",
     category: "Digital Twin",
     subcategory: "Platform",
     price: 7999,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "3D asset modeling",
+      "3D modeling and visualization",
       "Real-time data integration",
       "Simulation and prediction",
       "Performance analytics",
@@ -1230,8 +1230,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       "Reduce operational costs by 30%",
       "Improve asset performance by 25%",
       "Enable predictive maintenance",
-      "Optimize operational efficiency",
-      "Reduce downtime by 40%"
+      "Optimize operations",
+      "Enhance decision-making"
     ],
     useCases: [
       "Manufacturing operations",
@@ -1259,14 +1259,14 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
-      technology: ["Unity3D", "Unreal Engine", "Python", "React", "Node.js", "Three.js"],
-      integrations: ["IoT platforms", "CAD systems", "PLM systems", "ERP systems"],
-      apiEndpoints: 350,
+      technology: ["3D rendering", "IoT", "Machine learning", "React", "Unity", "PostgreSQL"],
+      integrations: ["CAD systems", "IoT platforms", "SCADA systems", "ERP systems"],
+      apiEndpoints: 250,
       uptime: "99.9%",
-      security: ["Data encryption", "Access control", "Audit logging", "Compliance"]
+      security: ["Data encryption", "Access control", "Audit trails", "Compliance reporting"]
     },
-    competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
-    marketSize: "$86.1 billion by 2028"
+    competitors: ["Siemens", "GE Digital", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
+    marketSize: "$86.1 billion by 2025"
   },
 
   // AI HR Platform
@@ -1354,7 +1354,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       "Environmental impact assessment",
       "Sustainability analytics",
       "Stakeholder engagement",
-      "Goal setting and tracking"
+      "Goal tracking"
     ],
     benefits: [
       "Reduce carbon footprint by 25%",
@@ -1393,598 +1393,302 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       integrations: ["Energy management systems", "IoT sensors", "ERP systems", "Reporting platforms"],
       apiEndpoints: 200,
       uptime: "99.9%",
-      security: ["Data encryption", "Access control", "Audit logging", "Compliance"]
+      security: ["Data encryption", "Access control", "Audit trails", "Compliance reporting"]
     },
     competitors: ["Sphera", "Wolters Kluwer", "Benchmark ESG", "Sustainalytics"],
     marketSize: "$28.9 billion by 2027"
   }
 ];
 
-// New Innovative Micro SAAS Services for 2025
-export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
-  // AI-Powered Content Creation & Management
+// Add new innovative Micro SaaS services
+export const additionalInnovativeMicroSaasServices = [
   {
-    id: "ai-content-orchestrator-pro",
-    title: "AI Content Orchestrator Pro",
-    description: "Enterprise-grade content management platform that uses AI to create, optimize, and distribute content across all channels with intelligent workflow automation.",
-    category: "AI & Content Management",
-    subcategory: "Content Creation",
-    price: 4999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'ai-customer-sentiment-analyzer',
+    title: 'AI Customer Sentiment Analyzer Pro',
+    description: 'Real-time sentiment analysis across all customer touchpoints with predictive insights and automated response recommendations.',
+    category: 'Micro SaaS',
+    price: '$199',
+    billing: 'month',
     features: [
-      "Multi-channel content creation",
-      "AI-powered SEO optimization",
-      "Brand voice consistency",
-      "Content performance analytics",
-      "Automated publishing workflows",
-      "Multi-language support",
-      "Content calendar management",
-      "Team collaboration tools",
-      "API integrations",
-      "White-label solutions"
+      'Multi-channel sentiment tracking (email, chat, social, reviews)',
+      'Real-time sentiment scoring and alerts',
+      'Predictive customer churn detection',
+      'Automated response recommendations',
+      'Sentiment trend analysis and reporting',
+      'Integration with CRM and support systems'
     ],
-    benefits: [
-      "Increase content production by 300%",
-      "Improve SEO rankings by 40%",
-      "Reduce content creation costs by 60%",
-      "Ensure brand consistency across all channels",
-      "Streamline content operations"
-    ],
-    useCases: [
-      "Marketing agencies",
-      "Enterprise content teams",
-      "E-commerce businesses",
-      "Publishing companies",
-      "Educational institutions"
-    ],
-    targetAudience: [
-      "Content managers",
-      "Marketing directors",
-      "SEO specialists",
-      "Brand managers",
-      "Digital agencies"
-    ],
-    tags: ["AI", "Content Management", "SEO", "Marketing Automation", "Brand Management"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,999 - $12,999/month",
-    roi: "400-600%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["GPT-4", "Claude", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["WordPress", "Shopify", "HubSpot", "Salesforce", "Google Analytics"],
-      apiEndpoints: 200,
-      uptime: "99.95%",
-      security: ["SOC 2", "GDPR", "HIPAA", "End-to-end encryption", "Multi-factor authentication"]
-    },
-    competitors: ["Contentful", "Storyblok", "Strapi", "Kentico"],
-    marketSize: "$45.2 billion by 2025"
+    ctaLabel: 'Analyze Sentiment',
+    href: 'https://ziontechgroup.com/services/ai-customer-sentiment-analyzer'
   },
-
-  // Quantum-Enhanced Cybersecurity Platform
   {
-    id: "quantum-cybersecurity-suite",
-    title: "Quantum Cybersecurity Suite",
-    description: "Next-generation cybersecurity platform leveraging quantum computing principles for threat detection, encryption, and security automation.",
-    category: "Cybersecurity",
-    subcategory: "Quantum Security",
-    price: 8999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'smart-inventory-optimizer',
+    title: 'Smart Inventory Optimizer',
+    description: 'AI-powered inventory management with demand forecasting, automated reordering, and cost optimization.',
+    category: 'Micro SaaS',
+    price: '$149',
+    billing: 'month',
     features: [
-      "Quantum-resistant encryption",
-      "AI-powered threat detection",
-      "Zero-trust architecture",
-      "Real-time security monitoring",
-      "Automated incident response",
-      "Compliance automation",
-      "Security analytics dashboard",
-      "Multi-cloud security",
-      "API security gateway",
-      "24/7 security operations center"
+      'Machine learning demand forecasting',
+      'Automated reorder point calculations',
+      'Multi-warehouse optimization',
+      'Seasonal trend analysis',
+      'Cost optimization recommendations',
+      'Real-time inventory tracking and alerts'
     ],
-    benefits: [
-      "Protect against quantum attacks",
-      "Reduce security incidents by 90%",
-      "Automate 80% of security tasks",
-      "Ensure compliance with regulations",
-      "Provide enterprise-grade security"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Technology companies",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security architects",
-      "IT directors",
-      "Compliance officers",
-      "Security analysts"
-    ],
-    tags: ["Quantum Computing", "Cybersecurity", "AI", "Compliance", "Zero Trust"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,999 - $25,000/month",
-    roi: "300-500%",
-    innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Quantum algorithms", "Machine learning", "Blockchain", "React", "Python", "Kubernetes"],
-      integrations: ["SIEM systems", "EDR platforms", "Cloud providers", "Identity providers"],
-      apiEndpoints: 300,
-      uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "Quantum encryption", "Zero-knowledge proofs"]
-    },
-    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Fortinet"],
-    marketSize: "$376.3 billion by 2025"
+    ctaLabel: 'Optimize Inventory',
+    href: 'https://ziontechgroup.com/services/smart-inventory-optimizer'
   },
-
-  // Autonomous Business Operations Platform
   {
-    id: "autonomous-business-operations",
-    title: "Autonomous Business Operations Platform",
-    description: "AI-powered platform that automates and optimizes business processes, decision-making, and operations across all departments.",
-    category: "Business Automation",
-    subcategory: "Operations Management",
-    price: 6999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'ai-powered-crm-enhancer',
+    title: 'AI-Powered CRM Enhancer',
+    description: 'Transform your existing CRM with AI capabilities including lead scoring, opportunity prediction, and automated follow-ups.',
+    category: 'Micro SaaS',
+    price: '$89',
+    billing: 'month',
     features: [
-      "Process automation engine",
-      "AI decision support",
-      "Predictive analytics",
-      "Workflow orchestration",
-      "Resource optimization",
-      "Performance monitoring",
-      "Custom automation rules",
-      "Integration hub",
-      "Real-time dashboards",
-      "Mobile applications"
+      'Intelligent lead scoring and prioritization',
+      'Opportunity win probability prediction',
+      'Automated follow-up scheduling',
+      'Customer behavior pattern analysis',
+      'Sales performance insights and coaching',
+      'Integration with major CRM platforms'
     ],
-    benefits: [
-      "Reduce operational costs by 50%",
-      "Improve efficiency by 70%",
-      "Automate 90% of routine tasks",
-      "Enable data-driven decisions",
-      "Scale operations seamlessly"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Retail chains",
-      "Service businesses",
-      "Healthcare organizations",
-      "Financial institutions"
-    ],
-    targetAudience: [
-      "Operations managers",
-      "Business analysts",
-      "Process engineers",
-      "CIOs",
-      "Business consultants"
-    ],
-    tags: ["AI", "Automation", "Operations", "Analytics", "Workflow"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,999 - $18,000/month",
-    roi: "350-550%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Machine learning", "RPA", "BPM", "React", "Python", "PostgreSQL"],
-      integrations: ["ERP systems", "CRM platforms", "Accounting software", "HR systems"],
-      apiEndpoints: 250,
-      uptime: "99.9%",
-      security: ["SOC 2", "GDPR", "Role-based access", "Data encryption", "Audit trails"]
-    },
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Pega"],
-    marketSize: "$19.6 billion by 2025"
+    ctaLabel: 'Enhance CRM',
+    href: 'https://ziontechgroup.com/services/ai-powered-crm-enhancer'
   },
-
-  // Edge Computing Intelligence Platform
   {
-    id: "edge-computing-intelligence",
-    title: "Edge Computing Intelligence Platform",
-    description: "Distributed computing platform that brings AI and analytics to the edge, enabling real-time processing and decision-making.",
-    category: "Edge Computing",
-    subcategory: "AI at Edge",
-    price: 5499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'smart-contract-lifecycle-manager',
+    title: 'Smart Contract Lifecycle Manager',
+    description: 'End-to-end contract management with AI-powered risk assessment, compliance monitoring, and automated renewals.',
+    category: 'Micro SaaS',
+    price: '$299',
+    billing: 'month',
     features: [
-      "Edge AI deployment",
-      "Real-time data processing",
-      "Distributed computing",
-      "IoT device management",
-      "Edge analytics",
-      "Low-latency processing",
-      "Offline capabilities",
-      "Scalable architecture",
-      "Security framework",
-      "Monitoring tools"
+      'AI-powered contract risk assessment',
+      'Automated compliance monitoring',
+      'Contract renewal reminders and automation',
+      'Template library and version control',
+      'Electronic signature integration',
+      'Contract performance analytics'
     ],
-    benefits: [
-      "Reduce latency by 90%",
-      "Lower bandwidth costs by 70%",
-      "Enable offline operations",
-      "Improve data privacy",
-      "Scale edge deployments"
-    ],
-    useCases: [
-      "Smart cities",
-      "Industrial IoT",
-      "Autonomous vehicles",
-      "Healthcare monitoring",
-      "Retail analytics"
-    ],
-    targetAudience: [
-      "IoT architects",
-      "Data engineers",
-      "DevOps engineers",
-      "System architects",
-      "Technology consultants"
-    ],
-    tags: ["Edge Computing", "IoT", "AI", "Real-time", "Distributed Systems"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,499 - $15,000/month",
-    roi: "300-450%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Kubernetes", "Docker", "TensorFlow Lite", "React", "Go", "Redis"],
-      integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"],
-      apiEndpoints: 400,
-      uptime: "99.9%",
-      security: ["Device authentication", "Data encryption", "Secure boot", "OTA updates", "Access control"]
-    },
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
-    marketSize: "$67.2 billion by 2025"
+    ctaLabel: 'Manage Contracts',
+    href: 'https://ziontechgroup.com/services/smart-contract-lifecycle-manager'
   },
-
-  // Sustainable Technology Solutions Platform
   {
-    id: "sustainable-tech-solutions",
-    title: "Sustainable Technology Solutions Platform",
-    description: "Comprehensive platform for measuring, optimizing, and reporting on environmental impact and sustainability metrics.",
-    category: "Sustainability",
-    subcategory: "Environmental Tech",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'ai-powered-hr-recruitment-platform',
+    title: 'AI-Powered HR Recruitment Platform',
+    description: 'Streamline your hiring process with AI candidate matching, automated screening, and bias-free selection.',
+    category: 'Micro SaaS',
+    price: '$179',
+    billing: 'month',
     features: [
-      "Carbon footprint tracking",
-      "Energy consumption monitoring",
-      "Waste management analytics",
-      "Sustainability reporting",
-      "ESG compliance",
-      "Green procurement",
-      "Environmental impact assessment",
-      "Sustainability dashboards",
-      "Stakeholder communication",
-      "Goal tracking"
+      'AI-powered candidate-job matching',
+      'Automated resume screening and ranking',
+      'Bias-free candidate selection',
+      'Interview scheduling automation',
+      'Candidate experience tracking',
+      'Hiring analytics and insights'
     ],
-    benefits: [
-      "Reduce environmental impact by 40%",
-      "Achieve sustainability goals",
-      "Improve ESG ratings",
-      "Comply with regulations",
-      "Enhance brand reputation"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Retail chains",
-      "Technology companies",
-      "Government agencies",
-      "Educational institutions"
-    ],
-    targetAudience: [
-      "Sustainability managers",
-      "ESG officers",
-      "Environmental consultants",
-      "Corporate executives",
-      "Compliance officers"
-    ],
-    tags: ["Sustainability", "ESG", "Environmental", "Reporting", "Compliance"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,999 - $12,000/month",
-    roi: "250-400%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["IoT sensors", "Machine learning", "React", "Node.js", "PostgreSQL", "Time-series DB"],
-      integrations: ["ERP systems", "Energy management", "Waste tracking", "Reporting tools"],
-      apiEndpoints: 150,
-      uptime: "99.9%",
-      security: ["Data encryption", "Access control", "Audit trails", "Compliance reporting"]
-    },
-    competitors: ["Sphera", "Benchmark ESG", "Sustainalytics", "MSCI ESG"],
-    marketSize: "$28.6 billion by 2025"
+    ctaLabel: 'Streamline Hiring',
+    href: 'https://ziontechgroup.com/services/ai-powered-hr-recruitment-platform'
   },
-
-  // Healthcare AI Analytics Platform
   {
-    id: "healthcare-ai-analytics",
-    title: "Healthcare AI Analytics Platform",
-    description: "Advanced healthcare analytics platform using AI to improve patient outcomes, operational efficiency, and clinical decision-making.",
-    category: "Healthcare",
-    subcategory: "AI Analytics",
-    price: 7499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'smart-expense-management-saas',
+    title: 'Smart Expense Management SaaS',
+    description: 'Automated expense tracking, approval workflows, and policy compliance with AI-powered fraud detection.',
+    category: 'Micro SaaS',
+    price: '$79',
+    billing: 'month',
     features: [
-      "Patient outcome prediction",
-      "Clinical decision support",
-      "Operational analytics",
-      "Population health management",
-      "Risk stratification",
-      "Treatment optimization",
-      "Real-time monitoring",
-      "Compliance reporting",
-      "Integration capabilities",
-      "Mobile applications"
+      'OCR receipt scanning and categorization',
+      'Automated approval workflows',
+      'AI-powered fraud detection',
+      'Policy compliance monitoring',
+      'Expense analytics and reporting',
+      'Mobile app for on-the-go expense entry'
     ],
-    benefits: [
-      "Improve patient outcomes by 30%",
-      "Reduce readmission rates by 25%",
-      "Optimize resource utilization",
-      "Enhance clinical decisions",
-      "Ensure regulatory compliance"
-    ],
-    useCases: [
-      "Hospitals",
-      "Clinics",
-      "Health systems",
-      "Research institutions",
-      "Insurance companies"
-    ],
-    targetAudience: [
-      "Healthcare executives",
-      "Clinical leaders",
-      "Data scientists",
-      "Quality managers",
-      "IT directors"
-    ],
-    tags: ["Healthcare", "AI", "Analytics", "Clinical", "Population Health"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$7,499 - $20,000/month",
-    roi: "400-600%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Machine learning", "Deep learning", "React", "Python", "PostgreSQL", "FHIR"],
-      integrations: ["EHR systems", "PACS", "Lab systems", "Billing systems"],
-      apiEndpoints: 300,
-      uptime: "99.99%",
-      security: ["HIPAA", "SOC 2", "HITECH", "Data encryption", "Access controls"]
-    },
-    competitors: ["Epic", "Cerner", "Allscripts", "Athenahealth"],
-    marketSize: "$96.3 billion by 2025"
+    ctaLabel: 'Manage Expenses',
+    href: 'https://ziontechgroup.com/services/smart-expense-management-saas'
   },
-
-  // Financial Technology Innovation Platform
   {
-    id: "fintech-innovation-platform",
-    title: "FinTech Innovation Platform",
-    description: "Comprehensive financial technology platform offering AI-powered trading, risk management, and financial analytics solutions.",
-    category: "Financial Technology",
-    subcategory: "Trading & Analytics",
-    price: 9999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'ai-powered-project-management',
+    title: 'AI-Powered Project Management',
+    description: 'Intelligent project planning, resource allocation, and risk management with predictive analytics.',
+    category: 'Micro SaaS',
+    price: '$129',
+    billing: 'month',
     features: [
-      "AI-powered trading algorithms",
-      "Risk management systems",
-      "Portfolio optimization",
-      "Real-time market data",
-      "Compliance automation",
-      "Fraud detection",
-      "Performance analytics",
-      "Multi-asset support",
-      "API trading",
-      "Mobile trading"
+      'AI-powered project timeline estimation',
+      'Resource allocation optimization',
+      'Risk prediction and mitigation',
+      'Automated task prioritization',
+      'Team performance analytics',
+      'Integration with popular project tools'
     ],
-    benefits: [
-      "Improve trading performance by 35%",
-      "Reduce risk exposure by 50%",
-      "Automate compliance processes",
-      "Enhance decision-making",
-      "Scale trading operations"
-    ],
-    useCases: [
-      "Investment firms",
-      "Banks",
-      "Hedge funds",
-      "Trading desks",
-      "Financial advisors"
-    ],
-    targetAudience: [
-      "Traders",
-      "Portfolio managers",
-      "Risk managers",
-      "Compliance officers",
-      "Financial analysts"
-    ],
-    tags: ["FinTech", "Trading", "AI", "Risk Management", "Compliance"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$9,999 - $30,000/month",
-    roi: "500-800%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Machine learning", "Quantitative models", "React", "Python", "PostgreSQL", "Redis"],
-      integrations: ["Bloomberg", "Reuters", "Brokerage APIs", "Banking systems"],
-      apiEndpoints: 500,
-      uptime: "99.99%",
-      security: ["SOC 2", "PCI DSS", "Encryption", "Multi-factor auth", "Audit trails"]
-    },
-    competitors: ["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"],
-    marketSize: "$324.9 billion by 2025"
+    ctaLabel: 'Manage Projects',
+    href: 'https://ziontechgroup.com/services/ai-powered-project-management'
   },
-
-  // Supply Chain Intelligence Platform
   {
-    id: "supply-chain-intelligence",
-    title: "Supply Chain Intelligence Platform",
-    description: "AI-powered supply chain platform providing end-to-end visibility, optimization, and predictive analytics for global operations.",
-    category: "Supply Chain",
-    subcategory: "Intelligence & Analytics",
-    price: 6499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'smart-customer-support-automation',
+    title: 'Smart Customer Support Automation',
+    description: 'AI-powered support ticket routing, automated responses, and customer satisfaction optimization.',
+    category: 'Micro SaaS',
+    price: '$159',
+    billing: 'month',
     features: [
-      "End-to-end visibility",
-      "Predictive analytics",
-      "Demand forecasting",
-      "Inventory optimization",
-      "Route optimization",
-      "Risk management",
-      "Supplier management",
-      "Performance monitoring",
-      "Real-time tracking",
-      "Mobile applications"
+      'Intelligent ticket routing and prioritization',
+      'Automated response generation',
+      'Customer satisfaction prediction',
+      'Support agent performance analytics',
+      'Knowledge base optimization',
+      'Multi-channel support integration'
     ],
-    benefits: [
-      "Reduce supply chain costs by 25%",
-      "Improve delivery performance by 40%",
-      "Optimize inventory levels",
-      "Mitigate supply chain risks",
-      "Enhance customer satisfaction"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Retail chains",
-      "Logistics providers",
-      "E-commerce businesses",
-      "Distribution companies"
-    ],
-    targetAudience: [
-      "Supply chain managers",
-      "Logistics directors",
-      "Operations managers",
-      "Procurement officers",
-      "Business analysts"
-    ],
-    tags: ["Supply Chain", "Logistics", "AI", "Analytics", "Optimization"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,499 - $18,000/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Machine learning", "IoT", "Blockchain", "React", "Python", "PostgreSQL"],
-      integrations: ["ERP systems", "WMS", "TMS", "Supplier portals"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["Data encryption", "Access control", "Audit trails", "Compliance reporting"]
-    },
-    competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
-    marketSize: "$19.9 billion by 2025"
+    ctaLabel: 'Automate Support',
+    href: 'https://ziontechgroup.com/services/smart-customer-support-automation'
   },
-
-  // Digital Twin Enterprise Platform
   {
-    id: "digital-twin-enterprise",
-    title: "Digital Twin Enterprise Platform",
-    description: "Comprehensive digital twin platform for creating virtual representations of physical assets, processes, and systems.",
-    category: "Digital Twin",
-    subcategory: "Enterprise Solutions",
-    price: 7999,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'ai-powered-marketing-attribution',
+    title: 'AI-Powered Marketing Attribution',
+    description: 'Advanced marketing ROI tracking with multi-touch attribution modeling and predictive analytics.',
+    category: 'Micro SaaS',
+    price: '$199',
+    billing: 'month',
     features: [
-      "3D modeling and visualization",
-      "Real-time data integration",
-      "Predictive maintenance",
-      "Performance monitoring",
-      "Simulation capabilities",
-      "Asset management",
-      "IoT integration",
-      "Analytics dashboard",
-      "Mobile applications",
-      "API access"
+      'Multi-touch attribution modeling',
+      'Customer lifetime value prediction',
+      'Marketing channel optimization',
+      'ROI forecasting and budgeting',
+      'Cross-device tracking',
+      'Integration with major ad platforms'
     ],
-    benefits: [
-      "Reduce maintenance costs by 30%",
-      "Improve asset performance by 25%",
-      "Enable predictive maintenance",
-      "Optimize operations",
-      "Enhance decision-making"
+    ctaLabel: 'Track Attribution',
+    href: 'https://ziontechgroup.com/services/ai-powered-marketing-attribution'
+  },
+  {
+    id: 'smart-supply-chain-visibility',
+    title: 'Smart Supply Chain Visibility',
+    description: 'End-to-end supply chain tracking with real-time monitoring, risk assessment, and optimization recommendations.',
+    category: 'Micro SaaS',
+    price: '$249',
+    billing: 'month',
+    features: [
+      'Real-time shipment tracking',
+      'Supply chain risk assessment',
+      'Demand forecasting and planning',
+      'Supplier performance analytics',
+      'Cost optimization recommendations',
+      'Integration with ERP and logistics systems'
     ],
-    useCases: [
-      "Manufacturing plants",
-      "Smart buildings",
-      "Infrastructure projects",
-      "Energy facilities",
-      "Transportation systems"
+    ctaLabel: 'Track Supply Chain',
+    href: 'https://ziontechgroup.com/services/smart-supply-chain-visibility'
+  },
+  {
+    id: 'ai-powered-financial-planning',
+    title: 'AI-Powered Financial Planning',
+    description: 'Intelligent financial forecasting, budgeting, and scenario planning with automated insights.',
+    category: 'Micro SaaS',
+    price: '$179',
+    billing: 'month',
+    features: [
+      'AI-powered financial forecasting',
+      'Automated budget optimization',
+      'Scenario planning and modeling',
+      'Cash flow prediction',
+      'Financial risk assessment',
+      'Integration with accounting systems'
     ],
-    targetAudience: [
-      "Operations managers",
-      "Asset managers",
-      "Facility managers",
-      "Engineers",
-      "Technology consultants"
+    ctaLabel: 'Plan Finances',
+    href: 'https://ziontechgroup.com/services/ai-powered-financial-planning'
+  },
+  {
+    id: 'smart-quality-assurance-platform',
+    title: 'Smart Quality Assurance Platform',
+    description: 'AI-powered quality control with automated testing, defect prediction, and continuous improvement.',
+    category: 'Micro SaaS',
+    price: '$189',
+    billing: 'month',
+    features: [
+      'Automated testing and quality checks',
+      'Defect prediction and prevention',
+      'Quality metrics tracking',
+      'Continuous improvement recommendations',
+      'Compliance monitoring',
+      'Integration with development tools'
     ],
-    tags: ["Digital Twin", "IoT", "3D Modeling", "Predictive Maintenance", "Asset Management"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$7,999 - $22,000/month",
-    roi: "350-550%",
-    innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["3D rendering", "IoT", "Machine learning", "React", "Unity", "PostgreSQL"],
-      integrations: ["CAD systems", "IoT platforms", "SCADA systems", "ERP systems"],
-      apiEndpoints: 250,
-      uptime: "99.9%",
-      security: ["Data encryption", "Access control", "Audit trails", "Compliance reporting"]
-    },
-    competitors: ["Siemens", "GE Digital", "PTC", "Bentley Systems"],
-    marketSize: "$86.1 billion by 2025"
+    ctaLabel: 'Ensure Quality',
+    href: 'https://ziontechgroup.com/services/smart-quality-assurance-platform'
+  },
+  {
+    id: 'ai-powered-knowledge-management',
+    title: 'AI-Powered Knowledge Management',
+    description: 'Intelligent knowledge base with automated content organization, search optimization, and insights generation.',
+    category: 'Micro SaaS',
+    price: '$139',
+    billing: 'month',
+    features: [
+      'Automated content categorization',
+      'Intelligent search and recommendations',
+      'Knowledge gap identification',
+      'Content performance analytics',
+      'Collaborative knowledge creation',
+      'Integration with learning management systems'
+    ],
+    ctaLabel: 'Manage Knowledge',
+    href: 'https://ziontechgroup.com/services/ai-powered-knowledge-management'
+  },
+  {
+    id: 'smart-workflow-automation-engine',
+    title: 'Smart Workflow Automation Engine',
+    description: 'AI-powered business process automation with intelligent routing, decision making, and optimization.',
+    category: 'Micro SaaS',
+    price: '$219',
+    billing: 'month',
+    features: [
+      'Intelligent workflow routing',
+      'Automated decision making',
+      'Process optimization recommendations',
+      'Performance analytics and insights',
+      'Integration with business systems',
+      'Custom workflow builder'
+    ],
+    ctaLabel: 'Automate Workflows',
+    href: 'https://ziontechgroup.com/services/smart-workflow-automation-engine'
+  },
+  {
+    id: 'ai-powered-customer-success-platform',
+    title: 'AI-Powered Customer Success Platform',
+    description: 'Proactive customer success management with churn prediction, engagement optimization, and growth opportunities.',
+    category: 'Micro SaaS',
+    price: '$199',
+    billing: 'month',
+    features: [
+      'Churn prediction and prevention',
+      'Customer engagement scoring',
+      'Growth opportunity identification',
+      'Success metric tracking',
+      'Automated onboarding workflows',
+      'Integration with CRM and support systems'
+    ],
+    ctaLabel: 'Optimize Success',
+    href: 'https://ziontechgroup.com/services/ai-powered-customer-success-platform'
+  },
+  {
+    id: 'smart-data-governance-suite',
+    title: 'Smart Data Governance Suite',
+    description: 'Comprehensive data governance with automated compliance, quality monitoring, and privacy protection.',
+    category: 'Micro SaaS',
+    price: '$299',
+    billing: 'month',
+    features: [
+      'Automated data quality monitoring',
+      'Compliance and privacy management',
+      'Data lineage tracking',
+      'Access control and security',
+      'Data catalog and discovery',
+      'Integration with data platforms'
+    ],
+    ctaLabel: 'Govern Data',
+    href: 'https://ziontechgroup.com/services/smart-data-governance-suite'
   }
 ];
 

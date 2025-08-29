@@ -58,7 +58,8 @@ import {
   Award,
   Users,
   TrendingUp,
-  CheckCircle
+  CheckCircle,
+  Cpu
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
@@ -98,57 +99,48 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'IoT Edge Computing', href: '/services/iot-edge' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
-        { name: 'Sustainability Solutions', href: '/services/sustainability' },
-        { name: 'Green IT', href: '/services/green-it' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Space Technology', href: '/services/space-tech' }
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Smart Inventory Optimizer', href: '/services/smart-inventory-optimizer' },
+        { name: 'Smart Supply Chain Visibility', href: '/services/smart-supply-chain-visibility' }
       ]
     },
     {
-      title: 'Revolutionary 2030 Services',
-      icon: Crown,
+      title: 'AI & Analytics',
+      icon: Brain,
+      color: 'from-purple-600 to-indigo-600',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+        { name: 'AI Customer Sentiment Analyzer', href: '/services/ai-customer-sentiment-analyzer' },
+        { name: 'AI-Powered CRM Enhancer', href: '/services/ai-powered-crm-enhancer' },
+        { name: 'AI-Powered HR Recruitment', href: '/services/ai-powered-hr-recruitment-platform' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: Zap,
       color: 'from-yellow-600 to-orange-600',
       links: [
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
-        { name: 'AI Autonomous Business Operations', href: '/revolutionary-services-2030' },
-        { name: 'Quantum AI Hybrid Computing', href: '/revolutionary-services-2030' },
-        { name: 'AI Metaverse Development', href: '/revolutionary-services-2030' },
-        { name: 'AI Space Technology', href: '/revolutionary-services-2030' },
-        { name: 'Next-Gen Cybersecurity', href: '/revolutionary-services-2030' },
-        { name: 'Quantum Internet Infrastructure', href: '/revolutionary-services-2030' },
-        { name: 'AI Autonomous Vehicles', href: '/revolutionary-services-2030' },
-        { name: 'Brain-Computer Interface', href: '/revolutionary-services-2030' },
-        { name: 'AI Climate Change Solutions', href: '/revolutionary-services-2030' },
-        { name: 'AI Drug Discovery Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Financial Services Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Manufacturing Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Retail Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Transportation Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Energy Management Platform', href: '/revolutionary-services-2030' }
+        { name: 'Smart Contract Lifecycle Manager', href: '/services/smart-contract-lifecycle-manager' },
+        { name: 'Smart Expense Management', href: '/services/smart-expense-management-saas' },
+        { name: 'AI-Powered Project Management', href: '/services/ai-powered-project-management' },
+        { name: 'Smart Customer Support Automation', href: '/services/smart-customer-support-automation' },
+        { name: 'AI-Powered Marketing Attribution', href: '/services/ai-powered-marketing-attribution' },
+        { name: 'Smart Data Governance Suite', href: '/services/smart-data-governance-suite' }
       ]
     },
     {
-      title: 'Company & Support',
-      icon: Users,
+      title: 'Emerging Technologies',
+      icon: Cpu,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Contact', href: '/contact' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'FAQ', href: '/faq' },
-        { name: 'Help Center', href: '/help' },
-        { name: 'Support', href: '/support' },
-        { name: 'Training', href: '/training' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'Accessibility', href: '/accessibility' },
-        { name: 'Security', href: '/security' },
-        { name: 'Compliance', href: '/compliance' }
+        { name: 'Neuromorphic Computing', href: '/services/neuromorphic-computing-platform' },
+        { name: 'Synthetic Biology Platform', href: '/services/synthetic-biology-platform' },
+        { name: 'Brain-Computer Interface', href: '/services/brain-computer-interface-platform' },
+        { name: 'Fusion Energy Management', href: '/services/fusion-energy-management-platform' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing' }
       ]
     }
   ];
@@ -166,30 +158,43 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   const companyLinks = [
-    { name: 'About Us', href: '/about', description: 'Our story and mission' },
-    { name: 'Team', href: '/team', description: 'Meet our experts' },
-    { name: 'Careers', href: '/careers', description: 'Join our team' },
-    { name: 'Blog', href: '/blog', description: 'Latest insights' },
-    { name: 'Press', href: '/press', description: 'Media resources' },
-    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Press & Media', href: '/press' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' }
   ];
 
   const supportLinks = [
-    { name: 'Help Center', href: '/help', description: 'Find answers to questions' },
-    { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
-    { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-    { name: 'Documentation', href: '/docs', description: 'Technical guides' },
-    { name: 'Training', href: '/training', description: 'Learning resources' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' }
+    { name: 'Help Center', href: '/help' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Training', href: '/training' },
+    { name: 'Support', href: '/support' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Community', href: '/community' },
+    { name: 'Status', href: '/status' },
+    { name: 'Contact Support', href: '/contact' }
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
-    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
-    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
-    { name: 'Security', href: '/security', description: 'Security practices' },
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Accessibility', href: '/accessibility' }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
 
   return (
@@ -433,30 +438,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               >
                 <Globe className="w-5 h-5" />
               </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-cyan-400 transition-colors"
-              >
-                <Github className="w-5 h-5" />
-              </a>
+              {socialLinks.map((social) => (
+                <a 
+                  key={social.name}
+                  href={social.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
             </div>
           </div>
 
