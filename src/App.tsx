@@ -130,13 +130,11 @@ const Support = React.lazy(() => import('./pages/Support'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility'));
 const Security = React.lazy(() => import('./pages/Security'));
 const Compliance = React.lazy(() => import('./pages/Compliance'));
-const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
 const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
 const News = React.lazy(() => import('./pages/News'));
 const Events = React.lazy(() => import('./pages/events'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 
 // Additional service pages
@@ -146,19 +144,7 @@ const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2Comp
 const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
 const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
 
-// Additional components from the merge
-const Talent = React.lazy(() => import('./pages/Talent'));
-const Equipment = React.lazy(() => import('./pages/Equipment'));
-const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
-const News = React.lazy(() => import('./pages/News'));
-const Events = React.lazy(() => import('./pages/events'));
 const ComprehensiveServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
-
-// Additional service pages
-const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
-const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
-const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
-const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
 
 const Marketplace = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
