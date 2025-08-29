@@ -115,6 +115,11 @@ const AIPredictiveMaintenance = lazy(() => import('./pages/services/ai-predictiv
 const QuantumMachineLearning = lazy(() => import('./pages/services/quantum-machine-learning'));
 const AIContentCreation = lazy(() => import('./pages/services/ai-content-creation'));
 
+// New innovative AI services
+const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AIQuantumComputingPlatform'));
+const AIAutonomousVehiclePlatform = lazy(() => import('./pages/services/AIAutonomousVehiclePlatform'));
+const AIMetaverseDevelopmentPlatform = lazy(() => import('./pages/services/AIMetaverseDevelopmentPlatform'));
+
 // Comprehensive services imports
 const ComprehensiveServicesShowcase2025Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const ComprehensiveServicesShowcase2027Page = lazy(() => import('./pages/ComprehensiveServicesShowcase2027'));
@@ -365,6 +370,11 @@ function App() {
                     <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
                     <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                    
+                    {/* New innovative AI services */}
+                    <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
+                    <Route path="/services/ai-autonomous-vehicle-platform" element={<AIAutonomousVehiclePlatform />} />
+                    <Route path="/services/ai-metaverse-development-platform" element={<AIMetaverseDevelopmentPlatform />} />
                     
                     {/* Additional Pages */}
                     <Route path="/dashboard" element={<Dashboard />} />
