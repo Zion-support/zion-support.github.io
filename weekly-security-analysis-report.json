@@ -1,7 +1,28 @@
 {
-  "timestamp": "2025-08-29T18:40:49.680Z",
+  "timestamp": "2025-08-29T18:45:41.905Z",
   "status": "completed",
-  "auditResults": {},
+  "auditResults": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 178,
+        "dev": 475,
+        "optional": 69,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 676
+      }
+    }
+  },
   "packageAnalysis": {
     "totalPackages": 71,
     "packages": {
