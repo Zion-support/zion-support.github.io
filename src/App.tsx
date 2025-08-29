@@ -42,7 +42,7 @@ const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 
@@ -191,6 +191,11 @@ function App() {
               <Route path="/ai-services" element={<AIServices />} />
               <Route path="/it-services" element={<ITServices />} />
               <Route path="/micro-saas" element={<MicroSaaS />} />
+              <Route path="/services/affiliate-marketing-tracker" element={<AffiliateMarketingTracker />} />
+              <Route path="/services/uptime-sla-monitor" element={<UptimeSLAMonitor />} />
+              <Route path="/services/soc2-compliance-tracker" element={<SOC2ComplianceTracker />} />
+              <Route path="/services/employee-scheduling-saas" element={<EmployeeSchedulingSaaS />} />
+              <Route path="/services/ai-support-helpdesk" element={<AISupportHelpdesk />} />
               <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
               <Route path="/request-quote" element={<RequestQuote />} />
               <Route path="/dashboard" element={<Dashboard />} />
