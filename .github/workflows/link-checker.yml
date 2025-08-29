@@ -1,125 +1,229 @@
 name: Link Checker
-
 on:
   schedule:
-    - cron: '0 2 * * *'  # Daily at 2 AM
+    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [ main, develop ]
+    paths:
+      - '**.md'
+      - '**.html'
+      - '**.tsx'
+      - '**.ts'
+      - '**.js'
+      - '**.jsx'
 
 permissions:
-  contents: read
+  contents: write
   issues: write
+
+concurrency:
+  group: link-checker
+  cancel-in-progress: false
 
 jobs:
   check-links:
+    name: Check External Links
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
+          
       - name: Install linkinator
         run: npm install -g linkinator
-
-      - name: Check internal links
-        run: |
-          echo "Checking internal links..."
-          npx linkinator http://localhost:5000 --recurse --concurrency 10 --skip '.*(logout|signout).*' --format json > internal-links.json || true
-
+        
       - name: Check external links
         run: |
-          echo "Checking external links..."
-          # Extract external URLs from the build
-          find dist -name "*.html" -exec grep -o 'https://[^"]*' {} \; | sort -u > external-urls.txt
-          if [ -s external-urls.txt ]; then
-            npx linkinator $(cat external-urls.txt) --concurrency 5 --format json > external-links.json || true
-          else
-            echo '{"links":[]}' > external-links.json
-          fi
-
-      - name: Generate link report
+          # Create a comprehensive list of external links to check
+          cat > external_links.txt << 'EOF'
+          https://ziontechgroup.com
+          https://github.com/Zion-Holdings
+          https://www.linkedin.com/company/zion-tech-group
+          https://www.facebook.com/ziontechgroup
+          https://instagram.com/ziontechgroup
+          https://twitter.com/ziontechgroup
+          https://www.youtube.com/@ziontechgroup
+          https://medium.com/@ziontechgroup
+          https://dev.to/ziontechgroup
+          https://hashnode.com/@ziontechgroup
+          https://ziontechgroup.com/sitemap.xml
+          https://ziontechgroup.com/robots.txt
+          EOF
+          
+          echo "Checking $(wc -l < external_links.txt) external links..."
+          
+          # Run linkinator on the external links with detailed output
+          linkinator external_links.txt \
+            --format json \
+            --concurrency 10 \
+            --timeout 30000 \
+            --retry 3 \
+            --skip '.*(logout|signout|auth|login).*' \
+            > link_report.json || true
+            
+      - name: Analyze results
         run: |
-          echo "Generating link report..."
-          # Combine internal and external link reports
-          jq -s '
-            reduce .[] as $r ({"links":[]};
-              .links += ($r.links // [])
-            )
-          ' internal-links.json external-links.json > combined-links.json
-
-          # Generate broken links summary
-          jq '
-            [.links[] | select(.state=="BROKEN") |
-              {source:.parent, target:.url, status:(.status // "unknown"), type: "broken"}
-            ] | sort_by(.source, .target)
-          ' combined-links.json > broken-links.json
-
-          # Count broken links
-          broken_count=$(jq 'length' broken-links.json)
-          echo "Found $broken_count broken links"
-
-          # Generate markdown report
-          if [ "$broken_count" -gt 0 ]; then
+          if [ -f link_report.json ]; then
+            # Parse the JSON report
+            total_links=$(jq '.links | length' link_report.json 2>/dev/null || echo "0")
+            working_links=$(jq '.links[] | select(.state=="OK") | length' link_report.json 2>/dev/null || echo "0")
+            broken_links=$(jq '.links[] | select(.state=="BROKEN") | length' link_report.json 2>/dev/null || echo "0")
+            timeout_links=$(jq '.links[] | select(.state=="TIMEOUT") | length' link_report.json 2>/dev/null || echo "0")
+            
+            echo "Total links checked: $total_links"
+            echo "Working links: $working_links"
+            echo "Broken links: $broken_links"
+            echo "Timeout links: $timeout_links"
+            
+            # Create comprehensive report
             cat > LINK_REPORT.md << EOF
-            # Link Check Report - $(date)
+            # External Link Check Report
             
-            ## Summary
-            - **Total broken links**: $broken_count
-            - **Report generated**: $(date)
+            **Generated on:** $(date -u +"%Y-%m-%d %H:%M UTC")
+            **Repository:** Zion Tech Group Website
+            **Workflow:** Link Checker
             
-            ## Broken Links
+            ## 📊 Summary
             
-            | Source | Target | Status |
-            |--------|--------|--------|
-            $(jq -r '.[] | "| " + (.source // "unknown") + " | " + (.target // "unknown") + " | " + (.status // "unknown") + " |"' broken-links.json)
+            | Metric | Count |
+            |--------|-------|
+            | Total Links Checked | $total_links |
+            | ✅ Working Links | $working_links |
+            | ❌ Broken Links | $broken_links |
+            | ⏰ Timeout Links | $timeout_links |
             
-            ## Recommendations
-            1. Fix all broken internal links
-            2. Update or remove broken external links
-            3. Implement proper 404 handling for broken routes
-            4. Add link validation to CI/CD pipeline
+            ## 🔍 Detailed Results
+            
             EOF
+            
+            if [ "$broken_links" -gt 0 ]; then
+              echo "### ❌ Broken Links" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              echo "| URL | Status | Error Details |" >> LINK_REPORT.md
+              echo "|-----|--------|---------------|" >> LINK_REPORT.md
+              jq -r '.links[] | select(.state=="BROKEN") | "| \(.url) | \(.status // "unknown") | \(.error // "No error details") |"' link_report.json >> LINK_REPORT.md 2>/dev/null || echo "| Error parsing broken links | | |" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            if [ "$timeout_links" -gt 0 ]; then
+              echo "### ⏰ Timeout Links" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              echo "| URL | Status |" >> LINK_REPORT.md
+              echo "|-----|--------|" >> LINK_REPORT.md
+              jq -r '.links[] | select(.state=="TIMEOUT") | "| \(.url) | \(.status // "timeout") |"' link_report.json >> LINK_REPORT.md 2>/dev/null || echo "| Error parsing timeout links | |" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            if [ "$broken_links" -eq 0 ] && [ "$timeout_links" -eq 0 ]; then
+              echo "### 🎉 All Links Working!" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+              echo "✅ All external links are functioning correctly!" >> LINK_REPORT.md
+              echo "" >> LINK_REPORT.md
+            fi
+            
+            echo "## 📋 Recommendations" >> LINK_REPORT.md
+            echo "" >> LINK_REPORT.md
+            if [ "$broken_links" -gt 0 ]; then
+              echo "- **Immediate Action Required:** Fix broken links to maintain website credibility"
+              echo "- Check if URLs have changed or if services are temporarily down"
+              echo "- Update or remove broken links from the website"
+            fi
+            if [ "$timeout_links" -gt 0 ]; then
+              echo "- **Investigation Needed:** Links experiencing timeouts may indicate slow response times"
+              echo "- Consider if these services are essential or can be replaced"
+            fi
+            if [ "$broken_links" -eq 0 ] && [ "$timeout_links" -eq 0 ]; then
+              echo "- **Maintenance:** Continue regular link checking to ensure ongoing reliability"
+              echo "- Consider expanding link checking to internal pages for comprehensive coverage"
+            fi
+            
+            echo "" >> LINK_REPORT.md
+            echo "---" >> LINK_REPORT.md
+            echo "*This report was automatically generated by GitHub Actions*" >> LINK_REPORT.md
+            
           else
+            echo "❌ Failed to generate link report"
             cat > LINK_REPORT.md << EOF
-            # Link Check Report - $(date)
+            # Link Check Report - Error
             
-            ## Summary
-            ✅ **No broken links found!**
+            **Generated on:** $(date -u +"%Y-%m-%d %H:%M UTC")
             
-            All links are working correctly.
+            ## ❌ Error
+            
+            Failed to generate link report. This could be due to:
+            - Linkinator installation issues
+            - Network connectivity problems
+            - Invalid link format
+            
+            Please check the workflow logs for more details.
             EOF
           fi
-
-      - name: Upload link report
-        uses: actions/upload-artifact@v4
-        with:
-          name: link-report
-          path: |
-            LINK_REPORT.md
-            broken-links.json
-            combined-links.json
-          retention-days: 7
-
+          
       - name: Create issue for broken links
-        if: contains(steps.check-links.outputs.broken_count, '0') == false
+        if: failure() || contains(steps.analyze-results.outputs.broken_count, '0') == false
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: "🔗 Broken Links Detected - $(date)"
+          title: "🔗 External Link Check - Issues Detected"
           content-filepath: LINK_REPORT.md
           labels: |
             link-check
             automated
-            bug
+            broken-links
+            website-maintenance
           assignees: ''
+          body: |
+            ## 🔗 External Link Check Results
+            
+            Automated link checking has detected issues with external links on the Zion Tech Group website.
+            
+            Please review the attached report and take appropriate action to fix broken links.
+            
+            **Priority:** 
+            - High: Broken links affecting user experience
+            - Medium: Timeout links requiring investigation
+            
+            **Next Steps:**
+            1. Review the detailed report below
+            2. Fix or update broken links
+            3. Test links manually if needed
+            4. Update website content as necessary
+            
+      - name: Upload report artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-report-$(date +%Y%m%d)
+          path: |
+            LINK_REPORT.md
+            link_report.json
+            external_links.txt
+          retention-days: 30
+          
+      - name: Comment on PR (if applicable)
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('LINK_REPORT.md', 'utf8');
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 🔗 Link Check Results\n\n${report}`
+            });
+            
+      - name: Success notification
+        if: success()
+        run: |
+          echo "✅ Link check completed successfully!"
+          echo "📊 Report generated: LINK_REPORT.md"
+          echo "📦 Artifacts uploaded for review"
