@@ -2,6 +2,8 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
+
+const News: React.FC = () => {
   const newsArticles = [
     {
       id: 1,
@@ -310,4 +312,5 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink } from 'lucide-react';
     </div>
   );
 };
+
 export default News;
