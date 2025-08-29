@@ -182,6 +182,117 @@ module.exports = {
     }
   ],
 
+  // Intelligent AI-Powered Automation Processes
+  intelligentAutomation: [
+    // AI-Powered Code Quality Automation
+    {
+      name: 'ai-code-quality',
+      script: './scripts/automation/ai-code-quality-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
+      },
+      error_file: 'logs/ai-code-quality-error.log',
+      out_file: 'logs/ai-code-quality-out.log',
+      log_file: 'logs/ai-code-quality-combined.log',
+      time: true
+    },
+
+    // Intelligent Performance Optimization Automation
+    {
+      name: 'intelligent-performance',
+      script: './scripts/automation/intelligent-performance-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      },
+      error_file: 'logs/intelligent-performance-error.log',
+      out_file: 'logs/intelligent-performance-out.log',
+      log_file: 'logs/intelligent-performance-combined.log',
+      time: true
+    },
+
+    // Smart Dependency Management Automation
+    {
+      name: 'smart-dependency',
+      script: './scripts/automation/smart-dependency-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours (daily)
+      },
+      error_file: 'logs/smart-dependency-error.log',
+      out_file: 'logs/smart-dependency-out.log',
+      log_file: 'logs/smart-dependency-combined.log',
+      time: true
+    },
+
+    // Advanced Error Prediction & Prevention Automation
+    {
+      name: 'error-prediction',
+      script: './scripts/automation/error-prediction-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      },
+      error_file: 'logs/error-prediction-error.log',
+      out_file: 'logs/error-prediction-out.log',
+      log_file: 'logs/error-prediction-combined.log',
+      time: true
+    },
+
+    // Intelligent Build Optimization Automation
+    {
+      name: 'intelligent-build',
+      script: './scripts/automation/intelligent-build-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      },
+      error_file: 'logs/intelligent-build-error.log',
+      out_file: 'logs/intelligent-build-out.log',
+      log_file: 'logs/intelligent-build-combined.log',
+      time: true
+    },
+
+    // Smart Testing Strategy Automation
+    {
+      name: 'smart-testing',
+      script: './scripts/automation/smart-testing-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '86400000' // 24 hours (daily)
+      },
+      error_file: 'logs/smart-testing-error.log',
+      out_file: 'logs/smart-testing-out.log',
+      log_file: 'logs/smart-testing-combined.log',
+      time: true
+    }
+  ],
+
   // PM2 Log Rotation
   module: {
     name: 'pm2-logrotate',
