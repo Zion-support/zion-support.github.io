@@ -4,7 +4,8 @@
 
 [build]
   # Use `npm ci` for consistent dependency management, Vite builds to dist/
-  command = "npm ci && npm run build:netlify"
+  # Force npm usage explicitly in the command
+  command = "which npm && npm --version && npm ci --ignore-scripts --no-optional && npm run build:netlify"
   publish = "dist"
   # Force static site build (not Next.js)
   # Functions moved to PM2 automation
