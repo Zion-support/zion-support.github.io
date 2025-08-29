@@ -9,7 +9,7 @@ import { Footer } from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { EnhancedSEO } from './components/EnhancedSEO';
 import { ServiceWorker } from './components/ServiceWorker';
