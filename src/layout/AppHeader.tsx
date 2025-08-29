@@ -171,6 +171,62 @@ export function AppHeader() {
       description: 'Quality Assurance & Testing',
       featured: true,
       color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Quantum AI Trading', 
+      href: '/services#quantum-ai-trading', 
+      icon: Atom, 
+      description: 'Quantum-Powered Trading Platform',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500'
+    },
+    { 
+      name: 'Neural Interface', 
+      href: '/services#neural-interface', 
+      icon: Brain, 
+      description: 'Brain-Computer Interface',
+      featured: true,
+      color: 'from-pink-500 to-purple-500'
+    },
+    { 
+      name: 'Holographic Workspace', 
+      href: '/services#holographic-workspace', 
+      icon: Eye, 
+      description: '3D Holographic Collaboration',
+      featured: true,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    { 
+      name: 'BioDigital Twin', 
+      href: '/services#biodigital-twin', 
+      icon: Heart, 
+      description: 'Digital Twin for Health',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'Space Debris Tracking', 
+      href: '/services#space-debris-tracking', 
+      icon: Rocket, 
+      description: 'AI-Powered Space Safety',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Ethics Guardian', 
+      href: '/services#ai-ethics-guardian', 
+      icon: Shield, 
+      description: 'AI Ethics & Governance',
+      featured: true,
+      color: 'from-green-500 to-blue-500'
+    },
+    { 
+      name: 'Metaverse Builder', 
+      href: '/services#metaverse-builder', 
+      icon: Globe, 
+      description: 'Build Immersive Virtual Worlds',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500'
     }
   ];
 
