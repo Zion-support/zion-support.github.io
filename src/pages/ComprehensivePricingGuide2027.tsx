@@ -1,861 +1,608 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Heart, Globe, Cpu, Lock, Users, DollarSign, Clock, Target, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, ChevronRight, Sparkles, Flame, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
-const ComprehensivePricingGuide2027: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All');
-
-  const pricingData = [
-    // Revolutionary 2030 Services
-    {
-      id: 'quantum-ai-hybrid-platform',
-      title: 'Quantum AI Hybrid Platform',
-      category: 'Revolutionary 2030',
-      description: 'Revolutionary platform combining quantum computing with advanced AI',
-      monthlyPrice: 25000,
-      yearlyPrice: 250000,
-      marketPrice: '$25,000 - $75,000/month',
-      features: [
-        'Quantum-classical hybrid algorithms',
-        'AI-powered quantum error correction',
-        'Real-time quantum state visualization',
-        'Multi-qubit entanglement management',
-        'Quantum machine learning models',
-        'Financial portfolio optimization',
-        'Drug discovery simulations',
-        'Climate modeling capabilities'
-      ],
-      benefits: [
-        '1000x faster computation for specific problems',
-        'Breakthrough solutions in drug discovery',
-        'Unprecedented financial modeling accuracy',
-        'Future-proof quantum-ready infrastructure'
-      ],
-      useCases: [
-        'Pharmaceutical research & development',
-        'Financial risk assessment & trading',
-        'Climate change modeling & prediction',
-        'Cryptography & cybersecurity'
-      ],
-      targetAudience: 'Research institutions, Pharmaceutical companies, Financial institutions',
-      roi: '500-1000%',
-      implementationTime: '3-4 months',
-      trainingIncluded: true,
-      customizationLevel: 'High',
-      icon: Brain,
-      color: 'from-cyan-500 to-blue-600',
-      featured: true
-    },
-    {
-      id: 'ai-cybersecurity-platform-2030',
-      title: 'AI-Powered Cybersecurity Platform 2030',
-      category: 'Revolutionary 2030',
-      description: 'Next-generation cybersecurity platform using advanced AI and machine learning',
-      monthlyPrice: 8999,
-      yearlyPrice: 89990,
-      marketPrice: '$8,999 - $24,999/month',
-      features: [
-        'AI-powered threat detection',
-        'Behavioral analytics',
-        'Zero-day exploit prevention',
-        'Automated incident response',
-        'Threat intelligence sharing',
-        'Advanced endpoint protection',
-        'Cloud security monitoring',
-        'IoT device security'
-      ],
-      benefits: [
-        '99.9% threat detection accuracy',
-        '90% reduction in false positives',
-        'Real-time threat response',
-        'Automated compliance reporting'
-      ],
-      useCases: [
-        'Enterprise security operations',
-        'Government cybersecurity',
-        'Financial institution protection',
-        'Healthcare data security'
-      ],
-      targetAudience: 'Large enterprises, Government agencies, Financial institutions',
-      roi: '300-500%',
-      implementationTime: '2-3 months',
-      trainingIncluded: true,
-      customizationLevel: 'High',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600',
-      featured: true
-    },
-    {
-      id: 'autonomous-ai-business-operations',
-      title: 'Autonomous AI Business Operations Platform',
-      category: 'Revolutionary 2030',
-      description: 'Revolutionary platform that autonomously manages business operations',
-      monthlyPrice: 15999,
-      yearlyPrice: 159990,
-      marketPrice: '$15,999 - $45,999/month',
-      features: [
-        'AI-powered process automation',
-        'Autonomous decision making',
-        'Predictive business analytics',
-        'Intelligent resource allocation',
-        'Automated customer service',
-        'Smart inventory management',
-        'Dynamic pricing optimization',
-        'Workflow orchestration'
-      ],
-      benefits: [
-        '80% reduction in operational costs',
-        '95% process automation',
-        'Real-time business optimization',
-        '24/7 autonomous operation'
-      ],
-      useCases: [
-        'Manufacturing operations',
-        'Retail & e-commerce',
-        'Financial services',
-        'Healthcare operations'
-      ],
-      targetAudience: 'Large enterprises, Manufacturing companies, Retail chains',
-      roi: '400-700%',
-      implementationTime: '4-5 months',
-      trainingIncluded: true,
-      customizationLevel: 'Very High',
-      icon: Zap,
-      color: 'from-green-500 to-emerald-600',
-      featured: true
-    },
-    {
-      id: 'quantum-financial-trading-platform',
-      title: 'Quantum Financial Trading Platform',
-      category: 'Revolutionary 2030',
-      description: 'Advanced trading platform leveraging quantum computing and AI',
-      monthlyPrice: 35000,
-      yearlyPrice: 350000,
-      marketPrice: '$35,000 - $100,000/month',
-      features: [
-        'Quantum-powered market analysis',
-        'AI-driven trading strategies',
-        'Real-time risk assessment',
-        'Portfolio optimization',
-        'High-frequency trading',
-        'Market prediction models',
-        'Compliance monitoring',
-        'Performance analytics'
-      ],
-      benefits: [
-        '1000x faster market analysis',
-        '95% prediction accuracy',
-        'Real-time risk management',
-        'Optimized portfolio returns'
-      ],
-      useCases: [
-        'Hedge funds',
-        'Investment banks',
-        'Asset management firms',
-        'Trading desks'
-      ],
-      targetAudience: 'Hedge funds, Investment banks, Asset managers',
-      roi: '800-1200%',
-      implementationTime: '5-6 months',
-      trainingIncluded: true,
-      customizationLevel: 'Very High',
-      icon: DollarSign,
-      color: 'from-yellow-500 to-orange-600',
-      featured: true
-    },
-    {
-      id: 'ai-healthcare-diagnostics-platform',
-      title: 'AI-Powered Healthcare Diagnostics Platform',
-      category: 'Revolutionary 2030',
-      description: 'Advanced healthcare platform using AI and machine learning',
-      monthlyPrice: 12999,
-      yearlyPrice: 129990,
-      marketPrice: '$12,999 - $35,999/month',
-      features: [
-        'AI-powered medical imaging analysis',
-        'Symptom assessment & diagnosis',
-        'Treatment recommendation engine',
-        'Patient outcome prediction',
-        'Drug interaction checking',
-        'Medical record analysis',
-        'Telemedicine integration',
-        'Clinical decision support'
-      ],
-      benefits: [
-        '95% diagnostic accuracy',
-        '50% faster diagnosis',
-        'Reduced medical errors',
-        'Improved patient outcomes'
-      ],
-      useCases: [
-        'Hospitals & clinics',
-        'Medical imaging centers',
-        'Primary care practices',
-        'Specialty medical practices'
-      ],
-      targetAudience: 'Hospitals, Medical clinics, Healthcare systems',
-      roi: '300-600%',
-      implementationTime: '3-4 months',
-      trainingIncluded: true,
-      customizationLevel: 'High',
-      icon: Heart,
-      color: 'from-pink-500 to-rose-600',
-      featured: false
-    },
-    {
-      id: 'sustainable-smart-city-platform',
-      title: 'Sustainable Smart City Platform',
-      category: 'Revolutionary 2030',
-      description: 'Comprehensive platform for building and managing sustainable smart cities',
-      monthlyPrice: 45000,
-      yearlyPrice: 450000,
-      marketPrice: '$45,000 - $120,000/month',
-      features: [
-        'IoT infrastructure management',
-        'Smart energy grid optimization',
-        'Traffic flow optimization',
-        'Environmental monitoring',
-        'Waste management optimization',
-        'Public safety systems',
-        'Citizen engagement platform',
-        'Data analytics dashboard'
-      ],
-      benefits: [
-        '30% reduction in energy consumption',
-        '40% improvement in traffic flow',
-        '50% reduction in waste',
-        'Enhanced public safety'
-      ],
-      useCases: [
-        'Municipal governments',
-        'City planning departments',
-        'Utility companies',
-        'Transportation authorities'
-      ],
-      targetAudience: 'City governments, Municipalities, Urban planners',
-      roi: '400-800%',
-      implementationTime: '6-8 months',
-      trainingIncluded: true,
-      customizationLevel: 'Very High',
-      icon: Globe,
-      color: 'from-teal-500 to-cyan-600',
-      featured: false
-    },
-    {
-      id: 'ai-education-platform-2030',
-      title: 'AI-Powered Education Platform 2030',
-      category: 'Revolutionary 2030',
-      description: 'Revolutionary educational platform using AI for personalized learning',
-      monthlyPrice: 7999,
-      yearlyPrice: 79990,
-      marketPrice: '$7,999 - $22,999/month',
-      features: [
-        'AI-powered personalized learning',
-        'Intelligent tutoring systems',
-        'Adaptive curriculum generation',
-        'Student performance analytics',
-        'Learning path optimization',
-        'Content recommendation engine',
-        'Assessment automation',
-        'Progress tracking'
-      ],
-      benefits: [
-        '40% improvement in learning outcomes',
-        'Personalized learning paths',
-        'Real-time performance tracking',
-        'Reduced administrative workload'
-      ],
-      useCases: [
-        'K-12 schools',
-        'Higher education institutions',
-        'Corporate training programs',
-        'Online learning platforms'
-      ],
-      targetAudience: 'Educational institutions, School districts, Universities',
-      roi: '250-400%',
-      implementationTime: '2-3 months',
-      trainingIncluded: true,
-      customizationLevel: 'High',
-      icon: Users,
-      color: 'from-indigo-500 to-purple-600',
-      featured: false
-    },
-    {
-      id: 'quantum-internet-security-platform',
-      title: 'Quantum Internet Security Platform',
-      category: 'Revolutionary 2030',
-      description: 'Next-generation internet security using quantum cryptography',
-      monthlyPrice: 28000,
-      yearlyPrice: 280000,
-      marketPrice: '$28,000 - $75,000/month',
-      features: [
-        'Quantum key distribution (QKD)',
-        'Quantum-resistant cryptography',
-        'Post-quantum algorithms',
-        'Quantum random number generation',
-        'Quantum-secure communication',
-        'Network monitoring & detection',
-        'Threat intelligence',
-        'Compliance reporting'
-      ],
-      benefits: [
-        'Unbreakable encryption',
-        'Future-proof security',
-        'Quantum-resistant algorithms',
-        'Real-time threat detection'
-      ],
-      useCases: [
-        'Government communications',
-        'Financial institutions',
-        'Healthcare organizations',
-        'Critical infrastructure'
-      ],
-      targetAudience: 'Government agencies, Financial institutions, Critical infrastructure',
-      roi: '600-900%',
-      implementationTime: '4-5 months',
-      trainingIncluded: true,
-      customizationLevel: 'Very High',
-      icon: Lock,
-      color: 'from-purple-500 to-pink-600',
-      featured: false
-    },
-    {
-      id: 'ai-manufacturing-platform-2030',
-      title: 'AI-Powered Manufacturing Platform 2030',
-      category: 'Revolutionary 2030',
-      description: 'Comprehensive manufacturing platform using AI, IoT, and machine learning',
-      monthlyPrice: 18999,
-      yearlyPrice: 189990,
-      marketPrice: '$18,999 - $50,000/month',
-      features: [
-        'AI-powered production optimization',
-        'Predictive maintenance',
-        'Quality control automation',
-        'Supply chain optimization',
-        'Inventory management',
-        'Energy efficiency monitoring',
-        'Worker safety systems',
-        'Performance analytics'
-      ],
-      benefits: [
-        '25% increase in production efficiency',
-        '40% reduction in downtime',
-        '30% improvement in quality',
-        '20% reduction in energy costs'
-      ],
-      useCases: [
-        'Automotive manufacturing',
-        'Electronics production',
-        'Pharmaceutical manufacturing',
-        'Food & beverage production'
-      ],
-      targetAudience: 'Manufacturing companies, Industrial facilities, Production plants',
-      roi: '350-600%',
-      implementationTime: '3-4 months',
-      trainingIncluded: true,
-      customizationLevel: 'High',
-      icon: Cpu,
-      color: 'from-slate-500 to-gray-600',
-      featured: false
-    }
-  ];
-
-  const categories = ['All', ...Array.from(new Set(pricingData.map(item => item.category)))];
-  const priceRanges = [
-    'All',
-    'Under $10K',
-    '$10K - $25K',
-    '$25K - $50K',
-    'Over $50K'
-  ];
-
-  const filteredData = useMemo(() => {
-    let filtered = pricingData;
-
-    // Filter by search query
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(item =>
-        item.title.toLowerCase().includes(query) ||
-        item.description.toLowerCase().includes(query) ||
-        item.category.toLowerCase().includes(query)
-      );
-    }
-
-    // Filter by category
-    if (selectedCategory !== 'All') {
-      filtered = filtered.filter(item => item.category === selectedCategory);
-    }
-
-    // Filter by price range
-    if (selectedPriceRange !== 'All') {
-      switch (selectedPriceRange) {
-        case 'Under $10K':
-          filtered = filtered.filter(item => item.monthlyPrice < 10000);
-          break;
-        case '$10K - $25K':
-          filtered = filtered.filter(item => item.monthlyPrice >= 10000 && item.monthlyPrice < 25000);
-          break;
-        case '$25K - $50K':
-          filtered = filtered.filter(item => item.monthlyPrice >= 25000 && item.monthlyPrice < 50000);
-          break;
-        case 'Over $50K':
-          filtered = filtered.filter(item => item.monthlyPrice >= 50000);
-          break;
-        default:
-          break;
-      }
-    }
-
-    return filtered;
-  }, [searchQuery, selectedCategory, selectedPriceRange]);
-
+import { 
+  Search, 
+  Filter, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Heart, 
+  Zap, 
+  Star, 
+  TrendingUp, 
+  CheckCircle, 
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  DollarSign,
+  Award,
+  Clock,
+  Target,
+  BarChart3,
+  Cpu,
+  Lock,
+  ShoppingCart,
+  MessageCircle,
+  BookOpen,
+  Settings,
+  Database,
+  Network,
+  Server,
+  ShieldCheck,
+  Leaf,
+  Satellite,
+  Atom,
+  Code,
+  FileText,
+  GraduationCap,
+  Building,
+  Briefcase,
+  Lightbulb,
+  Sparkles,
+  Users,
+  Eye,
+  ArrowUpRight,
+  Grid,
+  List,
+  ChevronRight,
+  ChevronDown,
+  Info,
+  Calendar,
+  UserCheck,
+  Globe,
+  Layers,
+  Activity,
+  PieChart,
+  BarChart,
+  LineChart,
+  TrendingDown,
+  Key,
+  EyeOff,
+  AlertTriangle,
+  CheckCircle2,
+  XCircle,
+  Info as InfoIcon,
+  ExternalLink,
+  Download,
+  Share2,
+  Bookmark,
+  Heart as HeartIcon
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
+import { servicesCatalog } from '../data/servicesCatalog';
+// Enhanced pricing tiers
+const pricingTiers = [
+  {
+    name: 'Starter',
+    price: '$99',
+    period: 'month',
+    description: 'Perfect for small businesses and startups',
+    features: ['Basic features', 'Email support', 'Up to 5 users', 'Standard integrations'],
+    color: 'from-green-500 to-emerald-500',
+    popular: false
+  },
+  {
+    name: 'Professional',
+    price: '$299',
+    period: 'month',
+    description: 'Ideal for growing businesses',
+    features: ['Advanced features', 'Priority support', 'Up to 25 users', 'Premium integrations', 'Analytics dashboard'],
+    color: 'from-blue-500 to-cyan-500',
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    price: '$999',
+    period: 'month',
+    description: 'For large organizations',
+    features: ['All features', '24/7 support', 'Unlimited users', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager'],
+    color: 'from-purple-500 to-pink-500',
+    popular: false
+  }
+];
+// Service comparison features
+const comparisonFeatures = [
+  'AI-Powered Analytics',
+  'Real-time Monitoring',
+  'Custom Integrations',
+  'API Access',
+  'White-label Options',
+  'Advanced Security',
+  'Compliance Certifications',
+  'Training & Support',
+  'SLA Guarantees',
+  'Custom Development'
+];
+// Enhanced service card component
+const ServicePricingCard = ({ service, showDetails = false }: { service: any; showDetails?: boolean }) => {
+  const [expanded, setExpanded] = useState(false);
   const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
-      'Revolutionary 2030': Zap,
-      'AI Services': Brain,
+    const iconMap: Record<string, any> = {
+      'Micro SaaS': ShoppingCart,
+      'IT Services': Server,
+      'AI Solutions': Brain,
       'Cybersecurity': Shield,
       'Cloud & DevOps': Cloud,
-      'IT Infrastructure': Cpu,
-      'Micro SaaS': Rocket
+      'Quantum Computing': Atom,
+      'Blockchain & Web3': Lock,
+      'IoT & Edge': Cpu,
+      'Green Tech': Leaf,
+      'Space Tech': Satellite,
+      'BioTech & Health': Heart,
+      'FinTech & DeFi': DollarSign,
+      'Metaverse & AR/VR': Eye,
+      'Autonomous Systems': Rocket
     };
-    return iconMap[category] || Zap;
+    return iconMap[category] || Grid;
   };
-
-  const getPriceRangeColor = (price: number) => {
-    if (price < 10000) return 'text-green-400';
-    if (price < 25000) return 'text-yellow-400';
-    if (price < 50000) return 'text-orange-400';
-    return 'text-red-400';
+  const getCategoryColor = (category: string) => {
+    const colorMap: Record<string, string> = {
+      'Micro SaaS': 'from-purple-600 to-pink-600',
+      'IT Services': 'from-green-600 to-emerald-600',
+      'AI Solutions': 'from-indigo-600 to-purple-600',
+      'Cybersecurity': 'from-red-600 to-pink-600',
+      'Cloud & DevOps': 'from-blue-600 to-cyan-600',
+      'Quantum Computing': 'from-purple-600 to-indigo-600',
+      'Blockchain & Web3': 'from-yellow-600 to-orange-600',
+      'IoT & Edge': 'from-green-600 to-teal-600',
+      'Green Tech': 'from-green-600 to-emerald-600',
+      'Space Tech': 'from-indigo-600 to-purple-600',
+      'BioTech & Health': 'from-red-600 to-pink-600',
+      'FinTech & DeFi': 'from-emerald-600 to-teal-600',
+      'Metaverse & AR/VR': 'from-purple-600 to-indigo-600',
+      'Autonomous Systems': 'from-orange-600 to-red-600'
+    };
+    return colorMap[category] || 'from-gray-600 to-gray-700';
   };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
+    >
+      {/* Service Header */}
+      <div className={`bg-gradient-to-r ${getCategoryColor(service.category)} p-6 text-white`}>
+        <div className="flex items-center justify-between mb-4">
+          <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+            {React.createElement(getCategoryIcon(service.category), { className: 'w-6 h-6' })}
+          </div>
+          <span className="text-sm font-medium bg-white/20 px-3 py-2 rounded-full">
+            {service.category}
+          </span>
+        </div>
+        <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+        <p className="text-white/80 text-sm leading-relaxed">{service.description}</p>
+      </div>
+      {/* Service Content */}
+      <div className="p-6">
+        {/* Pricing */}
+        <div className="flex items-center justify-between mb-6">
+          <div className="text-3xl font-bold text-gray-900">{service.price}</div>
+          <span className="text-sm text-gray-500 capitalize">per {service.billing}</span>
+        </div>
+        {/* Features */}
+        <div className="mb-6">
+          <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
+            <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+            Key Features
+          </h4>
+          <div className="space-y-2">
+            {service.features.slice(0, showDetails ? 5 : 3).map((feature: string, idx: number) => (
+              <div key={idx} className="flex items-center space-x-2">
+                <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
+                <span className="text-sm text-gray-600">{feature}</span>
+              </div>
+            ))}
+            {service.features.length > (showDetails ? 5 : 3) && (
+              <button
+                onClick={() => setExpanded(!expanded)}
+                className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center"
+              >
+                {expanded ? 'Show less' : `+${service.features.length - (showDetails ? 5 : 3)} more features`}
+                {expanded ? <ChevronDown className="w-4 h-4 ml-1" /> : <ChevronRight className="w-4 h-4 ml-1" />}
+              </button>
+            )}
+            {expanded && service.features.slice(showDetails ? 5 : 3).map((feature: string, idx: number) => (
+              <div key={idx + (showDetails ? 5 : 3)} className="flex items-center space-x-2">
+                <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
+                <span className="text-sm text-gray-600">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* CTA Button */}
+        <a
+          href={service.href}
+          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+        >
+          {service.ctaLabel}
+          <ArrowRight className="w-4 h-4 ml-2" />
+        </a>
+      </div>
+    </motion.div>
+  );
+};
+// Pricing comparison table
+const PricingComparisonTable = ({ services }: { services: any[] }) => {
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const toggleService = (serviceId: string) => {
+    setSelectedServices(prev => 
+      prev.includes(serviceId) 
+        ? prev.filter(id => id !== serviceId)
+        : [...prev, serviceId]
+    );
+  };
+  const filteredServices = services.filter(service => selectedServices.includes(service.id));
+  return (
+    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100">
+      <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Service Comparison</h3>
+      {/* Service Selection */}
+      <div className="mb-6">
+        <h4 className="text-lg font-semibold text-gray-700 mb-3">Select Services to Compare</h4>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          {services.map(service => (
+            <button
+              key={service.id}
+              onClick={() => toggleService(service.id)}
+              className={`p-3 rounded-lg border transition-all duration-200 text-sm ${
+                selectedServices.includes(service.id)
+                  ? 'border-blue-500 bg-blue-50 text-blue-700'
+                  : 'border-gray-200 hover:border-gray-300 text-gray-700'
+              }`}
+            >
+              {service.title}
+            </button>
+          ))}
+        </div>
+      </div>
+      {/* Comparison Table */}
+      {filteredServices.length > 0 && (
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-gray-200">
+                <th className="text-left p-3 font-semibold text-gray-700">Feature</th>
+                {filteredServices.map(service => (
+                  <th key={service.id} className="text-center p-3 font-semibold text-gray-700">
+                    {service.title}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonFeatures.map(feature => (
+                <tr key={feature} className="border-b border-gray-100">
+                  <td className="p-3 text-sm text-gray-600">{feature}</td>
+                  {filteredServices.map(service => (
+                    <td key={service.id} className="text-center p-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 mx-auto" />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+              <tr className="bg-gray-50">
+                <td className="p-3 font-semibold text-gray-700">Starting Price</td>
+                {filteredServices.map(service => (
+                  <td key={service.id} className="text-center p-3 font-semibold text-gray-900">
+                    {service.price}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+};
+// Contact information section
+const ContactSection = () => {
+  const contactInfo = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    website: "https://ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709"
+  };
+  return (
+    <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact our team to discuss your specific needs and get a customized quote for your business
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center">
+            <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold mb-2">Call Us</h3>
+            <a href={`tel:${contactInfo.phone}`} className="text-blue-300 hover:text-blue-200">
+              {contactInfo.phone}
+            </a>
+          </div>
+          <div className="text-center">
+            <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold mb-2">Email Us</h3>
+            <a href={`mailto:${contactInfo.email}`} className="text-purple-300 hover:text-purple-200">
+              {contactInfo.email}
+            </a>
+          </div>
+          <div className="text-center">
+            <Globe className="w-12 h-12 text-green-400 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold mb-2">Visit Website</h3>
+            <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="text-green-300 hover:text-green-200">
+              {contactInfo.website.replace('https://', '')}
+            </a>
+          </div>
+          <div className="text-center">
+            <MapPin className="w-12 h-12 text-red-400 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold mb-2">Address</h3>
+            <p className="text-red-300 text-sm">{contactInfo.address}</p>
+          </div>
+        </div>
+        <div className="text-center mt-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Get Started Today
+            </a>
+            <a
+              href="/request-quote"
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center"
+            >
+              <DollarSign className="w-5 h-5 mr-2" />
+              Request Custom Quote
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default function ComprehensivePricingGuide2027() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  // Flatten all services from the catalog
+  const allServices = useMemo(() => {
+    return servicesCatalog.flatMap(category => category.items);
+  }, []);
+  // Get unique categories
+  const categories = useMemo(() => {
+    const cats = [...new Set(allServices.map(service => service.category))];
+    return cats.sort();
+  }, [allServices]);
+  // Filter services based on search, category, and price
+  const filteredServices = useMemo(() => {
+    return allServices.filter(service => {
+      const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesPrice = priceRange === 'all' || (() => {
+        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+        switch (priceRange) {
+          case '0-100': return price <= 100;
+          case '100-500': return price > 100 && price <= 500;
+          case '500-1000': return price > 500 && price <= 1000;
+          case '1000+': return price > 1000;
+          default: return true;
+        }
+      })();
+      return matchesSearch && matchesCategory && matchesPrice;
+    });
+  }, [allServices, searchQuery, selectedCategory, priceRange]);
+  return (
+    <>
       <SEO 
-        title="Comprehensive Pricing Guide 2027 - Zion Tech Group" 
-        description="Explore our complete pricing guide for AI, quantum computing, cybersecurity, and innovative technology services. Get transparent pricing and ROI information."
-        canonical="/pricing"
+        title="Comprehensive Pricing Guide 2027 | Zion Tech Group"
+        description="Explore our complete pricing guide for AI solutions, IT services, and Micro SaaS platforms. Get detailed pricing, features, and comparison information for all our services."
+        keywords="pricing guide, service pricing, AI solutions pricing, IT services cost, Micro SaaS pricing, technology pricing"
       />
-
-      {/* Hero Section */}
-      <section className="relative py-20 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-6">
-              Comprehensive
-              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Pricing Guide 2027
-              </span>
-            </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Transparent pricing for our revolutionary AI, quantum computing, and innovative technology services. 
-              Understand costs, ROI, and implementation timelines to make informed decisions.
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Comprehensive Pricing Guide 2027
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Transparent pricing for all our AI solutions, IT services, and Micro SaaS platforms. 
+                Find the perfect solution for your business needs and budget.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-sm">
+                <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <span>{allServices.length}+ Services</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
+                  <Star className="w-4 h-4 text-yellow-400" />
+                  <span>Transparent Pricing</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
+                  <Shield className="w-4 h-4 text-blue-400" />
+                  <span>Enterprise Ready</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+        {/* Pricing Tiers Overview */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Tiers</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the pricing tier that best fits your business needs and scale as you grow
             </p>
-            
-            {/* Search and Filters */}
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col lg:flex-row gap-4 mb-6">
-                <div className="flex-1 relative">
-                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingTiers.map((tier, index) => (
+              <motion.div
+                key={tier.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`relative bg-white rounded-2xl shadow-lg p-8 border-2 ${
+                  tier.popular ? 'border-blue-500 scale-105' : 'border-gray-200'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className={`w-16 h-16 bg-gradient-to-r ${tier.color} rounded-xl flex items-center justify-center mx-auto mb-6`}>
+                  <Star className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
+                <div className="mb-4">
+                  <span className="text-4xl font-bold text-gray-900">{tier.price}</span>
+                  <span className="text-gray-600">/{tier.period}</span>
+                </div>
+                <p className="text-gray-600 mb-6">{tier.description}</p>
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                  tier.popular
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                }`}>
+                  Get Started
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        {/* Search and Filter Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-white rounded-2xl shadow-xl p-6 mb-8 border border-gray-100">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              {/* Search */}
+              <div className="md:col-span-2">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
-                    placeholder="Search services, technologies, or solutions..."
+                    placeholder="Search services by name, description, or category..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 rounded-xl bg-slate-800/70 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
-
+              </div>
+              {/* Category Filter */}
+              <div>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 rounded-xl bg-slate-800/70 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
+                  <option value="all">All Categories</option>
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
-
+              </div>
+              {/* Price Range Filter */}
+              <div>
                 <select
-                  value={selectedPriceRange}
-                  onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="px-4 py-3 rounded-xl bg-slate-800/70 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
+                  value={priceRange}
+                  onChange={(e) => setPriceRange(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  {priceRanges.map(range => (
-                    <option key={range} value={range}>{range}</option>
-                  ))}
+                  <option value="all">All Prices</option>
+                  <option value="0-100">$0 - $100</option>
+                  <option value="100-500">$100 - $500</option>
+                  <option value="500-1000">$500 - $1,000</option>
+                  <option value="1000+">$1,000+</option>
                 </select>
               </div>
             </div>
-
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-400" />
-                <span>{pricingData.length} Services</span>
+            {/* View Mode Toggle */}
+            <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-200">
+              <div className="flex items-center space-x-2">
+                <span className="text-sm text-gray-600">View Mode:</span>
+                <div className="flex items-center space-x-2 bg-gray-100 rounded-xl p-1">
+                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white shadow-sm' : 'text-gray-500'}`}
+                    title="Grid View"
+                  >
+                    <Grid className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white shadow-sm' : 'text-gray-500'}`}
+                    title="List View"
+                  >
+                    <List className="w-5 h-5" />
+                  </button>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-4 h-4 text-green-400" />
-                <span>250-1200% ROI</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-4 h-4 text-cyan-400" />
-                <span>Transparent Pricing</span>
+              <div className="text-sm text-gray-600">
+                Showing {filteredServices.length} of {allServices.length} services
               </div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Pricing Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
-            {filteredData.map((item, index) => (
-              <motion.div
-                key={item.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`group relative bg-slate-900/60 backdrop-blur border transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl overflow-hidden ${
-                  item.featured 
-                    ? 'border-purple-400/40 hover:border-purple-400/60 hover:shadow-purple-400/10' 
-                    : 'border-cyan-400/15 hover:border-cyan-400/40 hover:shadow-cyan-400/10'
-                }`}
-              >
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                
-                {/* Featured Badge */}
-                {item.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-400/20 text-purple-300 border border-purple-400/30">
-                      Featured
-                    </span>
-                  </div>
-                )}
-
-                {/* Content */}
-                <div className="relative z-10">
-                  {/* Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <item.icon className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-700/50 text-slate-300 border border-slate-600/30">
-                          {item.category}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Title and Description */}
-                  <h3 className="text-xl font-semibold mb-3 group-hover:text-cyan-300 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-300 text-sm mb-4 line-clamp-2">
-                    {item.description}
-                  </p>
-
-                  {/* Pricing */}
-                  <div className="mb-6">
-                    <div className="flex items-baseline gap-2 mb-2">
-                      <span className={`text-3xl font-bold ${getPriceRangeColor(item.monthlyPrice)}`}>
-                        ${item.monthlyPrice.toLocaleString()}
-                      </span>
-                      <span className="text-slate-400">/month</span>
-                    </div>
-                    <div className="text-sm text-slate-400 mb-2">
-                      Market: {item.marketPrice}
-                    </div>
-                    <div className="text-sm text-green-400 font-medium">
-                      ROI: {item.roi}
-                    </div>
-                  </div>
-
-                  {/* Key Features */}
-                  <div className="space-y-2 mb-6">
-                    <h4 className="text-sm font-semibold text-slate-200">Key Features:</h4>
-                    {item.features.slice(0, 4).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-2 text-sm text-slate-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                        <span className="line-clamp-1">{feature}</span>
-                      </div>
-                    ))}
-                    {item.features.length > 4 && (
-                      <div className="text-xs text-slate-400">
-                        +{item.features.length - 4} more features
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Implementation Details */}
-                  <div className="grid grid-cols-2 gap-3 mb-6 text-xs">
-                    <div>
-                      <span className="text-slate-400">Implementation:</span>
-                      <div className="text-white font-medium">{item.implementationTime}</div>
-                    </div>
-                    <div>
-                      <span className="text-slate-400">Training:</span>
-                      <div className="text-white font-medium">
-                        {item.trainingIncluded ? 'Included' : 'Additional'}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Target Audience */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-slate-200 mb-2">Target Audience:</h4>
-                    <p className="text-xs text-slate-300 line-clamp-2">{item.targetAudience}</p>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex flex-col gap-2">
-                    <Link
-                      to="/contact"
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                    >
-                      Get Started
-                    </Link>
-                    <Link
-                      to="/revolutionary-services-2030"
-                      className="w-full bg-slate-800/50 text-slate-300 text-center py-2 px-4 rounded-lg text-sm font-medium hover:bg-slate-700/50 transition-all duration-300"
-                    >
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
           </div>
-
-          {filteredData.length === 0 && (
+        </div>
+        {/* Services Display */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {filteredServices.length > 0 ? (
+            viewMode === 'grid' ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredServices.map((service, index) => (
+                  <ServicePricingCard key={service.id} service={service} showDetails={true} />
+                ))}
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {filteredServices.map((service, index) => (
+                  <ServicePricingCard key={service.id} service={service} showDetails={true} />
+                ))}
+              </div>
+            )
+          ) : (
             <div className="text-center py-16">
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold mb-2">No services found</h3>
-              <p className="text-slate-400">Try adjusting your search criteria or filters</p>
+              <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Search className="w-12 h-12 text-gray-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>
+              <p className="text-gray-600">
+                Try adjusting your search criteria or browse all services
+              </p>
             </div>
           )}
         </div>
-      </section>
-
-      {/* Pricing Comparison */}
-      <section className="py-16 bg-slate-900/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Pricing Comparison</h2>
-            <p className="text-slate-300 max-w-2xl mx-auto">
-              Compare our pricing with industry standards and understand the value proposition
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-lg rounded-xl p-6 border border-green-500/30 text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">
-                ${Math.max(...allServices.map(s => s.price)).toLocaleString()}
-              </div>
-              <div className="text-gray-300">Premium Price</div>
-            </div>
-            
-            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 border border-purple-500/30 text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">
-                {allServices.length}
-              </div>
-              <div className="text-gray-300">Total Services</div>
-            </div>
-            
-            <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-lg rounded-xl p-6 border border-orange-500/30 text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">
-                {Math.max(...allServices.map(s => parseInt(s.roi.split('%')[0])))}%
-              </div>
-              <div className="text-gray-300">Max ROI</div>
-            </div>
-          </div>
+        {/* Service Comparison */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <PricingComparisonTable services={allServices} />
         </div>
-      </section>
-
-    {/* Market Comparison Section */}
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/30">
-              <h3 className="text-xl font-semibold mb-4 text-center">Market Average</h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between">
-                  <span>AI Services</span>
-                  <span className="text-slate-400">$15K - $50K/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Quantum Computing</span>
-                  <span className="text-slate-400">$50K - $200K/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Cybersecurity</span>
-                  <span className="text-slate-400">$10K - $30K/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Implementation</span>
-                  <span className="text-slate-400">6-12 months</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-400/30">
-              <h3 className="text-xl font-semibold mb-4 text-center text-cyan-300">Zion Tech Group</h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between">
-                  <span>AI Services</span>
-                  <span className="text-cyan-400">$8K - $35K/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Quantum Computing</span>
-                  <span className="text-cyan-400">$25K - $45K/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Cybersecurity</span>
-                  <span className="text-cyan-400">$9K - $28K/month</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Implementation</span>
-                  <span className="text-cyan-400">2-6 months</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/30">
-              <h3 className="text-xl font-semibold mb-4 text-center">Value Proposition</h3>
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between">
-                  <span>Cost Savings</span>
-                  <span className="text-green-400">30-60%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Faster Implementation</span>
-                  <span className="text-green-400">50-75%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>ROI Improvement</span>
-                  <span className="text-green-400">200-500%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Support Quality</span>
-                  <span className="text-green-400">24/7 Enterprise</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 bg-slate-900/50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Contact our team to discuss pricing, implementation, and how our revolutionary services 
-            can transform your business and drive unprecedented growth.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
-            <div className="text-center">
-              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Call Us</h3>
-              <a 
-                href="tel:+13024640950" 
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="text-center">
-              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Email Us</h3>
-              <a 
-                href="mailto:kleber@ziontechgroup.com" 
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="text-center">
-              <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Visit Us</h3>
-              <a 
-                href="https://ziontechgroup.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </a>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact" 
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started Today
-            </a>
-            <a 
-              href="/revolutionary-services-2030" 
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              Explore Services
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                {pricingData.length}
-              </div>
-              <div className="text-lg font-semibold mb-2">Services</div>
-              <div className="text-sm text-gray-400">Comprehensive coverage</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">
-                $500K+
-              </div>
-              <div className="text-lg font-semibold mb-2">Monthly Revenue</div>
-              <div className="text-sm text-gray-400">Premium pricing</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">
-                1200%
-              </div>
-              <div className="text-lg font-semibold mb-2">Max ROI</div>
-              <div className="text-sm text-gray-400">Quantum trading</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
-                6 months
-              </div>
-              <div className="text-lg font-semibold mb-2">Max Implementation</div>
-              <div className="text-sm text-gray-400">Fast deployment</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+        {/* Contact Section */}
+        <ContactSection />
+      </div>
+    </>
   );
-};
-
-export default ComprehensivePricingGuide2027;
+}
