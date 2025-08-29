@@ -83,12 +83,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' }
       ]
     },
     {
@@ -96,12 +96,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
       links: [
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Sustainability', href: '/services/sustainability' },
+        { name: 'Healthcare Tech', href: '/services/healthcare-tech' }
       ]
     },
     {
@@ -109,12 +109,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' }
       ]
     }
   ];
@@ -132,29 +132,29 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const companyLinks = [
     { name: 'About Us', href: '/about', description: 'Our story and mission' },
-    { name: 'Team', href: '/team', description: 'Meet our experts' },
+    { name: 'Services Overview', href: '/services-overview', description: 'Complete service portfolio' },
     { name: 'Careers', href: '/careers', description: 'Join our team' },
     { name: 'Blog', href: '/blog', description: 'Latest insights' },
-    { name: 'Press', href: '/press', description: 'Media resources' },
-    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+    { name: 'Contact', href: '/contact', description: 'Get in touch' }
   ];
 
   const supportLinks = [
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
-    { name: 'Support', href: '/support', description: 'Technical assistance' },
+    { name: 'Help Center', href: '/help', description: 'Technical assistance' },
     { name: 'Documentation', href: '/docs', description: 'Technical guides' },
     { name: 'Training', href: '/training', description: 'Learning resources' },
-    { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
-    { name: 'Status', href: '/status', description: 'System status' }
+    { name: 'Blog', href: '/blog', description: 'Latest insights' },
+    { name: 'Community', href: '/community', description: 'Join our community' }
   ];
 
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
-    { name: 'Security', href: '/security', description: 'Security practices' },
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
+    { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+    { name: 'Help Center', href: '/help', description: 'Support resources' },
+    { name: 'Documentation', href: '/docs', description: 'Technical guides' }
   ];
 
   return (
@@ -395,30 +395,34 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
+                title="Visit our website"
               >
                 <Globe className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/company/zion-tech-group" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
+                title="Follow us on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="https://twitter.com" 
+                href="https://twitter.com/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
+                title="Follow us on Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a 
-                href="https://github.com" 
+                href="https://github.com/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
+                title="Check out our GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
