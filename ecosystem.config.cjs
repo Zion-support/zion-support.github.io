@@ -5,35 +5,37 @@ module.exports = {
       name: 'zion-app',
       script: 'npm',
       args: 'start',
+      cwd: './',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+      },
+      env_production: {
+        NODE_ENV: 'production',
+        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
       }
     },
     
-    // Backend services
+    // Backend server
     {
       name: 'zion-backend',
       script: 'npm',
-      args: 'run dev',
+      args: 'start',
+      cwd: './server',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'development',
-        PORT: 5000
+        NODE_ENV: 'production'
       }
-    }
-  ],
+    },
 
-  // Enhanced Automation Processes
-  automation: [
-    // Core automation processes
+    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',
@@ -46,7 +48,8 @@ module.exports = {
         AUTOMATION_INTERVAL: '900000' // 15 minutes
       }
     },
-    
+
+    // Continuous link checker - runs every 30 minutes
     {
       name: 'link-checker',
       script: './scripts/automation/link-checker.cjs',
@@ -59,7 +62,8 @@ module.exports = {
         AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
     },
-    
+
+    // Continuous improvement - runs every 2 hours
     {
       name: 'continuous-improvement',
       script: './scripts/automation/continuous-improvement.cjs',
@@ -69,10 +73,11 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
     },
-    
+
+    // Continuous build and test - runs every hour
     {
       name: 'daily-build-test',
       script: './scripts/automation/daily-build-test.cjs',
@@ -82,10 +87,11 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
       }
     },
-    
+
+    // Continuous security audit - runs every 4 hours
     {
       name: 'security-audit',
       script: './scripts/automation/security-audit.cjs',
@@ -95,10 +101,11 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
       }
     },
-    
+
+    // Continuous dependency updates - runs every 6 hours
     {
       name: 'dependency-updates',
       script: './scripts/automation/dependency-updates.cjs',
@@ -108,10 +115,11 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
     },
-    
+
+    // Continuous performance monitoring - runs every 2 hours
     {
       name: 'performance-monitor',
       script: './scripts/automation/performance-monitor.cjs',
@@ -121,10 +129,11 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
     },
-    
+
+    // Continuous quality checks - runs every 3 hours
     {
       name: 'quality-checks',
       script: './scripts/automation/quality-checks.cjs',
@@ -134,10 +143,11 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
+        AUTOMATION_INTERVAL: '10800000' // 3 hours
       }
     },
-    
+
+    // Continuous link integrity checker - runs every 2 hours
     {
       name: 'link-integrity',
       script: './scripts/automation/link-integrity.cjs',
@@ -150,7 +160,8 @@ module.exports = {
         AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
     },
-    
+
+    // Continuous front maximizer - runs every 4 hours
     {
       name: 'front-maximizer',
       script: './scripts/automation/front-maximizer.cjs',
@@ -160,10 +171,11 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
       }
     },
-    
+
+    // Continuous sitemap runner - runs every 6 hours
     {
       name: 'sitemap-runner',
       script: './scripts/automation/sitemap-runner.cjs',
@@ -173,74 +185,8 @@ module.exports = {
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '86400000' // 24 hours
-      }
-    },
-
-    // Enhanced automation processes (GitHub workflow replacements)
-    {
-      name: 'enhanced-testing',
-      script: './scripts/automation/enhanced-testing-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '7200000' // 2 hours
-      }
-    },
-    
-    {
-      name: 'enhanced-security',
-      script: './scripts/automation/enhanced-security-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '3600000' // 1 hour
-      }
-    },
-    
-    {
-      name: 'enhanced-link-checker',
-      script: './scripts/automation/enhanced-link-checker.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
-      }
-    },
-    
-    {
-      name: 'enhanced-ci-cd',
-      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
     }
-  ],
-
-  // PM2 Log Rotation
-  module: {
-    name: 'pm2-logrotate',
-    script: 'pm2-logrotate',
-    instances: 1,
-    autorestart: true,
-    watch: false,
-    max_memory_restart: '100M',
-    env: {
-      NODE_ENV: 'production'
-    }
-  }
+  ]
 };
