@@ -66,6 +66,21 @@ const AIDataGovernance = React.lazy(() => import('./pages/services/DataAnalytics
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
+// New innovative services
+const SmartContractRiskScanner = React.lazy(() => import('./pages/services/SmartContractRiskScanner'));
+
+// Simple placeholder pages for missing ones
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Training = React.lazy(() => import('./pages/Training'));
+const Support = React.lazy(() => import('./pages/Support'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const Security = React.lazy(() => import('./pages/Security'));
+const Compliance = React.lazy(() => import('./pages/Compliance'));
+const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
+
+// Emerging Technology 2030
+const EmergingTech2030 = React.lazy(() => import('./pages/EmergingTech2030'));
+
 // AI platform services that exist
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/ai-financial-trading-platform'));
@@ -78,6 +93,12 @@ const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILega
 const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducationPlatform'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const AIProjectManagementPlatform = React.lazy(() => import('./pages/services/ai-project-management-platform'));
+
+// New AI services we added
+const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/services/AIHealthcarePredictiveAnalytics'));
+const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
+const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
 
 function App() {
   return (
@@ -142,6 +163,15 @@ function App() {
                 
                 {/* New AI-powered micro SaaS service routes */}
                 <Route path="/services/ai-content-marketing-automation" element={<AIContentMarketingAutomation />} />
+                
+                {/* New AI services we added */}
+                <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
+                <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
+                <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
+                
+                {/* Emerging Tech 2030 */}
+                <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
                 
                 {/* New comprehensive pricing guide 2026 */}
                 <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
