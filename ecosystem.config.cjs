@@ -49,6 +49,34 @@ module.exports = {
       }
     },
 
+    // 🚨 NEW: Error Fix Automation Orchestrator - runs continuously (HIGHEST PRIORITY)
+    {
+      name: 'error-fix-orchestrator',
+      script: './scripts/automation/error-fix-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '60000' // 1 minute (continuous monitoring)
+      }
+    },
+
+    // 🔧 NEW: Core Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    {
+      name: 'core-error-fixer',
+      script: './scripts/automation/error-fix-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
     // 🤖 NEW: AI Code Optimizer - runs every hour
     {
       name: 'ai-code-optimizer',
