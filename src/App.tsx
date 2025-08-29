@@ -145,8 +145,20 @@ function App() {
           </main>
           <Footer />
           <ChatAssistant />
-          <PerformanceOptimizer />
-          <AccessibilityEnhancer />
+          <EnhancedPerformanceOptimizer 
+            enableMonitoring={true}
+            enableOptimizations={true}
+            logMetrics={false}
+            enableBundleAnalysis={true}
+          />
+          <EnhancedAccessibilityEnhancer 
+            enableMonitoring={true}
+            enableEnhancements={true}
+            showAccessibilityPanel={true}
+            logMetrics={false}
+            enableHighContrast={true}
+            enableReducedMotion={true}
+          />
         </div>
       </Router>
     </ErrorBoundary>
