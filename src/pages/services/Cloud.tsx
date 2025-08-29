@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from 'react';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 } from 'lucide-react';
 
