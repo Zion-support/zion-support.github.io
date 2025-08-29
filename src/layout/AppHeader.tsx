@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Bot, Atom } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Activity, Calendar, PenTool } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { EnhancedSearch } from '../components/EnhancedSearch';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
@@ -39,9 +39,11 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'Pricing', href: '/pricing-guide', current: false },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
+    { name: 'Request Quote', href: '/request-quote', current: false },
   ];
 
   const services = [
@@ -62,8 +64,17 @@ export function AppHeader() {
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
-    { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', icon: Bot, description: 'Fully autonomous business operations' },
-    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Next-generation computational power' },
+    { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: TrendingUp, description: 'Prioritize deals with ML' },
+    { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: '24/7 on-site assistant' },
+    { name: 'RAG Search', href: '/services/rag-search', icon: BookOpen, description: 'AI answers with citations' },
+    { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' },
+    { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', icon: ShoppingCart, description: 'Recos & search' },
+    { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker', icon: TrendingUp, description: 'Advanced affiliate tracking & analytics' },
+    { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor', icon: Activity, description: 'Professional uptime monitoring' },
+    { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker', icon: Shield, description: 'Automated compliance management' },
+    { name: 'Employee Scheduling SaaS', href: '/services/employee-scheduling-saas', icon: Calendar, description: 'AI-powered workforce management' },
+    { name: 'AI Support Helpdesk', href: '/services/ai-support-helpdesk', icon: MessageCircle, description: 'Intelligent customer support' },
+    { name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, description: 'AI-powered content creation' },
   ];
 
   const servicesCategories = [
@@ -258,7 +269,7 @@ export function AppHeader() {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
               {mainNavigation.map((item) => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
@@ -284,15 +295,22 @@ export function AppHeader() {
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
               {/* Search */}
-              <div className="hidden md:block">
-                <EnhancedSearch />
-              </div>
+              <form onSubmit={handleSearch} className="hidden md:block relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-48 xl:w-64 pl-10 pr-4 py-2 rounded-lg bg-slate-800/70 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400 text-sm"
+                />
+              </form>
 
               {/* Theme Toggle */}
               <ThemeToggle />
 
               {/* Contact Info */}
-              <div className="hidden lg:flex items-center space-x-4 text-sm text-slate-300">
+              <div className="hidden lg:flex items-center gap-3 xl:gap-4 text-sm text-slate-300">
                 <a href="tel:+13024640950" className="flex items-center space-x-1 hover:text-cyan-400 transition-colors">
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
