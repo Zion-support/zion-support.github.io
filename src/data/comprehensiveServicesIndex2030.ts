@@ -5,7 +5,7 @@ import { CUTTING_EDGE_IT_INFRASTRUCTURE_2030 } from "./cuttingEdgeITInfrastructu
 import { EMERGING_TECHNOLOGY_SERVICES_2030 } from "./emergingTechnologyServices2030";
 import { SPECIALIZED_FINANCIAL_AI_SERVICES_2028 } from "./specializedFinancialAIServices2028";
 import { SPECIALIZED_HEALTHCARE_AI_SERVICES_2028 } from "./specializedHealthcareAIServices2028";
-import { innovativeMicroSaasServices2030 } from "./innovativeMicroSaasServices2030";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030";
 import { comprehensiveITServices2030 } from "./comprehensiveITServices2030";
 import { comprehensiveAIServices2030 } from "./comprehensiveAIServices2030";
 
@@ -19,7 +19,7 @@ export const COMPREHENSIVE_SERVICES_INDEX_2030: ProductListing[] = [
   ...EMERGING_TECHNOLOGY_SERVICES_2030,
   ...SPECIALIZED_FINANCIAL_AI_SERVICES_2028,
   ...SPECIALIZED_HEALTHCARE_AI_SERVICES_2028,
-  ...innovativeMicroSaasServices2030,
+  ...INNOVATIVE_MICRO_SAAS_SERVICES_2030,
   ...comprehensiveITServices2030,
   ...comprehensiveAIServices2030
 ];
