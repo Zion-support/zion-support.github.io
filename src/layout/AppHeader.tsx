@@ -41,21 +41,13 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false },
-    { name: 'AI Services', href: '/ai-services', current: false },
-    { name: 'IT Services', href: '/it-services', current: false },
-    { name: 'Micro SaaS', href: '/micro-saas', current: false },
     { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Case Studies', href: '/case-studies', current: false },
     { name: 'Blog', href: '/blog', current: false },
     { name: 'Careers', href: '/careers', current: false },
-    { name: 'Partners', href: '/partners', current: false },
-    { name: 'News', href: '/news', current: false },
-    { name: 'Case Studies', href: '/case-studies', current: false },
-    { name: 'Help', href: '/help', current: false },
-    { name: 'FAQ', href: '/faq', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
-    { name: 'Marketplace', href: '/marketplace', current: false },
+    { name: 'Contact', href: '/contact', current: false },
   ];
 
   // Enhanced services by category with better organization and working links
@@ -99,15 +91,43 @@ export function AppHeader() {
     { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom, description: 'Quantum-AI integration', category: 'Emerging Tech', color: 'from-indigo-500 to-purple-500' },
     { name: 'Space Technology', href: '/space-tech', icon: Satellite, description: 'Space-based solutions', category: 'Emerging Tech', color: 'from-blue-500 to-indigo-500' },
     
-    // Data & Analytics
-    { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3, description: 'Business intelligence & insights', category: 'Data & Analytics', color: 'from-blue-500 to-indigo-500' },
-    { name: 'Business Intelligence', href: '/services/ai-business-intelligence', icon: TrendingUp, description: 'Performance metrics & reporting', category: 'Data & Analytics', color: 'from-green-500 to-teal-500' },
-    
     // Micro SaaS Solutions
-    { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart, description: 'Niche software solutions', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
-    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
-    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
-    { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+    { name: 'Micro CRM', href: '/services/micro-crm', icon: Users, description: 'Customer relationship management', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
+    { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle, description: 'Customer support system', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3, description: 'Performance tracking & insights', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle, description: 'IT support management', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
+    { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp, description: 'Affiliate program management', category: 'Micro SaaS', color: 'from-indigo-500 to-purple-500' },
+    { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone, description: 'Mobile survey solutions', category: 'Micro SaaS', color: 'from-cyan-500 to-blue-500' },
+    { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail, description: 'Automated email campaigns', category: 'Micro SaaS', color: 'from-blue-500 to-indigo-500' },
+    { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: Video, description: 'Audio transcription services', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' },
+    { name: 'Returns Management', href: '/services/returns-management', icon: Truck, description: 'Product returns processing', category: 'Micro SaaS', color: 'from-green-500 to-teal-500' },
+    { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: Mail, description: 'Intelligent email automation', category: 'Micro SaaS', color: 'from-orange-500 to-red-500' },
+    { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle, description: 'Customer feedback collection', category: 'Micro SaaS', color: 'from-indigo-500 to-purple-500' },
+    { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'Compliance assistance', category: 'Micro SaaS', color: 'from-green-500 to-emerald-500' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: PenTool, description: 'AI content creation', category: 'Micro SaaS', color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Autonomous Code Reviewer', href: '/services/ai-autonomous-code-reviewer', icon: Code, description: 'Automated code review', category: 'Micro SaaS', color: 'from-purple-500 to-pink-500' }
+  ];
+
+  // Solutions categories
+  const solutions = [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, description: 'Large-scale enterprise solutions', category: 'Enterprise', color: 'from-blue-500 to-indigo-500' },
+    { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart, description: 'Healthcare IT infrastructure', category: 'Healthcare', color: 'from-red-500 to-pink-500' },
+    { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Financial technology solutions', category: 'Financial', color: 'from-green-500 to-emerald-500' },
+    { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Truck, description: 'Manufacturing IT systems', category: 'Manufacturing', color: 'from-orange-500 to-red-500' },
+    { name: 'Retail & E-commerce', href: '/solutions/retail', icon: ShoppingCart, description: 'Retail technology solutions', category: 'Retail', color: 'from-purple-500 to-pink-500' },
+    { name: 'Government', href: '/solutions/government', icon: Building, description: 'Public sector IT solutions', category: 'Government', color: 'from-gray-500 to-slate-500' }
+  ];
+
+  // Resources categories
+  const resources = [
+    { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights and updates', category: 'Content', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Case Studies', href: '/case-studies', icon: FileText, description: 'Client success stories', category: 'Content', color: 'from-green-500 to-emerald-500' },
+    { name: 'News', href: '/news', icon: Newspaper, description: 'Company news and announcements', category: 'Content', color: 'from-purple-500 to-pink-500' },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Frequently asked questions', category: 'Support', color: 'from-orange-500 to-red-500' },
+    { name: 'Help Center', href: '/help', icon: LifeBuoy, description: 'Support and documentation', category: 'Support', color: 'from-indigo-500 to-purple-500' },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing and plans', category: 'Business', color: 'from-yellow-500 to-orange-500' },
+    { name: 'Partners', href: '/partners', icon: Users, description: 'Partnership opportunities', category: 'Business', color: 'from-green-500 to-teal-500' },
+    { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Job opportunities', category: 'Business', color: 'from-blue-500 to-indigo-500' }
   ];
 
   const quickLinks = [
