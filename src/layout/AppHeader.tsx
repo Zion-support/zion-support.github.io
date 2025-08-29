@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Target, BarChart3, Sparkles, GraduationCap, FileText } from 'lucide-react';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Star, TrendingUp, Award, Settings, Phone, Mail, MapPin, Building, Target, BarChart3, Sparkles, GraduationCap, FileText, Crown } from 'lucide-react';
 import { ThemeToggle } from '../components/ThemeToggle';
 import { ZionLoadingSpinner } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export function AppHeader() {
+interface AppHeaderProps {
+  onSidebarToggle?: () => void;
+  isSidebarOpen?: boolean;
+}
+
+export function AppHeader({ onSidebarToggle, isSidebarOpen }: AppHeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -38,11 +43,10 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
-    { name: 'Pricing', href: '/pricing-guide', current: false },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
-    { name: 'Support', href: '/help', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
-    { name: 'Request Quote', href: '/request-quote', current: false },
+    { name: 'Get Quote', href: '/request-quote', current: false },
   ];
 
   const services = [
@@ -55,25 +59,7 @@ export function AppHeader() {
     { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'AI Medicine & Diagnostics' },
     { name: 'Sustainability', href: '/services/sustainability', icon: Globe, description: 'Green IT Solutions' },
     { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
-    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
-    { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
-    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
-    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
-    { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', icon: TrendingUp, description: 'Prioritize deals with ML' },
-    { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', icon: MessageCircle, description: '24/7 on-site assistant' },
-    { name: 'RAG Search', href: '/services/rag-search', icon: BookOpen, description: 'AI answers with citations' },
-    { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', icon: Settings, description: 'Train, deploy, monitor' },
-    { name: 'eCommerce Personalization', href: '/services/ecommerce-personalization', icon: ShoppingCart, description: 'Recos & search' },
-    { name: 'AI Sales Automation', href: '/innovative-services-showcase-2025', icon: TrendingUp, description: 'Complete sales automation suite' },
-    { name: 'AI Customer Support', href: '/innovative-services-showcase-2025', icon: MessageCircle, description: 'Intelligent support platform' },
-    { name: 'AI Financial Analytics', href: '/innovative-services-showcase-2025', icon: DollarSign, description: 'Advanced financial insights' },
-    { name: 'AI Supply Chain', href: '/innovative-services-showcase-2025', icon: Settings, description: 'Supply chain optimization' },
-    { name: 'AI HR Platform', href: '/innovative-services-showcase-2025', icon: Users, description: 'HR automation & analytics' },
-    { name: 'AI Project Management', href: '/innovative-services-showcase-2025', icon: Target, description: 'Smart project optimization' },
-    { name: 'AI Marketing Automation', href: '/innovative-services-showcase-2025', icon: BarChart3, description: 'Marketing campaign optimization' },
-    { name: 'AI Learning Management', href: '/innovative-services-showcase-2025', icon: GraduationCap, description: 'Personalized learning platform' },
-    { name: 'AI Legal Automation', href: '/innovative-services-showcase-2025', icon: FileText, description: 'Legal document automation' },
-    { name: 'AI Healthcare Analytics', href: '/innovative-services-showcase-2025', icon: Heart, description: 'Healthcare insights platform' },
+    { name: 'View All Services', href: '/services-overview', icon: Settings, description: 'Complete service portfolio' },
   ];
 
   const servicesCategories = [
@@ -149,19 +135,6 @@ export function AppHeader() {
         { name: 'Healthcare Technology', href: '/services/healthcare-tech', description: 'Healthcare solutions' },
         { name: 'Sustainability', href: '/services/sustainability', description: 'Environmental solutions' }
       ]
-    },
-    {
-      name: 'Business Solutions',
-      icon: Briefcase,
-      color: 'from-teal-600 to-cyan-600',
-      services: [
-        { name: 'AI Supply Chain', href: '/innovative-services-showcase-2025', description: 'Supply chain optimization' },
-        { name: 'AI HR Platform', href: '/innovative-services-showcase-2025', description: 'HR automation' },
-        { name: 'AI Project Management', href: '/innovative-services-showcase-2025', description: 'Project optimization' },
-        { name: 'AI Marketing Automation', href: '/innovative-services-showcase-2025', description: 'Marketing optimization' },
-        { name: 'AI Learning Management', href: '/innovative-services-showcase-2025', description: 'Learning platform' },
-        { name: 'AI Legal Automation', href: '/innovative-services-showcase-2025', description: 'Legal automation' }
-      ]
     }
   ];
 
@@ -198,24 +171,28 @@ export function AppHeader() {
       color: 'from-green-600 to-emerald-600',
       solutions: [
         { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-        { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
-        { name: 'Comprehensive Services', href: '/comprehensive-services', description: 'Complete service portfolio' }
-      ]
-    },
-    {
-      name: 'Micro SaaS Solutions',
-      icon: ShoppingCart,
-      color: 'from-blue-600 to-cyan-600',
-      solutions: [
-        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Lead prioritization' },
-        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', description: 'Customer support' },
-        { name: 'RAG Search', href: '/services/rag-search', description: 'AI-powered search' },
-        { name: 'E-commerce Personalization', href: '/services/ecommerce-personalization', description: 'Personalized shopping' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', description: 'Customer insights' },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Email automation' }
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Rocket, description: 'Future-ready solutions' },
+        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', icon: Crown, description: 'Enterprise-grade solutions' }
       ]
     }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', href: '/about', description: 'Company overview and mission' },
+    { name: 'Our Team', href: '/team', description: 'Meet our experts' },
+    { name: 'Careers', href: '/careers', description: 'Join our team' },
+    { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+    { name: 'Press & News', href: '/news', description: 'Latest company news' },
+    { name: 'Case Studies', href: '/case-studies', description: 'Success stories' }
+  ];
+
+  const resourceLinks = [
+    { name: 'Help Center', href: '/help', description: 'Support and documentation' },
+    { name: 'Blog', href: '/blog', description: 'Industry insights and updates' },
+    { name: 'Webinars', href: '/webinars', description: 'Educational content' },
+    { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
+    { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+    { name: 'Documentation', href: '/help', description: 'Technical guides' }
   ];
 
   const quickLinks = [
@@ -297,6 +274,16 @@ export function AppHeader() {
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center">
+              {/* Sidebar Toggle Button */}
+              {onSidebarToggle && (
+                <button
+                  onClick={onSidebarToggle}
+                  className="mr-4 p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition-colors lg:hidden"
+                >
+                  <Menu className="w-5 h-5" />
+                </button>
+              )}
+              
               <Link to="/" className="flex-shrink-0 group">
                 <div className="flex items-center space-x-3">
                   <div className="relative">
@@ -318,7 +305,14 @@ export function AppHeader() {
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <button
-                      onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                      onClick={() => {
+                        // Set the current navigation item and open dropdown
+                        const updatedNav = mainNavigation.map(nav => ({
+                          ...nav,
+                          current: nav.name === item.name
+                        }));
+                        setServicesDropdownOpen(!servicesDropdownOpen);
+                      }}
                       className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
                     >
                       <span>{item.name}</span>
@@ -383,37 +377,152 @@ export function AppHeader() {
               className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
             >
               <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                  {servicesCategories.map((category) => (
-                    <div key={category.name} className="space-y-4">
-                      <div className="flex items-center space-x-3">
-                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
-                          <category.icon className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-white">{category.name}</h3>
-                          <p className="text-sm text-slate-400">{category.description}</p>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        {category.services.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
-                          >
-                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                              {service.name}
+                {/* Determine which dropdown content to show based on active navigation */}
+                {(() => {
+                  const activeNav = mainNavigation.find(item => item.hasDropdown && item.current);
+                  if (!activeNav) return null;
+
+                  switch (activeNav.name) {
+                    case 'Services':
+                      return (
+                        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                          {servicesCategories.map((category) => (
+                            <div key={category.name} className="space-y-4">
+                              <div className="flex items-center space-x-3">
+                                <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                                  <category.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                  <h3 className="font-semibold text-white">{category.name}</h3>
+                                </div>
+                              </div>
+                              <div className="space-y-2">
+                                {category.services.map((service) => (
+                                  <Link
+                                    key={service.name}
+                                    to={service.href}
+                                    className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                                  >
+                                    <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                      {service.name}
+                                    </div>
+                                    <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                                      {service.description}
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
                             </div>
-                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
-                              {service.description}
+                          ))}
+                        </div>
+                      );
+
+                    case 'Solutions':
+                      return (
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                          {solutionsCategories.map((category) => (
+                            <div key={category.name} className="space-y-4">
+                              <div className="flex items-center space-x-3">
+                                <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                                  <category.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div>
+                                  <h3 className="font-semibold text-white">{category.name}</h3>
+                                </div>
+                              </div>
+                              <div className="space-y-2">
+                                {category.solutions.map((solution) => (
+                                  <Link
+                                    key={solution.name}
+                                    to={solution.href}
+                                    className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                                  >
+                                    <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                      {solution.name}
+                                    </div>
+                                    <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                                      {solution.description}
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
                             </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                          ))}
+                        </div>
+                      );
+
+                    case 'Company':
+                      return (
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                          <div className="space-y-4">
+                            <h3 className="text-lg font-semibold text-white mb-4">About Zion Tech Group</h3>
+                            <p className="text-slate-300 mb-6">
+                              Leading provider of innovative technology solutions, helping businesses transform and thrive in the digital age.
+                            </p>
+                            <Link
+                              to="/about"
+                              className="inline-flex items-center px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+                            >
+                              Learn More
+                            </Link>
+                          </div>
+                          <div className="space-y-2">
+                            {companyLinks.map((link) => (
+                              <Link
+                                key={link.name}
+                                to={link.href}
+                                className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                              >
+                                <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                  {link.name}
+                                </div>
+                                <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                                  {link.description}
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      );
+
+                    case 'Resources':
+                      return (
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                          <div className="space-y-4">
+                            <h3 className="text-lg font-semibold text-white mb-4">Help & Support</h3>
+                            <p className="text-slate-300 mb-6">
+                              Access our comprehensive resources, documentation, and support to get the most out of our services.
+                            </p>
+                            <Link
+                              to="/help"
+                              className="inline-flex items-center px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
+                            >
+                              Get Help
+                            </Link>
+                          </div>
+                          <div className="space-y-2">
+                            {resourceLinks.map((link) => (
+                              <Link
+                                key={link.name}
+                                to={link.href}
+                                className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                              >
+                                <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                  {link.name}
+                                </div>
+                                <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                                  {link.description}
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      );
+
+                    default:
+                      return null;
+                  }
+                })()}
 
                 {/* Quick Links Section */}
                 <div className="mt-8 pt-8 border-t border-slate-700">
