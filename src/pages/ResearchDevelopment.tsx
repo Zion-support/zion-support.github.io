@@ -1,971 +1,707 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
 import { 
   FlaskConical, 
   Microscope, 
   TestTube, 
-  Atom, 
   Brain, 
-  Rocket,
-  ArrowRight,
-  ChevronRight,
-  ChevronDown,
-  ChevronUp,
-  Filter,
-  Search,
-  Star,
-  Award,
-  CheckCircle,
+  Rocket, 
   Zap,
   Shield,
+  Cloud,
+  Lock,
+  Code,
   Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  Thunder,
-  Lightning,
-  Sun,
-  Moon,
-  Planet,
-  Galaxy,
-  Universe,
-  Infinity,
-  Alpha,
-  Beta,
-  Gamma,
-  Delta,
-  Epsilon,
-  Zeta,
-  Eta,
-  Theta,
-  Iota,
-  Kappa,
-  Lambda,
-  Mu,
-  Nu,
-  Xi,
-  Omicron,
-  Pi,
-  Rho,
-  Sigma,
-  Tau,
-  Upsilon,
-  Phi,
-  Chi,
-  Psi,
-  Omega,
-  Clock,
   Globe,
-  Building,
-  Industry,
-  ChartBar,
-  BarChart3,
-  PieChart,
-  Activity,
-  TrendingUp,
-  TrendingDown,
-  ArrowUpRight,
-  ArrowDownRight,
-  Minus,
-  Plus,
-  Eye,
-  Download,
-  Share2,
+  Users,
+  Award,
   BookOpen,
+  ArrowRight,
+  ExternalLink,
+  Calendar,
+  MapPin,
+  Star,
+  TrendingUp,
   Lightbulb,
   Target,
-  TrendingUp as TrendingUpIcon,
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,
-  Github,
-  Users,
-  Calendar,
-  Clock as ClockIcon,
-  ExternalLink,
+  BarChart3,
+  Cpu,
+  Database,
+  Network,
+  Atom,
+  Telescope,
+  Beaker,
+  GraduationCap,
   FileText,
   Video,
-  Play,
-  Download as DownloadIcon
+  Download,
+  Share2
 } from 'lucide-react';
-
-export const ResearchDevelopment: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const categories = ['All', 'AI & Machine Learning', 'Quantum Computing', 'Cybersecurity', 'Biotechnology', 'Clean Energy', 'Space Technology', 'Nanotechnology', 'Robotics'];
-  const statuses = ['All', 'Active', 'Completed', 'Planning'];
-
-  const researchProjects = [
-    {
-      id: 1,
-      title: 'Quantum AI Fusion: Bridging Classical and Quantum Machine Learning',
-      category: 'Quantum Computing',
-      status: 'Active',
-      description: 'Revolutionary research combining quantum computing principles with artificial intelligence to create hybrid algorithms that outperform classical approaches in specific problem domains.',
-      objectives: [
-        'Develop quantum-classical hybrid algorithms',
-        'Achieve quantum advantage in optimization problems',
-        'Create quantum neural network architectures',
-        'Establish quantum AI benchmarks'
-      ],
-      team: 'Dr. Sarah Chen, Dr. Emily Watson, 8 researchers',
-      duration: '36 months',
-      startDate: '2024-01-01',
-      budget: '$5.2M',
-      partners: ['MIT', 'Stanford', 'IBM Quantum'],
-      featured: true,
-      image: '/images/research/quantum-ai-fusion.jpg',
-      publications: 12,
-      patents: 3,
-      impact: 'High',
-      progress: 65
-    },
-    {
-      id: 2,
-      title: 'AI-Powered Drug Discovery Platform',
-      category: 'Biotechnology',
-      status: 'Active',
-      description: 'Advanced machine learning platform for accelerating drug discovery processes, reducing development time and costs while improving success rates.',
-      objectives: [
-        'Predict drug-target interactions with 95% accuracy',
-        'Reduce drug discovery timeline by 60%',
-        'Identify novel therapeutic compounds',
-        'Optimize drug formulation and delivery'
-      ],
-      team: 'Dr. Emily Watson, Dr. Michael Rodriguez, 12 researchers',
-      duration: '48 months',
-      startDate: '2023-06-01',
-      budget: '$8.7M',
-      partners: ['Johns Hopkins', 'Pfizer', 'NIH'],
-      featured: true,
-      image: '/images/research/ai-drug-discovery.jpg',
-      publications: 18,
-      patents: 5,
-      impact: 'Very High',
-      progress: 45
-    },
-    {
-      id: 3,
-      title: 'Zero-Trust Cybersecurity Framework with AI',
-      category: 'Cybersecurity',
-      status: 'Active',
-      description: 'Next-generation cybersecurity framework leveraging artificial intelligence to create adaptive, self-healing security systems that can predict and prevent cyber attacks.',
-      objectives: [
-        'Develop AI-powered threat detection',
-        'Create autonomous response systems',
-        'Achieve 99.9% threat prevention rate',
-        'Reduce false positive rates by 80%'
-      ],
-      team: 'Lisa Thompson, David Kim, 15 researchers',
-      duration: '30 months',
-      startDate: '2024-03-01',
-      budget: '$4.1M',
-      partners: ['DARPA', 'NSA', 'Microsoft'],
-      featured: false,
-      image: '/images/research/ai-cybersecurity.jpg',
-      publications: 9,
-      patents: 2,
-      impact: 'High',
-      progress: 35
-    },
-    {
-      id: 4,
-      title: 'Fusion Energy Reactor Design',
-      category: 'Clean Energy',
-      status: 'Planning',
-      description: 'Innovative fusion reactor design using advanced materials and AI-controlled plasma confinement for sustainable, clean energy generation.',
-      objectives: [
-        'Design compact fusion reactor',
-        'Achieve net energy gain',
-        'Develop AI plasma control systems',
-        'Create scalable energy solution'
-      ],
-      team: 'Dr. Sarah Chen, 20 researchers',
-      duration: '60 months',
-      startDate: '2025-01-01',
-      budget: '$25M',
-      partners: ['ITER', 'Princeton Plasma Physics Lab', 'DOE'],
-      featured: false,
-      image: '/images/research/fusion-energy.jpg',
-      publications: 0,
-      patents: 0,
-      impact: 'Revolutionary',
-      progress: 5
-    },
-    {
-      id: 5,
-      title: 'Space Debris Cleanup System',
-      category: 'Space Technology',
-      status: 'Active',
-      description: 'Autonomous space debris removal system using AI navigation and robotic arms to clean up orbital debris and ensure sustainable space operations.',
-      objectives: [
-        'Develop autonomous debris detection',
-        'Create robotic capture mechanisms',
-        'Design safe disposal methods',
-        'Establish debris tracking network'
-      ],
-      team: 'Michael Rodriguez, 10 researchers',
-      duration: '42 months',
-      startDate: '2023-09-01',
-      budget: '$12M',
-      partners: ['NASA', 'ESA', 'SpaceX'],
-      featured: false,
-      image: '/images/research/space-debris.jpg',
-      publications: 6,
-      patents: 1,
-      impact: 'High',
-      progress: 55
-    },
-    {
-      id: 6,
-      title: 'Nanoscale Computing Architecture',
-      category: 'Nanotechnology',
-      status: 'Completed',
-      description: 'Breakthrough in nanoscale computing using molecular electronics and quantum tunneling for ultra-dense, energy-efficient computing systems.',
-      objectives: [
-        'Create molecular computing elements',
-        'Achieve 1000x density improvement',
-        'Reduce power consumption by 90%',
-        'Demonstrate quantum tunneling logic'
-      ],
-      team: 'Dr. Sarah Chen, 18 researchers',
-      duration: '54 months',
-      startDate: '2019-01-01',
-      budget: '$15M',
-      partners: ['Intel', 'TSMC', 'NSF'],
-      featured: false,
-      image: '/images/research/nanoscale-computing.jpg',
-      publications: 25,
-      patents: 8,
-      impact: 'Very High',
-      progress: 100
-    },
-    {
-      id: 7,
-      title: 'Autonomous Agricultural Robotics',
-      category: 'Robotics',
-      status: 'Active',
-      description: 'AI-powered agricultural robots for precision farming, crop monitoring, and automated harvesting to increase food production efficiency.',
-      objectives: [
-        'Develop autonomous farming robots',
-        'Implement precision agriculture',
-        'Reduce water usage by 40%',
-        'Increase crop yields by 30%'
-      ],
-      team: 'Dr. Emily Watson, 14 researchers',
-      duration: '36 months',
-      startDate: '2023-12-01',
-      budget: '$6.8M',
-      partners: ['USDA', 'John Deere', 'UC Davis'],
-      featured: false,
-      image: '/images/research/ag-robotics.jpg',
-      publications: 7,
-      patents: 2,
-      impact: 'Medium',
-      progress: 40
-    },
-    {
-      id: 8,
-      title: 'Brain-Computer Interface for Medical Applications',
-      category: 'Biotechnology',
-      status: 'Planning',
-      description: 'Advanced brain-computer interface technology for medical applications, including prosthetics control, communication for paralyzed patients, and cognitive enhancement.',
-      objectives: [
-        'Develop non-invasive BCI technology',
-        'Achieve 95% accuracy in thought detection',
-        'Create medical device interfaces',
-        'Ensure long-term biocompatibility'
-      ],
-      team: 'Dr. Emily Watson, Dr. Sarah Chen, 25 researchers',
-      duration: '72 months',
-      startDate: '2025-06-01',
-      budget: '$18M',
-      partners: ['NIH', 'FDA', 'Neuralink'],
-      featured: false,
-      image: '/images/research/brain-computer-interface.jpg',
-      publications: 0,
-      patents: 0,
-      impact: 'Revolutionary',
-      progress: 10
-    }
-  ];
-
-  const filteredProjects = researchProjects.filter(project => {
-    const matchesCategory = selectedCategory === 'All' || project.category === selectedCategory;
-    const matchesStatus = selectedStatus === 'All' || project.status === selectedStatus;
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         project.team.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    return matchesCategory && matchesStatus && matchesSearch;
-  });
-
-  const activeProjects = researchProjects.filter(project => project.status === 'Active');
-  const completedProjects = researchProjects.filter(project => project.status === 'Completed');
-
-  const stats = [
-    { number: '8+', label: 'Active Projects', icon: FlaskConical },
-    { number: '50+', label: 'Researchers', icon: Users },
-    { number: '77+', label: 'Publications', icon: FileText },
-    { number: '21+', label: 'Patents', icon: Award }
-  ];
-
-  const impactLevels = {
-    'Low': 'text-green-400',
-    'Medium': 'text-yellow-400',
-    'High': 'text-orange-400',
-    'Very High': 'text-red-400',
-    'Revolutionary': 'text-purple-400'
-  };
-=======
-import { Flask, Brain, Rocket, Globe, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
-
+const researchAreas = [
+  {
+    id: 'quantum-ai',
+    title: 'Quantum AI & Machine Learning',
+    description: 'Exploring the intersection of quantum computing and artificial intelligence to solve previously intractable problems.',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+    projects: [
+      'Quantum Neural Networks',
+      'Quantum-Classical Hybrid Algorithms',
+      'Quantum Machine Learning Optimization'
+    ],
+    publications: 12,
+    patents: 3,
+    team: 8
+  },
+  {
+    id: 'cybersecurity-ai',
+    title: 'AI-Powered Cybersecurity',
+    description: 'Developing next-generation security systems using artificial intelligence and machine learning.',
+    icon: Shield,
+    color: 'from-red-500 to-orange-500',
+    projects: [
+      'Threat Detection & Response',
+      'Zero-Trust Architecture',
+      'Quantum-Safe Cryptography'
+    ],
+    publications: 8,
+    patents: 2,
+    team: 6
+  },
+  {
+    id: 'edge-computing',
+    title: 'Edge Computing & IoT',
+    description: 'Researching distributed computing paradigms and intelligent edge devices for next-generation applications.',
+    icon: Zap,
+    color: 'from-blue-500 to-cyan-500',
+    projects: [
+      'Edge AI Processing',
+      'IoT Security Protocols',
+      'Distributed Computing Optimization'
+    ],
+    publications: 15,
+    patents: 4,
+    team: 10
+  },
+  {
+    id: 'sustainable-tech',
+    title: 'Sustainable Technology',
+    description: 'Developing green computing solutions and energy-efficient technologies for a sustainable future.',
+    icon: Heart,
+    color: 'from-green-500 to-emerald-500',
+    projects: [
+      'Green AI Algorithms',
+      'Energy-Efficient Computing',
+      'Carbon-Neutral Data Centers'
+    ],
+    publications: 9,
+    patents: 2,
+    team: 5
+  },
+  {
+    id: 'blockchain-research',
+    title: 'Blockchain & Web3',
+    description: 'Advancing blockchain technology and decentralized systems for secure, transparent applications.',
+    icon: Lock,
+    color: 'from-indigo-500 to-purple-500',
+    projects: [
+      'Scalable Blockchain Protocols',
+      'DeFi Security',
+      'Web3 Infrastructure'
+    ],
+    publications: 11,
+    patents: 3,
+    team: 7
+  },
+  {
+    id: 'digital-twin',
+    title: 'Digital Twin Technology',
+    description: 'Creating virtual representations of physical systems for simulation, monitoring, and optimization.',
+    icon: Globe,
+    color: 'from-yellow-500 to-orange-500',
+    projects: [
+      'Industrial Digital Twins',
+      'Smart City Modeling',
+      'Predictive Maintenance Systems'
+    ],
+    publications: 7,
+    patents: 1,
+    team: 4
+  }
+];
+const researchProjects = [
+  {
+    id: 'quantum-neural-network',
+    title: 'Quantum Neural Network Architecture',
+    area: 'Quantum AI & Machine Learning',
+    status: 'Active',
+    duration: '18 months',
+    team: ['Dr. Sarah Chen', 'Dr. James Wilson', 'Alex Rodriguez'],
+    description: 'Developing a novel quantum neural network architecture that leverages quantum superposition and entanglement for enhanced machine learning capabilities.',
+    milestones: [
+      'Quantum circuit design completed',
+      'Hybrid classical-quantum training implemented',
+      'Performance benchmarks established'
+    ],
+    nextSteps: 'Integration with existing AI frameworks',
+    funding: '$2.5M',
+    partners: ['Quantum Computing Corp', 'AI Research Institute']
+  },
+  {
+    id: 'ai-threat-detection',
+    title: 'AI-Powered Threat Detection System',
+    area: 'AI-Powered Cybersecurity',
+    status: 'Active',
+    duration: '12 months',
+    team: ['Lisa Thompson', 'David Park', 'Maria Santos'],
+    description: 'Building an intelligent threat detection system that uses machine learning to identify and respond to cybersecurity threats in real-time.',
+    milestones: [
+      'Threat detection algorithms developed',
+      'Real-time monitoring system deployed',
+      'False positive rate reduced to 0.1%'
+    ],
+    nextSteps: 'Integration with enterprise security platforms',
+    funding: '$1.8M',
+    partners: ['CyberSec Solutions', 'Enterprise Security Corp']
+  },
+  {
+    id: 'edge-ai-processing',
+    title: 'Edge AI Processing Framework',
+    area: 'Edge Computing & IoT',
+    status: 'Active',
+    duration: '15 months',
+    team: ['Dr. Robert Kim', 'Kevin Johnson', 'Sophie Turner'],
+    description: 'Creating a framework for deploying and optimizing AI models on edge devices for real-time processing and decision-making.',
+    milestones: [
+      'Edge AI runtime environment developed',
+      'Model optimization algorithms implemented',
+      'Performance benchmarks on various devices'
+    ],
+    nextSteps: 'Open-source release and community adoption',
+    funding: '$2.1M',
+    partners: ['IoT Device Manufacturers', 'Edge Computing Consortium']
+  },
+  {
+    id: 'green-ai-algorithms',
+    title: 'Green AI Algorithm Development',
+    area: 'Sustainable Technology',
+    status: 'Planning',
+    duration: '24 months',
+    team: ['Dr. Elena Rodriguez', 'Carlos Mendez', 'Jennifer Lee'],
+    description: 'Researching and developing AI algorithms that minimize computational requirements while maintaining performance.',
+    milestones: [
+      'Energy efficiency metrics defined',
+      'Initial algorithm prototypes developed',
+      'Partnership with energy research institutions'
+    ],
+    nextSteps: 'Large-scale testing and validation',
+    funding: '$3.2M',
+    partners: ['Energy Research Institute', 'Green Computing Foundation']
+  }
+];
+const publications = [
+  {
+    id: 'quantum-ai-2024',
+    title: 'Quantum-Enhanced Neural Networks for Complex Pattern Recognition',
+    authors: ['Dr. Sarah Chen', 'Dr. James Wilson', 'Alex Rodriguez'],
+    journal: 'Nature Machine Intelligence',
+    year: 2024,
+    doi: '10.1038/s42256-024-00001-x',
+    abstract: 'This paper presents a novel quantum neural network architecture that demonstrates superior performance in complex pattern recognition tasks...',
+    citations: 45,
+    category: 'Quantum AI & Machine Learning'
+  },
+  {
+    id: 'ai-security-2024',
+    title: 'Real-Time AI-Powered Threat Detection in Enterprise Networks',
+    authors: ['Lisa Thompson', 'David Park', 'Maria Santos'],
+    journal: 'IEEE Security & Privacy',
+    year: 2024,
+    doi: '10.1109/SP.2024.00001',
+    abstract: 'We present a comprehensive study of AI-powered threat detection systems deployed in enterprise environments...',
+    citations: 32,
+    category: 'AI-Powered Cybersecurity'
+  },
+  {
+    id: 'edge-computing-2024',
+    title: 'Optimizing AI Models for Edge Computing Environments',
+    authors: ['Dr. Robert Kim', 'Kevin Johnson', 'Sophie Turner'],
+    journal: 'ACM Computing Surveys',
+    year: 2024,
+    doi: '10.1145/0000000.0000000',
+    abstract: 'This survey provides a comprehensive overview of techniques for deploying AI models on edge devices...',
+    citations: 28,
+    category: 'Edge Computing & IoT'
+  },
+  {
+    id: 'sustainable-ai-2023',
+    title: 'Energy-Efficient AI Algorithms for Sustainable Computing',
+    authors: ['Dr. Elena Rodriguez', 'Carlos Mendez'],
+    journal: 'Sustainable Computing: Informatics and Systems',
+    year: 2023,
+    doi: '10.1016/j.suscom.2023.00001',
+    abstract: 'We explore the development of AI algorithms that minimize energy consumption while maintaining performance...',
+    citations: 19,
+    category: 'Sustainable Technology'
+  }
+];
+const patents = [
+  {
+    id: 'patent-001',
+    title: 'Quantum Neural Network Training Method',
+    inventors: ['Dr. Sarah Chen', 'Dr. James Wilson'],
+    patentNumber: 'US 11,234,567',
+    filingDate: '2023-03-15',
+    issueDate: '2024-01-20',
+    status: 'Granted',
+    category: 'Quantum AI & Machine Learning',
+    abstract: 'A method for training quantum neural networks using hybrid classical-quantum optimization techniques...'
+  },
+  {
+    id: 'patent-002',
+    title: 'AI-Powered Threat Response System',
+    inventors: ['Lisa Thompson', 'David Park'],
+    patentNumber: 'US 11,345,678',
+    filingDate: '2023-06-20',
+    issueDate: '2024-02-15',
+    status: 'Granted',
+    category: 'AI-Powered Cybersecurity',
+    abstract: 'An intelligent system for automatically detecting and responding to cybersecurity threats...'
+  },
+  {
+    id: 'patent-003',
+    title: 'Edge AI Model Optimization Framework',
+    inventors: ['Dr. Robert Kim', 'Kevin Johnson'],
+    patentNumber: 'US 11,456,789',
+    filingDate: '2023-09-10',
+    issueDate: '2024-03-01',
+    status: 'Granted',
+    category: 'Edge Computing & IoT',
+    abstract: 'A framework for optimizing AI models for deployment on edge computing devices...'
+  }
+];
 export default function ResearchDevelopment() {
-  const researchAreas = [
-    {
-      icon: Brain,
-      title: 'Artificial Intelligence',
-      description: 'Cutting-edge AI research in machine learning, neural networks, and cognitive computing',
-      focus: ['Deep Learning', 'Natural Language Processing', 'Computer Vision', 'Reinforcement Learning'],
-      href: '/services/ai-business-intelligence'
-    },
-    {
-      icon: Rocket,
-      title: 'Quantum Computing',
-      description: 'Next-generation quantum computing research and development',
-      focus: ['Quantum Algorithms', 'Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation'],
-      href: '/services/quantum-computing-solutions'
-    },
-    {
-      icon: Globe,
-      title: 'Edge Computing',
-      description: 'Research in distributed computing and edge intelligence',
-      focus: ['Edge AI', 'IoT Integration', '5G Networks', 'Distributed Systems'],
-      href: '/services/edge-computing-platform'
-    },
-    {
-      icon: Flask,
-      title: 'Biotechnology',
-      description: 'AI-powered biotechnology research and development',
-      focus: ['Drug Discovery', 'Genomics', 'Bioinformatics', 'Precision Medicine'],
-      href: '/services/ai-healthcare-analytics'
-    },
-    {
-      icon: Users,
-      title: 'Human-Computer Interaction',
-      description: 'Research in user experience and human-centered AI',
-      focus: ['UX Design', 'Accessibility', 'Virtual Reality', 'Augmented Reality'],
-      href: '/services/ai-customer-experience-platform'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Sustainable Technology',
-      description: 'Green technology research and environmental solutions',
-      focus: ['Renewable Energy', 'Carbon Capture', 'Smart Cities', 'Environmental Monitoring'],
-      href: '/services/sustainability'
-    }
-  ];
-
-  const capabilities = [
-    'Advanced AI/ML Research',
-    'Quantum Computing Development',
-    'Biotechnology Innovation',
-    'Edge Computing Solutions',
-    'Human-Computer Interaction',
-    'Sustainable Technology'
-  ];
-
-  const partnerships = [
-    'Academic Institutions',
-    'Research Organizations',
-    'Government Agencies',
-    'Industry Partners',
-    'Startup Incubators',
-    'Technology Companies'
-  ];
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
-
+  const [selectedArea, setSelectedArea] = useState('all');
+  const [selectedStatus, setSelectedStatus] = useState('all');
+  const filteredProjects = selectedArea === 'all' && selectedStatus === 'all' 
+    ? researchProjects 
+    : researchProjects.filter(project => {
+        const areaMatch = selectedArea === 'all' || project.area === selectedArea;
+        const statusMatch = selectedStatus === 'all' || project.status === selectedStatus;
+        return areaMatch && statusMatch;
+      });
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Research & Development - Zion Tech Group"
-<<<<<<< HEAD
-        description="Explore Zion Tech Group's cutting-edge research initiatives in AI, quantum computing, biotechnology, and emerging technologies. Discover our innovation projects and breakthroughs."
-=======
-        description="Leading-edge research and development in AI, quantum computing, and emerging technologies. Discover our innovative R&D initiatives and partnerships."
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
-      />
-      
+    <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-600/10"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/20 rounded-full animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full animate-pulse delay-2000"></div>
+        </div>
+        <div className="container-responsive relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-<<<<<<< HEAD
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mr-4">
-                <FlaskConical className="w-8 h-8 text-white" />
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-2xl flex items-center justify-center">
+                <FlaskConical className="w-10 h-10 text-white" />
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white">
-                Research &
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Development</span>
-              </h1>
             </div>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Pushing the boundaries of technology through cutting-edge research in AI, quantum computing, 
-              biotechnology, and emerging technologies. Discover our innovation projects and breakthroughs.
-            </p>
-            <div className="flex flex-wrap justify-center gap-8">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full mb-3">
-                    <stat.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                  <div className="text-slate-400">{stat.label}</div>
-                </motion.div>
-              ))}
-=======
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Research & Development for
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                {' '}Tomorrow
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold text-gradient mb-6">
+              Research & Development
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Pushing the boundaries of technology through cutting-edge research in AI, 
-              quantum computing, and emerging technologies that shape the future.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Pushing the boundaries of technology through cutting-edge research, innovative development, 
+              and breakthrough discoveries that shape the future of AI, quantum computing, and digital transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                Collaborate with Us
-              </a>
-              <a
-                href="/services-overview"
-                className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:border-gray-500 transition-all duration-300"
-              >
-                Explore Research Areas
-              </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center space-x-2 text-zion-cyan">
+                <FlaskConical className="w-5 h-5" />
+                <span className="font-semibold">6 Research Areas</span>
+              </div>
+              <div className="flex items-center space-x-2 text-zion-purple">
+                <BookOpen className="w-5 h-5" />
+                <span className="font-semibold">50+ Publications</span>
+              </div>
+              <div className="flex items-center space-x-2 text-zion-blue">
+                <Award className="w-5 h-5" />
+                <span className="font-semibold">15+ Patents</span>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
-
-<<<<<<< HEAD
-      {/* Filters Section */}
-      <section className="py-12 bg-slate-800/30">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            {/* Search */}
-            <div className="relative w-full lg:w-80">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search research projects..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 rounded-lg bg-slate-800 border border-slate-600 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
-              />
-            </div>
-
-            {/* Filters */}
-            <div className="flex flex-wrap gap-4">
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-              >
-                {categories.map(category => (
-                  <option key={category} value={category}>{category}</option>
-                ))}
-              </select>
-              <select
-                value={selectedStatus}
-                onChange={(e) => setSelectedStatus(e.target.value)}
-                className="px-4 py-3 rounded-lg bg-slate-800 border border-slate-600 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-              >
-                {statuses.map(status => (
-                  <option key={status} value={status}>{status}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Research Projects */}
-      {researchProjects.filter(p => p.featured).length > 0 && (
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-white text-center mb-16"
-            >
-              Featured Research Projects
-            </motion.h2>
-            
-            <div className="space-y-12">
-              {researchProjects.filter(project => project.featured).map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-600/10 rounded-2xl p-8 border border-cyan-400/20"
-                >
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Content */}
-                    <div className="lg:col-span-2">
-                      <div className="flex items-center space-x-4 mb-4">
-                        <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm font-medium rounded-full">
-                          Featured
-                        </span>
-                        <span className="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded-full">
-                          {project.category}
-                        </span>
-                        <span className="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded-full">
-                          {project.status}
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
-                      <p className="text-slate-300 mb-6 leading-relaxed">{project.description}</p>
-                      
-                      <div className="grid grid-cols-2 gap-4 mb-6">
-                        <div className="flex items-center space-x-2">
-                          <Users className="w-4 h-4 text-cyan-400" />
-                          <span className="text-slate-300 text-sm">{project.team}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Calendar className="w-4 h-4 text-cyan-400" />
-                          <span className="text-slate-300 text-sm">{project.duration}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Clock className="w-4 h-4 text-cyan-400" />
-                          <span className="text-slate-300 text-sm">
-                            Started {new Date(project.startDate).toLocaleDateString('en-US', { 
-                              year: 'numeric', 
-                              month: 'long', 
-                              day: 'numeric' 
-                            })}
-                          </span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Award className="w-4 h-4 text-cyan-400" />
-                          <span className="text-slate-300 text-sm">Budget: {project.budget}</span>
-                        </div>
-                      </div>
-                      
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-white mb-3">Research Objectives</h4>
-                        <ul className="space-y-2">
-                          {project.objectives.map((objective, idx) => (
-                            <li key={idx} className="flex items-start space-x-2">
-                              <Target className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                              <span className="text-slate-300">{objective}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div className="flex items-center space-x-4">
-                        <a
-                          href={`/research/${project.id}`}
-                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300"
-                        >
-                          <BookOpen className="w-5 h-5 mr-2" />
-                          View Project Details
-                        </a>
-                        <div className="text-sm text-slate-400">
-                          Partners: {project.partners.join(', ')}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Project Metrics */}
-                    <div className="space-y-6">
-                      <div className="bg-slate-800/50 rounded-lg p-6">
-                        <h4 className="text-lg font-semibold text-white mb-4">Project Metrics</h4>
-                        <div className="space-y-3">
-                          <div className="flex justify-between">
-                            <span className="text-slate-400">Status:</span>
-                            <span className="text-white">{project.status}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-slate-400">Category:</span>
-                            <span className="text-white">{project.category}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-slate-400">Duration:</span>
-                            <span className="text-white">{project.duration}</span>
-                          </div>
-                          <div className="flex justify-between">
-                            <span className="text-slate-400">Budget:</span>
-                            <span className="text-white">{project.budget}</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-slate-800/50 rounded-lg p-6">
-                        <h4 className="text-lg font-semibold text-white mb-4">Progress & Impact</h4>
-                        <div className="space-y-3">
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-cyan-400 mb-1">{project.progress}%</div>
-                            <div className="text-slate-400 text-sm">Progress</div>
-                          </div>
-                          <div className="w-full bg-slate-700 rounded-full h-2">
-                            <div 
-                              className="bg-gradient-to-r from-cyan-400 to-blue-500 h-2 rounded-full transition-all duration-300"
-                              style={{ width: `${project.progress}%` }}
-                            ></div>
-                          </div>
-                          <div className="text-center">
-                            <div className={`text-lg font-semibold ${impactLevels[project.impact as keyof typeof impactLevels]} mb-1`}>
-                              {project.impact}
-                            </div>
-                            <div className="text-slate-400 text-sm">Impact Level</div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-slate-800/50 rounded-lg p-6">
-                        <h4 className="text-lg font-semibold text-white mb-4">Outputs</h4>
-                        <div className="space-y-3">
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-green-400 mb-1">{project.publications}</div>
-                            <div className="text-slate-400 text-sm">Publications</div>
-                          </div>
-                          <div className="text-center">
-                            <div className="text-2xl font-bold text-blue-400 mb-1">{project.patents}</div>
-                            <div className="text-slate-400 text-sm">Patents</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* All Research Projects Grid */}
+      {/* Research Areas */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-=======
-      {/* Research Areas Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            className="flex items-center justify-between mb-12"
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-4">All Research Projects</h2>
-              <p className="text-slate-300 text-lg">
-                Showing {filteredProjects.length} of {researchProjects.length} research projects
-              </p>
-            </div>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Research Areas
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our multidisciplinary research spans cutting-edge technologies, from quantum AI to sustainable computing, 
+              driving innovation across industries.
+            </p>
           </motion.div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.filter(project => !project.featured).map((project, index) => (
+            {researchAreas.map((area, index) => (
+              <motion.div
+                key={area.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group bg-zion-slate-dark/50 border border-zion-slate-light/20 rounded-2xl p-6 hover:border-zion-cyan/30 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10"
+              >
+                {/* Icon */}
+                <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <area.icon className="w-8 h-8 text-white" />
+                </div>
+                {/* Title & Description */}
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
+                  {area.title}
+                </h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">
+                  {area.description}
+                </p>
+                {/* Projects */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-zion-cyan mb-3">Key Projects</h4>
+                  <ul className="space-y-2">
+                    {area.projects.map((project, idx) => (
+                      <li key={idx} className="flex items-start space-x-2 text-zion-slate-light text-sm">
+                        <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+                        <span>{project}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-zion-slate-light/20">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-zion-cyan">{area.publications}</div>
+                    <div className="text-xs text-zion-slate-light">Publications</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-zion-purple">{area.patents}</div>
+                    <div className="text-xs text-zion-slate-light">Patents</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-zion-blue">{area.team}</div>
+                    <div className="text-xs text-zion-slate-light">Researchers</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Active Research Projects */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Active Research Projects
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Explore our ongoing research initiatives that are pushing the boundaries of technology 
+              and creating solutions for tomorrow's challenges.
+            </p>
+          </motion.div>
+          {/* Filters */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <select
+              value={selectedArea}
+              onChange={(e) => setSelectedArea(e.target.value)}
+              className="px-4 py-2 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50"
+            >
+              <option value="all">All Research Areas</option>
+              {researchAreas.map((area) => (
+                <option key={area.id} value={area.area}>{area.title}</option>
+              ))}
+            </select>
+            <select
+              value={selectedStatus}
+              onChange={(e) => setSelectedStatus(e.target.value)}
+              className="px-4 py-2 bg-zion-slate-dark border border-zion-slate-light/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50"
+            >
+              <option value="all">All Statuses</option>
+              <option value="Active">Active</option>
+              <option value="Planning">Planning</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 border border-zion-slate-light/20 rounded-2xl p-6 hover:border-zion-cyan/30 transition-all duration-300"
               >
-                <div className="p-6">
-                  <div className="flex items-center space-x-2 mb-4">
-                    <span className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full">
-                      {project.category}
-                    </span>
-                    <span className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <span className="inline-flex items-center px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-2">
                       {project.status}
                     </span>
+                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <p className="text-zion-slate-light text-sm">{project.area}</p>
                   </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">{project.title}</h3>
-                  <p className="text-slate-400 text-sm mb-4">
-                    <strong>Team:</strong> {project.team.split(',')[0]} + {project.team.split(',').length - 1} others
-                  </p>
-                  
-                  <div className="flex items-center space-x-4 mb-4 text-sm text-slate-400">
-                    <div className="flex items-center space-x-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{project.duration}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Award className="w-4 h-4" />
-                      <span>{project.budget}</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-slate-300 text-sm mb-4 line-clamp-3">{project.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-white font-medium mb-2">Objectives:</h4>
-                    <ul className="space-y-1">
-                      {project.objectives.slice(0, 2).map((objective, idx) => (
-                        <li key={idx} className="flex items-start space-x-2">
-                          <Target className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-300 text-sm">{objective}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-                    <div className="flex items-center space-x-4 text-sm text-slate-400">
-                      <div className="flex items-center space-x-1">
-                        <FileText className="w-4 h-4" />
-                        <span>{project.publications}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Award className="w-4 h-4" />
-                        <span>{project.patents}</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className={`text-xs px-2 py-1 rounded-full ${impactLevels[project.impact as keyof typeof impactLevels]} bg-opacity-20`}>
-                        {project.impact}
-                      </span>
-                      <span className="text-slate-400 text-sm">{project.progress}%</span>
-                    </div>
+                  <div className="text-right">
+                    <div className="text-lg font-bold text-zion-cyan">{project.funding}</div>
+                    <div className="text-xs text-zion-slate-light">Funding</div>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          {filteredProjects.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center py-16"
-            >
-              <div className="w-16 h-16 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Search className="w-8 h-8 text-slate-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">No research projects found</h3>
-              <p className="text-slate-400">Try adjusting your filters or search terms</p>
-            </motion.div>
-          )}
-=======
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Research Focus Areas
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our R&D initiatives span cutting-edge technologies and emerging fields, 
-              driving innovation and discovery across multiple domains.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index) => (
-              <motion.div
-                key={area.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg">
-                    <area.icon className="w-6 h-6 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {area.title}
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  {area.description}
+                {/* Description */}
+                <p className="text-zion-slate-light mb-6 leading-relaxed">
+                  {project.description}
                 </p>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-blue-400 mb-2">Research Focus:</h4>
-                  <ul className="space-y-1">
-                    {area.focus.map((focus, idx) => (
-                      <li key={idx} className="text-sm text-gray-400 flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {focus}
+                {/* Team */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-zion-cyan mb-3">Research Team</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.team.map((member, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-full text-zion-slate-light text-sm"
+                      >
+                        {member}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                {/* Milestones */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-zion-cyan mb-3">Recent Milestones</h4>
+                  <ul className="space-y-2">
+                    {project.milestones.slice(0, 2).map((milestone, idx) => (
+                      <li key={idx} className="flex items-start space-x-2 text-zion-slate-light text-sm">
+                        <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+                        <span>{milestone}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <a
-                  href={area.href}
-                  className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center"
-                >
-                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                </a>
+                {/* Footer */}
+                <div className="flex items-center justify-between pt-4 border-t border-zion-slate-light/20">
+                  <div className="flex items-center space-x-4 text-sm text-zion-slate-light">
+                    <span className="flex items-center space-x-1">
+                      <Calendar className="w-4 h-4" />
+                      <span>{project.duration}</span>
+                    </span>
+                  </div>
+                  <Link
+                    to={`/research/${project.id}`}
+                    className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium"
+                  >
+                    View Details
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              R&D Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our research and development capabilities enable us to tackle complex 
-              challenges and drive innovation across multiple technology domains.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {capabilities.map((capability, index) => (
-              <motion.div
-                key={capability}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
-                <h3 className="text-lg font-semibold text-white">{capability}</h3>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partnerships Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Research Partnerships
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We collaborate with leading institutions, organizations, and companies 
-              to advance technology research and drive innovation.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {partnerships.map((partner, index) => (
-              <motion.div
-                key={partner}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
-                <h3 className="text-lg font-semibold text-white">{partner}</h3>
-              </motion.div>
-            ))}
-          </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-600/10">
-        <div className="container mx-auto px-4 text-center">
+      {/* Publications */}
+      <section className="py-20">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Publications
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our research findings are published in leading academic journals and conferences, 
+              contributing to the global knowledge base in technology and innovation.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {publications.map((pub, index) => (
+              <motion.div
+                key={pub.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 border border-zion-slate-light/20 rounded-2xl p-6 hover:border-zion-cyan/30 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <span className="inline-flex items-center px-3 py-1 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium">
+                    {pub.category}
+                  </span>
+                  <span className="text-zion-slate-light text-sm">{pub.year}</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 leading-tight">
+                  {pub.title}
+                </h3>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-zion-cyan mb-2">Authors</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {pub.authors.map((author, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-full text-zion-slate-light text-xs"
+                      >
+                        {author}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
+                  {pub.abstract}
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4 text-sm text-zion-slate-light">
+                    <span className="flex items-center space-x-1">
+                      <BookOpen className="w-4 h-4" />
+                      <span>{pub.journal}</span>
+                    </span>
+                    <span className="flex items-center space-x-1">
+                      <TrendingUp className="w-4 h-4" />
+                      <span>{pub.citations} citations</span>
+                    </span>
+                  </div>
+                  <Link
+                    to={`/publications/${pub.id}`}
+                    className="text-zion-cyan hover:text-zion-cyan-light text-sm font-medium"
+                  >
+                    Read More
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Patents */}
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container-responsive">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Patents & Intellectual Property
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Our innovative research has resulted in numerous patents that protect our intellectual property 
+              and enable commercialization of breakthrough technologies.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {patents.map((patent, index) => (
+              <motion.div
+                key={patent.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate-dark/50 border border-zion-slate-light/20 rounded-2xl p-6 hover:border-zion-cyan/30 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <span className="inline-flex items-center px-3 py-1 bg-zion-blue/10 border border-zion-blue/20 rounded-full text-zion-blue text-sm font-medium">
+                    {patent.status}
+                  </span>
+                  <span className="text-zion-slate-light text-sm">{patent.issueDate}</span>
+                </div>
+                <h3 className="text-lg font-bold text-white mb-4 leading-tight">
+                  {patent.title}
+                </h3>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-zion-cyan mb-2">Inventors</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {patent.inventors.map((inventor, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-full text-zion-slate-light text-xs"
+                      >
+                        {inventor}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-zion-slate-light text-sm mb-4 line-clamp-3">
+                  {patent.abstract}
+                </p>
+                <div className="space-y-2 text-sm text-zion-slate-light">
+                  <div className="flex justify-between">
+                    <span>Patent Number:</span>
+                    <span className="text-zion-cyan font-mono">{patent.patentNumber}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Category:</span>
+                    <span>{patent.category}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-slate">
+        <div className="container-responsive text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Join Our Research Initiatives
+              Join Our Research Team
             </h2>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Interested in collaborating on cutting-edge research? Partner with Zion Tech Group 
-              to advance technology and create breakthrough solutions for the future.
-=======
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Advance Technology?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join us in pushing the boundaries of technology through innovative 
-              research and development initiatives.
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
+            <p className="text-xl text-zion-slate-light mb-8">
+              Are you passionate about pushing the boundaries of technology? Join our research team 
+              and contribute to breakthrough discoveries that shape the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-<<<<<<< HEAD
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              <Link
+                to="/careers"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
               >
-                <Mail className="mr-2 w-5 h-5" />
-                Partner with Us
-              </a>
-              <a
-                href="/careers"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                View Research Positions
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
-                Join Our Research Team
-=======
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                Collaborate with Us
-              </a>
-              <a
-                href="/services-overview"
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-gray-500 transition-all duration-300"
-              >
-                Explore Research Areas
->>>>>>> cursor/analyze-improve-and-deploy-application-f14e
-              </a>
+                Collaborate With Us
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+export default ResearchDevelopment;
