@@ -57,6 +57,15 @@ export default function Services() {
           reviewCount: 127
         },
         {
+          name: 'AI Predictive Analytics Platform',
+          description: 'Enterprise-grade predictive analytics with 95% accuracy for business forecasting',
+          features: ['Real-time Processing', 'ML Algorithms', 'Custom Models', 'Interactive Dashboards'],
+          href: '/innovative-micro-saas-services-2026',
+          price: 'From $2,500/month',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
           name: 'AI Sales Copilot',
           description: 'AI-powered sales automation and customer relationship management',
           features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automated Follow-ups'],
@@ -174,6 +183,25 @@ export default function Services() {
       description: 'AI-powered healthcare solutions and medical technology',
       href: '/services/healthcare-tech',
       color: 'from-red-600 to-pink-600'
+    }
+  ];
+
+  const innovativeServices = [
+    {
+      name: 'Innovative Micro SaaS 2026',
+      icon: Rocket,
+      description: 'Cutting-edge AI-powered micro SaaS solutions with proven ROI',
+      href: '/innovative-micro-saas-services-2026',
+      color: 'from-purple-600 to-pink-600',
+      featured: true
+    },
+    {
+      name: 'Comprehensive Pricing Guide',
+      icon: DollarSign,
+      description: 'Complete pricing analysis and ROI calculations for all services',
+      href: '/comprehensive-pricing-guide-2026',
+      color: 'from-green-600 to-emerald-600',
+      featured: true
     }
   ];
   const whyChooseUs = [
@@ -355,6 +383,65 @@ export default function Services() {
             ))}
           </div>
         </section>
+        {/* Innovative Services Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Innovative Services 2026
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover our latest AI-powered micro SaaS solutions and comprehensive service offerings.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {innovativeServices.map((service, index) => (
+                <motion.div
+                  key={service.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <Link
+                    to={service.href}
+                    className="block bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                  >
+                    <div className="flex items-center justify-between mb-6">
+                      <div className={`w-16 h-16 p-4 rounded-2xl bg-gradient-to-r ${service.color} group-hover:scale-110 transition-transform duration-300`}>
+                        <service.icon className="w-8 h-8 text-white" />
+                      </div>
+                      {service.featured && (
+                        <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-sm font-medium rounded-full border border-yellow-500/30">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-300 group-hover:text-gray-200 transition-colors text-lg">
+                      {service.description}
+                    </p>
+                    <div className="mt-6 flex items-center text-purple-400 group-hover:text-purple-300 transition-colors">
+                      <span className="font-medium">Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Emerging Technologies */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">

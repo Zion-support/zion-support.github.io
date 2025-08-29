@@ -48,8 +48,8 @@ export function AppHeader() {
       color: 'from-cyan-500 to-blue-500'
     },
     { 
-      name: 'Innovative Micro SAAS 2025', 
-      href: '/innovative-micro-saas-services-2025', 
+      name: 'Innovative Micro SAAS 2026', 
+      href: '/innovative-micro-saas-services-2026', 
       icon: Rocket, 
       description: 'Cutting-edge AI Services',
       featured: true,

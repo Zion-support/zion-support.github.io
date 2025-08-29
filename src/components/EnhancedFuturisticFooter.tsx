@@ -105,10 +105,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-        { name: 'AI Customer Sentiment Analyzer', href: '/services/ai-customer-sentiment-analyzer' },
-        { name: 'AI-Powered CRM Enhancer', href: '/services/ai-powered-crm-enhancer' },
-        { name: 'AI-Powered HR Recruitment', href: '/services/ai-powered-hr-recruitment-platform' }
+        { name: 'AI Predictive Analytics', href: '/innovative-micro-saas-services-2026' },
+        { name: 'AI Customer Churn Predictor', href: '/innovative-micro-saas-services-2026' },
+        { name: 'AI Diagnostic Assistant', href: '/innovative-micro-saas-services-2026' },
+        { name: 'AI Trading Algorithm Platform', href: '/innovative-micro-saas-services-2026' }
       ]
     },
     {
@@ -137,16 +137,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-      title: 'Micro SaaS Solutions',
+      title: 'Innovative Micro SaaS 2026',
       icon: Zap,
       color: 'from-yellow-600 to-orange-600',
       links: [
-        { name: 'Smart Contract Lifecycle Manager', href: '/services/smart-contract-lifecycle-manager' },
-        { name: 'Smart Expense Management', href: '/services/smart-expense-management-saas' },
-        { name: 'AI-Powered Project Management', href: '/services/ai-powered-project-management' },
-        { name: 'Smart Customer Support Automation', href: '/services/smart-customer-support-automation' },
-        { name: 'AI-Powered Marketing Attribution', href: '/services/ai-powered-marketing-attribution' },
-        { name: 'Smart Data Governance Suite', href: '/services/smart-data-governance-suite' }
+        { name: 'AI Predictive Analytics Platform', href: '/innovative-micro-saas-services-2026' },
+        { name: 'AI Customer Churn Predictor', href: '/innovative-micro-saas-services-2026' },
+        { name: 'AI Threat Detection Platform', href: '/innovative-micro-saas-services-2026' },
+        { name: 'Smart Contract Security Auditor', href: '/innovative-micro-saas-services-2026' },
+        { name: 'AI Diagnostic Assistant', href: '/innovative-micro-saas-services-2026' },
+        { name: 'Drug Discovery AI Platform', href: '/innovative-micro-saas-services-2026' }
       ]
     },
     {

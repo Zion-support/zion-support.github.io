@@ -89,6 +89,8 @@ const AILegalDocumentAutomation = React.lazy(() => import('./pages/services/AILe
 const AIHealthcarePredictiveAnalytics = React.lazy(() => import('./pages/services/AIHealthcarePredictiveAnalytics'));
 const AIFinancialTradingRiskManagement = React.lazy(() => import('./pages/services/AIFinancialTradingRiskManagement'));
 const ComprehensiveAIServicesShowcase2025 = React.lazy(() => import('./pages/ComprehensiveAIServicesShowcase2025'));
+// Innovative Micro SaaS Services 2026
+const InnovativeMicroSAASServices2026 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2026'));
 function App() {
   return (
     <ErrorBoundary>
@@ -152,9 +154,13 @@ function App() {
                 <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
                 <Route path="/services/ai-financial-trading-risk-management" element={<AIFinancialTradingRiskManagement />} />
                 <Route path="/comprehensive-ai-services-showcase-2025" element={<ComprehensiveAIServicesShowcase2025 />} />
+                {/* Innovative Micro SaaS Services 2026 */}
+                <Route path="/innovative-micro-saas-services-2026" element={<InnovativeMicroSAASServices2026 />} />
                 {/* Emerging Tech 2030 */}
                 <Route path="/emerging-tech-2030" element={<EmergingTech2030 />} />
                 {/* New comprehensive pricing guide 2026 */}
+                <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
+                {/* Comprehensive Pricing Guide 2026 */}
                 <Route path="/comprehensive-pricing-guide-2026" element={<ComprehensivePricingGuide2026 />} />
                 {/* New comprehensive pricing guide 2027 */}
                 <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
