@@ -31,6 +31,7 @@ const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 // New pages
 const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
+const ComprehensiveServicesOverview2029 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2029'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
@@ -44,6 +45,7 @@ const AdvancedServicesShowcase2025 = React.lazy(() => import('./pages/AdvancedSe
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensivePricingGuide2029 = React.lazy(() => import('./pages/ComprehensivePricingGuide2029'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025'));
 const RevolutionaryServices2030 = React.lazy(() => import('./pages/RevolutionaryServices2030'));
 
@@ -177,11 +179,13 @@ function App() {
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
               <Route path="/pricing-guide" element={<PricingGuide />} />
+              <Route path="/comprehensive-pricing-guide-2029" element={<ComprehensivePricingGuide2029 />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
               <Route path="/services" element={<Services />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
               <Route path="/services-overview" element={<ServicesOverview />} />
+              <Route path="/comprehensive-services-overview-2029" element={<ComprehensiveServicesOverview2029 />} />
               
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />

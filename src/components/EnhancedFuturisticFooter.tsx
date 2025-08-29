@@ -66,55 +66,68 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'Revolutionary 2030',
-      icon: Rocket,
+      title: 'AI & Machine Learning',
+      icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'Quantum AI Hybrid Platform', href: '/revolutionary-services-2030' },
-        { name: 'AI Cybersecurity Platform', href: '/revolutionary-services-2030' },
-        { name: 'Autonomous AI Operations', href: '/revolutionary-services-2030' },
-        { name: 'Quantum Financial Trading', href: '/revolutionary-services-2030' },
-        { name: 'AI Healthcare Diagnostics', href: '/revolutionary-services-2030' },
-        { name: 'Smart City Platform', href: '/revolutionary-services-2030' }
+        { name: 'Enterprise AI Platform', href: '/services/enterprise-ai-platform' },
+        { name: 'AI Business Intelligence', href: '/services/ai-powered-business-intelligence' },
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform' },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform' },
+        { name: 'AI Process Automation', href: '/services/ai-process-automation-platform' }
       ]
     },
     {
-      title: 'Cloud & DevOps',
-      icon: Zap,
+      title: 'Micro SaaS Solutions',
+      icon: ShoppingCart,
       color: 'from-blue-600 to-cyan-600',
       links: [
-        { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'Customer Churn Predictor', href: '/services/ai-powered-customer-churn-predictor' },
+        { name: 'Inventory Optimization', href: '/services/intelligent-inventory-optimization-platform' },
+        { name: 'Quantum Encryption', href: '/services/quantum-resistant-encryption-manager' },
+        { name: 'Legal Document Analyzer', href: '/services/ai-powered-legal-document-analyzer' },
+        { name: 'Energy Optimization', href: '/services/sustainable-energy-optimization-platform' },
+        { name: 'AI Recruitment Intelligence', href: '/services/ai-powered-recruitment-intelligence' }
       ]
     },
     {
-      title: 'IoT & Digital Twin',
-      icon: Rocket,
+      title: 'Enterprise IT Services',
+      icon: Settings,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'Cloud Migration Strategy', href: '/services/enterprise-cloud-migration-strategy' },
+        { name: 'Zero Trust Security', href: '/services/zero-trust-security-implementation' },
+        { name: 'Data Analytics Platform', href: '/services/enterprise-data-analytics-platform' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation-consulting' },
+        { name: 'Managed IT Services', href: '/services/managed-it-services' },
+        { name: 'System Integration', href: '/services/enterprise-integration-services' }
       ]
     },
     {
-      title: 'Quantum & Emerging Tech',
+      title: 'Emerging Technologies',
+      icon: Rocket,
+      color: 'from-orange-600 to-red-600',
+      links: [
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'IoT Platform', href: '/services/iot-enterprise-platform' },
+        { name: 'Healthcare AI', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'Financial Trading AI', href: '/services/ai-financial-trading-platform' },
+        { name: 'Supply Chain Transparency', href: '/services/blockchain-supply-chain-transparency' },
+        { name: 'Smart City Solutions', href: '/revolutionary-services-2030' }
+      ]
+    },
+    {
+      title: 'Additional Services',
       icon: Crown,
       color: 'from-indigo-600 to-purple-600',
       links: [
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Onsite Support', href: '/services/onsite-support' },
+        { name: 'Green IT Solutions', href: '/services/green-it' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
         { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'Space Technology', href: '/services/space-tech' }
       ]
     }
   ];
