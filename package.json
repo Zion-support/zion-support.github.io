@@ -23,7 +23,37 @@
     "type-check:all": "npm run type-check && npm run type-check:backend",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint --fix || true",
-    "install:all": "npm install && cd server && npm install"
+    "install:all": "npm install && cd server && npm install",
+    
+    "automation:start": "pm2 start ecosystem.config.cjs --only automation",
+    "automation:stop": "pm2 stop ecosystem.config.cjs --only automation",
+    "automation:restart": "pm2 restart ecosystem.config.cjs --only automation",
+    "automation:status": "pm2 status",
+    "automation:logs": "pm2 logs",
+    "automation:monit": "pm2 monit",
+    "automation:health": "node scripts/automation-manager.js health",
+    "automation:reports": "node scripts/automation-manager.js reports",
+    
+    "ai:quality": "pm2 start ai-code-quality",
+    "ai:performance": "pm2 start intelligent-performance",
+    "ai:workflow": "pm2 start smart-dev-workflow",
+    "ai:all": "pm2 start ai-code-quality intelligent-performance smart-dev-workflow",
+    
+    "pm2:start": "pm2 start ecosystem.config.cjs",
+    "pm2:stop": "pm2 stop ecosystem.config.cjs",
+    "pm2:restart": "pm2 restart ecosystem.config.cjs",
+    "pm2:status": "pm2 status",
+    "pm2:logs": "pm2 logs",
+    "pm2:monit": "pm2 monit",
+    "pm2:delete": "pm2 delete ecosystem.config.cjs",
+    
+    "quality:analyze": "node scripts/automation/ai-code-quality-automation.cjs",
+    "performance:monitor": "node scripts/automation/intelligent-performance-automation.cjs",
+    "workflow:manage": "node scripts/automation/smart-dev-workflow-automation.cjs",
+    
+    "dev:smart": "concurrently \"npm run dev\" \"npm run ai:all\"",
+    "dev:quality": "concurrently \"npm run dev\" \"npm run ai:quality\"",
+    "dev:performance": "concurrently \"npm run dev\" \"npm run ai:performance\""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

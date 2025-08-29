@@ -179,6 +179,65 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '1800000' // 30 minutes
       }
+    },
+
+    // NEW: AI-Powered Code Quality Automation
+    {
+      name: 'ai-code-quality',
+      script: './scripts/automation/ai-code-quality-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000', // 30 minutes
+        IMPROVEMENT_INTERVAL: '3600000' // 1 hour
+      },
+      error_file: 'logs/ai-code-quality-error.log',
+      out_file: 'logs/ai-code-quality-out.log',
+      log_file: 'logs/ai-code-quality-combined.log',
+      time: true
+    },
+
+    // NEW: Intelligent Performance Optimization Automation
+    {
+      name: 'intelligent-performance',
+      script: './scripts/automation/intelligent-performance-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        MONITORING_INTERVAL: '300000', // 5 minutes
+        OPTIMIZATION_INTERVAL: '1800000', // 30 minutes
+        TESTING_INTERVAL: '3600000' // 1 hour
+      },
+      error_file: 'logs/intelligent-performance-error.log',
+      out_file: 'logs/intelligent-performance-out.log',
+      log_file: 'logs/intelligent-performance-combined.log',
+      time: true
+    },
+
+    // NEW: Smart Development Workflow Automation
+    {
+      name: 'smart-dev-workflow',
+      script: './scripts/automation/smart-dev-workflow-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        CHECK_INTERVAL: '60000', // 1 minute
+        AUTO_TEST_INTERVAL: '300000', // 5 minutes
+        AUTO_DEPLOY_INTERVAL: '1800000' // 30 minutes
+      },
+      error_file: 'logs/smart-dev-workflow-error.log',
+      out_file: 'logs/smart-dev-workflow-out.log',
+      log_file: 'logs/smart-dev-workflow-combined.log',
+      time: true
     }
   ],
 

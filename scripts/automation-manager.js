@@ -23,7 +23,12 @@ class AutomationManager {
       'quality-checks',
       'link-integrity',
       'front-maximizer',
-      'sitemap-runner'
+      'sitemap-runner',
+      
+      // NEW: Intelligent AI Automations
+      'ai-code-quality',
+      'intelligent-performance',
+      'smart-dev-workflow'
     ];
   }
 
