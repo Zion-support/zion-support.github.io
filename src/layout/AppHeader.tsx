@@ -56,9 +56,9 @@ export function AppHeader() {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
-        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Smart lead qualification' },
         { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'Search engine optimization' },
-        { name: 'AI Proofreading Studio', href: '/services/ai-proofreading-studio', description: 'Content quality assurance' }
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Process automation' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', description: 'Supply chain intelligence' }
       ]
     },
     {
@@ -69,10 +69,10 @@ export function AppHeader() {
       links: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'DevOps & Infrastructure' },
         { name: 'FinOps Optimizer', href: '/services/finops-optimizer', description: 'Cloud cost optimization' },
-        { name: 'API Monitoring SaaS', href: '/services/api-monitoring-saas', description: 'API performance tracking' },
-        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'Machine learning operations' },
         { name: 'Digital Twin', href: '/services/digital-twin', description: 'Virtual replicas & simulation' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'IoT & real-time processing' }
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'IoT & real-time processing' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'Data Analytics', href: '/services/data-analytics', description: 'Business intelligence & insights' }
       ]
     },
     {
@@ -97,10 +97,8 @@ export function AppHeader() {
       color: 'from-red-500 to-pink-500',
       links: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'Regulatory compliance automation' },
-        { name: 'Zero Trust Architecture', href: '/services/zero-trust-architecture', description: 'Advanced security framework' },
-        { name: 'Vendor Risk Management', href: '/services/vendor-risk-management', description: 'Third-party risk assessment' },
-        { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker', description: 'Compliance monitoring' },
-        { name: 'GDPR Cookie Compliance', href: '/services/gdpr-cookie-compliance', description: 'Privacy regulation compliance' },
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', description: 'Advanced security framework' },
+        { name: 'Cybersecurity Services', href: '/services/cybersecurity', description: 'Comprehensive security solutions' },
         { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity', description: 'AI-Powered Security' }
       ]
     },
@@ -110,12 +108,10 @@ export function AppHeader() {
       icon: ShoppingCart,
       color: 'from-orange-500 to-red-500',
       links: [
-        { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker', description: 'Affiliate program management' },
-        { name: 'Employee Scheduling SaaS', href: '/services/employee-scheduling-saas', description: 'Workforce management' },
-        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor', description: 'Customer retention analytics' },
-        { name: 'AI Support Helpdesk', href: '/services/ai-support-helpdesk', description: 'Automated customer support' },
-        { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor', description: 'Service level monitoring' },
-        { name: 'Micro SaaS Products', href: '/services/micro-saas', description: 'AI automations with transparent pricing' }
+        { name: 'Micro SaaS Products', href: '/services/micro-saas', description: 'AI automations with transparent pricing' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Marketing process automation' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Customer experience management' },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', description: 'Human resources automation' }
       ]
     }
   ];
