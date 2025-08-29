@@ -53,6 +53,19 @@ export default function ServicesIndex() {
               { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
               { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
               { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
+              { href: '/services/cloud-cost-optimizer', title: 'Cloud Cost Optimizer', desc: 'Autonomous FinOps for AWS, GCP, Azure.' },
+              { href: '/services/m365-security-copilot', title: 'M365 Security Copilot', desc: 'Harden Microsoft 365 with guardrails.' },
+              { href: '/services/ai-knowledgebase-agent', title: 'AI Knowledgebase Agent', desc: 'RAG assistant with sources and SDK.' },
+              { href: '/services/data-governance-observability', title: 'Data Governance & Observability', desc: 'Lineage, quality checks, and alerts.' },
+              { href: '/services/devops-release-automation', title: 'DevOps Release Automation', desc: 'Policy-driven CI/CD and safe rollbacks.' },
+              { href: '/services/fractional-cto', title: 'Fractional CTO', desc: 'Strategic tech leadership on-demand.' },
+              { href: '/services/governed-ai-agents', title: 'Governed AI Agents', desc: 'Multi-agent automation with approvals.' },
+              { href: '/services/gdpr-dsar-portal', title: 'Privacy Request Portal (DSAR)', desc: 'Manage GDPR/CPRA requests end-to-end.' },
+              { href: '/services/security-headers-csp-manager', title: 'CSP & Security Headers Manager', desc: 'Enforce CSP, HSTS, and modern headers.' },
+              { href: '/services/checkout-performance-optimizer', title: 'Checkout A/B Optimizer', desc: 'Increase conversion with safe experiments.' },
+              { href: '/services/status-incident-hub', title: 'Status & Incident Hub', desc: 'Status pages, incidents, and SLOs.' },
+              { href: '/services/ai-talent-sourcing-copilot', title: 'AI Talent Sourcing Copilot', desc: 'Sourcing, outreach, and pipeline analytics.' },
+              { href: '/services/vendor-risk-automation', title: 'Vendor Risk Automation', desc: 'Questionnaires, ratings, and remediation.' },
             ].map((s) => (
               <Link key={s.href} href={s.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
