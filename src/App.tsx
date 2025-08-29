@@ -44,9 +44,21 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 
 // Service pages that exist
-const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
-const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
-const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIEnterpriseOrchestrator = React.lazy(() => import('./pages/services/ai-enterprise-orchestrator'));
+const AIBusinessIntelligence = React.lazy(() => import('./pages/services/ai-business-intelligence'));
+const AICybersecuritySuite = React.lazy(() => import('./pages/services/ai-cybersecurity-suite'));
+const DigitalTwin = React.lazy(() => import('./pages/services/digital-twin'));
+const IoTEdge = React.lazy(() => import('./pages/services/iot-edge'));
+const BlockchainEnterpriseSolutions = React.lazy(() => import('./pages/services/blockchain-enterprise-solutions'));
+const HealthcareTech = React.lazy(() => import('./pages/services/healthcare-tech'));
+const Sustainability = React.lazy(() => import('./pages/services/sustainability'));
+const MicroSAASSolutions = React.lazy(() => import('./pages/services/micro-saas-solutions'));
+const AIAutoEmailResponder = React.lazy(() => import('./pages/services/ai-auto-email-responder'));
+const LLMContentStudio = React.lazy(() => import('./pages/services/llm-content-studio'));
+const FinOpsAdvisor = React.lazy(() => import('./pages/services/finops-advisor'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/ai-supply-chain-optimization'));
+const DigitalTransformation = React.lazy(() => import('./pages/services/digital-transformation'));
+const CloudDevOps = React.lazy(() => import('./pages/services/cloud-devops'));
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = React.memo(() => (
@@ -126,6 +138,21 @@ const App = React.memo(() => {
     { path: '/services/cloud-devops', element: <CloudDevOps /> },
     { path: '/services/digital-transformation', element: <DigitalTransformation /> },
     { path: '/services/ai-supply-chain-optimization', element: <AISupplyChainOptimization /> },
+    { path: '/services/ai-enterprise-orchestrator', element: <AIEnterpriseOrchestrator /> },
+    { path: '/services/ai-business-intelligence', element: <AIBusinessIntelligence /> },
+    { path: '/services/ai-cybersecurity-suite', element: <AICybersecuritySuite /> },
+    { path: '/services/digital-twin', element: <DigitalTwin /> },
+    { path: '/services/iot-edge', element: <IoTEdge /> },
+    { path: '/services/blockchain-enterprise-solutions', element: <BlockchainEnterpriseSolutions /> },
+    { path: '/services/healthcare-tech', element: <HealthcareTech /> },
+    { path: '/services/sustainability', element: <Sustainability /> },
+    { path: '/services/micro-saas-solutions', element: <MicroSAASSolutions /> },
+    { path: '/services/ai-auto-email-responder', element: <AIAutoEmailResponder /> },
+            { path: '/services/llm-content-studio', element: <LLMContentStudio /> },
+        { path: '/services/finops-advisor', element: <FinOpsAdvisor /> },
+        { path: '/services/ai-supply-chain-optimization', element: <AISupplyChainOptimization /> },
+        { path: '/services/digital-transformation', element: <DigitalTransformation /> },
+        { path: '/services/cloud-devops', element: <CloudDevOps /> },
   ], []);
 
   // Memoize the route elements to prevent unnecessary re-renders
