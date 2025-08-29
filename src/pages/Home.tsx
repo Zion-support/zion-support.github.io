@@ -54,48 +54,64 @@ const serviceCategories = [
     description: "Cutting-edge artificial intelligence services for business transformation",
     icon: "🤖",
     href: "/ai-services",
-    count: 15,
+    count: 25,
     color: "from-cyan-500 to-blue-600"
+  },
+  {
+    name: "Cybersecurity",
+    description: "Advanced AI-powered security protocols and threat protection systems",
+    icon: "🔒",
+    href: "/services/ai-cybersecurity-suite",
+    count: 12,
+    color: "from-red-500 to-orange-600"
   },
   {
     name: "Cloud & DevOps",
     description: "Scalable cloud infrastructure and automated deployment solutions",
     icon: "☁️",
     href: "/services/cloud-devops",
-    count: 12,
+    count: 15,
     color: "from-blue-500 to-purple-600"
-  },
-  {
-    name: "Cybersecurity",
-    description: "Advanced security protocols and threat protection systems",
-    icon: "🔒",
-    href: "/services/ai-compliance-copilot",
-    count: 8,
-    color: "from-red-500 to-orange-600"
   },
   {
     name: "Digital Transformation",
     description: "End-to-end business process modernization and optimization",
     icon: "🚀",
     href: "/services/digital-transformation",
-    count: 10,
+    count: 18,
     color: "from-green-500 to-cyan-600"
   },
   {
-    name: "Infrastructure",
-    description: "Robust IT infrastructure and network management solutions",
-    icon: "🏗️",
-    href: "/services/it-infrastructure",
-    count: 6,
+    name: "IoT & Edge Computing",
+    description: "Smart devices, networks, and edge AI processing solutions",
+    icon: "🌐",
+    href: "/services/iot-edge",
+    count: 10,
     color: "from-purple-500 to-pink-600"
   },
   {
-    name: "Consulting",
-    description: "Strategic technology consulting and implementation guidance",
-    icon: "💡",
-    href: "/services/it-consulting",
-    count: 9,
+    name: "Quantum & Emerging Tech",
+    description: "Quantum computing, blockchain, and space technology solutions",
+    icon: "⚡",
+    href: "/services/quantum-computing",
+    count: 8,
     color: "from-orange-500 to-green-600"
+  },
+  {
+    name: "Industry Solutions",
+    description: "Specialized solutions for healthcare, finance, manufacturing, and retail",
+    icon: "🏭",
+    href: "/services/healthcare-tech",
+    count: 12,
+    color: "from-indigo-500 to-purple-600"
+  },
+  {
+    name: "Revolutionary 2030",
+    description: "Future technology solutions and autonomous business platforms",
+    icon: "🌟",
+    href: "/revolutionary-services-2030",
+    count: 20,
+    color: "from-yellow-500 to-orange-600"
   }
 ];
 
