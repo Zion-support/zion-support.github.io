@@ -57,6 +57,9 @@ export function AppHeader() {
     { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Zap, description: 'Intelligent process automation' },
+    { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform', icon: Heart, description: 'AI-powered CX platform' },
+    { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain optimization' },
   ];
 
   const servicesCategories = [
@@ -79,7 +82,10 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', description: 'Intelligent process automation' },
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform', description: 'AI-powered CX platform' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', description: 'Supply chain optimization' }
       ]
     },
     {
@@ -122,7 +128,10 @@ export function AppHeader() {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI content generation' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', description: 'Intelligent process automation' },
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform', description: 'AI-powered CX platform' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', description: 'Supply chain optimization' }
       ]
     },
     {
