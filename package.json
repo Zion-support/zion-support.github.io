@@ -103,7 +103,20 @@
     "linting:start": "npm run linting:orchestrator continuous",
     "linting:status": "npm run linting:orchestrator status",
     "linting:check": "npm run linting:orchestrator check",
-    "linting:fix": "npm run linting:orchestrator fix"
+    "linting:fix": "npm run linting:orchestrator fix",
+    "pm2:start": "node pm2-automation-launcher.cjs start",
+    "pm2:stop": "node pm2-automation-launcher.cjs stop",
+    "pm2:restart": "node pm2-automation-launcher.cjs restart",
+    "pm2:reload": "node pm2-automation-launcher.cjs reload",
+    "pm2:delete": "node pm2-automation-launcher.cjs delete",
+    "pm2:status": "node pm2-automation-launcher.cjs status",
+    "pm2:logs": "node pm2-automation-launcher.cjs logs",
+    "pm2:monitor": "node pm2-automation-launcher.cjs monitor",
+    "pm2:startup": "node pm2-automation-launcher.cjs startup",
+    "pm2:health": "node pm2-automation-launcher.cjs health",
+    "pm2:ecosystem": "pm2 start ecosystem.config.cjs",
+    "pm2:save": "pm2 save",
+    "pm2:startup:setup": "pm2 startup"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
