@@ -1,5 +1,5 @@
-import React, { useEffect, useCallback } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface PerformanceMetrics {
   fcp: number;
@@ -10,56 +10,28 @@ interface PerformanceMetrics {
 }
 
 export function PerformanceOptimizer() {
-  const location = useLocation();
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  // Preload critical resources
-  const preloadCriticalResources = useCallback(() => {
-    const criticalPaths = [
-      '/services',
-      '/ai-services',
-      '/contact',
-      '/about'
-    ];
-
-    criticalPaths.forEach(path => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = path;
-      document.head.appendChild(link);
-    });
-  }, []);
-
-  // Monitor Core Web Vitals
-  const monitorCoreWebVitals = useCallback(() => {
+  useEffect(() => {
+    // Performance monitoring
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
-            console.log('FCP:', entry.startTime);
-            // Send to analytics
-            if (entry.startTime < 1800) {
-              console.log('✅ FCP is good');
-            } else {
-              console.log('⚠️ FCP needs improvement');
-            }
-          }
-        });
+        const fcp = entries[entries.length - 1];
+        if (fcp) {
+          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
+        }
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          console.log('LCP:', lastEntry.startTime);
-          if (lastEntry.startTime < 2500) {
-            console.log('✅ LCP is good');
-          } else {
-            console.log('⚠️ LCP needs improvement');
-          }
+        const lcp = entries[entries.length - 1];
+        if (lcp) {
+          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
         }
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -67,106 +39,154 @@ export function PerformanceOptimizer() {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          const fid = entry.processingStart - entry.startTime;
-          if (fid < 100) {
-            console.log('✅ FID is good');
-          } else {
-            console.log('⚠️ FID needs improvement');
-          }
-        });
+        const fid = entries[entries.length - 1];
+        if (fid) {
+          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
+        }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
+        for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+            clsValue += (entry as any).value;
           }
-        });
-        console.log('CLS:', clsValue);
-        if (clsValue < 0.1) {
-          console.log('✅ CLS is good');
-        } else {
-          console.log('⚠️ CLS needs improvement');
         }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+      }
     }
-  }, []);
 
-  // Optimize images
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      
-      // Add decoding="async" for better performance
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-  }, []);
-
-  // Add intersection observer for animations
-  const setupIntersectionObserver = useCallback(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-        }
+    // Lazy loading for images
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              imageObserver.unobserve(img);
+            }
+          }
+        });
       });
-    }, observerOptions);
 
-    // Observe elements with data-animate attribute
-    const animatedElements = document.querySelectorAll('[data-animate]');
-    animatedElements.forEach((el) => observer.observe(el));
+      document.querySelectorAll('img[data-src]').forEach((img) => {
+        imageObserver.observe(img);
+      });
+    }
+
+    // Preload critical resources
+    const preloadLinks = [
+      { rel: 'preload', href: '/fonts/Orbitron-Bold.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+      { rel: 'preload', href: '/fonts/Rajdhani-Medium.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
+    ];
+
+    preloadLinks.forEach((link) => {
+      const linkElement = document.createElement('link');
+      Object.assign(linkElement, link);
+      document.head.appendChild(linkElement);
+    });
+
+    // Service Worker registration for PWA features
+    if ('serviceWorker' in navigator && import.meta.env.PROD) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+
+    // Show performance metrics after a delay
+    const timer = setTimeout(() => setIsVisible(true), 2000);
+    return () => clearTimeout(timer);
   }, []);
 
-  // Route change optimization
-  useEffect(() => {
-    // Preload critical resources on route change
-    preloadCriticalResources();
+  const getPerformanceScore = (metrics: PerformanceMetrics): number => {
+    let score = 100;
     
-    // Optimize images on route change
-    setTimeout(optimizeImages, 100);
+    if (metrics.fcp > 1800) score -= 20;
+    if (metrics.lcp > 2500) score -= 20;
+    if (metrics.fid > 100) score -= 20;
+    if (metrics.cls > 0.1) score -= 20;
+    if (metrics.ttfb > 600) score -= 20;
     
-    // Setup intersection observer
-    setupIntersectionObserver();
-  }, [location.pathname, preloadCriticalResources, optimizeImages, setupIntersectionObserver]);
+    return Math.max(0, score);
+  };
 
-  // Initial setup
-  useEffect(() => {
-    monitorCoreWebVitals();
-    preloadCriticalResources();
-    optimizeImages();
-    setupIntersectionObserver();
+  const getPerformanceColor = (score: number): string => {
+    if (score >= 90) return 'text-green-400';
+    if (score >= 70) return 'text-yellow-400';
+    return 'text-red-400';
+  };
 
-    // Add performance monitoring to window for debugging
-    (window as any).performanceMetrics = {
-      getMetrics: () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        return {
-          ttfb: navigation.responseStart - navigation.requestStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          totalTime: navigation.loadEventEnd - navigation.navigationStart
-        };
-      }
-    };
-  }, [monitorCoreWebVitals, preloadCriticalResources, optimizeImages, setupIntersectionObserver]);
+  if (!isVisible || !metrics) return null;
 
-  return null; // This component doesn't render anything
+  const score = getPerformanceScore(metrics);
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-md border border-zion-cyan/30 rounded-2xl p-4 max-w-sm z-50"
+      >
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
+          >
+            ×
+          </button>
+        </div>
+        
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span className="text-gray-300">Overall Score:</span>
+            <span className={`font-bold ${getPerformanceColor(score)}`}>{score}/100</span>
+          </div>
+          
+          <div className="space-y-1">
+            <div className="flex justify-between text-xs">
+              <span className="text-gray-400">FCP:</span>
+              <span className={metrics.fcp < 1800 ? 'text-green-400' : 'text-red-400'}>
+                {Math.round(metrics.fcp)}ms
+              </span>
+            </div>
+            <div className="flex justify-between text-xs">
+              <span className="text-gray-400">LCP:</span>
+              <span className={metrics.lcp < 2500 ? 'text-green-400' : 'text-red-400'}>
+                {Math.round(metrics.lcp)}ms
+              </span>
+            </div>
+            <div className="flex justify-between text-xs">
+              <span className="text-gray-400">FID:</span>
+              <span className={metrics.fid < 100 ? 'text-green-400' : 'text-red-400'}>
+                {Math.round(metrics.fid)}ms
+              </span>
+            </div>
+            <div className="flex justify-between text-xs">
+              <span className="text-gray-400">CLS:</span>
+              <span className={metrics.cls < 0.1 ? 'text-green-400' : 'text-red-400'}>
+                {metrics.cls.toFixed(3)}
+              </span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </AnimatePresence>
+  );
 }
