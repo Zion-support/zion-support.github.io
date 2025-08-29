@@ -13,7 +13,7 @@ import {
   EyeOff,
   RefreshCw,
   Zap,
-  Security,
+  ShieldCheck,
   Bug,
   Network,
   Database
