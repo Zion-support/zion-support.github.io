@@ -161,13 +161,35 @@ export default function ComprehensiveServicesOverview() {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
     
+    // Price filter
+    if (priceRange !== 'all') {
+      filtered = filtered.filter(service => {
+        const price = service.pricing?.basic || 0;
+        switch (priceRange) {
+          case 'under-100':
+            return price < 100;
+          case '100-500':
+            return price >= 100 && price < 500;
+          case '500-1000':
+            return price >= 500 && price < 1000;
+          case 'over-1000':
+            return price >= 1000;
+          default:
+            return true;
+        }
+      });
+    }
     // Support level filter
     if (selectedSupportLevel !== 'all') {
       filtered = filtered.filter(service => service.supportLevel === selectedSupportLevel);
     }
     
     return filtered;
-  }, [searchQuery, selectedCategory, selectedSupportLevel]);
+  }, [searchQuery, selectedCategory, priceRange, selectedSupportLevel]);
+
+  const getPriceValue = (service: any) => {
+    return service.pricing?.basic || 0;
+  };
 
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
   const supportLevels = Array.from(new Set(ALL_SERVICES.map(service => service.supportLevel)));

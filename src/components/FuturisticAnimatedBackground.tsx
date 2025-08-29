@@ -68,6 +68,7 @@ export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackground
       });
     };
 
+
     const animate = () => {
       // Clear canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
