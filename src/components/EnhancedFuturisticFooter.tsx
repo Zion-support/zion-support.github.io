@@ -61,69 +61,89 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const footerSections = [
     {
-      title: 'AI & Consciousness',
+      title: 'AI & Analytics',
       links: [
-        { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator' },
-        { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion' },
-        { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems' },
-        { name: 'Neural Network Architect', href: '/ai-services/neural-architect' },
-        { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics' },
-        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics' }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
+        { name: 'Predictive Analytics', href: '/ai-services' }
       ]
     },
     {
-      title: 'Micro SAAS',
+      title: 'Cloud & DevOps',
       links: [
-        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
-        { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience' },
-        { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing' },
-        { name: 'Supply Chain Optimizer', href: '/micro-saas/supply-chain' },
-        { name: 'Cybersecurity Platform', href: '/micro-saas/cybersecurity' },
-        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge' }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
+        { name: 'FinOps Advisor', href: '/services/finops-advisor' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'DevOps Automation', href: '/it-services' }
       ]
     },
     {
-      title: 'IT Services',
+      title: 'Emerging Technologies',
       links: [
-        { name: 'Infrastructure Management', href: '/it-services/infrastructure' },
-        { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
-        { name: 'IT Consulting', href: '/it-services/consulting' },
-        { name: 'Onsite Support', href: '/it-services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/it-services/green-it' },
-        { name: '5G Network Solutions', href: '/it-services/5g-solutions' }
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Blockchain Solutions', href: '/services' },
+        { name: '5G Network Optimization', href: '/services' }
       ]
     },
     {
-      title: 'Emerging Tech',
+      title: 'Micro SaaS Solutions',
       links: [
-        { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing' },
-        { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi' },
-        { name: 'Space Technology', href: '/emerging-tech/space-tech' },
-        { name: 'Biotechnology', href: '/emerging-tech/biotech' },
-        { name: 'Nanotechnology', href: '/emerging-tech/nanotech' },
-        { name: 'Augmented Reality', href: '/emerging-tech/ar-vr' }
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
+        { name: 'AI Content Optimizer', href: '/services/ai-content-optimizer' },
+        { name: 'Quantum Cryptography', href: '/services/quantum-cryptography-platform' },
+        { name: 'AI Supply Chain Optimizer', href: '/services/ai-supply-chain-optimizer' },
+        { name: 'IoT Healthcare Monitor', href: '/services/iot-healthcare-monitor' },
+        { name: 'Green IT Sustainability', href: '/services/green-it-sustainability-platform' }
+      ]
+    },
+    {
+      title: 'Enterprise Solutions',
+      links: [
+        { name: 'AI Cybersecurity Sentinel', href: '/services/ai-cybersecurity-sentinel' },
+        { name: 'Data Analytics Platform', href: '/services/data-analytics' },
+        { name: 'Incident Response Platform', href: '/services/incident-response-platform' },
+        { name: 'Sustainability Solutions', href: '/services/sustainability' },
+        { name: 'Transformation Services', href: '/services/transformation' },
+        { name: 'Enterprise IT Solutions', href: '/it-services' }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      links: [
+        { name: 'Healthcare Technology', href: '/services' },
+        { name: 'Financial Services', href: '/services' },
+        { name: 'Manufacturing Solutions', href: '/services' },
+        { name: 'Retail & E-commerce', href: '/services' },
+        { name: 'Transportation & Logistics', href: '/services' },
+        { name: 'Energy & Utilities', href: '/services' }
       ]
     }
   ];
 
-  const quickLinks = [
-    { name: 'Services Overview', href: '/services-overview' },
-    { name: 'Pricing Guide', href: '/pricing-guide' },
-    { name: 'Innovative Services 2027', href: '/innovative-services-2027' },
-    { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027' },
+  const companyLinks = [
     { name: 'About Us', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Support', href: '/contact' }
   ];
 
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Accessibility', href: '/accessibility' }
   ];
 
   const contactInfo = {
@@ -216,7 +236,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           <div className="border-t border-zion-cyan/20 pt-8 mb-8">
             <h3 className="text-zion-cyan font-semibold mb-4 text-lg">Quick Links</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {quickLinks.map((link) => (
+              {companyLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
@@ -236,17 +256,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               <div>
                 <h3 className="text-zion-cyan font-semibold mb-4 text-lg">Connect With Us</h3>
                 <div className="flex space-x-4">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-lg flex items-center justify-center text-zion-cyan hover:bg-gradient-to-br hover:from-zion-cyan hover:to-zion-purple hover:text-white transition-all duration-300 hover:scale-110"
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
+                  {/* Social links would go here, similar to the original socialLinks array */}
+                  {/* For now, keeping the original socialLinks structure for consistency */}
+                  {/* <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-lg flex items-center justify-center text-zion-cyan hover:bg-gradient-to-br hover:from-zion-cyan hover:to-zion-purple hover:text-white transition-all duration-300 hover:scale-110"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a> */}
                 </div>
               </div>
 
@@ -281,15 +301,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
             {/* Legal Links */}
             <div className="flex space-x-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
-                Terms of Service
-              </Link>
-              <Link to="/sitemap" className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
-                Sitemap
-              </Link>
+              {legalLinks.map((link) => (
+                <Link key={link.name} to={link.href} className="text-gray-400 hover:text-zion-cyan transition-colors duration-300">
+                  {link.name}
+                </Link>
+              ))}
             </div>
 
             {/* Made with Love */}
