@@ -106,6 +106,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
         { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
         { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' }
       ]

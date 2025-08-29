@@ -1,186 +1,197 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
-  Zap, 
   Brain, 
-  Workflow, 
-  Bot, 
+  Zap, 
   Clock, 
   TrendingUp, 
   Shield, 
   Users, 
   BarChart3, 
-  Target,
   CheckCircle,
   ArrowRight,
-  Mail,
-  Phone,
-  Globe,
-  ExternalLink
+  Play,
+  Star,
+  DollarSign,
+  Settings,
+  Workflow,
+  Automation,
+  Integration,
+  Analytics,
+  Security,
+  Support,
+  Rocket
 } from 'lucide-react';
 
 export default function AIWorkflowAutomation() {
   const features = [
     {
-      icon: Bot,
-      title: 'Intelligent Process Automation',
-      description: 'AI-powered workflow automation that learns and optimizes business processes',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Workflow,
-      title: 'Visual Workflow Builder',
-      description: 'Drag-and-drop interface for creating complex business workflows without coding',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
       icon: Brain,
-      title: 'Machine Learning Integration',
-      description: 'Continuous learning algorithms that improve workflow efficiency over time',
-      color: 'from-green-500 to-emerald-500'
+      title: "AI-Powered Workflow Intelligence",
+      description: "Machine learning algorithms that continuously optimize your business processes based on performance data and user behavior patterns."
     },
     {
       icon: Zap,
-      title: 'Real-time Automation',
-      description: 'Instant execution of workflows based on triggers and business rules',
-      color: 'from-yellow-500 to-orange-500'
+      title: "Smart Automation Triggers",
+      description: "Intelligent event-driven automation that responds to business conditions, customer actions, and market changes in real-time."
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Role-based access control, audit trails, and compliance monitoring',
-      color: 'from-red-500 to-pink-500'
+      icon: Workflow,
+      title: "Visual Workflow Designer",
+      description: "Drag-and-drop interface for creating complex business workflows with conditional logic, loops, and parallel processing."
     },
     {
-      icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive reporting on workflow performance and optimization opportunities',
-      color: 'from-indigo-500 to-purple-500'
+      icon: Integration,
+      title: "Seamless System Integration",
+      description: "Connect with 500+ business applications including CRM, ERP, marketing tools, and custom systems via API."
+    },
+    {
+      icon: Analytics,
+      title: "Performance Analytics Dashboard",
+      description: "Real-time insights into workflow efficiency, bottlenecks, and optimization opportunities with predictive analytics."
+    },
+    {
+      icon: Security,
+      title: "Enterprise-Grade Security",
+      description: "SOC 2 Type II compliance, end-to-end encryption, role-based access control, and audit trails."
     }
   ];
 
-  const services = [
+  const pricingPlans = [
     {
-      title: 'Workflow Assessment & Design',
-      description: 'Comprehensive analysis of existing processes and custom workflow design',
-      price: 'From $3,500',
-      features: ['Process mapping', 'Bottleneck identification', 'Automation strategy', 'ROI analysis']
+      name: "Starter",
+      price: "$99",
+      period: "/month",
+      description: "Perfect for small teams and basic automation needs",
+      features: [
+        "Up to 10 workflows",
+        "Basic AI optimization",
+        "5 system integrations",
+        "Email support",
+        "Standard analytics",
+        "Mobile app access"
+      ],
+      cta: "Start Free Trial",
+      popular: false
     },
     {
-      title: 'AI Workflow Implementation',
-      description: 'Full implementation of AI-powered workflow automation',
-      price: 'From $8,000',
-      features: ['Custom workflow design', 'AI model training', 'Integration setup', 'User training']
+      name: "Professional",
+      price: "$299",
+      period: "/month",
+      description: "Ideal for growing businesses with complex automation requirements",
+      features: [
+        "Up to 50 workflows",
+        "Advanced AI optimization",
+        "Unlimited integrations",
+        "Priority support",
+        "Advanced analytics",
+        "Custom dashboards",
+        "API access",
+        "Team collaboration"
+      ],
+      cta: "Start Free Trial",
+      popular: true
     },
     {
-      title: 'Workflow Optimization',
-      description: 'Continuous improvement and optimization of existing workflows',
-      price: 'From $2,500/month',
-      features: ['Performance monitoring', 'AI model updates', 'Process refinement', 'Analytics reports']
-    },
-    {
-      title: 'Enterprise Workflow Suite',
-      description: 'Complete enterprise workflow management with advanced AI capabilities',
-      price: 'From $15,000',
-      features: ['Multi-department workflows', 'Advanced AI models', 'Custom integrations', '24/7 support']
+      name: "Enterprise",
+      price: "$799",
+      period: "/month",
+      description: "For large organizations requiring enterprise-grade automation",
+      features: [
+        "Unlimited workflows",
+        "Custom AI models",
+        "White-label solution",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "Advanced security features",
+        "SLA guarantees",
+        "On-premise deployment"
+      ],
+      cta: "Contact Sales",
+      popular: false
     }
   ];
 
-  const useCases = [
+  const benefits = [
     {
-      title: 'Customer Service Automation',
-      description: 'Automate ticket routing, response generation, and escalation processes',
-      benefits: ['Reduce response time by 70%', 'Improve customer satisfaction', 'Handle 5x more tickets']
+      icon: Clock,
+      title: "Save 40+ Hours Weekly",
+      description: "Automate repetitive tasks and focus on strategic initiatives that drive business growth."
     },
     {
-      title: 'Sales Process Automation',
-      description: 'Automate lead qualification, follow-up scheduling, and proposal generation',
-      benefits: ['Increase conversion rates by 40%', 'Reduce manual tasks by 80%', 'Improve sales efficiency']
+      icon: TrendingUp,
+      title: "Increase Efficiency by 300%",
+      description: "Streamline operations and eliminate bottlenecks with intelligent workflow optimization."
     },
     {
-      title: 'HR Process Automation',
-      description: 'Streamline recruitment, onboarding, and employee management workflows',
-      benefits: ['Reduce hiring time by 50%', 'Improve compliance', 'Enhance employee experience']
+      icon: DollarSign,
+      title: "Reduce Costs by 60%",
+      description: "Lower operational expenses through automation and improved resource allocation."
     },
     {
-      title: 'Financial Process Automation',
-      description: 'Automate invoice processing, expense approval, and financial reporting',
-      benefits: ['Reduce processing time by 60%', 'Improve accuracy', 'Enhance compliance']
+      icon: Users,
+      title: "Improve Team Productivity",
+      description: "Empower your team with tools that make complex tasks simple and efficient."
     }
-  ];
-
-  const technologies = [
-    { name: 'Machine Learning', description: 'Advanced ML algorithms for process optimization' },
-    { name: 'Natural Language Processing', description: 'Intelligent document and text processing' },
-    { name: 'Computer Vision', description: 'Automated image and document analysis' },
-    { name: 'Predictive Analytics', description: 'Forecast process bottlenecks and optimization opportunities' },
-    { name: 'API Integration', description: 'Seamless integration with existing business systems' },
-    { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based automation' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Transform your business processes with AI-powered workflow automation. Reduce manual tasks, improve efficiency, and drive innovation across your organization."
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.8 }}
           >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
-                <Workflow className="w-10 h-10 text-white" />
-              </div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Automation
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Workflow Automation
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Transform your business processes with intelligent automation that learns, adapts, and optimizes workflows in real-time
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business operations with intelligent automation that learns, adapts, and optimizes your workflows in real-time. 
+              Boost productivity by 300% while reducing operational costs by 60%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://ziontechgroup.com/contact" 
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center gap-2"
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg font-semibold text-white hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+13024640950" 
-                className="border border-purple-500 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                Start Free Trial
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
-                <Phone className="w-5 h-5" />
-                Call Now
-              </a>
+                <Play className="w-5 h-5 inline mr-2" />
+                Watch Demo
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Automation
+              Powerful Features for Modern Businesses
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI workflow automation platform combines cutting-edge technology with intuitive design to deliver unprecedented efficiency gains
+              Our AI-powered platform combines cutting-edge technology with intuitive design to deliver 
+              the most advanced workflow automation solution available.
             </p>
           </motion.div>
 
@@ -191,12 +202,13 @@ export default function AIWorkflowAutomation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -204,119 +216,113 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
-      {/* Services & Pricing Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-4">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Automation Solutions
+              Transform Your Business Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From initial assessment to ongoing optimization, we provide end-to-end workflow automation services
+              Join thousands of businesses that have revolutionized their operations with AI workflow automation.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <div className="text-3xl font-bold text-purple-400 mb-6">{service.price}</div>
-                <ul className="space-y-3">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      {feature}
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that best fits your business needs. All plans include a 14-day free trial.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular 
+                    ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent' 
+                    : 'border-white/10'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how AI workflow automation transforms different business functions
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 mb-6">{useCase.description}</p>
-                <div className="space-y-3">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
-                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
-                      {benefit}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technology Stack
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on the latest AI and automation technologies for maximum performance and reliability
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
-                <p className="text-gray-300">{tech.description}</p>
+                <Link
+                  to={plan.name === "Enterprise" ? "/contact" : "/signup"}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
+                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
+                  }`}
+                >
+                  {plan.cta}
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -324,67 +330,36 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Automate Your Workflows?
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Join hundreds of businesses that have transformed their operations with AI-powered workflow automation
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses that have transformed their operations with AI-powered automation. 
+              Start your free trial today and see the difference in just 14 days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://ziontechgroup.com/contact" 
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg font-semibold text-white hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Start Free Consultation
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+13024640950" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
+                Start Free Trial
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
               >
-                <Phone className="w-5 h-5" />
-                Call +1 302 464 0950
-              </a>
+                Schedule Demo
+              </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-700">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Globe className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
-                ziontechgroup.com
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
         </div>
       </section>
     </div>

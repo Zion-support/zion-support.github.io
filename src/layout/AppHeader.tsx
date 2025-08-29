@@ -78,7 +78,10 @@ export function AppHeader() {
     { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', icon: Target, description: 'AI-powered project optimization' },
     { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', icon: Shield, description: 'Advanced threat detection' },
     { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', icon: DollarSign, description: 'AI-powered trading' },
-    { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, description: 'Healthcare analytics platform' }
+    { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, description: 'Healthcare analytics platform' },
+    { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Settings, description: 'Intelligent workflow automation' },
+    { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', icon: Users, description: 'Customer experience optimization' },
+    { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain intelligence' }
   ];
 
   const servicesCategories = [
@@ -109,7 +112,10 @@ export function AppHeader() {
         { name: 'AI Project Management Platform', href: '/services/ai-project-management-platform', description: 'AI-powered project optimization' },
         { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection', description: 'Advanced threat detection' },
         { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform', description: 'AI-powered trading' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', description: 'Healthcare analytics platform' }
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', description: 'Healthcare analytics platform' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', description: 'Intelligent workflow automation' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', description: 'Customer experience optimization' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', description: 'Supply chain intelligence' }
       ]
 =======
     { 

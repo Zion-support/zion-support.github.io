@@ -106,6 +106,9 @@ const AICustomerChurnPrediction = React.lazy(() => import('./pages/services/AICu
 const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/AIFinancialFraudDetection'));
 const AIHRTalentAcquisition = React.lazy(() => import('./pages/services/AIHRTalentAcquisition'));
 
+// New innovative services
+const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
+
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
@@ -331,6 +334,9 @@ function App() {
               <Route path="/services/ai-project-management-platform" element={<AIProjectManagementPlatform />} />
               <Route path="/services/ai-cybersecurity-threat-detection" element={<AICybersecurityThreatDetection />} />
               <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+              
+              {/* New innovative service routes */}
+              <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
               
               {/* New Innovative Service Routes */}
               <Route path="/services/ai-content-generation-platform" element={<AIContentGenerationPlatform />} />
