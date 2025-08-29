@@ -38,6 +38,13 @@ const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'))
 const Community = React.lazy(() => import('./pages/Community'));
 const Demo = React.lazy(() => import('./pages/Demo'));
 
+// Missing pages
+const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/RevolutionaryServicesShowcase2030'));
+const PricingGuide2030 = React.lazy(() => import('./pages/PricingGuide2030'));
+const Documentation = React.lazy(() => import('./pages/Documentation'));
+const Help = React.lazy(() => import('./pages/Help'));
+
 // Import real pages
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
@@ -71,7 +78,6 @@ const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICu
 const SmartContractRiskScanner = React.lazy(() => import('./pages/services/SmartContractRiskScanner'));
 
 // Simple placeholder pages for missing ones
-const Documentation = React.lazy(() => import('./pages/Documentation'));
 const Training = React.lazy(() => import('./pages/Training'));
 const Support = React.lazy(() => import('./pages/Support'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility'));
@@ -191,6 +197,13 @@ function App() {
                 
                 {/* Service Pages */}
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+
+                {/* Missing Pages */}
+                <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
+                <Route path="/pricing-2030" element={<PricingGuide2030 />} />
+                <Route path="/docs" element={<Documentation />} />
+                <Route path="/help" element={<Help />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
