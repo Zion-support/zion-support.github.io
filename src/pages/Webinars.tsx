@@ -381,7 +381,10 @@ const Webinars: React.FC = () => {
                       <webinar.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
-                  
+                </div>
+                
+                {/* Content */}
+                <div className="p-6">
                   <div className="mb-4">
                     <span className="inline-block px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs font-medium rounded-full">
                       {webinar.category}
@@ -437,22 +440,22 @@ const Webinars: React.FC = () => {
                     Register Now
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
-                </motion.div>
-              ))}
-            </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Past Webinars */}
-      {pastWebinars.length > 0 && (
+      {upcomingWebinars.length > 0 && (
         <section className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
-              Past Webinars
+              Upcoming Webinars
             </h2>
             <div className="space-y-6">
-              {pastWebinars.map((webinar, index) => (
+              {upcomingWebinars.map((webinar, index) => (
                 <motion.div
                   key={webinar.id}
                   initial={{ opacity: 0, x: -20 }}
@@ -482,7 +485,90 @@ const Webinars: React.FC = () => {
                           </div>
                           <div className="flex items-center gap-1">
                             <Users className="w-3 h-3" />
-                            {webinar.attendees.toLocaleString()}
+                            {webinar.attendees ? webinar.attendees.toLocaleString() : 'TBD'}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p className="text-gray-400 mb-4">
+                        {webinar.description}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {webinar.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-2 py-1 bg-slate-700/30 text-gray-300 text-xs rounded"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-6 h-6 bg-slate-700 rounded-full flex items-center justify-center">
+                          <Users className="w-3 h-3 text-gray-400" />
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          <span className="text-white font-medium">{webinar.speaker}</span> • {webinar.speakerTitle}
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4">
+                        <button className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300 group">
+                          <Play className="w-4 h-4" />
+                          Register Now
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Past Webinars */}
+      {webinars.filter(w => w.recording).length > 0 && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">
+              Past Webinars
+            </h2>
+            <div className="space-y-6">
+              {webinars.filter(w => w.recording).map((webinar, index) => (
+                <motion.div
+                  key={webinar.id}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  className="group bg-slate-800/30 rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300 hover:bg-slate-800/50"
+                >
+                  <div className="flex items-start gap-6">
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${webinar.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                      <webinar.icon className="w-8 h-8 text-white" />
+                    </div>
+                    
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between mb-2">
+                        <div>
+                          <span className="inline-block px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm font-medium rounded-full mb-3">
+                            {webinar.category}
+                          </span>
+                          <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300 mb-2">
+                            {webinar.title}
+                          </h3>
+                        </div>
+                        <div className="text-right text-sm text-gray-500">
+                          <div className="flex items-center gap-1 mb-1">
+                            <Calendar className="w-3 h-3" />
+                            {new Date(webinar.date).toLocaleDateString()}
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Users className="w-3 h-3" />
+                            {webinar.attendees ? webinar.attendees.toLocaleString() : 'TBD'}
                           </div>
                         </div>
                       </div>
