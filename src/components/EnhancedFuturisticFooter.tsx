@@ -176,14 +176,7 @@ export function EnhancedFuturisticFooter() {
       ]
     }
   ];
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-  ];
+  
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -561,7 +554,6 @@ export function EnhancedFuturisticFooter() {
       >
         <ArrowUpRight className="w-5 h-5 rotate-45" />
       </motion.button>
->>>>>>> 08de59b94539af873e34f3b2b217c17990522c20
     </footer>
   );
 }

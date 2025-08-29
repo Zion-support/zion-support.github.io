@@ -38,7 +38,6 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: false },
   ];
   const services = [
-=======
     { 
       name: 'Comprehensive Services 2026', 
       href: '/comprehensive-services-showcase-2026', 
