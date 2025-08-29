@@ -1,6 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { innovativeMicroSaasServices2025, innovativeITInfrastructureServices2025, innovativeAIServices2025 } from '../data/innovativeMicroSAASServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSAASServices2025';
 
 const ComprehensivePricingGuide2025: React.FC = () => {
   return (
@@ -126,7 +126,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {innovativeMicroSaasServices2025.map((service, index) => (
+                  {INNOVATIVE_MICRO_SAAS_SERVICES_2025.map((service, index) => (
                     <tr key={service.id} className={`border-b border-slate-600/30 ${index % 2 === 0 ? 'bg-slate-700/20' : ''}`}>
                       <td className="p-6">
                         <div>
@@ -195,7 +195,8 @@ const ComprehensivePricingGuide2025: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {innovativeITInfrastructureServices2025.map((service) => (
+              {/* IT Infrastructure Services - Temporarily disabled */}
+            {[].map((service) => (
                 <div key={service.id} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-2xl border border-slate-600/30 hover:border-purple-500/50 transition-all duration-300">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -267,7 +268,8 @@ const ComprehensivePricingGuide2025: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {innovativeAIServices2025.map((service) => (
+              {/* AI Services - Temporarily disabled */}
+            {[].map((service) => (
                 <div key={service.id} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-2xl border border-slate-600/30 hover:border-pink-500/50 transition-all duration-300">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-2xl font-bold text-white">{service.name}</h3>
