@@ -73,6 +73,7 @@ const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSPro
 const Careers = React.lazy(() => import('./pages/Careers'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const InnovativeMicroSAASServices2025 = React.lazy(() => import('./pages/InnovativeMicroSAASServices2025'));
+const InnovativeServicesShowcase2026 = React.lazy(() => import('./pages/InnovativeServicesShowcase2026'));
 
 function App() {
   return (
@@ -120,6 +121,7 @@ function App() {
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/innovative-micro-saas-services-2025" element={<InnovativeMicroSAASServices2025 />} />
                 <Route path="/innovative-services-showcase-2027" element={<InnovativeServicesShowcase2027 />} />
+                <Route path="/innovative-services-showcase-2026" element={<InnovativeServicesShowcase2026 />} />
                 <Route path="/comprehensive-services-landing-2027" element={<ComprehensiveServicesLanding2027 />} />
                 <Route path="/services/innovative-2025" element={<InnovativeServices2025 />} />
                 <Route path="/schedule-demo" element={<ScheduleDemo />} />
