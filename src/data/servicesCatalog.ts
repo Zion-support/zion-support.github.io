@@ -2,7 +2,7 @@ export type ServiceItem = {
 	id: string;
 	title: string;
 	description: string;
-	category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems';
+	category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Advanced AI & ML' | 'Digital Marketing & SEO' | 'E-commerce & Retail' | 'Healthcare & Telemedicine' | 'Education & E-Learning' | 'Real Estate & Property' | 'Legal & Compliance' | 'Manufacturing & Industry 4.0' | 'Energy & Sustainability' | 'Transportation & Logistics';
 	price: string; // average market starting price
 	billing: 'month' | 'project' | 'hour';
 	features: string[];
@@ -1085,6 +1085,666 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Orchestrate Robots',
 				href: 'https://ziontechgroup.com/services'
+			}
+		]
+	},
+	{
+		name: 'Advanced AI & ML',
+		slug: 'advanced-ai-ml',
+		items: [
+			{
+				id: 'ai-code-review-assistant',
+				title: 'AI Code Review Assistant Pro',
+				description: 'Intelligent code review system that automatically analyzes code quality, security vulnerabilities, and performance issues with detailed recommendations.',
+				category: 'Advanced AI & ML',
+				price: '$399',
+				billing: 'month',
+				features: [
+					'Automated code analysis',
+					'Security vulnerability detection',
+					'Performance optimization suggestions',
+					'Code style enforcement',
+					'Integration with GitHub/GitLab',
+					'Custom rule configuration',
+					'Team collaboration tools',
+					'Historical analysis tracking'
+				],
+				ctaLabel: 'Start Code Review',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-test-automation-platform',
+				title: 'AI Test Automation Platform',
+				description: 'Intelligent test automation that automatically generates, maintains, and optimizes test cases using AI and machine learning.',
+				category: 'Advanced AI & ML',
+				price: '$599',
+				billing: 'month',
+				features: [
+					'AI-generated test cases',
+					'Automated test maintenance',
+					'Visual regression testing',
+					'Performance testing automation',
+					'Cross-browser compatibility',
+					'CI/CD integration',
+					'Test analytics dashboard',
+					'Parallel execution support'
+				],
+				ctaLabel: 'Automate Testing',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-document-intelligence',
+				title: 'AI Document Intelligence Suite',
+				description: 'Advanced document processing platform that extracts, analyzes, and organizes information from any document type using AI.',
+				category: 'Advanced AI & ML',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Multi-format document support',
+					'Intelligent data extraction',
+					'Natural language processing',
+					'Automated categorization',
+					'Search and retrieval',
+					'Compliance monitoring',
+					'API integration',
+					'Custom workflow automation'
+				],
+				ctaLabel: 'Process Documents',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Digital Marketing & SEO',
+		slug: 'digital-marketing-seo',
+		items: [
+			{
+				id: 'ai-seo-optimizer-pro',
+				title: 'AI SEO Optimizer Pro',
+				description: 'Comprehensive SEO platform that uses AI to analyze, optimize, and monitor website performance with automated recommendations.',
+				category: 'Digital Marketing & SEO',
+				price: '$199',
+				billing: 'month',
+				features: [
+					'AI-powered keyword research',
+					'On-page optimization analysis',
+					'Competitor analysis',
+					'Technical SEO auditing',
+					'Content optimization suggestions',
+					'Ranking tracking',
+					'Automated reporting',
+					'Local SEO optimization'
+				],
+				ctaLabel: 'Optimize SEO',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'social-media-ai-manager',
+				title: 'Social Media AI Manager',
+				description: 'Intelligent social media management platform that automates content creation, scheduling, and engagement using AI.',
+				category: 'Digital Marketing & SEO',
+				price: '$149',
+				billing: 'month',
+				features: [
+					'AI content generation',
+					'Smart posting schedules',
+					'Engagement automation',
+					'Performance analytics',
+					'Multi-platform management',
+					'Brand voice consistency',
+					'Trend analysis',
+					'ROI tracking'
+				],
+				ctaLabel: 'Manage Social Media',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-email-marketing-automation',
+				title: 'AI Email Marketing Automation',
+				description: 'Advanced email marketing platform with AI-powered personalization, automation, and optimization for maximum engagement.',
+				category: 'Digital Marketing & SEO',
+				price: '$179',
+				billing: 'month',
+				features: [
+					'AI personalization engine',
+					'Behavioral automation',
+					'A/B testing automation',
+					'Predictive analytics',
+					'Smart segmentation',
+					'Engagement scoring',
+					'Deliverability optimization',
+					'Revenue attribution'
+				],
+				ctaLabel: 'Automate Email Marketing',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'E-commerce & Retail',
+		slug: 'ecommerce-retail',
+		items: [
+			{
+				id: 'ai-inventory-optimizer',
+				title: 'AI Inventory Optimizer',
+				description: 'Intelligent inventory management system that predicts demand, optimizes stock levels, and reduces costs using AI.',
+				category: 'E-commerce & Retail',
+				price: '$349',
+				billing: 'month',
+				features: [
+					'Demand forecasting',
+					'Stock level optimization',
+					'Reorder automation',
+					'Seasonal trend analysis',
+					'Cost optimization',
+					'Multi-location support',
+					'Supplier management',
+					'Real-time alerts'
+				],
+				ctaLabel: 'Optimize Inventory',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-pricing-optimizer',
+				title: 'AI Pricing Optimizer',
+				description: 'Dynamic pricing platform that automatically adjusts prices based on market conditions, demand, and competitor analysis.',
+				category: 'E-commerce & Retail',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Dynamic pricing algorithms',
+					'Competitor price monitoring',
+					'Demand-based pricing',
+					'Profit margin optimization',
+					'Seasonal pricing strategies',
+					'Real-time price updates',
+					'Performance analytics',
+					'Custom pricing rules'
+				],
+				ctaLabel: 'Optimize Pricing',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-customer-churn-predictor',
+				title: 'AI Customer Churn Predictor',
+				description: 'Predictive analytics platform that identifies at-risk customers and provides actionable insights to improve retention.',
+				category: 'E-commerce & Retail',
+				price: '$249',
+				billing: 'month',
+				features: [
+					'Churn prediction models',
+					'Risk scoring algorithms',
+					'Retention strategies',
+					'Customer behavior analysis',
+					'Automated alerts',
+					'ROI tracking',
+					'Integration with CRM',
+					'Custom retention campaigns'
+				],
+				ctaLabel: 'Predict Churn',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Healthcare & Telemedicine',
+		slug: 'healthcare-telemedicine',
+		items: [
+			{
+				id: 'ai-medical-imaging-analyzer',
+				title: 'AI Medical Imaging Analyzer',
+				description: 'Advanced medical imaging analysis platform that uses AI to detect abnormalities and assist in diagnosis.',
+				category: 'Healthcare & Telemedicine',
+				price: '$1,299',
+				billing: 'month',
+				features: [
+					'Multi-modality support',
+					'AI abnormality detection',
+					'Diagnostic assistance',
+					'Report generation',
+					'Integration with PACS',
+					'HIPAA compliance',
+					'Clinical workflow integration',
+					'Performance analytics'
+				],
+				ctaLabel: 'Analyze Medical Images',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-patient-scheduling-optimizer',
+				title: 'AI Patient Scheduling Optimizer',
+				description: 'Intelligent scheduling system that optimizes appointment booking, reduces no-shows, and improves patient satisfaction.',
+				category: 'Healthcare & Telemedicine',
+				price: '$399',
+				billing: 'month',
+				features: [
+					'Smart appointment scheduling',
+					'No-show prediction',
+					'Patient preference learning',
+					'Resource optimization',
+					'Automated reminders',
+					'Waitlist management',
+					'Performance metrics',
+					'Integration with EHR'
+				],
+				ctaLabel: 'Optimize Scheduling',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-medical-transcription',
+				title: 'AI Medical Transcription Pro',
+				description: 'Advanced medical transcription service that converts speech to text with medical terminology accuracy and EHR integration.',
+				category: 'Healthcare & Telemedicine',
+				price: '$199',
+				billing: 'month',
+				features: [
+					'Medical terminology recognition',
+					'Multi-speaker support',
+					'EHR integration',
+					'Custom vocabulary training',
+					'Quality assurance tools',
+					'Secure file handling',
+					'Turnaround time tracking',
+					'Compliance reporting'
+				],
+				ctaLabel: 'Start Transcription',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Education & E-Learning',
+		slug: 'education-elearning',
+		items: [
+			{
+				id: 'ai-personalized-learning-platform',
+				title: 'AI Personalized Learning Platform',
+				description: 'Adaptive learning platform that personalizes educational content based on individual student performance and learning styles.',
+				category: 'Education & E-Learning',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Adaptive learning algorithms',
+					'Personalized content delivery',
+					'Progress tracking',
+					'Learning style assessment',
+					'Performance analytics',
+					'Content recommendation engine',
+					'Multi-subject support',
+					'Parent/teacher dashboard'
+				],
+				ctaLabel: 'Personalize Learning',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-student-performance-predictor',
+				title: 'AI Student Performance Predictor',
+				description: 'Predictive analytics platform that identifies at-risk students and provides early intervention recommendations.',
+				category: 'Education & E-Learning',
+				price: '$199',
+				billing: 'month',
+				features: [
+					'Performance prediction models',
+					'Early warning system',
+					'Intervention recommendations',
+					'Progress monitoring',
+					'Risk factor analysis',
+					'Teacher insights dashboard',
+					'Parent communication tools',
+					'Outcome tracking'
+				],
+				ctaLabel: 'Predict Performance',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-content-creation-assistant',
+				title: 'AI Content Creation Assistant',
+				description: 'AI-powered content creation tool that helps educators create engaging, personalized learning materials.',
+				category: 'Education & E-Learning',
+				price: '$149',
+				billing: 'month',
+				features: [
+					'AI content generation',
+					'Curriculum customization',
+					'Multimedia content creation',
+					'Accessibility features',
+					'Content quality assessment',
+					'Collaboration tools',
+					'Version control',
+					'Distribution management'
+				],
+				ctaLabel: 'Create Content',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Real Estate & Property',
+		slug: 'real-estate-property',
+		items: [
+			{
+				id: 'ai-property-valuation-engine',
+				title: 'AI Property Valuation Engine',
+				description: 'Advanced property valuation platform that uses AI to analyze market data and provide accurate property assessments.',
+				category: 'Real Estate & Property',
+				price: '$399',
+				billing: 'month',
+				features: [
+					'AI-powered valuation models',
+					'Market trend analysis',
+					'Comparable property analysis',
+					'Risk assessment',
+					'Automated reports',
+					'Market data integration',
+					'Custom valuation criteria',
+					'Performance tracking'
+				],
+				ctaLabel: 'Value Properties',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-lead-scoring-platform',
+				title: 'AI Lead Scoring Platform',
+				description: 'Intelligent lead scoring system that prioritizes prospects based on AI analysis of behavior and engagement patterns.',
+				category: 'Real Estate & Property',
+				price: '$249',
+				billing: 'month',
+				features: [
+					'Behavioral analysis',
+					'Engagement scoring',
+					'Lead prioritization',
+					'Conversion prediction',
+					'Automated follow-up',
+					'CRM integration',
+					'Performance analytics',
+					'Custom scoring rules'
+				],
+				ctaLabel: 'Score Leads',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-market-analysis-tool',
+				title: 'AI Market Analysis Tool',
+				description: 'Comprehensive market analysis platform that provides real-time insights into real estate market trends and opportunities.',
+				category: 'Real Estate & Property',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Real-time market data',
+					'Trend analysis',
+					'Opportunity identification',
+					'Investment analysis',
+					'Market forecasting',
+					'Custom reports',
+					'Data visualization',
+					'Alert system'
+				],
+				ctaLabel: 'Analyze Market',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Legal & Compliance',
+		slug: 'legal-compliance',
+		items: [
+			{
+				id: 'ai-contract-analysis-platform',
+				title: 'AI Contract Analysis Platform',
+				description: 'Intelligent contract analysis platform that automatically reviews, analyzes, and extracts key information from legal documents.',
+				category: 'Legal & Compliance',
+				price: '$599',
+				billing: 'month',
+				features: [
+					'Automated contract review',
+					'Risk identification',
+					'Clause extraction',
+					'Compliance checking',
+					'Version comparison',
+					'Custom clause library',
+					'Integration with legal tools',
+					'Audit trail'
+				],
+				ctaLabel: 'Analyze Contracts',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-legal-research-assistant',
+				title: 'AI Legal Research Assistant',
+				description: 'Advanced legal research platform that uses AI to find relevant case law, statutes, and legal precedents.',
+				category: 'Legal & Compliance',
+				price: '$399',
+				billing: 'month',
+				features: [
+					'AI-powered legal search',
+					'Case law analysis',
+					'Statute interpretation',
+					'Precedent identification',
+					'Research automation',
+					'Citation management',
+					'Collaboration tools',
+					'Research analytics'
+				],
+				ctaLabel: 'Research Legal',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-compliance-monitoring',
+				title: 'AI Compliance Monitoring System',
+				description: 'Automated compliance monitoring platform that tracks regulatory changes and ensures organizational compliance.',
+				category: 'Legal & Compliance',
+				price: '$499',
+				billing: 'month',
+				features: [
+					'Regulatory change tracking',
+					'Compliance assessment',
+					'Risk monitoring',
+					'Automated reporting',
+					'Policy management',
+					'Training tracking',
+					'Audit preparation',
+					'Alert system'
+				],
+				ctaLabel: 'Monitor Compliance',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Manufacturing & Industry 4.0',
+		slug: 'manufacturing-industry4',
+		items: [
+			{
+				id: 'ai-quality-control-system',
+				title: 'AI Quality Control System',
+				description: 'Intelligent quality control platform that uses computer vision and AI to detect defects and ensure product quality.',
+				category: 'Manufacturing & Industry 4.0',
+				price: '$799',
+				billing: 'month',
+				features: [
+					'Computer vision inspection',
+					'Defect detection',
+					'Quality scoring',
+					'Process optimization',
+					'Real-time monitoring',
+					'Integration with MES',
+					'Performance analytics',
+					'Custom quality rules'
+				],
+				ctaLabel: 'Control Quality',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-predictive-maintenance',
+				title: 'AI Predictive Maintenance Platform',
+				description: 'Advanced predictive maintenance system that uses AI to predict equipment failures and optimize maintenance schedules.',
+				category: 'Manufacturing & Industry 4.0',
+				price: '$649',
+				billing: 'month',
+				features: [
+					'Failure prediction models',
+					'Maintenance optimization',
+					'Equipment monitoring',
+					'Cost optimization',
+					'Integration with CMMS',
+					'Real-time alerts',
+					'Performance tracking',
+					'Custom maintenance rules'
+				],
+				ctaLabel: 'Predict Maintenance',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-supply-chain-optimizer',
+				title: 'AI Supply Chain Optimizer',
+				description: 'Intelligent supply chain optimization platform that uses AI to improve efficiency, reduce costs, and enhance visibility.',
+				category: 'Manufacturing & Industry 4.0',
+				price: '$899',
+				billing: 'month',
+				features: [
+					'Demand forecasting',
+					'Inventory optimization',
+					'Route optimization',
+					'Cost analysis',
+					'Risk assessment',
+					'Supplier management',
+					'Performance tracking',
+					'Custom optimization rules'
+				],
+				ctaLabel: 'Optimize Supply Chain',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Energy & Sustainability',
+		slug: 'energy-sustainability',
+		items: [
+			{
+				id: 'ai-energy-optimization',
+				title: 'AI Energy Optimization Platform',
+				description: 'Intelligent energy management platform that optimizes consumption, reduces costs, and improves sustainability.',
+				category: 'Energy & Sustainability',
+				price: '$549',
+				billing: 'month',
+				features: [
+					'Energy consumption analysis',
+					'Optimization algorithms',
+					'Cost reduction strategies',
+					'Sustainability tracking',
+					'Real-time monitoring',
+					'Integration with IoT devices',
+					'Performance analytics',
+					'Custom optimization rules'
+				],
+				ctaLabel: 'Optimize Energy',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-carbon-footprint-tracker',
+				title: 'AI Carbon Footprint Tracker',
+				description: 'Comprehensive carbon footprint tracking platform that helps organizations measure, reduce, and report their environmental impact.',
+				category: 'Energy & Sustainability',
+				price: '$299',
+				billing: 'month',
+				features: [
+					'Carbon footprint calculation',
+					'Emissions tracking',
+					'Reduction strategies',
+					'Sustainability reporting',
+					'Compliance monitoring',
+					'Integration with ERP systems',
+					'Performance analytics',
+					'Custom tracking rules'
+				],
+				ctaLabel: 'Track Carbon Footprint',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-renewable-energy-manager',
+				title: 'AI Renewable Energy Manager',
+				description: 'Intelligent renewable energy management platform that optimizes renewable energy systems and grid integration.',
+				category: 'Energy & Sustainability',
+				price: '$699',
+				billing: 'month',
+				features: [
+					'Renewable energy optimization',
+					'Grid integration management',
+					'Energy storage optimization',
+					'Performance monitoring',
+					'Predictive analytics',
+					'Integration with smart grids',
+					'Cost optimization',
+					'Custom management rules'
+				],
+				ctaLabel: 'Manage Renewable Energy',
+				href: 'https://ziontechgroup.com/contact'
+			}
+		]
+	},
+	{
+		name: 'Transportation & Logistics',
+		slug: 'transportation-logistics',
+		items: [
+			{
+				id: 'ai-fleet-optimization',
+				title: 'AI Fleet Optimization Platform',
+				description: 'Intelligent fleet management platform that optimizes routes, reduces costs, and improves operational efficiency.',
+				category: 'Transportation & Logistics',
+				price: '$799',
+				billing: 'month',
+				features: [
+					'Route optimization',
+					'Fleet performance monitoring',
+					'Cost optimization',
+					'Driver behavior analysis',
+					'Maintenance scheduling',
+					'Integration with GPS systems',
+					'Performance analytics',
+					'Custom optimization rules'
+				],
+				ctaLabel: 'Optimize Fleet',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-last-mile-delivery',
+				title: 'AI Last-Mile Delivery Optimizer',
+				description: 'Advanced last-mile delivery optimization platform that improves delivery efficiency and customer satisfaction.',
+				category: 'Transportation & Logistics',
+				price: '$449',
+				billing: 'month',
+				features: [
+					'Delivery route optimization',
+					'Real-time tracking',
+					'Customer communication',
+					'Performance analytics',
+					'Integration with delivery platforms',
+					'Cost optimization',
+					'Custom delivery rules',
+					'Performance tracking'
+				],
+				ctaLabel: 'Optimize Last-Mile',
+				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-warehouse-automation',
+				title: 'AI Warehouse Automation Platform',
+				description: 'Intelligent warehouse automation platform that optimizes operations, reduces costs, and improves efficiency.',
+				category: 'Transportation & Logistics',
+				price: '$1,199',
+				billing: 'month',
+				features: [
+					'Automated picking systems',
+					'Inventory optimization',
+					'Space utilization',
+					'Performance monitoring',
+					'Integration with WMS',
+					'Cost optimization',
+					'Custom automation rules',
+					'Performance analytics'
+				],
+				ctaLabel: 'Automate Warehouse',
+				href: 'https://ziontechgroup.com/contact'
 			}
 		]
 	}
