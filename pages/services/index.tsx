@@ -1,22 +1,260 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import { Brain, Cloud, Shield, Database, Globe, Smartphone, Cpu, BarChart3 } from 'lucide-react';
 
-const Index: NextPage = () => {
+const Services: NextPage = () => {
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI Development',
+      description: 'Custom AI solutions and machine learning models tailored to your business needs.',
+      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      href: '/services/ai-development',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Services',
+      description: 'Scalable cloud solutions and infrastructure design for modern applications.',
+      features: ['Cloud Migration', 'Infrastructure Design', 'DevOps Automation', 'Cost Optimization'],
+      href: '/services/cloud-services',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Shield,
+      title: 'Blockchain Solutions',
+      description: 'Secure and transparent blockchain implementations for various industries.',
+      features: ['Smart Contracts', 'DeFi Platforms', 'Supply Chain Tracking', 'Digital Identity'],
+      href: '/services/blockchain',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: BarChart3,
+      title: 'Data Analytics',
+      description: 'Transform raw data into actionable insights for better decision making.',
+      features: ['Business Intelligence', 'Data Visualization', 'Real-time Analytics', 'Predictive Modeling'],
+      href: '/services/data-analytics',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      icon: Globe,
+      title: 'Web Development',
+      description: 'Modern, responsive web applications built with cutting-edge technologies.',
+      features: ['Frontend Development', 'Backend Systems', 'API Integration', 'Performance Optimization'],
+      href: '/services/web-development',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android.',
+      features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization'],
+      href: '/services/mobile-development',
+      color: 'from-teal-500 to-blue-500'
+    },
+    {
+      icon: Cpu,
+      title: 'IoT Platforms',
+      description: 'Connected device solutions and IoT platform development.',
+      features: ['Device Management', 'Data Collection', 'Real-time Monitoring', 'Edge Computing'],
+      href: '/services/iot-platforms',
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      icon: Database,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
+      href: '/services/cybersecurity',
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const processSteps = [
+    {
+      number: '01',
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a comprehensive project plan.'
+    },
+    {
+      number: '02',
+      title: 'Design & Architecture',
+      description: 'Our team designs the solution architecture and user experience.'
+    },
+    {
+      number: '03',
+      title: 'Development & Testing',
+      description: 'We build your solution using agile methodologies and rigorous testing.'
+    },
+    {
+      number: '04',
+      title: 'Deployment & Support',
+      description: 'Your solution goes live with ongoing support and maintenance.'
+    }
+  ];
+
   return (
-    <div>
+    <>
       <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index service" />
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Explore Zion Tech Group's comprehensive technology services including AI development, cloud services, blockchain solutions, and more." />
+        <meta name="keywords" content="technology services, AI development, cloud services, blockchain, data analytics, web development, mobile development, IoT, cybersecurity" />
       </Head>
       
-      <main>
-        <h1>Index</h1>
-        <p>Service details coming soon...</p>
-        <Link href="/services">Back to Services</Link>
-      </main>
-    </div>
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl font-bold mb-6">Our Services</h1>
+            <p className="text-xl max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to transform your business 
+              and drive innovation across all digital touchpoints.
+            </p>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4 text-gray-800">What We Offer</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                From AI development to cybersecurity, we provide end-to-end technology 
+                solutions that help businesses thrive in the digital age.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className={`h-32 bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                    <service.icon className="w-16 h-16 text-white" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-800">{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                    
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-700 mb-2">Key Features:</h4>
+                      <ul className="space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="text-sm text-gray-600 flex items-center">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <Link 
+                      href={service.href}
+                    >
+                      <span className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                        Learn More
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Our Process */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4 text-gray-800">Our Development Process</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We follow a proven methodology that ensures successful project delivery 
+                and maximum value for our clients.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-white text-2xl font-bold">{step.number}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-800">{step.title}</h3>
+                  <p className="text-gray-600">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4 text-gray-800">Why Choose Zion Tech Group?</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                We combine technical expertise with business acumen to deliver solutions 
+                that drive real business value.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">Expert Team</h3>
+                <p className="text-gray-600">
+                  Our team consists of experienced professionals with deep expertise 
+                  in their respective domains.
+                </p>
+              </div>
+              
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">Quality Assurance</h3>
+                <p className="text-gray-600">
+                  We maintain the highest standards of quality and security 
+                  in all our deliverables.
+                </p>
+              </div>
+              
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Cloud className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-800">Scalable Solutions</h3>
+                <p className="text-gray-600">
+                  We build solutions that grow with your business and 
+                  adapt to changing requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let's discuss your project requirements and explore how our services 
+              can help you achieve your business goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact"><span className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Contact Us Today
+              </span></Link>
+              <Link href="/about"><span className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More About Us
+              </span></Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default Index;
+export default Services;
