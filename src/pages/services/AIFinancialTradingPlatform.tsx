@@ -1,13 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Shield, 
-  Eye, 
+  TrendingUp, 
+  BarChart3, 
   Zap, 
-  Lock, 
-  AlertTriangle, 
-  Users, 
-  Globe, 
+  Shield, 
+  Brain, 
   CheckCircle,
   ArrowRight,
   Phone,
@@ -17,134 +15,139 @@ import {
   Clock,
   Target,
   Activity,
-  BarChart3,
-  Brain,
   Cpu,
-  Network
+  DollarSign,
+  LineChart,
+  PieChart,
+  Activity as ActivityIcon
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
-export default function AICybersecuritySuite() {
+export default function AIFinancialTradingPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI Threat Detection",
-      description: "Advanced machine learning algorithms that identify and respond to threats in real-time, even before they become active."
+      title: "AI Market Analysis",
+      description: "Advanced machine learning algorithms that analyze market data in real-time to identify trading opportunities and trends."
     },
     {
-      icon: Shield,
-      title: "Zero Trust Architecture",
-      description: "Implement comprehensive security that never trusts and always verifies every user, device, and connection."
-    },
-    {
-      icon: Eye,
-      title: "Behavioral Analytics",
-      description: "Monitor user and system behavior patterns to detect anomalies and potential security breaches."
+      icon: TrendingUp,
+      title: "Predictive Trading Signals",
+      description: "AI-generated trading signals based on historical data, market patterns, and predictive analytics."
     },
     {
       icon: Zap,
-      title: "Automated Response",
-      description: "Instant threat containment and response without human intervention, reducing response time to seconds."
+      title: "Automated Trading",
+      description: "Intelligent automation that executes trades based on AI recommendations with customizable risk parameters."
     },
     {
-      icon: Lock,
-      title: "Quantum-Resistant Encryption",
-      description: "Future-proof your security with encryption that withstands quantum computing attacks."
+      icon: Shield,
+      title: "Risk Management",
+      description: "Comprehensive risk management tools including position sizing, stop-loss automation, and portfolio diversification."
     },
     {
-      icon: Network,
-      title: "Network Security",
-      description: "Comprehensive network protection including firewall management, intrusion detection, and traffic analysis."
+      icon: BarChart3,
+      title: "Portfolio Optimization",
+      description: "AI-powered portfolio optimization that maximizes returns while minimizing risk based on your investment goals."
+    },
+    {
+      icon: ActivityIcon,
+      title: "Real-time Data Feeds",
+      description: "Live market data from multiple exchanges with millisecond latency for optimal trading decisions."
     }
   ];
 
   const benefits = [
-    "Reduce security incidents by 85%",
-    "Automate 90% of security tasks",
-    "Improve compliance scores by 95%",
-    "Reduce response time to threats by 70%",
-    "Prevent 99.9% of known attacks",
-    "Reduce false positives by 80%"
+    "Improve trading accuracy by 75%",
+    "Reduce trading risks by 60%",
+    "Increase portfolio returns by 40%",
+    "Automate 90% of trading decisions",
+    "Reduce emotional trading by 80%",
+    "Optimize portfolio performance by 65%"
   ];
 
   const pricingTiers = [
     {
-      name: "Essential",
-      price: 299,
+      name: "Starter",
+      price: 799,
       period: "month",
-      description: "Perfect for small businesses starting their security journey",
+      description: "Perfect for individual traders getting started with AI-powered trading",
       features: [
-        "Up to 50 users",
-        "Basic AI threat detection",
-        "Email security",
-        "Basic compliance reporting",
+        "Up to $100K portfolio",
+        "Basic AI analysis",
+        "Standard trading signals",
         "Email support",
-        "Standard integrations"
+        "Basic risk management",
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: 799,
+      price: 1999,
       period: "month",
-      description: "Ideal for growing businesses with advanced security needs",
+      description: "Ideal for active traders and small investment firms",
       features: [
-        "Up to 250 users",
+        "Up to $1M portfolio",
         "Advanced AI algorithms",
-        "Zero trust architecture",
-        "Behavioral analytics",
+        "Real-time trading signals",
         "Priority support",
-        "Advanced integrations",
-        "Compliance automation",
-        "24/7 monitoring"
+        "Advanced risk management",
+        "Portfolio optimization",
+        "API access",
+        "Custom strategies"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: 1999,
+      price: 4999,
       period: "month",
-      description: "For large organizations with complex security requirements",
+      description: "For large investment firms and institutional traders",
       features: [
-        "Unlimited users",
+        "Unlimited portfolio size",
         "Custom AI models",
-        "Full zero trust implementation",
-        "Quantum-resistant encryption",
-        "Dedicated security team",
+        "White-label platform",
+        "Dedicated support team",
+        "Advanced analytics",
         "Custom integrations",
         "SLA guarantees",
-        "On-site support"
+        "On-site training"
       ],
       popular: false
     }
   ];
 
-  const securityFeatures = [
+  const useCases = [
     {
-      category: "Threat Prevention",
-      items: ["AI-powered malware detection", "Phishing protection", "Ransomware prevention", "Zero-day threat blocking"]
+      industry: "Individual Traders",
+      description: "AI-powered trading signals and portfolio optimization for personal investment"
     },
     {
-      category: "Network Security",
-      items: ["Next-gen firewall", "Intrusion prevention", "DDoS protection", "VPN management"]
+      industry: "Investment Firms",
+      description: "Institutional-grade AI trading platform with advanced risk management"
     },
     {
-      category: "Data Protection",
-      items: ["Data encryption", "Access control", "Data loss prevention", "Backup security"]
+      industry: "Hedge Funds",
+      description: "Quantitative trading strategies and automated execution systems"
     },
     {
-      category: "Compliance",
-      items: ["GDPR compliance", "HIPAA compliance", "SOC 2 Type II", "ISO 27001"]
+      industry: "Asset Managers",
+      description: "Portfolio optimization and risk management for client portfolios"
+    },
+    {
+      industry: "Trading Desks",
+      description: "Real-time market analysis and automated trading execution"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Cybersecurity Suite - Zion Tech Group"
-        description="Comprehensive AI-powered cybersecurity platform providing real-time threat detection, automated incident response, and advanced security analytics."
+        title="AI Financial Trading Platform - Zion Tech Group"
+        description="Intelligent trading platform that uses AI to analyze market data, predict trends, and execute automated trading strategies."
       />
       
       {/* Hero Section */}
@@ -155,24 +158,24 @@ export default function AICybersecuritySuite() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Badge className="mb-6 bg-gradient-to-r from-red-600 to-pink-600 text-white border-0">
-              AI-Powered Cybersecurity
+            <Badge className="mb-6 bg-gradient-to-r from-green-600 to-emerald-600 text-white border-0">
+              AI-Powered Financial Trading
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Protect Your Business with
-              <span className="bg-gradient-to-r from-red-400 to-pink-500 bg-clip-text text-transparent"> AI-Powered Security</span>
+              Revolutionize Your Trading with
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI-powered cybersecurity platform that provides real-time threat detection, 
-              automated incident response, and advanced security analytics.
+              Intelligent trading platform that uses AI to analyze market data, predict trends, 
+              and execute automated trading strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700">
+              <Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-                Security Assessment
+                Schedule Demo
               </Button>
             </div>
           </motion.div>
@@ -190,11 +193,11 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Security Features
+              Advanced Trading Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered platform combines cutting-edge security technology with intelligent automation 
-              to provide comprehensive protection for your business.
+              Our AI-powered platform combines cutting-edge technology with proven trading 
+              methodologies to deliver exceptional results.
             </p>
           </motion.div>
 
@@ -206,9 +209,9 @@ export default function AICybersecuritySuite() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -219,7 +222,7 @@ export default function AICybersecuritySuite() {
         </div>
       </section>
 
-      {/* Security Features Grid */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -230,56 +233,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Security Coverage
+              Transform Your Trading Performance
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Protect every aspect of your business with our multi-layered security approach.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityFeatures.map((category, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
-              >
-                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-                  <Shield className="h-6 w-6 text-red-500 mr-2" />
-                  {category.category}
-                </h3>
-                <ul className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-red-500 mr-2 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Cybersecurity Suite?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See measurable improvements in security posture, threat response, and compliance.
+              See measurable improvements in trading accuracy, risk management, and portfolio returns.
             </p>
           </motion.div>
 
@@ -293,7 +250,7 @@ export default function AICybersecuritySuite() {
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
               >
-                <CheckCircle className="h-6 w-6 text-red-500 mt-1 flex-shrink-0" />
+                <CheckCircle className="h-6 w-6 text-green-500 mt-1 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </motion.div>
             ))}
@@ -302,7 +259,7 @@ export default function AICybersecuritySuite() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -312,10 +269,10 @@ export default function AICybersecuritySuite() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Plans for Every Business
+              Choose Your Trading Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the security level that matches your business needs and budget.
+              Flexible pricing options designed to scale with your trading needs and portfolio size.
             </p>
           </motion.div>
 
@@ -329,13 +286,13 @@ export default function AICybersecuritySuite() {
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   tier.popular 
-                    ? 'border-red-500/50 ring-2 ring-red-500/20' 
+                    ? 'border-green-500/50 ring-2 ring-green-500/20' 
                     : 'border-slate-700'
                 }`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <Badge className="bg-gradient-to-r from-red-500 to-pink-600 text-white border-0">
+                    <Badge className="bg-gradient-to-r from-green-500 to-emerald-600 text-white border-0">
                       Most Popular
                     </Badge>
                   </div>
@@ -353,7 +310,7 @@ export default function AICybersecuritySuite() {
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-red-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -362,12 +319,48 @@ export default function AICybersecuritySuite() {
                 <Button 
                   className={`w-full ${
                     tier.popular 
-                      ? 'bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700' 
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' 
                       : 'bg-slate-700 hover:bg-slate-600'
                   }`}
                 >
                   Get Started
                 </Button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform is designed to work across various trading and investment scenarios.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -384,18 +377,18 @@ export default function AICybersecuritySuite() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Business?
+              Ready to Transform Your Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already protected by our AI-powered cybersecurity platform.
+              Join thousands of traders already using AI to improve their trading performance and returns.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700">
+              <Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
-                Security Assessment
+                Contact Sales
               </Button>
             </div>
           </motion.div>
@@ -415,30 +408,30 @@ export default function AICybersecuritySuite() {
               Get in Touch
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Have security questions? Our cybersecurity experts are here to help.
+              Have questions? Our trading experts are here to help you get started.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
-                <Phone className="h-8 w-8 text-red-500 mb-4" />
+                <Phone className="h-8 w-8 text-green-500 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="h-8 w-8 text-red-500 mb-4" />
+                <Mail className="h-8 w-8 text-green-500 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="h-8 w-8 text-red-500 mb-4" />
+                <MapPin className="h-8 w-8 text-green-500 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700">
-                Schedule Security Review
+              <Button size="lg" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
+                Schedule a Call
               </Button>
               <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Send Message

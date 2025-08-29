@@ -70,12 +70,37 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'AI Business Intelligence Platform', href: '/services/ai-business-intelligence-platform' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' },
         { name: 'LLM Content Studio', href: '/services/llm-content-studio' },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' }
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform' },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
+        { name: 'AI Financial Trading Platform', href: '/services/ai-financial-trading-platform' },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform' },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
+        { name: 'AI Legal Research Platform', href: '/services/ai-legal-research-platform' },
+        { name: 'AI Education Platform', href: '/services/ai-education-platform' }
+      ]
+    },
+    {
+      title: 'Cybersecurity & IT Services',
+      icon: Shield,
+      color: 'from-red-600 to-pink-600',
+      links: [
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
+        { name: 'Zero Trust Network Architecture', href: '/services/zero-trust-network-architecture' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'IT Consulting', href: '/services/it-consulting' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation' },
+        { name: 'Onsite Support', href: '/services/onsite-support' }
       ]
     },
     {
@@ -84,37 +109,71 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       color: 'from-blue-600 to-cyan-600',
       links: [
         { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
         { name: 'FinOps Advisor', href: '/services/finops-advisor' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+        { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
+        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' }
       ]
     },
     {
-      title: 'IoT & Digital Twin',
+      title: 'IoT & Digital Solutions',
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
       links: [
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' },
-        { name: 'IT Consulting', href: '/services/it-consulting' },
-        { name: 'Onsite Support', href: '/services/onsite-support' },
-        { name: 'Green IT Solutions', href: '/services/green-it' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' }
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Blockchain Enterprise Solutions', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Healthcare Technology', href: '/services/healthcare-tech' },
+        { name: 'Sustainability Solutions', href: '/services/sustainability' },
+        { name: 'Green IT', href: '/services/green-it' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing' },
+        { name: 'Space Technology', href: '/services/space-tech' }
       ]
     },
     {
-      title: 'Quantum & Emerging Tech',
+      title: 'Revolutionary 2030 Services',
       icon: Crown,
+      color: 'from-yellow-600 to-orange-600',
+      links: [
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
+        { name: 'AI Autonomous Business Operations', href: '/revolutionary-services-2030' },
+        { name: 'Quantum AI Hybrid Computing', href: '/revolutionary-services-2030' },
+        { name: 'AI Metaverse Development', href: '/revolutionary-services-2030' },
+        { name: 'AI Space Technology', href: '/revolutionary-services-2030' },
+        { name: 'Next-Gen Cybersecurity', href: '/revolutionary-services-2030' },
+        { name: 'Quantum Internet Infrastructure', href: '/revolutionary-services-2030' },
+        { name: 'AI Autonomous Vehicles', href: '/revolutionary-services-2030' },
+        { name: 'Brain-Computer Interface', href: '/revolutionary-services-2030' },
+        { name: 'AI Climate Change Solutions', href: '/revolutionary-services-2030' },
+        { name: 'AI Drug Discovery Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Financial Services Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Manufacturing Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Retail Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Transportation Platform', href: '/revolutionary-services-2030' },
+        { name: 'AI Energy Management Platform', href: '/revolutionary-services-2030' }
+      ]
+    },
+    {
+      title: 'Company & Support',
+      icon: Users,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Sustainability', href: '/services/sustainability' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' }
+        { name: 'About Us', href: '/about' },
+        { name: 'Contact', href: '/contact' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'Support', href: '/support' },
+        { name: 'Training', href: '/training' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'Accessibility', href: '/accessibility' },
+        { name: 'Security', href: '/security' },
+        { name: 'Compliance', href: '/compliance' }
       ]
     }
   ];

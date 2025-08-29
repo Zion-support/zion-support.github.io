@@ -82,6 +82,15 @@ const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGoverna
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
+// Additional innovative services
+const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
+const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
+const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
+const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
+const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducationPlatform'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -204,6 +213,22 @@ function App() {
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
               <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+              
+              {/* Additional innovative services routes */}
+              <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
+              <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
+              <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+              <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
+              <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
+              <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
+              <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
+              <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+              <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
+              <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+              <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
+              <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+              <Route path="/services/ai-legal-research-platform" element={<AILegalResearchPlatform />} />
+              <Route path="/services/ai-education-platform" element={<AIEducationPlatform />} />
               
               {/* Catch all route */}
               <Route path="*" element={<Home />} />
