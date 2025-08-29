@@ -277,7 +277,6 @@ export default function Services() {
                 <div className="text-sm text-slate-300">Emerging Tech</div>
               </div>
             </motion.div>
-            </motion.div>
 
             {/* Search and Filter Controls */}
             <motion.div
@@ -623,4 +622,4 @@ export default function Services() {
       </div>
     </>
   );
-}
+  }
