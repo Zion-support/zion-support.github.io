@@ -2,19 +2,22 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 const http = require('http');
-const url = require('url');
+const { execSync } = require('child_process');
 
 class AutomationDashboard {
   constructor() {
-    this.automationSystems = new Map();
-    this.metrics = new Map();
-    this.alerts = [];
+    this.port = parseInt(process.env.DASHBOARD_PORT) || 3001;
+    this.updateInterval = parseInt(process.env.UPDATE_INTERVAL) || 5000; // 5 seconds
+    this.realTimeMonitoring = process.env.REAL_TIME_MONITORING === 'true';
+    
+    this.automationStatus = new Map();
+    this.performanceMetrics = new Map();
+    this.aiInsights = [];
     this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log');
     this.ensureLogDirectory();
-    this.loadAutomationSystems();
-    this.startMetricsCollection();
+    
+    this.log('🚀 Enhanced Automation Dashboard initialized');
   }
 
   ensureLogDirectory() {
@@ -31,506 +34,796 @@ class AutomationDashboard {
     fs.appendFileSync(this.logFile, logMessage);
   }
 
-  loadAutomationSystems() {
-    const systems = [
-      { name: 'lint-monitor', path: 'lint-monitor.js', category: 'code-quality', status: 'available' },
-      { name: 'lint-fixer', path: 'lint-error-fixer.js', category: 'code-quality', status: 'available' },
-      { name: 'lint-manager', path: 'lint-automation-manager.js', category: 'code-quality', status: 'available' },
-      { name: 'code-quality', path: 'code-quality-monitor.js', category: 'analysis', status: 'available' },
-      { name: 'performance', path: 'performance-optimizer.js', category: 'optimization', status: 'available' },
-      { name: 'content-generator', path: 'content-generator.js', category: 'generation', status: 'available' },
-      { name: 'seo-optimizer', path: 'seo-optimizer.js', category: 'seo', status: 'available' },
-      { name: 'security-scanner', path: 'security-scanner.js', category: 'security', status: 'available' },
-      { name: 'test-generator', path: 'test-generator.js', category: 'testing', status: 'available' },
-      { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },
-      { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' }
+  async startDashboard() {
+    this.log(`🌐 Starting automation dashboard on port ${this.port}...`);
+    
+    // Initialize automation status
+    await this.initializeAutomationStatus();
+    
+    // Start real-time monitoring
+    if (this.realTimeMonitoring) {
+      this.startRealTimeMonitoring();
+    }
+    
+    // Create HTTP server
+    const server = http.createServer((req, res) => {
+      this.handleRequest(req, res);
+    });
+    
+    server.listen(this.port, () => {
+      this.log(`✅ Dashboard server started on http://localhost:${this.port}`);
+      this.log('📊 Dashboard is now accessible in your browser');
+    });
+    
+    // Handle server errors
+    server.on('error', (error) => {
+      this.log(`❌ Dashboard server error: ${error.message}`);
+    });
+  }
+
+  async initializeAutomationStatus() {
+    this.log('🔍 Initializing automation status...');
+    
+    // Define automation processes
+    const processes = [
+      'intelligent-orchestrator',
+      'ai-code-quality',
+      'smart-lint-monitor',
+      'ai-security-scanner',
+      'performance-optimizer',
+      'seo-intelligence',
+      'test-intelligence',
+      'dependency-intelligence',
+      'build-intelligence',
+      'link-intelligence',
+      'automation-dashboard'
     ];
-
-    for (const system of systems) {
-      const systemPath = path.join(__dirname, system.path);
-      if (fs.existsSync(systemPath)) {
-        this.automationSystems.set(system.name, {
-          ...system,
-          path: systemPath,
-          lastRun: null,
-          successCount: 0,
-          failureCount: 0,
-          totalExecutionTime: 0,
-          averageExecutionTime: 0,
-          uptime: 0,
-          isRunning: false
-        });
-      }
+    
+    for (const processName of processes) {
+      this.automationStatus.set(processName, {
+        name: processName,
+        status: 'unknown',
+        memory: 0,
+        cpu: 0,
+        uptime: 0,
+        lastUpdate: new Date().toISOString(),
+        health: 'unknown',
+        performance: 'unknown'
+      });
     }
+    
+    this.log(`✅ Initialized ${processes.length} automation processes`);
   }
 
-  startMetricsCollection() {
-    // Collect metrics every 30 seconds
-    setInterval(() => {
-      this.collectMetrics();
-    }, 30000);
-
-    // Generate alerts every minute
-    setInterval(() => {
-      this.generateAlerts();
-    }, 60000);
+  startRealTimeMonitoring() {
+    this.log('🔄 Starting real-time monitoring...');
+    
+    // Update status every interval
+    setInterval(async () => {
+      await this.updateAutomationStatus();
+      await this.generateAIInsights();
+      await this.updatePerformanceMetrics();
+    }, this.updateInterval);
+    
+    this.log(`✅ Real-time monitoring started with ${this.updateInterval / 1000}s intervals`);
   }
 
-  collectMetrics() {
-    for (const [name, system] of this.automationSystems) {
-      const metrics = {
-        timestamp: new Date().toISOString(),
-        isRunning: system.isRunning,
-        lastRun: system.lastRun,
-        successRate: system.successCount / (system.successCount + system.failureCount) || 0,
-        averageExecutionTime: system.averageExecutionTime,
-        uptime: system.uptime
-      };
-
-      this.metrics.set(name, metrics);
-    }
-  }
-
-  generateAlerts() {
-    this.alerts = [];
-
-    for (const [name, system] of this.automationSystems) {
-      const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
-      
-      if (successRate < 0.8) {
-        this.alerts.push({
-          type: 'warning',
-          system: name,
-          message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,
-          timestamp: new Date().toISOString()
-        });
-      }
-
-      if (system.averageExecutionTime > 30000) {
-        this.alerts.push({
-          type: 'warning',
-          system: name,
-          message: `Slow execution time: ${system.averageExecutionTime}ms`,
-          timestamp: new Date().toISOString()
-        });
-      }
-
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
-        this.alerts.push({
-          type: 'error',
-          system: name,
-          message: 'System not running recently',
-          timestamp: new Date().toISOString()
-        });
-      }
-    }
-  }
-
-  async runSystem(systemName) {
-    const system = this.automationSystems.get(systemName);
-    if (!system) {
-      this.log(`❌ System not found: ${systemName}`);
-      return false;
-    }
-
-    const startTime = Date.now();
-    system.isRunning = true;
-
+  async updateAutomationStatus() {
     try {
-      this.log(`🚀 Running system: ${systemName}`);
-      
-      const result = execSync(`node "${system.path}"`, { 
+      // Get PM2 status
+      const pm2Status = execSync('pm2 jlist', { 
         encoding: 'utf8',
         stdio: 'pipe'
       });
       
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, true, executionTime);
+      const processes = JSON.parse(pm2Status);
       
-      this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
-      return { success: true, output: result, executionTime };
+      for (const process of processes) {
+        const processName = process.name;
+        if (this.automationStatus.has(processName)) {
+          const status = this.automationStatus.get(processName);
+          
+          status.status = process.pm2_env.status;
+          status.memory = process.monit.memory;
+          status.cpu = process.monit.cpu;
+          status.uptime = process.pm2_env.pm_uptime;
+          status.lastUpdate = new Date().toISOString();
+          status.health = this.calculateProcessHealth(process);
+          status.performance = this.calculateProcessPerformance(process);
+        }
+      }
+      
     } catch (error) {
-      const executionTime = Date.now() - startTime;
-      this.updateSystemMetrics(systemName, false, executionTime);
-      
-      this.log(`❌ System failed: ${systemName} - ${error.message}`);
-      return { success: false, error: error.message, executionTime };
-    } finally {
-      system.isRunning = false;
+      this.log(`⚠️ Error updating automation status: ${error.message}`);
     }
   }
 
-  updateSystemMetrics(systemName, success, executionTime) {
-    const system = this.automationSystems.get(systemName);
-    if (!system) return;
-
-    if (success) {
-      system.successCount++;
-    } else {
-      system.failureCount++;
-    }
-
-    system.totalExecutionTime += executionTime;
-    system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
-    system.lastRun = new Date();
-  }
-
-  async runAllSystems() {
-    this.log('🚀 Running all automation systems...');
+  calculateProcessHealth(process) {
+    const memory = process.monit.memory;
+    const cpu = process.monit.cpu;
+    const status = process.pm2_env.status;
     
-    const results = [];
-    for (const [name, system] of this.automationSystems) {
-      if (system.status === 'available') {
-        const result = await this.runSystem(name);
-        results.push({ name, ...result });
-        
-        // Add delay between systems
-        await this.sleep(2000);
+    if (status !== 'online') return 'critical';
+    if (memory > 500 * 1024 * 1024) return 'warning'; // > 500MB
+    if (cpu > 80) return 'warning'; // > 80% CPU
+    if (memory > 300 * 1024 * 1024) return 'attention'; // > 300MB
+    if (cpu > 50) return 'attention'; // > 50% CPU
+    
+    return 'healthy';
+  }
+
+  calculateProcessPerformance(process) {
+    const memory = process.monit.memory;
+    const cpu = process.monit.cpu;
+    
+    const memoryScore = Math.max(0, 100 - (memory / (1024 * 1024))); // MB to score
+    const cpuScore = Math.max(0, 100 - cpu);
+    
+    const averageScore = (memoryScore + cpuScore) / 2;
+    
+    if (averageScore >= 80) return 'excellent';
+    if (averageScore >= 60) return 'good';
+    if (averageScore >= 40) return 'fair';
+    if (averageScore >= 20) return 'poor';
+    return 'critical';
+  }
+
+  async generateAIInsights() {
+    this.log('🧠 Generating AI insights...');
+    
+    this.aiInsights = [];
+    
+    // Analyze automation performance
+    const performanceInsights = this.analyzePerformance();
+    this.aiInsights.push(...performanceInsights);
+    
+    // Analyze automation health
+    const healthInsights = this.analyzeHealth();
+    this.aiInsights.push(...healthInsights);
+    
+    // Generate recommendations
+    const recommendations = this.generateRecommendations();
+    this.aiInsights.push(...recommendations);
+    
+    this.log(`🧠 Generated ${this.aiInsights.length} AI insights`);
+  }
+
+  analyzePerformance() {
+    const insights = [];
+    
+    // Check for high memory usage
+    for (const [name, status] of this.automationStatus) {
+      if (status.memory > 400 * 1024 * 1024) { // > 400MB
+        insights.push({
+          type: 'performance',
+          severity: 'warning',
+          message: `${name} is using high memory (${Math.round(status.memory / 1024 / 1024)}MB)`,
+          recommendation: 'Consider optimizing memory usage or increasing memory limits',
+          process: name
+        });
+      }
+      
+      if (status.cpu > 70) { // > 70% CPU
+        insights.push({
+          type: 'performance',
+          severity: 'warning',
+          message: `${name} is using high CPU (${status.cpu.toFixed(1)}%)`,
+          recommendation: 'Investigate high CPU usage and optimize if necessary',
+          process: name
+        });
       }
     }
     
-    this.log(`📊 Completed ${results.length} systems`);
-    return results;
+    return insights;
+  }
+
+  analyzeHealth() {
+    const insights = [];
+    
+    // Check for offline processes
+    for (const [name, status] of this.automationStatus) {
+      if (status.status !== 'online') {
+        insights.push({
+          type: 'health',
+          severity: 'critical',
+          message: `${name} is not running (status: ${status.status})`,
+          recommendation: 'Restart the process and investigate the cause',
+          process: name
+        });
+      }
+      
+      if (status.health === 'critical') {
+        insights.push({
+          type: 'health',
+          severity: 'critical',
+          message: `${name} has critical health issues`,
+          recommendation: 'Immediate attention required - check logs and restart if necessary',
+          process: name
+        });
+      }
+    }
+    
+    return insights;
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    // Overall system recommendations
+    const totalProcesses = this.automationStatus.size;
+    const onlineProcesses = Array.from(this.automationStatus.values()).filter(p => p.status === 'online').length;
+    const onlinePercentage = (onlineProcesses / totalProcesses) * 100;
+    
+    if (onlinePercentage < 100) {
+      recommendations.push({
+        type: 'system',
+        severity: 'warning',
+        message: `Only ${onlinePercentage.toFixed(1)}% of automation processes are online`,
+        recommendation: 'Investigate and restart offline processes',
+        process: 'system'
+      });
+    }
+    
+    // Performance recommendations
+    const highMemoryProcesses = Array.from(this.automationStatus.values()).filter(p => p.memory > 300 * 1024 * 1024);
+    if (highMemoryProcesses.length > 0) {
+      recommendations.push({
+        type: 'system',
+        severity: 'info',
+        message: `${highMemoryProcesses.length} processes are using high memory`,
+        recommendation: 'Monitor memory usage and consider optimization',
+        process: 'system'
+      });
+    }
+    
+    return recommendations;
+  }
+
+  async updatePerformanceMetrics() {
+    try {
+      // Calculate system-wide metrics
+      const totalMemory = Array.from(this.automationStatus.values())
+        .reduce((sum, p) => sum + p.memory, 0);
+      
+      const totalCPU = Array.from(this.automationStatus.values())
+        .reduce((sum, p) => sum + p.cpu, 0);
+      
+      const onlineProcesses = Array.from(this.automationStatus.values())
+        .filter(p => p.status === 'online').length;
+      
+      const totalProcesses = this.automationStatus.size;
+      
+      this.performanceMetrics.set('system', {
+        totalMemory: Math.round(totalMemory / 1024 / 1024), // MB
+        totalCPU: Math.round(totalCPU * 100) / 100,
+        onlineProcesses,
+        totalProcesses,
+        uptime: Math.min(...Array.from(this.automationStatus.values()).map(p => p.uptime)),
+        lastUpdate: new Date().toISOString()
+      });
+      
+    } catch (error) {
+      this.log(`⚠️ Error updating performance metrics: ${error.message}`);
+    }
+  }
+
+  handleRequest(req, res) {
+    const url = req.url;
+    
+    // Set CORS headers
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    
+    if (req.method === 'OPTIONS') {
+      res.writeHead(200);
+      res.end();
+      return;
+    }
+    
+    try {
+      if (url === '/' || url === '/index.html') {
+        this.serveDashboard(res);
+      } else if (url === '/api/status') {
+        this.serveStatusAPI(res);
+      } else if (url === '/api/insights') {
+        this.serveInsightsAPI(res);
+      } else if (url === '/api/metrics') {
+        this.serveMetricsAPI(res);
+      } else if (url === '/api/health') {
+        this.serveHealthAPI(res);
+      } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Not Found');
+      }
+    } catch (error) {
+      this.log(`❌ Error handling request: ${error.message}`);
+      res.writeHead(500, { 'Content-Type': 'text/plain' });
+      res.end('Internal Server Error');
+    }
+  }
+
+  serveDashboard(res) {
+    const html = this.generateDashboardHTML();
+    
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(html);
+  }
+
+  serveStatusAPI(res) {
+    const status = {
+      timestamp: new Date().toISOString(),
+      processes: Object.fromEntries(this.automationStatus),
+      summary: {
+        total: this.automationStatus.size,
+        online: Array.from(this.automationStatus.values()).filter(p => p.status === 'online').length,
+        offline: Array.from(this.automationStatus.values()).filter(p => p.status !== 'online').length
+      }
+    };
+    
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(status, null, 2));
+  }
+
+  serveInsightsAPI(res) {
+    const insights = {
+      timestamp: new Date().toISOString(),
+      insights: this.aiInsights,
+      count: this.aiInsights.length
+    };
+    
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(insights, null, 2));
+  }
+
+  serveMetricsAPI(res) {
+    const metrics = {
+      timestamp: new Date().toISOString(),
+      system: this.performanceMetrics.get('system'),
+      processes: Object.fromEntries(
+        Array.from(this.automationStatus.entries()).map(([name, status]) => [
+          name,
+          {
+            memory: Math.round(status.memory / 1024 / 1024), // MB
+            cpu: status.cpu,
+            performance: status.performance,
+            health: status.health
+          }
+        ])
+      )
+    };
+    
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(metrics, null, 2));
+  }
+
+  serveHealthAPI(res) {
+    const health = {
+      timestamp: new Date().toISOString(),
+      status: 'healthy',
+      checks: {
+        processes: this.checkProcessHealth(),
+        memory: this.checkMemoryHealth(),
+        cpu: this.checkCPUHealth()
+      }
+    };
+    
+    // Overall health status
+    const criticalIssues = this.aiInsights.filter(i => i.severity === 'critical').length;
+    if (criticalIssues > 0) {
+      health.status = 'critical';
+    } else if (this.aiInsights.filter(i => i.severity === 'warning').length > 0) {
+      health.status = 'warning';
+    }
+    
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify(health, null, 2));
+  }
+
+  checkProcessHealth() {
+    const onlineProcesses = Array.from(this.automationStatus.values()).filter(p => p.status === 'online').length;
+    const totalProcesses = this.automationStatus.size;
+    
+    return {
+      status: onlineProcesses === totalProcesses ? 'healthy' : 'unhealthy',
+      online: onlineProcesses,
+      total: totalProcesses,
+      percentage: (onlineProcesses / totalProcesses) * 100
+    };
+  }
+
+  checkMemoryHealth() {
+    const totalMemory = Array.from(this.automationStatus.values()).reduce((sum, p) => sum + p.memory, 0);
+    const memoryGB = totalMemory / 1024 / 1024 / 1024;
+    
+    return {
+      status: memoryGB < 2 ? 'healthy' : memoryGB < 4 ? 'warning' : 'critical',
+      total: Math.round(memoryGB * 100) / 100,
+      unit: 'GB'
+    };
+  }
+
+  checkCPUHealth() {
+    const totalCPU = Array.from(this.automationStatus.values()).reduce((sum, p) => sum + p.cpu, 0);
+    const averageCPU = totalCPU / this.automationStatus.size;
+    
+    return {
+      status: averageCPU < 30 ? 'healthy' : averageCPU < 60 ? 'warning' : 'critical',
+      average: Math.round(averageCPU * 100) / 100,
+      unit: '%'
+    };
   }
 
   generateDashboardHTML() {
-    const systems = Array.from(this.automationSystems.values());
-    const metrics = Array.from(this.metrics.values());
-    const alerts = this.alerts;
-
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automation Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body class="bg-gray-100">
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-gray-800 mb-8">Automation Dashboard</h1>
+    <title>Zion Tech Group - AI Automation Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-        <!-- System Status -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            ${systems.map(system => `
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-lg font-semibold text-gray-800">${system.name}</h3>
-                        <span class="px-2 py-1 rounded-full text-xs font-medium ${
-                            system.isRunning ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
-                        }">
-                            ${system.isRunning ? 'Running' : 'Idle'}
-                        </span>
-                    </div>
-                    <div class="space-y-2 text-sm text-gray-600">
-                        <p>Category: ${system.category}</p>
-                        <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>
-                        <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p>
-                        <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}</p>
-                    </div>
-                </div>
-            `).join('')}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .status-online { background: #27ae60; }
+        .status-offline { background: #e74c3c; }
+        .status-unknown { background: #f39c12; }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .insights-section {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .insights-header {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .insight-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .insight-critical {
+            background: #fee;
+            border-left-color: #e74c3c;
+        }
+        
+        .insight-warning {
+            background: #fff3cd;
+            border-left-color: #f39c12;
+        }
+        
+        .insight-info {
+            background: #d1ecf1;
+            border-left-color: #17a2b8;
+        }
+        
+        .insight-message {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .insight-recommendation {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .refresh-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .refresh-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Automation Dashboard</h1>
+            <p>Real-time monitoring and intelligent insights for Zion Tech Group automation systems</p>
         </div>
-
-        <!-- Alerts -->
-        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Alerts</h2>
-            ${alerts.length > 0 ? alerts.map(alert => `
-                <div class="p-3 rounded-lg mb-2 ${
-                    alert.type === 'error' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800'
-                }">
-                    <strong>${alert.system}:</strong> ${alert.message}
-                    <span class="text-xs ml-2">${new Date(alert.timestamp).toLocaleString()}</span>
-                </div>
-            `).join('') : '<p class="text-gray-500">No alerts</p>'}
+        
+        <div class="dashboard-grid" id="dashboard-grid">
+            <div class="loading">Loading automation status...</div>
         </div>
-
-        <!-- Performance Chart -->
-        <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Performance Metrics</h2>
-            <canvas id="performanceChart" width="400" height="200"></canvas>
-        </div>
-
-        <!-- Actions -->
-        <div class="bg-white rounded-lg shadow-md p-6 mt-8">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">Actions</h2>
-            <div class="flex flex-wrap gap-4">
-                <button onclick="runAllSystems()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">
-                    Run All Systems
-                </button>
-                <button onclick="refreshDashboard()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
-                    Refresh Dashboard
-                </button>
-                <button onclick="generateReport()" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg">
-                    Generate Report
-                </button>
+        
+        <div class="insights-section">
+            <div class="insights-header">🧠 AI Insights & Recommendations</div>
+            <div id="insights-container">
+                <div class="loading">Loading AI insights...</div>
             </div>
         </div>
     </div>
-
+    
+    <button class="refresh-button" onclick="refreshDashboard()">🔄 Refresh</button>
+    
     <script>
-        // Performance Chart
-        const ctx = document.getElementById('performanceChart').getContext('2d');
-        const performanceChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ${JSON.stringify(metrics.map(m => new Date(m.timestamp).toLocaleTimeString()))},
-                datasets: [{
-                    label: 'Success Rate',
-                    data: ${JSON.stringify(metrics.map(m => m.successRate * 100))},
-                    borderColor: 'rgb(59, 130, 246)',
-                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                    tension: 0.1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 100
-                    }
-                }
+        let dashboardData = {};
+        let insightsData = {};
+        
+        async function loadDashboard() {
+            try {
+                const [statusResponse, insightsResponse] = await Promise.all([
+                    fetch('/api/status'),
+                    fetch('/api/insights')
+                ]);
+                
+                dashboardData = await statusResponse.json();
+                insightsData = await insightsResponse.json();
+                
+                renderDashboard();
+                renderInsights();
+                
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+                document.getElementById('dashboard-grid').innerHTML = 
+                    '<div class="loading">Error loading dashboard data</div>';
             }
-        });
-
-        function runAllSystems() {
-            fetch('/api/run-all', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    alert('All systems started');
-                    setTimeout(refreshDashboard, 5000);
-                });
         }
-
+        
+        function renderDashboard() {
+            const grid = document.getElementById('dashboard-grid');
+            grid.innerHTML = '';
+            
+            Object.values(dashboardData.processes).forEach(process => {
+                const card = createProcessCard(process);
+                grid.appendChild(card);
+            });
+        }
+        
+        function createProcessCard(process) {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            const statusClass = process.status === 'online' ? 'status-online' : 
+                              process.status === 'offline' ? 'status-offline' : 'status-unknown';
+            
+            card.innerHTML = \`
+                <div class="card-header">
+                    <div class="card-title">\${process.name}</div>
+                    <div class="status-indicator \${statusClass}"></div>
+                </div>
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="metric-value">\${process.status}</div>
+                        <div class="metric-label">Status</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">\${Math.round(process.memory / 1024 / 1024)}MB</div>
+                        <div class="metric-label">Memory</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">\${process.cpu.toFixed(1)}%</div>
+                        <div class="metric-label">CPU</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">\${process.health}</div>
+                        <div class="metric-label">Health</div>
+                    </div>
+                </div>
+            \`;
+            
+            return card;
+        }
+        
+        function renderInsights() {
+            const container = document.getElementById('insights-container');
+            
+            if (insightsData.insights.length === 0) {
+                container.innerHTML = '<div class="loading">No insights available</div>';
+                return;
+            }
+            
+            container.innerHTML = insightsData.insights.map(insight => \`
+                <div class="insight-item insight-\${insight.severity}">
+                    <div class="insight-message">\${insight.message}</div>
+                    <div class="insight-recommendation">\${insight.recommendation}</div>
+                </div>
+            \`).join('');
+        }
+        
         function refreshDashboard() {
-            location.reload();
+            loadDashboard();
         }
-
-        function generateReport() {
-            fetch('/api/report')
-                .then(response => response.json())
-                .then(data => {
-                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'automation-report.json';
-                    a.click();
-                });
-        }
-
+        
         // Auto-refresh every 30 seconds
-        setInterval(refreshDashboard, 30000);
+        setInterval(loadDashboard, 30000);
+        
+        // Initial load
+        loadDashboard();
     </script>
 </body>
 </html>`;
   }
 
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: {
-        totalSystems: this.automationSystems.size,
-        runningSystems: Array.from(this.automationSystems.values()).filter(s => s.isRunning).length,
-        totalAlerts: this.alerts.length,
-        averageSuccessRate: this.calculateAverageSuccessRate()
-      },
-      systems: {},
-      metrics: {},
-      alerts: this.alerts,
-      recommendations: this.generateRecommendations()
+  getStatus() {
+    return {
+      running: true,
+      port: this.port,
+      updateInterval: this.updateInterval,
+      realTimeMonitoring: this.realTimeMonitoring,
+      processes: this.automationStatus.size,
+      insights: this.aiInsights.length,
+      lastUpdate: new Date().toISOString()
     };
-
-    // System details
-    for (const [name, system] of this.automationSystems) {
-      report.systems[name] = {
-        category: system.category,
-        status: system.status,
-        isRunning: system.isRunning,
-        successCount: system.successCount,
-        failureCount: system.failureCount,
-        successRate: system.successCount / (system.successCount + system.failureCount) || 0,
-        averageExecutionTime: system.averageExecutionTime,
-        lastRun: system.lastRun?.toISOString(),
-        uptime: system.uptime
-      };
-    }
-
-    // Metrics
-    for (const [name, metric] of this.metrics) {
-      report.metrics[name] = metric;
-    }
-
-    return report;
   }
 
-  calculateAverageSuccessRate() {
-    const systems = Array.from(this.automationSystems.values());
-    const totalSuccessRate = systems.reduce((sum, system) => {
-      const rate = system.successCount / (system.successCount + system.failureCount) || 0;
-      return sum + rate;
-    }, 0);
-    
-    return systems.length > 0 ? totalSuccessRate / systems.length : 0;
-  }
-
-  generateRecommendations() {
-    const recommendations = [];
-
-    for (const [name, system] of this.automationSystems) {
-      const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
-      
-      if (successRate < 0.8) {
-        recommendations.push({
-          type: 'performance',
-          system: name,
-          message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,
-          priority: 'high'
-        });
-      }
-
-      if (system.averageExecutionTime > 30000) {
-        recommendations.push({
-          type: 'optimization',
-          system: name,
-          message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,
-          priority: 'medium'
-        });
-      }
-
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
-        recommendations.push({
-          type: 'maintenance',
-          system: name,
-          message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`,
-          priority: 'low'
-        });
-      }
-    }
-
-    return recommendations;
-  }
-
-  createServer() {
-    const server = http.createServer((req, res) => {
-      const parsedUrl = url.parse(req.url, true);
-      const pathname = parsedUrl.pathname;
-
-      res.setHeader('Content-Type', 'application/json');
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-      res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-      if (req.method === 'OPTIONS') {
-        res.writeHead(200);
-        res.end();
-        return;
-      }
-
-      switch (pathname) {
-        case '/':
-          res.setHeader('Content-Type', 'text/html');
-          res.writeHead(200);
-          res.end(this.generateDashboardHTML());
-          break;
-
-        case '/api/status':
-          res.writeHead(200);
-          res.end(JSON.stringify({
-            systems: Array.from(this.automationSystems.entries()),
-            metrics: Array.from(this.metrics.entries()),
-            alerts: this.alerts
-          }));
-          break;
-
-        case '/api/run-all':
-          if (req.method === 'POST') {
-            this.runAllSystems().then(results => {
-              res.writeHead(200);
-              res.end(JSON.stringify({ success: true, results }));
-            });
-          } else {
-            res.writeHead(405);
-            res.end(JSON.stringify({ error: 'Method not allowed' }));
-          }
-          break;
-
-        case '/api/run':
-          if (req.method === 'POST') {
-            let body = '';
-            req.on('data', chunk => body += chunk);
-            req.on('end', () => {
-              const { system } = JSON.parse(body);
-              this.runSystem(system).then(result => {
-                res.writeHead(200);
-                res.end(JSON.stringify(result));
-              });
-            });
-          } else {
-            res.writeHead(405);
-            res.end(JSON.stringify({ error: 'Method not allowed' }));
-          }
-          break;
-
-        case '/api/report':
-          res.writeHead(200);
-          res.end(JSON.stringify(this.generateReport()));
-          break;
-
-        default:
-          res.writeHead(404);
-          res.end(JSON.stringify({ error: 'Not found' }));
-      }
-    });
-
-    return server;
-  }
-
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  start(port = 3001) {
-    const server = this.createServer();
-    server.listen(port, () => {
-      this.log(`🚀 Automation Dashboard started on port ${port}`);
-      this.log(`📊 Dashboard available at: http://localhost:${port}`);
-      this.log(`📊 API available at: http://localhost:${port}/api/status`);
-    });
+  stop() {
+    this.log('🛑 Automation Dashboard stopped');
   }
 }
 
 // CLI handling
 const dashboard = new AutomationDashboard();
 const command = process.argv[2];
-const port = process.argv[3] || 3001;
 
 switch (command) {
   case 'start':
-    dashboard.start(parseInt(port));
+    dashboard.startDashboard();
     break;
   case 'status':
-    console.log(JSON.stringify(dashboard.generateReport(), null, 2));
-    break;
-  case 'run-all':
-    dashboard.runAllSystems().then(results => {
-      console.log(JSON.stringify(results, null, 2));
-      process.exit(0);
-    });
+    const status = dashboard.getStatus();
+    console.log(JSON.stringify(status, null, 2));
+    process.exit(0);
     break;
   default:
-    console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
+    console.log('Usage: node automation-dashboard.cjs [start|status]');
     console.log('\nCommands:');
-    console.log('  start    - Start the dashboard server');
-    console.log('  status   - Show current status');
-    console.log('  run-all  - Run all automation systems');
+    console.log('  start   - Start the dashboard server');
+    console.log('  status  - Show dashboard status');
     process.exit(1);
 }
 
 // Graceful shutdown
 process.on('SIGINT', () => {
-  console.log('\n🛑 Shutting down automation dashboard...');
+  dashboard.stop();
+  process.exit(0);
+});
+
+process.on('SIGTERM', () => {
+  dashboard.stop();
   process.exit(0);
 });
