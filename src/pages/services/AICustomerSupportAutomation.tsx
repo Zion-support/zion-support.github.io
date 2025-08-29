@@ -672,6 +672,7 @@ const AICustomerSupportAutomation = () => {
             </motion.div>
           </div>
         </div>
+      </div>
       </section>
     );
 };
