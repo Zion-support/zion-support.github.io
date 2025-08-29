@@ -105,7 +105,58 @@ module.exports = {
       out_file: './logs/file-integrity-out.log'
     },
 
-    // NEW: Project Health Management Automations
+    // NEW: AI-Powered Code Review Automation
+    {
+      name: 'ai-code-review',
+      script: './scripts/automation/ai-code-review.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/30 * * * *', // Every 30 minutes
+      log_file: './logs/ai-code-review.log',
+      error_file: './logs/ai-code-review-error.log',
+      out_file: './logs/ai-code-review-out.log'
+    },
+
+    // NEW: Intelligent Performance Optimization
+    {
+      name: 'intelligent-performance-optimizer',
+      script: './scripts/automation/intelligent-performance-optimizer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1.5G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './logs/intelligent-performance.log',
+      error_file: './logs/intelligent-performance-error.log',
+      out_file: './logs/intelligent-performance-out.log'
+    },
+
+    // NEW: Smart Dependency Intelligence
+    {
+      name: 'smart-dependency-intelligence',
+      script: './scripts/automation/smart-dependency-intelligence.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/smart-dependency.log',
+      error_file: './logs/smart-dependency-error.log',
+      out_file: './logs/smart-dependency-out.log'
+    },
+
+    // Project Health Management Automations
     {
       name: 'project-health-monitor',
       script: './scripts/automation/project-health-monitor.cjs',
@@ -168,6 +219,57 @@ module.exports = {
       log_file: './logs/project-health-dashboard.log',
       error_file: './logs/project-health-dashboard-error.log',
       out_file: './logs/project-health-dashboard-out.log'
+    },
+
+    // NEW: Enhanced Security Automation
+    {
+      name: 'enhanced-security-automation',
+      script: './scripts/automation/enhanced-security-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: './logs/enhanced-security.log',
+      error_file: './logs/enhanced-security-error.log',
+      out_file: './logs/enhanced-security-out.log'
+    },
+
+    // NEW: Enhanced Testing Automation
+    {
+      name: 'enhanced-testing-automation',
+      script: './scripts/automation/enhanced-testing-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: './logs/enhanced-testing.log',
+      error_file: './logs/enhanced-testing-error.log',
+      out_file: './logs/enhanced-testing-out.log'
+    },
+
+    // NEW: Enhanced CI/CD Automation
+    {
+      name: 'enhanced-ci-cd-automation',
+      script: './scripts/automation/enhanced-ci-cd-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/20 * * * *', // Every 20 minutes
+      log_file: './logs/enhanced-ci-cd.log',
+      error_file: './logs/enhanced-ci-cd-error.log',
+      out_file: './logs/enhanced-ci-cd-out.log'
     }
   ],
 
