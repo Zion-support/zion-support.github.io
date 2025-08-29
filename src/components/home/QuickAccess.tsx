@@ -256,9 +256,8 @@ const QuickAccess: React.FC = () => {
           {quickLinks.map((link, index) => (
             <motion.div
               key={link.title}
-              variants={itemVariants}
-              whileHover="hover"
               variants={hoverVariants}
+              whileHover="hover"
               onHoverStart={() => setHoveredCategory(link.title)}
               onHoverEnd={() => setHoveredCategory(null)}
               onClick={() => setSelectedCategory(selectedCategory === link.title ? null : link.title)}
