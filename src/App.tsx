@@ -168,27 +168,9 @@ const News = React.lazy(() => import('./pages/News'));
 const Events = React.lazy(() => import('./pages/events'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 
-// Additional missing pages
-const Talent = React.lazy(() => import('./pages/Talent'));
-const Equipment = React.lazy(() => import('./pages/Equipment'));
-const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
-const Status = React.lazy(() => import('./pages/Status'));
-const News = React.lazy(() => import('./pages/News'));
-const Events = React.lazy(() => import('./pages/events'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 
-const Careers = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <EnhancedSEO 
-      title="Careers - Zion Tech Group"
-      description="Join our team of technology experts and help shape the future of AI-powered business solutions."
-    />
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Careers</h1>
-      <p className="text-xl text-gray-300">Join our team</p>
-    </div>
-  </div>
-);
+
+
 
 function App() {
   return (
