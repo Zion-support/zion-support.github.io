@@ -60,6 +60,20 @@ module.exports = {
       }
     },
     
+    // Link checking replacement
+    {
+      name: 'link-checker-automation',
+      script: './scripts/automation/link-checker.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '604800000' // 7 days (weekly)
+      }
+    },
+    
     // Enhanced automation processes
     {
       name: 'enhanced-testing',

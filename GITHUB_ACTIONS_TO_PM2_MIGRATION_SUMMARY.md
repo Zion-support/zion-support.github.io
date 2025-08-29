@@ -48,15 +48,20 @@ PM2 is now running the following automation processes:
    - Runs every 24 hours
    - Handles dependency installation, building, and testing
 
-4. **enhanced-testing** - Enhanced testing automation
+4. **link-checker-automation** - Replaces link checking workflows
+   - Runs weekly (every 7 days)
+   - Checks external links using linkinator
+   - Generates reports and identifies broken links
+
+5. **enhanced-testing** - Enhanced testing automation
    - Runs every 2 hours
    - Comprehensive testing suite
 
-5. **enhanced-security** - Enhanced security automation
+6. **enhanced-security** - Enhanced security automation
    - Runs every hour
    - Advanced security scanning and monitoring
 
-6. **enhanced-ci-cd** - Enhanced CI/CD automation
+7. **enhanced-ci-cd** - Enhanced CI/CD automation
    - Runs every 30 minutes
    - Full CI/CD pipeline automation
 
@@ -89,12 +94,13 @@ PM2 is now running the following automation processes:
 ┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
 │ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
 ├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
-│ 3  │ build-test-automa… │ fork     │ 2    │ online    │ 0%       │ 62.5mb   │
-│ 1  │ ci-automation      │ fork     │ 14   │ online    │ 0%       │ 62.9mb   │
-│ 6  │ enhanced-ci-cd     │ fork     │ 2    │ online    │ 0%       │ 66.8mb   │
-│ 5  │ enhanced-security  │ fork     │ 5    │ online    │ 0%       │ 66.5mb   │
-│ 4  │ enhanced-testing   │ fork     │ 11   │ online    │ 0%       │ 65.7mb   │
-│ 2  │ security-automati… │ fork     │ 2    │ online    │ 0%       │ 62.8mb   │
+│ 3  │ build-test-automa… │ fork     │ 41   │ online    │ 0%       │ 63.1mb   │
+│ 1  │ ci-automation      │ fork     │ 83   │ online    │ 0%       │ 62.1mb   │
+│ 6  │ enhanced-ci-cd     │ fork     │ 43   │ online    │ 0%       │ 66.0mb   │
+│ 5  │ enhanced-security  │ fork     │ 78   │ online    │ 0%       │ 66.3mb   │
+│ 4  │ enhanced-testing   │ fork     │ 85   │ online    │ 0%       │ 66.3mb   │
+│ 7  │ link-checker-auto… │ fork     │ 0    │ online    │ 0%       │ 62.9mb   │
+│ 2  │ security-automati… │ fork     │ 44   │ online    │ 0%       │ 61.8mb   │
 └────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
 ```
 
@@ -102,6 +108,30 @@ PM2 is now running the following automation processes:
 - `scripts/automation/console-error-fixer.cjs` - CI automation
 - `scripts/automation/security-audit.cjs` - Security automation
 - `scripts/automation/daily-build-test.cjs` - Build and test automation
+- `scripts/automation/link-checker.cjs` - Link checking automation
+
+## Link Checker Automation Details
+
+### Features
+- **External link validation** - Checks all external links weekly
+- **Automated reporting** - Generates markdown reports
+- **Issue creation** - Logs broken links for review
+- **Cleanup** - Automatically removes temporary files
+- **Scheduling** - Runs weekly by default, configurable via PM2
+
+### External Links Monitored
+- ziontechgroup.com
+- GitHub organization
+- LinkedIn company page
+- Facebook page
+- Instagram profile
+- Twitter profile
+
+### Report Generation
+- Creates `LINK_REPORT.md` with detailed findings
+- Tracks total links checked and broken links found
+- Provides recommendations for fixing issues
+- Logs all activities for monitoring
 
 ## Next Steps
 
@@ -109,6 +139,7 @@ PM2 is now running the following automation processes:
 1. ✅ PM2 processes are running and monitoring
 2. ✅ GitHub Actions workflows have been cleaned up
 3. ✅ Automation scripts are in place
+4. ✅ Link checker automation is active
 
 ### Monitoring
 - Use `pm2 status` to check process status
@@ -119,6 +150,7 @@ PM2 is now running the following automation processes:
 - Review PM2 logs regularly for any automation issues
 - Adjust automation intervals in `ecosystem.config.cjs` as needed
 - Monitor resource usage and adjust memory limits if necessary
+- Check link checker reports weekly for broken external links
 
 ## Conclusion
-The migration from GitHub Actions to PM2 automation has been completed successfully. All redundant workflows have been removed, and PM2 is now handling the automation tasks efficiently. The system maintains all the essential CI/CD functionality while providing better local control and resource utilization.
+The migration from GitHub Actions to PM2 automation has been completed successfully. All redundant workflows have been removed, and PM2 is now handling the automation tasks efficiently. The system maintains all the essential CI/CD functionality while providing better local control and resource utilization. The new link checker automation ensures external link health is monitored regularly without relying on GitHub Actions.
