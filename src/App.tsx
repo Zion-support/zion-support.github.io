@@ -42,6 +42,7 @@ const Press = React.lazy(() => import('./pages/Press'));
 const News = React.lazy(() => import('./pages/News'));
 const Events = React.lazy(() => import('./pages/Events'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
+const Resources = React.lazy(() => import('./pages/Resources'));
 
 // Service pages - only import existing ones
 const DigitalTwin = React.lazy(() => import('./pages/services/DigitalTwin'));
@@ -224,6 +225,7 @@ function App() {
                     <Route path="/security" element={<Security />} />
                     <Route path="/status" element={<Status />} />
                     <Route path="/search" element={<SearchPage />} />
+                    <Route path="/resources" element={<Resources />} />
                     
                     {/* Service Category Routes */}
                     <Route path="/ai-services" element={<AIServicesPage />} />

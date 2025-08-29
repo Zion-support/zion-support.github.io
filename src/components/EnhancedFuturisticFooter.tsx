@@ -82,12 +82,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Star,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
-        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028' },
-        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation' }
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Star, description: 'Future-focused solutions' },
+        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', icon: Star, description: 'Complete service portfolio' },
+        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Star, description: 'Cutting-edge technology' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Star, description: 'Sales automation' },
+        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation', icon: Star, description: 'Content generation' }
       ]
     },
     {
@@ -171,16 +170,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
-    { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
   ];
 
   const contactInfo = {
-    phone: '+1 (555) 123-4567',
+    phone: '+1 (800) 123-4567',
     email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
   };
