@@ -118,12 +118,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Digital Twin Solutions', href: '/services/digital-twin', featured: true },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', featured: true },
         { name: 'Data Analytics', href: '/services/data-analytics', featured: true },
-        { name: 'Cybersecurity Solutions', href: '/services/ai-cybersecurity', featured: true },
-        { name: 'Zero Trust Security', href: '/services/ai-cybersecurity', featured: true },
-        { name: 'AI Ethics & Governance', href: '/services/ai-cybersecurity', featured: true },
-        { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', featured: true },
+        { name: 'Cybersecurity Solutions', href: '/services/ai-cybersecurity-suite', featured: true },
+        { name: 'Zero Trust Security', href: '/services/zero-trust-network-architecture', featured: true },
+        { name: 'AI Ethics & Governance', href: '/services/ai-cybersecurity-suite', featured: true },
+        { name: 'IoT & Edge Computing', href: '/services/iot-edge', featured: true },
         { name: 'Quantum Computing', href: '/services/quantum-computing', featured: true },
-        { name: 'Green IT Solutions', href: '/services/green-it', featured: true }
+        { name: 'Green IT Solutions', href: '/services/sustainability', featured: true }
       ]
     },
     {
@@ -138,7 +138,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Retail & E-commerce', href: '/solutions#retail', featured: false },
         { name: 'Government & Public Sector', href: '/solutions#government', featured: false },
         { name: 'Energy & Sustainability', href: '/solutions#energy', featured: false },
-        { name: 'Space & Aerospace', href: '/space-tech', featured: false },
+        { name: 'Space & Aerospace', href: '/services/space-tech', featured: false },
         { name: 'Education & Training', href: '/training', featured: false }
       ]
     },
@@ -152,20 +152,19 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Cybersecurity Threat Detection', href: '/services/ai-cybersecurity-threat-detection' },
         { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
-        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'Space Technology', href: '/services/space-tech' },
-        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
+        { name: 'Micro SaaS Products', href: '/services/micro-saas-solutions', featured: true },
         { name: 'Enterprise Solutions', href: '/solutions', featured: true },
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', featured: true },
-        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-orchestrator', featured: true },
+        { name: 'AI Project Management', href: '/services/ai-project-management-platform', featured: true },
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
         { name: 'AI HR & Recruitment', href: '/services/ai-hr-platform', featured: true },
         { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', featured: true },
         { name: 'AI Quality Assurance', href: '/services/ai-predictive-maintenance', featured: true },
         { name: 'AI Sales Intelligence', href: '/services/ai-marketing-automation', featured: true },
-        { name: 'AI Innovation Management', href: '/services/ai-workflow-automation', featured: true }
+        { name: 'AI Innovation Management', href: '/services/ai-workflow-orchestrator', featured: true }
       ]
     },
     {
@@ -173,7 +172,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: false,
       links: [
         { name: 'Comprehensive Pricing 2027', href: '/comprehensive-pricing-guide-2027', featured: true },
-        { name: 'Pricing Guide 2030', href: '/pricing-guide-2030', featured: true },
+        { name: 'Pricing Guide 2030', href: '/comprehensive-pricing-guide-2030', featured: true },
         { name: 'Blog & Insights', href: '/blog', featured: false },
         { name: 'FAQ & Help Center', href: '/faq', featured: false },
         { name: 'Documentation', href: '/docs', featured: false },
@@ -189,13 +188,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       featured: false,
       links: [
         { name: 'About Zion Tech Group', href: '/about', featured: false },
-        { name: 'Our Team', href: '/about#team', featured: false },
+        { name: 'Our Team', href: '/team', featured: false },
         { name: 'Careers', href: '/careers', featured: false },
         { name: 'Contact Us', href: '/contact', featured: true },
         { name: 'Request Quote', href: '/request-quote', featured: true },
-        { name: 'Schedule Demo', href: '/schedule-demo', featured: false },
+        { name: 'Schedule Demo', href: '/demo', featured: false },
         { name: 'Partnerships', href: '/partners', featured: false },
-        { name: 'Press & Media', href: '/about', featured: false },
+        { name: 'Press & Media', href: '/press', featured: false },
         { name: 'Legal & Privacy', href: '/legal', featured: false },
         { name: 'Support Center', href: '/support', featured: false }
       ]
