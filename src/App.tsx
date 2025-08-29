@@ -35,6 +35,13 @@ const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const Legal = React.lazy(() => import('./pages/Legal'));
 const EnhancedContact = React.lazy(() => import('./components/EnhancedContact'));
 
+// New service pages
+const AISalesCopilot = React.lazy(() => import('./pages/services/ai-sales-copilot'));
+const AIComplianceAssistant = React.lazy(() => import('./pages/services/ai-compliance-assistant'));
+const AIAutoEmailResponder = React.lazy(() => import('./pages/services/ai-auto-email-responder'));
+const LLMContentStudio = React.lazy(() => import('./pages/services/llm-content-studio'));
+const CloudFinOpsOptimizer = React.lazy(() => import('./pages/services/cloud-finops-optimizer'));
+
 // Enhanced components
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 const Community = React.lazy(() => import('./pages/Community'));
@@ -137,6 +144,13 @@ function App() {
                 <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                 <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                
+                {/* Additional service routes */}
+                <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                <Route path="/services/ai-auto-email-responder" element={<AIAutoEmailResponder />} />
+                <Route path="/services/llm-content-studio" element={<LLMContentStudio />} />
+                <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
