@@ -1,4 +1,3 @@
-import { Activity, AlertTriangle, Brain, CheckCircle, DollarSign, FileText, Lightbulb, Loader, Maximize2, Minimize2, MoreVertical, Play, Search, Server, Settings, Target, TrendingUp, Users, Workflow, X } from 'lucide-react';
 import React, { useRef, useState } from 'react';
 const mockBusinessProcesses = [
     {
