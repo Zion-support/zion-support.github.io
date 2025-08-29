@@ -98,7 +98,6 @@ import {
       ]
     }
   ];
-=======
 interface SitemapSection {
   title: string;
   icon: any;
@@ -109,7 +108,6 @@ interface SitemapSection {
     description?: string;
   }>;
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-f8f3
 
 const sitemapSections: SitemapSection[] = [
   {

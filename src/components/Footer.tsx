@@ -216,7 +216,7 @@ export function Footer() {
   };
 
 
->>>>>>> origin/cursor/website-audit-and-enhancement-f8f3
+
   return (
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Enhanced Background */}
