@@ -60,7 +60,6 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
 const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
 const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
-const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));

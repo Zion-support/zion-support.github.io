@@ -18,8 +18,8 @@ export function AppHeader() {
       case '/':
         import('../pages/Home');
         break;
-      case '/services-overview':
-        import('../pages/ServicesOverview');
+      case '/services':
+        import('../pages/Services');
         break;
       case '/ai-services':
         import('../pages/AIServices');
@@ -68,7 +68,7 @@ export function AppHeader() {
 
   const mainNavigation = [
     { name: 'Home', href: '/', current: true, hasDropdown: false },
-    { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'AI Services', href: '/ai-services', current: false, hasDropdown: false },
     { name: 'IT Services', href: '/it-services', current: false, hasDropdown: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false, hasDropdown: false },
