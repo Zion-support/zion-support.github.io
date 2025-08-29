@@ -17,6 +17,9 @@ const services: Service[] = [
   { name: 'API Monitoring & Status', path: '/services/api-monitoring', summary: 'SLA-grade uptime, SLOs, and public status pages.', price: '$79–$249/mo', category: 'Micro SaaS' },
   { name: 'GDPR & Cookie Compliance', path: '/services/gdpr-cookie-compliance', summary: 'Consent banners, scanners, and audit logs.', price: '$49–$149/mo', category: 'Micro SaaS' },
   { name: 'AI Proofreading Studio', path: '/services/ai-proofreading-studio', summary: 'Tone, brand, and compliance checks for content.', price: '$29–$149/mo/seat', category: 'Micro SaaS' },
+  { name: 'AI Meeting Notes & Summaries', path: '/services/ai-meeting-notes', summary: 'Auto-capture meetings, summaries, action items, and CRM sync.', price: '$19–$79/user/mo', category: 'Micro SaaS' },
+  { name: 'Smart Forms & Intake', path: '/services/smart-forms-intake', summary: 'Conditional logic, AI validation, and workflow routing.', price: '$49–$299/mo', category: 'Micro SaaS' },
+  { name: 'Social Proof & Reviews Widget', path: '/services/reviews-widget', summary: 'Aggregate reviews, schema rich-snippets, and trust badges.', price: '$19–$99/mo', category: 'Micro SaaS' },
   { name: 'IT Infrastructure', path: '/services/it-infrastructure', summary: 'Networks, servers, and endpoint management.', price: 'Custom/SOW', category: 'IT Services' },
   { name: 'Cloud & DevOps', path: '/services/cloud-devops', summary: 'Kubernetes, IaC, CI/CD and observability.', price: '$8k+ projects', category: 'IT Services' },
   // New Micro SaaS offerings
