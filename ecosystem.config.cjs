@@ -49,17 +49,17 @@ module.exports = {
       }
     },
 
-    // Continuous link checker - runs every 30 minutes
+    // Continuous link integrity checker - runs every 2 hours
     {
-      name: 'link-checker',
-      script: './scripts/automation/link-checker.cjs',
+      name: 'link-integrity',
+      script: './scripts/automation/link-integrity.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
     },
 
