@@ -116,19 +116,9 @@ const MicroSaaS: React.FC = () => {
           </a>
           <div className="mt-6 text-xs text-slate-400">
             Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709
->>>>>>> origin/feature/services-expansion-aug-2025
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  );
-}
-
-function FeatureCard({ title, desc, to }: { title: string; desc: string; to: string }) {
-  return (
-    <Link to={to} className="block p-5 rounded-xl border border-slate-800 hover:border-cyan-500 bg-slate-900/40 transition-colors">
-      <div className="text-lg font-semibold mb-1">{title}</div>
-      <div className="text-slate-400 text-sm">{desc}</div>
-    </Link>
   );
 }
