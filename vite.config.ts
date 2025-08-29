@@ -13,7 +13,8 @@ export default defineConfig({
   build: {
     target: 'es2019',
     minify: 'terser',
-    sourcemap: process.env.NODE_ENV !== 'production' ? 'hidden' : false,
+    // Use inline sourcemaps in dev for better DX; disable in production
+    sourcemap: process.env.NODE_ENV !== 'production' ? 'inline' : false,
     reportCompressedSize: false,
     outDir: 'dist',
     cssCodeSplit: true,
@@ -84,7 +85,8 @@ export default defineConfig({
     logOverride: { 'this-is-undefined-in-esm': 'silent' },
   },
   server: {
-    port: 3000,
-    open: true,
+    port: Number(process.env.PORT) || 3000,
+    host: true,
+    open: false,
   },
 })
