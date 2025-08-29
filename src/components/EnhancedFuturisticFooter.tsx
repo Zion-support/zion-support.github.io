@@ -220,8 +220,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play, featured: true },
     { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Play, featured: false },
     { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
     { name: 'Join Community', href: '/community', icon: Users, featured: false },
     { name: 'Partner Program', href: '/partners', icon: Users, featured: false }

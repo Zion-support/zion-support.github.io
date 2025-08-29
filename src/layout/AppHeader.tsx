@@ -41,6 +41,7 @@ export function AppHeader() {
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Contact', href: '/contact', current: false },
+    { name: 'Schedule Demo', href: '/schedule-demo', current: false, featured: true },
   ];
 
   const services = [
