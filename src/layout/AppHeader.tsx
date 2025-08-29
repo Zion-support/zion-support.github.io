@@ -63,6 +63,9 @@ export function AppHeader() {
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
     { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', icon: Bot, description: 'Fully autonomous business operations' },
+    { name: 'AI Project Management', href: '/services/ai-project-management', icon: Calendar, description: 'AI-powered project planning and optimization' },
+    { name: 'AI Financial Trading', href: '/services/ai-financial-trading', icon: TrendingUp, description: 'AI trading platform with 85% success rate' },
+    { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', icon: Truck, description: 'Supply chain optimization with 95% accuracy' },
     { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Next-generation computational power' },
   ];
 

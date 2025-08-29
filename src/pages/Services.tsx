@@ -239,6 +239,33 @@ export default function Services() {
           price: 'From $299',
           rating: 4.9,
           reviewCount: 234
+        },
+        {
+          name: 'AI Project Management',
+          description: 'AI-powered project planning with predictive timelines and resource optimization',
+          features: ['AI Planning', 'Team Collaboration', 'Risk Management', 'Performance Analytics'],
+          href: '/services/ai-project-management',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'AI Financial Trading',
+          description: 'AI-powered trading platform with 85% success rate and automated strategies',
+          features: ['AI Analysis', 'Real-time Trading', 'Risk Management', 'Portfolio Optimization'],
+          href: '/services/ai-financial-trading',
+          price: 'From $499',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'AI Supply Chain Optimization',
+          description: 'AI-powered supply chain optimization with 95% forecasting accuracy',
+          features: ['Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Risk Mitigation'],
+          href: '/services/ai-supply-chain-optimization',
+          price: 'From $2,999',
+          rating: 4.9,
+          reviewCount: 134
         }
       ]
     }

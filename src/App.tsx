@@ -92,6 +92,10 @@ const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGoverna
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 
+// Additional Innovative Services
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+const AIFinancialTrading = React.lazy(() => import('./pages/services/AIFinancialTrading'));
+
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
@@ -219,6 +223,11 @@ function App() {
                 <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
                 <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
                 <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+                
+                {/* Additional Innovative Services Routes */}
+                <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
+                <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                 
                 {/* Catch all route */}
                 <Route path="*" element={<Home />} />
