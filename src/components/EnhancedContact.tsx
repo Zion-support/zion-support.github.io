@@ -11,6 +11,8 @@ import {
   MessageSquare,
   Building,
   Globe
+} from 'lucide-react';
+
 interface ContactFormData {
   name: string;
   email: string;
@@ -18,9 +20,11 @@ interface ContactFormData {
   company: string;
   service: string;
   message: string;
+}
 
 interface ContactFormErrors {
   [key: string]: string;
+}
 
 export function EnhancedContact() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -437,4 +441,4 @@ export function EnhancedContact() {
       </div>
     </div>
   );
-</div>}}}}}}}}}}}}
+}

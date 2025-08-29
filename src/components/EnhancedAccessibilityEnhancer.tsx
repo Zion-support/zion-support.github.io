@@ -1,27 +1,18 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
-  Eye,
-  EyeOff,
-  Volume2,
-  VolumeX,
-  Keyboard,
-  MousePointer,
-  Accessibility,
-  CheckCircle,
-  AlertTriangle,
-  X,
-  Settings,
-  Contrast,
-  Type,
-  ZoomIn,
-  ZoomOut,
-  RotateCcw,
-  Info,
-  Shield,
-  Users,
-  Smartphone,
-  Monitor
+    Accessibility,
+    AlertTriangle,
+    CheckCircle,
+    Contrast,
+    Eye,
+    EyeOff,
+    Info,
+    X,
+    ZoomIn,
+    ZoomOut
+} from 'lucide-react';
+import { useCallback, useEffect, useState } from 'react';
+
 interface AccessibilityFeature {
   id: string;
   name: string;
@@ -29,6 +20,7 @@ interface AccessibilityFeature {
   enabled: boolean;
   category: 'visual' | 'motor' | 'cognitive' | 'auditory';
   wcagLevel: 'A' | 'AA' | 'AAA';
+}
 
 interface AccessibilityAudit {
   id: string;
@@ -37,6 +29,7 @@ interface AccessibilityAudit {
   element: string;
   recommendation: string;
   wcagCriteria: string;
+}
 
 export default function EnhancedAccessibilityEnhancer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -570,4 +563,4 @@ export default function EnhancedAccessibilityEnhancer() {
       </AnimatePresence>
     </>
   );
-</div>}}}}}}}}}}}}}}}}}}}
+}

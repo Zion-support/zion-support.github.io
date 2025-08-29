@@ -11,6 +11,7 @@ class TypeScriptErrorFixer {
     this.issuesFixed = 0;
     this.filesProcessed = 0;
     this.startTime = Date.now();
+  }
 
   log(message) {
     const timestamp = new Date().toISOString();
@@ -20,7 +21,8 @@ class TypeScriptErrorFixer {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
       // console.error('Failed to write to log file:', error.message);
-
+    }
+  }
 
   async fixEmptyFiles(filePath) {
     try {
@@ -48,13 +50,14 @@ export default function ${fileName}() {
           this.issuesFixed++;
           this.log(`Fixed empty file: ${filePath} - Created basic component template`);
           return true;
-
-
+        }
+      }
       return false;
     } catch (error) {
       this.log(`Error fixing empty file ${filePath}: ${error.message}`);
       return false;
-
+    }
+  }
 
   async fixMissingClosingTags(filePath) {
     try {
@@ -95,8 +98,8 @@ export default function ${fileName}() {
             const missingTags = close.repeat(missingCount);
             fixedContent = beforeBrace + missingTags + afterBrace;
             hasChanges = true;
-
-
+          }
+        }
       });
 
       if (hasChanges) {
@@ -104,12 +107,14 @@ export default function ${fileName}() {
         this.issuesFixed++;
         this.log(`Fixed missing closing tags in: ${filePath}`);
         return true;
+      }
 
       return false;
     } catch (error) {
       this.log(`Error fixing missing closing tags in ${filePath}: ${error.message}`);
       return false;
-
+    }
+  }
 
   async fixSyntaxErrors(filePath) {
     try {
@@ -120,7 +125,8 @@ export default function ${fileName}() {
       // Fix common syntax errors
       let hasChanges = false;
 
-      // Fix unexpected tokens like fixedContent = fixedContent.replace(/}\s+from\s+["']lucide-react["'];?\s*\n?/g, '');
+      // Fix unexpected tokens like } from "lucide-react";
+      fixedContent = fixedContent.replace(/}\s+from\s+["']lucide-react["'];?\s*\n?/g, '');
       
       // Fix unexpected tokens like } at the end of files
       fixedContent = fixedContent.replace(/}\s*$/g, '');
@@ -139,18 +145,21 @@ export default function ${fileName}() {
           'export default function CybersecurityServicesPage() {'
         );
         hasChanges = true;
+      }
 
       if (originalContent !== fixedContent) {
         fs.writeFileSync(filePath, fixedContent, 'utf8');
         this.issuesFixed++;
         this.log(`Fixed syntax errors in: ${filePath}`);
         return true;
+      }
 
       return false;
     } catch (error) {
       this.log(`Error fixing syntax errors in ${filePath}: ${error.message}`);
       return false;
-
+    }
+  }
 
   async fixBraceMismatches(filePath) {
     try {
@@ -176,21 +185,24 @@ export default function ${fileName}() {
             const lastBraceIndex = fixedContent.lastIndexOf('}');
             if (lastBraceIndex !== -1) {
               fixedContent = fixedContent.substring(0, lastBraceIndex) + fixedContent.substring(lastBraceIndex + 1);
-
-
-
+            }
+          }
+        }
+        
         if (originalContent !== fixedContent) {
           fs.writeFileSync(filePath, fixedContent, 'utf8');
           this.issuesFixed++;
           this.log(`Fixed brace mismatch in: ${filePath}`);
           return true;
-
+        }
+      }
 
       return false;
     } catch (error) {
       this.log(`Error fixing brace mismatches in ${filePath}: ${error.message}`);
       return false;
-
+    }
+  }
 
   async processFile(filePath) {
     try {
@@ -204,10 +216,12 @@ export default function ${fileName}() {
           filePath.includes('.next') ||
           filePath.includes('coverage')) {
         return;
+      }
 
       const ext = path.extname(filePath);
       if (!['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {
         return;
+      }
 
       let fileFixed = false;
 
@@ -219,10 +233,12 @@ export default function ${fileName}() {
 
       if (fileFixed) {
         this.log(`File processed and fixed: ${filePath}`);
+      }
 
     } catch (error) {
       this.log(`Error processing file ${filePath}: ${error.message}`);
-
+    }
+  }
 
   async walkDirectory(dir) {
     try {
@@ -236,11 +252,12 @@ export default function ${fileName}() {
           await this.walkDirectory(fullPath);
         } else if (stat.isFile()) {
           await this.processFile(fullPath);
-
-
+        }
+      }
     } catch (error) {
       this.log(`Error walking directory ${dir}: ${error.message}`);
-
+    }
+  }
 
   async run() {
     this.log('🚀 Starting TypeScript Error Fixer...');
@@ -251,6 +268,7 @@ export default function ${fileName}() {
       const logsDir = path.dirname(this.logFile);
       if (!fs.existsSync(logsDir)) {
         fs.mkdirSync(logsDir, { recursive: true });
+      }
 
       // Process all files
       await this.walkDirectory(this.projectRoot);
@@ -272,19 +290,20 @@ export default function ${fileName}() {
           this.log('✅ Changes committed to git');
         } catch (error) {
           this.log(`⚠️  Could not commit changes: ${error.message}`);
-
+        }
       } else {
         this.log('✨ No TypeScript errors found to fix!');
+      }
 
     } catch (error) {
       this.log(`❌ Error running TypeScript error fixer: ${error.message}`);
       process.exit(1);
-
-
+    }
+  }
+}
 
 // Run the TypeScript error fixer
 const fixer = new TypeScriptErrorFixer();
 fixer.run().catch(error => {
   process.exit(1);
-</Card></Card>});
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+});

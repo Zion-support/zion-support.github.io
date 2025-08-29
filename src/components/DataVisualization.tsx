@@ -1,21 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
-  BarChart3,
-  PieChart,
-  TrendingUp,
-  Activity,
-  Users,
-  DollarSign,
-  Calendar,
-  Target,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Eye,
-  Download,
-  Share2,
-  RefreshCw
+    Activity,
+    ArrowDown,
+    ArrowUp,
+    BarChart3,
+    DollarSign,
+    Download,
+    Eye,
+    Minus,
+    PieChart,
+    RefreshCw,
+    Share2,
+    Target,
+    TrendingUp,
+    Users
+} from 'lucide-react';
+import React, { useState } from 'react';
+
 interface ChartData {
   labels: string[];
   datasets: {
@@ -25,6 +26,7 @@ interface ChartData {
     borderColor: string[];
     borderWidth: number;
   }[];
+}
 
 interface MetricCard {
   title: string;
@@ -33,12 +35,14 @@ interface MetricCard {
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
   color: string;
+}
 
 interface DataVisualizationProps {
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
   showActions?: boolean;
+}
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard",
@@ -478,4 +482,4 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       </div>
     </div>
   );
-</div>};}}}}</motion.div>}
+};
