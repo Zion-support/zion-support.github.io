@@ -169,8 +169,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' }
       ]
     }
-      ]
-    }
   ];
 
   const quickLinks = [
