@@ -35,7 +35,7 @@ const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
-const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
+// const ServicesComparisonPage duplicate removed
 const Team = React.lazy(() => import('./pages/Team'));
 const Press = React.lazy(() => import('./pages/Press'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
@@ -88,6 +88,14 @@ const WebsiteAiChatbot = React.lazy(() => import('./pages/services/WebsiteAiChat
 const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
 const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
 const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
+
+// New services added in this iteration
+const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
+const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
+const AIProofreadingStudio = React.lazy(() => import('./pages/services/AIProofreadingStudio'));
+
+// Catalog page
+const ServicesCatalog = React.lazy(() => import('./pages/ServicesCatalog'));
 
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
@@ -187,6 +195,7 @@ function App() {
               <Route path="/pricing-guide" element={<PricingGuide />} />
               <Route path="/services-comparison" element={<ServicesComparisonPage />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services-catalog" element={<ServicesCatalog />} />
               <Route path="/services-overview" element={<ServicesOverview />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
@@ -244,6 +253,9 @@ function App() {
               <Route path="/services/rag-search" element={<RagSearch />} />
               <Route path="/services/mlops-pipeline" element={<MlopsPipeline />} />
               <Route path="/services/ecommerce-personalization" element={<EcommercePersonalization />} />
+              <Route path="/services/api-monitoring" element={<APIMonitoringSaaS />} />
+              <Route path="/services/gdpr-cookie-compliance" element={<GDPRCookieCompliance />} />
+              <Route path="/services/ai-proofreading-studio" element={<AIProofreadingStudio />} />
               
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
