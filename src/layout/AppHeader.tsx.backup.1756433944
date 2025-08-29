@@ -105,16 +105,37 @@ export function AppHeader() {
   };
 
   const navigation = [
+<<<<<<< HEAD
+    { name: 'Home', href: '/', current: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+=======
     { name: 'Home', href: '/', current: location.pathname === '/' },
     { name: 'Services', href: '/services', current: location.pathname.startsWith('/services'), hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: location.pathname.startsWith('/solutions'), hasDropdown: true },
     { name: 'Resources', href: '/resources', current: location.pathname.startsWith('/resources'), hasDropdown: true },
     { name: 'About', href: '/about', current: location.pathname === '/about' },
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
+>>>>>>> cursor/website-audit-content-update-and-deployment-dee9
   ];
 
   const services = [
     { 
+<<<<<<< HEAD
+
+      name: 'AI Legal Document Analyzer Pro', 
+      href: '/services/ai-legal-document-analysis', 
+      icon: FileText, 
+      description: 'Advanced legal document analysis with AI',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500',
+      price: '$299/month',
+      category: 'AI & Legal Tech'
+
+=======
       name: 'AI Business Intelligence', 
       href: '/services/ai-business-intelligence', 
       icon: Brain, 
@@ -122,6 +143,7 @@ export function AppHeader() {
       featured: true,
       color: 'from-purple-500 to-cyan-500',
       badge: 'Popular'
+>>>>>>> cursor/website-audit-content-update-and-deployment-dee9
     },
     { 
       name: 'AI Healthcare Platform', 
@@ -146,7 +168,144 @@ export function AppHeader() {
       icon: Shield, 
       description: 'AI-Powered Security',
       featured: true,
+<<<<<<< HEAD
+      color: 'from-purple-500 to-pink-500',
+      price: '$399/month',
+      category: 'AI & Operations'
+    },
+    { 
+      name: 'AI Workflow Automation', 
+      href: '/services/ai-workflow-automation', 
+      icon: Settings, 
+      description: 'Smart workflow optimization',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500',
+      price: '$349/month',
+      category: 'AI & Operations'
+    },
+    { 
+      name: 'AI Predictive Maintenance', 
+      href: '/services/ai-predictive-maintenance', 
+      icon: Gauge, 
+      description: 'IoT-powered maintenance prediction',
+      featured: true,
+      color: 'from-yellow-500 to-orange-500',
+      price: '$899/month',
+      category: 'AI & Operations'
+    },
+    { 
+      name: 'AI Supply Chain Optimizer', 
+      href: '/services/ai-supply-chain-optimization', 
+      icon: Truck, 
+      description: 'Intelligent supply chain management',
+      featured: true,
+      color: 'from-teal-500 to-cyan-500',
+      price: '$499/month',
+      category: 'AI & Operations'
+    },
+    { 
+      name: 'AI Autonomous Research Assistant', 
+      href: '/services/ai-autonomous-research-assistant', 
+      icon: BookOpen, 
+      description: 'Autonomous research and analysis',
+      featured: true,
+      color: 'from-violet-500 to-purple-500',
+      price: '$599/month',
+      category: 'AI & Research'
+    },
+    { 
+      name: 'AI Quantum Hybrid Platform', 
+      href: '/services/ai-quantum-hybrid-platform', 
+      icon: Atom, 
+      description: 'Quantum AI hybrid computing',
+      featured: true,
+      color: 'from-purple-500 to-pink-500',
+      price: '$2,499/month',
+      category: 'Quantum Computing'
+    },
+    { 
+      name: 'AI Space Technology Platform', 
+      href: '/services/ai-space-technology', 
+      icon: Rocket, 
+      description: 'Space AI and satellite operations',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500',
+      price: '$3,999/month',
+      category: 'Space Technology'
+    },
+    { 
+      name: 'AI Sustainable Technology Platform', 
+      href: '/services/ai-sustainable-technology', 
+      icon: Leaf, 
+      description: 'Green tech and sustainability AI',
+      featured: true,
+      color: 'from-green-500 to-teal-500',
+      price: '$799/month',
+      category: 'Sustainable Technology'
+    },
+    { 
+      name: 'AI Metaverse Platform', 
+      href: '/services/ai-metaverse', 
+      icon: Globe, 
+      description: 'Next-gen metaverse experiences',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500',
+      price: '$1,499/month',
+      category: 'AI & Metaverse'
+    },
+    { 
+      name: 'AI Education Platform', 
+      href: '/services/ai-education', 
+      icon: BookOpen, 
+      description: 'Personalized AI learning',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500',
+      price: '$399/month',
+      category: 'AI & Education'
+    },
+    { 
+      name: 'AI Entertainment Platform', 
+      href: '/services/ai-entertainment', 
+      icon: Play, 
+      description: 'AI-powered entertainment',
+      featured: true,
+      color: 'from-purple-500 to-pink-500',
+      price: '$299/month',
+      category: 'AI & Entertainment'
+    },
+    { 
+      name: 'AI Development Platform', 
+      href: '/services/ai-development', 
+      icon: Code, 
+      description: 'AI-powered development tools',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500',
+      price: '$599/month',
+      category: 'AI & Development'
+    },
+    { 
+      name: 'AI Green Technology Platform', 
+      href: '/services/ai-green-technology', 
+      icon: Leaf, 
+      description: 'Sustainable AI solutions',
+      featured: true,
+      color: 'from-green-500 to-emerald-500',
+      price: '$699/month',
+      category: 'AI & Green Tech'
+    },
+    // Legacy Services
+    { 
+      name: 'AI Business Intelligence', 
+      href: '/services/ai-business-intelligence',
+      icon: Brain, 
+      description: 'Machine Learning & Data Science',
+      featured: true,
+      color: 'from-purple-500 to-cyan-500',
+      price: 'Custom Pricing',
+      category: 'AI & Business Intelligence'
+=======
       color: 'from-green-500 to-blue-500'
+>>>>>>> cursor/website-audit-content-update-and-deployment-dee9
     },
     { 
       name: 'Quantum Computing', 
@@ -158,6 +317,12 @@ export function AppHeader() {
       badge: 'Cutting Edge'
     },
     { 
+<<<<<<< HEAD
+      name: 'Quantum AI Cybersecurity', 
+      href: '/services/quantum-ai-cybersecurity-platform', 
+      icon: Shield, 
+      description: 'Quantum Security & AI',
+=======
       name: 'IoT Edge Computing', 
       href: '/services/iot-edge-computing', 
       icon: Cpu, 
@@ -170,14 +335,54 @@ export function AppHeader() {
       href: '/services/digital-twin', 
       icon: Globe, 
       description: 'Virtual Replicas & Simulation',
+>>>>>>> cursor/website-audit-content-update-and-deployment-dee9
       featured: true,
       color: 'from-blue-500 to-cyan-500',
       price: 'Custom Pricing',
       category: 'IoT & Edge Computing'
     },
     { 
+<<<<<<< HEAD
+      name: 'AI Content Creation Studio', 
+      href: '/services/ai-content-creation-studio', 
+      icon: PenTool, 
+      description: 'AI Content Generation',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'AI Sales Intelligence', 
+      href: '/services/ai-sales-intelligence-platform', 
+      icon: TrendingUp, 
+      description: 'Sales AI & Analytics',
+      featured: true,
+      color: 'from-green-500 to-emerald-500',
+      price: 'Custom Pricing',
+      category: 'Digital Twin'
+    },
+    { 
+      name: 'AI Customer Support', 
+      href: '/services/ai-customer-support-automation', 
+      icon: MessageCircle, 
+      description: 'AI Support Automation',
+      featured: true,
+      color: 'from-blue-500 to-purple-500'
+    },
+    { 
+      name: 'AI Data Analytics & BI', 
+      href: '/services/ai-data-analytics-bi', 
+      icon: BarChart3, 
+      description: 'Business Intelligence',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Cloud Infrastructure & DevOps', 
+      href: '/services/cloud-infrastructure-devops', 
+=======
       name: 'Cloud & DevOps', 
       href: '/services/cloud-devops', 
+>>>>>>> cursor/website-audit-content-update-and-deployment-dee9
       icon: Cloud, 
       description: 'Infrastructure & Automation',
       featured: true,
@@ -205,8 +410,22 @@ export function AppHeader() {
       icon: Zap, 
       description: 'Specialized Software Solutions',
       featured: true,
+<<<<<<< HEAD
+      color: 'from-orange-500 to-red-500',
+      price: 'Starting at $99/month',
+      category: 'Micro SaaS'
+    },
+    { 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+
+=======
       color: 'from-orange-500 to-red-500'
     }
+>>>>>>> cursor/website-audit-content-update-and-deployment-dee9
   ];
 
   const solutions = [
@@ -327,6 +546,30 @@ export function AppHeader() {
     }
   ];
 
+<<<<<<< HEAD
+
+  const serviceCategories = [
+    { name: 'AI & Business Intelligence', count: services.filter(s => s.category?.includes('AI & Business Intelligence') || s.category?.includes('AI & Development')).length },
+    { name: 'AI & Marketing', count: services.filter(s => s.category?.includes('AI & Marketing')).length },
+    { name: 'AI & Healthcare', count: services.filter(s => s.category?.includes('AI & Healthcare')).length },
+    { name: 'AI & Legal Tech', count: services.filter(s => s.category?.includes('AI & Legal Tech')).length },
+    { name: 'AI & Operations', count: services.filter(s => s.category?.includes('AI & Operations')).length },
+    { name: 'AI & Content', count: services.filter(s => s.category?.includes('AI & Content')).length },
+    { name: 'AI & Customer Support', count: services.filter(s => s.category?.includes('AI & Customer Support')).length },
+    { name: 'AI & HR', count: services.filter(s => s.category?.includes('AI & HR')).length },
+    { name: 'FinTech', count: services.filter(s => s.category?.includes('FinTech')).length },
+    { name: 'Quantum Computing', count: services.filter(s => s.category?.includes('Quantum Computing')).length },
+    { name: 'Space Technology', count: services.filter(s => s.category?.includes('Space Technology')).length },
+    { name: 'Sustainable Technology', count: services.filter(s => s.category?.includes('Sustainable Technology') || s.category?.includes('AI & Green Tech')).length },
+    { name: 'AI & Metaverse', count: services.filter(s => s.category?.includes('AI & Metaverse')).length },
+    { name: 'AI & Education', count: services.filter(s => s.category?.includes('AI & Education')).length },
+    { name: 'AI & Entertainment', count: services.filter(s => s.category?.includes('AI & Entertainment')).length },
+    { name: 'Micro SaaS', count: services.filter(s => s.category?.includes('Micro SaaS')).length },
+    { name: 'Enterprise Solutions', count: services.filter(s => s.category?.includes('Enterprise Solutions')).length }
+  ];
+
+=======
+>>>>>>> cursor/website-audit-content-update-and-deployment-dee9
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

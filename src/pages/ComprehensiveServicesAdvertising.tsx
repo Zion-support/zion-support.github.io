@@ -79,7 +79,7 @@ import {
   Eye as EyeIcon
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
+import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
 
 export default function ComprehensiveServicesAdvertising() {
   const [activeCategory, setActiveCategory] = useState('all');
