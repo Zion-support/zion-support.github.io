@@ -1,499 +1,444 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
 import { 
   Cpu, 
   Zap, 
   Globe, 
-  Server, 
-  Network, 
-  Cloud, 
   Shield, 
-  Clock,
+  TrendingUp, 
+  Users, 
+  Clock, 
   CheckCircle,
-  TrendingUp,
-  Users,
+  ArrowRight,
+  Server,
+  Network,
   Database,
+  Cloud,
+  Smartphone,
+  Monitor,
   Wifi,
   Satellite,
-  Smartphone,
-  Car,
-  Factory,
-  Home,
-  Building,
-  Truck,
-  Plane,
-  Ship,
-  Train,
-  Rocket,
-  Target,
-  Gauge,
-  BarChart3,
-  Settings,
-  RefreshCw,
-  Download,
-  Upload,
-  Play,
-  Pause,
-  Stop,
-  FastForward,
-  Rewind,
-  Volume2,
-  VolumeX,
-  WifiOff,
-  Signal,
-  Activity,
-  Pulse,
-  Heart,
-  Battery,
-  Power,
-  PowerOff,
-  Sun,
-  Moon,
-  Star,
-  Sparkles,
-  Flame,
-  Lightning,
-  Thunder,
-  Rain,
-  Snow,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  MapPin
+  Router,
+  HardDrive,
+  Activity
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
-const EdgeComputingPlatform: React.FC = () => {
+export default function EdgeComputingPlatform() {
   const features = [
     {
       icon: Cpu,
       title: "Distributed Edge Nodes",
-      description: "Deploy computing resources closer to data sources for ultra-low latency processing",
-      color: "from-blue-500 to-cyan-500"
+      description: "Deploy computing resources closer to data sources for ultra-low latency processing"
     },
     {
       icon: Zap,
-      title: "Real-time Processing",
-      description: "Sub-millisecond response times for critical applications and IoT devices",
-      color: "from-green-500 to-emerald-500"
+      title: "Real-time Analytics",
+      description: "Process data at the edge for instant insights and immediate decision-making"
     },
     {
       icon: Globe,
       title: "Global Edge Network",
-      description: "Worldwide infrastructure with automatic failover and load balancing",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Server,
-      title: "Edge AI Inference",
-      description: "Run machine learning models at the edge for instant decision making",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: Network,
-      title: "5G & IoT Integration",
-      description: "Seamless connectivity with 5G networks and IoT device ecosystems",
-      color: "from-indigo-500 to-purple-500"
+      description: "Worldwide infrastructure with automatic failover and load balancing"
     },
     {
       icon: Shield,
       title: "Edge Security",
-      description: "Advanced security protocols and encryption for edge computing environments",
-      color: "from-yellow-500 to-orange-500"
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$399",
-      period: "/month",
-      description: "Perfect for small IoT deployments and edge computing experiments",
-      features: [
-        "Up to 10 edge nodes",
-        "Basic edge processing",
-        "Standard security",
-        "Email support",
-        "Basic monitoring",
-        "5GB data transfer",
-        "Community support"
-      ],
-      cta: "Start Free Trial",
-      popular: false
+      description: "Advanced security protocols with encrypted data transmission and access control"
     },
     {
-      name: "Professional",
-      price: "$1,199",
-      period: "/month",
-      description: "Ideal for growing businesses with significant edge computing needs",
-      features: [
-        "Up to 100 edge nodes",
-        "Advanced edge AI",
-        "Custom security policies",
-        "Priority support",
-        "Advanced analytics",
-        "100GB data transfer",
-        "API access",
-        "Custom integrations"
-      ],
-      cta: "Start Free Trial",
-      popular: true
+      icon: TrendingUp,
+      title: "Scalable Architecture",
+      description: "Auto-scaling edge nodes based on demand and performance requirements"
     },
     {
-      name: "Enterprise",
-      price: "$3,999",
-      period: "/month",
-      description: "For large organizations requiring enterprise-grade edge computing",
-      features: [
-        "Unlimited edge nodes",
-        "Custom AI models",
-        "Advanced security features",
-        "Multi-tenant support",
-        "Dedicated support team",
-        "Custom development",
-        "SLA guarantees",
-        "On-premise option"
-      ],
-      cta: "Contact Sales",
-      popular: false
+      icon: Users,
+      title: "Multi-tenant Support",
+      description: "Isolated environments for different applications and organizations"
     }
   ];
 
   const benefits = [
     {
       icon: Zap,
-      title: "10x Faster Response",
-      description: "Reduce latency from 100ms to under 10ms with edge processing",
-      metric: "10x"
+      title: "Ultra-Low Latency",
+      description: "Reduce response times by up to 90% with edge processing",
+      metric: "90%"
+    },
+    {
+      icon: Globe,
+      title: "Global Coverage",
+      description: "Deploy across 50+ countries with automatic routing optimization",
+      metric: "50+"
     },
     {
       icon: TrendingUp,
-      title: "50% Cost Reduction",
-      description: "Lower bandwidth costs and reduce cloud computing expenses",
-      metric: "50%"
+      title: "Cost Optimization",
+      description: "Reduce bandwidth costs by processing data locally at the edge",
+      metric: "60%"
     },
     {
-      icon: Clock,
-      title: "99.9% Uptime",
-      description: "Distributed architecture ensures high availability and reliability",
-      metric: "99.9%"
-    },
-    {
-      icon: Users,
-      title: "Global Scale",
-      description: "Deploy edge nodes worldwide for optimal user experience",
-      metric: "200+"
+      icon: Shield,
+      title: "Enhanced Security",
+      description: "Local data processing reduces exposure and improves privacy",
+      metric: "100%"
     }
   ];
 
   const useCases = [
     {
-      industry: "Autonomous Vehicles",
-      title: "Real-time Decision Making",
-      description: "Process sensor data and make driving decisions in milliseconds",
-      icon: Car,
-      color: "from-blue-500 to-cyan-500"
+      title: "IoT & Smart Cities",
+      description: "Process sensor data locally for real-time traffic management and environmental monitoring",
+      icon: Smartphone
     },
     {
-      industry: "Smart Cities",
-      title: "IoT Infrastructure",
-      description: "Manage traffic lights, utilities, and public services in real-time",
-      icon: Building,
-      color: "from-green-500 to-emerald-500"
+      title: "Content Delivery",
+      description: "Deliver media content with minimal latency for streaming and gaming applications",
+      icon: Monitor
     },
     {
-      industry: "Manufacturing",
-      title: "Predictive Maintenance",
-      description: "Monitor equipment health and prevent failures before they occur",
-      icon: Factory,
-      color: "from-purple-500 to-pink-500"
+      title: "Financial Trading",
+      description: "Ultra-low latency processing for high-frequency trading and real-time analytics",
+      icon: TrendingUp
     },
     {
-      industry: "Healthcare",
-      title: "Remote Monitoring",
-      description: "Real-time patient monitoring and emergency response systems",
-      icon: Heart,
-      color: "from-orange-500 to-red-500"
+      title: "Healthcare IoT",
+      description: "Process medical device data locally for immediate patient monitoring and alerts",
+      icon: Activity
     }
   ];
 
-  const edgeLocations = [
+  const pricing = [
     {
-      region: "North America",
-      cities: ["New York", "Los Angeles", "Chicago", "Toronto", "Vancouver"],
-      icon: Building,
-      color: "from-blue-500 to-cyan-500"
+      name: "Starter",
+      price: "$499",
+      period: "/month",
+      description: "Perfect for small applications and development teams",
+      features: [
+        "Up to 5 edge nodes",
+        "Basic monitoring",
+        "Standard support",
+        "100GB bandwidth",
+        "Basic analytics",
+        "Email support"
+      ],
+      cta: "Start Free Trial",
+      popular: false
     },
     {
-      region: "Europe",
-      cities: ["London", "Paris", "Berlin", "Amsterdam", "Frankfurt"],
-      icon: Globe,
-      color: "from-green-500 to-emerald-500"
+      name: "Professional",
+      price: "$1,999",
+      period: "/month",
+      description: "Ideal for production applications with moderate traffic",
+      features: [
+        "Up to 25 edge nodes",
+        "Advanced monitoring",
+        "Priority support",
+        "1TB bandwidth",
+        "Advanced analytics",
+        "24/7 support",
+        "Custom domains"
+      ],
+      cta: "Start Free Trial",
+      popular: true
     },
     {
-      region: "Asia Pacific",
-      cities: ["Tokyo", "Singapore", "Sydney", "Seoul", "Hong Kong"],
-      icon: Satellite,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      region: "Latin America",
-      cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],
-      icon: MapPin,
-      color: "from-orange-500 to-red-500"
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "For large-scale deployments with custom requirements",
+      features: [
+        "Unlimited edge nodes",
+        "Custom monitoring",
+        "Dedicated support",
+        "Unlimited bandwidth",
+        "Custom analytics",
+        "SLA guarantees",
+        "On-premise options"
+      ],
+      cta: "Contact Sales",
+      popular: false
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <SEO 
         title="Edge Computing Platform - Zion Tech Group"
-        description="Deploy computing power to the edge with our advanced edge computing platform. Ultra-low latency, real-time processing, and global edge network for IoT and AI applications."
+        description="Deploy computing resources closer to your users with our global edge computing platform. Reduce latency, improve performance, and scale globally."
+        canonical="/services/edge-computing-platform"
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-green-900/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6"
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
-                <Cpu className="w-4 h-4 mr-2" />
-                Next-Generation Edge Computing
-              </div>
-              
-              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-                Edge Computing
-                <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent"> Platform</span>
-              </h1>
-              
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Bring computing power to the edge of your network. Ultra-low latency processing, 
-                real-time AI inference, and global edge infrastructure for the IoT era.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
-                  Watch Demo
-                </button>
-              </div>
+              <Cpu className="w-4 h-4 mr-2" />
+              Global Edge Computing
+            </motion.div>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-5xl md:text-6xl font-bold mb-6"
+            >
+              Edge Computing
+              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+                Platform
+              </span>
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl text-slate-300 max-w-3xl mx-auto mb-8"
+            >
+              Deploy computing resources closer to your users worldwide. Reduce latency, improve performance, and scale globally with our intelligent edge computing platform.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link
+                to="/request-quote"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
+              >
+                Schedule Demo
+              </Link>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Key Benefits */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Powerful Edge Computing Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to deploy and manage edge computing infrastructure
+            <h2 className="text-4xl font-bold mb-6">Why Choose Edge Computing?</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Transform your applications with distributed computing that brings resources closer to your users
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-slate-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Benefits Metrics */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Transform Your Applications
-            </h2>
-            <p className="text-xl text-gray-300">
-              See how edge computing revolutionizes performance and user experience
+            <h2 className="text-4xl font-bold mb-6">Proven Results</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              See the measurable impact of edge computing on your application performance
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-purple-400" />
                 </div>
-                <div className="text-4xl font-bold text-white mb-2">{benefit.metric}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <div className="text-4xl font-bold text-purple-400 mb-2">{benefit.metric}</div>
+                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-slate-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Use Cases */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-gray-300">
-              Edge computing solutions for every industry and use case
+            <h2 className="text-4xl font-bold mb-6">Powerful Use Cases</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Discover how edge computing can transform your applications and user experience
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50"
               >
-                <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
-                  <div className="flex items-start space-x-4">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
-                      <useCase.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-sm font-medium text-blue-300 mb-2">{useCase.industry}</div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
-                      <p className="text-gray-300">{useCase.description}</p>
-                    </div>
-                  </div>
+                <div className="w-16 h-16 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
+                  <useCase.icon className="w-8 h-8 text-purple-400" />
                 </div>
+                <h3 className="text-2xl font-semibold mb-4">{useCase.title}</h3>
+                <p className="text-slate-300 text-lg">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Edge Locations Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Global Network Map */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Global Edge Network
-            </h2>
-            <p className="text-xl text-gray-300">
-              Deploy edge nodes worldwide for optimal performance and reliability
+            <h2 className="text-4xl font-bold mb-6">Global Edge Network</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Deploy your applications across our worldwide infrastructure for optimal performance
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {edgeLocations.map((location, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${location.color} mb-4`}>
-                    <location.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{location.region}</h3>
-                  <div className="space-y-2">
-                    {location.cities.map((city, cityIndex) => (
-                      <div key={cityIndex} className="text-gray-300 text-sm">
-                        • {city}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center"
+            >
+              <div className="w-16 h-16 bg-purple-500/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">50+ Countries</h3>
+              <p className="text-slate-300">Global presence with edge nodes in major metropolitan areas</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center"
+            >
+              <div className="w-16 h-16 bg-purple-500/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Zap className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">&lt;10ms Latency</h3>
+              <p className="text-slate-300">Ultra-low latency for real-time applications and gaming</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 text-center"
+            >
+              <div className="w-16 h-16 bg-purple-500/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4">99.99% Uptime</h3>
+              <p className="text-slate-300">Enterprise-grade reliability with automatic failover</p>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Pricing */}
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
-            </h2>
-            <p className="text-xl text-gray-300">
-              Choose the plan that fits your edge computing needs
+            <h2 className="text-4xl font-bold mb-6">Simple, Transparent Pricing</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Choose the plan that fits your edge computing needs. All plans include a 14-day free trial.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative rounded-xl p-8 ${
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-slate-800/50 p-8 rounded-xl border ${
                   plan.popular 
-                    ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50' 
-                    : 'bg-slate-800/50 border border-slate-700/50'
+                    ? 'border-purple-500/50 bg-purple-500/5' 
+                    : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-4">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <h3 className="text-2xl font-semibold mb-4">{plan.name}</h3>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    <span className="text-slate-400">{plan.period}</span>
                   </div>
-                  <p className="text-gray-300">{plan.description}</p>
+                  <p className="text-slate-300">{plan.description}</p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      <span className="text-slate-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-blue-500 to-green-500 text-white hover:from-blue-600 hover:to-green-600'
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
+                <Link
+                  to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-purple-500 hover:bg-purple-600 text-white'
+                      : 'bg-slate-700 hover:bg-slate-600 text-white'
+                  }`}
+                >
                   {plan.cta}
-                </button>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -501,32 +446,28 @@ const EdgeComputingPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Deploy to the Edge?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations already using edge computing to transform their applications
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="max-w-4xl mx-auto text-center px-6">
+          <h2 className="text-4xl font-bold mb-6">Ready to Go Global?</h2>
+          <p className="text-xl mb-8 text-purple-100">
+            Join leading companies already using edge computing to deliver superior user experiences
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/request-quote"
+              className="px-8 py-4 bg-white text-purple-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Free Trial
+            </Link>
+            <Link
+              to="/contact"
+              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
         </div>
       </section>
-    </div>
+    </>
   );
-};
-
-export default EdgeComputingPlatform;
+}
