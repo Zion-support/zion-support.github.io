@@ -9,6 +9,7 @@ export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
@@ -73,6 +74,7 @@ export function AppHeader() {
     { name: 'IT Services', href: '/it-services', current: false, hasDropdown: false },
     { name: 'Micro SaaS', href: '/micro-saas', current: false, hasDropdown: false },
     { name: 'Pricing', href: '/pricing-guide', current: false, hasDropdown: false },
+    { name: 'Resources', href: '#', current: false, hasDropdown: true },
     { name: 'About', href: '/about', current: false, hasDropdown: false },
     { name: 'Contact', href: '/contact', current: false, hasDropdown: false },
   ];
@@ -88,7 +90,10 @@ export function AppHeader() {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
+        { name: 'AI Lead Scoring', href: '/services/ai-lead-scoring', description: 'Smart lead qualification' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'Search engine optimization' },
+        { name: 'AI Proofreading Studio', href: '/services/ai-proofreading-studio', description: 'Content quality assurance' }
       ]
     },
     {
@@ -99,7 +104,10 @@ export function AppHeader() {
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation' },
         { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Cost optimization' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' }
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Financial operations guidance' },
+        { name: 'API Monitoring SaaS', href: '/services/api-monitoring', description: 'Real-time API monitoring' },
+        { name: 'MLOps Pipeline', href: '/services/mlops-pipeline', description: 'Machine learning operations' },
+        { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor', description: 'Service availability tracking' }
       ]
     },
     {
@@ -112,7 +120,9 @@ export function AppHeader() {
         { name: 'IoT Edge Computing', href: '/services/iot-edge', description: 'Smart device networks' },
         { name: 'Data Analytics', href: '/services/data-analytics', description: 'Advanced data processing' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce RMA & logistics' }
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
+        { name: 'Website AI Chatbot', href: '/services/website-ai-chatbot', description: 'Intelligent customer support' },
+        { name: 'RAG Search', href: '/services/rag-search', description: 'Advanced search capabilities' }
       ]
     },
     {
@@ -123,7 +133,24 @@ export function AppHeader() {
       services: [
         { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', description: 'AI-powered security' },
         { name: 'Zero Trust Architecture', href: '/services/zero-trust-network-architecture', description: 'Modern security framework' },
-        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' }
+        { name: 'Incident Response', href: '/services/incident-response-platform', description: 'Security incident management' },
+        { name: 'Vendor Risk Management', href: '/services/vendor-risk-management', description: 'Third-party risk assessment' },
+        { name: 'SOC2 Compliance Tracker', href: '/services/soc2-compliance-tracker', description: 'Compliance monitoring' },
+        { name: 'GDPR Cookie Compliance', href: '/services/gdpr-cookie-compliance', description: 'Privacy compliance' }
+      ]
+    },
+    {
+      name: 'Micro SaaS',
+      description: 'Specialized business automation tools',
+      color: 'from-yellow-500 to-orange-600',
+      icon: Settings,
+      services: [
+        { name: 'Affiliate Marketing Tracker', href: '/services/affiliate-marketing-tracker', description: 'Referral program management' },
+        { name: 'Employee Scheduling SaaS', href: '/services/employee-scheduling-saas', description: 'Workforce management' },
+        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor', description: 'Customer retention analytics' },
+        { name: 'Returns Management', href: '/services/returns-management', description: 'E-commerce RMA & logistics' },
+        { name: 'Ecommerce Personalization', href: '/services/ecommerce-personalization', description: 'Customer experience optimization' },
+        { name: 'AI Support Helpdesk', href: '/services/ai-support-helpdesk', description: 'Automated customer support' }
       ]
     },
     {
@@ -152,6 +179,48 @@ export function AppHeader() {
     { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'Help', href: '/help', icon: MessageCircle },
     { name: 'Partners', href: '/partners', icon: Users },
+  ];
+
+  const resourcesCategories = [
+    {
+      name: 'Learning & Support',
+      description: 'Knowledge base and assistance',
+      color: 'from-blue-500 to-cyan-600',
+      icon: BookOpen,
+      links: [
+        { name: 'Documentation', href: '/docs', description: 'Technical guides and API docs' },
+        { name: 'Help Center', href: '/help', description: 'Self-service support portal' },
+        { name: 'Training', href: '/training', description: 'Educational resources' },
+        { name: 'Webinars', href: '/webinars', description: 'Live and recorded sessions' },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
+      ]
+    },
+    {
+      name: 'Company',
+      description: 'About us and our team',
+      color: 'from-green-500 to-emerald-600',
+      icon: Users,
+      links: [
+        { name: 'About Us', href: '/about', description: 'Our story and mission' },
+        { name: 'Team', href: '/team', description: 'Meet our experts' },
+        { name: 'Careers', href: '/careers', description: 'Join our team' },
+        { name: 'Press', href: '/press', description: 'Media resources' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+      ]
+    },
+    {
+      name: 'Resources',
+      description: 'Insights and tools',
+      color: 'from-purple-500 to-pink-600',
+      icon: Star,
+      links: [
+        { name: 'Blog', href: '/blog', description: 'Latest insights and trends' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
+        { name: 'Status Page', href: '/status', description: 'Service status' },
+        { name: 'Sitemap', href: '/sitemap', description: 'Site navigation' }
+      ]
+    }
   ];
 
   return (
@@ -186,11 +255,22 @@ export function AppHeader() {
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <button
-                      onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                      onClick={() => {
+                        if (item.name === 'Services') {
+                          setServicesDropdownOpen(!servicesDropdownOpen);
+                          setResourcesDropdownOpen(false);
+                        } else if (item.name === 'Resources') {
+                          setResourcesDropdownOpen(!resourcesDropdownOpen);
+                          setServicesDropdownOpen(false);
+                        }
+                      }}
                       className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
                     >
                       <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform ${
+                        (item.name === 'Services' && servicesDropdownOpen) || 
+                        (item.name === 'Resources' && resourcesDropdownOpen) ? 'rotate-180' : ''
+                      }`} />
                     </button>
                   ) : (
                     <Link
@@ -313,6 +393,53 @@ export function AppHeader() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Resources Dropdown */}
+        <AnimatePresence>
+          {resourcesDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  {resourcesCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.links.map((link) => (
+                          <Link
+                            key={link.name}
+                            to={link.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {link.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {link.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
 
       {/* Mobile Menu */}
@@ -360,7 +487,7 @@ export function AppHeader() {
                         <div className="space-y-2">
                           <div className="font-medium text-white py-2">{item.name}</div>
                           <div className="pl-4 space-y-2">
-                            {servicesCategories.map((category) => (
+                            {item.name === 'Services' && servicesCategories.map((category) => (
                               <div key={category.name} className="space-y-2">
                                 <div className="text-sm font-medium text-cyan-400">{category.name}</div>
                                 <div className="pl-4 space-y-1">
@@ -372,6 +499,23 @@ export function AppHeader() {
                                       className="block text-sm text-slate-300 hover:text-white transition-colors py-1"
                                     >
                                       {service.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                            {item.name === 'Resources' && resourcesCategories.map((category) => (
+                              <div key={category.name} className="space-y-2">
+                                <div className="text-sm font-medium text-cyan-400">{category.name}</div>
+                                <div className="pl-4 space-y-1">
+                                  {category.links.map((link) => (
+                                    <Link
+                                      key={link.name}
+                                      to={link.href}
+                                      onClick={() => setMobileMenuOpen(false)}
+                                      className="block text-sm text-slate-300 hover:text-white transition-colors py-1"
+                                    >
+                                      {link.name}
                                     </Link>
                                   ))}
                                 </div>

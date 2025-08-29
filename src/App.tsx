@@ -98,6 +98,13 @@ const AIIncidentPostmortems = React.lazy(() => import('./pages/services/AIIncide
 // New services added in this iteration
 const APIMonitoringSaaS = React.lazy(() => import('./pages/services/APIMonitoringSaaS'));
 const GDPRCookieCompliance = React.lazy(() => import('./pages/services/GDPRCookieCompliance'));
+
+// Missing service imports
+const AffiliateMarketingTracker = React.lazy(() => import('./pages/services/AffiliateMarketingTracker'));
+const UptimeSLAMonitor = React.lazy(() => import('./pages/services/UptimeSLAMonitor'));
+const SOC2ComplianceTracker = React.lazy(() => import('./pages/services/SOC2ComplianceTracker'));
+const EmployeeSchedulingSaaS = React.lazy(() => import('./pages/services/EmployeeSchedulingSaaS'));
+const AISupportHelpdesk = React.lazy(() => import('./pages/services/AISupportHelpdesk'));
 const AIProofreadingStudio = React.lazy(() => import('./pages/services/AIProofreadingStudio'));
 
 // Catalog page

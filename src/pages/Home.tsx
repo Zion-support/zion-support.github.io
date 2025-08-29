@@ -1,18 +1,4 @@
-import React from 'react';
-
-export default function Home() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-white mb-4">Welcome to Zion Tech Group</h1>
-      <p className="text-zion-slate-light max-w-2xl">
-        Transforming businesses through cutting-edge technology and strategic insights.
-      </p>
-    </div>
-  );
-}
-
-
-import React, { Suspense } from 'react';
+import React, { Suspense, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Zap } from 'lucide-react';
@@ -42,6 +28,12 @@ import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { ServicesShowcase } from "@/components/ServicesShowcase.tsx";
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <>
       <SEO 
