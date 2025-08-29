@@ -136,18 +136,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
-      title: 'Micro SaaS Solutions',
-      featured: true,
-      links: [
 
-        { name: 'Micro SaaS Products', href: '/services/micro-saas', featured: true },
-        { name: 'AI Content Creation Studio Pro', href: '/services#ai-content-creation-studio-pro', featured: true },
-        { name: 'AI Customer Support Automation Suite', href: '/services#ai-customer-support-automation-suite', featured: true },
-        { name: 'AI Marketing Automation Platform', href: '/services#ai-marketing-automation-platform', featured: true },
-        { name: 'AI Legal Document Analyzer Pro', href: '/services/ai-legal-document-analysis', featured: true },
-        { name: 'AI Healthcare Analytics Suite', href: '/services/ai-healthcare-analytics', featured: true }
-=======
       title: 'AI & Technology Services',
       featured: true,
       links: [
