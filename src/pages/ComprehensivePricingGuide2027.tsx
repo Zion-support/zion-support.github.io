@@ -513,7 +513,7 @@ const ComprehensivePricingGuide2027: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* Pricing Grid */}
       <section className="py-16">
@@ -658,26 +658,27 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               Compare our pricing with industry standards and understand the value proposition
             </p>
           </div>
-          <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-lg rounded-xl p-6 border border-green-500/30 text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">
-              ${Math.max(...allServices.map(s => s.price)).toLocaleString()}
+          
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-lg rounded-xl p-6 border border-green-500/30 text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">
+                ${Math.max(...allServices.map(s => s.price)).toLocaleString()}
+              </div>
+              <div className="text-gray-300">Premium Price</div>
             </div>
-            <div className="text-gray-300">Premium Price</div>
-          </div>
-          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 border border-purple-500/30 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">
-              {allServices.length}
+            <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-xl p-6 border border-purple-500/30 text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">
+                {allServices.length}
+              </div>
+              <div className="text-gray-300">Total Services</div>
             </div>
-            <div className="text-gray-300">Total Services</div>
-          </div>
-          <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-lg rounded-xl p-6 border border-orange-500/30 text-center">
-                          <div className="text-3xl font-bold text-orange-400 mb-2">
+            <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-lg rounded-xl p-6 border border-orange-500/30 text-center">
+              <div className="text-3xl font-bold text-orange-400 mb-2">
                 {Math.max(...allServices.map(s => parseInt(s.roi.split('%')[0])))}%
               </div>
-            <div className="text-gray-300">Max ROI</div>
-          </div>
-        </motion.div>
-      </div>
+              <div className="text-gray-300">Max ROI</div>
+            </div>
+          </motion.div>
 
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/30">
@@ -844,8 +845,8 @@ const ComprehensivePricingGuide2027: React.FC = () => {
               <div className="text-sm text-gray-400">Fast deployment</div>
             </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };

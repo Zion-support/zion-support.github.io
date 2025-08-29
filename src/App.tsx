@@ -7,6 +7,7 @@ import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import EnhancedSEO from './components/EnhancedSEO.jsx';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { MobileOptimizer } from './components/MobileOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { ThemeProvider } from './components/ThemeProvider';
 
@@ -269,6 +270,7 @@ function App() {
           <EnhancedFuturisticFooter />
           <ChatAssistant />
           <PerformanceOptimizer showMetrics={true} />
+          <MobileOptimizer />
         </div>
       </ThemeProvider>
     </ErrorBoundary>
