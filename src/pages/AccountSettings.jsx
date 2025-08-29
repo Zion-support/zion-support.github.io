@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SEO from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
-import Input from '@/components/ui/Input';
+import { Input } from '@/components/ui/Input';
 import { Wallet, Database, Save } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';

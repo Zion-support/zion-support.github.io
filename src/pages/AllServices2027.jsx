@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/Input";
 import { 
     Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, 
     ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, 

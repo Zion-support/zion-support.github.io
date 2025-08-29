@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import { 
   Users, 
   Target, 
+<<<<<<< HEAD
+  ArrowRight, 
+  CheckCircle 
+} from 'lucide-react';
+import SEO from '@/components/SEO';
+=======
   CheckCircle, 
   ArrowRight 
 } from 'lucide-react';
@@ -38,6 +44,60 @@ export default function MicroCRM() {
     { industry: 'Retail', description: 'Track customer preferences and purchase history' },
     { industry: 'Consulting', description: 'Manage client relationships and project tracking' },
     { industry: 'Healthcare', description: 'Patient appointment scheduling and follow-ups' }
+  ];
+>>>>>>> origin/main
+
+export default function MicroCRM() {
+  // Data arrays
+  const services = [
+    {
+      title: 'Contact Management',
+      description: 'Organize and track customer information',
+      icon: Users
+    },
+    {
+      title: 'Sales Pipeline',
+      description: 'Track deals and opportunities',
+      icon: Target
+    },
+    {
+      title: 'Task Management',
+      description: 'Organize and prioritize tasks',
+      icon: CheckCircle
+    },
+    {
+      title: 'Reporting',
+      description: 'Generate insights and analytics',
+      icon: Target
+    }
+  ];
+
+  const benefits = [
+    'Improve customer relationships',
+    'Increase sales efficiency',
+    'Better task organization',
+    'Data-driven insights',
+    'Automated workflows',
+    'Mobile accessibility'
+  ];
+
+  const useCases = [
+    {
+      industry: 'Local Services',
+      description: 'Manage appointments and customers'
+    },
+    {
+      industry: 'Retail',
+      description: 'Track sales and inventory'
+    },
+    {
+      industry: 'Consulting',
+      description: 'Manage projects and clients'
+    },
+    {
+      industry: 'Healthcare',
+      description: 'Patient management and scheduling'
+    }
   ];
 
   return (

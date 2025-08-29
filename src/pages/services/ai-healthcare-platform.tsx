@@ -3,10 +3,23 @@ import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
   Heart, 
-  Brain, 
   Shield, 
-  Zap, 
+  Activity, 
   Users, 
+<<<<<<< HEAD
+  Target, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  Award, 
+  Lightbulb, 
+  BarChart3, 
+  Smartphone, 
+  Monitor, 
+  AlertTriangle, 
+  FileText
+=======
   TrendingUp, 
   CheckCircle, 
   ArrowRight,
@@ -24,11 +37,60 @@ import {
   Clock,
   Building,
   Flask
+>>>>>>> origin/main
 } from 'lucide-react';
 
 const AIHealthcarePlatform: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
+      icon: Heart,
+      title: 'AI-Powered Diagnostics',
+      description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis'
+    },
+    {
+      icon: Shield,
+      title: 'Patient Monitoring',
+      description: 'Real-time health monitoring with predictive analytics and early warning systems'
+    },
+    {
+      icon: Activity,
+      title: 'HIPAA Compliant',
+      description: 'Enterprise-grade security with full HIPAA compliance and data protection'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Analytics',
+      description: 'Instant insights and actionable intelligence for healthcare providers'
+    },
+    {
+      icon: Users,
+      title: 'Multi-user Access',
+      description: 'Role-based access control for doctors, nurses, and administrators'
+    }
+  ];
+
+  const solutions = [
+    {
+      icon: Lightbulb,
+      title: 'Clinical Decision Support',
+      description: 'AI-powered recommendations for treatment plans and medication management'
+    },
+    {
+      icon: Target,
+      title: 'Medical Imaging Analysis',
+      description: 'Computer vision for X-rays, MRIs, and CT scans with 99.9% accuracy'
+    },
+    {
+      icon: Award,
+      title: 'Drug Interaction Checker',
+      description: 'Real-time medication interaction analysis and dosage optimization'
+    },
+    {
+      icon: Activity,
+      title: 'Vital Signs Monitoring',
+      description: 'Continuous monitoring of heart rate, blood pressure, and oxygen levels'
+=======
       icon: Brain,
       title: "AI-Powered Diagnostics",
       description: "Advanced machine learning algorithms for accurate disease detection and diagnosis",
@@ -51,6 +113,7 @@ const AIHealthcarePlatform: React.FC = () => {
       title: "Automated Workflows",
       description: "Streamlined healthcare processes with intelligent automation and optimization",
       color: "from-purple-500 to-indigo-500"
+>>>>>>> origin/main
     }
   ];
 
@@ -176,6 +239,50 @@ const AIHealthcarePlatform: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
+      <section className="py-20">
+        <div className="container-responsive">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Transform Your Healthcare Delivery
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Experience the future of healthcare with our AI-powered platform that delivers 
+                measurable improvements in patient care and operational efficiency.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <div className="p-8 bg-slate-800/50 border border-cyan-400/20 rounded-xl">
+                <div className="text-center">
+                  <BarChart3 className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Performance Metrics</h3>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-cyan-400">99.9%</div>
+                      <div className="text-gray-400">Accuracy Rate</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-cyan-400">85%</div>
+                      <div className="text-gray-400">Error Reduction</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-cyan-400">60%</div>
+                      <div className="text-gray-400">Outcome Improvement</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-cyan-400">30%</div>
+                      <div className="text-gray-400">Cost Reduction</div>
+                    </div>
+=======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -244,6 +351,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-800 to-slate-700 border border-slate-600 hover:border-slate-500 transition-all duration-300 h-full">
                   <div className="inline-flex p-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 mb-4">
                     <useCase.icon className="h-6 w-6 text-white" />
+>>>>>>> origin/main
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {useCase.title}
