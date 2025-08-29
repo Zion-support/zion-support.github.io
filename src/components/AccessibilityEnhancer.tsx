@@ -1,5 +1,21 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Eye, 
+  EyeOff, 
+  Volume2, 
+  VolumeX, 
+  Move, 
+  Type, 
+  Contrast, 
+  Accessibility,
+  X,
+  Settings,
+  Keyboard,
+  MousePointer,
+  Monitor,
+  Smartphone
+} from 'lucide-react';
 
 interface AccessibilityFeatures {
   highContrast: boolean;
@@ -7,6 +23,11 @@ interface AccessibilityFeatures {
   largeText: boolean;
   focusHighlight: boolean;
   screenReaderMode: boolean;
+  highContrastText: boolean;
+  increasedSpacing: boolean;
+  cursorEnhancement: boolean;
+  keyboardNavigation: boolean;
+  colorBlindnessSupport: boolean;
 }
 
 interface FocusTrapConfig {
@@ -15,33 +36,61 @@ interface FocusTrapConfig {
   returnFocus?: boolean;
 }
 
-export function AccessibilityEnhancer() {
+interface AccessibilityAnnouncement {
+  message: string;
+  priority: 'polite' | 'assertive';
+  id: number;
+  timestamp: number;
+}
+
+export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { showAccessibilityPanel?: boolean }) {
   const [features, setFeatures] = useState<AccessibilityFeatures>({
     highContrast: false,
     reducedMotion: false,
     largeText: false,
     focusHighlight: true,
-    screenReaderMode: false
+    screenReaderMode: false,
+    highContrastText: false,
+    increasedSpacing: false,
+    cursorEnhancement: false,
+    keyboardNavigation: false,
+    colorBlindnessSupport: false
   });
 
-  const [announcements, setAnnouncements] = useState<string[]>([]);
+  const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[]>([]);
   const [currentAnnouncement, setCurrentAnnouncement] = useState<string>('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<'visual' | 'navigation' | 'audio' | 'advanced'>('visual');
+  const [fontSize, setFontSize] = useState(16);
+  const [lineHeight, setLineHeight] = useState(1.5);
+  const [letterSpacing, setLetterSpacing] = useState(0);
+  
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const focusableElementsRef = useRef<HTMLElement[]>([]);
 
-  // Screen reader announcements
+  // Screen reader announcements with better management
   const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
-    const announcement = { message, priority, id: Date.now() };
+    const announcement: AccessibilityAnnouncement = { 
+      message, 
+      priority, 
+      id: Date.now(),
+      timestamp: Date.now()
+    };
+    
     setAnnouncements(prev => [...prev, announcement]);
+    setCurrentAnnouncement(message);
     
     // Auto-remove after 5 seconds
     setTimeout(() => {
       setAnnouncements(prev => prev.filter(a => a.id !== announcement.id));
+      if (currentAnnouncement === message) {
+        setCurrentAnnouncement('');
+      }
     }, 5000);
-  }, []);
+  }, [currentAnnouncement]);
 
-  // High contrast mode
+  // Enhanced high contrast mode
   const toggleHighContrast = useCallback(() => {
     setFeatures(prev => {
       const newFeatures = { ...prev, highContrast: !prev.highContrast };
@@ -58,7 +107,7 @@ export function AccessibilityEnhancer() {
     });
   }, [announce]);
 
-  // Reduced motion mode
+  // Enhanced reduced motion mode
   const toggleReducedMotion = useCallback(() => {
     setFeatures(prev => {
       const newFeatures = { ...prev, reducedMotion: !prev.reducedMotion };
@@ -68,6 +117,7 @@ export function AccessibilityEnhancer() {
         announce('Reduced motion enabled', 'assertive');
       } else {
         document.documentElement.classList.remove('reduced-motion');
+        document.documentElement.classList.remove('reduced-animations');
         announce('Reduced motion disabled', 'assertive');
       }
       
@@ -75,16 +125,20 @@ export function AccessibilityEnhancer() {
     });
   }, [announce]);
 
-  // Large text mode
+  // Enhanced large text mode with customizable sizing
   const toggleLargeText = useCallback(() => {
     setFeatures(prev => {
       const newFeatures = { ...prev, largeText: !prev.largeText };
       
       if (newFeatures.largeText) {
         document.documentElement.classList.add('large-text');
+        setFontSize(20);
+        setLineHeight(1.8);
         announce('Large text mode enabled', 'assertive');
       } else {
         document.documentElement.classList.remove('large-text');
+        setFontSize(16);
+        setLineHeight(1.5);
         announce('Large text mode disabled', 'assertive');
       }
       
@@ -92,7 +146,7 @@ export function AccessibilityEnhancer() {
     });
   }, [announce]);
 
-  // Focus highlight mode
+  // Enhanced focus highlight mode
   const toggleFocusHighlight = useCallback(() => {
     setFeatures(prev => {
       const newFeatures = { ...prev, focusHighlight: !prev.focusHighlight };
@@ -109,7 +163,7 @@ export function AccessibilityEnhancer() {
     });
   }, [announce]);
 
-  // Screen reader mode
+  // Enhanced screen reader mode
   const toggleScreenReaderMode = useCallback(() => {
     setFeatures(prev => {
       const newFeatures = { ...prev, screenReaderMode: !prev.screenReaderMode };
@@ -126,376 +180,442 @@ export function AccessibilityEnhancer() {
     });
   }, [announce]);
 
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.altKey) {
-        event.preventDefault();
-        const mainContent = document.querySelector('main');
-        if (mainContent) {
-          (mainContent as HTMLElement).focus();
-          announce('Moved to main content');
-        }
+  // High contrast text mode
+  const toggleHighContrastText = useCallback(() => {
+    setFeatures(prev => {
+      const newFeatures = { ...prev, highContrastText: !prev.highContrastText };
+      
+      if (newFeatures.highContrastText) {
+        document.documentElement.classList.add('high-contrast-text');
+        announce('High contrast text enabled', 'assertive');
+      } else {
+        document.documentElement.classList.remove('high-contrast-text');
+        announce('High contrast text disabled', 'assertive');
       }
-
-      // Skip to navigation
-      if (event.key === 'Tab' && event.shiftKey && event.altKey) {
-        event.preventDefault();
-        const navigation = document.querySelector('nav');
-        if (navigation) {
-          (navigation as HTMLElement).focus();
-          announce('Moved to navigation');
-        }
-      }
-
-      // Skip to footer
-      if (event.key === 'Tab' && event.ctrlKey) {
-        event.preventDefault();
-        const footer = document.querySelector('footer');
-        if (footer) {
-          (footer as HTMLElement).focus();
-          announce('Moved to footer');
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+      
+      return newFeatures;
+    });
   }, [announce]);
 
-  // Focus management
-  useEffect(() => {
-    const handleFocusChange = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
+  // Increased spacing mode
+  const toggleIncreasedSpacing = useCallback(() => {
+    setFeatures(prev => {
+      const newFeatures = { ...prev, increasedSpacing: !prev.increasedSpacing };
       
-      // Add focus indicator
-      if (features.focusHighlight) {
-        target.style.outline = '3px solid #22ddd2';
-        target.style.outlineOffset = '2px';
+      if (newFeatures.increasedSpacing) {
+        document.documentElement.classList.add('increased-spacing');
+        setLineHeight(2.0);
+        setLetterSpacing(0.1);
+        announce('Increased spacing enabled', 'assertive');
+      } else {
+        document.documentElement.classList.remove('increased-spacing');
+        setLineHeight(1.5);
+        setLetterSpacing(0);
+        announce('Increased spacing disabled', 'assertive');
       }
       
-      // Announce focus changes for screen readers
-      if (features.screenReaderMode && target.getAttribute('aria-label')) {
-        announce(target.getAttribute('aria-label') || 'Element focused');
+      return newFeatures;
+    });
+  }, [announce]);
+
+  // Cursor enhancement mode
+  const toggleCursorEnhancement = useCallback(() => {
+    setFeatures(prev => {
+      const newFeatures = { ...prev, cursorEnhancement: !prev.cursorEnhancement };
+      
+      if (newFeatures.cursorEnhancement) {
+        document.documentElement.classList.add('cursor-enhancement');
+        announce('Cursor enhancement enabled', 'assertive');
+      } else {
+        document.documentElement.classList.remove('cursor-enhancement');
+        announce('Cursor enhancement disabled', 'assertive');
+      }
+      
+      return newFeatures;
+    });
+  }, [announce]);
+
+  // Keyboard navigation mode
+  const toggleKeyboardNavigation = useCallback(() => {
+    setFeatures(prev => {
+      const newFeatures = { ...prev, keyboardNavigation: !prev.keyboardNavigation };
+      
+      if (newFeatures.keyboardNavigation) {
+        document.documentElement.classList.add('keyboard-navigation');
+        announce('Keyboard navigation mode enabled', 'assertive');
+      } else {
+        document.documentElement.classList.remove('keyboard-navigation');
+        announce('Keyboard navigation mode disabled', 'assertive');
+      }
+      
+      return newFeatures;
+    });
+  }, [announce]);
+
+  // Color blindness support
+  const toggleColorBlindnessSupport = useCallback(() => {
+    setFeatures(prev => {
+      const newFeatures = { ...prev, colorBlindnessSupport: !prev.colorBlindnessSupport };
+      
+      if (newFeatures.colorBlindnessSupport) {
+        document.documentElement.classList.add('color-blindness-support');
+        announce('Color blindness support enabled', 'assertive');
+      } else {
+        document.documentElement.classList.remove('color-blindness-support');
+        announce('Color blindness support disabled', 'assertive');
+      }
+      
+      return newFeatures;
+    });
+  }, [announce]);
+
+  // Focus trap implementation
+  const createFocusTrap = useCallback((config: FocusTrapConfig) => {
+    const { containerRef, onEscape, returnFocus } = config;
+    
+    if (!containerRef.current) return;
+    
+    const focusableElements = containerRef.current.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    focusableElementsRef.current = Array.from(focusableElements) as HTMLElement[];
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && onEscape) {
+        onEscape();
+        return;
+      }
+      
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        
+        const currentIndex = focusableElementsRef.current.indexOf(document.activeElement as HTMLElement);
+        let nextIndex: number;
+        
+        if (e.shiftKey) {
+          nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElementsRef.current.length - 1;
+        } else {
+          nextIndex = currentIndex < focusableElementsRef.current.length - 1 ? currentIndex + 1 : 0;
+        }
+        
+        focusableElementsRef.current[nextIndex]?.focus();
       }
     };
-
-    const handleBlur = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      target.style.outline = '';
-      target.style.outlineOffset = '';
-    };
-
-    document.addEventListener('focusin', handleFocusChange);
-    document.addEventListener('focusout', handleBlur);
-
+    
+    containerRef.current.addEventListener('keydown', handleKeyDown);
+    
+    // Focus first element
+    if (focusableElementsRef.current.length > 0) {
+      focusableElementsRef.current[0].focus();
+    }
+    
     return () => {
-      document.removeEventListener('focusin', handleFocusChange);
-      document.removeEventListener('focusout', handleBlur);
+      containerRef.current?.removeEventListener('keydown', handleKeyDown);
     };
-  }, [features.focusHighlight, features.screenReaderMode, announce]);
-
-  // Auto-detect user preferences
-  useEffect(() => {
-    // Check for user's reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (prefersReducedMotion.matches) {
-      setFeatures(prev => ({ ...prev, reducedMotion: true }));
-      document.documentElement.classList.add('reduced-motion');
-    }
-
-    // Check for user's high contrast preference
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-    if (prefersHighContrast.matches) {
-      setFeatures(prev => ({ ...prev, highContrast: true }));
-      document.documentElement.classList.add('high-contrast');
-    }
-
-    // Check for user's large text preference
-    const prefersLargeText = window.matchMedia('(prefers-font-size: large)');
-    if (prefersLargeText.matches) {
-      setFeatures(prev => ({ ...prev, largeText: true }));
-      document.documentElement.classList.add('large-text');
-    }
   }, []);
 
-  // Click outside to close menu
+  // Keyboard shortcuts
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node) &&
-          buttonRef.current && !buttonRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Alt + A to toggle accessibility menu
+      if (e.altKey && e.key === 'a') {
+        e.preventDefault();
+        setIsMenuOpen(prev => !prev);
+      }
+      
+      // Alt + H to toggle high contrast
+      if (e.altKey && e.key === 'h') {
+        e.preventDefault();
+        toggleHighContrast();
+      }
+      
+      // Alt + M to toggle reduced motion
+      if (e.altKey && e.key === 'm') {
+        e.preventDefault();
+        toggleReducedMotion();
+      }
+      
+      // Alt + L to toggle large text
+      if (e.altKey && e.key === 'l') {
+        e.preventDefault();
+        toggleLargeText();
       }
     };
+    
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [toggleHighContrast, toggleReducedMotion, toggleLargeText]);
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  // Apply accessibility features to document
+  useEffect(() => {
+    const root = document.documentElement;
+    
+    // Apply CSS custom properties for accessibility
+    root.style.setProperty('--accessibility-font-size', `${fontSize}px`);
+    root.style.setProperty('--accessibility-line-height', lineHeight.toString());
+    root.style.setProperty('--accessibility-letter-spacing', `${letterSpacing}em`);
+    
+    // Apply feature classes
+    Object.entries(features).forEach(([feature, enabled]) => {
+      if (enabled) {
+        root.classList.add(feature.replace(/([A-Z])/g, '-$1').toLowerCase());
+      } else {
+        root.classList.remove(feature.replace(/([A-Z])/g, '-$1').toLowerCase());
+      }
+    });
+  }, [features, fontSize, lineHeight, letterSpacing]);
+
+  // Focus trap for menu
+  useEffect(() => {
+    if (isMenuOpen && menuRef.current) {
+      return createFocusTrap({
+        containerRef: menuRef,
+        onEscape: () => setIsMenuOpen(false)
+      });
+    }
+  }, [isMenuOpen, createFocusTrap]);
+
+  // Accessibility menu component
+  const renderAccessibilityMenu = () => (
+    <AnimatePresence>
+      {isMenuOpen && (
+        <motion.div
+          ref={menuRef}
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.95, y: 20 }}
+          className="fixed top-20 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 z-50 w-80 max-h-[80vh] overflow-hidden"
+          role="dialog"
+          aria-labelledby="accessibility-menu-title"
+          aria-describedby="accessibility-menu-description"
+        >
+          <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center justify-between">
+              <h2 id="accessibility-menu-title" className="text-lg font-semibold text-gray-900 dark:text-white">
+                Accessibility Settings
+              </h2>
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                aria-label="Close accessibility menu"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <p id="accessibility-menu-description" className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+              Customize your browsing experience with these accessibility features
+            </p>
+          </div>
+
+          <div className="p-4">
+            <div className="flex space-x-2 mb-4">
+              {(['visual', 'navigation', 'audio', 'advanced'] as const).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    activeTab === tab
+                      ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300'
+                      : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200'
+                  }`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              ))}
+            </div>
+
+            <div className="space-y-4">
+              {activeTab === 'visual' && (
+                <>
+                  <AccessibilityToggle
+                    label="High Contrast"
+                    description="Increase contrast for better visibility"
+                    enabled={features.highContrast}
+                    onToggle={toggleHighContrast}
+                    icon={Contrast}
+                  />
+                  <AccessibilityToggle
+                    label="High Contrast Text"
+                    description="Optimize text contrast"
+                    enabled={features.highContrastText}
+                    onToggle={toggleHighContrastText}
+                    icon={Type}
+                  />
+                  <AccessibilityToggle
+                    label="Large Text"
+                    description="Increase text size for better readability"
+                    enabled={features.largeText}
+                    onToggle={toggleLargeText}
+                    icon={Type}
+                  />
+                  <AccessibilityToggle
+                    label="Increased Spacing"
+                    description="Add more space between elements"
+                    enabled={features.increasedSpacing}
+                    onToggle={toggleIncreasedSpacing}
+                    icon={Move}
+                  />
+                </>
+              )}
+
+              {activeTab === 'navigation' && (
+                <>
+                  <AccessibilityToggle
+                    label="Focus Highlight"
+                    description="Highlight focused elements"
+                    enabled={features.focusHighlight}
+                    onToggle={toggleFocusHighlight}
+                    icon={Keyboard}
+                  />
+                  <AccessibilityToggle
+                    label="Keyboard Navigation"
+                    description="Enhanced keyboard navigation"
+                    enabled={features.keyboardNavigation}
+                    onToggle={toggleKeyboardNavigation}
+                    icon={Keyboard}
+                  />
+                  <AccessibilityToggle
+                    label="Cursor Enhancement"
+                    description="Make cursor more visible"
+                    enabled={features.cursorEnhancement}
+                    onToggle={toggleCursorEnhancement}
+                    icon={MousePointer}
+                  />
+                </>
+              )}
+
+              {activeTab === 'audio' && (
+                <>
+                  <AccessibilityToggle
+                    label="Screen Reader Mode"
+                    description="Optimize for screen readers"
+                    enabled={features.screenReaderMode}
+                    onToggle={toggleScreenReaderMode}
+                    icon={Volume2}
+                  />
+                </>
+              )}
+
+              {activeTab === 'advanced' && (
+                <>
+                  <AccessibilityToggle
+                    label="Reduced Motion"
+                    description="Reduce animations and transitions"
+                    enabled={features.reducedMotion}
+                    onToggle={toggleReducedMotion}
+                    icon={Move}
+                  />
+                  <AccessibilityToggle
+                    label="Color Blindness Support"
+                    description="Optimize colors for color blindness"
+                    enabled={features.colorBlindnessSupport}
+                    onToggle={toggleColorBlindnessSupport}
+                    icon={Eye}
+                  />
+                </>
+              )}
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <div className="text-xs text-gray-500 dark:text-gray-400 space-y-1">
+                <p><strong>Keyboard Shortcuts:</strong></p>
+                <p>Alt + A: Toggle this menu</p>
+                <p>Alt + H: Toggle high contrast</p>
+                <p>Alt + M: Toggle reduced motion</p>
+                <p>Alt + L: Toggle large text</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+
+  // Accessibility toggle component
+  const AccessibilityToggle = ({ 
+    label, 
+    description, 
+    enabled, 
+    onToggle, 
+    icon: Icon 
+  }: {
+    label: string;
+    description: string;
+    enabled: boolean;
+    onToggle: () => void;
+    icon: React.ComponentType<any>;
+  }) => (
+    <div className="flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+      <div className="flex items-center space-x-3">
+        <Icon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+        <div>
+          <label className="text-sm font-medium text-gray-900 dark:text-white cursor-pointer">
+            {label}
+          </label>
+          <p className="text-xs text-gray-500 dark:text-gray-400">{description}</p>
+        </div>
+      </div>
+      <button
+        onClick={onToggle}
+        className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
+          enabled ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'
+        }`}
+        role="switch"
+        aria-checked={enabled}
+        aria-label={`${label} ${enabled ? 'enabled' : 'disabled'}`}
+      >
+        <span
+          className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+            enabled ? 'translate-x-6' : 'translate-x-1'
+          }`}
+        />
+      </button>
+    </div>
+  );
 
   return (
     <>
-      {/* Accessibility Menu Button */}
-      <div className="fixed top-4 right-4 z-50">
-        <button
-          ref={buttonRef}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300"
-          aria-label="Accessibility options"
-          aria-expanded={isMenuOpen}
-          aria-haspopup="true"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </button>
+      {/* Floating accessibility button */}
+      <button
+        ref={buttonRef}
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="fixed top-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg z-40 transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Open accessibility settings"
+        aria-expanded={isMenuOpen}
+        aria-haspopup="dialog"
+      >
+        <Accessibility className="w-5 h-5" />
+      </button>
 
-        {/* Accessibility Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              ref={menuRef}
-              initial={{ opacity: 0, y: -10, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -10, scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              className="absolute right-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700"
-            >
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                  Accessibility Options
-                </h3>
-                
-                <div className="space-y-3">
-                  <button
-                    onClick={toggleHighContrast}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
-                      features.highContrast 
-                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-                        : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span>High Contrast</span>
-                      <div className={`w-4 h-4 rounded border-2 ${
-                        features.highContrast ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-                      }`}>
-                        {features.highContrast && (
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        )}
-                      </div>
-                    </div>
-                  </button>
+      {/* Accessibility menu */}
+      {renderAccessibilityMenu()}
 
-                  <button
-                    onClick={toggleReducedMotion}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
-                      features.reducedMotion 
-                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-                        : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span>Reduced Motion</span>
-                      <div className={`w-4 h-4 rounded border-2 ${
-                        features.reducedMotion ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-                      }`}>
-                        {features.reducedMotion && (
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        )}
-                      </div>
-                    </div>
-                  </button>
-
-                  <button
-                    onClick={toggleLargeText}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
-                      features.largeText 
-                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-                        : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span>Large Text</span>
-                      <div className={`w-4 h-4 rounded border-2 ${
-                        features.largeText ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-                      }`}>
-                        {features.largeText && (
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        )}
-                      </div>
-                    </div>
-                  </button>
-
-                  <button
-                    onClick={toggleFocusHighlight}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
-                      features.focusHighlight 
-                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-                        : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span>Focus Highlight</span>
-                      <div className={`w-4 h-4 rounded border-2 ${
-                        features.focusHighlight ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-                      }`}>
-                        {features.focusHighlight && (
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        )}
-                      </div>
-                    </div>
-                  </button>
-
-                  <button
-                    onClick={toggleScreenReaderMode}
-                    className={`w-full text-left p-3 rounded-lg transition-colors ${
-                      features.screenReaderMode 
-                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100' 
-                        : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span>Screen Reader Mode</span>
-                      <div className={`w-4 h-4 rounded border-2 ${
-                        features.screenReaderMode ? 'bg-blue-600 border-blue-600' : 'border-gray-400'
-                      }`}>
-                        {features.screenReaderMode && (
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                        )}
-                      </div>
-                    </div>
-                  </button>
-                </div>
-
-                <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    <strong>Keyboard Shortcuts:</strong><br />
-                    Alt + Tab: Skip to main content<br />
-                    Alt + Shift + Tab: Skip to navigation<br />
-                    Ctrl + Tab: Skip to footer
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
-      {/* Screen Reader Announcements */}
+      {/* Screen reader announcements */}
       <div
         aria-live="polite"
         aria-atomic="true"
         className="sr-only"
-        id="accessibility-announcements"
       >
-        {announcements.map((announcement) => (
-          <div key={announcement.id} aria-live={announcement.priority}>
-            {announcement.message}
-          </div>
-        ))}
+        {currentAnnouncement}
       </div>
+
+      {/* Visual announcements for non-screen reader users */}
+      <AnimatePresence>
+        {announcements.map((announcement) => (
+          <motion.div
+            key={announcement.id}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            className="fixed bottom-20 left-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 max-w-sm"
+            role="status"
+            aria-live={announcement.priority}
+          >
+            <p className="text-sm">{announcement.message}</p>
+          </motion.div>
+        ))}
+      </AnimatePresence>
     </>
   );
-}
-
-// Focus Trap Hook
-export function useFocusTrap({ containerRef, onEscape, returnFocus }: FocusTrapConfig) {
-  const previousFocus = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    // Store previous focus
-    previousFocus.current = document.activeElement as HTMLElement;
-
-    // Focus first focusable element
-    const focusableElements = container.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    
-    if (focusableElements.length > 0) {
-      (focusableElements[0] as HTMLElement).focus();
-    }
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && onEscape) {
-        onEscape();
-        return;
-      }
-
-      if (event.key === 'Tab') {
-        const focusableElements = Array.from(container.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        )).filter(el => !(el as HTMLElement).disabled) as HTMLElement[];
-
-        if (focusableElements.length === 0) return;
-
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
-
-        if (event.shiftKey) {
-          if (document.activeElement === firstElement) {
-            lastElement.focus();
-            event.preventDefault();
-          }
-        } else {
-          if (document.activeElement === lastElement) {
-            firstElement.focus();
-            event.preventDefault();
-          }
-        }
-      }
-    };
-
-    container.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      container.removeEventListener('keydown', handleKeyDown);
-      
-      // Return focus when unmounting
-      if (returnFocus && previousFocus.current) {
-        previousFocus.current.focus();
-      }
-    };
-  }, [containerRef, onEscape, returnFocus]);
-}
-
-// Skip Link Component
-export function SkipLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <a
-      href={href}
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"
-    >
-      {children}
-    </a>
-  );
-}
-
-// Announcement Hook
-export function useAnnouncement() {
-  const [announcements, setAnnouncements] = useState<string[]>([]);
-
-  const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
-    const announcement = { message, priority, id: Date.now() };
-    setAnnouncements(prev => [...prev, announcement]);
-    
-    setTimeout(() => {
-      setAnnouncements(prev => prev.filter(a => a.id !== announcement.id));
-    }, 5000);
-  }, []);
-
-  return { announcements, announce };
 }
