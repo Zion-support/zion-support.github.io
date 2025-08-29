@@ -179,12 +179,9 @@ function App() {
               <Route path="/pricing-guide" element={<PricingGuide />} />
               <Route path="/services-comparison" element={<ServicesComparisonPage />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/services-overview" element={<ServicesOverview />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/comprehensive-services" element={<ComprehensiveServicesLanding2025 />} />
-              <Route path="/services" element={<Services />} />
               {/** duplicate comprehensive-services route removed */}
-              <Route path="/services-overview" element={<ServicesOverview />} />
               
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
@@ -255,13 +252,6 @@ function App() {
               
               {/* Additional innovative services routes */}
               <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
-              <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
-              <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
-              <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
-              <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
-              <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
-              <Route path="/services/quantum-ai-platform" element={<QuantumAIPlatform />} />
-              <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
               <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
               <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
               <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
