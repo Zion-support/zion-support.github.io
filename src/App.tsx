@@ -86,6 +86,7 @@ const Support = React.lazy(() => import('./pages/Support'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility'));
 const Security = React.lazy(() => import('./pages/Security'));
 const Compliance = React.lazy(() => import('./pages/Compliance'));
+const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 
 // Add missing import for OnsiteSupport
 const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
