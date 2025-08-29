@@ -660,8 +660,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
       channels: ["Email", "Phone", "Chat", "Video"],
       sla: "99.99% uptime"
     }
-=======
-export const COMPREHENSIVE_PRICING_GUIDE_2025 = {
+
   title: "Zion Tech Group 2025 Comprehensive Pricing Guide",
   subtitle: "Innovative AI, IT, and Technology Solutions for the Future",
   description: "Complete pricing information for our cutting-edge micro SAAS services, IT solutions, and AI platforms. Get transparent pricing with ROI guarantees and flexible payment options.",
@@ -1179,7 +1178,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025 = {
       "Penetration testing",
       "Vulnerability assessments"
     ]
->>>>>>> 3547fcdc350425396bf88a936d6af4a6a7c3bcbd
+
   }
 ];
 

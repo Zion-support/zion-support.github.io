@@ -99,7 +99,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Customer Churn Prediction', href: '/services/ai-customer-churn-prediction', featured: true },
         { name: 'AI Financial Fraud Detection', href: '/services/ai-financial-fraud-detection', featured: true },
         { name: 'AI Energy Management System', href: '/services/ai-energy-management-system', featured: true }
->>>>>>> 3547fcdc350425396bf88a936d6af4a6a7c3bcbd
+
       ]
     },
     {
