@@ -88,7 +88,9 @@ export function AppHeader() {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Sales automation & optimization' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', description: 'Smart email management' },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' }
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', description: 'AI-powered content creation' },
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-powered project management' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Customer success automation' }
       ]
     },
     {
@@ -136,6 +138,19 @@ export function AppHeader() {
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', description: 'Distributed ledger tech' },
         { name: 'Space Technology', href: '/services/space-tech', description: 'Space-based solutions' },
         { name: 'Sustainability Tech', href: '/services/sustainability', description: 'Green technology solutions' }
+      ]
+    },
+    {
+      name: 'Innovative Micro SaaS',
+      description: 'Specialized business applications',
+      color: 'from-emerald-500 to-teal-600',
+      icon: Zap,
+      services: [
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-powered project management' },
+        { name: 'AI Customer Success', href: '/services/ai-customer-success-platform', description: 'Customer success automation' },
+        { name: 'Vendor Risk Management', href: '/services/vendor-risk-management', description: 'Vendor risk assessment' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', description: 'AI-powered SEO optimization' },
+        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor', description: 'Churn prediction & prevention' }
       ]
     }
   ];
@@ -252,7 +267,7 @@ export function AppHeader() {
               className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
             >
               <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
                   {servicesCategories.map((category) => (
                     <div key={category.name} className="space-y-4">
                       <div className="flex items-center space-x-3">

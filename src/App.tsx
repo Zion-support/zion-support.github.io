@@ -120,6 +120,9 @@ const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComp
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
 const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
 
+// New innovative micro SaaS services
+const AIProjectManagement = React.lazy(() => import('./pages/services/AIProjectManagement'));
+
 // Additional innovative services
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
 const AIFinancialTradingPlatform = React.lazy(() => import('./pages/services/AIFinancialTradingPlatform'));
@@ -286,6 +289,9 @@ function App() {
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
               <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+              
+              {/* New innovative micro SaaS services */}
+              <Route path="/services/ai-project-management" element={<AIProjectManagement />} />
               
               {/* Additional innovative services routes */}
               <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />

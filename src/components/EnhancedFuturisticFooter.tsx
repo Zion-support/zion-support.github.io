@@ -106,6 +106,21 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'Innovative Micro SaaS',
+      icon: Zap,
+      color: 'from-emerald-600 to-teal-600',
+      links: [
+        { name: 'AI Project Management', href: '/services/ai-project-management' },
+        { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform' },
+        { name: 'Vendor Risk Management', href: '/services/vendor-risk-management' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
+        { name: 'SaaS Churn Predictor', href: '/services/saas-churn-predictor' },
+        { name: 'AI Incident Postmortems', href: '/services/ai-incident-postmortems' },
+        { name: 'API Monitoring SaaS', href: '/services/api-monitoring' },
+        { name: 'GDPR Cookie Compliance', href: '/services/gdpr-cookie-compliance' }
+      ]
+    },
+    {
       title: 'Revolutionary 2030 Services',
       icon: Crown,
       color: 'from-yellow-600 to-orange-600',
