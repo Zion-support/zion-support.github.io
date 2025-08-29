@@ -130,9 +130,7 @@ const OnsiteSupport = React.lazy(() => import('./pages/OnsiteSupport'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
 const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
-const Team = React.lazy(() => import('./pages/Team'));
 const Status = React.lazy(() => import('./pages/Status'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const News = React.lazy(() => import('./pages/News'));
 const Events = React.lazy(() => import('./pages/events'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
@@ -153,7 +151,8 @@ const Careers = () => (
 function App() {
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-futuristic">
+      <ThemeProvider>
+        <div className="min-h-screen bg-futuristic">
         <AppHeader />
         
         <main className="flex-1">
