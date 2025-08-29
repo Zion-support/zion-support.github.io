@@ -42,6 +42,7 @@ const Webinars = React.lazy(() => import('./pages/Webinars'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Signup = React.lazy(() => import('./pages/Signup'));
 
 // Enhanced services pages - only import existing ones
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
@@ -59,6 +60,7 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
 const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
 const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -102,6 +104,7 @@ const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkf
 const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
 const AICustomerSuccessPlatform = React.lazy(() => import('./pages/services/AICustomerSuccessPlatform'));
+const IncidentResponsePlatform = React.lazy(() => import('./pages/services/IncidentResponsePlatform'));
 
 // Additional innovative services
 const AIBusinessIntelligencePlatform = React.lazy(() => import('./pages/services/AIBusinessIntelligencePlatform'));
@@ -111,6 +114,8 @@ const AIHRPlatform = React.lazy(() => import('./pages/services/AIHRPlatform'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 const AILegalResearchPlatform = React.lazy(() => import('./pages/services/AILegalResearchPlatform'));
 const AIEducationPlatform = React.lazy(() => import('./pages/services/AIEducationPlatform'));
+const Status = React.lazy(() => import('./pages/Status'));
+const Demo = React.lazy(() => import('./pages/Demo'));
 
 // Simple placeholder pages for missing ones
 const Community = React.lazy(() => import('./pages/Community'));
@@ -172,6 +177,9 @@ function App() {
               <Route path="/terms" element={<Terms />} />
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/sitemap" element={<Sitemap />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/status" element={<Status />} />
+              <Route path="/demo" element={<Demo />} />
               {/** duplicates removed */}
               <Route path="/onsite-support" element={<OnsiteSupport />} />
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
@@ -218,6 +226,7 @@ function App() {
               <Route path="/services/healthcare-tech" element={<HealthcareTech />} />
               <Route path="/services/sustainability" element={<Sustainability />} />
               <Route path="/services/zero-trust-network-architecture" element={<ZeroTrustNetworkArchitecture />} />
+              <Route path="/services/incident-response-platform" element={<IncidentResponsePlatform />} />
               <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
               <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
               <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
@@ -243,6 +252,9 @@ function App() {
               <Route path="/services/green-it" element={<GreenIT />} />
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
               <Route path="/services/space-tech" element={<SpaceTech />} />
+
+              {/* Marketing/Comparison */}
+              <Route path="/services-comparison" element={<ServicesComparisonPage />} />
 
               {/* New AI Services Routes */}
               <Route path="/services/ai-cybersecurity-suite" element={<AICybersecuritySuite />} />
