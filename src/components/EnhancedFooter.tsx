@@ -56,55 +56,61 @@ export function EnhancedFooter() {
 
   const footerSections = [
     {
-      title: 'Services',
+      title: 'Core Services',
       links: [
         { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
         { name: 'IT Services', href: '/it-services', icon: Server },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', href: '/cloud-devops', icon: Cloud },
-        { name: 'Quantum Computing', href: '/quantum-computing', icon: Atom },
-        { name: 'Emerging Tech', href: '/emerging-tech', icon: Sparkles },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: TrendingUp }
       ]
     },
     {
-      title: 'Solutions',
+      title: 'AI Solutions',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation-suite', icon: PenTool },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Workflow },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: TrendingUp }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
         { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },
         { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign },
         { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Truck },
-        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
         { name: 'Government', href: '/solutions/government', icon: Building },
-        { name: 'Education', href: '/solutions/education', icon: BookOpen },
-        { name: 'Space Technology', href: '/space-tech', icon: Satellite }
+        { name: 'Education', href: '/solutions/education', icon: BookOpen }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Mission', href: '/mission', icon: Target },
-        { name: 'Leadership Team', href: '/leadership', icon: Award },
+        { name: 'Our Team', href: '/team', icon: Award },
         { name: 'Careers', href: '/careers', icon: Workflow },
         { name: 'Partners', href: '/partners', icon: Handshake },
         { name: 'News & Updates', href: '/news', icon: FileText },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Blog', href: '/blog', icon: PenTool }
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'Documentation', href: '/documentation', icon: FileText },
         { name: 'API Reference', href: '/api', icon: Code },
-        { name: 'Developer Portal', href: '/developer', icon: Cpu },
+        { name: 'Developer Portal', href: '/developer-portal', icon: Cpu },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'FAQ', href: '/faq', icon: MessageCircle },
         { name: 'Training', href: '/training', icon: BookOpen },
         { name: 'Webinars', href: '/webinars', icon: Users },
-        { name: 'White Papers', href: '/white-papers', icon: FileText }
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Blog', href: '/blog', icon: PenTool }
       ]
     }
   ];
