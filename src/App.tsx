@@ -30,6 +30,8 @@ const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 // New pages
 const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
+const ComprehensiveServicesOverview2025 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2025'));
+const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
@@ -142,12 +144,14 @@ function App() {
               <Route path="/cookies" element={<Cookies />} />
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/compliance" element={<Compliance />} />
-              <Route path="/onsite-support" element={<OnsiteSupport />} />
+
               <Route path="/pricing" element={<ComprehensivePricingGuide2027 />} />
+              <Route path="/pricing-2025" element={<ComprehensivePricingGuide2025 />} />
               <Route path="/pricing-2030" element={<ComprehensivePricingGuide2030 />} />
               <Route path="/pricing-guide" element={<PricingGuide />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services-overview" element={<ServicesOverview />} />
+              <Route path="/comprehensive-services-overview-2025" element={<ComprehensiveServicesOverview2025 />} />
               <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
               <Route path="/revolutionary-services-showcase-2030" element={<RevolutionaryServicesShowcase2030 />} />
               <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
@@ -184,7 +188,7 @@ function App() {
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
               <Route path="/services/it-consulting" element={<ITConsulting />} />
-              <Route path="/services/onsite-support" element={<OnsiteSupport />} />
+
               <Route path="/services/green-it" element={<GreenIT />} />
               <Route path="/services/quantum-computing" element={<QuantumComputing />} />
               <Route path="/services/space-tech" element={<SpaceTech />} />
