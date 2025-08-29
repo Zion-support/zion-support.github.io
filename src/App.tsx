@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
+import { EnhancedNavigation } from './components/EnhancedNavigation';
+import { EnhancedFooter } from './components/EnhancedFooter';
 import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
@@ -142,7 +142,7 @@ function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">
-        <AppHeader />
+        <EnhancedNavigation />
         
         <main className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
@@ -256,7 +256,7 @@ function App() {
           </Suspense>
         </main>
         
-        <EnhancedFuturisticFooter />
+        <EnhancedFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
       </div>

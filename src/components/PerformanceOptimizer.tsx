@@ -1,163 +1,167 @@
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-}
-
-interface BundleInfo {
-  name: string;
-  size: number;
-  chunks: string[];
-}
+import React, { useEffect, useCallback, useLocation } from 'react';
 
 export function PerformanceOptimizer() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo[]>([]);
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const location = useLocation();
 
-  useEffect(() => {
-    // Performance monitoring
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => prev ? { ...prev, lcp: entry.startTime } : null);
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical images
+    const criticalImages = [
+      '/images/hero-bg.jpg',
+      '/images/logo.png',
+      '/images/favicon.ico'
+    ];
+
+    criticalImages.forEach(src => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = src;
+      document.head.appendChild(link);
+    });
+
+    // Preload critical fonts
+    const criticalFonts = [
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+    ];
+
+    criticalFonts.forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'style';
+      link.href = href;
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  // Setup image optimization with Intersection Observer
+  const setupImageOptimization = useCallback(() => {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              imageObserver.unobserve(img);
+            }
           }
         });
       });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      
-      return () => observer.disconnect();
+
+      // Observe all lazy images
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
     }
-
-    // Measure Core Web Vitals
-    const measurePerformance = () => {
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          setMetrics({
-            fcp: 0, // Will be updated by observer
-            lcp: 0, // Will be updated by observer
-            fid: 0, // First Input Delay
-            cls: 0, // Cumulative Layout Shift
-            ttfb: navigation.responseStart - navigation.requestStart
-          });
-        }
-      }
-    };
-
-    // Bundle analysis (in development)
-    if (process.env.NODE_ENV === 'development') {
-      analyzeBundle();
-    }
-
-    measurePerformance();
   }, []);
 
-  const analyzeBundle = async () => {
-    try {
-      // Simulate bundle analysis
-      const mockBundleInfo: BundleInfo[] = [
-        { name: 'main', size: 245760, chunks: ['main', 'vendor'] },
-        { name: 'vendor', size: 1024000, chunks: ['react', 'framer-motion'] },
-        { name: 'ui', size: 51200, chunks: ['components', 'ui'] }
-      ];
-      setBundleInfo(mockBundleInfo);
-    } catch (error) {
-      console.warn('Bundle analysis not available:', error);
+  // Monitor Core Web Vitals
+  const monitorCoreWebVitals = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      // First Contentful Paint (FCP)
+      const fcpObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            console.log('FCP:', entry.startTime);
+          }
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Largest Contentful Paint (LCP)
+      const lcpObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          console.log('LCP:', entry.startTime);
+        });
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Cumulative Layout Shift (CLS)
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        list.getEntries().forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        console.log('CLS:', clsValue);
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
-  };
+  }, []);
 
-  const optimizeImages = () => {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-  };
-
-  const preloadCriticalResources = () => {
-    const criticalPaths = [
-      '/fonts/orbitron-v28-latin-700.woff2',
-      '/css/critical.css'
+  // Optimize bundle loading with resource hints
+  const optimizeBundleLoading = useCallback(() => {
+    // DNS prefetch for external domains
+    const externalDomains = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://cdn.jsdelivr.net'
     ];
 
-    criticalPaths.forEach(path => {
+    externalDomains.forEach(domain => {
       const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = path;
-      link.as = path.endsWith('.woff2') ? 'font' : 'style';
-      link.crossOrigin = 'anonymous';
+      link.rel = 'dns-prefetch';
+      link.href = domain;
       document.head.appendChild(link);
     });
-  };
 
-  const optimizeFonts = () => {
-    // Font display optimization
-    const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
-    fontLinks.forEach(link => {
-      link.setAttribute('font-display', 'swap');
+    // Preconnect to critical domains
+    const criticalDomains = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com'
+    ];
+
+    criticalDomains.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = domain;
+      document.head.appendChild(link);
     });
-  };
-
-  const startOptimization = async () => {
-    setIsOptimizing(true);
-    
-    try {
-      // Run optimizations in parallel
-      await Promise.all([
-        optimizeImages(),
-        preloadCriticalResources(),
-        optimizeFonts()
-      ]);
-
-      // Simulate optimization delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      console.log('Performance optimization completed');
-    } catch (error) {
-      console.error('Optimization failed:', error);
-    } finally {
-      setIsOptimizing(false);
-    }
-  };
-
-  // Auto-optimize on mount
-  useEffect(() => {
-    startOptimization();
   }, []);
 
-  // Performance monitoring dashboard (development only)
-  if (process.env.NODE_ENV === 'development' && metrics) {
-    return (
-      <div className="fixed bottom-4 right-4 bg-slate-900 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-        <h3 className="text-sm font-semibold mb-2">Performance Monitor</h3>
-        <div className="space-y-1 text-xs">
-          <div>FCP: {metrics.fcp.toFixed(0)}ms</div>
-          <div>LCP: {metrics.lcp.toFixed(0)}ms</div>
-          <div>TTFB: {metrics.ttfb.toFixed(0)}ms</div>
-          <div>Bundle Size: {(bundleInfo.reduce((sum, b) => sum + b.size, 0) / 1024).toFixed(1)}KB</div>
-        </div>
-        <button
-          onClick={startOptimization}
-          disabled={isOptimizing}
-          className="mt-2 px-3 py-1 bg-blue-600 hover:bg-blue-700 disabled:opacity-50 rounded text-xs"
-        >
-          {isOptimizing ? 'Optimizing...' : 'Re-optimize'}
-        </button>
-      </div>
-    );
-  }
+  // Optimize route loading with prefetching
+  const optimizeRouteLoading = useCallback(() => {
+    const currentPath = location.pathname;
+    
+    // Prefetch next likely routes based on current path
+    if (currentPath === '/') {
+      // Prefetch main service pages
+      const routesToPrefetch = [
+        '/ai-services',
+        '/it-services',
+        '/about',
+        '/contact'
+      ];
+      
+      routesToPrefetch.forEach(route => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = route;
+        document.head.appendChild(link);
+      });
+    }
+  }, [location.pathname]);
 
+  useEffect(() => {
+    // Initialize performance optimizations
+    preloadCriticalResources();
+    setupImageOptimization();
+    monitorCoreWebVitals();
+    optimizeBundleLoading();
+    optimizeRouteLoading();
+  }, [preloadCriticalResources, setupImageOptimization, monitorCoreWebVitals, optimizeBundleLoading, optimizeRouteLoading]);
+
+  // This component doesn't render anything visible
   return null;
 }
