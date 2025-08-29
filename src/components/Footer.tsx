@@ -92,55 +92,27 @@ const footerSections = [
     ]
   },
   {
-    title: 'AI & Machine Learning',
+    title: 'Core Services',
+    icon: Zap,
+    links: [
+      { name: 'AI & Machine Learning', path: '/ai-services', icon: Brain },
+      { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+      { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+      { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
+      { name: 'IT Consulting', path: '/it-consulting', icon: Cpu }
+    ]
+  },
+  {
+    title: 'AI Solutions',
     icon: Brain,
     links: [
       { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: TrendingUp },
-      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
-      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
-      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
-      { name: 'AI Business Intelligence Analytics', path: '/services/ai-business-intelligence-analytics', icon: BarChart3 },
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
       { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-      { name: 'AI-Powered SEO', path: '/services/ai-powered-seo', icon: TrendingUp },
-      { name: 'Interview Assessment AI', path: '/services/interview-assessment-ai', icon: Users },
-      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
-      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation', icon: MessageCircle },
-      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
-      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-      { name: 'AI DevOps Automation Platform', path: '/services/ai-devops-automation-platform', icon: GitFork },
-      { name: 'AI Customer Experience Support', path: '/services/ai-customer-experience-support', icon: MessageCircle },
-      { name: 'AI Marketing Automation Personalization', path: '/services/ai-marketing-automation-personalization', icon: Target }
-    ]
-  },
-  {
-    title: 'Cloud & Infrastructure',
-    icon: Cloud,
-    links: [
-      { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Server },
-      { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-      { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
-      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
-      { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
-      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
-      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
-    ]
-  },
-  {
-    title: 'Cybersecurity & Privacy',
-    icon: Shield,
-    links: [
-      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Lock },
-      { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Shield },
-      { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
-      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
-      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle }
+      { name: 'AI Content Creation', path: '/services/ai-content-creation', icon: FileText },
+      { name: 'AI Cybersecurity', path: '/services/ai-cybersecurity', icon: Lock },
+      { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart }
     ]
   },
   {
@@ -149,10 +121,9 @@ const footerSections = [
     links: [
       { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
       { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Brain },
-      { name: 'Space Technology', path: '/space-tech', icon: Satellite },
       { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
-      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
+      { name: 'Space Technology', path: '/space-tech', icon: Satellite },
+      { name: 'Blockchain Solutions', path: '/services/blockchain', icon: Lock }
     ]
   },
   {
@@ -164,42 +135,19 @@ const footerSections = [
       { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
       { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
       { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
-      { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
-      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: MessageCircle },
-      { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
-      { name: 'Returns Management', path: '/services/returns-management', icon: Truck },
-      { name: 'LLM Content Studio', path: '/services/llm-content-studio', icon: FileText }
+      { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone }
     ]
   },
   {
-    title: 'New AI Services 2025',
-    icon: Sparkles,
+    title: 'Solutions',
+    icon: Target,
     links: [
-      { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield },
-      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Brain },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-risk-management', icon: Shield },
-      { name: 'AI Code Review Security Scanner', path: '/services/ai-code-review-security-scanner', icon: Code },
-    ]
-  },
-  {
-    title: '2029 Services Showcase',
-    icon: Rocket,
-    links: [
-      { name: 'Comprehensive Services 2029', path: '/comprehensive-services-showcase-2029', icon: Star },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-      { name: 'AI Autonomous Supply Chain', path: '/services/ai-autonomous-supply-chain', icon: Truck },
-      { name: 'AI Cybersecurity Threat Intelligence', path: '/services/ai-cybersecurity-threat-intelligence', icon: Shield },
-    ]
-  },
-  {
-    title: 'Featured Services',
-    icon: Star,
-    links: [
-      { name: '2025 New Innovative Services', path: '/new-innovative-services-2025', icon: Star },
-      { name: '2026 Services Overview', path: '/ultimate-services-showcase-2026', icon: Star },
-      { name: '2027 Services Overview', path: '/comprehensive-services-showcase-2027', icon: Star },
-      { name: '2029 Cutting-Edge Services', path: '/zion-cutting-edge-services-2029', icon: Star },
-      { name: '2029 Comprehensive Services Showcase', path: '/comprehensive-services-showcase-2029', icon: Star }
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+      { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign },
+      { name: 'Government Solutions', path: '/solutions/government', icon: Building },
+      { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
+      { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart }
     ]
   },
   {
@@ -211,9 +159,7 @@ const footerSections = [
       { name: 'Documentation', path: '/documentation', icon: BookOpen },
       { name: 'API Documentation', path: '/api-docs', icon: Code },
       { name: 'Developer Portal', path: '/developer', icon: Cpu },
-      { name: 'Training', path: '/training', icon: GraduationCap },
-      { name: 'Webinars', path: '/webinars', icon: Video },
-      { name: 'White Papers', path: '/white-papers', icon: FileText }
+      { name: 'Training', path: '/training', icon: GraduationCap }
     ]
   }
 ];

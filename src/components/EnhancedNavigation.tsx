@@ -37,10 +37,12 @@ const navigationItems: NavigationItem[] = [
     href: '/services',
     children: [
       { label: 'AI & Machine Learning', href: '/services/ai-ml' },
-      { label: 'Cloud Solutions', href: '/services/cloud' },
+      { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
       { label: 'Cybersecurity', href: '/services/cybersecurity' },
+      { label: 'IT Infrastructure', href: '/services/it-infrastructure' },
       { label: 'Digital Transformation', href: '/services/digital-transformation' },
-      { label: 'Consulting', href: '/services/consulting' }
+      { label: 'Micro SaaS Solutions', href: '/micro-saas' },
+      { label: 'Consulting', href: '/it-consulting' }
     ]
   },
   { 
@@ -48,12 +50,50 @@ const navigationItems: NavigationItem[] = [
     href: '/solutions',
     children: [
       { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { label: 'SMB Solutions', href: '/solutions/smb' },
-      { label: 'Industry Specific', href: '/solutions/industry' }
+      { label: 'Healthcare Solutions', href: '/solutions/healthcare' },
+      { label: 'Financial Solutions', href: '/solutions/financial' },
+      { label: 'Government Solutions', href: '/solutions/government' },
+      { label: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
+      { label: 'Retail Solutions', href: '/solutions/retail' }
+    ]
+  },
+  { 
+    label: 'AI Services', 
+    href: '/ai-services',
+    children: [
+      { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
+      { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
+      { label: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+      { label: 'AI Content Creation', href: '/services/ai-content-creation' },
+      { label: 'AI Cybersecurity', href: '/services/ai-cybersecurity' },
+      { label: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform' }
+    ]
+  },
+  { 
+    label: 'Emerging Tech', 
+    href: '/emerging-tech',
+    children: [
+      { label: 'Quantum Computing', href: '/services/quantum-computing' },
+      { label: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+      { label: 'Digital Twin', href: '/services/digital-twin' },
+      { label: 'Space Technology', href: '/space-tech' },
+      { label: 'Blockchain Solutions', href: '/services/blockchain' }
     ]
   },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Contact', href: '/contact' },
+  { 
+    label: 'Resources', 
+    href: '/resources',
+    children: [
+      { label: 'Blog', href: '/blog' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'News', href: '/news' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'Help Center', href: '/help' },
+      { label: 'Documentation', href: '/documentation' }
+    ]
+  }
 ];
 
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
@@ -324,18 +364,18 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
               {/* Mobile Actions */}
               <div className="pt-4 border-t border-slate-700/50 space-y-3">
-                <div className="flex items-center space-x-4 text-slate-400">
-                  <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-4 text-slate-400">
-                  <Mail className="w-4 h-4" />
-                  <span>info@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-4 text-slate-400">
-                  <MapPin className="w-4 h-4" />
-                  <span>123 Tech Street, Digital City</span>
-                </div>
+                              <div className="flex items-center space-x-4 text-slate-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-4 text-slate-400">
+                <Mail className="w-4 h-4" />
+                <span>contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-4 text-slate-400">
+                <MapPin className="w-4 h-4" />
+                <span>Innovation District, Tech City</span>
+              </div>
               </div>
             </div>
           </motion.div>

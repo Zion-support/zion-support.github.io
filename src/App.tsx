@@ -29,6 +29,8 @@ const Blog = lazy(() => import('./pages/Blog'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Team = lazy(() => import('./pages/Team'));
+const EmergingTech = lazy(() => import('./pages/EmergingTech'));
+const Resources = lazy(() => import('./pages/Resources'));
 
 // Additional missing page imports
 const Dashboard = lazy(() => import('./pages/Dashboard'));
@@ -338,6 +340,8 @@ function App() {
                   <Route path="/news" element={<News />} />
                   <Route path="/case-studies" element={<CaseStudies />} />
                   <Route path="/help" element={<HelpCenter />} />
+                  <Route path="/emerging-tech" element={<EmergingTech />} />
+                  <Route path="/resources" element={<Resources />} />
                   
                   {/* New sitemap routes */}
                   <Route path="/ai-solutions" element={<AiSolutions />} />
