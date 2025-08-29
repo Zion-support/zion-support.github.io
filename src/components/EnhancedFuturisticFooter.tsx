@@ -168,17 +168,35 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'E-commerce Personalization', href: '/services/ecommerce-personalization' },
         { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder' }
       ]
+    },
+    {
+      title: 'Solutions & Industries',
+      icon: Building,
+      color: 'from-blue-600 to-cyan-600',
+      links: [
+        { name: 'AI Solutions Overview', href: '/ai-solutions', description: 'Complete AI solutions portfolio' },
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale enterprise solutions' },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare', description: 'Healthcare technology solutions' },
+        { name: 'Research & Development', href: '/research-development', description: 'Innovation and R&D services' }
+      ]
     }
   ];
 
   const quickLinks = [
     { name: 'Services Overview', href: '/services-overview' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+    { name: 'Research & Development', href: '/research-development' },
     { name: 'Pricing Guide', href: '/pricing-guide' },
     { name: 'Help Center', href: '/help' },
     { name: 'FAQ', href: '/faq' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' },
+    { name: 'News', href: '/news' },
+    { name: 'Events', href: '/events' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Careers', href: '/careers' },
     { name: 'Sitemap', href: '/sitemap' }
   ];
@@ -188,7 +206,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Team', href: '/team', description: 'Meet our experts' },
     { name: 'Careers', href: '/careers', description: 'Join our team' },
     { name: 'Blog', href: '/blog', description: 'Latest insights' },
+    { name: 'News', href: '/news', description: 'Company and industry news' },
+    { name: 'Events', href: '/events', description: 'Upcoming events and webinars' },
     { name: 'Press', href: '/press', description: 'Media resources' },
+    { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
     { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
   ];
 

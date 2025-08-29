@@ -171,6 +171,7 @@ export function AppHeader() {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       solutions: [
+        { name: 'AI Solutions Overview', href: '/ai-solutions', description: 'Complete AI solutions portfolio' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Machine Learning & Data Science' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'AI-powered sales automation' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Regulatory compliance automation' },
@@ -178,6 +179,16 @@ export function AppHeader() {
         { name: 'AI Customer Success Platform', href: '/services/ai-customer-success-platform', description: 'Customer success automation' },
         { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', description: 'Workflow automation' },
         { name: 'AI Data Governance', href: '/services/ai-data-governance', description: 'Data management' }
+      ]
+    },
+    {
+      name: 'Industry Solutions',
+      icon: Building,
+      color: 'from-blue-600 to-cyan-600',
+      solutions: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale enterprise solutions' },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare', description: 'Healthcare technology solutions' },
+        { name: 'Research & Development', href: '/research-development', description: 'Innovation and R&D services' }
       ]
     },
     {
@@ -247,6 +258,8 @@ export function AppHeader() {
       color: 'from-green-600 to-emerald-600',
       items: [
         { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
+        { name: 'News', href: '/news', description: 'Company and industry news' },
+        { name: 'Events', href: '/events', description: 'Upcoming events and webinars' },
         { name: 'Press', href: '/press', description: 'Media resources' },
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
         { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }

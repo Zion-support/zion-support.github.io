@@ -1,62 +1,79 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { Brain, Zap, Shield, Cloud, Rocket, Users, TrendingUp, CheckCircle } from 'lucide-react';
+import { Heart, Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
-export default function AISolutions() {
-  const features = [
+export default function HealthcareSolutions() {
+  const solutions = [
     {
-      icon: Brain,
-      title: 'AI Business Intelligence',
-      description: 'Advanced analytics and machine learning solutions for data-driven decision making',
-      href: '/services/ai-business-intelligence'
-    },
-    {
-      icon: Zap,
-      title: 'AI Workflow Automation',
-      description: 'Streamline business processes with intelligent automation',
-      href: '/services/ai-workflow-automation'
+      icon: Heart,
+      title: 'Healthcare Analytics',
+      description: 'AI-powered analytics for patient care optimization and clinical decision support',
+      features: ['Patient Risk Assessment', 'Treatment Optimization', 'Clinical Outcomes Analysis', 'Predictive Modeling'],
+      href: '/services/ai-healthcare-analytics'
     },
     {
       icon: Shield,
-      title: 'AI Cybersecurity Suite',
-      description: 'Next-generation security powered by artificial intelligence',
-      href: '/services/ai-cybersecurity-suite'
+      title: 'Healthcare Security',
+      description: 'HIPAA-compliant security solutions for healthcare data protection',
+      features: ['Data Encryption', 'Access Control', 'Audit Logging', 'Compliance Monitoring'],
+      href: '/services/ai-compliance-copilot'
     },
     {
-      icon: Cloud,
-      title: 'AI Cloud Solutions',
-      description: 'Scalable AI infrastructure and cloud-native applications',
-      href: '/services/cloud-devops'
+      icon: Brain,
+      title: 'AI Diagnostics',
+      description: 'Machine learning solutions for medical imaging and diagnostic support',
+      features: ['Medical Image Analysis', 'Symptom Assessment', 'Disease Prediction', 'Treatment Recommendations'],
+      href: '/services/healthcare-tech'
     },
     {
-      icon: Rocket,
-      title: 'AI Innovation Hub',
-      description: 'Cutting-edge AI research and development services',
-      href: '/services/ai-workflow-orchestrator'
+      icon: Zap,
+      title: 'Healthcare Automation',
+      description: 'Intelligent automation for healthcare workflows and administrative tasks',
+      features: ['Appointment Scheduling', 'Patient Communication', 'Billing Automation', 'Resource Management'],
+      href: '/services/ai-workflow-automation'
     },
     {
       icon: Users,
-      title: 'AI Customer Experience',
-      description: 'Personalized customer interactions and engagement',
+      title: 'Patient Experience',
+      description: 'Digital solutions to enhance patient engagement and satisfaction',
+      features: ['Patient Portals', 'Telemedicine', 'Mobile Apps', 'Communication Tools'],
       href: '/services/ai-customer-experience-platform'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Population Health',
+      description: 'Analytics and insights for population health management and preventive care',
+      features: ['Health Trends Analysis', 'Preventive Care', 'Population Risk Assessment', 'Intervention Planning'],
+      href: '/services/data-analytics'
     }
   ];
 
   const benefits = [
-    'Increased operational efficiency by 40-60%',
-    'Enhanced decision-making with real-time insights',
-    'Reduced costs through intelligent automation',
-    'Improved customer satisfaction and retention',
-    'Scalable solutions that grow with your business',
-    '24/7 AI-powered monitoring and support'
+    'Improved patient outcomes and care quality',
+    'Enhanced operational efficiency and cost reduction',
+    'Better compliance with healthcare regulations',
+    'Increased patient satisfaction and engagement',
+    'Data-driven clinical decision making',
+    'Streamlined administrative processes'
+  ];
+
+  const specialties = [
+    'Primary Care',
+    'Specialty Medicine',
+    'Emergency Medicine',
+    'Mental Health',
+    'Pediatrics',
+    'Geriatrics',
+    'Oncology',
+    'Cardiology'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Solutions - Zion Tech Group"
-        description="Transform your business with cutting-edge AI solutions. From machine learning to automation, we deliver intelligent solutions that drive growth and innovation."
+        title="Healthcare Solutions - Zion Tech Group"
+        description="Transform healthcare delivery with AI-powered solutions. From diagnostics to patient care, we deliver innovative healthcare technology solutions."
       />
       
       {/* Hero Section */}
@@ -68,34 +85,34 @@ export default function AISolutions() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Solutions for the
+              Healthcare Solutions for
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                {' '}Future
+                {' '}Better Care
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Harness the power of artificial intelligence to transform your business operations, 
-              enhance customer experiences, and unlock new opportunities for growth and innovation.
+              Transform healthcare delivery with AI-powered solutions that improve patient outcomes, 
+              enhance operational efficiency, and ensure regulatory compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/request-quote"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
-                Get Started
+                Get Healthcare Quote
               </a>
               <a
-                href="/services-overview"
+                href="/contact"
                 className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:border-gray-500 transition-all duration-300"
               >
-                Explore Services
+                Schedule Demo
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* Solutions Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -105,18 +122,18 @@ export default function AISolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive AI Solutions
+              Comprehensive Healthcare Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI solutions cover every aspect of modern business, from data analytics to 
-              autonomous operations, ensuring you stay ahead of the competition.
+              Our healthcare solutions address the unique challenges of modern healthcare 
+              delivery while improving patient care and operational efficiency.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {solutions.map((solution, index) => (
               <motion.div
-                key={feature.title}
+                key={solution.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -124,20 +141,28 @@ export default function AISolutions() {
               >
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg">
-                    <feature.icon className="w-6 h-6 text-white" />
+                    <solution.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  {feature.title}
+                  {solution.title}
                 </h3>
                 <p className="text-gray-300 mb-4">
-                  {feature.description}
+                  {solution.description}
                 </p>
+                <ul className="space-y-2 mb-4">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="text-sm text-gray-400 flex items-center">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
                 <a
-                  href={feature.href}
-                  className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
+                  href={solution.href}
+                  className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300 flex items-center"
                 >
-                  Learn More →
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
               </motion.div>
             ))}
@@ -155,11 +180,11 @@ export default function AISolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Solutions?
+              Healthcare Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the transformative power of AI with solutions designed for real-world 
-              business challenges and measurable results.
+              Experience measurable improvements in patient care, operational efficiency, 
+              and compliance with our healthcare technology solutions.
             </p>
           </motion.div>
 
@@ -196,6 +221,40 @@ export default function AISolutions() {
         </div>
       </section>
 
+      {/* Specialties Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Healthcare Specialties
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our solutions are designed to meet the unique needs of various 
+              healthcare specialties and practice types.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {specialties.map((specialty, index) => (
+              <motion.div
+                key={specialty}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-slate-600 transition-all duration-300"
+              >
+                <h3 className="text-lg font-semibold text-white">{specialty}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -205,24 +264,24 @@ export default function AISolutions() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business with AI?
+              Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the AI revolution and discover how our solutions can drive innovation, 
-              efficiency, and growth for your organization.
+              Let's discuss how our healthcare solutions can improve patient care, 
+              enhance operational efficiency, and ensure compliance for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/request-quote"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
-                Start Your AI Journey
+                Get Healthcare Quote
               </a>
               <a
                 href="/contact"
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-gray-500 transition-all duration-300"
               >
-                Talk to Our Experts
+                Schedule Demo
               </a>
             </div>
           </motion.div>

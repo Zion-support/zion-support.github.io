@@ -25,6 +25,14 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
+// New pages
+const AISolutions = React.lazy(() => import('./pages/AISolutions'));
+const EnterpriseSolutions = React.lazy(() => import('./pages/solutions/Enterprise'));
+const HealthcareSolutions = React.lazy(() => import('./pages/solutions/Healthcare'));
+const ResearchDevelopment = React.lazy(() => import('./pages/ResearchDevelopment'));
+const News = React.lazy(() => import('./pages/News'));
+const Events = React.lazy(() => import('./pages/Events'));
+
 // Service overview pages
 const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
@@ -132,8 +140,6 @@ const Compliance = React.lazy(() => import('./pages/Compliance'));
 const Talent = React.lazy(() => import('./pages/Talent'));
 const Equipment = React.lazy(() => import('./pages/Equipment'));
 const ITOnsiteServices = React.lazy(() => import('./pages/ITOnsiteServices'));
-const News = React.lazy(() => import('./pages/News'));
-const Events = React.lazy(() => import('./pages/events'));
 const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const Careers = React.lazy(() => import('./pages/Careers'));
 
@@ -222,6 +228,12 @@ function App() {
               <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
               <Route path="/news" element={<News />} />
               <Route path="/events" element={<Events />} />
+              
+              {/* New Solution Routes */}
+              <Route path="/ai-solutions" element={<AISolutions />} />
+              <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+              <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
               
               {/* Service Routes */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
