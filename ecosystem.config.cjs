@@ -152,6 +152,22 @@ module.exports = {
       log_file: './logs/dependency-manager.log',
       error_file: './logs/dependency-manager-error.log',
       out_file: './logs/dependency-manager-out.log'
+    },
+
+    {
+      name: 'project-health-dashboard',
+      script: './scripts/automation/project-health-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      log_file: './logs/project-health-dashboard.log',
+      error_file: './logs/project-health-dashboard-error.log',
+      out_file: './logs/project-health-dashboard-out.log'
     }
   ],
 
