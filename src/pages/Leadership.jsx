@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
 const Leadership = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';

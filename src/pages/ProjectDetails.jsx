@@ -68,7 +68,7 @@ function ProjectDetailsContent() {
             setNotes(data || []);
         }
         catch (err) {
-            console.error("Error fetching project notes:", err);
+            // console.error("Error fetching project notes:", err);
         }
     };
     const handleSubmitNote = async () => {
@@ -95,7 +95,7 @@ function ProjectDetailsContent() {
             });
         }
         catch (err) {
-            console.error("Error adding note:", err);
+            // console.error("Error adding note:", err);
             toast({
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",

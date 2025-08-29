@@ -278,7 +278,7 @@ export default function EnhancedAccessibilityEnhancer({
       };
 
       recognition.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
+        // console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
 
@@ -406,7 +406,7 @@ export default function EnhancedAccessibilityEnhancer({
       localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
       await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate save
     } catch (error) {
-      console.error('Failed to save settings:', error);
+      // console.error('Failed to save settings:', error);
     } finally {
       setIsLoading(false);
     }
@@ -424,7 +424,7 @@ export default function EnhancedAccessibilityEnhancer({
       }
       await new Promise(resolve => setTimeout(resolve, 500)); // Simulate load
     } catch (error) {
-      console.error('Failed to load settings:', error);
+      // console.error('Failed to load settings:', error);
     } finally {
       setIsLoading(false);
     }

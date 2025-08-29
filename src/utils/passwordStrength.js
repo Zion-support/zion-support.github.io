@@ -66,7 +66,7 @@ export const hasNumbers = (password) => {
  * @returns {boolean} True if contains special characters
  */
 export const hasSpecialChars = (password) => {
-  return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+  return /[!@#$%^&*()_+-=[\]{};':"\\|,.<>/?]/.test(password);
 };
 
 /**

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -218,7 +217,7 @@ export function Footer() {
       window.open(link.path, '_blank', 'noopener,noreferrer');
     } else {
       // Handle internal navigation
-      console.log('Navigate to:', link.path);
+      // console.log('Navigate to:', link.path);
     }
   };
 

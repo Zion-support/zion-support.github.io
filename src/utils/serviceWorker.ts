@@ -17,7 +17,7 @@ export class ServiceWorkerManager {
 
   async register(): Promise<ServiceWorkerRegistration | null> {
     if (!this.isSupported) {
-      console.log('Service Worker not supported');
+      // console.log('Service Worker not supported');
       return null;
     }
 
@@ -25,7 +25,7 @@ export class ServiceWorkerManager {
       // Check if service worker is already registered
       const existingRegistration = await navigator.serviceWorker.getRegistration();
       if (existingRegistration) {
-        console.log('Service Worker already registered');
+        // console.log('Service Worker already registered');
         this.swRegistration = existingRegistration;
         return existingRegistration;
       }
@@ -36,7 +36,7 @@ export class ServiceWorkerManager {
         updateViaCache: 'none'
       });
 
-      console.log('Service Worker registered successfully:', registration);
+      // console.log('Service Worker registered successfully:', registration);
       this.swRegistration = registration;
 
       // Wait for service worker to be ready before setting up handlers
@@ -50,7 +50,7 @@ export class ServiceWorkerManager {
 
       return registration;
     } catch (error) {
-      console.error('Service Worker registration failed:', error);
+      // console.error('Service Worker registration failed:', error);
       return null;
     }
   }
@@ -68,7 +68,7 @@ export class ServiceWorkerManager {
                 this.showUpdateNotification();
               }
             } catch (error) {
-              console.error('Error handling worker state change:', error);
+              // console.error('Error handling worker state change:', error);
             }
           });
         }
@@ -83,34 +83,34 @@ export class ServiceWorkerManager {
             window.location.reload();
           }
         } catch (error) {
-          console.error('Error handling controller change:', error);
+          // console.error('Error handling controller change:', error);
         }
       });
     } catch (error) {
-      console.error('Error setting up update handlers:', error);
+      // console.error('Error setting up update handlers:', error);
     }
   }
 
   private handleMessages() {
     navigator.serviceWorker.addEventListener('message', (event) => {
       try {
-        console.log('Message from Service Worker:', event.data);
+        // console.log('Message from Service Worker:', event.data);
         
         switch (event.data.type) {
           case 'CACHE_UPDATED':
-            console.log('Cache updated:', event.data.payload);
+            // console.log('Cache updated:', event.data.payload);
             break;
           case 'OFFLINE_READY':
-            console.log('App is ready for offline use');
+            // console.log('App is ready for offline use');
             break;
           case 'ERROR':
-            console.error('Service Worker error:', event.data.payload);
+            // console.error('Service Worker error:', event.data.payload);
             break;
           default:
-            console.log('Unknown message type:', event.data.type);
+            // console.log('Unknown message type:', event.data.type);
         }
       } catch (error) {
-        console.error('Error handling service worker message:', error);
+        // console.error('Error handling service worker message:', error);
       }
     });
   }
@@ -158,7 +158,7 @@ export class ServiceWorkerManager {
       }
     }, 10000);
     } catch (error) {
-      console.error('Error showing update notification:', error);
+      // console.error('Error showing update notification:', error);
     }
   }
 
@@ -167,9 +167,9 @@ export class ServiceWorkerManager {
 
     try {
       await this.swRegistration.update();
-      console.log('Service Worker update initiated');
+      // console.log('Service Worker update initiated');
     } catch (error) {
-      console.error('Service Worker update failed:', error);
+      // console.error('Service Worker update failed:', error);
     }
   }
 
@@ -179,12 +179,12 @@ export class ServiceWorkerManager {
     try {
       const unregistered = await this.swRegistration.unregister();
       if (unregistered) {
-        console.log('Service Worker unregistered');
+        // console.log('Service Worker unregistered');
         this.swRegistration = null;
       }
       return unregistered;
     } catch (error) {
-      console.error('Service Worker unregistration failed:', error);
+      // console.error('Service Worker unregistration failed:', error);
       return false;
     }
   }
@@ -213,9 +213,9 @@ export class ServiceWorkerManager {
       await Promise.all(
         cacheNames.map(cacheName => caches.delete(cacheName))
       );
-      console.log('All caches cleared');
+      // console.log('All caches cleared');
     } catch (error) {
-      console.error('Failed to clear caches:', error);
+      // console.error('Failed to clear caches:', error);
     }
   }
 
@@ -241,7 +241,7 @@ export class ServiceWorkerManager {
 
       return totalSize;
     } catch (error) {
-      console.error('Failed to calculate cache size:', error);
+      // console.error('Failed to calculate cache size:', error);
       return 0;
     }
   }
@@ -256,12 +256,12 @@ export class ServiceWorkerManager {
       const registration = await this.getRegistration();
       if (registration) {
         await (registration as any).sync.register(tag);
-        console.log('Background sync requested:', tag);
+        // console.log('Background sync requested:', tag);
         return true;
       }
       return false;
     } catch (error) {
-      console.error('Background sync request failed:', error);
+      // console.error('Background sync request failed:', error);
       return false;
     }
   }
@@ -274,10 +274,10 @@ export class ServiceWorkerManager {
 
     try {
       const permission = await Notification.requestPermission();
-      console.log('Notification permission:', permission);
+      // console.log('Notification permission:', permission);
       return permission;
     } catch (error) {
-      console.error('Failed to request notification permission:', error);
+      // console.error('Failed to request notification permission:', error);
       return 'denied';
     }
   }
@@ -290,13 +290,13 @@ export class ServiceWorkerManager {
     try {
       const permission = await this.requestNotificationPermission();
       if (permission !== 'granted') {
-        console.log('Notification permission denied');
+        // console.log('Notification permission denied');
         return null;
       }
 
       const registration = await this.getRegistration();
       if (!registration) {
-        console.log('No service worker registration');
+        // console.log('No service worker registration');
         return null;
       }
 
@@ -305,10 +305,10 @@ export class ServiceWorkerManager {
         applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
       });
 
-      console.log('Push subscription created:', subscription);
+      // console.log('Push subscription created:', subscription);
       return subscription;
     } catch (error) {
-      console.error('Push subscription failed:', error);
+      // console.error('Push subscription failed:', error);
       return null;
     }
   }

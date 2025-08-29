@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from 'lucide-react';
 

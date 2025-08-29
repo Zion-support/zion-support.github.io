@@ -1,4 +1,3 @@
-import React from "react";
 import { ArrowRight, Users, Zap, Play, Download } from "lucide-react";
 
 export const FeatureCTAsSection = () => {

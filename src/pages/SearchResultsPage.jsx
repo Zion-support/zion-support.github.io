@@ -34,7 +34,7 @@ export default function SearchResultsPage() {
         const el = loader.current;
         if (!el)
             return;
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new window.IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
                 fetchNextPage();
             }

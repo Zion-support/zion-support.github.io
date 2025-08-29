@@ -1,4 +1,3 @@
-import React from 'react';
 import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Target, Clock, Package, Globe } from 'lucide-react';
 
 export default function AISupplyChainOptimization() {

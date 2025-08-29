@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,

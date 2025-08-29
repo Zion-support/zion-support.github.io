@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
@@ -45,7 +44,7 @@ export function PrimaryNav() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      console.log('PrimaryNav search submit:', query);
+      // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('');
     }
@@ -75,7 +74,7 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  console.log('PrimaryNav search suggestion selected:', sugg);
+                  // console.log('PrimaryNav search suggestion selected:', sugg);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page

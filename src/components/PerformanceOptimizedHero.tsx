@@ -57,7 +57,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   const handleCTAClick = useCallback(() => {
     // Analytics tracking could be added here
-    console.log('Hero CTA clicked');
+    // console.log('Hero CTA clicked');
   }, []);
 
   const containerVariants = {

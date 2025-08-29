@@ -151,7 +151,7 @@ export default function TranslationManager() {
             });
         }
         catch (error) {
-            console.error(`Error translating key ${key}:`, error);
+            // console.error(`Error translating key ${key}:`, error);
             toast({
                 title: t('translation.translation_failed'),
                 description: error instanceof Error ? error.message : t('translation.unknown_error'),

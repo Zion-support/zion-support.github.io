@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, Star, ArrowRight, CheckCircle, TrendingUp, Shield, Code, Users } from 'lucide-react';
 import { getFeaturedMicroSaasServices } from '@/data/microSaasServices';

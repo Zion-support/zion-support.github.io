@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
@@ -22,8 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 // Register service worker with error handling
 try {
   registerServiceWorker().catch(error => {
-    console.warn('Service worker registration failed:', error);
+    // console.warn('Service worker registration failed:', error);
   });
 } catch (error) {
-  console.warn('Service worker registration error:', error);
+  // console.warn('Service worker registration error:', error);
 }

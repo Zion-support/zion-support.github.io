@@ -11,7 +11,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
     useEffect(() => {
         if (priority || !imgRef.current)
             return;
-        observerRef.current = new IntersectionObserver(([entry]) => {
+        observerRef.current = new window.IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setIsInView(true);
                 observerRef.current?.disconnect();

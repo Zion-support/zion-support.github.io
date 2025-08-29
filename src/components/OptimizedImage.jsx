@@ -12,7 +12,7 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
             setIsInView(true);
             return;
         }
-        const observer = new IntersectionObserver(([entry]) => {
+        const observer = new window.IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setIsInView(true);
                 observer.disconnect();

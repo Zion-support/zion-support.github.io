@@ -1,4 +1,3 @@
-import React from 'react';
 import JSZip from 'jszip';
 import { saveAs } from 'file-saver';
 import { AppLayout } from '@/layout/AppLayout';
@@ -59,21 +58,21 @@ const LaunchToolkitPage = () => {
             for (const assetPath of toolkitAssets) {
                 const response = await fetch(`/${assetPath}`); // Fetch from public directory
                 if (!response.ok) {
-                    console.error(`Failed to fetch asset: ${assetPath}`);
+                    // console.error(`Failed to fetch asset: ${assetPath}`);
                     // Optionally, decide if one failed asset should stop the whole process
                     // or if it should be skipped. For now, we'll log and continue.
                     continue;
                 }
                 const blob = await response.blob();
                 // The path in the zip should be relative to 'toolkit_assets' or a desired root folder in the zip
-                const pathInZip = assetPath.replace(/^toolkit_assets\//, 'Zion_Launch_Toolkit/');
+                const pathInZip = assetPath.replace(/^toolkit_assets//, 'Zion_Launch_Toolkit/');
                 zip.file(pathInZip, blob);
             }
             const zipBlob = await zip.generateAsync({ type: 'blob' });
             saveAs(zipBlob, 'Zion_Launch_Toolkit.zip');
         }
         catch (error) {
-            console.error("Error creating ZIP:", error);
+            // console.error("Error creating ZIP:", error);
             setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.');
         }
         finally {
@@ -93,7 +92,7 @@ const LaunchToolkitPage = () => {
                 setExplainerCopy(text);
             }
             catch (error) {
-                console.error("Error loading explainer copy:", error);
+                // console.error("Error loading explainer copy:", error);
                 setExplainerCopy('Could not load explainer copy.');
                 setLoadCopyError(error instanceof Error ? error.message : 'An unknown error occurred.');
             }
@@ -118,7 +117,7 @@ const LaunchToolkitPage = () => {
             setSelectedTemplateContent(text);
         }
         catch (error) {
-            console.error("Error loading template:", error);
+            // console.error("Error loading template:", error);
             setSelectedTemplateContent('');
             setLoadError(error instanceof Error ? error.message : 'An unknown error occurred.');
         }
@@ -128,7 +127,7 @@ const LaunchToolkitPage = () => {
     };
     const generateWithDate = () => {
         if (selectedTemplateContent && customDate) {
-            setGeneratedPressRelease(selectedTemplateContent.replace(/\[DATE\]/g, customDate));
+            setGeneratedPressRelease(selectedTemplateContent.replace(/[DATE\]/g, customDate));
         }
         else if (!selectedTemplateContent) {
             setGeneratedPressRelease('Please load a template first.');

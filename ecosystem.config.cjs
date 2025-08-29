@@ -35,7 +35,63 @@ module.exports = {
       }
     },
 
-    // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    // Merge conflict resolver - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'merge-conflict-resolver',
+      script: './scripts/automation/merge-conflict-resolver.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // Comprehensive error fixer - runs every 30 minutes
+    {
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1800000' // 30 minutes
+      }
+    },
+
+    // Linting error fixer - runs every 20 minutes
+    {
+      name: 'linting-error-fixer',
+      script: './scripts/automation/linting-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1200000' // 20 minutes
+      }
+    },
+
+    // TypeScript error fixer - runs every 25 minutes
+    {
+      name: 'typescript-error-fixer',
+      script: './scripts/automation/typescript-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '1500000' // 25 minutes
+      }
+    },
+
+    // Continuous console error fixer - runs every 15 minutes
     {
       name: 'console-error-fixer',
       script: './scripts/automation/console-error-fixer.cjs',
@@ -172,6 +228,20 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
+    },
+
+    // Error fixing orchestrator - runs every hour
+    {
+      name: 'error-fixing-orchestrator',
+      script: './scripts/automation/error-fixing-orchestrator.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '3600000' // 1 hour
       }
     },
 

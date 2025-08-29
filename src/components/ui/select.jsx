@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function Select({ children, className = '', value, onValueChange }) {
   return (
     <div className={`relative ${className}`}>

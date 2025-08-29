@@ -395,7 +395,7 @@ export function SEO({
               const navigation = performance.getEntriesByType('navigation')[0];
               if (navigation) {
                 const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-                console.log('Page load time:', loadTime + 'ms');
+                // console.log('Page load time:', loadTime + 'ms');
                 
                 // Send to analytics if available
                 if (window.gtag) {

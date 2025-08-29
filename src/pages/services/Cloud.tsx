@@ -1,4 +1,3 @@
-import React from 'react';
 import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 } from 'lucide-react';
 
 const CloudServices = () => {

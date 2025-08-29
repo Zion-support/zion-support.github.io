@@ -22,7 +22,7 @@ const EnhancedAccessibility = () => {
                 applySettings({ ...settings, ...parsed });
             }
             catch (error) {
-                console.warn('Failed to load accessibility settings:', error);
+                // console.warn('Failed to load accessibility settings:', error);
             }
         }
         // Check for user preferences
@@ -94,11 +94,11 @@ const EnhancedAccessibility = () => {
         applySettings(defaultSettings);
     };
     const speakText = (text) => {
-        if ('speechSynthesis' in window) {
-            const utterance = new SpeechSynthesisUtterance(text);
+        if ('window.speechSynthesis' in window) {
+            const utterance = new window.SpeechSynthesisUtterance(text);
             utterance.rate = 0.9;
             utterance.pitch = 1;
-            speechSynthesis.speak(utterance);
+            window.speechSynthesis.speak(utterance);
         }
     };
     const announcePageChange = (pageName) => {

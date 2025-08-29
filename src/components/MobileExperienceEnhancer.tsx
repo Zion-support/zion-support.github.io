@@ -323,19 +323,19 @@ export function MobileExperienceEnhancer({
         case 'swipe':
           if (gesture.direction === 'left') {
             // Navigate forward
-            console.log('Swipe left - navigate forward');
+            // console.log('Swipe left - navigate forward');
           } else if (gesture.direction === 'right') {
             // Navigate back
-            console.log('Swipe right - navigate back');
+            // console.log('Swipe right - navigate back');
           }
           break;
         case 'longPress':
           // Show context menu
-          console.log('Long press - show context menu');
+          // console.log('Long press - show context menu');
           break;
         case 'tap':
           // Handle tap
-          console.log('Tap detected');
+          // console.log('Tap detected');
           break;
       }
       
@@ -393,7 +393,7 @@ export function MobileExperienceEnhancer({
       setMobileScore(score);
       
     } catch (error) {
-      console.error('Mobile optimization failed:', error);
+      // console.error('Mobile optimization failed:', error);
     } finally {
       setIsOptimizing(false);
     }
@@ -416,7 +416,7 @@ export function MobileExperienceEnhancer({
       localStorage.setItem('zion-mobile-settings', JSON.stringify(settings));
       await new Promise(resolve => setTimeout(resolve, 1000));
     } catch (error) {
-      console.error('Failed to save mobile settings:', error);
+      // console.error('Failed to save mobile settings:', error);
     } finally {
       setIsOptimizing(false);
     }
@@ -433,7 +433,7 @@ export function MobileExperienceEnhancer({
       }
       await new Promise(resolve => setTimeout(resolve, 500));
     } catch (error) {
-      console.error('Failed to load mobile settings:', error);
+      // console.error('Failed to load mobile settings:', error);
     } finally {
       setIsOptimizing(false);
     }

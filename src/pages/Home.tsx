@@ -415,7 +415,7 @@ const Home = () => {
 
   const handleGetStarted = () => {
     // Handle get started action
-    console.log('Get Started clicked');
+    // console.log('Get Started clicked');
   };
 
   return (

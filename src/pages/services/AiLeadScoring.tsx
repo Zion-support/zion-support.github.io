@@ -1,6 +1,5 @@
 // removed duplicate old section
 
-import React from 'react';
 import { SEO } from '@/components/SEO';
 import { TrendingUp, CheckCircle, Database, PlugZap } from 'lucide-react';
 

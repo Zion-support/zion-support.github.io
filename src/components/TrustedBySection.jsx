@@ -1,4 +1,3 @@
-import React from 'react';
 export function TrustedBySection() {
     const companies = [
         'Microsoft', 'Google', 'Amazon', 'Meta', 'Apple', 'Netflix'

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, StarHalf } from 'lucide-react';
 export function RatingStars({ value = 0 }) {
     const filled = Math.floor(value);

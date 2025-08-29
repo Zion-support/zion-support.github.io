@@ -9,7 +9,7 @@ interface PerformanceMetrics {
 
 interface UsePerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
-  enableIntersectionObserver?: boolean;
+  enablewindow.IntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
   threshold?: number;
@@ -18,7 +18,7 @@ interface UsePerformanceOptimizationOptions {
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
   const {
     enableLazyLoading = true,
-    enableIntersectionObserver = true,
+    enablewindow.IntersectionObserver = true,
     enableMemoryManagement = true,
     enableFPSMonitoring = true,
     threshold = 0.1
@@ -31,7 +31,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     fps: 0
   });
 
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const observerRef = useRef<window.IntersectionObserver | null>(null);
   const frameCountRef = useRef(0);
   const lastTimeRef = useRef(performance.now());
 
@@ -71,7 +71,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Log low FPS for debugging
         if (fps < 30) {
-          console.warn(`Low FPS detected: ${fps}`);
+          // console.warn(`Low FPS detected: ${fps}`);
         }
       }
 
@@ -98,7 +98,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
+          // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
       }
     };
@@ -108,14 +108,14 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, [enableMemoryManagement]);
 
   // Intersection Observer for lazy loading
-  const createIntersectionObserver = useCallback((callback: IntersectionObserverCallback) => {
-    if (!enableIntersectionObserver) return null;
+  const createwindow.IntersectionObserver = useCallback((callback: window.IntersectionObserverCallback) => {
+    if (!enablewindow.IntersectionObserver) return null;
 
-    return new IntersectionObserver(callback, {
+    return new window.IntersectionObserver(callback, {
       threshold,
       rootMargin: '50px'
     });
-  }, [enableIntersectionObserver, threshold]);
+  }, [enablewindow.IntersectionObserver, threshold]);
 
   // Lazy loading utility
   const lazyLoad = useCallback((element: HTMLElement, callback: () => void) => {
@@ -128,7 +128,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       observerRef.current.disconnect();
     }
 
-    observerRef.current = createIntersectionObserver((entries) => {
+    observerRef.current = createwindow.IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           callback();
@@ -142,7 +142,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     if (observerRef.current) {
       observerRef.current.observe(element);
     }
-  }, [enableLazyLoading, createIntersectionObserver]);
+  }, [enableLazyLoading, createwindow.IntersectionObserver]);
 
   // Performance monitoring
   const measureRenderTime = useCallback((componentName: string) => {
@@ -155,7 +155,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
       // Log slow renders
       if (renderTime > 16) { // 60fps threshold
-        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
+        // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
 
       // Report to analytics if available
@@ -226,7 +226,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     measureRenderTime,
     debounce,
     throttle,
-    createIntersectionObserver,
+    createwindow.IntersectionObserver,
     getMetrics,
     performanceData,
     cleanup
