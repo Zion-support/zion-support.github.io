@@ -6,6 +6,7 @@ import { ChatAssistant } from './components/ChatAssistant';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Lazy load pages - only import existing ones
@@ -124,7 +125,7 @@ function App() {
       <div className="min-h-screen bg-futuristic">
         <AppHeader />
         
-        <main className="flex-1">
+        <main id="main-content" className="flex-1">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -212,6 +213,7 @@ function App() {
         <EnhancedFuturisticFooter />
         <ChatAssistant />
         <PerformanceOptimizer />
+        <AccessibilityEnhancer />
       </div>
     </ErrorBoundary>
   );
