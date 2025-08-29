@@ -9,6 +9,9 @@ export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
+  const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
@@ -37,8 +40,9 @@ export function AppHeader() {
   const mainNavigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
     { name: 'Company', href: '/about', current: false, hasDropdown: true },
+    { name: 'Resources', href: '/news', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -184,16 +188,28 @@ export function AppHeader() {
         { name: 'Careers', href: '/careers', description: 'Join our team' },
         { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
       ]
-    },
+    }
+  ];
+
+  const resourcesCategories = [
     {
-      name: 'Resources',
+      name: 'News & Updates',
       icon: BookOpen,
       color: 'from-green-600 to-emerald-600',
       items: [
-        { name: 'Blog', href: '/blog', description: 'Latest insights and news' },
-        { name: 'Press', href: '/press', description: 'Media resources' },
-        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
-        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
+        { name: 'Latest News', href: '/news', description: 'Company updates and insights' },
+        { name: 'Blog', href: '/blog', description: 'Technology insights and articles' },
+        { name: 'Press', href: '/press', description: 'Media resources and releases' }
+      ]
+    },
+    {
+      name: 'Research & Events',
+      icon: TrendingUp,
+      color: 'from-purple-600 to-pink-600',
+      items: [
+        { name: 'Research & Development', href: '/research-development', description: 'Our innovation initiatives' },
+        { name: 'Events & Webinars', href: '/events', description: 'Upcoming events and workshops' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories and outcomes' }
       ]
     }
   ];
@@ -262,11 +278,39 @@ export function AppHeader() {
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <button
-                      onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                      onClick={() => {
+                        // Close other dropdowns
+                        if (item.name === 'Services') {
+                          setServicesDropdownOpen(!servicesDropdownOpen);
+                          setSolutionsDropdownOpen(false);
+                          setCompanyDropdownOpen(false);
+                          setResourcesDropdownOpen(false);
+                        } else if (item.name === 'Solutions') {
+                          setSolutionsDropdownOpen(!solutionsDropdownOpen);
+                          setServicesDropdownOpen(false);
+                          setCompanyDropdownOpen(false);
+                          setResourcesDropdownOpen(false);
+                        } else if (item.name === 'Company') {
+                          setCompanyDropdownOpen(!companyDropdownOpen);
+                          setServicesDropdownOpen(false);
+                          setSolutionsDropdownOpen(false);
+                          setResourcesDropdownOpen(false);
+                        } else if (item.name === 'Resources') {
+                          setResourcesDropdownOpen(!resourcesDropdownOpen);
+                          setServicesDropdownOpen(false);
+                          setSolutionsDropdownOpen(false);
+                          setCompanyDropdownOpen(false);
+                        }
+                      }}
                       className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors py-2"
                     >
                       <span>{item.name}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                      <ChevronDown className={`w-4 h-4 transition-transform ${
+                        (item.name === 'Services' && servicesDropdownOpen) ||
+                        (item.name === 'Solutions' && solutionsDropdownOpen) ||
+                        (item.name === 'Company' && companyDropdownOpen) ||
+                        (item.name === 'Resources' && resourcesDropdownOpen) ? 'rotate-180' : ''
+                      }`} />
                     </button>
                   ) : (
                     <Link
@@ -383,6 +427,147 @@ export function AppHeader() {
                       </Link>
                     ))}
                   </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Solutions Dropdown */}
+        <AnimatePresence>
+          {solutionsDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  {solutionsCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.solutions.map((solution) => (
+                          <Link
+                            key={solution.name}
+                            to={solution.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {solution.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {solution.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Company Dropdown */}
+        <AnimatePresence>
+          {companyDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {companyCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.items.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {item.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {item.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Resources Dropdown */}
+        <AnimatePresence>
+          {resourcesDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
+            >
+              <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {resourcesCategories.map((category) => (
+                    <div key={category.name} className="space-y-4">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${category.color} flex items-center justify-center`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-white">{category.name}</h3>
+                          <p className="text-sm text-slate-400">{category.description}</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        {category.items.map((item) => (
+                          <Link
+                            key={item.name}
+                            to={item.href}
+                            className="block p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                          >
+                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                              {item.name}
+                            </div>
+                            <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
+                              {item.description}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>

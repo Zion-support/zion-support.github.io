@@ -30,6 +30,13 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 
 // New pages
+const Solutions = React.lazy(() => import('./pages/solutions'));
+const ResearchDevelopment = React.lazy(() => import('./pages/research-development'));
+const CaseStudies = React.lazy(() => import('./pages/case-studies'));
+const News = React.lazy(() => import('./pages/news'));
+const Events = React.lazy(() => import('./pages/events'));
+
+// New pages
 const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
@@ -176,6 +183,13 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/partners" element={<Partners />} />
+              
+              {/* New Routes */}
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/research-development" element={<ResearchDevelopment />} />
+              <Route path="/case-studies" element={<CaseStudies />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/events" element={<Events />} />
               
               {/* Service Routes - only for existing pages */}
               <Route path="/services/cloud-devops" element={<CloudDevOps />} />
