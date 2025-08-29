@@ -51,6 +51,7 @@ const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/Compre
 const EnhancedServicesLanding = React.lazy(() => import('./pages/EnhancedServicesLanding'));
 const ComprehensiveServicesAdvertising = React.lazy(() => import('./pages/ComprehensiveServicesAdvertising'));
 const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
+const ComprehensiveServices2030 = React.lazy(() => import('./pages/ComprehensiveServices2030'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -59,6 +60,13 @@ const DataAnalytics = React.lazy(() => import('./pages/services/DataAnalytics'))
 const ITInfrastructure = React.lazy(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = React.lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const MicroSaaSProducts = React.lazy(() => import('./pages/services/MicroSaaSProducts'));
+
+// Add missing service imports that are referenced in the header
+const AIHealthcarePlatform = React.lazy(() => import('./pages/services/AIHealthcarePlatform'));
+const AIContentCreation = React.lazy(() => import('./pages/services/AIContentCreation'));
+const AICybersecurity = React.lazy(() => import('./pages/services/AICybersecurity'));
+const QuantumComputing = React.lazy(() => import('./pages/services/QuantumComputing'));
+const IoTEdgeComputing = React.lazy(() => import('./pages/services/IoTEdgeComputing'));
 
 // NEW INNOVATIVE MICRO SAAS SERVICE PAGES
 const AILegalDocumentAnalyzer = React.lazy(() => import('./pages/services/ai-legal-document-analyzer'));
@@ -143,6 +151,7 @@ function App() {
                 <Route path="/services/micro-saas" element={<MicroSaaSProducts />} />
                 <Route path="/services/comprehensive-advertising" element={<ComprehensiveServicesAdvertising />} />
                 <Route path="/services/showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
+                <Route path="/comprehensive-services-2030" element={<ComprehensiveServices2030 />} />
                 <Route path="/pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                 <Route path="/pricing-guide-2030" element={<ComprehensivePricingGuide2030 />} />
                 <Route path="/request-quote" element={<RequestQuote />} />
@@ -156,6 +165,14 @@ function App() {
                 <Route path="/services/data-analytics" element={<DataAnalytics />} />
                 <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                 <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                
+                {/* Add missing service routes referenced in header */}
+                <Route path="/services/ai-healthcare-platform" element={<AIHealthcarePlatform />} />
+                <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/iot-edge-computing" element={<IoTEdgeComputing />} />
+                
                 <Route path="/services/ai-legal-document-analyzer" element={<AILegalDocumentAnalyzer />} />
                 <Route path="/services/ai-real-estate-investment-analyzer" element={<AIRealEstateInvestmentAnalyzer />} />
                 <Route path="/services/ai-restaurant-management-system" element={<AIRestaurantManagementSystem />} />

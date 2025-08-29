@@ -45,7 +45,7 @@
     "prefer-offline": true
   },
   "dependencies": {
-    "@esbuild/linux-x64": "^0.25.9",
+    "@esbuild/linux-x64": "^0.21.5",
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -80,7 +80,7 @@
     "d3-path": "^3.1.0",
     "d3-time-format": "^4.1.0",
     "date-fns": "^2.30.0",
-    "esbuild": "^0.25.9",
+    "esbuild": "^0.21.5",
     "framer-motion": "^10.16.4",
     "i18next": "^25.4.2",
     "i18next-browser-languagedetector": "^8.2.0",
