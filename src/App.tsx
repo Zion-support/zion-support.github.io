@@ -45,6 +45,9 @@ const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 
 // New pages that we know exist
 const ComprehensivePricingGuide2025 = React.lazy(() => import('./pages/ComprehensivePricingGuide2025'));
+const RevolutionaryServices2030 = React.lazy(() => import('./pages/revolutionary-services-2030'));
+const PricingGuide2025 = React.lazy(() => import('./pages/pricing-guide-2025'));
+const Developers = React.lazy(() => import('./pages/developers'));
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
@@ -190,6 +193,9 @@ function App() {
                 
                 {/* New pricing guide route */}
                 <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+                <Route path="/pricing-guide-2025" element={<PricingGuide2025 />} />
+                <Route path="/revolutionary-services-2030" element={<RevolutionaryServices2030 />} />
+                <Route path="/developers" element={<Developers />} />
                 
                 {/* Service Routes */}
                 <Route path="/ai-services" element={<AIServices />} />
