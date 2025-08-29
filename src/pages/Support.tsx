@@ -1,488 +1,484 @@
-import React from 'react';
-
-export default function Support() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-white mb-4">Support</h1>
-      <p className="text-zion-slate-light">Find help, documentation, and contact options.</p>
-    </div>
-  );
-}
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Clock, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  BookOpen,
-  Video,
-  Download,
-  ExternalLink,
-  Zap,
-  Shield,
-  Brain,
-  Cloud,
-  Rocket,
-  Code
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { LifeBuoy, MessageCircle, Phone, Mail, MapPin, ArrowRight, Star, Shield, Brain, Cloud, Zap, Users, CheckCircle, Clock, FileText, Video, BookOpen, Search, ChevronDown, ChevronUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Support() {
+  const [openCategories, setOpenCategories] = useState<string[]>(['getting-started']);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const toggleCategory = (category: string) => {
+    setOpenCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
+
+  const supportCategories = [
+    {
+      key: 'getting-started',
+      name: 'Getting Started',
+      icon: Star,
+      color: 'from-blue-500 to-cyan-500',
+      items: [
+        {
+          title: 'Quick Start Guide',
+          description: 'Get up and running with our platform in minutes',
+          type: 'guide',
+          link: '/docs/quick-start'
+        },
+        {
+          title: 'First Steps',
+          description: 'Essential setup and configuration steps',
+          type: 'tutorial',
+          link: '/docs/first-steps'
+        },
+        {
+          title: 'Account Setup',
+          description: 'Complete your account configuration',
+          type: 'guide',
+          link: '/docs/account-setup'
+        }
+      ]
+    },
+    {
+      key: 'ai-services',
+      name: 'AI Services',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      items: [
+        {
+          title: 'AI Model Training',
+          description: 'Learn how to train and deploy AI models',
+          type: 'tutorial',
+          link: '/docs/ai-training'
+        },
+        {
+          title: 'Data Preparation',
+          description: 'Prepare your data for AI analysis',
+          type: 'guide',
+          link: '/docs/data-prep'
+        },
+        {
+          title: 'Model Deployment',
+          description: 'Deploy AI models to production',
+          type: 'tutorial',
+          link: '/docs/model-deployment'
+        }
+      ]
+    },
+    {
+      key: 'cloud-devops',
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      color: 'from-green-500 to-emerald-500',
+      items: [
+        {
+          title: 'Infrastructure Setup',
+          description: 'Set up cloud infrastructure and services',
+          type: 'guide',
+          link: '/docs/infrastructure'
+        },
+        {
+          title: 'CI/CD Pipelines',
+          description: 'Configure continuous integration and deployment',
+          type: 'tutorial',
+          link: '/docs/cicd'
+        },
+        {
+          title: 'Monitoring & Alerting',
+          description: 'Set up monitoring and alerting systems',
+          type: 'guide',
+          link: '/docs/monitoring'
+        }
+      ]
+    },
+    {
+      key: 'troubleshooting',
+      name: 'Troubleshooting',
+      icon: Shield,
+      color: 'from-orange-500 to-red-500',
+      items: [
+        {
+          title: 'Common Issues',
+          description: 'Solutions to frequently encountered problems',
+          type: 'guide',
+          link: '/docs/common-issues'
+        },
+        {
+          title: 'Error Codes',
+          description: 'Understanding error messages and codes',
+          type: 'reference',
+          link: '/docs/error-codes'
+        },
+        {
+          title: 'Performance Issues',
+          description: 'Resolve performance and optimization problems',
+          type: 'guide',
+          link: '/docs/performance'
+        }
+      ]
+    }
+  ];
+
   const supportChannels = [
     {
-      title: 'Live Chat Support',
-      description: 'Get instant help from our technical experts',
       icon: MessageCircle,
-      color: 'from-blue-500 to-cyan-500',
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      responseTime: '2-5 minutes',
       availability: '24/7',
-      responseTime: 'Instant',
-      href: '/chat',
-      features: ['Real-time assistance', 'Technical expertise', 'Screen sharing available', 'Chat history saved']
+      color: 'from-blue-500 to-cyan-500',
+      action: 'Start Chat',
+      link: '/chat'
     },
     {
-      title: 'Phone Support',
-      description: 'Speak directly with our support team',
       icon: Phone,
-      color: 'from-green-500 to-emerald-500',
-      availability: '9 AM - 6 PM EST',
+      title: 'Phone Support',
+      description: 'Speak directly with our technical experts',
       responseTime: 'Immediate',
-      href: 'tel:+13024640950',
-      features: ['Direct expert contact', 'Complex issue resolution', 'Personalized assistance', 'Follow-up calls']
-    },
-    {
-      title: 'Email Support',
-      description: 'Send detailed inquiries and get comprehensive responses',
-      icon: Mail,
-      color: 'from-purple-500 to-pink-500',
-      availability: '24/7',
-      responseTime: '4-8 hours',
-      href: 'mailto:kleber@ziontechgroup.com',
-      features: ['Detailed documentation', 'File attachments', 'Issue tracking', 'Escalation support']
-    },
-    {
-      title: 'Emergency Support',
-      description: 'Critical issue resolution for enterprise customers',
-      icon: Zap,
-      color: 'from-red-500 to-orange-500',
-      availability: '24/7',
-      responseTime: '1-2 hours',
-      href: 'tel:+13024640950',
-      features: ['Priority response', 'Expert escalation', 'Root cause analysis', 'Prevention planning']
-    }
-  ];
-
-  const supportTiers = [
-    {
-      name: 'Basic Support',
-      description: 'Essential support for all customers',
-      price: 'Included',
-      features: [
-        'Email support (24/7)',
-        'Knowledge base access',
-        'Community forum access',
-        'Basic troubleshooting',
-        'Response within 24 hours'
-      ],
-      icon: Users,
-      color: 'from-slate-500 to-slate-600'
-    },
-    {
-      name: 'Professional Support',
-      description: 'Enhanced support for business users',
-      price: '$99/month',
-      features: [
-        'All Basic features',
-        'Live chat support',
-        'Phone support (business hours)',
-        'Priority ticket handling',
-        'Response within 8 hours',
-        'Monthly support review'
-      ],
-      icon: Star,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      name: 'Enterprise Support',
-      description: 'Premium support for enterprise customers',
-      price: 'Custom',
-      features: [
-        'All Professional features',
-        '24/7 phone support',
-        'Dedicated support manager',
-        'Emergency response (1-2 hours)',
-        'Custom SLA agreements',
-        'Quarterly business reviews',
-        'Proactive monitoring'
-      ],
-      icon: Shield,
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
-
-  const resources = [
-    {
-      title: 'Knowledge Base',
-      description: 'Comprehensive guides and tutorials',
-      icon: BookOpen,
-      href: '/help',
-      color: 'from-blue-500 to-cyan-500',
-      features: ['Step-by-step guides', 'Video tutorials', 'Best practices', 'Troubleshooting tips']
-    },
-    {
-      title: 'API Documentation',
-      description: 'Developer resources and integration guides',
-      icon: Code,
-      href: '/docs',
+      availability: 'Business Hours',
       color: 'from-green-500 to-emerald-500',
-      features: ['API references', 'Code examples', 'SDK downloads', 'Integration guides']
+      action: 'Call Now',
+      link: 'tel:+13024640950'
     },
     {
-      title: 'Video Tutorials',
-      description: 'Visual learning resources',
-      icon: Video,
-      href: '/tutorials',
+      icon: Mail,
+      title: 'Email Support',
+      description: 'Send detailed questions and get comprehensive answers',
+      responseTime: '4-8 hours',
+      availability: '24/7',
       color: 'from-purple-500 to-pink-500',
-      features: ['Getting started', 'Advanced topics', 'Feature demos', 'Case studies']
+      action: 'Send Email',
+      link: 'mailto:kleber@ziontechgroup.com'
     },
     {
-      title: 'Community Forum',
-      description: 'Connect with other users and experts',
-      icon: Users,
-      href: '/community',
+      icon: BookOpen,
+      title: 'Documentation',
+      description: 'Comprehensive guides and API references',
+      responseTime: 'Instant',
+      availability: '24/7',
       color: 'from-orange-500 to-red-500',
-      features: ['User discussions', 'Expert answers', 'Tips & tricks', 'Showcase projects']
+      action: 'Browse Docs',
+      link: '/documentation'
     }
   ];
 
-  const supportHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },
-    { day: 'Sunday', hours: 'Emergency support only', available: false }
-  ];
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    businessHours: 'Monday - Friday: 9:00 AM - 6:00 PM EST'
+  };
+
+  const filteredCategories = supportCategories.filter(category =>
+    searchQuery === '' || 
+    category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    category.items.some(item => 
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Support Portal - Zion Tech Group"
-        description="Get comprehensive technical support for all Zion Tech Group services. 24/7 assistance, live chat, phone support, and expert guidance."
-      />
-      
-      {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
-        <div className="container mx-auto px-4 py-16">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-cyan-900/20 to-green-900/20"></div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <MessageCircle className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-400 text-sm font-medium mb-6">
+              <LifeBuoy className="w-4 h-4" />
+              Support Center
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Technical Support Portal
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              We're Here to
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+                {' '}Help
+              </span>
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Get expert technical support for all our services. Our team of specialists is here to help you succeed.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Get the support you need to succeed with our AI-powered solutions. 
+              From documentation to live assistance, we're here to help you every step of the way.
             </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search for help articles, guides, and solutions..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+              </div>
+            </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
       {/* Support Channels */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-3xl font-bold text-white text-center mb-12"
-        >
-          Support Channels
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {supportChannels.map((channel, index) => (
-            <motion.div
-              key={channel.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300"
-            >
-              <div className="flex items-center space-x-4 mb-4">
-                <div className={`w-12 h-12 bg-gradient-to-br ${channel.color} rounded-lg flex items-center justify-center`}>
-                  <channel.icon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">{channel.title}</h3>
-                  <p className="text-slate-400">{channel.description}</p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="text-center p-3 bg-slate-700/50 rounded-lg">
-                  <div className="text-sm text-slate-400">Availability</div>
-                  <div className="text-white font-semibold">{channel.availability}</div>
-                </div>
-                <div className="text-center p-3 bg-slate-700/50 rounded-lg">
-                  <div className="text-sm text-slate-400">Response Time</div>
-                  <div className="text-white font-semibold">{channel.responseTime}</div>
-                </div>
-              </div>
-              
-              <div className="space-y-2 mb-4">
-                {channel.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                    <span className="text-sm text-slate-300">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <Link
-                to={channel.href}
-                className="block w-full text-center py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              How Can We Help You?
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Choose the support channel that works best for you. 
+              We offer multiple ways to get the help you need.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {supportChannels.map((channel, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 group"
               >
-                Get Support
+                <div className={`w-16 h-16 bg-gradient-to-br ${channel.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <channel.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
+                <p className="text-gray-400 mb-4">{channel.description}</p>
+                
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm">
+                    <Clock className="w-4 h-4 text-blue-400" />
+                    <span className="text-gray-300">Response: {channel.responseTime}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <span className="text-gray-300">Available: {channel.availability}</span>
+                  </div>
+                </div>
+
+                <Link
+                  to={channel.link}
+                  className={`inline-flex items-center gap-2 w-full justify-center px-4 py-2 bg-gradient-to-r ${channel.color} text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25`}
+                >
+                  {channel.action}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Help Categories */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Help & Documentation
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Find comprehensive guides, tutorials, and solutions organized by category. 
+              Everything you need to succeed with our platform.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto space-y-6">
+            {filteredCategories.map((category) => (
+              <motion.div
+                key={category.key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-600/50 overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleCategory(category.key)}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-600/30 transition-colors"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
+                      <category.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>
+                  </div>
+                  {openCategories.includes(category.key) ? (
+                    <ChevronUp className="w-6 h-6 text-gray-400" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6 text-gray-400" />
+                  )}
+                </button>
+                
+                {openCategories.includes(category.key) && (
+                  <div className="px-6 pb-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {category.items.map((item, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          className="bg-slate-600/30 rounded-xl p-4 hover:bg-slate-600/50 transition-colors"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-8 h-8 bg-slate-500/50 rounded-lg flex items-center justify-center flex-shrink-0">
+                              {item.type === 'guide' && <FileText className="w-4 h-4 text-blue-400" />}
+                              {item.type === 'tutorial' && <Video className="w-4 h-4 text-green-400" />}
+                              {item.type === 'reference' && <BookOpen className="w-4 h-4 text-purple-400" />}
+                            </div>
+                            <div className="flex-1">
+                              <h4 className="font-semibold text-white mb-2">{item.title}</h4>
+                              <p className="text-gray-400 text-sm mb-3">{item.description}</p>
+                              <Link
+                                to={item.link}
+                                className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+                              >
+                                Learn More
+                                <ArrowRight className="w-3 h-3" />
+                              </Link>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact & Business Hours */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Need personalized assistance? Our support team is here to help you 
+              succeed with our AI-powered solutions.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Information */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Phone</h4>
+                      <a
+                        href={`tel:${contactInfo.phone}`}
+                        className="text-blue-400 hover:text-blue-300 transition-colors"
+                      >
+                        {contactInfo.phone}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Email</h4>
+                      <a
+                        href={`mailto:${contactInfo.email}`}
+                        className="text-purple-400 hover:text-purple-300 transition-colors"
+                      >
+                        {contactInfo.email}
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Address</h4>
+                      <p className="text-gray-300">{contactInfo.address}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Business Hours */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Business Hours</h3>
+                <div className="bg-slate-700/50 rounded-2xl p-6 border border-slate-600/50">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                      <Clock className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white">Support Hours</h4>
+                      <p className="text-gray-400 text-sm">Eastern Standard Time</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-4">{contactInfo.businessHours}</p>
+                  <p className="text-sm text-gray-400">
+                    For urgent issues outside business hours, please use our emergency support line 
+                    or submit a ticket through our support portal.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-center mt-12"
+            >
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+              >
+                Contact Our Team
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Support Tiers */}
-      <div className="bg-slate-800/20 py-16">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-3xl font-bold text-white text-center mb-12"
-          >
-            Support Tiers
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportTiers.map((tier, index) => (
-              <motion.div
-                key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <div className="text-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${tier.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <tier.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
-                  <p className="text-slate-400 mb-3">{tier.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400">{tier.price}</div>
-                </div>
-                
-                <div className="space-y-3 mb-6">
-                  {tier.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                      <span className="text-sm text-slate-300">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <Link
-                  to="/contact"
-                  className="block w-full text-center py-3 bg-slate-700 text-white font-semibold rounded-lg hover:bg-slate-600 transition-colors duration-300"
-                >
-                  Get Started
-                </Link>
-              </motion.div>
-            ))}
           </div>
         </div>
-      </div>
-
-      {/* Support Hours & Contact */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-8">Support Hours</h2>
-            <div className="space-y-4">
-              {supportHours.map((schedule, index) => (
-                <div key={index} className="flex items-center justify-between p-4 bg-slate-800/30 border border-slate-700 rounded-lg">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{schedule.day}</h3>
-                    <p className="text-slate-300">{schedule.hours}</p>
-                  </div>
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    schedule.available 
-                      ? 'bg-green-500/20 text-green-400' 
-                      : 'bg-amber-500/20 text-amber-400'
-                  }`}>
-                    {schedule.available ? 'Available' : 'Limited'}
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            <div className="mt-8 p-6 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-xl border border-cyan-500/20">
-              <h3 className="text-xl font-bold text-white mb-3">Emergency Support</h3>
-              <p className="text-slate-300 mb-4">
-                For critical issues outside business hours, we provide emergency support for enterprise customers.
-              </p>
-              <a 
-                href="tel:+13024640950"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold"
-              >
-                Call Emergency Line
-                <Phone className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="bg-slate-800/30 border border-slate-700 rounded-xl p-8"
-          >
-            <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">Phone Support</h4>
-                  <p className="text-slate-300">+1 302 464 0950</p>
-                  <p className="text-slate-400 text-sm">Available during support hours</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">Email Support</h4>
-                  <p className="text-slate-300">kleber@ziontechgroup.com</p>
-                  <p className="text-slate-400 text-sm">Response within 24 hours</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">Response Times</h4>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-slate-300">General inquiries:</span>
-                      <span className="text-slate-400">24-48 hours</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-300">Technical issues:</span>
-                      <span className="text-slate-400">4-8 hours</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-300">Critical issues:</span>
-                      <span className="text-slate-400">1-2 hours</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Resources */}
-      <div className="bg-slate-800/20 py-16">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="text-3xl font-bold text-white text-center mb-12"
-          >
-            Additional Resources
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resources.map((resource, index) => (
-              <motion.div
-                key={resource.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                className="group"
-              >
-                <Link
-                  to={resource.href}
-                  className="block bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 h-full"
-                >
-                  <div className={`w-12 h-12 bg-gradient-to-br ${resource.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <resource.icon className="w-6 h-6 text-white" />
-                  </div>
-                  
-                  <h3 className="text-lg font-semibold text-white mb-3">{resource.title}</h3>
-                  <p className="text-slate-400 mb-4 text-sm">{resource.description}</p>
-                  
-                  <div className="space-y-2">
-                    {resource.features.map((feature, idx) => (
-                      <div key={idx} className="text-slate-300 text-sm flex items-center">
-                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12 text-center"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Support?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Our expert support team is ready to help you succeed with our services
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Support
-            </Link>
-            <Link
-              to="/help"
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              Browse Help Center
-            </Link>
-          </div>
-        </motion.div>
-      </div>
+      </section>
     </div>
   );
 }

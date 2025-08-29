@@ -1,95 +1,95 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { Truck, Globe, BarChart3, Shield, Zap, Target, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Package, Route, Clock, DollarSign, Users } from 'lucide-react';
+import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain } from 'lucide-react';
 
-const AISupplyChainOptimization: React.FC = () => {
+const QuantumComputingAsAService: React.FC = () => {
   const features = [
     {
-      icon: Truck,
-      title: 'Route Optimization',
-      description: 'AI-powered route planning that reduces delivery time by 30% and fuel costs by 25%',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Globe,
-      title: 'Global Supply Chain Visibility',
-      description: 'Real-time tracking across all suppliers, warehouses, and distribution centers worldwide',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: BarChart3,
-      title: 'Demand Forecasting',
-      description: 'Predictive analytics with 92% accuracy for inventory planning and demand management',
+      icon: Atom,
+      title: 'Quantum Processing Units',
+      description: 'Access to state-of-the-art quantum processors with 100+ qubits and quantum error correction',
       color: 'from-purple-500 to-pink-500'
     },
     {
+      icon: Brain,
+      title: 'Quantum Machine Learning',
+      description: 'Quantum algorithms for optimization, classification, and pattern recognition tasks',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Cpu,
+      title: 'Hybrid Quantum-Classical',
+      description: 'Seamless integration between quantum and classical computing resources',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
       icon: Shield,
-      title: 'Risk Management',
-      description: 'AI-driven risk assessment and mitigation strategies for supply chain disruptions',
+      title: 'Quantum Security',
+      description: 'Post-quantum cryptography and quantum-resistant encryption solutions',
       color: 'from-red-500 to-orange-500'
     },
     {
       icon: Zap,
-      title: 'Automated Procurement',
-      description: 'Intelligent supplier selection and automated purchase order generation',
+      title: 'Real-time Optimization',
+      description: 'Quantum algorithms for complex optimization problems in logistics and finance',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: Target,
-      title: 'Inventory Optimization',
-      description: 'Dynamic inventory management that reduces carrying costs by 35% while improving availability',
+      title: 'Quantum Simulation',
+      description: 'Molecular modeling, material science, and chemical reaction simulations',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$499',
+      name: 'Quantum Starter',
+      price: '$2,999',
       period: '/month',
-      description: 'Perfect for small to medium businesses',
+      description: 'Perfect for research institutions and startups',
       features: [
-        'Up to 5 locations',
-        'Basic route optimization',
-        'Inventory tracking',
-        'Supplier management',
-        'Basic reporting',
-        'Email support'
+        'Up to 50 quantum computing hours',
+        'Basic quantum algorithms',
+        'Standard support',
+        'API access',
+        'Documentation',
+        'Community forum access'
       ],
       cta: 'Start Free Trial',
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$1,299',
+      name: 'Quantum Professional',
+      price: '$7,999',
       period: '/month',
-      description: 'Ideal for growing enterprises',
+      description: 'Ideal for growing businesses and research teams',
       features: [
-        'Up to 25 locations',
-        'Advanced AI optimization',
-        'Real-time analytics',
-        'API access',
-        'Custom workflows',
+        'Up to 200 quantum computing hours',
+        'Advanced quantum algorithms',
+        'Custom algorithm development',
         'Priority support',
-        'Multi-warehouse management'
+        'Dedicated quantum engineer',
+        'White-label solutions',
+        'SLA guarantees'
       ],
       cta: 'Get Started',
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$2,999',
+      name: 'Quantum Enterprise',
+      price: '$19,999',
       period: '/month',
-      description: 'For global supply chain operations',
+      description: 'For large enterprises and government agencies',
       features: [
-        'Unlimited locations',
-        'Custom AI models',
-        'White-label solution',
-        'Dedicated account manager',
-        'Custom integrations',
+        'Unlimited quantum computing hours',
+        'Custom quantum hardware access',
+        'Dedicated quantum team',
         '24/7 phone support',
-        'SLA guarantees'
+        'Custom integrations',
+        'On-premise deployment options',
+        'Research partnerships'
       ],
       cta: 'Contact Sales',
       popular: false
@@ -98,61 +98,61 @@ const AISupplyChainOptimization: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Manufacturing',
-      description: 'Optimize production planning, supplier management, and inventory control across global operations',
-      metrics: ['Reduce lead times by 40%', 'Cut inventory costs by 35%', 'Improve supplier performance by 50%']
+      title: 'Financial Services',
+      description: 'Portfolio optimization, risk assessment, and option pricing with quantum algorithms',
+      metrics: ['50x faster optimization', '30% better risk models', 'Real-time pricing calculations']
     },
     {
-      title: 'Retail & E-commerce',
-      description: 'Streamline distribution networks, optimize last-mile delivery, and manage seasonal inventory fluctuations',
-      metrics: ['Increase delivery speed by 30%', 'Reduce shipping costs by 25%', 'Boost customer satisfaction by 45%']
+      title: 'Pharmaceutical Research',
+      description: 'Drug discovery, molecular modeling, and protein folding simulations',
+      metrics: ['100x faster simulations', 'Accurate molecular predictions', 'Reduced R&D costs']
     },
     {
-      title: 'Logistics & Transportation',
-      description: 'Optimize fleet operations, route planning, and warehouse management for maximum efficiency',
-      metrics: ['Improve fleet utilization by 40%', 'Reduce fuel costs by 25%', 'Enhance delivery accuracy by 95%']
+      title: 'Logistics & Supply Chain',
+      description: 'Route optimization, inventory management, and supply chain optimization',
+      metrics: ['40% cost reduction', 'Optimal route planning', 'Real-time optimization']
     }
   ];
 
   const integrations = [
-    'SAP', 'Oracle', 'Microsoft Dynamics', 'NetSuite', 'QuickBooks', 'Shopify',
-    'WooCommerce', 'Magento', 'FedEx', 'UPS', 'DHL', 'Amazon FBA',
-    'WMS Systems', 'TMS Platforms', 'ERP Systems', 'CRM Platforms'
+    'Python', 'Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Julia', 'MATLAB',
+    'AWS Braket', 'Azure Quantum', 'Google Cloud', 'IBM Quantum',
+    'REST APIs', 'GraphQL', 'Webhooks', 'Docker', 'Kubernetes'
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
-      title: '30% Cost Reduction',
-      description: 'Optimize routes, reduce fuel consumption, and minimize inventory carrying costs'
-    },
-    {
-      icon: Clock,
-      title: '40% Faster Delivery',
-      description: 'Streamline operations and eliminate bottlenecks for improved customer satisfaction'
-    },
-    {
-      icon: DollarSign,
-      title: '25% Revenue Growth',
-      description: 'Improve service levels and expand market reach with optimized supply chains'
+      title: '100x Performance Boost',
+      description: 'Quantum algorithms solve complex problems exponentially faster than classical computers'
     },
     {
       icon: Users,
-      title: '95% Customer Satisfaction',
-      description: 'Deliver on-time, every time with AI-powered optimization and real-time tracking'
+      title: 'No Hardware Investment',
+      description: 'Access quantum computing power without expensive infrastructure and maintenance'
+    },
+    {
+      icon: DollarSign,
+      title: 'Competitive Advantage',
+      description: 'Stay ahead of the competition with cutting-edge quantum computing capabilities'
+    },
+    {
+      icon: Clock,
+      title: 'Immediate Access',
+      description: 'Start using quantum computing today with our cloud-based platform'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization Platform - Zion Tech Group"
-        description="Transform your supply chain with AI-powered optimization. Reduce costs by 30%, improve delivery speed by 40%, and gain real-time visibility across global operations."
+        title="Quantum Computing as a Service - Zion Tech Group"
+        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -161,21 +161,21 @@ const AISupplyChainOptimization: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                <Truck className="w-10 h-10 text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+                <Atom className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain Optimization Platform
+              Quantum Computing as a Service
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your supply chain with artificial intelligence. Optimize routes, predict demand, 
-              manage inventory, and gain real-time visibility across your entire global network.
+              Access the power of quantum computing without the complexity. Solve complex optimization, 
+              simulation, and machine learning problems with our enterprise-grade quantum platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -196,10 +196,10 @@ const AISupplyChainOptimization: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Supply Chain Performance
+              Transform Your Computing Power
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform delivers measurable results that directly impact your operational efficiency and bottom line
+              Our quantum computing platform delivers unprecedented performance for complex problems
             </p>
           </div>
           
@@ -212,7 +212,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center p-6"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
@@ -228,10 +228,10 @@ const AISupplyChainOptimization: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Supply Chains
+              Advanced Quantum Computing Features
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Everything you need to optimize, automate, and transform your supply chain operations
+              Everything you need to harness the power of quantum computing for your business
             </p>
           </div>
           
@@ -260,10 +260,10 @@ const AISupplyChainOptimization: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing for Every Business
+              Transparent Pricing for Quantum Computing
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your supply chain needs. All plans include a 14-day free trial.
+              Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
           </div>
           
@@ -276,13 +276,13 @@ const AISupplyChainOptimization: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
                   plan.popular 
-                    ? 'border-blue-500 relative' 
+                    ? 'border-purple-500 relative' 
                     : 'border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -300,7 +300,7 @@ const AISupplyChainOptimization: React.FC = () => {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -310,7 +310,7 @@ const AISupplyChainOptimization: React.FC = () => {
                   href="/contact" 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
@@ -330,7 +330,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Proven Results Across Industries
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              See how different industries are transforming their supply chains with AI
+              See how different industries are leveraging quantum computing for breakthrough results
             </p>
           </div>
           
@@ -367,7 +367,7 @@ const AISupplyChainOptimization: React.FC = () => {
               Seamless Integrations
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with your existing ERP, WMS, TMS, and e-commerce platforms without disruption
+              Connect with your existing development tools and cloud platforms
             </p>
           </div>
           
@@ -387,6 +387,61 @@ const AISupplyChainOptimization: React.FC = () => {
         </div>
       </section>
 
+      {/* Security & Compliance */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Enterprise-Grade Security & Compliance
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Your quantum computing workloads are protected with the highest security standards
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Lock className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Quantum-Safe Security</h3>
+              <p className="text-slate-300">Post-quantum cryptography and quantum-resistant encryption protocols</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">SOC 2 Type II</h3>
+              <p className="text-slate-300">SOC 2 Type II certification for enterprise-grade security and reliability</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Activity className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Real-Time Monitoring</h3>
+              <p className="text-slate-300">24/7 quantum system monitoring with automated threat detection</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -397,16 +452,16 @@ const AISupplyChainOptimization: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Harness Quantum Power?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join hundreds of companies already using AI to transform their supply chain operations
+              Join forward-thinking companies already using quantum computing to solve impossible problems
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -422,15 +477,15 @@ const AISupplyChainOptimization: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-400">
               <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-blue-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-purple-500 mr-2" />
                 <span>14-day free trial</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-blue-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-purple-500 mr-2" />
                 <span>No credit card required</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-blue-500 mr-2" />
+                <CheckCircle className="w-5 h-5 text-purple-500 mr-2" />
                 <span>Cancel anytime</span>
               </div>
             </div>
@@ -445,21 +500,21 @@ const AISupplyChainOptimization: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-blue-500 mb-4" />
+                <Phone className="w-8 h-8 text-purple-500 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
                 <a href="tel:+13024640950" className="text-slate-300 hover:text-white transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-blue-500 mb-4" />
+                <Mail className="w-8 h-8 text-purple-500 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                 <a href="mailto:kleber@ziontechgroup.com" className="text-slate-300 hover:text-white transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex flex-col items-center">
-                <ExternalLink className="w-8 h-8 text-blue-500 mb-4" />
+                <ExternalLink className="w-8 h-8 text-purple-500 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
                 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors">
                   ziontechgroup.com
@@ -473,4 +528,4 @@ const AISupplyChainOptimization: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimization;
+export default QuantumComputingAsAService;

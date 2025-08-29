@@ -1,59 +1,59 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { Truck, Globe, BarChart3, Shield, Zap, Target, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Package, Route, Clock, DollarSign, Users } from 'lucide-react';
+import { Heart, Brain, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp } from 'lucide-react';
 
-const AISupplyChainOptimization: React.FC = () => {
+const AIHealthcareAnalyticsPlatform: React.FC = () => {
   const features = [
     {
-      icon: Truck,
-      title: 'Route Optimization',
-      description: 'AI-powered route planning that reduces delivery time by 30% and fuel costs by 25%',
+      icon: Brain,
+      title: 'Predictive Diagnostics',
+      description: 'AI algorithms predict disease progression and treatment outcomes with 89% accuracy',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Globe,
-      title: 'Global Supply Chain Visibility',
-      description: 'Real-time tracking across all suppliers, warehouses, and distribution centers worldwide',
-      color: 'from-green-500 to-emerald-500'
+      icon: Heart,
+      title: 'Patient Risk Scoring',
+      description: 'Real-time risk assessment for readmissions, complications, and adverse events',
+      color: 'from-red-500 to-pink-500'
     },
     {
       icon: BarChart3,
-      title: 'Demand Forecasting',
-      description: 'Predictive analytics with 92% accuracy for inventory planning and demand management',
-      color: 'from-purple-500 to-pink-500'
+      title: 'Population Health Analytics',
+      description: 'Comprehensive analysis of patient populations for preventive care strategies',
+      color: 'from-green-500 to-emerald-500'
     },
     {
       icon: Shield,
-      title: 'Risk Management',
-      description: 'AI-driven risk assessment and mitigation strategies for supply chain disruptions',
-      color: 'from-red-500 to-orange-500'
+      title: 'Clinical Decision Support',
+      description: 'Evidence-based recommendations for treatment plans and medication management',
+      color: 'from-purple-500 to-indigo-500'
     },
     {
       icon: Zap,
-      title: 'Automated Procurement',
-      description: 'Intelligent supplier selection and automated purchase order generation',
+      title: 'Real-time Monitoring',
+      description: 'Continuous patient monitoring with instant alerts for critical changes',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: Target,
-      title: 'Inventory Optimization',
-      description: 'Dynamic inventory management that reduces carrying costs by 35% while improving availability',
+      title: 'Treatment Optimization',
+      description: 'AI-driven treatment recommendations based on patient history and outcomes',
       color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$499',
+      name: 'Community Hospital',
+      price: '$1,499',
       period: '/month',
-      description: 'Perfect for small to medium businesses',
+      description: 'Perfect for small to medium healthcare facilities',
       features: [
-        'Up to 5 locations',
-        'Basic route optimization',
-        'Inventory tracking',
-        'Supplier management',
+        'Up to 500 patient beds',
+        'Basic predictive analytics',
+        'Patient risk scoring',
+        'Clinical decision support',
         'Basic reporting',
         'Email support'
       ],
@@ -61,33 +61,33 @@ const AISupplyChainOptimization: React.FC = () => {
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$1,299',
+      name: 'Regional Medical Center',
+      price: '$3,999',
       period: '/month',
-      description: 'Ideal for growing enterprises',
+      description: 'Ideal for growing healthcare networks',
       features: [
-        'Up to 25 locations',
-        'Advanced AI optimization',
-        'Real-time analytics',
+        'Up to 2,000 patient beds',
+        'Advanced AI algorithms',
+        'Population health analytics',
+        'Custom dashboards',
         'API access',
-        'Custom workflows',
         'Priority support',
-        'Multi-warehouse management'
+        'HIPAA compliance tools'
       ],
       cta: 'Get Started',
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$2,999',
+      name: 'Academic Medical Center',
+      price: '$8,999',
       period: '/month',
-      description: 'For global supply chain operations',
+      description: 'For large healthcare systems and research institutions',
       features: [
-        'Unlimited locations',
+        'Unlimited patient capacity',
         'Custom AI models',
+        'Research analytics tools',
         'White-label solution',
-        'Dedicated account manager',
-        'Custom integrations',
+        'Dedicated support team',
         '24/7 phone support',
         'SLA guarantees'
       ],
@@ -98,56 +98,56 @@ const AISupplyChainOptimization: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Manufacturing',
-      description: 'Optimize production planning, supplier management, and inventory control across global operations',
-      metrics: ['Reduce lead times by 40%', 'Cut inventory costs by 35%', 'Improve supplier performance by 50%']
+      title: 'Hospitals & Health Systems',
+      description: 'Optimize patient care, reduce readmissions, and improve operational efficiency across multiple facilities',
+      metrics: ['Reduce readmissions by 25%', 'Improve patient outcomes by 30%', 'Cut operational costs by 20%']
     },
     {
-      title: 'Retail & E-commerce',
-      description: 'Streamline distribution networks, optimize last-mile delivery, and manage seasonal inventory fluctuations',
-      metrics: ['Increase delivery speed by 30%', 'Reduce shipping costs by 25%', 'Boost customer satisfaction by 45%']
+      title: 'Primary Care Practices',
+      description: 'Preventive care strategies, chronic disease management, and population health optimization',
+      metrics: ['Increase preventive care by 40%', 'Reduce ER visits by 35%', 'Improve patient satisfaction by 45%']
     },
     {
-      title: 'Logistics & Transportation',
-      description: 'Optimize fleet operations, route planning, and warehouse management for maximum efficiency',
-      metrics: ['Improve fleet utilization by 40%', 'Reduce fuel costs by 25%', 'Enhance delivery accuracy by 95%']
+      title: 'Specialty Clinics',
+      description: 'Disease-specific analytics, treatment optimization, and patient outcome tracking',
+      metrics: ['Optimize treatment plans by 50%', 'Reduce complications by 30%', 'Improve recovery times by 25%']
     }
   ];
 
   const integrations = [
-    'SAP', 'Oracle', 'Microsoft Dynamics', 'NetSuite', 'QuickBooks', 'Shopify',
-    'WooCommerce', 'Magento', 'FedEx', 'UPS', 'DHL', 'Amazon FBA',
-    'WMS Systems', 'TMS Platforms', 'ERP Systems', 'CRM Platforms'
+    'Epic', 'Cerner', 'Allscripts', 'Meditech', 'NextGen', 'Athenahealth',
+    'Practice Fusion', 'eClinicalWorks', 'Kareo', 'DrChrono', 'AdvancedMD',
+    'HL7 FHIR', 'DICOM', 'HL7 v2', 'CCDA', 'X12', 'Webhooks'
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
-      title: '30% Cost Reduction',
-      description: 'Optimize routes, reduce fuel consumption, and minimize inventory carrying costs'
-    },
-    {
-      icon: Clock,
-      title: '40% Faster Delivery',
-      description: 'Streamline operations and eliminate bottlenecks for improved customer satisfaction'
-    },
-    {
-      icon: DollarSign,
-      title: '25% Revenue Growth',
-      description: 'Improve service levels and expand market reach with optimized supply chains'
+      title: '25% Fewer Readmissions',
+      description: 'Predict and prevent patient readmissions with AI-powered risk assessment'
     },
     {
       icon: Users,
-      title: '95% Customer Satisfaction',
-      description: 'Deliver on-time, every time with AI-powered optimization and real-time tracking'
+      title: '30% Better Outcomes',
+      description: 'Improve patient outcomes through personalized treatment recommendations'
+    },
+    {
+      icon: DollarSign,
+      title: '20% Cost Reduction',
+      description: 'Optimize resource allocation and reduce unnecessary procedures'
+    },
+    {
+      icon: Clock,
+      title: '50% Faster Diagnosis',
+      description: 'Accelerate diagnosis and treatment planning with AI insights'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Supply Chain Optimization Platform - Zion Tech Group"
-        description="Transform your supply chain with AI-powered optimization. Reduce costs by 30%, improve delivery speed by 40%, and gain real-time visibility across global operations."
+        title="AI Healthcare Analytics Platform - Zion Tech Group"
+        description="Transform healthcare delivery with AI-powered analytics. Reduce readmissions by 25%, improve patient outcomes by 30%, and optimize clinical decision-making with predictive insights."
       />
       
       {/* Hero Section */}
@@ -162,15 +162,15 @@ const AISupplyChainOptimization: React.FC = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
-                <Truck className="w-10 h-10 text-white" />
+                <Heart className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Supply Chain Optimization Platform
+              AI Healthcare Analytics Platform
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your supply chain with artificial intelligence. Optimize routes, predict demand, 
-              manage inventory, and gain real-time visibility across your entire global network.
+              Revolutionize healthcare delivery with artificial intelligence. Predict patient outcomes, 
+              optimize treatment plans, and improve population health with data-driven insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -196,10 +196,10 @@ const AISupplyChainOptimization: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Supply Chain Performance
+              Transform Healthcare Delivery
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI platform delivers measurable results that directly impact your operational efficiency and bottom line
+              Our AI platform delivers measurable improvements in patient care and operational efficiency
             </p>
           </div>
           
@@ -228,10 +228,10 @@ const AISupplyChainOptimization: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Supply Chains
+              Advanced Healthcare Analytics Features
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Everything you need to optimize, automate, and transform your supply chain operations
+              Everything you need to deliver better patient care with AI-powered intelligence
             </p>
           </div>
           
@@ -260,10 +260,10 @@ const AISupplyChainOptimization: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing for Every Business
+              Transparent Pricing for Every Healthcare Facility
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your supply chain needs. All plans include a 14-day free trial.
+              Choose the plan that fits your healthcare organization. All plans include a 14-day free trial.
             </p>
           </div>
           
@@ -327,10 +327,10 @@ const AISupplyChainOptimization: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Proven Results Across Industries
+              Proven Results Across Healthcare Settings
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              See how different industries are transforming their supply chains with AI
+              See how different healthcare organizations are transforming patient care with AI
             </p>
           </div>
           
@@ -364,10 +364,10 @@ const AISupplyChainOptimization: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Seamless Integrations
+              Seamless EHR Integrations
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Connect with your existing ERP, WMS, TMS, and e-commerce platforms without disruption
+              Connect with your existing electronic health record systems and healthcare platforms
             </p>
           </div>
           
@@ -387,6 +387,61 @@ const AISupplyChainOptimization: React.FC = () => {
         </div>
       </section>
 
+      {/* Security & Compliance */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Healthcare-Grade Security & Compliance
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Your patient data is protected with the highest standards of security and compliance
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Lock className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">HIPAA Compliant</h3>
+              <p className="text-slate-300">Full HIPAA compliance with end-to-end encryption and secure data handling</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">SOC 2 Type II</h3>
+              <p className="text-slate-300">SOC 2 Type II certification for enterprise-grade security and reliability</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Activity className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Real-Time Monitoring</h3>
+              <p className="text-slate-300">24/7 security monitoring with automated threat detection and response</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -397,10 +452,10 @@ const AISupplyChainOptimization: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Healthcare Delivery?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Join hundreds of companies already using AI to transform their supply chain operations
+              Join hundreds of healthcare organizations already using AI to improve patient care and outcomes
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -473,4 +528,4 @@ const AISupplyChainOptimization: React.FC = () => {
   );
 };
 
-export default AISupplyChainOptimization;
+export default AIHealthcareAnalyticsPlatform;

@@ -1,466 +1,396 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BookOpen, 
-  Code, 
-  Download, 
-  ExternalLink, 
-  Search, 
-  FileText, 
-  Play, 
-  Users,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Database,
-  Code,
-  Terminal,
-  GitBranch,
-  Package,
-  Server,
-  Globe
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { BookOpen, Search, Code, FileText, Video, Download, ExternalLink, ArrowRight, Star, Shield, Brain, Cloud, Zap, Users, CheckCircle, ChevronDown, ChevronUp, Github, Globe, Database, Lock, Server, Network } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Documentation: React.FC = () => {
-  const documentationCategories = [
-    {
-      title: 'Getting Started',
-      icon: Rocket,
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Quick start guides and tutorials for new users',
-      guides: [
-        { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', href: '/docs/quick-start', difficulty: 'Beginner' },
-        { title: 'Installation Guide', description: 'Step-by-step installation instructions', href: '/docs/installation', difficulty: 'Beginner' },
-        { title: 'First Project', description: 'Create your first project with Zion Tech', href: '/docs/first-project', difficulty: 'Beginner' },
-        { title: 'Configuration', description: 'Configure your environment and settings', href: '/docs/configuration', difficulty: 'Beginner' }
-      ]
-    },
-    {
-      title: 'API Reference',
-      icon: Code,
-      color: 'from-purple-600 to-pink-600',
-      description: 'Complete API documentation and examples',
-      guides: [
-        { title: 'Authentication', description: 'API keys, OAuth, and security', href: '/docs/api/auth', difficulty: 'Intermediate' },
-        { title: 'Core Endpoints', description: 'Main API endpoints and methods', href: '/docs/api/endpoints', difficulty: 'Intermediate' },
-        { title: 'Webhooks', description: 'Real-time event notifications', href: '/docs/api/webhooks', difficulty: 'Advanced' },
-        { title: 'Rate Limiting', description: 'API usage limits and best practices', href: '/docs/api/rate-limiting', difficulty: 'Intermediate' }
-      ]
-    },
-    {
-      title: 'SDKs & Libraries',
-      icon: Package,
-      color: 'from-green-600 to-emerald-600',
-      description: 'Client libraries and SDKs for popular languages',
-      guides: [
-        { title: 'JavaScript/Node.js', description: 'Official Node.js SDK', href: '/docs/sdks/javascript', difficulty: 'Intermediate' },
-        { title: 'Python', description: 'Python client library', href: '/docs/sdks/python', difficulty: 'Intermediate' },
-        { title: 'Java', description: 'Java SDK for enterprise applications', href: '/docs/sdks/java', difficulty: 'Advanced' },
-        { title: 'Go', description: 'Go client library', href: '/docs/sdks/go', difficulty: 'Advanced' }
-      ]
-    },
-    {
-      title: 'Integration Guides',
-      icon: GitBranch,
-      color: 'from-orange-600 to-red-600',
-      description: 'Step-by-step integration tutorials',
-      guides: [
-        { title: 'Web Application', description: 'Integrate with React, Vue, or Angular', href: '/docs/integrations/web', difficulty: 'Intermediate' },
-        { title: 'Mobile Apps', description: 'iOS and Android integration', href: '/docs/integrations/mobile', difficulty: 'Advanced' },
-        { title: 'Serverless', description: 'AWS Lambda, Azure Functions integration', href: '/docs/integrations/serverless', difficulty: 'Advanced' },
-        { title: 'Microservices', description: 'Docker and Kubernetes deployment', href: '/docs/integrations/microservices', difficulty: 'Advanced' }
-      ]
-    }
-  ];
+export default function Documentation() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [openCategories, setOpenCategories] = useState<string[]>(['getting-started']);
 
-  const quickStartGuides = [
+  const toggleCategory = (category: string) => {
+    setOpenCategories(prev => 
+      prev.includes(category) 
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
+
+  const docCategories = [
     {
-      title: 'AI Services Integration',
-      description: 'Integrate AI-powered features into your applications',
+      key: 'getting-started',
+      name: 'Getting Started',
+      icon: Star,
+      color: 'from-blue-500 to-cyan-500',
+      items: [
+        {
+          title: 'Quick Start Guide',
+          description: 'Get up and running with our platform in minutes',
+          type: 'guide',
+          link: '/docs/quick-start',
+          difficulty: 'Beginner'
+        },
+        {
+          title: 'Installation Guide',
+          description: 'Step-by-step installation instructions',
+          type: 'guide',
+          link: '/docs/installation',
+          difficulty: 'Beginner'
+        },
+        {
+          title: 'First Project',
+          description: 'Create your first AI project',
+          type: 'tutorial',
+          link: '/docs/first-project',
+          difficulty: 'Beginner'
+        }
+      ]
+    },
+    {
+      key: 'ai-services',
+      name: 'AI Services',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      time: '15 min',
-      href: '/docs/ai-integration'
+      items: [
+        {
+          title: 'AI Model Training',
+          description: 'Train and deploy AI models',
+          type: 'guide',
+          link: '/docs/ai-training',
+          difficulty: 'Intermediate'
+        },
+        {
+          title: 'Data Preparation',
+          description: 'Prepare data for AI analysis',
+          type: 'guide',
+          link: '/docs/data-prep',
+          difficulty: 'Intermediate'
+        },
+        {
+          title: 'Model Deployment',
+          description: 'Deploy models to production',
+          type: 'tutorial',
+          link: '/docs/model-deployment',
+          difficulty: 'Advanced'
+        }
+      ]
     },
     {
-      title: 'Cloud Infrastructure Setup',
-      description: 'Deploy and manage cloud infrastructure',
+      key: 'cloud-devops',
+      name: 'Cloud & DevOps',
       icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      time: '30 min',
-      href: '/docs/cloud-setup'
-    },
-    {
-      title: 'Security Implementation',
-      description: 'Implement security best practices',
-      icon: Shield,
       color: 'from-green-500 to-emerald-500',
-      time: '20 min',
-      href: '/docs/security-implementation'
+      items: [
+        {
+          title: 'Infrastructure Setup',
+          description: 'Set up cloud infrastructure',
+          type: 'guide',
+          link: '/docs/infrastructure',
+          difficulty: 'Intermediate'
+        },
+        {
+          title: 'CI/CD Pipelines',
+          description: 'Configure CI/CD workflows',
+          type: 'tutorial',
+          link: '/docs/cicd',
+          difficulty: 'Advanced'
+        },
+        {
+          title: 'Monitoring & Alerting',
+          description: 'Set up monitoring systems',
+          type: 'guide',
+          link: '/docs/monitoring',
+          difficulty: 'Intermediate'
+        }
+      ]
     },
     {
-      title: 'Performance Optimization',
-      description: 'Optimize your applications for better performance',
-      icon: Zap,
+      key: 'api-reference',
+      name: 'API Reference',
+      icon: Code,
       color: 'from-orange-500 to-red-500',
-      time: '25 min',
-      href: '/docs/performance-optimization'
-    }
-  ];
-
-  const codeExamples = [
-    {
-      title: 'Authentication Example',
-      language: 'JavaScript',
-      code: `import { ZionTech } from '@ziontech/sdk';
-
-const client = new ZionTech({
-  apiKey: 'your-api-key',
-  environment: 'production'
-});
-
-// Authenticate and get user info
-const user = await client.auth.authenticate();`,
-      href: '/docs/examples/authentication'
-    },
-    {
-      title: 'AI Service Call',
-      language: 'Python',
-      code: `from ziontech import ZionTech
-
-client = ZionTech(api_key="your-api-key")
-
-# Call AI service
-response = client.ai.analyze_text(
-    text="Your text here",
-    model="gpt-4"
-)
-
-print(response.result)`,
-      href: '/docs/examples/ai-service'
-    },
-    {
-      title: 'Webhook Handler',
-      language: 'Node.js',
-      code: `app.post('/webhook', (req, res) => {
-  const signature = req.headers['x-zion-signature'];
-  
-  if (verifySignature(signature, req.body)) {
-    // Process webhook
-    const event = req.body;
-    console.log('Received event:', event.type);
-  }
-  
-  res.status(200).send('OK');
-});`,
-      href: '/docs/examples/webhooks'
+      items: [
+        {
+          title: 'REST API',
+          description: 'Complete API documentation',
+          type: 'reference',
+          link: '/docs/api/rest',
+          difficulty: 'Intermediate'
+        },
+        {
+          title: 'SDK Downloads',
+          description: 'Client libraries and SDKs',
+          type: 'download',
+          link: '/docs/sdk',
+          difficulty: 'Beginner'
+        },
+        {
+          title: 'Authentication',
+          description: 'API authentication methods',
+          type: 'guide',
+          link: '/docs/auth',
+          difficulty: 'Intermediate'
+        }
+      ]
     }
   ];
 
   const resources = [
     {
-      title: 'API Playground',
-      description: 'Interactive API testing environment',
-      icon: Terminal,
-      href: '/docs/playground',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Code Samples',
-      description: 'Ready-to-use code examples',
-      icon: Code,
-      href: '/docs/samples',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
+      icon: Video,
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
-      icon: Play,
-      href: '/docs/videos',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-blue-500 to-cyan-500',
+      link: '/tutorials'
     },
     {
-      title: 'Community Forum',
-      description: 'Get help from the community',
+      icon: Github,
+      title: 'GitHub Repositories',
+      description: 'Open source examples and templates',
+      color: 'from-gray-600 to-slate-600',
+      link: 'https://github.com/ziontechgroup'
+    },
+    {
       icon: Users,
-      href: '/community',
-      color: 'from-orange-500 to-red-500'
+      title: 'Community Forum',
+      description: 'Connect with other developers',
+      color: 'from-purple-500 to-pink-500',
+      link: '/community'
+    },
+    {
+      icon: Download,
+      title: 'Sample Projects',
+      description: 'Downloadable project templates',
+      color: 'from-green-500 to-emerald-500',
+      link: '/samples'
     }
   ];
 
+  const filteredCategories = docCategories.filter(category =>
+    searchQuery === '' || 
+    category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    category.items.some(item => 
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Documentation - Zion Tech Group"
-        description="Comprehensive technical documentation, API references, SDKs, and integration guides for Zion Tech Group services."
-      />
-      
-      {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
-        <div className="container mx-auto px-4 py-16">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20"></div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-              <BookOpen className="w-10 h-10 text-white" />
+            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 text-blue-400 text-sm font-medium mb-6">
+              <BookOpen className="w-4 h-4" />
+              Documentation
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Developer Documentation
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              Developer
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                {' '}Documentation
+              </span>
             </h1>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Comprehensive guides, API references, and integration tutorials to help you build with Zion Tech Group services.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive guides, tutorials, and API references to help you build 
+              powerful AI-powered applications with our platform.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search documentation, guides, and APIs..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Documentation Categories */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Documentation Categories
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Find comprehensive guides, tutorials, and references organized by category. 
+              Everything you need to build with our AI platform.
             </p>
           </motion.div>
 
-          {/* Search Bar */}
+          <div className="max-w-4xl mx-auto space-y-6">
+            {filteredCategories.map((category) => (
+              <motion.div
+                key={category.key}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl border border-slate-600/50 overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleCategory(category.key)}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-600/30 transition-colors"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
+                      <category.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">{category.name}</h3>
+                  </div>
+                  {openCategories.includes(category.key) ? (
+                    <ChevronUp className="w-6 h-6 text-gray-400" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6 text-gray-400" />
+                  )}
+                </button>
+                
+                {openCategories.includes(category.key) && (
+                  <div className="px-6 pb-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {category.items.map((item, index) => (
+                        <motion.div
+                          key={index}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ duration: 0.5, delay: index * 0.1 }}
+                          className="bg-slate-600/30 rounded-xl p-4 hover:bg-slate-600/50 transition-colors"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-8 h-8 bg-slate-500/50 rounded-lg flex items-center justify-center flex-shrink-0">
+                              {item.type === 'guide' && <FileText className="w-4 h-4 text-blue-400" />}
+                              {item.type === 'tutorial' && <Video className="w-4 h-4 text-green-400" />}
+                              {item.type === 'reference' && <Code className="w-4 h-4 text-purple-400" />}
+                              {item.type === 'download' && <Download className="w-4 h-4 text-orange-400" />}
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center gap-2 mb-2">
+                                <h4 className="font-semibold text-white">{item.title}</h4>
+                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                                  item.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
+                                  item.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
+                                  'bg-red-500/20 text-red-400'
+                                }`}>
+                                  {item.difficulty}
+                                </span>
+                              </div>
+                              <p className="text-gray-400 text-sm mb-3">{item.description}</p>
+                              <Link
+                                to={item.link}
+                                className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+                              >
+                                Learn More
+                                <ArrowRight className="w-3 h-3" />
+                              </Link>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Resources */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-2xl mx-auto mt-8"
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
           >
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search documentation, APIs, and guides..."
-                className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-              />
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Additional Resources
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Beyond documentation, we offer additional resources to help you succeed 
+              with our platform and connect with the community.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {resources.map((resource, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50 hover:border-blue-500/50 transition-all duration-300 group"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <resource.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
+                <p className="text-gray-400 mb-4">{resource.description}</p>
+                <Link
+                  to={resource.link}
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
+                >
+                  Explore
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-blue-900/50 to-indigo-900/50 rounded-3xl p-12 text-center border border-blue-500/30"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Need Help Getting Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Can't find what you're looking for? Our support team is here to help you 
+              get started and succeed with our AI platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/support"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
+              >
+                Get Support
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                Contact Us
+              </Link>
             </div>
           </motion.div>
         </div>
-      </div>
-
-      {/* Quick Start Guides */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-3xl font-bold text-white text-center mb-12"
-        >
-          Quick Start Guides
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {quickStartGuides.map((guide, index) => (
-            <motion.div
-              key={guide.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-              className="group"
-            >
-              <Link
-                to={guide.href}
-                className="block bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 h-full"
-              >
-                <div className={`w-12 h-12 bg-gradient-to-br ${guide.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <guide.icon className="w-6 h-6 text-white" />
-                </div>
-                
-                <h3 className="text-lg font-semibold text-white mb-2">{guide.title}</h3>
-                <p className="text-slate-400 text-sm mb-3">{guide.description}</p>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-cyan-400 text-sm font-medium">{guide.time}</span>
-                  <div className="w-5 h-5 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Documentation Categories */}
-      <div className="bg-slate-800/20 py-16">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-3xl font-bold text-white text-center mb-12"
-          >
-            Documentation Categories
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {documentationCategories.map((category, index) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
-              >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
-                    <category.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{category.title}</h3>
-                    <p className="text-slate-400 text-sm">{category.description}</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-3">
-                  {category.guides.map((guide) => (
-                    <Link
-                      key={guide.title}
-                      to={guide.href}
-                      className="block p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                            {guide.title}
-                          </div>
-                          <div className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
-                            {guide.description}
-                          </div>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            guide.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
-                            guide.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                            'bg-red-500/20 text-red-400'
-                          }`}>
-                            {guide.difficulty}
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Code Examples */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-          className="text-3xl font-bold text-white text-center mb-12"
-        >
-          Code Examples
-        </motion.h2>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {codeExamples.map((example, index) => (
-            <motion.div
-              key={example.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-              className="bg-slate-800/30 border border-slate-700 rounded-xl overflow-hidden"
-            >
-              <div className="p-4 border-b border-slate-700">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold text-white">{example.title}</h3>
-                  <span className="text-sm text-slate-400">{example.language}</span>
-                </div>
-              </div>
-              
-              <div className="p-4">
-                <pre className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
-                  <code className="text-sm text-slate-300">{example.code}</code>
-                </pre>
-                
-                <Link
-                  to={example.href}
-                  className="block w-full text-center py-3 bg-slate-700 text-white font-semibold rounded-lg hover:bg-slate-600 transition-colors duration-300 mt-4"
-                >
-                  View Full Example
-                </Link>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      {/* Additional Resources */}
-      <div className="bg-slate-800/20 py-16">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="text-3xl font-bold text-white text-center mb-12"
-          >
-            Additional Resources
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {resources.map((resource, index) => (
-              <motion.div
-                key={resource.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
-                className="group"
-              >
-                <Link
-                  to={resource.href}
-                  className="block bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 h-full text-center"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <resource.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
-                  <p className="text-slate-400 text-sm">{resource.description}</p>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.1 }}
-          className="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12 text-center"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Need Help with Documentation?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Our developer support team is here to help you succeed with our APIs and services
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Contact Developer Support
-            </Link>
-            <Link
-              to="/community"
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              Join Developer Community
-            </Link>
-          </div>
-        </motion.div>
-      </div>
+      </section>
     </div>
   );
 }
-
-export default Documentation;

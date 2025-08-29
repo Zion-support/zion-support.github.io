@@ -42,7 +42,6 @@ import {
   ShoppingCart,
   Building,
   MailIcon,
-  BookOpen,
   Calendar,
   Settings
 } from 'lucide-react';
@@ -65,6 +64,31 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+      title: 'IoT & Digital Solutions',
+      icon: Rocket,
+      color: 'from-green-600 to-emerald-600',
+      links: [
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'Data Analytics', href: '/services/data-analytics' },
+        { name: 'Smart Inventory Optimizer', href: '/services/smart-inventory-optimizer' },
+        { name: 'Smart Supply Chain Visibility', href: '/services/smart-supply-chain-visibility' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      icon: Zap,
+      color: 'from-yellow-600 to-orange-600',
+      links: [
+        { name: 'Smart Contract Lifecycle Manager', href: '/services/smart-contract-lifecycle-manager' },
+        { name: 'Smart Expense Management', href: '/services/smart-expense-management-saas' },
+        { name: 'AI-Powered Project Management', href: '/services/ai-powered-project-management' },
+        { name: 'Smart Customer Support Automation', href: '/services/smart-customer-support-automation' },
+        { name: 'AI-Powered Marketing Attribution', href: '/services/ai-powered-marketing-attribution' },
+        { name: 'Smart Data Governance Suite', href: '/services/smart-data-governance-suite' }
+      ]
+    },
+    {
       title: 'Core Technologies',
       icon: Brain,
       color: 'from-indigo-600 to-purple-600',
@@ -72,7 +96,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
         { name: 'Cloud DevOps', href: '/services/cloud-devops' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
         { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot' },
         { name: 'Data Analytics', href: '/services/data-analytics' }
       ]
@@ -82,12 +106,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       icon: Star,
       color: 'from-purple-600 to-pink-600',
       links: [
-        { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },
-        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
-        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028' },
-        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation' }
+        { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030', icon: Star, description: 'Future-focused solutions' },
+        { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028', icon: Star, description: 'Complete service portfolio' },
+        { name: 'Emerging Tech 2030', href: '/emerging-tech-2030', icon: Star, description: 'Cutting-edge technology' },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Star, description: 'Sales automation' },
+        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation', icon: Star, description: 'Content generation' }
       ]
     },
     {
@@ -171,16 +194,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
-    { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
   ];
 
   const contactInfo = {
-    phone: '+1 (555) 123-4567',
+    phone: '+1 (800) 123-4567',
     email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
   };
