@@ -46,7 +46,7 @@ import {
   Car,
   Factory,
   Store,
-  Hospital,
+  Building,
   Banknote,
   Truck,
   Wrench,

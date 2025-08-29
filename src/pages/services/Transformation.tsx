@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from 'react';
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight } from 'lucide-react';
 

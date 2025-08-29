@@ -13,7 +13,7 @@ export default defineConfig({
   build: {
     target: 'es2019',
     minify: 'terser',
-    sourcemap: process.env.NODE_ENV !== 'production' ? 'hidden' : false,
+    sourcemap: process.env.NODE_ENV === 'production' ? false : 'hidden',
     reportCompressedSize: false,
     outDir: 'dist',
     cssCodeSplit: true,
@@ -72,12 +72,13 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        passes: 2
+        passes: 3
       },
       format: {
         comments: false
       }
     },
+    cssMinify: true,
   },
   esbuild: {
     legalComments: 'none',

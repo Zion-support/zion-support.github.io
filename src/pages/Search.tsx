@@ -1,3 +1,14 @@
+import React from 'react';
+
+export default function Search() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Search</h1>
+      <p className="text-zion-slate-light">Find services, solutions, and resources.</p>
+    </div>
+  );
+}
+
 import React, { useState, useEffect } from 'react';
 import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';

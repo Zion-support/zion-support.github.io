@@ -1,3 +1,14 @@
+import React from 'react';
+
+export default function Contact() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold text-white mb-4">Contact</h1>
+      <p className="text-zion-slate-light">Reach us at kleber@ziontechgroup.com or +1 302 464 0950.</p>
+    </div>
+  );
+}
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
