@@ -43,7 +43,7 @@ import {
   TrendingUp 
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
+import { EnhancedHeroSection } from "@/components/EnhancedHeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
 // Lazy load heavy components
@@ -325,7 +325,7 @@ export default function Home() {
       
       <div className="min-h-screen bg-futuristic">
         {/* Hero Section */}
-        <HeroSection />
+        <EnhancedHeroSection />
 
         {/* Stats Section */}
         <motion.section 
