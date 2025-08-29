@@ -36,7 +36,7 @@ async function fixTypeScriptSyntaxErrors() {
               "Chat" + oldName.charAt(0).toUpperCase() + oldName.slice(1);
             lines[i] = line.replace(oldName, newName);
             modified = true;
-            console.log(`  Fixed variable name: ${oldName} -> ${newName}`);
+            console.log(`  Fixed function name: ${oldName} -> ${newName}`);
           }
         }
       }

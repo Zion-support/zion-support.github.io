@@ -5,671 +5,625 @@ import {
   Search, 
   Filter, 
   X, 
+  ArrowRight, 
   Clock, 
-  User, 
-  Tag, 
-  ArrowRight,
-  BookOpen,
-  FileText,
-  Users,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Rocket,
-  TrendingUp,
-  Star,
-  Calendar,
-  Eye,
-  Heart,
+  TrendingUp, 
+  Star, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Users, 
+  Building, 
+  Globe, 
+  Server, 
+  Database, 
+  Network, 
+  Lock, 
+  Heart, 
+  ShoppingCart, 
+  MessageCircle, 
+  FileText, 
+  Video, 
+  TestTube, 
+  Code, 
+  BookOpen, 
+  Briefcase, 
+  Newspaper, 
+  Target, 
+  DollarSign, 
+  Settings, 
+  Bell, 
+  Download, 
+  Edit, 
+  Trash2, 
+  Plus, 
+  Calendar, 
+  Truck, 
+  BarChart3, 
+  Atom, 
+  Leaf, 
+  Satellite, 
+  Cpu, 
+  Rocket, 
+  TrendingUp as TrendingUpIcon, 
+  Award, 
+  Activity, 
+  CheckCircle, 
+  AlertCircle, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ExternalLink, 
+  HelpCircle, 
+  Lightbulb, 
+  Info, 
+  AlertTriangle, 
+  Tag,
+  Bookmark,
   Share2,
-  Bookmark
+  Eye,
+  Calendar as CalendarIcon,
+  User,
+  Tag as TagIcon
 } from 'lucide-react';
 
 interface SearchResult {
   id: string;
   title: string;
-  excerpt: string;
-  content: string;
-  type: 'service' | 'blog' | 'page' | 'documentation';
+  description: string;
+  url: string;
+  type: 'service' | 'page' | 'blog' | 'documentation' | 'case-study';
   category: string;
   tags: string[];
-  author?: string;
-  date?: string;
-  readTime?: string;
-  views?: number;
-  rating?: number;
-  url: string;
-  icon: React.ReactNode;
-  color: string;
+  relevance: number;
+  lastUpdated: string;
+  icon: any;
+  featured?: boolean;
 }
 
-interface SearchFilter {
-  type: string[];
-  category: string[];
-  tags: string[];
-  dateRange: string;
-}
-
-const SearchPage: React.FC = () => {
+export default function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [query, setQuery] = useState(searchParams.get('q') || '');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
+  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'popularity'>('relevance');
   const [showFilters, setShowFilters] = useState(false);
-  const [filters, setFilters] = useState<SearchFilter>({
-    type: [],
-    category: [],
-    tags: [],
-    dateRange: 'all'
-  });
 
   // Mock search results - in a real app, this would come from an API
-  const mockResults: SearchResult[] = [
+  const mockSearchResults: SearchResult[] = [
+    // AI Services
     {
-      id: '1',
-      title: 'AI Business Intelligence Solutions',
-      excerpt: 'Transform your business with cutting-edge AI-powered business intelligence solutions that provide real-time insights and predictive analytics.',
-      content: 'Our AI Business Intelligence solutions leverage machine learning algorithms to analyze vast amounts of data and provide actionable insights...',
-      type: 'service',
-      category: 'AI & Analytics',
-      tags: ['AI', 'Business Intelligence', 'Machine Learning', 'Analytics'],
-      author: 'Zion Tech Team',
-      date: '2024-12-15',
-      readTime: '5 min read',
-      views: 1247,
-      rating: 4.8,
+      id: 'ai-bi',
+      title: 'AI Business Intelligence',
+      description: 'Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.',
       url: '/services/ai-business-intelligence',
-      icon: <Brain className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-500'
+      type: 'service',
+      category: 'AI Services',
+      tags: ['AI', 'Business Intelligence', 'Analytics', 'Machine Learning', 'Predictive'],
+      relevance: 0.95,
+      lastUpdated: '2024-12-01',
+      icon: Brain,
+      featured: true
     },
     {
-      id: '2',
-      title: 'Cloud DevOps Best Practices',
-      excerpt: 'Learn the essential practices for implementing effective DevOps in cloud environments to accelerate development and deployment.',
-      content: 'Cloud DevOps combines the power of cloud computing with DevOps practices to create a more efficient and scalable development process...',
+      id: 'ai-compliance',
+      title: 'AI Compliance Assistant',
+      description: 'Automated regulatory compliance solution that helps businesses stay compliant with industry standards and regulations through intelligent monitoring and reporting.',
+      url: '/services/ai-compliance-assistant',
+      type: 'service',
+      category: 'AI Services',
+      tags: ['AI', 'Compliance', 'Regulatory', 'Automation', 'Risk Management'],
+      relevance: 0.92,
+      lastUpdated: '2024-11-28',
+      icon: Shield
+    },
+    {
+      id: 'ai-sales',
+      title: 'AI Sales Copilot',
+      description: 'Intelligent sales optimization platform that enhances sales performance through AI-driven insights, lead scoring, and automated follow-up sequences.',
+      url: '/services/ai-sales-copilot',
+      type: 'service',
+      category: 'AI Services',
+      tags: ['AI', 'Sales', 'CRM', 'Automation', 'Lead Generation'],
+      relevance: 0.89,
+      lastUpdated: '2024-11-25',
+      icon: Users
+    },
+
+    // Cloud Services
+    {
+      id: 'cloud-devops',
+      title: 'Cloud DevOps Platform',
+      description: 'Comprehensive cloud DevOps solution that automates infrastructure deployment, scaling, and management across multiple cloud providers.',
+      url: '/services/cloud-devops',
+      type: 'service',
+      category: 'Cloud & Infrastructure',
+      tags: ['Cloud', 'DevOps', 'Automation', 'Infrastructure', 'AWS', 'Azure'],
+      relevance: 0.87,
+      lastUpdated: '2024-11-20',
+      icon: Cloud
+    },
+    {
+      id: 'it-infrastructure',
+      title: 'IT Infrastructure Management',
+      description: 'Enterprise-grade IT infrastructure solutions including server management, network optimization, and disaster recovery planning.',
+      url: '/services/it-infrastructure',
+      type: 'service',
+      category: 'Cloud & Infrastructure',
+      tags: ['Infrastructure', 'IT', 'Enterprise', 'Networking', 'Security'],
+      relevance: 0.84,
+      lastUpdated: '2024-11-18',
+      icon: Server
+    },
+
+    // Security Services
+    {
+      id: 'ai-cybersecurity',
+      title: 'AI Cybersecurity Platform',
+      description: 'Next-generation cybersecurity solution powered by artificial intelligence for advanced threat detection, prevention, and response.',
+      url: '/services/ai-cybersecurity-platform',
+      type: 'service',
+      category: 'Security & Compliance',
+      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security', 'Compliance'],
+      relevance: 0.91,
+      lastUpdated: '2024-11-22',
+      icon: Shield,
+      featured: true
+    },
+    {
+      id: 'zero-trust',
+      title: 'Zero Trust Network Access',
+      description: 'Modern security architecture that implements zero-trust principles for enhanced network security and access control.',
+      url: '/services/zero-trust-network-access',
+      type: 'service',
+      category: 'Security & Compliance',
+      tags: ['Zero Trust', 'Security', 'Network', 'Access Control', 'Compliance'],
+      relevance: 0.86,
+      lastUpdated: '2024-11-15',
+      icon: Lock
+    },
+
+    // Quantum Computing
+    {
+      id: 'quantum-computing',
+      title: 'Quantum Computing Solutions',
+      description: 'Cutting-edge quantum computing services for optimization problems, cryptography, and scientific simulations.',
+      url: '/services/quantum-computing',
+      type: 'service',
+      category: 'Quantum Computing',
+      tags: ['Quantum Computing', 'Optimization', 'Cryptography', 'AI', 'Research'],
+      relevance: 0.88,
+      lastUpdated: '2024-11-10',
+      icon: Atom
+    },
+
+    // Blog Posts
+    {
+      id: 'ai-trends-2024',
+      title: 'AI Trends to Watch in 2024',
+      description: 'Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.',
+      url: '/blog/ai-trends-2024',
       type: 'blog',
-      category: 'Cloud & DevOps',
-      tags: ['Cloud', 'DevOps', 'CI/CD', 'Automation'],
-      author: 'Sarah Chen',
-      date: '2024-12-10',
-      readTime: '8 min read',
-      views: 892,
-      rating: 4.6,
-      url: '/blog/cloud-devops-best-practices',
-      icon: <Cloud className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500'
+      category: 'AI & Technology',
+      tags: ['AI', 'Trends', 'Technology', '2024', 'Innovation'],
+      relevance: 0.82,
+      lastUpdated: '2024-12-01',
+      icon: BookOpen
     },
     {
-      id: '3',
-      title: 'Cybersecurity Framework Implementation',
-      excerpt: 'Comprehensive guide to implementing enterprise-grade cybersecurity frameworks to protect your organization from evolving threats.',
-      content: 'Implementing a robust cybersecurity framework is essential for protecting sensitive data and maintaining business continuity...',
-      type: 'documentation',
-      category: 'Security',
-      tags: ['Cybersecurity', 'Framework', 'Compliance', 'Risk Management'],
-      author: 'Michael Rodriguez',
-      date: '2024-12-08',
-      readTime: '12 min read',
-      views: 1563,
-      rating: 4.9,
-      url: '/docs/cybersecurity-framework',
-      icon: <Shield className="w-6 h-6" />,
-      color: 'from-red-500 to-pink-500'
+      id: 'cloud-migration-guide',
+      title: 'Complete Guide to Cloud Migration',
+      description: 'A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.',
+      url: '/blog/cloud-migration-guide',
+      type: 'blog',
+      category: 'Cloud & Infrastructure',
+      tags: ['Cloud Migration', 'Guide', 'Best Practices', 'Infrastructure'],
+      relevance: 0.79,
+      lastUpdated: '2024-11-28',
+      icon: Cloud
     },
+
+    // Case Studies
     {
-      id: '4',
-      title: 'Digital Transformation Strategy',
-      excerpt: 'Strategic approach to digital transformation that aligns technology initiatives with business objectives for maximum impact.',
-      content: 'Digital transformation is not just about technology—it\'s about fundamentally changing how your business operates and delivers value...',
-      type: 'service',
-      category: 'Digital Innovation',
-      tags: ['Digital Transformation', 'Strategy', 'Innovation', 'Change Management'],
-      author: 'Zion Tech Team',
-      date: '2024-12-05',
-      readTime: '10 min read',
-      views: 2034,
-      rating: 4.7,
-      url: '/services/digital-transformation',
-      icon: <Rocket className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: '5',
-      title: 'IoT Edge Computing Solutions',
-      excerpt: 'Next-generation IoT edge computing solutions that bring processing power closer to data sources for real-time decision making.',
-      content: 'Edge computing in IoT environments enables faster response times and reduced bandwidth usage by processing data locally...',
-      type: 'service',
-      category: 'IoT & Edge',
-      tags: ['IoT', 'Edge Computing', 'Real-time', 'Processing'],
-      author: 'Zion Tech Team',
-      date: '2024-12-03',
-      readTime: '7 min read',
-      views: 1156,
-      rating: 4.5,
-      url: '/services/iot-edge',
-      icon: <Zap className="w-6 h-6" />,
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      id: '6',
-      title: 'Micro SaaS Development Guide',
-      excerpt: 'Complete guide to building and launching successful micro SaaS applications with modern development practices.',
-      content: 'Micro SaaS applications offer entrepreneurs the opportunity to build focused, profitable software businesses...',
-      type: 'documentation',
-      category: 'Micro SaaS',
-      tags: ['SaaS', 'Development', 'Startup', 'Software'],
-      author: 'Emily Watson',
-      date: '2024-11-30',
-      readTime: '15 min read',
-      views: 987,
-      rating: 4.4,
-      url: '/docs/micro-saas-guide',
-      icon: <Globe className="w-6 h-6" />,
-      color: 'from-indigo-500 to-purple-500'
+      id: 'healthcare-ai-case-study',
+      title: 'AI Transformation in Healthcare',
+      description: 'How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',
+      url: '/case-studies/healthcare-ai-transformation',
+      type: 'case-study',
+      category: 'Healthcare',
+      tags: ['AI', 'Healthcare', 'Case Study', 'Transformation', 'Patient Care'],
+      relevance: 0.85,
+      lastUpdated: '2024-11-20',
+      icon: FileText
     }
   ];
 
-  const categories = ['AI & Analytics', 'Cloud & DevOps', 'Security', 'Digital Innovation', 'IoT & Edge', 'Micro SaaS'];
-  const types = ['service', 'blog', 'page', 'documentation'];
-  const allTags = ['AI', 'Machine Learning', 'Cloud', 'DevOps', 'Cybersecurity', 'Digital Transformation', 'IoT', 'SaaS', 'Analytics', 'Automation'];
+  const filterOptions = [
+    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
+    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
+    { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
+    { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },
+    { id: 'case-studies', name: 'Case Studies', icon: FileText, count: 0 },
+    { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
+  ];
 
   useEffect(() => {
-    if (query) {
-      performSearch(query);
-    } else {
-      setResults([]);
-      setFilteredResults([]);
+    if (searchQuery) {
+      performSearch();
     }
-  }, [query]);
+  }, [searchQuery, selectedFilters, sortBy]);
 
-  useEffect(() => {
-    applyFilters();
-  }, [filters, results]);
-
-  const performSearch = async (searchQuery: string) => {
-    setIsLoading(true);
+  const performSearch = async () => {
+    setIsSearching(true);
     
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 800));
     
-    // Filter mock results based on search query
-    const searchResults = mockResults.filter(result => 
-      result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      result.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      result.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())) ||
-      result.category.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    
-    setResults(searchResults);
-    setIsLoading(false);
-  };
-
-  const applyFilters = () => {
-    let filtered = [...results];
-
-    if (filters.type.length > 0) {
-      filtered = filtered.filter(result => filters.type.includes(result.type));
-    }
-
-    if (filters.category.length > 0) {
-      filtered = filtered.filter(result => filters.category.includes(result.category));
-    }
-
-    if (filters.tags.length > 0) {
-      filtered = filtered.filter(result => 
-        result.tags.some(tag => filters.tags.includes(tag))
-      );
-    }
-
-    if (filters.dateRange !== 'all') {
-      const now = new Date();
-      const cutoffDate = new Date();
+    let filtered = mockSearchResults.filter(result => {
+      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       
-      switch (filters.dateRange) {
-        case 'week':
-          cutoffDate.setDate(now.getDate() - 7);
-          break;
-        case 'month':
-          cutoffDate.setMonth(now.getMonth() - 1);
-          break;
-        case 'year':
-          cutoffDate.setFullYear(now.getFullYear() - 1);
-          break;
+      const matchesFilters = selectedFilters.size === 0 || 
+                           selectedFilters.has(result.category.toLowerCase().replace(/\s+/g, '-')) ||
+                           selectedFilters.has(result.type);
+      
+      return matchesQuery && matchesFilters;
+    });
+
+    // Sort results
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'date':
+          return new Date(b.lastUpdated).getTime() - new Date(a.lastUpdated).getTime();
+        case 'popularity':
+          return b.relevance - a.relevance;
+        default:
+          return b.relevance - a.relevance;
       }
-      
-      filtered = filtered.filter(result => 
-        result.date && new Date(result.date) >= cutoffDate
-      );
-    }
+    });
 
-    setFilteredResults(filtered);
+    setSearchResults(filtered);
+    setIsSearching(false);
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (query.trim()) {
-      setSearchParams({ q: query.trim() });
+    if (searchQuery.trim()) {
+      setSearchParams({ q: searchQuery.trim() });
     }
   };
 
-  const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
-    setFilters(prev => {
-      const currentValues = prev[filterType] as string[];
-      if (currentValues.includes(value)) {
-        return {
-          ...prev,
-          [filterType]: currentValues.filter(v => v !== value)
-        };
-      } else {
-        return {
-          ...prev,
-          [filterType]: [...currentValues, value]
-        };
-      }
-    });
+  const toggleFilter = (filterId: string) => {
+    const newFilters = new Set(selectedFilters);
+    if (newFilters.has(filterId)) {
+      newFilters.delete(filterId);
+    } else {
+      newFilters.add(filterId);
+    }
+    setSelectedFilters(newFilters);
   };
 
   const clearFilters = () => {
-    setFilters({
-      type: [],
-      category: [],
-      tags: [],
-      dateRange: 'all'
-    });
+    setSelectedFilters(new Set());
   };
 
-  const getTypeIcon = (type: string) => {
+  const getResultIcon = (type: string) => {
     switch (type) {
-      case 'service':
-        return <Zap className="w-4 h-4" />;
-      case 'blog':
-        return <BookOpen className="w-4 h-4" />;
-      case 'documentation':
-        return <FileText className="w-4 h-4" />;
-      case 'page':
-        return <Users className="w-4 h-4" />;
-      default:
-        return <FileText className="w-4 h-4" />;
+      case 'service': return Zap;
+      case 'page': return FileText;
+      case 'blog': return BookOpen;
+      case 'case-study': return FileText;
+      case 'documentation': return Code;
+      default: return FileText;
     }
   };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'short', 
-      day: 'numeric' 
-    });
+  const getResultColor = (type: string) => {
+    switch (type) {
+      case 'service': return 'from-blue-500 to-indigo-500';
+      case 'blog': return 'from-green-500 to-emerald-500';
+      case 'case-study': return 'from-purple-500 to-pink-500';
+      case 'documentation': return 'from-orange-500 to-red-500';
+      default: return 'from-gray-500 to-slate-500';
+    }
   };
 
+  // Calculate filter counts
+  filterOptions.forEach(filter => {
+    filter.count = mockSearchResults.filter(result => 
+      result.category.toLowerCase().replace(/\s+/g, '-') === filter.id ||
+      result.type === filter.id
+    ).length;
+  });
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-16">
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.5 }}
+            className="text-center"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Search className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Search Zion Tech Group
-            </h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Find services, documentation, blog posts, and resources to help transform your business with cutting-edge technology.
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Search Zion Tech Group</h1>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Find services, documentation, case studies, and insights across our comprehensive technology portfolio.
             </p>
-            
-            {/* Search Form */}
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                <input
-                  type="text"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search for services, articles, documentation..."
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-slate-600/30 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent backdrop-blur-md text-lg"
-                />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                >
-                  Search
-                </button>
-              </div>
-            </form>
           </motion.div>
         </div>
       </div>
 
-      {/* Search Results */}
-      {query && (
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-7xl mx-auto">
-            {/* Results Header */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col lg:flex-row gap-6 mb-8"
-            >
-              <div className="flex-1">
-                <h2 className="text-2xl font-bold text-white mb-2">
-                  Search Results for "{query}"
-                </h2>
-                <p className="text-slate-400">
-                  {isLoading ? 'Searching...' : `${filteredResults.length} results found`}
-                </p>
-              </div>
-              
-              <div className="flex items-center gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Search Form */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-8"
+        >
+          <form onSubmit={handleSearch} className="max-w-3xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search for services, solutions, documentation, or insights..."
+                className="w-full pl-12 pr-4 py-4 text-lg border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </motion.div>
+
+        {/* Filters and Results */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Filters Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
                 <button
-                  onClick={() => setShowFilters(!showFilters)}
-                  className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
-                    showFilters
-                      ? 'border-cyan-500 bg-cyan-500/20 text-cyan-400'
-                      : 'border-slate-600/30 bg-white/5 text-white hover:bg-white/10'
-                  }`}
+                  onClick={clearFilters}
+                  className="text-sm text-blue-600 hover:text-blue-700"
                 >
-                  <Filter className="w-4 h-4" />
-                  Filters
+                  Clear All
                 </button>
-                
-                {(filters.type.length > 0 || filters.category.length > 0 || filters.tags.length > 0 || filters.dateRange !== 'all') && (
-                  <button
-                    onClick={clearFilters}
-                    className="px-4 py-2 rounded-lg border border-slate-600/30 bg-white/5 text-white hover:bg-white/10 transition-all duration-300 flex items-center gap-2"
-                  >
-                    <X className="w-4 h-4" />
-                    Clear
-                  </button>
-                )}
               </div>
-            </motion.div>
 
-            <div className="flex flex-col lg:flex-row gap-8">
-              {/* Filters Sidebar */}
-              <AnimatePresence>
-                {showFilters && (
-                  <motion.div
-                    initial={{ opacity: 0, x: -20, width: 0 }}
-                    animate={{ opacity: 1, x: 0, width: 'auto' }}
-                    exit={{ opacity: 0, x: -20, width: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="lg:w-80 space-y-6"
+              {/* Sort Options */}
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="relevance">Relevance</option>
+                  <option value="date">Date</option>
+                  <option value="popularity">Popularity</option>
+                </select>
+              </div>
+
+              {/* Filter Options */}
+              <div className="space-y-3">
+                {filterOptions.map(filter => (
+                  <button
+                    key={filter.id}
+                    onClick={() => toggleFilter(filter.id)}
+                    className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
+                      selectedFilters.has(filter.id)
+                        ? 'bg-blue-50 border border-blue-200'
+                        : 'hover:bg-gray-50'
+                    }`}
                   >
-                    <div className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md">
-                      <h3 className="text-lg font-semibold text-white mb-4">Content Type</h3>
-                      <div className="space-y-3">
-                        {types.map((type) => (
-                          <label key={type} className="flex items-center gap-3 cursor-pointer">
-                            <input
-                              type="checkbox"
-                              checked={filters.type.includes(type)}
-                              onChange={() => toggleFilter('type', type)}
-                              className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
-                            />
-                            <span className="text-slate-300 capitalize">{type}</span>
-                          </label>
-                        ))}
-                      </div>
+                    <div className="flex items-center space-x-3">
+                      <filter.icon className="h-5 w-5 text-gray-600" />
+                      <span className="text-sm font-medium text-gray-700">{filter.name}</span>
                     </div>
-
-                    <div className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md">
-                      <h3 className="text-lg font-semibold text-white mb-4">Categories</h3>
-                      <div className="space-y-3">
-                        {categories.map((category) => (
-                          <label key={category} className="flex items-center gap-3 cursor-pointer">
-                            <input
-                              type="checkbox"
-                              checked={filters.category.includes(category)}
-                              onChange={() => toggleFilter('category', category)}
-                              className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
-                            />
-                            <span className="text-slate-300">{category}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md">
-                      <h3 className="text-lg font-semibold text-white mb-4">Tags</h3>
-                      <div className="space-y-3 max-h-48 overflow-y-auto">
-                        {allTags.map((tag) => (
-                          <label key={tag} className="flex items-center gap-3 cursor-pointer">
-                            <input
-                              type="checkbox"
-                              checked={filters.tags.includes(tag)}
-                              onChange={() => toggleFilter('tags', tag)}
-                              className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 rounded focus:ring-cyan-500 focus:ring-2"
-                            />
-                            <span className="text-slate-300">{tag}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md">
-                      <h3 className="text-lg font-semibold text-white mb-4">Date Range</h3>
-                      <div className="space-y-3">
-                        {[
-                          { value: 'all', label: 'All Time' },
-                          { value: 'week', label: 'Past Week' },
-                          { value: 'month', label: 'Past Month' },
-                          { value: 'year', label: 'Past Year' }
-                        ].map((option) => (
-                          <label key={option.value} className="flex items-center gap-3 cursor-pointer">
-                            <input
-                              type="radio"
-                              name="dateRange"
-                              value={option.value}
-                              checked={filters.dateRange === option.value}
-                              onChange={(e) => setFilters(prev => ({ ...prev, dateRange: e.target.value }))}
-                              className="w-4 h-4 text-cyan-500 bg-slate-700 border-slate-600 focus:ring-cyan-500 focus:ring-2"
-                            />
-                            <span className="text-slate-300">{option.label}</span>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              {/* Results List */}
-              <div className="flex-1">
-                {isLoading ? (
-                  <div className="text-center py-12">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-                    <p className="text-slate-400">Searching...</p>
-                  </div>
-                ) : filteredResults.length > 0 ? (
-                  <div className="space-y-6">
-                    {filteredResults.map((result, index) => (
-                      <motion.div
-                        key={result.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="bg-white/5 border border-slate-600/30 rounded-xl p-6 backdrop-blur-md hover:bg-white/10 transition-all duration-300"
-                      >
-                        <div className="flex items-start gap-4">
-                          <div className={`w-12 h-12 bg-gradient-to-r ${result.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
-                            {result.icon}
-                          </div>
-                          
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-3 mb-2">
-                              <span className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full capitalize">
-                                {result.type}
-                              </span>
-                              <span className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full">
-                                {result.category}
-                              </span>
-                            </div>
-                            
-                            <h3 className="text-xl font-semibold text-white mb-2 hover:text-cyan-400 transition-colors duration-200">
-                              <a href={result.url} className="hover:underline">
-                                {result.title}
-                              </a>
-                            </h3>
-                            
-                            <p className="text-slate-300 mb-4 leading-relaxed">
-                              {result.excerpt}
-                            </p>
-                            
-                            <div className="flex items-center gap-6 text-sm text-slate-400 mb-4">
-                              {result.author && (
-                                <div className="flex items-center gap-2">
-                                  <User className="w-4 h-4" />
-                                  {result.author}
-                                </div>
-                              )}
-                              {result.date && (
-                                <div className="flex items-center gap-2">
-                                  <Calendar className="w-4 h-4" />
-                                  {formatDate(result.date)}
-                                </div>
-                              )}
-                              {result.readTime && (
-                                <div className="flex items-center gap-2">
-                                  <Clock className="w-4 h-4" />
-                                  {result.readTime}
-                                </div>
-                              )}
-                              {result.views && (
-                                <div className="flex items-center gap-2">
-                                  <Eye className="w-4 h-4" />
-                                  {result.views.toLocaleString()} views
-                                </div>
-                              )}
-                              {result.rating && (
-                                <div className="flex items-center gap-2">
-                                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                                  {result.rating}
-                                </div>
-                              )}
-                            </div>
-                            
-                            <div className="flex items-center justify-between">
-                              <div className="flex flex-wrap gap-2">
-                                {result.tags.slice(0, 4).map((tag) => (
-                                  <span key={tag} className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full">
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                              
-                              <div className="flex items-center gap-2">
-                                <button className="p-2 text-slate-400 hover:text-white transition-colors duration-200">
-                                  <Heart className="w-4 h-4" />
-                                </button>
-                                <button className="p-2 text-slate-400 hover:text-white transition-colors duration-200">
-                                  <Bookmark className="w-4 h-4" />
-                                </button>
-                                <button className="p-2 text-slate-400 hover:text-white transition-colors duration-200">
-                                  <Share2 className="w-4 h-4" />
-                                </button>
-                                <a
-                                  href={result.url}
-                                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                                >
-                                  View
-                                  <ArrowRight className="w-4 h-4" />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <Search className="w-16 h-16 text-slate-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      No results found
-                    </h3>
-                    <p className="text-slate-400 mb-6">
-                      Try adjusting your search terms or filters to find what you're looking for.
-                    </p>
-                    <button
-                      onClick={clearFilters}
-                      className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-                    >
-                      Clear Filters
-                    </button>
-                  </div>
-                )}
+                    <span className="text-sm text-gray-500">{filter.count}</span>
+                  </button>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      )}
 
-      {/* No Search Query State */}
-      {!query && (
-        <div className="container mx-auto px-4 py-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                What are you looking for?
-              </h2>
-              <p className="text-slate-300 mb-8 text-lg">
-                Search for our services, read our latest insights, or explore our comprehensive documentation.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Services</h3>
-                  <p className="text-slate-400 text-sm">
-                    AI, Cloud, Security, and more
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <BookOpen className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Resources</h3>
-                  <p className="text-slate-400 text-sm">
-                    Blog posts, case studies, guides
-                  </p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <FileText className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
-                  <p className="text-slate-400 text-sm">
-                    Technical guides and tutorials
-                  </p>
-                </div>
+          {/* Search Results */}
+          <div className="lg:col-span-3">
+            {/* Results Header */}
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h2 className="text-xl font-semibold text-gray-900">
+                  {searchQuery ? `Search Results for "${searchQuery}"` : 'Recent Content'}
+                </h2>
+                <p className="text-gray-600">
+                  {isSearching ? 'Searching...' : `${searchResults.length} results found`}
+                </p>
               </div>
+              
+              {/* Mobile Filter Toggle */}
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className="lg:hidden flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
+              >
+                <Filter className="h-4 w-4" />
+                <span>Filters</span>
+              </button>
             </div>
-          </motion.div>
+
+            {/* Mobile Filters */}
+            <AnimatePresence>
+              {showFilters && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="lg:hidden mb-6 bg-white rounded-xl shadow-sm border border-gray-200 p-4"
+                >
+                  <div className="grid grid-cols-2 gap-3">
+                    {filterOptions.map(filter => (
+                      <button
+                        key={filter.id}
+                        onClick={() => toggleFilter(filter.id)}
+                        className={`flex items-center justify-between p-3 rounded-lg transition-colors ${
+                          selectedFilters.has(filter.id)
+                            ? 'bg-blue-50 border border-blue-200'
+                            : 'hover:bg-gray-50'
+                        }`}
+                      >
+                        <div className="flex items-center space-x-2">
+                          <filter.icon className="h-4 w-4 text-gray-600" />
+                          <span className="text-sm font-medium text-gray-700">{filter.name}</span>
+                        </div>
+                        <span className="text-sm text-gray-500">{filter.count}</span>
+                      </button>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            {/* Results List */}
+            <div className="space-y-4">
+              {isSearching ? (
+                <div className="text-center py-12">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                  <p className="text-gray-600">Searching for results...</p>
+                </div>
+              ) : searchResults.length > 0 ? (
+                searchResults.map((result, index) => (
+                  <motion.div
+                    key={result.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
+                  >
+                    <div className="flex items-start space-x-4">
+                                              {/* Icon */}
+                        <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-r ${getResultColor(result.type)} rounded-xl flex items-center justify-center`}>
+                          {React.createElement(getResultIcon(result.type), { className: "h-6 w-6 text-white" })}
+                        </div>
+
+                      {/* Content */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <div className="flex items-center space-x-2 mb-2">
+                              <h3 className="text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors">
+                                <a href={result.url}>{result.title}</a>
+                              </h3>
+                              {result.featured && (
+                                <span className="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full font-medium">
+                                  Featured
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-gray-600 mb-3 leading-relaxed">{result.description}</p>
+                            
+                            {/* Tags */}
+                            <div className="flex flex-wrap gap-2 mb-3">
+                              {result.tags.slice(0, 5).map(tag => (
+                                <span
+                                  key={tag}
+                                  className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+
+                            {/* Meta */}
+                            <div className="flex items-center space-x-4 text-sm text-gray-500">
+                              <span className="flex items-center">
+                                <TagIcon className="h-4 w-4 mr-1" />
+                                {result.category}
+                              </span>
+                              <span className="flex items-center">
+                                <CalendarIcon className="h-4 w-4 mr-1" />
+                                {new Date(result.lastUpdated).toLocaleDateString()}
+                              </span>
+                              <span className="flex items-center">
+                                <Eye className="h-4 w-4 mr-1" />
+                                {Math.round(result.relevance * 100)}% relevant
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Actions */}
+                          <div className="flex items-center space-x-2 ml-4">
+                            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+                              <Bookmark className="h-4 w-4" />
+                            </button>
+                            <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+                              <Share2 className="h-4 w-4" />
+                            </button>
+                            <a
+                              href={result.url}
+                              className="p-2 text-blue-600 hover:text-blue-700 transition-colors"
+                            >
+                              <ArrowRight className="h-4 w-4" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))
+              ) : searchQuery ? (
+                <div className="text-center py-12">
+                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">No results found</h3>
+                  <p className="text-gray-600 mb-4">
+                    Try adjusting your search terms or filters to find what you're looking for.
+                  </p>
+                  <button
+                    onClick={clearFilters}
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Clear Filters
+                  </button>
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">Start your search</h3>
+                  <p className="text-gray-600">
+                    Enter a search term above to find services, documentation, and insights.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Pagination */}
+            {searchResults.length > 0 && (
+              <div className="mt-8 flex justify-center">
+                <nav className="flex items-center space-x-2">
+                  <button className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                    Previous
+                  </button>
+                  <span className="px-3 py-2 text-gray-700">Page 1 of 1</span>
+                  <button className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                    Next
+                  </button>
+                </nav>
+              </div>
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
-};
-
-export default SearchPage;
+}

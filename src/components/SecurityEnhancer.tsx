@@ -13,7 +13,7 @@ import {
   EyeOff,
   RefreshCw,
   Zap,
-  Security,
+  ShieldCheck,
   Bug,
   Network,
   Database
@@ -232,8 +232,8 @@ const SecurityEnhancer: React.FC = () => {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Security className="h-5 w-5" />
-            Security Overview
+                    <ShieldCheck className="h-5 w-5" />
+        Security Overview
           </CardTitle>
         </CardHeader>
         <CardContent>

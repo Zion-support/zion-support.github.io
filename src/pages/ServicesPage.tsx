@@ -1,14 +1,3 @@
-import React from 'react';
-
-export default function ServicesPage() {
-  return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold text-white mb-4">Services</h1>
-      <p className="text-zion-slate-light">Explore our AI, Cloud, Cybersecurity, and DevOps services.</p>
-    </div>
-  );
-}
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -44,6 +33,7 @@ import {
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
+import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES } from "@/data/additionalServices2025";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -80,7 +70,12 @@ export default function ServicesPage() {
   ];
 
   // Filter and sort services
-  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025, ...SPECIALIZED_SERVICES];
+  const allServices = [
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...SPECIALIZED_SERVICES,
+    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,
+    ...ADDITIONAL_SPECIALIZED_SERVICES
+  ];
   
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -300,7 +295,7 @@ export default function ServicesPage() {
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
-                          {getCategoryIcon(service.category) && <getCategoryIcon(service.category) className="w-6 h-6 text-white" />}
+                          {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>

@@ -15,10 +15,10 @@ import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigati
 import { MobileMenu } from '@/components/header/MobileMenu';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 import { Menu, X, ShoppingCart } from 'lucide-react';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
+import { ModeToggle } from '@/components/ModeToggle';
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -124,9 +124,7 @@ export function PrimaryNav() {
                   </Link>
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <div className="p-4">
-                    <p className="text-sm text-muted-foreground">Cart preview</p>
-                  </div>
+                  <MiniCartPreview />
                 </HoverCardContent>
               </HoverCard>
             </div>
@@ -156,8 +154,9 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-              {isLoggedIn && <UserMenu />}
+            {isLoggedIn && <UserMenu />}
             </div>
+          </div>
           
           {/* Mobile menu button */}
           <button
