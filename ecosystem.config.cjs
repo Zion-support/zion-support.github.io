@@ -187,6 +187,48 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // CodeQL Security Analysis - runs every 6 hours (replaces GitHub Actions CodeQL)
+    {
+      name: 'codeql-security',
+      script: './scripts/automation/codeql-security.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '21600000' // 6 hours
+      }
+    },
+
+    // Dependency Management - runs every 8 hours (replaces GitHub Actions dependencies)
+    {
+      name: 'dependency-management',
+      script: './scripts/automation/dependency-management.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '28800000' // 8 hours
+      }
+    },
+
+    // Workflow Status Monitor - runs every 2 hours (replaces GitHub Actions status workflows)
+    {
+      name: 'workflow-monitor',
+      script: './scripts/automation/workflow-monitor.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
     }
   ]
 };
