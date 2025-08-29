@@ -1,4 +1,4 @@
-import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap } from 'lucide-react';
+import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Truck, Eye, Globe2 } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeToggle } from '../components/ThemeToggle';
@@ -51,6 +51,14 @@ export function AppHeader() {
       description: 'Cutting-edge AI Services',
       featured: true,
       color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Revolutionary Services 2030', 
+      href: '/revolutionary-services-2030', 
+      icon: Rocket, 
+      description: 'Future Technology Solutions',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
     },
     { 
       name: 'AI Business Intelligence', 
@@ -125,12 +133,84 @@ export function AppHeader() {
       color: 'from-orange-500 to-red-500'
     },
     { 
-      name: 'Revolutionary Services 2030', 
-      href: '/revolutionary-services-2030', 
-      icon: Rocket, 
-      description: 'Future Technology Solutions',
+      name: 'AI Autonomous Fleet Management', 
+      href: '/services/ai-autonomous-fleet-management', 
+      icon: Truck, 
+      description: 'Autonomous Vehicle Fleet Management',
+      featured: true,
+      color: 'from-blue-500 to-indigo-500'
+    },
+    { 
+      name: 'Quantum-Resistant Cryptography', 
+      href: '/services/quantum-resistant-cryptography-platform', 
+      icon: Lock, 
+      description: 'Post-Quantum Security',
       featured: true,
       color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'Neural Interface Development', 
+      href: '/services/neural-interface-development-platform', 
+      icon: Brain, 
+      description: 'Brain-Computer Interfaces',
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
+    { 
+      name: 'Holographic Workspace', 
+      href: '/services/holographic-workspace-platform', 
+      icon: Eye, 
+      description: '3D Holographic Environments',
+      featured: true,
+      color: 'from-cyan-500 to-blue-500'
+    },
+    { 
+      name: 'Space Debris Tracking', 
+      href: '/services/space-debris-tracking-system', 
+      icon: Globe, 
+      description: 'Space Safety & Monitoring',
+      featured: true,
+      color: 'from-indigo-500 to-purple-500'
+    },
+    { 
+      name: 'AI Ethics Guardian', 
+      href: '/services/ai-ethics-guardian-platform', 
+      icon: Scale, 
+      description: 'Ethical AI Development',
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
+    { 
+      name: 'Metaverse Builder', 
+      href: '/services/metaverse-builder-platform', 
+      icon: Globe2, 
+      description: 'Virtual World Creation',
+      featured: true,
+      color: 'from-purple-500 to-indigo-500'
+    },
+    { 
+      name: 'BioDigital Twin Platform', 
+      href: '/services/biodigital-twin-platform', 
+      icon: Heart, 
+      description: 'Medical Digital Twins',
+      featured: true,
+      color: 'from-red-500 to-pink-500'
+    },
+    { 
+      name: 'Quantum AI Trading', 
+      href: '/services/quantum-ai-trading-platform', 
+      icon: TrendingUp, 
+      description: 'Quantum-Powered Trading',
+      featured: true,
+      color: 'from-emerald-500 to-green-500'
+    },
+    { 
+      name: 'AI Autonomous Operations', 
+      href: '/services/ai-autonomous-business-operations', 
+      icon: Settings, 
+      description: 'Autonomous Business Systems',
+      featured: true,
+      color: 'from-gray-500 to-slate-500'
     }
   ];
 

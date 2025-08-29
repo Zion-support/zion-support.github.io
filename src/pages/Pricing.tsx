@@ -104,6 +104,63 @@ export default function Pricing() {
     }
   ];
 
+  const innovativeServices = [
+    {
+      name: 'AI Business Intelligence Suite',
+      price: '$4,999',
+      description: 'Enterprise-grade BI with AI-powered insights',
+      features: ['Natural language queries', 'Predictive analytics', '95% accuracy'],
+      category: 'AI & Analytics',
+      roi: '500% ROI in 6 months',
+      setupTime: '4-6 weeks'
+    },
+    {
+      name: 'Zero-Trust Cybersecurity Platform',
+      price: '$8,999',
+      description: 'AI-powered security with 99.99% uptime',
+      features: ['Continuous authentication', 'AI threat detection', '85% incident reduction'],
+      category: 'Cybersecurity',
+      roi: '600% ROI in 8 months',
+      setupTime: '6-8 weeks'
+    },
+    {
+      name: 'AI Autonomous Fleet Management',
+      price: '$12,999',
+      description: 'Intelligent fleet optimization and monitoring',
+      features: ['Real-time monitoring', 'Route optimization', '35% cost reduction'],
+      category: 'AI & Autonomous Systems',
+      roi: '700% ROI in 12 months',
+      setupTime: '8-12 weeks'
+    },
+    {
+      name: 'Quantum-Resistant Cryptography',
+      price: '$15,999',
+      description: 'Future-proof security against quantum attacks',
+      features: ['Post-quantum algorithms', 'Lattice-based encryption', 'Future-proof security'],
+      category: 'Cybersecurity',
+      roi: '800% ROI in 18 months',
+      setupTime: '10-14 weeks'
+    },
+    {
+      name: 'Neural Interface Development',
+      price: '$24,999',
+      description: 'Brain-computer interface development platform',
+      features: ['EEG processing', 'Real-time analysis', 'BCI development tools'],
+      category: 'AI & Emerging Technology',
+      roi: '1000% ROI in 24 months',
+      setupTime: '12-16 weeks'
+    },
+    {
+      name: 'AI Consciousness Transfer',
+      price: '$199,999',
+      description: 'Digital consciousness preservation platform',
+      features: ['Mind uploading', 'Digital immortality', 'Neural mapping'],
+      category: 'AI & Emerging Technology',
+      roi: '10000% ROI in 120 months',
+      setupTime: '40-52 weeks'
+    }
+  ];
+
   const servicePackages = [
     {
       title: 'AI & Machine Learning',
@@ -356,6 +413,57 @@ export default function Pricing() {
                 >
                   {plan.cta}
                 </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Services */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="container-responsive">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Innovative Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our cutting-edge solutions for unique business challenges.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {innovativeServices.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50"
+              >
+                <div className="flex items-center justify-center mb-6">
+                  <DollarSign className="w-16 h-16 text-indigo-400" />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <span className="text-3xl font-bold text-white">Starting at {service.price}</span>
+                </div>
+
+                <ul className="space-y-3 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <p className="text-gray-400 text-sm">
+                  ROI: {service.roi} in {service.setupTime}
+                </p>
               </motion.div>
             ))}
           </div>
