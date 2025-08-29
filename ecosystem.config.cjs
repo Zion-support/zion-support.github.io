@@ -187,6 +187,20 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // GitHub Actions replacement automation - runs every 4 hours
+    {
+      name: 'github-actions-replacement',
+      script: './scripts/automation/github-actions-replacement.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '14400000' // 4 hours
+      }
     }
   ]
 };
