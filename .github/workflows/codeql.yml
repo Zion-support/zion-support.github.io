@@ -1,48 +1,24 @@
-name: CodeQL
+name: codeql (DISABLED - Migrated to PM2)
 
 on:
-  push:
-    branches: ["main", "develop"]
-  pull_request:
-    branches: ["main", "develop"]
-  schedule:
-    - cron: "33 1 * * 1"
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling automation tasks
+  # Now handled by PM2 processes as configured in ecosystem.config.cjs
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 permissions:
   contents: read
-  security-events: write
-
-concurrency:
-  group: codeql-${{ github.ref }}
-  cancel-in-progress: false
 
 jobs:
-  analyze:
-    name: Analyze
+  disabled:
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ['javascript-typescript']
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: ${{ matrix.language }}
-          config-file: ./.github/codeql/codeql-config.yml
-
-      - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
-
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
-        with:
-          category: "/language:${{ matrix.language }}"
+      - name: Workflow Disabled
+        run: |
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "All automation tasks are now handled by PM2 processes."
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          echo "PM2 processes are currently running:"
+          pm2 status || echo "PM2 not available in this environment"
+          exit 0

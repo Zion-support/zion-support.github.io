@@ -1,51 +1,24 @@
-name: Quality Check
+name: quality-check (DISABLED - Migrated to PM2)
 
 on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    branches: [main, develop]
+  # This workflow is disabled and migrated to PM2 automation
+  # The original workflow was handling automation tasks
+  # Now handled by PM2 processes as configured in ecosystem.config.cjs
+  workflow_dispatch: # Only manual triggers allowed
+  # All automatic triggers removed
 
 permissions:
   contents: read
 
 jobs:
-  quality:
+  disabled:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          
-      - name: Install dependencies
-        run: npm ci
-        
-      - name: Run linting
-        run: npm run lint
-        
-      - name: Type checking
-        run: npm run type-check
-        
-      - name: Build check
-        run: npm run build
-        
-      - name: Check bundle size
+      - name: Workflow Disabled
         run: |
-          echo "Checking bundle size..."
-          if [ -d dist ]; then
-            echo "Build directory size:"
-            du -sh dist/
-            echo "JavaScript files:"
-            find dist -name "*.js" -exec wc -c {} + | tail -1
-          fi
-          
-      - name: Security audit
-        run: npm audit --audit-level=moderate || true
-        
-      - name: Check for outdated packages
-        run: npm outdated || echo "All packages are up to date"
+          echo "This workflow has been disabled and migrated to PM2 automation."
+          echo "All automation tasks are now handled by PM2 processes."
+          echo "PM2 ecosystem.config.cjs contains the full automation configuration."
+          echo "PM2 processes are currently running:"
+          pm2 status || echo "PM2 not available in this environment"
+          exit 0
