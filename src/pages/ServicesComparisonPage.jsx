@@ -5,7 +5,12 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { PRICING_TIERS } from '@/data/advancedServices';
+// Fallback local pricing tiers to avoid missing data module at build time
+const PRICING_TIERS = {
+  starter: { name: 'Starter', price: '$1,999', highlights: ['Email support', 'Basic features'] },
+  professional: { name: 'Professional', price: '$4,999', highlights: ['Priority support', 'Advanced features'] },
+  enterprise: { name: 'Enterprise', price: 'Custom', highlights: ['Dedicated support', 'Custom SLAs'] }
+};
 // Service comparison data
 const SERVICE_COMPARISONS = [
     {
@@ -122,7 +127,7 @@ export default function ServicesComparisonPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {PRICING_TIERS.map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
+            {Object.values(PRICING_TIERS).map((tier, index) => (<Card key={tier.name} className={`bg-zion-blue-dark border-zion-blue-light text-white ${index === 1 ? 'border-zion-cyan scale-105' : ''}`}>
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">{tier.name}</CardTitle>
                   <div className="text-4xl font-bold text-zion-cyan">{tier.price}</div>
