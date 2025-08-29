@@ -37,8 +37,13 @@
     "quality:fix": "node scripts/pm2/lint-fixer.js && node scripts/pm2/auto-commit-fixes.js",
     "deps:check": "node scripts/pm2/dependency-monitor.js",
     "perf:check": "node scripts/pm2/performance-monitor.js",
+    "test:smart": "node scripts/pm2/smart-test-runner.js",
+    "git:workflow": "node scripts/pm2/git-workflow-automator.js",
+    "security:scan": "node scripts/pm2/security-scanner.js",
+    "bundle:optimize": "node scripts/pm2/bundle-optimizer.js",
     "automation:setup": "npm run pm2:start && echo 'PM2 automation processes started successfully!'",
-    "automation:stop": "npm run pm2:stop && echo 'PM2 automation processes stopped successfully!'"
+    "automation:stop": "npm run pm2:stop && echo 'PM2 automation processes stopped successfully!'",
+    "automation:full": "npm run quality:check && npm run deps:check && npm run perf:check && npm run test:smart && npm run git:workflow && npm run security:scan && npm run bundle:optimize"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

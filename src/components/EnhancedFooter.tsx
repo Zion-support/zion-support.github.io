@@ -1,47 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Rocket,
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Code,
-  Truck,
-  Building,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  ArrowRight,
-  PanelLeft,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  Satellite,
+import { 
+  Zap, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Globe, 
+  Cpu, 
+  Lock, 
+  Heart, 
+  Users, 
+  ShoppingCart, 
+  BookOpen, 
+  MessageCircle, 
+  HelpCircle, 
+  DollarSign, 
+  Gauge, 
+  Workflow, 
+  Atom, 
+  Star, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  Code, 
+  Truck, 
+  Building, 
+  BarChart3, 
+  PenTool, 
+  Eye, 
+  Server, 
+  Smartphone, 
+  Database, 
+  Network, 
+  Clock, 
+  ArrowRight, 
+  PanelLeft, 
+  Sparkles, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Satellite, 
   FileText,
   Linkedin,
   Twitter,
@@ -56,55 +56,61 @@ export function EnhancedFooter() {
 
   const footerSections = [
     {
-      title: 'Services',
+      title: 'Core Services',
       links: [
         { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
         { name: 'IT Services', href: '/it-services', icon: Server },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', href: '/cloud-devops', icon: Cloud },
-        { name: 'Quantum Computing', href: '/quantum-computing', icon: Atom },
-        { name: 'Emerging Tech', href: '/emerging-tech', icon: Sparkles },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp }
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: TrendingUp }
       ]
     },
     {
-      title: 'Solutions',
+      title: 'AI Solutions',
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation-suite', icon: PenTool },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Workflow },
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: TrendingUp }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
         { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },
         { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign },
         { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Truck },
-        { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
         { name: 'Government', href: '/solutions/government', icon: Building },
-        { name: 'Education', href: '/solutions/education', icon: BookOpen },
-        { name: 'Space Technology', href: '/space-tech', icon: Satellite }
+        { name: 'Education', href: '/solutions/education', icon: BookOpen }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Mission', href: '/mission', icon: Target },
-        { name: 'Leadership Team', href: '/leadership', icon: Award },
+        { name: 'Our Team', href: '/team', icon: Award },
         { name: 'Careers', href: '/careers', icon: Workflow },
         { name: 'Partners', href: '/partners', icon: Handshake },
         { name: 'News & Updates', href: '/news', icon: FileText },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Blog', href: '/blog', icon: PenTool }
+        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'Documentation', href: '/documentation', icon: FileText },
         { name: 'API Reference', href: '/api', icon: Code },
-        { name: 'Developer Portal', href: '/developer', icon: Cpu },
+        { name: 'Developer Portal', href: '/developer-portal', icon: Cpu },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'FAQ', href: '/faq', icon: MessageCircle },
         { name: 'Training', href: '/training', icon: BookOpen },
         { name: 'Webinars', href: '/webinars', icon: Users },
-        { name: 'White Papers', href: '/white-papers', icon: FileText }
+        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Blog', href: '/blog', icon: PenTool }
       ]
     }
   ];
@@ -130,7 +136,7 @@ export function EnhancedFooter() {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-50"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,212,255,0.1)_0%,transparent_50%)]"></div>
-
+      
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
@@ -150,11 +156,11 @@ export function EnhancedFooter() {
                   </p>
                 </div>
               </div>
-
+              
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Leading the future of technology with cutting-edge AI, quantum computing, and innovative solutions that transform businesses and drive digital transformation.
               </p>
-
+              
               {/* Contact Information */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
