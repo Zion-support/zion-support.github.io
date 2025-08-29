@@ -35,7 +35,6 @@ const ServicesOverview = React.lazy(() => import('./pages/ServicesOverview'));
 const PricingGuide = React.lazy(() => import('./pages/PricingGuide'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
-const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 const Team = React.lazy(() => import('./pages/Team'));
 const Press = React.lazy(() => import('./pages/Press'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
@@ -60,7 +59,7 @@ const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/Innovati
 const InnovativeServicesShowcase2028 = React.lazy(() => import('./pages/InnovativeServicesShowcase2028'));
 const ComprehensivePricingGuide2028 = React.lazy(() => import('./pages/ComprehensivePricingGuide2028'));
 const ComprehensiveServicesLanding2028 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2028'));
-const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
+// duplicate removed: ServicesComparisonPage already declared above
 
 // Service pages - only import existing ones
 const CloudDevOps = React.lazy(() => import('./pages/services/CloudDevOps'));
