@@ -134,6 +134,15 @@ export default function Services() {
           price: 'From $4,500',
           rating: 4.8,
           reviewCount: 76
+        },
+        {
+          name: 'AI Supply Chain Optimization',
+          description: 'AI-powered supply chain optimization with demand forecasting and route optimization',
+          features: ['AI Demand Forecasting', 'Route Optimization', 'Inventory Management', 'Global Visibility'],
+          href: '/services/ai-supply-chain-optimization',
+          price: 'From $599',
+          rating: 4.9,
+          reviewCount: 98
         }
       ]
     },
@@ -239,6 +248,33 @@ export default function Services() {
           price: 'From $299',
           rating: 4.9,
           reviewCount: 234
+        },
+        {
+          name: 'AI Customer Churn Prediction',
+          description: 'Predict and prevent customer churn with 95%+ accuracy using AI-powered analytics',
+          features: ['Churn Prediction', 'Real-time Analytics', 'Proactive Interventions', 'Customer Segmentation'],
+          href: '/services/ai-customer-churn-prediction',
+          price: 'From $299',
+          rating: 4.9,
+          reviewCount: 156
+        },
+        {
+          name: 'AI Financial Fraud Detection',
+          description: 'Protect your business with AI-powered fraud detection and 99.2% accuracy',
+          features: ['Fraud Detection', 'Real-time Monitoring', 'Multi-layer Security', 'Adaptive Learning'],
+          href: '/services/ai-financial-fraud-detection',
+          price: 'From $799',
+          rating: 4.9,
+          reviewCount: 189
+        },
+        {
+          name: 'AI HR Talent Acquisition',
+          description: 'Revolutionize hiring with AI-powered candidate matching and recruitment automation',
+          features: ['AI Matching', 'Intelligent Sourcing', 'Predictive Analytics', 'Smart Screening'],
+          href: '/services/ai-hr-talent-acquisition',
+          price: 'From $399',
+          rating: 4.8,
+          reviewCount: 267
         }
       ]
     }

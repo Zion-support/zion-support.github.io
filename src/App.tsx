@@ -87,6 +87,11 @@ const RagSearch = React.lazy(() => import('./pages/services/RagSearch'));
 const MlopsPipeline = React.lazy(() => import('./pages/services/MlopsPipeline'));
 const EcommercePersonalization = React.lazy(() => import('./pages/services/EcommercePersonalization'));
 
+// Additional innovative AI services
+const AICustomerChurnPrediction = React.lazy(() => import('./pages/services/AICustomerChurnPrediction'));
+const AIFinancialFraudDetection = React.lazy(() => import('./pages/services/AIFinancialFraudDetection'));
+const AIHRTalentAcquisition = React.lazy(() => import('./pages/services/AIHRTalentAcquisition'));
+
 // Additional service pages
 const DigitalTransformation = React.lazy(() => import('./pages/services/DigitalTransformation'));
 const ITConsulting = React.lazy(() => import('./pages/services/ITConsulting'));
@@ -242,6 +247,11 @@ function App() {
               <Route path="/services/rag-search" element={<RagSearch />} />
               <Route path="/services/mlops-pipeline" element={<MlopsPipeline />} />
               <Route path="/services/ecommerce-personalization" element={<EcommercePersonalization />} />
+              
+              {/* Additional innovative AI services */}
+              <Route path="/services/ai-customer-churn-prediction" element={<AICustomerChurnPrediction />} />
+              <Route path="/services/ai-financial-fraud-detection" element={<AIFinancialFraudDetection />} />
+              <Route path="/services/ai-hr-talent-acquisition" element={<AIHRTalentAcquisition />} />
               
               {/* Additional Service Routes */}
               <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
